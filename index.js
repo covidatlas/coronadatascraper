@@ -1,4 +1,6 @@
 import scrapers from './scrapers.js';
+import * as fs from './lib/fs.js';
+import path from 'path';
 
 async function executeScraper(location) {
   let data = await location.scraper();
@@ -34,9 +36,18 @@ async function scrape() {
     }
   }
 
-  console.log(cases);
   return cases;
 }
 
-scrape();
+async function start() {
+  console.log('⏳ Scraping data...');
+
+  let cases = await scrape();
+
+  fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(cases, null, 2));
+
+  console.log('✅ Data scraped for %d counties', cases.length);
+};
+
+start();
 
