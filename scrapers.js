@@ -13,6 +13,35 @@ import load from './lib/load.js';
 
 let scrapers = [
   {
+    state: 'FL',
+    country: 'USA',
+    url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
+    scraper: async function() {
+      let counties = {};
+      let $ = await load(this.url);
+
+      let $table = $('*:contains("Diagnosed in Florida")').closest('table');
+
+      let $trs = $table.find('tr:not(:first-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = $tr.find('td:nth-child(2)').text();
+        counties[county] = counties[county] || { cases: 0 };
+        counties[county].cases += 1;
+      });
+
+      let countyArray = [];
+      for (let [county, data] of Object.entries(counties)) {
+        countyArray.push(Object.assign({
+          county: county
+        }, data));
+      }
+
+      return countyArray;
+    }
+  },
+  {
     state: 'NY',
     country: 'USA',
     url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
