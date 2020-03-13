@@ -14,6 +14,32 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'IA',
+    country: 'USA',
+    url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
+    // Incapsula blocking request
+    _scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
+
+      let $trs = $table.find('tbody > tr:not(:last-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '');
+        let cases = parse.number($tr.find('td:last-child').text());
+        counties.push({
+          county: county,
+          cases: cases
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'TX',
     country: 'USA',
     url: 'https://www.dshs.state.tx.us/news/updates.shtm',
