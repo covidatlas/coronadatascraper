@@ -430,6 +430,17 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.rivcoph.org/coronavirus',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $el = $('p:contains("Confirmed cases:")').first();
+
+      let matches = $el.text().match(/Confirmed cases:.*?(\d)/);
+
+      return {
+        cases: parse.number(matches[1])
+      };
+    }
   },
   {
     county: 'San Diego County',
