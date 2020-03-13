@@ -14,6 +14,31 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'OR',
+    country: 'USA',
+    url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('table[summary="Cases by County in Oregon for COVID-19"]');
+
+      let $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = parse.string($tr.find('td:first-child').text());
+        let cases = parse.number($tr.find('td:nth-child(2)').text());
+        counties.push({
+          county: county,
+          cases: cases
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'LA',
     country: 'USA',
     url: 'http://ldh.la.gov/Coronavirus/',
