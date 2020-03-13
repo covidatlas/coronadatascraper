@@ -270,17 +270,14 @@ let scrapers = [
     country: 'USA',
     url: 'http://www.solanocounty.com/depts/ph/coronavirus.asp',
     scraper: async function() {
-      let cases;
       let $ = await load(this.url);
 
       let $el = $('*:contains("Number of Positive Cases")').first();
 
       let matches = $el.text().match(/Number of Positive Cases in Solano County: (\d)/);
 
-      cases = parse.number(matches[1]);
-
       return {
-        cases: cases
+        cases: parse.number(matches[1])
       };
     }
   },
@@ -356,6 +353,17 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $el = $('*:contains("Confirmed cases")').first();
+
+      let matches = $el.text().match(/Confirmed cases:.*?(\d)/);
+
+      return {
+        cases: parse.number(matches[1])
+      };
+    }
   },
   {
     county: 'Placer County',
