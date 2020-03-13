@@ -416,6 +416,14 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      return {
+        cases: parse.number($('td:contains("Confirmed Cases")').next().text()),
+        deaths: parse.number($('td:contains("Total Deaths")').next().text())
+      };
+    }
   },
   {
     county: 'Riverside County',
