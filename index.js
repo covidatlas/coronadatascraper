@@ -2,15 +2,6 @@ import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 import path from 'path';
 
-async function executeScraper(location) {
-  let data = await location.scraper();
-  Object.assign(data, location);
-
-  delete data.scraper;
-
-  return data;
-}
-
 function addLocationToData(data, location) {
   Object.assign(data, location);
   delete data.scraper;
@@ -32,7 +23,7 @@ async function scrape() {
   let cases = [];
   for (let location of scrapers) {
     if (location.scraper) {
-      addData(cases, location, await executeScraper(location));
+      addData(cases, location, await location.scraper());
     }
   }
 
