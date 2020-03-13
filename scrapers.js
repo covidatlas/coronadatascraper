@@ -62,31 +62,82 @@ let scrapers = [
     county: 'Alameda County',
     state: 'CA',
     country: 'USA',
+    // Error "Please enable JavaScript to view the page content."
     url: 'http://www.acphd.org/2019-ncov.aspx',
-  },
-  {
-    county: 'Marin County',
-    state: 'CA',
-    country: 'USA',
-    url: 'https://coronavirus.marinhhs.org/',
+    _scraper: async function() {
+      let cases;
+      let $ = await load(this.url);
+
+      let $table = $('.contacts_table');
+
+      {
+        let $p = $table.find('*:contains("Positive Cases:")');
+        console.log($p.html());
+      }
+
+      return {
+        cases: cases
+      };
+    }
   },
   {
     county: 'Sonoma County',
     state: 'CA',
     country: 'USA',
     url: 'https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/',
+    scraper: async function() {
+      let cases;
+      let $ = await load(this.url);
+
+      let $th = $('th:contains("Total in Sonoma County")');
+      let $table = $th.closest('table');
+
+      
+      let $td = $table.find('td:last-child');
+      cases = parseInt($td.text(), 10);
+
+      return {
+        cases: cases
+      };
+    }
   },
   {
     county: 'Santa Cruz County',
     state: 'CA',
     country: 'USA',
     url: 'http://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx',
+    scraper: async function() {
+      let cases;
+      let $ = await load(this.url);
+
+      let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
+
+      cases = parseInt($h1.text(), 10);
+
+      return {
+        cases: cases
+      };
+    }
   },
   {
     county: 'Santa Clara County',
     state: 'CA',
     country: 'USA',
     url: 'https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx',
+    // Error: page needs JavaScript
+    _scraper: async function() {
+      let cases;
+      let $ = await load(this.url);
+
+      let $table = $('.sccgov-responsive-table');
+
+      let $cell = $table.find('.sccgov-responsive-table-cell').first();
+      cases = parseInt($cell.text(), 10);
+
+      return {
+        cases: cases
+      };
+    }
   },
   {
     county: 'Solano County',
