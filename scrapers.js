@@ -1,6 +1,54 @@
 import load from './lib/load.js';
 
+/*
+  Each scraper must return the following object or an array of the following objects:
+
+  {
+    cases: Integer,
+    deaths: Integer,
+    recovered: Integer,
+    tested: Integer
+  }
+*/
+
 let scrapers = [
+  {
+    state: 'NY',
+    country: 'USA',
+    url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('#case_count_table');
+
+      let $trs = $table.find('tr:not(.total_row):not(:first-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = $tr.find('td:first-child').text();
+        let cases = parseInt($tr.find('td:last-child').text(), 10);
+        counties.push({
+          county: county,
+          cases: cases
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
+    state: 'WA',
+    country: 'USA',
+    url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
+    // Error "Please enable JavaScript to view the page content."
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      return counties;
+    }
+  },
   {
     county: 'San Francisco County',
     state: 'CA',
