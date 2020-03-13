@@ -370,6 +370,15 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.placer.ca.gov/6448/Cases-in-Placer',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $table = $('p:contains("Confirmed COVID-19 Cases in Placer County")').nextAll('table').first();
+      return {
+        cases: parse.number($table.find('td:contains("Positive Tests")').closest('tr').find('td:last-child').text()),
+        deaths: parse.number($table.find('td:contains("Deaths")').closest('tr').find('td:last-child').text())
+      };
+    }
   },
   {
     county: 'Shasta County',
