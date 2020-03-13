@@ -13,6 +13,32 @@ import load from './lib/load.js';
 
 let scrapers = [
   {
+    state: 'TX',
+    country: 'USA',
+    url: 'https://www.dshs.state.tx.us/news/updates.shtm',
+    // Error: unable to verify the first certificate
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('table[summary="Texas COVID-19 Cases"]');
+
+      let $trs = $table.find('tbody > tr:not(:last-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '');
+        let cases = parseInt($tr.find('td:last-child').text(), 10);
+        counties.push({
+          county: county,
+          cases: cases
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'DE',
     country: 'USA',
     url: 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html',
