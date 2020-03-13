@@ -342,6 +342,14 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.co.fresno.ca.us/departments/public-health/covid-19',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      return {
+        cases: parse.number($('li:contains("Total cases")').text()),
+        deaths: parse.number($('li:contains("Total deaths")').text())
+      };
+    }
   },
   {
     county: 'Madera County',
