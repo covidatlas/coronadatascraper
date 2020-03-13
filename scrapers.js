@@ -326,6 +326,16 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.saccounty.net/COVID-19/Pages/default.aspx',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $table = $('th:contains("Confirmed")').closest('table');
+      let $tds = $table.find('tr:last-child > td');
+      return {
+        cases: parse.number($tds.first().text()),
+        deaths: parse.number($tds.last().text())
+      };
+    }
   },
   {
     county: 'Fresno County',
