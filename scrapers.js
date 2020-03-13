@@ -13,6 +13,27 @@ import load from './lib/load.js';
 
 let scrapers = [
   {
+    state: 'DE',
+    country: 'USA',
+    url: 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html',
+    scraper: async function() {
+      let counties = {};
+      let $ = await load(this.url);
+
+      let $td = $('*:contains("County breakdown")').closest('tr').find('td:last-child');
+
+      let countyArray = $td.html().split('<br>').map((str) => {
+        let parts = str.split(': ');
+        return {
+          county: parts[0] + ' County',
+          cases: parseInt(parts[1], 10)
+        }
+      });
+
+      return countyArray;
+    }
+  },
+  {
     state: 'FL',
     country: 'USA',
     url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
