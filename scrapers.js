@@ -268,6 +268,20 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.solanocounty.com/depts/ph/coronavirus.asp',
+    scraper: async function() {
+      let cases;
+      let $ = await load(this.url);
+
+      let $el = $('*:contains("Number of Positive Cases")').first();
+
+      let matches = $el.text().match(/Number of Positive Cases in Solano County: (\d)/);
+
+      cases = parseInt(matches[1], 10);
+
+      return {
+        cases: cases
+      };
+    }
   },
   {
     county: 'Contra Costa County',
