@@ -1,6 +1,7 @@
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 import path from 'path';
+import csvStringify from 'csv-stringify';
 
 function addLocationToData(data, location) {
   Object.assign(data, location);
@@ -56,12 +57,51 @@ async function scrape() {
   return cases;
 }
 
+function generateCSV(data) {
+  return new Promise((resolve, reject) => {
+    // Get list of columns
+    let columns = [];
+    for (let location of data) {
+      for (let column in location) {
+        if (columns.indexOf(column) === -1) {
+          columns.push(column);
+        }
+      }
+    }
+
+    // Turn data into arrays
+    let csvData = [
+      columns
+    ];
+    for (let location of data) {
+      let row = [];
+      for (let column of columns) {
+        row.push(location[column]);
+      }
+      csvData.push(row);
+    }
+
+    csvStringify(csvData, (err, output) => {
+      if (err) {
+        reject(err);
+      }
+      else {
+        resolve(output);
+      }
+    });
+  });
+}
+
 async function start() {
   console.log('⏳ Scraping data...');
 
   let cases = await scrape();
 
-  fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(cases, null, 2));
+  await fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(cases, null, 2));
+
+  let csvString = await generateCSV(cases);
+
+  await fs.writeFile(path.join('dist', 'data.csv'), csvString);
 
   console.log('✅ Data scraped for %d counties', cases.length);
 };

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "csv": "^5.3.2",
     "needle": "^2.3.3"
   }
 }
