@@ -7,4 +7,4 @@ Scrape case data from goverment websites.
 ```
 yarn install
 yarn start
-``
+```
