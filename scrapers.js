@@ -447,6 +447,14 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      return {
+        cases: parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()),
+        tested: parse.number($('td:contains("Total Tested")').next('td').text())
+      };
+    }
   },
   {
     county: 'Ventura County',
