@@ -402,6 +402,14 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.publichealth.lacounty.gov/media/Coronavirus/',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      return {
+        cases: parse.number($('.counter').first().text()),
+        deaths: parse.number($('.counter').last().text())
+      };
+    }
   },
   {
     county: 'Orange County',
