@@ -8,14 +8,35 @@ function addLocationToData(data, location) {
   return data;
 }
 
+function isValid(data, location) {
+  if (data.cases === undefined) {
+    throw new Error(`Invalid data: contains no case data`);
+  }
+
+  for (let [prop, value] of Object.entries(data)) {
+    if (value === null) {
+      throw new Error(`Invalid data: ${prop} is null`);
+    }
+    if (Number.isNaN(value))   {
+      throw new Error(`Invalid data: ${prop} is not a number`);
+    }
+  }
+
+  return true;
+}
+
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     for (let data of result) {
-      cases.push(addLocationToData(data, location));
+      if (isValid(data, location)) {
+        cases.push(addLocationToData(data, location));
+      }
     }
   }
   else {
-    cases.push(addLocationToData(result, location));
+    if (isValid(result, location)) {
+      cases.push(addLocationToData(result, location));
+    }
   }
 }
 
@@ -23,7 +44,12 @@ async function scrape() {
   let cases = [];
   for (let location of scrapers) {
     if (location.scraper) {
-      addData(cases, location, await location.scraper());
+      try {
+        addData(cases, location, await location.scraper());
+      }
+      catch(err) {
+        console.error('  ❌ Error processing %s: ', location.county, err);
+      }
     }
   }
 
