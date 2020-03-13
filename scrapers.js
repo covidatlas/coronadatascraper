@@ -306,6 +306,13 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.schsa.org/PublicHealth/pages/corona-virus/',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      return {
+        cases: parseInt($('.counter').text(), 10)
+      };
+    }
   },
   {
     county: 'Yolo County',
