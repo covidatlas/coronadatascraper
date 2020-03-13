@@ -385,6 +385,17 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $el = $('h3:contains("Positive cases:")').first();
+
+      let matches = $el.text().match(/Positive cases:.*?(\d)/);
+
+      return {
+        cases: parse.number(matches[1])
+      };
+    }
   },
   {
     county: 'Los Angeles County',
