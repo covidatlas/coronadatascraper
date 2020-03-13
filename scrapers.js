@@ -461,6 +461,20 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.ventura.org/covid19/',
+    // Needs JavaScript to populate counts
+    _scraper: async function() {
+      let $ = await load(this.url);
+
+      let cases = 0;
+      cases += parse.number($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').find('.count-number').text());
+
+      console.log($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').html());
+
+      return {
+        cases: cases,
+        tested: parse.number($('.count-subject:contains("People tested")').closest('.hb-counter').find('.count-number').text()),
+      };
+    }
   },
 ];
 
