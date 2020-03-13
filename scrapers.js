@@ -14,6 +14,34 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'LA',
+    country: 'USA',
+    url: 'http://ldh.la.gov/Coronavirus/',
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('p:contains("Louisiana Cases")').nextAll('table');
+
+      let $trs = $table.find('tbody > tr:not(:last-child)');
+
+      $trs.each((index, tr) => {
+        if (index < 2) {
+          return;
+        }
+        let $tr = $(tr);
+        let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
+        let cases = parse.number($tr.find('td:last-child').text());
+        counties.push({
+          county: county,
+          cases: cases
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'IA',
     country: 'USA',
     url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
