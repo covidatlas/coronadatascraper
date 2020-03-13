@@ -1,0 +1,16 @@
+{
+  "name": "corona-scraper",
+  "version": "1.0.0",
+  "description": "A scraper for Cornavirus data",
+  "main": "index.js",
+  "author": "Larry Davis <lazdnet@gmail.com>",
+  "license": "BSD",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_OPTIONS='--insecure-http-parser' node index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "needle": "^2.3.3"
+  }
+}
