@@ -288,6 +288,18 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.coronavirus.cchealth.org/',
+    scraper: async function() {
+      let cases, deaths;
+      let $ = await load(this.url);
+
+      cases = parseInt($('h1:contains("TOTAL")').parent().next().text(), 10);
+      deaths = parseInt($('h1:contains("DEATHS")').parent().prev().text(), 10);
+
+      return {
+        cases: cases,
+        deaths: deaths
+      };
+    }
   },
   {
     county: 'Stanislaus County',
