@@ -1,4 +1,5 @@
 import load from './lib/load.js';
+import * as parse from './lib/parse.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -28,7 +29,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '');
-        let cases = parseInt($tr.find('td:last-child').text(), 10);
+        let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
           cases: cases
@@ -52,7 +53,7 @@ let scrapers = [
         let parts = str.split(': ');
         return {
           county: parts[0] + ' County',
-          cases: parseInt(parts[1], 10)
+          cases: parse.number(parts[1])
         }
       });
 
@@ -103,7 +104,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         let county = $tr.find('td:first-child').text();
-        let cases = parseInt($tr.find('td:last-child').text(), 10);
+        let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
           cases: cases
@@ -138,12 +139,12 @@ let scrapers = [
 
       {
         let $p = $h2.nextAll('*:contains("Cases:")');
-        cases = parseInt($p.text().replace(/[^\d]/g, ''), 10);
+        cases = parse.number($p.text());
       }
 
       {
         let $p = $h2.nextAll('*:contains("Deaths:")');
-        deaths = parseInt($p.text().replace(/[^\d]/g, ''), 10);
+        deaths = parse.number($p.text());
       }
 
       return {
@@ -167,13 +168,13 @@ let scrapers = [
       {
         let $tr = $table.find('*:contains("Positive")').closest('tr');
         let $dataTd = $tr.find('td:last-child')
-        cases = parseInt($dataTd.text(), 10);
+        cases = parse.number($dataTd.text());
       }
 
       {
         let $tr = $table.find('*:contains("Deaths")').closest('tr');
         let $dataTd = $tr.find('td:last-child')
-        deaths = parseInt($dataTd.text(), 10);
+        deaths = parse.number($dataTd.text());
       }
 
       return {
@@ -218,7 +219,7 @@ let scrapers = [
 
       
       let $td = $table.find('td:last-child');
-      cases = parseInt($td.text(), 10);
+      cases = parse.number($td.text());
 
       return {
         cases: cases
@@ -236,7 +237,7 @@ let scrapers = [
 
       let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
 
-      cases = parseInt($h1.text(), 10);
+      cases = parse.number($h1.text());
 
       return {
         cases: cases
@@ -256,7 +257,7 @@ let scrapers = [
       let $table = $('.sccgov-responsive-table');
 
       let $cell = $table.find('.sccgov-responsive-table-cell').first();
-      cases = parseInt($cell.text(), 10);
+      cases = parse.number($cell.text());
 
       return {
         cases: cases
@@ -276,7 +277,7 @@ let scrapers = [
 
       let matches = $el.text().match(/Number of Positive Cases in Solano County: (\d)/);
 
-      cases = parseInt(matches[1], 10);
+      cases = parse.number(matches[1]);
 
       return {
         cases: cases
@@ -292,8 +293,8 @@ let scrapers = [
       let cases, deaths;
       let $ = await load(this.url);
 
-      cases = parseInt($('h1:contains("TOTAL")').parent().next().text(), 10);
-      deaths = parseInt($('h1:contains("DEATHS")').parent().prev().text(), 10);
+      cases = parse.number($('h1:contains("TOTAL")').parent().next().text());
+      deaths = parse.number($('h1:contains("DEATHS")').parent().prev().text());
 
       return {
         cases: cases,
@@ -310,7 +311,7 @@ let scrapers = [
       let $ = await load(this.url);
 
       return {
-        cases: parseInt($('.counter').text(), 10)
+        cases: parse.number($('.counter').text())
       };
     }
   },
