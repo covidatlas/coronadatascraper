@@ -20,6 +20,29 @@ import * as transform from './lib/transform.js';
 
 let scrapers = [
   {
+    country: 'Canada',
+    url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let $table = $('h2:contains("Current situation")').nextAll('table').first();
+
+      let $trs = $table.find('tbody > tr');
+
+      let regions = [];
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        regions.push({
+          state: parse.string($tr.find('td:first-child').text()),
+          cases: parse.number($tr.find('td:nth-child(2)').text())
+        })
+      });
+
+      return regions;
+    }
+  },
+  {
     // Get country data only from JHU
     url: 'https://github.com/CSSEGISandData/COVID-19',
     _urls: {
@@ -132,7 +155,6 @@ let scrapers = [
 
       let $table = $('h3:contains("Mississippi Cases")').nextAll('table').first();
 
-      // Ignore the last row "Out of town"
       let $trs = $table.find('tbody > tr');
 
       let counties = {};
