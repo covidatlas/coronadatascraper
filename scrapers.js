@@ -201,9 +201,12 @@ let scrapers = [
 
       let $table = $('*:contains("Diagnosed in Florida")').closest('table');
 
-      let $trs = $table.find('tr:not(:first-child)');
+      let $trs = $table.find('tr');
 
       $trs.each((index, tr) => {
+        if (index < 2) {
+          return;
+        }
         let $tr = $(tr);
         let county = $tr.find('td:nth-child(2)').text();
         counties[county] = counties[county] || { cases: 0 };
