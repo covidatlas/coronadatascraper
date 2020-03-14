@@ -536,10 +536,25 @@ let scrapers = [
     state: 'WA',
     country: 'USA',
     url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
-    // Error "Please enable JavaScript to view the page content."
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
+
+      let $th = $('th:contains("(COVID-19) in Washington")');
+      let $table = $th.closest('table');
+      let $trs = $table.find('tbody > tr');
+
+      $trs.each((index, tr) => {
+        if (index < 1 || index > $trs.get().length - 3) {
+          return;
+        }
+        let $tr = $(tr);
+        counties.push({
+          county: parse.string($tr.find('> *:first-child').text()) + ' County',
+          cases: parse.number($tr.find('> *:nth-child(2)').text()),
+          deaths: parse.number($tr.find('> *:last-child').text())
+        });
+      });
 
       return counties;
     }
