@@ -12,9 +12,9 @@ yarn start
 
 ## Contributing
 
-Contributions for any place in the world are welcome. Write clean and clear code, and please ensure to follow the criteria below for sources.
+Contributions for any place in the world are welcome. See the [community-curated list of verified data sources](https://docs.google.com/spreadsheets/d/1T2cSvWvUvurnOuNFj2AMPGLpuR2yVs3-jdd_urfWU4c/edit#gid=0) to find a new datasource to add, and be sure to update the "Scraped?" column when you do.
 
-Send a pull request with your scraper, and be sure to run the scraper first with the instructions above to make sure the data is valid.
+Write clean and clear code, and please ensure to follow the criteria below for sources. Send a pull request with your scraper, and be sure to run the scraper first with the instructions above to make sure the data is valid.
 
 It's a tough challenge to write scrapers that will work when websites are inevitably updated. Here are some tips:
 
