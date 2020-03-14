@@ -1,6 +1,4 @@
 import path from 'path';
-import csvStringify from 'csv-stringify';
-import yargs from 'yargs';
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 import * as transform from './lib/transform.js';
@@ -103,86 +101,61 @@ async function scrape() {
   Generate a CSV from the given data
 */
 function generateCSV(data) {
-  return new Promise((resolve, reject) => {
-    // Start with the columns we want first
-    let columns = [
-      'city',
-      'county',
-      'state',
-      'country',
-      'cases',
-      'deaths',
-      'recovered',
-      'tested',
-      'lat',
-      'long',
-      'url'
-    ];
+  // Start with the columns we want first
+  let columns = [
+    'city',
+    'county',
+    'state',
+    'country',
+    'cases',
+    'deaths',
+    'recovered',
+    'tested',
+    'lat',
+    'long',
+    'url'
+  ];
 
-    // Get list of columns
-    for (let location of data) {
-      for (let column in location) {
-        if (columns.indexOf(column) === -1) {
-          columns.push(column);
-        }
+  // Get list of columns
+  for (let location of data) {
+    for (let column in location) {
+      if (columns.indexOf(column) === -1) {
+        columns.push(column);
       }
     }
+  }
 
-    // Drop coordinates
-    columns = columns.filter(column => column != 'coordinates');
+  // Drop coordinates
+  columns = columns.filter(column => column != 'coordinates');
 
-    // Turn data into arrays
-    let csvData = [
-      columns
-    ];
-    for (let location of data) {
-      let row = [];
-      for (let column of columns) {
-        // Output lat and long instead
-        if (column === 'lat' && location.coordinates) {
-          row.push(location.coordinates[1]);
-        }
-        else if (column === 'long' && location.coordinates) {
-          row.push(location.coordinates[0]);
-        }
-        else {
-          row.push(location[column]);
-        }
+  // Turn data into arrays
+  let csvData = [
+    columns
+  ];
+  for (let location of data) {
+    let row = [];
+    for (let column of columns) {
+      // Output lat and long instead
+      if (column === 'lat' && location.coordinates) {
+        row.push(location.coordinates[1]);
       }
-      csvData.push(row);
-    }
-
-    csvStringify(csvData, (err, output) => {
-      if (err) {
-        reject(err);
+      else if (column === 'long' && location.coordinates) {
+        row.push(location.coordinates[0]);
       }
       else {
-        resolve(output);
+        row.push(location[column]);
       }
-    });
-  });
+    }
+    csvData.push(row);
+  }
+  return csvData;
 }
 
 /*
   Main
 */
 async function scrapeData() {
-  console.log('⏳ Scraping data...');
-
-
-  const argv = yargs
-    .option('date', {
-      alias: 'd',
-      description: 'Generate data for the provided date in YYYY-M-D format',
-      type: 'string',
-    })
-    .help()
-    .alias('help', 'h')
-    .argv;
-
-  if (argv.date) {
-    process.env['SCRAPE_DATE'] = argv.date;
-  }
+  console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
 
   let locations = await scrape();
 
@@ -216,16 +189,22 @@ async function writeData({ locations, featureCollection }) {
 
   await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
 
-  let csvString = await generateCSV(locations);
-
-  await fs.writeFile(path.join('dist', `data${date}.csv`), csvString);
+  await fs.writeCSV(path.join('dist', `data${date}.csv`), generateCSV(locations));
 
   await fs.writeJSON(path.join('dist', `features${date}.json`), featureCollection);
 
   return { locations, featureCollection };
 }
 
-scrapeData()
-  .then(findFeatures)
-  .then(findPopulations)
-  .then(writeData);
+async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true }) {
+  if (date) {
+    process.env['SCRAPE_DATE'] = date;
+  }
+
+  return scrapeData()
+    .then(options.findFeatures && findFeatures)
+    .then(options.findPopulations && findPopulations)
+    .then(options.writeData && writeData);
+}
+
+export default generate;
