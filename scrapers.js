@@ -208,7 +208,7 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
-        let county = $tr.find('td:nth-child(2)').text();
+        let county = $tr.find('td:nth-child(2)').text() + ' County';
         counties[county] = counties[county] || { cases: 0 };
         counties[county].cases += 1;
       });
