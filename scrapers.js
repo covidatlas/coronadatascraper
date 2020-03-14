@@ -1,5 +1,6 @@
 import load from './lib/load.js';
 import * as parse from './lib/parse.js';
+import * as transform from './lib/transform.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -13,6 +14,35 @@ import * as parse from './lib/parse.js';
 */
 
 let scrapers = [
+  {
+    state: 'MS',
+    country: 'USA',
+    url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let $table = $('h3:contains("Mississippi Cases")').nextAll('table').first();
+
+      // Ignore the last row "Out of town"
+      let $trs = $table.find('tbody > tr');
+
+      let counties = {};
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let status = $tr.find('td:nth-child(3)').text();
+        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
+
+        // Make sure this matches once they have a confirmed case
+        if (status === 'Confirmed') {
+          counties[county] = counties[county] || { cases: 0 };
+          counties[county].cases++;
+        }
+      });
+
+      return transform.objectToArray(counties);
+    }
+  },
   {
     state: 'DC',
     country: 'USA',
@@ -192,12 +222,11 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html',
     scraper: async function() {
-      let counties = {};
       let $ = await load(this.url);
 
       let $td = $('*:contains("County breakdown")').closest('tr').find('td:last-child');
 
-      let countyArray = $td.html().split('<br>').map((str) => {
+      let counties = $td.html().split('<br>').map((str) => {
         let parts = str.split(': ');
         return {
           county: parts[0] + ' County',
@@ -205,7 +234,7 @@ let scrapers = [
         }
       });
 
-      return countyArray;
+      return counties;
     }
   },
   {
@@ -230,14 +259,7 @@ let scrapers = [
         counties[county].cases += 1;
       });
 
-      let countyArray = [];
-      for (let [county, data] of Object.entries(counties)) {
-        countyArray.push(Object.assign({
-          county: county
-        }, data));
-      }
-
-      return countyArray;
+      return transform.objectToArray(counties);
     }
   },
   {
