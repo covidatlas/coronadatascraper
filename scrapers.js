@@ -1091,7 +1091,6 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
       let $table = $('th:contains("Case Count")').closest('table');
-      console.log($table);
 
       let $trs = $table.find('tbody > tr');
 
@@ -1103,6 +1102,27 @@ let scrapers = [
         counties.push({
           county: parse.string($tr.find('td:first-child').text()) + ' County',
           cases: parse.number($tr.find('td:last-child').text())
+        });
+      });
+      return counties;
+    }
+  },
+  {
+    state: 'OH',
+    country: 'USA',
+    url: 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.page(this.url);
+      let $paragraph = $('p:contains("Number of counties with cases:")').text();
+      let regExp = /\(([^)]+)\)/;
+      let parsed = regExp.exec($paragraph);
+      let arrayOfCounties = parsed[1].split(',');
+      arrayOfCounties.map(county => {
+        let splitCounty = county.trim().split(' ');
+        counties.push({
+          county: splitCounty[0] + ' County',
+          cases: splitCounty[1]
         });
       });
       return counties;
