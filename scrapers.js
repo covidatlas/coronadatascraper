@@ -1137,7 +1137,7 @@ let scrapers = [
       $lis.each((index, li) => {
         let matches = $(li).text().match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          let county = parse.string(matches[1]);
+          let county = parse.string(matches[1]) + ' County';
           let cases = parse.number(matches[2]);
           counties.push({
             county,
