@@ -1186,8 +1186,8 @@ let scrapers = [
       arrayOfCounties.map(county => {
         let splitCounty = county.trim().split(' ');
         counties.push({
-          county: splitCounty[0] + ' County',
-          cases: splitCounty[1]
+          county: parse.string(splitCounty[0]) + ' County',
+          cases: parse.number(splitCounty[1])
         });
       });
       return counties;
