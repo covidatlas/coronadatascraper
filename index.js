@@ -8,7 +8,16 @@ import csvStringify from 'csv-stringify';
 */
 function addLocationToData(data, location) {
   Object.assign(data, location);
+
+  for (let prop in data) {
+    // Remove "private" fields
+    if (prop[0] === '_') {
+      delete data[prop];
+    }
+  }
+
   delete data.scraper;
+
   return data;
 }
 

@@ -20,6 +20,29 @@ import * as transform from './lib/transform.js';
 
 let scrapers = [
   {
+    country: 'ITA',
+    url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+
+      // Find the most recent date
+      let latestDate = data[data.length - 1].data;
+
+      // Get only records for that date
+      return data.filter((row) => {
+        return row.data === latestDate;
+      })
+      .map((row) => {
+        return {
+          recovered: row.dimessi_guariti,
+          deaths: row.deceduti,
+          cases: row.totale_casi,
+          county: row.denominazione_regione
+        };
+      });
+    }
+  },
+  {
     state: 'MS',
     country: 'USA',
     url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
