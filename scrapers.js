@@ -432,8 +432,6 @@ let scrapers = [
         });
       });
 
-      console.log(counties);
-
       return counties;
     }
   },
