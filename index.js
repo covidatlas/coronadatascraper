@@ -142,7 +142,25 @@ async function start() {
 
   await fs.writeFile(path.join('dist', 'data.csv'), csvString);
 
-  console.log('✅ Data scraped for %d counties', cases.length);
+  let states = 0;
+  let counties = 0;
+  let countries = 0;
+  for (let location of cases) {
+    if (!location.state && !location.county) {
+      countries++;
+    }
+    else if (!location.county) {
+      states++;
+    }
+    else {
+      counties++;
+    }
+  }
+
+  console.log('✅ Data scraped!');
+  console.log('   - %d countries', countries);
+  console.log('   - %d states', states);
+  console.log('   - %d counties', counties);
 };
 
 start();
