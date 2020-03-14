@@ -275,7 +275,7 @@ let scrapers = [
             recovered: parse.number(row.dimessi_guariti),
             deaths: parse.number(row.deceduti),
             cases: parse.number(row.totale_casi),
-            county: parse.string(row.denominazione_regione)
+            state: parse.string(row.denominazione_regione)
           };
         });
     }
