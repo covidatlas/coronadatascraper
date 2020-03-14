@@ -103,7 +103,7 @@ let scrapers = [
         let matches = $(li).text().match(/(.*?): (\d+)/);
         if (matches) {
           counties.push({
-            county: parse.string(matches[1]) + ' County',
+            county: parse.string(matches[1]),
             cases: parse.number(matches[2])
           });
         }
