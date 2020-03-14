@@ -20,6 +20,41 @@ import * as transform from './lib/transform.js';
 
 let scrapers = [
   {
+    country: 'USA',
+    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-cases-us.json',
+    _getCaseNumber: function(string) {
+      if (typeof string === 'string') {
+        let matches;
+        if (string === 'None') {
+          return 0;
+        }
+        if (matches = string.match(/(\d+) of (\d+)/)) {
+          // Return the high number
+          return parse.number(matches[2]);
+        }
+        else {
+          return parse.number(string);
+        }
+      }
+      return string;
+    },
+    scraper: async function() {
+      let data = await fetch.json(this.url);
+
+      let states = [];
+      for (let stateData of data.data) {
+        if (stateData.Name) {
+          states.push({
+            state: parse.string(stateData.Name),
+            cases: this._getCaseNumber(stateData['Cases Reported'])
+          });
+        }
+      }
+
+      return states;
+    }
+  },
+  {
     country: 'CHE',
     county: 'Zurich',
     url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
