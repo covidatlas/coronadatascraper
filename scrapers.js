@@ -953,6 +953,29 @@ let scrapers = [
             return counties
         }
     },
+    {
+        state: 'PA',
+        country: 'USA',
+        url: 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx',
+        scraper: async function () {
+            let counties = [];
+            let $ = await fetch.page(this.url);
+            let $lis = $('li:contains("Counties impacted to date include")').nextAll('ul').first().find('li');
+            $lis.each((index, li) => {
+                let matches = $(li).text().match(/[A-Za-z]* (\(\d+\))/);
+                if (matches.length === 2) {
+                    let cases = matches[1];
+                    let county = matches[0].replace(cases, "County");
+                    cases = parse.number(cases.replace(/[{()}]/g, ''));
+                    counties.push({
+                        county,
+                        cases,
+                    });
+                }
+            });
+            return counties
+        }
+    },
 ];
 
 export default scrapers;
