@@ -42,19 +42,32 @@ function isValid(data, location) {
 }
 
 /*
+  Clean the passed data
+*/
+function clean(data) {
+  for (let [prop, value] of Object.entries(data)) {
+    if (value === '') {
+      delete data[prop];
+    }
+  }
+
+  return data;
+}
+
+/*
   Add output data to the cases array. Input can be either an object or an array
 */
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     for (let data of result) {
       if (isValid(data, location)) {
-        cases.push(addLocationToData(data, location));
+        cases.push(clean(addLocationToData(data, location)));
       }
     }
   }
   else {
     if (isValid(result, location)) {
-      cases.push(addLocationToData(result, location));
+      cases.push(clean(addLocationToData(result, location)));
     }
   }
 }
