@@ -1080,7 +1080,6 @@ let scrapers = [
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
-      console.log(`here's South Dakota ${counties} `);
       return counties;
     }
   }
