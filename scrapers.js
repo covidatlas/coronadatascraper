@@ -1100,8 +1100,6 @@ let scrapers = [
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
-<<<<<<< HEAD
-=======
       return counties;
     }
   },
@@ -1113,6 +1111,7 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
       let $table = $('th:contains("Case Count")').closest('table');
+      console.log($table);
 
       let $trs = $table.find('tbody > tr');
 
@@ -1126,7 +1125,6 @@ let scrapers = [
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
->>>>>>> Added TN
       return counties;
     }
   },
