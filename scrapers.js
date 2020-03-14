@@ -10,7 +10,7 @@ import * as rules from './lib/rules.js';
     city: String†,
     county: String†,   // County or region name, complete with "County" or "Parish" at the end
     country: String†,  // ISO 3166-1 alpha-3 country code
-    cases: Integer,    // Confirmed (not presumptive) cases
+    cases: Integer,    // Confirmed cases (including presumptive)
     deaths: Integer,
     recovered: Integer,
     tested: Integer
@@ -894,8 +894,9 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
+      let cases = parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()) + parse.number($('td:contains("Presumptive Positive")').next('td').text());
       return {
-        cases: parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()),
+        cases: cases,
         tested: parse.number($('td:contains("Total Tested")').next('td').text())
       };
     }
@@ -906,13 +907,12 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.ventura.org/covid19/',
     // Needs JavaScript to populate counts
-    _scraper: async function() {
+    scraper: async function() {
       let $ = await fetch.page(this.url);
 
       let cases = 0;
       cases += parse.number($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').find('.count-number').text());
-
-      console.log($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').html());
+      cases += parse.number($('.count-subject:contains("Presumptive Positive")').closest('.hb-counter').find('.count-number').text());
 
       return {
         cases: cases,
