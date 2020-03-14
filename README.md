@@ -141,9 +141,9 @@ No news articles, no aggregated sources.
 
 Additional data is welcome.
 
-#### 3. Presumptive cases are not considered confirmed
+#### 3. Presumptive cases are considered confirmed
 
-As of now, presumptive cases should not be considered.
+In keeping with other datasets, presumptive cases should be considered part of the case total.
 
 ## License
 

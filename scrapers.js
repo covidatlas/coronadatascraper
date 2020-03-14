@@ -10,7 +10,7 @@ import * as rules from "./lib/rules.js";
     city: String†,
     county: String†,   // County or region name, complete with "County" or "Parish" at the end
     country: String†,  // ISO 3166-1 alpha-3 country code
-    cases: Integer,    // Confirmed (not presumptive) cases
+    cases: Integer,    // Confirmed cases (including presumptive)
     deaths: Integer,
     recovered: Integer,
     tested: Integer
@@ -460,7 +460,7 @@ let scrapers = [
     country: "USA",
     url: "https://idph.iowa.gov/emerging-health-issues/novel-coronavirus",
     // Incapsula blocking request
-    _scraper: async function() {
+    scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
 
@@ -472,11 +472,10 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr
-          .find("td:first-child")
-          .text()
-          .replace(/[\d]*/g, "");
-        let cases = parse.number($tr.find("td:last-child").text());
+
+        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '') + ' County';
+        let cases = parse.number($tr.find('td:last-child').text());
+
         counties.push({
           county: county,
           cases: cases
@@ -681,20 +680,17 @@ let scrapers = [
     state: "CA",
     country: "USA",
     // Error "Please enable JavaScript to view the page content."
-    url: "http://www.acphd.org/2019-ncov.aspx",
-    _scraper: async function() {
+
+    url: 'http://www.acphd.org/2019-ncov.aspx',
+    scraper: async function() {
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $table = $(".contacts_table");
-
-      {
-        let $p = $table.find('*:contains("Positive Cases:")');
-        console.log($p.html());
-      }
+      let $table = $('.sccgov-responsive-table');
 
       return {
-        cases: cases
+        deaths: parse.number($table.find('div:contains("Deaths")').parent().children().last().text()),
+        cases: parse.number($table.find('div:contains("Total Confirmed Cases")').parent().children().last().text())
       };
     }
   },
@@ -1005,17 +1001,11 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
+      let cases = parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()) + parse.number($('td:contains("Presumptive Positive")').next('td').text());
       return {
-        cases: parse.number(
-          $('td:contains("Positive (confirmed cases)")')
-            .next("td")
-            .text()
-        ),
-        tested: parse.number(
-          $('td:contains("Total Tested")')
-            .next("td")
-            .text()
-        )
+
+        cases: cases,
+        tested: parse.number($('td:contains("Total Tested")').next('td').text())
       };
     }
   },
@@ -1025,22 +1015,14 @@ let scrapers = [
     country: "USA",
     url: "https://www.ventura.org/covid19/",
     // Needs JavaScript to populate counts
-    _scraper: async function() {
+    scraper: async function() {
       let $ = await fetch.page(this.url);
 
       let cases = 0;
-      cases += parse.number(
-        $('.count-subject:contains("Positive travel-related case")')
-          .closest(".hb-counter")
-          .find(".count-number")
-          .text()
-      );
 
-      console.log(
-        $('.count-subject:contains("Positive travel-related case")')
-          .closest(".hb-counter")
-          .html()
-      );
+      cases += parse.number($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').find('.count-number').text());
+      cases += parse.number($('.count-subject:contains("Presumptive Positive")').closest('.hb-counter').find('.count-number').text());
+
 
       return {
         cases: cases,
