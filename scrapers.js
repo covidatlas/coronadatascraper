@@ -14,6 +14,30 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'CO',
+    country: 'USA',
+    url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $lis = $('p:contains("Presumptive positive cases by county of residence")').nextAll('ul').first().find('li');
+
+      $lis.each((index, li) => {
+        // This does not match "Out of state visitors"
+        let matches = $(li).text().match(/(.*?): (\d+)/);
+        if (matches) {
+          counties.push({
+            county: parse.string(matches[1]),
+            cases: parse.number(matches[2])
+          });
+        }
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'OR',
     country: 'USA',
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
