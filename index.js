@@ -57,10 +57,23 @@ async function scrape() {
   return cases;
 }
 
+
 function generateCSV(data) {
   return new Promise((resolve, reject) => {
+    // Start with the columns we want first
+    let columns = [
+      'city',
+      'county',
+      'state',
+      'country',
+      'cases',
+      'deaths',
+      'recovered',
+      'tested',
+      'url'
+    ];
+
     // Get list of columns
-    let columns = [];
     for (let location of data) {
       for (let column in location) {
         if (columns.indexOf(column) === -1) {
