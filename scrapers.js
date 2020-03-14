@@ -206,7 +206,6 @@ let scrapers = [
           // Return the high number
           return parse.number(matches[2]);
         }
-        //prettier fix
         else {
           return parse.number(string);
         }
@@ -234,9 +233,17 @@ let scrapers = [
     county: 'Zurich',
     url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      let latestData = data[data.length - 1];
+      let latestData;
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        let date = transform.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
+        latestData = data.filter(dayData => dayData.Date === date)[0];
+      }
+      else {
+        latestData = data[data.length - 1];
+      }
 
       return {
         recovered: parse.number(latestData.TotalCured),
@@ -250,15 +257,18 @@ let scrapers = [
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      // Find the most recent date
-      let latestDate = data[data.length - 1].data;
+      let latestDate = data[data.length - 1].data.substr(0, 10);
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
+      }
 
       // Get only records for that date
       return data
         .filter(row => {
-          return row.data === latestDate;
+          return row.data.substr(0, 10) === latestDate;
         })
         .map(row => {
           return {
@@ -427,11 +437,19 @@ let scrapers = [
       let $trs = $table.find('tbody > tr:not(:last-child)');
 
       $trs.each((index, tr) => {
-        if (index < 2) {
+        // First 3 rows are test data
+        if (index < 3) {
           return;
         }
         let $tr = $(tr);
         let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
+
+        // Skip bunk data
+        let $tds = $tr.find('td');
+        if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
+          return;
+        }
+
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -544,7 +562,7 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
-        let county = $tr.find('td:nth-child(2)').text() + ' County';
+        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
         counties[county] = counties[county] || { cases: 0 };
         counties[county].cases += 1;
       });
@@ -566,7 +584,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr.find('td:first-child').text();
+        let county = parse.string($tr.find('td:first-child').text()).replace(':', '');
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -988,17 +1006,19 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
-      let cases =
-        parse.number(
-          $('td:contains("Positive (confirmed cases)")')
-            .next('td')
-            .text()
-        ) +
-        parse.number(
-          $('td:contains("Presumptive Positive")')
-            .next('td')
-            .text()
-        );
+      let cases = 0;
+      $('td:contains("Positive (confirmed cases)")')
+        .nextAll('td')
+        .each((index, td) => {
+          cases += parse.number($(td).text());
+        });
+
+      $('td:contains("Presumptive Positive")')
+        .nextAll('td')
+        .each((index, td) => {
+          cases += parse.number($(td).text());
+        });
+
       return {
         cases: cases,
         tested: parse.number(
