@@ -1,5 +1,5 @@
 {
-  "name": "corona-scraper",
+  "name": "coronadatascraper",
   "version": "1.0.0",
   "description": "A scraper for Cornavirus data",
   "main": "index.js",
