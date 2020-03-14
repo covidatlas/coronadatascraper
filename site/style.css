@@ -1,0 +1,148 @@
+:root {
+  --gt-background-color: #212121;
+  --gt-body-color: #515151;
+  --gt-heading-color: rgba(210, 210, 210, 1);
+
+  --gt-component-background-color: rgb(60, 60, 60);
+  --gt-component-background-color-hover: rgb(75, 75, 75);
+  --gt-component-background-color-selected: rgb(49, 80, 125);
+  --gt-component-background-color-focus: var(--gt-component-background-color-hover);
+  --gt-component-text-color: rgba(200, 200, 200, 0.85);
+
+  --gt-dialog-background-color: rgb(40, 40, 40);
+
+  --gt-component-height: 38px;
+  --gt-component-margin: 8px;
+  --gt-component-padding-x: 14px;
+  --gt-component-padding-y: 10px;
+  --gt-component-font-size: 16px;
+  --gt-component-border-radius: 4px;
+
+  --gt-component-focus-color: rgb(38, 128, 235);
+  --gt-component-focus-width: 3px;
+  --gt-component-focus-blur: 1px;
+
+  --gt-component-shadow-color: rgba(20, 20, 20, 0.25);
+  --gt-component-shadow-width: 2px;
+  --gt-component-shadow-blur: 4px;
+
+  --gt-body-padding: 20px;
+
+  --gt-layer-padding: 6px;
+
+  --gt-slider-thumb-height: 24px;
+  --gt-slider-thumb-width: var(--gt-slider-thumb-height);
+  --gt-slider-thumb-border-radius: 100%;
+  --gt-slider-track-height: 12px;
+  --gt-slider-thumb-outline-color: rgb(40, 40, 40);
+  --gt-slider-thumb-outline-width: 1px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+
+  background: var(--gt-background-color);
+  color: var(--gt-component-text-color);
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.gt_page {
+  background-color: var(--gt-body-color);
+  max-width: 640px;
+  margin: 120px auto;
+  border-radius: var(--gt-component-border-radius);
+}
+
+.gt_output,
+.gt_footer,
+.gt_button {
+  display: inline-block; /* Stack horizontally like text */
+  position: relative; /* Position the :before pseudo-element relative to us */
+  vertical-align: top; /* Line up correctly with buttons */
+
+  height: var(--gt-component-height);
+  margin: var(--gt-component-margin);
+  padding: var(--gt-component-padding-y) var(--gt-component-padding-x);
+
+  border: none;
+  border-radius: var(--gt-component-border-radius);
+  background-color: var(--gt-component-background-color);
+
+  box-shadow: 0 0 var(--gt-component-shadow-blur) var(--gt-component-shadow-width) var(--gt-component-shadow-color);
+
+  font-family: Helvetica, sans-serif;
+  font-size: var(--gt-component-font-size);
+  text-align: center;
+  color: var(--gt-component-text-color);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0 ,0.25);
+}
+
+.gt_body {
+  padding: var(--gt-body-padding);
+}
+
+.gt_button-label {
+  margin-left: calc(var(--gt-component-padding-x) / 2);
+}
+
+.gt_button.is-highlighted,
+.gt_button:hover {
+    background-color: var(--gt-component-background-color-hover);
+  }
+}
+
+.gt_button:focus {
+  outline: none;
+  background-color: var(--gt-component-background-color-focus);
+  box-shadow: 0 0 var(--gt-component-focus-blur) var(--gt-component-focus-width) var(--gt-component-focus-color);
+}
+
+.gt_link,
+.gt_link:visited {
+  color: var(--gt-component-text-color);
+}
+
+.gt_output {
+  height: auto;
+  min-height: var(--gt-component-height);
+}
+
+.gt_heading {
+  color: var(--gt-heading-color);
+}
+.gt_heading:first-child {
+  margin-top: 0;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.gt_footer {
+  margin: 0;
+  border-radius: 0 0 var(--gt-component-border-radius) var(--gt-component-border-radius);
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gt_ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
