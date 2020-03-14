@@ -922,6 +922,25 @@ let scrapers = [
       };
     }
   },
+    {
+        state: 'WI',
+        country: 'USA',
+        url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
+        scraper: async function() {
+            let $ = await fetch.page(this.url);
+            let counties = [];
+            let $table = $('caption:contains("Number of Positive Results by County")').closest('table');
+            let $trs = $table.find('tbody > tr:not(:last-child)');
+            $trs.each((index, tr) => {
+                let $tr = $(tr);
+                counties.push({
+                    county: parse.string($tr.find('td:first-child').text()) + ' County',
+                    cases: parse.number($tr.find('td:last-child').text())
+                });
+            });
+            return counties
+        }
+    },
 ];
 
 export default scrapers;
