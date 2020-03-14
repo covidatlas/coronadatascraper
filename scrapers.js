@@ -14,6 +14,33 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'AL',
+    country: 'USA',
+    url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
+    scraper: async function() {
+      let counties = [];
+      let $ = await load(this.url);
+
+      let $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
+
+      let $trs = $table.find('tbody > tr');
+
+      $trs.each((index, tr) => {
+        if (index < 2) {
+          return;
+        }
+        let $tr = $(tr);
+        counties.push({
+          county: parse.string($tr.find('td:first-child').text()),
+          cases: parse.number($tr.find('td:nth-last-child(2)').text()),
+          deaths: parse.number($tr.find('td:last-child').text())
+        });
+      });
+
+      return counties;
+    }
+  },
+  {
     state: 'CO',
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
