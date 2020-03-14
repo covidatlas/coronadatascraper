@@ -255,14 +255,18 @@ let scrapers = [
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      // Find the most recent date
-      let latestDate = data[data.length - 1].data;
+      let latestDate = data[data.length - 1].data.substr(0, 10);
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
+        console.log(latestDate);
+      }
 
       // Get only records for that date
       return data.filter((row) => {
-        return row.data === latestDate;
+        return row.data.substr(0, 10) === latestDate;
       })
       .map((row) => {
         return {
