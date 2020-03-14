@@ -1,3 +1,6 @@
 [submodule "coronavirus-data-sources"]
 	path = coronavirus-data-sources
 	url = https://github.com/lazd/coronavirus-data-sources.git
+[submodule "coronadatascraper-cache"]
+	path = coronadatascraper-cache
+	url = git@github.com:lazd/coronadatascraper-cache.git

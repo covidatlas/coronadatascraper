@@ -1,5 +1,6 @@
 import path from 'path';
 import csvStringify from 'csv-stringify';
+import yargs from 'yargs';
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 
@@ -163,6 +164,21 @@ function generateCSV(data) {
 */
 async function scrapeData() {
   console.log('⏳ Scraping data...');
+
+
+  const argv = yargs
+    .option('date', {
+      alias: 'd',
+      description: 'Generate data for the provided date in YYYY-M-D format',
+      type: 'string',
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
+
+  if (argv.date) {
+    process.env['SCRAPE_DATE'] = argv.date;
+  }
 
   let locations = await scrape();
 
