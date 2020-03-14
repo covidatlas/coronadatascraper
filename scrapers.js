@@ -10,7 +10,7 @@ import * as rules from './lib/rules.js';
     city: String†,
     county: String†,   // County or region name, complete with "County" or "Parish" at the end
     country: String†,  // ISO 3166-1 alpha-3 country code
-    cases: Integer,    // Confirmed (not presumptive) cases
+    cases: Integer,    // Confirmed cases (including presumptive)
     deaths: Integer,
     recovered: Integer,
     tested: Integer
@@ -163,12 +163,18 @@ let scrapers = [
       }
     ],
     scraper: async function() {
-      let cases = await fetch.csv(this._urls.cases);
-      let deaths = await fetch.csv(this._urls.deaths);
-      let recovered = await fetch.csv(this._urls.recovered);
+      let cases = await fetch.csv(this._urls.cases, false);
+      let deaths = await fetch.csv(this._urls.deaths, false);
+      let recovered = await fetch.csv(this._urls.recovered, false);
 
       let countries = [];
       let latestDate = Object.keys(cases[0]).pop();
+
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        latestDate = transform.getMDYY(new Date(process.env['SCRAPE_DATE']));
+      }
+
       for (let index = 0; index < cases.length; index++) {
         if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           countries.push({
@@ -187,7 +193,7 @@ let scrapers = [
   },
   {
     country: 'USA',
-    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-cases-us.json',
+    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-data-cases.csv',
     _getCaseNumber: function(string) {
       if (typeof string === 'string') {
         let matches;
@@ -205,10 +211,10 @@ let scrapers = [
       return string;
     },
     scraper: async function() {
-      let data = await fetch.json(this.url);
+      let data = await fetch.csv(this.url);
 
       let states = [];
-      for (let stateData of data.data) {
+      for (let stateData of data) {
         if (stateData.Name) {
           states.push({
             state: parse.string(stateData.Name),
@@ -415,7 +421,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
     // Incapsula blocking request
-    _scraper: async function() {
+    scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
 
@@ -425,7 +431,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '');
+        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '') + ' County';
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -622,19 +628,15 @@ let scrapers = [
     country: 'USA',
     // Error "Please enable JavaScript to view the page content."
     url: 'http://www.acphd.org/2019-ncov.aspx',
-    _scraper: async function() {
+    scraper: async function() {
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $table = $('.contacts_table');
-
-      {
-        let $p = $table.find('*:contains("Positive Cases:")');
-        console.log($p.html());
-      }
+      let $table = $('.sccgov-responsive-table');
 
       return {
-        cases: cases
+        deaths: parse.number($table.find('div:contains("Deaths")').parent().children().last().text()),
+        cases: parse.number($table.find('div:contains("Total Confirmed Cases")').parent().children().last().text())
       };
     }
   },
@@ -894,8 +896,9 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
+      let cases = parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()) + parse.number($('td:contains("Presumptive Positive")').next('td').text());
       return {
-        cases: parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()),
+        cases: cases,
         tested: parse.number($('td:contains("Total Tested")').next('td').text())
       };
     }
@@ -906,13 +909,12 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.ventura.org/covid19/',
     // Needs JavaScript to populate counts
-    _scraper: async function() {
+    scraper: async function() {
       let $ = await fetch.page(this.url);
 
       let cases = 0;
       cases += parse.number($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').find('.count-number').text());
-
-      console.log($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').html());
+      cases += parse.number($('.count-subject:contains("Presumptive Positive")').closest('.hb-counter').find('.count-number').text());
 
       return {
         cases: cases,
@@ -920,6 +922,25 @@ let scrapers = [
       };
     }
   },
+    {
+        state: 'WI',
+        country: 'USA',
+        url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
+        scraper: async function() {
+            let $ = await fetch.page(this.url);
+            let counties = [];
+            let $table = $('caption:contains("Number of Positive Results by County")').closest('table');
+            let $trs = $table.find('tbody > tr:not(:last-child)');
+            $trs.each((index, tr) => {
+                let $tr = $(tr);
+                counties.push({
+                    county: parse.string($tr.find('td:first-child').text()) + ' County',
+                    cases: parse.number($tr.find('td:last-child').text())
+                });
+            });
+            return counties
+        }
+    },
 ];
 
 export default scrapers;

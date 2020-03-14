@@ -1,5 +1,6 @@
 import path from 'path';
 import csvStringify from 'csv-stringify';
+import yargs from 'yargs';
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 
@@ -164,6 +165,21 @@ function generateCSV(data) {
 async function scrapeData() {
   console.log('⏳ Scraping data...');
 
+
+  const argv = yargs
+    .option('date', {
+      alias: 'd',
+      description: 'Generate data for the provided date in YYYY-M-D format',
+      type: 'string',
+    })
+    .help()
+    .alias('help', 'h')
+    .argv;
+
+  if (argv.date) {
+    process.env['SCRAPE_DATE'] = argv.date;
+  }
+
   let locations = await scrape();
 
   let states = 0;
@@ -190,13 +206,15 @@ async function scrapeData() {
 };
 
 async function writeData({ locations, featureCollection }) {
-  await fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(locations, null, 2));
+  let date = process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] + '-' : '';
+
+  await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
 
   let csvString = await generateCSV(locations);
 
-  await fs.writeFile(path.join('dist', 'data.csv'), csvString);
+  await fs.writeFile(path.join('dist', `data${date}.csv`), csvString);
 
-  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
+  await fs.writeJSON(path.join('dist', `features${date}.json`), featureCollection);
 
   return { locations, featureCollection };
 }
