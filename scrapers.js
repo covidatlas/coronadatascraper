@@ -29,11 +29,10 @@ let scrapers = [
       let latestData = data[data.length - 1];
 
       return {
-        recovered: latestData.TotalCured,
-        deaths: latestData.TotalDeaths,
-        cases: latestData.TotalConfCases,
-        tested: latestData.TotalTestedCases,
-        county: latestData.denominazione_regione
+        recovered: parse.number(latestData.TotalCured),
+        deaths: parse.number(latestData.TotalDeaths),
+        cases: parse.number(latestData.TotalConfCases),
+        tested: parse.number(latestData.TotalTestedCases)
       };
     }
   },
@@ -52,10 +51,10 @@ let scrapers = [
       })
       .map((row) => {
         return {
-          recovered: row.dimessi_guariti,
-          deaths: row.deceduti,
-          cases: row.totale_casi,
-          county: row.denominazione_regione
+          recovered: parse.number(row.dimessi_guariti),
+          deaths: parse.number(row.deceduti),
+          cases: parse.number(row.totale_casi),
+          county: parse.string(row.denominazione_regione)
         };
       });
     }
