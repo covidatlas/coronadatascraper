@@ -7,9 +7,9 @@ import * as transform from './lib/transform.js';
 
   {
     city: String†,
-    county: String†,
-    county: String†,
-    cases: Integer,
+    county: String†,   // County or region name, complete with "County" or "Parish" at the end
+    country: String†,  // ISO 3166-1 alpha-3 country code
+    cases: Integer,    // Confirmed (not presumptive) cases
     deaths: Integer,
     recovered: Integer,
     tested: Integer
