@@ -1,4 +1,4 @@
-import load from './lib/load.js';
+import * as fetch from './lib/fetch.js';
 import * as parse from './lib/parse.js';
 import * as transform from './lib/transform.js';
 
@@ -19,7 +19,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('h3:contains("Mississippi Cases")').nextAll('table').first();
 
@@ -48,7 +48,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://coronavirus.dc.gov/page/coronavirus-data',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let cases = 0;
       cases += parse.number($('p:contains("Number of PHL positives")').first().text().split(': ')[1]);
@@ -66,7 +66,7 @@ let scrapers = [
     url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
 
@@ -94,7 +94,7 @@ let scrapers = [
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $lis = $('p:contains("Presumptive positive cases by county of residence")').nextAll('ul').first().find('li');
 
@@ -118,7 +118,7 @@ let scrapers = [
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('table[summary="Cases by County in Oregon for COVID-19"]');
 
@@ -143,7 +143,7 @@ let scrapers = [
     url: 'http://ldh.la.gov/Coronavirus/',
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('p:contains("Louisiana Cases")').nextAll('table');
 
@@ -172,7 +172,7 @@ let scrapers = [
     // Incapsula blocking request
     _scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
 
@@ -198,7 +198,7 @@ let scrapers = [
     // Error: unable to verify the first certificate
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('table[summary="Texas COVID-19 Cases"]');
 
@@ -222,7 +222,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $td = $('*:contains("County breakdown")').closest('tr').find('td:last-child');
 
@@ -243,7 +243,7 @@ let scrapers = [
     url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
     scraper: async function() {
       let counties = {};
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('*:contains("Diagnosed in Florida")').closest('table');
 
@@ -268,7 +268,7 @@ let scrapers = [
     url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('#case_count_table');
 
@@ -294,7 +294,7 @@ let scrapers = [
     // Error "Please enable JavaScript to view the page content."
     scraper: async function() {
       let counties = [];
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return counties;
     }
@@ -306,7 +306,7 @@ let scrapers = [
     url: 'https://www.sfdph.org/dph/alerts/coronavirus.asp',
     scraper: async function() {
       let deaths, cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $h2 = $('h2:contains("Cases in San Francisco")');
 
@@ -333,7 +333,7 @@ let scrapers = [
     url: 'https://www.smchealth.org/coronavirus',
     scraper: async function() {
       let deaths, cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $th = $('th:contains("COVID-19 Case Count")');
       let $table = $th.closest('table');
@@ -364,7 +364,7 @@ let scrapers = [
     url: 'http://www.acphd.org/2019-ncov.aspx',
     _scraper: async function() {
       let cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('.contacts_table');
 
@@ -385,7 +385,7 @@ let scrapers = [
     url: 'https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/',
     scraper: async function() {
       let cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $th = $('th:contains("Total in Sonoma County")');
       let $table = $th.closest('table');
@@ -406,7 +406,7 @@ let scrapers = [
     url: 'http://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx',
     scraper: async function() {
       let cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
 
@@ -425,7 +425,7 @@ let scrapers = [
     // Error: page needs JavaScript
     _scraper: async function() {
       let cases;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('.sccgov-responsive-table');
 
@@ -443,7 +443,7 @@ let scrapers = [
     country: 'USA',
     url: 'http://www.solanocounty.com/depts/ph/coronavirus.asp',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $el = $('*:contains("Number of Positive Cases")').first();
 
@@ -461,7 +461,7 @@ let scrapers = [
     url: 'https://www.coronavirus.cchealth.org/',
     scraper: async function() {
       let cases, deaths;
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       cases = parse.number($('h1:contains("TOTAL")').parent().next().text());
       deaths = parse.number($('h1:contains("DEATHS")').parent().prev().text());
@@ -478,7 +478,7 @@ let scrapers = [
     country: 'USA',
     url: 'http://www.schsa.org/PublicHealth/pages/corona-virus/',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return {
         cases: parse.number($('.counter').text())
@@ -491,7 +491,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       // this is brittle as all hell
       let $h3 = $('h3:contains("confirmed case")');
@@ -508,7 +508,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.saccounty.net/COVID-19/Pages/default.aspx',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('th:contains("Confirmed")').closest('table');
       let $tds = $table.find('tr:last-child > td');
@@ -524,7 +524,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.co.fresno.ca.us/departments/public-health/covid-19',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return {
         cases: parse.number($('li:contains("Total cases")').text()),
@@ -538,7 +538,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $el = $('*:contains("Confirmed cases")').first();
 
@@ -555,7 +555,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.placer.ca.gov/6448/Cases-in-Placer',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $table = $('p:contains("Confirmed COVID-19 Cases in Placer County")').nextAll('table').first();
       return {
@@ -570,7 +570,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $el = $('h3:contains("Positive cases:")').first();
 
@@ -587,7 +587,7 @@ let scrapers = [
     country: 'USA',
     url: 'http://www.publichealth.lacounty.gov/media/Coronavirus/',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return {
         cases: parse.number($('.counter').first().text()),
@@ -601,7 +601,7 @@ let scrapers = [
     country: 'USA',
     url: 'http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return {
         cases: parse.number($('td:contains("Confirmed Cases")').next().text()),
@@ -615,7 +615,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.rivcoph.org/coronavirus',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let $el = $('p:contains("Confirmed cases:")').first();
 
@@ -632,7 +632,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html',
     scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       return {
         cases: parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()),
@@ -647,7 +647,7 @@ let scrapers = [
     url: 'https://www.ventura.org/covid19/',
     // Needs JavaScript to populate counts
     _scraper: async function() {
-      let $ = await load(this.url);
+      let $ = await fetch.page(this.url);
 
       let cases = 0;
       cases += parse.number($('.count-subject:contains("Positive travel-related case")').closest('.hb-counter').find('.count-number').text());
