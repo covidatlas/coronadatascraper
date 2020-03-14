@@ -415,7 +415,7 @@ let scrapers = [
     country: 'USA',
     url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
     // Incapsula blocking request
-    _scraper: async function() {
+    scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
 
@@ -425,7 +425,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '');
+        let county = $tr.find('td:first-child').text().replace(/[\d]*/g, '') + ' County';
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
