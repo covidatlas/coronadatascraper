@@ -1113,7 +1113,6 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
       let $table = $('th:contains("Case Count")').closest('table');
-      console.log($table);
 
       let $trs = $table.find('tbody > tr');
 
