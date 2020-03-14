@@ -1,6 +1,10 @@
 # coronadatascraper
 > A scraper that pulls coronavirus case data from verified sources.
 
+## Where's the data?
+
+http://blog.lazd.net/coronadatascraper/
+
 ## Running the scraper
 
 Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
