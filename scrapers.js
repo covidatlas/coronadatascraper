@@ -52,10 +52,36 @@ let scrapers = [
     },
     _reject: [
       {
+        'Province/State': 'Diamond Princess'
+      },
+      {
+        'Province/State': 'Grand Princess'
+      },
+      {
         'Province/State': 'From Diamond Princess'
       }
     ],
     _accept: [
+      {
+        'Province/State': 'St Martin',
+        'Country/Region': 'France'
+      },
+      {
+        'Province/State': 'French Polynesia',
+        'Country/Region': 'France'
+      },
+      {
+        'Province/State': 'Channel Islands',
+        'Country/Region': 'United Kingdom'
+      },
+      {
+        'Province/State': 'Gibraltar',
+        'Country/Region': 'United Kingdom'
+      },
+      {
+        'Province/State': 'Saint Barthelemy',
+        'Country/Region': 'France'
+      },
       {
         'Province/State': ''
       },
