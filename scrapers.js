@@ -163,12 +163,18 @@ let scrapers = [
       }
     ],
     scraper: async function() {
-      let cases = await fetch.csv(this._urls.cases);
-      let deaths = await fetch.csv(this._urls.deaths);
-      let recovered = await fetch.csv(this._urls.recovered);
+      let cases = await fetch.csv(this._urls.cases, false);
+      let deaths = await fetch.csv(this._urls.deaths, false);
+      let recovered = await fetch.csv(this._urls.recovered, false);
 
       let countries = [];
       let latestDate = Object.keys(cases[0]).pop();
+
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        latestDate = transform.getMDYY(new Date(process.env['SCRAPE_DATE']));
+      }
+
       for (let index = 0; index < cases.length; index++) {
         if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           countries.push({

@@ -206,13 +206,15 @@ async function scrapeData() {
 };
 
 async function writeData({ locations, featureCollection }) {
-  await fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(locations, null, 2));
+  let date = process.env['SCRAPE_DATE'];
+
+  await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
 
   let csvString = await generateCSV(locations);
 
-  await fs.writeFile(path.join('dist', 'data.csv'), csvString);
+  await fs.writeFile(path.join('dist', `data${date}.csv`), csvString);
 
-  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
+  await fs.writeJSON(path.join('dist', `features${date}.json`), featureCollection);
 
   return { locations, featureCollection };
 }
