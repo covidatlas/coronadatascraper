@@ -212,6 +212,8 @@ async function scrapeData() {
 async function writeData({ locations, featureCollection }) {
   let date = process.env['SCRAPE_DATE'] ?  '-' + process.env['SCRAPE_DATE'] : '';
 
+  await fs.ensureDir('dist')
+
   await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
 
   let csvString = await generateCSV(locations);
