@@ -4,6 +4,7 @@ import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 
 import findFeatures from './tasks/findFeatures.js';
+import findPopulations from './tasks/findPopulations.js';
 
 /*
   Combine location information with the passed data object
@@ -202,4 +203,5 @@ async function writeData({ locations, featureCollection }) {
 
 scrapeData()
   .then(findFeatures)
+  .then(findPopulations)
   .then(writeData);
