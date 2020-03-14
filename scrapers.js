@@ -1100,6 +1100,34 @@ let scrapers = [
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
+<<<<<<< HEAD
+=======
+      return counties;
+    }
+  },
+  {
+    state: 'TN',
+    country: 'USA',
+    url: 'https://www.tn.gov/health/cedep/ncov.html',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.page(this.url);
+      let $table = $('th:contains("Case Count")').closest('table');
+      console.log($table);
+
+      let $trs = $table.find('tbody > tr');
+
+      $trs.each((index, tr) => {
+        if (index < 1) {
+          return;
+        }
+        let $tr = $(tr);
+        counties.push({
+          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          cases: parse.number($tr.find('td:last-child').text())
+        });
+      });
+>>>>>>> Added TN
       return counties;
     }
   },
