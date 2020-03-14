@@ -1,10 +1,50 @@
-# corona-scraper
+# coronadatascraper
+> A scraper that pulls coronavirus case data from verified sources.
 
-Scrape case data from goverment websites.
+## Running the scraper
 
-## Usage
+Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
 
 ```
 yarn install
 yarn start
 ```
+
+## Contributing
+
+Contributions for any place in the world are welcome. Write clean and clear code, and please ensure to follow the criteria below for sources.
+
+Send a pull request with your scraper, and be sure to run the scraper first with the instructions above to make sure the data is valid.
+
+It's a tough challenge to write scrapers that will work when websites are inevitably updated. Here are some tips:
+
+* Write your scraper so it handles aggregate data with a single scraper entry (i.e. find a table, process the table)
+* Try not to hardcode county or city names, instead let the data on the page populate that
+* Try to make your scraper less brittle by generated class names (i.e. CSS modules)
+* When targeting elements, don't assume order will be the same (i.e. if there are multiple `.count` elements, don't assume the second one is deaths, verify it by parsing the label)
+
+## Criteria for sources
+
+Any source added to the scraper must meet the following criteria:
+
+### 1. Sources must be government or health organizations
+
+No news articles, no aggregated sources.
+
+### 2. Sources must provide the number of cases at a bare minimum
+
+Additional data is welcome.
+
+### 3. Presumptive cases are not considered confirmed
+
+As of now, presumptive cases should not be considered.
+
+## License
+
+This project is licensed under the permissive [BSD 2-clause license](LICENSE).
+
+The data produced by this project is public domain.
+
+## Attribution
+
+Please cite this project if you use it in your visualization or reporting.
