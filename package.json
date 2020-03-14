@@ -19,6 +19,7 @@
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
     "csv": "^5.3.2",
+    "editorconfig": "^0.15.3",
     "gh-pages": "^2.2.0",
     "needle": "^2.3.3",
     "yargs": "^15.3.0"
