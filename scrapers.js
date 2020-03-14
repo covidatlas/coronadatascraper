@@ -622,19 +622,17 @@ let scrapers = [
     country: 'USA',
     // Error "Please enable JavaScript to view the page content."
     url: 'http://www.acphd.org/2019-ncov.aspx',
-    _scraper: async function() {
+    scraper: async function() {
       let cases;
       let $ = await fetch.page(this.url);
 
       let $table = $('.contacts_table');
 
-      {
-        let $p = $table.find('*:contains("Positive Cases:")');
-        console.log($p.html());
-      }
+      let $p = $table.find('p:contains("Positive Cases:")');
+      let matches = $p.text().match(/Positive Cases: (\d)/);
 
       return {
-        cases: cases
+        cases: parse.number(matches[1])
       };
     }
   },
