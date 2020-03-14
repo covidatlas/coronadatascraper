@@ -908,7 +908,16 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
-      let cases = parse.number($('td:contains("Positive (confirmed cases)")').next('td').text()) + parse.number($('td:contains("Presumptive Positive")').next('td').text());
+      let cases = 0;
+      $('td:contains("Positive (confirmed cases)")').nextAll('td').each((index, td) => {
+        console.log(td);
+        cases += parse.number($(td).text());
+      });
+
+      $('td:contains("Presumptive Positive")').nextAll('td').each((index, td) => {
+        cases += parse.number($(td).text());
+      });
+
       return {
         cases: cases,
         tested: parse.number($('td:contains("Total Tested")').next('td').text())
