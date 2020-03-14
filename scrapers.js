@@ -21,6 +21,26 @@ import * as rules from './lib/rules.js';
 
 let scrapers = [
   {
+    url: 'https://opendata.arcgis.com/datasets/969678bce431494a8f64d7faade6e5b8_0.csv',
+    country: 'USA',
+    state: 'NC',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+
+      let counties = [];
+      for (let county of data) {
+        counties.push({
+          county: parse.string(county.County) + ' County',
+          cases: parse.number(county.Total), // Includes presumptive
+          recovered: parse.number(county.Recovered),
+          deaths: parse.number(county.Deaths)
+        });
+      }
+
+      return counties;
+    }
+  },
+  {
     url: 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv',
     country: 'USA',
     state: 'NJ',
