@@ -21,6 +21,25 @@ import * as rules from './lib/rules.js';
 
 let scrapers = [
   {
+    url: 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv',
+    country: 'USA',
+    state: 'NJ',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+
+      let counties = [];
+      for (let county of data) {
+        counties.push({
+          county: parse.string(county.COUNTY_LAB),
+          cases: parse.number(county.Positives),
+          tested: parse.number(county.Negatives) + parse.number(county.Positives)
+        });
+      }
+
+      return counties;
+    }
+  },
+  {
     country: 'Canada',
     url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
     _reject: [
