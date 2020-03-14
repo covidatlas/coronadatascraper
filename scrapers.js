@@ -193,7 +193,7 @@ let scrapers = [
   },
   {
     country: 'USA',
-    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-cases-us.json',
+    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-data-cases.csv',
     _getCaseNumber: function(string) {
       if (typeof string === 'string') {
         let matches;
@@ -211,10 +211,10 @@ let scrapers = [
       return string;
     },
     scraper: async function() {
-      let data = await fetch.json(this.url);
+      let data = await fetch.csv(this.url);
 
       let states = [];
-      for (let stateData of data.data) {
+      for (let stateData of data) {
         if (stateData.Name) {
           states.push({
             state: parse.string(stateData.Name),
@@ -231,9 +231,17 @@ let scrapers = [
     county: 'Zurich',
     url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      let latestData = data[data.length - 1];
+      let latestData;
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        let date = transform.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
+        latestData = data.filter(dayData => dayData.Date === date)[0];
+      }
+      else {
+        latestData = data[data.length - 1];
+      }
 
       return {
         recovered: parse.number(latestData.TotalCured),
@@ -247,14 +255,18 @@ let scrapers = [
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      // Find the most recent date
-      let latestDate = data[data.length - 1].data;
+      let latestDate = data[data.length - 1].data.substr(0, 10);
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
+        console.log(latestDate);
+      }
 
       // Get only records for that date
       return data.filter((row) => {
-        return row.data === latestDate;
+        return row.data.substr(0, 10) === latestDate;
       })
       .map((row) => {
         return {
@@ -922,6 +934,25 @@ let scrapers = [
       };
     }
   },
+    {
+        state: 'WI',
+        country: 'USA',
+        url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
+        scraper: async function() {
+            let $ = await fetch.page(this.url);
+            let counties = [];
+            let $table = $('caption:contains("Number of Positive Results by County")').closest('table');
+            let $trs = $table.find('tbody > tr:not(:last-child)');
+            $trs.each((index, tr) => {
+                let $tr = $(tr);
+                counties.push({
+                    county: parse.string($tr.find('td:first-child').text()) + ' County',
+                    cases: parse.number($tr.find('td:last-child').text())
+                });
+            });
+            return counties
+        }
+    },
 ];
 
 export default scrapers;

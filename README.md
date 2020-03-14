@@ -14,6 +14,14 @@ yarn install
 yarn start
 ```
 
+### Re-generating old data
+
+To re-generate old data from cache (or timeseries), run:
+
+```
+yarn start --date=2020-3-12
+```
+
 ## Contributing
 
 Contributions for any place in the world are welcome. See the [community-curated list of verified data sources](https://docs.google.com/spreadsheets/d/1T2cSvWvUvurnOuNFj2AMPGLpuR2yVs3-jdd_urfWU4c/edit#gid=0) to find a new datasource to add, and be sure to update the "Scraped?" column when you do.
@@ -128,6 +136,10 @@ It's a tough challenge to write scrapers that will work when websites are inevit
 * Try not to hardcode county or city names, instead let the data on the page populate that
 * Try to make your scraper less brittle by generated class names (i.e. CSS modules)
 * When targeting elements, don't assume order will be the same (i.e. if there are multiple `.count` elements, don't assume the second one is deaths, verify it by parsing the label)
+
+#### Generating data retroactively
+
+If your datasource has timeseries data, you can include its data in retroactive regeneration (prior to this project's inception) by checking for `process.env['SCRAPE_DATE']`. This date is your target date; get it in whatever format you need, and only return results from your timeseries dataset from that date. See the JHU scraper for an example.
 
 ### Criteria for sources
 
