@@ -23,6 +23,14 @@ let scrapers = [
   {
     country: 'Canada',
     url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
+    _reject: [
+      {
+        state: 'Repatriated travellers'
+      },
+      {
+        state: 'Total cases'
+      }
+    ],
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
@@ -34,10 +42,13 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        regions.push({
+        let data = {
           state: parse.string($tr.find('td:first-child').text()),
           cases: parse.number($tr.find('td:nth-child(2)').text())
-        })
+        };
+        if (rules.isAcceptable(data, null, this._reject)) {
+          regions.push(data);
+        }
       });
 
       return regions;

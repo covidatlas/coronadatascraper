@@ -1,7 +1,9 @@
-import scrapers from './scrapers.js';
-import * as fs from './lib/fs.js';
 import path from 'path';
 import csvStringify from 'csv-stringify';
+import scrapers from './scrapers.js';
+import * as fs from './lib/fs.js';
+
+import findFeatures from './tasks/findFeatures.js';
 
 /*
   Combine location information with the passed data object
@@ -106,6 +108,8 @@ function generateCSV(data) {
       'deaths',
       'recovered',
       'tested',
+      'lat',
+      'long',
       'url'
     ];
 
@@ -118,6 +122,9 @@ function generateCSV(data) {
       }
     }
 
+    // Drop coordinates
+    columns = columns.filter(column => column != 'coordinates');
+
     // Turn data into arrays
     let csvData = [
       columns
@@ -125,7 +132,16 @@ function generateCSV(data) {
     for (let location of data) {
       let row = [];
       for (let column of columns) {
-        row.push(location[column]);
+        // Output lat and long instead
+        if (column === 'lat' && location.coordinates) {
+          row.push(location.coordinates[1]);
+        }
+        else if (column === 'long' && location.coordinates) {
+          row.push(location.coordinates[0]);
+        }
+        else {
+          row.push(location[column]);
+        }
       }
       csvData.push(row);
     }
@@ -144,7 +160,7 @@ function generateCSV(data) {
 /*
   Main
 */
-async function start() {
+async function scrapeData() {
   console.log('⏳ Scraping data...');
 
   let cases = await scrape();
@@ -174,7 +190,11 @@ async function start() {
   console.log('   - %d countries', countries);
   console.log('   - %d states', states);
   console.log('   - %d counties', counties);
+
+  return {
+    locations: cases
+  };
 };
 
-start();
-
+scrapeData()
+  .then(findFeatures);
