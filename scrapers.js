@@ -538,7 +538,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr.find('td:first-child').text();
+        let county = parse.string($tr.find('td:first-child').text()).replace(':', '');
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
