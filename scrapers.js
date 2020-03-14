@@ -231,9 +231,17 @@ let scrapers = [
     county: 'Zurich',
     url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
     scraper: async function() {
-      let data = await fetch.csv(this.url);
+      let data = await fetch.csv(this.url, false);
 
-      let latestData = data[data.length - 1];
+      let latestData;
+      if (process.env['SCRAPE_DATE']) {
+        // Find old date
+        let date = transform.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
+        latestData = data.filter(dayData => dayData.Date === date)[0];
+      }
+      else {
+        latestData = data[data.length - 1];
+      }
 
       return {
         recovered: parse.number(latestData.TotalCured),
