@@ -7,11 +7,45 @@ http://blog.lazd.net/coronadatascraper/
 
 ## Running the scraper
 
+First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
+
 Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
+
+#### 1. Clone, init submodules, and add upstream
+
+Replace `yourusername` below with your Github username:
+
+```
+git clone --recursive git@github.com:yourusername/coronadatascraper.git
+cd coronadatascraper
+git remote add upstream git@github.com:lazd/coronadatascraper.git
+```
+
+If you've already cloned without `--recrusive`, run:
+
+```
+git submodule init
+git submodule update
+```
+
+#### 2. Install dependencies
 
 ```
 yarn install
+```
+
+#### 3. Run the scraper
+
+```
 yarn start
+```
+
+#### 4. Pull from upstream often
+
+This gets you the latest scrapers, as well as the cache so we're not hammering servers.
+
+```
+git pull upstream master --recurse-submodules
 ```
 
 ### Re-generating old data
