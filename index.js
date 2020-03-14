@@ -3,12 +3,18 @@ import * as fs from './lib/fs.js';
 import path from 'path';
 import csvStringify from 'csv-stringify';
 
+/*
+  Combine location information with the passed data object
+*/
 function addLocationToData(data, location) {
   Object.assign(data, location);
   delete data.scraper;
   return data;
 }
 
+/*
+  Check if the provided data contains any invalid fields
+*/
 function isValid(data, location) {
   if (data.cases === undefined) {
     throw new Error(`Invalid data: contains no case data`);
@@ -26,6 +32,9 @@ function isValid(data, location) {
   return true;
 }
 
+/*
+  Add output data to the cases array. Input can be either an object or an array
+*/
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     for (let data of result) {
@@ -41,6 +50,9 @@ function addData(cases, location, result) {
   }
 }
 
+/*
+  Begin the scraping process
+*/
 async function scrape() {
   let cases = [];
   for (let location of scrapers) {
@@ -57,7 +69,9 @@ async function scrape() {
   return cases;
 }
 
-
+/*
+  Generate a CSV from the given data
+*/
 function generateCSV(data) {
   return new Promise((resolve, reject) => {
     // Start with the columns we want first
@@ -105,6 +119,9 @@ function generateCSV(data) {
   });
 }
 
+/*
+  Main
+*/
 async function start() {
   console.log('⏳ Scraping data...');
 
