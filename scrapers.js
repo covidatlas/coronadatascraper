@@ -261,7 +261,6 @@ let scrapers = [
       if (process.env['SCRAPE_DATE']) {
         // Find old date
         latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
-        console.log(latestDate);
       }
 
       // Get only records for that date
@@ -517,7 +516,7 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
-        let county = $tr.find('td:nth-child(2)').text() + ' County';
+        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
         counties[county] = counties[county] || { cases: 0 };
         counties[county].cases += 1;
       });
@@ -539,7 +538,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = $tr.find('td:first-child').text();
+        let county = parse.string($tr.find('td:first-child').text()).replace(':', '');
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -910,7 +909,6 @@ let scrapers = [
 
       let cases = 0;
       $('td:contains("Positive (confirmed cases)")').nextAll('td').each((index, td) => {
-        console.log(td);
         cases += parse.number($(td).text());
       });
 
