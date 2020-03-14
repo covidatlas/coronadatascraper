@@ -163,18 +163,12 @@ function generateCSV(data) {
 async function scrapeData() {
   console.log('⏳ Scraping data...');
 
-  let cases = await scrape();
-
-  await fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(cases, null, 2));
-
-  let csvString = await generateCSV(cases);
-
-  await fs.writeFile(path.join('dist', 'data.csv'), csvString);
+  let locations = await scrape();
 
   let states = 0;
   let counties = 0;
   let countries = 0;
-  for (let location of cases) {
+  for (let location of locations) {
     if (!location.state && !location.county) {
       countries++;
     }
@@ -191,10 +185,21 @@ async function scrapeData() {
   console.log('   - %d states', states);
   console.log('   - %d counties', counties);
 
-  return {
-    locations: cases
-  };
+  return { locations };
 };
 
+async function writeData({ locations, featureCollection }) {
+  await fs.writeFile(path.join('dist', 'data.json'), JSON.stringify(locations, null, 2));
+
+  let csvString = await generateCSV(locations);
+
+  await fs.writeFile(path.join('dist', 'data.csv'), csvString);
+
+  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
+
+  return { locations, featureCollection };
+}
+
 scrapeData()
-  .then(findFeatures);
+  .then(findFeatures)
+  .then(writeData);

@@ -97,6 +97,11 @@ function generateFeatures({ locations }) {
       }
     }
 
+    // Store coordinates on location
+    if (feature.geometry) {
+      location.coordinates = turf.center(feature).geometry.coordinates;
+    }
+
     if (DEBUG) {
       console.log('Storing %s in %s', location.name, feature.properties.name);
     }
@@ -137,21 +142,19 @@ function generateFeatures({ locations }) {
       }
 
       if (location.state) {
-        if (location.country === 'US') {
-          // Ignore state-level data
-          if (usStates[location.state]) {
-            console.log('  ⚠️  Skipping state-level data for %s', location.state);
-            foundCount++;
-            continue;
-          }
+        if (location.country === 'USA') {
           // Find county
           for (let feature of usCountyData.features) {
-            if (feature.properties.name === location.state) {
+            if (!location.county) {
+              continue;
+            }
+
+            if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
               found = true;
               storeFeature(feature, location);
               continue locationLoop;
             }
-            if (feature.geometry) {
+            if (point && feature.geometry) {
               let poly = turf.feature(feature.geometry);
               if (turf.booleanPointInPolygon(point, poly)) {
                 found = true;
@@ -170,7 +173,7 @@ function generateFeatures({ locations }) {
             break;
           }
 
-          if (feature.properties.name === 'New York' && location.state === 'New York County, NY') {
+          if (feature.properties.name === 'New York') {
             // Can't find New York for some reason, hardcode FTW
             found = true;
             storeFeature(feature, location);
