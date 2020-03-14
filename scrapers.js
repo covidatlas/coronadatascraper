@@ -412,17 +412,27 @@ let scrapers = [
       let $trs = $table.find('tbody > tr:not(:last-child)');
 
       $trs.each((index, tr) => {
-        if (index < 2) {
+        // First 3 rows are test data
+        if (index < 3) {
           return;
         }
         let $tr = $(tr);
         let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
+
+        // Skip bunk data
+        let $tds = $tr.find('td');
+        if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
+          return;
+        }
+
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
           cases: cases
         });
       });
+
+      console.log(counties);
 
       return counties;
     }
