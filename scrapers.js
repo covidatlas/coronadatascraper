@@ -972,8 +972,8 @@ let scrapers = [
                         cases,
                     });
                 }
-                return counties
             });
+            return counties
         }
     },
 ];
