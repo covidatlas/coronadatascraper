@@ -193,7 +193,7 @@ let scrapers = [
   },
   {
     country: 'USA',
-    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-cases-us.json',
+    url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-data-cases.csv',
     _getCaseNumber: function(string) {
       if (typeof string === 'string') {
         let matches;
@@ -211,10 +211,10 @@ let scrapers = [
       return string;
     },
     scraper: async function() {
-      let data = await fetch.json(this.url);
+      let data = await fetch.csv(this.url);
 
       let states = [];
-      for (let stateData of data.data) {
+      for (let stateData of data) {
         if (stateData.Name) {
           states.push({
             state: parse.string(stateData.Name),
