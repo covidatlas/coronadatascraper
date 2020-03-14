@@ -420,6 +420,17 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      // this is brittle as all hell
+      let $h3 = $('h3:contains("confirmed case")');
+
+      let matches = $h3.text().match(/there are (\d+) confirmed cases? in Yolo/);
+      return {
+        cases: parse.number(matches[1])
+      };
+    }
   },
   {
     county: 'Sacramento County',
