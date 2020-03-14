@@ -23,7 +23,8 @@ let scrapers = [
 
       let $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
 
-      let $trs = $table.find('tbody > tr');
+      // Ignore the last row "Out of town"
+      let $trs = $table.find('tbody > tr:not(:last-child)');
 
       $trs.each((index, tr) => {
         if (index < 2) {
@@ -31,7 +32,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()),
+          county: parse.string($tr.find('td:first-child').text()) + ' County',
           cases: parse.number($tr.find('td:nth-last-child(2)').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
@@ -55,7 +56,7 @@ let scrapers = [
         let matches = $(li).text().match(/(.*?): (\d+)/);
         if (matches) {
           counties.push({
-            county: parse.string(matches[1]),
+            county: parse.string(matches[1]) + ' County',
             cases: parse.number(matches[2])
           });
         }
@@ -78,7 +79,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:first-child').text());
+        let county = parse.string($tr.find('td:first-child').text()) + ' County';
         let cases = parse.number($tr.find('td:nth-child(2)').text());
         counties.push({
           county: county,
