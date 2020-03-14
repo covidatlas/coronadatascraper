@@ -6,11 +6,16 @@ import * as transform from './lib/transform.js';
   Each scraper must return the following object or an array of the following objects:
 
   {
+    city: String†,
+    county: String†,
+    county: String†,
     cases: Integer,
     deaths: Integer,
     recovered: Integer,
     tested: Integer
   }
+
+  † Optional, not required if provided in the main scraper definition
 */
 
 let scrapers = [
