@@ -20,6 +20,35 @@ import * as transform from './lib/transform.js';
 
 let scrapers = [
   {
+    // Get country data only from JHU
+    url: 'https://github.com/CSSEGISandData/COVID-19',
+    _urls: {
+      cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
+      deaths: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
+      recovered: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
+    },
+    scraper: async function() {
+      let cases = await fetch.csv(this._urls.cases);
+      let deaths = await fetch.csv(this._urls.deaths);
+      let recovered = await fetch.csv(this._urls.recovered);
+
+      let countries = [];
+      let latestDate = Object.keys(cases[0]).pop();
+      for (let index = 0; index < cases.length; index++) {
+        if (!cases[index]['Province/State']) {
+          countries.push({
+            country: parse.string(cases[index]['Country/Region']),
+            cases: parse.number(cases[index][latestDate]),
+            recovered: parse.number(recovered[index][latestDate]),
+            deaths: parse.number(deaths[index][latestDate])
+          });
+        }
+      }
+
+      return countries;
+    }
+  },
+  {
     country: 'USA',
     url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-cases-us.json',
     _getCaseNumber: function(string) {
