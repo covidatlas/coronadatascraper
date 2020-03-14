@@ -3,6 +3,7 @@ import csvStringify from 'csv-stringify';
 import yargs from 'yargs';
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
+import * as transform from './lib/transform.js';
 
 import findFeatures from './tasks/findFeatures.js';
 import findPopulations from './tasks/findPopulations.js';
@@ -63,6 +64,9 @@ function clean(data) {
 */
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
+    if (result.length === 0) {
+      throw new Error(`Invalid data: scraper for ${transform.getName(location)} returned 0 rows`);
+    }
     for (let data of result) {
       if (isValid(data, location)) {
         cases.push(clean(addLocationToData(data, location)));
