@@ -20,6 +20,24 @@ import * as transform from './lib/transform.js';
 
 let scrapers = [
   {
+    country: 'CHE',
+    county: 'Zurich',
+    url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+
+      let latestData = data[data.length - 1];
+
+      return {
+        recovered: latestData.TotalCured,
+        deaths: latestData.TotalDeaths,
+        cases: latestData.TotalConfCases,
+        tested: latestData.TotalTestedCases,
+        county: latestData.denominazione_regione
+      };
+    }
+  },
+  {
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
     scraper: async function() {
