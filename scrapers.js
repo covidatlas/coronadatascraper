@@ -261,7 +261,6 @@ let scrapers = [
       if (process.env['SCRAPE_DATE']) {
         // Find old date
         latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
-        console.log(latestDate);
       }
 
       // Get only records for that date
@@ -910,7 +909,6 @@ let scrapers = [
 
       let cases = 0;
       $('td:contains("Positive (confirmed cases)")').nextAll('td').each((index, td) => {
-        console.log(td);
         cases += parse.number($(td).text());
       });
 
