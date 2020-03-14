@@ -626,13 +626,11 @@ let scrapers = [
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $table = $('.contacts_table');
-
-      let $p = $table.find('p:contains("Positive Cases:")');
-      let matches = $p.text().match(/Positive Cases: (\d)/);
+      let $table = $('.sccgov-responsive-table');
 
       return {
-        cases: parse.number(matches[1])
+        deaths: parse.number($table.find('div:contains("Deaths")').parent().children().last().text()),
+        cases: parse.number($table.find('div:contains("Total Confirmed Cases")').parent().children().last().text())
       };
     }
   },
