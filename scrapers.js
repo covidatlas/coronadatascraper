@@ -14,6 +14,23 @@ import * as parse from './lib/parse.js';
 
 let scrapers = [
   {
+    state: 'DC',
+    country: 'USA',
+    url: 'https://coronavirus.dc.gov/page/coronavirus-data',
+    scraper: async function() {
+      let $ = await load(this.url);
+
+      let cases = 0;
+      cases += parse.number($('p:contains("Number of PHL positives")').first().text().split(': ')[1]);
+      cases += parse.number($('p:contains("Number of commercial lab positives")').first().text().split(': ')[1]);
+
+      return {
+        cases: cases,
+        tested: parse.number($('p:contains("Number of people tested overall")').first().text().split(': ')[1])
+      };
+    }
+  },
+  {
     state: 'AL',
     country: 'USA',
     url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
