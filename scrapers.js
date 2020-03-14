@@ -182,9 +182,9 @@ let scrapers = [
           countries.push({
             country: parse.string(cases[index]['Country/Region']),
             state: parse.string(cases[index]['Province/State']),
-            cases: parse.number(cases[index][latestDate]),
-            recovered: parse.number(recovered[index][latestDate]),
-            deaths: parse.number(deaths[index][latestDate]),
+            cases: parse.number(cases[index][latestDate] || 0),
+            recovered: parse.number(recovered[index][latestDate] || 0),
+            deaths: parse.number(deaths[index][latestDate] || 0),
             coordinates: [parse.float(cases[index]['Long']), parse.float(cases[index]['Lat'])]
           });
         }
