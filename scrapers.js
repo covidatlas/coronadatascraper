@@ -1102,7 +1102,30 @@ let scrapers = [
       });
       return counties;
     }
-  }
+  },
+  {
+    state: 'UT',
+    country: 'USA',
+    url: 'https://coronavirus.utah.gov/latest/',
+    scraper: async function () {
+      let $ = await fetch.page(this.url);
+      let counties = [];
+      let $table = $('th:contains("District")').closest('table');
+      let $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let county = parse.string($tr.find('td:first-child').text());
+        let cases = parse.number($tr.find('td:last-child').text());
+        if (index > 0 && county.indexOf('Non-Utah') === -1) {
+          counties.push({
+            county: county + ' County',
+            cases,
+          });
+        }
+      });
+      return counties
+    }
+  },
 ];
 
 export default scrapers;
