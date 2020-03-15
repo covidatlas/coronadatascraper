@@ -383,7 +383,7 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
 
-      let $lis = $('p:contains("Presumptive positive cases by county of residence")')
+      let $lis = $('p:contains("Positive cases by county of residence")')
         .nextAll('ul')
         .first()
         .find('li');
