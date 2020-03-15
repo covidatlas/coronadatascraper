@@ -711,7 +711,7 @@ let scrapers = [
     url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
     scraper: async function() {
       let counties = [];
-      let $ = await fetch.page(this.url);
+      let $ = await fetch.headless(this.url);
 
       let $th = $('th:contains("(COVID-19) in Washington")');
       let $table = $th.closest('table');
