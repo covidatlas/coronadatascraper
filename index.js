@@ -2,6 +2,7 @@ import path from 'path';
 import scrapers from './scrapers.js';
 import * as fs from './lib/fs.js';
 import * as transform from './lib/transform.js';
+import * as stringify from './lib/stringify.js';
 
 import findFeatures from './tasks/findFeatures.js';
 import findPopulations from './tasks/findPopulations.js';
@@ -98,60 +99,6 @@ async function scrape() {
 }
 
 /*
-  Generate a CSV from the given data
-*/
-function generateCSV(data) {
-  // Start with the columns we want first
-  let columns = [
-    'city',
-    'county',
-    'state',
-    'country',
-    'cases',
-    'deaths',
-    'recovered',
-    'tested',
-    'lat',
-    'long',
-    'url'
-  ];
-
-  // Get list of columns
-  for (let location of data) {
-    for (let column in location) {
-      if (columns.indexOf(column) === -1) {
-        columns.push(column);
-      }
-    }
-  }
-
-  // Drop coordinates
-  columns = columns.filter(column => column != 'coordinates');
-
-  // Turn data into arrays
-  let csvData = [
-    columns
-  ];
-  for (let location of data) {
-    let row = [];
-    for (let column of columns) {
-      // Output lat and long instead
-      if (column === 'lat' && location.coordinates) {
-        row.push(location.coordinates[1]);
-      }
-      else if (column === 'long' && location.coordinates) {
-        row.push(location.coordinates[0]);
-      }
-      else {
-        row.push(location[column]);
-      }
-    }
-    csvData.push(row);
-  }
-  return csvData;
-}
-
-/*
   Main
 */
 async function scrapeData() {
@@ -189,7 +136,7 @@ async function writeData({ locations, featureCollection }) {
 
   await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
 
-  await fs.writeCSV(path.join('dist', `data${date}.csv`), generateCSV(locations));
+  await fs.writeCSV(path.join('dist', `data${date}.csv`), stringify.csvForDay(locations));
 
   await fs.writeJSON(path.join('dist', `features${date}.json`), featureCollection);
 
