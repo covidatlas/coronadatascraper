@@ -969,7 +969,7 @@ let scrapers = [
 
       return {
         cases: parse.number(
-          $('td:contains("Confirmed Cases")')
+          $('td:contains("Cases")')
             .next()
             .text()
         ),
