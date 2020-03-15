@@ -54,6 +54,9 @@ function clean(data) {
     data.state = transform.toUSStateAbbreviation(data.state);
   }
 
+  // Normalize countries
+  data.country = transform.toISO3166Alpha3(data.country);
+
   for (let [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
