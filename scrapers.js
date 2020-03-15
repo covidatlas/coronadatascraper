@@ -1348,11 +1348,11 @@ let scrapers = [
         if(index < 1) {
           return
         }
-        let countyData = $(li).text().split(': ');
-           counties.push({
-            county: parse.string(countyData[0]),
-            cases: parse.number(countyData[1])
-          });
+        let countyData = $(li).text().split(/:\s*/);
+        counties.push({
+          county: parse.string(countyData[0]),
+          cases: parse.number(countyData[1])
+        });
       })
       return counties;
     }
