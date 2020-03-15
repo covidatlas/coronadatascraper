@@ -46,4 +46,4 @@ jobs:
             cd coronadatascraper-cache
             git add .
             git commit -m "Update cache following deployment"
-            git push
+            git push origin HEAD:master
