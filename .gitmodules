@@ -3,4 +3,4 @@
 	url = https://github.com/lazd/coronavirus-data-sources.git
 [submodule "coronadatascraper-cache"]
 	path = coronadatascraper-cache
-	url = git@github.com:lazd/coronadatascraper-cache.git
+	url = https://github.com/lazd/coronadatascraper-cache.git
