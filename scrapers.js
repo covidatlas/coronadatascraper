@@ -575,7 +575,8 @@ let scrapers = [
     // Incapsula blocking request
     scraper: async function() {
       let counties = [];
-      let $ = await fetch.headless(this.url);
+      let $ = await fetch.page(this.url);
+
       let $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
 
       let $trs = $table.find('tbody > tr:not(:last-child)');
@@ -587,12 +588,12 @@ let scrapers = [
             .text()
             .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
-      
         counties.push({
           county: county,
           cases: cases
         });
       });
+
       return counties;
     }
   },
@@ -842,6 +843,43 @@ let scrapers = [
     }
   },
   {
+    county: 'San Benito County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://hhsa.cosb.us/publichealth/communicable-disease/coronavirus/',
+    
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let $table = $('p:contains("San Benito County COVID-19 Case Count")')
+        .nextAll('table')
+        .first();
+      return {
+        cases: parse.number(
+          $table
+            .find('td:contains("Positive")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        ),
+        deaths: parse.number(
+          $table
+            .find('td:contains("Deaths")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        ),
+        recovered: parse.number(
+          $table
+            .find('td:contains("Recovered")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        )
+      };
+    }
+  },
+  {
     county: 'Santa Cruz County',
     state: 'CA',
     country: 'USA',
@@ -850,9 +888,9 @@ let scrapers = [
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
+      let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
 
-      cases = parse.number($h2.text());
+      cases = parse.number($h1.text());
 
       return {
         cases: cases
@@ -1158,25 +1196,23 @@ let scrapers = [
         $('.count-subject:contains("Positive travel-related case")')
           .closest('.hb-counter')
           .find('.count-number')
-          .attr('data-from')
+          .text()
       );
       cases += parse.number(
         $('.count-subject:contains("Presumptive Positive")')
           .closest('.hb-counter')
           .find('.count-number')
-          .attr('data-from')
-      );
-
-      let tested = parse.number(
-        $('.count-subject:contains("People tested")')
-          .closest('.hb-counter')
-          .find('.count-number')
-          .attr('data-from')
+          .text()
       );
 
       return {
         cases: cases,
-        tested: tested
+        tested: parse.number(
+          $('.count-subject:contains("People tested")')
+            .closest('.hb-counter')
+            .find('.count-number')
+            .text()
+        )
       };
     }
   },
