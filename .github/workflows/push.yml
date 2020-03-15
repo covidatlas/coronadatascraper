@@ -30,3 +30,18 @@ jobs:
         - name: Run
           run: |
             yarn update
+        - name: Push data.csv
+          uses: actions/upload-artifact@v1
+          with:
+            name: data.csv
+            path: dist/data.csv
+        - name: Push data.json
+          uses: actions/upload-artifact@v1
+          with:
+            name: data.json
+            path: dist/data.json
+        - name: Push features.json
+          uses: actions/upload-artifact@v1
+          with:
+            name: features.json
+            path: dist/features.json
