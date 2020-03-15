@@ -7,6 +7,7 @@
   "license": "BSD",
   "type": "module",
   "scripts": {
+    "timeseries": "node timeseries.js",
     "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
     "updateModules": "git submodule update --remote",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
