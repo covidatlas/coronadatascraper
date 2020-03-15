@@ -124,7 +124,7 @@ async function scrapeData() {
     else {
       counties++;
     }
-    location["active"] = transform.getActiveFromLocation(location)
+    location["active"] = location["active"] === undefined ? transform.getActiveFromLocation(location) : location["active"];
   }
 
   console.log('✅ Data scraped!');
