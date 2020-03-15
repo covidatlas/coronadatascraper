@@ -432,35 +432,57 @@ let scrapers = [
   {
     state: 'LA',
     country: 'USA',
-    url: 'http://ldh.la.gov/Coronavirus/',
+    url: 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv',
     scraper: async function() {
       let counties = [];
-      let $ = await fetch.page(this.url);
+      if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-14'))) {
+        this.url = 'http://ldh.la.gov/Coronavirus/';
 
-      let $table = $('p:contains("Louisiana Cases")').nextAll('table');
+        let $ = await fetch.page(this.url);
 
-      let $trs = $table.find('tbody > tr:not(:last-child)');
+        let $table = $('p:contains("Louisiana Cases")').nextAll('table');
 
-      $trs.each((index, tr) => {
-        // First 3 rows are test data
-        if (index < 3) {
-          return;
-        }
-        let $tr = $(tr);
-        let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
+        let $trs = $table.find('tbody > tr:not(:last-child)');
 
-        // Skip bunk data
-        let $tds = $tr.find('td');
-        if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
-          return;
-        }
+        $trs.each((index, tr) => {
+          // First 3 rows are test data
+          if (index < 3) {
+            return;
+          }
+          let $tr = $(tr);
+          let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
 
-        let cases = parse.number($tr.find('td:last-child').text());
-        counties.push({
-          county: county,
-          cases: cases
+          // Skip bunk data
+          let $tds = $tr.find('td');
+          if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
+            return;
+          }
+
+          let cases = parse.number($tr.find('td:last-child').text());
+          counties.push({
+            county: county,
+            cases: cases
+          });
         });
-      });
+      }
+      else {
+        // Use the new map
+        let data = await fetch.csv(this.url);
+
+        for (let county of data) {
+          if (county.PARISH === 'Out of State Resident') {
+            continue;
+          }
+          if (county.PARISH === 'Parish Under Investigation') {
+            continue;
+          }
+          counties.push({
+            county: parse.string(county.PARISH) + ' Parish',
+            cases: parse.number(county.Cases),
+            deaths: parse.number(county.Deaths)
+          });
+        }
+      }
 
       return counties;
     }
@@ -1209,7 +1231,7 @@ let scrapers = [
                   .nextAll('ul')
                   .first()
                   .find('li');
-                
+
       $lis.each((index, li) => {
         if(index < 1) {
           return
@@ -1219,7 +1241,7 @@ let scrapers = [
             county: parse.string(countyData[0]),
             cases: parse.number(countyData[1])
           });
-      })      
+      })
       return counties;
     }
   }
