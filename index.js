@@ -124,6 +124,7 @@ async function scrapeData() {
     else {
       counties++;
     }
+    location["active"] = transform.getActiveFromLocation(location)
   }
 
   console.log('✅ Data scraped!');
