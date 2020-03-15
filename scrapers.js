@@ -331,6 +331,11 @@ let scrapers = [
   {
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
+    _regionMap: {
+      'P.A. Trento': 'Trento',
+      'Emilia Romagna': 'Emilia-Romagna',
+      'P.A. Bolzano': 'Trentino-South Tyrol',
+    },
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
 
@@ -346,11 +351,13 @@ let scrapers = [
           return row.data.substr(0, 10) === latestDate;
         })
         .map(row => {
+          let regionName = parse.string(row.denominazione_regione);
+          regionName = this._regionMap[regionName] || regionName;
           return {
             recovered: parse.number(row.dimessi_guariti),
             deaths: parse.number(row.deceduti),
             cases: parse.number(row.totale_casi),
-            state: parse.string(row.denominazione_regione)
+            state: regionName
           };
         });
     }
@@ -435,8 +442,12 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
+        let countyName = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+        if (countyName === 'Out of State County') {
+          return;
+        }
         counties.push({
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: countyName,
           cases: parse.number($tr.find('td:last-child').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
@@ -669,6 +680,11 @@ let scrapers = [
     state: 'NY',
     country: 'USA',
     url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
+    _countyMap: {
+      // This is totally wrong, but otherwise we need less granular GeoJSON
+      'New York City': 'New York County',
+      'Broom': 'Broome'
+    },
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -679,11 +695,11 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = transform.addCounty(parse.string($tr.find('td:first-child').text()).replace(':', ''));
-        let cases = parse.number($tr.find('td:last-child').text());
+        let countyName = parse.string($tr.find('td:first-child').text()).replace(':', '');
+        countyName = this._countyMap[countyName] || countyName;
         counties.push({
-          county: county,
-          cases: cases
+          county: transform.addCounty(countyName),
+          cases: parse.number($tr.find('td:last-child').text())
         });
       });
 

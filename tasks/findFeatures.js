@@ -45,6 +45,8 @@ let props = [
   'abbrev',
   'region',
   'admin',
+  'postal',
+  'gu_a3',
   'geonunit',
   'pop_est',
   'pop_year',
@@ -143,20 +145,31 @@ function generateFeatures({ locations }) {
 
       if (location.state) {
         if (location.country === 'USA') {
-          // Find county
-          for (let feature of usCountyData.features) {
-            if (!location.county) {
-              continue;
-            }
+          if (location.county) {
+            // Find county
+            for (let feature of usCountyData.features) {
+              if (!location.county) {
+                continue;
+              }
 
-            if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
-              found = true;
-              storeFeature(feature, location);
-              continue locationLoop;
+              if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
+                found = true;
+                storeFeature(feature, location);
+                continue locationLoop;
+              }
+              if (point && feature.geometry) {
+                let poly = turf.feature(feature.geometry);
+                if (turf.booleanPointInPolygon(point, poly)) {
+                  found = true;
+                  storeFeature(feature, location);
+                  continue locationLoop;
+                }
+              }
             }
-            if (point && feature.geometry) {
-              let poly = turf.feature(feature.geometry);
-              if (turf.booleanPointInPolygon(point, poly)) {
+          }
+          else if (location.state) {
+            for (let feature of provinceData.features) {
+              if (location.state === feature.properties.postal) {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;
@@ -167,14 +180,12 @@ function generateFeatures({ locations }) {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.state === transform.toUSStateAbbreviation(feature.properties.name) || location.state === transform.toUSStateAbbreviation(feature.properties.name_en)) {
-            found = true;
-            storeFeature(feature, location);
-            break;
-          }
-
-          if (feature.properties.name === 'New York') {
-            // Can't find New York for some reason, hardcode FTW
+          if (location.country === feature.properties.gu_a3 && (
+              location.state === feature.properties.name ||
+              location.state === feature.properties.name_en ||
+              location.state === feature.properties.region
+            )
+          ) {
             found = true;
             storeFeature(feature, location);
             break;
@@ -262,7 +273,7 @@ function generateFeatures({ locations }) {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s [%f, %f]', transform.getName(location), location.coordinates ? location.coordinates[0] : '?', location.coordinates ? location.coordinates[1] : '?');
+        console.error('  ❌ Could not find location %s', transform.getName(location), location);
       }
     }
 
