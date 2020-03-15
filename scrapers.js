@@ -28,12 +28,12 @@ let scrapers = [
     country: 'USA',
     url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
     scraper: async function() {
-      let { browser, page } = await fetch.headless(this.url);
+      // let { browser, page } = await fetch.headless(this.url);
 
       let counties = [];
       // do stuff
 
-      await browser.close();
+      // await browser.close();
       return counties;
     }
   },
@@ -139,6 +139,11 @@ let scrapers = [
       deaths: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
       recovered: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
     },
+    _urlsOld: {
+      cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
+      deaths: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
+      recovered: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
+    },
     _reject: [
       {
         'Province/State': 'Diamond Princess'
@@ -185,9 +190,16 @@ let scrapers = [
       // Build a hash of US counties
       let jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
 
-      let cases = await fetch.csv(this._urls.cases, false);
-      let deaths = await fetch.csv(this._urls.deaths, false);
-      let recovered = await fetch.csv(this._urls.recovered, false);
+      let getOldData = process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-12'));
+
+      if (getOldData) {
+        console.log('  🕰  Fetching old data for %s', process.env['SCRAPE_DATE']);
+      }
+
+      let urls = getOldData ? this._urlsOld : this._urls;
+      let cases = await fetch.csv(urls.cases, false);
+      let deaths = await fetch.csv(urls.deaths, false);
+      let recovered = await fetch.csv(urls.recovered, false);
 
       let countries = [];
       let date = Object.keys(cases[0]).pop();
@@ -200,8 +212,6 @@ let scrapers = [
         }
         date = customDate;
       }
-
-      let getOldData = process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-13'));
 
       let countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
