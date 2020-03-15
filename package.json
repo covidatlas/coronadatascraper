@@ -7,9 +7,11 @@
   "license": "BSD",
   "type": "module",
   "scripts": {
+    "timeseries": "node timeseries.js",
     "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
     "updateModules": "git submodule update --remote",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
+    "build": "yarn start && yarn timeseries && yarn buildSite",
     "buildSite": "cp -r site/* dist/",
     "deploy": "npm run dateData && npm run deploySite",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
