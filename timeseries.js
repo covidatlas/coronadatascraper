@@ -96,7 +96,7 @@ async function generateTidyCSV(timeseriesData) {
 
   csvData.splice(0, 0, columns);
 
-  return fs.writeCSV(path.join('dist', 'timeseries-tidy.csv'), csvData);
+  return fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
 }
 
 async function generateLessTidyCSV(timeseriesData) {
@@ -150,7 +150,7 @@ async function generateLessTidyCSV(timeseriesData) {
 
   csvData.splice(0, 0, columns);
 
-  return fs.writeCSV(path.join('dist', 'timeseries-lesstidy.csv'), csvData);
+  return fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
 }
 
 async function generateCSV(timeseriesData) {
@@ -192,7 +192,7 @@ async function generateCSV(timeseriesData) {
   columns = columns.concat(dates);
   csvData.splice(0, 0, columns);
 
-  return fs.writeCSV(path.join('dist', 'timeseries-simple.csv'), csvData);
+  return fs.writeCSV(path.join('dist', 'timeseries-jhu.csv'), csvData);
 }
 
 /*
