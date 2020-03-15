@@ -31,7 +31,7 @@ let scrapers = [
       let counties = [];
       for (let county of data) {
         counties.push({
-          county: parse.string(county.COUNTYNAME) + ' County',
+          county: transform.addCounty(parse.string(county.COUNTYNAME)),
           cases: parse.number(county.Total_Positive),
           deaths: parse.number(county.Total_Deaths),
           tested: parse.number(county.Total_Tested)
@@ -51,7 +51,7 @@ let scrapers = [
       let counties = [];
       for (let county of data) {
         counties.push({
-          county: parse.string(county.County) + ' County',
+          county: transform.addCounty(parse.string(county.County)),
           cases: parse.number(county.Total), // Includes presumptive
           recovered: parse.number(county.Recovered),
           deaths: parse.number(county.Deaths)
@@ -303,7 +303,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         let status = $tr.find('td:nth-child(3)').text();
-        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
 
         // Make sure this matches once they have a confirmed case
         if (status === 'Confirmed') {
@@ -366,7 +366,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:nth-last-child(2)').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
@@ -418,7 +418,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:first-child').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
         let cases = parse.number($tr.find('td:nth-child(2)').text());
         counties.push({
           county: county,
@@ -502,11 +502,10 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county =
-          $tr
+        let county = transform.addCounty($tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '') + ' County';
+            .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -532,11 +531,10 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county =
-          $tr
+        let county = transform.addCounty($tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '') + ' County';
+            .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -564,7 +562,7 @@ let scrapers = [
         .map(str => {
           let parts = str.split(': ');
           return {
-            county: parts[0] + ' County',
+            county: transform.addCounty(parse.string(parts[0])),
             cases: parse.number(parts[1])
           };
         });
@@ -589,7 +587,7 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
         counties[county] = counties[county] || { cases: 0 };
         counties[county].cases += 1;
       });
@@ -640,7 +638,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('> *:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
           cases: parse.number($tr.find('> *:nth-child(2)').text()),
           deaths: parse.number($tr.find('> *:last-child').text())
         });
@@ -1102,7 +1100,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -1123,7 +1121,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('> *:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
@@ -1145,7 +1143,7 @@ let scrapers = [
         let cases = parse.number($tr.find('td:last-child').text());
         if (index > 0 && county.indexOf('Non-Utah') === -1) {
           counties.push({
-            county: county + ' County',
+            county: transform.addCounty(county),
             cases,
           });
         }
@@ -1164,7 +1162,7 @@ let scrapers = [
       $lis.each((index, li) => {
         let matches = $(li).text().match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          let county = parse.string(matches[1]) + ' County';
+          let county = transform.addCounty(parse.string(matches[1]));
           let cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -1192,7 +1190,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -1213,7 +1211,7 @@ let scrapers = [
       arrayOfCounties.map(county => {
         let splitCounty = county.trim().split(' ');
         counties.push({
-          county: parse.string(splitCounty[0]) + ' County',
+          county: transform.addCounty(parse.string(splitCounty[0])),
           cases: parse.number(splitCounty[1])
         });
       });
