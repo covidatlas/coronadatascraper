@@ -64,6 +64,14 @@ To generate timeseries data in `dist/timeseries*.*`, run:
 yarn timeseries
 ```
 
+### Building the website
+
+To build the website and all data into `dist/`:
+
+```
+yarn build
+```
+
 ## Contributing
 
 Contributions for any place in the world are welcome. See the [community-curated list of verified data sources](https://docs.google.com/spreadsheets/d/1T2cSvWvUvurnOuNFj2AMPGLpuR2yVs3-jdd_urfWU4c/edit#gid=0) to find a new datasource to add, and be sure to update the "Scraped?" column when you do.
