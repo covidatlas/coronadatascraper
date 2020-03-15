@@ -6,19 +6,19 @@ on:
 
 jobs:
   build:
-     runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v1
-              with:
-                token: ${{ secrets.SECRETS_TOKEN }}
-                submodules: true
-          - name: Use Node.js 13.x
-              uses: actions/setup-node@v1
-              with:
-                node-version: '13.x'
-          - name: Install
-            run: |
-              yarn
-          - name: Run
-            run: |
-              yarn start
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+            with:
+              token: ${{ secrets.SECRETS_TOKEN }}
+              submodules: true
+        - name: Use Node.js 13.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: '13.x'
+        - name: Install
+          run: |
+            yarn
+        - name: Run
+          run: |
+            yarn start
