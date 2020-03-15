@@ -851,9 +851,9 @@ let scrapers = [
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
+      let $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
 
-      cases = parse.number($h1.text());
+      cases = parse.number($h2.text());
 
       return {
         cases: cases
