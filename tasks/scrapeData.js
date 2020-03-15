@@ -20,8 +20,8 @@ function addLocationToData(data, location) {
 }
 
 /*
-    Check if the provided data contains any invalid fields
-  */
+  Check if the provided data contains any invalid fields
+*/
 function isValid(data, location) {
   if (data.cases === undefined) {
     throw new Error(`Invalid data: contains no case data`);
@@ -40,13 +40,16 @@ function isValid(data, location) {
 }
 
 /*
-    Clean the passed data
-  */
+  Clean the passed data
+*/
 function clean(data) {
   // Normalize states
   if (data.country === 'USA') {
     data.state = transform.toUSStateAbbreviation(data.state);
   }
+
+  // Normalize countries
+  data.country = transform.toISO3166Alpha3(data.country);
 
   for (let [prop, value] of Object.entries(data)) {
     if (value === '') {
@@ -58,8 +61,8 @@ function clean(data) {
 }
 
 /*
-    Add output data to the cases array. Input can be either an object or an array
-  */
+  Add output data to the cases array. Input can be either an object or an array
+*/
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     if (result.length === 0) {

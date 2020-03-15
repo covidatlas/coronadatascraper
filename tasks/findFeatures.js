@@ -39,7 +39,24 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
+let props = [
+  'name',
+  'name_en',
+  'abbrev',
+  'region',
+  'admin',
+  'postal',
+  'gu_a3',
+  'geonunit',
+  'pop_est',
+  'pop_year',
+  'gdp_md_est',
+  'gdp_year',
+  'iso_a2',
+  'iso_3166_2',
+  'type_en',
+  'wikipedia'
+];
 
 const locationTransforms = {
   // Correct missing county
@@ -130,20 +147,31 @@ const generateFeatures = report => ({ locations }) => {
 
       if (location.state) {
         if (location.country === 'USA') {
-          // Find county
-          for (let feature of usCountyData.features) {
-            if (!location.county) {
-              continue;
-            }
+          if (location.county) {
+            // Find county
+            for (let feature of usCountyData.features) {
+              if (!location.county) {
+                continue;
+              }
 
-            if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
-              found = true;
-              storeFeature(feature, location);
-              continue locationLoop;
+              if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
+                found = true;
+                storeFeature(feature, location);
+                continue locationLoop;
+              }
+              if (point && feature.geometry) {
+                let poly = turf.feature(feature.geometry);
+                if (turf.booleanPointInPolygon(point, poly)) {
+                  found = true;
+                  storeFeature(feature, location);
+                  continue locationLoop;
+                }
+              }
             }
-            if (point && feature.geometry) {
-              let poly = turf.feature(feature.geometry);
-              if (turf.booleanPointInPolygon(point, poly)) {
+          }
+          else if (location.state) {
+            for (let feature of provinceData.features) {
+              if (location.state === feature.properties.postal) {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;
@@ -154,14 +182,12 @@ const generateFeatures = report => ({ locations }) => {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.state === feature.properties.name || location.state === feature.properties.name_en) {
-            found = true;
-            storeFeature(feature, location);
-            break;
-          }
-
-          if (feature.properties.name === 'New York') {
-            // Can't find New York for some reason, hardcode FTW
+          if (location.country === feature.properties.gu_a3 && (
+              location.state === feature.properties.name ||
+              location.state === feature.properties.name_en ||
+              location.state === feature.properties.region
+            )
+          ) {
             found = true;
             storeFeature(feature, location);
             break;
@@ -248,8 +274,12 @@ const generateFeatures = report => ({ locations }) => {
       }
 
       if (!found) {
+<<<<<<< HEAD
         console.error('  ❌ Could not find location %s [%f, %f]', transform.getName(location), location.coordinates ? location.coordinates[0] : '?', location.coordinates ? location.coordinates[1] : '?');
         errors.push(transform.getName(location));
+=======
+        console.error('  ❌ Could not find location %s', transform.getName(location), location);
+>>>>>>> 8a26628c2d9ec40b85dc9837c7e34c67ecb0aa07
       }
     }
 
