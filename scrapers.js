@@ -1,6 +1,7 @@
 import * as fetch from './lib/fetch.js';
 import * as parse from './lib/parse.js';
 import * as transform from './lib/transform.js';
+import * as datetime from './lib/datetime.js';
 import * as rules from './lib/rules.js';
 
 /*
@@ -30,7 +31,7 @@ let scrapers = [
       let counties = [];
       for (let county of data) {
         counties.push({
-          county: parse.string(county.COUNTYNAME) + ' County',
+          county: transform.addCounty(parse.string(county.COUNTYNAME)),
           cases: parse.number(county.Total_Positive),
           deaths: parse.number(county.Total_Deaths),
           tested: parse.number(county.Total_Tested)
@@ -50,7 +51,7 @@ let scrapers = [
       let counties = [];
       for (let county of data) {
         counties.push({
-          county: parse.string(county.County) + ' County',
+          county: transform.addCounty(parse.string(county.County)),
           cases: parse.number(county.Total), // Includes presumptive
           recovered: parse.number(county.Recovered),
           deaths: parse.number(county.Deaths)
@@ -170,11 +171,15 @@ let scrapers = [
       let recovered = await fetch.csv(this._urls.recovered, false);
 
       let countries = [];
-      let latestDate = Object.keys(cases[0]).pop();
+      let date = Object.keys(cases[0]).pop();
 
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        latestDate = transform.getMDYY(new Date(process.env['SCRAPE_DATE']));
+        let customDate = datetime.getMDYY(new Date(process.env['SCRAPE_DATE']));
+        if (!cases[0][customDate]) {
+          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
+        }
+        date = customDate;
       }
 
       for (let index = 0; index < cases.length; index++) {
@@ -182,9 +187,9 @@ let scrapers = [
           countries.push({
             country: parse.string(cases[index]['Country/Region']),
             state: parse.string(cases[index]['Province/State']),
-            cases: parse.number(cases[index][latestDate] || 0),
-            recovered: parse.number(recovered[index][latestDate] || 0),
-            deaths: parse.number(deaths[index][latestDate] || 0),
+            cases: parse.number(cases[index][date] || 0),
+            recovered: parse.number(recovered[index][date] || 0),
+            deaths: parse.number(deaths[index][date] || 0),
             coordinates: [parse.float(cases[index]['Long']), parse.float(cases[index]['Lat'])]
           });
         }
@@ -238,7 +243,7 @@ let scrapers = [
       let latestData;
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        let date = transform.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
+        let date = datetime.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
         latestData = data.filter(dayData => dayData.Date === date)[0];
       }
       else {
@@ -262,7 +267,7 @@ let scrapers = [
       let latestDate = data[data.length - 1].data.substr(0, 10);
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
+        latestDate = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
       }
 
       // Get only records for that date
@@ -298,7 +303,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         let status = $tr.find('td:nth-child(3)').text();
-        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
 
         // Make sure this matches once they have a confirmed case
         if (status === 'Confirmed') {
@@ -361,7 +366,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:nth-last-child(2)').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
@@ -413,7 +418,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:first-child').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
         let cases = parse.number($tr.find('td:nth-child(2)').text());
         counties.push({
           county: county,
@@ -427,35 +432,57 @@ let scrapers = [
   {
     state: 'LA',
     country: 'USA',
-    url: 'http://ldh.la.gov/Coronavirus/',
+    url: 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv',
     scraper: async function() {
       let counties = [];
-      let $ = await fetch.page(this.url);
+      if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-14'))) {
+        this.url = 'http://ldh.la.gov/Coronavirus/';
 
-      let $table = $('p:contains("Louisiana Cases")').nextAll('table');
+        let $ = await fetch.page(this.url);
 
-      let $trs = $table.find('tbody > tr:not(:last-child)');
+        let $table = $('p:contains("Louisiana Cases")').nextAll('table');
 
-      $trs.each((index, tr) => {
-        // First 3 rows are test data
-        if (index < 3) {
-          return;
-        }
-        let $tr = $(tr);
-        let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
+        let $trs = $table.find('tbody > tr:not(:last-child)');
 
-        // Skip bunk data
-        let $tds = $tr.find('td');
-        if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
-          return;
-        }
+        $trs.each((index, tr) => {
+          // First 3 rows are test data
+          if (index < 3) {
+            return;
+          }
+          let $tr = $(tr);
+          let county = parse.string($tr.find(`td:nth-last-child(2)`).text()) + ' Parish';
 
-        let cases = parse.number($tr.find('td:last-child').text());
-        counties.push({
-          county: county,
-          cases: cases
+          // Skip bunk data
+          let $tds = $tr.find('td');
+          if ($tds.get(0).length > 2 && !$tds.first().attr('rowspan')) {
+            return;
+          }
+
+          let cases = parse.number($tr.find('td:last-child').text());
+          counties.push({
+            county: county,
+            cases: cases
+          });
         });
-      });
+      }
+      else {
+        // Use the new map
+        let data = await fetch.csv(this.url);
+
+        for (let county of data) {
+          if (county.PARISH === 'Out of State Resident') {
+            continue;
+          }
+          if (county.PARISH === 'Parish Under Investigation') {
+            continue;
+          }
+          counties.push({
+            county: parse.string(county.PARISH) + ' Parish',
+            cases: parse.number(county.Cases),
+            deaths: parse.number(county.Deaths)
+          });
+        }
+      }
 
       return counties;
     }
@@ -475,11 +502,10 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county =
-          $tr
+        let county = transform.addCounty($tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '') + ' County';
+            .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -505,11 +531,10 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county =
-          $tr
+        let county = transform.addCounty($tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '') + ' County';
+            .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
@@ -537,7 +562,7 @@ let scrapers = [
         .map(str => {
           let parts = str.split(': ');
           return {
-            county: parts[0] + ' County',
+            county: transform.addCounty(parse.string(parts[0])),
             cases: parse.number(parts[1])
           };
         });
@@ -562,7 +587,7 @@ let scrapers = [
           return;
         }
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:nth-child(2)').text()) + ' County';
+        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
         counties[county] = counties[county] || { cases: 0 };
         counties[county].cases += 1;
       });
@@ -613,7 +638,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('> *:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
           cases: parse.number($tr.find('> *:nth-child(2)').text()),
           deaths: parse.number($tr.find('> *:last-child').text())
         });
@@ -969,7 +994,7 @@ let scrapers = [
 
       return {
         cases: parse.number(
-          $('td:contains("Confirmed Cases")')
+          $('td:contains("Cases")')
             .next()
             .text()
         ),
@@ -1075,7 +1100,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -1096,7 +1121,7 @@ let scrapers = [
       $trs.each((index, tr) => {
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('> *:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
@@ -1118,7 +1143,7 @@ let scrapers = [
         let cases = parse.number($tr.find('td:last-child').text());
         if (index > 0 && county.indexOf('Non-Utah') === -1) {
           counties.push({
-            county: county + ' County',
+            county: transform.addCounty(county),
             cases,
           });
         }
@@ -1137,7 +1162,7 @@ let scrapers = [
       $lis.each((index, li) => {
         let matches = $(li).text().match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          let county = parse.string(matches[1]) + ' County';
+          let county = transform.addCounty(parse.string(matches[1]));
           let cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -1165,7 +1190,7 @@ let scrapers = [
         }
         let $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()) + ' County',
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -1186,10 +1211,35 @@ let scrapers = [
       arrayOfCounties.map(county => {
         let splitCounty = county.trim().split(' ');
         counties.push({
-          county: parse.string(splitCounty[0]) + ' County',
+          county: transform.addCounty(parse.string(splitCounty[0])),
           cases: parse.number(splitCounty[1])
         });
       });
+      return counties;
+    }
+  },
+  {
+    state: 'CT',
+    country: 'USA',
+    url: 'https://portal.ct.gov/Coronavirus',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.page(this.url);
+      let $lis = $('span:contains("Latest COVID-19 Testing Data in Connecticut")')
+                  .nextAll('ul')
+                  .first()
+                  .find('li');
+
+      $lis.each((index, li) => {
+        if(index < 1) {
+          return
+        }
+        let countyData = $(li).text().split(': ');
+           counties.push({
+            county: parse.string(countyData[0]),
+            cases: parse.number(countyData[1])
+          });
+      })
       return counties;
     }
   }
