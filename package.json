@@ -24,6 +24,7 @@
     "editorconfig": "^0.15.3",
     "gh-pages": "^2.2.0",
     "needle": "^2.3.3",
+    "puppeteer": "^2.1.1",
     "yargs": "^15.3.0"
   }
 }
