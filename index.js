@@ -90,7 +90,7 @@ async function scrape() {
         addData(cases, location, await location.scraper());
       }
       catch(err) {
-        console.error('  ❌ Error processing %s: ', location.county, err);
+        console.error('  ❌ Error processing %s: ', transform.getName(location), err);
       }
     }
   }
