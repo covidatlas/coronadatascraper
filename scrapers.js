@@ -345,7 +345,7 @@ let scrapers = [
         let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
 
         // Make sure this matches once they have a confirmed case
-        if (status === 'Confirmed') {
+        if (status === 'Confirmed' || status === 'Presumptive') {
           counties[county] = counties[county] || { cases: 0 };
           counties[county].cases++;
         }
