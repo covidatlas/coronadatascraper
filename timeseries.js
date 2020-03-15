@@ -202,12 +202,17 @@ async function generateTimeseries() {
   let timeseriesData = {};
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
+  let featureCollection;
   for (let date of dates) {
     let data = await generate(date === lastDate ? undefined : date, {
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
     });
+
+    if (date === lastDate) {
+      featureCollection = data.featureCollection;
+    }
 
     for (let location of data.locations) {
       let name = transform.getName(location);
@@ -228,6 +233,7 @@ async function generateTimeseries() {
   }
 
   await fs.writeJSON(path.join('dist', 'timeseries.json'), timeseriesData);
+  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
 
   let { locations, timeseries } = transform.pivotTimeseries(timeseriesData);
   await fs.writeFile(path.join('dist', `timeseries-pivoted.json`), JSON.stringify(timeseries, null, 2));
