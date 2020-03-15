@@ -40,7 +40,7 @@ async function readPopulationData(featureCollection) {
     supplemental: await readPopulationFromCSV('population-supplemental.csv')
   };
 
-  populations.byState.CHN = populations.byState['Mainland China'];
+  populations.byState.CHN = populations.byState['China'];
   populations.byState.CAN = populations.byState['Canada'];
   populations.byState.ITA = populations.byState['Italy'];
   populations.byState.AUS = populations.byState['Australia'];
