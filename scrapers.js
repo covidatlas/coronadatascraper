@@ -850,9 +850,9 @@ let scrapers = [
       let cases;
       let $ = await fetch.page(this.url);
 
-      let $h1 = $('p:contains("Total Confirmed Cases")').nextAll('h1');
+      let $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
 
-      cases = parse.number($h1.text());
+      cases = parse.number($h2.text());
 
       return {
         cases: cases
@@ -1158,23 +1158,25 @@ let scrapers = [
         $('.count-subject:contains("Positive travel-related case")')
           .closest('.hb-counter')
           .find('.count-number')
-          .text()
+          .attr('data-from')
       );
       cases += parse.number(
         $('.count-subject:contains("Presumptive Positive")')
           .closest('.hb-counter')
           .find('.count-number')
-          .text()
+          .attr('data-from')
+      );
+
+      let tested = parse.number(
+        $('.count-subject:contains("People tested")')
+          .closest('.hb-counter')
+          .find('.count-number')
+          .attr('data-from')
       );
 
       return {
         cases: cases,
-        tested: parse.number(
-          $('.count-subject:contains("People tested")')
-            .closest('.hb-counter')
-            .find('.count-number')
-            .text()
-        )
+        tested: tested
       };
     }
   },
