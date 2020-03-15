@@ -229,6 +229,10 @@ async function generateTimeseries() {
 
   await fs.writeJSON(path.join('dist', 'timeseries.json'), timeseriesData);
 
+  let { locations, timeseries } = transform.pivotTimeseries(timeseriesData);
+  await fs.writeFile(path.join('dist', `timeseries-pivoted.json`), JSON.stringify(timeseries, null, 2));
+  await fs.writeFile(path.join('dist', `locations.json`), JSON.stringify(locations, null, 2));
+
   await generateCSV(timeseriesData);
 
   await generateTidyCSV(timeseriesData);
