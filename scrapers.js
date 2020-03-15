@@ -865,18 +865,23 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx',
-    // Error: page needs JavaScript
-    _scraper: async function() {
-      let cases;
+
+    scraper: async function() {
+      // Santa Clara County uses JavaScript to parse JSON data into an HTML table. We cannot read
+      // this table directly without the DOM so we regex parse the JSON data.
+
       let $ = await fetch.page(this.url);
+      let scriptData = $('script:contains("Total_Confirmed_Cases")')[0].children[0].data;
 
-      let $table = $('.sccgov-responsive-table');
+      let regExp = /\[.*\]/;
+      let data = JSON.parse(regExp.exec(scriptData))[0];
 
-      let $cell = $table.find('.sccgov-responsive-table-cell').first();
-      cases = parse.number($cell.text());
+      let cases = parse.number(data['Total_Confirmed_Cases']);
+      let deaths = parse.number(data['Deaths']);
 
       return {
-        cases: cases
+        cases: cases,
+        deaths: deaths
       };
     }
   },
