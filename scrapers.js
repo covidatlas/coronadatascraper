@@ -575,8 +575,7 @@ let scrapers = [
     // Incapsula blocking request
     scraper: async function() {
       let counties = [];
-      let $ = await fetch.page(this.url);
-
+      let $ = await fetch.headless(this.url);
       let $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
 
       let $trs = $table.find('tbody > tr:not(:last-child)');
@@ -588,12 +587,12 @@ let scrapers = [
             .text()
             .replace(/[\d]*/g, ''));
         let cases = parse.number($tr.find('td:last-child').text());
+      
         counties.push({
           county: county,
           cases: cases
         });
       });
-
       return counties;
     }
   },
