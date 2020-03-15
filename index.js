@@ -49,6 +49,11 @@ function isValid(data, location) {
   Clean the passed data
 */
 function clean(data) {
+  // Normalize states
+  if (data.country === 'USA') {
+    data.state = transform.toUSStateAbbreviation(data.state);
+  }
+
   for (let [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
