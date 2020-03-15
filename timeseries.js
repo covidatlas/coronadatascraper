@@ -99,6 +99,53 @@ async function generateTidyCSV(timeseriesData) {
   return fs.writeCSV(path.join('dist', 'timeseries-tidy.csv'), csvData);
 }
 
+async function generateLessTidyCSV(timeseriesData) {
+  let columns = [
+    'city',
+    'county',
+    'state',
+    'country',
+    'population',
+    'lat',
+    'long',
+  ].concat(caseDataProps);
+
+  let csvData = [];
+  for (let [name, location] of Object.entries(timeseriesData)) {
+    // Build base row
+    let row = [];
+    for (let column of columns) {
+      if (column === 'lat') {
+        row.push(location.coordinates ? location.coordinates[1] : '');
+      }
+      else if (column === 'long') {
+        row.push(location.coordinates ? location.coordinates[0] : '');
+      }
+      else {
+        row.push(location[column]);
+      }
+    }
+
+    // For each date, add rows for each type
+    for (let date of dates) {
+      let dateTypeRow = row.slice();
+      for (let type of caseDataProps) {
+        dateTypeRow.push(location.dates[date] && location.dates[date][type] || '');
+      }
+      dateTypeRow.push(date);
+      csvData.push(dateTypeRow);
+    }
+  }
+
+  columns = columns.concat([
+    'date'
+  ]);
+
+  csvData.splice(0, 0, columns);
+
+  return fs.writeCSV(path.join('dist', 'timeseries-lesstidy.csv'), csvData);
+}
+
 async function generateCSV(timeseriesData) {
   let columns = [
     'city',
@@ -178,6 +225,8 @@ async function generateTimeseries() {
   await generateCSV(timeseriesData);
 
   await generateTidyCSV(timeseriesData);
+
+  await generateLessTidyCSV(timeseriesData);
 }
 
 generateTimeseries();
