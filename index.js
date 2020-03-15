@@ -185,6 +185,8 @@ async function scrapeData() {
 async function writeData({ locations, featureCollection }) {
   let date = process.env['SCRAPE_DATE'] ?  '-' + process.env['SCRAPE_DATE'] : '';
 
+  locations = await addDailyPercentChange(locations);
+
   await fs.ensureDir('dist')
 
   await fs.writeFile(path.join('dist', `data${date}.json`), JSON.stringify(locations, null, 2));
@@ -205,6 +207,39 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
     .then(options.findFeatures && findFeatures)
     .then(options.findPopulations && findPopulations)
     .then(options.writeData && writeData);
+}
+
+async function addDailyPercentChange(locations) {
+
+  let y = new Date();
+  y.setDate(y.getDate() - 1);
+  let yesterday = transform.getYYYYMD(y, '-');
+  let filePath = './' + path.join('dist', `data-${yesterday}.json`);
+  let dataFromYesterday = [];
+  try {
+    dataFromYesterday = await fs.readJSON(filePath);
+  } catch (err) {
+    console.error('  ❌ JSON file "%s" not found percentages will not be calculated: ', filePath, err);
+    return locations
+  }
+  return locations.map(location => {
+    let percentChange = "NA";
+    let locationDataYesterday = dataFromYesterday.find(d => d.county === location.county);
+    if (locationDataYesterday !== undefined) {
+      let casesDiff = location.cases - locationDataYesterday.cases;
+      if (casesDiff > 0) {
+        if (locationDataYesterday.cases > 0) {
+          percentChange = (casesDiff / locationDataYesterday.cases) * 100
+        } else {
+          percentChange = location.cases * 100
+        }
+      } else {
+        percentChange = 0;
+      }
+    }
+    location["dailyPercentChange"] = percentChange;
+    return location
+  });
 }
 
 export default generate;
