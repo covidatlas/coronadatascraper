@@ -1192,6 +1192,31 @@ let scrapers = [
       });
       return counties;
     }
+  },
+  {
+    state: 'CT',
+    country: 'USA',
+    url: 'https://portal.ct.gov/Coronavirus',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.page(this.url);
+      let $lis = $('span:contains("Latest COVID-19 Testing Data in Connecticut")')
+                  .nextAll('ul')
+                  .first()
+                  .find('li');
+                
+      $lis.each((index, li) => {
+        if(index < 1) {
+          return
+        }
+        let countyData = $(li).text().split(': ');
+           counties.push({
+            county: parse.string(countyData[0]),
+            cases: parse.number(countyData[1])
+          });
+      })      
+      return counties;
+    }
   }
 
 
