@@ -41,13 +41,20 @@ let scrapers = [
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
     state: 'IN',
+    _countyMap: {
+      'Verm.': 'Vermillion',
+      'Vander.': 'Vanderburgh',
+      'St Joseph': 'St. Joseph'
+    },
     scraper: async function() {
       let data = await fetch.csv(this.url);
 
       let counties = [];
       for (let county of data) {
+        let countyName = parse.string(county.COUNTYNAME)
+        countyName = this._countyMap[countyName] || countyName;
         counties.push({
-          county: transform.addCounty(parse.string(county.COUNTYNAME)),
+          county: transform.addCounty(countyName),
           cases: parse.number(county.Total_Positive),
           deaths: parse.number(county.Total_Deaths),
           tested: parse.number(county.Total_Tested)
