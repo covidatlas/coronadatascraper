@@ -182,8 +182,20 @@ async function scrapeData() {
   return { locations };
 };
 
+function calculateActive(locations) {
+  return locations.map(l => {
+    let cases = l["cases"] !== undefined ? l["cases"] : 0;
+    let deaths = l["deaths"] !== undefined ? l["deaths"] : 0;
+    let recovered = l["recovered"] !== undefined ? l["recovered"] : 0;
+    l["active"] = cases - deaths - recovered;
+    return l;
+  });
+}
+
 async function writeData({ locations, featureCollection }) {
   let date = process.env['SCRAPE_DATE'] ?  '-' + process.env['SCRAPE_DATE'] : '';
+
+  locations = calculateActive(locations);
 
   await fs.ensureDir('dist')
 
