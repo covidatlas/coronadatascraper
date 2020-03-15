@@ -1,8 +1,10 @@
+import path from 'path';
 import * as fetch from './lib/fetch.js';
 import * as parse from './lib/parse.js';
 import * as transform from './lib/transform.js';
 import * as datetime from './lib/datetime.js';
 import * as rules from './lib/rules.js';
+import * as fs from './lib/fs.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -21,6 +23,20 @@ import * as rules from './lib/rules.js';
 */
 
 let scrapers = [
+  {
+    state: 'AZ',
+    country: 'USA',
+    url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
+    scraper: async function() {
+      let { browser, page } = await fetch.headless(this.url);
+
+      let counties = [];
+      // do stuff
+
+      await browser.close();
+      return counties;
+    }
+  },
   {
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
@@ -166,6 +182,9 @@ let scrapers = [
       }
     ],
     scraper: async function() {
+      // Build a hash of US counties
+      let jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
+
       let cases = await fetch.csv(this._urls.cases, false);
       let deaths = await fetch.csv(this._urls.deaths, false);
       let recovered = await fetch.csv(this._urls.recovered, false);
@@ -182,7 +201,36 @@ let scrapers = [
         date = customDate;
       }
 
+      let getOldData = process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-13'));
+
+      let countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
+        let retain = false;
+        if (getOldData) {
+          // See if it's a county
+          let countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
+          if (countyAndState) {
+
+            if (countyTotals[countyAndState]) {
+              // Add
+              countyTotals[countyAndState].cases += cases[index][date] || 0;
+              countyTotals[countyAndState].deaths += deaths[index][date] || 0;
+              countyTotals[countyAndState].recovered += recovered[index][date] || 0;
+            }
+            else {
+              let [county, state] = countyAndState.split(', ');
+              countyTotals[countyAndState] = {
+                county: county,
+                state: state,
+                cases: parse.number(cases[index][date] || 0),
+                recovered: parse.number(recovered[index][date] || 0),
+                deaths: parse.number(deaths[index][date] || 0),
+                coordinates: [parse.float(cases[index]['Long']), parse.float(cases[index]['Lat'])]
+              };
+            }
+          }
+        }
+
         if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           countries.push({
             country: parse.string(cases[index]['Country/Region']),
@@ -193,6 +241,11 @@ let scrapers = [
             coordinates: [parse.float(cases[index]['Long']), parse.float(cases[index]['Lat'])]
           });
         }
+      }
+
+      // Add counties
+      for (let [countyName, countyData] of Object.entries(countyTotals)) {
+        countries.push(countyData);
       }
 
       return countries;
@@ -306,7 +359,7 @@ let scrapers = [
         let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
 
         // Make sure this matches once they have a confirmed case
-        if (status === 'Confirmed') {
+        if (status === 'Confirmed' || status === 'Presumptive') {
           counties[county] = counties[county] || { cases: 0 };
           counties[county].cases++;
         }
@@ -367,7 +420,7 @@ let scrapers = [
         let $tr = $(tr);
         counties.push({
           county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
-          cases: parse.number($tr.find('td:nth-last-child(2)').text()),
+          cases: parse.number($tr.find('td:last-child').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -383,7 +436,7 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
 
-      let $lis = $('p:contains("Presumptive positive cases by county of residence")')
+      let $lis = $('p:contains("Positive cases by county of residence")')
         .nextAll('ul')
         .first()
         .find('li');

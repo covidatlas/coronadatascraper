@@ -31,9 +31,21 @@
       <p>Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.</p>
 
       <p>Here's what it found most recently:</p>
-      <a class="gt_button" download href="./data.csv">CSV</a>
-      <a class="gt_button" download href="./data.json">JSON</a>
-      <a class="gt_button" download href="./features.json">GeoJSON</a>
+
+      <div style="display: flex; flex-direction: row; justify-content: space-around;">
+        <p style="display: flex; flex-direction: column;">
+          <a class="gt_button" download href="./timeseries.json">Timeseries JSON</a>
+          <a class="gt_button" download href="./timeseries.csv">Timeseries CSV</a>
+          <a class="gt_button" download href="./timeseries-tidy.csv">Timeseries CSV (Tidy format)</a>
+          <a class="gt_button" download href="./timeseries-jhu.csv">Timeseries CSV (like JHU)</a>
+        </p>
+
+        <p style="display: flex; flex-direction: column;">
+          <a class="gt_button" download href="./data.csv">Today's CSV</a>
+          <a class="gt_button" download href="./data.json">Today's JSON</a>
+          <a class="gt_button" download href="./features.json">Today's GeoJSON</a>
+        </p>
+      </div>
 
       <h2 class="gt_heading">Can't quite visualize it?</h2>
       <nav>
