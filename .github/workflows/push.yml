@@ -10,12 +10,8 @@ jobs:
       steps:
         - uses: actions/checkout@v1
           with:
-            token: ${{ secrets.SECRETS_TOKEN }}
+            token: ${{ secrets.GIT_SECRET }}
             submodules: true
-        - name: Checkout submodules
-          uses: textbook/git-checkout-submodule-action@master
-          with:
-            remote: true
         - name: Use Node.js 13.x
           uses: actions/setup-node@v1
           with:
