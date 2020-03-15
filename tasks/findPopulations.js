@@ -34,7 +34,7 @@ async function readPopulationData(featureCollection) {
       'Australia': await readPopulationFromCSV('population-australia-states.csv'),
       'Canada': await readPopulationFromCSV('population-canada-provinces.csv'),
       'Italy': await readPopulationFromCSV('population-italy-regions.csv'),
-      'USA': await readPopulationFromCSV('population-usa-states.csv')
+      'USA': await readPopulationFromCSV('population-usa-states-abbrev.csv')
     },
     byCountry: {},
     supplemental: await readPopulationFromCSV('population-supplemental.csv')

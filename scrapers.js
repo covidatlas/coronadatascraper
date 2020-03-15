@@ -210,7 +210,6 @@ let scrapers = [
           // See if it's a county
           let countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
           if (countyAndState) {
-
             if (countyTotals[countyAndState]) {
               // Add
               countyTotals[countyAndState].cases += parse.number(cases[index][date] || 0);
@@ -278,7 +277,7 @@ let scrapers = [
       for (let stateData of data) {
         if (stateData.Name) {
           states.push({
-            state: parse.string(stateData.Name),
+            state: transform.toUSStateAbbreviation(parse.string(stateData.Name)),
             cases: this._getCaseNumber(stateData['Cases Reported'])
           });
         }
