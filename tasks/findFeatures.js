@@ -167,7 +167,7 @@ function generateFeatures({ locations }) {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.state === feature.properties.name || location.state === feature.properties.name_en) {
+          if (location.state === transform.toUSStateAbbreviation(feature.properties.name) || location.state === transform.toUSStateAbbreviation(feature.properties.name_en)) {
             found = true;
             storeFeature(feature, location);
             break;
