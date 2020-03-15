@@ -406,7 +406,7 @@ let scrapers = [
         let $tr = $(tr);
         counties.push({
           county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
-          cases: parse.number($tr.find('td:nth-last-child(2)').text()),
+          cases: parse.number($tr.find('td:last-child').text()),
           deaths: parse.number($tr.find('td:last-child').text())
         });
       });
