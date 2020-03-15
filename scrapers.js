@@ -1159,23 +1159,25 @@ let scrapers = [
         $('.count-subject:contains("Positive travel-related case")')
           .closest('.hb-counter')
           .find('.count-number')
-          .text()
+          .attr('data-from')
       );
       cases += parse.number(
         $('.count-subject:contains("Presumptive Positive")')
           .closest('.hb-counter')
           .find('.count-number')
-          .text()
+          .attr('data-from')
+      );
+
+      let tested = parse.number(
+        $('.count-subject:contains("People tested")')
+          .closest('.hb-counter')
+          .find('.count-number')
+          .attr('data-from')
       );
 
       return {
         cases: cases,
-        tested: parse.number(
-          $('.count-subject:contains("People tested")')
-            .closest('.hb-counter')
-            .find('.count-number')
-            .text()
-        )
+        tested: tested
       };
     }
   },
