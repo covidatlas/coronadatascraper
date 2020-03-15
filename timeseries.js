@@ -1,7 +1,7 @@
 import generate from './index.js';
 import path from 'path';
 import * as transform from './lib/transform.js';
-import * as date from './lib/datetime.js';
+import * as datetime from './lib/datetime.js';
 import * as fs from './lib/fs.js';
 
 // Generate a list of dates starting at the first data
@@ -9,7 +9,7 @@ let dates = [];
 let today = new Date();
 let curDate = new Date('2020-1-22');
 while (curDate <= today) {
-  dates.push(date.getYYYYMD(curDate));
+  dates.push(datetime.getYYYYMD(curDate));
   curDate.setDate(curDate.getDate() + 1);
 }
 
@@ -79,7 +79,7 @@ async function generateTidyCSV(timeseriesData) {
       for (let type of caseDataProps) {
         if (location.dates[date] && location.dates[date][type] !== undefined) {
           let dateTypeRow = row.slice();
-          dateTypeRow.push(date);
+          dateTypeRow.push(datetime.getYYYYMMDD(new Date(date)));
           dateTypeRow.push(type);
           dateTypeRow.push(location.dates[date][type]);
           csvData.push(dateTypeRow);
@@ -108,7 +108,8 @@ async function generateLessTidyCSV(timeseriesData) {
     'population',
     'lat',
     'long',
-  ].concat(caseDataProps);
+    'url'
+  ];
 
   let csvData = [];
   for (let [name, location] of Object.entries(timeseriesData)) {
@@ -126,18 +127,24 @@ async function generateLessTidyCSV(timeseriesData) {
       }
     }
 
-    // For each date, add rows for each type
+    // For each date, add a row
     for (let date of dates) {
-      let dateTypeRow = row.slice();
+      let dateRow = row.slice();
+      let hasData = false;
       for (let type of caseDataProps) {
-        dateTypeRow.push(location.dates[date] && location.dates[date][type] || '');
+        if (location.dates[date] && location.dates[date][type]) {
+          hasData = true;
+        }
+        dateRow.push(location.dates[date] && location.dates[date][type] || '');
       }
-      dateTypeRow.push(date);
-      csvData.push(dateTypeRow);
+      if (hasData) {
+        dateRow.push(datetime.getYYYYMMDD(new Date(date)));
+        csvData.push(dateRow);
+      }
     }
   }
 
-  columns = columns.concat([
+  columns = columns.concat(caseDataProps).concat([
     'date'
   ]);
 
