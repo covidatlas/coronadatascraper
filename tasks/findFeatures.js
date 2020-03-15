@@ -39,46 +39,31 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-let props = [
-  'name',
-  'name_en',
-  'abbrev',
-  'region',
-  'admin',
-  'geonunit',
-  'pop_est',
-  'pop_year',
-  'gdp_md_est',
-  'gdp_year',
-  'iso_a2',
-  'iso_3166_2',
-  'type_en',
-  'wikipedia'
-];
+let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
   // Correct missing county
-  'Island, WA': (location) => {
+  'Island, WA': location => {
     location.state = 'Island County, WA';
   },
 
   // 🇭🇰
-  'Hong Kong': (location) => {
+  'Hong Kong': location => {
     location.country = 'Hong Kong';
     delete location.state;
   },
 
   // Why is this in Denmark?
-  'Faroe Islands': (location) => {
+  'Faroe Islands': location => {
     location.country = 'Faroe Islands';
     delete location.state;
   },
 
   // Why is it UK, United Kingdom?
-  'UK': (location) => {
+  UK: location => {
     delete location.state;
   }
-}
+};
 
 function cleanFeatures(set) {
   for (let feature of set.features) {
@@ -86,7 +71,7 @@ function cleanFeatures(set) {
   }
 }
 
-function generateFeatures({ locations }) {
+const generateFeatures = report => ({ locations }) => {
   function storeFeature(feature, location) {
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
@@ -128,6 +113,8 @@ function generateFeatures({ locations }) {
     // Clean and normalize data first
     cleanFeatures(countryData);
     cleanFeatures(provinceData);
+
+    const errors = [];
 
     locationLoop: for (let location of locations) {
       let found = false;
@@ -202,8 +189,7 @@ function generateFeatures({ locations }) {
             break;
           }
         }
-      }
-      else {
+      } else {
         // Check if the location exists within our countries
         for (let feature of countryData.features) {
           // Find by full name
@@ -263,13 +249,19 @@ function generateFeatures({ locations }) {
 
       if (!found) {
         console.error('  ❌ Could not find location %s [%f, %f]', transform.getName(location), location.coordinates ? location.coordinates[0] : '?', location.coordinates ? location.coordinates[1] : '?');
+        errors.push(transform.getName(location));
       }
     }
 
     console.log('✅ Found features for %d out of %d regions for a total of %d features', foundCount, Object.keys(locations).length, featureCollection.features.length);
 
+    report['findFeatures'] = {
+      numFeaturesFound: foundCount,
+      missingFeatures: errors
+    };
+
     resolve({ locations, featureCollection });
   });
-}
+};
 
 export default generateFeatures;
