@@ -6,13 +6,20 @@ on:
 
 jobs:
   build:
-      runs-on: ubuntu-latest
+      runs-on: [macOS-latest]
       steps:
-        - uses: actions/checkout@v1
-        - name: Checkout submodules
-          uses: textbook/git-checkout-submodule-action@master
-          with:
-            remote: true
+        - uses: actions/checkout@v1 # without submodules
+        - name: disable the keychain credential helper
+          run: git config --global credential.helper ""
+        - name: enable the local store credential helper
+          run: git config --global --add credential.helper store
+        - name: add credential
+          run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
+        - name: tell git to use https instead of ssh whenever it encounters it
+          run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+        - name: Update submodules
+          run: |
+          git submodule update --init
         - name: Use Node.js 13.x
           uses: actions/setup-node@v1
           with:
@@ -22,4 +29,4 @@ jobs:
             yarn
         - name: Run
           run: |
-            yarn start
+            yarn update
