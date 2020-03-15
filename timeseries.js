@@ -18,6 +18,7 @@ let caseDataProps = [
   'cases',
   'deaths',
   'recovered',
+  'active',
   'tested'
 ];
 
