@@ -213,15 +213,16 @@ let scrapers = [
 
             if (countyTotals[countyAndState]) {
               // Add
-              countyTotals[countyAndState].cases += cases[index][date] || 0;
-              countyTotals[countyAndState].deaths += deaths[index][date] || 0;
-              countyTotals[countyAndState].recovered += recovered[index][date] || 0;
+              countyTotals[countyAndState].cases += parse.number(cases[index][date] || 0);
+              countyTotals[countyAndState].deaths += parse.number(deaths[index][date] || 0);
+              countyTotals[countyAndState].recovered += parse.number(recovered[index][date] || 0);
             }
             else {
               let [county, state] = countyAndState.split(', ');
               countyTotals[countyAndState] = {
                 county: county,
                 state: state,
+                country: 'USA',
                 cases: parse.number(cases[index][date] || 0),
                 recovered: parse.number(recovered[index][date] || 0),
                 deaths: parse.number(deaths[index][date] || 0),
@@ -662,7 +663,7 @@ let scrapers = [
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:first-child').text()).replace(':', '');
+        let county = transform.addCounty(parse.string($tr.find('td:first-child').text()).replace(':', ''));
         let cases = parse.number($tr.find('td:last-child').text());
         counties.push({
           county: county,
