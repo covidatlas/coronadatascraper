@@ -1,4 +1,4 @@
-name: Build CI
+name: Deploy CI
 on:
   push:
     branches-ignore:
@@ -9,6 +9,8 @@ jobs:
       runs-on: [macOS-latest]
       steps:
         - uses: actions/checkout@v1 # without submodules
+          with:
+            persist-credentials: false
         - name: Disable the keychain credential helper
           run: git config --global credential.helper ""
         - name: Enable the local store credential helper
@@ -30,8 +32,12 @@ jobs:
         - name: Run
           run: |
             yarn update
-        - name: Push data
-          uses: actions/upload-artifact@v1
+        - name: Build site
+          run: |
+            yarn deploy
+        - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@releases/v3
           with:
-            name: data
-            path: dist
+            ACCESS_TOKEN: ${{ secrets.GIT_SECRET }}
+            BRANCH: gh-pages # The branch the action should deploy to.
+            FOLDER: dist # The folder the action should deploy.
