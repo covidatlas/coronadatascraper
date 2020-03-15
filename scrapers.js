@@ -24,6 +24,20 @@ import * as fs from './lib/fs.js';
 
 let scrapers = [
   {
+    state: 'AZ',
+    country: 'USA',
+    url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
+    scraper: async function() {
+      let { browser, page } = await fetch.headless(this.url);
+
+      let counties = [];
+      // do stuff
+
+      await browser.close();
+      return counties;
+    }
+  },
+  {
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
     state: 'IN',
