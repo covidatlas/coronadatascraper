@@ -1,6 +1,7 @@
 import * as fetch from './lib/fetch.js';
 import * as parse from './lib/parse.js';
 import * as transform from './lib/transform.js';
+import * as datetime from './lib/datetime.js';
 import * as rules from './lib/rules.js';
 
 /*
@@ -170,11 +171,15 @@ let scrapers = [
       let recovered = await fetch.csv(this._urls.recovered, false);
 
       let countries = [];
-      let latestDate = Object.keys(cases[0]).pop();
+      let date = Object.keys(cases[0]).pop();
 
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        latestDate = transform.getMDYY(new Date(process.env['SCRAPE_DATE']));
+        let customDate = datetime.getMDYY(new Date(process.env['SCRAPE_DATE']));
+        if (!cases[0][customDate]) {
+          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
+        }
+        date = customDate;
       }
 
       for (let index = 0; index < cases.length; index++) {
@@ -182,9 +187,9 @@ let scrapers = [
           countries.push({
             country: parse.string(cases[index]['Country/Region']),
             state: parse.string(cases[index]['Province/State']),
-            cases: parse.number(cases[index][latestDate] || 0),
-            recovered: parse.number(recovered[index][latestDate] || 0),
-            deaths: parse.number(deaths[index][latestDate] || 0),
+            cases: parse.number(cases[index][date] || 0),
+            recovered: parse.number(recovered[index][date] || 0),
+            deaths: parse.number(deaths[index][date] || 0),
             coordinates: [parse.float(cases[index]['Long']), parse.float(cases[index]['Lat'])]
           });
         }
@@ -238,7 +243,7 @@ let scrapers = [
       let latestData;
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        let date = transform.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
+        let date = datetime.getDDMMYYYY(new Date(process.env['SCRAPE_DATE']), '.');
         latestData = data.filter(dayData => dayData.Date === date)[0];
       }
       else {
@@ -262,7 +267,7 @@ let scrapers = [
       let latestDate = data[data.length - 1].data.substr(0, 10);
       if (process.env['SCRAPE_DATE']) {
         // Find old date
-        latestDate = transform.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
+        latestDate = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']), '-');
       }
 
       // Get only records for that date
