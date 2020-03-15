@@ -39,24 +39,7 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-let props = [
-  'name',
-  'name_en',
-  'abbrev',
-  'region',
-  'admin',
-  'postal',
-  'gu_a3',
-  'geonunit',
-  'pop_est',
-  'pop_year',
-  'gdp_md_est',
-  'gdp_year',
-  'iso_a2',
-  'iso_3166_2',
-  'type_en',
-  'wikipedia'
-];
+let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
   // Correct missing county
@@ -88,7 +71,7 @@ function cleanFeatures(set) {
   }
 }
 
-const generateFeatures = report => ({ locations }) => {
+const generateFeatures = ({ locations, report }) => {
   function storeFeature(feature, location) {
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
@@ -168,8 +151,7 @@ const generateFeatures = report => ({ locations }) => {
                 }
               }
             }
-          }
-          else if (location.state) {
+          } else if (location.state) {
             for (let feature of provinceData.features) {
               if (location.state === feature.properties.postal) {
                 found = true;
@@ -182,12 +164,7 @@ const generateFeatures = report => ({ locations }) => {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.country === feature.properties.gu_a3 && (
-              location.state === feature.properties.name ||
-              location.state === feature.properties.name_en ||
-              location.state === feature.properties.region
-            )
-          ) {
+          if (location.country === feature.properties.gu_a3 && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region)) {
             found = true;
             storeFeature(feature, location);
             break;
@@ -274,12 +251,8 @@ const generateFeatures = report => ({ locations }) => {
       }
 
       if (!found) {
-<<<<<<< HEAD
-        console.error('  ❌ Could not find location %s [%f, %f]', transform.getName(location), location.coordinates ? location.coordinates[0] : '?', location.coordinates ? location.coordinates[1] : '?');
-        errors.push(transform.getName(location));
-=======
         console.error('  ❌ Could not find location %s', transform.getName(location), location);
->>>>>>> 8a26628c2d9ec40b85dc9837c7e34c67ecb0aa07
+        errors.push(transform.getName(location));
       }
     }
 
@@ -290,7 +263,7 @@ const generateFeatures = report => ({ locations }) => {
       missingFeatures: errors
     };
 
-    resolve({ locations, featureCollection });
+    resolve({ locations, featureCollection, report });
   });
 };
 

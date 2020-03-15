@@ -105,7 +105,7 @@ async function scrape() {
   return { locations, errors };
 }
 
-const scrapeData = report => async () => {
+const scrapeData = async ({ report }) => {
   console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
 
   const { locations, errors } = await scrape();
@@ -138,7 +138,7 @@ const scrapeData = report => async () => {
     errors
   };
 
-  return { locations };
+  return { locations, report };
 };
 
 export default scrapeData;

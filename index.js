@@ -13,12 +13,14 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
   }
 
   // JSON used for reporting
-  const report = {};
+  const report = {
+    date
+  };
 
-  const output = scrapeData(report)()
-    .then(options.findFeatures && findFeatures(report))
-    .then(options.findPopulations && findPopulations(report))
-    .then(options.writeData && writeData(report));
+  const output = scrapeData({ report })
+    .then(options.findFeatures && findFeatures)
+    .then(options.findPopulations && findPopulations)
+    .then(options.writeData && writeData);
 
   return output;
 }
