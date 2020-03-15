@@ -123,6 +123,13 @@ const generateFeatures = ({ locations, report }) => {
         point = turf.point(location.coordinates);
       }
 
+      // Breaks France
+      if (location.country === 'REU' ||
+          location.country === 'MTQ' ||
+          location.country === 'GUF') {
+        continue;
+      }
+
       // Apply transforms
       if (locationTransforms[location.state]) {
         locationTransforms[location.state](location);
