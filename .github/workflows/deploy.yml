@@ -1,8 +1,7 @@
 name: Deploy CI
-on:
-  push:
-    branches-ignore:
-        - master
+schedule:
+    # * is a special character in YAML so we have to quote this string
+    - cron:  '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
 
 jobs:
   build:
