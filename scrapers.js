@@ -432,7 +432,6 @@ let scrapers = [
   {
     state: 'LA',
     country: 'USA',
-    url: 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv',
     scraper: async function() {
       let counties = [];
       if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-14'))) {
@@ -466,6 +465,7 @@ let scrapers = [
         });
       }
       else {
+        this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
         // Use the new map
         let data = await fetch.csv(this.url);
 
