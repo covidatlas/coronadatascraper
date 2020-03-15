@@ -15,7 +15,8 @@
     "buildSite": "cp -r site/* dist/",
     "deploy": "npm run dateData && npm run deploySite",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
-    "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e ."
+    "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
+    "test": "jest"
   },
   "dependencies": {
     "@turf/turf": "^5.1.6",
@@ -26,5 +27,8 @@
     "needle": "^2.3.3",
     "puppeteer": "^2.1.1",
     "yargs": "^15.3.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
