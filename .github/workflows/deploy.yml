@@ -34,12 +34,9 @@ jobs:
         - name: Install
           run: |
             yarn
-        - name: Run
+        - name: Build
           run: |
-            yarn update
-        - name: Build site
-          run: |
-            yarn deploy
+            yarn build
         - name: Deploy
           uses: JamesIves/github-pages-deploy-action@releases/v3
           with:
