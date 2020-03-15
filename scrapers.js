@@ -169,7 +169,7 @@ let scrapers = [
     ],
     scraper: async function() {
       // Build a hash of US counties
-      let jhuUSCountyMap = await fs.readJSON(path.join('dist', 'jhuUSCountyMap.json'));
+      let jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
 
       let cases = await fetch.csv(this._urls.cases, false);
       let deaths = await fetch.csv(this._urls.deaths, false);
