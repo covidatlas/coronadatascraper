@@ -369,27 +369,49 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
-      let $table = $('h3:contains("Mississippi Cases")')
+      if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-15'))) {
+        let $table = $('h3:contains("Mississippi Cases")')
+          .nextAll('table')
+          .first();
+
+        let $trs = $table.find('tbody > tr');
+
+        let counties = {};
+
+        $trs.each((index, tr) => {
+          let $tr = $(tr);
+          let status = $tr.find('td:nth-child(3)').text();
+          let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
+
+          // Make sure this matches once they have a confirmed case
+          if (status === 'Confirmed' || status === 'Presumptive') {
+            counties[county] = counties[county] || { cases: 0 };
+            counties[county].cases++;
+          }
+        });
+
+        return transform.objectToArray(counties);
+      }
+
+      let $table = $('h4:contains("All Mississippi cases to date")')
         .nextAll('table')
         .first();
 
       let $trs = $table.find('tbody > tr');
 
-      let counties = {};
+      let counties = [];
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let status = $tr.find('td:nth-child(3)').text();
-        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
+        let county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
 
-        // Make sure this matches once they have a confirmed case
-        if (status === 'Confirmed' || status === 'Presumptive') {
-          counties[county] = counties[county] || { cases: 0 };
-          counties[county].cases++;
-        }
+        counties.push({
+          county: county,
+          cases: parse.number($tr.find('td:last-child').text())
+        });
       });
 
-      return transform.objectToArray(counties);
+      return counties;
     }
   },
   {
