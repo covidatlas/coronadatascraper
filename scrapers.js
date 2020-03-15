@@ -1075,6 +1075,23 @@ let scrapers = [
     }
   },
   {
+    county: 'San Bernardino County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://wp.sbcounty.gov/dph/coronavirus/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h3:contains("COVID-19 CASES")')
+                    .parent()
+                    .attr('data-number-value'));
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
