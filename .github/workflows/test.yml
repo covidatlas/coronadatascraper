@@ -3,7 +3,7 @@ name: Test CI
 on: push
 
 jobs:
-  build:
+  test:
     runs-on: [macOS-latest]
     steps:
       - uses: actions/checkout@v1 # without submodules

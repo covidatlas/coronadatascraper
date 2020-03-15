@@ -34,5 +34,8 @@
     "@babel/preset-env": "^7.8.7",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0"
+  },
+  "engines": {
+    "node": ">=13.0.0"
   }
 }
