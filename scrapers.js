@@ -1092,6 +1092,22 @@ let scrapers = [
     }
   },
   {
+    county: 'San Joaquin County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.sjcphs.org/coronavirus.aspx#res',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let h3 = $('h6:contains("confirmed cases of COVID-19")').first().text();
+      let cases = parse.number(h3.match(/\((\d+)\)/)[1]);
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
