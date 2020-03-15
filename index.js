@@ -147,6 +147,9 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
   if (date) {
     process.env['SCRAPE_DATE'] = date;
   }
+  else {
+    delete process.env['SCRAPE_DATE'];
+  }
 
   return scrapeData()
     .then(options.findFeatures && findFeatures)

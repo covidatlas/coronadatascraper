@@ -203,7 +203,7 @@ async function generateTimeseries() {
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
   for (let date of dates) {
-    let data = await generate(date, {
+    let data = await generate(date === lastDate ? undefined : date, {
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
