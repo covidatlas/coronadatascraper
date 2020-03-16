@@ -282,6 +282,11 @@ The maximium rating for a source is 1, the minimum is near 0. See [`lib/transfor
 
 All data in the output includes the `url` and the `rating` of the source.
 
+## SSL
+
+Some source don't standard SSL certificates, resulting in fetching errors. You can add additional SSL certificates in the `ssl` directory. 
+They will automatically be used by `fetch`.
+
 ## License
 
 This project is licensed under the permissive [BSD 2-clause license](LICENSE).
