@@ -1486,7 +1486,29 @@ let scrapers = [
       })
       return counties;
     }
-  }
+  },
+  {
+    state: 'MD',
+    country: 'USA',
+    url: 'https://coronavirus.maryland.gov/',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.headless(this.url);
+      let paragraph = $('p:contains("Number of Confirmed Cases:")').next('p').text();
+  
+      paragraph.split(')').map(splitCounty => {
+      if(splitCounty.length > 1){
+       let county = transform.addCounty(parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim()))
+       let cases = parse.number(splitCounty.substring(splitCounty.indexOf('(')+1, splitCounty.length).trim())
+       counties.push({
+         county,
+         cases
+       })}
+       
+      })
+      return counties;
+    }
+  },
 
 
 ];
