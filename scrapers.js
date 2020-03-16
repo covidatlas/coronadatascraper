@@ -1187,6 +1187,24 @@ let scrapers = [
     }
   },
   {
+    county: 'Mendocino County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.mendocinocounty.org/community/novel-coronavirus',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('strong:contains("current cases of COVID-19")')
+                    .text()
+                    .match(/There are (\d+) current cases of/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
