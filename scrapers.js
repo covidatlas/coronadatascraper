@@ -1180,6 +1180,43 @@ let scrapers = [
     }
   },
   {
+    county: 'San Benito County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://hhsa.cosb.us/publichealth/communicable-disease/coronavirus/',
+
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let $table = $('p:contains("San Benito County COVID-19 Case Count")')
+        .nextAll('table')
+        .first();
+      return {
+        cases: parse.number(
+          $table
+            .find('td:contains("Positive")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        ),
+        deaths: parse.number(
+          $table
+            .find('td:contains("Deaths")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        ),
+        recovered: parse.number(
+          $table
+            .find('td:contains("Recovered")')
+            .closest('tr')
+            .find('td:last-child')
+            .text()
+        )
+      };
+    }
+  },
+  {
     state: 'WI',
     country: 'USA',
     url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
