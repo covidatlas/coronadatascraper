@@ -39,7 +39,7 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
+let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
   // Correct missing county
@@ -56,11 +56,6 @@ const locationTransforms = {
   // Why is this in Denmark?
   'Faroe Islands': location => {
     location.country = 'Faroe Islands';
-    delete location.state;
-  },
-
-  // Why is it UK, United Kingdom?
-  UK: location => {
     delete location.state;
   }
 };
@@ -141,7 +136,7 @@ const generateFeatures = ({ locations, report }) => {
         locationTransforms[location.state](location);
       }
 
-      if (location.state) {
+      if (location.state || location.county) {
         if (location.country === 'USA') {
           if (location.county) {
             // Find county
@@ -177,7 +172,22 @@ const generateFeatures = ({ locations, report }) => {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.country === feature.properties.gu_a3 && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region)) {
+
+          if (
+            (
+              location.country === feature.properties.gu_a3 ||
+              location.country === feature.properties.adm0_a3
+            )
+            &&
+            (
+              location.state === feature.properties.name ||
+              location.state === feature.properties.name_en ||
+              location.state === feature.properties.region ||
+              location.county === feature.properties.name ||
+              location.county === feature.properties.name_en ||
+              location.county === feature.properties.region
+            )
+          ) {
             found = true;
             storeFeature(feature, location);
             break;
