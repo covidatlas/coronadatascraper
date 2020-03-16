@@ -7,13 +7,6 @@ import * as transform from '../lib/transform.js';
 function addLocationToData(data, location) {
   Object.assign(data, location);
 
-  for (let prop in data) {
-    // Remove "private" fields
-    if (prop[0] === '_') {
-      delete data[prop];
-    }
-  }
-
   delete data.scraper;
 
   return data;
@@ -55,6 +48,10 @@ function clean(data) {
     if (value === '') {
       delete data[prop];
     }
+    // Remove "private" fields
+    if (prop[0] === '_') {
+      delete data[prop];
+    }
   }
 
   return data;
@@ -70,12 +67,12 @@ function addData(cases, location, result) {
     }
     for (let data of result) {
       if (isValid(data, location)) {
-        cases.push(clean(addLocationToData(data, location)));
+        cases.push(addLocationToData(data, location));
       }
     }
   } else {
     if (isValid(result, location)) {
-      cases.push(clean(addLocationToData(result, location)));
+      cases.push(addLocationToData(result, location));
     }
   }
 }
@@ -102,13 +99,51 @@ async function scrape() {
     }
   }
 
-  return { locations, errors };
+  // De-dupe and clean data
+  let seenLocations = {};
+  let i = locations.length - 1;
+  let deDeuped = 0;
+  while (i--) {
+    let location = locations[i];
+    let locationName = transform.getName(location);
+    let otherLocation = seenLocations[locationName];
+    if (otherLocation) {
+      let thisPriority = transform.getPriority(location);
+      let otherPriority = transform.getPriority(otherLocation);
+      if (otherPriority === thisPriority) {
+        console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
+        // Kill the other location
+        locations.splice(locations.indexOf(otherLocation), 1);
+        deDeuped++;
+      }
+      else if (otherPriority < thisPriority) {
+        // Kill the other location
+        console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
+        locations.splice(locations.indexOf(otherLocation), 1);
+        deDeuped++;
+      }
+      else {
+        // Kill this location
+        console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
+        locations.splice(i, 1);
+        deDeuped++;
+      }
+    }
+    seenLocations[locationName] = location;
+  }
+
+  // Clean data
+  for (let [index, location] of Object.entries(locations)) {
+    locations[index] = clean(locations[index]);
+  }
+
+  return { locations, errors, deDeuped };
 }
 
 const scrapeData = async ({ report }) => {
   console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
 
-  const { locations, errors } = await scrape();
+  const { locations, errors, deDuped } = await scrape();
 
   let states = 0;
   let counties = 0;
@@ -128,12 +163,14 @@ const scrapeData = async ({ report }) => {
   console.log('   - %d countries', countries);
   console.log('   - %d states', states);
   console.log('   - %d counties', counties);
+  console.log('   - %d duplicates removed', deDuped);
   console.log('❌ %d errors', errors.length);
 
   report['scrape'] = {
     numCountries: countries,
     numStates: states,
     numCounties: counties,
+    numDuplicates: deDuped,
     numErrors: errors.length,
     errors
   };
