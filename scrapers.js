@@ -530,6 +530,37 @@ let scrapers = [
         }
       });
 
+      let visitorCounties = [];
+      let $visitors = $('p:contains("Positive cases by county of residence")').nextAll('p').find('span');
+      $visitors.each((index, visitor) => {
+        let visitorInfo = $(visitor).text().match(/([A-Za-z]+) - (\d+)/);
+        if (visitorInfo !== null && visitorInfo.length === 3) {
+          let county = visitorInfo[1] + ' County';
+          let cases = visitorInfo[2];
+          if (county.indexOf('information') === -1) {
+            let data = {
+              county: transform.addCounty(parse.string(county)),
+              cases: parse.number(cases)
+            };
+            if (rules.isAcceptable(data, null, this._reject)) {
+              visitorCounties.push(data);
+            }
+          }
+        }
+      });
+      counties.forEach(county => {
+        if(county['cases'] !== undefined && county['county'] !== undefined) {
+          visitorCounties.forEach(
+            visitorCounty => {
+              if(visitorCounty['cases'] !== undefined && visitorCounty['county'] !== undefined) {
+                if(visitorCounty['county'] === county['county']){
+                  county['cases'] = visitorCounty['cases'] + county['cases'];
+                }
+              }
+            }
+          )
+        }
+      });
       counties.push(transform.sumData(counties));
 
       return counties;
