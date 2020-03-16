@@ -111,10 +111,11 @@ async function scrape() {
     let locationName = transform.getName(location);
     let otherLocation = seenLocations[locationName];
     if (otherLocation) {
-      let thisPriority = transform.getPriority(location);
-      let otherPriority = transform.getPriority(otherLocation);
+      // Take rating into account to break ties
+      let thisPriority = transform.getPriority(location) + (location.rating / 2);
+      let otherPriority = transform.getPriority(otherLocation) + (otherLocation.rating / 2);
       if (otherPriority === thisPriority) {
-        console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
+        console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         // Kill the other location
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
