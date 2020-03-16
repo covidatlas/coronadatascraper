@@ -3,47 +3,46 @@ name: Deploy CI
 on:
   push:
   schedule:
-      # * is a special character in YAML so we have to quote this string
-      - cron:  '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
-
+    # * is a special character in YAML so we have to quote this string
+    - cron: '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
 
 jobs:
   build:
-      runs-on: [macOS-latest]
-      steps:
-        - uses: actions/checkout@v1 # without submodules
-          with:
-            persist-credentials: false
-        - name: Disable the keychain credential helper
-          run: git config --global credential.helper ""
-        - name: Enable the local store credential helper
-          run: git config --global --add credential.helper store
-        - name: Add credential
-          run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
-        - name: Tell git to use https instead of ssh whenever it encounters it
-          run: 'git config --global url."https://github.com/".insteadof git@github.com:'
-        - name: Update submodules
-          run: |
-            git submodule update --init
-        - name: Use Node.js 13.x
-          uses: actions/setup-node@v1
-          with:
-            node-version: '13.x'
-        - name: Install
-          run: |
-            yarn
-        - name: Build
-          run: |
-            yarn build
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@releases/v3
-          with:
-            ACCESS_TOKEN: ${{ secrets.GIT_SECRET }}
-            BRANCH: gh-pages-test # The branch the action should deploy to.
-            FOLDER: dist # The folder the action should deploy.
-        - name: Update cache
-          run: |
-            cd coronadatascraper-cache
-            git add .
-            git commit -m "Update cache following deployment"
-            git push origin HEAD:master
+    runs-on: [macOS-latest]
+    steps:
+      - uses: actions/checkout@v1 # without submodules
+        with:
+          persist-credentials: false
+      - name: Disable the keychain credential helper
+        run: git config --global credential.helper ""
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Update submodules
+        run: |
+          git submodule update --init
+      - name: Use Node.js 13.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+      - name: Install
+        run: |
+          yarn
+      - name: Build
+        run: |
+          yarn build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GIT_SECRET }}
+          BRANCH: gh-pages-test # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
+      - name: Update cache
+        run: |
+          cd coronadatascraper-cache
+          git add .
+          git commit -m "Update cache following deployment"
+          git push origin HEAD:test-branch
