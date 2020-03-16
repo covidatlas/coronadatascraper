@@ -1301,8 +1301,23 @@ let scrapers = [
                     .match(/(\d+)/)[1]
                     );
 
+      let pui = parse.number($('font:contains("Number of Persons Under Investigation")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let pending = parse.number($('font:contains("Number of Specimens with Results Pending")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let tested = pui + pending;
+
       return {
-        cases: cases
+        cases: cases,
+        tested: tested
       };
     }
   },
