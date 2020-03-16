@@ -9,6 +9,9 @@ function addLocationToData(data, location) {
 
   delete data.scraper;
 
+  // Add rating
+  data.rating = transform.calculateRating(data);
+
   return data;
 }
 
