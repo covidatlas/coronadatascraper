@@ -542,6 +542,7 @@ let scrapers = [
     state: 'CO',
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
+    type: 'list',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1547,6 +1548,7 @@ let scrapers = [
     state: 'PA',
     country: 'USA',
     url: 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx',
+    type: 'list',
     scraper: async function () {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1615,6 +1617,7 @@ let scrapers = [
     state: 'CT',
     country: 'USA',
     url: 'https://portal.ct.gov/Coronavirus',
+    type: 'list',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
