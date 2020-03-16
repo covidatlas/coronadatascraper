@@ -380,6 +380,24 @@ let scrapers = [
     }
   },
   {
+    country: 'GBR',
+    url: 'https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+
+      let counties = [];
+      for (let utla of data) {
+        let name = parse.string(utla.GSS_NM);
+        counties.push({
+          county: name,
+          cases: parse.number(utla.TotalCases)
+        });
+      }
+
+      return counties;
+    }
+  },
+  {
     state: 'MS',
     country: 'USA',
     url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
