@@ -61,7 +61,7 @@ async function readPopulationData(featureCollection) {
   return populations;
 }
 
-const generatePopulations = async ({ locations, featureCollection, report }) => {
+const generatePopulations = async ({ locations, featureCollection, report, options }) => {
   console.log('⏳ Getting population data...');
 
   let populations = await readPopulationData(featureCollection);
@@ -147,7 +147,7 @@ const generatePopulations = async ({ locations, featureCollection, report }) => 
     missingPopulations: errors
   };
 
-  return { locations, featureCollection, report };
+  return { locations, featureCollection, report, options };
 };
 
 export default generatePopulations;

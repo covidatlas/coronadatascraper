@@ -83,10 +83,20 @@ function addData(cases, location, result) {
 /*
     Begin the scraping process
   */
-async function scrape() {
+async function scrape(options) {
   let locations = [];
   let errors = [];
   for (let location of scrapers) {
+    if (options.only) {
+      if (transform.getName(location) !== options.only) {
+        continue;
+      }
+    }
+    if (options.skip) {
+      if (transform.getName(location) === options.skip) {
+        continue;
+      }
+    }
     if (location.scraper) {
       try {
         addData(locations, location, await location.scraper());
@@ -145,10 +155,10 @@ async function scrape() {
   return { locations, errors, deDuped };
 }
 
-const scrapeData = async ({ report }) => {
+const scrapeData = async ({ report, options }) => {
   console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
 
-  const { locations, errors, deDuped } = await scrape();
+  const { locations, errors, deDuped } = await scrape(options);
 
   let states = 0;
   let counties = 0;
@@ -180,7 +190,7 @@ const scrapeData = async ({ report }) => {
     errors
   };
 
-  return { locations, report };
+  return { locations, report, options };
 };
 
 export default scrapeData;

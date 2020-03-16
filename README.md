@@ -73,6 +73,22 @@ To generate timeseries data in `dist/timeseries*.*`, run:
 yarn timeseries
 ```
 
+### Run only one scraper
+
+To scrape just one location, use `--only`/`-o`
+
+```
+yarn start --only "Ventura County, CA, USA"
+```
+
+### Skipping a scraper
+
+To skip a scraper, use `--skip`/`-s`
+
+```
+yarn start --skip "Ventura County, CA, USA"
+```
+
 ### Building the website
 
 To build the website and all data into `dist/`:

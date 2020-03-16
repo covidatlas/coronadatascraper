@@ -2,7 +2,7 @@ import path from 'path';
 import * as fs from '../lib/fs.js';
 import * as stringify from '../lib/stringify.js';
 
-const writeData = async ({ locations, featureCollection, report }) => {
+const writeData = async ({ locations, featureCollection, report, options }) => {
   let date = process.env['SCRAPE_DATE'] ? '-' + process.env['SCRAPE_DATE'] : '';
 
   await fs.ensureDir('dist');
@@ -15,7 +15,7 @@ const writeData = async ({ locations, featureCollection, report }) => {
 
   await fs.writeJSON('dist/report.json', report);
 
-  return { locations, featureCollection, report };
+  return { locations, featureCollection, report, options };
 };
 
 export default writeData;
