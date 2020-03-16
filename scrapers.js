@@ -1150,6 +1150,25 @@ let scrapers = [
     }
   },
   {
+    county: 'Butte County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.buttecounty.net/publichealth',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      // This may be hacky but hopefully they keep the same formatting. We may need
+      // to convert this to a table one available.
+      let cases = parse.number($('td:contains("Positive COVID-19 Tests")')
+                    .next()
+                    .text());
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
