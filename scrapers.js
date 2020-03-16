@@ -613,9 +613,9 @@ let scrapers = [
           if (county.PARISH === 'Parish Under Investigation') {
             continue;
           }
-          let county = parse.string(county.PARISH) + ' Parish';
+          let countyName = parse.string(county.PARISH) + ' Parish';
           counties.push({
-            county: this._countyMap[county] || county,
+            county: this._countyMap[countyName] || countyName,
             cases: parse.number(county.Cases),
             deaths: parse.number(county.Deaths)
           });
@@ -783,19 +783,32 @@ let scrapers = [
       let $table = $th.closest('table');
       let $trs = $table.find('tbody > tr');
 
+      let stateData = {
+        cases: 0,
+        deaths: 0
+      };
       $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let cases = parse.number($tr.find('> *:nth-child(2)').text());
+        let deaths = parse.number($tr.find('> *:last-child').text());
+        let county = transform.addCounty(parse.string($tr.find('> *:first-child').text()));
+        if (county === 'Unassigned County') {
+          // Store unassigned in state
+          stateData.cases += cases;
+          stateData.deaths += deaths;
+        }
         if (index < 1 || index > $trs.get().length - 3) {
           return;
         }
-        let $tr = $(tr);
         counties.push({
-          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
-          cases: parse.number($tr.find('> *:nth-child(2)').text()),
-          deaths: parse.number($tr.find('> *:last-child').text())
+          county: county,
+          cases: cases,
+          deaths: deaths
         });
       });
 
-      counties.push(transform.sumData(counties));
+      // Add unassigned
+      counties.push(transform.sumData(counties, stateData));
 
       return counties;
     }
