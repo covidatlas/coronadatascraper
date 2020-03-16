@@ -1169,6 +1169,24 @@ let scrapers = [
     }
   },
   {
+    county: 'Kings County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h3:contains("Confirmed Cases")')
+                    .text()
+                    .match(/Confirmed Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
