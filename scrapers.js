@@ -206,7 +206,7 @@ let scrapers = [
       // Build a hash of US counties
       let jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
 
-      let getOldData = process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-12'));
+      let getOldData = datetime.scrapeDateIsBefore('2020-3-12');
 
       if (getOldData) {
         console.log('  🕰  Fetching old data for %s', process.env['SCRAPE_DATE']);
@@ -397,7 +397,7 @@ let scrapers = [
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
-      if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-15'))) {
+      if (datetime.scrapeDateIsBefore('2020-3-15')) {
         let $table = $('h3:contains("Mississippi Cases")')
           .nextAll('table')
           .first();
@@ -615,7 +615,7 @@ let scrapers = [
     },
     scraper: async function() {
       let counties = [];
-      if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-14'))) {
+      if (datetime.scrapeDateIsBefore('2020-3-14')) {
         this.url = 'http://ldh.la.gov/Coronavirus/';
 
         let $ = await fetch.page(this.url);
