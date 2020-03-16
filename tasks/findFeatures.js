@@ -127,6 +127,12 @@ const generateFeatures = ({ locations, report }) => {
       if (location.country === 'REU' ||
           location.country === 'MTQ' ||
           location.country === 'GUF') {
+        console.warn('  ⚠️  Skipping %s because it breaks France', transform.getName(location));
+        continue;
+      }
+
+      if (location.county === '(unassigned)') {
+        console.warn('  ⚠️  Skipping %s because it\'s unassigned',  transform.getName(location));
         continue;
       }
 
@@ -258,7 +264,7 @@ const generateFeatures = ({ locations, report }) => {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s', transform.getName(location), location);
+        console.error('  ❌ Could not find location %s', transform.getName(location));
         errors.push(transform.getName(location));
       }
     }

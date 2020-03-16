@@ -22,6 +22,9 @@ import * as fs from './lib/fs.js';
   † Optional, not required if provided in the main scraper definition
 */
 
+// Set county to this if you only have state data, but this isn't the entire state
+let UNASSIGNED = '(unassigned)';
+
 let scrapers = [
   {
     state: 'AZ',
@@ -407,7 +410,11 @@ let scrapers = [
           }
         });
 
-        return transform.objectToArray(counties);
+        let countiesArray = transform.objectToArray(counties);
+
+        counties.push(transform.sumData(countiesArray));
+
+        return countiesArray;
       }
 
       let $table = $('h4:contains("All Mississippi cases to date")')
@@ -502,9 +509,6 @@ let scrapers = [
     state: 'CO',
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
-    _reject: {
-      county: 'Unknown county County'
-    },
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -520,13 +524,15 @@ let scrapers = [
           .text()
           .match(/(.*?): (\d+)/);
         if (matches) {
+          let county = transform.addCounty(parse.string(matches[1]));
+          if (county === 'Unknown county County') {
+            county = UNASSIGNED;
+          }
           let data = {
-            county: transform.addCounty(parse.string(matches[1])),
+            county: county,
             cases: parse.number(matches[2])
           };
-          if (rules.isAcceptable(data, null, this._reject)) {
-            counties.push(data);
-          }
+          counties.push(data);
         }
       });
 
@@ -717,6 +723,7 @@ let scrapers = [
     state: 'FL',
     country: 'USA',
     url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
+    _priority: 1,
     scraper: async function() {
       let counties = {};
       let $ = await fetch.page(this.url);
@@ -735,7 +742,19 @@ let scrapers = [
         counties[county].cases += 1;
       });
 
-      return transform.objectToArray(counties);
+
+      let countiesArray = transform.objectToArray(counties);
+
+      // Add non florida as unassigned
+      let text = $('div:contains("Non-Florida Residents")').last().text();
+      let nonFlorida = text.split(' – ')[0];
+      if (nonFlorida) {
+        countiesArray.push({ name: UNASSIGNED, cases: nonFlorida });
+      }
+
+      countiesArray.push(transform.sumData(countiesArray));
+
+      return countiesArray;
     }
   },
   {
@@ -782,21 +801,15 @@ let scrapers = [
       let $table = $th.closest('table');
       let $trs = $table.find('tbody > tr');
 
-      let stateData = {
-        cases: 0,
-        deaths: 0
-      };
       $trs.each((index, tr) => {
         let $tr = $(tr);
         let cases = parse.number($tr.find('> *:nth-child(2)').text());
         let deaths = parse.number($tr.find('> *:last-child').text());
         let county = transform.addCounty(parse.string($tr.find('> *:first-child').text()));
         if (county === 'Unassigned County') {
-          // Store unassigned in state
-          stateData.cases += cases;
-          stateData.deaths += deaths;
+          county = UNASSIGNED;
         }
-        if (index < 1 || index > $trs.get().length - 3) {
+        if (index < 1 || index > $trs.get().length - 2) {
           return;
         }
         counties.push({
@@ -807,7 +820,7 @@ let scrapers = [
       });
 
       // Add unassigned
-      counties.push(transform.sumData(counties, stateData));
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
