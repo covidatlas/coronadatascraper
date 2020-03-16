@@ -1700,7 +1700,7 @@ let scrapers = [
       for (let row of data) {
         let granularity = row.granularite !== undefined ? parse.string(row.granularite) : "";
         let rowDate = row.date !== undefined ? parse.string(row.date) : "";
-        if (granularity === "region" && rowDate === date) {
+        if ((granularity === "region" || granularity === "collectivite-outremer") && rowDate === date) {
           let state = row.maille_nom !== undefined ? parse.string(row.maille_nom) : "";
           let cases = row.cas_confirmes !== undefined ? parse.number(row.cas_confirmes) : 0;
           let deaths = row.deces !== undefined ? parse.number(row.deces) : 0;
