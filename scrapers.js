@@ -80,7 +80,7 @@ let scrapers = [
         counties.push({
           county: transform.addCounty(parse.string(county.County)),
           cases: parse.number(county.Total), // Includes presumptive
-          recovered: parse.number(county.Recovered),
+          // recovered: parse.number(county.Recovered),
           deaths: parse.number(county.Deaths)
         });
       }
