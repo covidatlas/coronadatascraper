@@ -102,7 +102,7 @@ async function scrape() {
   // De-dupe and clean data
   let seenLocations = {};
   let i = locations.length - 1;
-  let deDeuped = 0;
+  let deDuped = 0;
   while (i--) {
     let location = locations[i];
     let locationName = transform.getName(location);
@@ -114,19 +114,19 @@ async function scrape() {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         // Kill the other location
         locations.splice(locations.indexOf(otherLocation), 1);
-        deDeuped++;
+        deDuped++;
       }
       else if (otherPriority < thisPriority) {
         // Kill the other location
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         locations.splice(locations.indexOf(otherLocation), 1);
-        deDeuped++;
+        deDuped++;
       }
       else {
         // Kill this location
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
         locations.splice(i, 1);
-        deDeuped++;
+        deDuped++;
       }
     }
     seenLocations[locationName] = location;
@@ -137,7 +137,8 @@ async function scrape() {
     locations[index] = clean(locations[index]);
   }
 
-  return { locations, errors, deDeuped };
+
+  return { locations, errors, deDuped };
 }
 
 const scrapeData = async ({ report }) => {
