@@ -331,11 +331,6 @@ let scrapers = [
   {
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
-    _regionMap: {
-      'P.A. Trento': 'Trento',
-      'Emilia Romagna': 'Emilia-Romagna',
-      'P.A. Bolzano': 'Trentino-South Tyrol',
-    },
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
 
@@ -351,13 +346,11 @@ let scrapers = [
           return row.data.substr(0, 10) === latestDate;
         })
         .map(row => {
-          let regionName = parse.string(row.denominazione_regione);
-          regionName = this._regionMap[regionName] || regionName;
           return {
             recovered: parse.number(row.dimessi_guariti),
             deaths: parse.number(row.deceduti),
             cases: parse.number(row.totale_casi),
-            state: regionName
+            state: parse.string(row.denominazione_regione)
           };
         });
     }
