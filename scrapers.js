@@ -489,8 +489,7 @@ let scrapers = [
         }
         counties.push({
           county: countyName,
-          cases: parse.number($tr.find('td:last-child').text()),
-          deaths: parse.number($tr.find('td:last-child').text())
+          cases: parse.number($tr.find('td:last-child').text())
         });
       });
 
