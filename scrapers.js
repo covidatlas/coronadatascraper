@@ -1689,6 +1689,7 @@ let scrapers = [
   {
     country: 'FRA',
     url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
+    priority: 1,
     scraper: async function() {
       let data = await fetch.csv(this.url);
       let states = [];
