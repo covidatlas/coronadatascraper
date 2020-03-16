@@ -1783,6 +1783,45 @@ let scrapers = [
       };
     }
   },
+  {
+    country: 'FRA',
+    url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
+    priority: 1,
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+      let states = [];
+      let date = datetime.getYYYYMMDD(new Date());
+      if (process.env['SCRAPE_DATE']) {
+        date = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']));
+      }
+      for (let row of data) {
+        let granularity = row.granularite !== undefined ? parse.string(row.granularite) : "";
+        let rowDate = row.date !== undefined ? parse.string(row.date) : "";
+        if ((granularity === "region" || granularity === "collectivite-outremer") && rowDate === date) {
+          let state = row.maille_nom !== undefined ? parse.string(row.maille_nom) : "";
+          let cases = row.cas_confirmes !== undefined ? parse.number(row.cas_confirmes) : 0;
+          let deaths = row.deces !== undefined ? parse.number(row.deces) : 0;
+          let sourceUrl = row.source_url !== undefined ? parse.string(row.source_url) : this.url;
+          sourceUrl = sourceUrl === "" ? this.url : sourceUrl;
+          if (state !== "") {
+            let data = {
+              state,
+              cases,
+              deaths,
+              url: sourceUrl,
+            };
+            if (rules.isAcceptable(data, null, null)) {
+              states.push(data);
+            }
+          }
+        }
+      }
+      // Add data for FRA
+      states.push(transform.sumData(states));
+
+      return states;
+    }
+  },
 ];
 
 export default scrapers;
