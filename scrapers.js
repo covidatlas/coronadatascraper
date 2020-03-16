@@ -44,6 +44,7 @@ let scrapers = [
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
     state: 'IN',
+    timeseries: false,
     _countyMap: {
       'Verm.': 'Vermillion',
       'Vander.': 'Vanderburgh',
@@ -114,6 +115,7 @@ let scrapers = [
   {
     country: 'Canada',
     url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
+    type: 'table',
     _reject: [
       {
         state: 'Repatriated travellers'
@@ -149,6 +151,7 @@ let scrapers = [
   },
   {
     url: 'https://github.com/CSSEGISandData/COVID-19',
+    timeseries: true,
     _priority: -1,
     _urls: {
       cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
@@ -335,6 +338,7 @@ let scrapers = [
     country: 'CHE',
     county: 'Zurich',
     url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
+    timeseries: true,
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
 
@@ -359,6 +363,7 @@ let scrapers = [
   {
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
+    timeseries: true,
     _regionMap: {
       'P.A. Trento': 'Trento',
       'Emilia Romagna': 'Emilia-Romagna',
@@ -412,6 +417,7 @@ let scrapers = [
     state: 'MS',
     country: 'USA',
     url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
+    type: 'table',
     scraper: async function() {
       let $ = await fetch.page(this.url);
 
@@ -502,6 +508,7 @@ let scrapers = [
     state: 'AL',
     country: 'USA',
     url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
+    type: 'table',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -535,6 +542,7 @@ let scrapers = [
     state: 'CO',
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
+    type: 'list',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -602,6 +610,7 @@ let scrapers = [
     state: 'OR',
     country: 'USA',
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
+    type: 'table',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -635,6 +644,7 @@ let scrapers = [
       let counties = [];
       if (datetime.scrapeDateIsBefore('2020-3-14')) {
         this.url = 'http://ldh.la.gov/Coronavirus/';
+        this.type = 'table';
 
         let $ = await fetch.page(this.url);
 
@@ -665,6 +675,8 @@ let scrapers = [
       }
       else {
         this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
+        this.type = 'csv';
+
         // Use the new map
         let data = await fetch.csv(this.url);
 
@@ -693,7 +705,8 @@ let scrapers = [
     state: 'IA',
     country: 'USA',
     url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
-    // Incapsula blocking request
+    type: 'table',
+    headless: true, // Incapsula blocking request
     scraper: async function() {
       let counties = [];
       let $ = await fetch.headless(this.url);
@@ -724,7 +737,8 @@ let scrapers = [
     state: 'TX',
     country: 'USA',
     url: 'https://www.dshs.state.tx.us/news/updates.shtm',
-    // Error: unable to verify the first certificate
+    type: 'table',
+    ssl: false, // Error: unable to verify the first certificate
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -780,6 +794,7 @@ let scrapers = [
     state: 'FL',
     country: 'USA',
     url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
+    type: 'table',
     _priority: 1,
     scraper: async function() {
       let counties = {};
@@ -818,6 +833,7 @@ let scrapers = [
     state: 'NY',
     country: 'USA',
     url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
+    type: 'table',
     _countyMap: {
       // This is totally wrong, but otherwise we need less granular GeoJSON
       'New York City': 'New York County',
@@ -850,6 +866,8 @@ let scrapers = [
     state: 'WA',
     country: 'USA',
     url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
+    type: 'table',
+    headless: true,
     scraper: async function() {
       let counties = [];
       let $ = await fetch.headless(this.url);
@@ -1319,6 +1337,103 @@ let scrapers = [
     }
   },
   {
+    county: 'Calaveras County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://covid19.calaverasgov.us/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h2:contains("in Calaveras County:")')
+                    .first()
+                    .text()
+                    .match(/in Calaveras County: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Colusa County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.countyofcolusa.org/99/Public-Health',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('strong:contains("Confirmed Cases:")')
+                    .first()
+                    .text()
+                    .match(/Confirmed Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Del Norte County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.co.del-norte.ca.us/departments/health-human-services/public-health',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('font:contains("Number of Confirmed Cases")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let pui = parse.number($('font:contains("Number of Persons Under Investigation")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let pending = parse.number($('font:contains("Number of Specimens with Results Pending")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let negative = parse.number($('font:contains("Number of Negative Tests")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let tested = pui + pending + negative;
+
+      return {
+        cases: cases,
+        tested: tested
+      };
+    }
+  },
+  {
+    county: 'Glenn County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('font:contains("Glenn County COVID-19 Cases")')
+                    .first()
+                    .text()
+                    .match(/Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Kings County',
     state: 'CA',
     country: 'USA',
@@ -1464,6 +1579,7 @@ let scrapers = [
     state: 'WI',
     country: 'USA',
     url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
+    type: 'table',
     scraper: async function() {
       let $ = await fetch.page(this.url);
       let counties = [];
@@ -1483,6 +1599,7 @@ let scrapers = [
     state: 'SD',
     country: 'USA',
     url: 'https://doh.sd.gov/news/Coronavirus.aspx#SD',
+    type: 'table',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1504,6 +1621,7 @@ let scrapers = [
     state: 'UT',
     country: 'USA',
     url: 'https://coronavirus.utah.gov/latest/',
+    type: 'table',
     scraper: async function () {
       let $ = await fetch.page(this.url);
       let counties = [];
@@ -1527,6 +1645,7 @@ let scrapers = [
     state: 'PA',
     country: 'USA',
     url: 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx',
+    type: 'list',
     scraper: async function () {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1549,6 +1668,7 @@ let scrapers = [
     state: 'TN',
     country: 'USA',
     url: 'https://www.tn.gov/health/cedep/ncov.html',
+    type: 'table',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1594,6 +1714,7 @@ let scrapers = [
     state: 'CT',
     country: 'USA',
     url: 'https://portal.ct.gov/Coronavirus',
+    type: 'list',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -1619,6 +1740,7 @@ let scrapers = [
     state: 'MD',
     country: 'USA',
     url: 'http://opendata.arcgis.com/datasets/ca77764e722c442986ef6514da88411c_0.csv',
+    type: 'csv',
     scraper: async function() {
       let data = await fetch.csv(this.url);
 
@@ -1684,6 +1806,46 @@ let scrapers = [
             .text()
         )
       };
+    }
+  },
+  {
+    country: 'FRA',
+    url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
+    priority: 1,
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+      let states = [];
+
+      let date = datetime.getYYYYMMDD(new Date());
+      if (process.env['SCRAPE_DATE']) {
+        date = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']));
+      }
+      for (let row of data) {
+        let granularity = row.granularite !== undefined ? parse.string(row.granularite) : "";
+        let rowDate = row.date !== undefined ? parse.string(row.date) : "";
+        if ((granularity === "region" || granularity === "collectivite-outremer") && rowDate === date) {
+          let state = row.maille_nom !== undefined ? parse.string(row.maille_nom) : "";
+          let cases = row.cas_confirmes !== undefined ? parse.number(row.cas_confirmes) : 0;
+          let deaths = row.deces !== undefined ? parse.number(row.deces) : 0;
+          let sourceUrl = row.source_url !== undefined ? parse.string(row.source_url) : this.url;
+          sourceUrl = sourceUrl === "" ? this.url : sourceUrl;
+          if (state !== "") {
+            let data = {
+              state,
+              cases,
+              deaths,
+              url: sourceUrl,
+            };
+            if (rules.isAcceptable(data, null, null)) {
+              states.push(data);
+            }
+          }
+        }
+      }
+      // Add data for FRA
+      states.push(transform.sumData(states));
+
+      return states;
     }
   },
   {
