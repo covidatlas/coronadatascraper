@@ -250,6 +250,18 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
 
 As you can see, you can change `this.url` within your function (but be sure to set it every time).
 
+Another example is when HTML on the page changes, you can simple change the selectors or Cheerio function calls:
+
+```javascript
+let $table;
+if (datetime.scrapeDateIsBefore('2020-3-16')) {
+  $table = $('table[summary="Texas COVID-19 Cases"]');
+}
+else {
+  $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
+}
+```
+
 You can also use `datetime.scrapeDateIsAfter()` for more complex customization.
 
 ### Criteria for sources
