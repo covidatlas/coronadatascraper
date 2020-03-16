@@ -1,10 +1,7 @@
 name: Deploy CI
 
 on:
-  push:
-  schedule:
-    # * is a special character in YAML so we have to quote this string
-    - cron: '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
+  push: tags
 
 jobs:
   build:
@@ -38,11 +35,11 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.GIT_SECRET }}
-          BRANCH: gh-pages-test # The branch the action should deploy to.
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: dist # The folder the action should deploy.
       - name: Update cache
         run: |
           cd coronadatascraper-cache
           git add .
           git commit -m "Update cache following deployment"
-          git push origin HEAD:test-branch
+          git push origin HEAD:master
