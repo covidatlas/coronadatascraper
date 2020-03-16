@@ -19,7 +19,8 @@ let caseDataProps = [
   'deaths',
   'recovered',
   'active',
-  'tested'
+  'tested',
+  'growthFactor'
 ];
 
 /*
@@ -196,6 +197,14 @@ async function generateCSV(timeseriesByLocation) {
   return fs.writeCSV(path.join('dist', 'timeseries-jhu.csv'), csvData);
 }
 
+function getGrowthfactor(casesToday, casesYesterday) {
+  let growthFactor = casesToday / casesYesterday;
+  if (growthFactor === Infinity) {
+    return null;
+  }
+  return growthFactor;
+}
+
 /*
   Generate timeseries data
 */
@@ -224,7 +233,7 @@ async function generateTimeseries() {
 
       // Add growth factor
       if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
-        strippedLocation.growthFactor = strippedLocation.cases / timeseriesByLocation[name].dates[previousDate].cases;
+        strippedLocation.growthFactor = getGrowthfactor(strippedLocation.cases, timeseriesByLocation[name].dates[previousDate].cases);
       }
 
       timeseriesByLocation[name].dates[date] = strippedLocation;
