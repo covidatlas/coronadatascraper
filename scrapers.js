@@ -1319,6 +1319,103 @@ let scrapers = [
     }
   },
   {
+    county: 'Calaveras County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://covid19.calaverasgov.us/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h2:contains("in Calaveras County:")')
+                    .first()
+                    .text()
+                    .match(/in Calaveras County: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Colusa County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.countyofcolusa.org/99/Public-Health',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('strong:contains("Confirmed Cases:")')
+                    .first()
+                    .text()
+                    .match(/Confirmed Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Del Norte County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.co.del-norte.ca.us/departments/health-human-services/public-health',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('font:contains("Number of Confirmed Cases")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let pui = parse.number($('font:contains("Number of Persons Under Investigation")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let pending = parse.number($('font:contains("Number of Specimens with Results Pending")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let negative = parse.number($('font:contains("Number of Negative Tests")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let tested = pui + pending + negative;
+
+      return {
+        cases: cases,
+        tested: tested
+      };
+    }
+  },
+  {
+    county: 'Glenn County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('font:contains("Glenn County COVID-19 Cases")')
+                    .first()
+                    .text()
+                    .match(/Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Kings County',
     state: 'CA',
     country: 'USA',
