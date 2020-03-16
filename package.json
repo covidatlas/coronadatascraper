@@ -26,6 +26,7 @@
     "editorconfig": "^0.15.3",
     "gh-pages": "^2.2.0",
     "jest-each": "^25.1.0",
+    "moment": "^2.24.0",
     "needle": "^2.3.3",
     "puppeteer": "^2.1.1",
     "yargs": "^15.3.0"
