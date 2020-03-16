@@ -743,7 +743,13 @@ let scrapers = [
       let counties = [];
       let $ = await fetch.page(this.url);
 
-      let $table = $('table[summary="Texas COVID-19 Cases"]');
+      let $table;
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        $table = $('table[summary="Texas COVID-19 Cases"]');
+      }
+      else {
+        $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
+      }
 
       let $trs = $table.find('tbody > tr:not(:last-child)');
 
