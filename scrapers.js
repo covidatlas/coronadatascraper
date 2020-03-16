@@ -1709,6 +1709,9 @@ let scrapers = [
           }
         }
       }
+      // Add data for ESP
+      states.push(transform.sumData(states);
+
       return states;
     }
   },
