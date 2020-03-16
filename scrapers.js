@@ -1382,7 +1382,13 @@ let scrapers = [
                     .match(/(\d+)/)[1]
                     );
 
-      let tested = pui + pending;
+      let negative = parse.number($('font:contains("Number of Negative Tests")')
+                    .first()
+                    .text()
+                    .match(/(\d+)/)[1]
+                    );
+
+      let tested = pui + pending + negative;
 
       return {
         cases: cases,
