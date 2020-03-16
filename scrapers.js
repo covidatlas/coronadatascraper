@@ -27,7 +27,7 @@ let scrapers = [
     state: 'AZ',
     country: 'USA',
     url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
-    scraper: async function() {
+    _scraper: async function() {
       // let { browser, page } = await fetch.headless(this.url);
 
       let counties = [];
