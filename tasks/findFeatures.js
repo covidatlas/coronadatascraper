@@ -125,7 +125,10 @@ function generateFeatures({ locations }) {
     const usStates = await fs.readJSON('./coronavirus-data-sources/lib/us-states.json');
     const countryData = await fs.readJSON('./coronavirus-data-sources/geojson/world-countries.json');
     const usCountyData = await fs.readJSON('./coronavirus-data-sources/geojson/usa-counties.json');
+    const itaRegionsData = await fs.readJSON('./coronavirus-data-sources/geojson/ita-regions.json');
     const provinceData = await fs.readJSON('./coronavirus-data-sources/geojson/world-states-provinces.json');
+
+    featureCollection.features = featureCollection.features.concat(itaRegionsData.features);
 
     // Clean and normalize data first
     cleanFeatures(countryData);
