@@ -34,7 +34,7 @@ let scrapers = [
       let testedPublic = $('td:contains("tested through the Idaho Bureau of Lab") + td').first().html();
       
       return {
-        cases,
+        cases: parse.number(cases),
         tested: parse.number(testedPrivate) + parse.number(testedPublic)
       }
     }
