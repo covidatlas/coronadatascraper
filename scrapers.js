@@ -1097,6 +1097,136 @@ let scrapers = [
     }
   },
   {
+    county: 'San Bernardino County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://wp.sbcounty.gov/dph/coronavirus/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h3:contains("COVID-19 CASES")')
+                    .parent()
+                    .attr('data-number-value'));
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'San Joaquin County',
+    state: 'CA',
+    country: 'USA',
+    url: 'http://www.sjcphs.org/coronavirus.aspx#res',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let h3 = $('h6:contains("confirmed cases of COVID-19")').first().text();
+      let cases = parse.number(h3.match(/\((\d+)\)/)[1]);
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Merced County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let $table = $('h3:contains("Merced County COVID-19 Statistics")')
+                        .parent()
+                        .next('table');
+
+      let cases = parse.number($table.find('td:contains("Cases")').next('td').text());
+      let deaths = parse.number($table.find('td:contains("Deaths")').next('td').text());
+      let recovered = parse.number($table.find('td:contains("Recoveries")').next('td').text());
+
+      return {
+        cases: cases,
+        deaths: deaths,
+        recovered: recovered
+      };
+    }
+  },
+  {
+    county: 'Marin County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://coronavirus.marinhhs.org/surveillance',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      // This may be hacky but hopefully they keep the same formatting. We may need
+      // to convert this to a table one available.
+      let text = $('td:contains("confirmed cases of COVID-19")').text();
+
+      let cases = parse.number(text.match(/there have been (\d+) confirmed cases of/)[1]);
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Butte County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.buttecounty.net/publichealth',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      // This may be hacky but hopefully they keep the same formatting. We may need
+      // to convert this to a table one available.
+      let cases = parse.number($('td:contains("Positive COVID-19 Tests")')
+                    .next()
+                    .text());
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Kings County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('h3:contains("Confirmed Cases")')
+                    .text()
+                    .match(/Confirmed Cases: (\d+)/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
+    county: 'Mendocino County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.mendocinocounty.org/community/novel-coronavirus',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let cases = parse.number($('strong:contains("current cases of COVID-19")')
+                    .text()
+                    .match(/There are (\d+) current cases of/)[1]
+                    );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
