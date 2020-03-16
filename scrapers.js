@@ -1444,7 +1444,7 @@ let scrapers = [
   {
     state: 'OH',
     country: 'USA',
-    url: 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/',
+    url: 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
