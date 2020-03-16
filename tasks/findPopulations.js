@@ -72,10 +72,11 @@ const generatePopulations = async ({ locations, featureCollection, report }) => 
       // Use either city by country or city by state
       let populationSource = populations.byCity[location.country];
       if (populationSource && populationSource[location.state]) {
-        populationSource = populations.byCity[location.country][location.state];
+        populationSource = populationSource[location.state];
       }
-
-      population = populationSource[location.city];
+      if (populationSource && populationSource[location.state]) {
+        population = populationSource[location.city];
+      }
     } else if (location.county) {
       if (populations.byCounty[location.country]) {
         // Try counties
