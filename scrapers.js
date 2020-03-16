@@ -257,6 +257,14 @@ let scrapers = [
           }
         }
 
+        // These two incorrectly have a state set
+        if (
+          cases[index]['Province/State'] === 'United Kingdom' ||
+          cases[index]['Province/State'] === 'France'
+        ) {
+          cases[index]['Province/State'] = '';
+        }
+
         // Use their US states
         if (cases[index]['Country/Region'] === 'US' && transform.usStates[parse.string(cases[index]['Province/State'])]) {
           let state = transform.usStates[parse.string(cases[index]['Province/State'])];
