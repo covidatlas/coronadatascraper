@@ -81,6 +81,9 @@ let scrapers = [
         });
       }
 
+      // Add summed state data
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -99,6 +102,8 @@ let scrapers = [
           tested: parse.number(county.Negatives) + parse.number(county.Positives)
         });
       }
+
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -141,6 +146,7 @@ let scrapers = [
   },
   {
     url: 'https://github.com/CSSEGISandData/COVID-19',
+    _priority: -1,
     _urls: {
       cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
       deaths: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
@@ -248,7 +254,18 @@ let scrapers = [
           }
         }
 
-        if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
+        // Use their US states
+        if (cases[index]['Country/Region'] === 'US' && transform.usStates[parse.string(cases[index]['Province/State'])]) {
+          let state = transform.usStates[parse.string(cases[index]['Province/State'])];
+          countries.push({
+            country: 'USA',
+            state: state,
+            cases: parse.number(cases[index][date] || 0),
+            recovered: parse.number(recovered[index][date] || 0),
+            deaths: parse.number(deaths[index][date] || 0)
+          });
+        }
+        else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           countries.push({
             country: parse.string(cases[index]['Country/Region']),
             state: parse.string(cases[index]['Province/State']),
@@ -287,7 +304,7 @@ let scrapers = [
       }
       return string;
     },
-    scraper: async function() {
+    _scraper: async function() {
       let data = await fetch.csv(this.url);
 
       let states = [];
@@ -411,6 +428,8 @@ let scrapers = [
         });
       });
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -475,6 +494,8 @@ let scrapers = [
         });
       });
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -504,6 +525,8 @@ let scrapers = [
         }
       });
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -528,6 +551,8 @@ let scrapers = [
           cases: cases
         });
       });
+
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -587,6 +612,8 @@ let scrapers = [
         }
       }
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -615,6 +642,9 @@ let scrapers = [
           cases: cases
         });
       });
+
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -643,6 +673,8 @@ let scrapers = [
           cases: cases
         });
       });
+
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -724,6 +756,8 @@ let scrapers = [
         });
       });
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   },
@@ -750,6 +784,8 @@ let scrapers = [
           deaths: parse.number($tr.find('> *:last-child').text())
         });
       });
+
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
