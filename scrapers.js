@@ -24,6 +24,17 @@ import * as fs from './lib/fs.js';
 
 let scrapers = [
   {
+    state: 'NH',
+    country: 'USA',
+    url: 'https://www.nh.gov/covid19/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+      const cases = parse.number($('th:contains("Number of Persons with COVID-19") + td').html());
+      const tested = parse.number($('th:contains("Total Number of Persons Tested") + td').html());
+      return { cases, tested };
+    }
+  },
+  {
     state: 'AZ',
     country: 'USA',
     url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
