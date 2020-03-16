@@ -503,6 +503,9 @@ let scrapers = [
     state: 'CO',
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
+    _reject: {
+      county: 'Unknown county County'
+    },
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
@@ -518,10 +521,13 @@ let scrapers = [
           .text()
           .match(/(.*?): (\d+)/);
         if (matches) {
-          counties.push({
+          let data = {
             county: transform.addCounty(parse.string(matches[1])),
             cases: parse.number(matches[2])
-          });
+          };
+          if (rules.isAcceptable(data, null, this._reject)) {
+            counties.push(data);
+          }
         }
       });
 
@@ -560,6 +566,9 @@ let scrapers = [
   {
     state: 'LA',
     country: 'USA',
+    _countyMap: {
+      'La Salle Parish': 'LaSalle Parish'
+    },
     scraper: async function() {
       let counties = [];
       if (process.env['SCRAPE_DATE'] && datetime.dateIsBefore(new Date(process.env['SCRAPE_DATE']), new Date('2020-3-14'))) {
@@ -587,7 +596,7 @@ let scrapers = [
 
           let cases = parse.number($tr.find('td:last-child').text());
           counties.push({
-            county: county,
+            county: this._countyMap[county] || county,
             cases: cases
           });
         });
@@ -604,8 +613,9 @@ let scrapers = [
           if (county.PARISH === 'Parish Under Investigation') {
             continue;
           }
+          let county = parse.string(county.PARISH) + ' Parish';
           counties.push({
-            county: parse.string(county.PARISH) + ' Parish',
+            county: this._countyMap[county] || county,
             cases: parse.number(county.Cases),
             deaths: parse.number(county.Deaths)
           });
