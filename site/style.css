@@ -11,7 +11,7 @@
 
   --gt-dialog-background-color: rgb(40, 40, 40);
 
-  --gt-component-height: 38px;
+  --gt-component-min-height: 3em;
   --gt-component-margin: 8px;
   --gt-component-padding-x: 14px;
   --gt-component-padding-y: 10px;
@@ -43,7 +43,7 @@
 }
 
 html {
-  overflow: hidden;
+  font-size: 16px;
 }
 
 body {
@@ -65,11 +65,14 @@ body {
 .gt_output,
 .gt_footer,
 .gt_button {
-  display: inline-block; /* Stack horizontally like text */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative; /* Position the :before pseudo-element relative to us */
   vertical-align: top; /* Line up correctly with buttons */
 
-  height: var(--gt-component-height);
+  min-height: var(--gt-component-min-height);
   margin: var(--gt-component-margin);
   padding: var(--gt-component-padding-y) var(--gt-component-padding-x);
 
@@ -145,4 +148,16 @@ h2 {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@media only screen
+and (max-device-width: 812px) {
+  .gt_ribbon {
+    transform-origin: 100% 100%;
+    transform: scale(0.5);
+  }
+  .gt_page {
+    max-width: 100%;
+    margin: 0;
+  }
 }
