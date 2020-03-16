@@ -1545,9 +1545,44 @@ let scrapers = [
       })
       return counties;
     }
-  }
+  },
+  {
+    state: 'MD',
+    country: 'USA',
+    url: 'http://opendata.arcgis.com/datasets/ca77764e722c442986ef6514da88411c_0.csv',
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
 
+      let counties = [];
+      for (let county of data) {
+        if (county.PARISH === 'Out of State Resident') {
+          continue;
+        }
+        if (county.PARISH === 'Parish Under Investigation') {
+          continue;
+        }
+        let item = {
+          cases: parse.number(county.COVID19Cases),
+          recovered: parse.number(county.COVID19Recovered),
+          deaths: parse.number(county.COVID19Deaths)
+        };
 
+        let itemName = parse.string(county.COUNTY);
+        if (itemName === 'Baltimore City') {
+          item.city = itemName;
+        }
+        else {
+          item.county = transform.addCounty(itemName);
+        }
+
+        counties.push(item);
+      }
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    }
+  },
 ];
 
 export default scrapers;
