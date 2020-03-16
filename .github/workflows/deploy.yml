@@ -1,6 +1,7 @@
 name: Deploy CI
 
 on:
+  push:
   schedule:
     - cron: '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
 
