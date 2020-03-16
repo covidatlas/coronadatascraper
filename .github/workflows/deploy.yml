@@ -1,7 +1,9 @@
 name: Deploy CI
 
 on:
-  push: tags
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
