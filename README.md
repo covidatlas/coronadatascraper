@@ -196,6 +196,53 @@ It's a tough challenge to write scrapers that will work when websites are inevit
 
 If your datasource has timeseries data, you can include its data in retroactive regeneration (prior to this project's inception) by checking for `process.env['SCRAPE_DATE']`. This date is your target date; get it in whatever format you need, and only return results from your timeseries dataset from that date. See the JHU scraper for an example.
 
+#### What to do if a scraper breaks?
+
+Scrapers need to be able to operate correctly on old data, so updates to scrapers must be backwards compatible. If you know the date the site broke, you can have two implementations (or more) of a scraper in the same function:
+
+```javascript
+{
+    state: 'LA',
+    country: 'USA',
+    scraper: async function() {
+      let counties = [];
+      if (datetime.scrapeDateIsBefore('2020-3-14')) {
+        // Use the old table
+        this.url = 'http://ldh.la.gov/Coronavirus/';
+
+        let $ = await fetch.page(this.url);
+
+        let $table = $('p:contains("Louisiana Cases")')
+                      .nextAll('table')
+                      .find('tbody > tr:not(:last-child)');
+
+        $trs.each((index, tr) => {
+          counties.push(...);
+        });
+      }
+      else {
+        // Use the new CSV file
+        this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
+
+        let data = await fetch.csv(this.url);
+
+        for (let county of data) {
+          counties.push(...);
+        }
+      }
+
+      // Add state data
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    }
+  },
+```
+
+As you can see, you can change `this.url` within your function (but be sure to set it every time).
+
+You can also use `datetime.scrapeDateIsAfter()` for more complex customization.
+
 ### Criteria for sources
 
 Any source added to the scraper must meet the following criteria:

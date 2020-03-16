@@ -14,7 +14,7 @@ async function readPopulationFromCSV(csvPath) {
     if (item.population) {
       populationData[item.name] = parseInt(item.population, 10);
     } else {
-      reject(`Invalid data in ${csvPath} for ${item.name}`);
+      throw new Error(`Invalid data in ${csvPath} for ${item.name}`);
       return;
     }
   }
@@ -26,7 +26,8 @@ async function readPopulationData(featureCollection) {
   let populations = {
     byCity: {},
     byCounty: {
-      USA: await readPopulationFromCSV('population-usa-counties.csv')
+      USA: await readPopulationFromCSV('population-usa-counties.csv'),
+      GBR: await readPopulationFromCSV('population-gbr-counties.csv')
     },
     byState: {
       China: await readPopulationFromCSV('population-china-admin-divisions.csv'),
