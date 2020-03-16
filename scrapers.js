@@ -1815,6 +1815,7 @@ let scrapers = [
     scraper: async function() {
       let data = await fetch.csv(this.url);
       let states = [];
+
       let date = datetime.getYYYYMMDD(new Date());
       if (process.env['SCRAPE_DATE']) {
         date = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']));
@@ -1842,6 +1843,36 @@ let scrapers = [
         }
       }
       // Add data for FRA
+      states.push(transform.sumData(states));
+
+      return states;
+    }
+  },
+  {
+    country: 'ESP',
+    url: 'https://opendata.arcgis.com/datasets/48fac2d7de0f43f9af938852e3748845_0.csv',
+    priority: 1,
+    scraper: async function() {
+      let data = await fetch.csv(this.url);
+      let states = [];
+      for (let row of data) {
+        let state = row.Texto !== undefined ? parse.string(row.Texto) : "";
+        let cases = row.TotalConfirmados !== undefined ? parse.number(row.TotalConfirmados) : 0;
+        let deaths = row.TotalFallecidos !== undefined ? parse.number(row.TotalFallecidos) : 0;
+        let recovered = row.TotalRecuperados !== undefined ? parse.number(row.TotalRecuperados) : 0;
+        if(state !== "") {
+          let data = {
+            state,
+            cases,
+            deaths,
+            recovered,
+          };
+          if (rules.isAcceptable(data, null, this._reject)) {
+            states.push(data);
+          }
+        }
+      }
+      // Add data for ESP
       states.push(transform.sumData(states));
 
       return states;
