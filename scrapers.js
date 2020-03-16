@@ -1719,6 +1719,9 @@ let scrapers = [
           }
         }
       }
+      // Add data for FRA
+      states.push(transform.sumData(states));
+
       return states;
     }
   },
