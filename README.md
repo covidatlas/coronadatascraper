@@ -48,6 +48,11 @@ This gets you the latest scrapers, as well as the cache so we're not hammering s
 git pull upstream master --recurse-submodules
 ```
 
+Note: If you are encountering issues updating a submodule such as `Could not access submodule`, you may need to update your fork using:
+```
+git submodule update --init --recursive
+```
+
 ### Re-generating old data
 
 To re-generate old data from cache (or timeseries), run:

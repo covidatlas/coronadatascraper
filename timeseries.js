@@ -18,7 +18,9 @@ let caseDataProps = [
   'cases',
   'deaths',
   'recovered',
-  'tested'
+  'active',
+  'tested',
+  'growthFactor'
 ];
 
 /*
@@ -47,7 +49,7 @@ function stripCases(location) {
   return newLocation;
 }
 
-async function generateTidyCSV(timeseriesData) {
+async function generateTidyCSV(timeseriesByLocation) {
   let columns = [
     'city',
     'county',
@@ -59,7 +61,7 @@ async function generateTidyCSV(timeseriesData) {
   ];
 
   let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesData)) {
+  for (let [name, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
     let row = [];
     for (let column of columns) {
@@ -96,10 +98,10 @@ async function generateTidyCSV(timeseriesData) {
 
   csvData.splice(0, 0, columns);
 
-  return fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
+  return fs.writeCSV(path.join('dist', 'timeseries-tidy.csv'), csvData);
 }
 
-async function generateLessTidyCSV(timeseriesData) {
+async function generateLessTidyCSV(timeseriesByLocation) {
   let columns = [
     'city',
     'county',
@@ -112,7 +114,7 @@ async function generateLessTidyCSV(timeseriesData) {
   ];
 
   let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesData)) {
+  for (let [name, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
     let row = [];
     for (let column of columns) {
@@ -153,7 +155,7 @@ async function generateLessTidyCSV(timeseriesData) {
   return fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
 }
 
-async function generateCSV(timeseriesData) {
+async function generateCSV(timeseriesByLocation) {
   let columns = [
     'city',
     'county',
@@ -168,7 +170,7 @@ async function generateCSV(timeseriesData) {
   ];
 
   let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesData)) {
+  for (let [name, location] of Object.entries(timeseriesByLocation)) {
     let row = [];
     for (let column of columns) {
       if (column === 'lat') {
@@ -195,13 +197,22 @@ async function generateCSV(timeseriesData) {
   return fs.writeCSV(path.join('dist', 'timeseries-jhu.csv'), csvData);
 }
 
+function getGrowthfactor(casesToday, casesYesterday) {
+  let growthFactor = casesToday / casesYesterday;
+  if (growthFactor === Infinity) {
+    return null;
+  }
+  return growthFactor;
+}
+
 /*
   Generate timeseries data
 */
 async function generateTimeseries() {
-  let timeseriesData = {};
+  let timeseriesByLocation = {};
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
+  let featureCollection;
   for (let date of dates) {
     let data = await generate(date === lastDate ? undefined : date, {
       findFeatures: date === lastDate,
@@ -209,31 +220,40 @@ async function generateTimeseries() {
       writeData: false
     });
 
+    if (date === lastDate) {
+      featureCollection = data.featureCollection;
+    }
+
     for (let location of data.locations) {
       let name = transform.getName(location);
 
-      timeseriesData[name] = Object.assign({ dates: {} }, timeseriesData[name], stripCases(location));
+      timeseriesByLocation[name] = Object.assign({ dates: {} }, timeseriesByLocation[name], stripCases(location));
 
       let strippedLocation = stripInfo(location);
 
       // Add growth factor
-      if (previousDate && timeseriesData[name].dates[previousDate]) {
-        strippedLocation.growthFactor = strippedLocation.cases / timeseriesData[name].dates[previousDate].cases;
+      if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
+        strippedLocation.growthFactor = getGrowthfactor(strippedLocation.cases, timeseriesByLocation[name].dates[previousDate].cases);
       }
 
-      timeseriesData[name].dates[date] = strippedLocation;
+      timeseriesByLocation[name].dates[date] = strippedLocation;
     }
 
     previousDate = date;
   }
 
-  await fs.writeJSON(path.join('dist', 'timeseries.json'), timeseriesData);
+  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation);
+  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
 
-  await generateCSV(timeseriesData);
+  let { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
+  await fs.writeFile(path.join('dist', `timeseries.json`), JSON.stringify(timeseriesByDate, null, 2));
+  await fs.writeFile(path.join('dist', `locations.json`), JSON.stringify(locations, null, 2));
 
-  await generateTidyCSV(timeseriesData);
+  await generateCSV(timeseriesByLocation);
 
-  await generateLessTidyCSV(timeseriesData);
+  await generateTidyCSV(timeseriesByLocation);
+
+  await generateLessTidyCSV(timeseriesByLocation);
 }
 
 generateTimeseries();
