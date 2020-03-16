@@ -1498,7 +1498,11 @@ let scrapers = [
   
       paragraph.split(')').map(splitCounty => {
       if(splitCounty.length > 1){
-       let county = transform.addCounty(parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim()))
+       let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim())
+       //check for Baltimore City
+       if (county !== 'Baltimore City') {
+         county = transform.addCounty(county)
+       }
        let cases = parse.number(splitCounty.substring(splitCounty.indexOf('(')+1, splitCounty.length).trim())
        counties.push({
          county,
