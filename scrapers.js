@@ -24,6 +24,22 @@ import * as fs from './lib/fs.js';
 
 let scrapers = [
   {
+    state: 'ID',
+    country: 'USA',
+    url: 'https://coronavirus.idaho.gov/',
+    scraper: async function() {
+      let $ = await fetch.page(this.url)
+      let cases = $('td:contains("Number of lab-confirmed COVID-19 cases") + td').first().html();
+      let testedPrivate = $('td:contains("tested through commercial laboratories") + td').first().html();
+      let testedPublic = $('td:contains("tested through the Idaho Bureau of Lab") + td').first().html();
+      
+      return {
+        cases,
+        tested: parse.number(testedPrivate) + parse.number(testedPublic)
+      }
+    }
+  },
+  {
     state: 'AZ',
     country: 'USA',
     url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
