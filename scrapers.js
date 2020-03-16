@@ -1131,6 +1131,25 @@ let scrapers = [
     }
   },
   {
+    county: 'Marin County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://coronavirus.marinhhs.org/surveillance',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      // This may be hacky but hopefully they keep the same formatting. We may need
+      // to convert this to a table one available.
+      let text = $('td:contains("confirmed cases of COVID-19")').text();
+
+      let cases = parse.number(text.match(/there have been (\d+) confirmed cases of/)[1]);
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
