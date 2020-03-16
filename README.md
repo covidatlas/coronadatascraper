@@ -58,7 +58,7 @@ git submodule update --init --recursive
 To re-generate old data from cache (or timeseries), run:
 
 ```
-yarn start --date=2020-3-12
+yarn start --date=2020-03-12
 ```
 
 ### Generating timeseries data

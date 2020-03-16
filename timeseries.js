@@ -9,7 +9,7 @@ let dates = [];
 let today = new Date();
 let curDate = new Date('2020-1-22');
 while (curDate <= today) {
-  dates.push(datetime.getYYYYMD(curDate));
+  dates.push(datetime.getYYYYMMDD(curDate));
   curDate.setDate(curDate.getDate() + 1);
 }
 
