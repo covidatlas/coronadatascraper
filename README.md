@@ -284,8 +284,8 @@ All data in the output includes the `url` and the `rating` of the source.
 
 ## SSL
 
-Some source don't standard SSL certificates, resulting in fetching errors. You can add additional SSL certificates in the `ssl` directory. 
-They will automatically be used by `fetch`.
+Some source don't use standard SSL certificates, resulting in fetching errors. You can add additional 
+SSL certificates in the `ssl` directory. They will automatically be used when fetching data.
 
 ## License
 
