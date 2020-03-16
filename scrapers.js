@@ -1108,6 +1108,29 @@ let scrapers = [
     }
   },
   {
+    county: 'Merced County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019',
+    scraper: async function() {
+      let $ = await fetch.page(this.url);
+
+      let $table = $('h3:contains("Merced County COVID-19 Statistics")')
+                        .parent()
+                        .next('table');
+
+      let cases = parse.number($table.find('td:contains("Cases")').next('td').text());
+      let deaths = parse.number($table.find('td:contains("Deaths")').next('td').text());
+      let recovered = parse.number($table.find('td:contains("Recoveries")').next('td').text());
+
+      return {
+        cases: cases,
+        deaths: deaths,
+        recovered: recovered
+      };
+    }
+  },
+  {
     county: 'Orange County',
     state: 'CA',
     country: 'USA',
