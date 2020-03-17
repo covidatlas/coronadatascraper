@@ -46,7 +46,7 @@ jobs:
           cd coronadatascraper-cache
           git add .
           git commit -m "Update cache following deployment"
-          git push origin HEAD:master
+          git push origin HEAD:master || echo "Nothing to push to cache"
       - name: Notify Slack
         run: |
           curl -X POST -H 'Content-type: application/js' --data '{"text":"I just pushed a new release, go check it out at http://blog.lazd.net/coronadatascraper !"}' {{ secrets.SLACK_HOOK }}
