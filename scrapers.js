@@ -1695,6 +1695,11 @@ let scrapers = [
     url: 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/',
     scraper: async function() {
       let counties = [];
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        this.url = 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/';
+      } else {
+        this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      }
       let $ = await fetch.page(this.url);
       let $paragraph = $('p:contains("Number of counties with cases:")').text();
       let parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ','');
