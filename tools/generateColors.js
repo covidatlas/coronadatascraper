@@ -61,5 +61,9 @@ function generateColors() {
 cssVariables[prop] = value;
     }
   }
+  let cssString = Object.entries(vars).map(v => {    
+    return `${v.join(': ')};\n`
+  });
+  fs.writeFile('./site/colors.css', `.spectrum {\n${cssString}}\n`);
 }
 generateColors();
