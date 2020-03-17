@@ -27,17 +27,10 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
     date
   };
 
-<<<<<<< HEAD
   const output = await scrapeData({ report, options })
     .then(options.findFeatures && findFeatures)
     .then(options.findPopulations && findPopulations)
     .then(options.writeData && writeData);
-=======
-  const output = scrapeData({ report, options })
-    .then(options.findFeatures !== false && findFeatures)
-    .then(options.findPopulations !== false && findPopulations)
-    .then(options.writeData !== false && writeData);
->>>>>>> e1913de5889020f7eb0fa15c62ea2ec64291075e
 
   return output;
 }
