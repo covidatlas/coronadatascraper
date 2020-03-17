@@ -1,5 +1,5 @@
-import scrapers from '../scrapers';
-import * as transform from '../lib/transform';
+import scrapers from '../scrapers.js';
+import * as transform from '../lib/transform.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 

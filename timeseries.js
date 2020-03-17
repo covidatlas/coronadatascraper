@@ -1,9 +1,9 @@
 import path from 'path';
-import generate from './index';
-import argv from './lib/cliArgs';
-import * as transform from './lib/transform';
-import * as datetime from './lib/datetime';
-import * as fs from './lib/fs';
+import generate from './index.js';
+import argv from './lib/cliArgs.js';
+import * as transform from './lib/transform.js';
+import * as datetime from './lib/datetime.js';
+import * as fs from './lib/fs.js';
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];

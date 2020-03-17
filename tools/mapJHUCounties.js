@@ -1,5 +1,5 @@
 import turf from '@turf/turf';
-import * as fs from '../lib/fs';
+import * as fs from '../lib/fs.js';
 
 const LAT = 'Lat';
 const LONG = 'Long';

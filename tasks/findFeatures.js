@@ -1,7 +1,7 @@
 import turf from '@turf/turf';
 
-import * as fs from '../lib/fs';
-import * as transform from '../lib/transform';
+import * as fs from '../lib/fs.js';
+import * as transform from '../lib/transform.js';
 
 const DEBUG = false;
 

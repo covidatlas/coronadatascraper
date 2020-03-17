@@ -25,7 +25,6 @@
     "@adobe/spectrum-css": "^2.18.0",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
-    "csv": "^5.3.2",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",
     "editorconfig": "^0.15.3",

@@ -12,6 +12,7 @@
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
     "no-shadow": "warn",
+    "import/extensions": ["error", "ignorePackages"],
     "no-underscore-dangle": "off"
   }
 }

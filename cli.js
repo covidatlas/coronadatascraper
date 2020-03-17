@@ -1,4 +1,4 @@
-import generate from './index';
-import argv from './lib/cliArgs';
+import generate from './index.js';
+import argv from './lib/cliArgs.js';
 
 generate(argv.date, argv);
