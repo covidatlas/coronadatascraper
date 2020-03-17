@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "yarn start && yarn timeseries && yarn buildSite",
-    "buildSite": "cp -r site/* dist/ && ./tools/copySpectrumCSS.sh",
+    "buildSite": "mkdir -p dist/; cp -r site/* dist/ && ./tools/copySpectrumCSS.sh",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
