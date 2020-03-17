@@ -1783,19 +1783,34 @@ let scrapers = [
     scraper: async function () {
       let counties = [];
       let $ = await fetch.page(this.url);
-      let $lis = $('li:contains("Counties impacted to date include")').nextAll('ul').first().find('li');
-      $lis.each((index, li) => {
-        let matches = $(li).text().match(/([A-Za-z]+) \((\d+\))/);
-        if (matches) {
-          let county = transform.addCounty(parse.string(matches[1]));
-          let cases = parse.number(matches[2]);
-          counties.push({
-            county,
-            cases,
-          });
-        }
-      });
-      return counties
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        let $lis = $('li:contains("Counties impacted to date include")').nextAll('ul').first().find('li');
+        $lis.each((index, li) => {
+          let matches = $(li).text().match(/([A-Za-z]+) \((\d+\))/);
+          if (matches) {
+            let county = transform.addCounty(parse.string(matches[1]));
+            let cases = parse.number(matches[2]);
+            counties.push({
+              county,
+              cases,
+            });
+          }
+        });
+      }
+      else {
+        let $table = $('table.ms-rteTable-default').first();
+        let $trs = $table.find('tbody > tr');
+
+        $trs.each((index, tr) => {
+          let $tr = $(tr);
+          let data = {
+            county: parse.string($tr.find('td:first-child').text()),
+            cases: parse.number($tr.find('td:last-child').text())
+          };
+          counties.push(data);
+        });
+      }
+      return counties;
     }
   },
   {
