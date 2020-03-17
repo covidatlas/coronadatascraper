@@ -153,6 +153,18 @@ body {
   margin-top: calc( 2.5 * var(--spectrum-heading-l-margin-top, var(--spectrum-alias-heading-l-margin-top)));
 }
 
+.spectrum-Link {
+  text-decoration: underline;
+}
+
+div.spectrum-SideNav-itemLink {
+  cursor: default;
+}
+
+div.spectrum-SideNav-itemLink:hover {
+  background: transparent;
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
