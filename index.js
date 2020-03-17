@@ -1,3 +1,5 @@
+import rootCas from 'ssl-root-cas/latest.js';
+
 import * as fs from './lib/fs.js';
 
 import scrapeData from './tasks/scrapeData.js';
@@ -12,15 +14,23 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
     delete process.env['SCRAPE_DATE'];
   }
 
+  // Add SSL certificates for sources that use non-standard ones
+  const files = await fs.readFiles('./ssl');
+  for (let file of files) {
+    rootCas.addFile('./ssl/' + file);
+  }
+
+  rootCas.inject();
+
   // JSON used for reporting
   const report = {
     date
   };
 
-  const output = scrapeData({ report, options })
-    .then(options.findFeatures !== false && findFeatures)
-    .then(options.findPopulations !== false && findPopulations)
-    .then(options.writeData !== false && writeData);
+  const output = await scrapeData({ report, options })
+    .then(options.findFeatures && findFeatures)
+    .then(options.findPopulations && findPopulations)
+    .then(options.writeData && writeData);
 
   return output;
 }
