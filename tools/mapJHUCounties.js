@@ -24,7 +24,7 @@ async function findNameMapping() {
     if (point) {
       // Search within features
       for (const feature of usCountyData.features) {
-        if (point && feature.geometry) {
+        if (feature.geometry) {
           const poly = turf.feature(feature.geometry);
           if (turf.booleanPointInPolygon(point, poly)) {
             countyMap[location[STATE]] = feature.properties.name;

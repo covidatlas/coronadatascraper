@@ -93,7 +93,7 @@
             });
 
             document.querySelector('.cds-Editor-content').innerHTML = '';
-            var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
+            new Handsontable(document.querySelector('.cds-Editor-content'), {
               data: data.data,
               rowHeaders: true,
               colHeaders: true,
@@ -121,7 +121,6 @@
       }
 
       document.addEventListener('click', function(evt) {
-        var target = evt.target;
         var button = evt.target.closest('button');
         if (button && button.classList.contains('js-toggleMenu')) {
           openSidebar();
@@ -188,7 +187,7 @@
       </div>
 
       <div class="spectrum-Site-mainContainer">
-    
+
         <div class="spectrum-Site-page cds-Home">
           <div class="spectrum-Site-hero">
             <div class="spectrum-Site-heroHeading">
