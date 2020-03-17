@@ -65,6 +65,12 @@ To re-generate old data from cache (or timeseries), run:
 yarn start --date=2020-3-12
 ```
 
+To output files without the date suffix, use:
+
+```
+yarn start --date=2020-3-12 -o
+```
+
 ### Generating timeseries data
 
 To generate timeseries data in `dist/timeseries*.*`, run:
@@ -75,10 +81,10 @@ yarn timeseries
 
 ### Run only one scraper
 
-To scrape just one location, use `--only`/`-o`
+To scrape just one location, use `--location`/`-l`
 
 ```
-yarn start --only "Ventura County, CA, USA"
+yarn start --location "Ventura County, CA, USA"
 ```
 
 ### Skipping a scraper

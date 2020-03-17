@@ -202,14 +202,16 @@ function getGrowthfactor(casesToday, casesYesterday) {
 */
 let dates;
 async function generateTimeseries(options = {}) {
-  // Generate a list of dates starting at the first data, OR the provided start date
+  // Generate a list of dates starting at the first date, OR the provided start date
+  // ending at today or the provided end date
   dates = [];
   let today = new Date();
+  let endDate = options.endDate ? new Date(options.endDate) : today;
   let curDate = new Date('2020-1-22');
   if (options.date) {
     curDate = new Date(options.date);
   }
-  while (curDate <= today) {
+  while (curDate <= endDate) {
     dates.push(datetime.getYYYYMD(curDate));
     curDate.setDate(curDate.getDate() + 1);
   }
@@ -219,7 +221,7 @@ async function generateTimeseries(options = {}) {
   let lastDate = dates[dates.length - 1];
   let featureCollection;
   for (let date of dates) {
-    let data = await generate(date === lastDate ? undefined : date, Object.assign({
+    let data = await generate(date === today ? undefined : date, Object.assign({
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
