@@ -774,26 +774,48 @@ let scrapers = [
   {
     state: 'DE',
     country: 'USA',
-    url: 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html',
     scraper: async function() {
-      let $ = await fetch.page(this.url);
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';
+        let $ = await fetch.page(this.url);
 
-      let $td = $('*:contains("County breakdown")')
-        .closest('tr')
-        .find('td:last-child');
+        let $td = $('*:contains("County breakdown")')
+          .closest('tr')
+          .find('td:last-child');
 
-      let counties = $td
-        .html()
-        .split('<br>')
-        .map(str => {
-          let parts = str.split(': ');
-          return {
-            county: transform.addCounty(parse.string(parts[0])),
-            cases: parse.number(parts[1])
-          };
-        });
+        let counties = $td
+          .html()
+          .split('<br>')
+          .map(str => {
+            let parts = str.split(': ');
+            return {
+              county: transform.addCounty(parse.string(parts[0])),
+              cases: parse.number(parts[1])
+            };
+          });
 
-      return counties;
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      }
+      else {
+        this.url = 'http://opendata.arcgis.com/datasets/c8d4efa2a6bd48a1a7ae074a8166c6fa_0.csv';
+        let data = await fetch.csv(this.url);
+
+        // This CSV is probably going to change once they have confirmed data
+        let counties = [];
+        for (let county of data) {
+          counties.push({
+            county: parse.string(county.NAME),
+            cases: parse.number(county.Presumptive_Positive),
+            recovered: parse.number(county.Recovered)
+          });
+        }
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      }
     }
   },
   {
