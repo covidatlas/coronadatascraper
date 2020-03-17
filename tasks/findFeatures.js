@@ -172,7 +172,6 @@ const generateFeatures = ({ locations, report, options }) => {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-
           if (
             (
               location.country === feature.properties.gu_a3 ||
@@ -180,12 +179,16 @@ const generateFeatures = ({ locations, report, options }) => {
             )
             &&
             (
-              location.state === feature.properties.name ||
-              location.state === feature.properties.name_en ||
-              location.state === feature.properties.region ||
-              location.county === feature.properties.name ||
-              location.county === feature.properties.name_en ||
-              location.county === feature.properties.region
+              location.state && (
+                location.state === feature.properties.name ||
+                location.state === feature.properties.name_en ||
+                location.state === feature.properties.region
+              ) ||
+              location.county && (
+                location.county === feature.properties.name ||
+                location.county === feature.properties.name_en ||
+                location.county === feature.properties.region
+              )
             )
           ) {
             found = true;
