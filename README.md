@@ -25,7 +25,7 @@ cd coronadatascraper
 git remote add upstream git@github.com:lazd/coronadatascraper.git
 ```
 
-If you've already cloned without `--recrusive`, run:
+If you've already cloned without `--recursive`, run:
 
 ```
 git submodule init
