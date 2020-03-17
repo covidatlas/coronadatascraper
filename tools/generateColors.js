@@ -1,5 +1,5 @@
 import { generateAdaptiveTheme } from '@adobe/leonardo-contrast-colors';
-
+import * as fs from '../lib/fs.js';
 // returns theme colors as JSON
 function generateColors() {
   let cds_theme = generateAdaptiveTheme({
