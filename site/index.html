@@ -20,6 +20,8 @@
   <link href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
+  <script src="https://unpkg.com/@adobe/focus-ring-polyfill@0.1.5/index.js"></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160595752-1"></script>
   <script>
@@ -32,7 +34,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       document.addEventListener('click', function(evt) {
         var target = evt.target;
-        if (target.tagName === 'A' && target.hasAttribute('download')) {
+        if (target.tagName === 'A' && target.hasAttribute('download') && !target.hasAttribute('data-noview')) {
           // Stop download
           evt.preventDefault();
 
@@ -146,13 +148,10 @@
         <div class="u-scrollable spectrum-Site-nav">
           <nav>
             <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Timeseries</a>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Snapshot</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-byLocation.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by location)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-tidy.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (Tidy format)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Metadata</a>
@@ -162,10 +161,13 @@
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
                 </ul>
               </li>
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Snapshot</a>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Timeseries</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-byLocation.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by location)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download data-noview href="./timeseries-tidy.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (Tidy format)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
