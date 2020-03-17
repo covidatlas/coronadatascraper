@@ -821,40 +821,57 @@ let scrapers = [
   {
     state: 'FL',
     country: 'USA',
-    url: 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html',
-    type: 'table',
     _priority: 1,
     scraper: async function() {
-      let counties = {};
-      let $ = await fetch.page(this.url);
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        this.type = 'table';
+        this.url = 'http://www.floridahealth.gov/diseases-and-conditions/COVID-19/index.html';
+        let counties = {};
+        let $ = await fetch.page(this.url);
 
-      let $table = $('*:contains("Diagnosed in Florida")').closest('table');
+        let $table = $('*:contains("Diagnosed in Florida")').closest('table');
 
-      let $trs = $table.find('tr');
+        let $trs = $table.find('tr');
 
-      $trs.each((index, tr) => {
-        if (index < 2) {
-          return;
+        $trs.each((index, tr) => {
+          if (index < 2) {
+            return;
+          }
+          let $tr = $(tr);
+          let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
+          counties[county] = counties[county] || { cases: 0 };
+          counties[county].cases += 1;
+        });
+
+
+        let countiesArray = transform.objectToArray(counties);
+
+        // Add non florida as unassigned
+        let text = $('div:contains("Non-Florida Residents")').last().text();
+        let nonFlorida = text.split(' – ')[0];
+        if (nonFlorida) {
+          countiesArray.push({ name: UNASSIGNED, cases: nonFlorida });
         }
-        let $tr = $(tr);
-        let county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
-        counties[county] = counties[county] || { cases: 0 };
-        counties[county].cases += 1;
-      });
 
+        countiesArray.push(transform.sumData(countiesArray));
 
-      let countiesArray = transform.objectToArray(counties);
-
-      // Add non florida as unassigned
-      let text = $('div:contains("Non-Florida Residents")').last().text();
-      let nonFlorida = text.split(' – ')[0];
-      if (nonFlorida) {
-        countiesArray.push({ name: UNASSIGNED, cases: nonFlorida });
+        return countiesArray;
       }
+      else {
+        this.type = 'csv';
+        this.url = 'https://opendata.arcgis.com/datasets/b4930af3f43a48138c70bca409b5c452_0.csv';
+        let data = await fetch.csv(this.url);
 
-      countiesArray.push(transform.sumData(countiesArray));
+        let counties = [];
+        for (let county of data) {
+          counties.push({
+            county: parse.string(county.County),
+            cases: parse.number(county.Counts)
+          });
+        }
 
-      return countiesArray;
+        return counties;
+      }
     }
   },
   {
