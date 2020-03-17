@@ -44,7 +44,7 @@ const scrapers = [
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
     state: 'IN',
-    timeseries: false,
+    aggregate: 'county',
     _countyMap: {
       'Verm.': 'Vermillion',
       'Vander.': 'Vanderburgh',
@@ -72,6 +72,7 @@ const scrapers = [
     url: 'https://opendata.arcgis.com/datasets/969678bce431494a8f64d7faade6e5b8_0.csv',
     country: 'USA',
     state: 'NC',
+    aggregate: 'county',
     async scraper() {
       const data = await fetch.csv(this.url);
 
@@ -95,6 +96,7 @@ const scrapers = [
     url: 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv',
     country: 'USA',
     state: 'NJ',
+    aggregate: 'county',
     async scraper() {
       const data = await fetch.csv(this.url);
 
@@ -124,6 +126,7 @@ const scrapers = [
         state: 'Total cases'
       }
     ],
+    aggregate: 'state',
     async scraper() {
       const $ = await fetch.page(this.url);
 
@@ -152,6 +155,7 @@ const scrapers = [
   {
     url: 'https://github.com/CSSEGISandData/COVID-19',
     timeseries: true,
+    aggregate: 'state',
     priority: -1,
     _urls: {
       cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
@@ -355,6 +359,7 @@ const scrapers = [
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
     timeseries: true,
+    aggregate: 'state',
     async scraper() {
       const data = await fetch.csv(this.url, false);
 
@@ -382,6 +387,8 @@ const scrapers = [
   {
     country: 'GBR',
     url: 'https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data',
+    aggregate: 'county',
+    type: 'csv', // required since URL does not end in .csv
     async scraper() {
       const data = await fetch.csv(this.url);
 
@@ -402,6 +409,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const $ = await fetch.page(this.url);
 
@@ -460,6 +468,7 @@ const scrapers = [
     state: 'DC',
     country: 'USA',
     url: 'https://coronavirus.dc.gov/page/coronavirus-data',
+    type: 'paragraph',
     async scraper() {
       const $ = await fetch.page(this.url);
 
@@ -493,6 +502,7 @@ const scrapers = [
     country: 'USA',
     url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -615,6 +625,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -644,6 +655,7 @@ const scrapers = [
     _countyMap: {
       'La Salle Parish': 'LaSalle Parish'
     },
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       if (datetime.scrapeDateIsBefore('2020-3-14')) {
@@ -709,6 +721,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus',
     type: 'table',
+    aggregate: 'county',
     headless: true, // Incapsula blocking request
     async scraper() {
       const counties = [];
@@ -743,6 +756,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.dshs.state.tx.us/news/updates.shtm',
     type: 'table',
+    aggregate: 'county',
     ssl: false, // Error: unable to verify the first certificate
     async scraper() {
       const counties = [];
@@ -780,9 +794,11 @@ const scrapers = [
   {
     state: 'DE',
     country: 'USA',
+    aggregate: 'county',
     async scraper() {
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';
+        this.type = 'table';
         const $ = await fetch.page(this.url);
 
         const $td = $('*:contains("County breakdown")')
@@ -805,6 +821,7 @@ const scrapers = [
         return counties;
       }
       this.url = 'http://opendata.arcgis.com/datasets/c8d4efa2a6bd48a1a7ae074a8166c6fa_0.csv';
+      this.type = 'csv';
       const data = await fetch.csv(this.url);
 
       // This CSV is probably going to change once they have confirmed data
@@ -826,6 +843,7 @@ const scrapers = [
     state: 'FL',
     country: 'USA',
     priority: 1,
+    aggregate: 'county',
     async scraper() {
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         this.type = 'table';
@@ -882,6 +900,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
     type: 'table',
+    aggregate: 'county',
     _countyMap: {
       // This is totally wrong, but otherwise we need less granular GeoJSON
       'New York City': 'New York County',
@@ -916,6 +935,7 @@ const scrapers = [
     url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
     type: 'table',
     headless: true,
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.headless(this.url);
@@ -1711,6 +1731,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const regions = [];
       const $ = await fetch.page(this.url);
@@ -1774,6 +1795,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://doh.sd.gov/news/Coronavirus.aspx#SD',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -1796,6 +1818,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://coronavirus.utah.gov/latest/',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const $ = await fetch.page(this.url);
       const counties = [];
@@ -1820,6 +1843,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx',
     type: 'list',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -1862,6 +1886,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.tn.gov/health/cedep/ncov.html',
     type: 'table',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -1885,6 +1910,7 @@ const scrapers = [
   {
     state: 'OH',
     country: 'USA',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       let arrayOfCounties = [];
@@ -1918,6 +1944,7 @@ const scrapers = [
     country: 'USA',
     url: 'https://portal.ct.gov/Coronavirus',
     type: 'list',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -1980,6 +2007,7 @@ const scrapers = [
     url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
     timeseries: true,
     priority: 1,
+    aggregate: 'state',
     async scraper() {
       const data = await fetch.csv(this.url, false);
       const states = [];
@@ -2021,6 +2049,7 @@ const scrapers = [
     country: 'ESP',
     url: 'https://opendata.arcgis.com/datasets/48fac2d7de0f43f9af938852e3748845_0.csv',
     priority: 1,
+    aggregate: 'state',
     async scraper() {
       const data = await fetch.csv(this.url);
       const states = [];
@@ -2051,6 +2080,7 @@ const scrapers = [
     state: 'MD',
     country: 'USA',
     url: 'https://coronavirus.maryland.gov/',
+    aggregate: 'county',
     async scraper() {
       const counties = [];
       const $ = await fetch.headless(this.url);
@@ -2080,6 +2110,7 @@ const scrapers = [
     url: 'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',
     type: 'table',
     priority: 1,
+    aggregate: 'state',
     async scraper() {
       const states = [];
       const $ = await fetch.page(this.url);
