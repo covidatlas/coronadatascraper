@@ -2027,6 +2027,35 @@ let scrapers = [
       return counties;
     }
   },
+  {
+    country: 'AUS',
+    url: 'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',
+    type: 'table',
+    priority: 1,
+    scraper: async function() {
+      let states = [];
+      let $ = await fetch.page(this.url);
+
+      let $table = $('.health-table__responsive > table');
+
+      let $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
+
+      $trs.each((index, tr) => {
+        let $tr = $(tr);
+        let state = parse.string($tr.find('td:first-child').text());
+        let cases = parse.number($tr.find('td:nth-child(2)').text());
+        states.push({
+          state: state,
+          cases: cases
+        });
+      });
+
+      // Add data for AUS itself
+      states.push(transform.sumData(states));
+
+      return states;
+    }
+  }
 ];
 
 export default scrapers;
