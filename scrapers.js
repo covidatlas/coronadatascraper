@@ -1550,30 +1550,57 @@ let scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.ventura.org/covid19/',
-    // Needs JavaScript to populate counts
+    type: 'paragraph', // It's not a real table, it gets a low score
     scraper: async function() {
-      let $ = await fetch.page(this.url);
+      let $ = await fetch.headless(this.url);
 
       let cases = 0;
-      cases += parse.number(
-        $('.count-subject:contains("Positive travel-related case")')
-          .closest('.hb-counter')
-          .find('.count-number')
-          .attr('data-from')
-      );
-      cases += parse.number(
-        $('.count-subject:contains("Presumptive Positive")')
-          .closest('.hb-counter')
-          .find('.count-number')
-          .attr('data-from')
-      );
+      let tested = 0;
 
-      let tested = parse.number(
-        $('.count-subject:contains("People tested")')
-          .closest('.hb-counter')
-          .find('.count-number')
-          .attr('data-from')
-      );
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        cases += parse.number(
+          $('.count-subject:contains("Positive travel-related case")')
+            .closest('.hb-counter')
+            .find('.count-number')
+            .attr('data-from')
+        );
+        cases += parse.number(
+          $('.count-subject:contains("Presumptive Positive")')
+            .closest('.hb-counter')
+            .find('.count-number')
+            .attr('data-from')
+        );
+        tested = parse.number(
+          $('.count-subject:contains("People tested")')
+            .closest('.hb-counter')
+            .find('.count-number')
+            .attr('data-from')
+        );
+      }
+      else {
+        cases += parse.number(
+          $('td:contains("Positive cases")')
+            .closest('table')
+            .find('td')
+            .first()
+            .text()
+        );
+        cases += parse.number(
+          $('td:contains("Presumptive positive")')
+            .closest('table')
+            .find('td')
+            .first()
+            .text()
+        );
+
+        tested = parse.number(
+          $('td:contains("People tested")')
+            .closest('table')
+            .find('td')
+            .first()
+            .text()
+        );
+      }
 
       return {
         cases: cases,
