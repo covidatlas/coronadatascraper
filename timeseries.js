@@ -200,9 +200,10 @@ function getGrowthfactor(casesToday, casesYesterday) {
 /*
   Generate timeseries data
 */
+let dates;
 async function generateTimeseries(options = {}) {
   // Generate a list of dates starting at the first data, OR the provided start date
-  let dates = [];
+  dates = [];
   let today = new Date();
   let curDate = new Date('2020-1-22');
   if (options.date) {
