@@ -1,6 +1,14 @@
 import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
 
+let numericalValues = [
+  'cases',
+  'tested',
+  'recovered',
+  'deaths',
+  'active'
+];
+
 /*
   Combine location information with the passed data object
 */
@@ -28,6 +36,12 @@ function isValid(data, location) {
       throw new Error(`Invalid data: ${prop} is null`);
     }
     if (Number.isNaN(value)) {
+      throw new Error(`Invalid data: ${prop} is not a number`);
+    }
+  }
+
+  for (let prop of numericalValues) {
+    if (data[prop] !== undefined && typeof data[prop] !== 'number') {
       throw new Error(`Invalid data: ${prop} is not a number`);
     }
   }
@@ -83,10 +97,20 @@ function addData(cases, location, result) {
 /*
     Begin the scraping process
   */
-async function scrape() {
+async function scrape(options) {
   let locations = [];
   let errors = [];
   for (let location of scrapers) {
+    if (options.only) {
+      if (transform.getName(location) !== options.only) {
+        continue;
+      }
+    }
+    if (options.skip) {
+      if (transform.getName(location) === options.skip) {
+        continue;
+      }
+    }
     if (location.scraper) {
       try {
         addData(locations, location, await location.scraper());
@@ -101,12 +125,12 @@ async function scrape() {
       }
     }
   }
-
+  
   // De-dupe and clean data
   let seenLocations = {};
   let i = locations.length - 1;
   let deDuped = 0;
-  while (i--) {
+  while (i-- > 0) {
     let location = locations[i];
     let locationName = transform.getName(location);
     let otherLocation = seenLocations[locationName];
@@ -145,42 +169,68 @@ async function scrape() {
   return { locations, errors, deDuped };
 }
 
-const scrapeData = async ({ report }) => {
+const scrapeData = async ({ report, options }) => {
   console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
 
-  const { locations, errors, deDuped } = await scrape();
+  const { locations, errors, deDuped } = await scrape(options);
 
-  let states = 0;
-  let counties = 0;
-  let countries = 0;
+  let locationCounts = {
+    cities: 0,
+    states: 0,
+    counties: 0,
+    countries: 0
+  };
+  let caseCounts = {
+    cases: 0,
+    tested: 0,
+    recovered: 0,
+    deaths: 0,
+    active: 0
+  };
   for (let location of locations) {
     if (!location.state && !location.county) {
-      countries++;
+      locationCounts.countries++;
     } else if (!location.county) {
-      states++;
+      locationCounts.states++;
+    } else if (!location.city) {
+      locationCounts.counties++;
     } else {
-      counties++;
+      locationCounts.cities++;
     }
+
     location['active'] = location['active'] === undefined ? transform.getActiveFromLocation(location) : location['active'];
+
+    for (let type of Object.keys(caseCounts)) {
+      if (location[type]) {
+        caseCounts[type] += location[type];
+      }
+    }
   }
 
   console.log('✅ Data scraped!');
-  console.log('   - %d countries', countries);
-  console.log('   - %d states', states);
-  console.log('   - %d counties', counties);
-  console.log('   - %d duplicates removed', deDuped);
-  console.log('❌ %d errors', errors.length);
+  for (let [name, count] of Object.entries(locationCounts)) {
+    console.log('   - %d %s', count, name);
+  }
+  console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
+  for (let [name, count] of Object.entries(caseCounts)) {
+    console.log('   - %d %s', count, name);
+  }
+
+  if (errors.length) {
+    console.log('❌ %d error%s', errors.length, errors.length === 1 ? '' : 's');
+  }
 
   report['scrape'] = {
-    numCountries: countries,
-    numStates: states,
-    numCounties: counties,
+    numCountries: locationCounts.countries,
+    numStates: locationCounts.states,
+    numCounties: locationCounts.counties,
+    numCities: locationCounts.cities,
     numDuplicates: deDuped,
     numErrors: errors.length,
     errors
   };
 
-  return { locations, report };
+  return { locations, report, options };
 };
 
 export default scrapeData;

@@ -1,18 +1,8 @@
 import path from 'path';
-import yargs from 'yargs';
 import generate from './index.js';
 import * as fs from './lib/fs.js';
 import * as stringify from './lib/stringify.js';
-
-const argv = yargs
-  .option('date', {
-    alias: 'd',
-    description: 'Generate data for the provided date in YYYY-M-D format',
-    type: 'string',
-  })
-  .help()
-  .alias('help', 'h')
-  .argv;
+import argv from './lib/cliArgs.js';
 
 async function writeData({ locations }) {
   let date = process.env['SCRAPE_DATE'] ?  '-' + process.env['SCRAPE_DATE'] : '';
@@ -26,5 +16,5 @@ async function writeData({ locations }) {
   return { locations };
 }
 
-generate(argv.date)
+generate(argv.date, argv)
   .then(writeData);

@@ -66,7 +66,7 @@ function cleanFeatures(set) {
   }
 }
 
-const generateFeatures = ({ locations, report }) => {
+const generateFeatures = ({ locations, report, options }) => {
   function storeFeature(feature, location) {
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
@@ -286,7 +286,7 @@ const generateFeatures = ({ locations, report }) => {
       missingFeatures: errors
     };
 
-    resolve({ locations, featureCollection, report });
+    resolve({ locations, featureCollection, report, options });
   });
 };
 
