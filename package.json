@@ -1,30 +1,32 @@
 {
   "name": "coronadatascraper",
   "version": "1.0.0",
-  "description": "A scraper for Cornavirus data",
+  "description": "A scraper for Coronavirus data",
   "main": "cli.js",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
   "type": "module",
   "scripts": {
-    "postinstall": "node initSSL.js",
-    "timeseries": "node timeseries.js",
-    "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
-    "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js",
-    "updateModules": "git submodule update --remote",
-    "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "build": "yarn start && yarn timeseries && yarn buildSite",
     "buildSite": "cp -r site/* dist/ && ./tools/copySpectrumCSS.sh",
-    "deploy": "npm run dateData && npm run deploySite",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
+    "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
-    "test": "jest"
+    "lint": "eslint .",
+    "postinstall": "node initSSL.js",
+    "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
+    "test": "jest",
+    "timeseries": "node timeseries.js",
+    "update": "npm run updateModules && rm -rf cache/* && npm run start",
+    "updateModules": "git submodule update --remote",
+    "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js"
   },
   "dependencies": {
     "@adobe/spectrum-css": "^2.18.0",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
-    "csv": "^5.3.2",
+    "csv-parse": "^4.8.8",
+    "csv-stringify": "^5.3.6",
     "editorconfig": "^0.15.3",
     "gh-pages": "^2.2.0",
     "jest-each": "^25.1.0",
@@ -32,12 +34,34 @@
     "puppeteer": "^2.1.1",
     "ssl": "^1.0.0",
     "ssl-root-cas": "^1.3.1",
-    "yargs": "^15.3.0"
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
-    "jest": "^25.1.0"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
