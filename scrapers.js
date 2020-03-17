@@ -363,6 +363,7 @@ let scrapers = [
   {
     country: 'ITA',
     url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
+    timeseries: true,
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
 
