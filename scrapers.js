@@ -1424,9 +1424,12 @@ let scrapers = [
     county: 'Glenn County',
     state: 'CA',
     country: 'USA',
-    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome',
+    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19',
     scraper: async function() {
       let $ = await fetch.page(this.url);
+
+      // Resource contains multiple updates shown chronologically however it is unclear now that
+      // they will follow any reliable pattern. This captures the first one as the latest
 
       let cases = parse.number($('font:contains("Glenn County COVID-19 Cases")')
                     .first()
