@@ -1446,9 +1446,18 @@ let scrapers = [
     county: 'Glenn County',
     state: 'CA',
     country: 'USA',
-    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome',
     scraper: async function() {
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        this.url = 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome';
+      }
+      else {
+        this.url = 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19';
+      }
+
       let $ = await fetch.page(this.url);
+
+      // Resource contains multiple updates shown chronologically however it is unclear now that
+      // they will follow any reliable pattern. This captures the first one as the latest
 
       let cases = parse.number($('font:contains("Glenn County COVID-19 Cases")')
                     .first()
