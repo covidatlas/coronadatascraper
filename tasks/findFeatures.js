@@ -225,7 +225,7 @@ const generateFeatures = ({ locations, report, options }) => {
         // Check if the location exists within our countries
         for (let feature of countryData.features) {
           // Find by full name
-          if (location.country === feature.properties.name) {
+          if (location.country === feature.properties.adm0_a3 || location.country === feature.properties.gu_a3) {
             found = true;
             storeFeature(feature, location);
             break;
