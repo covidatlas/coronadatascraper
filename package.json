@@ -7,6 +7,7 @@
   "license": "BSD",
   "type": "module",
   "scripts": {
+    "postinstall": "node initSSL.js",
     "timeseries": "node timeseries.js",
     "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
     "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js",
