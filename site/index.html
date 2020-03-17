@@ -12,9 +12,6 @@
   <meta name="twitter:description" content="COVID-19 Coronavirus data scraped from reliable sources">
   <meta name="viewport" content="initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="icons/style.css">
-
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/vars/spectrum-global.css">
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/vars/spectrum-darkest.css">
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/vars/spectrum-lightest.css">
@@ -32,6 +29,13 @@
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/buttongroup/index-vars.css">
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/site/index-vars.css">
   <link rel="stylesheet" type="text/css" href="http://spectrum-css-archives.s3-website.us-east-2.amazonaws.com/2.18.0/components/sidenav/index-vars.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="icons/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160595752-1"></script>
@@ -52,23 +56,48 @@
         req.addEventListener("load", function() {
           document.querySelector('.cds-Heading').innerText = url;
 
-          let obj = JSON.parse(this.responseText);
+          let extension = url.split('.').pop();
 
-          const formatter = new JSONFormatter(obj, target.getAttribute('data-levels') || 1, {
-            // hoverPreviewEnabled: false,
-            // hoverPreviewArrayCount: 100,
-            // hoverPreviewFieldCount: 5,
-            // theme: '',
-            animateOpen: false,
-            animateClose: false,
-            // useToJSON: true
-          });
-           
           document.querySelector('.cds-Home').hidden = true;
           document.querySelector('.cds-Editor').hidden = false;
-          document.querySelector('.cds-Editor-content').innerHTML = '';
-          document.querySelector('.cds-Editor-content').appendChild(formatter.render());
           document.querySelector('.cds-Editor-download').href = url;
+          if (extension === 'json') {
+            let obj = JSON.parse(this.responseText);
+            const formatter = new JSONFormatter(obj, target.getAttribute('data-levels') || 1, {
+              // hoverPreviewEnabled: false,
+              // hoverPreviewArrayCount: 100,
+              // hoverPreviewFieldCount: 5,
+              // theme: '',
+              animateOpen: false,
+              animateClose: false,
+              // useToJSON: true
+            });
+
+            document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
+            document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
+          }
+          else {
+            var data = Papa.parse(this.responseText, {
+              header: true,
+              skipEmptyLines: true
+            });
+
+            document.querySelector('.cds-Editor-content').innerHTML = '';
+            var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
+              data: data.data,
+              rowHeaders: true,
+              colHeaders: true,
+              colHeaders: data.meta.fields,
+              columnSorting: true,
+              licenseKey: 'non-commercial-and-evaluation'
+            });
+          }
+
+          let previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
+          if (previousItem) {
+            previousItem.classList.remove('is-selected');
+          }
+          target.closest('.spectrum-SideNav-item').classList.add('is-selected');
         });
         req.open('GET', url);
         req.send();
@@ -79,17 +108,19 @@
   <script src="https://cdn.jsdelivr.net/npm/json-formatter-js@2.3.4/dist/json-formatter.umd.min.js"></script>
 </head>
 <body class="spectrum spectrum--light spectrum--medium">
+  <a class="cds-Ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+
   <div class="spectrum-Site spectrum-Typography">
     <div class="spectrum-Site-content">
       <div class="spectrum-Site-sideBar">
         <a class="spectrum-Site-sideBarHeader js-fastLoad" href="index.html">
-          <!-- <h2 class="spectrum-Site-title spectrum-Heading spectrum-Heading--M">Corona Data Scraper</h2> -->
+          <img src="logo.svg" class="cds-Logo" alt="Coronadatascraper logo">
+          <h2 class="spectrum-Site-title spectrum-Code spectrum-Code--XL">CDS</h2>
         </a>
 
         <div class="u-scrollable spectrum-Site-nav">
           <nav>
             <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Timeseries</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
@@ -112,6 +143,8 @@
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
                 </ul>
               </li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/issues/new" target="_blank" rel="noopener">Report Issue</a></li>
             </ul>
           </nav>
         </div>
@@ -122,9 +155,35 @@
         <div class="spectrum-Site-page cds-Home">
           <div class="spectrum-Site-hero">
             <div class="spectrum-Site-heroHeading">
-              <h1 class="spectrum-Heading spectrum-Heading--XXL spectrum-Heading--serif">Corona Data Scraper</h1>
+              <h1 class="spectrum-Heading spectrum-Heading--XXL">Corona Data Scraper</h1>
             </div>
-            <p class="spectrum-Body spectrum-Body--XL">Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.</p>
+            <div class="spectrum-Body spectrum-Body--XL">
+              <p>Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.</p>
+              <p>All sources are cited right in the same row as the data.</p>
+              <p>Select a file on the left to view and download it.</p>
+
+              <h2 class="spectrum-Heading spectrum-Heading--L">Can't quite visualize it?</h2>
+              <nav>
+                <ul>
+                  <li><a class="spectrum-Link" href="https://blog.lazd.net/coronaglobe" target="_blank"><strong>Coronaglobe</strong></a> A rate-adjusted choropleth 3D globe</li>
+                  <li><a class="spectrum-Link" href="https://public.tableau.com/profile/stevenzhang#!/vizhome/semilogplotsforcoronavirusliveupdates/specificregioncomparisons?publish=yes" target="_blank"><strong>Semilog plots</strong></a> by Steven Zhang</li>
+                </ul>
+              </nav>
+
+              <h2 class="spectrum-Heading spectrum-Heading--L">Missing data you've got a source for?</h2>
+              <p><a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper#contributing" target="_blank">Contribute a scraper</a> and your data will appear here tomorrow.</p>
+              <p><a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Join the Slack</a> and chat in <code>#scraper-dev</code> if you have any questions</p>
+
+              <h2 class="spectrum-Heading spectrum-Heading--L">Found a problem with the data?</h2>
+              <p><a class="spectrum-Link" href="https://github.co m/lazd/coronadatascraper/issues">File an issue</a> on Github with complete details of the issue.</p>
+
+              <h2 class="spectrum-Heading spectrum-Heading--L">Use this data?</h2>
+              <p>Cite this website and <a class="spectrum-Link" href="https://github.co m/lazd/coronadatascraper/issue/new">file an issue</a> to have your project's URL added.</p>
+            </div>
+          </div>
+          <div class="cds-Footer spectrum-Site-footer">
+            <p>Maintained by lazd (Larry Davis)</p>
+            <p><a class="spectrum-Link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="spectrum-Link" target="_blank" href="https://github.com/lazd">github</a> • <a class="spectrum-Link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="spectrum-Link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
           </div>
         </div>
         <div class="cds-Editor" hidden>
@@ -141,27 +200,6 @@
         </div>
       </div>
     </div>
-<!-- 
-      <h2 class="gt_heading">Can't quite visualize it?</h2>
-      <nav>
-        <ul>
-          <li><a class="gt_link" href="https://blog.lazd.net/coronaglobe" target="_blank"><strong>Coronaglobe:</strong> A rate-adjusted choropleth 3D globe</a></li>
-          <li><a class="gt_link" href="https://public.tableau.com/profile/stevenzhang#!/vizhome/semilogplotsforcoronavirusliveupdates/specificregioncomparisons?publish=yes" target="_blank">Semilog plots for coronavirus by Steven Zhang</a></li>
-        </ul>
-      </nav>
-
-      <h2 class="gt_heading">Missing data you've got a source for?</h2>
-      <p><a class="gt_link" href="https://github.com/lazd/coronadatascraper#contributing" target="_blank">Contribute a scraper</a> and your data will appear here tomorrow.</p>
-      <p><a class="gt_link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Join the Slack</a> and chat in <code>#scraper-dev</code> if you have any questions</p>
-
-      <h2 class="gt_heading">Found a problem with the data?</h2>
-      <p><a class="gt_link" href="https://github.co m/lazd/coronadatascraper/issues">File an issue</a> on Github with complete details of the issue.</p>
-      -->
-
- <!--    <div class="gt_footer">
-      <p>Maintained by lazd (Larry Davis)</p>
-      <p><a class="gt_link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="gt_link" target="_blank" href="https://github.com/lazd">github</a> • <a class="gt_link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="gt_link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
-    </div> -->
 
 </body>
 </html>
