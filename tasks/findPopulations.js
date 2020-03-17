@@ -13,9 +13,8 @@ async function readPopulationFromCSV(csvPath) {
   for (let item of output) {
     if (item.population) {
       populationData[item.name] = parseInt(item.population, 10);
-    }
-    else {
-      reject(`Invalid data in ${csvPath} for ${item.name}`);
+    } else {
+      throw new Error(`Invalid data in ${csvPath} for ${item.name}`);
       return;
     }
   }
@@ -27,14 +26,15 @@ async function readPopulationData(featureCollection) {
   let populations = {
     byCity: {},
     byCounty: {
-      USA: await readPopulationFromCSV('population-usa-counties.csv')
+      USA: await readPopulationFromCSV('population-usa-counties.csv'),
+      GBR: await readPopulationFromCSV('population-gbr-counties.csv')
     },
     byState: {
-      'China': await readPopulationFromCSV('population-china-admin-divisions.csv'),
-      'Australia': await readPopulationFromCSV('population-australia-states.csv'),
-      'Canada': await readPopulationFromCSV('population-canada-provinces.csv'),
-      'Italy': await readPopulationFromCSV('population-italy-regions.csv'),
-      'USA': await readPopulationFromCSV('population-usa-states-abbrev.csv')
+      China: await readPopulationFromCSV('population-china-admin-divisions.csv'),
+      Australia: await readPopulationFromCSV('population-australia-states.csv'),
+      Canada: await readPopulationFromCSV('population-canada-provinces.csv'),
+      Italy: await readPopulationFromCSV('population-italy-regions.csv'),
+      USA: await readPopulationFromCSV('population-usa-states-abbrev.csv')
     },
     byCountry: {},
     supplemental: await readPopulationFromCSV('population-supplemental.csv')
@@ -61,8 +61,7 @@ async function readPopulationData(featureCollection) {
   return populations;
 }
 
-
-async function generatePopulations({ locations, featureCollection }) {
+const generatePopulations = async ({ locations, featureCollection, report, options }) => {
   console.log('⏳ Getting population data...');
 
   let populations = await readPopulationData(featureCollection);
@@ -74,12 +73,12 @@ async function generatePopulations({ locations, featureCollection }) {
       // Use either city by country or city by state
       let populationSource = populations.byCity[location.country];
       if (populationSource && populationSource[location.state]) {
-        populationSource = populations.byCity[location.country][location.state]
+        populationSource = populationSource[location.state];
       }
-
-      population = populationSource[location.city]
-    }
-    else if (location.county) {
+      if (populationSource && populationSource[location.state]) {
+        population = populationSource[location.city];
+      }
+    } else if (location.county) {
       if (populations.byCounty[location.country]) {
         // Try counties
         let populationSource = populations.byCounty[location.country];
@@ -89,14 +88,12 @@ async function generatePopulations({ locations, featureCollection }) {
 
         population = populationSource[location.county] || populationSource[countyNameReplaced] || populationSource[countyNameJoined] || populationSource[countyNameReplacedJoined];
       }
-    }
-    else if (location.state) {
+    } else if (location.state) {
       if (populations.byState[location.country] && populations.byState[location.country][location.state]) {
         // Try states
         population = populations.byState[location.country][location.state];
       }
-    }
-    else {
+    } else {
       // Try countries
       population = populations.byCountry[location.country];
     }
@@ -129,6 +126,8 @@ async function generatePopulations({ locations, featureCollection }) {
     return population;
   }
 
+  const errors = [];
+
   let populationFound = 0;
   for (let location of locations) {
     let population = getPopulation(location);
@@ -136,14 +135,19 @@ async function generatePopulations({ locations, featureCollection }) {
     if (population) {
       location.population = population;
       populationFound++;
-    }
-    else {
+    } else {
       console.error('  ❌ %s: ?', transform.getName(location));
+      errors.push(transform.getName(location));
     }
   }
   console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
 
-  return { locations, featureCollection };
-}
+  report['findPopulation'] = {
+    numLocationsWithPopulation: populationFound,
+    missingPopulations: errors
+  };
+
+  return { locations, featureCollection, report, options };
+};
 
 export default generatePopulations;

@@ -39,48 +39,26 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-let props = [
-  'name',
-  'name_en',
-  'abbrev',
-  'region',
-  'admin',
-  'postal',
-  'gu_a3',
-  'geonunit',
-  'pop_est',
-  'pop_year',
-  'gdp_md_est',
-  'gdp_year',
-  'iso_a2',
-  'iso_3166_2',
-  'type_en',
-  'wikipedia'
-];
+let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
   // Correct missing county
-  'Island, WA': (location) => {
+  'Island, WA': location => {
     location.state = 'Island County, WA';
   },
 
   // 🇭🇰
-  'Hong Kong': (location) => {
+  'Hong Kong': location => {
     location.country = 'Hong Kong';
     delete location.state;
   },
 
   // Why is this in Denmark?
-  'Faroe Islands': (location) => {
+  'Faroe Islands': location => {
     location.country = 'Faroe Islands';
     delete location.state;
-  },
-
-  // Why is it UK, United Kingdom?
-  'UK': (location) => {
-    delete location.state;
   }
-}
+};
 
 function cleanFeatures(set) {
   for (let feature of set.features) {
@@ -88,7 +66,7 @@ function cleanFeatures(set) {
   }
 }
 
-function generateFeatures({ locations }) {
+const generateFeatures = ({ locations, report, options }) => {
   function storeFeature(feature, location) {
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
@@ -134,6 +112,8 @@ function generateFeatures({ locations }) {
     cleanFeatures(countryData);
     cleanFeatures(provinceData);
 
+    const errors = [];
+
     locationLoop: for (let location of locations) {
       let found = false;
       let point;
@@ -141,12 +121,25 @@ function generateFeatures({ locations }) {
         point = turf.point(location.coordinates);
       }
 
+      // Breaks France
+      if (location.country === 'REU' ||
+          location.country === 'MTQ' ||
+          location.country === 'GUF') {
+        console.warn('  ⚠️  Skipping %s because it breaks France', transform.getName(location));
+        continue;
+      }
+
+      if (location.county === '(unassigned)') {
+        console.warn('  ⚠️  Skipping %s because it\'s unassigned',  transform.getName(location));
+        continue;
+      }
+
       // Apply transforms
       if (locationTransforms[location.state]) {
         locationTransforms[location.state](location);
       }
 
-      if (location.state) {
+      if (location.state || location.county) {
         if (location.country === 'USA') {
           if (location.county) {
             // Find county
@@ -169,8 +162,7 @@ function generateFeatures({ locations }) {
                 }
               }
             }
-          }
-          else if (location.state) {
+          } else if (location.state) {
             for (let feature of provinceData.features) {
               if (location.state === feature.properties.postal) {
                 found = true;
@@ -183,10 +175,23 @@ function generateFeatures({ locations }) {
 
         // Check if the location exists within our provinces
         for (let feature of provinceData.features) {
-          if (location.country === feature.properties.gu_a3 && (
-              location.state === feature.properties.name ||
-              location.state === feature.properties.name_en ||
-              location.state === feature.properties.region
+          if (
+            (
+              location.country === feature.properties.gu_a3 ||
+              location.country === feature.properties.adm0_a3
+            )
+            &&
+            (
+              location.state && (
+                location.state === feature.properties.name ||
+                location.state === feature.properties.name_en ||
+                location.state === feature.properties.region
+              ) ||
+              location.county && (
+                location.county === feature.properties.name ||
+                location.county === feature.properties.name_en ||
+                location.county === feature.properties.region
+              )
             )
           ) {
             found = true;
@@ -216,8 +221,7 @@ function generateFeatures({ locations }) {
             break;
           }
         }
-      }
-      else {
+      } else {
         // Check if the location exists within our countries
         for (let feature of countryData.features) {
           // Find by full name
@@ -276,14 +280,20 @@ function generateFeatures({ locations }) {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s', transform.getName(location), location);
+        console.error('  ❌ Could not find location %s', transform.getName(location));
+        errors.push(transform.getName(location));
       }
     }
 
     console.log('✅ Found features for %d out of %d regions for a total of %d features', foundCount, Object.keys(locations).length, featureCollection.features.length);
 
-    resolve({ locations, featureCollection });
+    report['findFeatures'] = {
+      numFeaturesFound: foundCount,
+      missingFeatures: errors
+    };
+
+    resolve({ locations, featureCollection, report, options });
   });
-}
+};
 
 export default generateFeatures;

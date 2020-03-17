@@ -1,17 +1,9 @@
 import generate from './index.js';
 import path from 'path';
+import argv from './lib/cliArgs.js';
 import * as transform from './lib/transform.js';
 import * as datetime from './lib/datetime.js';
 import * as fs from './lib/fs.js';
-
-// Generate a list of dates starting at the first data
-let dates = [];
-let today = new Date();
-let curDate = new Date('2020-1-22');
-while (curDate <= today) {
-  dates.push(datetime.getYYYYMD(curDate));
-  curDate.setDate(curDate.getDate() + 1);
-}
 
 // The props to keep on a date object
 let caseDataProps = [
@@ -19,7 +11,8 @@ let caseDataProps = [
   'deaths',
   'recovered',
   'active',
-  'tested'
+  'tested',
+  'growthFactor'
 ];
 
 /*
@@ -196,20 +189,41 @@ async function generateCSV(timeseriesByLocation) {
   return fs.writeCSV(path.join('dist', 'timeseries-jhu.csv'), csvData);
 }
 
+function getGrowthfactor(casesToday, casesYesterday) {
+  let growthFactor = casesToday / casesYesterday;
+  if (growthFactor === Infinity) {
+    return null;
+  }
+  return growthFactor;
+}
+
 /*
   Generate timeseries data
 */
-async function generateTimeseries() {
+let dates;
+async function generateTimeseries(options = {}) {
+  // Generate a list of dates starting at the first data, OR the provided start date
+  dates = [];
+  let today = new Date();
+  let curDate = new Date('2020-1-22');
+  if (options.date) {
+    curDate = new Date(options.date);
+  }
+  while (curDate <= today) {
+    dates.push(datetime.getYYYYMD(curDate));
+    curDate.setDate(curDate.getDate() + 1);
+  }
+
   let timeseriesByLocation = {};
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
   let featureCollection;
   for (let date of dates) {
-    let data = await generate(date === lastDate ? undefined : date, {
+    let data = await generate(date === lastDate ? undefined : date, Object.assign({
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
-    });
+    }, options));
 
     if (date === lastDate) {
       featureCollection = data.featureCollection;
@@ -224,7 +238,7 @@ async function generateTimeseries() {
 
       // Add growth factor
       if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
-        strippedLocation.growthFactor = strippedLocation.cases / timeseriesByLocation[name].dates[previousDate].cases;
+        strippedLocation.growthFactor = getGrowthfactor(strippedLocation.cases, timeseriesByLocation[name].dates[previousDate].cases);
       }
 
       timeseriesByLocation[name].dates[date] = strippedLocation;
@@ -247,4 +261,4 @@ async function generateTimeseries() {
   await generateLessTidyCSV(timeseriesByLocation);
 }
 
-generateTimeseries();
+generateTimeseries(argv);
