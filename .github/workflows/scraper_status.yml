@@ -36,4 +36,4 @@ jobs:
         env:
           SLACK_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
         run: |
-          node ./scripts/statusSlackBot.js ${SLACK_STATUS_HOOK}
+          node ./scripts/statusSlackBot.js send ${SLACK_STATUS_HOOK}
