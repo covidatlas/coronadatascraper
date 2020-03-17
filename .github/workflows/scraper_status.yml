@@ -1,0 +1,39 @@
+name: Status CI
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Runs every 5 minutes
+
+jobs:
+  status:
+    runs-on: [macOS-latest]
+    steps:
+      - uses: actions/checkout@v1 # without submodules
+        with:
+          persist-credentials: false
+      - name: Disable the keychain credential helper
+        run: git config --global credential.helper ""
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+      - name: Use Node.js 13.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: '13.x'
+      - name: Install
+        run: |
+          yarn
+      - name: Build
+        run: |
+          yarn start
+      - name: Notify Slack
+        env:
+          SLACK_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
+        run: |
+          node ./scripts/statusSlackBot.js ${SLACK_STATUS_HOOK}
