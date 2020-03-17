@@ -82,6 +82,7 @@ body {
 }
 
 .cds-Sidebar {
+  z-index: 1000;
   min-width: 235px;
 }
 
@@ -89,8 +90,19 @@ body {
   font-size: 24px;
 }
 
+.cds-Editor-menuToggle {
+  display: none;
+}
+
+.spectrum-Site-overlay {
+  z-index: 999;
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
+  }
+  .cds-Editor-menuToggle {
+    display: block;
   }
 }
