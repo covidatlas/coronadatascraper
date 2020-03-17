@@ -33,20 +33,16 @@
     gtag('config', 'UA-160595752-1');
 
     document.addEventListener('DOMContentLoaded', function() {
-      if (window.location.hash) {
-        loadFile(window.location.hash.substr(1));
-      }
+      let routes = {
+        '#sources': showSources,
+        '#home': function() {}
+      };
 
-      document.addEventListener('click', function(evt) {
-        var target = evt.target;
-        if (target.tagName === 'A' && target.hasAttribute('download') && !target.hasAttribute('data-noview')) {
-          // Stop download
-          evt.preventDefault();
-
-          var url = target.getAttribute('href');
-          loadFile(url, target.getAttribute('data-levels'));
-        }
-      });
+      let pages = {
+        '#home': '.cds-Home',
+        '#editor': '.cds-Editor',
+        '#sources': '.cds-Sources'
+      };
 
       var sidebar = document.querySelector('.spectrum-Site-sideBar');
       var overlay = document.querySelector('.spectrum-Site-overlay');
@@ -61,7 +57,58 @@
         overlay.classList.remove('is-open');
       }
 
-      function loadFile(url, dataLevels) {
+      function showSources() {
+        console.log('wooo')
+      }
+
+      function showPage(pageToShow, noPush) {
+        if (routes[pageToShow]) {
+          if (!noPush) {
+            history.pushState(null, '', pageToShow);
+          }
+          routes[pageToShow]();
+        }
+
+        // Set selected
+        let currentSideLink = document.querySelector('.spectrum-SideNav-item a[href="'+pageToShow+'"]');
+        let currentSideItem = currentSideLink && currentSideLink.closest('.spectrum-SideNav-item');
+        let otherSideItem = document.querySelector('.spectrum-SideNav-item.is-selected');
+        currentSideItem && currentSideItem.classList.add('is-selected');
+        otherSideItem && otherSideItem.classList.remove('is-selected');
+
+        for (let page in pages) {
+          let selector = pages[page];
+          if (page === pageToShow) {
+            document.querySelector(selector).hidden = false;
+          }
+          else {
+            document.querySelector(selector).hidden = true;
+          }
+        }
+        closeSidebar();
+      }
+
+      document.addEventListener('click', function(evt) {
+        var target = evt.target.closest('a');
+        if (target) {
+          if (target.tagName === 'A' && target.hasAttribute('download') && !target.hasAttribute('data-noview')) {
+            // Stop download
+            evt.preventDefault();
+
+            var url = target.getAttribute('href');
+            loadFile(url, target.getAttribute('data-levels'));
+          }
+          else if (target.tagName === 'A' && routes[target.getAttribute('href')]) {
+            // Stop download
+            evt.preventDefault();
+
+            showPage(target.getAttribute('href'));
+          }
+        }
+      });
+
+
+      function loadFile(url, dataLevels, noPush) {
         document.body.classList.add('is-editing');
 
         var req = new XMLHttpRequest();
@@ -70,8 +117,7 @@
 
           var extension = url.split('.').pop();
 
-          document.querySelector('.cds-Home').hidden = true;
-          document.querySelector('.cds-Editor').hidden = false;
+          showPage('#editor');
           document.querySelector('.cds-Editor-download').href = url;
           if (extension === 'json') {
             var obj;
@@ -111,14 +157,14 @@
           }
 
           document.querySelector('a[href="' + url + '"]').closest('.spectrum-SideNav-item').classList.add('is-selected');
-
-          closeSidebar();
         });
 
         req.open('GET', url);
         req.send();
 
-        history.replaceState(null, null, '#' + url);
+        if (!noPush) {
+          history.pushState(null, '', '#' + url, '');
+        }
       }
 
       document.addEventListener('click', function(evt) {
@@ -131,6 +177,24 @@
           closeSidebar();
         }
       });
+
+      function handleHashChange() {
+        if (window.location.hash) {
+          if (routes[window.location.hash]) {
+            showPage(window.location.hash, true);
+          }
+          else {
+            loadFile(window.location.hash.substr(1), null, true);
+          }
+        }
+        else {
+          showPage('#home', false);
+        }
+      }
+      window.addEventListener('hashchange', handleHashChange, false);
+
+      // Init
+      handleHashChange()
     });
   </script>
 
@@ -150,7 +214,7 @@
 
     <div class="spectrum-Site-content">
       <div class="cds-Sidebar spectrum-Site-sideBar">
-        <a class="spectrum-Site-sideBarHeader js-fastLoad" href="./">
+        <a class="spectrum-Site-sideBarHeader" href="#home">
           <!-- <img src="logo.svg" class="cds-Logo" alt="Coronadatascraper logo"> -->
           <svg version="1.1" class="cds-Logo" alt="Coronadatascraper logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 107.7 40.3" style="enable-background:new 0 0 107.7 40.3;" xml:space="preserve">
@@ -231,7 +295,8 @@
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
                 </ul>
               </li>
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://blog.lazd.net/coronaglobe" target="_blank">View on 3d map (Coronaglobe)</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://blog.lazd.net/coronaglobe" target="_blank">View on 3D map (Coronaglobe)</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#sources">Sources</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/issues/new" target="_blank" rel="noopener">Report Issue</a></li>
             </ul>
@@ -279,6 +344,11 @@
             <p><a class="spectrum-Link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="spectrum-Link" target="_blank" href="https://github.com/lazd">github</a> • <a class="spectrum-Link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="spectrum-Link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
           </div>
         </div>
+        
+        <div class="cds-Sources" hidden>
+          Hi
+        </div>
+
 
         <div class="cds-Editor" hidden>
           <div class="cds-Editor-header">
