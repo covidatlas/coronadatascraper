@@ -1850,7 +1850,7 @@ let scrapers = [
       let data = await fetch.csv(this.url, false);
       let states = [];
 
-      let date = datetime.getYYYYMMDD(new Date());
+      let date = datetime.getYYYYMMDD();
       if (process.env['SCRAPE_DATE']) {
         date = datetime.getYYYYMMDD(new Date(process.env['SCRAPE_DATE']));
       }
