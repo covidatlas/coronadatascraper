@@ -47,6 +47,7 @@ function generateColors() {
   let cds_theme_light = cds_theme(97);
 
   let varPrefix = '--';
+  let cssVariables = {};
 
   // Iterate each color object
   for (let i = 0; i < cds_theme_light.length; i++) {
