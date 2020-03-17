@@ -106,7 +106,7 @@ const generateFeatures = ({ locations, report, options }) => {
     const itaRegionsData = await fs.readJSON('./coronavirus-data-sources/geojson/ita-regions.json');
     const provinceData = await fs.readJSON('./coronavirus-data-sources/geojson/world-states-provinces.json');
 
-    provinceData.features = itaRegionsData.features.concat(featureCollection.features);
+    provinceData.features = itaRegionsData.features.concat(provinceData.features);
 
     // Clean and normalize data first
     cleanFeatures(countryData);
