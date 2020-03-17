@@ -58,8 +58,7 @@ function generateColors() {
       // output value of color
       let value = cds_theme_light[i].values[j].value;
       // create CSS property with name and value
-      document.documentElement.style
-        .setProperty(prop, value);
+cssVariables[prop] = value;
     }
   }
 }
