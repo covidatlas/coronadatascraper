@@ -1,4 +1,4 @@
-name: Status CI
+name: Scraper Status CI
 
 on:
   schedule:
