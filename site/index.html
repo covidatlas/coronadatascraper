@@ -57,8 +57,158 @@
         overlay.classList.remove('is-open');
       }
 
+      // Todo make this site less crappy and don't copy paste this
+      function getName(location) {
+        let name = '';
+        let sep = '';
+        if (location.city) {
+          name += location.city;
+          sep = ', ';
+        }
+        if (location.county) {
+          name += sep + location.county;
+          sep = ', ';
+        }
+        if (location.state) {
+          name += sep + location.state;
+          sep = ', ';
+        }
+        if (location.country) {
+          name += sep + location.country;
+          sep = ', ';
+        }
+        return name;
+      }
+
+      function getGrade(rating) {
+        rating *= 200;
+
+        if (rating >= 97) {
+          return 'A+';
+        }
+        if (rating >= 93) {
+          return 'A';
+        }
+        if (rating >= 90) {
+          return 'A-';
+        }
+        if (rating >= 87) {
+          return 'B+';
+        }
+        if (rating >= 83) {
+          return 'B';
+        }
+        if (rating >= 80) {
+          return 'B-';
+        }
+        if (rating >= 77) {
+          return 'C+';
+        }
+        if (rating >= 73) {
+          return 'C';
+        }
+        if (rating >= 70) {
+          return 'C-';
+        }
+        if (rating >= 67) {
+          return 'D+';
+        }
+        if (rating >= 63) {
+          return 'D';
+        }
+        if (rating >= 60) {
+          return 'D';
+        }
+        if (rating >= 57) {
+          return 'F+';
+        }
+        if (rating >= 53) {
+          return 'F';
+        }
+        if (rating >= 50) {
+          return 'F';
+        }
+        return 'F-';
+      }
+
+      function ratingTemplate(source, index) {
+        let typeIcons = {
+          'json': '✅',
+          'csv': '✅',
+          'table': '⚠️',
+          'list': '❌',
+          'paragraph': '🤮',
+        };
+        let typeNames = {
+          'json': 'JSON',
+          'csv': 'CSV'
+        };
+
+        let granular = source.city || source.county;
+        let granularity = 'country-level';
+        if (source.city || source.aggregate === 'city') {
+          granularity = 'city-level';
+          granular = true;
+        }
+        else if (source.county || source.aggregate === 'county') {
+          granularity = 'county-level';
+          granular = true;
+        }
+        else if (source.state || source.aggregate === 'state') {
+          granularity = 'state-level';
+        }
+
+        let sourceName = source.url.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/)[1];
+
+
+        return `
+        <div class="cds-ReportCard">
+          <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
+          <div class="cds-ReportCard-content">
+            <h2 class="spectrum-Heading spectrum-Heading--L">${index + 1}. ${getName(source)}</h2>
+            <h3 class="spectrum-Body spectrum-Body--XL"><a href="${source.url}" class="spectrum-Link" target="_blank">${sourceName}</a></h3>
+            <div class="cds-ReportCard-criteria">
+              <div class="cds-ReportCard-criterion">
+                ${typeIcons[source.type]} ${typeNames[source.type] || source.type.substr(0, 1).toUpperCase()+source.type.substr(1)}
+              </div>
+              <div class="cds-ReportCard-criterion">
+                ${source.timeseries ? '✅' : '❌'} Timeseries
+              </div>
+              <div class="cds-ReportCard-criterion">
+                ${source.aggregate ? '✅' : '❌'} Aggregate
+              </div>
+              <div class="cds-ReportCard-criterion">
+                ${source.ssl ? '✅' : '❌'} SSL
+              </div>
+              <div class="cds-ReportCard-criterion">
+                ${source.headless ? '❌' : '✅'} ${source.headless ? 'Requires' : ' Does not require'} JavaScript
+              </div>
+              <div class="cds-ReportCard-criterion">
+                ${granular ? '✅' : '❌'} Granularity (${granularity})
+              </div>
+            </div>
+          </div>
+        </div>
+`;
+      }
+
       function showSources() {
-        console.log('wooo')
+        let list = document.querySelector('.cds-Sources-list');
+        fetch('ratings.json', function(response) {
+          var ratings;
+          try {
+            ratings = JSON.parse(this.responseText);
+          }
+          catch(error) {
+            list.innerHTML = '<div class="cds-Error">Failed to load ratings: ' + error + '</div>';
+            return;
+          }
+
+          list.innerHTML = '';
+          for (var i = 0; i < ratings.length; i++) {
+            list.insertAdjacentHTML('beforeend', ratingTemplate(ratings[i], i));
+          }
+        });
       }
 
       function showPage(pageToShow, noPush) {
@@ -107,12 +257,19 @@
         }
       });
 
+      function fetch(url, callback) {
+        var req = new XMLHttpRequest();
+        req.addEventListener('load', callback);
+
+        req.open('GET', url);
+        req.send();
+      }
 
       function loadFile(url, dataLevels, noPush) {
         document.body.classList.add('is-editing');
 
         var req = new XMLHttpRequest();
-        req.addEventListener("load", function() {
+        fetch(url, function() {
           document.querySelector('.cds-Heading').innerText = url;
 
           var extension = url.split('.').pop();
@@ -158,9 +315,6 @@
 
           document.querySelector('a[href="' + url + '"]').closest('.spectrum-SideNav-item').classList.add('is-selected');
         });
-
-        req.open('GET', url);
-        req.send();
 
         if (!noPush) {
           history.pushState(null, '', '#' + url, '');
@@ -346,9 +500,22 @@
         </div>
         
         <div class="cds-Sources" hidden>
-          Hi
-        </div>
+          <div class="spectrum-Site-page">
+            <h1 class="spectrum-Heading spectrum-Heading--L">Sources</h1>
+            <p>Corona Data Scraper pulls from a variety of official sources. Sources are rated based on how machine-readable, complete, and granular the data is.</p>
 
+            <h2 class="spectrum-Heading spectrum-Heading--M">Ratings have nothing to do with the accuracy of the data</h2>
+            <p>We only choose official sources for data, so it's up to the source to be honest and accurate.</p>
+            <p>The goal of offering these ratings is to make government agencies account for their data practices. We need complete, real-time, machine-readible data to inform decision making -- press releases do not cut it!</p>
+
+            <h2 class="spectrum-Heading spectrum-Heading--M">Does your source's rating look bad?</h2>
+            <p>Let's get those grades up! <a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Reach out to us on on Slack</a> or <a class="spectrum-Link" href="https://github.co m/lazd/coronadatascraper/issues">file an issue on Github</a> and we can help you improve it!</p>
+            <p>Wanna know exactly how the ratings work? <a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/blob/master/lib/rating.js" target="_blank">Look at the code</a></p>
+
+            <ul class="cds-Sources-list">
+            </ul>
+          </div>
+        </div>
 
         <div class="cds-Editor" hidden>
           <div class="cds-Editor-header">
