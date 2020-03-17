@@ -544,66 +544,78 @@ let scrapers = [
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
     type: 'list',
     scraper: async function() {
-      let counties = [];
       let $ = await fetch.page(this.url);
 
-      let $lis = $('p:contains("Positive cases by county of residence")')
-        .nextAll('ul')
-        .first()
-        .find('li');
+      if (datetime.scrapeDateIs('2020-3-16')) {
+        return {
+          cases: parse.number($('span:contains("Positive")').text().split(':')[1]),
+          tested: parse.number($('span:contains("Total number of people tested")').text().split(':')[1])
+        };
+      }
+      else if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        let counties = [];
 
-      $lis.each((index, li) => {
-        // This does not match "Out of state visitors"
-        let matches = $(li)
-          .text()
-          .match(/(.*?): (\d+)/);
-        if (matches) {
-          let county = transform.addCounty(parse.string(matches[1]));
-          if (county === 'Unknown county County') {
-            county = UNASSIGNED;
-          }
-          let data = {
-            county: county,
-            cases: parse.number(matches[2])
-          };
-          counties.push(data);
-        }
-      });
+        let $lis = $('p:contains("Positive cases by county of residence")')
+          .nextAll('ul')
+          .first()
+          .find('li');
 
-      let visitorCounties = [];
-      let $visitors = $('p:contains("Positive cases by county of residence")').nextAll('p').find('span');
-      $visitors.each((index, visitor) => {
-        let visitorInfo = $(visitor).text().match(/([A-Za-z]+) - (\d+)/);
-        if (visitorInfo !== null && visitorInfo.length === 3) {
-          let county = visitorInfo[1] + ' County';
-          let cases = visitorInfo[2];
-          if (county.indexOf('information') === -1) {
-            let data = {
-              county: transform.addCounty(parse.string(county)),
-              cases: parse.number(cases)
-            };
-            if (rules.isAcceptable(data, null, this._reject)) {
-              visitorCounties.push(data);
+        $lis.each((index, li) => {
+          // This does not match "Out of state visitors"
+          let matches = $(li)
+            .text()
+            .match(/(.*?): (\d+)/);
+          if (matches) {
+            let county = transform.addCounty(parse.string(matches[1]));
+            if (county === 'Unknown county County') {
+              county = UNASSIGNED;
             }
+            let data = {
+              county: county,
+              cases: parse.number(matches[2])
+            };
+            counties.push(data);
           }
-        }
-      });
-      counties.forEach(county => {
-        if(county['cases'] !== undefined && county['county'] !== undefined) {
-          visitorCounties.forEach(
-            visitorCounty => {
-              if(visitorCounty['cases'] !== undefined && visitorCounty['county'] !== undefined) {
-                if(visitorCounty['county'] === county['county']){
-                  county['cases'] = visitorCounty['cases'] + county['cases'];
-                }
+        });
+
+        let visitorCounties = [];
+        let $visitors = $('p:contains("Positive cases by county of residence")').nextAll('p').find('span');
+        $visitors.each((index, visitor) => {
+          let visitorInfo = $(visitor).text().match(/([A-Za-z]+) - (\d+)/);
+          if (visitorInfo !== null && visitorInfo.length === 3) {
+            let county = visitorInfo[1] + ' County';
+            let cases = visitorInfo[2];
+            if (county.indexOf('information') === -1) {
+              let data = {
+                county: transform.addCounty(parse.string(county)),
+                cases: parse.number(cases)
+              };
+              if (rules.isAcceptable(data, null, this._reject)) {
+                visitorCounties.push(data);
               }
             }
-          )
-        }
-      });
-      counties.push(transform.sumData(counties));
+          }
+        });
+        counties.forEach(county => {
+          if(county['cases'] !== undefined && county['county'] !== undefined) {
+            visitorCounties.forEach(
+              visitorCounty => {
+                if(visitorCounty['cases'] !== undefined && visitorCounty['county'] !== undefined) {
+                  if(visitorCounty['county'] === county['county']){
+                    county['cases'] = visitorCounty['cases'] + county['cases'];
+                  }
+                }
+              }
+            )
+          }
+        });
+        counties.push(transform.sumData(counties));
 
-      return counties;
+        return counties;
+      }
+      else {
+        throw new Error('Hey remember how Colorado is awful at reporting data? You gotta do manual work again today to get it');
+      }
     }
   },
   {
