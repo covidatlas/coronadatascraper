@@ -5,15 +5,6 @@ import * as transform from './lib/transform.js';
 import * as datetime from './lib/datetime.js';
 import * as fs from './lib/fs.js';
 
-// Generate a list of dates starting at the first data
-let dates = [];
-let today = new Date();
-let curDate = new Date('2020-1-22');
-while (curDate <= today) {
-  dates.push(datetime.getYYYYMD(curDate));
-  curDate.setDate(curDate.getDate() + 1);
-}
-
 // The props to keep on a date object
 let caseDataProps = [
   'cases',
@@ -210,6 +201,18 @@ function getGrowthfactor(casesToday, casesYesterday) {
   Generate timeseries data
 */
 async function generateTimeseries(options = {}) {
+  // Generate a list of dates starting at the first data, OR the provided start date
+  let dates = [];
+  let today = new Date();
+  let curDate = new Date('2020-1-22');
+  if (options.date) {
+    curDate = new Date(options.date);
+  }
+  while (curDate <= today) {
+    dates.push(datetime.getYYYYMD(curDate));
+    curDate.setDate(curDate.getDate() + 1);
+  }
+
   let timeseriesByLocation = {};
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
