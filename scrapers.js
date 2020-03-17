@@ -1888,8 +1888,8 @@ let scrapers = [
   {
     country: 'FRA',
     url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
-    priority: 1,
     timeseries: true,
+    _priority: 1,
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
       let states = [];
@@ -1930,7 +1930,7 @@ let scrapers = [
   {
     country: 'ESP',
     url: 'https://opendata.arcgis.com/datasets/48fac2d7de0f43f9af938852e3748845_0.csv',
-    priority: 1,
+    _priority: 1,
     scraper: async function() {
       let data = await fetch.csv(this.url);
       let states = [];
