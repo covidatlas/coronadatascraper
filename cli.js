@@ -13,7 +13,7 @@ async function writeData({ locations, report }) {
 
   await fs.writeCSV(path.join('dist', `data${date}.csv`), stringify.csvForDay(locations));
 
-  await fs.writeCSV(path.join('dist', `report.json`), report);
+  await fs.writeJSON(path.join('dist', `report.json`), report);
 
   return { locations };
 }
