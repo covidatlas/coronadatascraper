@@ -49,5 +49,7 @@ jobs:
           git commit -m "Update cache following deployment" || echo "Nothing to push to cache"
           git push origin HEAD:master || echo "Nothing to push to cache"
       - name: Notify Slack
+        env:
+          SLACK_HOOK: ${{ secrets.SLACK_HOOK }}
         run: |
-          curl -X POST -H 'Content-type: application/js' --data '{"text":"I just pushed a new release, go check it out at http://blog.lazd.net/coronadatascraper !"}' {{ secrets.SLACK_HOOK }}
+          curl -X POST -H 'Content-type: application/js' --data '{"text":"I just pushed a new release, go check it out at http://blog.lazd.net/coronadatascraper !"}' ${SLACK_HOOK}
