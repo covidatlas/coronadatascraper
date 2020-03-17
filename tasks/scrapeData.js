@@ -1,6 +1,14 @@
 import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
 
+let numericalValues = [
+  'cases',
+  'tested',
+  'recovered',
+  'deaths',
+  'active'
+];
+
 /*
   Combine location information with the passed data object
 */
@@ -28,6 +36,12 @@ function isValid(data, location) {
       throw new Error(`Invalid data: ${prop} is null`);
     }
     if (Number.isNaN(value)) {
+      throw new Error(`Invalid data: ${prop} is not a number`);
+    }
+  }
+
+  for (let prop of numericalValues) {
+    if (data[prop] !== undefined && typeof data[prop] !== 'number') {
       throw new Error(`Invalid data: ${prop} is not a number`);
     }
   }
@@ -160,31 +174,54 @@ const scrapeData = async ({ report, options }) => {
 
   const { locations, errors, deDuped } = await scrape(options);
 
-  let states = 0;
-  let counties = 0;
-  let countries = 0;
+  let locationCounts = {
+    cities: 0,
+    states: 0,
+    counties: 0,
+    countries: 0
+  };
+  let caseCounts = {
+    cases: 0,
+    tested: 0,
+    recovered: 0,
+    deaths: 0,
+    active: 0
+  };
   for (let location of locations) {
     if (!location.state && !location.county) {
-      countries++;
+      locationCounts.countries++;
     } else if (!location.county) {
-      states++;
+      locationCounts.states++;
+    } else if (!location.city) {
+      locationCounts.counties++;
     } else {
-      counties++;
+      locationCounts.cities++;
     }
+
     location['active'] = location['active'] === undefined ? transform.getActiveFromLocation(location) : location['active'];
+
+    for (let type of Object.keys(caseCounts)) {
+      if (location[type]) {
+        caseCounts[type] += location[type];
+      }
+    }
   }
 
   console.log('✅ Data scraped!');
-  console.log('   - %d countries', countries);
-  console.log('   - %d states', states);
-  console.log('   - %d counties', counties);
-  console.log('   - %d duplicates removed', deDuped);
+  for (let [name, count] of Object.entries(locationCounts)) {
+    console.log('   - %d %s', count, name);
+  }
+  console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
+  for (let [name, count] of Object.entries(caseCounts)) {
+    console.log('   - %d %s', count, name);
+  }
   console.log('❌ %d errors', errors.length);
 
   report['scrape'] = {
-    numCountries: countries,
-    numStates: states,
-    numCounties: counties,
+    numCountries: locationCounts.countries,
+    numStates: locationCounts.states,
+    numCounties: locationCounts.counties,
+    numCities: locationCounts.cities,
     numDuplicates: deDuped,
     numErrors: errors.length,
     errors
