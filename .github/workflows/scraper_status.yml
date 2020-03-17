@@ -34,6 +34,6 @@ jobs:
           yarn start
       - name: Notify Slack
         env:
-          SLACK_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
+          SLACK_STATUS_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
         run: |
           node ./scripts/statusSlackBot.js send ${SLACK_STATUS_HOOK}
