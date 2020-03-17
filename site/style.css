@@ -53,13 +53,14 @@ body {
   padding: 8px 24px;
 }
 
-.cds-Editor-title {
-  flex: 1;
-}
-
 .cds-Editor-title,
 .cds-Editor-actions {
   padding: 8px 12px;
+}
+
+.cds-Editor-title {
+  flex: 1;
+  padding-left: 16px;
 }
 
 .cds-Logo {
@@ -84,6 +85,7 @@ body {
 .cds-Sidebar {
   z-index: 1000;
   min-width: 235px;
+  border-right: 1px solid var(--spectrum-global-color-gray-200);
 }
 
 .spectrum-ActionButton .icon {
@@ -96,6 +98,15 @@ body {
 
 .spectrum-Site-overlay {
   z-index: 999;
+}
+
+.cds-Error {
+  display: inline-block;
+  margin: 24px;
+  padding: 8px 16px;
+  background: var(--spectrum-semantic-notice-color-background);
+  border-radius: var(--spectrum-alias-border-radius-medium);
+  color: white;
 }
 
 @media screen and (max-width: 960px) {

@@ -32,68 +32,18 @@
     gtag('config', 'UA-160595752-1');
 
     document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.hash) {
+        loadFile(window.location.hash.substr(1));
+      }
+
       document.addEventListener('click', function(evt) {
         var target = evt.target;
         if (target.tagName === 'A' && target.hasAttribute('download') && !target.hasAttribute('data-noview')) {
           // Stop download
           evt.preventDefault();
 
-          document.body.classList.add('is-editing');
-
           var url = target.getAttribute('href');
-
-          var req = new XMLHttpRequest();
-          req.addEventListener("load", function() {
-            document.querySelector('.cds-Heading').innerText = url;
-
-            var extension = url.split('.').pop();
-
-            document.querySelector('.cds-Home').hidden = true;
-            document.querySelector('.cds-Editor').hidden = false;
-            document.querySelector('.cds-Editor-download').href = url;
-            if (extension === 'json') {
-              var obj = JSON.parse(this.responseText);
-              const formatter = new JSONFormatter(obj, target.getAttribute('data-levels') || 1, {
-                // hoverPreviewEnabled: false,
-                // hoverPreviewArrayCount: 100,
-                // hoverPreviewFieldCount: 5,
-                // theme: '',
-                animateOpen: false,
-                animateClose: false,
-                // useToJSON: true
-              });
-
-              document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
-              document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
-            }
-            else {
-              var data = Papa.parse(this.responseText, {
-                header: true,
-                skipEmptyLines: true
-              });
-
-              document.querySelector('.cds-Editor-content').innerHTML = '';
-              var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
-                data: data.data,
-                rowHeaders: true,
-                colHeaders: true,
-                colHeaders: data.meta.fields,
-                columnSorting: true,
-                licenseKey: 'non-commercial-and-evaluation'
-              });
-            }
-
-            // Select menu item
-            var previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
-            if (previousItem) {
-              previousItem.classList.remove('is-selected');
-            }
-            target.closest('.spectrum-SideNav-item').classList.add('is-selected');
-
-            closeSidebar();
-          });
-          req.open('GET', url);
-          req.send();
+          loadFile(url, target.getAttribute('data-levels'));
         }
       });
 
@@ -108,6 +58,66 @@
       function closeSidebar() {
         sidebar.classList.remove('is-open');
         overlay.classList.remove('is-open');
+      }
+
+      function loadFile(url, dataLevels) {
+        document.body.classList.add('is-editing');
+
+        var req = new XMLHttpRequest();
+        req.addEventListener("load", function() {
+          document.querySelector('.cds-Heading').innerText = url;
+
+          var extension = url.split('.').pop();
+
+          document.querySelector('.cds-Home').hidden = true;
+          document.querySelector('.cds-Editor').hidden = false;
+          document.querySelector('.cds-Editor-download').href = url;
+          if (extension === 'json') {
+            var obj;
+            try {
+              obj = JSON.parse(this.responseText);
+            }
+            catch(error) {
+              document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Error">Failed to load ' + url + ': ' + error + '</div>';
+              return;
+            }
+            const formatter = new JSONFormatter(obj, dataLevels || 1);
+
+            document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
+            document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
+          }
+          else {
+            var data = Papa.parse(this.responseText, {
+              header: true,
+              skipEmptyLines: true
+            });
+
+            document.querySelector('.cds-Editor-content').innerHTML = '';
+            var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
+              data: data.data,
+              rowHeaders: true,
+              colHeaders: true,
+              colHeaders: data.meta.fields,
+              columnSorting: true,
+              licenseKey: 'non-commercial-and-evaluation'
+            });
+          }
+
+          // Select menu item
+          var previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
+          if (previousItem) {
+            previousItem.classList.remove('is-selected');
+          }
+
+          document.querySelector('a[href="' + url + '"]').closest('.spectrum-SideNav-item').classList.add('is-selected');
+
+          closeSidebar();
+        });
+
+        req.open('GET', url);
+        req.send();
+
+        history.replaceState(null, null, '#' + url);
       }
 
       document.addEventListener('click', function(evt) {
@@ -150,24 +160,24 @@
             <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Snapshot</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Metadata</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./features.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> GeoJSON Features</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./locations.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Location Metadata</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="features.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> GeoJSON Features</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="locations.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Location Metadata</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#">Timeseries</a>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-byLocation.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by location)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download data-noview href="./timeseries-tidy.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (Tidy format)</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="./timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-byLocation.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by location)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download data-noview href="timeseries-tidy.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (Tidy format)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
