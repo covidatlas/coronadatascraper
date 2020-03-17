@@ -1692,13 +1692,24 @@ let scrapers = [
   {
     state: 'OH',
     country: 'USA',
-    url: 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/',
     scraper: async function() {
-      let counties = [];
-      let $ = await fetch.page(this.url);
-      let $paragraph = $('p:contains("Number of counties with cases:")').text();
-      let parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ','');
-      let arrayOfCounties = parsed.split(',');
+      let counties = []
+      let arrayOfCounties  = []
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        this.url = 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/';
+        let $ = await fetch.page(this.url);
+        let $paragraph = $('p:contains("Number of counties with cases:")').text();
+        let regExp = /\(([^)]+)\)/;
+        let parsed = regExp.exec($paragraph);
+        arrayOfCounties = parsed[1].split(',');
+      } else {
+        this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+        let $ = await fetch.page(this.url);
+        let $paragraph = $('p:contains("Number of counties with cases:")').text();
+        let parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ','');
+        arrayOfCounties= parsed.split(',');
+      }
+      
       arrayOfCounties.map(county => {
         let splitCounty = county.trim().split(' ');
         counties.push({
