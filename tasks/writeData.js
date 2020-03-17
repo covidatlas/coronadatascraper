@@ -2,7 +2,7 @@ import path from 'path';
 import * as fs from '../lib/fs.js';
 import * as stringify from '../lib/stringify.js';
 
-const writeData = async ({ locations, featureCollection, report, options }) => {
+const writeData = async ({ locations, featureCollection, report, options, sourceRatings }) => {
   let suffix = '';
   if (options.outputSuffix !== undefined) {
     suffix = options.outputSuffix;
@@ -19,6 +19,8 @@ const writeData = async ({ locations, featureCollection, report, options }) => {
   await fs.writeJSON(path.join('dist', `features${suffix}.json`), featureCollection);
 
   await fs.writeJSON('dist/report.json', report);
+
+  await fs.writeJSON('dist/ratings.json', sourceRatings);
 
   return { locations, featureCollection, report, options };
 };

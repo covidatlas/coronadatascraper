@@ -65,7 +65,7 @@ function cleanFeatures(set) {
   }
 }
 
-const generateFeatures = ({ locations, report, options }) => {
+const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   const featureCollection = {
     type: 'FeatureCollection',
     features: []
@@ -271,7 +271,7 @@ const generateFeatures = ({ locations, report, options }) => {
       missingFeatures: errors
     };
 
-    resolve({ locations, featureCollection, report, options });
+    resolve({ locations, featureCollection, report, options, sourceRatings });
   });
 };
 

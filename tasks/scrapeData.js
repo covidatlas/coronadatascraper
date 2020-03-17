@@ -16,6 +16,9 @@ function addLocationToData(data, location) {
   // Add rating
   data.rating = transform.calculateRating(data);
 
+  // Store for usage in ratings
+  data._scraperDefinition = location;
+
   return data;
 }
 
@@ -171,18 +174,49 @@ async function scrape(options) {
     seenLocations[locationName] = location;
   }
 
+  // Generate ratings
+  const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url'];
+
+  const sourcesByURL = {};
+  for (const location of locations) {
+    const sourceObj = { ...location._scraperDefinition };
+    for (const prop of sourceProps) {
+      if (location[prop] !== undefined) {
+        sourceObj[prop] = location[prop];
+      }
+    }
+    for (const prop in sourceObj) {
+      if (prop[0] === '_') {
+        delete sourceObj[prop];
+      }
+    }
+
+    delete sourceObj.scraper;
+
+    // Remove granularity from the data since this is a report on the scraper
+    if (sourceObj.aggregate) {
+      delete sourceObj[sourceObj.aggregate];
+    }
+
+    sourcesByURL[location.url] = sourceObj;
+  }
+  let sourceRatings = Object.values(sourcesByURL);
+  sourceRatings = sourceRatings.sort((a, b) => {
+    return transform.calculateRating(b) - transform.calculateRating(a);
+  });
+
   // Clean data
   for (const [index] of Object.entries(locations)) {
     locations[index] = clean(locations[index]);
   }
 
-  return { locations, errors, deDuped };
+  return { locations, errors, deDuped, sourceRatings };
 }
 
 const scrapeData = async ({ report, options }) => {
   console.log(`⏳ Scraping data for ${process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : 'today'}...`);
 
-  const { locations, errors, deDuped } = await scrape(options);
+  const { locations, errors, deDuped, sourceRatings } = await scrape(options);
 
   const locationCounts = {
     cities: 0,
@@ -240,7 +274,7 @@ const scrapeData = async ({ report, options }) => {
     errors
   };
 
-  return { locations, report, options };
+  return { locations, report, options, sourceRatings };
 };
 
 export default scrapeData;
