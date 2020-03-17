@@ -1,11 +1,11 @@
-import rootCas from 'ssl-root-cas/latest.js';
+import rootCas from 'ssl-root-cas/latest';
 
-import * as fs from './lib/fs.js';
+import * as fs from './lib/fs';
 
-import scrapeData from './tasks/scrapeData.js';
-import findFeatures from './tasks/findFeatures.js';
-import findPopulations from './tasks/findPopulations.js';
-import writeData from './tasks/writeData.js';
+import scrapeData from './tasks/scrapeData';
+import findFeatures from './tasks/findFeatures';
+import findPopulations from './tasks/findPopulations';
+import writeData from './tasks/writeData';
 
 async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, only: null }) {
   if (date) {

@@ -1,6 +1,6 @@
 import path from 'path';
-import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
+import * as fs from '../lib/fs';
+import * as transform from '../lib/transform';
 
 const dataPath = path.join('./coronavirus-data-sources/population/');
 
@@ -15,7 +15,6 @@ async function readPopulationFromCSV(csvPath) {
       populationData[item.name] = parseInt(item.population, 10);
     } else {
       throw new Error(`Invalid data in ${csvPath} for ${item.name}`);
-      return;
     }
   }
 

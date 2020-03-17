@@ -1,12 +1,9 @@
-import path from 'path';
 import turf from '@turf/turf';
-import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
+import * as fs from '../lib/fs';
 
 const LAT = 'Lat';
 const LONG = 'Long';
 const STATE = 'Province/State';
-const COUNTRY = 'Country/Region';
 
 async function findNameMapping() {
   const jhuData = await fs.readCSV('cache/e20883430a9a4c7502d0a9618e49c1a9.csv');
@@ -14,7 +11,7 @@ async function findNameMapping() {
 
   const countyMap = {};
 
-  locationLoop: for (const location of jhuData) {
+  for (const location of jhuData) {
     if (!location[STATE] || location[STATE].indexOf(',') === -1) {
       continue;
     }
@@ -31,7 +28,7 @@ async function findNameMapping() {
           const poly = turf.feature(feature.geometry);
           if (turf.booleanPointInPolygon(point, poly)) {
             countyMap[location[STATE]] = feature.properties.name;
-            continue locationLoop;
+            continue;
           }
         }
       }

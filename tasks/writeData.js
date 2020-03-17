@@ -1,6 +1,6 @@
 import path from 'path';
-import * as fs from '../lib/fs.js';
-import * as stringify from '../lib/stringify.js';
+import * as fs from '../lib/fs';
+import * as stringify from '../lib/stringify';
 
 const writeData = async ({ locations, featureCollection, report, options }) => {
   let suffix = '';

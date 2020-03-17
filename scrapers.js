@@ -1,10 +1,10 @@
 import path from 'path';
-import * as fetch from './lib/fetch.js';
-import * as parse from './lib/parse.js';
-import * as transform from './lib/transform.js';
-import * as datetime from './lib/datetime.js';
-import * as rules from './lib/rules.js';
-import * as fs from './lib/fs.js';
+import * as fetch from './lib/fetch';
+import * as parse from './lib/parse';
+import * as transform from './lib/transform';
+import * as datetime from './lib/datetime';
+import * as rules from './lib/rules';
+import * as fs from './lib/fs';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -234,7 +234,6 @@ const scrapers = [
 
       const countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
-        const retain = false;
         if (getOldData) {
           // See if it's a county
           const countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
@@ -287,7 +286,7 @@ const scrapers = [
       }
 
       // Add counties
-      for (const [countyName, countyData] of Object.entries(countyTotals)) {
+      for (const [, countyData] of Object.entries(countyTotals)) {
         countries.push(countyData);
       }
 
@@ -299,15 +298,14 @@ const scrapers = [
     url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-data-cases.csv',
     _getCaseNumber(string) {
       if (typeof string === 'string') {
-        let matches;
+        const matches = string.match(/(\d+) of (\d+)/);
         if (string === 'None') {
           return 0;
         }
-        if ((matches = string.match(/(\d+) of (\d+)/))) {
+        if (matches) {
           // Return the high number
           return parse.number(matches[2]);
         }
-
         return parse.number(string);
       }
       return string;
@@ -340,7 +338,7 @@ const scrapers = [
       if (process.env.SCRAPE_DATE) {
         // Find old date
         const date = datetime.getDDMMYYYY(new Date(process.env.SCRAPE_DATE), '.');
-        latestData = data.filter(dayData => dayData.Date === date)[0];
+        [latestData] = data.filter(dayData => dayData.Date === date);
       } else {
         latestData = data[data.length - 1];
       }
@@ -609,7 +607,6 @@ const scrapers = [
 
         return counties;
       }
-
       throw new Error('Hey remember how Colorado is awful at reporting data? You gotta do manual work again today to get it');
     }
   },
@@ -807,7 +804,6 @@ const scrapers = [
 
         return counties;
       }
-
       this.url = 'http://opendata.arcgis.com/datasets/c8d4efa2a6bd48a1a7ae074a8166c6fa_0.csv';
       const data = await fetch.csv(this.url);
 
@@ -866,7 +862,6 @@ const scrapers = [
 
         return countiesArray;
       }
-
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/b4930af3f43a48138c70bca409b5c452_0.csv';
       const data = await fetch.csv(this.url);
@@ -1019,7 +1014,6 @@ const scrapers = [
     // Error "Please enable JavaScript to view the page content."
     url: 'http://www.acphd.org/2019-ncov.aspx',
     async scraper() {
-      let cases;
       const $ = await fetch.page(this.url);
 
       const $table = $('.sccgov-responsive-table');
@@ -1050,14 +1044,13 @@ const scrapers = [
     country: 'USA',
     url: 'https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/',
     async scraper() {
-      let cases;
       const $ = await fetch.page(this.url);
 
       const $th = $('th:contains("Total in Sonoma County")');
       const $table = $th.closest('table');
 
       const $td = $table.find('td:last-child');
-      cases = parse.number($td.text());
+      const cases = parse.number($td.text());
 
       return {
         cases
@@ -1070,12 +1063,11 @@ const scrapers = [
     country: 'USA',
     url: 'http://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx',
     async scraper() {
-      let cases;
       const $ = await fetch.page(this.url);
 
       const $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
 
-      cases = parse.number($h2.text());
+      const cases = parse.number($h2.text());
 
       return {
         cases
@@ -1130,17 +1122,15 @@ const scrapers = [
     country: 'USA',
     url: 'https://www.coronavirus.cchealth.org/',
     async scraper() {
-      let cases;
-      let deaths;
       const $ = await fetch.headless(this.url);
 
-      cases = parse.number(
+      const cases = parse.number(
         $('h1:contains("TOTAL")')
           .parent()
           .next()
           .text()
       );
-      deaths = parse.number(
+      const deaths = parse.number(
         $('h1:contains("DEATHS")')
           .parent()
           .prev()
@@ -1892,7 +1882,7 @@ const scrapers = [
         arrayOfCounties = parsed.split(',');
       }
 
-      arrayOfCounties.map(county => {
+      arrayOfCounties.forEach(county => {
         const splitCounty = county.trim().split(' ');
         counties.push({
           county: transform.addCounty(parse.string(splitCounty[0])),
@@ -2047,7 +2037,7 @@ const scrapers = [
         .next('p')
         .text();
 
-      paragraph.split(')').map(splitCounty => {
+      paragraph.split(')').forEach(splitCounty => {
         if (splitCounty.length > 1) {
           let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim());
           // check for Baltimore City

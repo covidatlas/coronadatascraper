@@ -1,12 +1,14 @@
 import path from 'path';
-import generate from './index.js';
-import argv from './lib/cliArgs.js';
-import * as transform from './lib/transform.js';
-import * as datetime from './lib/datetime.js';
-import * as fs from './lib/fs.js';
+import generate from './index';
+import argv from './lib/cliArgs';
+import * as transform from './lib/transform';
+import * as datetime from './lib/datetime';
+import * as fs from './lib/fs';
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
+
+let dates;
 
 /*
   Drop everything but case data from a location
@@ -38,7 +40,7 @@ async function generateTidyCSV(timeseriesByLocation) {
   let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long'];
 
   const csvData = [];
-  for (const [name, location] of Object.entries(timeseriesByLocation)) {
+  for (const [, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
     const row = [];
     for (const column of columns) {
@@ -76,7 +78,7 @@ async function generateLessTidyCSV(timeseriesByLocation) {
   let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
 
   const csvData = [];
-  for (const [name, location] of Object.entries(timeseriesByLocation)) {
+  for (const [, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
     const row = [];
     for (const column of columns) {
@@ -117,7 +119,7 @@ async function generateCSV(timeseriesByLocation) {
   let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'type', 'value', 'url'];
 
   const csvData = [];
-  for (const [name, location] of Object.entries(timeseriesByLocation)) {
+  for (const [, location] of Object.entries(timeseriesByLocation)) {
     const row = [];
     for (const column of columns) {
       if (column === 'lat') {
@@ -153,7 +155,6 @@ function getGrowthfactor(casesToday, casesYesterday) {
 /*
   Generate timeseries data
 */
-let dates;
 async function generateTimeseries(options = {}) {
   // Generate a list of dates starting at the first date, OR the provided start date
   // ending at today or the provided end date

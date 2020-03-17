@@ -1,9 +1,7 @@
-import path from 'path';
-
 import turf from '@turf/turf';
 
-import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
+import * as fs from '../lib/fs';
+import * as transform from '../lib/transform';
 
 const DEBUG = false;
 
@@ -33,6 +31,7 @@ function takeOnlyProps(obj, props) {
 
 function normalizeProps(obj) {
   const newObj = {};
+  // eslint-disable-next-line guard-for-in
   for (const prop in obj) {
     newObj[prop.toLowerCase()] = obj[prop];
   }
@@ -67,6 +66,13 @@ function cleanFeatures(set) {
 }
 
 const generateFeatures = ({ locations, report, options }) => {
+  const featureCollection = {
+    type: 'FeatureCollection',
+    features: []
+  };
+
+  let foundCount = 0;
+
   function storeFeature(feature, location) {
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
@@ -91,16 +97,9 @@ const generateFeatures = ({ locations, report, options }) => {
     foundCount++;
   }
 
-  let foundCount = 0;
-  let featureCollection = {
-    type: 'FeatureCollection',
-    features: []
-  };
-
-  return new Promise(async (resolve, reject) => {
+  return new Promise(async resolve => {
     console.log('⏳ Generating features...');
 
-    const usStates = await fs.readJSON('./coronavirus-data-sources/lib/us-states.json');
     const countryData = await fs.readJSON('./coronavirus-data-sources/geojson/world-countries.json');
     const usCountyData = await fs.readJSON('./coronavirus-data-sources/geojson/usa-counties.json');
     const itaRegionsData = await fs.readJSON('./coronavirus-data-sources/geojson/ita-regions.json');

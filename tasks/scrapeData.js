@@ -1,5 +1,5 @@
-import scrapers from '../scrapers.js';
-import * as transform from '../lib/transform.js';
+import scrapers from '../scrapers';
+import * as transform from '../lib/transform';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -22,7 +22,7 @@ function addLocationToData(data, location) {
 /*
   Check if the provided data contains any invalid fields
 */
-function isValid(data, location) {
+function isValid(data) {
   if (data.cases === undefined) {
     throw new Error(`Invalid data: contains no case data`);
   }
@@ -133,7 +133,7 @@ async function scrape(options) {
   }
 
   // Normalize data
-  for (const [index, location] of Object.entries(locations)) {
+  for (const [index] of Object.entries(locations)) {
     locations[index] = normalize(locations[index]);
   }
 
@@ -172,7 +172,7 @@ async function scrape(options) {
   }
 
   // Clean data
-  for (const [index, location] of Object.entries(locations)) {
+  for (const [index] of Object.entries(locations)) {
     locations[index] = clean(locations[index]);
   }
 
