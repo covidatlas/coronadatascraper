@@ -215,7 +215,10 @@ const scrapeData = async ({ report, options }) => {
   for (let [name, count] of Object.entries(caseCounts)) {
     console.log('   - %d %s', count, name);
   }
-  console.log('❌ %d errors', errors.length);
+
+  if (errors.length) {
+    console.log('❌ %d error%s', errors.length, errors.length === 1 ? '' : 's');
+  }
 
   report['scrape'] = {
     numCountries: locationCounts.countries,
