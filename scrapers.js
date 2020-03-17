@@ -1692,14 +1692,13 @@ let scrapers = [
   {
     state: 'OH',
     country: 'USA',
-    url: 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/',
+    url: 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/',
     scraper: async function() {
       let counties = [];
       let $ = await fetch.page(this.url);
       let $paragraph = $('p:contains("Number of counties with cases:")').text();
-      let regExp = /\(([^)]+)\)/;
-      let parsed = regExp.exec($paragraph);
-      let arrayOfCounties = parsed[1].split(',');
+      let parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ','');
+      let arrayOfCounties = parsed.split(',');
       arrayOfCounties.map(county => {
         let splitCounty = county.trim().split(' ');
         counties.push({
@@ -1733,44 +1732,6 @@ let scrapers = [
           cases: parse.number(countyData[1])
         });
       })
-      return counties;
-    }
-  },
-  {
-    state: 'MD',
-    country: 'USA',
-    url: 'http://opendata.arcgis.com/datasets/ca77764e722c442986ef6514da88411c_0.csv',
-    type: 'csv',
-    scraper: async function() {
-      let data = await fetch.csv(this.url);
-
-      let counties = [];
-      for (let county of data) {
-        if (county.PARISH === 'Out of State Resident') {
-          continue;
-        }
-        if (county.PARISH === 'Parish Under Investigation') {
-          continue;
-        }
-        let item = {
-          cases: parse.number(county.COVID19Cases),
-          recovered: parse.number(county.COVID19Recovered),
-          deaths: parse.number(county.COVID19Deaths)
-        };
-
-        let itemName = parse.string(county.COUNTY);
-        if (itemName === 'Baltimore City') {
-          item.city = itemName;
-        }
-        else {
-          item.county = transform.addCounty(itemName);
-        }
-
-        counties.push(item);
-      }
-
-      counties.push(transform.sumData(counties));
-
       return counties;
     }
   },
@@ -1878,6 +1839,32 @@ let scrapers = [
       states.push(transform.sumData(states));
 
       return states;
+    }
+  },
+  {
+    state: 'MD',
+    country: 'USA',
+    url: 'https://coronavirus.maryland.gov/',
+    scraper: async function() {
+      let counties = [];
+      let $ = await fetch.headless(this.url);
+      let paragraph = $('p:contains("Number of Confirmed Cases:")').next('p').text();
+  
+      paragraph.split(')').map(splitCounty => {
+      if(splitCounty.length > 1){
+       let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim())
+       //check for Baltimore City
+       if (county !== 'Baltimore City') {
+         county = transform.addCounty(county)
+       }
+       let cases = parse.number(splitCounty.substring(splitCounty.indexOf('(')+1, splitCounty.length).trim())
+       counties.push({
+         county,
+         cases
+       })}
+       
+      })
+      return counties;
     }
   },
 ];
