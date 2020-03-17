@@ -113,6 +113,8 @@ body {
   color: white;
 }
 
+.spectrum-Site-hero .spectrum-Heading--L { margin-top: calc( 2.5 * var(--spectrum-heading-l-margin-top, var(--spectrum-alias-heading-l-margin-top)));
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
