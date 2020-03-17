@@ -1,5 +1,6 @@
 import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
+import calculateRating from '../lib/rating.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -14,7 +15,7 @@ function addLocationToData(data, location) {
   delete data.scraper;
 
   // Add rating
-  data.rating = transform.calculateRating(data);
+  data.rating = calculateRating(data);
 
   // Store for usage in ratings
   data._scraperDefinition = location;
@@ -199,10 +200,11 @@ async function scrape(options) {
     }
 
     sourcesByURL[location.url] = sourceObj;
+    sourceObj.rating = calculateRating(sourceObj);
   }
   let sourceRatings = Object.values(sourcesByURL);
   sourceRatings = sourceRatings.sort((a, b) => {
-    return transform.calculateRating(b) - transform.calculateRating(a);
+    return b.rating - a.rating;
   });
 
   // Clean data
