@@ -50,7 +50,7 @@ body {
 }
 
 .cds-Editor-JSON {
-  padding: 10px 25px;
+  padding: 8px 24px;
 }
 
 .cds-Editor-title {
@@ -59,7 +59,7 @@ body {
 
 .cds-Editor-title,
 .cds-Editor-actions {
-  padding: 10px 15px;
+  padding: 8px 12px;
 }
 
 .cds-Logo {
@@ -81,7 +81,16 @@ body {
   margin-top: 120px;
 }
 
-@media only screen
-and (max-device-width: 812px) {
+.cds-Sidebar {
+  min-width: 235px;
+}
 
+.spectrum-ActionButton .icon {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  .is-editing .cds-SiteHeader {
+    display: none;
+  }
 }

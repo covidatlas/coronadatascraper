@@ -46,73 +46,115 @@
 
     gtag('config', 'UA-160595752-1');
 
-    document.addEventListener('click', function(evt) {
-      let target = evt.target;
-      if (target.tagName === 'A' && target.hasAttribute('download')) {
-        evt.preventDefault();
-        let url = target.getAttribute('href');
+    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('click', function(evt) {
+        var target = evt.target;
+        if (target.tagName === 'A' && target.hasAttribute('download')) {
+          // Stop download
+          evt.preventDefault();
 
-        var req = new XMLHttpRequest();
-        req.addEventListener("load", function() {
-          document.querySelector('.cds-Heading').innerText = url;
+          document.body.classList.add('is-editing');
 
-          let extension = url.split('.').pop();
+          var url = target.getAttribute('href');
 
-          document.querySelector('.cds-Home').hidden = true;
-          document.querySelector('.cds-Editor').hidden = false;
-          document.querySelector('.cds-Editor-download').href = url;
-          if (extension === 'json') {
-            let obj = JSON.parse(this.responseText);
-            const formatter = new JSONFormatter(obj, target.getAttribute('data-levels') || 1, {
-              // hoverPreviewEnabled: false,
-              // hoverPreviewArrayCount: 100,
-              // hoverPreviewFieldCount: 5,
-              // theme: '',
-              animateOpen: false,
-              animateClose: false,
-              // useToJSON: true
-            });
+          var req = new XMLHttpRequest();
+          req.addEventListener("load", function() {
+            document.querySelector('.cds-Heading').innerText = url;
 
-            document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
-            document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
-          }
-          else {
-            var data = Papa.parse(this.responseText, {
-              header: true,
-              skipEmptyLines: true
-            });
+            var extension = url.split('.').pop();
 
-            document.querySelector('.cds-Editor-content').innerHTML = '';
-            var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
-              data: data.data,
-              rowHeaders: true,
-              colHeaders: true,
-              colHeaders: data.meta.fields,
-              columnSorting: true,
-              licenseKey: 'non-commercial-and-evaluation'
-            });
-          }
+            document.querySelector('.cds-Home').hidden = true;
+            document.querySelector('.cds-Editor').hidden = false;
+            document.querySelector('.cds-Editor-download').href = url;
+            if (extension === 'json') {
+              var obj = JSON.parse(this.responseText);
+              const formatter = new JSONFormatter(obj, target.getAttribute('data-levels') || 1, {
+                // hoverPreviewEnabled: false,
+                // hoverPreviewArrayCount: 100,
+                // hoverPreviewFieldCount: 5,
+                // theme: '',
+                animateOpen: false,
+                animateClose: false,
+                // useToJSON: true
+              });
 
-          let previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
-          if (previousItem) {
-            previousItem.classList.remove('is-selected');
-          }
-          target.closest('.spectrum-SideNav-item').classList.add('is-selected');
-        });
-        req.open('GET', url);
-        req.send();
+              document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
+              document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
+            }
+            else {
+              var data = Papa.parse(this.responseText, {
+                header: true,
+                skipEmptyLines: true
+              });
+
+              document.querySelector('.cds-Editor-content').innerHTML = '';
+              var hot = new Handsontable(document.querySelector('.cds-Editor-content'), {
+                data: data.data,
+                rowHeaders: true,
+                colHeaders: true,
+                colHeaders: data.meta.fields,
+                columnSorting: true,
+                licenseKey: 'non-commercial-and-evaluation'
+              });
+            }
+
+            // Select menu item
+            var previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
+            if (previousItem) {
+              previousItem.classList.remove('is-selected');
+            }
+            target.closest('.spectrum-SideNav-item').classList.add('is-selected');
+
+            closeSidebar();
+          });
+          req.open('GET', url);
+          req.send();
+        }
+      });
+
+      var sidebar = document.querySelector('.spectrum-Site-sideBar');
+      var overlay = document.querySelector('.spectrum-Site-overlay');
+
+      function openSidebar() {
+        sidebar.classList.add('is-open');
+        overlay.classList.add('is-open');
       }
+
+      function closeSidebar() {
+        sidebar.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+      }
+
+      document.addEventListener('click', function(evt) {
+        var target = evt.target;
+        var button = evt.target.closest('button');
+        if (button && button.classList.contains('js-toggleMenu')) {
+          openSidebar();
+        }
+
+        if (evt.target.closest('.spectrum-Site-overlay')) {
+          closeSidebar();
+        }
+      });
     });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/json-formatter-js@2.3.4/dist/json-formatter.umd.min.js"></script>
 </head>
 <body class="spectrum spectrum--light spectrum--medium">
-  <a class="cds-Ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+  <!-- <a class="cds-Ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a> -->
 
   <div class="spectrum-Site spectrum-Typography">
+    <div class="spectrum-Site-overlay"></div>
+
+    <div class="cds-SiteHeader spectrum-Site-header">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+        <span class="icon icon-menu"></span>
+      </button>
+    </div>
+
     <div class="spectrum-Site-content">
-      <div class="spectrum-Site-sideBar">
+      <div class="cds-Sidebar spectrum-Site-sideBar">
         <a class="spectrum-Site-sideBarHeader js-fastLoad" href="index.html">
           <img src="logo.svg" class="cds-Logo" alt="Coronadatascraper logo">
           <h2 class="spectrum-Site-title spectrum-Code spectrum-Code--XL">CDS</h2>
@@ -186,8 +228,14 @@
             <p><a class="spectrum-Link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="spectrum-Link" target="_blank" href="https://github.com/lazd">github</a> • <a class="spectrum-Link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="spectrum-Link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
           </div>
         </div>
+
         <div class="cds-Editor" hidden>
           <div class="cds-Editor-header">
+            <div class="cds-Editor-actions spectrum-ButtonGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+                <span class="icon icon-menu"></span>
+              </button>
+            </div>
             <code class="cds-Editor-title spectrum-Code spectrum-Code--XL cds-Heading">file.json</code>
             <div class="cds-Editor-actions spectrum-ButtonGroup">
               <a href="" download class="spectrum-ActionButton cds-Editor-download">
