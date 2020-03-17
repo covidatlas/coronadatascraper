@@ -12,7 +12,7 @@ function cleanProps(obj) {
     delete obj.wikipedia;
   }
 
-  for (let prop in obj) {
+  for (const prop in obj) {
     if (typeof obj[prop] === 'string' && obj[prop].trim() === '') {
       delete obj[prop];
     }
@@ -22,8 +22,8 @@ function cleanProps(obj) {
 }
 
 function takeOnlyProps(obj, props) {
-  let newObj = {};
-  for (let prop of props) {
+  const newObj = {};
+  for (const prop of props) {
     if (typeof obj[prop] !== 'undefined') {
       newObj[prop] = obj[prop];
     }
@@ -32,14 +32,14 @@ function takeOnlyProps(obj, props) {
 }
 
 function normalizeProps(obj) {
-  let newObj = {};
-  for (let prop in obj) {
+  const newObj = {};
+  for (const prop in obj) {
     newObj[prop.toLowerCase()] = obj[prop];
   }
   return newObj;
 }
 
-let props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
+const props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
   // Correct missing county
@@ -61,7 +61,7 @@ const locationTransforms = {
 };
 
 function cleanFeatures(set) {
-  for (let feature of set.features) {
+  for (const feature of set.features) {
     feature.properties = cleanProps(takeOnlyProps(normalizeProps(feature.properties), props));
   }
 }
@@ -73,7 +73,7 @@ const generateFeatures = ({ locations, report, options }) => {
       index = featureCollection.features.push(feature) - 1;
       if (feature.properties.geonunit) {
         feature.properties.shortName = feature.properties.name;
-        feature.properties.name = feature.properties.name + ', ' + feature.properties.geonunit;
+        feature.properties.name = `${feature.properties.name}, ${feature.properties.geonunit}`;
       }
     }
 
@@ -114,7 +114,7 @@ const generateFeatures = ({ locations, report, options }) => {
 
     const errors = [];
 
-    locationLoop: for (let location of locations) {
+    locationLoop: for (const location of locations) {
       let found = false;
       let point;
       if (location.coordinates) {
@@ -122,15 +122,13 @@ const generateFeatures = ({ locations, report, options }) => {
       }
 
       // Breaks France
-      if (location.country === 'REU' ||
-          location.country === 'MTQ' ||
-          location.country === 'GUF') {
+      if (location.country === 'REU' || location.country === 'MTQ' || location.country === 'GUF') {
         console.warn('  ⚠️  Skipping %s because it breaks France', transform.getName(location));
         continue;
       }
 
       if (location.county === '(unassigned)') {
-        console.warn('  ⚠️  Skipping %s because it\'s unassigned',  transform.getName(location));
+        console.warn("  ⚠️  Skipping %s because it's unassigned", transform.getName(location));
         continue;
       }
 
@@ -143,18 +141,18 @@ const generateFeatures = ({ locations, report, options }) => {
         if (location.country === 'USA') {
           if (location.county) {
             // Find county
-            for (let feature of usCountyData.features) {
+            for (const feature of usCountyData.features) {
               if (!location.county) {
                 continue;
               }
 
-              if (feature.properties.name === location.county.replace('Parish', 'County') + ', ' + location.state) {
+              if (feature.properties.name === `${location.county.replace('Parish', 'County')}, ${location.state}`) {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;
               }
               if (point && feature.geometry) {
-                let poly = turf.feature(feature.geometry);
+                const poly = turf.feature(feature.geometry);
                 if (turf.booleanPointInPolygon(point, poly)) {
                   found = true;
                   storeFeature(feature, location);
@@ -163,7 +161,7 @@ const generateFeatures = ({ locations, report, options }) => {
               }
             }
           } else if (location.state) {
-            for (let feature of provinceData.features) {
+            for (const feature of provinceData.features) {
               if (location.state === feature.properties.postal) {
                 found = true;
                 storeFeature(feature, location);
@@ -174,33 +172,15 @@ const generateFeatures = ({ locations, report, options }) => {
         }
 
         // Check if the location exists within our provinces
-        for (let feature of provinceData.features) {
-          if (
-            (
-              location.country === feature.properties.gu_a3 ||
-              location.country === feature.properties.adm0_a3
-            )
-            &&
-            (
-              location.state && (
-                location.state === feature.properties.name ||
-                location.state === feature.properties.name_en ||
-                location.state === feature.properties.region
-              ) ||
-              location.county && (
-                location.county === feature.properties.name ||
-                location.county === feature.properties.name_en ||
-                location.county === feature.properties.region
-              )
-            )
-          ) {
+        for (const feature of provinceData.features) {
+          if ((location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3) && ((location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region)) || (location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region)))) {
             found = true;
             storeFeature(feature, location);
             break;
           }
 
           if (point && feature.geometry) {
-            let poly = turf.feature(feature.geometry);
+            const poly = turf.feature(feature.geometry);
             if (turf.booleanPointInPolygon(point, poly)) {
               found = true;
               storeFeature(feature, location);
@@ -223,7 +203,7 @@ const generateFeatures = ({ locations, report, options }) => {
         }
       } else {
         // Check if the location exists within our countries
-        for (let feature of countryData.features) {
+        for (const feature of countryData.features) {
           // Find by full name
           if (location.country === feature.properties.adm0_a3 || location.country === feature.properties.gu_a3) {
             found = true;
@@ -239,7 +219,7 @@ const generateFeatures = ({ locations, report, options }) => {
           }
 
           if (point && feature.geometry) {
-            let poly = turf.feature(feature.geometry);
+            const poly = turf.feature(feature.geometry);
 
             if (turf.booleanPointInPolygon(point, poly)) {
               found = true;
@@ -252,7 +232,7 @@ const generateFeatures = ({ locations, report, options }) => {
         // Check by province as a last resort
         if (!found) {
           // Check within provinces
-          for (let feature of provinceData.features) {
+          for (const feature of provinceData.features) {
             if (location.country === feature.properties.name) {
               found = true;
               storeFeature(feature, location);
@@ -267,7 +247,7 @@ const generateFeatures = ({ locations, report, options }) => {
             }
 
             if (point && feature.geometry) {
-              let poly = turf.feature(feature.geometry);
+              const poly = turf.feature(feature.geometry);
 
               if (turf.booleanPointInPolygon(point, poly)) {
                 found = true;
@@ -287,7 +267,7 @@ const generateFeatures = ({ locations, report, options }) => {
 
     console.log('✅ Found features for %d out of %d regions for a total of %d features', foundCount, Object.keys(locations).length, featureCollection.features.length);
 
-    report['findFeatures'] = {
+    report.findFeatures = {
       numFeaturesFound: foundCount,
       missingFeatures: errors
     };

@@ -1,21 +1,9 @@
 import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
 
-let numericalValues = [
-  'cases',
-  'tested',
-  'recovered',
-  'deaths',
-  'active'
-];
+const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
-let scraperVars = [
-  'type',
-  'timeseries',
-  'headless',
-  'ssl',
-  'priority'
-];
+const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority'];
 
 /*
   Combine location information with the passed data object
@@ -39,7 +27,7 @@ function isValid(data, location) {
     throw new Error(`Invalid data: contains no case data`);
   }
 
-  for (let [prop, value] of Object.entries(data)) {
+  for (const [prop, value] of Object.entries(data)) {
     if (value === null) {
       throw new Error(`Invalid data: ${prop} is null`);
     }
@@ -48,7 +36,7 @@ function isValid(data, location) {
     }
   }
 
-  for (let prop of numericalValues) {
+  for (const prop of numericalValues) {
     if (data[prop] !== undefined && typeof data[prop] !== 'number') {
       throw new Error(`Invalid data: ${prop} is not a number`);
     }
@@ -61,7 +49,7 @@ function isValid(data, location) {
   Clean the passed data
 */
 function clean(data) {
-  for (let [prop, value] of Object.entries(data)) {
+  for (const [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
     }
@@ -72,7 +60,7 @@ function clean(data) {
   }
 
   // Remove non-data vars
-  for (let prop of scraperVars) {
+  for (const prop of scraperVars) {
     delete data[prop];
   }
 
@@ -102,15 +90,13 @@ function addData(cases, location, result) {
     if (result.length === 0) {
       throw new Error(`Invalid data: scraper for ${transform.getName(location)} returned 0 rows`);
     }
-    for (let data of result) {
+    for (const data of result) {
       if (isValid(data, location)) {
         cases.push(addLocationToData(data, location));
       }
     }
-  } else {
-    if (isValid(result, location)) {
-      cases.push(addLocationToData(result, location));
-    }
+  } else if (isValid(result, location)) {
+    cases.push(addLocationToData(result, location));
   }
 }
 
@@ -118,9 +104,9 @@ function addData(cases, location, result) {
     Begin the scraping process
   */
 async function scrape(options) {
-  let locations = [];
-  let errors = [];
-  for (let location of scrapers) {
+  const locations = [];
+  const errors = [];
+  for (const location of scrapers) {
     if (options.only) {
       if (transform.getName(location) !== options.only) {
         continue;
@@ -147,37 +133,35 @@ async function scrape(options) {
   }
 
   // Normalize data
-  for (let [index, location] of Object.entries(locations)) {
+  for (const [index, location] of Object.entries(locations)) {
     locations[index] = normalize(locations[index]);
   }
 
   // De-dupe data
-  let seenLocations = {};
+  const seenLocations = {};
   let i = locations.length - 1;
   let deDuped = 0;
   while (i-- > 0) {
-    let location = locations[i];
-    let locationName = transform.getName(location);
-    let otherLocation = seenLocations[locationName];
+    const location = locations[i];
+    const locationName = transform.getName(location);
+    const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {
       // Take rating into account to break ties
-      let thisPriority = transform.getPriority(location) + (location.rating / 2);
-      let otherPriority = transform.getPriority(otherLocation) + (otherLocation.rating / 2);
+      const thisPriority = transform.getPriority(location) + location.rating / 2;
+      const otherPriority = transform.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         // Kill the other location
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
-      }
-      else if (otherPriority < thisPriority) {
+      } else if (otherPriority < thisPriority) {
         // Kill the other location
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
-      }
-      else {
+      } else {
         // Kill this location
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
         locations.splice(i, 1);
@@ -188,7 +172,7 @@ async function scrape(options) {
   }
 
   // Clean data
-  for (let [index, location] of Object.entries(locations)) {
+  for (const [index, location] of Object.entries(locations)) {
     locations[index] = clean(locations[index]);
   }
 
@@ -196,24 +180,24 @@ async function scrape(options) {
 }
 
 const scrapeData = async ({ report, options }) => {
-  console.log(`⏳ Scraping data for ${process.env['SCRAPE_DATE'] ? process.env['SCRAPE_DATE'] : 'today'}...`);
+  console.log(`⏳ Scraping data for ${process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : 'today'}...`);
 
   const { locations, errors, deDuped } = await scrape(options);
 
-  let locationCounts = {
+  const locationCounts = {
     cities: 0,
     states: 0,
     counties: 0,
     countries: 0
   };
-  let caseCounts = {
+  const caseCounts = {
     cases: 0,
     tested: 0,
     recovered: 0,
     deaths: 0,
     active: 0
   };
-  for (let location of locations) {
+  for (const location of locations) {
     if (!location.state && !location.county) {
       locationCounts.countries++;
     } else if (!location.county) {
@@ -224,9 +208,9 @@ const scrapeData = async ({ report, options }) => {
       locationCounts.cities++;
     }
 
-    location['active'] = location['active'] === undefined ? transform.getActiveFromLocation(location) : location['active'];
+    location.active = location.active === undefined ? transform.getActiveFromLocation(location) : location.active;
 
-    for (let type of Object.keys(caseCounts)) {
+    for (const type of Object.keys(caseCounts)) {
       if (location[type]) {
         caseCounts[type] += location[type];
       }
@@ -234,11 +218,11 @@ const scrapeData = async ({ report, options }) => {
   }
 
   console.log('✅ Data scraped!');
-  for (let [name, count] of Object.entries(locationCounts)) {
+  for (const [name, count] of Object.entries(locationCounts)) {
     console.log('   - %d %s', count, name);
   }
   console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
-  for (let [name, count] of Object.entries(caseCounts)) {
+  for (const [name, count] of Object.entries(caseCounts)) {
     console.log('   - %d %s', count, name);
   }
 
@@ -246,7 +230,7 @@ const scrapeData = async ({ report, options }) => {
     console.log('❌ %d error%s', errors.length, errors.length === 1 ? '' : 's');
   }
 
-  report['scrape'] = {
+  report.scrape = {
     numCountries: locationCounts.countries,
     numStates: locationCounts.states,
     numCounties: locationCounts.counties,

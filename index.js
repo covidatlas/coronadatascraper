@@ -9,15 +9,15 @@ import writeData from './tasks/writeData.js';
 
 async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, only: null }) {
   if (date) {
-    process.env['SCRAPE_DATE'] = date;
+    process.env.SCRAPE_DATE = date;
   } else {
-    delete process.env['SCRAPE_DATE'];
+    delete process.env.SCRAPE_DATE;
   }
 
   // Add SSL certificates for sources that use non-standard ones
   const files = await fs.readFiles('./ssl');
-  for (let file of files) {
-    rootCas.addFile('./ssl/' + file);
+  for (const file of files) {
+    rootCas.addFile(`./ssl/${file}`);
   }
 
   rootCas.inject();

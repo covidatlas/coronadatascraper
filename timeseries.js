@@ -1,26 +1,19 @@
-import generate from './index.js';
 import path from 'path';
+import generate from './index.js';
 import argv from './lib/cliArgs.js';
 import * as transform from './lib/transform.js';
 import * as datetime from './lib/datetime.js';
 import * as fs from './lib/fs.js';
 
 // The props to keep on a date object
-let caseDataProps = [
-  'cases',
-  'deaths',
-  'recovered',
-  'active',
-  'tested',
-  'growthFactor'
-];
+const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
 
 /*
   Drop everything but case data from a location
 */
 function stripInfo(location) {
-  let newLocation = {};
-  for (let prop of caseDataProps) {
+  const newLocation = {};
+  for (const prop of caseDataProps) {
     if (location[prop] !== undefined) {
       newLocation[prop] = location[prop];
     }
@@ -32,8 +25,8 @@ function stripInfo(location) {
   Drop case data from a location
 */
 function stripCases(location) {
-  let newLocation = {};
-  for (let prop in location) {
+  const newLocation = {};
+  for (const prop in location) {
     if (caseDataProps.indexOf(prop) === -1) {
       newLocation[prop] = location[prop];
     }
@@ -42,37 +35,27 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = [
-    'city',
-    'county',
-    'state',
-    'country',
-    'population',
-    'lat',
-    'long'
-  ];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long'];
 
-  let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesByLocation)) {
+  const csvData = [];
+  for (const [name, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
-    let row = [];
-    for (let column of columns) {
+    const row = [];
+    for (const column of columns) {
       if (column === 'lat') {
         row.push(location.coordinates ? location.coordinates[1] : '');
-      }
-      else if (column === 'long') {
+      } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
-      }
-      else {
+      } else {
         row.push(location[column]);
       }
     }
 
     // For each date, add rows for each type
-    for (let date of dates) {
-      for (let type of caseDataProps) {
+    for (const date of dates) {
+      for (const type of caseDataProps) {
         if (location.dates[date] && location.dates[date][type] !== undefined) {
-          let dateTypeRow = row.slice();
+          const dateTypeRow = row.slice();
           dateTypeRow.push(datetime.getYYYYMMDD(new Date(date)));
           dateTypeRow.push(type);
           dateTypeRow.push(location.dates[date][type]);
@@ -82,11 +65,7 @@ async function generateTidyCSV(timeseriesByLocation) {
     }
   }
 
-  columns = columns.concat([
-    'date',
-    'type',
-    'value'
-  ]);
+  columns = columns.concat(['date', 'type', 'value']);
 
   csvData.splice(0, 0, columns);
 
@@ -94,42 +73,31 @@ async function generateTidyCSV(timeseriesByLocation) {
 }
 
 async function generateLessTidyCSV(timeseriesByLocation) {
-  let columns = [
-    'city',
-    'county',
-    'state',
-    'country',
-    'population',
-    'lat',
-    'long',
-    'url'
-  ];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
 
-  let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesByLocation)) {
+  const csvData = [];
+  for (const [name, location] of Object.entries(timeseriesByLocation)) {
     // Build base row
-    let row = [];
-    for (let column of columns) {
+    const row = [];
+    for (const column of columns) {
       if (column === 'lat') {
         row.push(location.coordinates ? location.coordinates[1] : '');
-      }
-      else if (column === 'long') {
+      } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
-      }
-      else {
+      } else {
         row.push(location[column]);
       }
     }
 
     // For each date, add a row
-    for (let date of dates) {
-      let dateRow = row.slice();
+    for (const date of dates) {
+      const dateRow = row.slice();
       let hasData = false;
-      for (let type of caseDataProps) {
+      for (const type of caseDataProps) {
         if (location.dates[date] && location.dates[date][type]) {
           hasData = true;
         }
-        dateRow.push(location.dates[date] && location.dates[date][type] || '');
+        dateRow.push((location.dates[date] && location.dates[date][type]) || '');
       }
       if (hasData) {
         dateRow.push(datetime.getYYYYMMDD(new Date(date)));
@@ -138,9 +106,7 @@ async function generateLessTidyCSV(timeseriesByLocation) {
     }
   }
 
-  columns = columns.concat(caseDataProps).concat([
-    'date'
-  ]);
+  columns = columns.concat(caseDataProps).concat(['date']);
 
   csvData.splice(0, 0, columns);
 
@@ -148,35 +114,22 @@ async function generateLessTidyCSV(timeseriesByLocation) {
 }
 
 async function generateCSV(timeseriesByLocation) {
-  let columns = [
-    'city',
-    'county',
-    'state',
-    'country',
-    'lat',
-    'long',
-    'population',
-    'type',
-    'value',
-    'url'
-  ];
+  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'type', 'value', 'url'];
 
-  let csvData = [];
-  for (let [name, location] of Object.entries(timeseriesByLocation)) {
-    let row = [];
-    for (let column of columns) {
+  const csvData = [];
+  for (const [name, location] of Object.entries(timeseriesByLocation)) {
+    const row = [];
+    for (const column of columns) {
       if (column === 'lat') {
         row.push(location.coordinates ? location.coordinates[1] : '');
-      }
-      else if (column === 'long') {
+      } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
-      }
-      else {
+      } else {
         row.push(location[column]);
       }
     }
 
-    for (let date of dates) {
+    for (const date of dates) {
       row.push(location.dates[date] ? location.dates[date].cases : '');
     }
 
@@ -190,7 +143,7 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 function getGrowthfactor(casesToday, casesYesterday) {
-  let growthFactor = casesToday / casesYesterday;
+  const growthFactor = casesToday / casesYesterday;
   if (growthFactor === Infinity) {
     return null;
   }
@@ -205,8 +158,8 @@ async function generateTimeseries(options = {}) {
   // Generate a list of dates starting at the first date, OR the provided start date
   // ending at today or the provided end date
   dates = [];
-  let today = new Date();
-  let endDate = options.endDate ? new Date(options.endDate) : today;
+  const today = new Date();
+  const endDate = options.endDate ? new Date(options.endDate) : today;
   let curDate = new Date('2020-1-22');
   if (options.date) {
     curDate = new Date(options.date);
@@ -216,27 +169,28 @@ async function generateTimeseries(options = {}) {
     curDate.setDate(curDate.getDate() + 1);
   }
 
-  let timeseriesByLocation = {};
+  const timeseriesByLocation = {};
   let previousDate = null;
-  let lastDate = dates[dates.length - 1];
+  const lastDate = dates[dates.length - 1];
   let featureCollection;
-  for (let date of dates) {
-    let data = await generate(date === today ? undefined : date, Object.assign({
+  for (const date of dates) {
+    const data = await generate(date === today ? undefined : date, {
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
-      writeData: false
-    }, options));
+      writeData: false,
+      ...options
+    });
 
     if (date === lastDate) {
       featureCollection = data.featureCollection;
     }
 
-    for (let location of data.locations) {
-      let name = transform.getName(location);
+    for (const location of data.locations) {
+      const name = transform.getName(location);
 
-      timeseriesByLocation[name] = Object.assign({ dates: {} }, timeseriesByLocation[name], stripCases(location));
+      timeseriesByLocation[name] = { dates: {}, ...timeseriesByLocation[name], ...stripCases(location) };
 
-      let strippedLocation = stripInfo(location);
+      const strippedLocation = stripInfo(location);
 
       // Add growth factor
       if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
@@ -252,7 +206,7 @@ async function generateTimeseries(options = {}) {
   await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation);
   await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
 
-  let { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
+  const { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
   await fs.writeFile(path.join('dist', `timeseries.json`), JSON.stringify(timeseriesByDate, null, 2));
   await fs.writeFile(path.join('dist', `locations.json`), JSON.stringify(locations, null, 2));
 
