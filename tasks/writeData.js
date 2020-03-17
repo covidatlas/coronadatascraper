@@ -6,9 +6,8 @@ const writeData = async ({ locations, featureCollection, report, options }) => {
   let suffix = '';
   if (options.outputSuffix !== undefined) {
     suffix = options.outputSuffix;
-  }
-  else if (process.env['SCRAPE_DATE']) {
-    suffix = '-' + process.env['SCRAPE_DATE'];
+  } else if (process.env.SCRAPE_DATE) {
+    suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
   await fs.ensureDir('dist');

@@ -1,0 +1,18 @@
+{
+  "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
+  "rules": {
+    "jest/no-standalone-expect": "warn",
+    "no-async-promise-executor": "warn",
+    "no-await-in-loop": "warn",
+    "no-console": "off",
+    "no-continue": "warn",
+    "no-labels": "warn",
+    "no-param-reassign": "warn",
+    "no-plusplus": "off",
+    "no-restricted-syntax": "off",
+    "no-shadow": "warn",
+    "import/extensions": ["error", "ignorePackages"],
+    "no-underscore-dangle": "off"
+  }
+}
