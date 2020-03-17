@@ -2,7 +2,7 @@ name: Scraper Status CI
 
 on:
   schedule:
-    - cron: '* */2 * * *' # Runs every 2 hours
+    - cron: '0 */2 * * *' # Runs every 2 hours
 
 jobs:
   status:
