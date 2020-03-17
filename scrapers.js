@@ -152,7 +152,7 @@ let scrapers = [
   {
     url: 'https://github.com/CSSEGISandData/COVID-19',
     timeseries: true,
-    _priority: -1,
+    priority: -1,
     _urls: {
       cases: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
       deaths: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
@@ -833,7 +833,7 @@ let scrapers = [
   {
     state: 'FL',
     country: 'USA',
-    _priority: 1,
+    priority: 1,
     scraper: async function() {
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         this.type = 'table';
@@ -1933,7 +1933,7 @@ let scrapers = [
     country: 'FRA',
     url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
     timeseries: true,
-    _priority: 1,
+    priority: 1,
     scraper: async function() {
       let data = await fetch.csv(this.url, false);
       let states = [];
@@ -1974,7 +1974,7 @@ let scrapers = [
   {
     country: 'ESP',
     url: 'https://opendata.arcgis.com/datasets/48fac2d7de0f43f9af938852e3748845_0.csv',
-    _priority: 1,
+    priority: 1,
     scraper: async function() {
       let data = await fetch.csv(this.url);
       let states = [];

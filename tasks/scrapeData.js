@@ -9,6 +9,14 @@ let numericalValues = [
   'active'
 ];
 
+let scraperVars = [
+  'type',
+  'timeseries',
+  'headless',
+  'ssl',
+  'priority'
+];
+
 /*
   Combine location information with the passed data object
 */
@@ -53,14 +61,6 @@ function isValid(data, location) {
   Clean the passed data
 */
 function clean(data) {
-  // Normalize states
-  if (data.country === 'USA') {
-    data.state = transform.toUSStateAbbreviation(data.state);
-  }
-
-  // Normalize countries
-  data.country = transform.toISO3166Alpha3(data.country);
-
   for (let [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
@@ -70,6 +70,26 @@ function clean(data) {
       delete data[prop];
     }
   }
+
+  // Remove non-data vars
+  for (let prop of scraperVars) {
+    delete data[prop];
+  }
+
+  return data;
+}
+
+/*
+  Clean the passed data
+*/
+function normalize(data) {
+  // Normalize states
+  if (data.country === 'USA') {
+    data.state = transform.toUSStateAbbreviation(data.state);
+  }
+
+  // Normalize countries
+  data.country = transform.toISO3166Alpha3(data.country);
 
   return data;
 }
@@ -125,8 +145,13 @@ async function scrape(options) {
       }
     }
   }
-  
-  // De-dupe and clean data
+
+  // Normalize data
+  for (let [index, location] of Object.entries(locations)) {
+    locations[index] = normalize(locations[index]);
+  }
+
+  // De-dupe data
   let seenLocations = {};
   let i = locations.length - 1;
   let deDuped = 0;
@@ -134,10 +159,12 @@ async function scrape(options) {
     let location = locations[i];
     let locationName = transform.getName(location);
     let otherLocation = seenLocations[locationName];
+
     if (otherLocation) {
       // Take rating into account to break ties
       let thisPriority = transform.getPriority(location) + (location.rating / 2);
       let otherPriority = transform.getPriority(otherLocation) + (otherLocation.rating / 2);
+
       if (otherPriority === thisPriority) {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         // Kill the other location
@@ -164,7 +191,6 @@ async function scrape(options) {
   for (let [index, location] of Object.entries(locations)) {
     locations[index] = clean(locations[index]);
   }
-
 
   return { locations, errors, deDuped };
 }
