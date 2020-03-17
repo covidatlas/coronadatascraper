@@ -1645,18 +1645,59 @@ let scrapers = [
     url: 'https://www.dhs.wisconsin.gov/outbreaks/index.htm',
     type: 'table',
     scraper: async function() {
+      let regions = [];
       let $ = await fetch.page(this.url);
-      let counties = [];
-      let $table = $('caption:contains("Number of Positive Results by County")').closest('table');
-      let $trs = $table.find('tbody > tr:not(:last-child)');
-      $trs.each((index, tr) => {
-        let $tr = $(tr);
-        counties.push({
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
-          cases: parse.number($tr.find('td:last-child').text())
+
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        let $table = $('caption:contains("Number of Positive Results by County")').closest('table');
+        let $trs = $table.find('tbody > tr:not(:last-child)');
+        $trs.each((index, tr) => {
+          let $tr = $(tr);
+          regions.push({
+            county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+            cases: parse.number($tr.find('td:last-child').text())
+          });
         });
-      });
-      return counties;
+
+        regions.push(transform.sumData(regions));
+      }
+      else {
+        let $table = $('h5:contains("Number of Positive Results by County")').nextAll('table').first();
+        let $trs = $table.find('tbody > tr:not(:last-child)');
+        $trs.each((index, tr) => {
+          let $tr = $(tr);
+          regions.push({
+            county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+            cases: parse.number($tr.find('td:last-child').text())
+          });
+        });
+
+        {
+          // Get state data from other table
+          let stateData = {
+            tested: 0
+          };
+
+          let $table = $('h5:contains("Wisconsin COVID-19 Test Results")').nextAll('table').first();
+          let $trs = $table.find('tbody > tr');
+          $trs.each((index, tr) => {
+            let $tr = $(tr);
+            let label = parse.string($tr.find('td:first-child').text());
+            let value = parse.number($tr.find('td:last-child').text());;
+            if (label === 'Positive') {
+              stateData.cases = value;
+              stateData.tested += value;
+            }
+            else if (label === 'Negative') {
+              stateData.tested += value;
+            }
+          });
+
+          regions.push(stateData);
+        }
+      }
+
+      return regions;
     }
   },
   {
