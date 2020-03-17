@@ -11,7 +11,8 @@ async function findNameMapping() {
 
   const countyMap = {};
 
-  for (const location of jhuData) {
+  // eslint-disable-next-line no-labels
+  locationLoop: for (const location of jhuData) {
     if (!location[STATE] || location[STATE].indexOf(',') === -1) {
       continue;
     }
@@ -28,7 +29,8 @@ async function findNameMapping() {
           const poly = turf.feature(feature.geometry);
           if (turf.booleanPointInPolygon(point, poly)) {
             countyMap[location[STATE]] = feature.properties.name;
-            continue;
+            // eslint-disable-next-line no-labels
+            continue locationLoop;
           }
         }
       }
