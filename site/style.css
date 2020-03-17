@@ -64,7 +64,11 @@ body {
 }
 
 .cds-Logo {
-  width: 48px;
+  height: 56px;
+}
+
+.cds-Logo-Type {
+  fill: #21385E;
 }
 
 .spectrum-Site-title {
