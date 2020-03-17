@@ -1,5 +1,6 @@
 import generate from './index.js';
 import path from 'path';
+import argv from './lib/cliArgs.js';
 import * as transform from './lib/transform.js';
 import * as datetime from './lib/datetime.js';
 import * as fs from './lib/fs.js';
@@ -208,17 +209,17 @@ function getGrowthfactor(casesToday, casesYesterday) {
 /*
   Generate timeseries data
 */
-async function generateTimeseries() {
+async function generateTimeseries(options = {}) {
   let timeseriesByLocation = {};
   let previousDate = null;
   let lastDate = dates[dates.length - 1];
   let featureCollection;
   for (let date of dates) {
-    let data = await generate(date === lastDate ? undefined : date, {
+    let data = await generate(date === lastDate ? undefined : date, Object.assign({
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
-    });
+    }, options));
 
     if (date === lastDate) {
       featureCollection = data.featureCollection;
@@ -256,4 +257,4 @@ async function generateTimeseries() {
   await generateLessTidyCSV(timeseriesByLocation);
 }
 
-generateTimeseries();
+generateTimeseries(argv);

@@ -111,12 +111,12 @@ async function scrape(options) {
       }
     }
   }
-
+  
   // De-dupe and clean data
   let seenLocations = {};
   let i = locations.length - 1;
   let deDuped = 0;
-  while (i--) {
+  while (i-- > 0) {
     let location = locations[i];
     let locationName = transform.getName(location);
     let otherLocation = seenLocations[locationName];
