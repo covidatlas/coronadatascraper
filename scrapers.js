@@ -1575,6 +1575,26 @@ let scrapers = [
     }
   },
   {
+    county: 'Mono County',
+    state: 'CA',
+    country: 'USA',
+    url: 'https://monocovid19-monomammoth.hub.arcgis.com/',
+    scraper: async function() {
+      let $ = await fetch.headless(this.url);
+
+      let cases = parse.number($('h4:contains("POSITIVE")')
+                              .first()
+                              .parent()
+                              .next('h3')
+                              .text()
+      );
+
+      return {
+        cases: cases
+      };
+    }
+  },
+  {
     county: 'San Diego County',
     state: 'CA',
     country: 'USA',
