@@ -14,13 +14,14 @@
     "updateModules": "git submodule update --remote",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "build": "yarn start && yarn timeseries && yarn buildSite",
-    "buildSite": "cp -r site/* dist/",
+    "buildSite": "cp -r site/* dist/ && ./tools/copySpectrumCSS.sh",
     "deploy": "npm run dateData && npm run deploySite",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "test": "jest"
   },
   "dependencies": {
+    "@adobe/spectrum-css": "^2.18.0",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
     "csv": "^5.3.2",

@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@adobe/spectrum-css@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@adobe/spectrum-css/-/spectrum-css-2.18.0.tgz#da9d1597f1c8cb16a1053484f727c2dd44003d04"
+  integrity sha512-DhfQ3vPt2FAx5tcoPq3HeHuKBqty0M+d5TPdPkl1hZFdxaqE9jac7qUblyz4lQczqyG/U/M4BjVpvp0Qc8iecw==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
