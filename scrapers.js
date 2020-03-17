@@ -1424,7 +1424,6 @@ let scrapers = [
     county: 'Glenn County',
     state: 'CA',
     country: 'USA',
-    url: 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19',
     scraper: async function() {
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         this.url = 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome';
