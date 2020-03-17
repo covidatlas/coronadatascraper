@@ -166,7 +166,8 @@ div.spectrum-SideNav-itemLink:hover {
 }
 
 .cds-Sources-list {
-  margin-top: 48px;
+  padding: 0;
+  margin: 48px 24px 0 24px;
 }
 
 /* Ratings */
@@ -181,17 +182,23 @@ div.spectrum-SideNav-itemLink:hover {
 }
 
 .cds-ReportCard-grade {
-  font-family: aglet-slab, sans-serif;
-  margin-right: 16px;
-  font-size: 48px;
-  width: 78px;
-  height: 78px;
-  border: 4px solid transparent;
-  border-radius: 100%;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: relative;
+
+  width: 78px;
+  height: 78px;
+
+  margin-right: 16px;
+
+  border: 4px solid transparent;
+  border-radius: 100%;
+
+  font-family: aglet-slab, sans-serif;
+  font-size: 48px;
 
   --b-color: rgb(131, 154, 20);
 }
@@ -230,5 +237,8 @@ div.spectrum-SideNav-itemLink:hover {
   }
   .cds-Editor-menuToggle {
     display: block;
+  }
+  .cds-Sources-list {
+    margin: 48px 12px 0 12px;
   }
 }

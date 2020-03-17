@@ -162,7 +162,7 @@
 
 
         return `
-        <div class="cds-ReportCard">
+        <li class="cds-ReportCard">
           <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
           <div class="cds-ReportCard-content">
             <h2 class="spectrum-Heading spectrum-Heading--L">${index + 1}. ${getName(source)}</h2>
@@ -188,7 +188,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </li>
 `;
       }
 
@@ -512,8 +512,8 @@
             <p class="spectrum-Body spectrum-Body--L">Let's get those grades up! <a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Reach out to us on on Slack</a> or <a class="spectrum-Link" href="https://github.co m/lazd/coronadatascraper/issues">file an issue on Github</a> and we can help you improve it!</p>
             <p class="spectrum-Body spectrum-Body--L">Wanna know exactly how the ratings work? <a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/blob/master/lib/rating.js" target="_blank">Look at the code</a></p>
 
-            <ul class="cds-Sources-list">
-            </ul>
+            <ol class="cds-Sources-list">
+            </ol>
           </div>
         </div>
 
