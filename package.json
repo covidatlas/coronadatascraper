@@ -22,6 +22,7 @@
     "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js"
   },
   "dependencies": {
+    "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
