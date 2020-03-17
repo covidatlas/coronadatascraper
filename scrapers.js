@@ -1133,7 +1133,7 @@ let scrapers = [
     url: 'https://www.coronavirus.cchealth.org/',
     scraper: async function() {
       let cases, deaths;
-      let $ = await fetch.page(this.url);
+      let $ = await fetch.headless(this.url);
 
       cases = parse.number(
         $('h1:contains("TOTAL")')
