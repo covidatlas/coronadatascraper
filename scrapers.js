@@ -53,7 +53,7 @@ const scrapers = [
       for (const county of data.characteristics_by_county.values) {
         counties.push({
           county: transform.addCounty(county.County),
-          cases: county.confirmed_cases,
+          cases: parse.number(county.confirmed_cases),
           tested: parse.number(county.total_tested)
         });
       }
