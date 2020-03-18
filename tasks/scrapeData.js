@@ -111,8 +111,8 @@ async function scrape(options) {
   const locations = [];
   const errors = [];
   for (const location of scrapers) {
-    if (options.only) {
-      if (transform.getName(location) !== options.only) {
+    if (options.location) {
+      if (transform.getName(location) !== options.location) {
         continue;
       }
     }
