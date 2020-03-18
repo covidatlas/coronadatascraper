@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       map.on('load', function() {
-        fetchJSON('http://blog.lazd.net/coronadatascraper/features.json', function(featureCollection) {
+        fetchJSON('features.json', function(featureCollection) {
           const smallFeatures = {
             type: 'FeatureCollection',
             features: featureCollection.features.filter((feature, index) => {
