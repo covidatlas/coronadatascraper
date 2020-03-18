@@ -2301,7 +2301,7 @@ const scrapers = [
     country: 'BRA',
     type: 'json',
     priority: 1,
-    url: ['http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=', +new Date()].join(''),
+    url: `http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=${datetime.getYYYYMMDD()}`,
     timeseries: true,
     _dataIds: [
       { uid: 11, name: 'Rondônia' },
