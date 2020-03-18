@@ -27,6 +27,23 @@ const UNASSIGNED = '(unassigned)';
 
 const scrapers = [
   {
+    country: 'DEU',
+    url: 'https://covid19-germany.appspot.com/now',
+    type: 'json',
+    ssl: true,
+    async scraper() {
+      const data = await fetch.json(this.url);
+      return {
+        country: 'DEU',
+        cases: data.current_totals.cases,
+        deaths: data.current_totals.deaths,
+        recovered: data.current_totals.recovered,
+        coordinates: [9.0, 51.0],
+        population: 83 * 10 ** 6
+      };
+    }
+  },
+  {
     state: 'AZ',
     country: 'USA',
     url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?:isGuestRedirectFromVizportal=y&:embed=y',
