@@ -40,6 +40,28 @@ const scrapers = [
       return counties;
     }
   },
+{
+    state: 'IL',
+    country: 'USA',
+    url: 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults.json',
+    async scraper() {
+      const data = await fetch.json(this.url);
+
+      const counties = [];
+      // do stuff
+      for (const county of data.characteristics_by_county.values) { 
+        counties.push({
+          county: county.County + " County",
+          cases:  county.confirmed_cases,
+          tested: county.total_tested
+        });
+      }
+
+      // await browser.close();
+      return counties;
+    }
+
+},
   {
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'USA',
