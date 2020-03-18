@@ -144,7 +144,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
               if (!location.county) {
                 continue;
               }
-
               if (feature.properties.name === `${location.county.replace('Parish', 'County')}, ${location.state}`) {
                 found = true;
                 storeFeature(feature, location);
@@ -172,7 +171,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
         // Check if the location exists within our provinces
         for (const feature of provinceData.features) {
-          if ((location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3) && ((location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region)) || (location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region)))) {
+          const countryMatches = location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
+          const stateMatches = location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region);
+          const countyMatches = location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region);
+          if (countryMatches && (stateMatches || countyMatches)) {
             found = true;
             storeFeature(feature, location);
             break;
