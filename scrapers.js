@@ -2353,11 +2353,7 @@ const scrapers = [
   
       let data_brazil = []
 
-      data_json['brazil'].filter((row) => row['date'] == [
-        datetime.getDate().toString().padStart(2,0),
-        (datetime.getMonth() +1).toString().padStart(2,0),
-        datetime.getFullYear().toString().padStart(2,0)
-      ].join('/')).forEach((date_data) => {
+      data_json['brazil'].filter((row) => row['date'] == datetime.getDDMMYY(scrapeDate, '/')).forEach((date_data) => {
         let date = date_data['date'].split('/')
         let time = date_data['time'].split(':')
         let data_date = new Date(parseInt(date[2]), parseInt(date[1]) - 1, parseInt(date[0])) 
