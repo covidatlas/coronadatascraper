@@ -54,7 +54,7 @@ const scrapers = [
         counties.push({
           county: transform.addCounty(county.County),
           cases: county.confirmed_cases,
-          tested: county.total_tested
+          tested: parse.number(county.total_tested)
         });
       }
       counties.push(transform.sumData(counties));
