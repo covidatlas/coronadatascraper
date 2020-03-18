@@ -131,6 +131,10 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
 
   let populationFound = 0;
   for (const location of locations) {
+    if (location.population) {
+      continue;
+    }
+
     const population = getPopulation(location);
 
     if (population) {
