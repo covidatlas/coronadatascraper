@@ -41,9 +41,32 @@ const scrapers = [
     }
   },
   {
-    url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
+    state: 'IL',
+    country: 'USA',
+    priority: 1,
+    url: 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults.json',
+    async scraper() {
+      const data = await fetch.json(this.url);
+
+      const counties = [];
+
+      for (const county of data.characteristics_by_county.values) {
+        counties.push({
+          county: transform.addCounty(county.County),
+          cases: parse.number(county.confirmed_cases),
+          tested: parse.number(county.total_tested)
+        });
+      }
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    }
+  },
+  {
     country: 'USA',
     state: 'IN',
+    priority: 1,
+    url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     aggregate: 'county',
     _countyMap: {
       'Verm.': 'Vermillion',
@@ -64,6 +87,8 @@ const scrapers = [
           tested: parse.number(county.Total_Tested)
         });
       }
+
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -1382,49 +1407,50 @@ const scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.sjcphs.org/coronavirus.aspx#res',
-    async scraper() {
-      const $ = await fetch.page(this.url);
+    scraper: {
+      '0': async function() {
+        const $ = await fetch.page(this.url);
+        this.type = 'paragraph';
 
-      if (datetime.scrapeDateIsBefore('2020-03-17')) {
         const h3 = $('h6:contains("confirmed cases of COVID-19")')
           .first()
           .text();
         const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
-        this.type = 'paragraph';
 
         return {
           cases
         };
+      },
+      '2020-3-17': async function() {
+        const $ = await fetch.page(this.url);
+        this.type = 'table';
+
+        const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
+
+        const $headers = $table.find('tbody > tr:nth-child(2) > td');
+        const $numbers = $table.find('tbody > tr:nth-child(3) > td');
+
+        let cases = 0;
+        let deaths = 0;
+
+        // Parse the table and ensure that the header labels match the expected value
+        $headers.each((index, td) => {
+          const $td = $(td);
+
+          if ($td.text().includes('Cases')) {
+            cases = parse.number($numbers.eq(index).text());
+          }
+
+          if ($td.text().includes('Deaths')) {
+            deaths = parse.number($numbers.eq(index).text());
+          }
+        });
+
+        return {
+          cases,
+          deaths
+        };
       }
-
-      // Parse the table and ensure that the header labels match
-      // the expected value
-
-      this.type = 'table';
-      const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
-
-      const $headers = $table.find('tbody > tr:nth-child(2) > td');
-      const $numbers = $table.find('tbody > tr:nth-child(3) > td');
-
-      let cases = 0;
-      let deaths = 0;
-
-      $headers.each((index, td) => {
-        const $td = $(td);
-
-        if ($td.text().includes('Cases')) {
-          cases = parse.number($numbers.eq(index).text());
-        }
-
-        if ($td.text().includes('Deaths')) {
-          deaths = parse.number($numbers.eq(index).text());
-        }
-      });
-
-      return {
-        cases,
-        deaths
-      };
     }
   },
   {
@@ -2184,30 +2210,61 @@ const scrapers = [
   {
     state: 'MD',
     country: 'USA',
-    url: 'https://coronavirus.maryland.gov/',
     aggregate: 'county',
-    async scraper() {
-      const counties = [];
-      const $ = await fetch.headless(this.url);
-      const paragraph = $('p:contains("Number of Confirmed Cases:")')
-        .next('p')
-        .text();
+    scraper: {
+      '0': async function() {
+        this.url = 'https://coronavirus.maryland.gov/';
+        this.type = 'paragraph';
 
-      paragraph.split(')').forEach(splitCounty => {
-        if (splitCounty.length > 1) {
-          let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim());
-          // check for Baltimore City
-          if (county !== 'Baltimore City') {
-            county = transform.addCounty(county);
+        const counties = [];
+        const $ = await fetch.headless(this.url);
+        const paragraph = $('p:contains("Number of Confirmed Cases:")')
+          .next('p')
+          .text();
+
+        paragraph.split(')').forEach(splitCounty => {
+          if (splitCounty.length > 1) {
+            let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim());
+            // check for Baltimore City
+            if (county !== 'Baltimore City') {
+              county = transform.addCounty(county);
+            }
+            const cases = parse.number(splitCounty.substring(splitCounty.indexOf('(') + 1, splitCounty.length).trim());
+            counties.push({
+              county,
+              cases
+            });
           }
-          const cases = parse.number(splitCounty.substring(splitCounty.indexOf('(') + 1, splitCounty.length).trim());
+        });
+
+        return counties;
+      },
+      '2020-3-17': async function() {
+        this.type = 'csv';
+        this.url = 'https://opendata.arcgis.com/datasets/3d9ca88970dd4689a701354d7fa6830b_0.csv';
+
+        const data = await fetch.csv(this.url);
+
+        const counties = [];
+        for (const county of data) {
+          let countyName;
+          if (county.COUNTY === 'Baltimore City') {
+            countyName = parse.string(county.COUNTY);
+          } else {
+            countyName = transform.addCounty(parse.string(county.COUNTY));
+          }
           counties.push({
-            county,
-            cases
+            county: countyName,
+            cases: parse.number(county.COVID19Cases),
+            deaths: parse.number(county.COVID19Deaths),
+            tested: parse.number(county.COVID19Recovered)
           });
         }
-      });
-      return counties;
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      }
     }
   },
   {

@@ -1,5 +1,6 @@
 import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
+import * as datetime from '../lib/datetime.js';
 import calculateRating from '../lib/rating.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
@@ -105,8 +106,33 @@ function addData(cases, location, result) {
 }
 
 /*
-    Begin the scraping process
-  */
+  Run the correct scraper for this location
+*/
+function runScraper(location) {
+  if (typeof location.scraper === 'function') {
+    return location.scraper();
+  }
+  if (typeof location.scraper === 'object') {
+    // Find the closest date
+    const targetDate = process.env.SCRAPE_DATE || datetime.getDate();
+    let scraperToUse = null;
+    for (const [date, scraper] of Object.entries(location.scraper)) {
+      if (datetime.dateIsBeforeOrEqualTo(date, targetDate)) {
+        scraperToUse = scraper;
+      }
+    }
+    if (scraperToUse === null) {
+      throw new Error(`Could not find scraper for ${transform.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
+    }
+    return scraperToUse.call(location);
+  }
+
+  throw new Error('Why on earth is the scraper for %s a %s?', transform.getName(location), typeof scraper);
+}
+
+/*
+  Begin the scraping process
+*/
 async function scrape(options) {
   const locations = [];
   const errors = [];
@@ -123,7 +149,7 @@ async function scrape(options) {
     }
     if (location.scraper) {
       try {
-        addData(locations, location, await location.scraper());
+        addData(locations, location, await runScraper(location));
       } catch (err) {
         console.error('  ❌ Error processing %s: ', transform.getName(location), err);
 
