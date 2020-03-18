@@ -2304,7 +2304,7 @@ const scrapers = [
     url: ['http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=', +new Date()].join(''),
     timeseries: true,
     scraper: async function () {
-      let datetime = process.env['SCRAPE_DATE'] ? new Date(process.env['SCRAPE_DATE']) : new Date()
+      let scrapeDate = process.env['SCRAPE_DATE'] ? new Date(process.env['SCRAPE_DATE']) : datetime.getDate()
       //https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o
       let ufs = {
         'Acre': ['AC', 881935, [-9.0238, -70.8120]],
