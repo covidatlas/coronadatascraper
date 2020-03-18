@@ -1040,6 +1040,7 @@ const scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.sfdph.org/dph/alerts/coronavirus.asp',
+    type: 'paragraph',
     async scraper() {
       let deaths;
       let cases;
