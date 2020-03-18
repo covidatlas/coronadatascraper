@@ -1223,10 +1223,21 @@ const scrapers = [
     async scraper() {
       const $ = await fetch.page(this.url);
 
-      // this is brittle as all hell
-      const $h3 = $('h3:contains("confirmed case")');
+      // Site currently contains information in a headline only
 
-      const matches = $h3.text().match(/there are (\d+) confirmed cases? in Yolo/);
+      if (datetime.scrapeDateIsBefore('2020-03-17')) {
+        const $h3 = $('h3:contains("confirmed case")');
+        const matches = $h3.text().match(/there are (\d+) confirmed cases? in Yolo/);
+
+        return {
+          cases: parse.number(matches[1])
+        };
+      }
+
+      // They started adding in asterisks like - there are **4 confirmed cases
+      const $h3 = $('h3:contains("confirmed case")');
+      const matches = $h3.text().match(/(\d+) confirmed case/);
+
       return {
         cases: parse.number(matches[1])
       };
@@ -1374,13 +1385,43 @@ const scrapers = [
     async scraper() {
       const $ = await fetch.page(this.url);
 
-      const h3 = $('h6:contains("confirmed cases of COVID-19")')
-        .first()
-        .text();
-      const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
+      if (datetime.scrapeDateIsBefore('2020-03-17')) {
+        const h3 = $('h6:contains("confirmed cases of COVID-19")')
+          .first()
+          .text();
+        const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
+
+        return {
+          cases
+        };
+      }
+
+      // Parse the table and ensure that the header labels match
+      // the expected value
+
+      const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
+
+      const $headers = $table.find('tbody > tr:nth-child(2) > td');
+      const $numbers = $table.find('tbody > tr:nth-child(3) > td');
+
+      let cases = 0;
+      let deaths = 0;
+
+      $headers.each((index, td) => {
+        const $td = $(td);
+
+        if ($td.text().includes('Cases')) {
+          cases = parse.number($numbers.eq(index).text());
+        }
+
+        if ($td.text().includes('Deaths')) {
+          deaths = parse.number($numbers.eq(index).text());
+        }
+      });
 
       return {
-        cases
+        cases,
+        deaths
       };
     }
   },
@@ -1562,13 +1603,24 @@ const scrapers = [
       // Resource contains multiple updates shown chronologically however it is unclear now that
       // they will follow any reliable pattern. This captures the first one as the latest
 
+      if (datetime.scrapeDateIsBefore('2020-3-17')) {
+        const cases = parse.number(
+          $('font:contains("Glenn County COVID-19 Cases")')
+            .first()
+            .text()
+            .match(/Cases: (\d+)/)[1]
+        );
+        return {
+          cases
+        };
+      }
+
       const cases = parse.number(
-        $('font:contains("Glenn County COVID-19 Cases")')
+        $('span:contains("Glenn County COVID-19 Cases")')
           .first()
           .text()
           .match(/Cases: (\d+)/)[1]
       );
-
       return {
         cases
       };
