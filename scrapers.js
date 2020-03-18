@@ -590,7 +590,7 @@ const scrapers = [
     async scraper() {
       const $ = await fetch.page(this.url);
 
-      if (datetime.scrapeDateIs('2020-3-16')) {
+      if (datetime.scrapeDateIsAfter('2020-3-15')) {
         return {
           cases: parse.number(
             $('span:contains("Positive")')
