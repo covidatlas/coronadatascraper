@@ -1404,49 +1404,50 @@ const scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'http://www.sjcphs.org/coronavirus.aspx#res',
-    async scraper() {
-      const $ = await fetch.page(this.url);
+    scraper: {
+      '0': async function() {
+        const $ = await fetch.page(this.url);
+        this.type = 'paragraph';
 
-      if (datetime.scrapeDateIsBefore('2020-03-17')) {
         const h3 = $('h6:contains("confirmed cases of COVID-19")')
           .first()
           .text();
         const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
-        this.type = 'paragraph';
 
         return {
           cases
         };
+      },
+      '2020-3-17': async function() {
+        const $ = await fetch.page(this.url);
+        this.type = 'table';
+
+        const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
+
+        const $headers = $table.find('tbody > tr:nth-child(2) > td');
+        const $numbers = $table.find('tbody > tr:nth-child(3) > td');
+
+        let cases = 0;
+        let deaths = 0;
+
+        // Parse the table and ensure that the header labels match the expected value
+        $headers.each((index, td) => {
+          const $td = $(td);
+
+          if ($td.text().includes('Cases')) {
+            cases = parse.number($numbers.eq(index).text());
+          }
+
+          if ($td.text().includes('Deaths')) {
+            deaths = parse.number($numbers.eq(index).text());
+          }
+        });
+
+        return {
+          cases,
+          deaths
+        };
       }
-
-      // Parse the table and ensure that the header labels match
-      // the expected value
-
-      this.type = 'table';
-      const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
-
-      const $headers = $table.find('tbody > tr:nth-child(2) > td');
-      const $numbers = $table.find('tbody > tr:nth-child(3) > td');
-
-      let cases = 0;
-      let deaths = 0;
-
-      $headers.each((index, td) => {
-        const $td = $(td);
-
-        if ($td.text().includes('Cases')) {
-          cases = parse.number($numbers.eq(index).text());
-        }
-
-        if ($td.text().includes('Deaths')) {
-          deaths = parse.number($numbers.eq(index).text());
-        }
-      });
-
-      return {
-        cases,
-        deaths
-      };
     }
   },
   {
