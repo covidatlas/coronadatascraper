@@ -169,7 +169,7 @@ async function scrape(options) {
 
   // De-dupe data
   const seenLocations = {};
-  let i = locations.length - 1;
+  let i = locations.length;
   let deDuped = 0;
   while (i-- > 0) {
     const location = locations[i];
