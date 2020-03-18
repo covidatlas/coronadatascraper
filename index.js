@@ -15,7 +15,7 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
   }
 
   // Add SSL certificates for sources that use non-standard ones
-  const files = await fs.readFiles('./ssl');
+  const files = await fs.getFilesInDir('./ssl');
   for (const file of files) {
     rootCas.addFile(`./ssl/${file}`);
   }

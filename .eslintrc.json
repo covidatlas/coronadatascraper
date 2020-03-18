@@ -13,6 +13,7 @@
     "no-restricted-syntax": "off",
     "no-shadow": "warn",
     "import/extensions": ["error", "ignorePackages"],
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "jest/no-try-expect": "off"
   }
 }
