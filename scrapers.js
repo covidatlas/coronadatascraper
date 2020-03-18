@@ -463,15 +463,40 @@ const scrapers = [
     async scraper() {
       const $ = await fetch.page(this.url);
 
+      if (datetime.scrapeDateIsBefore('2020-3-17')) {
+        let cases = 0;
+        cases += parse.number(
+          $('p:contains("Number of PHL positives")')
+            .first()
+            .text()
+            .split(': ')[1]
+        );
+        cases += parse.number(
+          $('p:contains("Number of commercial lab positives")')
+            .first()
+            .text()
+            .split(': ')[1]
+        );
+
+        return {
+          cases,
+          tested: parse.number(
+            $('p:contains("Number of people tested overall")')
+              .first()
+              .text()
+              .split(': ')[1]
+          )
+        };
+      }
       let cases = 0;
       cases += parse.number(
-        $('p:contains("Number of PHL positives")')
+        $('li:contains("Number of PHL positives")')
           .first()
           .text()
           .split(': ')[1]
       );
       cases += parse.number(
-        $('p:contains("Number of commercial lab positives")')
+        $('li:contains("Number of commercial lab positives")')
           .first()
           .text()
           .split(': ')[1]
@@ -480,7 +505,7 @@ const scrapers = [
       return {
         cases,
         tested: parse.number(
-          $('p:contains("Number of people tested overall")')
+          $('li:contains("Number of people tested overall")')
             .first()
             .text()
             .split(': ')[1]
