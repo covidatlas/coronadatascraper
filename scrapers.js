@@ -2368,7 +2368,6 @@ const scrapers = [
             city: undefined,
             county: undefined,
             state: labels[parseInt(value['uid'])][0],
-            country: 'Brazil',
             cases: value['cases'] || 0,
             deaths: value['deaths'] || 0,
             recovered: undefined,
