@@ -587,24 +587,10 @@ const scrapers = [
     country: 'USA',
     url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
     type: 'list',
-    async scraper() {
-      const $ = await fetch.page(this.url);
-
-      if (datetime.scrapeDateIsAfter('2020-3-15')) {
-        return {
-          cases: parse.number(
-            $('span:contains("Positive")')
-              .text()
-              .split(':')[1]
-          ),
-          tested: parse.number(
-            $('span:contains("Total number of people tested")')
-              .text()
-              .split(':')[1]
-          )
-        };
-      }
-      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+    scraper: {
+      '0': async function() {
+        this.url = 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub';
+        const $ = await fetch.page(this.url);
         const counties = [];
 
         const $lis = $('p:contains("Positive cases by county of residence")')
@@ -666,8 +652,25 @@ const scrapers = [
         counties.push(transform.sumData(counties));
 
         return counties;
+      },
+      '2020-3-15': async function() {
+        this.url = 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub';
+        this.type = 'paragraph';
+        const $ = await fetch.page(this.url);
+
+        return {
+          cases: parse.number(
+            $('span:contains("Positive")')
+              .text()
+              .split(':')[1]
+          ),
+          tested: parse.number(
+            $('span:contains("Total number of people tested")')
+              .text()
+              .split(':')[1]
+          )
+        };
       }
-      throw new Error('Hey remember how Colorado is awful at reporting data? You gotta do manual work again today to get it');
     }
   },
   {
