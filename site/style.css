@@ -22,6 +22,11 @@
   --spectrum-global-color-blue-500: var(--Blue200);
   --spectrum-global-color-blue-600: var(--Blue300);
   --spectrum-global-color-blue-700: var(--Blue400);
+
+  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-blue-600);
 }
 
 * {
@@ -117,6 +122,15 @@ body {
 
 .spectrum-ActionButton .icon {
   font-size: 24px;
+}
+
+.spectrum-Button--cta {
+
+}
+
+.spectrum-Button .icon {
+  font-size: 18px;
+  margin-right: 8px;
 }
 
 .cds-Editor-menuToggle {

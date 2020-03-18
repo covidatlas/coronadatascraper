@@ -27,25 +27,19 @@
 
 .icon-menu:before {
   content: "\e905";
-  color: var(--Gray600);
 }
 .icon-file:before {
   content: "\e904";
-  color: var(--Gray600);
 }
 .icon-code:before {
   content: "\e903";
-  color: var(--Gray600);
 }
 .icon-view:before {
   content: "\e900";
-  color: var(--Gray600);
 }
 .icon-search:before {
   content: "\e901";
-  color: var(--Gray600);
 }
 .icon-download:before {
   content: "\e902";
-  color: var(--Gray600);
 }

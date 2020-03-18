@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'FeatureCollection',
             features: featureCollection.features.filter((feature, index) => {
               feature.id = index;
-              return feature.properties.admin === undefined;
+              return feature.properties.admin !== feature.properties.name;
             })
           };
 
