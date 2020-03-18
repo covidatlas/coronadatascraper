@@ -114,7 +114,7 @@ function runScraper(location) {
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
-    const targetDate = process.env.SCRAPE_DATE;
+    const targetDate = process.env.SCRAPE_DATE || datetime.getDate();
     let scraperToUse = null;
     for (const [date, scraper] of Object.entries(location.scraper)) {
       if (datetime.dateIsBeforeOrEqualTo(date, targetDate)) {
@@ -122,7 +122,7 @@ function runScraper(location) {
       }
     }
     if (scraperToUse === null) {
-      throw new Error('Could not find scraper for %s at %s, only have: ', transform.getName(location), process.env.SCRAPE_DATE, Object.keys(location.scraper).join(', '));
+      throw new Error(`Could not find scraper for ${transform.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
     }
     return scraperToUse.call(location);
   }
