@@ -230,6 +230,11 @@ div.spectrum-SideNav-itemLink:hover {
   font-size: 36px;
 }
 
+/* Map */
+#map {
+  height: 100%;
+  width: 100%;
+}
 
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {

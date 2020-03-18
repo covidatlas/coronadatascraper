@@ -31,328 +31,14 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-160595752-1');
-
-    document.addEventListener('DOMContentLoaded', function() {
-      let routes = {
-        '#sources': showSources,
-        '#home': function() {}
-      };
-
-      let pages = {
-        '#home': '.cds-Home',
-        '#editor': '.cds-Editor',
-        '#sources': '.cds-Sources'
-      };
-
-      var sidebar = document.querySelector('.spectrum-Site-sideBar');
-      var overlay = document.querySelector('.spectrum-Site-overlay');
-
-      function openSidebar() {
-        sidebar.classList.add('is-open');
-        overlay.classList.add('is-open');
-      }
-
-      function closeSidebar() {
-        sidebar.classList.remove('is-open');
-        overlay.classList.remove('is-open');
-      }
-
-      // Todo make this site less crappy and don't copy paste this
-      function getName(location) {
-        let name = '';
-        let sep = '';
-        if (location.city) {
-          name += location.city;
-          sep = ', ';
-        }
-        if (location.county) {
-          name += sep + location.county;
-          sep = ', ';
-        }
-        if (location.state) {
-          name += sep + location.state;
-          sep = ', ';
-        }
-        if (location.country) {
-          name += sep + location.country;
-          sep = ', ';
-        }
-        return name;
-      }
-
-      function getGrade(rating) {
-        rating *= 200;
-
-        if (rating >= 97) {
-          return 'A+';
-        }
-        if (rating >= 93) {
-          return 'A';
-        }
-        if (rating >= 90) {
-          return 'A-';
-        }
-        if (rating >= 87) {
-          return 'B+';
-        }
-        if (rating >= 83) {
-          return 'B';
-        }
-        if (rating >= 80) {
-          return 'B-';
-        }
-        if (rating >= 77) {
-          return 'C+';
-        }
-        if (rating >= 73) {
-          return 'C';
-        }
-        if (rating >= 70) {
-          return 'C-';
-        }
-        if (rating >= 67) {
-          return 'D+';
-        }
-        if (rating >= 63) {
-          return 'D';
-        }
-        if (rating >= 60) {
-          return 'D';
-        }
-        if (rating >= 57) {
-          return 'F+';
-        }
-        if (rating >= 53) {
-          return 'F';
-        }
-        if (rating >= 50) {
-          return 'F';
-        }
-        return 'F-';
-      }
-
-      function ratingTemplate(source, index) {
-        let typeIcons = {
-          'json': '✅',
-          'csv': '✅',
-          'table': '⚠️',
-          'list': '❌',
-          'paragraph': '🤮',
-        };
-        let typeNames = {
-          'json': 'JSON',
-          'csv': 'CSV'
-        };
-
-        let granular = source.city || source.county;
-        let granularity = 'country-level';
-        if (source.city || source.aggregate === 'city') {
-          granularity = 'city-level';
-          granular = true;
-        }
-        else if (source.county || source.aggregate === 'county') {
-          granularity = 'county-level';
-          granular = true;
-        }
-        else if (source.state || source.aggregate === 'state') {
-          granularity = 'state-level';
-        }
-
-        let sourceName = source.url.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/)[1];
-
-
-        return `
-        <li class="cds-ReportCard">
-          <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
-          <div class="cds-ReportCard-content">
-            <h2 class="spectrum-Heading spectrum-Heading--L">${index + 1}. ${getName(source)}</h2>
-            <h3 class="spectrum-Body spectrum-Body--XL"><a href="${source.url}" class="spectrum-Link" target="_blank">${sourceName}</a></h3>
-            <div class="cds-ReportCard-criteria">
-              <div class="cds-ReportCard-criterion">
-                ${typeIcons[source.type]} ${typeNames[source.type] || source.type.substr(0, 1).toUpperCase()+source.type.substr(1)}
-              </div>
-              <div class="cds-ReportCard-criterion">
-                ${source.timeseries ? '✅' : '❌'} Timeseries
-              </div>
-              <div class="cds-ReportCard-criterion">
-                ${source.aggregate ? '✅' : '❌'} Aggregate
-              </div>
-              <div class="cds-ReportCard-criterion">
-                ${source.ssl ? '✅' : '❌'} SSL
-              </div>
-              <div class="cds-ReportCard-criterion">
-                ${source.headless ? '❌' : '✅'} ${source.headless ? 'Requires' : ' Does not require'} JavaScript
-              </div>
-              <div class="cds-ReportCard-criterion">
-                ${granular ? '✅' : '❌'} Granularity (${granularity})
-              </div>
-            </div>
-          </div>
-        </li>
-`;
-      }
-
-      function showSources() {
-        let list = document.querySelector('.cds-Sources-list');
-        fetch('ratings.json', function(response) {
-          var ratings;
-          try {
-            ratings = JSON.parse(this.responseText);
-          }
-          catch(error) {
-            list.innerHTML = '<div class="cds-Error">Failed to load ratings: ' + error + '</div>';
-            return;
-          }
-
-          list.innerHTML = '';
-          for (var i = 0; i < ratings.length; i++) {
-            list.insertAdjacentHTML('beforeend', ratingTemplate(ratings[i], i));
-          }
-        });
-      }
-
-      function showPage(pageToShow, noPush) {
-        if (routes[pageToShow]) {
-          if (!noPush) {
-            history.pushState(null, '', pageToShow);
-          }
-          routes[pageToShow]();
-        }
-
-        // Set selected
-        let currentSideLink = document.querySelector('.spectrum-SideNav-item a[href="'+pageToShow+'"]');
-        let currentSideItem = currentSideLink && currentSideLink.closest('.spectrum-SideNav-item');
-        let otherSideItem = document.querySelector('.spectrum-SideNav-item.is-selected');
-        currentSideItem && currentSideItem.classList.add('is-selected');
-        otherSideItem && otherSideItem.classList.remove('is-selected');
-
-        for (let page in pages) {
-          let selector = pages[page];
-          if (page === pageToShow) {
-            document.querySelector(selector).hidden = false;
-          }
-          else {
-            document.querySelector(selector).hidden = true;
-          }
-        }
-        closeSidebar();
-      }
-
-      document.addEventListener('click', function(evt) {
-        var target = evt.target.closest('a');
-        if (target) {
-          if (target.tagName === 'A' && target.hasAttribute('download') && !target.hasAttribute('data-noview')) {
-            // Stop download
-            evt.preventDefault();
-
-            var url = target.getAttribute('href');
-            loadFile(url, target.getAttribute('data-levels'));
-          }
-          else if (target.tagName === 'A' && routes[target.getAttribute('href')]) {
-            // Stop download
-            evt.preventDefault();
-
-            showPage(target.getAttribute('href'));
-          }
-        }
-      });
-
-      function fetch(url, callback) {
-        var req = new XMLHttpRequest();
-        req.addEventListener('load', callback);
-
-        req.open('GET', url);
-        req.send();
-      }
-
-      function loadFile(url, dataLevels, noPush) {
-        document.body.classList.add('is-editing');
-
-        var req = new XMLHttpRequest();
-        fetch(url, function() {
-          document.querySelector('.cds-Heading').innerText = url;
-
-          var extension = url.split('.').pop();
-
-          showPage('#editor');
-          document.querySelector('.cds-Editor-download').href = url;
-          if (extension === 'json') {
-            var obj;
-            try {
-              obj = JSON.parse(this.responseText);
-            }
-            catch(error) {
-              document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Error">Failed to load ' + url + ': ' + error + '</div>';
-              return;
-            }
-            const formatter = new JSONFormatter(obj, dataLevels || 1);
-
-            document.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
-            document.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
-          }
-          else {
-            var data = Papa.parse(this.responseText, {
-              header: true,
-              skipEmptyLines: true
-            });
-
-            document.querySelector('.cds-Editor-content').innerHTML = '';
-            new Handsontable(document.querySelector('.cds-Editor-content'), {
-              data: data.data,
-              rowHeaders: true,
-              colHeaders: true,
-              colHeaders: data.meta.fields,
-              columnSorting: true,
-              licenseKey: 'non-commercial-and-evaluation'
-            });
-          }
-
-          // Select menu item
-          var previousItem = document.querySelector('.spectrum-SideNav-item.is-selected');
-          if (previousItem) {
-            previousItem.classList.remove('is-selected');
-          }
-
-          document.querySelector('a[href="' + url + '"]').closest('.spectrum-SideNav-item').classList.add('is-selected');
-        });
-
-        if (!noPush) {
-          history.pushState(null, '', '#' + url, '');
-        }
-      }
-
-      document.addEventListener('click', function(evt) {
-        var button = evt.target.closest('button');
-        if (button && button.classList.contains('js-toggleMenu')) {
-          openSidebar();
-        }
-
-        if (evt.target.closest('.spectrum-Site-overlay')) {
-          closeSidebar();
-        }
-      });
-
-      function handleHashChange() {
-        if (window.location.hash) {
-          if (routes[window.location.hash]) {
-            showPage(window.location.hash, true);
-          }
-          else {
-            loadFile(window.location.hash.substr(1), null, true);
-          }
-        }
-        else {
-          showPage('#home', false);
-        }
-      }
-      window.addEventListener('hashchange', handleHashChange, false);
-
-      // Init
-      handleHashChange()
-    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/json-formatter-js@2.3.4/dist/json-formatter.umd.min.js"></script>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+
+  <script src="index.js"></script>
 </head>
 <body class="spectrum spectrum--light spectrum--medium">
   <!-- <a class="cds-Ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a> -->
@@ -517,7 +203,27 @@
           </div>
         </div>
 
-        <div class="cds-Editor" hidden>
+        <div class="cds-Editor cds-Map" hidden>
+          <div class="cds-Editor-header">
+            <div class="cds-Editor-actions spectrum-ButtonGroup cds-Editor-menuToggle">
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+                <span class="icon icon-menu"></span>
+              </button>
+            </div>
+            <code class="cds-Editor-title spectrum-Code spectrum-Code--XL cds-Heading">features.json</code>
+            <div class="cds-Editor-actions spectrum-ButtonGroup">
+              <a href="" download class="spectrum-ActionButton cds-Editor-download" data-noview>
+                <span class="spectrum-Icon icon icon-download"></span>
+                <span class="spectrum-ActionButton-label">Download</span>
+              </a>
+            </div>
+          </div>
+          <div class="cds-Editor-content">
+            <div id="map"></div>
+          </div>
+        </div>
+
+        <div class="cds-Editor cds-FileEditor" hidden>
           <div class="cds-Editor-header">
             <div class="cds-Editor-actions spectrum-ButtonGroup cds-Editor-menuToggle">
               <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
@@ -532,7 +238,7 @@
               </a>
             </div>
           </div>
-          <div class="cds-Editor-content"></div>
+          <div class="cds-Editor-content cds-FileEditor-content"></div>
         </div>
       </div>
     </div>
