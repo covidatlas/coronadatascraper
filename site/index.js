@@ -210,12 +210,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const sourceName = source.url.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/)[1];
+    const slug = `sources:${getName(source)
+      .replace(',', '-')
+      .replace(/\s/g, '')}`;
 
     return `
-    <li class="cds-ReportCard">
+    <li class="cds-ReportCard" id="${slug}">
       <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
       <div class="cds-ReportCard-content">
-        <h2 class="spectrum-Heading spectrum-Heading--L">${index + 1}. ${getName(source)}</h2>
+        <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index + 1}. ${getName(source)}</a></h2>
         <h3 class="spectrum-Body spectrum-Body--XL"><a href="${source.url}" class="spectrum-Link" target="_blank">${sourceName}</a></h3>
         <div class="cds-ReportCard-criteria">
           <div class="cds-ReportCard-criterion">
@@ -249,19 +252,26 @@ document.addEventListener('DOMContentLoaded', function() {
       for (let i = 0; i < ratings.length; i++) {
         list.insertAdjacentHTML('beforeend', ratingTemplate(ratings[i], i));
       }
+      if (window.location.hash.indexOf(':') !== -1) {
+        document.getElementById(window.location.hash.substr(1)).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     });
   }
 
+  let currentPage = null;
   function showPage(pageToShow, noPush) {
     // Set selected
     const currentSideLink = document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow}"]`);
     const currentSideItem = currentSideLink && currentSideLink.closest('.spectrum-SideNav-item');
     const otherSideItem = document.querySelector('.spectrum-SideNav-item.is-selected');
-    if (currentSideItem) {
-      currentSideItem.classList.add('is-selected');
-    }
     if (otherSideItem) {
       otherSideItem.classList.remove('is-selected');
+    }
+    if (currentSideItem) {
+      currentSideItem.classList.add('is-selected');
     }
 
     for (const page in pages) {
@@ -279,6 +289,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       routes[pageToShow]();
     }
+
+    currentPage = pageToShow;
 
     closeSidebar();
   }
@@ -360,11 +372,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  function getHashStart() {
+    return window.location.hash.split(':')[0];
+  }
+
   function handleHashChange() {
     if (window.location.hash) {
-      if (routes[window.location.hash]) {
-        showPage(window.location.hash, true);
-      } else {
+      if (routes[getHashStart()]) {
+        if (currentPage !== getHashStart()) {
+          showPage(getHashStart(), true);
+        }
+      } else if (window.location.hash.match('.csv') || window.location.hash.match('.json')) {
         loadFile(window.location.hash.substr(1), null, true);
       }
     } else {

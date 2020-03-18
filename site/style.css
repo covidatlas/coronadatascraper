@@ -171,6 +171,10 @@ body {
   text-decoration: underline;
 }
 
+.spectrum-Link--silent {
+  text-decoration: none;
+}
+
 div.spectrum-SideNav-itemLink {
   cursor: default;
 }
