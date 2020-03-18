@@ -2306,7 +2306,7 @@ const scrapers = [
     priority: 1,
     url: `http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=${datetime.getYYYYMMDD()}`,
     timeseries: true,
-    format: 'json',
+    aggregate: 'county',
     _dataIds: [
       { uid: 11, name: 'Rondônia' },
       { uid: 12, name: 'Acre' },
