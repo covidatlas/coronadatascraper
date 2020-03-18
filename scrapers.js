@@ -923,7 +923,8 @@ const scrapers = [
   {
     state: 'NY',
     country: 'USA',
-    url: 'https://www.health.ny.gov/diseases/communicable/coronavirus/',
+    // NY state changed URL
+    url: datetime.scrapeDateIsBefore('2020-3-17') ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/' : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases',
     type: 'table',
     aggregate: 'county',
     _countyMap: {
@@ -935,7 +936,12 @@ const scrapers = [
       const counties = [];
       const $ = await fetch.page(this.url);
 
-      const $table = $('#case_count_table');
+      let $table;
+      if (datetime.scrapeDateIsBefore('2020-3-17')) {
+        $table = $('#case_count_table');
+      } else {
+        $table = $('table').first();
+      }
 
       const $trs = $table.find('tr:not(.total_row):not(:first-child)');
 
@@ -943,10 +949,12 @@ const scrapers = [
         const $tr = $(tr);
         let countyName = parse.string($tr.find('td:first-child').text()).replace(':', '');
         countyName = this._countyMap[countyName] || countyName;
-        counties.push({
-          county: transform.addCounty(countyName),
-          cases: parse.number($tr.find('td:last-child').text())
-        });
+        if (countyName !== 'New York State (Outside of NYC)' && countyName !== 'Total Positive Cases (Statewide)') {
+          counties.push({
+            county: transform.addCounty(countyName),
+            cases: parse.number($tr.find('td:last-child').text())
+          });
+        }
       });
 
       counties.push(transform.sumData(counties));
