@@ -714,17 +714,21 @@ const scrapers = [
           });
         });
       } else {
-        this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
+        if (datetime.scrapeDateIsBefore('2020-3-17')) {
+          this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
+        } else {
+          this.url = 'https://opendata.arcgis.com/datasets/79e1165ecb95496589d39faa25a83ad4_0.csv';
+        }
         this.type = 'csv';
 
         // Use the new map
         const data = await fetch.csv(this.url);
 
+        const unassigned = { county: UNASSIGNED, cases: 0, deaths: 0 };
         for (const county of data) {
-          if (county.PARISH === 'Out of State Resident') {
-            continue;
-          }
-          if (county.PARISH === 'Parish Under Investigation') {
+          if (county.PARISH === 'Out of State Resident' || county.PARISH === 'Out of State' || county.PARISH === 'Under Investigation' || county.PARISH === 'Parish Under Investigation') {
+            unassigned.cases += parse.number(county.Cases);
+            unassigned.deaths += parse.number(county.Deaths);
             continue;
           }
           const countyName = `${parse.string(county.PARISH)} Parish`;
@@ -734,6 +738,8 @@ const scrapers = [
             deaths: parse.number(county.Deaths)
           });
         }
+
+        counties.push(unassigned);
       }
 
       counties.push(transform.sumData(counties));
