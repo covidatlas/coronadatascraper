@@ -1898,9 +1898,21 @@ const scrapers = [
             });
           }
         });
-      } else {
+      } else if (datetime.scrapeDateIsBefore('2020-3-17')) {
         const $table = $('table.ms-rteTable-default').first();
         const $trs = $table.find('tbody > tr');
+
+        $trs.each((index, tr) => {
+          const $tr = $(tr);
+          const data = {
+            county: parse.string($tr.find('td:first-child').text()),
+            cases: parse.number($tr.find('td:last-child').text())
+          };
+          counties.push(data);
+        });
+      } else {
+        const $countyTable = $('table.ms-rteTable-default').eq(1);
+        const $trs = $countyTable.find('tbody > tr');
 
         $trs.each((index, tr) => {
           const $tr = $(tr);
