@@ -2367,7 +2367,7 @@ const scrapers = [
             cases: value['cases'] || 0,
             deaths: value['deaths'] || 0,
             recovered: undefined,
-            tested: value['suspects'] || 0,
+            tested: undefined,
             population: labels[parseInt(value['uid'])][1],
             coordinates: [labels[parseInt(value['uid'])][2][1], labels[parseInt(value['uid'])][2][0]]
           })
