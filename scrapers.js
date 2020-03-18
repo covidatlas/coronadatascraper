@@ -2303,6 +2303,7 @@ const scrapers = [
     priority: 1,
     url: `http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=${datetime.getYYYYMMDD()}`,
     timeseries: true,
+    format: 'json',
     _dataIds: [
       { uid: 11, name: 'Rondônia' },
       { uid: 12, name: 'Acre' },
@@ -2616,24 +2617,20 @@ const scrapers = [
       dataJson.brazil
         .filter(row => row.date === datetime.getDDMMYYYY(scrapeDate, '/'))
         .forEach(dateData => {
-          const date = dateData.date.split('/');
-          const dataDate = new Date(parseInt(date[2], 10), parseInt(date[1], 10) - 1, parseInt(date[0], 10));
+          // const date = dateData.date.split('/');
+          // const dataDate = new Date(parseInt(date[2], 10), parseInt(date[1], 10) - 1, parseInt(date[0], 10));
           dateData.values.forEach(value => {
             dataBrazil.push({
-              date: dataDate,
-              country: 'BRA',
-              city: undefined,
-              county: undefined,
+              // date: dataDate, // not used yet, will always equal scrape date
               state: labels[parseInt(value.uid, 10)][0],
               cases: value.cases || 0,
               deaths: value.deaths || 0,
-              recovered: undefined,
-              tested: undefined,
               population: labels[parseInt(value.uid, 10)][1],
               coordinates: [labels[parseInt(value.uid, 10)][2][1], labels[parseInt(value.uid, 10)][2][0]]
             });
           });
         });
+
       dataBrazil.push(transform.sumData(dataBrazil));
       return dataBrazil;
     }
