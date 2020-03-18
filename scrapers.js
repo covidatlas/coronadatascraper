@@ -1390,6 +1390,7 @@ const scrapers = [
           .first()
           .text();
         const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
+        this.type = 'paragraph';
 
         return {
           cases
@@ -1399,6 +1400,7 @@ const scrapers = [
       // Parse the table and ensure that the header labels match
       // the expected value
 
+      this.type = 'table';
       const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
 
       const $headers = $table.find('tbody > tr:nth-child(2) > td');
