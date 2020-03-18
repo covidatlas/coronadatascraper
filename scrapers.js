@@ -1099,30 +1099,18 @@ const scrapers = [
     county: 'Alameda County',
     state: 'CA',
     country: 'USA',
-    // Error "Please enable JavaScript to view the page content."
     url: 'http://www.acphd.org/2019-ncov.aspx',
+    headless: true,
+    type: 'paragraph',
     async scraper() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.headless(this.url);
 
-      const $table = $('.sccgov-responsive-table');
+      const $el = $('p:contains("Positive Cases")');
+
+      const matches = $el.html().match(/Positive Cases:.*?(\d+).*/);
 
       return {
-        deaths: parse.number(
-          $table
-            .find('div:contains("Deaths")')
-            .parent()
-            .children()
-            .last()
-            .text()
-        ),
-        cases: parse.number(
-          $table
-            .find('div:contains("Total Confirmed Cases")')
-            .parent()
-            .children()
-            .last()
-            .text()
-        )
+        cases: parse.number(matches[1])
       };
     }
   },
@@ -1197,7 +1185,7 @@ const scrapers = [
 
       const $el = $('*:contains("Number of Positive Cases")').first();
 
-      const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d)/);
+      const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d+)/);
 
       return {
         cases: parse.number(matches[1])
@@ -1312,7 +1300,7 @@ const scrapers = [
 
       const $el = $('*:contains("Confirmed cases")').first();
 
-      const matches = $el.text().match(/Confirmed cases:.*?(\d)/);
+      const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
 
       return {
         cases: parse.number(matches[1])
@@ -1358,7 +1346,7 @@ const scrapers = [
 
       const $el = $('h3:contains("Positive cases:")').first();
 
-      const matches = $el.text().match(/Positive cases:.*?(\d)/);
+      const matches = $el.text().match(/Positive cases:.*?(\d+)/);
 
       return {
         cases: parse.number(matches[1])
@@ -1728,7 +1716,7 @@ const scrapers = [
 
       const $el = $('p:contains("Confirmed cases:")').first();
 
-      const matches = $el.text().match(/Confirmed cases:.*?(\d)/);
+      const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
 
       return {
         cases: parse.number(matches[1])
