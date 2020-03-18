@@ -10,8 +10,6 @@ const writeData = async ({ locations, featureCollection, report, options, source
     suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
-  await fs.ensureDir('dist');
-
   await fs.writeFile(path.join('dist', `data${suffix}.json`), JSON.stringify(locations, null, 2));
 
   await fs.writeCSV(path.join('dist', `data${suffix}.csv`), stringify.csvForDay(locations));
