@@ -49,7 +49,7 @@ const scrapers = [
       const data = await fetch.json(this.url);
 
       const counties = [];
-      
+
       for (const county of data.characteristics_by_county.values) {
         counties.push({
           county: transform.addCounty(county.County),
