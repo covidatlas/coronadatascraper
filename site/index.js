@@ -161,10 +161,6 @@ function populateMap() {
       }
     }
 
-    if (location && location.state && location.country === 'USA') {
-      console.log(color);
-    }
-
     feature.properties.color = color || noPopulationDataColor;
   });
 
