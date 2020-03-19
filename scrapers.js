@@ -818,6 +818,8 @@ const scrapers = [
     aggregate: 'county',
     ssl: false, // Error: unable to verify the first certificate
     async scraper() {
+      // Important: this prevents SSL from failing
+      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
       const counties = [];
       const $ = await fetch.page(this.url);
 
@@ -844,6 +846,8 @@ const scrapers = [
           cases
         });
       });
+
+      delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
 
       counties.push(transform.sumData(counties));
 
@@ -2616,7 +2620,7 @@ const scrapers = [
       const ufs = this._ufs;
 
       const labels = {};
-      /* 
+      /*
       open and extract http://plataforma.saude.gov.br/novocoronavirus/
       JSON.stringify([...$('[data-uid]').map(function () { return ({ uid: $(this).data('uid'), name: $(this).data('name') }) })])
       */
