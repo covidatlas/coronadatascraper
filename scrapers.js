@@ -887,7 +887,6 @@ const scrapers = [
     type: 'table',
     aggregate: 'county',
     ssl: false, // Error: unable to verify the first certificate
-    certValidation: false, // Important: this prevents SSL from failing
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -2831,7 +2830,7 @@ const scrapers = [
       const ufs = this._ufs;
 
       const labels = {};
-      /*
+      /* 
       open and extract http://plataforma.saude.gov.br/novocoronavirus/
       JSON.stringify([...$('[data-uid]').map(function () { return ({ uid: $(this).data('uid'), name: $(this).data('name') }) })])
       */
