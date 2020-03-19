@@ -8,14 +8,15 @@
 const data = {};
 let map;
 
-const noCasesColor = 'rgba(255, 255, 255, 0.5)';
-const noPopulationDataColor = '#AAAAAA';
+const noCasesColor = '#faffef';
+const noPopulationDataColor = '#ffffff';
 
 const outlineColorHighlight = 'rgb(0,0,0)';
-const outlineColor = 'rgba(175, 175, 175, 0.5)';
+const outlineColor = 'rgba(0, 0, 0, 0.3)';
 
 const choroplethColors = {
   stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
+  yellowOrangePurple: ['#faffef', '#f3fac1', '#f6f191', '#ffe15d', '#fec327', '#ff9b00', '#fe7000', '#fa4d13', '#c52155', '#842e79'],
   heat: ['#FFFFFF', '#ffff5e', '#ffe70c', '#fead0a', '#fd6f08', '#fd2907', '#fd0407'],
   peach: ['rgb(253,222,166)', 'rgb(255,188,134)', 'rgb(249,152,133)', 'rgb(232,110,129)', 'rgb(224,88,136)'],
   pink: ['rgb(255, 244, 221)', 'rgb(255, 221, 215)', 'rgb(255, 197, 210)', 'rgb(254, 174, 203)', 'rgb(250, 150, 196)', 'rgb(245, 126, 189)', 'rgb(239, 100, 181)', 'rgb(232, 70, 173)', 'rgb(210, 56, 161)', 'rgb(187, 46, 150)', 'rgb(163, 36, 140)', 'rgb(138, 27, 131)', 'rgb(113, 22, 124)', 'rgb(86, 15, 116)', 'rgb(55, 11, 110)', 'rgb(0, 9, 104)'],
@@ -23,9 +24,41 @@ const choroplethColors = {
   magma: ['#fcfdbf', '#fde2a3', '#fec488', '#fea772', '#fc8961', '#f56b5c', '#e75263', '#d0416f', '#b73779', '#9c2e7f', '#832681', '#6a1c81', '#51127c', '#36106b', '#1d1147', '#0a0822']
 };
 
-const choroplethStyle = 'pureRatio';
+const choroplethColor = 'yellowOrangePurple';
 
-const choroplethColor = 'stoplight';
+function returnLightness(c) {
+  return d3.lab(c).l;
+}
+function normalizePercent(min, max, input) {
+  const range = max - min;
+  const correctedStartValue = input - min;
+  const percentage = (correctedStartValue * 100) / range;
+  return percentage / 100;
+}
+
+let domainArray = [];
+const colorsArray = choroplethColors[choroplethColor];
+const lightnessArray = colorsArray.map(key => 1 - returnLightness(key) / 100);
+
+const max = Math.max(...lightnessArray);
+const min = Math.min(...lightnessArray);
+
+for (let i = 0; i < colorsArray.length; i++) {
+  const l = lightnessArray[i]; // lightness value
+
+  const y = normalizePercent(min, max, l);
+  domainArray.push(Number(y.toFixed(2)));
+}
+
+domainArray = domainArray.sort();
+
+const fill = d3
+  .scaleLinear()
+  .domain(domainArray)
+  .range(colorsArray)
+  .interpolate(d3.interpolateHcl);
+
+const choroplethStyle = 'pureRatio';
 
 const type = 'cases';
 
@@ -35,7 +68,7 @@ const choroplethStyles = {
     const affectedPercent = locationData[type] / location.population;
     const percentRatio = affectedPercent / worstAffectedPercent;
 
-    return adjustTanh(percentRatio, 0.15, 2);
+    return adjustTanh(percentRatio);
   },
   rankAdjustedRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
     // Color based on rank
@@ -64,7 +97,7 @@ function getRatio(fractional, total) {
 }
 
 // Via https://math.stackexchange.com/a/57510
-function adjustTanh(value, a = 0.1, b = 1.75) {
+function adjustTanh(value, a = 0, b = 3) {
   return Math.min(Math.tanh(value + a) * b, 1);
 }
 
@@ -97,21 +130,6 @@ function getLocationsByRank(currentData, type, min = 3) {
   }
 
   return locations;
-}
-
-function getColorOnGradient(colors, position) {
-  if (position === 1) {
-    return colors[colors.length - 1];
-  }
-  if (position === 0) {
-    return colors[0];
-  }
-
-  const index = Math.floor(position * (colors.length - 1));
-  const startColor = colors[index];
-  const endColor = colors[index + 1];
-  const alpha = position * (colors.length - 1) - index;
-  return d3.interpolateRgb(startColor, endColor)(alpha);
 }
 
 function populateMap() {
@@ -156,7 +174,7 @@ function populateMap() {
         } else {
           const rank = locationsByRank.indexOf(location);
           const scaledColorValue = choroplethStyles[choroplethStyle](location, locationData, type, rank, locationsByRank.length, worstAffectedPercent);
-          color = getColorOnGradient(choroplethColors[choroplethColor], scaledColorValue);
+          color = fill(scaledColorValue);
         }
       }
     }

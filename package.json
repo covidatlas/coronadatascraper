@@ -32,6 +32,7 @@
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",
+    "d3-scale": "^3.2.1",
     "editorconfig": "^0.15.3",
     "fast-glob": "^3.2.2",
     "gh-pages": "^2.2.0",
