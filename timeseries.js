@@ -1,9 +1,12 @@
-import path from 'path';
-import generate from './index.js';
-import argv from './lib/cliArgs.js';
-import * as transform from './lib/transform.js';
-import * as datetime from './lib/datetime.js';
-import * as fs from './lib/fs.js';
+const imports = require('esm')(module);
+
+const path = require('path');
+
+const generate = imports('./index.js').default;
+const argv = imports('./lib/cliArgs.js').default;
+const fs = imports('./lib/fs.js');
+const transform = imports('./lib/transform.js');
+const datetime = imports('./lib/datetime.js');
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
