@@ -957,7 +957,7 @@ const scrapers = [
       const counties = [];
       for (const county of data) {
         counties.push({
-          county: parse.string(county.NAME),
+          county: transform.addCounty(parse.string(county.NAME)),
           cases: parse.number(county.Presumptive_Positive),
           recovered: parse.number(county.Recovered)
         });
@@ -1016,7 +1016,7 @@ const scrapers = [
       const counties = [];
       for (const county of data) {
         counties.push({
-          county: parse.string(county.County),
+          county: transform.addCounty(parse.string(county.County)),
           cases: parse.number(county.Counts)
         });
       }
@@ -2161,7 +2161,7 @@ const scrapers = [
         $trs.each((index, tr) => {
           const $tr = $(tr);
           const data = {
-            county: parse.string($tr.find('td:first-child').text()),
+            county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
             cases: parse.number($tr.find('td:last-child').text())
           };
           counties.push(data);
