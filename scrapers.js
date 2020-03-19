@@ -27,6 +27,48 @@ const UNASSIGNED = '(unassigned)';
 
 const scrapers = [
   {
+    state: 'CA',
+    country: 'USA',
+    priority: 1,
+    type: 'csv',
+    aggregate: 'county',
+    url: 'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
+    curator: {
+      name: 'Harriet Rowan',
+      email: 'hattierowan@gmail.com',
+      twitter: '@hattierowan',
+      github: 'HarrietRowan'
+    },
+    async scraper() {
+      const data = await fetch.csv(this.url);
+
+      const counties = [];
+
+      for (const stateData of data) {
+        const stateObj = {
+          county: transform.addCounty(stateData.county)
+        };
+        if (stateData.cases !== '') {
+          stateObj.cases = parse.number(stateData.cases);
+        }
+        if (stateData.tested !== '') {
+          stateObj.tested = parse.number(stateData.tested);
+        }
+        if (stateData.recovered !== '') {
+          stateObj.recovered = parse.number(stateData.recovered);
+        }
+        if (stateData.deaths !== '') {
+          stateObj.deaths = parse.number(stateData.deaths);
+        }
+        counties.push(stateObj);
+      }
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    }
+  },
+  {
     country: 'USA',
     url: 'https://covidtracking.com/api/states',
     type: 'json',
@@ -57,7 +99,11 @@ const scrapers = [
     country: 'DEU',
     url: 'https://covid19-germany.appspot.com/now',
     type: 'json',
-    ssl: true,
+    curator: {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com'
+    },
+    source: 'Berliner Morgenpost (aggregated data from individual ministries of health in Germany)',
     async scraper() {
       const data = await fetch.json(this.url);
       return {
@@ -933,6 +979,7 @@ const scrapers = [
     type: 'table',
     aggregate: 'county',
     ssl: false, // Error: unable to verify the first certificate
+    certValidation: false, // Important: this prevents SSL from failing
     async scraper() {
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -2876,7 +2923,7 @@ const scrapers = [
       const ufs = this._ufs;
 
       const labels = {};
-      /* 
+      /*
       open and extract http://plataforma.saude.gov.br/novocoronavirus/
       JSON.stringify([...$('[data-uid]').map(function () { return ({ uid: $(this).data('uid'), name: $(this).data('name') }) })])
       */
