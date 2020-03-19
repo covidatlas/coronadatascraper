@@ -133,16 +133,8 @@ function addData(cases, location, result) {
   Run the correct scraper for this location
 */
 function runScraper(location) {
-  const rejectUnauthorized = location.certValidation === false;
-  if (rejectUnauthorized) {
-    // Important: this prevents SSL from failing
-    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-  }
   if (typeof location.scraper === 'function') {
     return location.scraper();
-  }
-  if (rejectUnauthorized) {
-    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
@@ -163,13 +155,27 @@ function runScraper(location) {
 }
 
 /*
+  Check if the passed stripped location object exists in the crosscheck report
+*/
+function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
+  let exists = false;
+  for (const existingLocation of crosscheckReportsByLocation) {
+    if (existingLocation.url === location.url) {
+      exists = true;
+      break;
+    }
+  }
+  return exists;
+}
+
+/*
   Begin the scraping process
 */
 async function scrape(options) {
   const crosscheckReports = {};
   const locations = [];
   const errors = [];
-  for (const location of scrapers) {
+  for (const location of await scrapers()) {
     if (options.location) {
       if (transform.getName(location) !== options.location) {
         continue;
@@ -236,9 +242,16 @@ async function scrape(options) {
       const crosscheckReport = crosscheck(location, otherLocation);
       if (crosscheckReport) {
         console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
-        crosscheckReports[locationName] = [] || crosscheckReports[locationName];
-        crosscheckReports[locationName].push(removePrivate(location));
-        crosscheckReports[locationName].push(removePrivate(otherLocation));
+
+        crosscheckReports[locationName] = crosscheckReports[locationName] || [];
+        const strippedLocation = removePrivate(location);
+        if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(strippedLocation);
+        }
+        const stippedOtherLocation = removePrivate(otherLocation);
+        if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(stippedOtherLocation);
+        }
       }
     }
     seenLocations[locationName] = location;

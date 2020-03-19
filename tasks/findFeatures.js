@@ -1,4 +1,4 @@
-import * as turf from '@turf/turf';
+import turf from '@turf/turf';
 
 import * as fs from '../lib/fs.js';
 import * as transform from '../lib/transform.js';
