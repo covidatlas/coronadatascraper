@@ -19,8 +19,7 @@
     "test": "jest",
     "timeseries": "node timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
-    "updateModules": "git submodule update --remote",
-    "winStart": "node cli.js"
+    "updateModules": "git submodule update --remote"
   },
   "dependencies": {
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",

@@ -817,9 +817,8 @@ const scrapers = [
     type: 'table',
     aggregate: 'county',
     ssl: false, // Error: unable to verify the first certificate
+    certValidation: false, // Important: this prevents SSL from failing
     async scraper() {
-      // Important: this prevents SSL from failing
-      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
       const counties = [];
       const $ = await fetch.page(this.url);
 
@@ -846,8 +845,6 @@ const scrapers = [
           cases
         });
       });
-
-      delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
 
       counties.push(transform.sumData(counties));
 
