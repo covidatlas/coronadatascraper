@@ -1,6 +1,5 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
-import * as datetime from '../../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -11,11 +10,12 @@ const scraper = {
   country: 'USA',
   url: 'https://www.ventura.org/covid19/',
   type: 'paragraph',
-  async scraper() {
-    const $ = await fetch.headless(this.url);
-    let cases = 0;
-    let tested = 0;
-    if (datetime.scrapeDateIsBefore('2020-3-16')) {
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.headless(this.url);
+      let cases = 0;
+      let tested = 0;
+
       cases += parse.number(
         $('.count-subject:contains("Positive travel-related case")')
           .closest('.hb-counter')
@@ -34,7 +34,14 @@ const scraper = {
           .find('.count-number')
           .attr('data-from')
       );
-    } else if (datetime.scrapeDateIsBefore('2020-3-18')) {
+      return { cases, tested };
+    },
+
+    '2020-3-16': async function() {
+      const $ = await fetch.headless(this.url);
+      let cases = 0;
+      let tested = 0;
+
       cases += parse.number(
         $('td:contains("Positive cases")')
           .closest('table')
@@ -57,18 +64,21 @@ const scraper = {
           .first()
           .text()
       );
-    } else {
+      return { cases, tested };
+    },
+
+    '2020-3-18': async function() {
+      const $ = await fetch.headless(this.url);
+      let cases = 0;
+
       cases += parse.number(
         $('tr.trFirstRow')
           .find('td')
           .first()
           .text()
       );
+      return { cases };
     }
-    return {
-      cases,
-      tested
-    };
   }
 };
 
