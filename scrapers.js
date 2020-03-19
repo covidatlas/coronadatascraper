@@ -27,6 +27,33 @@ const UNASSIGNED = '(unassigned)';
 
 const scrapers = [
   {
+    country: 'USA',
+    url: 'https://covidtracking.com/api/states',
+    type: 'json',
+    priority: 1,
+    async scraper() {
+      const data = await fetch.json(this.url);
+
+      const regions = [];
+
+      for (const stateData of data) {
+        const stateObj = {
+          state: stateData.state,
+          cases: parse.number(stateData.positive),
+          tested: parse.number(stateData.total)
+        };
+        if (stateData.death !== null) {
+          stateObj.deaths = parse.number(stateData.death);
+        }
+        regions.push(stateObj);
+      }
+
+      regions.push(transform.sumData(regions));
+
+      return regions;
+    }
+  },
+  {
     country: 'DEU',
     url: 'https://covid19-germany.appspot.com/now',
     type: 'json',
