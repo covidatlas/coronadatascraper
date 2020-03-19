@@ -172,11 +172,14 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 function getGrowthfactor(casesToday, casesYesterday) {
-  const growthFactor = casesToday / casesYesterday;
-  if (growthFactor === Infinity) {
-    return null;
+  if (casesYesterday) {
+    const growthFactor = casesToday / casesYesterday;
+    if (growthFactor === Infinity) {
+      return null;
+    }
+    return growthFactor;
   }
-  return growthFactor;
+  return null;
 }
 
 /*
