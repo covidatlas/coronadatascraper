@@ -1976,13 +1976,14 @@ const scrapers = [
   {
     state: 'PA',
     country: 'USA',
-    url: 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx',
-    type: 'list',
     aggregate: 'county',
-    async scraper() {
-      const counties = [];
-      const $ = await fetch.page(this.url);
-      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+    scraper: {
+      '0': async function scraper() {
+        this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
+        this.type = 'list';
+        const $ = await fetch.page(this.url);
+
+        const counties = [];
         const $lis = $('li:contains("Counties impacted to date include")')
           .nextAll('ul')
           .first()
@@ -2000,10 +2001,19 @@ const scrapers = [
             });
           }
         });
-      } else if (datetime.scrapeDateIsBefore('2020-3-17')) {
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      },
+      '2020-3-16': async function scraper() {
+        this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
+        this.type = 'table';
+        const $ = await fetch.page(this.url);
         const $table = $('table.ms-rteTable-default').first();
         const $trs = $table.find('tbody > tr');
 
+        const counties = [];
         $trs.each((index, tr) => {
           const $tr = $(tr);
           const data = {
@@ -2012,10 +2022,19 @@ const scrapers = [
           };
           counties.push(data);
         });
-      } else {
-        const $countyTable = $('table.ms-rteTable-default').eq(1);
-        const $trs = $countyTable.find('tbody > tr');
 
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      },
+      '2020-3-17': async function scraper() {
+        this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
+        this.type = 'table';
+        const $ = await fetch.page(this.url);
+        const $table = $('table.ms-rteTable-default').eq(1);
+        const $trs = $table.find('tbody > tr');
+
+        const counties = [];
         $trs.each((index, tr) => {
           const $tr = $(tr);
           const data = {
@@ -2024,8 +2043,36 @@ const scrapers = [
           };
           counties.push(data);
         });
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      },
+      '2020-3-18': async function scraper() {
+        this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
+        this.type = 'table';
+        const $ = await fetch.page(this.url);
+        const $countyTable = $('table.ms-rteTable-default').eq(1);
+        const $trs = $countyTable.find('tbody > tr:not(:first-child)');
+
+        const counties = [];
+        $trs.each((index, tr) => {
+          const $tr = $(tr);
+          counties.push({
+            county: parse.string($tr.find('td:first-child').text()),
+            cases: parse.number($tr.find('td:nth-child(2)').text()),
+            deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
+          });
+        });
+
+        const $stateTable = $('table.ms-rteTable-default').eq(0);
+        const stateData = transform.sumData(counties);
+        stateData.tested = parse.number($stateTable.find('tr:last-child td:first-child').text());
+        stateData.cases = parse.number($stateTable.find('tr:last-child td:last-child').text());
+        counties.push(stateData);
+
+        return counties;
       }
-      return counties;
     }
   },
   {
