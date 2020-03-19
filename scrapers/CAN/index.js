@@ -6,7 +6,7 @@ import * as rules from '../../lib/rules.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'Canada',
+  country: 'CAN',
   url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
   type: 'table',
   _reject: [{ state: 'Repatriated travellers' }, { state: 'Total cases' }],
