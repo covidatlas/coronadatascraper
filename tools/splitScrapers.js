@@ -4,16 +4,22 @@ import slugify from 'slugify';
 import prettier from 'prettier';
 import * as fs from '../lib/fs.js';
 
-const scraperImportsAndComments = dots => {
-  return `import path from 'path';
-import * as fetch from '..${dots}/lib/fetch.js';
-import * as parse from '..${dots}/lib/parse.js';
-import * as transform from '..${dots}/lib/transform.js';
-import * as datetime from '..${dots}/lib/datetime.js';
-import * as rules from '..${dots}/lib/rules.js';
-import * as fs from '..${dots}/lib/fs.js';
+const scraperImportsAndComments = (dots, scraperDefinition) => {
+  const IMPORT_PATH = `import path from 'path`;
+  const IMPORT_LIBS = ['fetch', 'parse', 'transform', 'datetime', 'rules', 'fs'];
 
-/*
+  let imports = ``;
+  if (scraperDefinition.includes('path.')) {
+    imports += `${IMPORT_PATH}\n`;
+  }
+
+  IMPORT_LIBS.forEach(lib => {
+    if (scraperDefinition.includes(`${lib}.`)) {
+      imports += `import * as ${lib} from '..${dots}/lib/${lib}.js'\n`;
+    }
+  });
+
+  let commentBlock = `/*
   Each scraper must return the following object or an array of the following objects:
 
   {
@@ -29,8 +35,15 @@ import * as fs from '..${dots}/lib/fs.js';
   † Optional, not required if provided in the main scraper definition
 */
 
-// Set county to this if you only have state data, but this isn't the entire state
-const UNASSIGNED = '(unassigned)';`;
+// Set county to this if you only have state data, but this isn't the entire state\n`;
+
+  if (scraperDefinition.includes('UNASSIGNED')) {
+    commentBlock += `const UNASSIGNED = '(unassigned)';`;
+  } else {
+    commentBlock += `//const UNASSIGNED = '(unassigned)';`;
+  }
+
+  return `${imports}\n\n${commentBlock}`;
 };
 
 const writeScraperToFile = async (props, scraperDefinition) => {
@@ -53,7 +66,7 @@ const writeScraperToFile = async (props, scraperDefinition) => {
     filepath = `${countySlug}.js`;
   }
 
-  let code = scraperImportsAndComments(dots);
+  let code = scraperImportsAndComments(dots, scraperDefinition);
   code += '\n\n';
   code += `const scraper = ${scraperDefinition}`;
   code += '\n\n';
