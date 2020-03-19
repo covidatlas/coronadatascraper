@@ -7,7 +7,7 @@ Every piece of data produced includes the URL where the data was sourced from as
 
 ## Where's the data?
 
-http://blog.lazd.net/coronadatascraper/
+https://coronadatascraper.com/
 
 ## Running the scraper
 
