@@ -1694,18 +1694,29 @@ const scrapers = [
     state: 'CA',
     country: 'USA',
     url: 'https://www.mendocinocounty.org/community/novel-coronavirus',
-    async scraper() {
-      const $ = await fetch.page(this.url);
+    scraper: {
+      '0': async function() {
+        const $ = await fetch.page(this.url);
 
-      const cases = parse.number(
-        $('strong:contains("current cases of COVID-19")')
-          .text()
-          .match(/There are (\d+) current cases of/)[1]
-      );
+        const cases = parse.number(
+          $('strong:contains("current cases of COVID-19")')
+            .text()
+            .match(/There are (\d+) current cases of/)[1]
+        );
 
-      return {
-        cases
-      };
+        return {
+          cases
+        };
+      },
+      '2020-3-18': async function() {
+        const $ = await fetch.page(this.url);
+
+        const $strong = $('strong:contains("current case")');
+        const cases = parse.number($strong.text().match(/(\d+) current/)[1]);
+        return {
+          cases
+        };
+      }
     }
   },
   {
