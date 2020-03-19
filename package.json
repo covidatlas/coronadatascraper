@@ -5,9 +5,9 @@
   "main": "cli.js",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
-  "type": "module",
+  "type": "commonjs",
   "engines": {
-    "node": ">=13.4.0"
+    "node": ">=12.15.0 <13.0.0"
   },
   "scripts": {
     "dev": "yarn buildSite & watch 'yarn buildSite' site & yarn serveSite",
@@ -18,12 +18,11 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
+    "start": "node cli.js",
     "test": "jest",
-    "timeseries": "NODE_OPTIONS='--insecure-http-parser' node timeseries.js",
+    "timeseries": "node timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
-    "updateModules": "git submodule update --remote",
-    "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js"
+    "updateModules": "git submodule update --remote"
   },
   "dependencies": {
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
@@ -34,6 +33,7 @@
     "csv-stringify": "^5.3.6",
     "d3-scale": "^3.2.1",
     "editorconfig": "^0.15.3",
+    "esm": "^3.2.25",
     "fast-glob": "^3.2.2",
     "gh-pages": "^2.2.0",
     "jest-each": "^25.1.0",
