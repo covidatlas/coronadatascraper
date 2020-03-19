@@ -19,7 +19,7 @@
     "test": "jest",
     "timeseries": "NODE_OPTIONS='--insecure-http-parser' node timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
-    "updateModules": "git submodule update --remote"
+    "updateModules": "git submodule update --remote --recursive"
   },
   "dependencies": {
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
