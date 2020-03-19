@@ -205,30 +205,25 @@ const scrapers = [
     ],
     _accept: [
       {
-        'Province/State': 'St Martin',
-        'Country/Region': 'France'
-      },
-      {
-        'Province/State': 'French Polynesia',
-        'Country/Region': 'France'
-      },
-      {
-        'Province/State': 'Channel Islands',
-        'Country/Region': 'United Kingdom'
-      },
-      {
-        'Province/State': 'Gibraltar',
-        'Country/Region': 'United Kingdom'
-      },
-      {
-        'Province/State': 'Saint Barthelemy',
-        'Country/Region': 'France'
-      },
-      {
         'Province/State': ''
       },
       {
+        'Country/Region': 'France'
+      },
+      {
+        'Country/Region': 'United Kingdom'
+      },
+      {
         'Country/Region': 'China'
+      },
+      {
+        'Country/Region': 'Denmark'
+      },
+      {
+        'Country/Region': 'Belgium'
+      },
+      {
+        'Country/Region': 'Netherlands'
       },
       {
         'Country/Region': 'Australia'
@@ -263,6 +258,10 @@ const scrapers = [
 
       const countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
+        if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
+          // Axe incorrectly categorized data
+          delete cases[index]['Province/State'];
+        }
         if (getOldData) {
           // See if it's a county
           const countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
@@ -303,14 +302,19 @@ const scrapers = [
             deaths: parse.number(deaths[index][date] || 0)
           });
         } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
-          countries.push({
+          const caseData = {
             country: parse.string(cases[index]['Country/Region']),
-            state: parse.string(cases[index]['Province/State']),
             cases: parse.number(cases[index][date] || 0),
             recovered: parse.number(recovered[index][date] || 0),
             deaths: parse.number(deaths[index][date] || 0),
             coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
-          });
+          };
+
+          if (cases[index]['Province/State']) {
+            caseData.state = parse.string(cases[index]['Province/State']);
+          }
+
+          countries.push(caseData);
         }
       }
 
