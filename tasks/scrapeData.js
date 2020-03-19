@@ -163,6 +163,20 @@ function runScraper(location) {
 }
 
 /*
+  Check if the passed stripped location object exists in the crosscheck report
+*/
+function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
+  let exists = false;
+  for (const existingLocation of crosscheckReportsByLocation) {
+    if (existingLocation.url === location.url) {
+      exists = true;
+      break;
+    }
+  }
+  return exists;
+}
+
+/*
   Begin the scraping process
 */
 async function scrape(options) {
@@ -236,9 +250,16 @@ async function scrape(options) {
       const crosscheckReport = crosscheck(location, otherLocation);
       if (crosscheckReport) {
         console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
-        crosscheckReports[locationName] = [] || crosscheckReports[locationName];
-        crosscheckReports[locationName].push(removePrivate(location));
-        crosscheckReports[locationName].push(removePrivate(otherLocation));
+
+        crosscheckReports[locationName] = crosscheckReports[locationName] || [];
+        const strippedLocation = removePrivate(location);
+        if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(strippedLocation);
+        }
+        const stippedOtherLocation = removePrivate(otherLocation);
+        if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(stippedOtherLocation);
+        }
       }
     }
     seenLocations[locationName] = location;
