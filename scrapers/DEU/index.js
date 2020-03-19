@@ -11,7 +11,10 @@ const scraper = {
     name: 'Dr. Jan-Philip Gehrcke',
     email: 'jgehrcke@googlemail.com'
   },
-  source: 'Berliner Morgenpost (aggregated data from individual ministries of health in Germany)',
+  source: {
+    name: 'Berliner Morgenpost',
+    description: 'Aggregated data from individual ministries of health in Germany'
+  },
   async scraper() {
     const data = await fetch.json(this.url);
     return {
