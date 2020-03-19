@@ -8,6 +8,21 @@ const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority'];
 
 /*
+  Returns a report if the crosscheck fails, or false if the two sets have identical data
+*/
+function crosscheck(a, b) {
+  const crosscheckReport = {};
+  let failed = false;
+  for (const prop of numericalValues) {
+    if (a[prop] !== b[prop]) {
+      crosscheckReport[prop] = [a[prop], b[prop]];
+      failed = true;
+    }
+  }
+  return failed ? crosscheckReport : false;
+}
+
+/*
   Combine location information with the passed data object
 */
 function addLocationToData(data, location) {
@@ -51,9 +66,9 @@ function isValid(data) {
 }
 
 /*
-  Clean the passed data
+  Remove "private" object properties
 */
-function clean(data) {
+function removePrivate(data) {
   for (const [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
@@ -63,6 +78,15 @@ function clean(data) {
       delete data[prop];
     }
   }
+
+  return data;
+}
+
+/*
+  Clean the passed data
+*/
+function clean(data) {
+  removePrivate(data);
 
   // Remove non-data vars
   for (const prop of scraperVars) {
@@ -142,6 +166,7 @@ function runScraper(location) {
   Begin the scraping process
 */
 async function scrape(options) {
+  const crosscheckReports = {};
   const locations = [];
   const errors = [];
   for (const location of scrapers) {
@@ -172,7 +197,9 @@ async function scrape(options) {
 
   // Normalize data
   for (const [index] of Object.entries(locations)) {
-    locations[index] = normalize(locations[index]);
+    const location = locations[index];
+    locations[index] = normalize(location);
+    location.active = location.active === undefined || location.active === null ? transform.getActiveFromLocation(location) : location.active;
   }
 
   // De-dupe data
@@ -204,6 +231,14 @@ async function scrape(options) {
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
         locations.splice(i, 1);
         deDuped++;
+      }
+
+      const crosscheckReport = crosscheck(location, otherLocation);
+      if (crosscheckReport) {
+        console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
+        crosscheckReports[locationName] = [] || crosscheckReports[locationName];
+        crosscheckReports[locationName].push(removePrivate(location));
+        crosscheckReports[locationName].push(removePrivate(otherLocation));
       }
     }
     seenLocations[locationName] = location;
@@ -246,13 +281,13 @@ async function scrape(options) {
     locations[index] = clean(locations[index]);
   }
 
-  return { locations, errors, deDuped, sourceRatings };
+  return { locations, errors, deDuped, sourceRatings, crosscheckReports };
 }
 
 const scrapeData = async ({ report, options }) => {
   console.log(`⏳ Scraping data for ${process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : 'today'}...`);
 
-  const { locations, errors, deDuped, sourceRatings } = await scrape(options);
+  const { locations, errors, deDuped, sourceRatings, crosscheckReports } = await scrape(options);
 
   const locationCounts = {
     cities: 0,
@@ -277,8 +312,6 @@ const scrapeData = async ({ report, options }) => {
     } else {
       locationCounts.cities++;
     }
-
-    location.active = location.active === undefined ? transform.getActiveFromLocation(location) : location.active;
 
     for (const type of Object.keys(caseCounts)) {
       if (location[type]) {
@@ -307,6 +340,7 @@ const scrapeData = async ({ report, options }) => {
     numCities: locationCounts.cities,
     numDuplicates: deDuped,
     numErrors: errors.length,
+    crosscheckReports,
     errors
   };
 

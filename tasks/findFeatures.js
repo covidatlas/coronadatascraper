@@ -41,14 +41,14 @@ function normalizeProps(obj) {
 const props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
-  // Correct missing county
-  'Island, WA': location => {
-    location.state = 'Island County, WA';
-  },
-
   // 🇭🇰
   'Hong Kong': location => {
-    location.country = 'Hong Kong';
+    location.country = 'HKG';
+    delete location.state;
+  },
+
+  Macau: location => {
+    location.country = 'MAC';
     delete location.state;
   },
 
@@ -160,46 +160,46 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
             }
           } else if (location.state) {
             for (const feature of provinceData.features) {
-              if (location.state === feature.properties.postal) {
+              if (location.state === feature.properties.postal && feature.properties.adm0_a3 === 'USA') {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;
               }
             }
           }
-        }
-
-        // Check if the location exists within our provinces
-        for (const feature of provinceData.features) {
-          const countryMatches = location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
-          const stateMatches = location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region);
-          const countyMatches = location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region);
-          if (countryMatches && (stateMatches || countyMatches)) {
-            found = true;
-            storeFeature(feature, location);
-            break;
-          }
-
-          if (point && feature.geometry) {
-            const poly = turf.feature(feature.geometry);
-            if (turf.booleanPointInPolygon(point, poly)) {
+        } else {
+          // Check if the location exists within our provinces
+          for (const feature of provinceData.features) {
+            const countryMatches = location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
+            const stateMatches = location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region);
+            const countyMatches = location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region);
+            if (countryMatches && (stateMatches || countyMatches)) {
               found = true;
               storeFeature(feature, location);
               break;
             }
-          }
 
-          // Match alternate names
-          // No known location, but might be useful in the future
-          if (feature.properties.alt && feature.properties.alt.split('|').indexOf(location.state) !== -1) {
-            found = true;
-            storeFeature(feature, location);
-            break;
-          }
-          if (feature.properties.region === location.state && feature.properties.admin === location.country) {
-            found = true;
-            storeFeature(feature, location);
-            break;
+            if (point && feature.geometry) {
+              const poly = turf.feature(feature.geometry);
+              if (turf.booleanPointInPolygon(point, poly)) {
+                found = true;
+                storeFeature(feature, location);
+                break;
+              }
+            }
+
+            // Match alternate names
+            // No known location, but might be useful in the future
+            if (feature.properties.alt && feature.properties.alt.split('|').indexOf(location.state) !== -1) {
+              found = true;
+              storeFeature(feature, location);
+              break;
+            }
+            if (feature.properties.region === location.state && feature.properties.admin === location.country) {
+              found = true;
+              storeFeature(feature, location);
+              break;
+            }
           }
         }
       } else {
