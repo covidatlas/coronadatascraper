@@ -21,7 +21,7 @@
     "postinstall": "node initSSL.js",
     "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
     "test": "jest",
-    "timeseries": "node timeseries.js",
+    "timeseries": "NODE_OPTIONS='--insecure-http-parser' node timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "winStart": "set NODE_OPTIONS='--insecure-http-parser' && node cli.js"
