@@ -1894,7 +1894,7 @@ const scrapers = [
             .find('.count-number')
             .attr('data-from')
         );
-      } else {
+      } else if (datetime.scrapeDateIsBefore('2020-3-17')) {
         cases += parse.number(
           $('td:contains("Positive cases")')
             .closest('table')
@@ -1913,6 +1913,13 @@ const scrapers = [
         tested = parse.number(
           $('td:contains("People tested")')
             .closest('table')
+            .find('td')
+            .first()
+            .text()
+        );
+      } else {
+        cases += parse.number(
+          $('tr.trFirstRow')
             .find('td')
             .first()
             .text()
