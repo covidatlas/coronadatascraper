@@ -37,7 +37,7 @@ function normalizePercent(min, max, input) {
 }
 
 let domainArray = [];
-const colorsArray = choroplethColors.stoplight;
+const colorsArray = choroplethColors[choroplethColor];
 const lightnessArray = colorsArray.map(key => 1 - returnLightness(key) / 100);
 
 const max = Math.max(...lightnessArray);
