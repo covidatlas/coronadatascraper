@@ -175,7 +175,7 @@ async function scrape(options) {
   const crosscheckReports = {};
   const locations = [];
   const errors = [];
-  for (const location of scrapers) {
+  for (const location of await scrapers()) {
     if (options.location) {
       if (transform.getName(location) !== options.location) {
         continue;
