@@ -15,7 +15,6 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "postinstall": "node initSSL.js",
     "start": "node cli.js",
     "test": "jest",
     "timeseries": "node timeseries.js",
