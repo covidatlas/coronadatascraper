@@ -258,7 +258,7 @@ async function scrape(options) {
   }
 
   // Generate ratings
-  const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url'];
+  const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url', 'curator', 'source'];
 
   const sourcesByURL = {};
   for (const location of locations) {
