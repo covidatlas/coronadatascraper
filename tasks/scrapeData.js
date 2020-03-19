@@ -133,8 +133,16 @@ function addData(cases, location, result) {
   Run the correct scraper for this location
 */
 function runScraper(location) {
+  const rejectUnauthorized = location.certValidation === false;
+  if (rejectUnauthorized) {
+    // Important: this prevents SSL from failing
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  }
   if (typeof location.scraper === 'function') {
     return location.scraper();
+  }
+  if (rejectUnauthorized) {
+    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
