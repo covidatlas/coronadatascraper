@@ -248,6 +248,10 @@ div.spectrum-SideNav-itemLink:hover {
   font-size: 36px;
 }
 
+.cds-ReportCard-curatorName {
+  margin-bottom: 0 !important;
+}
+
 /* Map */
 #map {
   height: 100%;
