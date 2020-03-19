@@ -1,16 +1,17 @@
 import Parser from 'acorn';
 import escodegen from 'escodegen';
 import slugify from 'slugify';
+import prettier from 'prettier';
 import * as fs from '../lib/fs.js';
 
-const scraperImportsAndComments = () => {
+const scraperImportsAndComments = dots => {
   return `import path from 'path';
-import * as fetch from '../lib/fetch.js';
-import * as parse from '../lib/parse.js';
-import * as transform from '../lib/transform.js';
-import * as datetime from '../lib/datetime.js';
-import * as rules from '../lib/rules.js';
-import * as fs from '../lib/fs.js';
+import * as fetch from '..${dots}/lib/fetch.js';
+import * as parse from '..${dots}/lib/parse.js';
+import * as transform from '..${dots}/lib/transform.js';
+import * as datetime from '..${dots}/lib/datetime.js';
+import * as rules from '..${dots}/lib/rules.js';
+import * as fs from '..${dots}/lib/fs.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -35,13 +36,16 @@ const UNASSIGNED = '(unassigned)';`;
 const writeScraperToFile = async (props, scraperDefinition) => {
   let dirPath = 'scrapers';
   let filepath = 'index.js';
+  let dots = '';
 
   if (props.country) {
     dirPath += `/${props.country}`;
+    dots += '/..';
   }
 
   if (props.state) {
     dirPath += `/${props.state}`;
+    dots += '/..';
   }
 
   if (props.county) {
@@ -49,11 +53,17 @@ const writeScraperToFile = async (props, scraperDefinition) => {
     filepath = `${countySlug}.js`;
   }
 
-  let code = scraperImportsAndComments();
+  let code = scraperImportsAndComments(dots);
   code += '\n\n';
   code += `const scraper = ${scraperDefinition}`;
   code += '\n\n';
-  code += 'export default scraper;';
+  code += 'export default scraper;\n';
+
+  code = prettier.format(code, {
+    parser: 'babel',
+    singleQuote: true,
+    endOfLine: 'auto'
+  });
 
   await fs.ensureDir(dirPath);
   await fs.writeFile(`${dirPath}/${filepath}`, code);
