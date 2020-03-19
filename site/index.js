@@ -24,6 +24,8 @@ const choroplethColors = {
   magma: ['#fcfdbf', '#fde2a3', '#fec488', '#fea772', '#fc8961', '#f56b5c', '#e75263', '#d0416f', '#b73779', '#9c2e7f', '#832681', '#6a1c81', '#51127c', '#36106b', '#1d1147', '#0a0822']
 };
 
+const choroplethColor = 'brownish';
+
 function returnLightness(c) {
   return d3.lab(c).l;
 }
