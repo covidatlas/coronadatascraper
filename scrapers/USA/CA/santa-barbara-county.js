@@ -13,7 +13,6 @@ const scraper = {
   async scraper() {
     const $ = await fetch.headless(this.url);
     let cases = 0;
-    const tested = 0;
 
     cases += parse.number(
       $('div.elementor-counter-title:contains("SANTA BARBARA COUNTY")')
@@ -22,10 +21,7 @@ const scraper = {
         .text()
     );
 
-    return {
-      cases,
-      tested
-    };
+    return { cases };
   }
 };
 
