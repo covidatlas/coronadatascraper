@@ -1,10 +1,6 @@
-import path from 'path';
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
-import * as rules from '../../../lib/rules.js';
-import * as fs from '../../../lib/fs.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -23,7 +19,7 @@ import * as fs from '../../../lib/fs.js';
 */
 
 // Set county to this if you only have state data, but this isn't the entire state
-const UNASSIGNED = '(unassigned)';
+// const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   url: 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv',
