@@ -9,14 +9,33 @@ const data = {};
 let map;
 
 const noCasesColor = 'rgba(255, 255, 255, 0.5)';
-const choroplethColors = ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'];
+const noPopulationDataColor = '#AAAAAA';
+
+const outlineColorHighlight = 'rgb(0,0,0)';
+const outlineColor = 'rgba(175, 175, 175, 0.5)';
+
+const choroplethColors = {
+  stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
+  heat: ['#FFFFFF', '#ffff5e', '#ffe70c', '#fead0a', '#fd6f08', '#fd2907', '#fd0407'],
+  peach: ['rgb(253,222,166)', 'rgb(255,188,134)', 'rgb(249,152,133)', 'rgb(232,110,129)', 'rgb(224,88,136)'],
+  pink: ['rgb(255, 244, 221)', 'rgb(255, 221, 215)', 'rgb(255, 197, 210)', 'rgb(254, 174, 203)', 'rgb(250, 150, 196)', 'rgb(245, 126, 189)', 'rgb(239, 100, 181)', 'rgb(232, 70, 173)', 'rgb(210, 56, 161)', 'rgb(187, 46, 150)', 'rgb(163, 36, 140)', 'rgb(138, 27, 131)', 'rgb(113, 22, 124)', 'rgb(86, 15, 116)', 'rgb(55, 11, 110)', 'rgb(0, 9, 104)'],
+  viridis: ['#fde725', '#d8e219', '#addc30', '#84d44b', '#5ec962', '#3fbc73', '#28ae80', '#1fa088', '#21918c', '#26828e', '#2c728e', '#33638d', '#3b528b', '#424086', '#472d7b', '#48186a'],
+  magma: ['#fcfdbf', '#fde2a3', '#fec488', '#fea772', '#fc8961', '#f56b5c', '#e75263', '#d0416f', '#b73779', '#9c2e7f', '#832681', '#6a1c81', '#51127c', '#36106b', '#1d1147', '#0a0822']
+};
+
+const choroplethStyle = 'pureRatio';
+
+const choroplethColor = 'stoplight';
+
+const type = 'cases';
 
 const choroplethStyles = {
   pureRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
     // Color based on how bad it is, relative to the worst place
-    const percentRatio = locationData[type] / location.population / worstAffectedPercent;
+    const affectedPercent = locationData[type] / location.population;
+    const percentRatio = affectedPercent / worstAffectedPercent;
 
-    return adjustTanh(percentRatio);
+    return adjustTanh(percentRatio, 0.15, 2);
   },
   rankAdjustedRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
     // Color based on rank
@@ -25,7 +44,7 @@ const choroplethStyles = {
     // Color based on how bad it is, relative to the worst place
     const percentRatio = locationData[type] / location.population / worstAffectedPercent;
 
-    const ratio = (rankRatio + percentRatio) / 2;
+    const ratio = (rankRatio * 0.75 + percentRatio) / 1.75;
 
     return ratio;
   },
@@ -36,6 +55,13 @@ const choroplethStyles = {
     return rankRatio;
   }
 };
+
+function getRatio(fractional, total) {
+  if (fractional === 0) {
+    return '-';
+  }
+  return `1 : ${Math.round(total / fractional).toLocaleString()}`;
+}
 
 // Via https://math.stackexchange.com/a/57510
 function adjustTanh(value, a = 0.1, b = 1.75) {
@@ -48,10 +74,6 @@ function getLocationsByRank(currentData, type, min = 3) {
   for (const locationId in currentData) {
     const locationData = currentData[locationId];
     const location = data.locations[locationId];
-
-    if (this.shouldSkipLocation(location)) {
-      continue;
-    }
 
     if (location.population && locationData[type] >= min) {
       rankedItems.push({ locationId, rate: locationData[type] / location.population });
@@ -92,33 +114,7 @@ function getColorOnGradient(colors, position) {
   return d3.interpolateRgb(startColor, endColor)(alpha);
 }
 
-function shouldSkipLocation(location) {
-  if (!location) {
-    return true;
-  }
-
-  if (
-    // Skip States, we have county data
-    (location.country === 'USA' && location.state && !location.county) ||
-    // Skip Italy; we have province data
-    (location.country === 'ITA' && !location.state) ||
-    // Skip Italy; we have province data
-    (location.country === 'FRA' && !location.state) ||
-    // Skip Italy; we have province data
-    (location.country === 'ESP' && !location.state) ||
-    // Breaks France
-    location.country === 'REU' ||
-    location.country === 'MTQ' ||
-    location.country === 'GUF'
-  ) {
-    return true;
-  }
-  return false;
-}
-
 function populateMap() {
-  const choroplethStyle = 'rankAdjustedRatio';
-  const type = 'cases';
   const currentDate = Object.keys(data.timeseries).pop();
   const currentData = data.timeseries[currentDate];
 
@@ -160,39 +156,117 @@ function populateMap() {
         } else {
           const rank = locationsByRank.indexOf(location);
           const scaledColorValue = choroplethStyles[choroplethStyle](location, locationData, type, rank, locationsByRank.length, worstAffectedPercent);
-          color = getColorOnGradient(choroplethColors, scaledColorValue);
+          color = getColorOnGradient(choroplethColors[choroplethColor], scaledColorValue);
         }
       }
     }
 
-    if (shouldSkipLocation(location)) {
-      feature.properties.color = 'rgba(0,0,0,0.1)';
-    } else {
-      feature.properties.color = color || '#AAAAAA';
+    if (location && location.state && location.country === 'USA') {
+      console.log(color);
     }
+
+    feature.properties.color = color || noPopulationDataColor;
   });
 
   console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
 
-  const smallFeatures = {
+  function isCountry(location) {
+    return location && location.country && !location.state && !location.county && !location.city;
+  }
+
+  function isState(location) {
+    return location && location.state && !location.county && !location.city;
+  }
+
+  function isCounty(location) {
+    return location && location.county && !location.city;
+  }
+
+  function isCity(location) {
+    return location && location.city;
+  }
+
+  function getLocationGranularityName(location) {
+    if (isCountry(location)) {
+      return 'country';
+    }
+    if (isState(location)) {
+      return 'state';
+    }
+    if (isCounty(location)) {
+      return 'county';
+    }
+    if (isCity(location)) {
+      return 'city';
+    }
+    return 'none';
+  }
+
+  const countryFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features
+    features: data.features.features.filter(function(feature) {
+      return isCountry(data.locations[feature.properties.locationId]);
+    })
   };
 
-  map.addSource('CDSStates', {
+  const stateFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      return isState(data.locations[feature.properties.locationId]);
+    })
+  };
+
+  const countyFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      return isCounty(data.locations[feature.properties.locationId]);
+    })
+  };
+
+  const paintConfig = {
+    // 'fill-outline-color': 'rgba(255, 255, 255, 1)',
+    'fill-color': ['get', 'color'],
+    'fill-outline-color': ['case', ['boolean', ['feature-state', 'hover'], false], outlineColorHighlight, outlineColor],
+    'fill-opacity': 1
+  };
+
+  map.addSource('CDS-country', {
     type: 'geojson',
-    data: smallFeatures
+    data: countryFeatures
   });
 
   map.addLayer({
-    id: 'CDSStates',
+    id: 'CDS-country',
     type: 'fill',
-    source: 'CDSStates',
+    source: 'CDS-country',
     layout: {},
-    paint: {
-      'fill-color': ['get', 'color'],
-      'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, 0.75]
-    }
+    paint: paintConfig
+  });
+
+  map.addSource('CDS-state', {
+    type: 'geojson',
+    data: stateFeatures
+  });
+
+  map.addLayer({
+    id: 'CDS-state',
+    type: 'fill',
+    source: 'CDS-state',
+    layout: {},
+    paint: paintConfig
+  });
+
+  map.addSource('CDS-county', {
+    type: 'geojson',
+    data: countyFeatures
+  });
+
+  map.addLayer({
+    id: 'CDS-county',
+    type: 'fill',
+    source: 'CDS-county',
+    layout: {},
+    paint: paintConfig
   });
 
   // Create a popup, but don't add it to the map yet.
@@ -201,44 +275,36 @@ function populateMap() {
     closeOnClick: false
   });
 
-  function getFeatureGranularity(feature) {
-    let granularity = 0;
-    const location = data.locations[feature.properties.locationId];
-    if (location.country) granularity++;
-    if (location.state) granularity++;
-    if (location.county) granularity++;
-    if (location.city) granularity++;
-    return granularity;
+  let hoveredFeatureId = null;
+  let hoveredFeatureSource = null;
+
+  function handleMouseLeave() {
+    map.getCanvas().style.cursor = '';
+    popup.remove();
+    if (hoveredFeatureId) {
+      map.setFeatureState({ source: 'CDS-state', id: hoveredFeatureId }, { hover: false });
+    }
   }
 
-  let hoveredStateId = null;
-  // When the user moves their mouse over the state-fill layer, we'll update the
-  // feature state for the feature under the mouse.
-  map.on('mousemove', 'CDSStates', function(e) {
+  function handleMouseMove(e) {
     if (e.features.length > 0) {
-      let feature = null;
-      let featureGranularity = 0;
+      e.preventDefault();
+      const feature = e.features[0];
 
-      for (const otherFeature of e.features) {
-        const otherFeatureGranularity = getFeatureGranularity(otherFeature);
-        if (otherFeatureGranularity > featureGranularity) {
-          feature = otherFeature;
-          featureGranularity = otherFeatureGranularity;
-        }
-      }
-
-      if (hoveredStateId) {
-        map.setFeatureState({ source: 'CDSStates', id: hoveredStateId }, { hover: false });
-      }
-
-      const { locationId } = feature.properties;
-
+      const { locationId } = feature.properties || {};
       const location = data.locations[locationId] || {};
+      const locationData = currentData[locationId] || {};
 
-      const locationData = currentData[locationId];
+      if (hoveredFeatureId) {
+        map.setFeatureState({ source: hoveredFeatureSource, id: hoveredFeatureId }, { hover: false });
+      }
 
-      hoveredStateId = feature.id;
-      map.setFeatureState({ source: 'CDSStates', id: hoveredStateId }, { hover: true });
+      hoveredFeatureId = feature.id;
+      hoveredFeatureSource = `CDS-${getLocationGranularityName(location)}`;
+
+      if (hoveredFeatureId) {
+        map.setFeatureState({ source: hoveredFeatureSource, id: hoveredFeatureId }, { hover: true });
+      }
 
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = 'pointer';
@@ -250,38 +316,46 @@ function populateMap() {
         .setHTML(popupTemplate(location, locationData, feature))
         .addTo(map);
     }
-  });
+  }
+
+  // When the user moves their mouse over the state-fill layer, we'll update the
+  // feature state for the feature under the mouse.
+  map.on('mousemove', 'CDS-country', handleMouseMove);
+  map.on('mousemove', 'CDS-state', handleMouseMove);
+  map.on('mousemove', 'CDS-county', handleMouseMove);
 
   // When the mouse leaves the state-fill layer, update the feature state of the
   // previously hovered feature.
-  map.on('mouseleave', 'CDSStates', function() {
-    map.getCanvas().style.cursor = '';
-    popup.remove();
-    if (hoveredStateId) {
-      map.setFeatureState({ source: 'CDSStates', id: hoveredStateId }, { hover: false });
-    }
-    hoveredStateId = null;
-  });
+  map.on('mouseleave', 'CDS-country', handleMouseLeave);
+  map.on('mouseleave', 'CDS-state', handleMouseLeave);
+  map.on('mouseleave', 'CDS-county', handleMouseLeave);
 }
 
 function popupTemplate(location, locationData) {
   let htmlString = `<div class="cds-Popup">`;
   htmlString += `<h6 class="spectrum-Heading spectrum-Heading--XXS">${location.name}</h6>`;
-  if (location.population) {
-    htmlString += `<p class="spectrum-Body spectrum-Body--XS"><strong>Population:</strong> ${location.population.toLocaleString()}</p>`;
+  htmlString += `<table class="cds-Popup-table spectrum-Body spectrum-Body--XS"><tbody>`;
+  if (location.population !== undefined) {
+    htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
+  } else {
+    htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
   }
-  if (locationData.cases) {
-    htmlString += `<p class="spectrum-Body spectrum-Body--XS"><strong>Cases:</strong> ${locationData.cases.toLocaleString()}</p>`;
+  if (location.population && locationData.cases) {
+    htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
   }
-  if (locationData.deaths) {
-    htmlString += `<p class="spectrum-Body spectrum-Body--XS"><strong>Deaths:</strong> ${locationData.deaths.toLocaleString()}</p>`;
+  if (locationData.cases !== undefined) {
+    htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
   }
-  if (locationData.recovered) {
-    htmlString += `<p class="spectrum-Body spectrum-Body--XS"><strong>Recovered:</strong> ${locationData.recovered.toLocaleString()}</p>`;
+  if (locationData.deaths !== undefined) {
+    htmlString += `<tr><th>Deaths:</th><td>${locationData.deaths.toLocaleString()}</td></tr>`;
+  }
+  if (locationData.recovered !== undefined) {
+    htmlString += `<tr><th>Recovered:</th><td>${locationData.recovered.toLocaleString()}</td></tr>`;
   }
   if (locationData.active !== locationData.cases) {
-    htmlString += `<p class="spectrum-Body spectrum-Body--XS"><strong>Active:</strong> ${locationData.active.toLocaleString()}</p>`;
+    htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
   }
+  htmlString += `</tbody></table>`;
   htmlString += `</div>`;
   return htmlString;
 }
@@ -292,7 +366,7 @@ function showMap() {
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',
     center: [-121.403732, 40.492392],
-    zoom: 5
+    zoom: 3
   });
 
   let remaining = 0;
