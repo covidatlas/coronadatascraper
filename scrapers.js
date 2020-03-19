@@ -670,6 +670,25 @@ const scrapers = [
               .split(':')[1]
           )
         };
+      },
+      '2020-3-18': async function () {
+        this.url = 'https://opendata.arcgis.com/datasets/46c727cc29424b1fb9db67554c7df04e_0.csv';
+        this.type = 'csv';
+        this.timeseries = true;
+        this.priority = -1;
+
+        const data = await fetch.csv(this.url);
+        const counties = [];
+        for (const county of data) {
+          if(datetime.scrapeDateIs(county.Date)){
+            counties.push({
+              county: parse.string(county.FULL_),
+              cases: parse.number(county.Number_of_COVID_positive_cases_),
+              population: parse.number(county.County_Population),
+            });
+          }
+        }
+        return counties;
       }
     }
   },
