@@ -41,14 +41,14 @@ function normalizeProps(obj) {
 const props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
-  // Correct missing county
-  'Island, WA': location => {
-    location.state = 'Island County, WA';
-  },
-
   // 🇭🇰
   'Hong Kong': location => {
-    location.country = 'Hong Kong';
+    location.country = 'HKG';
+    delete location.state;
+  },
+
+  Macau: location => {
+    location.country = 'MAC';
     delete location.state;
   },
 
