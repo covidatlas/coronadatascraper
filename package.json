@@ -18,7 +18,6 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "postinstall": "node initSSL.js",
     "start": "NODE_OPTIONS='--insecure-http-parser' node cli.js",
     "test": "jest",
     "timeseries": "NODE_OPTIONS='--insecure-http-parser' node timeseries.js",
@@ -41,8 +40,6 @@
     "needle": "^2.3.3",
     "puppeteer": "^2.1.1",
     "request": "^2.88.2",
-    "ssl": "^1.0.0",
-    "ssl-root-cas": "^1.3.1",
     "watch": "^1.0.2",
     "yargs": "^15.3.1"
   },
