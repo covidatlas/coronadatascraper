@@ -37,7 +37,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'curatorName', 'curatorEmail'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -48,6 +48,14 @@ async function generateTidyCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'curatorName') {
+        if (location.curator) {
+          row.push(location.curator.name);
+        }
+      } else if (column === 'curatorEmail') {
+        if (location.curator) {
+          row.push(location.curator.email);
+        }
       } else {
         row.push(location[column]);
       }
@@ -75,7 +83,7 @@ async function generateTidyCSV(timeseriesByLocation) {
 }
 
 async function generateLessTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'curatorName', 'curatorEmail'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -86,6 +94,14 @@ async function generateLessTidyCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'curatorName') {
+        if (location.curator) {
+          row.push(location.curator.name);
+        }
+      } else if (column === 'curatorEmail') {
+        if (location.curator) {
+          row.push(location.curator.email);
+        }
       } else {
         row.push(location[column]);
       }
@@ -116,7 +132,7 @@ async function generateLessTidyCSV(timeseriesByLocation) {
 }
 
 async function generateCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'type', 'value', 'url'];
+  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'type', 'value', 'url', 'curatorName', 'curatorEmail'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -126,6 +142,14 @@ async function generateCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'curatorName') {
+        if (location.curator) {
+          row.push(location.curator.name);
+        }
+      } else if (column === 'curatorEmail') {
+        if (location.curator) {
+          row.push(location.curator.email);
+        }
       } else {
         row.push(location[column]);
       }
