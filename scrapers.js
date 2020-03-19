@@ -688,7 +688,8 @@ const scrapers = [
             });
           }
         }
-        let stateData = transform.sumData(counties);
+
+        const stateData = transform.sumData(counties);
         stateData.population = data[0].State_Population;
         counties.push(stateData);
 
