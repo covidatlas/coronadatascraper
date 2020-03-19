@@ -68,7 +68,7 @@ const scraper = {
     },
 
     '2020-3-18': async function() {
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.page(this.url);
       let cases = 0;
 
       cases += parse.number(
