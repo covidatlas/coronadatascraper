@@ -231,7 +231,6 @@ async function scrape(options) {
         crosscheckReports[locationName] = [] || crosscheckReports[locationName];
         crosscheckReports[locationName].push(removePrivate(location));
         crosscheckReports[locationName].push(removePrivate(otherLocation));
-        console.log(crosscheckReports[locationName]);
       }
     }
     seenLocations[locationName] = location;
