@@ -1,6 +1,4 @@
-const imports = require('esm')(module);
-
-const generate = imports('./index.js').default;
-const argv = imports('./lib/cliArgs.js').default;
+import generate from './index.js';
+import argv from './lib/cliArgs.js';
 
 generate(argv.date, argv);
