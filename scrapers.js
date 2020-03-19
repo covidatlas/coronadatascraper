@@ -679,27 +679,53 @@ const scrapers = [
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
     type: 'table',
     aggregate: 'county',
-    async scraper() {
-      const counties = [];
-      const $ = await fetch.page(this.url);
+    scraper: {
+      '0': async function() {
+        const counties = [];
+        const $ = await fetch.headless(this.url);
 
-      const $table = $('table[summary="Cases by County in Oregon for COVID-19"]');
+        const $table = $('table[summary="Cases by County in Oregon for COVID-19"]');
 
-      const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
+        const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
 
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
-        const cases = parse.number($tr.find('td:nth-child(2)').text());
-        counties.push({
-          county,
-          cases
+        $trs.each((index, tr) => {
+          const $tr = $(tr);
+          const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+          const cases = parse.number($tr.find('td:nth-child(2)').text());
+          counties.push({
+            county,
+            cases
+          });
         });
-      });
 
-      counties.push(transform.sumData(counties));
+        counties.push(transform.sumData(counties));
 
-      return counties;
+        return counties;
+      },
+      '2020-3-18': async function() {
+        const counties = [];
+        const $ = await fetch.headless(this.url);
+
+        const $table = $('th:contains("County")').closest('table');
+
+        const $trs = $table.find('tbody > tr:not(:last-child)');
+
+        $trs.each((index, tr) => {
+          const $tr = $(tr);
+          const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+          const cases = parse.number($tr.find('td:nth-child(2)').text());
+          const deaths = parse.number($tr.find('td:last-child').text());
+          counties.push({
+            county,
+            cases,
+            deaths
+          });
+        });
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      }
     }
   },
   {
