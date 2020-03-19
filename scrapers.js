@@ -162,25 +162,44 @@ const scrapers = [
     }
   },
   {
-    url: 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv',
     country: 'USA',
     state: 'NJ',
     aggregate: 'county',
-    async scraper() {
-      const data = await fetch.csv(this.url);
+    scraper: {
+      '0': async function() {
+        this.url = 'https://opendata.arcgis.com/datasets/8840fd8ac1314f5188e6cf98b525321c_0.csv';
+        const data = await fetch.csv(this.url);
 
-      const counties = [];
-      for (const county of data) {
-        counties.push({
-          county: parse.string(county.COUNTY_LAB),
-          cases: parse.number(county.Positives),
-          tested: parse.number(county.Negatives) + parse.number(county.Positives)
-        });
+        const counties = [];
+        for (const county of data) {
+          counties.push({
+            county: parse.string(county.COUNTY_LAB),
+            cases: parse.number(county.Positives),
+            tested: parse.number(county.Negatives) + parse.number(county.Positives)
+          });
+        }
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
+      },
+      '2020-3-19': async function() {
+        // Why does the dashboard show a total value that's different than the sum of the counties?
+        this.url = 'https://opendata.arcgis.com/datasets/84737ef7f760486293b6afa536f028e0_0.csv';
+        const data = await fetch.csv(this.url);
+
+        const counties = [];
+        for (const county of data) {
+          counties.push({
+            county: parse.string(county.COUNTY_LAB),
+            cases: parse.number(county.Field2 || 0)
+          });
+        }
+
+        counties.push(transform.sumData(counties));
+
+        return counties;
       }
-
-      counties.push(transform.sumData(counties));
-
-      return counties;
     }
   },
   {
