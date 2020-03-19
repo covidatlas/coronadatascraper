@@ -54,7 +54,7 @@ const locationTransforms = {
 
   // Why is this in Denmark?
   'Faroe Islands': location => {
-    location.country = 'Faroe Islands';
+    location.country = 'FRO';
     delete location.state;
   }
 };
