@@ -41,31 +41,7 @@ const scraper = {
     recovered: 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
   },
   _reject: [{ 'Province/State': 'Diamond Princess' }, { 'Province/State': 'Grand Princess' }, { 'Province/State': 'From Diamond Princess' }],
-  _accept: [
-    {
-      'Province/State': 'St Martin',
-      'Country/Region': 'France'
-    },
-    {
-      'Province/State': 'French Polynesia',
-      'Country/Region': 'France'
-    },
-    {
-      'Province/State': 'Channel Islands',
-      'Country/Region': 'United Kingdom'
-    },
-    {
-      'Province/State': 'Gibraltar',
-      'Country/Region': 'United Kingdom'
-    },
-    {
-      'Province/State': 'Saint Barthelemy',
-      'Country/Region': 'France'
-    },
-    { 'Province/State': '' },
-    { 'Country/Region': 'China' },
-    { 'Country/Region': 'Australia' }
-  ],
+  _accept: [{ 'Province/State': '' }, { 'Country/Region': 'France' }, { 'Country/Region': 'United Kingdom' }, { 'Country/Region': 'China' }, { 'Country/Region': 'Denmark' }, { 'Country/Region': 'Belgium' }, { 'Country/Region': 'Netherlands' }, { 'Country/Region': 'Australia' }],
   async scraper() {
     const jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
     const getOldData = datetime.scrapeDateIsBefore('2020-3-12');
@@ -87,6 +63,9 @@ const scraper = {
     }
     const countyTotals = {};
     for (let index = 0; index < cases.length; index++) {
+      if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
+        delete cases[index]['Province/State'];
+      }
       if (getOldData) {
         const countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
         if (countyAndState) {
@@ -121,14 +100,17 @@ const scraper = {
           deaths: parse.number(deaths[index][date] || 0)
         });
       } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
-        countries.push({
+        const caseData = {
           country: parse.string(cases[index]['Country/Region']),
-          state: parse.string(cases[index]['Province/State']),
           cases: parse.number(cases[index][date] || 0),
           recovered: parse.number(recovered[index][date] || 0),
           deaths: parse.number(deaths[index][date] || 0),
           coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
-        });
+        };
+        if (cases[index]['Province/State']) {
+          caseData.state = parse.string(cases[index]['Province/State']);
+        }
+        countries.push(caseData);
       }
     }
     for (const [, countyData] of Object.entries(countyTotals)) {

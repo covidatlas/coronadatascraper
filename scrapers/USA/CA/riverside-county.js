@@ -33,7 +33,7 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $el = $('p:contains("Confirmed cases:")').first();
-    const matches = $el.text().match(/Confirmed cases:.*?(\d)/);
+    const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
     return { cases: parse.number(matches[1]) };
   }
 };

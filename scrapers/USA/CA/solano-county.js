@@ -33,7 +33,7 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $el = $('*:contains("Number of Positive Cases")').first();
-    const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d)/);
+    const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d+)/);
     return { cases: parse.number(matches[1]) };
   }
 };

@@ -33,7 +33,7 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $el = $('h3:contains("Positive cases:")').first();
-    const matches = $el.text().match(/Positive cases:.*?(\d)/);
+    const matches = $el.text().match(/Positive cases:.*?(\d+)/);
     return { cases: parse.number(matches[1]) };
   }
 };

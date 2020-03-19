@@ -29,10 +29,12 @@ const scraper = {
   state: 'CO',
   country: 'USA',
   url: 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub',
-  type: 'list',
+  aggregate: 'county',
+  priority: 1,
   scraper: {
     '0': async function() {
       this.url = 'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub';
+      this.type = 'list';
       const $ = await fetch.page(this.url);
       const counties = [];
       const $lis = $('p:contains("Positive cases by county of residence")')
@@ -107,6 +109,23 @@ const scraper = {
             .split(':')[1]
         )
       };
+    },
+    '2020-3-18': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/46c727cc29424b1fb9db67554c7df04e_0.csv';
+      this.type = 'csv';
+      const data = await fetch.csv(this.url);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.Number_of_COVID_positive_cases_),
+          population: parse.number(county.County_Population)
+        });
+      }
+      const stateData = transform.sumData(counties);
+      stateData.population = data[0].State_Population;
+      counties.push(stateData);
+      return counties;
     }
   }
 };

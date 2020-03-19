@@ -1,10 +1,10 @@
 import path from 'path';
-import * as fetch from '../../../lib/fetch.js';
-import * as parse from '../../../lib/parse.js';
-import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
-import * as rules from '../../../lib/rules.js';
-import * as fs from '../../../lib/fs.js';
+import * as fetch from '../../lib/fetch.js';
+import * as parse from '../../lib/parse.js';
+import * as transform from '../../lib/transform.js';
+import * as datetime from '../../lib/datetime.js';
+import * as rules from '../../lib/rules.js';
+import * as fs from '../../lib/fs.js';
 
 /*
   Each scraper must return the following object or an array of the following objects:
@@ -26,15 +26,20 @@ import * as fs from '../../../lib/fs.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  county: 'Madera County',
-  state: 'CA',
-  country: 'USA',
-  url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',
+  country: 'DEU',
+  url: 'https://covid19-germany.appspot.com/now',
+  type: 'json',
+  ssl: true,
   async scraper() {
-    const $ = await fetch.page(this.url);
-    const $el = $('*:contains("Confirmed cases")').first();
-    const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
-    return { cases: parse.number(matches[1]) };
+    const data = await fetch.json(this.url);
+    return {
+      country: 'DEU',
+      cases: data.current_totals.cases,
+      deaths: data.current_totals.deaths,
+      recovered: data.current_totals.recovered,
+      coordinates: [9, 51],
+      population: 83 * 10 ** 6
+    };
   }
 };
 

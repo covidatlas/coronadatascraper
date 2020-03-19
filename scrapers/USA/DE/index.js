@@ -56,7 +56,7 @@ const scraper = {
     const counties = [];
     for (const county of data) {
       counties.push({
-        county: parse.string(county.NAME),
+        county: transform.addCounty(parse.string(county.NAME)),
         cases: parse.number(county.Presumptive_Positive),
         recovered: parse.number(county.Recovered)
       });

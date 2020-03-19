@@ -30,27 +30,13 @@ const scraper = {
   state: 'CA',
   country: 'USA',
   url: 'http://www.acphd.org/2019-ncov.aspx',
+  headless: true,
+  type: 'paragraph',
   async scraper() {
-    const $ = await fetch.page(this.url);
-    const $table = $('.sccgov-responsive-table');
-    return {
-      deaths: parse.number(
-        $table
-          .find('div:contains("Deaths")')
-          .parent()
-          .children()
-          .last()
-          .text()
-      ),
-      cases: parse.number(
-        $table
-          .find('div:contains("Total Confirmed Cases")')
-          .parent()
-          .children()
-          .last()
-          .text()
-      )
-    };
+    const $ = await fetch.headless(this.url);
+    const $el = $('p:contains("Positive Cases")');
+    const matches = $el.html().match(/Positive Cases:.*?(\d+).*/);
+    return { cases: parse.number(matches[1]) };
   }
 };
 

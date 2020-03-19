@@ -67,7 +67,7 @@ const scraper = {
     const counties = [];
     for (const county of data) {
       counties.push({
-        county: parse.string(county.County),
+        county: transform.addCounty(parse.string(county.County)),
         cases: parse.number(county.Counts)
       });
     }
