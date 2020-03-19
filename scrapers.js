@@ -2185,27 +2185,50 @@ const scrapers = [
     url: 'https://portal.ct.gov/Coronavirus',
     type: 'list',
     aggregate: 'county',
-    async scraper() {
-      const counties = [];
-      const $ = await fetch.page(this.url);
-      const $lis = $('span:contains("Latest COVID-19 Testing Data in Connecticut")')
-        .nextAll('ul')
-        .first()
-        .find('li');
+    scraper: {
+      '0': async function() {
+        const counties = [];
+        const $ = await fetch.page(this.url);
+        const $lis = $('span:contains("Latest COVID-19 Testing Data in Connecticut")')
+          .nextAll('ul')
+          .first()
+          .find('li');
 
-      $lis.each((index, li) => {
-        if (index < 1) {
-          return;
-        }
-        const countyData = $(li)
-          .text()
-          .split(/:\s*/);
-        counties.push({
-          county: parse.string(countyData[0]),
-          cases: parse.number(countyData[1])
+        $lis.each((index, li) => {
+          if (index < 1) {
+            return;
+          }
+          const countyData = $(li)
+            .text()
+            .split(/:\s*/);
+          counties.push({
+            county: parse.string(countyData[0]),
+            cases: parse.number(countyData[1])
+          });
         });
-      });
-      return counties;
+        return counties;
+      },
+      '2020-03-18': async function() {
+        const counties = [];
+        const $ = await fetch.page(this.url);
+        const p = $('p:contains("Fairfield County:")')
+          .first()
+          .text();
+
+        const items = p.split('\n');
+
+        for (const item of items) {
+          const elements = item.split(':');
+          const countyName = parse.string(elements[0]);
+          const cases = parse.number(elements[1]);
+
+          counties.push({
+            county: countyName,
+            cases
+          });
+        }
+        return counties;
+      }
     }
   },
   {
