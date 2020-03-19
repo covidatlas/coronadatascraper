@@ -1,4 +1,4 @@
-import scrapers from '../scrapers.js';
+import scrapers from '../scrapers2.js';
 import * as transform from '../lib/transform.js';
 import * as datetime from '../lib/datetime.js';
 import calculateRating from '../lib/rating.js';
@@ -136,7 +136,7 @@ function runScraper(location) {
 async function scrape(options) {
   const locations = [];
   const errors = [];
-  for (const location of scrapers) {
+  for (const location of await scrapers()) {
     if (options.location) {
       if (transform.getName(location) !== options.location) {
         continue;
