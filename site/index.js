@@ -15,7 +15,8 @@ const outlineColorHighlight = 'rgb(0,0,0)';
 const outlineColor = 'rgba(0, 0, 0, 0.3)';
 
 const choroplethColors = {
-  stoplight: ['#faffef', '#f3fac1', '#f6f191', '#ffe15d', '#fec327', '#ff9b00', '#fe7000', '#fa4d13', '#c52155', '#842e79'],
+  stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
+  brownish: ['#faffef', '#f3fac1', '#f6f191', '#ffe15d', '#fec327', '#ff9b00', '#fe7000', '#fa4d13', '#c52155', '#842e79'],
   heat: ['#FFFFFF', '#ffff5e', '#ffe70c', '#fead0a', '#fd6f08', '#fd2907', '#fd0407'],
   peach: ['rgb(253,222,166)', 'rgb(255,188,134)', 'rgb(249,152,133)', 'rgb(232,110,129)', 'rgb(224,88,136)'],
   pink: ['rgb(255, 244, 221)', 'rgb(255, 221, 215)', 'rgb(255, 197, 210)', 'rgb(254, 174, 203)', 'rgb(250, 150, 196)', 'rgb(245, 126, 189)', 'rgb(239, 100, 181)', 'rgb(232, 70, 173)', 'rgb(210, 56, 161)', 'rgb(187, 46, 150)', 'rgb(163, 36, 140)', 'rgb(138, 27, 131)', 'rgb(113, 22, 124)', 'rgb(86, 15, 116)', 'rgb(55, 11, 110)', 'rgb(0, 9, 104)'],
