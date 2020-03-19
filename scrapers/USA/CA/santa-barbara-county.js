@@ -11,7 +11,7 @@ const scraper = {
   url: 'https://publichealthsbc.org',
   type: 'paragraph',
   async scraper() {
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.page(this.url);
     let cases = 0;
 
     cases += parse.number(
