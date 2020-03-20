@@ -19,7 +19,7 @@ const scraper = {
       const $tr = $(tr);
       const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
       const cases = parse.number($tr.find('td:last-child').text());
-      counties.push({county, cases});
+      counties.push({ county, cases });
     });
 
     return counties;
