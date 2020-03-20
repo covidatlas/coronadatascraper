@@ -1,5 +1,5 @@
 # coronadatascraper
-> A scraper that pulls coronavirus case data from verified sources.
+> A scraper that pulls COVID-19 Coronavirus data scraped from government and curated data sources.
 
 This project exists to pull county-level data for COVID-19 from verified, high-quality sources.
 
