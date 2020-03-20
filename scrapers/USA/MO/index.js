@@ -3,7 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const UNASSIGNED = '(unassigned)';
 
 // Based on the NY scraper
 
@@ -17,8 +17,7 @@ const scraper = {
     // MO reporting KC as a county, which is really part of several counties.
     'Kansas City': 'Jackson County',
     // MO reporting St. Louis City, which is it's own county, but is being reported as missing.
-    'St. Louis City': 'St. Louis County',
-    TBD: 'UNASSIGNED'
+    'St. Louis City': 'St. Louis County'
   },
   _counties: [
     'Adair County',
@@ -149,9 +148,12 @@ const scraper = {
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
       const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
-      if (countyName !== 'UNASSIGNED') {
-        countyName = transform.addCounty(countyName);
+      countyName = transform.addCounty(countyName);
+
+      if (countyName === 'TBD County') {
+        countyName = UNASSIGNED;
       }
+
       if (countyName in counties) {
         counties[countyName].cases += casesState + casesOther;
       } else {
