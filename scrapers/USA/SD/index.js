@@ -11,9 +11,77 @@ const scraper = {
   url: 'https://doh.sd.gov/news/Coronavirus.aspx#SD',
   type: 'table',
   aggregate: 'county',
+  _counties: [
+    'Aurora County',
+    'Beadle County',
+    'Bennett County',
+    'Bon Homme County',
+    'Brookings County',
+    'Brown County',
+    'Brule County',
+    'Buffalo County',
+    'Butte County',
+    'Campbell County',
+    'Charles Mix County',
+    'Clark County',
+    'Clay County',
+    'Codington County',
+    'Corson County',
+    'Custer County',
+    'Davison County',
+    'Day County',
+    'Deuel County',
+    'Dewey County',
+    'Douglas County',
+    'Edmunds County',
+    'Fall River County',
+    'Faulk County',
+    'Grant County',
+    'Gregory County',
+    'Haakon County',
+    'Hamlin County',
+    'Hand County',
+    'Hanson County',
+    'Harding County',
+    'Hughes County',
+    'Hutchinson County',
+    'Hyde County',
+    'Jackson County',
+    'Jerauld County',
+    'Jones County',
+    'Kingsbury County',
+    'Lake County',
+    'Lawrence County',
+    'Lincoln County',
+    'Lyman County',
+    'Marshall County',
+    'McCook County',
+    'McPherson County',
+    'Meade County',
+    'Mellette County',
+    'Miner County',
+    'Minnehaha County',
+    'Moody County',
+    'Oglala Lakota County',
+    'Pennington County',
+    'Perkins County',
+    'Potter County',
+    'Roberts County',
+    'Sanborn County',
+    'Spink County',
+    'Stanley County',
+    'Sully County',
+    'Todd County',
+    'Tripp County',
+    'Turner County',
+    'Union County',
+    'Walworth County',
+    'Yankton County',
+    'Ziebach County'
+  ],
   scraper: {
     '0': async function() {
-      const counties = [];
+      let counties = [];
       const $ = await fetch.page(this.url);
       const $th = $('h2:contains("South Dakota Counties with COVID-19 Cases")');
       const $table = $th.next('table');
@@ -25,10 +93,11 @@ const scraper = {
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
+      counties = transform.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
     '2020-3-19': async function() {
-      const counties = [];
+      let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('caption:contains("SOUTH DAKOTA COUNTIES WITH COVID-19 CASES")').closest('table');
       const $trs = $table.find('tbody > tr');
@@ -42,6 +111,7 @@ const scraper = {
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
+      counties = transform.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     }
   }
