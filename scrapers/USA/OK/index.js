@@ -98,7 +98,7 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $("table[summary='COVID-19 Cases by County']").first();
 
-    const $trs = $table.find('tr:not(:first-child)');
+    const $trs = $table.find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       let countyName = parse.string($tr.find('td:nth-child(1)').text());
