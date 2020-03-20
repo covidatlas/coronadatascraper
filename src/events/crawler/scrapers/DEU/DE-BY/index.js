@@ -7,7 +7,7 @@ import * as datetime from '../../../lib/datetime.js';
 const scraper = {
   country: 'DEU',
   state: 'DE-BY', // ISO 3166 notation
-  url: 'https://covid19-germany.appspot.com/',
+  url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
   type: 'json',
   timeseries: true,
   curators: [
@@ -24,7 +24,7 @@ const scraper = {
   ],
   async scraper() {
     const queryDayString = datetime.getYYYYMD(new Date(process.env.SCRAPE_DATE));
-    const data = await fetch.csv('https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv');
+    const data = await fetch.csv('this.url');
 
     let queryDayCases = 0;
     let queryDayDeaths = 0;
@@ -45,11 +45,8 @@ const scraper = {
       queryDayDeaths = lastRow['DE-BY_deaths'];
     }
     return {
-      country: 'DEU',
-      state: 'DE-BY',
       cases: parseInt(queryDayCases, 10),
       deaths: parseInt(queryDayDeaths, 10),
-      recovered: undefined, // no credible data from Germany yet
       coordinates: [11.497, 48.79],
       population: 13 * 10 ** 6
     };
