@@ -5,11 +5,13 @@ import * as transform from '../lib/transform.js';
 import * as datetime from '../lib/datetime.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';
+import * as maintainers from '../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
+  maintainer: maintainers.lazd,
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   aggregate: 'state',

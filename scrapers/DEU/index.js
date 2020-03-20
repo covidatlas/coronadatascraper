@@ -7,14 +7,18 @@ const scraper = {
   country: 'DEU',
   url: 'https://covid19-germany.appspot.com/now',
   type: 'json',
-  curator: {
-    name: 'Dr. Jan-Philip Gehrcke',
-    email: 'jgehrcke@googlemail.com'
-  },
-  source: {
-    name: 'Berliner Morgenpost',
-    description: 'Aggregated data from individual ministries of health in Germany'
-  },
+  curators: [
+    {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com'
+    }
+  ],
+  sources: [
+    {
+      name: 'Berliner Morgenpost',
+      description: 'Aggregated data from individual ministries of health in Germany'
+    }
+  ],
   async scraper() {
     const data = await fetch.json(this.url);
     return {

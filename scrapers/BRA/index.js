@@ -12,12 +12,16 @@ const scraper = {
   url: `http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=${datetime.getYYYYMMDD()}`,
   timeseries: true,
   aggregate: 'county',
-  maintainer: {
-    name: 'Felipe Roberto',
-    email: 'contato@feliperoberto.com.br',
-    github: 'feliperoberto'
-    // url: 'http://feliperoberto.com.br' // currently down
-  },
+  maintainers: [
+    {
+      name: 'Felipe Roberto',
+      email: 'contato@feliperoberto.com.br',
+      // url: 'http://feliperoberto.com.br', // currently down
+      github: 'feliperoberto',
+      country: 'BRA',
+      flag: '🇧🇷'
+    }
+  ],
   _dataIds: [
     {
       uid: 11,

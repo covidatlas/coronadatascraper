@@ -12,12 +12,14 @@ const scraper = {
   type: 'csv',
   aggregate: 'county',
   url: 'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
-  curator: {
-    name: 'Harriet Rowan',
-    email: 'hattierowan@gmail.com',
-    twitter: '@hattierowan',
-    github: 'HarrietRowan'
-  },
+  curators: [
+    {
+      name: 'Harriet Rowan',
+      email: 'hattierowan@gmail.com',
+      twitter: '@hattierowan',
+      github: 'HarrietRowan'
+    }
+  ],
   async scraper() {
     const data = await fetch.csv(this.url);
     const counties = [];

@@ -560,14 +560,17 @@ document.addEventListener('DOMContentLoaded', function() {
       .replace(/,/g, '-')
       .replace(/\s/g, '')}`;
 
+    const curators = getContributors(source.curators, 'Currated by');
+    const sources = getContributors(source.sources, 'Sourced from');
+    const maintainers = getContributors(source.maintainers, 'Maintained by');
     return `
     <li class="cds-ReportCard" id="${slug}">
       <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
       <div class="cds-ReportCard-content">
         <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index + 1}. ${getName(source)}</a></h2>
-        ${source.curator ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName">Currated by <a href="${getURLFromCurator(source.curator)}" class="spectrum-Link">${source.curator.name}</a></h3>` : ''}
-        ${source.source ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName" title="${source.source.description || ''}">Sourced via ${getURLFromCurator(source.source) ? `<a href="${getURLFromCurator(source.source)}" class="spectrum-Link">` : ''}${source.source.name}${getURLFromCurator(source.source) ? `</a>` : ''}</h3>` : ''}
-        ${source.maintainer ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName">Scraper by ${getURLFromCurator(source.maintainer) ? `<a href="${getURLFromCurator(source.maintainer)}" class="spectrum-Link">` : ''}${source.maintainer.name}${getURLFromCurator(source.maintainer) ? `</a>` : ''}</h3>` : ''}
+        ${sources}
+        ${curators}
+        ${maintainers}
         <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL">Data from <a href="${source.url}" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
         <div class="cds-ReportCard-criteria">
           <div class="cds-ReportCard-criterion">
@@ -592,6 +595,34 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </li>
 `;
+  }
+
+  function getContributors(contributors, byString) {
+    let html = '';
+
+    if (contributors) {
+      html += `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-contributorName">${byString} `;
+      for (const [index, contributor] of Object.entries(contributors)) {
+        if (index !== '0') {
+          html += ', ';
+        }
+        const contributorURL = getURLFromCurator(contributor);
+        if (contributorURL) {
+          html += `<a href="${getURLFromCurator(contributor)}" class="spectrum-Link">`;
+        }
+        html += contributor.name;
+        if (contributorURL) {
+          html += `</a>`;
+        }
+        if (contributor && (contributor.country || contributor.flag)) {
+          html += ' ';
+          html += contributor.flag ? contributor.flag : `(${contributor.country})`;
+        }
+      }
+      html += `</h3>`;
+    }
+
+    return html;
   }
 
   function showSources() {

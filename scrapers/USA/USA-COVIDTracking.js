@@ -9,12 +9,14 @@ const scraper = {
   country: 'USA',
   url: 'https://covidtracking.com/api/states',
   type: 'json',
-  curator: {
-    name: 'The COVID Tracking Project',
-    url: 'https://covidtracking.com/',
-    twitter: '@COVID19Tracking',
-    github: 'COVID19Tracking'
-  },
+  curators: [
+    {
+      name: 'The COVID Tracking Project',
+      url: 'https://covidtracking.com/',
+      twitter: '@COVID19Tracking',
+      github: 'COVID19Tracking'
+    }
+  ],
   aggregate: 'state',
   priority: 1,
   async scraper() {

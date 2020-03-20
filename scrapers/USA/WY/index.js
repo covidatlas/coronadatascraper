@@ -2,22 +2,17 @@ import cheerio from 'cheerio';
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
-
 const scraper = {
   state: 'WY',
   country: 'USA',
   aggregate: 'county',
   url: 'https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/',
   type: 'paragraph',
-  maintainer: {
-    name: 'Larry Davis',
-    email: 'lazdnet@gmail.com',
-    twitter: 'lazdnet',
-    github: 'lazd'
-  },
+  maintainers: [maintainers.lazd],
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
