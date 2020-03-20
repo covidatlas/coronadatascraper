@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .replace(/,/g, '-')
       .replace(/\s/g, '')}`;
 
-    const curators = getContributors(source.curators, 'Currated by');
+    const curators = getContributors(source.curators, 'Curated by');
     const sources = getContributors(source.sources, 'Sourced from');
     const maintainers = getContributors(source.maintainers, 'Maintained by');
     return `
