@@ -1,5 +1,6 @@
-/* global mapboxgl */
+/* globals mapboxgl */
 
+// import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import * as d3interpolate from 'd3-interpolate';
 import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
@@ -7,6 +8,8 @@ import * as fetch from './lib/fetch.js';
 import { adjustTanh, normalizePercent, getRatio } from './lib/math.js';
 import { getLightness } from './lib/color.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from '../lib/geography.js';
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
 
 const data = {};
 
@@ -324,7 +327,6 @@ function populateMap() {
 }
 
 function showMap() {
-  mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',

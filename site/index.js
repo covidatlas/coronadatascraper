@@ -10,6 +10,7 @@ import '@adobe/focus-ring-polyfill';
 import './style.css';
 
 import { getName } from '../lib/geography.js';
+import { getGrade } from './lib/math.js';
 
 import showMap from './map.js';
 
@@ -40,57 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeSidebar() {
     sidebar.classList.remove('is-open');
     overlay.classList.remove('is-open');
-  }
-
-  function getGrade(rating) {
-    rating *= 200;
-
-    if (rating >= 97) {
-      return 'A+';
-    }
-    if (rating >= 93) {
-      return 'A';
-    }
-    if (rating >= 90) {
-      return 'A-';
-    }
-    if (rating >= 87) {
-      return 'B+';
-    }
-    if (rating >= 83) {
-      return 'B';
-    }
-    if (rating >= 80) {
-      return 'B-';
-    }
-    if (rating >= 77) {
-      return 'C+';
-    }
-    if (rating >= 73) {
-      return 'C';
-    }
-    if (rating >= 70) {
-      return 'C-';
-    }
-    if (rating >= 67) {
-      return 'D+';
-    }
-    if (rating >= 63) {
-      return 'D';
-    }
-    if (rating >= 60) {
-      return 'D';
-    }
-    if (rating >= 57) {
-      return 'F+';
-    }
-    if (rating >= 53) {
-      return 'F';
-    }
-    if (rating >= 50) {
-      return 'F';
-    }
-    return 'F-';
   }
 
   function getURLFromCurator(curator) {
