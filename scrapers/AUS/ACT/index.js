@@ -3,7 +3,7 @@ import * as fetch from '../../../lib/fetch.js';
 
 const scraper = {
   country: 'AUS',
-  state: 'ACT',
+  state: 'Australian Capital Territory',
   url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
   type: 'table',
   priority: 1,
@@ -11,7 +11,7 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('.statuscontent');
     const $rowWithCases = $table.find('div:first-child').text();
-    return [{ state: 'ACT', cases: parse.number($rowWithCases) }];
+    return [{ state: 'Australian Capital Territory', cases: parse.number($rowWithCases) }];
   }
 };
 
