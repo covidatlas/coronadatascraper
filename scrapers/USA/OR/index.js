@@ -11,9 +11,47 @@ const scraper = {
   url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
   type: 'table',
   aggregate: 'county',
+  _counties: [
+    'Baker County',
+    'Benton County',
+    'Clackamas County',
+    'Clatsop County',
+    'Columbia County',
+    'Coos County',
+    'Crook County',
+    'Curry County',
+    'Deschutes County',
+    'Douglas County',
+    'Gilliam County',
+    'Grant County',
+    'Harney County',
+    'Hood River County',
+    'Jackson County',
+    'Jefferson County',
+    'Josephine County',
+    'Klamath County',
+    'Lake County',
+    'Lane County',
+    'Lincoln County',
+    'Linn County',
+    'Malheur County',
+    'Marion County',
+    'Morrow County',
+    'Multnomah County',
+    'Polk County',
+    'Sherman County',
+    'Tillamook County',
+    'Umatilla County',
+    'Union County',
+    'Wallowa County',
+    'Wasco County',
+    'Washington County',
+    'Wheeler County',
+    'Yamhill County'
+  ],
   scraper: {
     '0': async function() {
-      const counties = [];
+      let counties = [];
       const $ = await fetch.headless(this.url);
       const $table = $('table[summary="Cases by County in Oregon for COVID-19"]');
       const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
@@ -26,11 +64,15 @@ const scraper = {
           cases
         });
       });
+
+      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+
       counties.push(transform.sumData(counties));
+
       return counties;
     },
     '2020-3-18': async function() {
-      const counties = [];
+      let counties = [];
       const $ = await fetch.headless(this.url);
       const $table = $('th:contains("County")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
@@ -45,7 +87,11 @@ const scraper = {
           deaths
         });
       });
+
+      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+
       counties.push(transform.sumData(counties));
+
       return counties;
     }
   }
