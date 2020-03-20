@@ -39,7 +39,9 @@ function showFile(url, dataLevels, noPush) {
         rowHeaders: true,
         colHeaders: parsedData.meta.fields,
         columnSorting: true,
-        licenseKey: 'non-commercial-and-evaluation'
+        licenseKey: 'non-commercial-and-evaluation',
+        dropdownMenu: true,
+        filters: true
       });
     }
 
