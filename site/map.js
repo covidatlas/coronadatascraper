@@ -1,9 +1,12 @@
 /* global mapboxgl */
 
 import * as d3interpolate from 'd3-interpolate';
-import * as d3color from 'd3-color';
 import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
+
+import { adjustTanh, normalizePercent, getRatio } from './lib/math.js';
+import { getLightness } from './lib/color.js';
+import { isCounty, isState, isCountry, getLocationGranularityName } from '../lib/geography.js';
 
 const data = {};
 
@@ -27,20 +30,9 @@ const choroplethColors = {
 
 const choroplethColor = 'yellowOrangePurple';
 
-function returnLightness(c) {
-  return d3color.lab(c).l;
-}
-
-function normalizePercent(min, max, input) {
-  const range = max - min;
-  const correctedStartValue = input - min;
-  const percentage = (correctedStartValue * 100) / range;
-  return percentage / 100;
-}
-
 let domainArray = [];
 const colorsArray = choroplethColors[choroplethColor];
-const lightnessArray = colorsArray.map(key => 1 - returnLightness(key) / 100);
+const lightnessArray = colorsArray.map(key => 1 - getLightness(key) / 100);
 
 const max = Math.max(...lightnessArray);
 const min = Math.min(...lightnessArray);
@@ -63,11 +55,6 @@ const fill = d3scale
 const choroplethStyle = 'pureRatio';
 
 const type = 'cases';
-
-// Via https://math.stackexchange.com/a/57510
-function adjustTanh(value, a = 0, b = 3) {
-  return Math.min(Math.tanh(value + a) * b, 1);
-}
 
 const choroplethStyles = {
   pureRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
@@ -95,13 +82,6 @@ const choroplethStyles = {
     return rankRatio;
   }
 };
-
-function getRatio(fractional, total) {
-  if (fractional === 0) {
-    return '-';
-  }
-  return `1 : ${Math.round(total / fractional).toLocaleString()}`;
-}
 
 function getLocationsByRank(currentData, type, min = 3) {
   let rankedItems = [];
@@ -185,38 +165,6 @@ function populateMap() {
   });
 
   console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
-
-  function isCountry(location) {
-    return location && location.country && !location.state && !location.county && !location.city;
-  }
-
-  function isState(location) {
-    return location && location.state && !location.county && !location.city;
-  }
-
-  function isCounty(location) {
-    return location && location.county && !location.city;
-  }
-
-  function isCity(location) {
-    return location && location.city;
-  }
-
-  function getLocationGranularityName(location) {
-    if (isCountry(location)) {
-      return 'country';
-    }
-    if (isState(location)) {
-      return 'state';
-    }
-    if (isCounty(location)) {
-      return 'county';
-    }
-    if (isCity(location)) {
-      return 'city';
-    }
-    return 'none';
-  }
 
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;

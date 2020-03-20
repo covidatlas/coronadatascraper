@@ -1,5 +1,5 @@
 import scrapers from '../scrapers.js';
-import * as transform from '../lib/transform.js';
+import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
 import calculateRating from '../lib/rating.js';
 
@@ -102,11 +102,11 @@ function clean(data) {
 function normalize(data) {
   // Normalize states
   if (data.country === 'USA') {
-    data.state = transform.toUSStateAbbreviation(data.state);
+    data.state = geography.toUSStateAbbreviation(data.state);
   }
 
   // Normalize countries
-  data.country = transform.toISO3166Alpha3(data.country);
+  data.country = geography.toISO3166Alpha3(data.country);
 
   return data;
 }
@@ -117,7 +117,7 @@ function normalize(data) {
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     if (result.length === 0) {
-      throw new Error(`Invalid data: scraper for ${transform.getName(location)} returned 0 rows`);
+      throw new Error(`Invalid data: scraper for ${geography.getName(location)} returned 0 rows`);
     }
     for (const data of result) {
       if (isValid(data, location)) {
@@ -154,12 +154,12 @@ export function runScraper(location) {
       }
     }
     if (scraperToUse === null) {
-      throw new Error(`Could not find scraper for ${transform.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
+      throw new Error(`Could not find scraper for ${geography.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
     }
     return scraperToUse.call(location);
   }
 
-  throw new Error('Why on earth is the scraper for %s a %s?', transform.getName(location), typeof scraper);
+  throw new Error('Why on earth is the scraper for %s a %s?', geography.getName(location), typeof scraper);
 }
 
 /*
@@ -185,12 +185,12 @@ async function scrape(options) {
   const errors = [];
   for (const location of await scrapers()) {
     if (options.location) {
-      if (transform.getName(location) !== options.location) {
+      if (geography.getName(location) !== options.location) {
         continue;
       }
     }
     if (options.skip) {
-      if (transform.getName(location) === options.skip) {
+      if (geography.getName(location) === options.skip) {
         continue;
       }
     }
@@ -198,10 +198,10 @@ async function scrape(options) {
       try {
         addData(locations, location, await runScraper(location));
       } catch (err) {
-        console.error('  ❌ Error processing %s: ', transform.getName(location), err);
+        console.error('  ❌ Error processing %s: ', geography.getName(location), err);
 
         errors.push({
-          name: transform.getName(location),
+          name: geography.getName(location),
           url: location.url,
           err: err.toString()
         });
@@ -213,7 +213,7 @@ async function scrape(options) {
   for (const [index] of Object.entries(locations)) {
     const location = locations[index];
     locations[index] = normalize(location);
-    location.active = location.active === undefined || location.active === null ? transform.getActiveFromLocation(location) : location.active;
+    location.active = location.active === undefined || location.active === null ? geography.getActiveFromLocation(location) : location.active;
   }
 
   // De-dupe data
@@ -222,13 +222,13 @@ async function scrape(options) {
   let deDuped = 0;
   while (i-- > 0) {
     const location = locations[i];
-    const locationName = transform.getName(location);
+    const locationName = geography.getName(location);
     const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {
       // Take rating into account to break ties
-      const thisPriority = transform.getPriority(location) + location.rating / 2;
-      const otherPriority = transform.getPriority(otherLocation) + otherLocation.rating / 2;
+      const thisPriority = geography.getPriority(location) + location.rating / 2;
+      const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);

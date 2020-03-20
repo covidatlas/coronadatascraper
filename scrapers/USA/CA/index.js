@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -24,7 +25,7 @@ const scraper = {
     const data = await fetch.csv(this.url);
     const counties = [];
     for (const stateData of data) {
-      const stateObj = { county: transform.addCounty(stateData.county) };
+      const stateObj = { county: geography.addCounty(stateData.county) };
       if (stateData.cases !== '') {
         stateObj.cases = parse.number(stateData.cases);
       }

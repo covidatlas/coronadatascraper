@@ -9,7 +9,7 @@ import '@adobe/focus-ring-polyfill';
 
 import './style.css';
 
-import { getName } from '../lib/transform.js';
+import { getName } from '../lib/geography.js';
 
 import showMap from './map.js';
 
