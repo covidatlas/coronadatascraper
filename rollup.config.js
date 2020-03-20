@@ -1,6 +1,6 @@
 import json from '@rollup/plugin-json';
 import serve from 'rollup-plugin-serve';
-import copy from 'rollup-plugin-copy';
+import copy from 'rollup-plugin-copy-glob';
 import resolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
 import postcssNested from 'postcss-nested';
@@ -17,9 +17,7 @@ export default {
     resolve(),
     json(),
     serve('dist'),
-    copy({
-      targets: [{ src: ['site/*', '!index.js', '!style.css', '!icons/style.css'], dest: 'dist/' }]
-    }),
+    copy([{ files: ['site/**', '!site/*.js', '!site/*.css', '!site/icons/style.css', '!site/lib/*'], dest: 'dist' }], { verbose: true, watch: true }),
     postcss({
       plugins: [postcssImport(), postcssNested()]
     })
