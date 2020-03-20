@@ -109,12 +109,7 @@ function getLocationsByRank(currentData, type, min = 3) {
     return 1;
   });
 
-  const locations = [];
-  for (const rankedItem of rankedItems) {
-    locations.push(data.locations[rankedItem.locationId]);
-  }
-
-  return locations;
+  return rankedItems.map(rankedItem => data.locations[rankedItem.locationId]);
 }
 
 function populateMap() {
