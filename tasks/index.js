@@ -1,14 +1,19 @@
-import fetchScrapers from './fetchScrapers.js';
-import scrapeData from './scrapeData.js';
+import fetchSources from './fetchSources.js';
+import scrapeData from './scrapeData/index.js';
 import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
 import writeData from './writeData.js';
 
+import * as datetime from '../lib/datetime.js';
+
 async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, location: null }) {
-  if (date) {
+  if (!date && process.env.SCRAPE_DATE) {
+    date = process.env.SCRAPE_DATE;
+  } else if (!date) {
+    date = datetime.getYYYYMD();
     process.env.SCRAPE_DATE = date;
   } else {
-    delete process.env.SCRAPE_DATE;
+    process.env.SCRAPE_DATE = date;
   }
 
   // JSON used for reporting
@@ -16,10 +21,10 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
     date
   };
 
-  const output = await fetchScrapers({ report, options })
+  const output = await fetchSources({ date, report, options })
     .then(scrapeData)
-    .then(options.findFeatures !== false && findFeatures)
-    .then(options.findPopulations !== false && findPopulations)
+    .then(findFeatures)
+    .then(findPopulations)
     .then(options.writeData !== false && writeData);
 
   return output;
