@@ -1100,8 +1100,21 @@ const scraper = {
     const data = await fetch.page(this.url, false);
     const dataJson = JSON.parse(data.text().replace('var database=', ''));
     const dataBrazil = [];
+
+    // Find the latest available date
+    const dateParts = dataJson.brazil[dataJson.brazil.length - 1].date.split('/');
+    const latestDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+
+    let targetDate;
+    if (datetime.dateIsBefore(latestDate, scrapeDate)) {
+      console.error('🚨 Timeseries for BRA has not been updated, latest date is using %s instead of %s', datetime.getYYYYMMDD(latestDate), datetime.getYYYYMMDD(scrapeDate));
+      targetDate = datetime.getDDMMYYYY(latestDate, '/');
+    } else {
+      targetDate = datetime.getDDMMYYYY(scrapeDate, '/');
+    }
+
     dataJson.brazil
-      .filter(row => row.date === datetime.getDDMMYYYY(scrapeDate, '/'))
+      .filter(row => row.date === targetDate)
       .forEach(dateData => {
         dateData.values.forEach(value => {
           dataBrazil.push({
