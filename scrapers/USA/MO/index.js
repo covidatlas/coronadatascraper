@@ -13,7 +13,10 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/',
-  _countyMap: {},
+  _countyMap: {
+    'Kansas City': 'Jackson County',
+    'St. Louis City': 'St. Louis County'
+  },
   _counties: [
     'Adair County',
     'Andrew County',
@@ -66,7 +69,6 @@ const scraper = {
     'Jasper County',
     'Jefferson County',
     'Johnson County',
-    'Kansas City County',
     'Knox County',
     'Laclede County',
     'Lafayette County',
@@ -110,8 +112,6 @@ const scraper = {
     'St. Charles County',
     'St. Clair County',
     'St. Francois County',
-    'St. Louis City',
-    'St. Louis City County',
     'St. Louis County',
     'Ste. Genevieve County',
     'Saline County',
@@ -134,7 +134,7 @@ const scraper = {
     'Wright County'
   ],
   async scraper() {
-    let counties = [];
+    let counties = {};
     const $ = await fetch.page(this.url);
     const $table = $($('table')[1]);
 
@@ -147,16 +147,29 @@ const scraper = {
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
       const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
       if (countyName !== 'TBD') {
-        counties.push({
-          county: transform.addCounty(countyName),
-          cases: casesState + casesOther
-        });
+        countyName = transform.addCounty(countyName);
+        if (countyName in counties) {
+          counties[countyName] += casesState + casesOther;
+        } else {
+          counties[countyName] = casesState + casesOther;
+        }
       }
     });
 
-    counties.push(transform.sumData(counties));
+    const countiesList = [];
 
-    counties = transform.addEmptyRegions(counties, this._counties, 'county');
+    for (const c in counties) {
+      if ({}.hasOwnProperty.call(counties, c)) {
+        countiesList.push({
+          county: c,
+          cases: counties[c]
+        });
+      }
+    }
+
+    countiesList.push(transform.sumData(countiesList));
+
+    counties = transform.addEmptyRegions(countiesList, this._counties, 'county');
 
     return counties;
   }
