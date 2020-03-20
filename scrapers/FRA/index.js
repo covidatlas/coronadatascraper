@@ -14,6 +14,8 @@ const scraper = {
   priority: 1,
   aggregate: 'state',
   async scraper() {
+    // make it fail
+
     const data = await fetch.csv(this.url, false);
     const states = [];
     let date = datetime.getYYYYMMDD();
@@ -43,7 +45,8 @@ const scraper = {
       }
     }
     states.push(transform.sumData(states));
-    return states;
+
+    throw new Error();
   }
 };
 

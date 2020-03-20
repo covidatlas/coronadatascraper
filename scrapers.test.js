@@ -1,6 +1,7 @@
 import each from 'jest-each';
 
-import { runScraper } from '../tasks/scrapeData.js';
+import { runScraper } from './tasks/scrapeData.js';
+import * as fs from './lib/fs.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
@@ -10,9 +11,11 @@ describe('scrappers', () => {
 
     if (scrapers.length > 0) {
       each(scrapers).test('test "%s"', async scraperPath => {
-        const location = (await import(`../${scraperPath}`)).default;
+        if (await fs.exists(scraperPath)) {
+          const location = (await import(`./${scraperPath}`)).default;
 
-        runScraper(location);
+          await runScraper(location);
+        }
       });
     } else {
       noScrapersTest();
