@@ -8,26 +8,57 @@ import * as transform from '../../../lib/transform.js';
 const scraper = {
   state: 'UT',
   country: 'USA',
-  url: 'https://coronavirus.utah.gov/latest/',
-  type: 'table',
   aggregate: 'county',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    const counties = [];
-    const $table = $('th:contains("District")').closest('table');
-    const $trs = $table.find('tbody > tr');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      const county = parse.string($tr.find('td:first-child').text());
-      const cases = parse.number($tr.find('td:last-child').text());
-      if (index > 0 && county.indexOf('Non-Utah') === -1) {
+  scraper: {
+    '0': async function() {
+      this.url = 'https://coronavirus.utah.gov/latest/';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
+      const counties = [];
+      const $table = $('th:contains("District")').closest('table');
+      const $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const county = parse.string($tr.find('td:first-child').text());
+        const cases = parse.number($tr.find('td:last-child').text());
+        if (index > 0 && county.indexOf('Non-Utah') === -1) {
+          counties.push({
+            county: transform.addCounty(county),
+            cases
+          });
+        }
+      });
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-3-19': async function() {
+      this.url = 'https://coronavirus-dashboard.utah.gov/';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
+      const counties = [];
+
+      const script = $('script[type="application/json"]').html();
+      const { data } = JSON.parse(script).x;
+
+      for (const [index, county] of Object.entries(data[0])) {
+        if (county === 'State Total') {
+          continue;
+        }
         counties.push({
           county: transform.addCounty(county),
-          cases
+          cases: parse.number(data[1][index]) + parse.number(data[2][index])
         });
       }
-    });
-    return counties;
+
+      counties.push({
+        tested: parse.number($('#reported-people-tested .value-output').text()),
+        cases: parse.number($('#covid-19-cases .value-output').text())
+      });
+
+      return counties;
+    }
   }
 };
 
