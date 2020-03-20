@@ -14,8 +14,11 @@ const scraper = {
   aggregate: 'county',
   url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/',
   _countyMap: {
+    // MO reporting KC as a county, which is really part of several counties.
     'Kansas City': 'Jackson County',
-    'St. Louis City': 'St. Louis County'
+    // MO reporting St. Louis City, which is it's own county, but is being reported as missing.
+    'St. Louis City': 'St. Louis County',
+    TBD: 'UNASSIGNED'
   },
   _counties: [
     'Adair County',
@@ -146,29 +149,19 @@ const scraper = {
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
       const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
-      if (countyName !== 'TBD') {
+      if (countyName !== 'UNASSIGNED') {
         countyName = transform.addCounty(countyName);
-        if (countyName in counties) {
-          counties[countyName] += casesState + casesOther;
-        } else {
-          counties[countyName] = casesState + casesOther;
-        }
+      }
+      if (countyName in counties) {
+        counties[countyName].cases += casesState + casesOther;
+      } else {
+        counties[countyName] = {};
+        counties[countyName].cases = casesState + casesOther;
       }
     });
 
-    const countiesList = [];
-
-    for (const c in counties) {
-      if ({}.hasOwnProperty.call(counties, c)) {
-        countiesList.push({
-          county: c,
-          cases: counties[c]
-        });
-      }
-    }
-
+    const countiesList = transform.objectToArray(counties);
     countiesList.push(transform.sumData(countiesList));
-
     counties = transform.addEmptyRegions(countiesList, this._counties, 'county');
 
     return counties;
