@@ -93,6 +93,7 @@ const scraper = {
           cases: parse.number($tr.find('> *:last-child').text())
         });
       });
+      counties.push(transform.sumData(counties));
       counties = transform.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
@@ -111,6 +112,7 @@ const scraper = {
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
+      counties.push(transform.sumData(counties));
       counties = transform.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     }
