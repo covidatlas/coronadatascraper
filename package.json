@@ -7,7 +7,7 @@
   "license": "BSD",
   "type": "commonjs",
   "engines": {
-    "node": ">=12.15.0 <14.0.0"
+    "node": ">=12.15.0 <13.0.0"
   },
   "scripts": {
     "dev": "yarn buildSite & watch 'yarn buildSite' site & yarn serveSite",
