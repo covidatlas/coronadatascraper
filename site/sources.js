@@ -1,5 +1,4 @@
 /* global document, window */
-/* eslint no-useless-escape: "off" */
 
 import { getGrade } from './lib/math.js';
 import { getName } from '../lib/geography.js';
