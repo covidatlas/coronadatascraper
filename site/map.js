@@ -1,3 +1,6 @@
+import * as d3interpolate from 'd3-interpolate';
+import * as d3color from 'd3-color';
+import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
 
 const data = {};
@@ -23,7 +26,7 @@ const choroplethColors = {
 const choroplethColor = 'yellowOrangePurple';
 
 function returnLightness(c) {
-  return d3.lab(c).l;
+  return d3color.lab(c).l;
 }
 function normalizePercent(min, max, input) {
   const range = max - min;
@@ -48,11 +51,11 @@ for (let i = 0; i < colorsArray.length; i++) {
 
 domainArray = domainArray.sort();
 
-const fill = d3
+const fill = d3scale
   .scaleLinear()
   .domain(domainArray)
   .range(colorsArray)
-  .interpolate(d3.interpolateHcl);
+  .interpolate(d3interpolate.interpolateHcl);
 
 const choroplethStyle = 'pureRatio';
 

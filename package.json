@@ -27,10 +27,13 @@
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
     "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",
+    "d3-color": "^1.4.0",
+    "d3-interpolate": "^1.4.0",
     "d3-scale": "^3.2.1",
     "editorconfig": "^0.15.3",
     "esm": "^3.2.25",
@@ -47,6 +50,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "@adobe/focus-ring-polyfill": "^0.1.5",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "babel-eslint": "^10.1.0",
