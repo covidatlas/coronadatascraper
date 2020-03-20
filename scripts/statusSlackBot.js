@@ -1,8 +1,10 @@
-import request from 'request';
-import yargs from 'yargs';
+const imports = require('esm')(module);
 
-import * as fs from '../lib/fs.js';
-import * as datetime from '../lib/datetime.js';
+const request = imports('request');
+const yargs = imports('yargs');
+
+const fs = imports('../lib/fs.js');
+const datetime = imports('../lib/datetime.js');
 
 const { argv } = yargs
   .scriptName('node ./scripts/statusSlackBot.js')
@@ -30,7 +32,7 @@ const generateReport = async report => {
       text: {
         type: 'mrkdwn',
         text: `
-_Scrappers:_
+_Scrapers:_
 - *${scrape.numCities}* cities
 - *${scrape.numCounties}* counties
 - *${scrape.numStates}* states
