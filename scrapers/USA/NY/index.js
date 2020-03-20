@@ -9,7 +9,6 @@ import * as datetime from '../../../lib/datetime.js';
 const scraper = {
   state: 'NY',
   country: 'USA',
-  url: datetime.scrapeDateIsBefore('2020-3-17') ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/' : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases',
   type: 'table',
   aggregate: 'county',
   _countyMap: {
@@ -17,6 +16,7 @@ const scraper = {
     Broom: 'Broome'
   },
   async scraper() {
+    this.url = datetime.scrapeDateIsBefore('2020-3-17') ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/' : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
     const counties = [];
     const $ = await fetch.page(this.url);
     let $table;
