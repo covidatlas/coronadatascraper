@@ -118,7 +118,12 @@ const scraper = {
         return;
       }
       const $tr = $(tr);
-      const countyName = $tr.find('td:first-child').text().replace(/\w\S*/g,  function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})
+      const countyName = $tr
+        .find('td:first-child')
+        .text()
+        .replace(/\w\S*/g, function(txt) {
+          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        })
       counties.push({
         county: transform.addCounty(parse.string(countyName)),
         cases: parse.number($tr.find('td:last-child').text())
