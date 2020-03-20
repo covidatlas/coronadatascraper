@@ -66,6 +66,7 @@
     "request": "^2.88.2",
     "rollup": "^2.1.0",
     "rollup-plugin-copy-glob": "^0.3.1",
+    "rollup-plugin-livereload": "^1.1.0",
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-serve": "^1.0.1"
   },
