@@ -12,27 +12,32 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   headless: true,
-  async scraper() {
-    const counties = [];
-    const $ = await fetch.headless(this.url);
-    const $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
-    const $trs = $table.find('tbody > tr:not(:last-child)');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      const county = transform.addCounty(
-        $tr
-          .find('td:first-child')
-          .text()
-          .replace(/[\d]*/g, '')
-      );
-      const cases = parse.number($tr.find('td:last-child').text());
-      counties.push({
-        county,
-        cases
+  scraper: {
+    '0': async function() {
+      const counties = [];
+      const $ = await fetch.headless(this.url);
+      const $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const county = transform.addCounty(
+          $tr
+            .find('td:first-child')
+            .text()
+            .replace(/[\d]*/g, '')
+        );
+        const cases = parse.number($tr.find('td:last-child').text());
+        counties.push({
+          county,
+          cases
+        });
       });
-    });
-    counties.push(transform.sumData(counties));
-    return counties;
+      counties.push(transform.sumData(counties));
+      return counties;
+    },
+    '2020-2-19': async function() {
+      throw new Error('Iowa is putting an image on their site, not data!');
+    }
   }
 };
 
