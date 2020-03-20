@@ -11,20 +11,39 @@ const scraper = {
   url: 'https://doh.sd.gov/news/Coronavirus.aspx#SD',
   type: 'table',
   aggregate: 'county',
-  async scraper() {
-    const counties = [];
-    const $ = await fetch.page(this.url);
-    const $th = $('h2:contains("South Dakota Counties with COVID-19 Cases")');
-    const $table = $th.next('table');
-    const $trs = $table.find('tbody > tr');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      counties.push({
-        county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
-        cases: parse.number($tr.find('> *:last-child').text())
+  scraper: {
+    '0': async function() {
+      const counties = [];
+      const $ = await fetch.page(this.url);
+      const $th = $('h2:contains("South Dakota Counties with COVID-19 Cases")');
+      const $table = $th.next('table');
+      const $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        counties.push({
+          county: transform.addCounty(parse.string($tr.find('> *:first-child').text())),
+          cases: parse.number($tr.find('> *:last-child').text())
+        });
       });
-    });
-    return counties;
+      return counties;
+    },
+    '2020-3-19': async function() {
+      const counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('caption:contains("SOUTH DAKOTA COUNTIES WITH COVID-19 CASES")').closest('table');
+      const $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        if ($tr.find('td').attr('colspan')) {
+          return;
+        }
+        counties.push({
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          cases: parse.number($tr.find('td:last-child').text())
+        });
+      });
+      return counties;
+    }
   }
 };
 
