@@ -98,36 +98,27 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $("table[summary='COVID-19 Cases by County']").first();
 
-    const $trs = $table.find('tr');
+    const $trs = $table.find('tbody').find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       let countyName = parse.string($tr.find('td:nth-child(1)').text());
       countyName = this._countyMap[countyName] || countyName;
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
+      console.error(countyName);
       if (countyName !== 'Total') {
         countyName = transform.addCounty(countyName);
         if (countyName in counties) {
-          counties[countyName] += casesState;
+          counties[countyName].cases += casesState;
         } else {
-          counties[countyName] = casesState;
+          counties[countyName] = {};
+          counties[countyName].cases = casesState;
         }
       }
     });
 
-    const countiesList = [];
-
-    for (const c in counties) {
-      if ({}.hasOwnProperty.call(counties, c)) {
-        countiesList.push({
-          county: c,
-          cases: counties[c]
-        });
-      }
-    }
-
+    const countiesList = transform.objectToArray(counties);
     countiesList.push(transform.sumData(countiesList));
-
     counties = transform.addEmptyRegions(countiesList, this._counties, 'county');
 
     return counties;
