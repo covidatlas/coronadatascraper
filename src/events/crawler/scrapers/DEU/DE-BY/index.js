@@ -24,7 +24,7 @@ const scraper = {
   ],
   async scraper() {
     const queryDayString = datetime.getYYYYMD(new Date(process.env.SCRAPE_DATE));
-    const data = await fetch.csv('this.url');
+    const data = await fetch.csv(this.url);
 
     let queryDayCases = 0;
     let queryDayDeaths = 0;
