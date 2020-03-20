@@ -140,6 +140,8 @@ const scraper = {
 
       counties = transform.addEmptyRegions(counties, this._counties, 'county');
 
+      counties.push(transform.sumData(counties));
+
       return counties;
     }
   }
