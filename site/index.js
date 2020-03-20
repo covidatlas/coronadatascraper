@@ -711,7 +711,9 @@ document.addEventListener('DOMContentLoaded', function() {
           rowHeaders: true,
           colHeaders: parsedData.meta.fields,
           columnSorting: true,
-          licenseKey: 'non-commercial-and-evaluation'
+          licenseKey: 'non-commercial-and-evaluation',
+          dropdownMenu: true,
+          filters: true
         });
       }
 
