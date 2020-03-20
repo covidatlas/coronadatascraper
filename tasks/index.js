@@ -1,7 +1,8 @@
-import scrapeData from './tasks/scrapeData.js';
-import findFeatures from './tasks/findFeatures.js';
-import findPopulations from './tasks/findPopulations.js';
-import writeData from './tasks/writeData.js';
+import fetchScrapers from './fetchScrapers.js';
+import scrapeData from './scrapeData.js';
+import findFeatures from './findFeatures.js';
+import findPopulations from './findPopulations.js';
+import writeData from './writeData.js';
 
 async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, location: null }) {
   if (date) {
@@ -15,7 +16,8 @@ async function generate(date, options = { findFeatures: true, findPopulations: t
     date
   };
 
-  const output = await scrapeData({ report, options })
+  const output = await fetchScrapers({ report, options })
+    .then(scrapeData)
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
     .then(options.writeData !== false && writeData);

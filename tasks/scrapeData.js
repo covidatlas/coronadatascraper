@@ -1,4 +1,3 @@
-import scrapers from '../scrapers.js';
 import * as transform from '../lib/transform.js';
 import * as datetime from '../lib/datetime.js';
 import calculateRating from '../lib/rating.js';
@@ -179,11 +178,11 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
 /*
   Begin the scraping process
 */
-async function scrape(options) {
+async function scrape(scrapers, options) {
   const crosscheckReports = {};
   const locations = [];
   const errors = [];
-  for (const location of await scrapers()) {
+  for (const location of scrapers) {
     if (options.location) {
       if (transform.getName(location) !== options.location) {
         continue;
@@ -305,10 +304,12 @@ async function scrape(options) {
   return { locations, errors, deDuped, sourceRatings, crosscheckReports };
 }
 
-const scrapeData = async ({ report, options }) => {
+const scrapeData = async args => {
+  const { scrapers, report, options } = args;
+
   console.log(`⏳ Scraping data for ${process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : 'today'}...`);
 
-  const { locations, errors, deDuped, sourceRatings, crosscheckReports } = await scrape(options);
+  const { locations, errors, deDuped, sourceRatings, crosscheckReports } = await scrape(scrapers, options);
 
   const locationCounts = {
     cities: 0,
@@ -365,7 +366,7 @@ const scrapeData = async ({ report, options }) => {
     errors
   };
 
-  return { locations, report, options, sourceRatings };
+  return { ...args, locations, report, options, sourceRatings };
 };
 
 export default scrapeData;

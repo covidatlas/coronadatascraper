@@ -2,7 +2,7 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const generate = imports('./index.js').default;
+const generate = imports('./tasks/index.js').default;
 const argv = imports('./lib/cliArgs.js').default;
 const fs = imports('./lib/fs.js');
 const transform = imports('./lib/transform.js');
