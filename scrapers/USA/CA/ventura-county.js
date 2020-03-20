@@ -8,10 +8,10 @@ const scraper = {
   county: 'Ventura County',
   state: 'CA',
   country: 'USA',
-  url: 'https://www.ventura.org/covid19/',
   type: 'paragraph',
   scraper: {
     '0': async function() {
+      this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.headless(this.url);
       let cases = 0;
       let tested = 0;
@@ -38,6 +38,7 @@ const scraper = {
     },
 
     '2020-3-16': async function() {
+      this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.headless(this.url);
       let cases = 0;
       let tested = 0;
@@ -68,6 +69,7 @@ const scraper = {
     },
 
     '2020-3-18': async function() {
+      this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
       let cases = 0;
 
