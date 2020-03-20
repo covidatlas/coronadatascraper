@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -47,15 +48,15 @@ const scraper = {
     if (county === 'TriCounty') {
       const caseShare = cases / 3;
       counties.push({
-        county: transform.addCounty('Uintah'),
+        county: geography.addCounty('Uintah'),
         cases: caseShare
       });
       counties.push({
-        county: transform.addCounty('Duchesne'),
+        county: geography.addCounty('Duchesne'),
         cases: caseShare
       });
       counties.push({
-        county: transform.addCounty('Daggett'),
+        county: geography.addCounty('Daggett'),
         cases: caseShare
       });
       return;
@@ -63,11 +64,11 @@ const scraper = {
     if (county === 'Weber-Morgan') {
       const caseShare = cases / 2;
       counties.push({
-        county: transform.addCounty('Weber'),
+        county: geography.addCounty('Weber'),
         cases: caseShare
       });
       counties.push({
-        county: transform.addCounty('Morgan'),
+        county: geography.addCounty('Morgan'),
         cases: caseShare
       });
       return;
@@ -86,14 +87,14 @@ const scraper = {
     }
     if (county === 'Bear River') {
       counties.push({
-        city: transform.addCounty(county),
+        city: geography.addCounty(county),
         cases
       });
       return;
     }
 
     counties.push({
-      county: transform.addCounty(county),
+      county: geography.addCounty(county),
       cases
     });
   },
@@ -114,7 +115,7 @@ const scraper = {
         }
       });
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       counties.push(transform.sumData(counties));
 
@@ -138,7 +139,7 @@ const scraper = {
         cases: parse.number($('#covid-19-cases .value-output').text())
       });
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       counties.push(transform.sumData(counties));
 

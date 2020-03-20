@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -94,11 +95,11 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         regions.push({
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
-      regions = transform.addEmptyRegions(regions, this._counties, 'county');
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
       regions.push(transform.sumData(regions));
       return regions;
     },
@@ -114,7 +115,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         regions.push({
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
@@ -135,7 +136,7 @@ const scraper = {
             stateData.tested += value;
           }
         });
-        regions = transform.addEmptyRegions(regions, this._counties, 'county');
+        regions = geography.addEmptyRegions(regions, this._counties, 'county');
         regions.push(stateData);
       }
       return regions;
@@ -148,7 +149,7 @@ const scraper = {
       const data = await fetch.json(this.url);
       for (const field of data.features) {
         regions.push({
-          county: transform.addCounty(field.attributes.NAME),
+          county: geography.addCounty(field.attributes.NAME),
           cases: parse.number(field.attributes.POSITIVE)
         });
       }
@@ -159,7 +160,7 @@ const scraper = {
         tested: stateData.features[0].attributes.NEGATIVE + stateData.features[0].attributes.POSITIVE,
         cases: stateData.features[0].attributes.POSITIVE
       });
-      regions = transform.addEmptyRegions(regions, this._counties, 'county');
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
       return regions;
     }
   }

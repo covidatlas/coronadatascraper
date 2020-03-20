@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -65,7 +66,7 @@ const scraper = {
           return;
         }
         const $tr = $(tr);
-        const countyName = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+        const countyName = geography.addCounty(parse.string($tr.find('td:first-child').text()));
         counties.push({
           county: countyName,
           cases: parse.number($tr.find('td:last-child').text())
