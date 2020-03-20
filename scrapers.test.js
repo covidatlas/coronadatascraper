@@ -6,6 +6,14 @@ import * as fs from './lib/fs.js';
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
 describe('scrappers', () => {
+  beforeAll(() => {
+    jest.setTimeout(30000);
+  });
+
+  afterAll(() => {
+    jest.setTimeout(5000);
+  });
+
   if (process.env.FILES_MODIFIED) {
     const scrapers = process.env.FILES_MODIFIED.split('\n').filter(filePath => filePath.match(/^scrapers\//g));
 
