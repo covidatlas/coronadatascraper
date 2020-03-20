@@ -76,7 +76,7 @@ function ratingTemplate(source, index) {
     granularity = 'state-level';
   }
 
-  const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/)[1];
+  const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
   const slug = `sources:${getName(source)
     .replace(/,/g, '-')
     .replace(/\s/g, '')}`;
