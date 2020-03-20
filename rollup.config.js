@@ -19,7 +19,11 @@ export default {
   plugins: [
     resolve(),
     json(),
-    !prod && serve('dist'),
+    !prod &&
+      serve({
+        contentBase: 'dist',
+        port: 3000
+      }),
     !prod && livereload(),
     copy([{ files: 'site/**/!(*.js|*.css|.DS_Store)', dest: 'dist' }], { verbose: true, watch: !prod }),
     postcss({
