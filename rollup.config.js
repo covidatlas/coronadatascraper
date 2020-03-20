@@ -7,6 +7,8 @@ import postcss from 'rollup-plugin-postcss';
 import postcssNested from 'postcss-nested';
 import postcssImport from 'postcss-import';
 
+const prod = !process.env.ROLLUP_WATCH;
+
 export default {
   input: 'site/index.js',
   output: {
@@ -17,9 +19,9 @@ export default {
   plugins: [
     resolve(),
     json(),
-    serve('dist'),
-    livereload(),
-    copy([{ files: ['site/**', '!site/*.js', '!site/*.css', '!site/icons/style.css', '!site/lib/*'], dest: 'dist' }], { verbose: true, watch: true }),
+    !prod && serve('dist'),
+    !prod && livereload(),
+    copy([{ files: 'site/**/!(*.js|*.css|.DS_Store)', dest: 'dist' }], { verbose: true, watch: !prod }),
     postcss({
       plugins: [postcssImport(), postcssNested()]
     })
