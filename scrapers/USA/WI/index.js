@@ -9,11 +9,85 @@ const scraper = {
   state: 'WI',
   country: 'USA',
   aggregate: 'county',
+  _counties: [
+    'Adams County',
+    'Ashland County',
+    'Barron County',
+    'Bayfield County',
+    'Brown County',
+    'Buffalo County',
+    'Burnett County',
+    'Calumet County',
+    'Chippewa County',
+    'Clark County',
+    'Columbia County',
+    'Crawford County',
+    'Dane County',
+    'Dodge County',
+    'Door County',
+    'Douglas County',
+    'Dunn County',
+    'Eau Claire County',
+    'Florence County',
+    'Fond du Lac County',
+    'Forest County',
+    'Grant County',
+    'Green County',
+    'Green Lake County',
+    'Iowa County',
+    'Iron County',
+    'Jackson County',
+    'Jefferson County',
+    'Juneau County',
+    'Kenosha County',
+    'Kewaunee County',
+    'La Crosse County',
+    'Lafayette County',
+    'Langlade County',
+    'Lincoln County',
+    'Manitowoc County',
+    'Marathon County',
+    'Marinette County',
+    'Marquette County',
+    'Menominee County',
+    'Milwaukee County',
+    'Monroe County',
+    'Oconto County',
+    'Oneida County',
+    'Outagamie County',
+    'Ozaukee County',
+    'Pepin County',
+    'Pierce County',
+    'Polk County',
+    'Portage County',
+    'Price County',
+    'Racine County',
+    'Richland County',
+    'Rock County',
+    'Rusk County',
+    'Sauk County',
+    'Sawyer County',
+    'Shawano County',
+    'Sheboygan County',
+    'St. Croix County',
+    'Taylor County',
+    'Trempealeau County',
+    'Vernon County',
+    'Vilas County',
+    'Walworth County',
+    'Washburn County',
+    'Washington County',
+    'Waukesha County',
+    'Waupaca County',
+    'Waushara County',
+    'Winnebago County',
+    'Wood County'
+  ],
   scraper: {
     '0': async function() {
       this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
       this.type = 'table';
-      const regions = [];
+      let regions = [];
       const $ = await fetch.page(this.url);
       const $table = $('caption:contains("Number of Positive Results by County")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
@@ -24,13 +98,14 @@ const scraper = {
           cases: parse.number($tr.find('td:last-child').text())
         });
       });
+      regions = transform.addEmptyRegions(regions, this._counties, 'county');
       regions.push(transform.sumData(regions));
       return regions;
     },
     '2020-3-16': async function() {
       this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
       this.type = 'table';
-      const regions = [];
+      let regions = [];
       const $ = await fetch.page(this.url);
       const $table = $('h5:contains("Number of Positive Results by County")')
         .nextAll('table')
@@ -60,6 +135,7 @@ const scraper = {
             stateData.tested += value;
           }
         });
+        regions = transform.addEmptyRegions(regions, this._counties, 'county');
         regions.push(stateData);
       }
       return regions;
@@ -68,7 +144,7 @@ const scraper = {
       this.url =
         'https://services1.arcgis.com/ISZ89Z51ft1G16OK/arcgis/rest/services/COVID19_WI/FeatureServer/0//query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=NAME%2CPOSITIVE%2CDATE%2CCMNTY_SPRD&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=NAME+ASC&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=';
       this.type = 'json';
-      const regions = [];
+      let regions = [];
       const data = await fetch.json(this.url);
       for (const field of data.features) {
         regions.push({
@@ -83,6 +159,7 @@ const scraper = {
         tested: stateData.features[0].attributes.NEGATIVE + stateData.features[0].attributes.POSITIVE,
         cases: stateData.features[0].attributes.POSITIVE
       });
+      regions = transform.addEmptyRegions(regions, this._counties, 'county');
       return regions;
     }
   }
