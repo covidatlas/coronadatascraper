@@ -34,7 +34,7 @@ jobs:
       - name: PR Test
         if: github.event_name == 'pull_request'
         run: |
-          git diff --name-only master
+          git diff --name-only origin
           FILES_MODIFIED=$(git diff --name-only master) yarn jest
       - name: Lint
         run: |
