@@ -560,25 +560,15 @@ document.addEventListener('DOMContentLoaded', function() {
       .replace(/,/g, '-')
       .replace(/\s/g, '')}`;
 
-    let sourceName = '';
-    const sourceURL = getURLFromCurator(source.source);
-    if (source.source) {
-      sourceName = source.source.name;
-    }
-
-    let curatorName = '';
-    if (source.curator) {
-      curatorName = source.curator.name;
-    }
-
     return `
     <li class="cds-ReportCard" id="${slug}">
       <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([\+\-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
       <div class="cds-ReportCard-content">
         <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index + 1}. ${getName(source)}</a></h2>
-        ${curatorName ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName">Currated by <a href="${getURLFromCurator(source.curator)}" class="spectrum-Link">${curatorName}</a></h3>` : ''}
-        ${sourceName ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName" title="${source.source.description || ''}">Sourced via ${sourceURL ? `<a href="${sourceURL}" class="spectrum-Link">` : ''}${sourceName}${sourceURL ? `</a>` : ''}</h3>` : ''}
-        <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL"><a href="${source.url}" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
+        ${source.curator ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName">Currated by <a href="${getURLFromCurator(source.curator)}" class="spectrum-Link">${source.curator.name}</a></h3>` : ''}
+        ${source.source ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName" title="${source.source.description || ''}">Sourced via ${getURLFromCurator(source.source) ? `<a href="${getURLFromCurator(source.source)}" class="spectrum-Link">` : ''}${source.source.name}${getURLFromCurator(source.source) ? `</a>` : ''}</h3>` : ''}
+        ${source.maintainer ? `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-curatorName">Scraper by ${getURLFromCurator(source.maintainer) ? `<a href="${getURLFromCurator(source.maintainer)}" class="spectrum-Link">` : ''}${source.maintainer.name}${getURLFromCurator(source.maintainer) ? `</a>` : ''}</h3>` : ''}
+        <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL">Data from <a href="${source.url}" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
         <div class="cds-ReportCard-criteria">
           <div class="cds-ReportCard-criterion">
             ${typeIcons[source.type]} ${typeNames[source.type] || source.type.substr(0, 1).toUpperCase() + source.type.substr(1)}

@@ -12,6 +12,12 @@ const scraper = {
   aggregate: 'county',
   url: 'https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/',
   type: 'paragraph',
+  maintainer: {
+    name: 'Larry Davis',
+    email: 'lazdnet@gmail.com',
+    twitter: 'lazdnet',
+    github: 'lazd'
+  },
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
