@@ -136,22 +136,16 @@ const scraper = {
   async scraper() {
     let counties = [];
     const $ = await fetch.page(this.url);
-    // const $header = $('h3:contains(Cases by County)').first();
     const $table = $($('table')[1]);
-    // console.error($table.text());
 
     const $trs = $table.find('tr:not(:first-child)');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      // console.error($tr.text());
       let countyName = parse.string($tr.find('td:nth-child(1)').text());
       countyName = this._countyMap[countyName] || countyName;
-      console.error(countyName);
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-      console.error(casesState);
       const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
-      console.error(casesOther);
       if (countyName !== 'TBD') {
         counties.push({
           county: transform.addCounty(countyName),
