@@ -28,8 +28,13 @@ jobs:
         run: |
           yarn
       - name: Test
+        if: github.event_name != 'pull_request'
         run: |
           yarn test
+      - name: PR Test
+        if: github.event_name == 'pull_request'
+        run: |
+          FILES_MODIFIED=$(git diff --name-only master) yarn jest
       - name: Lint
         run: |
           yarn lint

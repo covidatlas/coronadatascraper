@@ -132,7 +132,7 @@ function addData(cases, location, result) {
 /*
   Run the correct scraper for this location
 */
-function runScraper(location) {
+export function runScraper(location) {
   const rejectUnauthorized = location.certValidation === false;
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
