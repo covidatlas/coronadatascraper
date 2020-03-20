@@ -1,7 +1,7 @@
-import csvParse from 'csv-parse/lib/sync';
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -25,16 +25,12 @@ const scraper = {
     const url = `https://tableau.azdhs.gov/vizql/w/COVID-19Dashboard/v/COVID-19table/vud/sessions/${sessionId}/views/8275719771277684273_9753144220671897612?csv=true&summary=true`;
 
     // Parse the tab separated values file that comes back
-    const tsv = await fetch.page(url);
-    const data = csvParse(tsv.text(), {
-      delimiter: '\t',
-      columns: true
-    });
+    const data = await fetch.tsv(url);
 
     const counties = [];
 
     for (const row of data) {
-      const county = transform.addCounty(row.County);
+      const county = geography.addCounty(row.County);
       const cases = parse.number(row.Count);
 
       counties.push({
