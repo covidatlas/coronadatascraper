@@ -12,14 +12,14 @@ const scraper = {
   type: 'table',
   async scraper() {
     const $ = await fetch.page(this.url);
-    let counties = [];
-    let $table = $('table:contains(County):contains(Cases)');
-    let $trs = $table.find('tbody > tr');
+    const counties = [];
+    const $table = $('table:contains(County):contains(Cases)');
+    const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
       const cases = parse.number($tr.find('td:last-child').text());
-      counties.push({county: county, cases: cases});
+      counties.push({county, cases});
     });
 
     return counties;
