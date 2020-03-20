@@ -12,10 +12,17 @@ const scraper = {
   aggregate: 'state',
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    let latestDate = data[data.length - 1].data.substr(0, 10);
-    if (process.env.SCRAPE_DATE) {
-      latestDate = datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE), '-');
+    const scrapeDate = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : datetime.getYYYYMMDD();
+    let latestDate = new Date(data[data.length - 1].data);
+    latestDate.setHours(0, 0, 0, 0);
+
+    if (datetime.dateIsBefore(latestDate, scrapeDate)) {
+      console.error('🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s', datetime.getYYYYMMDD(latestDate), datetime.getYYYYMMDD(scrapeDate));
+      latestDate = datetime.getYYYYMMDD(latestDate, '-');
+    } else {
+      latestDate = datetime.getYYYYMMDD(scrapeDate, '-');
     }
+
     return data
       .filter(row => {
         return row.data.substr(0, 10) === latestDate;
