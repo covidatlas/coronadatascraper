@@ -15,8 +15,8 @@ const data = {};
 
 let map;
 
-const noCasesColor = '#faffef';
-const noPopulationDataColor = '#ffffff';
+const noCasesColor = '#ffffff';
+const noPopulationDataColor = '#eaeaea';
 
 const outlineColorHighlight = 'rgb(0,0,0)';
 const outlineColor = 'rgba(0, 0, 0, 0.3)';
@@ -361,9 +361,11 @@ function showMap() {
   loadData('locations.json', 'locations');
   loadData('timeseries.json', 'timeseries');
   loadData('features.json', 'features');
+
+  createLegend();
 }
 
-window.createLegend = createLegend;
+// window.createLegend = createLegend;
 function createLegend(min, max) {
   const base = document.getElementById('map');
   const container = document.createElement('div');
