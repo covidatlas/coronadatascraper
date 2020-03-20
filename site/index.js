@@ -1,9 +1,11 @@
-/* global document, XMLHttpRequest, window, history, mapboxgl, Handsontable, Papa, JSONFormatter, d3 */
+/* global document, window, history, Handsontable, Papa, JSONFormatter */
 /* eslint no-use-before-define: "off" */
 /* eslint guard-for-in: "off" */
 /* eslint no-new: "off" */
 /* eslint no-restricted-globals: "off" */
 /* eslint no-useless-escape: "off" */
+
+import '@adobe/focus-ring-polyfill';
 
 import './style.css';
 
@@ -259,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const editor = document.querySelector('.cds-FileEditor');
 
-    fetchURL(url, function() {
+    fetch.url(url, function() {
       editor.querySelector('.cds-Heading').innerText = url;
 
       const extension = url.split('.').pop();

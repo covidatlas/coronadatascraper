@@ -1,10 +1,12 @@
+/* global XMLHttpRequest */
+
 export const url = function(urlToFetch, callback) {
   const req = new XMLHttpRequest();
   req.addEventListener('load', callback);
   req.open('GET', urlToFetch);
   req.send();
   return req;
-}
+};
 
 export const json = function(urlToFetch, callback) {
   return url(urlToFetch, function() {
@@ -16,4 +18,4 @@ export const json = function(urlToFetch, callback) {
     }
     callback(obj);
   });
-}
+};

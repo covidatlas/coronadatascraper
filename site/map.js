@@ -1,3 +1,5 @@
+/* global mapboxgl */
+
 import * as d3interpolate from 'd3-interpolate';
 import * as d3color from 'd3-color';
 import * as d3scale from 'd3-scale';
@@ -28,6 +30,7 @@ const choroplethColor = 'yellowOrangePurple';
 function returnLightness(c) {
   return d3color.lab(c).l;
 }
+
 function normalizePercent(min, max, input) {
   const range = max - min;
   const correctedStartValue = input - min;
@@ -60,6 +63,11 @@ const fill = d3scale
 const choroplethStyle = 'pureRatio';
 
 const type = 'cases';
+
+// Via https://math.stackexchange.com/a/57510
+function adjustTanh(value, a = 0, b = 3) {
+  return Math.min(Math.tanh(value + a) * b, 1);
+}
 
 const choroplethStyles = {
   pureRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
@@ -95,15 +103,10 @@ function getRatio(fractional, total) {
   return `1 : ${Math.round(total / fractional).toLocaleString()}`;
 }
 
-// Via https://math.stackexchange.com/a/57510
-function adjustTanh(value, a = 0, b = 3) {
-  return Math.min(Math.tanh(value + a) * b, 1);
-}
-
 function getLocationsByRank(currentData, type, min = 3) {
   let rankedItems = [];
 
-  for (const locationId in currentData) {
+  for (const locationId of Object.keys(currentData)) {
     const locationData = currentData[locationId];
     const location = data.locations[locationId];
 
@@ -215,6 +218,34 @@ function populateMap() {
     return 'none';
   }
 
+  function popupTemplate(location, locationData) {
+    let htmlString = `<div class="cds-Popup">`;
+    htmlString += `<h6 class="spectrum-Heading spectrum-Heading--XXS">${location.name}</h6>`;
+    htmlString += `<table class="cds-Popup-table spectrum-Body spectrum-Body--XS"><tbody>`;
+    if (location.population !== undefined) {
+      htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
+    } else {
+      htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
+    }
+    if (location.population && locationData.cases) {
+      htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
+    }
+    if (locationData.cases !== undefined) {
+      htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
+    }
+    if (locationData.deaths !== undefined) {
+      htmlString += `<tr><th>Deaths:</th><td>${locationData.deaths.toLocaleString()}</td></tr>`;
+    }
+    if (locationData.recovered !== undefined) {
+      htmlString += `<tr><th>Recovered:</th><td>${locationData.recovered.toLocaleString()}</td></tr>`;
+    }
+    if (locationData.active !== locationData.cases) {
+      htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
+    }
+    htmlString += `</tbody></table>`;
+    htmlString += `</div>`;
+    return htmlString;
+  }
   const countryFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
@@ -344,35 +375,6 @@ function populateMap() {
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
 }
 
-function popupTemplate(location, locationData) {
-  let htmlString = `<div class="cds-Popup">`;
-  htmlString += `<h6 class="spectrum-Heading spectrum-Heading--XXS">${location.name}</h6>`;
-  htmlString += `<table class="cds-Popup-table spectrum-Body spectrum-Body--XS"><tbody>`;
-  if (location.population !== undefined) {
-    htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
-  } else {
-    htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
-  }
-  if (location.population && locationData.cases) {
-    htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
-  }
-  if (locationData.cases !== undefined) {
-    htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
-  }
-  if (locationData.deaths !== undefined) {
-    htmlString += `<tr><th>Deaths:</th><td>${locationData.deaths.toLocaleString()}</td></tr>`;
-  }
-  if (locationData.recovered !== undefined) {
-    htmlString += `<tr><th>Recovered:</th><td>${locationData.recovered.toLocaleString()}</td></tr>`;
-  }
-  if (locationData.active !== locationData.cases) {
-    htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
-  }
-  htmlString += `</tbody></table>`;
-  htmlString += `</div>`;
-  return htmlString;
-}
-
 function showMap() {
   mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
   map = new mapboxgl.Map({
@@ -383,17 +385,6 @@ function showMap() {
   });
 
   let remaining = 0;
-  function loadData(url, field, callback) {
-    remaining++;
-    fetch.json(url, function(obj) {
-      data[field] = obj;
-      if (typeof callback === 'function') {
-        callback(obj);
-      }
-      handleLoaded();
-    });
-  }
-
   function handleLoaded() {
     remaining--;
     if (remaining === 0) {
@@ -403,6 +394,17 @@ function showMap() {
         map.once('load', populateMap);
       }
     }
+  }
+
+  function loadData(url, field, callback) {
+    remaining++;
+    fetch.json(url, function(obj) {
+      data[field] = obj;
+      if (typeof callback === 'function') {
+        callback(obj);
+      }
+      handleLoaded();
+    });
   }
 
   loadData('locations.json', 'locations');
