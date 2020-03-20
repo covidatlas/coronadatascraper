@@ -14,8 +14,76 @@ const scraper = {
   aggregate: 'county',
   ssl: false,
   certValidation: false,
+  _counties: [
+    'Aurora County',
+    'Beadle County',
+    'Bennett County',
+    'Bon Homme County',
+    'Brookings County',
+    'Brown County',
+    'Brule County',
+    'Buffalo County',
+    'Butte County',
+    'Campbell County',
+    'Charles Mix County',
+    'Clark County',
+    'Clay County',
+    'Codington County',
+    'Corson County',
+    'Custer County',
+    'Davison County',
+    'Day County',
+    'Deuel County',
+    'Dewey County',
+    'Douglas County',
+    'Edmunds County',
+    'Fall River County',
+    'Faulk County',
+    'Grant County',
+    'Gregory County',
+    'Haakon County',
+    'Hamlin County',
+    'Hand County',
+    'Hanson County',
+    'Harding County',
+    'Hughes County',
+    'Hutchinson County',
+    'Hyde County',
+    'Jackson County',
+    'Jerauld County',
+    'Jones County',
+    'Kingsbury County',
+    'Lake County',
+    'Lawrence County',
+    'Lincoln County',
+    'Lyman County',
+    'Marshall County',
+    'McCook County',
+    'McPherson County',
+    'Meade County',
+    'Mellette County',
+    'Miner County',
+    'Minnehaha County',
+    'Moody County',
+    'Oglala Lakota County',
+    'Pennington County',
+    'Perkins County',
+    'Potter County',
+    'Roberts County',
+    'Sanborn County',
+    'Spink County',
+    'Stanley County',
+    'Sully County',
+    'Todd County',
+    'Tripp County',
+    'Turner County',
+    'Union County',
+    'Walworth County',
+    'Yankton County',
+    'Ziebach County'
+  ],
   async scraper() {
-    const counties = [];
+    let counties = [];
     const $ = await fetch.page(this.url);
     let $table;
     if (datetime.scrapeDateIsBefore('2020-3-16')) {
@@ -38,6 +106,7 @@ const scraper = {
         cases
       });
     });
+    counties = transform.addEmptyRegions(counties, this._counties, 'county');
     counties.push(transform.sumData(counties));
     return counties;
   }
