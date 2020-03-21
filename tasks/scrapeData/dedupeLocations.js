@@ -1,4 +1,5 @@
 import * as geography from '../../lib/geography.js';
+import * as transform from '../../lib/transform.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -15,23 +16,6 @@ function crosscheck(a, b) {
     }
   }
   return failed ? crosscheckReport : false;
-}
-
-/*
-  Remove "private" object properties
-*/
-function removePrivate(data) {
-  for (const [prop, value] of Object.entries(data)) {
-    if (value === '') {
-      delete data[prop];
-    }
-    // Remove "private" fields
-    if (prop[0] === '_') {
-      delete data[prop];
-    }
-  }
-
-  return data;
 }
 
 /*
@@ -87,11 +71,11 @@ const dedupeLocations = args => {
         console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
 
         crosscheckReports[locationName] = crosscheckReports[locationName] || [];
-        const strippedLocation = removePrivate(location);
+        const strippedLocation = transform.removePrivate(location);
         if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
           crosscheckReports[locationName].push(strippedLocation);
         }
-        const stippedOtherLocation = removePrivate(otherLocation);
+        const stippedOtherLocation = transform.removePrivate(otherLocation);
         if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
           crosscheckReports[locationName].push(stippedOtherLocation);
         }
