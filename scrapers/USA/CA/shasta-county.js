@@ -11,11 +11,23 @@ const scraper = {
   country: 'USA',
   maintainers: [maintainers.jbencina],
   url: 'https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    const $el = $('h3:contains("Positive cases:")').first();
-    const matches = $el.text().match(/Positive cases:.*?(\d+)/);
-    return { cases: parse.number(matches[1]) };
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this.url);
+      const $el = $('h3:contains("Positive cases:")').first();
+      const matches = $el.text().match(/Positive cases:.*?(\d+)/);
+      return { cases: parse.number(matches[1]) };
+    },
+    '2019-3-20': async function() {
+      const $ = await fetch.headless(this.url);
+      const cases = parse.number(
+        $('td:contains("Confirmed Cases")')
+          .parent()
+          .find('td:last-child')
+          .text()
+      );
+      return { cases };
+    }
   }
 };
 
