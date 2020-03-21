@@ -8,22 +8,29 @@ import * as datetime from '../../lib/datetime.js';
 const scraper = {
   country: 'CHE',
   county: 'Zurich',
-  url: 'https://raw.githubusercontent.com/openZH/covid_19/master/COVID19_Fallzahlen_Kanton_ZH_total.csv',
+  url: 'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/COVID19_Fallzahlen_Kanton_ZH_total.csv',
   timeseries: true,
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    let latestData;
-    if (process.env.SCRAPE_DATE) {
-      const date = datetime.getDDMMYYYY(new Date(process.env.SCRAPE_DATE), '.');
-      [latestData] = data.filter(dayData => dayData.Date === date);
+    const scrapeDate = process.env.SCRAPE_DATE ? datetime.getYYYYMMDD(process.env.SCRAPE_DATE) : datetime.getYYYYMMDD();
+
+    let currentData = data[data.length - 1];
+    const latestDate = currentData.date;
+
+    if (datetime.dateIsBefore(latestDate, scrapeDate)) {
+      console.error('  🚨 Timeseries for Zurich, CHE has not been updated, using %s instead of %s', latestDate, scrapeDate);
     } else {
-      latestData = data[data.length - 1];
+      [currentData] = data.filter(dayData => dayData.date === scrapeDate);
     }
+
+    if (!currentData) {
+      throw new Error(`Zurich, CHE does not have data for ${scrapeDate}`);
+    }
+
     return {
-      recovered: parse.number(latestData.TotalCured),
-      deaths: parse.number(latestData.TotalDeaths),
-      cases: parse.number(latestData.TotalConfCases),
-      tested: parse.number(latestData.TotalTestedCases)
+      recovered: parse.number(currentData.ncumul_released),
+      deaths: parse.number(currentData.ncumul_deceased),
+      cases: parse.number(currentData.ncumul_conf)
     };
   }
 };
