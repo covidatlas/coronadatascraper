@@ -124,6 +124,23 @@ const scraper = {
       stateData.population = data[0].State_Population;
       counties.push(stateData);
       return counties;
+    },
+    '2020-3-20': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv';
+      this.type = 'csv';
+      const data = await fetch.csv(this.url);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.County_Pos_Cases),
+          population: parse.number(county.County_Population)
+        });
+      }
+      const stateData = transform.sumData(counties);
+      stateData.population = data[0].State_Population;
+      counties.push(stateData);
+      return counties;
     }
   }
 };
