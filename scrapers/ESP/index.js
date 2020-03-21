@@ -108,7 +108,10 @@ const scraper = {
     // },
     // ```
 
-    const scrapeDate = process.env.SCRAPE_DATE ? LocalDate.of(...process.env.SCRAPE_DATE.split('-')) : undefined;
+    // Need to jump through a couple extra hoops here because SCRAPE_DATE doesn't use leading zeroes
+    const scrapeDate = process.env.SCRAPE_DATE
+      ? LocalDate.of(...process.env.SCRAPE_DATE.split('-')) // e.g. '2020-3-8' -> LocalDate.of(2020, 3, 8)
+      : undefined;
 
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
