@@ -1,3 +1,9 @@
+# http://editorconfig.org
+# defaults: https://github.com/editorconfig/editorconfig-defaults/blob/master/.editorconfig
+
+root = true
+
 [*]
+charset = utf-8
 quote_type = single
-max_line_length = 500
+max_line_length = 120
