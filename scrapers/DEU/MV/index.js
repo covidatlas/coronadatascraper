@@ -1,4 +1,5 @@
 import * as fetch from '../../../lib/fetch.js';
+import * as parse from '../../../lib/parse.js';
 import * as datetime from '../../../lib/datetime.js';
 
 const scraper = {
@@ -35,11 +36,23 @@ const scraper = {
 
     const ddeaths = await fetch.json(`${this.url}/deaths`);
 
+    const cases = dcases.data
+      .filter(row => {
+        return Object.keys(row)[0].substr(0, 10) === latestDate;
+      })
+      .map(row => parse.number(Object.values(row)[0]))[0];
+
+    const deaths = ddeaths.data
+      .filter(row => {
+        return Object.keys(row)[0].substr(0, 10) === latestDate;
+      })
+      .map(row => parse.number(Object.values(row)[0]))[0];
+
     return {
       country: this.country,
       state: this.state,
-      cases: Object.values(dcases.data[dcases.data.length - 1])[0],
-      deaths: Object.values(ddeaths.data[dcases.data.length - 1])[0],
+      cases,
+      deaths,
       coordinates: [12.42, 53.37],
       population: 1.609 * 10 ** 6
     };
