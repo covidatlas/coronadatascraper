@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -23,7 +24,7 @@ const scraper = {
       let countyName = parse.string(county.COUNTYNAME);
       countyName = this._countyMap[countyName] || countyName;
       counties.push({
-        county: transform.addCounty(countyName),
+        county: geography.addCounty(countyName),
         cases: parse.number(county.Total_Positive),
         deaths: parse.number(county.Total_Deaths),
         tested: parse.number(county.Total_Tested)

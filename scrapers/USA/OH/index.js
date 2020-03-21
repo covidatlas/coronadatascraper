@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -113,14 +114,14 @@ const scraper = {
       arrayOfCounties.forEach(county => {
         const splitCounty = county.trim().split(' ');
         counties.push({
-          county: transform.addCounty(parse.string(splitCounty[0])),
+          county: geography.addCounty(parse.string(splitCounty[0])),
           cases: parse.number(splitCounty[1])
         });
       });
 
       counties.push(transform.sumData(counties));
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
     },
@@ -136,14 +137,14 @@ const scraper = {
       arrayOfCounties.forEach(county => {
         const splitCounty = county.trim().split(' ');
         counties.push({
-          county: transform.addCounty(parse.string(splitCounty[0])),
+          county: geography.addCounty(parse.string(splitCounty[0])),
           cases: parse.number(splitCounty[1])
         });
       });
 
       counties.push(transform.sumData(counties));
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
     }
