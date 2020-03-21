@@ -27,6 +27,7 @@
   "dependencies": {
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
+    "@js-joda/core": "^2.0.0",
     "@turf/turf": "^5.1.6",
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
