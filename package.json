@@ -21,7 +21,8 @@
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
-    "updateModules": "git submodule update --remote"
+    "updateModules": "git submodule update --remote",
+    "pretty": "prettier --write --single-quote '**/*.js'"
   },
   "dependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
