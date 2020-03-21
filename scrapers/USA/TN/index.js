@@ -4,7 +4,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'TN',
@@ -114,16 +114,41 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('th:contains("Case Count")').closest('table');
     const $trs = $table.find('tbody > tr');
+
+    const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+
     $trs.each((index, tr) => {
       if (index < 1) {
         return;
       }
       const $tr = $(tr);
+      const countyName = parse.string(
+        $tr
+          .find('td:first-child')
+          .text()
+          .replace(/\w\S*/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+          })
+      );
+
+      const cases = parse.number($tr.find('td:last-child').text());
+
+      if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+        unassignedCounty.cases += cases;
+        return;
+      }
+
+      if (countyName === 'Grand Total') {
+        return;
+      }
+
       counties.push({
-        county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
-        cases: parse.number($tr.find('td:last-child').text())
+        county: geography.addCounty(countyName),
+        cases
       });
     });
+
+    counties.push(unassignedCounty);
 
     counties.push(transform.sumData(counties));
 
