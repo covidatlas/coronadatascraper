@@ -1,6 +1,5 @@
 import * as turf from '@turf/turf';
 import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
 import espGeoJson from '../coronavirus-data-sources/geojson/ESP.json';
 import * as geography from '../lib/geography.js';
 
