@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -57,7 +58,7 @@ const scraper = {
       const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+        const county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
         const cases = parse.number($tr.find('td:nth-child(2)').text());
         counties.push({
           county,
@@ -65,7 +66,7 @@ const scraper = {
         });
       });
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       counties.push(transform.sumData(counties));
 
@@ -78,7 +79,7 @@ const scraper = {
       const $trs = $table.find('tbody > tr:not(:last-child)');
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const county = transform.addCounty(parse.string($tr.find('td:first-child').text()));
+        const county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
         const cases = parse.number($tr.find('td:nth-child(2)').text());
         const deaths = parse.number($tr.find('td:last-child').text());
         counties.push({
@@ -88,7 +89,7 @@ const scraper = {
         });
       });
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       counties.push(transform.sumData(counties));
 

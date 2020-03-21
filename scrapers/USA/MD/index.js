@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -22,7 +23,7 @@ const scraper = {
         if (splitCounty.length > 1) {
           let county = parse.string(splitCounty.substring(0, splitCounty.indexOf('(')).trim());
           if (county !== 'Baltimore City') {
-            county = transform.addCounty(county);
+            county = geography.addCounty(county);
           }
           const cases = parse.number(splitCounty.substring(splitCounty.indexOf('(') + 1, splitCounty.length).trim());
           counties.push({
@@ -43,7 +44,7 @@ const scraper = {
         if (county.COUNTY === 'Baltimore City') {
           countyName = parse.string(county.COUNTY);
         } else {
-          countyName = transform.addCounty(parse.string(county.COUNTY));
+          countyName = geography.addCounty(parse.string(county.COUNTY));
         }
         counties.push({
           county: countyName,
