@@ -73,5 +73,10 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "prettier": {
+    "printWidth": 500,
+    "semi": true,
+    "singleQuote": true
   }
 }
