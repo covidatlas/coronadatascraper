@@ -158,8 +158,9 @@ const scraper = {
       if (countyName in counties) {
         counties[countyName].cases += casesState + casesOther;
       } else {
-        counties[countyName] = {};
-        counties[countyName].cases = casesState + casesOther;
+        counties[countyName] = {
+          cases: casesState + casesOther
+        };
       }
     });
 
