@@ -14,6 +14,19 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/results.php',
+  source: {
+    name: 'Missouri Department of Health and Senior Services'
+  },
+  maintainers: [
+    {
+      name: 'Paul Boal',
+      email: 'paul.boal@amitechsolutions.com',
+      url: 'https://amitechsolutions.com',
+      github: 'paulboal',
+      country: 'USA',
+      flag: '🇺🇸'
+    }
+  ],
   _countyMap: {
     // MO reporting KC as a county, which is really part of several counties.
     'Kansas City': 'Jackson County',

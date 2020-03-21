@@ -14,6 +14,19 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   url: 'https://coronavirus.health.ok.gov/',
+  source: {
+    name: 'Oklahoma State Deparment of Health'
+  },
+  maintainers: [
+    {
+      name: 'Paul Boal',
+      email: 'paul.boal@amitechsolutions.com',
+      url: 'https://amitechsolutions.com',
+      github: 'paulboal',
+      country: 'USA',
+      flag: '🇺🇸'
+    }
+  ],
   _countyMap: {},
   _counties: [
     'Adair County',
