@@ -13,7 +13,6 @@ const scraper = {
   url: 'https://www.dshs.state.tx.us/news/updates.shtm',
   type: 'table',
   aggregate: 'county',
-  ssl: false,
   certValidation: false,
   _counties: [
     'Anderson County',
