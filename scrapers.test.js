@@ -1,6 +1,6 @@
 import each from 'jest-each';
 
-import { runScraper } from './tasks/scrapeData.js';
+import { runScraper } from './tasks/scrapeData/runScraper.js';
 import * as fs from './lib/fs.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));

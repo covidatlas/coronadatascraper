@@ -4,7 +4,7 @@ import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
 import writeData from './writeData.js';
 
-async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, location: null }) {
+async function generate(date, options) {
   if (date) {
     process.env.SCRAPE_DATE = date;
   } else {
