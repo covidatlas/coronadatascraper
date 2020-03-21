@@ -103,10 +103,6 @@ To generate a timeseries for the entire history of the pandemic using cached dat
 yarn timeseries
 ```
 
-```
-yarn timeseries
-```
-
 To generate it for a date range, use `-d`/`-e`:
 
 ```
