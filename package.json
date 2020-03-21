@@ -38,6 +38,7 @@
     "fast-glob": "^3.2.2",
     "mock-fs": "^4.11.0",
     "needle": "^2.3.3",
+    "pdfreader": "^1.0.6",
     "puppeteer": "^2.1.1",
     "yargs": "^15.3.1"
   },
