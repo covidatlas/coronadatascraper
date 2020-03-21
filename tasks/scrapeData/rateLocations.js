@@ -56,7 +56,7 @@ function calculateRating(info) {
     info.type = path.extname(info.url).substr(1);
   }
 
-  if (info.url.substr(0, 5) === 'https' && info.ssl !== false) {
+  if (info.url.substr(0, 5) === 'https' && info.certValidation !== false) {
     info.ssl = true;
     rating += sslWorth;
   }
