@@ -105,14 +105,14 @@ const scraper = {
       countyName = this._countyMap[countyName] || countyName;
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-      console.error(countyName);
       if (countyName !== 'Total') {
         countyName = transform.addCounty(countyName);
         if (countyName in counties) {
           counties[countyName].cases += casesState;
         } else {
-          counties[countyName] = {};
-          counties[countyName].cases = casesState;
+          counties[countyName] = {
+            cases: casesState
+          };
         }
       }
     });
