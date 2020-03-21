@@ -1,14 +1,14 @@
 import runScrapers from './runScraper.js';
 import normalizeLocations from './normalizeLocations.js';
 import cleanLocations from './cleanLocations.js';
-import dedupLocations from './dedupData.js';
+import dedupeLocations from './dedupeLocations.js';
 import rateLocations from './rateLocations.js';
 
 const scrapeData = async args =>
   runScrapers(args)
     .then(normalizeLocations)
     .then(rateLocations)
-    .then(dedupLocations)
+    .then(dedupeLocations)
     .then(cleanLocations)
     .then(args => {
       const { locations, scraperErrors, deDuped, crosscheckReports, report } = args;

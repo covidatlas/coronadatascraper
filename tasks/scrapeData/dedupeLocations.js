@@ -48,14 +48,7 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
   return exists;
 }
 
-/*
-  Get the priority of a location
-*/
-const getPriority = location => {
-  return location.priority !== undefined ? location.priority : 0;
-};
-
-const dedupLocations = args => {
+const dedupeLocations = args => {
   const { locations } = args;
 
   const crosscheckReports = {};
@@ -69,16 +62,16 @@ const dedupLocations = args => {
 
     if (otherLocation) {
       // Take rating into account to break ties
-      const thisPriority = getPriority(location) + location.rating / 2;
-      const otherPriority = getPriority(otherLocation) + otherLocation.rating / 2;
+      const thisPriority = geography.getPriority(location) + location.rating / 2;
+      const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
-        // Kill the other location
+        // Delete the other location
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
       } else if (otherPriority < thisPriority) {
-        // Kill the other location
+        // Delete the other location
         console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
@@ -110,4 +103,4 @@ const dedupLocations = args => {
   return { ...args, deDuped, crosscheckReports };
 };
 
-export default dedupLocations;
+export default dedupeLocations;
