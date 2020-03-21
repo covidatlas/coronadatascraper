@@ -15,7 +15,7 @@ const scraper = {
     const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
     const { casesString } = paragraph.match(/cases in Victoria to (?<casesString>\d+)./).groups;
     const cases = parse.number(casesString);
-    return [{ state: scraper.state, cases }];
+    return { state: scraper.state, cases };
   }
 };
 
