@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -24,7 +25,7 @@ const scraper = {
           .text()
           .match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          const county = transform.addCounty(parse.string(matches[1]));
+          const county = geography.addCounty(parse.string(matches[1]));
           const cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -45,7 +46,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -63,7 +64,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: parse.string($tr.find('td:first-child').text()),
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -81,7 +82,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()),
+          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });

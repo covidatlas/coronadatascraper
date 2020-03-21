@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
   "parser": "babel-eslint",
+  "ignorePatterns": ["dist/"],
   "rules": {
     "jest/no-standalone-expect": "warn",
     "no-async-promise-executor": "warn",
