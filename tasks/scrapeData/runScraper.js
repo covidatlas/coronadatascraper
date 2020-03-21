@@ -100,10 +100,8 @@ const runScrapers = async args => {
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.location) {
-      if (geography.getName(location) !== options.location) {
-        continue;
-      }
+    if (options.location && geography.getName(location) !== options.location) {
+      continue;
     }
     if (options.skip) {
       if (geography.getName(location) === options.skip) {
