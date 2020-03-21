@@ -20,7 +20,7 @@ const scraper = {
         // They had a weird URL for this day
         this.url = 'https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-19-2020-x-updated4pm/download';
       } else {
-        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${date.split(6)}-2020/download`;
+        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(date).getUTCDate()}-2020/download`;
       }
 
       let rows = null;
