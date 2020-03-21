@@ -94,7 +94,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         let cases = parse.number($tr.find('td:nth-child(2)').text());
-        let deaths = parse.number($tr.find('td:last-child').text());
+        let deaths = parse.number(parse.string($tr.find('td:last-child').text()) || 0);
 
         if (Number.isNaN(cases)) {
           cases = 0;
