@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
-    "build": "yarn start && yarn timeseries && yarn buildSite",
+    "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
@@ -18,7 +18,7 @@
     "lint": "eslint .",
     "start": "node src/events/crawler/cli.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
-    "timeseries": "node timeseries.js",
+    "timeseries": "node src/events/crawler/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote"
   },
