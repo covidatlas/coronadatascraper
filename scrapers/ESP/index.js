@@ -27,7 +27,6 @@ const scraper = {
     }
   ],
   async scraper() {
-    const ISO = DateTimeFormatter.ofPattern('yyyy-MM-dd');
     const isDate = s => s.includes('/');
 
     const parseDate = s => {
@@ -87,7 +86,7 @@ const scraper = {
           .map(date => {
             return {
               state: parse.string(location),
-              date: parseDate(date).format(ISO),
+              date: parseDate(date).toString(),
               cases: parse.number(casesRow[date]),
               deaths: parse.number(deathsRow[date]),
               recovered: parse.number(recoveredRow[date])
@@ -126,7 +125,7 @@ const scraper = {
     if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
     // return data from that date
-    const locations = data.filter(d => d.date === queryDate.format(ISO));
+    const locations = data.filter(d => d.date === queryDate.toString());
     locations.push(transform.sumData(locations));
     return locations;
   }
