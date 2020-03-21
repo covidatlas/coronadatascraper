@@ -1,5 +1,8 @@
 import path from 'path';
 
+// Generate ratings
+const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url', 'curators', 'sources', 'maintainers'];
+
 /*
   Calculate the rating of a source
     info.type - the way the source presents data (see below)
@@ -53,7 +56,7 @@ function calculateRating(info) {
     info.type = path.extname(info.url).substr(1);
   }
 
-  if (info.url.substr(0, 5) === 'https' && info.ssl !== false) {
+  if (info.url.substr(0, 5) === 'https' && info.certValidation !== false) {
     info.ssl = true;
     rating += sslWorth;
   }
@@ -91,4 +94,40 @@ function calculateRating(info) {
   return rating / possible;
 }
 
-export default calculateRating;
+const rateLocations = args => {
+  const { locations } = args;
+
+  const sourcesByURL = {};
+  for (const location of locations) {
+    const sourceObj = { ...location._scraperDefinition };
+    for (const prop of sourceProps) {
+      if (location[prop] !== undefined) {
+        sourceObj[prop] = location[prop];
+      }
+    }
+    for (const prop in sourceObj) {
+      if (prop[0] === '_') {
+        delete sourceObj[prop];
+      }
+    }
+
+    delete sourceObj.scraper;
+
+    // Remove granularity from the data since this is a report on the scraper
+    if (sourceObj.aggregate) {
+      delete sourceObj[sourceObj.aggregate];
+    }
+
+    sourcesByURL[location.url] = sourceObj;
+    sourceObj.rating = calculateRating(sourceObj);
+    location.rating = calculateRating(sourceObj);
+  }
+  let sourceRatings = Object.values(sourcesByURL);
+  sourceRatings = sourceRatings.sort((a, b) => {
+    return b.rating - a.rating;
+  });
+
+  return { ...args, sourceRatings };
+};
+
+export default rateLocations;
