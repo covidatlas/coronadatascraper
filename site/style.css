@@ -1,4 +1,25 @@
-@import url("https://use.typekit.net/xcj1vcp.css");
+@import url('https://use.typekit.net/xcj1vcp.css');
+
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-global.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-darkest.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-lightest.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-dark.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-light.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-large.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/icon/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/statuslight/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/page/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/button/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/buttongroup/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/sidenav/index-vars.css";
+
+@import "./colors.css";
+@import "./icons/style.css";
 
 :root {
   --cds-editor-header-background-color: var(--spectrum-global-color-gray-500);
