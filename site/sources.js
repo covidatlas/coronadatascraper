@@ -2,7 +2,7 @@
 
 import { getGrade } from './lib/math.js';
 import { getName } from '../src/events/crawler/lib/geography.js';
-import * as fetch from '../src/events/crawler/lib/fetch.js';
+import * as fetch from './lib/fetch.js';
 
 function getURLFromContributor(curator) {
   if (!curator) {
