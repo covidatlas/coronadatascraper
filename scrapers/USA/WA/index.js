@@ -93,8 +93,16 @@ const scraper = {
       const $trs = $table.find('tbody > tr');
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const cases = parse.number($tr.find('td:nth-child(2)').text());
-        const deaths = parse.number($tr.find('td:last-child').text());
+        let cases = parse.number($tr.find('td:nth-child(2)').text());
+        let deaths = parse.number($tr.find('td:last-child').text());
+
+        if (Number.isNaN(cases)) {
+          cases = 0;
+        }
+        if (Number.isNaN(deaths)) {
+          deaths = 0;
+        }
+
         let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
         if (county === 'Unassigned County') {
           county = UNASSIGNED;
