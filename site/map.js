@@ -7,7 +7,7 @@ import * as fetch from './lib/fetch.js';
 
 import { adjustTanh, normalizePercent, getRatio } from './lib/math.js';
 import { getLightness } from './lib/color.js';
-import { isCounty, isState, isCountry, getLocationGranularityName } from '../lib/geography.js';
+import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/events/crawler/lib/geography.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
 
