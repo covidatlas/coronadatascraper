@@ -150,7 +150,6 @@ const scraper = {
 
       let counties = [];
       for (const county of data.features) {
-        console.log(county.attributes);
         counties.push({
           county: this._getCountyName(geography.addCounty(parse.string(county.attributes.COUNTYNAME))),
           cases: parse.number(county.attributes.T_positive || 0),
