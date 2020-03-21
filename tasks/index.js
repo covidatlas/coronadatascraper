@@ -18,8 +18,8 @@ async function generate(date, options) {
 
   const output = await fetchSources({ date, report, options })
     .then(scrapeData)
-    .then(findFeatures)
-    .then(findPopulations)
+    .then(options.findFeatures !== false && findFeatures)
+    .then(options.findFeatures !== false && findPopulations)
     .then(options.writeData !== false && writeData);
 
   return output;
