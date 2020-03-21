@@ -9,8 +9,8 @@ const scraper = {
   priority: 1,
   async scraper() {
     const $ = await fetch.page(this.url);
-    const urls = $('#content h3:first-of-type > a');
-    const currentArticleUrl = urls[0].attribs.href;
+    const anchors = $('#content h3:first-of-type > a');
+    const currentArticleUrl = anchors[0].attribs.href;
     const $currentArticlePage = await fetch.page(currentArticleUrl);
     const paragraph = $currentArticlePage('#content h2:first-of-type + p').text();
     const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
