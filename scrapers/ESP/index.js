@@ -1,21 +1,6 @@
 import { LocalDate, DateTimeFormatter } from '@js-joda/core';
 import * as fetch from '../../lib/fetch.js';
-
-const ISO = DateTimeFormatter.ofPattern('yyyy-MM-dd');
-const isDate = s => s.includes('/');
-
-const parseDate = s => {
-  // Source data currently uses ddmmyyyy format for dates,
-  // but is (maybe?) planning to switch to yyyymmdd.
-  // See https://github.com/datadista/datasets/issues/14
-  // When/if this happens, replace contents of this function with:
-  // return LocalDate.parse(s)
-
-  const [d, m, y] = s.split('/');
-  return LocalDate.parse(`${y}-${m}-${d}`);
-};
-
-const mostRecent = dates => dates.sort().pop();
+import * as transform from '../../lib/transform.js';
 
 const scraper = {
   country: 'ESP',
@@ -42,9 +27,25 @@ const scraper = {
     }
   ],
   async scraper() {
+    const ISO = DateTimeFormatter.ofPattern('yyyy-MM-dd');
+    const isDate = s => s.includes('/');
+
+    const parseDate = s => {
+      // Source data currently uses ddmmyyyy format for dates,
+      // but is (maybe?) planning to switch to yyyymmdd.
+      // See https://github.com/datadista/datasets/issues/14
+      // When/if this happens, replace contents of this function with:
+      // return LocalDate.parse(s)
+
+      const [d, m, y] = s.split('/');
+      return LocalDate.parse(`${y}-${m}-${d}`);
+    };
+
+    const mostRecent = dates => dates.sort().pop();
+
     const rawData = {};
     for (const { name, url } of this.sources) {
-      rawData[name] = await fetch.csv(url);
+      rawData[name] = await fetch.csv(url, false);
     }
 
     // `data_raw` looks like this:
@@ -107,16 +108,21 @@ const scraper = {
     // },
     // ```
 
+    const scrapeDate = process.env.SCRAPE_DATE ? LocalDate.of(...process.env.SCRAPE_DATE.split('-')) : undefined;
+
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
       .filter(isDate)
       .map(parseDate);
+    const latestDate = mostRecent(dates);
 
-    // either get a specific date, or the latest available
-    const date = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : mostRecent(dates).format(ISO);
+    // use the scrape date, or the latest available
+    const date = (scrapeDate || latestDate).format(ISO);
 
     // return data from that date
-    return data.filter(d => d.date === date);
+    const locations = data.filter(d => d.date === date);
+    locations.push(transform.sumData(locations));
+    return locations;
   }
 };
 
