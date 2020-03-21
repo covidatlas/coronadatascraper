@@ -1,4 +1,6 @@
+import sync from 'csv-parse/lib/sync';
 import * as fetch from '../../../lib/fetch.js';
+import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography.js';
 
@@ -7,38 +9,38 @@ const scraper = {
   state: 'KY',
   priority: 1,
   url: 'https://datawrapper.dwcdn.net/BbowM/23/',
+  source: {
+    name: 'Kentucky Cabinet for Health and Family Services',
+    url: 'https://www.kentucky.com/news/coronavirus/article241309406.html'
+  },
+  maintainers: [
+    {
+      name: 'Jordan Holt',
+      email: 'jordholt@gmail.com',
+      github: 'DatJord',
+      country: 'USA',
+      flag: '🇺🇸'
+    }
+  ],
   aggregate: 'county',
   async scraper() {
     const $ = await fetch.headless(this.url);
 
     const counties = [];
-    const jsonList = [];
 
     // Extract raw csv from link attribute on Kentucky Health Organizations data map.
-    const $rawCSVstring = decodeURIComponent($('a[class="dw-data-link"]').attr('href')).replace('data:application/octet-stream;charset=utf-8,', '');
+    const csvText = decodeURIComponent($('a[class="dw-data-link"]').attr('href')).replace('data:application/octet-stream;charset=utf-8,', '');
 
-    // Convert this string into something more manageable (json)
-    const lines = $rawCSVstring.split('\n');
-    const headers = lines[0].split(',');
-
-    for (let i = 1; i < lines.length; i++) {
-      const obj = {};
-      const currentline = lines[i].split(',');
-
-      for (let j = 0; j < headers.length; j++) {
-        obj[headers[j]] = currentline[j];
-      }
-
-      jsonList.push(obj);
-    }
+    // Parse csv.
+    const data = sync(csvText, { columns: true });
 
     // Construct counties list and return to system.
-    for (const county of jsonList) {
+    for (const county of data) {
       counties.push({
         county: geography.addCounty(county.County),
-        cases: county.Total === 'null' ? 0 : parseInt(county.Total, 10),
-        deaths: county.Deaths === 'null' ? 0 : parseInt(county.Deaths, 10),
-        recovered: county.Recovered === 'null' ? 0 : parseInt(county.Recovered, 10)
+        cases: county.Total === 'null' ? 0 : parse.number(county.Total),
+        deaths: county.Deaths === 'null' ? 0 : parse.number(county.Deaths),
+        recovered: county.Recovered === 'null' ? 0 : parse.number(county.Recovered)
       });
     }
 
