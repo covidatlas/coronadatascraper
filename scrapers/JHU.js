@@ -1,7 +1,7 @@
 import path from 'path';
 import * as fetch from '../lib/fetch.js';
 import * as parse from '../lib/parse.js';
-import * as transform from '../lib/transform.js';
+import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';
@@ -126,8 +126,8 @@ const scraper = {
       }
 
       // Use their US states
-      if (cases[index]['Country/Region'] === 'US' && transform.usStates[parse.string(cases[index]['Province/State'])]) {
-        const state = transform.usStates[parse.string(cases[index]['Province/State'])];
+      if (cases[index]['Country/Region'] === 'US' && geography.usStates[parse.string(cases[index]['Province/State'])]) {
+        const state = geography.usStates[parse.string(cases[index]['Province/State'])];
         countries.push({
           country: 'USA',
           state,
