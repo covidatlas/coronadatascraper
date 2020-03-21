@@ -26,9 +26,8 @@ const scraper = {
     // {'features':[{'attributes':{'cases': INT, 'deaths': INT, 'BL': STRING, 'county': STRING, 'EWZ': INT}},..., {'attributes':{'cases': INT, 'deaths': INT, 'BL': STRING, 'county': STRING, 'EWZ': INT}}]}
 
     const { features } = res; // a list of dictionaries, one for each county
-    console.error('return is %s', features);
 
-    const foo = features.map(row => {
+    return features.map(row => {
       return {
         deaths: parse.number(row.attributes.deaths),
         cases: parse.number(row.attributes.cases),
@@ -37,8 +36,6 @@ const scraper = {
         population: parse.number(row.attributes.EWZ)
       };
     });
-    console.error('return is %s', foo[0].state);
-    return foo;
   }
 };
 
