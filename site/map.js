@@ -132,11 +132,13 @@ function populateMap() {
       }
     }
     // Associated the feature with the location
-    if (location.featureId) {
+    if (location.featureId !== undefined) {
       const feature = data.features.features[location.featureId];
       if (feature) {
         foundFeatures++;
         feature.properties.locationId = index;
+      } else {
+        console.error('Could not find feature with id %d', location.featureId);
       }
     }
   });
