@@ -1,6 +1,7 @@
 import { LocalDate, DateTimeFormatter } from '@js-joda/core';
 import * as fetch from '../../lib/fetch.js';
 import * as transform from '../../lib/transform.js';
+import * as parse from '../../lib/parse.js';
 
 const scraper = {
   country: 'ESP',
@@ -90,9 +91,9 @@ const scraper = {
             return {
               state: location,
               date: parseDate(date).format(ISO),
-              cases: +casesRow[date] || 0,
-              deaths: +deathsRow[date] || 0,
-              recovered: +recoveredRow[date] || 0
+              cases: parse.number(casesRow[date]),
+              deaths: parse.number(deathsRow[date]),
+              recovered: parse.number(recoveredRow[date])
             };
           });
       });
