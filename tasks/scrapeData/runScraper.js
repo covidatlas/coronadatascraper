@@ -125,7 +125,7 @@ const runScrapers = async args => {
     }
   }
 
-  return { ...args, locations };
+  return { ...args, locations, scraperErrors: errors };
 };
 
 export default runScrapers;

@@ -1,4 +1,4 @@
-import * as transform from '../../lib/transform.js';
+import * as geography from '../../lib/geography.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -64,7 +64,7 @@ const dedupLocations = args => {
   let deDuped = 0;
   while (i-- > 0) {
     const location = locations[i];
-    const locationName = transform.getName(location);
+    const locationName = geography.getName(location);
     const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {

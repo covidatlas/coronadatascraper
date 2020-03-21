@@ -120,6 +120,7 @@ const rateLocations = args => {
 
     sourcesByURL[location.url] = sourceObj;
     sourceObj.rating = calculateRating(sourceObj);
+    location.rating = calculateRating(sourceObj);
   }
   let sourceRatings = Object.values(sourcesByURL);
   sourceRatings = sourceRatings.sort((a, b) => {
