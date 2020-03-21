@@ -4,8 +4,9 @@
 import * as d3interpolate from 'd3-interpolate';
 import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
+import * as d3 from 'd3';
 
-import { adjustTanh, normalizePercent, getRatio } from './lib/math.js';
+import { adjustTanh, normalizePercent, getRatio, getPercent } from './lib/math.js';
 import { getLightness } from './lib/color.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from '../lib/geography.js';
 
@@ -32,7 +33,9 @@ const choroplethColors = {
   magma: ['#fcfdbf', '#fde2a3', '#fec488', '#fea772', '#fc8961', '#f56b5c', '#e75263', '#d0416f', '#b73779', '#9c2e7f', '#832681', '#6a1c81', '#51127c', '#36106b', '#1d1147', '#0a0822']
 };
 
-const choroplethColor = 'yellowOrangePurple';
+const choroplethColor = 'yellowOrangeRed';
+
+let chartDataMin, chartDataMax;
 
 let domainArray = [];
 const colorsArray = choroplethColors[choroplethColor];
@@ -126,6 +129,8 @@ function populateMap() {
 
   let foundFeatures = 0;
   let worstAffectedPercent = 0;
+  let lowestInfectionPercent = Infinity;
+
   data.locations.forEach(function(location, index) {
     // Calculate worst affected percent
     if (location.population) {
@@ -135,8 +140,15 @@ function populateMap() {
         if (infectionPercent > worstAffectedPercent) {
           worstAffectedPercent = infectionPercent;
         }
+        // Calculate least affected percent
+        if (infectionPercent != 0 && infectionPercent < lowestInfectionPercent) {
+          lowestInfectionPercent = infectionPercent;
+        }
+        chartDataMax = worstAffectedPercent;
+        chartDataMin = lowestInfectionPercent;
       }
     }
+
     // Associated the feature with the location
     if (location.featureId) {
       const feature = data.features.features[location.featureId];
@@ -181,6 +193,9 @@ function populateMap() {
     }
     if (location.population && locationData.cases) {
       htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
+    }
+    if (location.population && locationData.cases) {
+      htmlString += `<tr><th>Infected %:</th><td>${getPercent(locationData.cases, location.population)}</td></tr>`;
     }
     if (locationData.cases !== undefined) {
       htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
@@ -325,6 +340,8 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
+
+  createLegend(chartDataMin, chartDataMax);
 }
 
 function showMap() {
@@ -361,8 +378,6 @@ function showMap() {
   loadData('locations.json', 'locations');
   loadData('timeseries.json', 'timeseries');
   loadData('features.json', 'features');
-
-  createLegend();
 }
 
 // window.createLegend = createLegend;
@@ -374,15 +389,15 @@ function createLegend(min, max) {
 
   const heading = document.createElement('span');
   heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
-  heading.innerHTML = 'Cases by population';
+  heading.innerHTML = 'Percent of population infected';
   container.appendChild(heading);
 
   base.appendChild(container);
   ramp(choroplethColors.yellowOrangeRed, 300, containerId);
 
   // Correct value of max percent so that it's easier to parse
-  const lowestPercent = min * 100;
-  const worstPercent = max * 100;
+  const lowestPercent = (min * 100).toFixed(4);
+  const worstPercent = (max * 100).toFixed(4);
 
   const scaleText = document.createElement('span');
   scaleText.className = 'mapLegend-scaleLabels';
