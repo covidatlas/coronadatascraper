@@ -15,7 +15,7 @@ const scraper = {
     const paragraph = $currentArticlePage('#content h2:first-of-type + p').text();
     const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
     const cases = parse.number(casesString);
-    return [{ state: scraper.state, cases }];
+    return { state: scraper.state, cases };
   }
 };
 
