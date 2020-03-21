@@ -93,7 +93,7 @@ const scraper = {
       const $trs = $table.find('tbody > tr');
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const cases = parse.number($tr.find('td:nth-child(2)').text() || 0);
+        const cases = parse.number(parse.string($tr.find('td:nth-child(2)').text()) || 0);
         const deaths = parse.number(parse.string($tr.find('td:last-child').text()) || 0);
 
         let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
