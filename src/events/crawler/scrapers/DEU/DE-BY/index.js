@@ -33,7 +33,7 @@ const scraper = {
     };
   },
   async scraper() {
-    const data = await fetch.csv(this.url);
+    const data = await fetch.csv(this.url, false);
 
     // Rely on dataset to be sorted by time, in direction past -> future.
     const [lastRow] = data.slice(-1);
