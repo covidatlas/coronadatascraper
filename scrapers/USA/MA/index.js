@@ -15,13 +15,12 @@ const scraper = {
   scraper: {
     '2020-03-13': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
-      const dateObj = new Date(process.env.SCRAPE_DATE || datetime.getDate());
 
       if (date === '2020-03-19') {
         // They had a weird URL for this day
         this.url = 'https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-19-2020-x-updated4pm/download';
       } else {
-        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${dateObj.getDate() + 1}-2020/download`;
+        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${date.split(6)}-2020/download`;
       }
 
       let rows = null;
