@@ -137,8 +137,7 @@ Your scraper should return a `data` object, or an array of objects, with some of
 * `city` - The city name (not required if defined on scraper object)
 * `county` - The county or parish (not required if defined on scraper object)
 * `state` - The state, province, or region (not required if defined on scraper object)
-* `country` - [ISO 316
-6-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+* `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
 * `cases` - Total number of cases
 * `deaths` - Total number of deaths
 * `recovered` - Total number recovered
