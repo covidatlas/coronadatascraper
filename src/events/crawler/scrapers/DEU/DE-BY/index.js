@@ -19,37 +19,60 @@ const scraper = {
   sources: [
     {
       name: 'Robert Koch-Institut, Bavarian health ministry',
-      description: 'Fresh data obtained from Bavarian health ministry by ZEIT ONLINE'
+      description: 'Fresh data obtained from Bavarian health ministry by ZEIT ONLINE',
+      url: 'https://github.com/jgehrcke/covid-19-germany-gae'
     }
   ],
   async scraper() {
-    const queryDayString = datetime.getYYYYMD(new Date(process.env.SCRAPE_DATE));
     const data = await fetch.csv(this.url);
 
-    let queryDayCases = 0;
-    let queryDayDeaths = 0;
-
-    if (process.env.SCRAPE_DATE) {
-      // Get historical data for a specific day.
-      for (const row of data) {
-        const sampleDayString = datetime.getYYYYMD(new Date(row.time_iso8601));
-        if (sampleDayString === queryDayString) {
-          queryDayCases = row['DE-BY_cases'];
-          queryDayDeaths = row['DE-BY_deaths'];
-        }
-      }
-    } else {
-      // Rely on last entry in time series to be rather fresh.
-      const [lastRow] = data.slice(-1);
-      queryDayCases = lastRow['DE-BY_cases'];
-      queryDayDeaths = lastRow['DE-BY_deaths'];
+    function rowToResult(row) {
+      return {
+        cases: parseInt(row['DE-BY_cases'], 10),
+        deaths: parseInt(row['DE-BY_deaths'], 10),
+        coordinates: [11.497, 48.79],
+        population: 13 * 10 ** 6
+      };
     }
-    return {
-      cases: parseInt(queryDayCases, 10),
-      deaths: parseInt(queryDayDeaths, 10),
-      coordinates: [11.497, 48.79],
-      population: 13 * 10 ** 6
-    };
+
+    // location string for log and error msgs.
+    const loc = `${this.country}, ${this.state}`;
+
+    // Rely on dataset to be sorted by time, in direction past -> future.
+    const [lastRow] = data.slice(-1);
+
+    if (!process.env.SCRAPE_DATE) {
+      // We're asked to return the current state. Rely on last entry in time
+      // series to be fresh and return that.
+      return rowToResult(lastRow);
+    }
+
+    // Get historical data for a specific day.
+    const queryDate = new Date(process.env.SCRAPE_DATE);
+    const queryDayString = datetime.getYYYYMD(queryDate);
+    const lastDateInTimeseries = new Date(lastRow.time_iso8601);
+    const firstDateInTimeseries = new Date(data.slice(0)[0].time_iso8601);
+
+    // Handle the two special cases where queryDate is before or after the time
+    // interval covered by the timeseries.
+    if (queryDate > lastDateInTimeseries) {
+      console.error(`  🚨 timeseries for ${loc}: SCRAPE_DATE ${queryDayString} is newer than last sample time ${lastDateInTimeseries}. Use last sample anyway`);
+      return rowToResult(lastRow);
+    }
+
+    if (queryDate < firstDateInTimeseries) {
+      throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDayString}`);
+    }
+
+    // Search through time series for the query date.
+    for (const row of data) {
+      if (datetime.getYYYYMD(new Date(row.time_iso8601)) === queryDayString) {
+        return rowToResult(row);
+      }
+    }
+
+    // Special case where time series has a hole.
+    throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${queryDayString}`);
   }
 };
 
