@@ -2,10 +2,11 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const generate = imports('./index.js').default;
+const generate = imports('./tasks/index.js').default;
 const argv = imports('./lib/cliArgs.js').default;
 const fs = imports('./lib/fs.js');
 const transform = imports('./lib/transform.js');
+const geography = imports('./lib/geography.js');
 const datetime = imports('./lib/datetime.js');
 
 // The props to keep on a date object
@@ -193,7 +194,7 @@ async function generateTimeseries(options = {}) {
     }
 
     for (const location of data.locations) {
-      const name = transform.getName(location);
+      const name = geography.getName(location);
 
       timeseriesByLocation[name] = { dates: {}, ...timeseriesByLocation[name], ...stripCases(location) };
 

@@ -9,13 +9,13 @@ Every piece of data produced includes the URL where the data was sourced from as
 
 https://coronadatascraper.com/
 
-## Running the scraper
+## Getting started
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
 
 Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
 
-#### 1. Clone, init submodules, and add upstream
+##### 1. Clone, init submodules, and add upstream
 
 Replace `yourusername` below with your Github username:
 
@@ -32,19 +32,19 @@ git submodule init
 git submodule update
 ```
 
-#### 2. Install dependencies
+##### 2. Install dependencies
 
 ```
 yarn install
 ```
 
-#### 3. Run the scraper
+##### 3. Run the scraper
 
 ```
 yarn start
 ```
 
-#### 4. Pull from upstream often
+##### 4. Pull from upstream often
 
 This gets you the latest scrapers, as well as the cache so we're not hammering servers.
 
@@ -57,26 +57,12 @@ Note: If you are encountering issues updating a submodule such as `Could not acc
 git submodule update --init --recursive
 ```
 
-### Re-generating old data
+### Run scrapers
 
-To re-generate old data from cache (or timeseries), run:
-
-```
-yarn start --date=2020-3-12
-```
-
-To output files without the date suffix, use:
+To run the scrapers for today:
 
 ```
-yarn start --date=2020-3-12 -o
-```
-
-### Generating timeseries data
-
-To generate timeseries data in `dist/timeseries*.*`, run:
-
-```
-yarn timeseries
+yarn start
 ```
 
 ### Run only one scraper
@@ -95,12 +81,66 @@ To skip a scraper, use `--skip`/`-s`
 yarn start --skip "Ventura County, CA, USA"
 ```
 
+### Re-generating old data
+
+To re-generate old data from cache (or timeseries), use `--date`/`-d`:
+
+```
+yarn start -d 2020-3-12
+```
+
+To output files without the date suffix, use `--outputSuffix`/`-o`:
+
+```
+yarn start -d 2020-3-12 -o
+```
+
+### Generating timeseries data
+
+To generate a timeseries for the entire history of the pandemic using cached data:
+
+```
+yarn timeseries
+```
+
+```
+yarn timeseries
+```
+
+To generate it for a date range, use `-d`/`-e`:
+
+```
+yarn timeseries -d 2020-3-15 -e 2020-3-18
+```
+
+This can be combined with `-l` to test a single scraper:
+
+```
+yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
+```
+
+
 ### Building the website
 
-To build the website and all data into `dist/`:
+To build the website and start a development server at http://localhost:3000/:
+
+```
+yarn dev
+```
+
+
+### Building the website for production
+
+To build the latest data, a full timeseries, and the website:
 
 ```
 yarn build
+```
+
+To build only the website for production:
+
+```
+yarn buildSite
 ```
 
 ## Contributing
@@ -129,8 +169,20 @@ Add the following directly to the scraper object if the data you're pulling in i
 * `type` - on of `json`, `csv`, `table`, `list`, `paragraph`, `pdf`, `image`. assumes `list` if `undefined`.
 * `timeseries` - `true` if this source provides timeseries data, `false` or `undefined` if it only provides the latest data
 * `headless` - whether this source requires a headless browser to scrape
-* `ssl` - `true` or `undefined` if this host has a valid SSL certificate chain, `false` if not
+* `certValidation` - `false` to skip certificate validation when running this scraper (used to workaround certificate errors)
 * `priority` - any number (negative or positive). `0` is default, higher priority wins if duplicate data is present, ties are broken by rating
+
+For each scraper, we're now asking that you provide
+
+* `sources` - Array of objects with `{ name, url, description }` detailing the true source of the data, with `name` as a human readible name and `url` as the URL for source's landing page. This is required when using CSV and JSON sources that aren't webpages a human can read.
+
+If this is a curated source (data aggregated by a single person or organization from multiple organizations):
+
+* `curators` - Array of objects with `{ name, url, twitter, github, email }` indicating the name of the curator and their information so that they can get credit on the page.
+
+If you're interested in maintaining the scraper and would like your name to appear on the [sources page](https://coronadatascraper.com/#sources), add the following:
+
+* `maintainers` - Array of objects with `{ name, url, twitter, github, email }`. If you provide a `url`, that will be used on the site, otherwise it will go down the list and link to whatever information you've provided. Anything beyond a name is totally optional, but `github` is encouraged.
 
 Your scraper should return a `data` object, or an array of objects, with some of the following information:
 
@@ -143,7 +195,7 @@ Your scraper should return a `data` object, or an array of objects, with some of
 * `recovered` - Total number recovered
 * `tested` - Total number tested
 * `population` - The estimated population of the location
-* `coordinates` - Array of coordinates [longitude, latitude]
+* `coordinates` - Array of coordinates as `[longitude, latitude]`
 
 Everything defined on the scraper object except the `scraper` function and properties that start with `_` will be added to the objects returned by your scraper.
 
@@ -162,12 +214,15 @@ Here's the scraper for Indiana that gets data from a CSV:
       let counties = [];
       for (let county of data) {
         counties.push({
-          county: parse.string(county.COUNTYNAME) + ' County',
+          county: geography.addCounty(parse.string(county.COUNTYNAME)), // Add " County" to the end
           cases: parse.number(county.Total_Positive),
           deaths: parse.number(county.Total_Deaths),
           tested: parse.number(county.Total_Tested)
         });
       }
+
+      // Also return data for IN itself
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -192,13 +247,14 @@ Here's the scraper for Oregon that pulls data from a HTML table:
 
       $trs.each((index, tr) => {
         let $tr = $(tr);
-        let county = parse.string($tr.find('td:first-child').text()) + ' County';
-        let cases = parse.number($tr.find('td:nth-child(2)').text());
         counties.push({
-          county: county,
-          cases: cases
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text()),
+          cases: parse.number($tr.find('td:nth-child(2)').text())
         });
       });
+
+      // Also return data for OR itself
+      counties.push(transform.sumData(counties));
 
       return counties;
     }
@@ -228,50 +284,50 @@ If your datasource has timeseries data, you can include its data in retroactive 
 
 #### What to do if a scraper breaks?
 
-Scrapers need to be able to operate correctly on old data, so updates to scrapers must be backwards compatible. If you know the date the site broke, you can have two implementations (or more) of a scraper in the same function:
+Scrapers need to be able to operate correctly on old data, so updates to scrapers must be backwards compatible. If you know the date the site broke, you can have two implementations (or more) of a scraper in the same function, based on date:
 
 ```javascript
 {
-    state: 'LA',
-    country: 'USA',
-    scraper: async function() {
-      let counties = [];
-      if (datetime.scrapeDateIsBefore('2020-3-14')) {
-        // Use the old table
-        this.url = 'http://ldh.la.gov/Coronavirus/';
-
-        let $ = await fetch.page(this.url);
-
-        let $table = $('p:contains("Louisiana Cases")')
-                      .nextAll('table')
-                      .find('tbody > tr:not(:last-child)');
-
-        $trs.each((index, tr) => {
-          counties.push(...);
-        });
-      }
-      else {
-        // Use the new CSV file
-        this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
-
-        let data = await fetch.csv(this.url);
-
-        for (let county of data) {
-          counties.push(...);
-        }
-      }
-
-      // Add state data
-      counties.push(transform.sumData(counties));
-
+  state: 'LA',
+  country: 'USA',
+  aggregate: 'county',
+  _countyMap: { 'La Salle Parish': 'LaSalle Parish' },
+  scraper: {
+    // 0 matches all dates before the next definition
+    '0': async function() {
+      this.url = 'http://ldh.la.gov/Coronavirus/';
+      this.type = 'table';
+      const counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('p:contains("Louisiana Cases")').nextAll('table');
+      ...
+      return counties;
+    },
+    // 2020-3-14 matches all dates starting with 2020-3-14
+    '2020-3-14': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
+      this.type = 'csv';
+      const counties = [];
+      const data = await fetch.csv(this.url);
+      ...
+      return counties;
+    },
+    // 2020-3-17 matches all dates after 2020-3-14 and starting with 2020-3-17
+    '2020-3-17': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/79e1165ecb95496589d39faa25a83ad4_0.csv';
+      this.type = 'csv';
+      const counties = [];
+      const data = await fetch.csv(this.url);
+      ...
       return counties;
     }
-  },
+  }
+}
 ```
 
-As you can see, you can change `this.url` within your function (but be sure to set it every time).
+As you can see, you can change `this.url` and `this.type` within your function (but be sure to set it every time so it works with timeseries generation).
 
-Another example is when HTML on the page changes, you can simple change the selectors or Cheerio function calls:
+Another example is when HTML on the page changes, you can simply change the selectors or Cheerio function calls:
 
 ```javascript
 let $table;
@@ -314,11 +370,6 @@ Sources are rated based on:
 The maximium rating for a source is 1, the minimum is near 0. See [`lib/transform.calcuateRating`](blob/master/lib/transform.js) for the exact algorithm.
 
 All data in the output includes the `url` and the `rating` of the source.
-
-## SSL
-
-Some source don't use standard SSL certificates, resulting in fetching errors. You can add additional 
-SSL certificates in the `ssl` directory. They will automatically be used when fetching data.
 
 ## License
 

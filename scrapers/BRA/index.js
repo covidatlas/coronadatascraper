@@ -1107,7 +1107,7 @@ const scraper = {
 
     let targetDate;
     if (datetime.dateIsBefore(latestDate, scrapeDate)) {
-      console.error('🚨 Timeseries for BRA has not been updated, latest date is using %s instead of %s', datetime.getYYYYMMDD(latestDate), datetime.getYYYYMMDD(scrapeDate));
+      console.error('  🚨 Timeseries for BRA has not been updated, using %s instead of %s', datetime.getYYYYMMDD(latestDate), datetime.getYYYYMMDD(scrapeDate));
       targetDate = datetime.getDDMMYYYY(latestDate, '/');
     } else {
       targetDate = datetime.getDDMMYYYY(scrapeDate, '/');

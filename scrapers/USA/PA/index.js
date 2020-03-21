@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -9,12 +10,81 @@ const scraper = {
   state: 'PA',
   country: 'USA',
   aggregate: 'county',
+  _counties: [
+    'Adams County',
+    'Allegheny County',
+    'Armstrong County',
+    'Beaver County',
+    'Bedford County',
+    'Berks County',
+    'Blair County',
+    'Bradford County',
+    'Bucks County',
+    'Butler County',
+    'Cambria County',
+    'Cameron County',
+    'Carbon County',
+    'Centre County',
+    'Chester County',
+    'Clarion County',
+    'Clearfield County',
+    'Clinton County',
+    'Columbia County',
+    'Crawford County',
+    'Cumberland County',
+    'Dauphin County',
+    'Delaware County',
+    'Elk County',
+    'Erie County',
+    'Fayette County',
+    'Forest County',
+    'Franklin County',
+    'Fulton County',
+    'Greene County',
+    'Huntingdon County',
+    'Indiana County',
+    'Jefferson County',
+    'Juniata County',
+    'Lackawanna County',
+    'Lancaster County',
+    'Lawrence County',
+    'Lebanon County',
+    'Lehigh County',
+    'Luzerne County',
+    'Lycoming County',
+    'McKean County',
+    'Mercer County',
+    'Mifflin County',
+    'Monroe County',
+    'Montgomery County',
+    'Montour County',
+    'Northampton County',
+    'Northumberland County',
+    'Perry County',
+    'Philadelphia County',
+    'Pike County',
+    'Potter County',
+    'Schuylkill County',
+    'Snyder County',
+    'Somerset County',
+    'Sullivan County',
+    'Susquehanna County',
+    'Tioga County',
+    'Union County',
+    'Venango County',
+    'Warren County',
+    'Washington County',
+    'Wayne County',
+    'Westmoreland County',
+    'Wyoming County',
+    'York County'
+  ],
   scraper: {
     '0': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'list';
       const $ = await fetch.page(this.url);
-      const counties = [];
+      let counties = [];
       const $lis = $('li:contains("Counties impacted to date include")')
         .nextAll('ul')
         .first()
@@ -24,7 +94,7 @@ const scraper = {
           .text()
           .match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          const county = transform.addCounty(parse.string(matches[1]));
+          const county = geography.addCounty(parse.string(matches[1]));
           const cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -33,6 +103,7 @@ const scraper = {
         }
       });
       counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
     '2020-3-16': async function scraper() {
@@ -41,16 +112,17 @@ const scraper = {
       const $ = await fetch.page(this.url);
       const $table = $('table.ms-rteTable-default').first();
       const $trs = $table.find('tbody > tr');
-      const counties = [];
+      let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
       });
       counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
     '2020-3-17': async function scraper() {
@@ -59,16 +131,17 @@ const scraper = {
       const $ = await fetch.page(this.url);
       const $table = $('table.ms-rteTable-default').eq(1);
       const $trs = $table.find('tbody > tr');
-      const counties = [];
+      let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: parse.string($tr.find('td:first-child').text()),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
       });
       counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
     '2020-3-18': async function scraper() {
@@ -77,11 +150,11 @@ const scraper = {
       const $ = await fetch.page(this.url);
       const $countyTable = $('table.ms-rteTable-default').eq(1);
       const $trs = $countyTable.find('tbody > tr:not(:first-child)');
-      const counties = [];
+      let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: parse.string($tr.find('td:first-child').text()),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });
@@ -91,6 +164,7 @@ const scraper = {
       stateData.tested = parse.number($stateTable.find('tr:last-child td:first-child').text());
       stateData.cases = parse.number($stateTable.find('tr:last-child td:last-child').text());
       counties.push(stateData);
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     }
   }

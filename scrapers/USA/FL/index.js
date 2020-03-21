@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -79,6 +80,15 @@ const scraper = {
     'Walton County',
     'Washington County'
   ],
+  _getCountyName(testCountyName) {
+    const lowerCountyName = testCountyName.toLowerCase();
+    for (const countyName of this._counties) {
+      if (countyName.toLowerCase() === lowerCountyName) {
+        return countyName;
+      }
+    }
+    return transform.toTitleCase(testCountyName);
+  },
   scraper: {
     '0': async function() {
       this.type = 'table';
@@ -92,7 +102,7 @@ const scraper = {
           return;
         }
         const $tr = $(tr);
-        const county = transform.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
+        const county = geography.addCounty(parse.string($tr.find('td:nth-child(2)').text()));
         countiesMap[county] = countiesMap[county] || { cases: 0 };
         countiesMap[county].cases += 1;
       });
@@ -110,7 +120,7 @@ const scraper = {
 
       counties.push(transform.sumData(counties));
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
     },
@@ -121,14 +131,36 @@ const scraper = {
       let counties = [];
       for (const county of data) {
         counties.push({
-          county: transform.addCounty(parse.string(county.County)),
+          county: geography.addCounty(parse.string(county.County)),
           cases: parse.number(county.Counts)
         });
       }
 
       counties.push(transform.sumData(counties));
 
-      counties = transform.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      return counties;
+    },
+    '2020-3-20': async function() {
+      this.type = 'json';
+      this.url =
+        'https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Florida_Testing/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=true&spatialRel=esriSpatialRelIntersects&maxAllowableOffset=4891&geometry=%7B%22xmin%22%3A-10018754.1713954%2C%22ymin%22%3A2504688.542850271%2C%22xmax%22%3A-7514065.628547024%2C%22ymax%22%3A5009377.085698649%2C%22spatialReference%22%3A%7B%22wkid%22%3A102100%2C%22latestWkid%22%3A3857%7D%7D&geometryType=esriGeometryEnvelope&inSR=102100&outFields=*&outSR=102100&resultType=tile';
+      const data = await fetch.json(this.url);
+
+      let counties = [];
+      for (const county of data.features) {
+        counties.push({
+          county: this._getCountyName(geography.addCounty(parse.string(county.attributes.COUNTYNAME))),
+          cases: parse.number(county.attributes.T_positive || 0),
+          tested: parse.number(county.attributes.T_total || 0),
+          deaths: parse.number(county.attributes.FLandNonFLDeaths || 0)
+        });
+      }
+
+      counties.push(transform.sumData(counties));
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
     }

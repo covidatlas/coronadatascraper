@@ -1,6 +1,6 @@
 import path from 'path';
 import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
+import * as geography from '../lib/geography.js';
 
 const dataPath = path.join('./coronavirus-data-sources/population/');
 
@@ -143,8 +143,8 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       location.population = population;
       populationFound++;
     } else {
-      console.error('  ❌ %s: ?', transform.getName(location));
-      errors.push(transform.getName(location));
+      console.error('  ❌ %s: ?', geography.getName(location));
+      errors.push(geography.getName(location));
     }
   }
   console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);

@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as rules from '../../../lib/rules.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -26,7 +27,7 @@ const scraper = {
           .text()
           .match(/(.*?): (\d+)/);
         if (matches) {
-          let county = transform.addCounty(parse.string(matches[1]));
+          let county = geography.addCounty(parse.string(matches[1]));
           if (county === 'Unknown county County') {
             county = UNASSIGNED;
           }
@@ -50,7 +51,7 @@ const scraper = {
           const cases = visitorInfo[2];
           if (county.indexOf('information') === -1) {
             const data = {
-              county: transform.addCounty(parse.string(county)),
+              county: geography.addCounty(parse.string(county)),
               cases: parse.number(cases)
             };
             if (rules.isAcceptable(data, null, this._reject)) {
@@ -116,6 +117,23 @@ const scraper = {
         counties.push({
           county: parse.string(county.FULL_),
           cases: parse.number(county.Number_of_COVID_positive_cases_),
+          population: parse.number(county.County_Population)
+        });
+      }
+      const stateData = transform.sumData(counties);
+      stateData.population = data[0].State_Population;
+      counties.push(stateData);
+      return counties;
+    },
+    '2020-3-20': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv';
+      this.type = 'csv';
+      const data = await fetch.csv(this.url);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.County_Pos_Cases),
           population: parse.number(county.County_Population)
         });
       }

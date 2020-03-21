@@ -2,6 +2,7 @@ import * as turf from '@turf/turf';
 import * as fs from '../lib/fs.js';
 import * as transform from '../lib/transform.js';
 import espGeoJson from '../coronavirus-data-sources/geojson/ESP.json';
+import * as geography from '../lib/geography.js';
 
 const DEBUG = false;
 
@@ -122,12 +123,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
       // Breaks France
       if (location.country === 'REU' || location.country === 'MTQ' || location.country === 'GUF') {
-        console.warn('  ⚠️  Skipping %s because it breaks France', transform.getName(location));
+        console.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
         continue;
       }
 
       if (location.county === '(unassigned)') {
-        console.warn("  ⚠️  Skipping %s because it's unassigned", transform.getName(location));
+        console.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
         continue;
       }
 
@@ -267,8 +268,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s', transform.getName(location));
-        errors.push(transform.getName(location));
+        console.error('  ❌ Could not find location %s', geography.getName(location));
+        errors.push(geography.getName(location));
       }
     }
 
