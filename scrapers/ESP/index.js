@@ -6,7 +6,6 @@ const scraper = {
   country: 'ESP',
   url: 'https://github.com/datadista/datasets/tree/master/COVID%2019',
   priority: 1,
-  headless: false,
   timeseries: true,
   aggregate: 'state',
   sources: [
