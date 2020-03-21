@@ -56,13 +56,14 @@ export const getCachedFilePath = (url, type, date = false) => {
   * @param {*} url URL of the cached resource
   * @param {*} type type of the cached resource
   * @param {*} date the date associated with this resource, or false if a timeseries data
+  * @param {*} encoding for the resource to access, default to utf-8
 */
-export const getCachedFile = async (url, type, date) => {
+export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
 
   if (await fs.exists(filePath)) {
     console.log('  ⚡️ Cache hit for %s from %s', url, filePath);
-    return fs.readFile(filePath);
+    return fs.readFile(filePath, encoding);
   }
   if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
     console.log('  ⚠️ Cannot go back in time to get %s, no cache present', url);
