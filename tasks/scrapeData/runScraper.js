@@ -103,10 +103,8 @@ const runScrapers = async args => {
     if (options.location && geography.getName(location) !== options.location) {
       continue;
     }
-    if (options.skip) {
-      if (geography.getName(location) === options.skip) {
-        continue;
-      }
+    if (options.skip && geography.getName(location) === options.skip) {
+      continue;
     }
     if (location.scraper) {
       try {
