@@ -88,7 +88,7 @@ const scraper = {
           .filter(isDate)
           .map(date => {
             return {
-              state: location,
+              state: parse.string(location),
               date: parseDate(date).format(ISO),
               cases: parse.number(casesRow[date]),
               deaths: parse.number(deathsRow[date]),
