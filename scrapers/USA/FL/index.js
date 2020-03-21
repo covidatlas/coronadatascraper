@@ -159,8 +159,6 @@ const scraper = {
         });
       }
 
-      console.log(counties);
-
       counties.push(transform.sumData(counties));
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
