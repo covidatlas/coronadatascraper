@@ -10,12 +10,22 @@ const scraper = {
   state: 'CA',
   country: 'USA',
   maintainers: [maintainers.jbencina],
-  url: 'https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    const $el = $('h3:contains("Positive cases:")').first();
-    const matches = $el.text().match(/Positive cases:.*?(\d+)/);
-    return { cases: parse.number(matches[1]) };
+  scraper: {
+    '0': async function() {
+      this.url = 'https://www.co.shasta.ca.us/index/hhsa/health-safety/current-heath-concerns/coronavirus';
+      this.type = 'paragraph';
+      const $ = await fetch.page(this.url);
+      const $el = $('h3:contains("Positive cases:")').first();
+      const matches = $el.text().match(/Positive cases:.*?(\d+)/);
+      return { cases: parse.number(matches[1]) };
+    },
+    '2020-3-20': async function() {
+      this.url = 'https://www.co.shasta.ca.us/covid-19/overview';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
+      const $el = $('td:contains("Total Confirmed Cases")').next('td');
+      return { cases: parse.number($el.text()) };
+    }
   }
 };
 
