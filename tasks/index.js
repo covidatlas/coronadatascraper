@@ -4,16 +4,11 @@ import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
 import writeData from './writeData.js';
 
-import * as datetime from '../lib/datetime.js';
-
 async function generate(date, options = { findFeatures: true, findPopulations: true, writeData: true, skip: null, location: null }) {
-  if (!date && process.env.SCRAPE_DATE) {
-    date = process.env.SCRAPE_DATE;
-  } else if (!date) {
-    date = datetime.getYYYYMD();
+  if (date) {
     process.env.SCRAPE_DATE = date;
   } else {
-    process.env.SCRAPE_DATE = date;
+    delete process.env.SCRAPE_DATE;
   }
 
   // JSON used for reporting
