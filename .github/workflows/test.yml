@@ -20,16 +20,22 @@ jobs:
       - name: Update submodules
         run: |
           git submodule update --init --recursive
-      - name: Use Node.js 13.x
+      - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: '12.15.0'
       - name: Install
         run: |
           yarn
       - name: Test
+        if: github.event_name != 'pull_request'
         run: |
           yarn test
+      - name: PR Test
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff --name-only origin/master
+          FILES_MODIFIED=$(git diff --name-only origin/master) yarn jest
       - name: Lint
         run: |
           yarn lint

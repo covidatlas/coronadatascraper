@@ -1,7 +1,7 @@
-import turf from '@turf/turf';
+import * as turf from '@turf/turf';
 
 import * as fs from '../lib/fs.js';
-import * as transform from '../lib/transform.js';
+import * as geography from '../lib/geography.js';
 
 const DEBUG = false;
 
@@ -41,20 +41,20 @@ function normalizeProps(obj) {
 const props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
 
 const locationTransforms = {
-  // Correct missing county
-  'Island, WA': location => {
-    location.state = 'Island County, WA';
-  },
-
   // 🇭🇰
   'Hong Kong': location => {
-    location.country = 'Hong Kong';
+    location.country = 'HKG';
+    delete location.state;
+  },
+
+  Macau: location => {
+    location.country = 'MAC';
     delete location.state;
   },
 
   // Why is this in Denmark?
   'Faroe Islands': location => {
-    location.country = 'Faroe Islands';
+    location.country = 'FRO';
     delete location.state;
   }
 };
@@ -122,12 +122,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
       // Breaks France
       if (location.country === 'REU' || location.country === 'MTQ' || location.country === 'GUF') {
-        console.warn('  ⚠️  Skipping %s because it breaks France', transform.getName(location));
+        console.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
         continue;
       }
 
       if (location.county === '(unassigned)') {
-        console.warn("  ⚠️  Skipping %s because it's unassigned", transform.getName(location));
+        console.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
         continue;
       }
 
@@ -261,8 +261,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s', transform.getName(location));
-        errors.push(transform.getName(location));
+        console.error('  ❌ Could not find location %s', geography.getName(location));
+        errors.push(geography.getName(location));
       }
     }
 

@@ -1,13 +1,13 @@
 # coronadatascraper
-> A scraper that pulls coronavirus case data from verified sources.
+> A scraper that pulls COVID-19 Coronavirus data scraped from government and curated data sources.
 
-This project exists to pull county-level data for COVID-19 from verified, high-quality sources.
+This project exists to scrape, de-duplicate, and cross-check county-level data on the COVID-19 coronavirus pandemic.
 
 Every piece of data produced includes the URL where the data was sourced from as well as a rating of the source's technical quality (completeness, machine readability, best practices -- not accuracy).
 
 ## Where's the data?
 
-http://blog.lazd.net/coronadatascraper/
+https://coronadatascraper.com/
 
 ## Running the scraper
 

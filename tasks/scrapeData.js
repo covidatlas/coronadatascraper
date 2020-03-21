@@ -1,11 +1,26 @@
 import scrapers from '../scrapers.js';
-import * as transform from '../lib/transform.js';
+import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
 import calculateRating from '../lib/rating.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
 const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority'];
+
+/*
+  Returns a report if the crosscheck fails, or false if the two sets have identical data
+*/
+function crosscheck(a, b) {
+  const crosscheckReport = {};
+  let failed = false;
+  for (const prop of numericalValues) {
+    if (a[prop] !== b[prop]) {
+      crosscheckReport[prop] = [a[prop], b[prop]];
+      failed = true;
+    }
+  }
+  return failed ? crosscheckReport : false;
+}
 
 /*
   Combine location information with the passed data object
@@ -51,9 +66,9 @@ function isValid(data) {
 }
 
 /*
-  Clean the passed data
+  Remove "private" object properties
 */
-function clean(data) {
+function removePrivate(data) {
   for (const [prop, value] of Object.entries(data)) {
     if (value === '') {
       delete data[prop];
@@ -63,6 +78,15 @@ function clean(data) {
       delete data[prop];
     }
   }
+
+  return data;
+}
+
+/*
+  Clean the passed data
+*/
+function clean(data) {
+  removePrivate(data);
 
   // Remove non-data vars
   for (const prop of scraperVars) {
@@ -78,11 +102,11 @@ function clean(data) {
 function normalize(data) {
   // Normalize states
   if (data.country === 'USA') {
-    data.state = transform.toUSStateAbbreviation(data.state);
+    data.state = geography.toUSStateAbbreviation(data.state);
   }
 
   // Normalize countries
-  data.country = transform.toISO3166Alpha3(data.country);
+  data.country = geography.toISO3166Alpha3(data.country);
 
   return data;
 }
@@ -93,7 +117,7 @@ function normalize(data) {
 function addData(cases, location, result) {
   if (Array.isArray(result)) {
     if (result.length === 0) {
-      throw new Error(`Invalid data: scraper for ${transform.getName(location)} returned 0 rows`);
+      throw new Error(`Invalid data: scraper for ${geography.getName(location)} returned 0 rows`);
     }
     for (const data of result) {
       if (isValid(data, location)) {
@@ -108,9 +132,17 @@ function addData(cases, location, result) {
 /*
   Run the correct scraper for this location
 */
-function runScraper(location) {
+export function runScraper(location) {
+  const rejectUnauthorized = location.certValidation === false;
+  if (rejectUnauthorized) {
+    // Important: this prevents SSL from failing
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  }
   if (typeof location.scraper === 'function') {
     return location.scraper();
+  }
+  if (rejectUnauthorized) {
+    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
@@ -122,28 +154,43 @@ function runScraper(location) {
       }
     }
     if (scraperToUse === null) {
-      throw new Error(`Could not find scraper for ${transform.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
+      throw new Error(`Could not find scraper for ${geography.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
     }
     return scraperToUse.call(location);
   }
 
-  throw new Error('Why on earth is the scraper for %s a %s?', transform.getName(location), typeof scraper);
+  throw new Error('Why on earth is the scraper for %s a %s?', geography.getName(location), typeof scraper);
+}
+
+/*
+  Check if the passed stripped location object exists in the crosscheck report
+*/
+function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
+  let exists = false;
+  for (const existingLocation of crosscheckReportsByLocation) {
+    if (existingLocation.url === location.url) {
+      exists = true;
+      break;
+    }
+  }
+  return exists;
 }
 
 /*
   Begin the scraping process
 */
 async function scrape(options) {
+  const crosscheckReports = {};
   const locations = [];
   const errors = [];
-  for (const location of scrapers) {
+  for (const location of await scrapers()) {
     if (options.location) {
-      if (transform.getName(location) !== options.location) {
+      if (geography.getName(location) !== options.location) {
         continue;
       }
     }
     if (options.skip) {
-      if (transform.getName(location) === options.skip) {
+      if (geography.getName(location) === options.skip) {
         continue;
       }
     }
@@ -151,10 +198,10 @@ async function scrape(options) {
       try {
         addData(locations, location, await runScraper(location));
       } catch (err) {
-        console.error('  ❌ Error processing %s: ', transform.getName(location), err);
+        console.error('  ❌ Error processing %s: ', geography.getName(location), err);
 
         errors.push({
-          name: transform.getName(location),
+          name: geography.getName(location),
           url: location.url,
           err: err.toString()
         });
@@ -164,7 +211,9 @@ async function scrape(options) {
 
   // Normalize data
   for (const [index] of Object.entries(locations)) {
-    locations[index] = normalize(locations[index]);
+    const location = locations[index];
+    locations[index] = normalize(location);
+    location.active = location.active === undefined || location.active === null ? geography.getActiveFromLocation(location) : location.active;
   }
 
   // De-dupe data
@@ -173,13 +222,13 @@ async function scrape(options) {
   let deDuped = 0;
   while (i-- > 0) {
     const location = locations[i];
-    const locationName = transform.getName(location);
+    const locationName = geography.getName(location);
     const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {
       // Take rating into account to break ties
-      const thisPriority = transform.getPriority(location) + location.rating / 2;
-      const otherPriority = transform.getPriority(otherLocation) + otherLocation.rating / 2;
+      const thisPriority = geography.getPriority(location) + location.rating / 2;
+      const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
         console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
@@ -197,12 +246,27 @@ async function scrape(options) {
         locations.splice(i, 1);
         deDuped++;
       }
+
+      const crosscheckReport = crosscheck(location, otherLocation);
+      if (crosscheckReport) {
+        console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
+
+        crosscheckReports[locationName] = crosscheckReports[locationName] || [];
+        const strippedLocation = removePrivate(location);
+        if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(strippedLocation);
+        }
+        const stippedOtherLocation = removePrivate(otherLocation);
+        if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
+          crosscheckReports[locationName].push(stippedOtherLocation);
+        }
+      }
     }
     seenLocations[locationName] = location;
   }
 
   // Generate ratings
-  const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url'];
+  const sourceProps = ['rating', 'city', 'county', 'state', 'country', 'type', 'timeseries', 'headless', 'aggregate', 'ssl', 'priority', 'url', 'curators', 'sources', 'maintainers'];
 
   const sourcesByURL = {};
   for (const location of locations) {
@@ -238,13 +302,13 @@ async function scrape(options) {
     locations[index] = clean(locations[index]);
   }
 
-  return { locations, errors, deDuped, sourceRatings };
+  return { locations, errors, deDuped, sourceRatings, crosscheckReports };
 }
 
 const scrapeData = async ({ report, options }) => {
   console.log(`⏳ Scraping data for ${process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : 'today'}...`);
 
-  const { locations, errors, deDuped, sourceRatings } = await scrape(options);
+  const { locations, errors, deDuped, sourceRatings, crosscheckReports } = await scrape(options);
 
   const locationCounts = {
     cities: 0,
@@ -269,8 +333,6 @@ const scrapeData = async ({ report, options }) => {
     } else {
       locationCounts.cities++;
     }
-
-    location.active = location.active === undefined ? transform.getActiveFromLocation(location) : location.active;
 
     for (const type of Object.keys(caseCounts)) {
       if (location[type]) {
@@ -299,6 +361,7 @@ const scrapeData = async ({ report, options }) => {
     numCities: locationCounts.cities,
     numDuplicates: deDuped,
     numErrors: errors.length,
+    crosscheckReports,
     errors
   };
 

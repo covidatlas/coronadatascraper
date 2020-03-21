@@ -1,9 +1,13 @@
-import path from 'path';
-import generate from './index.js';
-import argv from './lib/cliArgs.js';
-import * as transform from './lib/transform.js';
-import * as datetime from './lib/datetime.js';
-import * as fs from './lib/fs.js';
+const imports = require('esm')(module);
+
+const path = require('path');
+
+const generate = imports('./index.js').default;
+const argv = imports('./lib/cliArgs.js').default;
+const fs = imports('./lib/fs.js');
+const transform = imports('./lib/transform.js');
+const geography = imports('./lib/geography.js');
+const datetime = imports('./lib/datetime.js');
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
@@ -37,7 +41,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -74,7 +78,7 @@ async function generateTidyCSV(timeseriesByLocation) {
   return fs.writeCSV(path.join('dist', 'timeseries-tidy.csv'), csvData);
 }
 
-async function generateLessTidyCSV(timeseriesByLocation) {
+async function generateCSV(timeseriesByLocation) {
   let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
 
   const csvData = [];
@@ -115,8 +119,8 @@ async function generateLessTidyCSV(timeseriesByLocation) {
   return fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
 }
 
-async function generateCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'type', 'value', 'url'];
+async function generateJHUCSV(timeseriesByLocation) {
+  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'url'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -145,11 +149,14 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 function getGrowthfactor(casesToday, casesYesterday) {
-  const growthFactor = casesToday / casesYesterday;
-  if (growthFactor === Infinity) {
-    return null;
+  if (casesYesterday) {
+    const growthFactor = casesToday / casesYesterday;
+    if (growthFactor === Infinity) {
+      return null;
+    }
+    return growthFactor;
   }
-  return growthFactor;
+  return null;
 }
 
 /*
@@ -187,7 +194,7 @@ async function generateTimeseries(options = {}) {
     }
 
     for (const location of data.locations) {
-      const name = transform.getName(location);
+      const name = geography.getName(location);
 
       timeseriesByLocation[name] = { dates: {}, ...timeseriesByLocation[name], ...stripCases(location) };
 
@@ -215,7 +222,7 @@ async function generateTimeseries(options = {}) {
 
   await generateTidyCSV(timeseriesByLocation);
 
-  await generateLessTidyCSV(timeseriesByLocation);
+  await generateJHUCSV(timeseriesByLocation);
 }
 
 generateTimeseries(argv);
