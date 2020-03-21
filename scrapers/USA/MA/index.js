@@ -34,10 +34,10 @@ const scraper = {
 
       const counties = [];
 
-      const startIndex = rows.findIndex(str => str.includes('County')) + 1;
+      const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('County')) + 1;
 
-      for (let i = startIndex; !rows[i].includes('Unknown') && !rows[i].includes('Sex'); i++) {
-        const data = rows[i].split(' ');
+      for (let i = startIndex; !rows[i][0].includes('Unknown') && !rows[i][0].includes('Sex'); i++) {
+        const data = rows[i];
         const countyName = data[0];
         const cases = data[1];
 
@@ -50,13 +50,13 @@ const scraper = {
       const summedData = transform.sumData(counties);
 
       // MA provides an unknown category, we sum it into the state total
-      const unknownIndex = rows.findIndex(str => str.includes('Unknown'));
-      if (unknownIndex > 0) summedData.cases += parse.number(rows[unknownIndex].split(' ')[1]);
+      const unknownIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Unknown'));
+      if (unknownIndex > 0) summedData.cases += parse.number(rows[unknownIndex][1]);
 
       // MA has death as a total for the state
-      const deathIndex = rows.findIndex(str => str.includes('Death')) + 1;
+      const deathIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Death')) + 1;
       if (deathIndex > 0) {
-        const deathData = rows[deathIndex].split(' ');
+        const deathData = rows[deathIndex];
         summedData.death = parse.number(deathData[deathData.length - 1]);
       }
 
