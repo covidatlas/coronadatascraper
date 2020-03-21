@@ -122,8 +122,6 @@ const scraper = {
         return;
       }
 
-      console.log(county, cases);
-
       counties.push({
         county,
         cases
