@@ -149,9 +149,9 @@ Write clean and clear code, and please ensure to follow the criteria below for s
 
 Scrapers can pull JSON, CSV, or good ol' HTML down and are written in a sort of modular way, with a handful of helpers available to clean up the data. Scrapers can pull in data for anything -- cities, counties, states, countries, or collections thereof. See the existing scrapers for ideas on how to deal with different ways of data being presented.
 
-Start by opening up `scrapers.js` and adding a new object at the top of the array.
+Start by going to `src/events/crawler/scrapers/` and creating a new file in the country, region, and region directory (`src/events/crawler/scrapers/USA/CA/mycounty-name.js`)
 
-Make sure you have the following properties:
+Your scraper should export an object containing at a minimum the following properties:
 
 * `url` - The source of the data
 * `scraper` - An async function that scrapes data and returns objects, defined below
@@ -168,7 +168,7 @@ Add the following directly to the scraper object if the data you're pulling in i
 * `certValidation` - `false` to skip certificate validation when running this scraper (used to workaround certificate errors)
 * `priority` - any number (negative or positive). `0` is default, higher priority wins if duplicate data is present, ties are broken by rating
 
-For each scraper, we're now asking that you provide
+For each scraper, we're now asking that you provide:
 
 * `sources` - Array of objects with `{ name, url, description }` detailing the true source of the data, with `name` as a human readible name and `url` as the URL for source's landing page. This is required when using CSV and JSON sources that aren't webpages a human can read.
 
