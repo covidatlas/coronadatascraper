@@ -82,7 +82,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: transform.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });
