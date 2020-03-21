@@ -13,7 +13,7 @@ const scraper = {
   country: 'USA',
   type: 'table',
   aggregate: 'county',
-  url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/',
+  url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/results.php',
   _countyMap: {
     // MO reporting KC as a county, which is really part of several counties.
     'Kansas City': 'Jackson County',
@@ -139,9 +139,9 @@ const scraper = {
   async scraper() {
     let counties = {};
     const $ = await fetch.page(this.url);
-    const $table = $($('table')[1]);
+    const $table = $('table').first();
 
-    const $trs = $table.find('tr:not(:first-child)');
+    const $trs = $table.find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       let countyName = parse.string($tr.find('td:nth-child(1)').text());
@@ -155,12 +155,14 @@ const scraper = {
         countyName = UNASSIGNED;
       }
 
-      if (countyName in counties) {
-        counties[countyName].cases += casesState + casesOther;
-      } else {
-        counties[countyName] = {
-          cases: casesState + casesOther
-        };
+      if (countyName !== ' County') {
+        if (countyName in counties) {
+          counties[countyName].cases += casesState + casesOther;
+        } else {
+          counties[countyName] = {
+            cases: casesState + casesOther
+          };
+        }
       }
     });
 
