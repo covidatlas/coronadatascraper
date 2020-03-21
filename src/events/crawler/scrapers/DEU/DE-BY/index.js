@@ -59,7 +59,7 @@ const scraper = {
     }
 
     if (queryDate < firstDateInTimeseries) {
-      throw new Error(`Timeseries for ${geography.getName(this)} starts later than SCRAPE_DATE ${queryDayString}`);
+      throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDayString}`);
     }
 
     // Search through time series for the query date.
