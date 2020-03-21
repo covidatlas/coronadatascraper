@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -106,7 +107,7 @@ const scraper = {
 
       const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
       if (countyName !== 'Total') {
-        countyName = transform.addCounty(countyName);
+        countyName = geography.addCounty(countyName);
         if (countyName in counties) {
           counties[countyName].cases += casesState;
         } else {
@@ -119,7 +120,7 @@ const scraper = {
 
     const countiesList = transform.objectToArray(counties);
     countiesList.push(transform.sumData(countiesList));
-    counties = transform.addEmptyRegions(countiesList, this._counties, 'county');
+    counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
 
     return counties;
   }
