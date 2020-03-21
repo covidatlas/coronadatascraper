@@ -41,8 +41,6 @@ const scraper = {
       return LocalDate.parse(`${y}-${m}-${d}`);
     };
 
-    const mostRecent = dates => dates.sort().pop();
-
     const rawData = {};
     for (const { name, url } of this.sources) {
       rawData[name] = await fetch.csv(url, false);
@@ -116,14 +114,19 @@ const scraper = {
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
       .filter(isDate)
-      .map(parseDate);
-    const latestDate = mostRecent(dates);
+      .map(parseDate)
+      .sort();
+
+    const firstDate = dates[0];
+    const lastDate = dates[dates.length - 1];
 
     // use the scrape date, or the latest available
-    const date = (scrapeDate || latestDate).format(ISO);
+    const queryDate = scrapeDate || lastDate;
+
+    if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
     // return data from that date
-    const locations = data.filter(d => d.date === date);
+    const locations = data.filter(d => d.date === queryDate.format(ISO));
     locations.push(transform.sumData(locations));
     return locations;
   }
