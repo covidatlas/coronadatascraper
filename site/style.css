@@ -330,9 +330,11 @@ div.spectrum-SideNav-itemLink:hover {
   .cds-Sources-list {
     margin: 48px 12px 0 12px;
   }
-
   .spectrum-Site-content {
     /* fix: header scrolls off */
     max-height: calc(100% - 48px);
+  }
+  .is-editing .spectrum-Site-content {
+    max-height: 100%;
   }
 }

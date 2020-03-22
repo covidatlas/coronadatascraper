@@ -475,6 +475,8 @@ function populateMap() {
 }
 
 function showMap() {
+  document.body.classList.add('is-editing');
+
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',
