@@ -7,7 +7,8 @@ import * as transform from '../../lib/transform.js';
 
 const scraper = {
   country: 'AUS',
-  url: 'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',
+  url:
+    'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',
   type: 'table',
   priority: 1,
   aggregate: 'state',

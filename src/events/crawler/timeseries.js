@@ -202,7 +202,10 @@ async function generateTimeseries(options = {}) {
 
       // Add growth factor
       if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
-        strippedLocation.growthFactor = getGrowthfactor(strippedLocation.cases, timeseriesByLocation[name].dates[previousDate].cases);
+        strippedLocation.growthFactor = getGrowthfactor(
+          strippedLocation.cases,
+          timeseriesByLocation[name].dates[previousDate].cases
+        );
       }
 
       timeseriesByLocation[name].dates[date] = strippedLocation;

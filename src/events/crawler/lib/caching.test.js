@@ -56,19 +56,25 @@ describe('caching', () => {
       ['https://example.com/somefile', 'html', false],
       // For this example, we request a file for today. A cache miss for a file before today has a different behavior
       ['https://example.com/testing', 'csv', datetime.getYYYYMD()]
-    ]).test('when given a file that has been not been cached for today, it returns CACHE_MISS', async (host, ext, date) => {
-      const outputFile = await caching.getCachedFile(host, ext, date);
-      expect(outputFile).toBe(caching.CACHE_MISS);
-    });
+    ]).test(
+      'when given a file that has been not been cached for today, it returns CACHE_MISS',
+      async (host, ext, date) => {
+        const outputFile = await caching.getCachedFile(host, ext, date);
+        expect(outputFile).toBe(caching.CACHE_MISS);
+      }
+    );
 
     each([
       // For this example, we request a file for a day before today, meaning the resource cannot be fetched if not cached
       ['https://example.com/somefile', 'html', '2019-5-16'],
       ['https://example.com/testing', 'csv', '2020-1-2']
-    ]).test('when given a file that has been not been cached with a date before today, it returns RESOURCE_UNAVAILABLE', async (host, ext, date) => {
-      const outputFile = await caching.getCachedFile(host, ext, date);
-      expect(outputFile).toBe(caching.RESOURCE_UNAVAILABLE);
-    });
+    ]).test(
+      'when given a file that has been not been cached with a date before today, it returns RESOURCE_UNAVAILABLE',
+      async (host, ext, date) => {
+        const outputFile = await caching.getCachedFile(host, ext, date);
+        expect(outputFile).toBe(caching.RESOURCE_UNAVAILABLE);
+      }
+    );
   });
 
   describe('saveFileToCache', () => {

@@ -29,7 +29,10 @@ const scraper = {
     const counties = [];
 
     // Extract raw csv from link attribute on Kentucky Health Organizations data map.
-    const csvText = decodeURIComponent($('a[class="dw-data-link"]').attr('href')).replace('data:application/octet-stream;charset=utf-8,', '');
+    const csvText = decodeURIComponent($('a[class="dw-data-link"]').attr('href')).replace(
+      'data:application/octet-stream;charset=utf-8,',
+      ''
+    );
 
     // Parse csv.
     const data = sync(csvText, { columns: true });

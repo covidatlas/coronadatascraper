@@ -10,7 +10,8 @@ const scraper = {
   state: 'CA',
   country: 'USA',
   maintainers: [maintainers.jbencina],
-  url: 'https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1',
+  url:
+    'https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1',
   async scraper() {
     const $ = await fetch.page(this.url);
     const cases = parse.number(

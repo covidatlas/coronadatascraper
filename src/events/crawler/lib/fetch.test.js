@@ -105,7 +105,9 @@ describe('Fetching', () => {
       const value = 'bar1';
 
       mockFs.restore();
-      const body = (await fetch.headless(`https://postman-echo.com/get?${key}=${value}`, 'json', { alwaysRun: true })).text();
+      const body = (
+        await fetch.headless(`https://postman-echo.com/get?${key}=${value}`, 'json', { alwaysRun: true })
+      ).text();
 
       const jsonBody = JSON.parse(body);
 

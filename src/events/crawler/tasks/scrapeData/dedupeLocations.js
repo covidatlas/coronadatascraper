@@ -50,25 +50,53 @@ const dedupeLocations = args => {
       const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
-        console.log('⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
+        console.log(
+          '⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily',
+          locationName,
+          location.url,
+          thisPriority,
+          otherLocation.url,
+          otherPriority
+        );
         // Delete the other location
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
       } else if (otherPriority < thisPriority) {
         // Delete the other location
-        console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, location.url, thisPriority, otherLocation.url, otherPriority);
+        console.log(
+          '✂️  %s: Using %s (%d) instead of %s (%d)',
+          locationName,
+          location.url,
+          thisPriority,
+          otherLocation.url,
+          otherPriority
+        );
         locations.splice(locations.indexOf(otherLocation), 1);
         deDuped++;
       } else {
         // Kill this location
-        console.log('✂️  %s: Using %s (%d) instead of %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
+        console.log(
+          '✂️  %s: Using %s (%d) instead of %s (%d)',
+          locationName,
+          otherLocation.url,
+          otherPriority,
+          location.url,
+          thisPriority
+        );
         locations.splice(i, 1);
         deDuped++;
       }
 
       const crosscheckReport = crosscheck(location, otherLocation);
       if (crosscheckReport) {
-        console.log('🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)', locationName, otherLocation.url, otherPriority, location.url, thisPriority);
+        console.log(
+          '🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)',
+          locationName,
+          otherLocation.url,
+          otherPriority,
+          location.url,
+          thisPriority
+        );
 
         crosscheckReports[locationName] = crosscheckReports[locationName] || [];
         const strippedLocation = transform.removePrivate(location);

@@ -81,7 +81,9 @@ const scraper = {
     'Yates County'
   ],
   async scraper() {
-    this.url = datetime.scrapeDateIsBefore('2020-3-17') ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/' : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
+    this.url = datetime.scrapeDateIsBefore('2020-3-17')
+      ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/'
+      : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
     let counties = [];
     const $ = await fetch.page(this.url);
     let $table;

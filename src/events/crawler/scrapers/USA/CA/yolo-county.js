@@ -11,7 +11,8 @@ const scraper = {
   state: 'CA',
   country: 'USA',
   maintainers: [maintainers.jbencina],
-  url: 'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
+  url:
+    'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
   async scraper() {
     const $ = await fetch.page(this.url);
     if (datetime.scrapeDateIsBefore('2020-03-17')) {

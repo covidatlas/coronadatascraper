@@ -87,7 +87,11 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
         const countyNameJoined = `${location.county}, ${location.state}`;
         const countyNameReplacedJoined = `${countyNameReplaced}, ${location.state}`;
 
-        population = populationSource[location.county] || populationSource[countyNameReplaced] || populationSource[countyNameJoined] || populationSource[countyNameReplacedJoined];
+        population =
+          populationSource[location.county] ||
+          populationSource[countyNameReplaced] ||
+          populationSource[countyNameJoined] ||
+          populationSource[countyNameReplacedJoined];
       }
     } else if (location.state) {
       if (populations.byState[location.country] && populations.byState[location.country][location.state]) {

@@ -11,7 +11,22 @@ const scraper = {
   state: 'MA',
   country: 'USA',
   aggregate: 'county',
-  _counties: ['Barnstable County', 'Berkshire County', 'Bristol County', 'Dukes County', 'Essex County', 'Franklin County', 'Hampden County', 'Hampshire County', 'Middlesex County', 'Nantucket County', 'Norfolk County', 'Plymouth County', 'Suffolk County', 'Worcester County'],
+  _counties: [
+    'Barnstable County',
+    'Berkshire County',
+    'Bristol County',
+    'Dukes County',
+    'Essex County',
+    'Franklin County',
+    'Hampden County',
+    'Hampshire County',
+    'Middlesex County',
+    'Nantucket County',
+    'Norfolk County',
+    'Plymouth County',
+    'Suffolk County',
+    'Worcester County'
+  ],
   scraper: {
     '2020-03-13': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
@@ -20,7 +35,9 @@ const scraper = {
         // They had a weird URL for this day
         this.url = 'https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-19-2020-x-updated4pm/download';
       } else {
-        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(date).getUTCDate()}-2020/download`;
+        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(
+          date
+        ).getUTCDate()}-2020/download`;
       }
 
       let rows = null;

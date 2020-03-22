@@ -104,7 +104,14 @@ export const toUSStateAbbreviation = function(string) {
 export const toISO3166Alpha3 = function(string) {
   string = countryMap[string] || string;
   for (const country of countryCodes) {
-    if (country['alpha-3'] === string || country['alpha-2'] === string || country.name === string || country.name.replace(/\s*\(.*?\)/, '') === string || country.name.replace(/, Province of .*$/, '') === string || country.name.replace(/, Republic of$/, '') === string) {
+    if (
+      country['alpha-3'] === string ||
+      country['alpha-2'] === string ||
+      country.name === string ||
+      country.name.replace(/\s*\(.*?\)/, '') === string ||
+      country.name.replace(/, Province of .*$/, '') === string ||
+      country.name.replace(/, Republic of$/, '') === string
+    ) {
       return country['alpha-3'];
     }
   }

@@ -48,7 +48,12 @@ const scraper = {
         deaths: 0
       };
       for (const county of data) {
-        if (county.PARISH === 'Out of State Resident' || county.PARISH === 'Out of State' || county.PARISH === 'Under Investigation' || county.PARISH === 'Parish Under Investigation') {
+        if (
+          county.PARISH === 'Out of State Resident' ||
+          county.PARISH === 'Out of State' ||
+          county.PARISH === 'Under Investigation' ||
+          county.PARISH === 'Parish Under Investigation'
+        ) {
           unassigned.cases += parse.number(county.Cases);
           unassigned.deaths += parse.number(county.Deaths);
           continue;
@@ -75,7 +80,12 @@ const scraper = {
         deaths: 0
       };
       for (const county of data) {
-        if (county.PARISH === 'Out of State Resident' || county.PARISH === 'Out of State' || county.PARISH === 'Under Investigation' || county.PARISH === 'Parish Under Investigation') {
+        if (
+          county.PARISH === 'Out of State Resident' ||
+          county.PARISH === 'Out of State' ||
+          county.PARISH === 'Under Investigation' ||
+          county.PARISH === 'Parish Under Investigation'
+        ) {
           unassigned.cases += parse.number(county.Cases);
           unassigned.deaths += parse.number(county.Deaths);
           continue;
@@ -92,7 +102,8 @@ const scraper = {
       return counties;
     },
     '2020-3-19': async function() {
-      this.url = 'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true';
+      this.url =
+        'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true';
       this.type = 'json';
 
       const data = await fetch.json(this.url);
@@ -104,7 +115,12 @@ const scraper = {
       const counties = [];
       for (const feature of data.features) {
         const county = feature.attributes;
-        if (county.Parish === 'Out of State Resident' || county.Parish === 'Out of State' || county.Parish === 'Under Investigation' || county.Parish === 'Parish Under Investigation') {
+        if (
+          county.Parish === 'Out of State Resident' ||
+          county.Parish === 'Out of State' ||
+          county.Parish === 'Under Investigation' ||
+          county.Parish === 'Parish Under Investigation'
+        ) {
           unassigned.cases += parse.number(county.Cases);
           unassigned.deaths += parse.number(county.Deaths);
           continue;

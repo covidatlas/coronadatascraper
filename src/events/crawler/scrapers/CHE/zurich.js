@@ -8,7 +8,8 @@ import * as datetime from '../../lib/datetime.js';
 const scraper = {
   country: 'CHE',
   county: 'Zurich',
-  url: 'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/COVID19_Fallzahlen_Kanton_ZH_total.csv',
+  url:
+    'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/COVID19_Fallzahlen_Kanton_ZH_total.csv',
   timeseries: true,
   async scraper() {
     const data = await fetch.csv(this.url, false);
@@ -18,7 +19,11 @@ const scraper = {
     const latestDate = currentData.date;
 
     if (datetime.dateIsBefore(latestDate, scrapeDate)) {
-      console.error('  🚨 Timeseries for Zurich, CHE has not been updated, using %s instead of %s', latestDate, scrapeDate);
+      console.error(
+        '  🚨 Timeseries for Zurich, CHE has not been updated, using %s instead of %s',
+        latestDate,
+        scrapeDate
+      );
     } else {
       [currentData] = data.filter(dayData => dayData.date === scrapeDate);
     }

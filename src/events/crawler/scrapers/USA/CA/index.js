@@ -12,7 +12,8 @@ const scraper = {
   priority: 1,
   type: 'csv',
   aggregate: 'county',
-  url: 'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
+  url:
+    'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
   curators: [
     {
       name: 'Harriet Rowan',

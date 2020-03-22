@@ -4,7 +4,21 @@
 // eslint-disable-next-line import/prefer-default-export
 export const csvForDay = function(data) {
   // Start with the columns we want first
-  let columns = ['city', 'county', 'state', 'country', 'cases', 'deaths', 'recovered', 'tested', 'active', 'population', 'lat', 'long', 'url'];
+  let columns = [
+    'city',
+    'county',
+    'state',
+    'country',
+    'cases',
+    'deaths',
+    'recovered',
+    'tested',
+    'active',
+    'population',
+    'lat',
+    'long',
+    'url'
+  ];
 
   // Get list of columns
   for (const location of data) {

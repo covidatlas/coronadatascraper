@@ -8,7 +8,8 @@ const scraper = {
   county: 'Monterey County',
   state: 'CA',
   country: 'USA',
-  url: 'https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19',
+  url:
+    'https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19',
   type: 'table',
   async scraper() {
     const $ = await fetch.page(this.url);

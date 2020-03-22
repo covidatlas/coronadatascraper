@@ -17,7 +17,11 @@ const scraper = {
     latestDate.setHours(0, 0, 0, 0);
 
     if (datetime.dateIsBefore(latestDate, scrapeDate)) {
-      console.error('🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s', datetime.getYYYYMMDD(latestDate), datetime.getYYYYMMDD(scrapeDate));
+      console.error(
+        '🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s',
+        datetime.getYYYYMMDD(latestDate),
+        datetime.getYYYYMMDD(scrapeDate)
+      );
       latestDate = datetime.getYYYYMMDD(latestDate, '-');
     } else {
       latestDate = datetime.getYYYYMMDD(scrapeDate, '-');

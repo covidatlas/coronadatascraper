@@ -38,7 +38,25 @@ function normalizeProps(obj) {
   return newObj;
 }
 
-const props = ['name', 'name_en', 'abbrev', 'region', 'admin', 'postal', 'gu_a3', 'adm0_a3', 'geonunit', 'pop_est', 'pop_year', 'gdp_md_est', 'gdp_year', 'iso_a2', 'iso_3166_2', 'type_en', 'wikipedia'];
+const props = [
+  'name',
+  'name_en',
+  'abbrev',
+  'region',
+  'admin',
+  'postal',
+  'gu_a3',
+  'adm0_a3',
+  'geonunit',
+  'pop_est',
+  'pop_year',
+  'gdp_md_est',
+  'gdp_year',
+  'iso_a2',
+  'iso_3166_2',
+  'type_en',
+  'wikipedia'
+];
 
 const locationTransforms = {
   // 🇭🇰
@@ -170,9 +188,18 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         } else {
           // Check if the location exists within our provinces
           for (const feature of provinceData.features) {
-            const countryMatches = location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
-            const stateMatches = location.state && (location.state === feature.properties.name || location.state === feature.properties.name_en || location.state === feature.properties.region);
-            const countyMatches = location.county && (location.county === feature.properties.name || location.county === feature.properties.name_en || location.county === feature.properties.region);
+            const countryMatches =
+              location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
+            const stateMatches =
+              location.state &&
+              (location.state === feature.properties.name ||
+                location.state === feature.properties.name_en ||
+                location.state === feature.properties.region);
+            const countyMatches =
+              location.county &&
+              (location.county === feature.properties.name ||
+                location.county === feature.properties.name_en ||
+                location.county === feature.properties.region);
             if (countryMatches && (stateMatches || countyMatches)) {
               found = true;
               storeFeature(feature, location);
@@ -266,7 +293,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
     }
 
-    console.log('✅ Found features for %d out of %d regions for a total of %d features', foundCount, Object.keys(locations).length, featureCollection.features.length);
+    console.log(
+      '✅ Found features for %d out of %d regions for a total of %d features',
+      foundCount,
+      Object.keys(locations).length,
+      featureCollection.features.length
+    );
 
     report.findFeatures = {
       numFeaturesFound: foundCount,

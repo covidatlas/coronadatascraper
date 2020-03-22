@@ -86,7 +86,11 @@ export function runScraper(location) {
       }
     }
     if (scraperToUse === null) {
-      throw new Error(`Could not find scraper for ${geography.getName(location)} at ${process.env.SCRAPE_DATE}, only have: ${Object.keys(location.scraper).join(', ')}`);
+      throw new Error(
+        `Could not find scraper for ${geography.getName(location)} at ${
+          process.env.SCRAPE_DATE
+        }, only have: ${Object.keys(location.scraper).join(', ')}`
+      );
     }
     return scraperToUse.call(location);
   }

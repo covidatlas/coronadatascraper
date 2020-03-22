@@ -7,7 +7,8 @@ import { PdfReader } from 'pdfreader';
 import * as datetime from './datetime.js';
 import * as caching from './caching.js';
 
-const CHROME_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';
+const CHROME_AGENT =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';
 const DEFAULT_VIEWPORT = { width: 1280, height: 800, isMobile: false };
 
 const OPEN_TIMEOUT = 5000;
@@ -35,7 +36,13 @@ needle.defaults({
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  */
 export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
-  const { alwaysRun, disableSSL, toString, encoding } = { alwaysRun: false, disableSSL: false, toString: true, encoding: 'utf8', ...options };
+  const { alwaysRun, disableSSL, toString, encoding } = {
+    alwaysRun: false,
+    disableSSL: false,
+    toString: true,
+    encoding: 'utf8',
+    ...options
+  };
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
 
