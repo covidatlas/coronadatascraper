@@ -21,7 +21,14 @@ const scraper = {
       github: 'jgehrcke'
     }
   ],
-  maintainers: this.curators,
+  maintainers: [
+    {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke'
+    }
+  ],
   scraper: defaultScraperDEU,
   _rowToResult: row => {
     return {
