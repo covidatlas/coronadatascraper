@@ -52,7 +52,6 @@ const scraper = {
       if (index < 1) {
         return;
       }
-      console.log(county, cases, recovered);
       counties.push({
         county,
         cases,
