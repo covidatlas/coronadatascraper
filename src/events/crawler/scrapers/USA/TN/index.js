@@ -178,7 +178,8 @@ const scraper = {
         if (
           countyName === 'Residents Of Other States/countries' ||
           countyName === 'Unknown' ||
-          countyName === 'Out of TN'
+          countyName === 'Out of TN' ||
+          !countyName
         ) {
           unassignedCounty.cases += cases;
           return;
