@@ -80,9 +80,9 @@ const scraper = {
       .filter(casesRow => casesRow.CCAA !== 'Total')
       .flatMap(casesRow => {
         const location = casesRow.CCAA;
-        const sameLocation = d => d.CCAA === location;
-        const deathsRow = rawData.deaths.find(sameLocation);
-        const recoveredRow = rawData.recovered.find(sameLocation);
+        const isSameLocation = d => d.CCAA === location;
+        const deathsRow = rawData.deaths.find(isSameLocation);
+        const recoveredRow = rawData.recovered.find(isSameLocation);
         return Object.keys(casesRow)
           .filter(isDate)
           .map(date => {
