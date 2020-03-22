@@ -114,7 +114,7 @@ const scraper = {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('th:contains("Case Count")').closest('table');
-      const $trs = $table.find('tbody > tr');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
 
       const unassignedCounty = { county: UNASSIGNED, cases: 0 };
 
@@ -134,7 +134,11 @@ const scraper = {
 
         const cases = parse.number($tr.find('td:last-child').text());
 
-        if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+        if (
+          countyName === 'Residents Of Other States/countries' ||
+          countyName === 'Unknown' ||
+          countyName === 'Out Of Tn'
+        ) {
           unassignedCounty.cases += cases;
           return;
         }
@@ -157,7 +161,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-20': async function() {
+    '2020-3-21': async function() {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('th:contains("Count")').closest('table');
