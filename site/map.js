@@ -16,7 +16,7 @@ const data = {};
 let map;
 
 const noCasesColor = '#ffffff';
-const noPopulationDataColor = '#eaeaea';
+const noPopulationDataColor = 'rgba(0,0,0,0)';
 
 const outlineColorHighlight = 'rgb(0,0,0)';
 const outlineColor = 'rgba(0, 0, 0, 0.3)';
@@ -344,15 +344,10 @@ function populateMap() {
     return htmlString;
   }
 
-  const statesWithAllCounties = {};
   const countyFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (location && location.aggregate === 'county' && location.state && location.country === 'USA') {
-        statesWithAllCounties[location.state] = true;
-      }
-      return isCounty(location);
+      return isCounty(data.locations[feature.properties.locationId]);
     })
   };
 
@@ -360,7 +355,7 @@ function populateMap() {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
       const location = data.locations[feature.properties.locationId];
-      if (location.country === 'USA' && statesWithAllCounties[location.state]) {
+      if (location && !location.county && location.aggregate === 'county') {
         return false;
       }
       return isState(location);
@@ -370,7 +365,11 @@ function populateMap() {
   const countryFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isCountry(data.locations[feature.properties.locationId]);
+      const location = data.locations[feature.properties.locationId];
+      if (location && location.country && !location.state && location.aggregate === 'state') {
+        return false;
+      }
+      return isCountry(location);
     })
   };
 
