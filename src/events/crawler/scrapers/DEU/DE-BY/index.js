@@ -6,17 +6,29 @@ const scraper = {
   url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
   type: 'json',
   timeseries: true,
+  sources: [
+    {
+      name: 'Robert Koch-Institut (RKI), Bavarian health ministry',
+      description: 'RKI, Bavarian health ministry, double-checked with ZEIT ONLINE, curated by JPG, see "curators"',
+      url: 'https://github.com/jgehrcke/covid-19-germany-gae'
+    }
+  ],
   curators: [
     {
       name: 'Dr. Jan-Philip Gehrcke',
-      email: 'jgehrcke@googlemail.com'
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke',
+      twitter: 'gehrcke'
     }
   ],
-  sources: [
+  maintainers: [
     {
-      name: 'Robert Koch-Institut, Bavarian health ministry',
-      description: 'Fresh data obtained from Bavarian health ministry by ZEIT ONLINE',
-      url: 'https://github.com/jgehrcke/covid-19-germany-gae'
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke',
+      twitter: 'gehrcke'
     }
   ],
   _rowToResult: row => {
