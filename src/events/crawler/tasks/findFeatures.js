@@ -92,10 +92,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   let foundCount = 0;
 
   function storeFeature(feature, location) {
+    feature.properties = feature.properties || {};
+
     let index = featureCollection.features.indexOf(feature);
     if (index === -1) {
       index = featureCollection.features.push(feature) - 1;
-      if (feature.properties.geonunit) {
+      if (feature.properties && feature.properties.geonunit) {
         feature.properties.shortName = feature.properties.name;
         feature.properties.name = `${feature.properties.name}, ${feature.properties.geonunit}`;
       }
@@ -136,6 +138,14 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       let point;
       if (location.coordinates) {
         point = turf.point(location.coordinates);
+      }
+
+      // If the location already comes with its own feature, store it98
+      if (location.feature) {
+        found = true;
+        storeFeature(location.feature, location);
+        delete location.feature;
+        continue;
       }
 
       // Breaks France
