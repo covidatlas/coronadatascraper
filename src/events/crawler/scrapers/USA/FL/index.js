@@ -154,6 +154,10 @@ const scraper = {
         if (countyName === 'Unknown County') {
           countyName = UNASSIGNED;
         }
+        if (countyName === 'Dade County') {
+          countyName = 'Miami-Dade County';
+        }
+
         counties.push({
           county: countyName,
           cases: parse.number(county.attributes.T_positive || 0),
