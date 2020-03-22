@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import * as datetime from './datetime.js';
 
-const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority', 'aggregate'];
+const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority'];
 
 /*
   Remove "private" object properties
