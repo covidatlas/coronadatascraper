@@ -112,15 +112,12 @@ const scraper = {
   async scraper() {
     let counties = [];
     const $ = await fetch.page(this.url);
-    const $table = $('th:contains("Case Count")').closest('table');
+    const $table = $('th:contains("Count")').closest('table');
     const $trs = $table.find('tbody > tr');
 
     const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
 
     $trs.each((index, tr) => {
-      if (index < 1) {
-        return;
-      }
       const $tr = $(tr);
       const countyName = parse.string(
         $tr
