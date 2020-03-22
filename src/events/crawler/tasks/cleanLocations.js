@@ -1,4 +1,4 @@
-import * as transform from '../../lib/transform.js';
+import * as schema from '../lib/schema.js';
 
 /*
   Clean the passed data
@@ -7,11 +7,10 @@ const cleanLocations = args => {
   const { locations } = args;
 
   for (const location of locations) {
-    transform.removePrivate(location);
-    transform.removeScraperVars(location);
+    schema.schemaHasErrors(location, schema.schemas.locationSchema);
   }
 
-  return { ...args, locations };
+  return args;
 };
 
 export default cleanLocations;
