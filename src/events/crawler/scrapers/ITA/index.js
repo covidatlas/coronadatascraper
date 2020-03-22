@@ -1,6 +1,7 @@
 import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
 import * as datetime from '../../lib/datetime.js';
+import * as transform from '../../lib/transform.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -10,6 +11,7 @@ const scraper = {
   url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
   timeseries: true,
   aggregate: 'state',
+  priority: 1,
   async scraper() {
     const data = await fetch.csv(this.url, false);
     const scrapeDate = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : datetime.getYYYYMMDD();
@@ -27,7 +29,7 @@ const scraper = {
       latestDate = datetime.getYYYYMMDD(scrapeDate, '-');
     }
 
-    return data
+    const states = data
       .filter(row => {
         return row.data.substr(0, 10) === latestDate;
       })
@@ -39,6 +41,10 @@ const scraper = {
           state: parse.string(row.denominazione_regione)
         };
       });
+
+    states.push(transform.sumData(states));
+
+    return states;
   }
 };
 
