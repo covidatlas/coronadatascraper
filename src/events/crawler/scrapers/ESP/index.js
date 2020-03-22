@@ -140,7 +140,6 @@ const scraper = {
 
     if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
-    // console.log({ rawData, data, queryDate });
     // return data from that date
     const locations = data.filter(d => d.date === queryDate.toString());
     locations.push(transform.sumData(locations));
