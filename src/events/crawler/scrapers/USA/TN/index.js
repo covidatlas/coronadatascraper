@@ -110,10 +110,46 @@ const scraper = {
     'Wilson County'
   ],
   '0': async function() {
-    // This is here to get around no-empty-functions in linter.
-    const counties = [];
+    let counties = [];
+    const $ = await fetch.page(this.url);
+    const $table = $('th:contains("Case Count")').closest('table');
+    const $trs = $table.find('tbody > tr');
 
-    counties.push({ cases: 0 });
+    const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+
+    $trs.each((index, tr) => {
+      const $tr = $(tr);
+      const countyName = parse.string(
+        $tr
+          .find('td:first-child')
+          .text()
+          .replace(/\w\S*/g, function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+          })
+      );
+
+      const cases = parse.number($tr.find('td:last-child').text());
+
+      if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+        unassignedCounty.cases += cases;
+        return;
+      }
+
+      if (countyName === 'Grand Total') {
+        return;
+      }
+
+      counties.push({
+        county: geography.addCounty(countyName),
+        cases
+      });
+    });
+
+    counties.push(unassignedCounty);
+
+    counties.push(transform.sumData(counties));
+
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
   },
