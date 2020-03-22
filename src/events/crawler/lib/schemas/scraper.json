@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "url": { "type": "string", "format": "uri" },
+    "timeseries": { "type": "boolean", "default": false },
+    "type": {
+      "type": "string",
+      "enum": ["json", "csv", "table", "list", "paragraph", "pdf", "image"],
+      "default": "list"
+    },
+    "maintainers": { "type": "array" },
+    "sources": { "type": "array" },
+    "curators": { "type": "array" },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "county": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "headless": {
+      "type": "boolean",
+      "default": false
+    },
+    "certValidation": {
+      "type": "boolean",
+      "default": false
+    },
+    "priority": {
+      "type": "number",
+      "default": 0
+    },
+    "scraper": {
+      "oneOf": [
+        {
+          "generator": true
+        },
+        {
+          "type": "object",
+          "patternProperties": {
+            ".*": { "generator": true }
+          }
+        }
+      ]
+    },
+    "aggregate": {
+      "type": "string"
+    }
+  },
+  "dependencies": {
+    "state": ["country"],
+    "county": ["country"],
+    "city": ["country"]
+  },
+  "patternProperties": {
+    "^_.*$": {}
+  },
+  "additionalProperties": false
+}
