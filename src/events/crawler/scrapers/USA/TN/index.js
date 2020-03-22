@@ -110,6 +110,14 @@ const scraper = {
     'Wilson County'
   ],
   '0': async function() {
+    // This is here to get around no-empty-functions in linter.
+    const counties = [];
+
+    counties.push({ cases: 0 });
+
+    return counties;
+  },
+  '2020-3-20': async function() {
     let counties = [];
     const $ = await fetch.page(this.url);
     const $table = $('th:contains("Count")').closest('table');
@@ -152,7 +160,6 @@ const scraper = {
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
-  },'2020-3-14': async function() {
   }
 };
 
