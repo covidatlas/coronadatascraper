@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch.js';
 import * as datetime from '../../lib/datetime.js';
 import * as geography from '../../lib/geography.js';
 
-async function deuScraperCommon() {
+async function defaultScraperDEU() {
   const data = await fetch.csv(this.url, false);
 
   // Rely on dataset to be sorted by time, in direction past -> future.
@@ -47,4 +47,4 @@ async function deuScraperCommon() {
   throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${queryDayString}`);
 }
 
-export default deuScraperCommon;
+export default defaultScraperDEU;

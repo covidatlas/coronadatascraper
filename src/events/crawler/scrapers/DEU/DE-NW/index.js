@@ -1,4 +1,4 @@
-import deuScraperCommon from '../_shared.js';
+import defaultScraperDEU from '../_shared.js';
 
 const scraper = {
   country: 'DEU',
@@ -19,19 +19,11 @@ const scraper = {
       name: 'Dr. Jan-Philip Gehrcke',
       email: 'jgehrcke@googlemail.com',
       url: 'https://gehrcke.de',
-      github: 'jgehrcke',
-      twitter: 'gehrcke'
+      github: 'jgehrcke'
     }
   ],
-  maintainers: [
-    {
-      name: 'Dr. Jan-Philip Gehrcke',
-      email: 'jgehrcke@googlemail.com',
-      url: 'https://gehrcke.de',
-      github: 'jgehrcke',
-      twitter: 'gehrcke'
-    }
-  ],
+  maintainers: this.curators,
+  scraper: defaultScraperDEU,
   _rowToResult: row => {
     return {
       cases: parseInt(row['DE-NW_cases'], 10),
@@ -39,8 +31,7 @@ const scraper = {
       coordinates: [7.661, 51.433],
       population: 17.91 * 10 ** 6
     };
-  },
-  scraper: deuScraperCommon
+  }
 };
 
 export default scraper;
