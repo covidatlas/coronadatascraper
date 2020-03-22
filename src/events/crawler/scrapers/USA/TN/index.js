@@ -109,52 +109,98 @@ const scraper = {
     'Williamson County',
     'Wilson County'
   ],
-  async scraper() {
-    let counties = [];
-    const $ = await fetch.page(this.url);
-    const $table = $('th:contains("Case Count")').closest('table');
-    const $trs = $table.find('tbody > tr');
+  scraper: {
+    '0': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('th:contains("Case Count")').closest('table');
+      const $trs = $table.find('tbody > tr');
 
-    const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+      const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
 
-    $trs.each((index, tr) => {
-      if (index < 1) {
-        return;
-      }
-      const $tr = $(tr);
-      const countyName = parse.string(
-        $tr
-          .find('td:first-child')
-          .text()
-          .replace(/\w\S*/g, function(txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-          })
-      );
+      $trs.each((index, tr) => {
+        if (index < 1) {
+          return;
+        }
+        const $tr = $(tr);
+        const countyName = parse.string(
+          $tr
+            .find('td:first-child')
+            .text()
+            .replace(/\w\S*/g, function(txt) {
+              return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            })
+        );
 
-      const cases = parse.number($tr.find('td:last-child').text());
+        const cases = parse.number($tr.find('td:last-child').text());
 
-      if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
-        unassignedCounty.cases += cases;
-        return;
-      }
+        if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+          unassignedCounty.cases += cases;
+          return;
+        }
 
-      if (countyName === 'Grand Total') {
-        return;
-      }
+        if (countyName === 'Grand Total') {
+          return;
+        }
 
-      counties.push({
-        county: geography.addCounty(countyName),
-        cases
+        counties.push({
+          county: geography.addCounty(countyName),
+          cases
+        });
       });
-    });
 
-    counties.push(unassignedCounty);
+      counties.push(unassignedCounty);
 
-    counties.push(transform.sumData(counties));
+      counties.push(transform.sumData(counties));
 
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
-    return counties;
+      return counties;
+    },
+    '2020-3-20': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('th:contains("Count")').closest('table');
+      const $trs = $table.find('tbody > tr');
+
+      const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const countyName = parse.string(
+          $tr
+            .find('td:first-child')
+            .text()
+            .replace(/\w\S*/g, function(txt) {
+              return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            })
+        );
+
+        const cases = parse.number($tr.find('td:last-child').text());
+
+        if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+          unassignedCounty.cases += cases;
+          return;
+        }
+
+        if (countyName === 'Grand Total') {
+          return;
+        }
+
+        counties.push({
+          county: geography.addCounty(countyName),
+          cases
+        });
+      });
+
+      counties.push(unassignedCounty);
+
+      counties.push(transform.sumData(counties));
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      return counties;
+    }
   }
 };
 
