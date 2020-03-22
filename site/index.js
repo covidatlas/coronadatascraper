@@ -38,7 +38,9 @@ function closeSidebar() {
 
 function showPage(pageToShow, noPush) {
   // Set selected
-  const currentSideLink = document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow}"]`) || document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow.replace('#', '')}"]`);
+  const currentSideLink =
+    document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow}"]`) ||
+    document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow.replace('#', '')}"]`);
   const currentSideItem = currentSideLink && currentSideLink.closest('.spectrum-SideNav-item');
   const otherSideItem = document.querySelector('.spectrum-SideNav-item.is-selected');
   if (otherSideItem) {
