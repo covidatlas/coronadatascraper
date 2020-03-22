@@ -1,7 +1,7 @@
 /* global document, window */
 
 import { getGrade } from './lib/math.js';
-import { getName } from '../lib/geography.js';
+import { getName } from '../src/events/crawler/lib/geography.js';
 import * as fetch from './lib/fetch.js';
 
 function getURLFromContributor(curator) {
@@ -85,16 +85,23 @@ function ratingTemplate(source, index) {
   const maintainers = getContributors(source.maintainers, 'Maintained by');
   return `
   <li class="cds-ReportCard" id="${slug}">
-    <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(/[^A-Z]+/g, '')}">${getGrade(source.rating).replace(/([+-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
+    <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(
+      /[^A-Z]+/g,
+      ''
+    )}">${getGrade(source.rating).replace(/([+-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
     <div class="cds-ReportCard-content">
-      <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index + 1}. ${getName(source)}</a></h2>
+      <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index +
+    1}. ${getName(source)}</a></h2>
       ${sources}
       ${curators}
       ${maintainers}
-      <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL">Data from <a href="${source.url}" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
+      <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL">Data from <a href="${
+        source.url
+      }" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
       <div class="cds-ReportCard-criteria">
         <div class="cds-ReportCard-criterion">
-          ${typeIcons[source.type]} ${typeNames[source.type] || source.type.substr(0, 1).toUpperCase() + source.type.substr(1)}
+          ${typeIcons[source.type]} ${typeNames[source.type] ||
+    source.type.substr(0, 1).toUpperCase() + source.type.substr(1)}
         </div>
         <div class="cds-ReportCard-criterion">
           ${source.timeseries ? '✅' : '❌'} Timeseries

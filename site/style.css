@@ -293,6 +293,33 @@ div.spectrum-SideNav-itemLink:hover {
   padding-right: 8px;
 }
 
+#mapLegend {
+  position: absolute;
+  background: #ffffff;
+  padding: 2px 8px 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  bottom: 36px;
+  left: 12px;
+}
+
+.mapLegend-scaleLabels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mapLegend-scaleLabels .spectrum-Body--XS {
+  margin: 0;
+}
+
+#mapLegend canvas {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
@@ -303,9 +330,11 @@ div.spectrum-SideNav-itemLink:hover {
   .cds-Sources-list {
     margin: 48px 12px 0 12px;
   }
-
   .spectrum-Site-content {
     /* fix: header scrolls off */
     max-height: calc(100% - 48px);
+  }
+  .is-editing .spectrum-Site-content {
+    max-height: 100%;
   }
 }
