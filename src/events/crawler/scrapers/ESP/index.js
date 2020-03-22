@@ -26,9 +26,21 @@ const scraper = {
       description: 'Deaths by date and community'
     }
   ],
-  curators: [{ name: 'Antonio Delgado', url: 'https://datadista.com/', twitter: '@adelgado', github: 'adelgadob' }],
+  curators: [
+    {
+      name: 'Antonio Delgado', //
+      url: 'https://datadista.com/',
+      twitter: '@adelgado',
+      github: 'adelgadob'
+    }
+  ],
   maintainers: [
-    { name: 'Herb Caudill', url: 'https://devresults.com', twitter: '@herbcaudill', github: 'herbcaudill' }
+    {
+      name: 'Herb Caudill', //
+      url: 'https://devresults.com',
+      twitter: '@herbcaudill',
+      github: 'herbcaudill'
+    }
   ],
   async scraper() {
     const isDate = s => s.includes('/');
