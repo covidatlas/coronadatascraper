@@ -1,4 +1,5 @@
 import * as turf from '@turf/turf';
+import geoTz from 'geo-tz';
 
 import * as fs from '../lib/fs.js';
 import * as geography from '../lib/geography.js';
@@ -110,6 +111,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     if (DEBUG) {
       console.log('Storing %s in %s', location.name, feature.properties.name);
+    }
+
+    if (location.coordinates) {
+      location.tz = geoTz(location.coordinates[1], location.coordinates[0]);
     }
 
     feature.properties.id = index;
