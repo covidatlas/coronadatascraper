@@ -22,10 +22,10 @@ jobs:
       - name: Update submodules
         run: |
           git submodule update --init --recursive
-      - name: Use Node.js 13.x
+      - name: Use Node.js 12
         uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: '12.15.0'
       - name: Install
         run: |
           yarn

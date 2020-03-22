@@ -1,4 +1,25 @@
-@import url("https://use.typekit.net/xcj1vcp.css");
+@import url('https://use.typekit.net/xcj1vcp.css');
+
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-global.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-darkest.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-lightest.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-dark.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-light.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-large.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/icon/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/statuslight/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/page/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/button/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/buttongroup/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/sidenav/index-vars.css";
+
+@import "./colors.css";
+@import "./icons/style.css";
 
 :root {
   --cds-editor-header-background-color: var(--spectrum-global-color-gray-500);
@@ -248,10 +269,55 @@ div.spectrum-SideNav-itemLink:hover {
   font-size: 36px;
 }
 
+.cds-ReportCard-contributorName {
+  margin-bottom: 0 !important;
+}
+
 /* Map */
 #map {
   height: 100%;
   width: 100%;
+}
+
+.cds-Popup {
+  margin: -10px 0;
+}
+
+.cds-Popup-table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.cds-Popup-table th {
+  text-align: right;
+  padding-right: 8px;
+}
+
+#mapLegend {
+  position: absolute;
+  background: #ffffff;
+  padding: 2px 8px 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  bottom: 36px;
+  left: 12px;
+}
+
+.mapLegend-scaleLabels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mapLegend-scaleLabels .spectrum-Body--XS {
+  margin: 0;
+}
+
+#mapLegend canvas {
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
@@ -264,9 +330,11 @@ div.spectrum-SideNav-itemLink:hover {
   .cds-Sources-list {
     margin: 48px 12px 0 12px;
   }
-
   .spectrum-Site-content {
     /* fix: header scrolls off */
     max-height: calc(100% - 48px);
+  }
+  .is-editing .spectrum-Site-content {
+    max-height: 100%;
   }
 }
