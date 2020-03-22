@@ -2,9 +2,9 @@ import defaultScraperDEU from '../_shared.js';
 
 const scraper = {
   country: 'DEU',
-  state: 'DE-HB', // ISO 3166 notation
+  state: 'DE-HB',
   url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
-  type: 'json',
+  type: 'csv',
   timeseries: true,
   sources: [
     {

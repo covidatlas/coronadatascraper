@@ -4,7 +4,7 @@ const scraper = {
   country: 'DEU',
   state: 'DE-TH', // ISO 3166 notation
   url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
-  type: 'json',
+  type: 'csv',
   timeseries: true,
   sources: [
     {
