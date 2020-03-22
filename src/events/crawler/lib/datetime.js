@@ -95,7 +95,20 @@ export const getMonthDYYYY = function(date = getDate(), sep = '_') {
     date = new Date(date);
   }
 
-  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
 
   const month = months[date.getUTCMonth()];
   const day = date.getUTCDate().toString();
