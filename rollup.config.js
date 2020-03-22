@@ -24,10 +24,13 @@ export default {
         contentBase: 'dist',
         port: 3000
       }),
-    !prod && livereload(),
+    !prod && livereload({ watch: 'site' }),
     copy([{ files: 'site/**/!(*.js|*.css|.DS_Store)', dest: 'dist' }], { verbose: true, watch: !prod }),
     postcss({
       plugins: [postcssImport(), postcssNested()]
     })
-  ]
+  ],
+  watch: {
+    exclude: ['node_modules'] // jic
+  }
 };
