@@ -11,14 +11,15 @@ export const asRows = (data, rowTolerance = 1) => {
   let currentPage = 1;
   for (const item of data) {
     if (!item || item.page > currentPage) {
+      const currentRows = rows;
       // end of page
-      Object.keys(rows) // => array of y-positions (type: float)
-        .sort((y1, y2) => parseFloat(y1) - parseFloat(y2)) // sort float positions
-        .forEach(y =>
-          output.push(
-            rows[y].sort((item1, item2) => parseFloat(item1.x) - parseFloat(item2.x)) // sort x positions and add to data array
-          )
-        );
+      output.push(
+        ...Object.keys(currentRows) // => array of y-positions (type: float)
+          // sort float positions
+          .sort((y1, y2) => parseFloat(y1) - parseFloat(y2))
+          // sort x positions and add to data array
+          .map(y => currentRows[y].sort((item1, item2) => parseFloat(item1.x) - parseFloat(item2.x)))
+      );
       rows = {}; // clear rows for next page
       currentPage += 1;
     } else {
@@ -66,6 +67,9 @@ export const asWords = (data, rowTolerance = 1, wordTolerance = 1) => {
 
         if (dist < wordTolerance) {
           lastWord.text += item.text;
+          // Width of elements in PDFs are weird. Sometimes they are accurate, sometimes they are not.
+          // A good estimation of the width of our word is to take the current width per character and assume that any
+          // additional letter we add to this word has the same width.
           lastWord.w *= lastWord.text.length / (lastWord.text.length - 1);
         } else {
           words.push(item);

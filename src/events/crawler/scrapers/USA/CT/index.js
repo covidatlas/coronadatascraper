@@ -82,7 +82,12 @@ const scraper = {
 
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
         1}${new Date(date).getUTCDate()}2020.pdf`;
+
       const body = await fetch.pdf(this.url);
+
+      if (body === null) {
+        throw new Error(`No data for ${date}`);
+      }
 
       const rows = pdfUtils.asWords(body, 0, 0.5).map(row => row.map(col => col.text));
 

@@ -48,12 +48,10 @@ const scraper = {
         ).getUTCDate()}-2020/download`;
       }
 
-      let body = null;
-      try {
-        body = await fetch.pdf(this.url, date, { alwaysRun: true });
-      } catch (e) {
-        // This indicates that no data is available for this day. Return all counties empty for now.
-        return geography.addEmptyRegions([], this._counties, 'county');
+      const body = await fetch.pdf(this.url);
+
+      if (body === null) {
+        throw new Error(`No data for ${date}`);
       }
 
       const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));

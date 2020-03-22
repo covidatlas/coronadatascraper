@@ -55,15 +55,18 @@ export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetim
     }
 
     const response = await needle('get', url);
-    const fetchedBody = toString ? response.body.toString() : response.body;
-
-    await caching.saveFileToCache(url, type, date, fetchedBody);
 
     if (disableSSL) {
       delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
     }
 
-    return fetchedBody;
+    if (response.statusCode < 400) {
+      const fetchedBody = toString ? response.body.toString() : response.body;
+      await caching.saveFileToCache(url, type, date, fetchedBody);
+      return fetchedBody;
+    }
+    console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+    return null;
   }
   return cachedBody;
 };
@@ -166,6 +169,7 @@ export const pdf = async (url, date, options) => {
 
     if (!body) {
       resolve(null);
+      return;
     }
 
     const data = [];
@@ -208,14 +212,14 @@ const fetchHeadless = async url => {
       browser.close();
       return html;
     }
-    console.log('  ❌ Got error %d trying to fetch %s headless', response._status, url);
+    console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
     browser.close();
     return null;
   } catch (err) {
     browser.close();
 
     if (err.name === 'TimeoutError') {
-      console.log('  ❌ Timed out trying to fetch %s headless', url);
+      console.log(`  ❌ Timed out trying to fetch ${url}`);
       return null;
     }
     throw err;

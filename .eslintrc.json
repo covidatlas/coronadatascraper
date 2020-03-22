@@ -15,7 +15,6 @@
     "no-shadow": "warn",
     "import/extensions": ["error", "ignorePackages"],
     "no-underscore-dangle": "off",
-    "jest/no-try-expect": "off",
-    "no-loop-func": "off"
+    "jest/no-try-expect": "off"
   }
 }
