@@ -116,7 +116,7 @@ const scraper = {
       const $table = $('th:contains("Case Count")').closest('table');
       const $trs = $table.find('tbody > tr');
 
-      const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+      const unassignedCounty = { county: UNASSIGNED, cases: 0 };
 
       $trs.each((index, tr) => {
         if (index < 1) {
@@ -161,24 +161,21 @@ const scraper = {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('th:contains("Count")').closest('table');
-      const $trs = $table.find('tbody > tr');
+      const $trs = $table.find('tbody > tr:not(:last-child)'); // skip grand total
 
-      const unassignedCounty = { countyName: UNASSIGNED, cases: 0 };
+      const unassignedCounty = { county: UNASSIGNED, cases: 0 };
 
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const countyName = parse.string(
-          $tr
-            .find('td:first-child')
-            .text()
-            .replace(/\w\S*/g, function(txt) {
-              return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-            })
-        );
+        const countyName = parse.string($tr.find('td:first-child').text());
 
         const cases = parse.number($tr.find('td:last-child').text());
 
-        if (countyName === 'Residents Of Other States/countries' || countyName === 'Unknown') {
+        if (
+          countyName === 'Residents Of Other States/countries' ||
+          countyName === 'Unknown' ||
+          countyName === 'Out of TN'
+        ) {
           unassignedCounty.cases += cases;
           return;
         }
