@@ -52,7 +52,6 @@ const scraper = {
       if (county === 'Unknown County') {
         county = UNASSIGNED;
       }
-
       counties.push({
         county,
         cases,
