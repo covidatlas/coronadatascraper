@@ -7,7 +7,7 @@
   "license": "BSD",
   "type": "commonjs",
   "engines": {
-    "node": ">=12.15.0 <13.0.0"
+    "node": ">=12.15.0 <13.12.0"
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
@@ -39,6 +39,7 @@
     "mock-fs": "^4.11.0",
     "needle": "^2.3.3",
     "puppeteer": "^2.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.7",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
