@@ -1,4 +1,5 @@
 const { Builder, By, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
 const scraper = {
   state: 'SC',
@@ -9,7 +10,10 @@ const scraper = {
 
   async scraper() {
     const counties = [];
-    const driver = await new Builder().forBrowser('chrome').build();
+    const driver = await new Builder()
+      .setChromeOptions(new chrome.Options().headless().windowSize({ width: 2000, height: 2000 }))
+      .forBrowser('chrome')
+      .build();
 
     try {
       await driver.get(this.url);
