@@ -16,7 +16,7 @@ const data = {};
 let map;
 
 const noCasesColor = '#ffffff';
-const noPopulationDataColor = '#eaeaea';
+const noPopulationDataColor = 'rgba(0,0,0,0)';
 
 const outlineColorHighlight = 'rgb(0,0,0)';
 const outlineColor = 'rgba(0, 0, 0, 0.3)';
@@ -273,7 +273,7 @@ function populateMap() {
     }
 
     // Associated the feature with the location
-    if (location.featureId) {
+    if (location.featureId !== undefined) {
       const feature = data.features.features[location.featureId];
       if (feature) {
         foundFeatures++;
@@ -343,24 +343,33 @@ function populateMap() {
     htmlString += `</div>`;
     return htmlString;
   }
-  const countryFeatures = {
+
+  const countyFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isCountry(data.locations[feature.properties.locationId]);
+      return isCounty(data.locations[feature.properties.locationId]);
     })
   };
 
   const stateFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isState(data.locations[feature.properties.locationId]);
+      const location = data.locations[feature.properties.locationId];
+      if (location && !location.county && location.aggregate === 'county') {
+        return false;
+      }
+      return isState(location);
     })
   };
 
-  const countyFeatures = {
+  const countryFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
+      const location = data.locations[feature.properties.locationId];
+      if (location && location.country && !location.state && location.aggregate === 'state') {
+        return false;
+      }
+      return isCountry(location);
     })
   };
 
@@ -474,7 +483,15 @@ function populateMap() {
   createLegend(chartDataMin, chartDataMax);
 }
 
+let rendered = false;
 function showMap() {
+  if (rendered) {
+    return;
+  }
+  rendered = true;
+
+  document.body.classList.add('is-editing');
+
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',

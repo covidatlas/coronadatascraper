@@ -10,7 +10,7 @@ const scraper = {
   country: 'ESP',
   url: 'https://opendata.arcgis.com/datasets/48fac2d7de0f43f9af938852e3748845_0.csv',
   priority: 1,
-  aggregate: 'state',
+  // aggregate: 'state', // doesn't seem to be aggregating properly
   async scraper() {
     const data = await fetch.csv(this.url);
     const states = [];

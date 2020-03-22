@@ -126,7 +126,7 @@ const scraper = {
       const $table = $('h4:contains("All Mississippi cases to date")')
         .nextAll('table')
         .first();
-      const $trs = $table.find('tbody > tr');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
       let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);

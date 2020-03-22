@@ -13,13 +13,12 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   _countyMap: {
-    'New York City': 'New York County',
     Broom: 'Broome'
   },
   _counties: [
     'Albany County',
     'Allegany County',
-    'Bronx County',
+    // 'Bronx County',
     'Broome County',
     'Cattaraugus County',
     'Cayuga County',
@@ -40,14 +39,14 @@ const scraper = {
     'Hamilton County',
     'Herkimer County',
     'Jefferson County',
-    'Kings County',
+    // 'Kings County',
     'Lewis County',
     'Livingston County',
     'Madison County',
     'Monroe County',
     'Montgomery County',
     'Nassau County',
-    'New York County',
+    // 'New York County',
     'Niagara County',
     'Oneida County',
     'Onondaga County',
@@ -57,9 +56,9 @@ const scraper = {
     'Oswego County',
     'Otsego County',
     'Putnam County',
-    'Queens County',
+    // 'Queens County',
     'Rensselaer County',
-    'Richmond County',
+    // 'Richmond County',
     'Rockland County',
     'St. Lawrence County',
     'Saratoga County',
@@ -97,11 +96,28 @@ const scraper = {
       const $tr = $(tr);
       let countyName = parse.string($tr.find('td:first-child').text()).replace(':', '');
       countyName = this._countyMap[countyName] || countyName;
-      if (countyName !== 'New York State (Outside of NYC)' && countyName !== 'Total Positive Cases (Statewide)') {
-        counties.push({
-          county: geography.addCounty(countyName),
+      if (
+        countyName !== 'New York State (Outside of NYC)' &&
+        countyName !== 'Total Positive Cases (Statewide)' &&
+        countyName !== 'Total Number of Positive Cases'
+      ) {
+        const countyObj = {
           cases: parse.number($tr.find('td:last-child').text())
-        });
+        };
+
+        if (countyName === 'New York City') {
+          countyObj.county = countyName;
+          countyObj.feature = geography.generateMultiCountyFeature(
+            ['Bronx County, NY', 'Kings County, NY', 'New York County, NY', 'Queens County, NY', 'Richmond County, NY'],
+            {
+              state: 'NY',
+              country: 'USA'
+            }
+          );
+        } else {
+          countyObj.county = geography.addCounty(countyName);
+        }
+        counties.push(countyObj);
       }
     });
 

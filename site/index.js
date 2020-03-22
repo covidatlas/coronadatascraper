@@ -59,6 +59,8 @@ function showPage(pageToShow, noPush) {
     }
   }
 
+  document.body.classList.remove('is-editing');
+
   if (routes[pageToShow]) {
     if (!noPush) {
       history.pushState(null, '', pageToShow);

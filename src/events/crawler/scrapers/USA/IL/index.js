@@ -10,6 +10,7 @@ const scraper = {
   state: 'IL',
   country: 'USA',
   priority: 1,
+  aggregate: 'county',
   url: 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults.json',
   async scraper() {
     const data = await fetch.json(this.url);

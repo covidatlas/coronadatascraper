@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import * as datetime from './datetime.js';
 
-const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority', 'aggregate'];
+const scraperVars = ['type', 'timeseries', 'headless', 'certValidation', 'priority'];
 
 /*
   Remove "private" object properties
@@ -116,6 +116,12 @@ export const sumData = function(dataArray, object) {
       }
     }
   }
+
+  // Automatically elevate the priority
+  if (summedData.priority < 1) {
+    summedData.priority = 1;
+  }
+
   return summedData;
 };
 

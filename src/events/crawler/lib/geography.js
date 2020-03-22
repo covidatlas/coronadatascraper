@@ -1,6 +1,8 @@
+import * as turf from '@turf/turf';
 import usStates from '../../../../coronavirus-data-sources/lib/us-states.json';
 
 import countryCodes from '../../../../coronavirus-data-sources/ISO-3166-Countries-with-Regional-Codes/slim-3/slim-3.json';
+import countyGeoJSON from '../../../../coronavirus-data-sources/geojson/usa-counties.json';
 
 export { usStates };
 
@@ -26,6 +28,41 @@ const countryMap = {
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB'
 };
+
+/*
+  Given a list of counties and a set of properties, combine the GeoJSON for the counties and slap the properties on it
+*/
+export function generateMultiCountyFeature(counties, properties) {
+  // Collect a list of features and polygons matching the list of counties
+  const polygons = [];
+  const features = [];
+  for (const countyFeature of countyGeoJSON.features) {
+    if (counties.indexOf(countyFeature.properties.name) !== -1) {
+      features.push(countyFeature.properties.name);
+      polygons.push(turf.feature(countyFeature.geometry));
+    }
+  }
+
+  // Generate a combined feature from all of the polygons
+  let combinedPolygon = polygons.pop();
+  while (polygons.length) {
+    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
+  }
+  const combinedFeature = combinedPolygon;
+  combinedFeature.properties = properties;
+
+  // Store each of the locations so we can reference them later and get populatin data
+  combinedFeature._aggregatedLocations = features.map(f => {
+    const [county, state] = f.split(', ');
+    return {
+      county,
+      state,
+      ...properties
+    };
+  });
+
+  return combinedFeature;
+}
 
 export const isCountry = function(location) {
   return location && location.country && !location.state && !location.county && !location.city;

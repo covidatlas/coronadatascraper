@@ -14,9 +14,11 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   url: 'https://coronavirus.health.ok.gov/',
-  source: {
-    name: 'Oklahoma State Deparment of Health'
-  },
+  sources: [
+    {
+      name: 'Oklahoma State Deparment of Health'
+    }
+  ],
   maintainers: [
     {
       name: 'Paul Boal',

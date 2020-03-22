@@ -11,10 +11,9 @@ import * as maintainers from '../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  maintainer: maintainers.lazd,
+  maintainers: [maintainers.lazd],
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
-  aggregate: 'state',
   priority: -1,
   _urls: {
     cases:
@@ -114,6 +113,7 @@ const scraper = {
           } else {
             const [county, state] = countyAndState.split(', ');
             countyTotals[countyAndState] = {
+              aggregate: 'state',
               county,
               state,
               country: 'USA',
@@ -135,6 +135,7 @@ const scraper = {
       if (cases[index]['Country/Region'] === 'US' && geography.usStates[parse.string(cases[index]['Province/State'])]) {
         const state = geography.usStates[parse.string(cases[index]['Province/State'])];
         countries.push({
+          aggregate: 'state',
           country: 'USA',
           state,
           cases: parse.number(cases[index][date] || 0),
@@ -143,6 +144,7 @@ const scraper = {
         });
       } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
         const caseData = {
+          aggregate: 'country',
           country: parse.string(cases[index]['Country/Region']),
           cases: parse.number(cases[index][date] || 0),
           recovered: parse.number(recovered[index][date] || 0),
@@ -151,6 +153,7 @@ const scraper = {
         };
 
         if (cases[index]['Province/State']) {
+          caseData.aggregate = 'state';
           caseData.state = parse.string(cases[index]['Province/State']);
         }
 

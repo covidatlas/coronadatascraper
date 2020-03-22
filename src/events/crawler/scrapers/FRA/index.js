@@ -12,7 +12,7 @@ const scraper = {
   url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
   timeseries: true,
   priority: 1,
-  aggregate: 'state',
+  // aggregate: 'state', // doesn't seem to be aggregating properly
   async scraper() {
     const data = await fetch.csv(this.url, false);
     const states = [];

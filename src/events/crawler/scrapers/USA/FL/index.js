@@ -150,8 +150,16 @@ const scraper = {
 
       let counties = [];
       for (const county of data.features) {
+        let countyName = this._getCountyName(geography.addCounty(parse.string(county.attributes.COUNTYNAME)));
+        if (countyName === 'Unknown County') {
+          countyName = UNASSIGNED;
+        }
+        if (countyName === 'Dade County') {
+          countyName = 'Miami-Dade County';
+        }
+
         counties.push({
-          county: this._getCountyName(geography.addCounty(parse.string(county.attributes.COUNTYNAME))),
+          county: countyName,
           cases: parse.number(county.attributes.T_positive || 0),
           tested: parse.number(county.attributes.T_total || 0),
           deaths: parse.number(county.attributes.FLandNonFLDeaths || 0)
