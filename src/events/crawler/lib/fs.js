@@ -63,7 +63,7 @@ export const readCSV = async filePath => {
         {
           columns: true
         },
-        function(err, output) {
+        (err, output) => {
           if (err) {
             reject(err);
           } else {

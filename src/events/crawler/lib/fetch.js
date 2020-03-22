@@ -124,7 +124,7 @@ export const csv = async (url, date, options = {}) => {
           delimiter: options.delimiter,
           columns: true
         },
-        function(err, output) {
+        (err, output) => {
           if (err) {
             reject(err);
           } else {
