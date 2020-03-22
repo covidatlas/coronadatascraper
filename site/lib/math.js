@@ -17,6 +17,13 @@ export const getRatio = function(fractional, total) {
   return `1 : ${Math.round(total / fractional).toLocaleString()}`;
 };
 
+export const getPercent = function(fractional, total) {
+  if (fractional === 0) {
+    return '-';
+  }
+  return `${((1 / Math.round(total / fractional)) * 100).toFixed(4)}%`;
+};
+
 export const getGrade = function(rating) {
   rating *= 200;
 
