@@ -36,42 +36,53 @@ def get_county_pops():
         county, state = county_state.split(', ')
         state_counties[state].add(county_state)
 
-    return county_pop, state_counties
+    return county_pop
 
-county_pop, state_to_counties = get_county_pops()
 
-reader = csv.reader(open(sys.argv[1]))
+def get_county_nonzero():
+    reader = csv.reader(open(sys.argv[1]))
 
-counties = defaultdict(int)
-states = []
+    counties = defaultdict(int)
+    states = []
 
-have_counties = set()
+    nonzero_today = set()
+    nonzero_ever = set()
 
-for row in reader:
-    #dump(row) ; sys.exit()
+    for row in reader:
+        #dump(row) ; sys.exit()
 
-    city,county,state,country = row[:4]
+        city,county,state,country = row[:4]
 
-    todays_count = toint(row[-1])
+        counts = list(map(toint, row[8:]))
 
-    if not todays_count:
-        continue
+        if country != 'USA':
+            continue
 
-    if country != 'USA':
-        continue
+        county = f'{county}, {state}'
 
-    county = f'{county}, {state}'
-    have_counties.add(county)
+        if counts[-1]:
+            nonzero_today.add(county)
+        if max(counts):
+            nonzero_ever.add(county)
 
-missing_counties = []
+    return nonzero_today, nonzero_ever
 
-for county,pop in county_pop.items():
-    if county in have_counties:
-        continue
-    missing_counties.append( (pop, county) )
+def biggest_zero_counties():
+    county_pop = get_county_pops()
 
-missing_counties = sorted(missing_counties, reverse = True)
-for pop,county in missing_counties:
-    print(pop, county)
+    nonzero_today, nonzero_ever = get_county_nonzero()
 
-dump(len(missing_counties))
+    missing_counties = []
+
+    for county,pop in county_pop.items():
+        if county in nonzero_today:
+            continue
+        missing_counties.append( (pop, county) )
+
+    missing_counties = sorted(missing_counties, reverse = True)
+    for pop,county in missing_counties:
+        print(pop, county)
+
+    dump(len(missing_counties))
+
+biggest_zero_counties()
