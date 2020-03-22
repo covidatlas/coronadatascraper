@@ -343,24 +343,34 @@ function populateMap() {
     htmlString += `</div>`;
     return htmlString;
   }
-  const countryFeatures = {
+
+  const statesWithAllCounties = {};
+  const countyFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isCountry(data.locations[feature.properties.locationId]);
+      const location = data.locations[feature.properties.locationId];
+      if (location && location.aggregate === 'county' && location.state && location.country === 'USA') {
+        statesWithAllCounties[location.state] = true;
+      }
+      return isCounty(location);
     })
   };
 
   const stateFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isState(data.locations[feature.properties.locationId]);
+      const location = data.locations[feature.properties.locationId];
+      if (location.country === 'USA' && statesWithAllCounties[location.state]) {
+        return false;
+      }
+      return isState(location);
     })
   };
 
-  const countyFeatures = {
+  const countryFeatures = {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
+      return isCountry(data.locations[feature.properties.locationId]);
     })
   };
 
@@ -474,7 +484,13 @@ function populateMap() {
   createLegend(chartDataMin, chartDataMax);
 }
 
+let rendered = false;
 function showMap() {
+  if (rendered) {
+    return;
+  }
+  rendered = true;
+
   document.body.classList.add('is-editing');
 
   map = new mapboxgl.Map({
