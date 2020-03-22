@@ -7,7 +7,7 @@
     "curators": { "type": "array" },
     "country": { "type": "string" },
     "state": { "type": "string" },
-    "county": { "type": "string" },
+    "county": { "type": "string", "minimum": 3, "maximum": 3 },
     "city": { "type": "string" },
     "cases": { "type": "number", "minimum": 0 },
     "deaths": { "type": "number", "minimum": 0 },
@@ -18,13 +18,13 @@
     "active": { "type": "number", "minimum": 0 },
     "featureId": { "type": "number" },
     "rating": { "type": "number" },
-    "tz": { "type": "string" }
+    "tz": { "type": "array" }
   },
   "dependencies": {
     "state": ["country"],
     "county": ["country"],
     "city": ["country"]
   },
-  "required": ["country", "cases", "active"],
+  "required": ["country", "cases", "active", "url", "rating"],
   "additionalProperties": false
 }

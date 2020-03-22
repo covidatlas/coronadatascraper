@@ -9,7 +9,7 @@ export const schemas = {
 };
 
 export const schemaHasErrors = (data, schema, options = {}) => {
-  const { useDefaults, removeAdditional } = { useDefaults: true, removeAdditional: true, ...options };
+  const { useDefaults, removeAdditional } = { useDefaults: true, removeAdditional: false, ...options };
 
   const ajv = new Ajv({ useDefaults, removeAdditional });
 
