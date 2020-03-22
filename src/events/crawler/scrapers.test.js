@@ -16,7 +16,8 @@ describe('scrappers', () => {
 
   if (process.env.FILES_MODIFIED) {
     const scrapers = process.env.FILES_MODIFIED.split('\n').filter(filePath =>
-      filePath.match(/^src\/events\/crawler\/scrapers\//g)
+      // Ignore any files or subdirectory in scrapers that starts with _
+      filePath.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi)
     );
 
     if (scrapers.length > 0) {
