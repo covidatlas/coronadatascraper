@@ -1,6 +1,5 @@
 /**
- * Returns 2D array of items on each row of the document. Each row consists of an array of text
- * elements elements present on that row.
+ * Returns 2D array of items on each row of the document. Each row consists of an array of elements present on that row.
  *
  * @param rowTolerance allowed variance in the y-axis. Allows elements with small discrepancies in their y
  *                  value to be considered as being part of the same row, defaults to 1 unit
@@ -44,6 +43,14 @@ export const asRows = (data, rowTolerance = 1) => {
   return output;
 };
 
+/**
+ * Combines elements of the PDF that are likely to be one word
+ * @param {*} data
+ * @param {*} rowTolerance allowed variance in the y-axis. Allows elements with small discrepancies in their y
+ *                  value to be considered as being part of the same word, defaults to 1 unit
+ * @param {*} wordTolerance allowed variance in the x-axis. Allows elements with small discrepancies in their x
+ *                  value to be considered as being part of the same word, defaults to 1 unit
+ */
 export const asWords = (data, rowTolerance = 1, wordTolerance = 1) => {
   const rows = asRows(data, rowTolerance);
 
@@ -74,6 +81,12 @@ export const asWords = (data, rowTolerance = 1, wordTolerance = 1) => {
 
 const euclideanDistance = (a, b) => Math.sqrt((a.x + a.w / 2 - b.x - b.w / 2) ** 2 + (a.y - b.y) ** 2);
 
+/**
+ * Returns all the text nearest to the provided item
+ *
+ * @param {*} target item to find nearest for
+ * @param {*} data array of all PDF items
+ */
 export const getNearest = (target, data) => {
   return data
     .filter(item => item.page === target.page) // ignore elements not on the target's page
