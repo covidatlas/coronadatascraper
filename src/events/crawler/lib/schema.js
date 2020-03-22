@@ -3,30 +3,26 @@ import Ajv from 'ajv';
 import scraperSchema from './schemas/scraper.json';
 import locationSchema from './schemas/location.json';
 
+const ajv = new Ajv({ useDefaults: true, removeAdditional: true, $data: true });
+
+ajv.addKeyword('generator', {
+  compile(sch) {
+    if (sch === true) {
+      return data => typeof data === 'function';
+    }
+    return data => typeof data !== 'function';
+  }
+});
+
 export const schemas = {
-  scraperSchema,
-  locationSchema
+  scraperSchema: ajv.compile(scraperSchema),
+  locationSchema: ajv.compile(locationSchema)
 };
 
-export const schemaHasErrors = (data, schema, options = {}) => {
-  const { useDefaults, removeAdditional } = { useDefaults: true, removeAdditional: false, ...options };
-
-  const ajv = new Ajv({ useDefaults, removeAdditional });
-
-  ajv.addKeyword('generator', {
-    compile(sch) {
-      if (sch === true) {
-        return data => typeof data === 'function';
-      }
-      return data => typeof data !== 'function';
-    }
-  });
-
-  const validate = ajv.compile(schema);
-
-  if (validate(data)) {
+export const schemaHasErrors = (data, schema) => {
+  if (schema(data)) {
     return false;
   }
 
-  return validate.errors;
+  return schema.errors;
 };
