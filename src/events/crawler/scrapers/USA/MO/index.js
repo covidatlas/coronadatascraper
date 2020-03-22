@@ -14,9 +14,11 @@ const scraper = {
   type: 'table',
   aggregate: 'county',
   url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/results.php',
-  source: {
-    name: 'Missouri Department of Health and Senior Services'
-  },
+  sources: [
+    {
+      name: 'Missouri Department of Health and Senior Services'
+    }
+  ],
   maintainers: [
     {
       name: 'Paul Boal',
