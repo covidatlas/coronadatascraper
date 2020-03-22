@@ -4,7 +4,7 @@ const scraper = {
   country: 'DEU',
   state: 'DE-BW', // ISO 3166 notation
   url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
-  type: 'csv',
+  type: 'json',
   timeseries: true,
   sources: [
     {
@@ -22,7 +22,14 @@ const scraper = {
       github: 'jgehrcke'
     }
   ],
-  maintainers: this.curators,
+  maintainers: [
+    {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke'
+    }
+  ],
   scraper: defaultScraperDEU,
   _rowToResult: row => {
     return {
