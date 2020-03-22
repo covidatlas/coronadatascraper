@@ -11,6 +11,12 @@ from collections import defaultdict
 from dump import dump
 
 
+def toint(v):
+    try:
+        return int(v)
+    except ValueError:
+        return 0
+
 def get_county_pops():
     fname = 'coronavirus-data-sources/population/population-usa-counties.csv'
     reader = csv.reader(open(fname))
@@ -19,11 +25,7 @@ def get_county_pops():
     county_pop = dict()
 
     for row in reader:
-        try:
-            pop = int(row[1])
-        except ValueError:
-            pop = 0
-
+        pop = toint(row[1])
         if not pop:
             continue
 
@@ -50,10 +52,7 @@ for row in reader:
 
     city,county,state,country = row[:4]
 
-    try:
-        todays_count = int(row[-1])
-    except ValueError:
-        todays_count = 0
+    todays_count = toint(row[-1])
 
     if not todays_count:
         continue
