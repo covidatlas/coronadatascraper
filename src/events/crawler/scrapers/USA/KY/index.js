@@ -8,6 +8,7 @@ const scraper = {
   country: 'USA',
   state: 'KY',
   priority: 1,
+  aggregate: 'county',
   url: 'https://datawrapper.dwcdn.net/BbowM/23/',
   source: {
     name: 'Kentucky Cabinet for Health and Family Services',
@@ -22,7 +23,6 @@ const scraper = {
       flag: '🇺🇸'
     }
   ],
-  aggregate: 'county',
   async scraper() {
     const $ = await fetch.headless(this.url);
 

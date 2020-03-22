@@ -11,6 +11,7 @@ const scraper = {
   country: 'USA',
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
+  aggregate: 'county',
   _counties: [
     'Appling County',
     'Atkinson County',
