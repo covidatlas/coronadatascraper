@@ -109,7 +109,7 @@ const scraper = {
     'Williamson County',
     'Wilson County'
   ],
-  async scraper() {
+  '0': async function() {
     let counties = [];
     const $ = await fetch.page(this.url);
     const $table = $('th:contains("Count")').closest('table');
@@ -152,6 +152,7 @@ const scraper = {
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
+  },'2020-3-14': async function() {
   }
 };
 
