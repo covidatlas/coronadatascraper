@@ -8,7 +8,7 @@ const scraper = {
   county: 'Kern County',
   state: 'CA',
   country: 'USA',
-  url: ' https://kernpublichealth.com/2019-novel-coronavirus/',
+  url: 'https://kernpublichealth.com/2019-novel-coronavirus/',
   type: 'table',
   async scraper() {
     let $ = await fetch.headless(this.url);

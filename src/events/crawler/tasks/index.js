@@ -1,4 +1,4 @@
-import fetchSources from './fetchSources.js';
+import fetchSources from './fetchSources/index.js';
 import scrapeData from './scrapeData/index.js';
 import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
