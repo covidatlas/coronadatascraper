@@ -1,7 +1,7 @@
 import each from 'jest-each';
 
-import { runScraper } from '../tasks/scrapeData/runScraper.js';
-import * as fs from '../lib/fs.js';
+import { runScraper } from './tasks/scrapeData/runScraper.js';
+import * as fs from './lib/fs.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
@@ -15,7 +15,9 @@ describe('scrappers', () => {
   });
 
   if (process.env.FILES_MODIFIED) {
-    const scrapers = process.env.FILES_MODIFIED.split('\n').filter(filePath => filePath.match(/^scrapers\//g));
+    const scrapers = process.env.FILES_MODIFIED.split('\n').filter(filePath =>
+      filePath.match(/^src\/events\/crawler\/scrapers\//g)
+    );
 
     if (scrapers.length > 0) {
       each(scrapers).test('test "%s"', async scraperPath => {
