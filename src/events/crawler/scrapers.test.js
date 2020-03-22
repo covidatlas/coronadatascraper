@@ -22,7 +22,7 @@ describe('scrappers', () => {
     if (scrapers.length > 0) {
       each(scrapers).test('test "%s"', async scraperPath => {
         if (await fs.exists(scraperPath)) {
-          const location = (await import(`./${scraperPath}`)).default;
+          const location = (await import(`../../../${scraperPath}`)).default;
 
           await runScraper(location);
         }
