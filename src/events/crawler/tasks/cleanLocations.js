@@ -11,13 +11,13 @@ const cleanLocations = args => {
 
   const errors = [];
   for (const location of locations) {
-    const errors = schema.schemaHasErrors(location, schema.schemas.locationSchema, { removeAdditional: true });
-    if (errors) {
-      const msg = `  ❌ ${geography.getName(location)} ${errors
+    const schemaErrors = schema.schemaHasErrors(location, schema.schemas.locationSchema, { removeAdditional: true });
+    if (schemaErrors) {
+      const msg = `${geography.getName(location)} ${schemaErrors
         .map(error => [error.dataPath, error.message].join(' '))
         .join('; ')}`;
       errors.push(msg);
-      console.log(msg);
+      console.log(`  ❌ ${msg}`);
     }
   }
 

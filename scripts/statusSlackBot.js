@@ -35,7 +35,7 @@ const generateReport = async report => {
 _Sources:_
 - *${sources.numSources}* sources
 - *${sources.errors.length}* invalid sources:
-${sources.errors.map(error => `  - ${error}`)}`
+${sources.errors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
@@ -79,7 +79,7 @@ _Populations:_
         text: `
 _Validate:_
 - *${validate.errors.length}* invalid locations:
-${validate.errors.map(error => `  - ${error}`)}`
+${validate.errors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
