@@ -36,7 +36,7 @@ const scraper = {
     return {
       cases: parseInt(row['DE-BW_cases'], 10),
       deaths: parseInt(row['DE-BW_deaths'], 10),
-      coordinates: [11.497, 48.79],
+      coordinates: [9.35, 48.661],
       population: 11.02 * 10 ** 6
     };
   },
