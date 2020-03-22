@@ -1,10 +1,12 @@
 # Code of Conduct
 
-We are strongly committed to ensuring that our community, and any online and offline spaces in which its members congregate and collaborate, are safe, positive, inclusive, constructive, and welcoming environments.
+We are strongly committed to ensuring that our community, and any online and offline spaces in which its members congregate and collaborate (at a minimum of 6 feet!), are safe, positive, inclusive, constructive, and welcoming environments.
 
 As such, this project adheres to the [Contributor Covenant](https://www.contributor-covenant.org).
 
-Lack of familiarity with the Contributor covenant is not an excuse for non-adherence.
+The [current latest version of the Contributor Covenant can be found here](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
+
+Lack of familiarity with the Contributor Covenant is not an excuse for non-adherence.
 
 
 ## Reporting
