@@ -11,7 +11,6 @@ const scraper = {
   country: 'USA',
   url: 'https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml',
   type: 'table',
-  headless: true,
   aggregate: 'county',
 
   _counties: [
@@ -41,6 +40,10 @@ const scraper = {
 
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
+      if (index < 1) {
+        return;
+      }
+
       const $tr = $(tr);
       let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
       const cases = parse.number($tr.find('> *:nth-child(2)').text());
@@ -49,10 +52,7 @@ const scraper = {
       if (county === 'Unknown County') {
         county = UNASSIGNED;
       }
-      if (index < 1) {
-        return;
-      }
-      console.log(county, cases, recovered);
+
       counties.push({
         county,
         cases,
