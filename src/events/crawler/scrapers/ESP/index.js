@@ -1,4 +1,4 @@
-import { LocalDate, DateTimeFormatter } from '@js-joda/core';
+import { LocalDate } from '@js-joda/core';
 import * as fetch from '../../lib/fetch.js';
 import * as transform from '../../lib/transform.js';
 import * as parse from '../../lib/parse.js';
@@ -27,7 +27,9 @@ const scraper = {
     }
   ],
   curators: [{ name: 'Antonio Delgado', url: 'https://datadista.com/', twitter: '@adelgado', github: 'adelgadob' }],
-  maintainers: [{ name: 'Herb Caudill', url: 'https://devresults.com', twitter: '@herbcaudill', github: 'herbcaudill' }],
+  maintainers: [
+    { name: 'Herb Caudill', url: 'https://devresults.com', twitter: '@herbcaudill', github: 'herbcaudill' }
+  ],
   async scraper() {
     const isDate = s => s.includes('/');
 
@@ -47,7 +49,7 @@ const scraper = {
       rawData[name] = await fetch.csv(url, false);
     }
 
-    // `data_raw` looks like this:
+    // `rawData` looks like this:
     // ```js
     // {
     //    cases: [
@@ -90,8 +92,8 @@ const scraper = {
               state: parse.string(location),
               date: parseDate(date).toString(),
               cases: parse.number(casesRow[date]),
-              deaths: parse.number(deathsRow[date]),
-              recovered: parse.number(recoveredRow[date])
+              deaths: parse.number(deathsRow[date] || 0),
+              recovered: parse.number(recoveredRow[date] || 0)
             };
           });
       });
@@ -126,6 +128,7 @@ const scraper = {
 
     if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
+    // console.log({ rawData, data, queryDate });
     // return data from that date
     const locations = data.filter(d => d.date === queryDate.toString());
     locations.push(transform.sumData(locations));
