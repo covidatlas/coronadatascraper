@@ -8,9 +8,9 @@ export const sharedSchema = {
   timeseries: true,
   sources: [
     {
-      name: 'Robert Koch-Institut (RKI), Brandenburg ministry of health',
+      name: 'Robert Koch-Institut (RKI), Landesgesundheitsminmisterien, Landesgesundheitsämter',
       description:
-        'RKI, Brandenburg ministry of health, double-checked with ZEIT ONLINE, curated by JPG, see "curators"',
+        'before March 17 based on RKI "situation reports", after that: Landesbehörten, double-checked with ZEIT ONLINE, curated by JPG, see "curators"',
       url: 'https://github.com/jgehrcke/covid-19-germany-gae'
     }
   ],
