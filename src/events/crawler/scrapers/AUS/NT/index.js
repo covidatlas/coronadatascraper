@@ -7,20 +7,19 @@ const scraper = {
   maintainer: maintainers.camjc,
   priority: 2,
   sources: {
-    description: 'ACT Government Health Department',
-    name: 'ACT Government Health',
-    url: 'https://www.health.act.gov.au'
+    description: 'Nothern Territory Government Coronavirus site',
+    name: 'Nothern Territory Government Coronavirus site',
+    url: 'https://coronavirus.nt.gov.au'
   },
-  state: 'Australian Capital Territory',
+  state: 'Northern Territory',
   type: 'table',
-  url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
+  url: 'https://coronavirus.nt.gov.au/',
   async scraper() {
     const $ = await fetch.page(this.url);
-    const $table = $('.statuscontent');
-    const $rowWithCases = $table.find('div:first-child').text();
+    const $rowWithCases = $('.header-widget p:first-of-type');
     return {
       state: scraper.state,
-      cases: parse.number($rowWithCases)
+      cases: parse.number($rowWithCases.text())
     };
   }
 };
