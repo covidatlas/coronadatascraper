@@ -12,12 +12,13 @@ export const getDate = function() {
   Get date formatted in YYYY-M-D
 */
 export const getYYYYMD = function(date = getDate(), sep = '-') {
-  if (typeof date === 'string') {
-    date = new Date(date);
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
   }
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
-  const year = date.getUTCFullYear();
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate.getUTCFullYear();
 
   return `${year}${sep}${month}${sep}${day}`;
 };
@@ -26,15 +27,16 @@ export const getYYYYMD = function(date = getDate(), sep = '-') {
   Get date formatted in YYYY-M-D
 */
 export const getYYYYMMDD = function(date = getDate(), sep = '-') {
-  if (typeof date === 'string') {
-    date = new Date(date);
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
   }
-  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
-  const day = date
+  const month = (localDate.getUTCMonth() + 1).toString().padStart(2, '0');
+  const day = localDate
     .getUTCDate()
     .toString()
     .padStart(2, '0');
-  const year = date.getUTCFullYear();
+  const year = localDate.getUTCFullYear();
 
   return `${year}${sep}${month}${sep}${day}`;
 };
@@ -43,15 +45,16 @@ export const getYYYYMMDD = function(date = getDate(), sep = '-') {
   Get date formatted in DD-MM-YYYY
 */
 export const getDDMMYYYY = function(date = getDate(), sep = '-') {
-  if (typeof date === 'string') {
-    date = new Date(date);
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
   }
-  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
-  const day = date
+  const month = (localDate.getUTCMonth() + 1).toString().padStart(2, '0');
+  const day = localDate
     .getUTCDate()
     .toString()
     .padStart(2, '0');
-  const year = date.getUTCFullYear();
+  const year = localDate.getUTCFullYear();
 
   return `${day}${sep}${month}${sep}${year}`;
 };
@@ -60,12 +63,13 @@ export const getDDMMYYYY = function(date = getDate(), sep = '-') {
   Get date formatted in M/D/YYYY
 */
 export const getMDYYYY = function(date = getDate(), sep = '/') {
-  if (typeof date === 'string') {
-    date = new Date(date);
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
   }
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
-  const year = date.getUTCFullYear();
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate.getUTCFullYear();
 
   return `${month}${sep}${day}${sep}${year}`;
 };
@@ -74,12 +78,13 @@ export const getMDYYYY = function(date = getDate(), sep = '/') {
   Get date formatted in M/D/YY
 */
 export const getMDYY = function(date = getDate(), sep = '/') {
-  if (typeof date === 'string') {
-    date = new Date(date);
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
   }
-  const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
-  const year = date
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate
     .getUTCFullYear()
     .toString()
     .substr(2, 2);
@@ -92,11 +97,13 @@ export const getMDYY = function(date = getDate(), sep = '/') {
   *sigh*
 */
 export const dateIsBefore = function(a, b) {
-  a = new Date(a);
-  b = new Date(b);
-  a.setHours(0, 0, 0, 0);
-  b.setHours(0, 0, 0, 0);
-  return a.getTime() < b.getTime();
+  let localA = a;
+  let localB = b;
+  localA = new Date(localA);
+  localB = new Date(localB);
+  localA.setHours(0, 0, 0, 0);
+  localB.setHours(0, 0, 0, 0);
+  return localA.getTime() < localB.getTime();
 };
 
 /*
@@ -104,11 +111,13 @@ export const dateIsBefore = function(a, b) {
   *sigh*
 */
 export const dateIsBeforeOrEqualTo = function(a, b) {
-  a = new Date(a);
-  b = new Date(b);
-  a.setHours(0, 0, 0, 0);
-  b.setHours(0, 0, 0, 0);
-  return a.getTime() < b.getTime() || a.getTime() === b.getTime();
+  let localA = a;
+  let localB = b;
+  localA = new Date(localA);
+  localB = new Date(localB);
+  localA.setHours(0, 0, 0, 0);
+  localB.setHours(0, 0, 0, 0);
+  return localA.getTime() < localB.getTime() || localA.getTime() === localB.getTime();
 };
 
 /*
