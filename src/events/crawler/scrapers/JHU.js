@@ -11,7 +11,7 @@ import * as maintainers from '../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  maintainer: maintainers.lazd,
+  maintainers: [maintainers.lazd],
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,

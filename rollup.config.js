@@ -27,6 +27,8 @@ export default {
     !prod && livereload({ watch: 'site' }),
     copy([{ files: 'site/**/!(*.js|*.css|.DS_Store)', dest: 'dist' }], { verbose: true, watch: !prod }),
     postcss({
+      inject: false,
+      extract: true,
       plugins: [postcssImport(), postcssNested()]
     })
   ],
