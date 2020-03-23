@@ -21,8 +21,44 @@ needle.defaults({
   user_agent: CHROME_AGENT,
   open_timeout: OPEN_TIMEOUT, // Maximum time to wait to establish a connection
   response_timeout: RESPONSE_TIMEOUT, // Maximum time to wait for a response
-  read_timeout: READ_TIMEOUT // Maximum time to wait for data to transfer
+  read_timeout: READ_TIMEOUT, // Maximum time to wait for data to transfer
+  follow_max: 5
 });
+
+export const getWaybackURL = (url, date) => {
+  return `https://web.archive.org/web/${date.replace(/-/g, '')}id_/${url}`;
+};
+
+export const fetchRequest = async (url, options = {}) => {
+  console.log('  🚦  Loading data for %s from server', url);
+
+  const { disableSSL, toString } = {
+    disableSSL: false,
+    toString: true,
+    ...options
+  };
+
+  if (disableSSL) {
+    console.log('  ⚠️  SSL disabled for this resource');
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+  }
+
+  const response = await needle('get', url, {
+    gzip: true,
+    headers: { connection: 'keep-alive', 'transfer-encoding': 'chunked' }
+  });
+
+  if (disableSSL) {
+    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
+  }
+
+  if (response.statusCode < 400) {
+    const fetchedBody = toString ? response.body.toString() : response.body;
+    return fetchedBody;
+  }
+  console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+  return null;
+};
 
 /**
  * Fetch whatever is at the provided URL. Use cached version if available.
@@ -36,7 +72,7 @@ needle.defaults({
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  */
 export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
-  const { alwaysRun, disableSSL, toString, encoding } = {
+  const { alwaysRun, encoding } = {
     alwaysRun: false,
     disableSSL: false,
     toString: true,
@@ -46,29 +82,27 @@ export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetim
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
 
+  if (cachedBody && !alwaysRun) {
+    return cachedBody;
+  }
+
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    console.log('  🚦  Loading data for %s from server', url);
+    const fetchedBody = await fetchRequest(url, options);
 
-    if (disableSSL) {
-      console.log('  ⚠️  SSL disabled for this resource');
-      process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-    }
-
-    const response = await needle('get', url);
-
-    if (disableSSL) {
-      delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
-    }
-
-    if (response.statusCode < 400) {
-      const fetchedBody = toString ? response.body.toString() : response.body;
+    if (fetchedBody) {
       await caching.saveFileToCache(url, type, date, fetchedBody);
       return fetchedBody;
     }
-    console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
-    return null;
   }
-  return cachedBody;
+
+  console.log('  ⏪  Loading data for %s from WayBack machine', url);
+  const waybackBody = await fetchRequest(getWaybackURL(url, date), options);
+  if (waybackBody) {
+    await caching.saveFileToCache(url, type, date, waybackBody);
+    return waybackBody;
+  }
+
+  return null;
 };
 
 /**
