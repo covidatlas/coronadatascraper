@@ -136,35 +136,44 @@ const scraper = {
       const datePart = datetime.getMonthDYYYY(date);
       this.url = `${this._baseUrl}COVID-19_${datePart}_.pdf`;
 
-      const body = await fetch.pdf(this.url);
+      const body = await fetch.pdf(this.url, date, { alwaysRun: true });
 
       if (body === null) {
         throw new Error(`No data for ${date}`);
       }
 
       const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));
+      // console.error(rows);
 
       const counties = [];
       const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Positive Case Information')) + 2;
-      for (let i = startIndex; rows[i].length === 4 && i <= 200; i++) {
+      // console.error(startIndex);
+
+      for (let i = startIndex; i < rows.length; i++) {
         const data = rows[i];
+        if (data[0].includes('County') || data[1] === parse.number(data[1])) {
+          // console.error(data);
 
-        // First set of columns
-        const countyName1 = data[0];
-        const cases1 = data[1];
-        counties.push({
-          county: geography.addCounty(countyName1),
-          cases: parse.number(cases1)
-        });
+          // First set of columns
+          const countyName1 = data[0];
+          const cases1 = data[1];
+          counties.push({
+            county: geography.addCounty(countyName1),
+            cases: parse.number(cases1)
+          });
 
-        // Second set of columns
-        const countyName2 = data[2];
-        const cases2 = data[3];
-        counties.push({
-          county: geography.addCounty(countyName2),
-          cases: parse.number(cases2)
-        });
+          // Optional second set of columns
+          if (data.length === 4) {
+            const countyName2 = data[2];
+            const cases2 = data[3];
+            counties.push({
+              county: geography.addCounty(countyName2),
+              cases: parse.number(cases2)
+            });
+          }
+        }
       }
+      // console.error(counties);
 
       const summedData = transform.sumData(counties);
       counties.push(summedData);
