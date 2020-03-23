@@ -69,10 +69,6 @@ const scraper = {
 
     counties.push(aggregationRecord);
 
-    for (const county of counties) {
-      console.log(county);
-    }
-
     return counties;
   }
 };
