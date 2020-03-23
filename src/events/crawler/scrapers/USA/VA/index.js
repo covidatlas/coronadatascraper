@@ -164,12 +164,20 @@ const scraper = {
     for (const name of this._counties) {
       const endURL = fullNameCounties.includes(name) ? name : name.slice(0, name.lastIndexOf(' '));
       const pdfUrl = pdfBaseURL + endURL;
-      const text = await fetch.pdfText(pdfUrl);
+      const pdfScrape = await fetch.pdf(pdfUrl);
+
+      let pdfText = '';
+      for (const item of pdfScrape) {
+        if (item.text === '©') {
+          break;
+        }
+        pdfText += item.text;
+      }
 
       counties.push({
         county: name,
-        cases: parse.number(text.match(/(\d*)\nCases/)[1]),
-        deaths: parse.number(text.match(/(\d*)\nDeaths/)[1])
+        cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+        deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
       });
     }
 
