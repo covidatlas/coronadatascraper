@@ -1,35 +1,9 @@
-import defaultScraperDEU from '../_shared.js';
+import defaultScraperDEU, { sharedSchema } from '../_shared.js';
 
 const scraper = {
+  ...sharedSchema,
   country: 'DEU',
   state: 'DE-BW', // ISO 3166 notation
-  url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
-  type: 'json',
-  timeseries: true,
-  sources: [
-    {
-      name: 'Robert Koch-Institut (RKI), Baden-Württemberg ministry of health',
-      description:
-        'RKI, Baden-Württemberg ministry of health, double-checked with ZEIT ONLINE, curated by JPG, see "curators"',
-      url: 'https://github.com/jgehrcke/covid-19-germany-gae'
-    }
-  ],
-  curators: [
-    {
-      name: 'Dr. Jan-Philip Gehrcke',
-      email: 'jgehrcke@googlemail.com',
-      url: 'https://gehrcke.de',
-      github: 'jgehrcke'
-    }
-  ],
-  maintainers: [
-    {
-      name: 'Dr. Jan-Philip Gehrcke',
-      email: 'jgehrcke@googlemail.com',
-      url: 'https://gehrcke.de',
-      github: 'jgehrcke'
-    }
-  ],
   scraper: defaultScraperDEU,
   _rowToResult: row => {
     return {

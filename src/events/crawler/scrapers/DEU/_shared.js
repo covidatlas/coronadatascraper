@@ -2,6 +2,36 @@ import * as fetch from '../../lib/fetch.js';
 import * as datetime from '../../lib/datetime.js';
 import * as geography from '../../lib/geography.js';
 
+export const sharedSchema = {
+  url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',
+  type: 'csv',
+  timeseries: true,
+  sources: [
+    {
+      name: 'Robert Koch-Institut (RKI), Brandenburg ministry of health',
+      description:
+        'RKI, Brandenburg ministry of health, double-checked with ZEIT ONLINE, curated by JPG, see "curators"',
+      url: 'https://github.com/jgehrcke/covid-19-germany-gae'
+    }
+  ],
+  curators: [
+    {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke'
+    }
+  ],
+  maintainers: [
+    {
+      name: 'Dr. Jan-Philip Gehrcke',
+      email: 'jgehrcke@googlemail.com',
+      url: 'https://gehrcke.de',
+      github: 'jgehrcke'
+    }
+  ]
+};
+
 async function defaultScraperDEU() {
   const data = await fetch.csv(this.url, false);
 
