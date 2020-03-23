@@ -8,11 +8,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 1,
-  sources: {
-    description: 'Australian Government Department of Health',
-    name: 'Australian Government Department of Health',
-    url: 'https://www.health.gov.au/'
-  },
+  sources: [
+    {
+      description: 'Australian Government Department of Health',
+      name: 'Australian Government Department of Health',
+      url: 'https://www.health.gov.au/'
+    }
+  ],
   type: 'table',
   url:
     'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',

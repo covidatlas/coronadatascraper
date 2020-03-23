@@ -6,11 +6,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 2,
-  sources: {
-    description: 'Nothern Territory Government Coronavirus site',
-    name: 'Nothern Territory Government Coronavirus site',
-    url: 'https://coronavirus.nt.gov.au'
-  },
+  sources: [
+    {
+      description: 'Nothern Territory Government Coronavirus site',
+      name: 'Nothern Territory Government Coronavirus site',
+      url: 'https://coronavirus.nt.gov.au'
+    }
+  ],
   state: 'Northern Territory',
   type: 'table',
   url: 'https://coronavirus.nt.gov.au/',

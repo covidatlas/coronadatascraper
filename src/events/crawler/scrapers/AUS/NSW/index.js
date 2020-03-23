@@ -11,11 +11,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 2,
-  sources: {
-    description: 'NSW Government Health Department',
-    name: 'NSW Government Health',
-    url: 'https://www.health.nsw.gov.au'
-  },
+  sources: [
+    {
+      description: 'NSW Government Health Department',
+      name: 'NSW Government Health',
+      url: 'https://www.health.nsw.gov.au'
+    }
+  ],
   state: 'New South Wales',
   type: 'table',
   url:

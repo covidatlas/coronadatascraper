@@ -6,11 +6,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 2,
-  sources: {
-    description: 'QLD Government Health Department',
-    name: 'QLD Government Health',
-    url: 'https://www.health.qld.gov.au'
-  },
+  sources: [
+    {
+      description: 'QLD Government Health Department',
+      name: 'QLD Government Health',
+      url: 'https://www.health.qld.gov.au'
+    }
+  ],
   state: 'Queensland',
   type: 'paragraph',
   url: 'https://www.health.qld.gov.au/news-events/doh-media-releases',

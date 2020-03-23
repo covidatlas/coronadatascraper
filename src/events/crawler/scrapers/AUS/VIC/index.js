@@ -6,11 +6,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 2,
-  sources: {
-    description: 'Victoria State Government Health and Human Services Department',
-    name: 'Victoria State Government Health and Human Services',
-    url: 'https://www.dhhs.vic.gov.au'
-  },
+  sources: [
+    {
+      description: 'Victoria State Government Health and Human Services Department',
+      name: 'Victoria State Government Health and Human Services',
+      url: 'https://www.dhhs.vic.gov.au'
+    }
+  ],
   state: 'Victoria',
   type: 'paragraph',
   url: 'https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19',

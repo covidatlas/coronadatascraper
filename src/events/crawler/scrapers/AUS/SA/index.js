@@ -6,11 +6,13 @@ const scraper = {
   country: 'AUS',
   maintainer: maintainers.camjc,
   priority: 2,
-  sources: {
-    description: 'SA Government Health Department',
-    name: 'SA Health',
-    url: 'https://www.sahealth.sa.gov.au'
-  },
+  sources: [
+    {
+      description: 'SA Government Health Department',
+      name: 'SA Health',
+      url: 'https://www.sahealth.sa.gov.au'
+    }
+  ],
   state: 'South Australia',
   type: 'paragraph',
   url:
