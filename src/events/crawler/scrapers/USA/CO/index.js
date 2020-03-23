@@ -140,7 +140,7 @@ const scraper = {
         });
       }
       const stateData = transform.sumData(counties);
-      stateData.population = data[0].State_Population;
+      stateData.population = parse.number(data[0].State_Population);
       counties.push(stateData);
       return counties;
     }
