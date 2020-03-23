@@ -3,6 +3,7 @@ import needle from 'needle';
 import csvParse from 'csv-parse';
 import puppeteer from 'puppeteer';
 import { PdfReader } from 'pdfreader';
+import pdfParse from 'pdf-parse';
 
 import * as datetime from './datetime.js';
 import * as caching from './caching.js';
@@ -210,6 +211,37 @@ export const pdf = async (url, date, options) => {
         rows[y] = row;
       }
     });
+  });
+};
+
+/**
+ * Load and parse PDF from the given URL
+ *
+ * Returns text of the pdf, one line per group of text
+ *
+ * @param {*} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {*} options customizable options:
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ *  - rowTolerance: allowed variance in the y-axis. Allows elements with small discrepancies in their y
+ *                  value to be considered as being part of the same row, defaults to 1 unit
+ */
+export const pdfText = async (url, date, options) => {
+  return new Promise(async (resolve, reject) => {
+    const body = await fetch(url, 'pdf', date, { ...options, toString: false, encoding: null });
+
+    if (!body) {
+      resolve(null);
+    }
+
+    pdfParse(body)
+      .then(data => {
+        resolve(data.text);
+      })
+      .catch(e => {
+        reject(e);
+      });
   });
 };
 
