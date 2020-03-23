@@ -20,9 +20,12 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('.statuscontent');
     const $rowWithCases = $table.find('div:first-child').text();
+    const $rowWithTestedMinusCases = $table.find('div:nth-child(2)').text();
+    const cases = parse.number($rowWithCases);
     return {
       state: scraper.state,
-      cases: parse.number($rowWithCases)
+      cases,
+      tested: cases + parse.number($rowWithTestedMinusCases)
     };
   }
 };
