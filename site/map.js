@@ -380,44 +380,64 @@ function populateMap() {
     'fill-opacity': 1
   };
 
+  const { layers } = map.getStyle();
+  // Find the index of the first symbol layer (the label layer) in the map style
+  let labelLayerId;
+  for (let i = 0; i < layers.length; i++) {
+    if (layers[i].type === 'symbol') {
+      labelLayerId = layers[i].id;
+      break;
+    }
+  }
+
   map.addSource('CDS-country', {
     type: 'geojson',
     data: countryFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-country',
-    type: 'fill',
-    source: 'CDS-country',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-country',
+      type: 'fill',
+      source: 'CDS-country',
+      layout: {},
+      paint: paintConfig
+    },
+    // Place layer underneath label layer of template map.
+    labelLayerId
+  );
 
   map.addSource('CDS-state', {
     type: 'geojson',
     data: stateFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-state',
-    type: 'fill',
-    source: 'CDS-state',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-state',
+      type: 'fill',
+      source: 'CDS-state',
+      layout: {},
+      paint: paintConfig
+    },
+    labelLayerId
+  );
 
   map.addSource('CDS-county', {
     type: 'geojson',
     data: countyFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-county',
-    type: 'fill',
-    source: 'CDS-county',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-county',
+      type: 'fill',
+      source: 'CDS-county',
+      layout: {},
+      paint: paintConfig
+    },
+    labelLayerId
+  );
 
   // Create a popup, but don't add it to the map yet.
   const popup = new mapboxgl.Popup({
