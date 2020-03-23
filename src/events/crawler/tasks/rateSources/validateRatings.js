@@ -13,6 +13,8 @@ const validateRatings = async args => {
     }
   }
 
+  console.log('✅ Assigned ratings for %d sources', sourceRatings.length);
+
   return args;
 };
 
