@@ -1,6 +1,7 @@
 import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
 import * as rules from '../../lib/rules.js';
+import * as fs from '../../lib/fs.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -23,6 +24,13 @@ const scraper = {
       .remove();
     const $trs = $table.find('tbody > tr');
     const regions = [];
+
+    // const fs = require('fs');
+    const filepath = './src/events/crawler/scrapers/IND/population.csv';
+    await fs.readCSV(filepath);
+
+    const dataArray = fs.readFile(filepath);
+
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const data = {
@@ -30,7 +38,8 @@ const scraper = {
         state: parse.string($tr.find('td:nth-child(2)').text()),
         cases: parse.number($tr.find('td:nth-child(3)').text()),
         deaths: parse.number($tr.find('td:nth-child(6)').text()),
-        recovered: parse.number($tr.find('td:nth-child(5)').text())
+        recovered: parse.number($tr.find('td:nth-child(5)').text()),
+        population: dataArray[index]
       };
       if (rules.isAcceptable(data, null, this._reject)) {
         regions.push(data);
