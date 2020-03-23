@@ -140,7 +140,6 @@ const scraper = {
     });
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    console.log(counties);
 
     return counties;
   }

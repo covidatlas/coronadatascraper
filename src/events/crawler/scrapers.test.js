@@ -8,7 +8,7 @@ const noScrapersTest = () => test('no scrapers modified', () => console.log('No 
 
 describe('scrappers', () => {
   beforeAll(() => {
-    jest.setTimeout(60000);
+    jest.setTimeout(300000);
   });
 
   afterAll(() => {
