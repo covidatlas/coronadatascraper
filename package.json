@@ -13,6 +13,7 @@
     "dev": "npx rollup -c --watch",
     "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
+    "dataValidation": "jest tests/*validation.*",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
