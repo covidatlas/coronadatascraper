@@ -15,7 +15,6 @@ const scraper = {
     {
       name: 'Arkanas Department of Health',
       url: 'https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus',
-      description: ''
     }
   ],
   aggregate: 'county',
