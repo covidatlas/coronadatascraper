@@ -9,6 +9,8 @@ const transform = imports('./lib/transform.js');
 const geography = imports('./lib/geography.js');
 const datetime = imports('./lib/datetime.js');
 
+const clearAllTimeouts = imports('./utils/timeouts.js').default;
+
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
 
@@ -228,4 +230,9 @@ async function generateTimeseries(options = {}) {
   await generateJHUCSV(timeseriesByLocation);
 }
 
-generateTimeseries(argv);
+generateTimeseries(argv)
+  .then(clearAllTimeouts)
+  .catch(e => {
+    clearAllTimeouts();
+    throw e;
+  });
