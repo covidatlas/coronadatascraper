@@ -22,8 +22,9 @@ const scraper = {
     }
   ],
   aggregate: 'county',
+  _counties: ['Hawaii County', 'Honolulu County', 'Kauai County', 'Maui County', 'Kalawao County'],
   async scraper() {
-    const counties = [];
+    let counties = [];
     const $ = await fetch.page(this.url);
     const $table = $('*:contains("Novel Coronavirus in Hawaii")').closest('table');
     const $trs = $table.find('tr');
@@ -31,35 +32,35 @@ const scraper = {
     let stateDeaths = 0;
     let rowCellValueList;
 
+    // Build county data array.
+
     $trs.each((index, tr) => {
       const $tr = $(tr);
 
-      /* 
-          TODO: This range will need to be expanded out when/if a case is found in Kalawao.
-          At time of writing, this county has no cases and is not shown in the data table.
-          Very likely to change. Additionally, index for state deaths will also need to be modified
-          when/if final county is added to table (deaths are only listed for the state and not per county row).
-        */
-      if (index > 2 && index < 7) {
-        // This is to exclude extraneous empty rows in table html.
+      rowCellValueList = $tr.text().split('\n');
 
-        rowCellValueList = $tr.text().split('\n');
+      let county = rowCellValueList[1].trim();
+      const cases = rowCellValueList[2].substr(0, rowCellValueList[2].indexOf(' ')).trim();
 
-        const county = rowCellValueList[1].trim();
-        const cases = rowCellValueList[2].substr(0, rowCellValueList[2].indexOf(' ')).trim();
+      if (county === 'Deaths') {
+        stateDeaths = rowCellValueList[2].substr(0, rowCellValueList[2].indexOf(' ')).trim();
 
+        return;
+      }
+
+      county = geography.addCounty(county);
+
+      if (this._counties.includes(geography.addCounty(county))) {
         counties.push({
-          name: geography.addCounty(county),
+          county: geography.addCounty(county),
           cases: parse.number(cases)
         });
       }
-
-      if (index === 9) {
-        rowCellValueList = $tr.text().split('\n');
-
-        stateDeaths = rowCellValueList[2].substr(0, rowCellValueList[2].indexOf(' ')).trim();
-      }
     });
+
+    // Post process data array, add empty regions, total deaths and total cases aggregation record.
+
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     const aggregationRecord = transform.sumData(counties);
 
@@ -67,6 +68,10 @@ const scraper = {
     aggregationRecord.deaths = parse.number(stateDeaths);
 
     counties.push(aggregationRecord);
+
+    for (const county of counties) {
+      console.log(county);
+    }
 
     return counties;
   }
