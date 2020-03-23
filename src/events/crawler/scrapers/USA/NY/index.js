@@ -3,7 +3,6 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as datetime from '../../../lib/datetime.js';
 import * as geography from '../../../lib/geography.js';
-import getBoroughs from './borough.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -87,13 +86,13 @@ const scraper = {
     Queens: 'Queens County',
     'Staten Island': 'Richmond County'
   },
+  _boroughURL: 'https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf',
   async scraper() {
     this.url = datetime.scrapeDateIsBefore('2020-3-17')
       ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/'
       : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
     let counties = [];
     const $ = await fetch.page(this.url);
-    const boroughs = await getBoroughs();
     let $table;
     if (datetime.scrapeDateIsBefore('2020-3-17')) {
       $table = $('#case_count_table');
@@ -132,10 +131,13 @@ const scraper = {
 
     counties.push(transform.sumData(counties));
 
-    boroughs.forEach(item => {
+    const pdfScrape = await fetch.pdf(this._boroughURL);
+    Object.keys(this._boroughs).forEach(name => {
+      const valIndex = pdfScrape.findIndex(ele => ele.text === name);
+
       counties.push({
-        cases: item.cases,
-        county: this._boroughs[item.borough]
+        county: this._boroughs[name],
+        cases: parse.number(pdfScrape[valIndex + 1].text.match(/(\d*)/)[1])
       });
     });
 

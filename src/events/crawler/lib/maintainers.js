@@ -27,6 +27,12 @@ const maintainers = {
     county: 'St. Louis County',
     city: 'St. Louis',
     flag: '🇺🇸'
+  },
+  aed3: {
+    name: 'Albert III',
+    gitub: 'aed3',
+    county: 'USA',
+    flag: 'us'
   }
 };
 

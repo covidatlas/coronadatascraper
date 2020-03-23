@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -14,13 +15,91 @@ const scraper = {
   sources: [
     {
       name: 'Arkanas Department of Health',
-      url: 'https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus',
+      url: 'https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus'
     }
   ],
+  maintainers: [maintainers.aed3],
   aggregate: 'county',
+  _counties: [
+    'Arkansas County',
+    'Ashley County',
+    'Baxter County',
+    'Benton County',
+    'Boone County',
+    'Bradley County',
+    'Calhoun County',
+    'Carroll County',
+    'Chicot County',
+    'Clark County',
+    'Clay County',
+    'Cleburne County',
+    'Cleveland County',
+    'Columbia County',
+    'Conway County',
+    'Craighead County',
+    'Crawford County',
+    'Crittenden County',
+    'Cross County',
+    'Dallas County',
+    'Desha County',
+    'Drew County',
+    'Faulkner County',
+    'Franklin County',
+    'Fulton County',
+    'Garland County',
+    'Grant County',
+    'Greene County',
+    'Hempstead County',
+    'Hot Spring County',
+    'Howard County',
+    'Independence County',
+    'Izard County',
+    'Jackson County',
+    'Jefferson County',
+    'Johnson County',
+    'Lafayette County',
+    'Lawrence County',
+    'Lee County',
+    'Lincoln County',
+    'Little River County',
+    'Logan County',
+    'Lonoke County',
+    'Madison County',
+    'Marion County',
+    'Miller County',
+    'Mississippi County',
+    'Monroe County',
+    'Montgomery County',
+    'Nevada County',
+    'Newton County',
+    'Ouachita County',
+    'Perry County',
+    'Phillips County',
+    'Pike County',
+    'Poinsett County',
+    'Polk County',
+    'Pope County',
+    'Prairie County',
+    'Pulaski County',
+    'Randolph County',
+    'St. Francis County',
+    'Saline County',
+    'Scott County',
+    'Searcy County',
+    'Sebastian County',
+    'Sevier County',
+    'Sharp County',
+    'Stone County',
+    'Union County',
+    'Van Buren County',
+    'Washington County',
+    'White County',
+    'Woodruff County',
+    'Yell County'
+  ],
   async scraper() {
     const data = await fetch.json(this.url);
-    const counties = [];
+    let counties = [];
 
     for (const countyData of data.features) {
       const attr = countyData.attributes;
@@ -40,6 +119,7 @@ const scraper = {
     }
 
     counties.push(transform.sumData(counties));
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
     return counties;
   }
 };
