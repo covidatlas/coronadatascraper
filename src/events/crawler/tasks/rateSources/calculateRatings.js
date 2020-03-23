@@ -30,11 +30,19 @@ const rateLocation = location => {
   let rating = 0;
 
   // Rate for completeness
-  rating += Object.entries(scoresheet.completeness).reduce(
-    (sum, [key, value]) => (location[key] !== null && location[key] !== undefined ? value : 0) + sum,
-    0
-  );
+  rating += Object.entries(scoresheet.completeness).reduce((sum, [key, value]) => {
+    if (location[key] !== null && location[key] !== undefined) {
+      return value + sum;
+    }
+    return sum;
+  }, 0);
 
+  // If we can't recognize the type of document this is, assume it's a list
+  if (!scoresheet.easeOfRead[location.type]) {
+    location.type = 'list';
+  }
+
+  // Rate based on the type of document we have
   rating += scoresheet.easeOfRead[location.type];
 
   // Add points if using SSL
@@ -55,11 +63,10 @@ const rateLocation = location => {
     rating += scoresheet.aggregateWorth;
   }
 
+  // We love timeseries
   if (location.timeseries) {
     rating += scoresheet.timeseries;
   }
-
-  rating += scoresheet.easeOfRead[location.type] || 0;
 
   return rating;
 };
