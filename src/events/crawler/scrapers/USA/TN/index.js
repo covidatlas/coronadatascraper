@@ -127,9 +127,7 @@ const scraper = {
           $tr
             .find('td:first-child')
             .text()
-            .replace(/\w\S*/g, function(txt) {
-              return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-            })
+            .replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
         );
 
         const cases = parse.number($tr.find('td:last-child').text());
