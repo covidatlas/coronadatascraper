@@ -1,3 +1,4 @@
+import * as parse from '../../../lib/parse.js';
 import defaultScraperDEU, { sharedSchema } from '../_shared.js';
 
 const scraper = {
@@ -7,8 +8,8 @@ const scraper = {
   scraper: defaultScraperDEU,
   _rowToResult: row => {
     return {
-      cases: parseInt(row['DE-HE_cases'], 10),
-      deaths: parseInt(row['DE-HE_deaths'], 10),
+      cases: parse.number(row[`${scraper.state}_cases`]),
+      deaths: parse.number(row[`${scraper.state}_deaths`]),
       coordinates: [9.162, 50.652],
       population: 6.24 * 10 ** 6
     };
