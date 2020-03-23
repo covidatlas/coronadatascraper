@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "url": { "type": "string", "format": "uri" },
+    "maintainers": { "type": "array" },
+    "sources": { "type": "array" },
+    "curators": { "type": "array" },
+    "country": { "type": "string", "not": { "pattern": "unassigned" }, "maxLength": 3, "minLength": 3 },
+    "state": { "type": "string", "not": { "pattern": "unassigned" } },
+    "county": { "type": "string", "not": { "pattern": "unassigned" } },
+    "city": { "type": "string", "not": { "pattern": "unassigned" } },
+    "cases": { "type": "number", "minimum": 0 },
+    "deaths": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
+    "recovered": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
+    "tested": { "type": "number", "minimum": 0 },
+    "population": { "type": "number", "minimum": 0 },
+    "coordinates": { "type": "array" },
+    "active": { "type": "number", "minimum": 0 },
+    "featureId": { "type": "number" },
+    "rating": { "type": "number" },
+    "tz": { "type": "array" }
+  },
+  "dependencies": {
+    "state": ["country"],
+    "county": ["country"],
+    "city": ["country"]
+  },
+  "required": ["country", "cases", "active", "url", "rating"],
+  "additionalProperties": false
+}
