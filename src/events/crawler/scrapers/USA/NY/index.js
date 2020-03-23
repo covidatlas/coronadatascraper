@@ -3,6 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as datetime from '../../../lib/datetime.js';
 import * as geography from '../../../lib/geography.js';
+import getBoroughs from './borough.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -18,7 +19,7 @@ const scraper = {
   _counties: [
     'Albany County',
     'Allegany County',
-    // 'Bronx County',
+    'Bronx County',
     'Broome County',
     'Cattaraugus County',
     'Cayuga County',
@@ -39,14 +40,14 @@ const scraper = {
     'Hamilton County',
     'Herkimer County',
     'Jefferson County',
-    // 'Kings County',
+    'Kings County',
     'Lewis County',
     'Livingston County',
     'Madison County',
     'Monroe County',
     'Montgomery County',
     'Nassau County',
-    // 'New York County',
+    'New York County',
     'Niagara County',
     'Oneida County',
     'Onondaga County',
@@ -56,9 +57,9 @@ const scraper = {
     'Oswego County',
     'Otsego County',
     'Putnam County',
-    // 'Queens County',
+    'Queens County',
     'Rensselaer County',
-    // 'Richmond County',
+    'Richmond County',
     'Rockland County',
     'St. Lawrence County',
     'Saratoga County',
@@ -79,12 +80,20 @@ const scraper = {
     'Wyoming County',
     'Yates County'
   ],
+  _boroughs: {
+    Bronx: 'Bronx County',
+    Brooklyn: 'Kings County',
+    Manhattan: 'New York County',
+    Queens: 'Queens County',
+    'Staten Island': 'Richmond County'
+  },
   async scraper() {
     this.url = datetime.scrapeDateIsBefore('2020-3-17')
       ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/'
       : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
     let counties = [];
     const $ = await fetch.page(this.url);
+    const boroughs = await getBoroughs();
     let $table;
     if (datetime.scrapeDateIsBefore('2020-3-17')) {
       $table = $('#case_count_table');
@@ -106,7 +115,7 @@ const scraper = {
         };
 
         if (countyName === 'New York City') {
-          countyObj.county = countyName;
+          countyObj.city = countyName;
           countyObj.feature = geography.generateMultiCountyFeature(
             ['Bronx County, NY', 'Kings County, NY', 'New York County, NY', 'Queens County, NY', 'Richmond County, NY'],
             {
@@ -123,7 +132,15 @@ const scraper = {
 
     counties.push(transform.sumData(counties));
 
+    boroughs.forEach(item => {
+      counties.push({
+        cases: item.cases,
+        county: this._boroughs[item.borough]
+      });
+    });
+
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
+    console.log(counties);
 
     return counties;
   }
