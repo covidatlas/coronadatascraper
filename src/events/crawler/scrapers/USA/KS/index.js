@@ -139,7 +139,8 @@ const scraper = {
       const body = await fetch.pdf(this.url, date, { alwaysRun: true });
 
       if (body === null) {
-        throw new Error(`No data for ${date}`);
+        // throw new Error(`No data for ${date}`);
+        return geography.addEmptyRegions([], this._counties, 'county');
       }
 
       const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));
