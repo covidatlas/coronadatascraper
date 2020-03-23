@@ -1,8 +1,6 @@
 import crypto from 'crypto';
 import * as datetime from './datetime.js';
 
-const scraperVars = ['type', 'timeseries', 'headless', 'ssl', 'priority', 'aggregate'];
-
 /*
   Remove "private" object properties
 */
@@ -15,14 +13,6 @@ export const removePrivate = data => {
 
   return data;
 };
-
-export const removeScraperVars = location => {
-  // Remove non-data vars
-  for (const prop of scraperVars) {
-    delete location[prop];
-  }
-};
-
 /*
   Convert an object keyed on county name to an array
 */
@@ -116,6 +106,12 @@ export const sumData = function(dataArray, object) {
       }
     }
   }
+
+  // Automatically elevate the priority
+  if (summedData.priority < 1) {
+    summedData.priority = 1;
+  }
+
   return summedData;
 };
 

@@ -1,7 +1,8 @@
-import fetchSources from './fetchSources.js';
+import fetchSources from './fetchSources/index.js';
 import scrapeData from './scrapeData/index.js';
 import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
+import cleanLocations from './cleanLocations.js';
 import writeData from './writeData.js';
 
 async function generate(date, options = {}) {
@@ -20,9 +21,10 @@ async function generate(date, options = {}) {
 
   const output = await fetchSources({ date, report, options })
     .then(scrapeData)
-    .then(options.findFeatures && findFeatures)
-    .then(options.findPopulations && findPopulations)
-    .then(options.writeData && writeData);
+    .then(options.findFeatures !== false && findFeatures)
+    .then(options.findFeatures !== false && findPopulations)
+    .then(cleanLocations)
+    .then(options.writeData !== false && writeData);
 
   return output;
 }

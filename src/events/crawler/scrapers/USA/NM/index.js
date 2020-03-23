@@ -7,21 +7,33 @@ import * as geography from '../../../lib/geography.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'IL',
+  state: 'NM',
   country: 'USA',
-  priority: 1,
+  url: 'https://cv.nmhealth.org/cases-by-county/',
+  type: 'table',
+  headless: false,
   aggregate: 'county',
-  url: 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults.json',
+
   async scraper() {
-    const data = await fetch.json(this.url);
     const counties = [];
-    for (const county of data.characteristics_by_county.values) {
+    const $ = await fetch.page(this.url);
+    const $table = $('td:contains("County")').closest('table');
+    const $trs = $table.find('tbody > tr');
+    $trs.each((index, tr) => {
+      const $tr = $(tr);
+      const cases = parse.number($tr.find('td:last-child').text());
+      const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
+
+      if (index < 1) {
+        return;
+      }
+
       counties.push({
-        county: geography.addCounty(county.County),
-        cases: parse.number(county.confirmed_cases),
-        tested: parse.number(county.total_tested)
+        county,
+        cases
       });
-    }
+    });
+
     counties.push(transform.sumData(counties));
     return counties;
   }

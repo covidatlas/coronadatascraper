@@ -81,7 +81,7 @@ const scraper = {
       const deathIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Death')) + 1;
       if (deathIndex > 0) {
         const deathData = rows[deathIndex];
-        summedData.death = parse.number(deathData[deathData.length - 1]);
+        summedData.deaths = parse.number(deathData[deathData.length - 1]);
       }
 
       counties.push(summedData);

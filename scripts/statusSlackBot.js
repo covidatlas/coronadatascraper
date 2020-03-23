@@ -17,7 +17,7 @@ const { argv } = yargs
   .help();
 
 const generateReport = async report => {
-  const { scrape, findFeatures, findPopulation } = report;
+  const { sources, scrape, findFeatures, findPopulation, validate } = report;
 
   return [
     {
@@ -25,6 +25,17 @@ const generateReport = async report => {
       text: {
         type: 'mrkdwn',
         text: `*Report for ${datetime.getDate().toUTCString()}:*`
+      }
+    },
+    {
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: `
+_Sources:_
+- *${sources.numSources}* sources
+- *${sources.errors.length}* invalid sources:
+${sources.errors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
@@ -59,6 +70,16 @@ _Features:_
 _Populations:_
 - *${findPopulation.numLocationsWithPopulation}* locations matched
 - *${findPopulation.missingPopulations.length}* locations with missing populations`
+      }
+    },
+    {
+      type: 'section',
+      text: {
+        type: 'mrkdwn',
+        text: `
+_Validate:_
+- *${validate.errors.length}* invalid locations:
+${validate.errors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
