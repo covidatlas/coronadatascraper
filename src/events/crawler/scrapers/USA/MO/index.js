@@ -151,41 +151,77 @@ const scraper = {
     'Worth County',
     'Wright County'
   ],
-  async scraper() {
-    let counties = {};
-    const $ = await fetch.page(this.url);
-    const $table = $('table').first();
+  scraper: {
+    '0': async function() {
+      let counties = {};
+      const $ = await fetch.page(this.url);
+      const $table = $('table').first();
 
-    const $trs = $table.find('tr');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      let countyName = parse.string($tr.find('td:nth-child(1)').text());
-      countyName = this._countyMap[countyName] || countyName;
+      const $trs = $table.find('tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        let countyName = parse.string($tr.find('td:nth-child(1)').text());
+        countyName = this._countyMap[countyName] || countyName;
 
-      const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-      const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
-      countyName = geography.addCounty(countyName);
+        const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
+        const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
+        countyName = geography.addCounty(countyName);
 
-      if (countyName === 'TBD County') {
-        countyName = UNASSIGNED;
-      }
-
-      if (countyName !== ' County') {
-        if (countyName in counties) {
-          counties[countyName].cases += casesState + casesOther;
-        } else {
-          counties[countyName] = {
-            cases: casesState + casesOther
-          };
+        if (countyName === 'TBD County') {
+          countyName = UNASSIGNED;
         }
-      }
-    });
 
-    const countiesList = transform.objectToArray(counties);
-    countiesList.push(transform.sumData(countiesList));
-    counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
+        if (countyName !== ' County') {
+          if (countyName in counties) {
+            counties[countyName].cases += casesState + casesOther;
+          } else {
+            counties[countyName] = {
+              cases: casesState + casesOther
+            };
+          }
+        }
+      });
 
-    return counties;
+      const countiesList = transform.objectToArray(counties);
+      countiesList.push(transform.sumData(countiesList));
+      counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
+
+      return counties;
+    },
+    '2020-02-22': async function() {
+      let counties = {};
+      const $ = await fetch.page(this.url);
+      const $table = $('table').first();
+
+      const $trs = $table.find('tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        let countyName = parse.string($tr.find('td:nth-child(1)').text());
+        countyName = this._countyMap[countyName] || countyName;
+        const casesTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
+        countyName = geography.addCounty(countyName);
+
+        if (countyName === 'TBD County') {
+          countyName = UNASSIGNED;
+        }
+
+        if (countyName !== ' County') {
+          if (countyName in counties) {
+            counties[countyName].cases += casesTotal;
+          } else {
+            counties[countyName] = {
+              cases: casesTotal
+            };
+          }
+        }
+      });
+
+      const countiesList = transform.objectToArray(counties);
+      countiesList.push(transform.sumData(countiesList));
+      counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
+
+      return counties;
+    }
   }
 };
 

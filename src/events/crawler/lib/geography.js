@@ -139,31 +139,33 @@ export const toUSStateAbbreviation = function(string) {
   Normalize the state as a 2-letter string
 */
 export const toISO3166Alpha3 = function(string) {
-  string = countryMap[string] || string;
+  let localString = string;
+  localString = countryMap[localString] || localString;
   for (const country of countryCodes) {
     if (
-      country['alpha-3'] === string ||
-      country['alpha-2'] === string ||
-      country.name === string ||
-      country.name.replace(/\s*\(.*?\)/, '') === string ||
-      country.name.replace(/, Province of .*$/, '') === string ||
-      country.name.replace(/, Republic of$/, '') === string
+      country['alpha-3'] === localString ||
+      country['alpha-2'] === localString ||
+      country.name === localString ||
+      country.name.replace(/\s*\(.*?\)/, '') === localString ||
+      country.name.replace(/, Province of .*$/, '') === localString ||
+      country.name.replace(/, Republic of$/, '') === localString
     ) {
       return country['alpha-3'];
     }
   }
-  console.warn('⚠️  Could not find country code for', string);
-  return string;
+  console.warn('⚠️  Could not find country code for', localString);
+  return localString;
 };
 
 /*
   Append ' County' to the end of a string, if not already present
 */
 export const addCounty = function(string) {
-  if (!string.match(/ County$/)) {
-    string += ' County';
+  let localString = string;
+  if (!localString.match(/ County$/)) {
+    localString += ' County';
   }
-  return string;
+  return localString;
 };
 
 /*

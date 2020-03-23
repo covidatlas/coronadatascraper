@@ -4,6 +4,7 @@
   "description": "A scraper for Coronavirus data",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
+  "main": "src/events/crawler/cli.js",
   "type": "commonjs",
   "engines": {
     "node": ">=12.15.0 <13.0.0"
@@ -29,6 +30,7 @@
     "@adobe/spectrum-css": "^2.18.0",
     "@architect/architect": "^6.2.4",
     "@turf/turf": "^5.1.6",
+    "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",

@@ -1,17 +1,32 @@
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch.js';
+import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   country: 'AUS',
+  maintainer: maintainers.camjc,
+  priority: 2,
+  sources: [
+    {
+      description: 'ACT Government Health Department',
+      name: 'ACT Government Health',
+      url: 'https://www.health.act.gov.au'
+    }
+  ],
   state: 'Australian Capital Territory',
-  url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
   type: 'table',
-  priority: 1,
+  url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
   async scraper() {
     const $ = await fetch.page(this.url);
     const $table = $('.statuscontent');
     const $rowWithCases = $table.find('div:first-child').text();
-    return [{ state: 'Australian Capital Territory', cases: parse.number($rowWithCases) }];
+    const $rowWithTestedMinusCases = $table.find('div:nth-child(2)').text();
+    const cases = parse.number($rowWithCases);
+    return {
+      state: scraper.state,
+      cases,
+      tested: cases + parse.number($rowWithTestedMinusCases)
+    };
   }
 };
 
