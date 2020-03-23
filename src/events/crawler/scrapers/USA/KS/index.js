@@ -144,17 +144,13 @@ const scraper = {
       }
 
       const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));
-      // console.error(rows);
 
       const counties = [];
       const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Positive Case Information')) + 2;
-      // console.error(startIndex);
 
       for (let i = startIndex; i < rows.length; i++) {
         const data = rows[i];
         if (data[0].includes('County') || data[1] === parse.number(data[1])) {
-          // console.error(data);
-
           // First set of columns
           const countyName1 = data[0];
           const cases1 = data[1];
@@ -174,7 +170,6 @@ const scraper = {
           }
         }
       }
-      // console.error(counties);
 
       const summedData = transform.sumData(counties);
       counties.push(summedData);
