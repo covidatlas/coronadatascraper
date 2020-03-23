@@ -89,12 +89,12 @@ const scraper = {
         throw new Error(`No data for ${date}`);
       }
 
-      const rows = pdfUtils.asWords(body, 0, 0.5).map(row => row.map(col => col.text));
+      const rows = pdfUtils.asWords(body, 0, 1).map(row => row.map(col => col.text));
 
       const counties = [];
-      const startIndex = rows.findIndex(row => row.length > 0 && row[0].includes('County')) + 1;
+      const startIndex = rows.findIndex(row => row.length > 0 && row[0] === 'County') + 1;
 
-      for (let i = startIndex; rows.length > 0 && !rows[i][0].includes('Total'); i++) {
+      for (let i = startIndex; rows.length > 0 && rows[i][0] !== 'Total'; i++) {
         // Some stray numbers in the PDF, ignore
         if (!Number.isNaN(parse.number(rows[i][0]))) continue;
 
