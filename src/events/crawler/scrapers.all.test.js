@@ -22,6 +22,13 @@ const scraperNameFromPath = s => s.replace(scrapersDir, '').replace('/tests', ''
 const testDirs = glob(join(scrapersDir, '**/tests'), { onlyDirectories: true });
 
 describe('all scrapers', () => {
+  const testScraper = async (s, expectedPath) => {
+    let result = await s.scraper();
+    result = result.map(stripFeatures);
+    const expected = await readJSON(expectedPath);
+    expect(result).toEqual(expected);
+  };
+
   for (const testDir of testDirs) {
     const scraperName = scraperNameFromPath(testDir);
 
@@ -34,13 +41,11 @@ describe('all scrapers', () => {
         get.setSources(source);
       }
 
-      const s = require(join(testDir, '..', 'index.js')).default;
+      const scraper = require(join(testDir, '..', 'index.js')).default;
+
       it('returns latest data', async () => {
-        let result = await s.scraper();
-        result = result.map(stripFeatures);
         const expectedPath = join(testDir, 'expected.json');
-        const expected = await readJSON(expectedPath);
-        expect(result).toEqual(expected);
+        await testScraper(scraper, expectedPath);
       });
 
       const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
@@ -51,10 +56,7 @@ describe('all scrapers', () => {
 
         it('returns data for a specific date', async () => {
           process.env.SCRAPE_DATE = date;
-          let result = await s.scraper();
-          result = result.map(stripFeatures);
-          const expected = await readJSON(expectedPath);
-          expect(result).toEqual(expected);
+          await testScraper(scraper, expectedPath);
         });
       }
 
