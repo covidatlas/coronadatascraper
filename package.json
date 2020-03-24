@@ -11,9 +11,9 @@
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
-    "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
+    "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite && yarn dataQualityReporter",
     "buildSite": "npx rollup -c",
-    "dataValidation": "jest tests/*validation.*",
+    "dataQualityReporter": "jest tests/*quality.* --reporters='./tools/dataQualityJestReporter.js'",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
