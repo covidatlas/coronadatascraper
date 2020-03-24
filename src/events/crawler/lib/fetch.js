@@ -55,15 +55,18 @@ export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetim
     }
 
     const response = await needle('get', url);
-    const fetchedBody = toString ? response.body.toString() : response.body;
-
-    await caching.saveFileToCache(url, type, date, fetchedBody);
 
     if (disableSSL) {
       delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
     }
 
-    return fetchedBody;
+    if (response.statusCode < 400) {
+      const fetchedBody = toString ? response.body.toString() : response.body;
+      await caching.saveFileToCache(url, type, date, fetchedBody);
+      return fetchedBody;
+    }
+    console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+    return null;
   }
   return cachedBody;
 };
@@ -124,7 +127,7 @@ export const csv = async (url, date, options = {}) => {
           delimiter: options.delimiter,
           columns: true
         },
-        function(err, output) {
+        (err, output) => {
           if (err) {
             reject(err);
           } else {
@@ -152,9 +155,6 @@ export const tsv = async (url, date, options = {}) => {
 /**
  * Load and parse PDF from the given URL
  *
- * Returns 2D array of items on each row of the document. Each row consists of an array of text
- * elements elements present on that row.
- *
  * @param {*} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} options customizable options:
@@ -165,49 +165,27 @@ export const tsv = async (url, date, options = {}) => {
  */
 export const pdf = async (url, date, options) => {
   return new Promise(async (resolve, reject) => {
-    const { rowTolerance } = { rowTolerance: 1, ...options };
-
     const body = await fetch(url, 'pdf', date, { ...options, toString: false, encoding: null });
 
     if (!body) {
       resolve(null);
+      return;
     }
 
     const data = [];
-    let rows = {};
+
+    let currentPage = 0;
 
     new PdfReader().parseBuffer(body, (err, item) => {
-      if (err) reject(err);
-      if (!item || item.page) {
-        // end of page
-        Object.keys(rows) // => array of y-positions (type: float)
-          .sort((y1, y2) => parseFloat(y1) - parseFloat(y2)) // sort float positions
-          .forEach(y =>
-            data.push(
-              rows[y]
-                .sort((item1, item2) => parseFloat(item1.x) - parseFloat(item2.x)) // sort x positions and add to data array
-                .map(item => item.text) // only keep the text
-            )
-          );
-        rows = {}; // clear rows for next page
-
-        if (!item) resolve(data); // document is parsed, return
+      if (err) {
+        reject(err);
+      } else if (!item) {
+        data.push(null);
+        resolve(data);
+      } else if (item.page) {
+        currentPage += 1;
       } else if (item.text) {
-        let { y } = item;
-
-        // We set y to an existing row if within tolerance
-        Object.keys(rows).forEach(yKey => {
-          if (Math.abs(yKey - y) < rowTolerance) {
-            y = yKey;
-          }
-        });
-
-        // accumulate text items into rows object, per line
-        const row = rows[y] || [];
-
-        row.push(item);
-
-        rows[y] = row;
+        data.push({ page: currentPage, x: item.x, y: item.y, w: item.w, text: item.text.trim() });
       }
     });
   });
@@ -234,14 +212,14 @@ const fetchHeadless = async url => {
       browser.close();
       return html;
     }
-    console.log('  ❌ Got error %d trying to fetch %s headless', response._status, url);
+    console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
     browser.close();
     return null;
   } catch (err) {
     browser.close();
 
     if (err.name === 'TimeoutError') {
-      console.log('  ❌ Timed out trying to fetch %s headless', url);
+      console.log(`  ❌ Timed out trying to fetch ${url}`);
       return null;
     }
     throw err;

@@ -45,8 +45,12 @@ const scraper = {
       const data = await fetch.csv(this.url);
       const counties = [];
       for (const county of data) {
+        let countyName = county.Name;
+        if (countyName === 'Obrien') {
+          countyName = "O'Brien";
+        }
         counties.push({
-          county: geography.addCounty(county.Name),
+          county: geography.addCounty(countyName),
           cases: parse.number(county.Confirmed || 0),
           deaths: parse.number(county.Deaths || 0),
           recovered: parse.number(county.Recovered || 0)

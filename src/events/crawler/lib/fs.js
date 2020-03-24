@@ -63,7 +63,7 @@ export const readCSV = async filePath => {
         {
           columns: true
         },
-        function(err, output) {
+        (err, output) => {
           if (err) {
             reject(err);
           } else {
@@ -87,15 +87,16 @@ export const readCSV = async filePath => {
  *  - ensureDir: creates a directory if it is missing
  */
 export const writeFile = async (filePath, data, options = {}) => {
-  options = { silent: false, ensureDir: true, ...options };
+  let localOptions = options;
+  localOptions = { silent: false, ensureDir: true, ...localOptions };
 
-  if (options.ensureDir) {
+  if (localOptions.ensureDir) {
     await ensureDir(path.dirname(filePath));
   }
 
   const ret = await fs.promises.writeFile(filePath, data);
 
-  if (!options.silent) {
+  if (!localOptions.silent) {
     console.log(`✏️  ${filePath} written`);
   }
 

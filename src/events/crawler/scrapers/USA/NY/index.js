@@ -18,7 +18,7 @@ const scraper = {
   _counties: [
     'Albany County',
     'Allegany County',
-    // 'Bronx County',
+    'Bronx County',
     'Broome County',
     'Cattaraugus County',
     'Cayuga County',
@@ -39,14 +39,14 @@ const scraper = {
     'Hamilton County',
     'Herkimer County',
     'Jefferson County',
-    // 'Kings County',
+    'Kings County',
     'Lewis County',
     'Livingston County',
     'Madison County',
     'Monroe County',
     'Montgomery County',
     'Nassau County',
-    // 'New York County',
+    'New York County',
     'Niagara County',
     'Oneida County',
     'Onondaga County',
@@ -56,9 +56,9 @@ const scraper = {
     'Oswego County',
     'Otsego County',
     'Putnam County',
-    // 'Queens County',
+    'Queens County',
     'Rensselaer County',
-    // 'Richmond County',
+    'Richmond County',
     'Rockland County',
     'St. Lawrence County',
     'Saratoga County',
@@ -79,6 +79,14 @@ const scraper = {
     'Wyoming County',
     'Yates County'
   ],
+  _boroughs: {
+    Bronx: 'Bronx County',
+    Brooklyn: 'Kings County',
+    Manhattan: 'New York County',
+    Queens: 'Queens County',
+    'Staten Island': 'Richmond County'
+  },
+  _boroughURL: 'https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf',
   async scraper() {
     this.url = datetime.scrapeDateIsBefore('2020-3-17')
       ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/'
@@ -106,7 +114,7 @@ const scraper = {
         };
 
         if (countyName === 'New York City') {
-          countyObj.county = countyName;
+          countyObj.city = countyName;
           countyObj.feature = geography.generateMultiCountyFeature(
             ['Bronx County, NY', 'Kings County, NY', 'New York County, NY', 'Queens County, NY', 'Richmond County, NY'],
             {
@@ -122,6 +130,16 @@ const scraper = {
     });
 
     counties.push(transform.sumData(counties));
+
+    const pdfScrape = await fetch.pdf(this._boroughURL);
+    Object.keys(this._boroughs).forEach(name => {
+      const valIndex = pdfScrape.findIndex(ele => ele.text === name);
+
+      counties.push({
+        county: this._boroughs[name],
+        cases: parse.number(pdfScrape[valIndex + 1].text.match(/(\d*)/)[1])
+      });
+    });
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
 

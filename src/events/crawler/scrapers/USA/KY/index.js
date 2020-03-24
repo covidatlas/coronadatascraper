@@ -10,15 +10,17 @@ const scraper = {
   priority: 1,
   aggregate: 'county',
   url: 'https://datawrapper.dwcdn.net/BbowM/23/',
-  source: {
-    name: 'Kentucky Cabinet for Health and Family Services',
-    url: 'https://www.kentucky.com/news/coronavirus/article241309406.html'
-  },
+  sources: [
+    {
+      name: 'Kentucky Cabinet for Health and Family Services',
+      url: 'https://www.kentucky.com/news/coronavirus/article241309406.html'
+    }
+  ],
   maintainers: [
     {
       name: 'Jordan Holt',
       email: 'jordholt@gmail.com',
-      github: 'DatJord',
+      github: 'Jord-Holt',
       country: 'USA',
       flag: '🇺🇸'
     }

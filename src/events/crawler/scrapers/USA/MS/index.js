@@ -142,6 +142,38 @@ const scraper = {
       counties.push(transform.sumData(counties));
 
       return counties;
+    },
+    '2020-3-20': async function() {
+      const $ = await fetch.page(this.url);
+      const $table = $('h4:contains("All Mississippi cases")')
+        .nextAll('table')
+        .first();
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      let counties = [];
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
+
+        // The publisher is making typos in their html table!
+        if (county === 'De Soto County') {
+          county = 'DeSoto County';
+        }
+        if (county === 'Leeflore County') {
+          county = 'Leflore County';
+        }
+
+        counties.push({
+          county,
+          cases: parse.number(parse.string($tr.find('td:nth-child(2)').text()) || 0),
+          deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
+        });
+      });
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
     }
   }
 };
