@@ -2,9 +2,10 @@
 /* eslint-disable import/no-dynamic-require  */
 
 import { sync as glob } from 'fast-glob';
+import { readFileSync as readFile } from 'fs';
 import path, { join as _join } from 'path';
+import { readJSON } from './lib/fs.js';
 import { get } from './lib/get.js';
-import { readFile, readJSON } from './lib/fs.js';
 
 jest.mock('./lib/get.js');
 
@@ -23,13 +24,13 @@ describe('all scrapers', () => {
 
   for (const testDir of testDirs) {
     const testInputs = glob(join(testDir, '*')).filter(p => !p.includes('expected'));
+    const scraperName = scraperNameFromPath(testDir);
 
     for (const filePath of testInputs) {
       const fileName = path.basename(filePath, path.extname(filePath));
-      get.setSources({ [fileName]: readFile(path.resolve(__dirname, filePath)) });
+      const source = { [fileName]: readFile(path.resolve(__dirname, filePath)).toString() };
+      get.setSources(source);
     }
-
-    const scraperName = scraperNameFromPath(testDir);
 
     describe(`scraper: ${scraperName}`, () => {
       const s = require(join(testDir, '..', 'index.js')).default;
@@ -37,7 +38,8 @@ describe('all scrapers', () => {
         let result = await s.scraper();
         result = result.map(stripFeatures);
         const expectedPath = join(testDir, 'expected.json');
-        expect(result).toEqual(await readJSON(expectedPath));
+        const expected = await readJSON(expectedPath);
+        expect(result).toEqual(expected);
       });
 
       // xxx('scrapes a specific date', async () => {
