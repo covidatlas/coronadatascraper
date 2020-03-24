@@ -116,6 +116,25 @@ const scraper = {
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
+    },
+    '2020-3-23': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('caption:contains("SD COUNTY OF RESIDENCE")').closest('table');
+      const $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        if ($tr.find('td').attr('colspan')) {
+          return;
+        }
+        counties.push({
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          cases: parse.number($tr.find('td:last-child').text())
+        });
+      });
+      counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
     }
   }
 };

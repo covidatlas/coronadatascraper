@@ -5,7 +5,7 @@ import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';
-import * as maintainers from '../lib/maintainers.js';
+import maintainers from '../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -132,7 +132,10 @@ const scraper = {
       }
 
       // Use their US states
-      if (cases[index]['Country/Region'] === 'US' && geography.usStates[parse.string(cases[index]['Province/State'])]) {
+      if (
+        cases[index]['Country/Region'] === 'US' &&
+        geography.usStates[parse.string(cases[index]['Province/State'] || '')]
+      ) {
         const state = geography.usStates[parse.string(cases[index]['Province/State'])];
         countries.push({
           aggregate: 'state',

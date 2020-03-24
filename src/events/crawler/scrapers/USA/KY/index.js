@@ -20,7 +20,7 @@ const scraper = {
     {
       name: 'Jordan Holt',
       email: 'jordholt@gmail.com',
-      github: 'DatJord',
+      github: 'Jord-Holt',
       country: 'USA',
       flag: '🇺🇸'
     }

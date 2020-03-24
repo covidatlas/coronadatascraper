@@ -1,8 +1,8 @@
 import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
-import * as transform from '../../lib/transform.js';
 import * as datetime from '../../lib/datetime.js';
-import * as rules from '../../lib/rules.js';
+
+import { features } from './features.json';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -15,35 +15,48 @@ const scraper = {
   // aggregate: 'state', // doesn't seem to be aggregating properly
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    const states = [];
     let date = datetime.getYYYYMMDD();
     if (process.env.SCRAPE_DATE) {
       date = datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE));
     }
+
+    const states = {};
+
     for (const row of data) {
-      const granularity = row.granularite !== undefined ? parse.string(row.granularite) : '';
-      const rowDate = row.date !== undefined ? parse.string(row.date) : '';
+      const data = {};
+
+      const granularity = row.granularite;
+      const rowDate = row.date;
+
+      data.url = row.source_url !== undefined ? row.source_url : this.url;
+
+      if (row.cas_confirmes !== undefined && row.cas_confirmes !== '') {
+        data.cases = parse.number(row.cas_confirmes);
+      }
+
+      if (row.deces !== undefined && row.deces !== '') {
+        data.deaths = parse.number(row.deces);
+      }
+
+      if (row.gueris !== undefined && row.gueris !== '') {
+        data.recovered = parse.number(row.gueris);
+      }
+
       if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === date) {
-        const state = row.maille_nom !== undefined ? parse.string(row.maille_nom) : '';
-        const cases = row.cas_confirmes !== undefined ? parse.number(row.cas_confirmes) : 0;
-        const deaths = row.deces !== undefined ? parse.number(row.deces) : 0;
-        let sourceUrl = row.source_url !== undefined ? parse.string(row.source_url) : this.url;
-        sourceUrl = sourceUrl === '' ? this.url : sourceUrl;
-        if (state !== '') {
-          const data = {
-            state,
-            cases,
-            deaths,
-            url: sourceUrl
-          };
-          if (rules.isAcceptable(data, null, null)) {
-            states.push(data);
-          }
+        data.state = row.maille_nom;
+
+        const regionCode = row.maille_code.slice(4);
+        data.feature = features.find(item => item.properties.code === regionCode);
+        data.population = data.feature ? data.feature.properties.population : undefined;
+
+        if (data.state !== '') {
+          states[regionCode] = { ...(states[regionCode] || {}), ...data };
         }
+      } else if (granularity === 'pays' && rowDate === date) {
+        states.FRA = { ...(states.FRA || {}), ...data };
       }
     }
-    states.push(transform.sumData(states));
-    return states;
+    return Object.values(states);
   }
 };
 
