@@ -270,33 +270,65 @@ const scraper = {
     'Zapata County',
     'Zavala County'
   ],
-  async scraper() {
-    let counties = [];
-    const $ = await fetch.page(this.url);
-    let $table;
-    if (datetime.scrapeDateIsBefore('2020-3-16')) {
-      $table = $('table[summary="Texas COVID-19 Cases"]');
-    } else {
-      $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
-    }
-    const $trs = $table.find('tbody > tr:not(:last-child)');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      const county = geography.addCounty(
-        $tr
-          .find('td:first-child')
-          .text()
-          .replace(/[\d]*/g, '')
-      );
-      const cases = parse.number($tr.find('td:last-child').text());
-      counties.push({
-        county,
-        cases
+  scraper: {
+    '0': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      let $table;
+      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+        $table = $('table[summary="Texas COVID-19 Cases"]');
+      } else {
+        $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
+      }
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const county = geography.addCounty(
+          $tr
+            .find('td:first-child')
+            .text()
+            .replace(/[\d]*/g, '')
+        );
+        const cases = parse.number($tr.find('td:last-child').text());
+        counties.push({
+          county,
+          cases
+        });
       });
-    });
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
-    return counties;
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    },
+    '2020-3-24': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const county = geography.addCounty(
+          $tr
+            .find('td:first-child')
+            .text()
+            .replace(/[\d]*/g, '')
+        );
+        const cases = parse.number($tr.find('td:nth-child(2)').text());
+        let deaths = $tr.find('td:last-child').text();
+        if (deaths === '-') {
+          deaths = 0;
+        } else {
+          deaths = parse.number(deaths);
+        }
+        counties.push({
+          county,
+          cases,
+          deaths
+        });
+      });
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    }
   }
 };
 
