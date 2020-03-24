@@ -10,36 +10,41 @@ const scraper = {
   country: 'USA',
   url: 'https://kernpublichealth.com/2019-novel-coronavirus/',
   type: 'table',
-  async scraper() {
-    let $ = await fetch.headless(this.url);
-    let cases = 0;
-    let tested = 0;
+  scraper: {
+    '0': async function() {
+      let $ = await fetch.headless(this.url);
+      let cases = 0;
+      let tested = 0;
 
-    // Pull out and fetch the embedded iframe
-    const frameURL = $('iframe').attr('src');
-    console.log(frameURL);
+      // Pull out and fetch the embedded iframe
+      const frameURL = $('iframe').attr('src');
+      console.log(frameURL);
 
-    $ = await fetch.headless(frameURL);
+      $ = await fetch.headless(frameURL);
 
-    const getVal = function(title) {
-      const val = parse.number(
-        $(`div[title="${title}"]`)
-          .next()
-          .find('text')
-          .find('title')
-          .text()
-      );
-      return val;
-    };
+      const getVal = function(title) {
+        const val = parse.number(
+          $(`div[title="${title}"]`)
+            .next()
+            .find('text')
+            .find('title')
+            .text()
+        );
+        return val;
+      };
 
-    cases += getVal('Positives Detected Among Kern Residents');
-    cases += getVal('Positives Detected Among Non-Residents');
+      cases += getVal('Positives Detected Among Kern Residents');
+      cases += getVal('Positives Detected Among Non-Residents');
 
-    tested += cases;
-    tested += getVal('Negative Tests');
-    tested += getVal('Pending Tests');
+      tested += cases;
+      tested += getVal('Negative Tests');
+      tested += getVal('Pending Tests');
 
-    return { cases, tested };
+      return { cases, tested };
+    },
+    '2020-3-23': async function() {
+      throw new Error('Kern County, CA uses an image now');
+    }
   }
 };
 
