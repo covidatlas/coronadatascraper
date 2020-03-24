@@ -19,7 +19,7 @@ const scraper = {
       .pop();
     const processDate = process.env.SCRAPE_DATE ? datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE)) : undefined;
     const reportDate = processDate || latestDate;
-    
+
     const states = {};
 
     for (const row of data) {
