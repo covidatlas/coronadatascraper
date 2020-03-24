@@ -132,7 +132,10 @@ const scraper = {
       }
 
       // Use their US states
-      if (cases[index]['Country/Region'] === 'US' && geography.usStates[parse.string(cases[index]['Province/State'])]) {
+      if (
+        cases[index]['Country/Region'] === 'US' &&
+        geography.usStates[parse.string(cases[index]['Province/State'] || '')]
+      ) {
         const state = geography.usStates[parse.string(cases[index]['Province/State'])];
         countries.push({
           aggregate: 'state',
