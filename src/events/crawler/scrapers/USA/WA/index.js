@@ -112,6 +112,37 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-3-23': async function() {
+      let counties = [];
+      const $ = await fetch.headless(this.url);
+      const $table = $('caption:contains("Confirmed Cases")')
+        .first()
+        .closest('table');
+
+      const $trs = $table.find('tbody > tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const cases = parse.number(parse.string($tr.find('td:nth-child(2)').text()) || 0);
+        const deaths = parse.number(parse.string($tr.find('td:last-child').text()) || 0);
+
+        let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
+        if (county === 'Unassigned County') {
+          county = UNASSIGNED;
+        }
+        if (county === 'Total County') {
+          return;
+        }
+        counties.push({
+          county,
+          cases,
+          deaths
+        });
+      });
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      console.log(counties);
+      return counties;
     }
   }
 };
