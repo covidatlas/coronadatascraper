@@ -14,7 +14,9 @@ const scraper = {
   type: 'list',
   aggregate: 'county',
   maintainers: [maintainers.aed3],
-
+source: {
+  name: 'City of Lincoln, Nebraska COVID-19 Response'
+},
   _counties: [
     'Adams County',
     'Antelope County',
