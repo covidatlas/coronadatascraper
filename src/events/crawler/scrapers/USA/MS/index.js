@@ -152,7 +152,16 @@ const scraper = {
       let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
-        const county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
+        let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
+
+        // The publisher is making typos in their html table!
+        if (county === 'De Soto County') {
+          county = 'DeSoto County';
+        }
+        if (county === 'Leeflore County') {
+          county = 'Leflore County';
+        }
+
         counties.push({
           county,
           cases: parse.number(parse.string($tr.find('td:nth-child(2)').text()) || 0),
