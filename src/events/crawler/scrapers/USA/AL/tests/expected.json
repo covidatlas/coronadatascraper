@@ -1,0 +1,22 @@
+﻿[
+  { "cases": 38, "date": "2020-03-22", "deaths": 38, "recovered": 38, "state": "Andalucía" },
+  { "cases": 3, "date": "2020-03-22", "deaths": 3, "recovered": 3, "state": "Aragón" },
+  { "cases": 20, "date": "2020-03-22", "deaths": 20, "recovered": 20, "state": "Asturias" },
+  { "cases": 17, "date": "2020-03-22", "deaths": 17, "recovered": 17, "state": "Baleares" },
+  { "cases": 7, "date": "2020-03-22", "deaths": 7, "recovered": 7, "state": "Canarias" },
+  { "cases": 11, "date": "2020-03-22", "deaths": 11, "recovered": 11, "state": "Cantabria" },
+  { "cases": 48, "date": "2020-03-22", "deaths": 48, "recovered": 48, "state": "Castilla-La Mancha" },
+  { "cases": 89, "date": "2020-03-22", "deaths": 89, "recovered": 89, "state": "Castilla y León" },
+  { "cases": 150, "date": "2020-03-22", "deaths": 150, "recovered": 150, "state": "Cataluña" },
+  { "cases": 0, "date": "2020-03-22", "deaths": 0, "recovered": 0, "state": "Ceuta" },
+  { "cases": 30, "date": "2020-03-22", "deaths": 30, "recovered": 30, "state": "C. Valenciana" },
+  { "cases": 8, "date": "2020-03-22", "deaths": 8, "recovered": 8, "state": "Extremadura" },
+  { "cases": 16, "date": "2020-03-22", "deaths": 16, "recovered": 16, "state": "Galicia" },
+  { "cases": 1899, "date": "2020-03-22", "deaths": 1899, "recovered": 1899, "state": "Madrid" },
+  { "cases": 0, "date": "2020-03-22", "deaths": 0, "recovered": 0, "state": "Melilla" },
+  { "cases": 1, "date": "2020-03-22", "deaths": 1, "recovered": 1, "state": "Murcia" },
+  { "cases": 4, "date": "2020-03-22", "deaths": 4, "recovered": 4, "state": "Navarra" },
+  { "cases": 216, "date": "2020-03-22", "deaths": 216, "recovered": 216, "state": "País Vasco" },
+  { "cases": 18, "date": "2020-03-22", "deaths": 18, "recovered": 18, "state": "La Rioja" },
+  { "cases": 2575, "deaths": 2575, "recovered": 2575 }
+]
