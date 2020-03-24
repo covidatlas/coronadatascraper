@@ -4,9 +4,6 @@ import * as datetime from '../../lib/datetime.js';
 
 import { features } from './features.json';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
-
 const scraper = {
   country: 'FRA',
   url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
