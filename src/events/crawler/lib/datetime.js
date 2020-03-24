@@ -93,6 +93,36 @@ export const getMDYY = function(date = getDate(), sep = '/') {
 };
 
 /*
+  Get date formatted in Month_D_YYYY
+*/
+export const getMonthDYYYY = function(date = getDate(), sep = '_') {
+  if (typeof date === 'string') {
+    date = new Date(date);
+  }
+
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+
+  const month = months[date.getUTCMonth()];
+  const day = date.getUTCDate().toString();
+  const year = date.getUTCFullYear().toString();
+
+  return `${month}${sep}${day}${sep}${year}`;
+};
+
+/*
   Check of the *date* of the passed date is before the other passed date
   *sigh*
 */

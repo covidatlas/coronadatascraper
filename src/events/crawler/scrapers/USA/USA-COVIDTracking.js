@@ -26,13 +26,16 @@ const scraper = {
 
     for (const stateData of data) {
       const stateObj = {
-        state: stateData.state,
-        cases: parse.number(stateData.positive),
-        tested: parse.number(stateData.total)
+        state: stateData.state
       };
       if (stateData.death !== null) {
         stateObj.deaths = parse.number(stateData.death);
       }
+      if (stateData.total !== null) {
+        stateObj.tested = parse.number(stateData.total);
+      }
+      // Assume zero if none provided
+      stateObj.cases = parse.number(stateData.positive || 0);
       regions.push(stateObj);
     }
 
