@@ -14,6 +14,7 @@ const scraper = {
   type: 'list',
   aggregate: 'county',
   maintainers: [maintainers.aed3],
+  priority: 1,
 source: {
   name: 'City of Lincoln, Nebraska COVID-19 Response'
 },
