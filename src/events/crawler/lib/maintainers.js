@@ -28,6 +28,12 @@ const maintainers = {
     city: 'St. Louis',
     flag: '🇺🇸'
   },
+  aed3: {
+    name: 'Albert III',
+    gitub: 'aed3',
+    county: 'USA',
+    flag: 'us'
+  },
   camjc: {
     name: 'Cameron Chamberlain',
     email: 'corona@camjc.com',
@@ -36,6 +42,7 @@ const maintainers = {
     state: 'Victoria',
     city: 'Melbourne',
     flag: '🇦🇺'
+
   }
 };
 
