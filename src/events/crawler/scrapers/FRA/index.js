@@ -12,11 +12,14 @@ const scraper = {
   // aggregate: 'state', // doesn't seem to be aggregating properly
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    let date = datetime.getYYYYMMDD();
-    if (process.env.SCRAPE_DATE) {
-      date = datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE));
-    }
 
+    const latestDate = data
+      .map(d => d.date)
+      .sort()
+      .pop();
+    const processDate = process.env.SCRAPE_DATE ? datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE)) : undefined;
+    const reportDate = processDate || latestDate;
+    
     const states = {};
 
     for (const row of data) {
@@ -39,7 +42,7 @@ const scraper = {
         data.recovered = parse.number(row.gueris);
       }
 
-      if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === date) {
+      if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === reportDate) {
         data.state = row.maille_nom;
 
         const regionCode = row.maille_code.slice(4);
@@ -49,7 +52,7 @@ const scraper = {
         if (data.state !== '') {
           states[regionCode] = { ...(states[regionCode] || {}), ...data };
         }
-      } else if (granularity === 'pays' && rowDate === date) {
+      } else if (granularity === 'pays' && rowDate === reportDate) {
         states.FRA = { ...(states.FRA || {}), ...data };
       }
     }
