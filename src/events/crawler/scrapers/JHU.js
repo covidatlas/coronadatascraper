@@ -111,17 +111,26 @@ const scraper = {
             countyTotals[countyAndState].deaths += parse.number(deaths[index][date] || 0);
             countyTotals[countyAndState].recovered += parse.number(recovered[index][date] || 0);
           } else {
-            const [county, state] = countyAndState.split(', ');
-            countyTotals[countyAndState] = {
+            let [county, state] = countyAndState.split(', ');
+            const regionObj = {
               aggregate: 'state',
-              county,
-              state,
               country: 'USA',
               cases: parse.number(cases[index][date] || 0),
               recovered: parse.number(recovered[index][date] || 0),
               deaths: parse.number(deaths[index][date] || 0),
               coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
             };
+            if (county === 'District of Columbia') {
+              county = null;
+              state = 'DC';
+            }
+            if (county) {
+              regionObj.county = county;
+            }
+            if (state) {
+              regionObj.state = state;
+            }
+            countyTotals[countyAndState] = regionObj;
           }
         }
       }
