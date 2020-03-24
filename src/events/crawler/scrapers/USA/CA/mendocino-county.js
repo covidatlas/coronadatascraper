@@ -26,6 +26,13 @@ const scraper = {
       const $strong = $('strong:contains("current case")');
       const cases = parse.number($strong.text().match(/(\d+) current/)[1]);
       return { cases };
+    },
+    '2020-3-23': async function() {
+      const $ = await fetch.page(this.url);
+      const $outerLI = $('li:contains("Testing Numbers")');
+      const $li = $outerLI.find('li:contains("Total Positives")');
+      const cases = parse.number($li.text().split(':')[1]);
+      return { cases };
     }
   }
 };
