@@ -43,6 +43,16 @@ export function generateMultiCountyFeature(counties, properties) {
     }
   }
 
+  if (features.length !== counties.length) {
+    console.warn(
+      '⚠️  ',
+      counties.length,
+      'counties provided to generateMultiCountyFeature, only',
+      features.length,
+      'features matched'
+    );
+  }
+
   // Generate a combined feature from all of the polygons
   let combinedPolygon = polygons.pop();
   while (polygons.length) {
