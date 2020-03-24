@@ -85,5 +85,10 @@
     "*.js": [
       "eslint --fix"
     ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true
   }
 }
