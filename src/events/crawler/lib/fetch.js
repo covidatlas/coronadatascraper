@@ -54,12 +54,22 @@ export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetim
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
 
-    const response = await needle('get', url);
+    let errorMsg = '';
+    const response = await needle('get', url).catch(err => {
+      // Errors we get here have the tendency of crashing the whole crawler
+      // with no ability for us to catch them. Let's hear what these errors have to say,
+      // and throw an error later down that won't bring the whole process down.
+      errorMsg = err.toString();
+    });
 
     if (disableSSL) {
       delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
     }
 
+    if (errorMsg) {
+      console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+      return null;
+    }
     if (response.statusCode < 400) {
       const fetchedBody = toString ? response.body.toString() : response.body;
       await caching.saveFileToCache(url, type, date, fetchedBody);
