@@ -2,7 +2,8 @@ import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import * as datetime from '../../lib/datetime.js';
-import * as rules from '../../lib/rules.js';
+
+import { features } from './features.json';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -28,17 +29,21 @@ const scraper = {
         const cases = row.cas_confirmes !== undefined ? parse.number(row.cas_confirmes) : 0;
         const deaths = row.deces !== undefined ? parse.number(row.deces) : 0;
         let sourceUrl = row.source_url !== undefined ? parse.string(row.source_url) : this.url;
+
+        const regionCode = row.maille_code.slice(4);
+        const feature = features.find(item => item.properties.code === regionCode);
+
         sourceUrl = sourceUrl === '' ? this.url : sourceUrl;
         if (state !== '') {
           const data = {
             state,
             cases,
             deaths,
-            url: sourceUrl
+            url: sourceUrl,
+            feature
           };
-          if (rules.isAcceptable(data, null, null)) {
-            states.push(data);
-          }
+
+          states.push(data);
         }
       }
     }
