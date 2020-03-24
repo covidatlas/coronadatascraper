@@ -1,14 +1,16 @@
 import { locationData, isMonotonicallyIncreasing, timeSeriesToArray } from './dataQualityHelpers.js';
 
 test.each(locationData)('%s: deaths <= cases <= tested', (locName, locObj, tsObj) => {
-  for (const date in tsObj.dates) {
-    if (tsObj.dates[date]) {
-      const data = tsObj.dates[date];
-      if (data.deaths) {
-        expect(data.deaths).toBeLessThanOrEqual(data.cases);
-      }
-      if (data.tested) {
-        expect(data.cases).toBeLessThanOrEqual(data.tested);
+  if (tsObj && tsObj.dates) {
+    for (const date in tsObj.dates) {
+      if (tsObj.dates[date]) {
+        const data = tsObj.dates[date];
+        if (data.deaths) {
+          expect(data.deaths).toBeLessThanOrEqual(data.cases);
+        }
+        if (data.tested) {
+          expect(data.cases).toBeLessThanOrEqual(data.tested);
+        }
       }
     }
   }
