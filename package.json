@@ -90,5 +90,11 @@
     "printWidth": 120,
     "semi": true,
     "singleQuote": true
+  },
+  "jest": {
+    "rootDir": "src",
+    "testMatch": [
+      "**/?(*.)test.js"
+    ]
   }
 }
