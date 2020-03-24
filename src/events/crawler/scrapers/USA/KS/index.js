@@ -136,7 +136,7 @@ const scraper = {
       const datePart = datetime.getMonthDYYYY(date);
       this.url = `${this._baseUrl}COVID-19_${datePart}_.pdf`;
 
-      const body = await fetch.pdf(this.url);
+      const body = await fetch.pdf(this.url).catch(err => console.error(`Error Fetching: ${err}`);
 
       if (body === null) {
         // throw new Error(`No data for ${date}`);
