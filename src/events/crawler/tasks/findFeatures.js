@@ -84,6 +84,24 @@ function cleanFeatures(set) {
   }
 }
 
+function matchFeature(props, featuresData) {
+  for (const featureData of featuresData) {
+    for (const feature of featureData.features) {
+      let found = true;
+      Object.keys(props).forEach(key => {
+        if (feature.properties[key] !== props[key]) {
+          found = false;
+        }
+      });
+
+      if (found) {
+        return feature;
+      }
+    }
+  }
+  return undefined;
+}
+
 const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   const featureCollection = {
     type: 'FeatureCollection',
@@ -138,6 +156,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     const errors = [];
 
+    const featuresData = [provinceData, usCountyData, countryData];
+
     locationLoop: for (const location of locations) {
       let found = false;
       let point;
@@ -148,9 +168,23 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       // If the location already comes with its own feature, store it98
       if (location.feature) {
         found = true;
-        storeFeature(location.feature, location);
+        if (Array.isArray(location.feature)) {
+          location.feature.forEach(feature => storeFeature(feature, location));
+        } else {
+          storeFeature(location.feature, location);
+        }
         delete location.feature;
         continue;
+      }
+
+      if (location._featureId) {
+        const feature = matchFeature(location._featureId, featuresData);
+        if (feature) {
+          found = true;
+          storeFeature(feature, location);
+          delete location.feature;
+          continue;
+        }
       }
 
       // Breaks France
