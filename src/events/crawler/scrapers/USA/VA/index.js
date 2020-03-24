@@ -170,23 +170,30 @@ const scraper = {
       const pdfUrl = pdfBaseURL + endURL;
       const pdfScrape = await fetch.pdf(pdfUrl);
 
-      let pdfText = '';
-      for (const item of pdfScrape) {
-        if (item.text === '©') {
-          break;
-        }
-        pdfText += item.text;
-      }
-
       if (city2County.includes(name)) {
         name = name.replace('city', 'County');
       }
 
-      counties.push({
-        county: name,
-        cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
-        deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
-      });
+      if (pdfScrape) {
+        let pdfText = '';
+        for (const item of pdfScrape) {
+          if (item.text === '©') {
+            break;
+          }
+          pdfText += item.text;
+        }
+
+        counties.push({
+          county: name,
+          cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+          deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
+        });
+      } else {
+        counties.push({
+          county: name,
+          cases: 0
+        });
+      }
     }
 
     counties.push(transform.sumData(counties));
