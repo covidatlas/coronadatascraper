@@ -4,7 +4,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   country: 'AUS',
-  maintainer: maintainers.camjc,
+  maintainers: [maintainers.camjc],
   priority: 2,
   sources: [
     {
