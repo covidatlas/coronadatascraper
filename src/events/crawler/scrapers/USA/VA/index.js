@@ -1,5 +1,6 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
+import * as geography from '../../../lib/geography.js';
 import * as transform from '../../../lib/transform.js';
 import maintainers from '../../../lib/maintainers.js';
 
@@ -17,7 +18,7 @@ const scraper = {
   _counties: [
     'Accomack County',
     'Albemarle County',
-    'Alexandria County',
+    'Alexandria city',
     'Alleghany County',
     'Amelia County',
     'Amherst County',
@@ -28,7 +29,7 @@ const scraper = {
     'Bedford County',
     'Bland County',
     'Botetourt County',
-    'Bristol County',
+    'Bristol city',
     'Brunswick County',
     'Buchanan County',
     'Buckingham County',
@@ -38,31 +39,31 @@ const scraper = {
     'Carroll County',
     'Charles City County',
     'Charlotte County',
-    'Charlottesville County',
-    'Chesapeake County',
+    'Charlottesville city',
+    'Chesapeake city',
     'Chesterfield County',
     'Clarke County',
-    'Colonial Heights County',
-    'Covington County',
+    'Colonial Heights city',
+    'Covington city',
     'Craig County',
     'Culpeper County',
     'Cumberland County',
-    'Danville County',
+    'Danville city',
     'Dickenson County',
     'Dinwiddie County',
-    'Emporia County',
+    'Emporia city',
     'Essex County',
     'Fairfax city',
     'Fairfax County',
-    'Falls Church County',
+    'Falls Church city',
     'Fauquier County',
     'Floyd County',
     'Fluvanna County',
     'Franklin city',
     'Franklin County',
     'Frederick County',
-    'Fredericksburg County',
-    'Galax County',
+    'Fredericksburg city',
+    'Galax city',
     'Giles County',
     'Gloucester County',
     'Goochland County',
@@ -70,13 +71,13 @@ const scraper = {
     'Greene County',
     'Greensville County',
     'Halifax County',
-    'Hampton County',
+    'Hampton city',
     'Hanover County',
-    'Harrisonburg County',
+    'Harrisonburg city',
     'Henrico County',
     'Henry County',
     'Highland County',
-    'Hopewell County',
+    'Hopewell city',
     'Isle of Wight County',
     'James City County',
     'King and Queen County',
@@ -84,39 +85,39 @@ const scraper = {
     'King William County',
     'Lancaster County',
     'Lee County',
-    'Lexington County',
+    'Lexington city',
     'Loudoun County',
     'Louisa County',
     'Lunenburg County',
     'Madison County',
     'Manassas city',
-    'Manassas Park County',
-    'Martinsville County',
+    'Manassas Park city',
+    'Martinsville city',
     'Mathews County',
     'Mecklenburg County',
     'Middlesex County',
     'Montgomery County',
     'Nelson County',
     'New Kent County',
-    'Newport News County',
+    'Newport News city',
     'Norfolk County',
     'Northampton County',
     'Northumberland County',
-    'Norton County',
+    'Norton city',
     'Nottoway County',
     'Orange County',
     'Page County',
     'Patrick County',
-    'Petersburg County',
+    'Petersburg city',
     'Pittsylvania County',
-    'Poquoson County',
-    'Portsmouth County',
+    'Poquoson city',
+    'Portsmouth city',
     'Powhatan County',
     'Prince Edward County',
     'Prince George County',
     'Prince William County',
     'Pulaski County',
-    'Radford County',
+    'Radford city',
     'Rappahannock County',
     'Richmond city',
     'Richmond County',
@@ -125,25 +126,25 @@ const scraper = {
     'Rockbridge County',
     'Rockingham County',
     'Russell County',
-    'Salem County',
+    'Salem city',
     'Scott County',
     'Shenandoah County',
     'Smyth County',
     'Southampton County',
     'Spotsylvania County',
     'Stafford County',
-    'Staunton County',
-    'Suffolk County',
+    'Staunton city',
+    'Suffolk city',
     'Surry County',
     'Sussex County',
     'Tazewell County',
-    'Virginia Beach County',
+    'Virginia Beach city',
     'Warren County',
     'Washington County',
-    'Waynesboro County',
+    'Waynesboro city',
     'Westmoreland County',
-    'Williamsburg County',
-    'Winchester County',
+    'Williamsburg city',
+    'Winchester city',
     'Wise County',
     'Wythe County',
     'York County'
@@ -162,41 +163,30 @@ const scraper = {
       'Roanoke city',
       'Roanoke County'
     ];
-    const city2County = ['Buena Vista city', 'Manassas city'];
-    const counties = [];
+    let counties = [];
 
-    for (let name of this._counties) {
+    for (const name of this._counties) {
       const endURL = fullNameCounties.includes(name) ? name : name.slice(0, name.lastIndexOf(' '));
       const pdfUrl = pdfBaseURL + endURL;
       const pdfScrape = await fetch.pdf(pdfUrl);
 
-      if (city2County.includes(name)) {
-        name = name.replace('city', 'County');
-      }
-
-      if (pdfScrape) {
-        let pdfText = '';
-        for (const item of pdfScrape) {
-          if (item.text === '©') {
-            break;
-          }
-          pdfText += item.text;
+      let pdfText = '';
+      for (const item of pdfScrape) {
+        if (item.text === '©') {
+          break;
         }
-
-        counties.push({
-          county: name,
-          cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
-          deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
-        });
-      } else {
-        counties.push({
-          county: name,
-          cases: 0
-        });
+        pdfText += item.text;
       }
+
+      counties.push({
+        county: name,
+        cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+        deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
+      });
     }
 
     counties.push(transform.sumData(counties));
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
   }
