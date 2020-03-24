@@ -3,18 +3,23 @@
   "parser": "babel-eslint",
   "ignorePatterns": ["dist/"],
   "rules": {
-    "jest/no-standalone-expect": "warn",
-    "no-async-promise-executor": "warn",
-    "no-await-in-loop": "warn",
+    "jest/no-expect-expect": "off",
+    "jest/no-standalone-expect": "off",
+    "consistent-return": "off",
+    "func-names": "off",
+    "no-async-promise-executor": "off",
+    "no-await-in-loop": "off",
     "no-console": "off",
-    "no-continue": "warn",
-    "no-labels": "warn",
-    "no-param-reassign": "warn",
+    "no-continue": "off",
+    "no-labels": "off",
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
-    "no-shadow": "warn",
+    "no-shadow": "off",
     "import/extensions": ["error", "ignorePackages"],
     "no-underscore-dangle": "off",
     "jest/no-try-expect": "off"
   }
 }
+
+
