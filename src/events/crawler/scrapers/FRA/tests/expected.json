@@ -1,285 +1,162 @@
 ﻿[
   {
-    "cases": 75,
-    "deaths": 0,
-    "state": "La Réunion",
-    "url": "https://www.lareunion.ars.sante.fr/coronavirus-covid-19-la-reunion-4-nouveaux-cas-confirmes-0"
-  },
-  {
-    "cases": 3,
-    "deaths": 0,
-    "state": "Saint-Barthélemy",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 8,
-    "deaths": 0,
-    "state": "Saint-Martin",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 62,
-    "deaths": 0,
-    "state": "Guadeloupe",
-    "url": "https://www.guadeloupe.ars.sante.fr/system/files/2020-03/23032020%20point%20de%20situation%20Coronavirus.pdf"
-  },
-  {
-    "cases": 62,
-    "deaths": 0,
-    "state": "Guadeloupe",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 0,
-    "state": "Guadeloupe",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
-    "cases": 53,
-    "deaths": 0,
-    "state": "Martinique",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 1,
-    "state": "Martinique",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
-    "cases": 23,
-    "deaths": 0,
-    "state": "Guyane",
-    "url": "https://pbs.twimg.com/media/ET0q7o-WoAAP1VT?format=jpg&name=large"
-  },
-  {
-    "cases": 20,
-    "deaths": 0,
-    "state": "Guyane",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 0,
-    "state": "Guyane",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
-    "cases": 71,
-    "deaths": 0,
-    "state": "La Réunion",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 0,
-    "state": "La Réunion",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
-    "cases": 24,
-    "deaths": 0,
-    "state": "Mayotte",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 0,
-    "state": "Mayotte",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
+    "url": "",
     "cases": 6211,
-    "deaths": 0,
-    "state": "Ile-de-France",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 193,
     "state": "Île-de-France",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 12246234,
+    "deaths": 193,
+    "recovered": 665
   },
   {
+    "url": "",
     "cases": 361,
     "deaths": 8,
     "state": "Centre-Val de Loire",
-    "url": "https://www.centre-val-de-loire.ars.sante.fr/system/files/2020-03/2020-03-23-bulletin%20information%20COVID-19_0.pdf"
+    "population": 2582522,
+    "recovered": 15
   },
   {
-    "cases": 361,
-    "deaths": 0,
-    "state": "Centre-Val de Loire",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 8,
-    "state": "Centre-Val de Loire",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
-    "cases": 0,
+    "url": "",
     "deaths": 62,
     "state": "Bourgogne-Franche-Comté",
-    "url": "https://www.bourgogne-franche-comte.ars.sante.fr/coronavirus-covid-19-en-bourgogne-franche-comte-mobilisation-cooperation-innovation"
-  },
-  {
+    "population": 2813289,
     "cases": 1347,
-    "deaths": 0,
-    "state": "Bourgogne-Franche-Comté",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
+    "recovered": 198
   },
   {
-    "cases": 0,
-    "deaths": 62,
-    "state": "Bourgogne-Franche-Comté",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
-  },
-  {
+    "url": "",
     "cases": 511,
-    "deaths": 0,
     "state": "Normandie",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
+    "population": 3342467,
     "deaths": 9,
-    "state": "Normandie",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "recovered": 24
   },
   {
-    "cases": 1287,
-    "deaths": 108,
-    "state": "Hauts-de-France",
-    "url": "https://www.hauts-de-france.ars.sante.fr/system/files/2020-03/Point%20quotidien%20cas%20confirm%C3%A9s%20-%2023032020_0.pdf"
-  },
-  {
+    "url": "",
     "cases": 1269,
-    "deaths": 0,
-    "state": "Hauts-de-France",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
     "deaths": 86,
     "state": "Hauts-de-France",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 6023336,
+    "recovered": 201
   },
   {
+    "url": "",
     "cases": 4256,
-    "deaths": 0,
-    "state": "Grand-Est",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 327,
     "state": "Grand Est",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 5548090,
+    "deaths": 327,
+    "recovered": 470
   },
   {
+    "url": "",
     "cases": 293,
-    "deaths": 10,
-    "state": "Pays de la Loire",
-    "url": "https://www.pays-de-la-loire.ars.sante.fr/system/files/2020-03/2020-03-23-bulletin%20information%20COVID-19.pdf"
-  },
-  {
-    "cases": 293,
-    "deaths": 0,
-    "state": "Pays de la Loire",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
     "deaths": 9,
+    "recovered": 74,
     "state": "Pays de la Loire",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 3787411
   },
   {
+    "url": "",
     "cases": 490,
-    "deaths": 0,
     "state": "Bretagne",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
+    "population": 3336643,
     "deaths": 23,
-    "state": "Bretagne",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "recovered": 68
   },
   {
+    "url": "",
     "cases": 676,
-    "deaths": 0,
     "state": "Nouvelle-Aquitaine",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
+    "population": 5994336,
     "deaths": 13,
-    "state": "Nouvelle-Aquitaine",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "recovered": 59
   },
   {
+    "url": "",
     "cases": 767,
-    "deaths": 0,
     "state": "Occitanie",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
+    "population": 5903190,
     "deaths": 32,
-    "state": "Occitanie",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "recovered": 117
   },
   {
-    "cases": 1738,
-    "deaths": 85,
-    "state": "Auvergne-Rhône-Alpes",
-    "url": "https://www.auvergne-rhone-alpes.ars.sante.fr/covid-19-en-auvergne-rhone-alpes-point-de-situation-lundi-23-mars-2020"
-  },
-  {
+    "url": "",
     "cases": 1730,
-    "deaths": 0,
-    "state": "Auvergne-Rhône-Alpes",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
     "deaths": 70,
     "state": "Auvergne-Rhône-Alpes",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 8037059,
+    "recovered": 254
   },
   {
+    "url": "",
     "cases": 1510,
-    "deaths": 0,
-    "state": "Provence-Alpes-Côte d’Azur",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
-    "deaths": 20,
     "state": "Provence-Alpes-Côte d'Azur",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 5065723,
+    "deaths": 20,
+    "recovered": 377
   },
   {
-    "cases": 203,
-    "deaths": 11,
-    "state": "Corse",
-    "url": "https://www.corse.ars.sante.fr/informations-utiles-et-point-de-situation"
-  },
-  {
+    "url": "",
     "cases": 194,
-    "deaths": 0,
-    "state": "Corse",
-    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-  },
-  {
-    "cases": 0,
     "deaths": 7,
     "state": "Corse",
-    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv"
+    "population": 337796,
+    "recovered": 45
   },
-  { "cases": 23898, "deaths": 1144 }
+  {
+    "url": "https://www.lareunion.ars.sante.fr/coronavirus-covid-19-la-reunion-4-nouveaux-cas-confirmes-0",
+    "cases": 75,
+    "state": "La Réunion"
+  },
+  {
+    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
+    "cases": 3,
+    "state": "Saint-Barthélemy"
+  },
+  {
+    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
+    "cases": 8,
+    "state": "Saint-Martin"
+  },
+  { "url": "", "cases": 19856, "deaths": 860, "recovered": 2567 },
+  {
+    "url": "",
+    "cases": 62,
+    "deaths": 0,
+    "state": "Guadeloupe",
+    "population": 390253,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 53,
+    "state": "Martinique",
+    "population": 1128,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 20,
+    "deaths": 0,
+    "recovered": 0,
+    "state": "Guyane",
+    "population": 86504
+  },
+  {
+    "url": "",
+    "cases": 71,
+    "state": "La Réunion",
+    "population": 853659,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 24,
+    "state": "Mayotte",
+    "population": 376,
+    "deaths": 0,
+    "recovered": 0
+  }
 ]
