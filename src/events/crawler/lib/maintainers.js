@@ -42,7 +42,6 @@ const maintainers = {
     state: 'Victoria',
     city: 'Melbourne',
     flag: '🇦🇺'
-
   }
 };
 
