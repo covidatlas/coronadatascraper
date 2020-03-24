@@ -26,22 +26,25 @@ const hash = str => {
 };
 
 /**
+ * Get the filename of the cache for the given URL
+ * @param {*} url URL of the cached resource
+ * @param {*} type type of the cached resource
+ */
+export const getCachedFileName = (url, type) => {
+  const urlHash = hash(url);
+  const extension = type || path.extname(url) || 'txt';
+  return `${urlHash}.${extension}`;
+};
+
+/**
  * Get the path of cache for the given URL at the given date
  * @param {*} url URL of the cached resource
  * @param {*} type type of the cached resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
-  // This data probably has its own timeseries in it
-  // Use local cache, assumed to be recent
   const cachePath = date === false ? TIMESERIES_CACHE_PATH : path.join(DEFAULT_CACHE_PATH, date);
-
-  const urlHash = hash(url);
-  const extension = type || path.extname(url) || 'txt';
-
-  const filePath = path.join(cachePath, `${urlHash}.${extension}`);
-
-  return filePath;
+  return path.join(cachePath, getCachedFileName(url, type));
 };
 
 /**
