@@ -5,8 +5,7 @@ import * as d3interpolate from 'd3-interpolate';
 import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
 
-import { adjustTanh, normalizePercent, getRatio, getPercent } from './lib/math.js';
-import { getLightness } from './lib/color.js';
+import { getRatio, getPercent } from './lib/math.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/events/crawler/lib/geography.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
@@ -112,10 +111,6 @@ let chartDataMax;
 
 let domainArray = [];
 const colorsArray = choroplethColors[choroplethColor];
-const lightnessArray = colorsArray.map(key => 1 - getLightness(key) / 100);
-
-const max = Math.max(...lightnessArray);
-const min = Math.min(...lightnessArray);
 
 // Create domains array equal to number of colors
 // distribution of lightness/colors handled outside of this tool
@@ -123,11 +118,10 @@ for (let i = 0; i < colorsArray.length; i++) {
   let inc;
   if (i === 0) {
     inc = 0;
-  }
-  else {
+  } else {
     inc = i / colorsArray.length;
   }
-  domainArray.push(inc)
+  domainArray.push(inc);
 }
 domainArray = domainArray.sort();
 
