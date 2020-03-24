@@ -1,17 +1,23 @@
 import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
-
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+import maintainers from '../../lib/maintainers.js';
 
 const scraper = {
+  aggregate: 'state',
   country: 'AUS',
+  maintainer: maintainers.camjc,
+  priority: 1,
+  sources: [
+    {
+      description: 'Australian Government Department of Health',
+      name: 'Australian Government Department of Health',
+      url: 'https://www.health.gov.au/'
+    }
+  ],
+  type: 'table',
   url:
     'https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers',
-  type: 'table',
-  priority: 1,
-  aggregate: 'state',
   async scraper() {
     const states = [];
     const $ = await fetch.page(this.url);

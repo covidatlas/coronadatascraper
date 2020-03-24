@@ -33,6 +33,16 @@ const maintainers = {
     gitub: 'aed3',
     county: 'USA',
     flag: 'us'
+  },
+  camjc: {
+    name: 'Cameron Chamberlain',
+    email: 'corona@camjc.com',
+    github: 'camjc',
+    country: 'AUS',
+    state: 'Victoria',
+    city: 'Melbourne',
+    flag: '🇦🇺'
+
   }
 };
 
