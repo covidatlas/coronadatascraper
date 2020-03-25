@@ -22,7 +22,7 @@ const scraper = {
     const currentArticleUrl = anchors[0].attribs.href;
     const $currentArticlePage = await fetch.page(currentArticleUrl);
     const paragraph = $currentArticlePage('#content h2:first-of-type + p').text();
-    const paragraphWithoutNbsp = paragraph.replace(/&nbsp;/g, ' ');
+    const paragraphWithoutNbsp = paragraph.replace(/ /g, ' ');
     const { casesString } = paragraphWithoutNbsp.match(/state total to (?<casesString>\d+)./).groups;
     return {
       state: scraper.state,
