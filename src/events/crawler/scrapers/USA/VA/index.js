@@ -169,6 +169,9 @@ const scraper = {
       const endURL = fullNameCounties.includes(name) ? name : name.slice(0, name.lastIndexOf(' '));
       const pdfUrl = pdfBaseURL + endURL;
       const pdfScrape = await fetch.pdf(pdfUrl);
+      if (pdfScrape == null) {
+        continue; // try the next county, don't error out
+      }
 
       let pdfText = '';
       for (const item of pdfScrape) {

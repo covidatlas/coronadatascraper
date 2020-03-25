@@ -54,29 +54,50 @@ export const fetch = async (url, type, date = process.env.SCRAPE_DATE || datetim
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
 
-    let errorMsg = '';
-    const response = await needle('get', url).catch(err => {
-      // Errors we get here have the tendency of crashing the whole crawler
-      // with no ability for us to catch them. Let's hear what these errors have to say,
-      // and throw an error later down that won't bring the whole process down.
-      errorMsg = err.toString();
-    });
+    // Allow a second chance if we encounter a recoverable error
+    let tries = 0;
+    while (tries < 5) {
+      tries++;
+      if (tries > 1) {
+        // sleep a moment before retrying
+        console.log(`  ⚠️  retrying (${tries})`);
+        await new Promise(r => setTimeout(r, 2000));
+      }
 
-    if (disableSSL) {
-      delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
-    }
+      let errorMsg = '';
+      const response = await needle('get', url).catch(err => {
+        // Errors we get here have the tendency of crashing the whole crawler
+        // with no ability for us to catch them. Let's hear what these errors have to say,
+        // and throw an error later down that won't bring the whole process down.
+        errorMsg = err.toString();
+      });
 
-    if (errorMsg) {
-      console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+      if (disableSSL) {
+        delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
+      }
+
+      // try again if we got an error
+      if (errorMsg) {
+        console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+        continue;
+      }
+      // try again if we got an error code which might be recoverable
+      if (response.statusCode >= 500) {
+        console.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+        continue;
+      }
+
+      // any sort of success code -- return good data
+      if (response.statusCode < 400) {
+        const fetchedBody = toString ? response.body.toString() : response.body;
+        await caching.saveFileToCache(url, type, date, fetchedBody);
+        return fetchedBody;
+      }
+
+      // 400-499 means "not found" and a retry probably won't help -- return null
+      console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
       return null;
     }
-    if (response.statusCode < 400) {
-      const fetchedBody = toString ? response.body.toString() : response.body;
-      await caching.saveFileToCache(url, type, date, fetchedBody);
-      return fetchedBody;
-    }
-    console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
-    return null;
   }
   return cachedBody;
 };
