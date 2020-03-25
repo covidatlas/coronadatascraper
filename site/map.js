@@ -13,14 +13,14 @@ const data = {};
 
 let map;
 
-const type = 'cases';
+let currentType = 'cases';
 let currentDate;
 let currentData;
 
 function initData() {
   let foundFeatures = 0;
   data.locations.forEach(function(location, index) {
-    // Associated the feature with the location
+    // Associate the feature with the location
     if (location.featureId !== undefined) {
       const feature = data.features.features[location.featureId];
       if (feature) {
@@ -37,7 +37,43 @@ function initData() {
   console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
 }
 
-function updateMap(date) {
+function setData() {
+  const countyFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      return isCounty(data.locations[feature.properties.locationId]);
+    })
+  };
+
+  const stateFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (location && !location.county && location.aggregate === 'county') {
+        return false;
+      }
+      return isState(location);
+    })
+  };
+
+  const countryFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (location && location.country && !location.state && location.aggregate === 'state') {
+        return false;
+      }
+      return isCountry(location);
+    })
+  };
+
+  map.getSource('CDS-county').setData(countyFeatures);
+  map.getSource('CDS-state').setData(stateFeatures);
+  map.getSource('CDS-country').setData(countryFeatures);
+}
+
+function updateMap(date, type) {
+  currentType = type || 'cases';
   currentDate = date || Object.keys(data.timeseries).pop();
   currentData = data.timeseries[currentDate];
 
@@ -80,7 +116,7 @@ function updateMap(date) {
         if (locationData.cases === 0) {
           regionColor = color.noCasesColor;
         } else {
-          regionColor = color.getScaledColorValue(location, locationData, type, worstAffectedPercent);
+          regionColor = color.getScaledColorValue(location, locationData, currentType, worstAffectedPercent);
         }
       }
     }
@@ -92,11 +128,12 @@ function updateMap(date) {
   console.log('Highest infection', highestLocation);
 
   color.createLegend(chartDataMin, chartDataMax);
+
+  setData();
 }
 
 function populateMap() {
   initData();
-  updateMap();
 
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;
@@ -130,35 +167,6 @@ function populateMap() {
     return htmlString;
   }
 
-  const countyFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
-    })
-  };
-
-  const stateFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (location && !location.county && location.aggregate === 'county') {
-        return false;
-      }
-      return isState(location);
-    })
-  };
-
-  const countryFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (location && location.country && !location.state && location.aggregate === 'state') {
-        return false;
-      }
-      return isCountry(location);
-    })
-  };
-
   const paintConfig = {
     // 'fill-outline-color': 'rgba(255, 255, 255, 1)',
     'fill-color': ['get', 'color'],
@@ -183,7 +191,7 @@ function populateMap() {
 
   map.addSource('CDS-country', {
     type: 'geojson',
-    data: countryFeatures
+    data: null
   });
 
   map.addLayer(
@@ -200,7 +208,7 @@ function populateMap() {
 
   map.addSource('CDS-state', {
     type: 'geojson',
-    data: stateFeatures
+    data: null
   });
 
   map.addLayer(
@@ -216,7 +224,7 @@ function populateMap() {
 
   map.addSource('CDS-county', {
     type: 'geojson',
-    data: countyFeatures
+    data: null
   });
 
   map.addLayer(
@@ -229,6 +237,8 @@ function populateMap() {
     },
     labelLayerId
   );
+
+  setData();
 
   // Create a popup, but don't add it to the map yet.
   const popup = new mapboxgl.Popup({
@@ -290,6 +300,8 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
+
+  updateMap();
 }
 
 let rendered = false;
