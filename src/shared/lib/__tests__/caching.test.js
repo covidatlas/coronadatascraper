@@ -1,9 +1,9 @@
 import each from 'jest-each';
-import * as mockFs from './__test_utils__/fs.js';
+import * as mockFs from '../__test_utils__/fs.js';
 
-import * as caching from './caching.js';
-import * as datetime from './datetime.js';
-import * as fs from './fs.js';
+import * as caching from '../caching.js';
+import * as datetime from '../datetime.js';
+import * as fs from '../fs.js';
 
 describe('caching', () => {
   describe('getCachedFilePath', () => {

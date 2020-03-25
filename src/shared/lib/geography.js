@@ -1,8 +1,8 @@
 import * as turf from '@turf/turf';
-import usStates from '../../../../coronavirus-data-sources/lib/us-states.json';
+import usStates from '../../../coronavirus-data-sources/lib/us-states.json';
 
-import countryCodes from '../../../../coronavirus-data-sources/ISO-3166-Countries-with-Regional-Codes/slim-3/slim-3.json';
-import countyGeoJSON from '../../../../coronavirus-data-sources/geojson/usa-counties.json';
+import countryCodes from '../../../coronavirus-data-sources/ISO-3166-Countries-with-Regional-Codes/slim-3/slim-3.json';
+import countyGeoJSON from '../../../coronavirus-data-sources/geojson/usa-counties.json';
 
 export { usStates };
 

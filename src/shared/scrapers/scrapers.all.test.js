@@ -5,21 +5,21 @@
 import { sync as glob } from 'fast-glob';
 import { readFileSync as readFile } from 'fs';
 import path from 'path';
-import join from './lib/join.js';
-import { readJSON } from './lib/fs.js';
-import { get } from './lib/get.js';
+import join from '../lib/join.js';
+import { readJSON } from '../lib/fs.js';
+import { get } from '../lib/get.js';
 
-jest.mock('./lib/get.js');
+jest.mock('../lib/get.js');
 
 /**
-This suite automatically tests a scraper's results against its test cases. 
+This suite automatically tests a scraper's results against its test cases.
 
 To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
 
-- Add a `tests` folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests` 
+- Add a `tests` folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
 - Add a sample response from the target URL. The filename should be the URL, without the
   `http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
-  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example: 
+  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
     - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
     - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
 
@@ -27,7 +27,7 @@ To add test coverage for a scraper, you only need to provide test assets; no new
   return. (Leave out any geojson `features` properties.)
 - For sources that have a time series, the `expected.json` file represents the latest result in the
   sample response provided. You can additionally test the return value for a specific date by adding
-  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`. 
+  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
 
     📁 USA
       📁 AK
@@ -51,7 +51,7 @@ To add test coverage for a scraper, you only need to provide test assets; no new
 const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
 const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
 
-// e.g. `/coronadatascraper/src/events/crawler/scrapers/USA/AK/tests` 🡒 `USA/AK`
+// e.g. `/coronadatascraper/src/shared/scrapers/USA/AK/tests` 🡒 `USA/AK`
 const scraperNameFromPath = s => s.replace(join(__dirname, 'scrapers'), '').replace('/tests', '');
 
 // Remove geojson from scraper result
@@ -61,7 +61,7 @@ const stripFeatures = d => {
 };
 
 describe('all scrapers', () => {
-  const testDirs = glob(join(__dirname, 'scrapers/**/tests'), { onlyDirectories: true });
+  const testDirs = glob(join(__dirname, '**', 'tests'), { onlyDirectories: true });
 
   for (const testDir of testDirs) {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`

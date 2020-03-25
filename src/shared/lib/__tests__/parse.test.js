@@ -1,6 +1,6 @@
 import each from 'jest-each';
 
-import * as parse from './parse.js';
+import * as parse from '../parse.js';
 
 describe('Parse functions', () => {
   describe('number', () => {

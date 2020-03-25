@@ -1,5 +1,5 @@
 import turf from '@turf/turf';
-import * as fs from '../src/events/crawler/lib/fs.js';
+import * as fs from '../src/shared/lib/fs.js';
 
 const LAT = 'Lat';
 const LONG = 'Long';

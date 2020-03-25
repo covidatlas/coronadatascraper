@@ -1,7 +1,7 @@
 /* global document, window */
 
 import { getGrade } from './lib/math.js';
-import { getName } from '../src/events/crawler/lib/geography.js';
+import { getName } from '../src/shared/lib/geography.js';
 import * as fetch from './lib/fetch.js';
 
 function getURLFromContributor(curator) {

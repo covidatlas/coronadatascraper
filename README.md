@@ -149,7 +149,7 @@ Write clean and clear code, and please ensure to follow the criteria below for s
 
 Scrapers can pull JSON, CSV, or good ol' HTML down and are written in a sort of modular way, with a handful of helpers available to clean up the data. Scrapers can pull in data for anything -- cities, counties, states, countries, or collections thereof. See the existing scrapers for ideas on how to deal with different ways of data being presented.
 
-Start by going to `src/events/crawler/scrapers/` and creating a new file in the country, region, and region directory (`src/events/crawler/scrapers/USA/CA/mycounty-name.js`)
+Start by going to `src/shared/scrapers/` and creating a new file in the country, region, and region directory (`src/shared/scrapers/USA/CA/mycounty-name.js`)
 
 Your scraper should export an object containing at a minimum the following properties:
 

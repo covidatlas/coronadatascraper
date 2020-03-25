@@ -1,4 +1,4 @@
-import * as datetime from './datetime.js';
+import * as datetime from '../datetime.js';
 
 describe('Datetime functions', () => {
   describe('scrapeDateIs', () => {

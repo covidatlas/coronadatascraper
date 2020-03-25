@@ -1,7 +1,7 @@
 import * as turf from '@turf/turf';
 import geoTz from 'geo-tz';
 import * as fs from '../lib/fs.js';
-import espGeoJson from '../../../../coronavirus-data-sources/geojson/ESP.json';
+import espGeoJson from '../../../coronavirus-data-sources/geojson/ESP.json';
 import * as geography from '../lib/geography.js';
 
 const DEBUG = false;
