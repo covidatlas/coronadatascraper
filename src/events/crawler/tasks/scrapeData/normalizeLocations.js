@@ -1,3 +1,4 @@
+import path from 'path';
 import * as geography from '../../lib/geography.js';
 
 const normalizeLocations = args => {
@@ -15,6 +16,11 @@ const normalizeLocations = args => {
 
     if (!location.active) {
       location.active = geography.getActiveFromLocation(location);
+    }
+
+    // Auto-detect type if not provided
+    if (!location.type && path.extname(location.url).substr(1)) {
+      location.type = path.extname(location.url).substr(1);
     }
   }
 

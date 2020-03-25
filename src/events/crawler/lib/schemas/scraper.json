@@ -5,8 +5,7 @@
     "timeseries": { "type": "boolean", "default": false },
     "type": {
       "type": "string",
-      "enum": ["json", "csv", "table", "list", "paragraph", "pdf", "image"],
-      "default": "list"
+      "enum": ["json", "csv", "table", "list", "paragraph", "pdf", "image", "png", "jpg"]
     },
     "maintainers": { "type": "array" },
     "sources": { "type": "array" },
@@ -29,7 +28,7 @@
     },
     "certValidation": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "priority": {
       "type": "number",

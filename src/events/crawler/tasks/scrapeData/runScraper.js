@@ -4,20 +4,6 @@ import * as geography from '../../lib/geography.js';
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
 /*
-  Combine location information with the passed data object
-*/
-function addLocationToData(data, location) {
-  Object.assign(data, location);
-
-  delete data.scraper;
-
-  // Store for usage in ratings
-  data._scraperDefinition = location;
-
-  return data;
-}
-
-/*
   Check if the provided data contains any invalid fields
 */
 function isValid(data) {
@@ -49,11 +35,11 @@ function addData(cases, location, result) {
     }
     for (const data of result) {
       if (isValid(data, location)) {
-        cases.push(addLocationToData(data, location));
+        cases.push({ ...location, ...data });
       }
     }
   } else if (isValid(result, location)) {
-    cases.push(addLocationToData(result, location));
+    cases.push({ ...location, ...result });
   }
 }
 
