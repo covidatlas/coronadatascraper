@@ -13,6 +13,9 @@ const scraper = {
   timeseries: true,
   priority: 1,
   // aggregate: 'state', // doesn't seem to be aggregating properly
+  _populations: {
+    Mayotte: 270372
+  },
   async scraper() {
     const data = await fetch.csv(this.url, false);
     let date = datetime.getYYYYMMDD();
@@ -47,7 +50,10 @@ const scraper = {
 
         const regionCode = row.maille_code.slice(4);
         data.feature = features.find(item => item.properties.code === regionCode);
-        data.population = data.feature ? data.feature.properties.population : undefined;
+        data.population = this._populations[data.state];
+        if (!data.population) {
+          data.population = data.feature ? data.feature.properties.population : undefined;
+        }
 
         if (data.state !== '') {
           states[regionCode] = { ...(states[regionCode] || {}), ...data };
@@ -56,6 +62,7 @@ const scraper = {
         states.FRA = { ...(states.FRA || {}), ...data };
       }
     }
+    console.log(states);
     return Object.values(states);
   }
 };
