@@ -208,7 +208,6 @@ export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerNa
   const layerMetadata = await json(
     `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`
   );
-  console.log(layerMetadata);
   const { serviceItemId } = layerMetadata;
   return `https://opendata.arcgis.com/datasets/${serviceItemId}_0.csv`;
 };
