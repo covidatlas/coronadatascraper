@@ -182,7 +182,11 @@ const scraper = {
       const $tr = $(tr);
       let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
       const cases = parse.number($tr.find('td:last-child').text());
-      if (county === 'Unknown County') {
+      
+      // Dekalb county is mis-capitalized on the state covid feed, so special case here to fix it.
+      if (county === 'Dekalb County') {
+        county = 'DeKalb County';
+      } else if (county === 'Unknown County') {
         county = UNASSIGNED;
       }
       counties.push({ county, cases });
