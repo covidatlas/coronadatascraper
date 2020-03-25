@@ -4,9 +4,6 @@ import * as datetime from '../../lib/datetime.js';
 
 import { features } from './features.json';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
-
 const scraper = {
   country: 'FRA',
   url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
@@ -19,10 +16,13 @@ const scraper = {
   },
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    let date = datetime.getYYYYMMDD();
-    if (process.env.SCRAPE_DATE) {
-      date = datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE));
-    }
+
+    const latestDate = data
+      .map(d => d.date)
+      .sort()
+      .pop();
+    const processDate = process.env.SCRAPE_DATE ? datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE)) : undefined;
+    const reportDate = processDate || latestDate;
 
     const states = {};
 
@@ -46,7 +46,7 @@ const scraper = {
         data.recovered = parse.number(row.gueris);
       }
 
-      if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === date) {
+      if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === reportDate) {
         data.state = row.maille_nom;
 
         const regionCode = row.maille_code.slice(4);
@@ -59,7 +59,7 @@ const scraper = {
         if (data.state !== '') {
           states[regionCode] = { ...(states[regionCode] || {}), ...data };
         }
-      } else if (granularity === 'pays' && rowDate === date) {
+      } else if (granularity === 'pays' && rowDate === reportDate) {
         states.FRA = { ...(states.FRA || {}), ...data };
       }
     }
