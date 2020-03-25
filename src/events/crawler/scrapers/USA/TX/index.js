@@ -10,10 +10,7 @@ import * as geography from '../../../lib/geography.js';
 const scraper = {
   state: 'TX',
   country: 'USA',
-  url: 'https://www.dshs.state.tx.us/news/updates.shtm',
-  type: 'table',
   aggregate: 'county',
-  certValidation: false,
   _counties: [
     'Anderson County',
     'Andrews County',
@@ -270,11 +267,15 @@ const scraper = {
     'Zapata County',
     'Zavala County'
   ],
+
   scraper: {
-    '0': async function() {
-      let counties = [];
+    '0': async function () {
+      let counties = [], $table;
+      this.type = 'table';
+      this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
+
       const $ = await fetch.page(this.url);
-      let $table;
+
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         $table = $('table[summary="Texas COVID-19 Cases"]');
       } else {
@@ -299,32 +300,30 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24': async function() {
+
+    '2020-3-24': async function () {
       let counties = [];
-      const $ = await fetch.page(this.url);
-      const $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
-      const $trs = $table.find('tbody > tr:not(:last-child)');
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        const county = geography.addCounty(
-          $tr
-            .find('td:first-child')
-            .text()
-            .replace(/[\d]*/g, '')
-        );
-        const cases = parse.number($tr.find('td:nth-child(2)').text());
-        let deaths = $tr.find('td:last-child').text();
-        if (deaths === '-') {
-          deaths = 0;
-        } else {
-          deaths = parse.number(deaths);
+      this.url = `https://services5.arcgis.com/ACaLB9ifngzawspq/arcgis/rest/services/COVID19County_ViewLayer/FeatureServer/0/query?f=json&returnGeometry=false&spatialRel=esriSpatialRelIntersects&geometry=%7B%22xmin%22%3A-12523442.714243783%2C%22ymin%22%3A2504688.542850286%2C%22xmax%22%3A-10018754.171395408%2C%22ymax%22%3A5009377.08569866%2C%22spatialReference%22%3A%7B%22wkid%22%3A102100%2C%22latestWkid%22%3A3857%7D%7D&geometryType=esriGeometryEnvelope&inSR=102100&outFields=*&orderByFields=Count_&outSR=102100&resultType=tile`;
+      this.type = 'json';
+
+      const data = await fetch.json(this.url);
+
+      for (const record of data.features) {
+        const rec = record.attributes;
+        const county = geography.addCounty(rec.County);
+
+        const cases = rec.Count_;
+        const deaths = rec.Deaths || 0;
+
+        if (cases > 0) {
+          counties.push({
+            county,
+            cases,
+            deaths
+          });
         }
-        counties.push({
-          county,
-          cases,
-          deaths
-        });
-      });
+      }
+
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
