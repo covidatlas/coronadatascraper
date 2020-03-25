@@ -2,26 +2,15 @@
   "type": "object",
   "properties": {
     "url": { "type": "string", "format": "uri" },
-    "timeseries": { "type": "boolean", "default": false },
+    "country": { "type": "string", "not": { "pattern": "unassigned" }, "maxLength": 3, "minLength": 3 },
+    "state": { "type": "string", "not": { "pattern": "unassigned" } },
+    "county": { "type": "string", "not": { "pattern": "unassigned" } },
+    "city": { "type": "string", "not": { "pattern": "unassigned" } },
+    "rating": { "type": "number" },
     "type": {
       "type": "string",
       "enum": ["json", "csv", "table", "list", "paragraph", "pdf", "image"],
       "default": "list"
-    },
-    "maintainers": { "type": "array" },
-    "sources": { "type": "array" },
-    "curators": { "type": "array" },
-    "country": {
-      "type": "string"
-    },
-    "state": {
-      "type": "string"
-    },
-    "county": {
-      "type": "string"
-    },
-    "city": {
-      "type": "string"
     },
     "headless": {
       "type": "boolean",
@@ -31,22 +20,12 @@
       "type": "boolean",
       "default": true
     },
+    "ssl": {
+      "type": "boolean"
+    },
     "priority": {
       "type": "number",
       "default": 0
-    },
-    "scraper": {
-      "oneOf": [
-        {
-          "generator": true
-        },
-        {
-          "type": "object",
-          "patternProperties": {
-            ".*": { "generator": true }
-          }
-        }
-      ]
     },
     "aggregate": {
       "type": "string"
@@ -57,8 +36,6 @@
     "county": ["country"],
     "city": ["country"]
   },
-  "patternProperties": {
-    "^_.*$": {}
-  },
+  "required": ["url", "rating", "type"],
   "additionalProperties": false
 }
