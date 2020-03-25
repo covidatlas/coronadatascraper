@@ -62,7 +62,6 @@ const scraper = {
         states.FRA = { ...(states.FRA || {}), ...data };
       }
     }
-    console.log(states);
     return Object.values(states);
   }
 };
