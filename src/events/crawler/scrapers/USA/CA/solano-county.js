@@ -28,6 +28,9 @@ const scraper = {
       const deaths = parse.number(lines[2].split(':')[1]);
 
       return { cases, deaths };
+    },
+    '2020-3-24': async function() {
+      throw new Error('Solano County, CA now uses a PDF');
     }
   }
 };
