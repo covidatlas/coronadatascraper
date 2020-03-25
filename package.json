@@ -22,7 +22,7 @@
     "timeseries": "node src/events/crawler/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
-    "pretty": "prettier --write --single-quote '**/*.js'"
+    "pretty": "prettier --write '**/*.js'"
   },
   "dependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
@@ -84,8 +84,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "prettier": {

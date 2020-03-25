@@ -5,8 +5,7 @@ import * as d3interpolate from 'd3-interpolate';
 import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
 
-import { adjustTanh, normalizePercent, getRatio, getPercent } from './lib/math.js';
-import { getLightness } from './lib/color.js';
+import { getRatio, getPercent } from './lib/math.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/events/crawler/lib/geography.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
@@ -24,16 +23,16 @@ const outlineColor = 'rgba(0, 0, 0, 0.3)';
 const choroplethColors = {
   stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
   yellowOrangePurple: [
-    '#faffef',
-    '#f3fac1',
-    '#f6f191',
-    '#ffe15d',
-    '#fec327',
-    '#ff9b00',
-    '#fe7000',
-    '#fa4d13',
-    '#c52155',
-    '#842e79'
+    '#fff5bd',
+    '#ffb500',
+    '#ff7e00',
+    '#f24b0d',
+    '#cd311f',
+    '#b10048',
+    '#7c0864',
+    '#4a185a',
+    '#2b123e',
+    '#140321'
   ],
   yellowOrangeRed: [
     '#fff5bd',
@@ -105,25 +104,25 @@ const choroplethColors = {
   ]
 };
 
-const choroplethColor = 'yellowOrangeRed';
+const choroplethColor = 'yellowOrangePurple';
 
 let chartDataMin;
 let chartDataMax;
 
 let domainArray = [];
 const colorsArray = choroplethColors[choroplethColor];
-const lightnessArray = colorsArray.map(key => 1 - getLightness(key) / 100);
 
-const max = Math.max(...lightnessArray);
-const min = Math.min(...lightnessArray);
-
+// Create domains array equal to number of colors
+// distribution of lightness/colors handled outside of this tool
 for (let i = 0; i < colorsArray.length; i++) {
-  const l = lightnessArray[i]; // lightness value
-
-  const y = normalizePercent(min, max, l);
-  domainArray.push(Number(y.toFixed(2)));
+  let inc;
+  if (i === 0) {
+    inc = 0;
+  } else {
+    inc = i / colorsArray.length;
+  }
+  domainArray.push(inc);
 }
-
 domainArray = domainArray.sort();
 
 const fill = d3scale
@@ -142,7 +141,7 @@ const choroplethStyles = {
     const affectedPercent = locationData[type] / location.population;
     const percentRatio = affectedPercent / worstAffectedPercent;
 
-    return adjustTanh(percentRatio);
+    return percentRatio;
   },
   rankAdjustedRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
     // Color based on rank
@@ -202,12 +201,12 @@ function ramp(color, n, containerId) {
   canvas.setAttribute('height', '16px');
   const context = canvas.getContext('2d');
 
-  canvas.style.width = '300px';
+  canvas.style.width = `${n}px`;
   canvas.style.height = '16px';
   canvas.style.imageRendering = 'pixelated';
 
   for (let i = 0; i < n; ++i) {
-    context.fillStyle = fill(i / (n - 1));
+    context.fillStyle = color(i / (n - 1));
     context.fillRect(i, 0, 1, 32);
   }
   return canvas;
@@ -225,11 +224,11 @@ function createLegend(min, max) {
   container.appendChild(heading);
 
   base.appendChild(container);
-  ramp(choroplethColors.yellowOrangeRed, 300, containerId);
+  ramp(fill, 300, containerId);
 
   // Correct value of max percent so that it's easier to parse
-  const lowestPercent = (min * 100).toFixed(4);
-  const worstPercent = (max * 100).toFixed(4);
+  const lowestPercent = (min * 100).toFixed(8);
+  const worstPercent = (max * 100).toFixed(2);
 
   const scaleText = document.createElement('span');
   scaleText.className = 'mapLegend-scaleLabels';

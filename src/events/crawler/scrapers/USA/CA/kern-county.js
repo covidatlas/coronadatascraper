@@ -43,7 +43,7 @@ const scraper = {
       return { cases, tested };
     },
     '2020-3-23': async function() {
-      throw new Error('Kern County, CA uses an image now');
+      throw new Error('Kern County, CA now uses a PNG and PDF');
     }
   }
 };

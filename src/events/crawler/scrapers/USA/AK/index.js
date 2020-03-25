@@ -60,19 +60,21 @@ const scraper = {
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
-    const $table = $('th:contains("Region")').closest('table');
+    const $table = $('td:contains("Gulf Coast")').closest('table');
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const cases = parse.number($tr.find('td:last-child').text());
       const region = parse.string($tr.find('> *:first-child').text());
 
-      if (index < 1 || region === 'TOTAL') {
+      const county = `${region} Economic Region`;
+      const population = this._populations[region];
+
+      // Only process the rows which match an economic region
+      if (population === undefined) {
         return;
       }
 
-      const county = `${region} Economic Region`;
-      const population = this._populations[region];
       const countyObj = {
         county,
         cases,
