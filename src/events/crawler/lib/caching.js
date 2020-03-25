@@ -6,6 +6,7 @@
 import path from 'path';
 import crypto from 'crypto';
 
+import join from './join.js';
 import * as datetime from './datetime.js';
 import * as fs from './fs.js';
 
@@ -43,8 +44,8 @@ export const getCachedFileName = (url, type) => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
-  const cachePath = date === false ? TIMESERIES_CACHE_PATH : path.join(DEFAULT_CACHE_PATH, date);
-  return path.join(cachePath, getCachedFileName(url, type));
+  const cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
+  return join(cachePath, getCachedFileName(url, type));
 };
 
 /**

@@ -5,6 +5,7 @@
 import { sync as glob } from 'fast-glob';
 import { readFileSync as readFile } from 'fs';
 import path from 'path';
+import join from './lib/join.js';
 import { readJSON } from './lib/fs.js';
 import { get } from './lib/get.js';
 
@@ -45,9 +46,6 @@ To add test coverage for a scraper, you only need to provide test assets; no new
 */
 
 // Utility functions
-
-// Join path and normalize to forward slash
-const join = (...args) => path.join(...args).replace(/\\/g, '/');
 
 // Extract date from filename, e.g. `expected-2020-03-16.json` -> `2020-03-16`
 const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
