@@ -29,10 +29,6 @@ To help you contribute a new source, please read the [Sources and Scrapers](./do
 
 Send a pull request with your scraper, and be sure to run the scraper first with the instructions specified in the guide to make sure the data is valid.
 
-## Notice an error in our data?
-
-Please file an issue and specify the specific location and 
-
 ## License
 
 This project is licensed under the permissive [BSD 2-clause license](LICENSE).
