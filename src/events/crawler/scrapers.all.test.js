@@ -76,7 +76,7 @@ describe('all scrapers', () => {
           const fileName = path.basename(filePath);
           const fullPath = path.resolve(__dirname, filePath);
           const source = { [fileName]: readFile(fullPath).toString() };
-          get.setSources(source);
+          get.addSources(source);
         }
       });
 
