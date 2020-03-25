@@ -21,7 +21,7 @@ const scoresheet = {
     county: 1,
     city: 0.5
   },
-  aggregateWorth: 1.5, // agregate is gold
+  aggregateWorth: 1.5, // aggregate is gold
   headlessWorth: -0.5, // headless should be avoided
   sslWorth: 0.25
 };
