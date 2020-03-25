@@ -26,7 +26,8 @@ const countryMap = {
   'Congo (Brazzaville)': 'COG',
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
-  'Gambia, The': 'GMB'
+  'Gambia, The': 'GMB',
+  US: 'USA'
 };
 
 /*
