@@ -22,6 +22,8 @@ const scraper = {
     } else if (datetime.dateIsBefore(date, '2020-03-24')) {
       const datePart = datetime.getYYYYMMDD(date, '');
       this.url = `${this._baseUrl}COVID19CountyResults${datePart}.json`;
+    } else if (datetime.dateIsBefore(date, '2020-03-25')) {
+      this.url = `${this._baseUrl}COVID19CountyResults202003250.json`;
     } else {
       this.url = 'http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json';
     }
