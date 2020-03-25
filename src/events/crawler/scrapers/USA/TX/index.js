@@ -10,8 +10,6 @@ import * as geography from '../../../lib/geography.js';
 const scraper = {
   state: 'TX',
   country: 'USA',
-  url: 'https://www.dshs.state.tx.us/news/updates.shtm',
-  type: 'table',
   aggregate: 'county',
   certValidation: false,
   _counties: [
@@ -270,9 +268,14 @@ const scraper = {
     'Zapata County',
     'Zavala County'
   ],
+  _countyMap: {
+    'De Witt County': 'DeWitt County'
+  },
   scraper: {
     '0': async function() {
       let counties = [];
+      this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
+      this.type = 'table';
       const $ = await fetch.page(this.url);
       let $table;
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
@@ -299,8 +302,10 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24': async function() {
+    '2020-3-24 16:00:00': async function() {
       let counties = [];
+      this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
+      this.type = 'table';
       const $ = await fetch.page(this.url);
       const $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
       const $trs = $table.find('tbody > tr:not(:last-child)');
@@ -325,6 +330,24 @@ const scraper = {
           deaths
         });
       });
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    },
+    '2020-3-24': async function() {
+      let counties = [];
+      this.url = 'https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv';
+      this.type = 'csv';
+      const data = await fetch.csv(this.url);
+      for (const row of data) {
+        let county = geography.addCounty(parse.string(row.County));
+        county = this._countyMap[county] || county;
+        const data = {
+          county,
+          cases: parse.number(row.Count_ || 0)
+        };
+        counties.push(data);
+      }
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
