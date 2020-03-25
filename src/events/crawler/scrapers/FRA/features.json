@@ -9293,7 +9293,7 @@
           ]
         ]
       },
-      "properties": { "code": "02", "name": "Martinique", "population": 1128 }
+      "properties": { "code": "02", "name": "Martinique", "population": 376480 }
     },
     {
       "type": "Feature",
@@ -9859,7 +9859,7 @@
           ]
         ]
       },
-      "properties": { "code": "03", "name": "Guyane", "population": 86504 }
+      "properties": { "code": "03", "name": "Guyane", "population": 290691 }
     },
     {
       "type": "Feature",
@@ -10315,7 +10315,7 @@
           ]
         ]
       },
-      "properties": { "code": "06", "name": "Mayotte", "population": 376 }
+      "properties": { "code": "06", "name": "Mayotte", "population": 270372 }
     },
     {
       "type": "Feature",
