@@ -29,8 +29,9 @@ export const csvForDay = function(data) {
     }
   }
 
-  // Drop coordinates
-  columns = columns.filter(column => column !== 'coordinates');
+  // Drop unwanted columns.
+  const unwanted = ['coordinates', 'maintainers'];
+  columns = columns.filter(column => !unwanted.includes(column));
 
   // Turn data into arrays
   const csvData = [columns];
