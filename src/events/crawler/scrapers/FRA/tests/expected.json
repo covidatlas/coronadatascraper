@@ -131,7 +131,7 @@
     "url": "",
     "cases": 53,
     "state": "Martinique",
-    "population": 1128,
+    "population": 376480,
     "deaths": 1,
     "recovered": 0
   },
@@ -141,7 +141,7 @@
     "deaths": 0,
     "recovered": 0,
     "state": "Guyane",
-    "population": 86504
+    "population": 290691
   },
   {
     "url": "",
@@ -155,7 +155,7 @@
     "url": "",
     "cases": 24,
     "state": "Mayotte",
-    "population": 376,
+    "population": 270372,
     "deaths": 0,
     "recovered": 0
   }

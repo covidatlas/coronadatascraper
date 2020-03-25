@@ -312,7 +312,7 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 <ul><li><a href="/dph/Epi/id/Pages/COVID-19/default.aspx">COVID-19 Homepage</a></li>
 <li><a href="/dph/Epi/id/Pages/COVID-19/monitoring.aspx">Case Counts</a></li>
 <li><a href="/dph/Epi/id/Pages/Human-Coronavirus.aspx">About Human Coronaviruses</a></li>
-<li><a href="/dph/Epi/id/Pages/COVID-19/communications.aspx">Media &amp; Communications</a></li></ul>
+<li><a href="/dph/Epi/id/Pages/covid-19/communications.aspx">Media &amp; Communications</a></li></ul>
 <h3 class="dz-Element-h3">What to do:</h3>
 <ul><li><a href="/dph/Epi/id/Pages/COVID-19/Sick.aspx">If you are sick</a></li>
 <li><span><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx">If you may have been exposed</a><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx"><span style="display:inline-block"></span></a></span><br /></li>
@@ -349,101 +349,117 @@ Resources for:</h3>
 
 <h4>Confirmed cases in Alaska by region</h4>
 <h4><img src="/dph/Epi/id/PublishingImages/COVID-19/COVID-19_confirmedcases_byday.png" alt="" style="margin:5px;width:450px;height:285px" /><span style="color:rgb(51, 51, 51);font-size:12.8px"></span><span style="color:rgb(51, 51, 51);font-size:12.8px"></span></h4>
-<div><ul><li>Cumulative number of cases hospitalized to date:  0​</li>
-<li><em><strong>Updated March 23, 2020; </strong>updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><br /></li></ul></div>
-<table width="100%" cellspacing="0" cellpadding="0" style="border:1px solid;border-collapse:collapse">
-  <tbody>
-    <tr>
-      <th scope="col" width="143" valign="top"><p align="center"><strong>Region</strong></p>
-      </th>
-
-<th scope="col" width="143" valign="top"><p align="center"><strong>Travel-Related</strong></p>
-      </th>
-
-<th scope="col" width="143" valign="top"><p align="center"><strong>Non-Travel</strong></p>
-      </th>
-
-<th scope="col" width="138" valign="top"><p align="center"><strong>Total</strong></p>
-    </th></tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Anchorage</strong></p>
-<strong>
-      </strong></th>
-
-
-<td width="143" valign="top"><p align="center">11</p></td>
-<td width="143" valign="top"><p align="center">6</p></td>
-      
-      <td width="138" valign="top"><p align="center">17</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Gulf Coast</strong></p>
-      </th>
-<td width="143" valign="top"><p align="center">2</p></td>
-<td width="143" valign="top"><p align="center">​1</p></td>
-      
-      <td width="138" valign="top"><p align="center">3</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Interior</strong></p>
-      </th>
-
-<td width="143" valign="top"><p align="center">3</p></td>
-<td width="143" valign="top"><p align="center">4</p></td>
-      
-      <td width="138" valign="top"><p align="center">7</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Mat-Su</strong></p>
-      </th>
-
-<td width="143" valign="top"><p align="center">2</p></td>
-<td width="143" valign="top"><p align="center">​0</p></td>
-      
-      <td width="138" valign="top"><p align="center">2</p></td>
-    </tr>
-    <tr>
-      <th><p><strong> Northern</strong></p></th>
-      <td width="143" valign="top"><p align="center">0</p></td>
-<td width="143" valign="top"><p align="center">0</p></td>
-
-      <td width="138" valign="top"><p align="center">0</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Southeast</strong></p>
-      </th>
-<td width="143" valign="top"><p align="center">1</p></td>
-<td colspan="1" width="143" valign="top"><p align="center">6</p></td>
-      
-      <td width="138" valign="top"><p align="center">7</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> Southwest</strong></p>
-      </th>
-<td width="143" valign="top"><p align="center">0</p></td>
-<td colspan="1" width="143" valign="top"><p align="center">0</p></td>
-      
-      <td width="138" valign="top"><p align="center">0</p></td>
-    </tr>
-    <tr>
-      <th scope="col" width="143" valign="top"><p><strong> TOTAL</strong></p>
-
-      </th>
-<td width="143" valign="top"><p align="center">19</p></td>
-<td colspan="1" width="143" valign="top"><p align="center">17</p></td>
-      
-      <td width="138" valign="top"><p align="center">36</p></td>
-    </tr>
-  </tbody>
-</table>
+<div><ul><li>Cumulative number of cases hospitalized to date:  0​1</li>
+<li><span>Cumulative number of deaths to date:  0​1<span style="display:inline-block"></span></span><br /></li>
+<li><em><strong>Updated March 24, 2020; </strong>updates made daily by 5pm and reflect cases reported as of 3pm that day.</em></li></ul></div>
+<table width="100%" cellspacing="0" cellpadding="5" style="border:1px solid;border-collapse:collapse">
+  <tbody><tr>
+    <td width="109" valign="top"><p align="center"><strong>Region</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>Travel-Related</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>Non-Travel</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>Total</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Anchorage</strong><strong> </strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>11</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>6</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong><em>17</em></strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Gulf Coast</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>​</strong><strong>2</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>4</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Seward</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>1</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Sterling</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>0</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>2</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Soldotna</em></p></td>
+    <td width="71" valign="top"><p align="center">1</p></td>
+    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>1</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Interior</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>3</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>6</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>9</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Fairbanks</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>3</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>6</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>9</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Mat-Su</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>​</strong><strong>0</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>2</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Palmer</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>2</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p><strong> Northern</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>0</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Southeast</strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>8</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>10</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Juneau</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><em> Ketchikan</em></p></td>
+    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="58" valign="top"><p align="center"><em>7</em></p></td>
+    <td width="47" valign="top"><p align="center"><em>8</em></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> Southwest</strong><strong> </strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>0</strong></p></td>
+  </tr>
+  <tr>
+    <td width="109" valign="top"><p><strong> TOTAL</strong><strong> </strong></p></td>
+    <td width="71" valign="top"><p align="center"><strong>20</strong></p></td>
+    <td width="58" valign="top"><p align="center"><strong>22</strong></p></td>
+    <td width="47" valign="top"><p align="center"><strong>42</strong></p></td>
+  </tr>
+</tbody></table>
 
 
 <ul><li style="font-size:12.8px"><a href="http://live.laborstats.alaska.gov/pop/index.cfm" style="font-size:12.8px"><strong style="font-size:12.8px"><em style="font-size:12.8px">Region:</em></strong> Economic regions definitions​</a></li>
 <li><strong><em>Travel-related:</em></strong> Exposure/source of the virus was outside of Alaska.</li>
-<li><span><em><strong>Updated March 23, 2020;</strong> updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><span style="display:inline-block"></span></span><br /></li></ul>
-<div class="box" style="margin-bottom:1em"><span><h3 class="dz-Element-h3">COVID-19 tests for Alaska residents<br /></h3>
+<li><span><em><strong>Updated March 24, 2020;</strong> updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><span style="display:inline-block"></span></span><br /></li></ul>
+<div class="box" style="margin-bottom:1em"><span><h3 class="dz-Element-h3">COVID-19 tests for Alaska residents</h3></span><span>
 <h4 class="dz-Element-h4">How many tests were completed in total? </h4>
-<div><div><span><span><h4><img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_cumulative.png" style="margin:5px 0px;width:98%;height:281px" /><span style="display:inline-block"></span></h4></span></span> <span><h4 class="dz-Element-h4">How many tests are completed each day?<img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_byday.png" style="width:98%;height:281px" /></h4></span></div></div></span><span>
+<div><div><span><span><h4><img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_cumulative.png" style="margin:5px 0px;width:98%;height:281px" /><span style="display:inline-block"></span></h4></span></span> <span><h4 class="dz-Element-h4">How many tests are completed each day?<img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_byday.png" style="width:98%;height:281px" /></h4>
+</span></div>
+<div><ul><li><span><a href="/dph/Epi/id/SiteAssets/Pages/HumanCoV/COVID-19_epi_testingcurve.csv">COVID-19 testing data for Alaska residents in CSV format</a><a href="/dph/Epi/id/SiteAssets/Pages/HumanCoV/COVID-19_epi_testingcurve.csv"><span style="display:inline-block"></span></a></span><span><br /></span></li></ul></div></div></span><span>
 </span></div>
 <h2 class="dz-Element-h2">CDC Case Counts</h2>
 <div>Thank you for your patience while this page loads. Embedded content brought to you through CDC content syndication:<br /></div>
