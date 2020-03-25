@@ -39,13 +39,22 @@ export const readFile = async (filePath, encoding = 'utf8') => {
   return fs.promises.readFile(filePath, encoding);
 };
 
+const stripBOM = content => {
+  content = content.toString();
+  // Remove byte order marker. This catches EF BB BF (the UTF-8 BOM)
+  // because the buffer-to-string conversion in `fs.readFileSync()`
+  // translates it to FEFF, the UTF-16 BOM.
+  if (content.charCodeAt(0) === 0xfeff) content = content.slice(1);
+  return content;
+};
+
 /**
   Read and return a JSON file at a given path.
 
   @throws ENOENT if file does not exists.
 */
 export const readJSON = async filePath => {
-  return JSON.parse(await readFile(filePath));
+  return JSON.parse(stripBOM(await readFile(filePath)));
 };
 
 /**
