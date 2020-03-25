@@ -14,7 +14,8 @@ const scraper = {
   priority: 1,
   // aggregate: 'state', // doesn't seem to be aggregating properly
   _populations: {
-    Mayotte: 270372
+    Mayotte: 270372,
+    Martinique: 376480
   },
   async scraper() {
     const data = await fetch.csv(this.url, false);
