@@ -18,10 +18,14 @@ const scraper = {
   type: 'table',
   async scraper() {
     const $ = await fetch.page(this.url);
-    const $h2Cases = $('h2:contains("Confirmed Positives")');
-    const $h2Deaths = $('h2:contains("Number of Deaths")');
-    const cases = parse.number($h2Cases[0].parent.children[5].children[0].data);
-    const deaths = parse.number($h2Deaths[0].parent.children[5].children[0].data);
+    const $divCases = $('.et_pb_cta_2')
+      .find('div:contains("Confirmed Positives")')
+      .find('p:nth-child(3)');
+    const $divDeaths = $('.et_pb_cta_3')
+      .find('div:contains("Number of Deaths")')
+      .find('p:nth-child(3)');
+    const cases = parse.number($divCases[0].children[0].data);
+    const deaths = parse.number($divDeaths[0].children[0].data);
     return {
       cases,
       deaths
