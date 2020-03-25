@@ -6,6 +6,9 @@ import * as caching from './caching.js';
 import * as datetime from './datetime.js';
 import { get } from './get.js';
 
+// The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
+// order to be mocked independently of the rest of these functions. Here we re-export `get` as
+// `fetch.fetch` so no existing code has to change.
 export const fetch = get;
 
 const CHROME_AGENT =
