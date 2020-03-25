@@ -100,8 +100,8 @@ const scraper = {
 
         const countyName = geography.addCounty(rows[i][0]);
 
-        let cases = undefined;
-        let deaths = undefined;
+        let cases;
+        let deaths;
 
         if (rows[i].length === 4) {
           cases = parse.number(rows[i][1]);
