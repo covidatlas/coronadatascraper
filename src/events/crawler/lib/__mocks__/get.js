@@ -1,23 +1,26 @@
 ﻿/* eslint-disable import/prefer-default-export */
+import sanitizeUrl from '../__test_utils__/sanitizeUrl.js';
 
-import path from 'path';
-
-const mock = async url => {
-  const ext = path.extname(url);
-  const urlKey = path.basename(url, ext);
-  const sourceKey = Object.keys(mock.sources).find(key => urlKey.endsWith(key));
-  if (sourceKey === undefined)
-    throw new Error(`You need to provide a mock source for ${url} using fetch.addMockSources().`);
-  return mock.sources[sourceKey];
+/**
+ * This function mocks the `get` function for testing. To use it, first pass an object of sources to `get.setSources`.
+ * If the given test suite only makes one call to `get`, you can just
+ * @param {*} url The URL passed to `get`.
+ */
+const mockGet = async url => {
+  const keys = Object.keys(mockGet.sources);
+  const urlKey = sanitizeUrl(url);
+  const sourceKey = keys.find(key => key.startsWith(urlKey));
+  if (sourceKey === undefined) {
+    console.log({ url, keys, sourceKey });
+    throw new Error(`You need to provide a mock source for ${url}. The file should be called ${urlKey}`);
+  }
+  return mockGet.sources[sourceKey];
 };
 
-mock.sources = {};
+mockGet.sources = {};
 
-mock.setSources = s => {
-  mock.sources = {
-    ...mock.sources,
-    ...s
-  };
+mockGet.setSources = s => {
+  mockGet.sources = { ...mockGet.sources, ...s };
 };
 
-export const get = mock;
+export const get = mockGet;
