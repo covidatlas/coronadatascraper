@@ -21,10 +21,23 @@ const scoresheet = {
     county: 1,
     city: 0.5
   },
-  aggregateWorth: 1.5, // agregate is gold
+  aggregateWorth: 1.5, // aggregate is gold
   headlessWorth: -0.5, // headless should be avoided
   sslWorth: 0.25
 };
+
+const sumValues = obj =>
+  Object.values(obj).reduce((sum, curr) => {
+    if (typeof curr === 'object') {
+      return sumValues(curr) + sum;
+    }
+    if (curr > 0) {
+      return curr + sum;
+    }
+    return sum;
+  }, 0);
+
+const bestScore = sumValues(scoresheet);
 
 const rateLocation = location => {
   let rating = 0;
@@ -68,7 +81,7 @@ const rateLocation = location => {
     rating += scoresheet.timeseries;
   }
 
-  return rating;
+  return rating / bestScore;
 };
 
 const calculateRatings = async args => {
