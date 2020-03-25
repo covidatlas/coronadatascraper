@@ -99,8 +99,20 @@ const scraper = {
         if (!Number.isNaN(parse.number(rows[i][0]))) continue;
 
         const countyName = geography.addCounty(rows[i][0]);
-        const cases = parse.number(rows[i][1]);
-        const deaths = parse.number(rows[i][3]);
+
+        let cases;
+        let deaths;
+
+        if (rows[i].length === 4) {
+          cases = parse.number(rows[i][1]);
+          deaths = parse.number(rows[i][3]);
+        } else if (rows[i].length === 5) {
+          // sometimes Foo County gets split across columns 1+2
+          cases = parse.number(rows[i][2]);
+          deaths = parse.number(rows[i][4]);
+        } else {
+          throw new Error('Badly formatted row in PDF');
+        }
 
         counties.push({
           county: countyName,

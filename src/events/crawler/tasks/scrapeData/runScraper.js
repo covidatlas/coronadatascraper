@@ -21,10 +21,6 @@ function addLocationToData(data, location) {
   Check if the provided data contains any invalid fields
 */
 function isValid(data) {
-  if (data.cases === undefined) {
-    throw new Error(`Invalid data: contains no case data`);
-  }
-
   for (const [prop, value] of Object.entries(data)) {
     if (value === null) {
       throw new Error(`Invalid data: ${prop} is null`);

@@ -476,7 +476,7 @@
           ]
         ]
       },
-      "properties": { "code": "11", "name": "\u00cele-de-France" }
+      "properties": { "code": "11", "name": "\u00cele-de-France", "population": 12246234 }
     },
     {
       "type": "Feature",
@@ -1333,7 +1333,7 @@
           ]
         ]
       },
-      "properties": { "code": "24", "name": "Centre-Val de Loire" }
+      "properties": { "code": "24", "name": "Centre-Val de Loire", "population": 2582522 }
     },
     {
       "type": "Feature",
@@ -2334,7 +2334,7 @@
           ]
         ]
       },
-      "properties": { "code": "27", "name": "Bourgogne-Franche-Comt\u00e9" }
+      "properties": { "code": "27", "name": "Bourgogne-Franche-Comt\u00e9", "population": 2813289 }
     },
     {
       "type": "Feature",
@@ -3106,7 +3106,7 @@
           ]
         ]
       },
-      "properties": { "code": "28", "name": "Normandie" }
+      "properties": { "code": "28", "name": "Normandie", "population": 3342467 }
     },
     {
       "type": "Feature",
@@ -3842,7 +3842,7 @@
           ]
         ]
       },
-      "properties": { "code": "32", "name": "Hauts-de-France" }
+      "properties": { "code": "32", "name": "Hauts-de-France", "population": 6023336 }
     },
     {
       "type": "Feature",
@@ -4932,7 +4932,7 @@
           ]
         ]
       },
-      "properties": { "code": "44", "name": "Grand Est" }
+      "properties": { "code": "44", "name": "Grand Est", "population": 5548090 }
     },
     {
       "type": "Feature",
@@ -5810,7 +5810,7 @@
           ]
         ]
       },
-      "properties": { "code": "52", "name": "Pays de la Loire" }
+      "properties": { "code": "52", "name": "Pays de la Loire", "population": 3787411 }
     },
     {
       "type": "Feature",
@@ -7102,7 +7102,7 @@
           ]
         ]
       },
-      "properties": { "code": "53", "name": "Bretagne" }
+      "properties": { "code": "53", "name": "Bretagne", "population": 3336643 }
     },
     {
       "type": "Feature",
@@ -8588,7 +8588,7 @@
           ]
         ]
       },
-      "properties": { "code": "75", "name": "Nouvelle-Aquitaine" }
+      "properties": { "code": "75", "name": "Nouvelle-Aquitaine", "population": 5994336 }
     },
     {
       "type": "Feature",
@@ -8905,7 +8905,7 @@
           ]
         ]
       },
-      "properties": { "code": "01", "name": "Guadeloupe" }
+      "properties": { "code": "01", "name": "Guadeloupe", "population": 390253 }
     },
     {
       "type": "Feature",
@@ -9293,7 +9293,7 @@
           ]
         ]
       },
-      "properties": { "code": "02", "name": "Martinique" }
+      "properties": { "code": "02", "name": "Martinique", "population": 376480 }
     },
     {
       "type": "Feature",
@@ -9859,7 +9859,7 @@
           ]
         ]
       },
-      "properties": { "code": "03", "name": "Guyane" }
+      "properties": { "code": "03", "name": "Guyane", "population": 290691 }
     },
     {
       "type": "Feature",
@@ -9978,7 +9978,7 @@
           ]
         ]
       },
-      "properties": { "code": "04", "name": "La R\u00e9union" }
+      "properties": { "code": "04", "name": "La R\u00e9union", "population": 853659 }
     },
     {
       "type": "Feature",
@@ -10315,7 +10315,7 @@
           ]
         ]
       },
-      "properties": { "code": "06", "name": "Mayotte" }
+      "properties": { "code": "06", "name": "Mayotte", "population": 270372 }
     },
     {
       "type": "Feature",
@@ -11571,7 +11571,7 @@
           ]
         ]
       },
-      "properties": { "code": "76", "name": "Occitanie" }
+      "properties": { "code": "76", "name": "Occitanie", "population": 5903190 }
     },
     {
       "type": "Feature",
@@ -13008,7 +13008,7 @@
           ]
         ]
       },
-      "properties": { "code": "84", "name": "Auvergne-Rh\u00f4ne-Alpes" }
+      "properties": { "code": "84", "name": "Auvergne-Rh\u00f4ne-Alpes", "population": 8037059 }
     },
     {
       "type": "Feature",
@@ -14051,7 +14051,7 @@
           ]
         ]
       },
-      "properties": { "code": "93", "name": "Provence-Alpes-C\u00f4te d'Azur" }
+      "properties": { "code": "93", "name": "Provence-Alpes-C\u00f4te d'Azur", "population": 5065723 }
     },
     {
       "type": "Feature",
@@ -14550,7 +14550,7 @@
           ]
         ]
       },
-      "properties": { "code": "94", "name": "Corse" }
+      "properties": { "code": "94", "name": "Corse", "population": 337796 }
     }
   ]
 }

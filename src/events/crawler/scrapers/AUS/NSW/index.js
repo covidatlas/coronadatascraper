@@ -9,7 +9,7 @@ const parseRow = $row => parse.number($row.find('td:last-child').text());
 
 const scraper = {
   country: 'AUS',
-  maintainer: maintainers.camjc,
+  maintainer: [maintainers.camjc],
   priority: 2,
   sources: [
     {
