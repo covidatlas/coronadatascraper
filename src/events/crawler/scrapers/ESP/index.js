@@ -43,17 +43,10 @@ const scraper = {
     }
   ],
   async scraper() {
-    const isDate = s => s.includes('/');
+    const isIsoDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s);
 
     const parseDate = s => {
-      // Source data currently uses ddmmyyyy format for dates,
-      // but is (maybe?) planning to switch to yyyymmdd.
-      // See https://github.com/datadista/datasets/issues/14
-      // When/if this happens, replace contents of this function with:
-      // return LocalDate.parse(s)
-
-      const [d, m, y] = s.split('/');
-      return LocalDate.parse(`${y}-${m}-${d}`);
+      return LocalDate.parse(s);
     };
 
     const rawData = {};
@@ -68,15 +61,15 @@ const scraper = {
     //      {
     //        cod_ine: '01',
     //        CCAA: 'Andalucía',
-    //        '27/02/2020': '1',
-    //        '28/02/2020': '6',
+    //        '2020-02-27': '1',
+    //        '2020-02-28': '6',
     //        // ...
     //      },
     //      {
     //        cod_ine: '02',
     //        CCAA: 'Aragón',
-    //        '27/02/2020': '0',
-    //        '28/02/2020': '1',
+    //        '2020-02-27': '0',
+    //        '2020-02-28': '1',
     //        // ...
     //      },
     //      //... other locations
@@ -98,7 +91,7 @@ const scraper = {
         const deathsRow = rawData.deaths.find(isSameLocation);
         const recoveredRow = rawData.recovered.find(isSameLocation);
         return Object.keys(casesRow)
-          .filter(isDate)
+          .filter(isIsoDate)
           .map(date => {
             return {
               state: parse.string(location),
@@ -128,7 +121,7 @@ const scraper = {
 
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
-      .filter(isDate)
+      .filter(isIsoDate)
       .map(parseDate)
       .sort();
 
