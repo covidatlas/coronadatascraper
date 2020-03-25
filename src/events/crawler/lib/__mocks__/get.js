@@ -2,8 +2,26 @@
 import sanitizeUrl from '../__test_utils__/sanitizeUrl.js';
 
 /**
- * This function mocks the `get` function for testing. To use it, first pass an object of sources to `get.setSources`.
- * If the given test suite only makes one call to `get`, you can just
+ * This function mocks the `get` function for testing. To use it, first pass an object of sources to
+ * `get.addSources`.
+ *
+ * Example:
+ *
+ * ```js
+ * // something.test.js
+ *
+ * import { get } from './lib/get.js';
+ *
+ * jest.mock('./lib/get.js');
+ *
+ * const sampleResponse = '<html>...</html>'
+ * get.addSources({
+ *  'www_source_com_covid19_data': sampleResponse
+ * })
+ * ```
+ * Now if any subsequent code calls `get` (directly or indirectly) for the url
+ * `https://www.source.com/covid19/data.html`, it will receive the value of `sampleResponse`.
+ *
  * @param {*} url The URL passed to `get`.
  */
 const mockGet = async url => {
@@ -19,7 +37,7 @@ const mockGet = async url => {
 
 mockGet.sources = {};
 
-mockGet.setSources = s => {
+mockGet.addSources = s => {
   mockGet.sources = { ...mockGet.sources, ...s };
 };
 
