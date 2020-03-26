@@ -17,7 +17,6 @@ const scraper = {
   _reject: [{ county: 'Illinois County' }, { county: 'Chicago County' }, { county: 'Suburban Cook County' }],
   async scraper() {
     const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
-    
     if (datetime.dateIsBefore(date, '2020-03-24')) {
       this.url = `${this._baseUrl}sites/default/files/COVID19/COVID19CountyResults.json`;
     } else if (datetime.dateIsBefore(date, '2020-03-25')) {
@@ -25,36 +24,38 @@ const scraper = {
     } else if (datetime.dateIsBefore(date, '2020-03-26')) {
       this.url = 'http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json';
     } else {
-      const sourcePage = 'http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus';
+      const sourcePage =
+        'http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus';
       const sourceScrape = await fetch.fetch(sourcePage, date);
-      
       const regex = /Plotly\.d3\.json\('(.+)',/gm;
       const m = regex.exec(sourceScrape);
-      this.url = `${this._baseUrl}${m[1]}`
+      this.url = `${this._baseUrl}${m[1]}`;
     }
 
     const data = await fetch.json(this.url);
     const counties = [];
 
-    var chicago = data.characteristics_by_county.values.find(x => x.County == 'Chicago');
+    const chicago = data.characteristics_by_county.values.find(x => x.County === 'Chicago');
 
-    for (var county of data.characteristics_by_county.values) {
-      if (county.County=='Illinois' || county.County=='Chicago') {
+    for (const county of data.characteristics_by_county.values) {
+      if (county.County === 'Illinois' || county.County === 'Chicago') {
         continue;
-      } else if (county.County=='Cook') {
-        var output = {
+      } else if (county.County === 'Cook') {
+        const output = {
           county: geography.addCounty(county.County),
           cases: parse.number(county.confirmed_cases) + parse.number(chicago.confirmed_cases)
         };
+        if (rules.isAcceptable(output, null, this._reject)) {
+          counties.push(output);
+        }
       } else {
-        var output = {
+        const output = {
           county: geography.addCounty(county.County),
           cases: parse.number(county.confirmed_cases)
         };
-      }
-      
-      if (rules.isAcceptable(output, null, this._reject)) {
-        counties.push(output);
+        if (rules.isAcceptable(output, null, this._reject)) {
+          counties.push(output);
+        }
       }
     }
 
