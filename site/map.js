@@ -115,7 +115,7 @@ function populateMap() {
     if (locationData.recovered !== undefined) {
       htmlString += `<tr><th>Recovered:</th><td>${locationData.recovered.toLocaleString()}</td></tr>`;
     }
-    if (locationData.active !== locationData.cases) {
+    if (locationData.active && locationData.active !== locationData.cases) {
       htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
     }
     htmlString += `</tbody></table>`;
