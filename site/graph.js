@@ -11,13 +11,13 @@ const showGraph = (location, locationData) => {
   locationData.forEach(day => {
     const date = new Date(day.date);
 
-    if (day.active)
+    if (day.cases)
       casesData.push({
         y: day.cases,
         t: date
       });
 
-    if (day.cases)
+    if (day.active)
       activeData.push({
         y: day.active,
         t: date
