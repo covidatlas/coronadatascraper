@@ -14,13 +14,13 @@ const scraper = {
     }
   ],
   async scraper() {
-    const csrfRequestResponse = await needle('get', this.url);
+    const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
     const csrfCookies = csrfRequestResponse.cookies;
-    const { csrfToken } = JSON.parse(csrfRequestResponse.body);
+    const { csrfToken } = csrfRequestResponse.body;
     // assert typeof csrfToken !== 'undefined'
 
-    const { body } = await needle('get', `${this.url}${csrfToken}`, { cookies: csrfCookies });
-    const { data } = JSON.parse(body);
+    const { body } = await needle('get', `${this.url}${csrfToken}`, { cookies: csrfCookies, parse_response: true });
+    const { data } = body;
     // assert typeof data !== 'undefined'
 
     const ruEntries = data.items.filter(({ ru }) => ru);
