@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as datetime from '../../../lib/datetime.js';
 import * as geography from '../../../lib/geography.js';
 import maintainers from '../../../lib/maintainers.js';
 
@@ -152,29 +153,82 @@ const scraper = {
   ],
 
   async scraper() {
-    const fullNameCounties = ['Fairfax City', 'Franklin City', 'Manassas City', 'Richmond City', 'Roanoke City'];
-    const city2County = ['Buena Vista City', 'Manassas City'];
+    const usePDFs = datetime.scrapeDateIsBefore('2020-3-26');
+    this.url = usePDFs
+      ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
+      : 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
     let counties = [];
 
-    const data = await fetch.csv(this.url);
+    if (usePDFs) {
+      const pdfBaseURL = `${this.url}.pdf?:showVizHome=no&Locality=`;
+      const fullNameCounties = [
+        'Buena Vista County',
+        'Fairfax city',
+        'Franklin city',
+        'Franklin County',
+        'Manassas County',
+        'Richmond city',
+        'Richmond County',
+        'Roanoke city',
+        'Roanoke County'
+      ];
+      const county2City = ['Buena Vista County', 'Manassas County'];
 
-    data.forEach(location => {
-      let name = parse.string(geography.addCounty(location.Locality));
-      if (fullNameCounties.includes(location.Locality)) {
-        name = parse.string(location.Locality.replace('City', 'city'));
-      } else if (city2County.includes(location.Locality)) {
-        name = parse.string(location.Locality.replace('City', 'County'));
+      for (const name of this._counties) {
+        let endURL = name;
+        if (county2City.includes(name)) {
+          endURL = endURL.replace('County', 'City');
+        }
+        if (!fullNameCounties.includes(name)) {
+          endURL = endURL.slice(0, name.lastIndexOf(' '));
+        }
+        const pdfUrl = pdfBaseURL + endURL;
+        const pdfScrape = await fetch.pdf(pdfUrl);
+
+        if (pdfScrape) {
+          let pdfText = '';
+          for (const item of pdfScrape) {
+            if (item.text === '©') {
+              break;
+            }
+            pdfText += item.text;
+          }
+
+          counties.push({
+            county: name,
+            cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+            deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
+          });
+        } else {
+          counties.push({
+            county: name,
+            cases: 0
+          });
+        }
       }
+    } else {
+      const cites = ['Fairfax City', 'Franklin City', 'Manassas City', 'Richmond City', 'Roanoke City'];
+      const city2County = ['Buena Vista City', 'Manassas City'];
+      const data = await fetch.csv(this.url);
 
-      counties.push({
-        county: name,
-        cases: parse.number(location['Total Cases'])
+      data.forEach(location => {
+        let name = parse.string(geography.addCounty(location.Locality));
+        if (cites.includes(location.Locality)) {
+          name = parse.string(location.Locality.replace('City', 'city'));
+        } else if (city2County.includes(location.Locality)) {
+          name = parse.string(location.Locality.replace('City', 'County'));
+        }
+
+        counties.push({
+          county: name,
+          cases: parse.number(location['Total Cases'])
+        });
       });
-    });
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+    }
 
     counties.push(transform.sumData(counties));
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-
     return counties;
   }
 };
