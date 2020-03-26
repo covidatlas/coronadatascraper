@@ -6,7 +6,7 @@ import * as schema from './lib/schema.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
-describe('scrappers', () => {
+describe('new scrapers', () => {
   beforeAll(() => {
     jest.setTimeout(300000);
   });

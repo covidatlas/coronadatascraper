@@ -171,6 +171,35 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
+    },
+    '2020-3-25': async function() {
+      this.type = 'csv';
+      this.url = await fetch.getArcGISCSVURL(1, '74c7375b03894e68920c2d0131eef1e6', 'Florida_Testing');
+      const data = await fetch.csv(this.url);
+
+      let counties = [];
+      for (const county of data) {
+        let countyName = this._getCountyName(geography.addCounty(parse.string(county.COUNTYNAME)));
+        if (countyName === 'Unknown County') {
+          countyName = UNASSIGNED;
+        }
+        if (countyName === 'Dade County') {
+          countyName = 'Miami-Dade County';
+        }
+
+        counties.push({
+          county: countyName,
+          cases: parse.number(county.T_positive || 0),
+          tested: parse.number(county.T_total || 0),
+          deaths: parse.number(county.FLandNonFLDeaths || 0)
+        });
+      }
+
+      counties.push(transform.sumData(counties));
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      return counties;
     }
   }
 };

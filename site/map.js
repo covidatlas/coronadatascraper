@@ -1,13 +1,11 @@
 /* globals mapboxgl, document */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
-import * as d3interpolate from 'd3-interpolate';
-import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
 
-import { adjustTanh, normalizePercent, getRatio, getPercent } from './lib/math.js';
-import { getLightness } from './lib/color.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/events/crawler/lib/geography.js';
+import { getRatio, getPercent } from './lib/math.js';
+import * as color from './lib/color.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
 
@@ -15,244 +13,39 @@ const data = {};
 
 let map;
 
-const noCasesColor = '#ffffff';
-const noPopulationDataColor = 'rgba(0,0,0,0)';
-
-const outlineColorHighlight = 'rgb(0,0,0)';
-const outlineColor = 'rgba(0, 0, 0, 0.3)';
-
-const choroplethColors = {
-  stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
-  yellowOrangePurple: [
-    '#faffef',
-    '#f3fac1',
-    '#f6f191',
-    '#ffe15d',
-    '#fec327',
-    '#ff9b00',
-    '#fe7000',
-    '#fa4d13',
-    '#c52155',
-    '#842e79'
-  ],
-  yellowOrangeRed: [
-    '#fff5bd',
-    '#fce289',
-    '#fcce54',
-    '#ffb601',
-    '#ff8f00',
-    '#fd6100',
-    '#e03d19',
-    '#b52725',
-    '#801f28',
-    '#4b1a21'
-  ],
-  heat: ['#FFFFFF', '#ffff5e', '#ffe70c', '#fead0a', '#fd6f08', '#fd2907', '#fd0407'],
-  peach: ['rgb(253,222,166)', 'rgb(255,188,134)', 'rgb(249,152,133)', 'rgb(232,110,129)', 'rgb(224,88,136)'],
-  pink: [
-    'rgb(255, 244, 221)',
-    'rgb(255, 221, 215)',
-    'rgb(255, 197, 210)',
-    'rgb(254, 174, 203)',
-    'rgb(250, 150, 196)',
-    'rgb(245, 126, 189)',
-    'rgb(239, 100, 181)',
-    'rgb(232, 70, 173)',
-    'rgb(210, 56, 161)',
-    'rgb(187, 46, 150)',
-    'rgb(163, 36, 140)',
-    'rgb(138, 27, 131)',
-    'rgb(113, 22, 124)',
-    'rgb(86, 15, 116)',
-    'rgb(55, 11, 110)',
-    'rgb(0, 9, 104)'
-  ],
-  viridis: [
-    '#fde725',
-    '#d8e219',
-    '#addc30',
-    '#84d44b',
-    '#5ec962',
-    '#3fbc73',
-    '#28ae80',
-    '#1fa088',
-    '#21918c',
-    '#26828e',
-    '#2c728e',
-    '#33638d',
-    '#3b528b',
-    '#424086',
-    '#472d7b',
-    '#48186a'
-  ],
-  magma: [
-    '#fcfdbf',
-    '#fde2a3',
-    '#fec488',
-    '#fea772',
-    '#fc8961',
-    '#f56b5c',
-    '#e75263',
-    '#d0416f',
-    '#b73779',
-    '#9c2e7f',
-    '#832681',
-    '#6a1c81',
-    '#51127c',
-    '#36106b',
-    '#1d1147',
-    '#0a0822'
-  ]
-};
-
-const choroplethColor = 'yellowOrangeRed';
-
-let chartDataMin;
-let chartDataMax;
-
-let domainArray = [];
-const colorsArray = choroplethColors[choroplethColor];
-const lightnessArray = colorsArray.map(key => 1 - getLightness(key) / 100);
-
-const max = Math.max(...lightnessArray);
-const min = Math.min(...lightnessArray);
-
-for (let i = 0; i < colorsArray.length; i++) {
-  const l = lightnessArray[i]; // lightness value
-
-  const y = normalizePercent(min, max, l);
-  domainArray.push(Number(y.toFixed(2)));
-}
-
-domainArray = domainArray.sort();
-
-const fill = d3scale
-  .scaleLinear()
-  .domain(domainArray)
-  .range(colorsArray)
-  .interpolate(d3interpolate.interpolateHcl);
-
-const choroplethStyle = 'pureRatio';
-
 const type = 'cases';
+let currentDate;
+let currentData;
 
-const choroplethStyles = {
-  pureRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
-    // Color based on how bad it is, relative to the worst place
-    const affectedPercent = locationData[type] / location.population;
-    const percentRatio = affectedPercent / worstAffectedPercent;
-
-    return adjustTanh(percentRatio);
-  },
-  rankAdjustedRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
-    // Color based on rank
-    const rankRatio = (totalRanked - rank) / totalRanked;
-
-    // Color based on how bad it is, relative to the worst place
-    const percentRatio = locationData[type] / location.population / worstAffectedPercent;
-
-    const ratio = (rankRatio * 0.75 + percentRatio) / 1.75;
-
-    return ratio;
-  },
-  rankRatio(location, locationData, type, rank, totalRanked) {
-    // Color based on rank
-    const rankRatio = (totalRanked - rank) / totalRanked;
-
-    return rankRatio;
-  }
-};
-
-function getLocationsByRank(currentData, type, min = 3) {
-  let rankedItems = [];
-
-  for (const locationId of Object.keys(currentData)) {
-    const locationData = currentData[locationId];
-    const location = data.locations[locationId];
-
-    if (location.population && locationData[type] >= min) {
-      rankedItems.push({ locationId, rate: locationData[type] / location.population });
+function initData() {
+  let foundFeatures = 0;
+  data.locations.forEach(function(location, index) {
+    // Associated the feature with the location
+    if (location.featureId !== undefined) {
+      const feature = data.features.features[location.featureId];
+      if (feature) {
+        foundFeatures++;
+        feature.properties.locationId = index;
+      }
     }
-  }
-
-  rankedItems = rankedItems.sort((a, b) => {
-    if (a.rate === b.rate) {
-      return 0;
-    }
-    if (a.rate > b.rate) {
-      return -1;
-    }
-
-    return 1;
   });
 
-  const locations = [];
-  for (const rankedItem of rankedItems) {
-    locations.push(data.locations[rankedItem.locationId]);
-  }
+  data.features.features.forEach(function(feature, index) {
+    feature.id = index;
+  });
 
-  return locations;
+  console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
 }
 
-function ramp(color, n, containerId) {
-  const base = document.getElementById(containerId);
-  const canvas = document.createElement('canvas');
-  base.appendChild(canvas);
-  canvas.setAttribute('width', `${n}px`);
-  canvas.setAttribute('height', '16px');
-  const context = canvas.getContext('2d');
+function updateMap(date) {
+  currentDate = date || Object.keys(data.timeseries).pop();
+  currentData = data.timeseries[currentDate];
 
-  canvas.style.width = '300px';
-  canvas.style.height = '16px';
-  canvas.style.imageRendering = 'pixelated';
-
-  for (let i = 0; i < n; ++i) {
-    context.fillStyle = fill(i / (n - 1));
-    context.fillRect(i, 0, 1, 32);
-  }
-  return canvas;
-}
-
-function createLegend(min, max) {
-  const base = document.getElementById('map');
-  const container = document.createElement('div');
-  const containerId = 'mapLegend';
-  container.id = containerId;
-
-  const heading = document.createElement('span');
-  heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
-  heading.innerHTML = 'Percent of population infected';
-  container.appendChild(heading);
-
-  base.appendChild(container);
-  ramp(choroplethColors.yellowOrangeRed, 300, containerId);
-
-  // Correct value of max percent so that it's easier to parse
-  const lowestPercent = (min * 100).toFixed(4);
-  const worstPercent = (max * 100).toFixed(4);
-
-  const scaleText = document.createElement('span');
-  scaleText.className = 'mapLegend-scaleLabels';
-  const startText = document.createElement('span');
-  startText.className = 'spectrum-Body spectrum-Body--XS';
-  startText.innerHTML = `${lowestPercent}%`;
-  const endText = document.createElement('span');
-  endText.className = 'spectrum-Body spectrum-Body--XS';
-  endText.innerHTML = `${worstPercent}%`;
-  scaleText.appendChild(startText);
-  scaleText.appendChild(endText);
-  container.appendChild(scaleText);
-}
-
-function populateMap() {
-  const currentDate = Object.keys(data.timeseries).pop();
-  const currentData = data.timeseries[currentDate];
-
-  const locationsByRank = getLocationsByRank(currentData, type, 1);
-
-  let foundFeatures = 0;
   let worstAffectedPercent = 0;
   let lowestInfectionPercent = Infinity;
+
+  let chartDataMin;
+  let chartDataMax;
 
   data.locations.forEach(function(location, index) {
     // Calculate worst affected percent
@@ -271,46 +64,32 @@ function populateMap() {
         chartDataMin = lowestInfectionPercent;
       }
     }
-
-    // Associated the feature with the location
-    if (location.featureId !== undefined) {
-      const feature = data.features.features[location.featureId];
-      if (feature) {
-        foundFeatures++;
-        feature.properties.locationId = index;
-      }
-    }
   });
 
-  data.features.features.forEach(function(feature, index) {
-    feature.id = index;
-    let color = null;
+  data.features.features.forEach(function(feature) {
+    let regionColor = null;
     const { locationId } = feature.properties;
     const location = data.locations[locationId];
     if (location && location.population) {
       const locationData = currentData[locationId];
       if (locationData) {
         if (locationData.cases === 0) {
-          color = noCasesColor;
+          regionColor = color.noCasesColor;
         } else {
-          const rank = locationsByRank.indexOf(location);
-          const scaledColorValue = choroplethStyles[choroplethStyle](
-            location,
-            locationData,
-            type,
-            rank,
-            locationsByRank.length,
-            worstAffectedPercent
-          );
-          color = fill(scaledColorValue);
+          regionColor = color.getScaledColorValue(location, locationData, type, worstAffectedPercent);
         }
       }
     }
 
-    feature.properties.color = color || noPopulationDataColor;
+    feature.properties.color = regionColor || color.noPopulationDataColor;
   });
 
-  console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
+  color.createLegend(chartDataMin, chartDataMax);
+}
+
+function populateMap() {
+  initData();
+  updateMap();
 
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;
@@ -376,7 +155,12 @@ function populateMap() {
   const paintConfig = {
     // 'fill-outline-color': 'rgba(255, 255, 255, 1)',
     'fill-color': ['get', 'color'],
-    'fill-outline-color': ['case', ['boolean', ['feature-state', 'hover'], false], outlineColorHighlight, outlineColor],
+    'fill-outline-color': [
+      'case',
+      ['boolean', ['feature-state', 'hover'], false],
+      color.outlineColorHighlight,
+      color.outlineColor
+    ],
     'fill-opacity': 1
   };
 
@@ -499,8 +283,6 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
-
-  createLegend(chartDataMin, chartDataMax);
 }
 
 let rendered = false;

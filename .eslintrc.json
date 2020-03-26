@@ -1,6 +1,6 @@
 {
   "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
-  "ignorePatterns": ["dist/"],
+  "ignorePatterns": ["dist/", "src/events/crawler/scrapers/**/tests/"],
   "parser": "babel-eslint",
   "rules": {
     "consistent-return": "off",
