@@ -1,5 +1,5 @@
-import calculateRatings from './calculateRatings.js';
-import validateRatings from './validateRatings.js';
+import calculateRatings from './calculate-ratings.js';
+import validateRatings from './validate-ratings.js';
 
 const rateSources = async args => calculateRatings(args).then(validateRatings);
 

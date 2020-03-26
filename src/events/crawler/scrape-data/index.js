@@ -1,7 +1,7 @@
-import runScrapers from './runScraper.js';
-import normalizeLocations from './normalizeLocations.js';
-import dedupeLocations from './dedupeLocations.js';
-import reportScraping from './reportScraping.js';
+import runScrapers from './run-scraper.js';
+import normalizeLocations from './normalize-locations.js';
+import dedupeLocations from './dedupe-locations.js';
+import reportScraping from './report-scraping.js';
 
 const scrapeData = async args =>
   runScrapers(args)
