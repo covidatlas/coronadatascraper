@@ -4,7 +4,7 @@
   "description": "A scraper for Coronavirus data",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
-  "main": "src/shared/cli.js",
+  "main": "src/shared/cli/index.js",
   "type": "commonjs",
   "engines": {
     "node": ">=12.15.0 <13.0.0"
@@ -18,7 +18,7 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "start": "node src/shared/cli.js",
+    "start": "node src/shared/cli/index.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
