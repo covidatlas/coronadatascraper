@@ -40,7 +40,7 @@ export default [
   {
     input: 'scripts/turf.js',
     output: {
-      file: 'src/shared/lib/geography/vendor/turf.js'
+      file: 'src/shared/vendor/turf-5.1.6.js'
     },
     plugins: [resolve()]
   }

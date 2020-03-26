@@ -1,5 +1,5 @@
-import * as turf from '@turf/turf';
 import geoTz from 'geo-tz';
+import * as turf from '../vendor/turf-5.1.6.js';
 import * as fs from '../lib/fs.js';
 import espGeoJson from '../../../coronavirus-data-sources/geojson/ESP.json';
 import * as geography from '../lib/geography/index.js';

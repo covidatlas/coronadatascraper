@@ -1,3 +1,3 @@
-import { feature, union } from '@turf/turf';
+import { booleanPointInPolygon, center, feature, point, union } from '@turf/turf';
 
-export { feature, union };
+export { booleanPointInPolygon, center, feature, point, union };

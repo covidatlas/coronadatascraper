@@ -1,8 +1,8 @@
-import * as turf from './vendor/turf.js';
-import usStates from './vendor/usa-states.json';
+import * as turf from '../../vendor/turf-5.1.6.js';
+import usStates from '../../vendor/usa-states.json';
 
-import countryCodes from './vendor/country-codes.json';
-import countyGeoJSON from './vendor/usa-counties.json';
+import countryCodes from '../../vendor/country-codes.json';
+import countyGeoJSON from '../../vendor/usa-counties.json';
 
 export { usStates };
 
