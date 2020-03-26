@@ -1,5 +1,14 @@
 import needle from 'needle';
 
+import populations from './populations.json';
+
+// Remap some of the mismatching or ambiguous names
+const POPULATION_REMAP = {
+  'Архангельская область': 'Архангельская область без Ненецкого автономного округа',
+  'Тюменская область': 'Тюменская область без автономных округов',
+  'Ханты-Мансийский АО': 'Ханты-Мансийский автономный округ-Югра'
+};
+
 const scraper = {
   country: 'RUS',
   aggregate: 'state',
@@ -33,15 +42,23 @@ const scraper = {
     // assert typeof data !== 'undefined'
 
     const ruEntries = data.items.filter(({ ru }) => ru);
-    return ruEntries.map(({ name, cases, cured: recovered, deaths, coordinates }) => ({
-      // The list contains data at federal subject level, which is the top-level political
-      // divisions (including cities of Moscow and St Petersburg)
-      state: name,
-      cases,
-      recovered,
-      deaths,
-      coordinates
-    }));
+    return ruEntries
+      .map(({ name, cases, cured: recovered, deaths, coordinates }) => ({
+        // The list contains data at federal subject level, which is the top-level political
+        // divisions (including cities of Moscow and St Petersburg)
+        state: name,
+        cases,
+        recovered,
+        deaths,
+        coordinates
+      }))
+      .map(entry => {
+        const { state } = entry;
+        const populationKey = state in POPULATION_REMAP ? POPULATION_REMAP[state] : state;
+        const populationObject = populations.find(({ state: key }) => key === populationKey);
+
+        return populationObject ? { ...entry, population: populationObject.population } : entry;
+      });
   }
 };
 
