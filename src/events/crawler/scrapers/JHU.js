@@ -3,6 +3,7 @@ import * as fetch from '../lib/fetch.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
+import * as transform from '../lib/transform.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';
 import maintainers from '../lib/maintainers.js';
@@ -17,17 +18,19 @@ const scraper = {
   priority: -1,
   _urls: {
     cases:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
     deaths:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
     recovered:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
   },
   _urlsNew: {
     cases:
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
     deaths:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
+    recovered:
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
   },
   _urlsOld: {
     cases:
@@ -42,10 +45,16 @@ const scraper = {
       'Province/State': 'Diamond Princess'
     },
     {
+      'Country/Region': 'Diamond Princess'
+    },
+    {
       'Province/State': 'Grand Princess'
     },
     {
       'Province/State': 'From Diamond Princess'
+    },
+    {
+      'Country/Region': 'West Bank and Gaza'
     }
   ],
   _accept: [
@@ -74,6 +83,46 @@ const scraper = {
       'Country/Region': 'Australia'
     }
   ],
+  _getRecovered(recovered, state, country) {
+    for (const location of recovered) {
+      // Believe it or not, the conditional for Province/State is intentionally duplicate -- there is an invisible space in there
+      // Thanks, JHU!
+      if (
+        (location['﻿Province/State'] === state || location['Province/State'] === state) &&
+        location['Country/Region'] === country
+      ) {
+        return location;
+      }
+    }
+  },
+  _rollup(locations) {
+    const countriesToRoll = {};
+    const countriesToNotRoll = {};
+
+    for (const location of locations) {
+      if (location.state && location.country && !location.county) {
+        countriesToRoll[location.country] = true;
+      }
+      if (!location.state && location.country && !location.county) {
+        countriesToNotRoll[location.country] = true;
+      }
+    }
+
+    for (const country of Object.keys(countriesToNotRoll)) {
+      delete countriesToRoll[country];
+    }
+
+    for (const country of Object.keys(countriesToRoll)) {
+      // Find everything matching this region and roll it up
+      const regions = [];
+      for (const location of locations) {
+        if (location.country === country) {
+          regions.push(location);
+        }
+      }
+      locations.push(transform.sumData(regions, { country, aggregate: 'state' }));
+    }
+  },
   scraper: {
     '0': async function() {
       // Build a hash of US counties
@@ -185,12 +234,15 @@ const scraper = {
         countries.push(countyData);
       }
 
+      this._rollup(countries);
+
       return countries;
     },
     '2020-3-24': async function() {
       const urls = this._urlsNew;
       const cases = await fetch.csv(urls.cases, false);
       const deaths = await fetch.csv(urls.deaths, false);
+      const recovered = await fetch.csv(urls.recovered, false);
 
       const countries = [];
       let date = Object.keys(cases[0]).pop();
@@ -206,6 +258,11 @@ const scraper = {
 
       const countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
+        const recoveredData = this._getRecovered(
+          recovered,
+          cases[index]['Province/State'],
+          cases[index]['Country/Region']
+        );
         if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
           // Axe incorrectly categorized data
           delete cases[index]['Province/State'];
@@ -222,13 +279,23 @@ const scraper = {
           geography.usStates[parse.string(cases[index]['Province/State'] || '')]
         ) {
           const state = geography.usStates[parse.string(cases[index]['Province/State'])];
-          countries.push({
+          const caseData = {
             aggregate: 'state',
             country: 'USA',
             state,
             cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0)
-          });
+            deaths: parse.number(deaths[index][date] || 0),
+            recovered: parse.number(recoveredData[date] || 0)
+          };
+
+          if (recoveredData) {
+            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
+            if (recoveredCount !== undefined) {
+              caseData.recovered = parse.number(recoveredCount);
+            }
+          }
+
+          countries.push(caseData);
         } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           const caseData = {
             aggregate: 'country',
@@ -237,6 +304,13 @@ const scraper = {
             deaths: parse.number(deaths[index][date] || 0),
             coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
           };
+
+          if (recoveredData) {
+            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
+            if (recoveredCount !== undefined) {
+              caseData.recovered = parse.number(recoveredCount);
+            }
+          }
 
           if (cases[index]['Province/State']) {
             caseData.aggregate = 'state';
@@ -251,6 +325,8 @@ const scraper = {
       for (const [, countyData] of Object.entries(countyTotals)) {
         countries.push(countyData);
       }
+
+      this._rollup(countries);
 
       return countries;
     }

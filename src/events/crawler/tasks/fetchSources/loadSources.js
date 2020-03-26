@@ -1,9 +1,10 @@
 import fastGlob from 'fast-glob';
-import { join, basename } from 'path';
+import { basename } from 'path';
+import join from '../../lib/join.js';
 
 export default async args => {
   console.log(`⏳ Fetching scrapers`);
-  const scrapers = join(__dirname, '..', '..', 'scrapers', '**', '*.js').replace(/\\/g, '/');
+  const scrapers = join(__dirname, '..', '..', 'scrapers', '**', '*.js');
   let filePaths = await fastGlob([scrapers]);
   filePaths = filePaths.filter(file => !file.endsWith('.test.js'));
 

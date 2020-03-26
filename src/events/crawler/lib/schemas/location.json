@@ -18,13 +18,14 @@
     "active": { "type": "number", "minimum": 0 },
     "featureId": { "type": "number" },
     "rating": { "type": "number" },
-    "tz": { "type": "array" }
+    "tz": { "type": "array" },
+    "aggregate": { "type": "string" }
   },
   "dependencies": {
     "state": ["country"],
     "county": ["country"],
     "city": ["country"]
   },
-  "required": ["country", "cases", "active", "url", "rating"],
+  "required": ["country", "url", "rating"],
   "additionalProperties": false
 }

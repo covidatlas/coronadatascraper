@@ -5,7 +5,7 @@ const validateSources = async args => {
 
   const errors = [];
   for (const source of sources) {
-    const schemaErrors = schema.schemaHasErrors(source, schema.schemas.scraperSchema);
+    const schemaErrors = schema.schemaHasErrors(source, schema.schemas.scraperSchema, {});
     if (schemaErrors) {
       const msg = `"${source._path}" ${schemaErrors
         .map(error => [error.dataPath, error.message].join(' '))

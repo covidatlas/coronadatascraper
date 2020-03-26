@@ -1,21 +1,8 @@
+import path from 'path';
 import * as datetime from '../../lib/datetime.js';
 import * as geography from '../../lib/geography.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
-
-/*
-  Combine location information with the passed data object
-*/
-function addLocationToData(data, location) {
-  Object.assign(data, location);
-
-  delete data.scraper;
-
-  // Store for usage in ratings
-  data._scraperDefinition = location;
-
-  return data;
-}
 
 /*
   Check if the provided data contains any invalid fields
@@ -49,11 +36,11 @@ function addData(cases, location, result) {
     }
     for (const data of result) {
       if (isValid(data, location)) {
-        cases.push(addLocationToData(data, location));
+        cases.push({ ...location, ...data });
       }
     }
   } else if (isValid(result, location)) {
-    cases.push(addLocationToData(result, location));
+    cases.push({ ...location, ...result });
   }
 }
 
@@ -100,10 +87,14 @@ const runScrapers = async args => {
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.location && geography.getName(location) !== options.location) {
+    if (options.skip && geography.getName(location) === options.skip) {
       continue;
     }
-    if (options.skip && geography.getName(location) === options.skip) {
+    if (
+      options.location &&
+      path.basename(location._path, '.js') !== options.location &&
+      geography.getName(location) !== options.location
+    ) {
       continue;
     }
     if (location.scraper) {

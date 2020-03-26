@@ -15,9 +15,9 @@ const scraper = {
     'Box Elder County',
     'Cache County',
     'Carbon County',
-    'Daggett County',
+    // 'Daggett County',
     'Davis County',
-    'Duchesne County',
+    // 'Duchesne County',
     'Emery County',
     'Garfield County',
     'Grand County',
@@ -25,7 +25,7 @@ const scraper = {
     'Juab County',
     'Kane County',
     'Millard County',
-    'Morgan County',
+    // 'Morgan County',
     'Piute County',
     'Rich County',
     'Salt Lake County',
@@ -34,42 +34,39 @@ const scraper = {
     'Sevier County',
     'Summit County',
     'Tooele County',
-    'Uintah County',
+    // 'Uintah County',
     'Utah County',
     'Wasatch County',
     'Washington County',
-    'Wayne County',
-    'Weber County'
+    'Wayne County'
+    // 'Weber County'
   ],
   _pushCounty(counties, county, cases) {
     if (county === 'State Total') {
       return;
     }
     if (county === 'TriCounty') {
-      const caseShare = cases / 3;
       counties.push({
-        county: geography.addCounty('Uintah'),
-        cases: caseShare
-      });
-      counties.push({
-        county: geography.addCounty('Duchesne'),
-        cases: caseShare
-      });
-      counties.push({
-        county: geography.addCounty('Daggett'),
-        cases: caseShare
+        county: 'TriCounty (Uintah, Duchesne, Daggett)',
+        cases,
+        feature: geography.generateMultiCountyFeature(
+          ['Uintah County, UT', 'Duchesne County, UT', 'Daggett County, UT'],
+          {
+            state: 'UT',
+            country: 'USA'
+          }
+        )
       });
       return;
     }
     if (county === 'Weber-Morgan') {
-      const caseShare = cases / 2;
       counties.push({
-        county: geography.addCounty('Weber'),
-        cases: caseShare
-      });
-      counties.push({
-        county: geography.addCounty('Morgan'),
-        cases: caseShare
+        county: 'Weber & Morgan Counties',
+        cases,
+        feature: geography.generateMultiCountyFeature(['Weber County, UT', 'Morgan County, UT'], {
+          state: 'UT',
+          country: 'USA'
+        })
       });
       return;
     }

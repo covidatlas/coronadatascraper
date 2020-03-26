@@ -1,0 +1,162 @@
+﻿[
+  {
+    "url": "",
+    "cases": 6211,
+    "state": "Île-de-France",
+    "population": 12246234,
+    "deaths": 193,
+    "recovered": 665
+  },
+  {
+    "url": "",
+    "cases": 361,
+    "deaths": 8,
+    "state": "Centre-Val de Loire",
+    "population": 2582522,
+    "recovered": 15
+  },
+  {
+    "url": "",
+    "deaths": 62,
+    "state": "Bourgogne-Franche-Comté",
+    "population": 2813289,
+    "cases": 1347,
+    "recovered": 198
+  },
+  {
+    "url": "",
+    "cases": 511,
+    "state": "Normandie",
+    "population": 3342467,
+    "deaths": 9,
+    "recovered": 24
+  },
+  {
+    "url": "",
+    "cases": 1269,
+    "deaths": 86,
+    "state": "Hauts-de-France",
+    "population": 6023336,
+    "recovered": 201
+  },
+  {
+    "url": "",
+    "cases": 4256,
+    "state": "Grand Est",
+    "population": 5548090,
+    "deaths": 327,
+    "recovered": 470
+  },
+  {
+    "url": "",
+    "cases": 293,
+    "deaths": 9,
+    "recovered": 74,
+    "state": "Pays de la Loire",
+    "population": 3787411
+  },
+  {
+    "url": "",
+    "cases": 490,
+    "state": "Bretagne",
+    "population": 3336643,
+    "deaths": 23,
+    "recovered": 68
+  },
+  {
+    "url": "",
+    "cases": 676,
+    "state": "Nouvelle-Aquitaine",
+    "population": 5994336,
+    "deaths": 13,
+    "recovered": 59
+  },
+  {
+    "url": "",
+    "cases": 767,
+    "state": "Occitanie",
+    "population": 5903190,
+    "deaths": 32,
+    "recovered": 117
+  },
+  {
+    "url": "",
+    "cases": 1730,
+    "deaths": 70,
+    "state": "Auvergne-Rhône-Alpes",
+    "population": 8037059,
+    "recovered": 254
+  },
+  {
+    "url": "",
+    "cases": 1510,
+    "state": "Provence-Alpes-Côte d'Azur",
+    "population": 5065723,
+    "deaths": 20,
+    "recovered": 377
+  },
+  {
+    "url": "",
+    "cases": 194,
+    "deaths": 7,
+    "state": "Corse",
+    "population": 337796,
+    "recovered": 45
+  },
+  {
+    "url": "https://www.lareunion.ars.sante.fr/coronavirus-covid-19-la-reunion-4-nouveaux-cas-confirmes-0",
+    "cases": 75,
+    "state": "La Réunion"
+  },
+  {
+    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
+    "cases": 3,
+    "state": "Saint-Barthélemy"
+  },
+  {
+    "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
+    "cases": 8,
+    "state": "Saint-Martin"
+  },
+  { "url": "", "cases": 19856, "deaths": 860, "recovered": 2567 },
+  {
+    "url": "",
+    "cases": 62,
+    "deaths": 0,
+    "state": "Guadeloupe",
+    "population": 390253,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 53,
+    "state": "Martinique",
+    "population": 376480,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 20,
+    "deaths": 0,
+    "recovered": 0,
+    "state": "Guyane",
+    "population": 290691
+  },
+  {
+    "url": "",
+    "cases": 71,
+    "state": "La Réunion",
+    "population": 853659,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "url": "",
+    "cases": 24,
+    "state": "Mayotte",
+    "population": 270372,
+    "deaths": 0,
+    "recovered": 0
+  }
+]
