@@ -1,6 +1,6 @@
 import each from 'jest-each';
 
-import * as geography from '../geography.js';
+import * as geography from '../geography/index.js';
 
 describe('Geography functions', () => {
   describe('toISO3166Alpha3', () => {

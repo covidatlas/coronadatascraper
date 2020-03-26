@@ -1,6 +1,6 @@
 import * as fetch from '../../lib/fetch.js';
 import * as datetime from '../../lib/datetime.js';
-import * as geography from '../../lib/geography.js';
+import * as geography from '../../lib/geography/index.js';
 
 export const sharedSchema = {
   url: 'https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv',

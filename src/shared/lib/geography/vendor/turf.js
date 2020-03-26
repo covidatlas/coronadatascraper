@@ -25300,6 +25300,4 @@ function union() {
     };
 }
 
-var turf = { feature, union };
-
-export default turf;
+export { feature, union };

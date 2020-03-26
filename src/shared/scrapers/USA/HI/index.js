@@ -1,5 +1,5 @@
 import * as fetch from '../../../lib/fetch.js';
-import * as geography from '../../../lib/geography.js';
+import * as geography from '../../../lib/geography/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 
