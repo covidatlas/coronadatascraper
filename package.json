@@ -11,7 +11,6 @@
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
-    "bundle": "npx rollup -c",
     "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
