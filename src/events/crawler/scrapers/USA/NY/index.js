@@ -131,15 +131,19 @@ const scraper = {
 
     counties.push(transform.sumData(counties));
 
-    const pdfScrape = await fetch.pdf(this._boroughURL);
-    Object.keys(this._boroughs).forEach(name => {
-      const valIndex = pdfScrape.findIndex(ele => ele.text === name);
+    try {
+      const pdfScrape = await fetch.pdf(this._boroughURL);
+      Object.keys(this._boroughs).forEach(name => {
+        const valIndex = pdfScrape.findIndex(ele => ele.text === name);
 
-      counties.push({
-        county: this._boroughs[name],
-        cases: parse.number(pdfScrape[valIndex + 1].text.match(/(\d*)/)[1])
+        counties.push({
+          county: this._boroughs[name],
+          cases: parse.number(pdfScrape[valIndex + 1].text.match(/(\d*)/)[1])
+        });
       });
-    });
+    } catch (err) {
+      console.error('  📃 Cannot get county-level PDF data for NYC boroughs on %s, skipping!', process.env.SCRAPE_DATE);
+    }
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
