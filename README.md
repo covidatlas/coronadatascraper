@@ -7,7 +7,11 @@ Every piece of data produced includes the URL where the data was sourced from as
 
 ## Where's the data?
 
-https://coronadatascraper.com/  We are aiming to refresh it evey day at 9PM.
+https://coronadatascraper.com/
+
+## How often is it updated?
+
+We upload fresh data every day at around 9PM PST.
 
 ## Getting started
 
