@@ -20,28 +20,19 @@ const scraper = {
     
     if (datetime.dateIsBefore(date, '2020-03-24')) {
       this.url = `${this._baseUrl}sites/default/files/COVID19/COVID19CountyResults.json`;
-    
     } else if (datetime.dateIsBefore(date, '2020-03-25')) {
       this.url = `${this._baseUrl}sites/default/files/COVID19/COVID19CountyResults20200323.json`;
-    
     } else if (datetime.dateIsBefore(date, '2020-03-26')) {
       this.url = 'http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json';
     } else {
-
-      // Scrapes page that embeds Illinois' county map; 
-      // uses regex to find source JSON used to generate map
-      var sourcePage = 'http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus';
-      var sourceScrape = await fetch.fetch(sourcePage, date);
+      const sourcePage = 'http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus';
+      const sourceScrape = await fetch.fetch(sourcePage, date);
       
       const regex = /Plotly\.d3\.json\('(.+)',/gm;
-      var m = regex.exec(sourceScrape);
+      const m = regex.exec(sourceScrape);
       this.url = `${this._baseUrl}${m[1]}`
     }
 
-    
-
-    
-    //this.url = 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults202003250.json';
     const data = await fetch.json(this.url);
     const counties = [];
 
