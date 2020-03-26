@@ -1,6 +1,5 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
-import * as geography from '../../../lib/geography/index.js';
 import * as transform from '../../../lib/transform.js';
 import maintainers from '../../../lib/maintainers.js';
 
