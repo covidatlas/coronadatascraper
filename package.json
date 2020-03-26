@@ -28,7 +28,6 @@
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
-    "@js-joda/core": "^2.0.0",
     "@architect/architect": "^6.2.4",
     "@js-joda/core": "^2.0.0",
     "@js-joda/timezone": "^2.2.0",
