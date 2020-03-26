@@ -1,5 +1,5 @@
-import * as schema from '../lib/schema.js';
-import * as geography from '../lib/geography/index.js';
+import * as schema from '../../../shared/lib/schema.js';
+import * as geography from '../../../shared/lib/geography/index.js';
 
 /*
   Clean the passed data

@@ -5,11 +5,11 @@
 import { sync as glob } from 'fast-glob';
 import { readFileSync as readFile } from 'fs';
 import path from 'path';
-import join from '../lib/join.js';
-import { readJSON } from '../lib/fs.js';
-import { get } from '../lib/get.js';
+import join from '../../lib/join.js';
+import { readJSON } from '../../lib/fs.js';
+import { get } from '../../lib/get.js';
 
-jest.mock('../lib/get.js');
+jest.mock('../../lib/get.js');
 
 /**
 This suite automatically tests a scraper's results against its test cases.
@@ -61,7 +61,7 @@ const stripFeatures = d => {
 };
 
 describe('all scrapers', () => {
-  const testDirs = glob(join(__dirname, '**', 'tests'), { onlyDirectories: true });
+  const testDirs = glob(join(__dirname, '..', '**', 'tests'), { onlyDirectories: true });
 
   for (const testDir of testDirs) {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`

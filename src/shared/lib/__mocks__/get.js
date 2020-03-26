@@ -1,5 +1,5 @@
 ﻿/* eslint-disable import/prefer-default-export */
-import sanitizeUrl from '../__test_utils__/sanitizeUrl.js';
+import sanitizeUrl from './sanitize-url.js';
 
 /**
  * This function mocks the `get` function for testing. To use it, first pass an object of sources to

@@ -1,5 +1,5 @@
 import each from 'jest-each';
-import * as mockFs from '../__test_utils__/fs.js';
+import * as mockFs from './utils/fs.js';
 
 import * as fs from '../fs.js';
 

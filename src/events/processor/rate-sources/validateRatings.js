@@ -1,4 +1,4 @@
-import * as schema from '../../lib/schema.js';
+import * as schema from '../../../shared/lib/schema.js';
 
 const validateRatings = async args => {
   const { sourceRatings } = args;
