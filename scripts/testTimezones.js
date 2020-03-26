@@ -1,4 +1,5 @@
-﻿/* eslint-disable jest/no-commented-out-tests */
+﻿/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable jest/no-commented-out-tests */
 /* eslint-disable no-use-before-define */
 
 const { spawn, execSync } = require('child_process');
