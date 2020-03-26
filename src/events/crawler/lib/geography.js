@@ -32,7 +32,7 @@ const countryMap = {
   'Cape Verde': 'CPV',
   'East Timor': 'TLS',
   'The Gambia': 'GMB',
-  'Republic of the Congo ': 'COG',
+  'Republic of the Congo': 'COG',
   Syria: 'SYR',
   Laos: 'LAO'
 };
