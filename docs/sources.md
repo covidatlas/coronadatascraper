@@ -1,6 +1,6 @@
 # Sources and Scrapers
 
-_Last updated: 2020-03-24_
+_Last updated: 2020-03-26_
 
 **Table of content**
 - [Sources and Scrapers](#sources-and-scrapers)
@@ -21,6 +21,8 @@ _Last updated: 2020-03-24_
     - [Features](#features)
     - [Population](#population)
   - [Testing sources](#testing-sources)
+    - [Test coverage](#test-coverage)
+    - [Manual testing](#manual-testing)
 
 This guide provides information on the criterias we use to determine whether a source should be added to the project, and offer technical details
 regarding how a source can be implemented.
@@ -330,7 +332,46 @@ in the returned object of the scraper.
 
 You should test your source first by running `yarn test`. This will perform some basic tests to make sure nothing crashes and the source object is in the correct form.
 
-You should then run your source with the crawler by running `yarn start -l "<name of your source>"`. Your source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for Montana, USA is "MN, USA").
+
+### Test coverage
+
+To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
+
+* Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
+
+* Add a sample response from the target URL. The filename should be the URL, without the
+`http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
+file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
+
+   * URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
+
+   * File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
+
+* Add a file named `expected.json` containing the array of values that the scraper is expected to
+return. (Leave out any geojson `features` properties.)
+
+For sources that have a time series, the `expected.json` file represents the latest result in the
+sample response provided. You can additionally test the return value for a specific date by adding
+a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
+
+
+    📁 USA
+      📁 AK
+        📄 index.js     # scraper
+        📁 tests
+          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html     # sample response
+          📄 expected.json     # expected result
+    ...
+    📁 FRA
+      📄 index.js     # scraper
+      📁 tests
+        📄 raw_githubusercontent_com_covid19_fr_data_chiffres_cles.csv     # sample response
+        📄 expected.json     # expected result for most recent date in sample
+        📄 expected.2020-03-16.json # expected result for March 16, 2020
+
+### Manual testing
+
+You should run your source with the crawler by running `yarn start -l "<name of your source>"`. Your source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for Montana, USA is "MN, USA").
 
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output located in the `dist` directory. `data.json` contains all the information
