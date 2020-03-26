@@ -54,6 +54,22 @@ const scraper = {
       }
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-3-26': async function() {
+      this.url = await fetch.getArcGISCSVURLByWidgetName(
+        'ec4bffd48f7e495182226eee7962b422',
+        'COVID-19 Cases by County'
+      );
+      const data = await fetch.csv(this.url);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.COUNTY_LAB),
+          cases: parse.number(county.TOTAL_CASES || 0)
+        });
+      }
+      counties.push(transform.sumData(counties));
+      return counties;
     }
   }
 };
