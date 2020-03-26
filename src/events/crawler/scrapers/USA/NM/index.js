@@ -27,15 +27,18 @@ const scraper = {
           .eq(1)
           .text()
       );
-      let deaths = parse.number(
-        $tr
-          .find('td')
-          .eq(2)
-          .text()
-      );
+      const deathText = $tr
+        .find('td')
+        .eq(2)
+        .text();
 
-      if (Number.isNaN(deaths)) {
-        deaths = undefined;
+      let deaths;
+      if (deathText) {
+        if (deathText === '—') {
+          deaths = 0;
+        } else {
+          deaths = parse.number(deathText);
+        }
       }
 
       const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
@@ -46,7 +49,8 @@ const scraper = {
 
       counties.push({
         county,
-        cases
+        cases,
+        deaths
       });
     });
 
