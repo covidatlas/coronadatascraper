@@ -38,7 +38,7 @@ const scraper = {
       const output = {
         county: geography.addCounty(county.County),
         cases: parse.number(county.confirmed_cases),
-        deaths: parse.number(county.deaths) || 0,
+        deaths: parse.number(county.deaths || 0),
         tested: parse.number(county.total_tested)
       };
       if (rules.isAcceptable(output, null, this._reject)) {
