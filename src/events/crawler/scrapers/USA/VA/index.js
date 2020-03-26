@@ -207,7 +207,7 @@ const scraper = {
         }
       }
     } else {
-      const cites = ['Fairfax City', 'Franklin City', 'Manassas City', 'Richmond City', 'Roanoke City'];
+      const cites = ['Fairfax City', 'Franklin City', 'Richmond City', 'Roanoke City'];
       const city2County = ['Buena Vista City', 'Manassas City'];
       const data = await fetch.csv(this.url);
 
