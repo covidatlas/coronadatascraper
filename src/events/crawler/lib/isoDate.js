@@ -32,8 +32,8 @@ export const parse = d => {
 };
 
 export const today = {
-  here: () => {
-    return LocalDate.from(currentZdt()).toString();
+  utc: () => {
+    return today.at('UTC');
   },
   at: tz => {
     const currentZdtThere = currentZdt().withZoneSameInstant(ZoneId.of(tz));
@@ -42,8 +42,8 @@ export const today = {
 };
 
 export const now = {
-  here: () => {
-    return LocalDateTime.from(currentZdt()).toString();
+  utc: () => {
+    return now.at('UTC');
   },
   at: tz => {
     const currentZdtThere = currentZdt().withZoneSameInstant(ZoneId.of(tz));
