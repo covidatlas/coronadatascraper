@@ -26,6 +26,6 @@
     "county": ["country"],
     "city": ["country"]
   },
-  "required": ["country", "cases", "active", "url", "rating"],
+  "required": ["country", "url", "rating"],
   "additionalProperties": false
 }

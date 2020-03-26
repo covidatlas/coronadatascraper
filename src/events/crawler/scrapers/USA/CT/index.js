@@ -14,6 +14,12 @@ const scraper = {
   url: 'https://portal.ct.gov/Coronavirus',
   type: 'pdf',
   aggregate: 'county',
+  maintainers: [
+    {
+      name: 'Quentin Golsteyn',
+      github: 'qgolsteyn'
+    }
+  ],
   scraper: {
     '0': async function() {
       this.type = 'list';
@@ -92,7 +98,8 @@ const scraper = {
       const rows = pdfUtils.asWords(body, 0, 1).map(row => row.map(col => col.text));
 
       const counties = [];
-      const startIndex = rows.findIndex(row => row.length > 0 && row[0] === 'County') + 1;
+      const startIndex =
+        rows.findIndex(row => row.length > 0 && row[0] === 'County' && row[1] === 'Confirmed Cases') + 1;
 
       for (let i = startIndex; rows.length > 0 && rows[i][0] !== 'Total'; i++) {
         // Some stray numbers in the PDF, ignore

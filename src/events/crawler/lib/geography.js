@@ -27,7 +27,14 @@ const countryMap = {
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB',
-  US: 'USA'
+  US: 'USA',
+  'Bahamas, The': 'BHS',
+  'Cape Verde': 'CPV',
+  'East Timor': 'TLS',
+  'The Gambia': 'GMB',
+  'Republic of the Congo ': 'COG',
+  Syria: 'SYR',
+  Laos: 'LAO'
 };
 
 /*
@@ -205,8 +212,8 @@ export const addEmptyRegions = function(regionDataArray, regionNameArray, region
   Calculates active cases from location data
 */
 export const getActiveFromLocation = function(location) {
-  const cases = location.cases !== undefined ? location.cases : 0;
-  const deaths = location.deaths !== undefined ? location.deaths : 0;
-  const recovered = location.recovered !== undefined ? location.recovered : 0;
-  return cases - deaths - recovered;
+  if (location.cases !== undefined && location.deaths !== undefined && location.recovered !== undefined) {
+    return location.cases - location.deaths - location.recovered;
+  }
+  return undefined;
 };

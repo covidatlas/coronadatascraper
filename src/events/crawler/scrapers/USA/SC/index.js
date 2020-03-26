@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography.js';
+import * as parse from '../../../lib/parse.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -62,30 +63,54 @@ const scraper = {
     'York County'
   ],
 
-  async scraper() {
-    const data = await fetch.json(this.url);
-    let counties = [];
+  scraper: {
+    '0': async function() {
+      const data = await fetch.json(this.url);
+      let counties = [];
 
-    for (const record of data.features) {
-      const rec = record.attributes;
+      for (const record of data.features) {
+        const rec = record.attributes;
 
-      const county = geography.addCounty(rec.NAME);
-      const cases = rec.Confirmed;
-      const deaths = rec.Death;
-      const recovered = rec.Recovered;
+        const county = geography.addCounty(rec.NAME);
+        const cases = rec.Confirmed;
+        const deaths = rec.Death;
+        const recovered = rec.Recovered;
 
-      counties.push({
-        county,
-        cases,
-        deaths,
-        recovered
-      });
+        counties.push({
+          county,
+          cases,
+          deaths,
+          recovered
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-3-25': async function() {
+      this.url = await fetch.getArcGISCSVURL(
+        2,
+        '3732035614af4246877e20c3a496e397',
+        'Covid19_Cases_Centroid_SharingView'
+      );
+      const data = await fetch.csv(this.url);
+      let counties = [];
+      for (const county of data) {
+        counties.push({
+          county: geography.addCounty(county.NAME),
+          cases: parse.number(county.Confirmed),
+          deaths: parse.number(county.Death),
+          recovered: parse.number(county.Recovered)
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+
+      return counties;
     }
-
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
-
-    return counties;
   }
 };
 
