@@ -68,8 +68,6 @@ const scraper = {
       const data = await fetch.json(this.url);
       let counties = [];
 
-      console.log(data);
-
       for (const record of data.features) {
         const rec = record.attributes;
 
