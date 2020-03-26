@@ -149,29 +149,29 @@ const scraper = {
 
       for (let i = startIndex; i < rows.length; i++) {
         const data = rows[i];
-        if (data[0].includes('County') || data[1] === parse.number(data[1])) {
-          // First set of columns
-          const countyName1 = geography.addCounty(data[0]);
-          const cases1 = data[1];
 
-          if (this._counties.indexOf(countyName1) !== -1) {
+        // First set of columns
+        const countyName1 = geography.addCounty(data[0]);
+
+        const cases1 = data[1];
+
+        if (this._counties.indexOf(countyName1) !== -1) {
+          counties.push({
+            county: countyName1,
+            cases: parse.number(cases1)
+          });
+        }
+
+        // Optional second set of columns
+        if (data.length === 4) {
+          const countyName2 = geography.addCounty(data[2]);
+          const cases2 = data[3];
+
+          if (this._counties.indexOf(countyName2) !== -1) {
             counties.push({
-              county: countyName1,
-              cases: parse.number(cases1)
+              county: countyName2,
+              cases: parse.number(cases2)
             });
-          }
-
-          // Optional second set of columns
-          if (data.length === 4) {
-            const countyName2 = geography.addCounty(data[2]);
-            const cases2 = data[3];
-
-            if (this._counties.indexOf(countyName2) !== -1) {
-              counties.push({
-                county: countyName2,
-                cases: parse.number(cases2)
-              });
-            }
           }
         }
       }
