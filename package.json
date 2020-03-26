@@ -11,6 +11,7 @@
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
+    "bundle": "npx rollup -c",
     "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
@@ -28,8 +29,8 @@
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
-    "@js-joda/core": "^2.0.0",
     "@architect/architect": "^6.2.4",
+    "@js-joda/core": "^2.0.0",
     "@turf/turf": "^5.1.6",
     "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",

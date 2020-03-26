@@ -1,5 +1,6 @@
-import fetchSources from './fetchSources/index.js';
-import scrapeData from './scrapeData/index.js';
+import fetchSources from '../../events/crawler/fetch-sources/index.js';
+import scrapeData from '../../events/crawler/scrape-data/index.js';
+
 import findFeatures from './findFeatures.js';
 import findPopulations from './findPopulations.js';
 import cleanLocations from './cleanLocations.js';

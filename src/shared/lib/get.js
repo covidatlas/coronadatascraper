@@ -60,6 +60,8 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
         await new Promise(r => setTimeout(r, 2000));
       }
 
+      // TODO @AWS: if AWS infra get from endpoint instead of needle
+
       let errorMsg = '';
       const response = await needle('get', url).catch(err => {
         // Errors we get here have the tendency of crashing the whole crawler

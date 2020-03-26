@@ -3,7 +3,8 @@
   "ignorePatterns": [
     "node_modules/",
     "dist/",
-    "src/shared/scrapers/**/tests/"
+    "src/shared/scrapers/**/tests/",
+    "vendor/"
   ],
   "parser": "babel-eslint",
   "rules": {

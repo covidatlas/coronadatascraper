@@ -1,6 +1,6 @@
 import path from 'path';
 import * as fs from '../lib/fs.js';
-import * as geography from '../lib/geography.js';
+import * as geography from '../lib/geography/index.js';
 
 const dataPath = path.join('./coronavirus-data-sources/population/');
 
