@@ -28,12 +28,12 @@ const ianaWin = require('windows-iana');
 
 const isWindows = os.platform() === 'win32';
 const currentSystemTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
-const originalSystemTimezone = currentSystemTimezone();
+const startingTimezone = currentSystemTimezone();
 
-const timezones = ['America/Chicago', 'UTC', 'Australia/Sydney', originalSystemTimezone];
+const timezones = ['America/Chicago', 'UTC', 'Australia/Sydney', startingTimezone];
 
 const run = async () => {
-  console.log(`⏲  Initial timezone: ${originalSystemTimezone}`);
+  console.log(`⏲  Initial timezone: ${startingTimezone}`);
 
   let failures = 0;
   for (const timezone of timezones) {
@@ -95,9 +95,8 @@ const setTZ = inputTZ => {
 };
 
 const restoreTZ = () => {
-  const tz = originalSystemTimezone;
-  if (tz && tz !== currentSystemTimezone()) {
-    setTZ(tz);
+  if (startingTimezone && startingTimezone !== currentSystemTimezone()) {
+    setTZ(startingTimezone);
   }
 };
 
