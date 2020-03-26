@@ -17,7 +17,7 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "qa": "pta ./src/qa/*.test.js -r log | node src/qa/utils/qaReporter.js",
+    "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
     "start": "node src/events/crawler/cli.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/events/crawler/timeseries.js",

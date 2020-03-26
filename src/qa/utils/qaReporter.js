@@ -1,9 +1,10 @@
-#!/usr/bin/env node
 const readline = require('readline');
 const fs = require('fs');
 const { stream } = require('@lorenzofox3/for-await');
 
 const report = {};
+
+// Currently active location and test, helps with structuring the report
 const active = {
   loc: '',
   test: ''
@@ -12,6 +13,9 @@ const active = {
 let passed = 0;
 let failed = 0;
 
+/**
+ * Adds an error to the report. Creates the necessary fields if missing.
+ */
 const addError = error => {
   if (active.test) {
     if (!report[active.loc]) {
@@ -36,13 +40,17 @@ async function processLineByLine(input = process.stdin) {
   ).map(m => JSON.parse(m));
 
   for await (const m of inputStream) {
+    // When test start, we determine if we are dealing with a
+    // new test or location and update the active object
     if (m.type === 'TEST_START') {
       const { description } = m.data;
+      // Locations start with characters "l>"
       if (description && description.match(/^l>/)) {
         active.loc = description.replace('l>', '');
       } else {
         active.test = description;
       }
+      // When test ends, we update the active object accordingly
     } else if (m.type === 'TEST_END') {
       const { description } = m.data;
       if (description && description.match(/^l>/)) {
