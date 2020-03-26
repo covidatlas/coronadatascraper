@@ -147,6 +147,32 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
+    },
+    '2020-3-25': async function() {
+      let counties = [];
+      let arrayOfCounties = [];
+
+      this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      const $ = await fetch.page(this.url);
+      const $paragraph = $('p:contains("Number of counties with cases:")').text();
+      const parsed = $paragraph
+        .replace(/([()])/g, '')
+        .replace('* Number of counties with cases: ', '')
+        .replace(/[0-9]+[\s–\s]+/g, '');
+      arrayOfCounties = parsed.split(',');
+      arrayOfCounties.forEach(county => {
+        const splitCounty = county.trim().split(' ');
+        counties.push({
+          county: geography.addCounty(parse.string(splitCounty[0])),
+          cases: parse.number(splitCounty[1])
+        });
+      });
+
+      counties.push(transform.sumData(counties));
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      return counties;
     }
   }
 };

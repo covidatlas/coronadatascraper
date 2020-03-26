@@ -9,7 +9,9 @@ const scraper = {
   country: 'USA',
   state: 'NJ',
   aggregate: 'county',
+  type: 'csv',
   source: {
+    name: 'State of New Jersey Department of Health',
     url: 'https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml'
   },
   scraper: {
@@ -41,11 +43,7 @@ const scraper = {
       return counties;
     },
     '2020-3-25': async function() {
-      this._metadataURL =
-        'https://services7.arcgis.com/Z0rixLlManVefxqY/arcgis/rest/services/DailyCaseCounts/FeatureServer/0?f=json';
-      const metadata = await fetch.json(this._metadataURL);
-
-      this.url = `https://opendata.arcgis.com/datasets/${metadata.serviceItemId}_0.csv`;
+      this.url = await fetch.getArcGISCSVURL(7, 'ec4bffd48f7e495182226eee7962b422', 'DailyCaseCounts');
       const data = await fetch.csv(this.url);
       const counties = [];
       for (const county of data) {

@@ -21,7 +21,26 @@ const scraper = {
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const cases = parse.number($tr.find('td:last-child').text());
+      const cases = parse.number(
+        $tr
+          .find('td')
+          .eq(1)
+          .text()
+      );
+      const deathText = $tr
+        .find('td')
+        .eq(2)
+        .text();
+
+      let deaths;
+      if (deathText) {
+        if (deathText === '—') {
+          deaths = 0;
+        } else {
+          deaths = parse.number(deathText);
+        }
+      }
+
       const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
 
       if (index < 1) {
@@ -30,7 +49,8 @@ const scraper = {
 
       counties.push({
         county,
-        cases
+        cases,
+        deaths
       });
     });
 

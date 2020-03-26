@@ -23,30 +23,25 @@ const scraper = {
     'Barnstable County',
     'Berkshire County',
     'Bristol County',
-    'Dukes County',
+    // 'Dukes County',
     'Essex County',
     'Franklin County',
     'Hampden County',
     'Hampshire County',
     'Middlesex County',
-    'Nantucket County',
+    // 'Nantucket County',
     'Norfolk County',
     'Plymouth County',
     'Suffolk County',
     'Worcester County'
   ],
   scraper: {
-    '2020-03-13': async function() {
+    '0': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
 
-      if (date === '2020-03-19') {
-        // They had a weird URL for this day
-        this.url = 'https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-19-2020-x-updated4pm/download';
-      } else {
-        this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(
-          date
-        ).getUTCDate()}-2020/download`;
-      }
+      this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(
+        date
+      ).getUTCDate()}-2020/download`;
 
       const body = await fetch.pdf(this.url);
 
@@ -65,10 +60,21 @@ const scraper = {
         const countyName = data[0];
         const cases = data[1];
 
-        counties.push({
+        const countyObj = {
           county: geography.addCounty(countyName),
           cases: parse.number(cases)
-        });
+        };
+
+        if (countyName === 'Dukes and') {
+          countyObj.county = geography.addCounty(`Dukes and ${data[1]}`);
+          countyObj.cases = parse.number(data[2]);
+
+          countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
+            state: 'MA',
+            country: 'USA'
+          });
+        }
+        counties.push(countyObj);
       }
 
       const summedData = transform.sumData(counties);

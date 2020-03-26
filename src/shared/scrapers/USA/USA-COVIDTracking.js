@@ -18,7 +18,7 @@ const scraper = {
     }
   ],
   aggregate: 'state',
-  priority: 0,
+  priority: -0.5,
   async scraper() {
     const data = await fetch.json(this.url);
 

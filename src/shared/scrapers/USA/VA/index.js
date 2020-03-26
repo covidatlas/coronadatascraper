@@ -18,7 +18,7 @@ const scraper = {
   _counties: [
     'Accomack County',
     'Albemarle County',
-    'Alexandria city',
+    'Alexandria County',
     'Alleghany County',
     'Amelia County',
     'Amherst County',
@@ -29,7 +29,7 @@ const scraper = {
     'Bedford County',
     'Bland County',
     'Botetourt County',
-    'Bristol city',
+    'Bristol County',
     'Brunswick County',
     'Buchanan County',
     'Buckingham County',
@@ -39,31 +39,31 @@ const scraper = {
     'Carroll County',
     'Charles City County',
     'Charlotte County',
-    'Charlottesville city',
-    'Chesapeake city',
+    'Charlottesville County',
+    'Chesapeake County',
     'Chesterfield County',
     'Clarke County',
-    'Colonial Heights city',
-    'Covington city',
+    'Colonial Heights County',
+    'Covington County',
     'Craig County',
     'Culpeper County',
     'Cumberland County',
-    'Danville city',
+    'Danville County',
     'Dickenson County',
     'Dinwiddie County',
-    'Emporia city',
+    'Emporia County',
     'Essex County',
     'Fairfax city',
     'Fairfax County',
-    'Falls Church city',
+    'Falls Church County',
     'Fauquier County',
     'Floyd County',
     'Fluvanna County',
     'Franklin city',
     'Franklin County',
     'Frederick County',
-    'Fredericksburg city',
-    'Galax city',
+    'Fredericksburg County',
+    'Galax County',
     'Giles County',
     'Gloucester County',
     'Goochland County',
@@ -71,13 +71,13 @@ const scraper = {
     'Greene County',
     'Greensville County',
     'Halifax County',
-    'Hampton city',
+    'Hampton County',
     'Hanover County',
-    'Harrisonburg city',
+    'Harrisonburg County',
     'Henrico County',
     'Henry County',
     'Highland County',
-    'Hopewell city',
+    'Hopewell County',
     'Isle of Wight County',
     'James City County',
     'King and Queen County',
@@ -85,39 +85,39 @@ const scraper = {
     'King William County',
     'Lancaster County',
     'Lee County',
-    'Lexington city',
+    'Lexington County',
     'Loudoun County',
     'Louisa County',
     'Lunenburg County',
     'Madison County',
     'Manassas city',
-    'Manassas Park city',
-    'Martinsville city',
+    'Manassas Park County',
+    'Martinsville County',
     'Mathews County',
     'Mecklenburg County',
     'Middlesex County',
     'Montgomery County',
     'Nelson County',
     'New Kent County',
-    'Newport News city',
+    'Newport News County',
     'Norfolk County',
     'Northampton County',
     'Northumberland County',
-    'Norton city',
+    'Norton County',
     'Nottoway County',
     'Orange County',
     'Page County',
     'Patrick County',
-    'Petersburg city',
+    'Petersburg County',
     'Pittsylvania County',
-    'Poquoson city',
-    'Portsmouth city',
+    'Poquoson County',
+    'Portsmouth County',
     'Powhatan County',
     'Prince Edward County',
     'Prince George County',
     'Prince William County',
     'Pulaski County',
-    'Radford city',
+    'Radford County',
     'Rappahannock County',
     'Richmond city',
     'Richmond County',
@@ -126,25 +126,25 @@ const scraper = {
     'Rockbridge County',
     'Rockingham County',
     'Russell County',
-    'Salem city',
+    'Salem County',
     'Scott County',
     'Shenandoah County',
     'Smyth County',
     'Southampton County',
     'Spotsylvania County',
     'Stafford County',
-    'Staunton city',
-    'Suffolk city',
+    'Staunton County',
+    'Suffolk County',
     'Surry County',
     'Sussex County',
     'Tazewell County',
-    'Virginia Beach city',
+    'Virginia Beach County',
     'Warren County',
     'Washington County',
-    'Waynesboro city',
+    'Waynesboro County',
     'Westmoreland County',
-    'Williamsburg city',
-    'Winchester city',
+    'Williamsburg County',
+    'Winchester County',
     'Wise County',
     'Wythe County',
     'York County'
@@ -163,33 +163,41 @@ const scraper = {
       'Roanoke city',
       'Roanoke County'
     ];
-    let counties = [];
+    const city2County = ['Buena Vista city', 'Manassas city'];
+    const counties = [];
 
-    for (const name of this._counties) {
+    for (let name of this._counties) {
       const endURL = fullNameCounties.includes(name) ? name : name.slice(0, name.lastIndexOf(' '));
       const pdfUrl = pdfBaseURL + endURL;
       const pdfScrape = await fetch.pdf(pdfUrl);
-      if (pdfScrape == null) {
-        continue; // try the next county, don't error out
+
+      if (city2County.includes(name)) {
+        name = name.replace('city', 'County');
       }
 
-      let pdfText = '';
-      for (const item of pdfScrape) {
-        if (item.text === '©') {
-          break;
+      if (pdfScrape) {
+        let pdfText = '';
+        for (const item of pdfScrape) {
+          if (item.text === '©') {
+            break;
+          }
+          pdfText += item.text;
         }
-        pdfText += item.text;
-      }
 
-      counties.push({
-        county: name,
-        cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
-        deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
-      });
+        counties.push({
+          county: name,
+          cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+          deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
+        });
+      } else {
+        counties.push({
+          county: name,
+          cases: 0
+        });
+      }
     }
 
     counties.push(transform.sumData(counties));
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
   }

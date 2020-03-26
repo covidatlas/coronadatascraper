@@ -11,9 +11,36 @@ const scraper = {
   country: 'USA',
   maintainers: [maintainers.jbencina],
   url: 'http://www.schsa.org/PublicHealth/pages/corona-virus/',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    return { cases: parse.number($('.counter').text()) };
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this.url);
+      return {
+        cases: parse.number(
+          $('.counter')
+            .first()
+            .text()
+        )
+      };
+    },
+    '2020-3-25': async function() {
+      const $ = await fetch.page(this.url);
+      return {
+        cases: parse.number(
+          $('p:contains("Positive Cases")')
+            .parent()
+            .find('.counter')
+            .last()
+            .text()
+        ),
+        deaths: parse.number(
+          $('p:contains("Related Deaths")')
+            .parent()
+            .find('.counter')
+            .last()
+            .text()
+        )
+      };
+    }
   }
 };
 

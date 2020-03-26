@@ -9,6 +9,10 @@ Every piece of data produced includes the URL where the data was sourced from as
 
 https://coronadatascraper.com/
 
+## How often is it updated?
+
+We upload fresh data every day at around 9PM PST.
+
 ## Getting started
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
@@ -70,7 +74,13 @@ yarn start
 To scrape just one location, use `--location`/`-l`
 
 ```
-yarn start --location "Ventura County, CA, USA"
+yarn start -l "Ventura County, CA, USA"
+```
+
+Alternatively, you can pass a filename (without extension or directory name) to `-l`:
+
+```
+yarn start -l "JHU"
 ```
 
 ### Skipping a scraper
@@ -78,7 +88,7 @@ yarn start --location "Ventura County, CA, USA"
 To skip a scraper, use `--skip`/`-s`
 
 ```
-yarn start --skip "Ventura County, CA, USA"
+yarn start -s "Ventura County, CA, USA"
 ```
 
 ### Re-generating old data

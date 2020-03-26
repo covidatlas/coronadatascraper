@@ -1,3 +1,4 @@
+import path from 'path';
 import * as datetime from '../../../shared/lib/datetime.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
@@ -86,10 +87,14 @@ const runScrapers = async args => {
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.location && geography.getName(location) !== options.location) {
+    if (options.skip && geography.getName(location) === options.skip) {
       continue;
     }
-    if (options.skip && geography.getName(location) === options.skip) {
+    if (
+      options.location &&
+      path.basename(location._path, '.js') !== options.location &&
+      geography.getName(location) !== options.location
+    ) {
       continue;
     }
     if (location.scraper) {

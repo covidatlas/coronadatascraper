@@ -117,17 +117,24 @@ const scraper = {
     let counties = [];
     const $ = await fetch.page(this.url);
 
-    const listItems = $('.stats-section ul li:contains("Confirmed cases in Nebraska") li');
+    const listItems = $('ul:contains("Lab-confirmed cases in Nebraska")').find('li');
 
     listItems.each((index, li) => {
       const text = $(li).text();
 
-      counties.push({
-        county: text.slice(0, text.search(/[^\w\s]/)),
-        cases: parse.number(text.match(/: (\d*)/)[1])
-      });
-    });
+      const cases = parse.number(text.match(/: (\d*)/)[1]);
+      let county = geography.addCounty(text.slice(0, text.search(/[^\w\s]/)));
+      if (county === 'Douglas County/Omaha County') {
+        county = 'Douglas County';
+      }
 
+      if (this._counties.indexOf(county) !== -1) {
+        counties.push({
+          county,
+          cases
+        });
+      }
+    });
     counties.push(transform.sumData(counties));
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
