@@ -11,8 +11,6 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   state: 'VA',
   country: 'USA',
-  url: 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv',
-  type: 'csv',
   aggregate: 'county',
   maintainers: [maintainers.aed3],
 
