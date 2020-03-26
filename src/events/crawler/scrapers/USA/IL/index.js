@@ -15,11 +15,11 @@ const scraper = {
   aggregate: 'county',
   _baseUrl: 'http://www.dph.illinois.gov/sites/default/files/COVID19/',
   _reject: [
-      { county: 'Illinois County' },
-      { county: 'Chicago County' },
-      { county: 'Suburban Cook County' },
-      { county: 'Cook County' }
-    ],
+    { county: 'Illinois County' },
+    { county: 'Chicago County' },
+    { county: 'Suburban Cook County' },
+    { county: 'Cook County' }
+  ],
   async scraper() {
     const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
     if (datetime.dateIsBefore(date, '2020-03-23')) {
@@ -33,7 +33,7 @@ const scraper = {
 
     const data = await fetch.json(this.url);
     const counties = [];
-    const cookCounty = { county: 'Cook County', cases: 0, deaths: 0, tested: 0 }
+    const cookCounty = { county: 'Cook County', cases: 0, deaths: 0, tested: 0 };
     for (const county of data.characteristics_by_county.values) {
       const output = {
         county: geography.addCounty(county.County),
