@@ -27,7 +27,14 @@ const countryMap = {
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB',
-  US: 'USA'
+  US: 'USA',
+  'Bahamas, The': 'BHS',
+  'Cape Verde': 'CPV',
+  'East Timor': 'TLS',
+  'The Gambia': 'GMB',
+  'Republic of the Congo ': 'COG',
+  Syria: 'SYR',
+  Laos: 'LAO'
 };
 
 /*
