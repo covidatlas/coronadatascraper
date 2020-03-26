@@ -46,6 +46,9 @@ const scraper = {
     },
     {
       'Province/State': 'From Diamond Princess'
+    },
+    {
+      'Country/Region': 'West Bank and Gaza'
     }
   ],
   _accept: [
