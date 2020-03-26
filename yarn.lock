@@ -10091,6 +10091,11 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
+windows-iana@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/windows-iana/-/windows-iana-4.2.0.tgz#39890a614bfdedfb5402a7e0c2365b31a4a07256"
+  integrity sha512-DKmBOpZSZ18VSXHDZlbL9fQdrdGru6TTdm2C6blirlDSa9S+t3Yeg5FgzrTTSQr0dV3GHM81/RcNybTeuvSHww==
+
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
