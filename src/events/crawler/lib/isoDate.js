@@ -1,30 +1,32 @@
 ﻿/* eslint-disable camelcase */
 
-import { ZonedDateTime, LocalDateTime, LocalDate, nativeJs, ZoneId } from '@js-joda/core';
+import { ZonedDateTime, LocalDateTime, LocalDate, ZoneId } from '@js-joda/core';
 import '@js-joda/timezone';
 
 // util functions
-const truncate = d => d.slice(0, 10);
+const currentJsDate = () => new Date(Date.now()); // allows us to mock current date
+const currentZdt = () => ZonedDateTime.parse(currentJsDate().toISOString());
 const normalize = d => d.replace(/[\\/.]/g, '-');
-const currentJsDate = () => nativeJs(new Date(Date.now())); // allows us to mock current date
-const currentZdt = () => ZonedDateTime.from(currentJsDate());
+const truncate = d => d.slice(0, 10); // truncate ISO datetime to ISO date
 
 // These don't check that string is a valid date, just that it has the right form
 export const looksLike = {
   isoDate: s => /^\d{4}-\d{2}-\d{2}$/.test(s), // YYYY-DD-MM
-  YYYYMMDD: s => /^\d{4}-\d{1,2}-\d{1,2}$/.test(s) // YYYY-D-M
+  YYYYMD: s => /^\d{4}-\d{1,2}-\d{1,2}$/.test(s) // YYYY-D-M
 };
 
 export const parse = d => {
   // JS Date object
-  if (d instanceof Date) return LocalDate.from(nativeJs(d));
+  if (d instanceof Date) d = d.toISOString();
   // String
   if (typeof d === 'string') {
     const s = truncate(normalize(d));
+    // ISO date
     if (looksLike.isoDate(s)) return LocalDate.parse(s).toString();
-    if (looksLike.YYYYMMDD(s)) {
-      const ymd = s.split('-');
-      return LocalDate.of(ymd);
+    // Other formats
+    if (looksLike.YYYYMD(s)) {
+      const ymd = s.split('-'); // e.g. [2020,3,16]
+      return LocalDate.of(...ymd).toString();
     }
   }
 };
@@ -48,3 +50,11 @@ export const now = {
     return LocalDateTime.from(currentZdtThere).toString();
   }
 };
+
+// console.log({
+//   currentJsDate: currentJsDate().toString(),
+//   currentZdt: currentZdt().toString(),
+//   now_here: now.here().toString()
+// });
+
+export const systemTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
