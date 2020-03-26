@@ -1,7 +1,7 @@
 import * as turf from '@turf/turf';
 import geoTz from 'geo-tz';
-
 import * as fs from '../lib/fs.js';
+import espGeoJson from '../../../../coronavirus-data-sources/geojson/ESP.json';
 import * as geography from '../lib/geography.js';
 
 const DEBUG = false;
@@ -233,6 +233,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
                 continue locationLoop;
               }
             }
+          }
+        } else if (location.country === 'ESP') {
+          const feature = espGeoJson.features.find(d => d.properties.name === location.state);
+          if (feature) {
+            found = true;
+            storeFeature(feature, location);
           }
         } else {
           // Check if the location exists within our provinces

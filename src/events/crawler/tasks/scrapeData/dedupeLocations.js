@@ -99,11 +99,11 @@ const dedupeLocations = args => {
         );
 
         crosscheckReports[locationName] = crosscheckReports[locationName] || [];
-        const strippedLocation = transform.removePrivate(location);
+        const strippedLocation = transform.removePrivate({ ...location });
         if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
           crosscheckReports[locationName].push(strippedLocation);
         }
-        const stippedOtherLocation = transform.removePrivate(otherLocation);
+        const stippedOtherLocation = transform.removePrivate({ ...otherLocation });
         if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
           crosscheckReports[locationName].push(stippedOtherLocation);
         }
