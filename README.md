@@ -70,7 +70,13 @@ yarn start
 To scrape just one location, use `--location`/`-l`
 
 ```
-yarn start --location "Ventura County, CA, USA"
+yarn start -l "Ventura County, CA, USA"
+```
+
+Alternatively, you can pass a filename (without extension or directory name) to `-l`:
+
+```
+yarn start -l "JHU"
 ```
 
 ### Skipping a scraper
@@ -78,7 +84,7 @@ yarn start --location "Ventura County, CA, USA"
 To skip a scraper, use `--skip`/`-s`
 
 ```
-yarn start --skip "Ventura County, CA, USA"
+yarn start -s "Ventura County, CA, USA"
 ```
 
 ### Re-generating old data
