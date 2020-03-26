@@ -5,6 +5,15 @@ const scraper = {
   aggregate: 'state',
   url: 'https://yandex.ru/maps/api/covid?csrfToken=',
   type: 'json',
+  curators: [{ name: 'Yandex', url: 'https://yandex.ru' }],
+  sources: [
+    {
+      description:
+        'Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)',
+      name: 'Rospotrebnadzor',
+      url: 'https://www.rospotrebnadzor.ru/'
+    }
+  ],
   maintainers: [
     {
       name: 'Arseniy Ivanov',
