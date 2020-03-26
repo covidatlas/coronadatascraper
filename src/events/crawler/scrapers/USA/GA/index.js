@@ -180,8 +180,7 @@ const scraper = {
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const name = $tr.find('td:first-child').text();
-      let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
+      let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
       const cases = parse.number($tr.find('td:last-child').text());
       if (county === 'Unknown County') {
         county = UNASSIGNED;
