@@ -1,4 +1,4 @@
-/* globals mapboxgl, document */
+/* globals mapboxgl, document, window */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import * as fetch from './lib/fetch.js';
@@ -131,6 +131,8 @@ function updateMap(date, type) {
 
   setData();
 }
+
+window.updateMap = updateMap;
 
 function populateMap() {
   initData();
