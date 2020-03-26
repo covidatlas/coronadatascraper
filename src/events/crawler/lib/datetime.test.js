@@ -1,17 +1,16 @@
 /* eslint-disable jest/no-commented-out-tests */
 import * as datetime from './datetime.js';
 
-describe('Datetime functions', () => {
+describe(`Datetime functions (${Intl.DateTimeFormat().resolvedOptions().timeZone})`, () => {
   describe('getYYYYMMDD', () => {
     test('convert date defined with ISO date string', () => {
-      const d = new Date('2020-03-16');
-      expect(datetime.getYYYYMMDD(d)).toBe('2020-03-16'); // sometimes we get 2020-03-15
+      const d = '2020-03-16';
+      expect(datetime.getYYYYMMDD(d)).toBe('2020-03-16');
     });
 
-    // This test fails on Windows when runtime timezone is east of GMT
-    //
-    // test('convert date defined with ISO datetime string', () => {
-    //   const d = new Date('2020-03-16T00:00:00');
+    // This test fails when runtime timezone is east of GMT
+    // test('convert date defined as ISO datetime string', () => {
+    //   const d = '2020-03-16T00:00:00';
     //   expect(datetime.getYYYYMMDD(d)).toBe('2020-03-16'); // sometimes we get 2020-03-15
     // });
   });
