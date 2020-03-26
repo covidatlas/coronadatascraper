@@ -120,7 +120,7 @@ const scraper = {
           regions.push(location);
         }
       }
-      locations.push(transform.sumData(regions, { country }));
+      locations.push(transform.sumData(regions, { country, aggregate: 'state' }));
     }
   },
   scraper: {
