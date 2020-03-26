@@ -3,15 +3,25 @@
 <head>
   <meta charset="utf-8">
   <title>Corona Data Scraper</title>
-  <link rel="stylesheet" href="./style.css">
   <meta name="description" content="COVID-19 Coronavirus data scraped from reliable sources">
   <meta name="author" content="Larry Davis">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Corona Data Scraper">
   <meta name="twitter:creator" content="@lazdnet">
-  <meta name="twitter:image" content="https://blog.lazd.net/coronadatascraper/thumb.jpg">
-  <meta name="twitter:description" content="COVID-19 Coronavirus data scraped from reliable sources">
+  <meta name="twitter:image" content="https://coronadatascraper.com/thumb.png">
+  <meta name="twitter:description" content="COVID-19 Coronavirus data scraped from government and curated data sources.">
   <meta name="viewport" content="initial-scale=1">
+
+  <!--  Favicons and app icons generated with realfavicongenerator.net-->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#118113">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160595752-1"></script>
@@ -22,55 +32,181 @@
 
     gtag('config', 'UA-160595752-1');
   </script>
+
+  <link href="index.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/json-formatter-js@2.3.4/dist/json-formatter.umd.min.js"></script>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+
+  <script src="index.js"></script>
 </head>
-<body>
-  <a class="gt_ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-  <div class="gt_page">
-    <div class="gt_body">
-      <h1 class="gt_heading">Corona Data Scraper</h1>
+<body class="spectrum spectrum--light spectrum--medium">
+  <!-- <a class="cds-Ribbon" href="https://github.com/lazd/coronadatascraper"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a> -->
 
-      <p>Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.</p>
+  <div class="spectrum-Site">
+    <div class="spectrum-Site-overlay"></div>
 
-      <p>Here's what it found most recently:</p>
+    <div class="cds-SiteHeader spectrum-Site-header">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+        <span class="icon icon-menu"></span>
+      </button>
+    </div>
 
-      <div style="display: flex; flex-direction: row; justify-content: space-around;">
-        <p style="display: flex; flex-direction: column;">
-          <a class="gt_button" download href="./timeseries.json">Timeseries JSON</a>
-          <a class="gt_button" download href="./timeseries-byLocation.json">Timeseries JSON (by location)</a>
-          <a class="gt_button" download href="./timeseries.csv">Timeseries CSV</a>
-          <a class="gt_button" download href="./timeseries-tidy.csv">Timeseries CSV (Tidy format)</a>
-          <a class="gt_button" download href="./timeseries-jhu.csv">Timeseries CSV (like JHU)</a>
-        </p>
+    <div class="spectrum-Site-content">
+      <div class="cds-Sidebar spectrum-Site-sideBar">
+        <a class="spectrum-Site-sideBarHeader" href="#home">
+          <img src="icons/logo-with-text.svg" class="cds-Logo" alt="Coronadatascraper logo">
+        </a>
 
-        <p style="display: flex; flex-direction: column;">
-          <a class="gt_button" download href="./data.csv">Today's CSV</a>
-          <a class="gt_button" download href="./data.json">Today's JSON</a>
-          <a class="gt_button" download href="./features.json">Today's GeoJSON</a>
-          <a class="gt_button" download href="./locations.json">Today's Location Information</a>
-          <a class="gt_button" download href="./report.json">Today's Report</a>
-        </p>
+        <div class="u-scrollable spectrum-Site-nav">
+          <nav>
+            <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Snapshot</div>
+                <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
+                </ul>
+              </li>
+              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Metadata</div>
+                <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="features.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> GeoJSON Features</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="locations.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Location Metadata</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
+                </ul>
+              </li>
+              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Timeseries</div>
+                <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by date)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-byLocation.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON (by location)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download data-noview href="timeseries-tidy.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (Tidy format)</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
+                </ul>
+              </li>
+              <!-- <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://blog.lazd.net/coronaglobe" target="_blank">View on 3D map (Coronaglobe)</a></li> -->
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#sources">Sources</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/issues/new" target="_blank" rel="noopener">Report Issue</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-      <h2 class="gt_heading">Can't quite visualize it?</h2>
-      <nav>
-        <ul>
-          <li><a class="gt_link" href="https://blog.lazd.net/coronaglobe" target="_blank"><strong>Coronaglobe:</strong> A rate-adjusted choropleth 3D globe</a></li>
-        </ul>
-      </nav>
+      <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-      <h2 class="gt_heading">Missing data you've got a source for?</h2>
-      <p><a class="gt_link" href="https://github.com/lazd/coronadatascraper#contributing" target="_blank">Contribute a scraper</a> and your data will appear here tomorrow.</p>
-      <p><a class="gt_link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Join the Slack</a> and chat in <code>#scraper-dev</code> if you have any questions</p>
+        <div class="spectrum-Site-page cds-Home">
+          <div class="spectrum-Site-hero">
+            <div class="spectrum-Site-heroHeading">
+              <h1 class="spectrum-Heading spectrum-Heading--XXL">Corona Data Scraper</h1>
+            </div>
+            <div class="spectrum-Body spectrum-Body--L">
+              <p>Corona Data Scraper pulls COVID-19 Coronavirus case data from verified sources, finds the corresponding GeoJSON features, and adds population data.</p>
+              <p>All sources are cited right in the same row as the data.</p>
+              <p>Select a file on the left to view and download it.</p>
+            </div>
 
-      <h2 class="gt_heading">Found a problem with the data?</h2>
-      <p><a class="gt_link" href="https://github.com/lazd/coronadatascraper/issues">File an issue</a> on Github with complete details of the issue.</p>
+            <h2 class="spectrum-Heading spectrum-Heading--L">Can't quite visualize it?</h2>
+            <nav class="spectrum-Body spectrum-Body--L">
+              <ul>
+                <li><a class="spectrum-Link" href="#features.json" target="_blank"><strong>CDS county-level Map</strong></a> A rate-adjusted 2D map</li>
+                <li><a class="spectrum-Link" href="https://blog.lazd.net/coronaglobe" target="_blank"><strong>Coronaglobe</strong></a> A rate-adjusted choropleth 3D globe</li>
+                <li><a class="spectrum-Link" href="https://public.tableau.com/profile/stevenzhang#!/vizhome/semilogplotsforcoronavirusliveupdates/specificregioncomparisons?publish=yes" target="_blank"><strong>Semilog plots</strong></a> by Steven Zhang</li>
+                <li><a class="spectrum-Link" href="https://colab.research.google.com/drive/1w-YaCRkhw2Zxwhz4BCiazIdKyRvG3JFZ" target="_blank"><strong>Quickstart plotting Jupyter notebook</strong></a> by Jason Curtis</li>
+              </ul>
+            </nav>
+
+            <h2 class="spectrum-Heading spectrum-Heading--L">Missing data you've got a source for?</h2>
+            <div class="spectrum-Body spectrum-Body--L">
+              <p><a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper#contributing" target="_blank">Contribute a scraper</a> and your data will appear here tomorrow.</p>
+              <p><a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Join the Slack</a> and chat in <code class="spectrum-Code spectrum-Code--L"><strong>#scraper-dev</strong></code> if you have any questions</p>
+            </div>
+            <h2 class="spectrum-Heading spectrum-Heading--L">Found a problem with the data?</h2>
+            <div class="spectrum-Body spectrum-Body--L">
+              <p><a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/issues">File an issue</a> on Github with complete details of the issue.</p>
+            </div>
+            <h2 class="spectrum-Heading spectrum-Heading--L">Use this data?</h2>
+            <div class="spectrum-Body spectrum-Body--L">
+              <p>Cite this website and <a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/issues/new">file an issue</a> to have your project's URL added.</p>
+            </div>
+          </div>
+          <div class="cds-Footer spectrum-Site-footer">
+            <p>Maintained by lazd (Larry Davis)</p>
+            <p><a class="spectrum-Link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="spectrum-Link" target="_blank" href="https://github.com/lazd">github</a> • <a class="spectrum-Link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="spectrum-Link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
+          </div>
+        </div>
+
+        <div class="cds-Sources" hidden>
+          <div class="spectrum-Site-page">
+            <h1 class="spectrum-Heading spectrum-Heading--L">About the data sources</h1>
+            <p class="spectrum-Body spectrum-Body--L">Corona Data Scraper pulls information from a variety of openly available world government data sources and curated datasets.</p>
+
+            <h2 class="spectrum-Heading spectrum-Heading--M">Ratings have nothing to do with the accuracy of the data</h2>
+            <p class="spectrum-Body spectrum-Body--L">The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.</p>
+            <p class="spectrum-Body spectrum-Body--L"><a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/blob/master/src/events/crawler/tasks/scrapeData/rateLocations.js" target="_blank">Take a look at the code</a> to learn more about how the rating system works.</p>
+
+            <h2 class="spectrum-Heading spectrum-Heading--M">Questions about a source’s rating?</h2>
+            <p class="spectrum-Body spectrum-Body--L">We’d like to hear from you and help you make your source more complete. <a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Reach out to us on on Slack</a> or <a class="spectrum-Link" href="https://github.com/lazd/coronadatascraper/issues">file an issue on Github</a>.</p>
+
+            <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">What does a good source look like?</h2>
+            <p class="spectrum-Body spectrum-Body--L">
+              First, please have a look at our <a href="example.csv" download class="spectrum-Link">example format</a>.<br/>
+              As the data itself is most important, please publish your total case count, deaths, recovered, and total tests administered.
+              If you cannot publish in JSON or CSV, at a minimum, please include a HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have.<br/>
+              Have a column for the name of this locality, and a column for each additional data point.<br/>
+              The best published sources include timestamps, allowing citizens and researchers alike better understand the data you have, over time, within your specific geographic region(s).
+            </p>
+
+            <ol class="cds-Sources-list">
+            </ol>
+          </div>
+        </div>
+
+        <div class="cds-Editor cds-Map" hidden>
+          <div class="cds-Editor-header">
+            <div class="cds-Editor-actions spectrum-ButtonGroup cds-Editor-menuToggle">
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+                <span class="icon icon-menu"></span>
+              </button>
+            </div>
+            <code class="cds-Editor-title spectrum-Code spectrum-Code--XL cds-Heading">features.json</code>
+            <div class="cds-Editor-actions spectrum-ButtonGroup">
+              <a href="features.json" download class="spectrum-Button spectrum-Button--cta cds-Editor-download" data-noview>
+                <span class="spectrum-Icon icon icon-download"></span>
+                <span class="spectrum-ActionButton-label">Download</span>
+              </a>
+            </div>
+          </div>
+          <div class="cds-Editor-content">
+            <div id="map"></div>
+          </div>
+        </div>
+
+        <div class="cds-Editor cds-FileEditor" hidden>
+          <div class="cds-Editor-header">
+            <div class="cds-Editor-actions spectrum-ButtonGroup cds-Editor-menuToggle">
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet js-toggleMenu">
+                <span class="icon icon-menu"></span>
+              </button>
+            </div>
+            <code class="cds-Editor-title spectrum-Code spectrum-Code--XL cds-Heading">file.json</code>
+            <div class="cds-Editor-actions spectrum-ButtonGroup">
+              <a href="" download class="spectrum-Button spectrum-Button--cta cds-Editor-download" data-noview>
+                <span class="spectrum-Icon icon icon-download"></span>
+                <span class="spectrum-ActionButton-label">Download</span>
+              </a>
+            </div>
+          </div>
+          <div class="cds-Editor-content cds-FileEditor-content"></div>
+        </div>
+      </div>
     </div>
-
-    <div class="gt_footer">
-      <p>Maintained by lazd (Larry Davis)</p>
-      <p><a class="gt_link" target="_blank" href="https://blog.lazd.net">blog</a> • <a class="gt_link" target="_blank" href="https://github.com/lazd">github</a> • <a class="gt_link" target="_blank" href="https://twitter.com/lazdnet">twitter</a> • <a class="gt_link" target="_blank" href="https://www.patreon.com/lazd">patreon</a></p>
-    </div>
-  </div>
 
 </body>
 </html>

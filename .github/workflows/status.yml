@@ -1,0 +1,39 @@
+name: Scraper Status CI
+
+on:
+  schedule:
+    - cron: '0 */2 * * *' # Runs every 2 hours
+
+jobs:
+  status:
+    runs-on: [macOS-latest]
+    steps:
+      - uses: actions/checkout@v1 # without submodules
+        with:
+          persist-credentials: false
+      - name: Disable the keychain credential helper
+        run: git config --global credential.helper ""
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.15.0'
+      - name: Install
+        run: |
+          yarn
+      - name: Build
+        run: |
+          yarn start
+      - name: Notify Slack
+        env:
+          SLACK_STATUS_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
+        run: |
+          node ./scripts/statusSlackBot.js send ${SLACK_STATUS_HOOK}

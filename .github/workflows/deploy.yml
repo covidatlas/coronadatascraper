@@ -1,0 +1,55 @@
+name: Deploy CI
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # Runs at 9 PM PST every day (4:00 UTC)
+
+jobs:
+  build:
+    runs-on: [macOS-latest]
+    steps:
+      - uses: actions/checkout@v1 # without submodules
+        with:
+          persist-credentials: false
+      - name: Disable the keychain credential helper
+        run: git config --global credential.helper ""
+      - name: Enable the local store credential helper
+        run: git config --global --add credential.helper store
+      - name: Add credential
+        run: echo "https://x-access-token:${{ secrets.GIT_SECRET }}@github.com" >> ~/.git-credentials
+      - name: Tell git to use https instead of ssh whenever it encounters it
+        run: 'git config --global url."https://github.com/".insteadof git@github.com:'
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.15.0'
+      - name: Install
+        run: |
+          yarn
+      - name: Test
+        run: |
+          yarn test
+      - name: Build
+        run: |
+          yarn build
+          yarn dateData
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GIT_SECRET }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
+      - name: Update cache
+        run: |
+          cd coronadatascraper-cache
+          git add .
+          git commit -m "Update cache following deployment" || echo "Nothing to push to cache"
+          git push origin HEAD:master || echo "Nothing to push to cache"
+      - name: Notify Slack
+        env:
+          SLACK_HOOK: ${{ secrets.SLACK_HOOK }}
+        run: |
+          curl -X POST -H 'Content-type: application/js' --data '{"text":"I just pushed a new release, go check it out at http://blog.lazd.net/coronadatascraper !"}' ${SLACK_HOOK}
