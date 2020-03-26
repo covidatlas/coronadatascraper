@@ -3,36 +3,36 @@ import { today, now, parse } from './isoDate.js';
 const setMockDate = d => jest.spyOn(global.Date, 'now').mockImplementationOnce(() => new Date(d).valueOf());
 
 describe(`isoDate (system timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone})`, () => {
-  describe('today.here', () => {
-    it('returns the current date in the current timezone', () => {
+  describe('today.utc', () => {
+    it('returns the current date in UTC', () => {
       setMockDate('2020-03-16T23:45Z');
-      expect(today.here()).toEqual('2020-03-16');
+      expect(today.utc()).toEqual('2020-03-16');
     });
   });
 
   describe('today.at', () => {
-    it('returns the current date in UTC', () => {
+    it('returns the current date in Los Angeles', () => {
       setMockDate('2020-03-16T23:45Z');
-      expect(today.at('UTC')).toEqual('2020-03-16');
+      expect(today.at('America/Los_Angeles')).toEqual('2020-03-16');
     });
 
-    it('returns the current date in Australia', () => {
+    it('returns the current date in Sydney', () => {
       setMockDate('2020-03-16T23:45Z');
       expect(today.at('Australia/Sydney')).toEqual('2020-03-17'); // next day
     });
   });
 
-  describe('now.here', () => {
-    it('returns the current time in the current timezone', () => {
+  describe('now.utc', () => {
+    it('returns the current time in UTC', () => {
       setMockDate('2020-03-16T23:45Z');
-      expect(now.here()).toEqual('2020-03-16T23:45');
+      expect(now.utc()).toEqual('2020-03-16T23:45');
     });
   });
 
   describe('now.at', () => {
-    it('returns the current time in UTC', () => {
+    it('returns the current time in Los Angeles', () => {
       setMockDate('2020-03-16T23:45Z');
-      expect(now.at('UTC')).toEqual('2020-03-16T23:45');
+      expect(now.at('America/Los_Angeles')).toEqual('2020-03-16T16:45'); // 7 hrs earlier
     });
     it('returns the current time in Australia', () => {
       setMockDate('2020-03-16T23:45Z');
