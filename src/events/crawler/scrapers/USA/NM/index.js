@@ -21,7 +21,23 @@ const scraper = {
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const cases = parse.number($tr.find('td:last-child').text());
+      const cases = parse.number(
+        $tr
+          .find('td')
+          .eq(1)
+          .text()
+      );
+      let deaths = parse.number(
+        $tr
+          .find('td')
+          .eq(2)
+          .text()
+      );
+
+      if (Number.isNaN(deaths)) {
+        deaths = undefined;
+      }
+
       const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
 
       if (index < 1) {
