@@ -152,7 +152,6 @@ const scraper = {
 
   async scraper() {
     const usePDFs = datetime.scrapeDateIsBefore('2020-3-26');
-    this.type = 'pdf',
     this.url = usePDFs
       ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
       : 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
@@ -172,6 +171,7 @@ const scraper = {
         'Roanoke County'
       ];
       const county2City = ['Buena Vista County', 'Manassas County'];
+      this.type = 'pdf';
 
       for (const name of this._counties) {
         let endURL = name;
@@ -209,6 +209,7 @@ const scraper = {
       const cites = ['Fairfax City', 'Franklin City', 'Richmond City', 'Roanoke City'];
       const city2County = ['Buena Vista City', 'Manassas City'];
       const data = await fetch.csv(this.url);
+      this.type = 'csv';
 
       data.forEach(location => {
         let name = parse.string(geography.addCounty(location.Locality));
