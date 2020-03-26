@@ -152,7 +152,6 @@ const scraper = {
 
         // First set of columns
         const countyName1 = geography.addCounty(data[0]);
-        console.log(countyName1);
 
         const cases1 = data[1];
 
