@@ -154,6 +154,7 @@ const scraper = {
 
   async scraper() {
     const usePDFs = datetime.scrapeDateIsBefore('2020-3-26');
+    this.type = 'pdf',
     this.url = usePDFs
       ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
       : 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
