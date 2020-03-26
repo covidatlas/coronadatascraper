@@ -2,6 +2,73 @@
 
 let chart;
 
+const options = {
+  maintainAspectRatio: false,
+  title: {
+    display: true,
+    fontSize: 20
+  },
+  scales: {
+    xAxes: [
+      {
+        type: 'time',
+        distribution: 'linear',
+        time: {
+          minUnit: 'day'
+        },
+        ticks: {
+          major: {
+            enabled: true,
+            fontStyle: 'bold'
+          },
+          source: 'data',
+          sampleSize: 100
+        }
+      }
+    ],
+    yAxes: [
+      {
+        gridLines: {
+          drawBorder: false
+        },
+        major: {
+          enabled: true,
+          fontStyle: 'bold'
+        }
+      }
+    ]
+  },
+  legend: {
+    labels: {
+      usePointStyle: true,
+      filter(labelItem, data) {
+        const curr = data.datasets.find(d => d.label === labelItem.text);
+        if (curr.data.length) {
+          return labelItem;
+        }
+      }
+    }
+  },
+  tooltips: {
+    intersect: false,
+    mode: 'index',
+    position: 'nearest',
+    callbacks: {
+      title(tooltipItem) {
+        return new Date(tooltipItem[0].label).toLocaleDateString();
+      },
+      label(tooltipItem, data) {
+        let label = data.datasets[tooltipItem.datasetIndex].label || '';
+        if (label) {
+          label += ': ';
+        }
+        label += parseInt(tooltipItem.value, 10);
+        return label;
+      }
+    }
+  }
+};
+
 const showGraph = (location, locationData) => {
   const casesData = [];
   const activeData = [];
@@ -78,74 +145,8 @@ const showGraph = (location, locationData) => {
     ]
   };
 
-  const options = {
-    maintainAspectRatio: false,
-    title: {
-      display: true,
-      text: location.name,
-      fontSize: 20
-    },
-    scales: {
-      xAxes: [
-        {
-          type: 'time',
-          distribution: 'linear',
-          time: {
-            minUnit: 'day'
-          },
-          ticks: {
-            major: {
-              enabled: true,
-              fontStyle: 'bold'
-            },
-            source: 'data',
-            sampleSize: 100,
-            max: casesData[casesData.length - 1].t
-          }
-        }
-      ],
-      yAxes: [
-        {
-          gridLines: {
-            drawBorder: false
-          },
-          major: {
-            enabled: true,
-            fontStyle: 'bold'
-          }
-        }
-      ]
-    },
-    legend: {
-      labels: {
-        usePointStyle: true,
-        filter(labelItem, data) {
-          const curr = data.datasets.find(d => d.label === labelItem.text);
-          if (curr.data.length) {
-            return labelItem;
-          }
-        }
-      }
-    },
-    tooltips: {
-      intersect: false,
-      mode: 'index',
-      position: 'nearest',
-      callbacks: {
-        title(tooltipItem) {
-          return new Date(tooltipItem[0].label).toLocaleDateString();
-        },
-        label(tooltipItem, data) {
-          let label = data.datasets[tooltipItem.datasetIndex].label || '';
-          if (label) {
-            label += ': ';
-          }
-          label += parseInt(tooltipItem.value, 10);
-          return label;
-        }
-      }
-    }
-  };
+  options.scales.xAxes[0].ticks.max = casesData[casesData.length - 1].t;
+  options.title.text = location.name;
 
   if (chart) {
     chart.options = options;
