@@ -3,6 +3,7 @@ import * as fetch from '../lib/fetch.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography.js';
 import * as datetime from '../lib/datetime.js';
+import * as transform from '../lib/transform.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';
 import maintainers from '../lib/maintainers.js';
@@ -92,6 +93,34 @@ const scraper = {
       ) {
         return location;
       }
+    }
+  },
+  _rollup(locations) {
+    const countriesToRoll = {};
+    const countriesToNotRoll = {};
+
+    for (const location of locations) {
+      if (location.state && location.country && !location.county) {
+        countriesToRoll[location.country] = true;
+      }
+      if (!location.state && location.country && !location.county) {
+        countriesToNotRoll[location.country] = true;
+      }
+    }
+
+    for (const country of Object.keys(countriesToNotRoll)) {
+      delete countriesToRoll[country];
+    }
+
+    for (const country of Object.keys(countriesToRoll)) {
+      // Find everything matching this region and roll it up
+      const regions = [];
+      for (const location of locations) {
+        if (location.country === country) {
+          regions.push(location);
+        }
+      }
+      locations.push(transform.sumData(regions, { country }));
     }
   },
   scraper: {
@@ -294,6 +323,8 @@ const scraper = {
       for (const [, countyData] of Object.entries(countyTotals)) {
         countries.push(countyData);
       }
+
+      this._rollup(countries);
 
       return countries;
     }
