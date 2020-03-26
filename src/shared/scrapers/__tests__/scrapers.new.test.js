@@ -1,3 +1,9 @@
+describe('new scrapers', () => {
+  it('is true', async () => {
+    expect(true).toEqual(true);
+  });
+});
+
 // import each from 'jest-each';
 
 // import { runScraper } from '../tasks/scrapeData/runScraper.js';
@@ -6,10 +12,7 @@
 
 // const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
-describe('new scrapers', () => {
-  it('is true', async () => {
-    expect(true).toEqual(true);
-  });
+// describe('new scrapers', () => {
 
   // beforeAll(() => {
   //   jest.setTimeout(300000);
@@ -46,4 +49,4 @@ describe('new scrapers', () => {
   // } else {
   //   noScrapersTest();
   // }
-});
+// });
