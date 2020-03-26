@@ -19,6 +19,7 @@
     "lint": "eslint .",
     "start": "node src/events/crawler/cli.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
+    "test:tz": "node scripts/testTimezones.js",
     "timeseries": "node src/events/crawler/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
