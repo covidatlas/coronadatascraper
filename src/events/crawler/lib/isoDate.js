@@ -51,10 +51,4 @@ export const now = {
   }
 };
 
-// console.log({
-//   currentJsDate: currentJsDate().toString(),
-//   currentZdt: currentZdt().toString(),
-//   now_here: now.here().toString()
-// });
-
 export const systemTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
