@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@turf/helpers": "^6.2.0-alpha.0",
+    "@turf/union": "^6.2.0-alpha.0",
+    "esm": "^3.2.25"
+  }
+}

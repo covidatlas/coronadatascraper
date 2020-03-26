@@ -1,4 +1,5 @@
-import * as turf from '../../vendor/turf-5.1.6.js';
+import { feature as turfFeature } from '@turf/helpers';
+import turfUnion from '@turf/union';
 import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';
@@ -47,7 +48,7 @@ export function generateMultiCountyFeature(counties, properties) {
   for (const countyFeature of countyGeoJSON.features) {
     if (counties.indexOf(countyFeature.properties.name) !== -1) {
       features.push(countyFeature.properties.name);
-      polygons.push(turf.feature(countyFeature.geometry));
+      polygons.push(turfFeature(countyFeature.geometry));
     }
   }
 
@@ -64,7 +65,7 @@ export function generateMultiCountyFeature(counties, properties) {
   // Generate a combined feature from all of the polygons
   let combinedPolygon = polygons.pop();
   while (polygons.length) {
-    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
+    combinedPolygon = turfUnion(combinedPolygon, polygons.pop());
   }
   const combinedFeature = combinedPolygon;
   combinedFeature.properties = properties;
