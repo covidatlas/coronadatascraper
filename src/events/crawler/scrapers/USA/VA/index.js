@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography.js';
 import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -9,8 +10,8 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   state: 'VA',
   country: 'USA',
-  url: 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard',
-  type: 'pdf',
+  url: 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv',
+  type: 'csv',
   aggregate: 'county',
   maintainers: [maintainers.aed3],
 
@@ -32,7 +33,7 @@ const scraper = {
     'Brunswick County',
     'Buchanan County',
     'Buckingham County',
-    'Buena Vista city',
+    'Buena Vista County',
     'Campbell County',
     'Caroline County',
     'Carroll County',
@@ -88,8 +89,9 @@ const scraper = {
     'Loudoun County',
     'Louisa County',
     'Lunenburg County',
+    'Lynchburg County',
     'Madison County',
-    'Manassas city',
+    'Manassas County',
     'Manassas Park County',
     'Martinsville County',
     'Mathews County',
@@ -150,53 +152,28 @@ const scraper = {
   ],
 
   async scraper() {
-    const pdfBaseURL = `${this.url}.pdf?:showVizHome=no&Locality=`;
-    const fullNameCounties = [
-      'Buena Vista city',
-      'Fairfax city',
-      'Franklin city',
-      'Franklin County',
-      'Manassas city',
-      'Richmond city',
-      'Richmond County',
-      'Roanoke city',
-      'Roanoke County'
-    ];
-    const city2County = ['Buena Vista city', 'Manassas city'];
-    const counties = [];
+    const fullNameCounties = ['Fairfax City', 'Franklin City', 'Manassas City', 'Richmond City', 'Roanoke City'];
+    const city2County = ['Buena Vista City', 'Manassas City'];
+    let counties = [];
 
-    for (let name of this._counties) {
-      const endURL = fullNameCounties.includes(name) ? name : name.slice(0, name.lastIndexOf(' '));
-      const pdfUrl = pdfBaseURL + endURL;
-      const pdfScrape = await fetch.pdf(pdfUrl);
+    const data = await fetch.csv(this.url);
 
-      if (city2County.includes(name)) {
-        name = name.replace('city', 'County');
+    data.forEach(location => {
+      let name = parse.string(geography.addCounty(location.Locality));
+      if (fullNameCounties.includes(location.Locality)) {
+        name = parse.string(location.Locality.replace('City', 'city'));
+      } else if (city2County.includes(location.Locality)) {
+        name = parse.string(location.Locality.replace('City', 'County'));
       }
 
-      if (pdfScrape) {
-        let pdfText = '';
-        for (const item of pdfScrape) {
-          if (item.text === '©') {
-            break;
-          }
-          pdfText += item.text;
-        }
-
-        counties.push({
-          county: name,
-          cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
-          deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
-        });
-      } else {
-        counties.push({
-          county: name,
-          cases: 0
-        });
-      }
-    }
+      counties.push({
+        county: name,
+        cases: parse.number(location['Total Cases'])
+      });
+    });
 
     counties.push(transform.sumData(counties));
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
   }
