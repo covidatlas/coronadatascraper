@@ -1,4 +1,4 @@
-import * as fetch from '../../../lib/fetch.js';
+import * as fetch from '../../../lib/fetch/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import maintainers from '../../../lib/maintainers.js';

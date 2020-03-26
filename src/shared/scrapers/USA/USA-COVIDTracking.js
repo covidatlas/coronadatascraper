@@ -1,4 +1,4 @@
-import * as fetch from '../../lib/fetch.js';
+import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 

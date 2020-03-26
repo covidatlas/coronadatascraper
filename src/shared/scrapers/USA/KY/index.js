@@ -1,5 +1,5 @@
 import sync from 'csv-parse/lib/sync';
-import * as fetch from '../../../lib/fetch.js';
+import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';

@@ -7,9 +7,9 @@ import { readFileSync as readFile } from 'fs';
 import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
-import { get } from '../../lib/get.js';
+import { get } from '../../lib/fetch/get.js';
 
-jest.mock('../../lib/get.js');
+jest.mock('../../lib/fetch/get.js');
 
 /**
 This suite automatically tests a scraper's results against its test cases.

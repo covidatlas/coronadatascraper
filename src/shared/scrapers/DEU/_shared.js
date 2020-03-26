@@ -1,4 +1,4 @@
-import * as fetch from '../../lib/fetch.js';
+import * as fetch from '../../lib/fetch/index.js';
 import * as datetime from '../../lib/datetime.js';
 import * as geography from '../../lib/geography/index.js';
 

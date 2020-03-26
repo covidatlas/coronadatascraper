@@ -1,6 +1,6 @@
-import * as mockFs from './utils/fs.js';
+import * as mockFs from '../../__tests__/utils/fs.js';
 
-import * as fetch from '../fetch.js';
+import * as fetch from '../index.js';
 import * as caching from '../caching.js';
 
 describe('Fetching', () => {

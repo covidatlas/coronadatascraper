@@ -4,7 +4,7 @@ A number of functions are available in separate modules to help write parsers.
 
 ## `fetch`
 
-`import * as fetch from './lib/fetch.js'`
+`import * as fetch from './lib/fetch/index.js'`
 
 
 #### `await fetch.page(url)`
@@ -131,4 +131,3 @@ Get the full name of a location
 MD5 hash a given string
 
 **Returns:** String
-

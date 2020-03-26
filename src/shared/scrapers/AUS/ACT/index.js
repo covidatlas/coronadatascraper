@@ -1,5 +1,5 @@
 import * as parse from '../../../lib/parse.js';
-import * as fetch from '../../../lib/fetch.js';
+import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
