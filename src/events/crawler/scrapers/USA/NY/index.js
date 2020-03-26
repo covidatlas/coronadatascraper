@@ -131,7 +131,7 @@ const scraper = {
 
     counties.push(transform.sumData(counties));
 
-   try {
+    try {
       const pdfScrape = await fetch.pdf(this._boroughURL);
       Object.keys(this._boroughs).forEach(name => {
         const valIndex = pdfScrape.findIndex(ele => ele.text === name);
