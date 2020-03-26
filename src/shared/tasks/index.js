@@ -25,7 +25,7 @@ async function generate(date, options = {}) {
     .then(scrapeData)
     .then(rateSources)
     .then(options.findFeatures !== false && findFeatures)
-    .then(options.findFeatures !== false && findPopulations)
+    .then(options.findPopulations !== false && findPopulations)
     .then(cleanLocations)
     .then(options.writeData !== false && writeData);
 
