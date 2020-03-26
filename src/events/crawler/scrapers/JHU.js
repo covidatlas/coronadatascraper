@@ -234,6 +234,8 @@ const scraper = {
         countries.push(countyData);
       }
 
+      this._rollup(countries);
+
       return countries;
     },
     '2020-3-24': async function() {
