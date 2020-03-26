@@ -15,7 +15,7 @@ const scraper = {
 
     const $table = $('table[style="font-weight:bold"]');
     $('table tr')
-      .slice(-1)
+      .slice(-2)
       .remove();
     const $trs = $table.find('tbody > tr');
     const regions = [];
