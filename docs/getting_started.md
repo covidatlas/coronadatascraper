@@ -112,6 +112,15 @@ This can be combined with `-l` to test a single scraper:
 yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
 ```
 
+### Tests
+
+We use [Jest](https://jestjs.io/).
+
+    # Run all tests
+    yarn test
+
+    # Run a single test file
+    yarn test src/events/crawler/scrapers.all.test.js
 
 ### Building the website
 
