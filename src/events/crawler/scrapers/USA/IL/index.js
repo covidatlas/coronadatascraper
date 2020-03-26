@@ -14,7 +14,12 @@ const scraper = {
   priority: 1,
   aggregate: 'county',
   _baseUrl: 'http://www.dph.illinois.gov/sites/default/files/COVID19/',
-  _reject: [{ county: 'Illinois County' }, { county: 'Chicago County' }, { county: 'Suburban Cook County' }, { county: 'Cook County' }],
+  _reject: [
+      { county: 'Illinois County' },
+      { county: 'Chicago County' },
+      { county: 'Suburban Cook County' },
+      { county: 'Cook County' }
+    ],
   async scraper() {
     const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
     if (datetime.dateIsBefore(date, '2020-03-23')) {
@@ -35,13 +40,13 @@ const scraper = {
         cases: parse.number(county.confirmed_cases),
         deaths: parse.number(county.deaths) || 0,
         tested: parse.number(county.total_tested)
-      }
+      };
       if (rules.isAcceptable(output, null, this._reject)) {
         counties.push(output);
-      } else if(output.county == 'Chicago County' || output.county == 'Cook County'){
-         cookCounty.cases += output.cases;
-         cookCounty.deaths += output.deaths;
-         cookCounty.tested += output.tested;
+      } else if (output.county === 'Chicago County' || output.county === 'Cook County') {
+        cookCounty.cases += output.cases;
+        cookCounty.deaths += output.deaths;
+        cookCounty.tested += output.tested;
       }
     }
     counties.push(cookCounty);
