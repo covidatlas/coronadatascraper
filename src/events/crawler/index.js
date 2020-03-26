@@ -24,8 +24,12 @@ async function crawler(event) {
     date
   };
 
-  const output = await fetchSources({ date, report, options }).then(scrapeData);
-  return output;
+  const payload = await fetchSources({ date, report, options }).then(scrapeData);
+
+  arc.events.publish({
+    name: 'processor',
+    payload
+  });
 }
 
 exports.handler = arc.events.subscribe(crawler);

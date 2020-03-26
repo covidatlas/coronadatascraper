@@ -1,14 +1,14 @@
-import path from 'path';
+import { join, resolve } from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
-const dataPath = path.join('./coronavirus-data-sources/population/');
+const dataPath = join(__dirname, '..', 'vendor', 'population');
 
 /*
   Read population data from a CSV with correct datatypes
 */
 async function readPopulationFromCSV(csvPath) {
-  const output = await fs.readCSV(path.resolve(dataPath, csvPath));
+  const output = await fs.readCSV(resolve(dataPath, csvPath));
   const populationData = {};
   for (const item of output) {
     if (item.population) {
@@ -25,20 +25,20 @@ async function readPopulationData(featureCollection) {
   const populations = {
     byCity: {},
     byCounty: {
-      USA: await readPopulationFromCSV('population-usa-counties.csv'),
-      GBR: await readPopulationFromCSV('population-gbr-counties.csv')
+      USA: await readPopulationFromCSV(join(dataPath, 'population-usa-counties.csv')),
+      GBR: await readPopulationFromCSV(join(dataPath, 'population-gbr-counties.csv'))
     },
     byState: {
-      China: await readPopulationFromCSV('population-china-admin-divisions.csv'),
-      Australia: await readPopulationFromCSV('population-australia-states.csv'),
-      Canada: await readPopulationFromCSV('population-canada-provinces.csv'),
-      Italy: await readPopulationFromCSV('population-italy-regions.csv'),
-      USA: await readPopulationFromCSV('population-usa-states-abbrev.csv'),
-      Brazil: await readPopulationFromCSV('population-brazil-states-abbrev.csv'),
-      Spain: await readPopulationFromCSV('population-ESP.csv')
+      China: await readPopulationFromCSV(join(dataPath, 'population-china-admin-divisions.csv')),
+      Australia: await readPopulationFromCSV(join(dataPath, 'population-australia-states.csv')),
+      Canada: await readPopulationFromCSV(join(dataPath, 'population-canada-provinces.csv')),
+      Italy: await readPopulationFromCSV(join(dataPath, 'population-italy-regions.csv')),
+      USA: await readPopulationFromCSV(join(dataPath, 'population-usa-states-abbrev.csv')),
+      Brazil: await readPopulationFromCSV(join(dataPath, 'population-brazil-states-abbrev.csv')),
+      Spain: await readPopulationFromCSV(join(dataPath, 'population-ESP.csv'))
     },
     byCountry: {},
-    supplemental: await readPopulationFromCSV('population-supplemental.csv')
+    supplemental: await readPopulationFromCSV(join(dataPath, 'population-supplemental.csv'))
   };
 
   populations.byState.CHN = populations.byState.China;

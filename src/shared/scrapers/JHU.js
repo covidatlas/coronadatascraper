@@ -77,7 +77,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       // Build a hash of US counties
-      const jhuUSCountyMap = await fs.readJSON(path.join('coronavirus-data-sources', 'lib', 'jhuUSCountyMap.json'));
+      const jhuUSCountyMap = await fs.readJSON(path.join('..', 'vendor', 'jhuUSCountyMap.json'));
 
       const getOldData = datetime.scrapeDateIsBefore('2020-3-12');
 

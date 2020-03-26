@@ -1,7 +1,8 @@
 import geoTz from 'geo-tz';
+import { join } from 'path';
 import * as turf from '../../../shared/vendor/turf-5.1.6.js';
 import * as fs from '../../../shared/lib/fs.js';
-import espGeoJson from '../../../../coronavirus-data-sources/geojson/ESP.json';
+import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 const DEBUG = false;
@@ -143,10 +144,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   return new Promise(async resolve => {
     console.log('⏳ Generating features...');
 
-    const countryData = await fs.readJSON('./coronavirus-data-sources/geojson/world-countries.json');
-    const usCountyData = await fs.readJSON('./coronavirus-data-sources/geojson/usa-counties.json');
-    const itaRegionsData = await fs.readJSON('./coronavirus-data-sources/geojson/ita-regions.json');
-    const provinceData = await fs.readJSON('./coronavirus-data-sources/geojson/world-states-provinces.json');
+    const usCountyData = await fs.readJSON(join(__dirname, '..', '..', '..', 'shared', 'vendor', 'usa-counties.json'));
+    const countryData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-countries.json'));
+    const itaRegionsData = await fs.readJSON(join(__dirname, '..', 'vendor', 'ita-regions.json'));
+    const provinceData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-states-provinces.json'));
 
     provinceData.features = itaRegionsData.features.concat(provinceData.features);
 

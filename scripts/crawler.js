@@ -1,4 +1,5 @@
-let arc = require('@architect/functions');
+// eslint-disable-next-line
+const arc = require('@architect/functions');
 
 arc.events.publish({
   name: 'crawler',
