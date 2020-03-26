@@ -29,6 +29,7 @@ export const parse = d => {
       return LocalDate.of(...ymd).toString();
     }
   }
+  throw new Error(`Could not parse '${d.toString()}' as a date`);
 };
 
 export const today = {
