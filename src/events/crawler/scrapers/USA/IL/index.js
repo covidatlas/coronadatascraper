@@ -13,31 +13,60 @@ const scraper = {
   country: 'USA',
   priority: 1,
   aggregate: 'county',
-  _baseUrl: 'http://www.dph.illinois.gov/sites/default/files/COVID19/',
+  _baseUrl: 'http://www.dph.illinois.gov/',
   _reject: [{ county: 'Illinois County' }, { county: 'Chicago County' }, { county: 'Suburban Cook County' }],
   async scraper() {
     const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
-    if (datetime.dateIsBefore(date, '2020-03-23')) {
-      this.url = `${this._baseUrl}COVID19CountyResults.json`;
-    } else if (datetime.dateIsBefore(date, '2020-03-24')) {
-      const datePart = datetime.getYYYYMMDD(date, '');
-      this.url = `${this._baseUrl}COVID19CountyResults${datePart}.json`;
-    } else {
+    
+    if (datetime.dateIsBefore(date, '2020-03-24')) {
+      this.url = `${this._baseUrl}sites/default/files/COVID19/COVID19CountyResults.json`;
+    
+    } else if (datetime.dateIsBefore(date, '2020-03-25')) {
+      this.url = `${this._baseUrl}sites/default/files/COVID19/COVID19CountyResults20200323.json`;
+    
+    } else if (datetime.dateIsBefore(date, '2020-03-26')) {
       this.url = 'http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json';
+    } else {
+
+      // Scrapes page that embeds Illinois' county map; 
+      // uses regex to find source JSON used to generate map
+      var sourcePage = 'http://www.dph.illinois.gov/topics-services/diseases-and-conditions/diseases-a-z-list/coronavirus';
+      var sourceScrape = await fetch.fetch(sourcePage, date);
+      
+      const regex = /Plotly\.d3\.json\('(.+)',/gm;
+      var m = regex.exec(sourceScrape);
+      this.url = `${this._baseUrl}${m[1]}`
     }
 
+    
+
+    
+    //this.url = 'http://www.dph.illinois.gov/sites/default/files/COVID19/COVID19CountyResults202003250.json';
     const data = await fetch.json(this.url);
     const counties = [];
-    for (const county of data.characteristics_by_county.values) {
-      const output = {
-        county: geography.addCounty(county.County),
-        cases: parse.number(county.confirmed_cases),
-        tested: parse.number(county.total_tested)
-      };
+
+    var chicago = data.characteristics_by_county.values.find(x => x.County == 'Chicago');
+
+    for (var county of data.characteristics_by_county.values) {
+      if (county.County=='Illinois' || county.County=='Chicago') {
+        continue;
+      } else if (county.County=='Cook') {
+        var output = {
+          county: geography.addCounty(county.County),
+          cases: parse.number(county.confirmed_cases) + parse.number(chicago.confirmed_cases)
+        };
+      } else {
+        var output = {
+          county: geography.addCounty(county.County),
+          cases: parse.number(county.confirmed_cases)
+        };
+      }
+      
       if (rules.isAcceptable(output, null, this._reject)) {
         counties.push(output);
       }
     }
+
     counties.push(transform.sumData(counties));
     return counties;
   }
