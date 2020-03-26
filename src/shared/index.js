@@ -1,5 +1,5 @@
 // Crawler operations
-import fetchSources from '../events/crawler/fetch-sources/index.js';
+import fetchSources from '../events/crawler/get-sources/index.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
 
 // Metadata + geo processing operations
@@ -23,10 +23,11 @@ async function generate(date, options = {}) {
     date
   };
 
+  // Crawler
   const output = await fetchSources({ date, report, options })
     .then(scrapeData)
+    // processor
     .then(rateSources)
-    //
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
     .then(cleanLocations)
