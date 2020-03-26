@@ -12,6 +12,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2N
 const data = {};
 
 let map;
+let slider;
 
 let currentType = 'cases';
 let currentDate;
@@ -136,6 +137,10 @@ window.updateMap = updateMap;
 
 function populateMap() {
   initData();
+
+  slider = document.querySelector('.cds-Map-dateSlider');
+  slider.max = Object.keys(data.timeseries).length - 1;
+  slider.value = Object.keys(data.timeseries).length - 1;
 
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;
@@ -302,6 +307,10 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
+
+  slider.addEventListener('input', () => {
+    updateMap(Object.keys(data.timeseries)[slider.value]);
+  });
 
   updateMap();
 }
