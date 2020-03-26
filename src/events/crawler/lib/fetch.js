@@ -204,6 +204,7 @@ export const headless = async (url, date = process.env.SCRAPE_DATE || datetime.g
 export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerName) {
   const dashboardManifest = await json(`https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`);
   const { orgId } = dashboardManifest;
+  console.log(dashboardManifest);
   const layerMetadata = await json(
     `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`
   );

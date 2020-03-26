@@ -320,50 +320,6 @@ div.spectrum-SideNav-itemLink:hover {
   overflow: hidden;
 }
 
-/* Graph */
-#graph-elements {
-  z-index: 3;
-  display: block;
-  padding-top: 100px;
-  position: fixed;
-  width: calc(100% - 235px);
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-  visibility: hidden;
-}
-
-#graph-container {
-  position: relative;
-  display: block;
-  animation: animatetop 0.4s;
-  width: 80%;
-  height: 80%;
-  margin: auto;
-  padding: 0;
-  outline: 0;
-}
-
-#graph-close {
-  font-size: 50px;
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  background-color: #FFFFFF;
-  border-radius: 61px;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 42px;
-  cursor: pointer;
-}
-
-#graph {
-  background-color: #fff;
-  border-radius: 1em;
-}
-
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
@@ -380,8 +336,5 @@ div.spectrum-SideNav-itemLink:hover {
   }
   .is-editing .spectrum-Site-content {
     max-height: 100%;
-  }
-  #graph-elements {
-    width: 100%;
   }
 }
