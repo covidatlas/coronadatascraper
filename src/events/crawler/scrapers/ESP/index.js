@@ -123,7 +123,7 @@ const scraper = {
     // use the scrape date, or the latest available
     const queryDate = scrapeDate || lastDate;
 
-    if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
+    if (queryDate < firstDate) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
     // return data from that date
     const locations = data.filter(d => d.date === queryDate.toString());
