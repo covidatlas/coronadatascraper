@@ -46,6 +46,8 @@ function updateMap(date) {
 
   let chartDataMin;
   let chartDataMax;
+  let lowestLocation = null;
+  let highestLocation = null;
 
   data.locations.forEach(function(location, index) {
     // Calculate worst affected percent
@@ -55,10 +57,12 @@ function updateMap(date) {
         const infectionPercent = locationData.cases / location.population;
         if (infectionPercent > worstAffectedPercent) {
           worstAffectedPercent = infectionPercent;
+          highestLocation = location;
         }
         // Calculate least affected percent
         if (infectionPercent !== 0 && infectionPercent < lowestInfectionPercent) {
           lowestInfectionPercent = infectionPercent;
+          lowestLocation = location;
         }
         chartDataMax = worstAffectedPercent;
         chartDataMin = lowestInfectionPercent;
@@ -83,6 +87,9 @@ function updateMap(date) {
 
     feature.properties.color = regionColor || color.noPopulationDataColor;
   });
+
+  console.log('Lowest infection', lowestLocation);
+  console.log('Highest infection', highestLocation);
 
   color.createLegend(chartDataMin, chartDataMax);
 }
