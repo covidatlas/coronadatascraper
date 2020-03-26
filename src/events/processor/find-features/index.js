@@ -1,6 +1,9 @@
 import geoTz from 'geo-tz';
 import { join } from 'path';
-import * as turf from '../../../shared/vendor/turf-5.1.6.js';
+// import * as turf from '../../../shared/vendor/turf-5.1.6.js';
+import turfCenter from '@turf/center';
+import turfBooleanPointInPolygon from '@turf/boolean-point-in-polygon';
+import { feature as turfFeature, point as turfPoint } from '@turf/helpers';
 import * as fs from '../../../shared/lib/fs.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
@@ -125,7 +128,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     // Store coordinates on location
     if (feature.geometry) {
-      location.coordinates = turf.center(feature).geometry.coordinates;
+      location.coordinates = turfCenter(feature).geometry.coordinates;
     }
 
     if (DEBUG) {
@@ -163,7 +166,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       let found = false;
       let point;
       if (location.coordinates) {
-        point = turf.point(location.coordinates);
+        point = turfPoint(location.coordinates);
       }
 
       // If the location already comes with its own feature, store it98
@@ -218,8 +221,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
                 continue locationLoop;
               }
               if (point && feature.geometry) {
-                const poly = turf.feature(feature.geometry);
-                if (turf.booleanPointInPolygon(point, poly)) {
+                const poly = turfFeature(feature.geometry);
+                if (turfBooleanPointInPolygon(point, poly)) {
                   found = true;
                   storeFeature(feature, location);
                   continue locationLoop;
@@ -263,8 +266,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
             }
 
             if (point && feature.geometry) {
-              const poly = turf.feature(feature.geometry);
-              if (turf.booleanPointInPolygon(point, poly)) {
+              const poly = turfFeature(feature.geometry);
+              if (turfBooleanPointInPolygon(point, poly)) {
                 found = true;
                 storeFeature(feature, location);
                 break;
@@ -303,9 +306,9 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           }
 
           if (point && feature.geometry) {
-            const poly = turf.feature(feature.geometry);
+            const poly = turfFeature(feature.geometry);
 
-            if (turf.booleanPointInPolygon(point, poly)) {
+            if (turfBooleanPointInPolygon(point, poly)) {
               found = true;
               storeFeature(feature, location);
               break;
@@ -331,9 +334,9 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
             }
 
             if (point && feature.geometry) {
-              const poly = turf.feature(feature.geometry);
+              const poly = turfFeature(feature.geometry);
 
-              if (turf.booleanPointInPolygon(point, poly)) {
+              if (turfBooleanPointInPolygon(point, poly)) {
                 found = true;
                 storeFeature(feature, location);
                 break;

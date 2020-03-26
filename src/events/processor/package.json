@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "@architect/functions": "^3.7.6",
+    "@turf/boolean-point-in-polygon": "^6.2.0-alpha.0",
+    "@turf/center": "^6.2.0-alpha.0",
+    "@turf/helpers": "^6.2.0-alpha.0",
+    "@turf/union": "^6.2.0-alpha.0",
     "esm": "^3.2.25",
     "geo-tz": "^5.1.0"
   }
