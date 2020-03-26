@@ -51,5 +51,3 @@ export const now = {
     return LocalDateTime.from(currentZdtThere).toString();
   }
 };
-
-export const systemTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
