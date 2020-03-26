@@ -9,6 +9,10 @@ Every piece of data produced includes the URL where the data was sourced from as
 
 https://coronadatascraper.com/
 
+## How often is it updated?
+
+We upload fresh data every day at around 9PM PST.
+
 ## Getting started
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
