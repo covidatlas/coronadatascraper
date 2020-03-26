@@ -1,7 +1,7 @@
 ﻿/* eslint-disable camelcase */
 
 import { ZonedDateTime, LocalDateTime, LocalDate, ZoneId } from '@js-joda/core';
-import '@js-joda/timezone';
+import '@js-joda/timezone/dist/js-joda-timezone-10-year-range'; // minimize package size by only importing tz data for current year ±5 yrs
 
 // util functions
 const currentJsDate = () => new Date(Date.now()); // allows us to mock current date
