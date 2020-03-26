@@ -1,9 +1,10 @@
-﻿/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jest/no-commented-out-tests */
+﻿/* eslint-disable jest/no-commented-out-tests */
 /* eslint-disable no-use-before-define */
 
 const { spawn, execSync } = require('child_process');
 const os = require('os');
+
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 const ianaWin = require('windows-iana');
 
 // This script runs date-related tests in multiple timezones to make sure that we don't have any
