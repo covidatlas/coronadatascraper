@@ -2,11 +2,11 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const generate = imports('./tasks/index.js').default;
-const argv = imports('./lib/cliArgs.js').default;
+const generate = imports('./index.js').default;
+const argv = imports('./cli/cli-args.js').default;
 const fs = imports('./lib/fs.js');
 const transform = imports('./lib/transform.js');
-const geography = imports('./lib/geography.js');
+const geography = imports('./lib/geography/index.js');
 const datetime = imports('./lib/datetime.js');
 
 const clearAllTimeouts = imports('./utils/timeouts.js').default;
