@@ -4,7 +4,7 @@
 import * as fetch from './lib/fetch.js';
 
 import { getRatio, getPercent } from './lib/math.js';
-import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/shared/lib/geography/index.js';
+import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
