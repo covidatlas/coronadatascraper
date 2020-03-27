@@ -12,6 +12,10 @@ const scraper = {
   url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
   type: 'table',
   aggregate: 'county',
+  source: {
+    name: 'Alabama Department of Public Health | Division of Infectious Diseases & Outbreaks',
+    url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html'
+  },
   _counties: [
     'Autauga County',
     'Baldwin County',
@@ -81,30 +85,53 @@ const scraper = {
     'Wilcox County',
     'Winston County'
   ],
-  async scraper() {
-    let counties = [];
-    const $ = await fetch.page(this.url);
-    const $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
-    const $trs = $table.find('tbody > tr:not(:last-child)');
-    $trs.each((index, tr) => {
-      if (index < 2) {
-        return;
-      }
-      const $tr = $(tr);
-      const countyName = geography.addCounty(parse.string($tr.find('td:first-child').text()));
-      if (countyName === 'Out of State County') {
-        return;
-      }
-      counties.push({
-        county: countyName,
-        cases: parse.number($tr.find('td:last-child').text())
+  scraper: {
+    '0': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      const $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        if (index < 2) {
+          return;
+        }
+        const $tr = $(tr);
+        const countyName = geography.addCounty(parse.string($tr.find('td:first-child').text()));
+        if (countyName === 'Out of State County') {
+          return;
+        }
+        counties.push({
+          county: countyName,
+          cases: parse.number($tr.find('td:last-child').text())
+        });
       });
-    });
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
-    counties.push(transform.sumData(counties));
+      counties.push(transform.sumData(counties));
 
-    return counties;
+      return counties;
+    },
+    '2020-3-26': async function() {
+      let counties = [];
+      this.url = await fetch.getArcGISCSVURLFromOrgId(7, '4RQmZZ0yaZkGR1zy', 'COV19_Public_Dashboard_ReadOnly');
+      this.type = 'csv';
+      const data = await fetch.csv(this.url);
+      for (const row of data) {
+        const county = geography.addCounty(row.CNTYNAME);
+        const cases = parse.number(row.CONFIRMED);
+        const deaths = parse.number(row.DIED);
+
+        // console.log(county, cases, deaths);
+        counties.push({
+          county,
+          cases,
+          deaths
+        });
+      }
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    }
   }
 };
 
