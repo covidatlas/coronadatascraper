@@ -42,7 +42,7 @@ const scraper = {
       };
     },
     '2020-3-27': async function() {
-      scraper.type = 'table';
+      this.type = 'table';
       const $ = await fetch.page(this.url);
       const $table = $('table:first-of-type');
       const $trs = $table.find('tbody > tr:not(:first-child)');
