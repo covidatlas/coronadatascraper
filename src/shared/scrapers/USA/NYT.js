@@ -11,6 +11,14 @@ const scraper = {
   timeseries: true,
   aggregate: 'county',
   priority: -1,
+  curators: [
+    {
+      name: 'The New York Times',
+      url: 'http://nytimes.com/',
+      twitter: '@nytimes',
+      github: 'nytimes'
+    }
+  ],
   async scraper() {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
     const data = await fetch.csv(this.url, false);
