@@ -320,6 +320,14 @@ div.spectrum-SideNav-itemLink:hover {
   overflow: hidden;
 }
 
+#mapControl {
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--spectrum-global-color-gray-50);
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;
