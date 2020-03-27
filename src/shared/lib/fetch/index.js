@@ -148,30 +148,56 @@ const fetchHeadless = async url => {
   await page.setUserAgent(CHROME_AGENT);
   await page.setViewport(DEFAULT_VIEWPORT);
 
-  try {
-    const response = await page.goto(url, {
-      timeout: READ_TIMEOUT,
-      waitUntil: 'networkidle2'
-    });
+  let tries = 0;
+  while (tries < 5) {
+    tries++;
+    if (tries > 1) {
+      // sleep a moment before retrying
+      console.log(`  ⚠️  Retrying (${tries})...`);
+      await new Promise(r => setTimeout(r, 2000));
+    }
 
-    if (response._status < 400) {
-      await page.waitFor(RESPONSE_TIMEOUT);
-      const html = await page.content();
+    try {
+      const response = await page.goto(url, {
+        timeout: READ_TIMEOUT,
+        waitUntil: 'networkidle2'
+      });
+
+      // Some sort of internal socket error or other badness, retry
+      if (response === null) {
+        browser.close();
+        continue;
+      }
+
+      // try again if we got an error code which might be recoverable
+      if (response.statusCode >= 500) {
+        console.error(`  ❌ Got error ${response._status} trying to fetch ${url}`);
+        continue;
+      }
+
+      // We got a good response, return it
+      if (response._status < 400) {
+        await page.waitFor(RESPONSE_TIMEOUT);
+        const html = await page.content();
+        browser.close();
+        return html;
+      }
+
+      // 400-499 means "not found", retrying is not likely to help
+      if (response._status < 500) {
+        console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
+        browser.close();
+        return null;
+      }
+    } catch (err) {
+      // Caught something, allow retry
       browser.close();
-      return html;
+      console.log(`  ❌ Caught ${err.name} error trying to fetch ${url}`);
     }
-    console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
-    browser.close();
-    return null;
-  } catch (err) {
-    browser.close();
-
-    if (err.name === 'TimeoutError') {
-      console.log(`  ❌ Timed out trying to fetch ${url}`);
-      return null;
-    }
-    throw err;
   }
+
+  console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+  return null;
 };
 
 /**
