@@ -32,7 +32,7 @@ const scraper = {
       const granularity = row.granularite;
       const rowDate = row.date;
 
-      data.url = row.source_url !== undefined ? row.source_url : this.url;
+      data.url = row.source_url ? row.source_url : this.url;
 
       if (row.cas_confirmes !== undefined && row.cas_confirmes !== '') {
         data.cases = parse.number(row.cas_confirmes);
