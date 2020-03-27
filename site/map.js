@@ -141,9 +141,6 @@ function populateMap() {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
       const location = data.locations[feature.properties.locationId];
-      /*if (location && !location.county && location.aggregate === 'county') {
-        return false;
-      }*/
       return isState(location);
     })
   };
@@ -152,9 +149,6 @@ function populateMap() {
     type: 'FeatureCollection',
     features: data.features.features.filter(function(feature) {
       const location = data.locations[feature.properties.locationId];
-      /*if (location && location.country && !location.state && location.aggregate === 'state') {
-        return false;
-      }*/
       return isCountry(location);
     })
   };
@@ -229,14 +223,13 @@ function populateMap() {
     },
     labelLayerId
   );
-
   class ToggleDataLevelControl {
     onAdd(map) {
-        this._map = map;
-        this._container = document.createElement('div');
-        this._container.id = "mapControl";
-        this._container.className = 'mapboxgl-ctrl';
-        this._container.innerHTML = `
+      this._map = map;
+      this._container = document.createElement('div');
+      this._container.id = 'mapControl';
+      this._container.className = 'mapboxgl-ctrl';
+      this._container.innerHTML = `
         <div class="mapToggleInput">
           <label for="showStates">Show States</label>
           <input type="checkbox" name="showStates" checked>
@@ -245,44 +238,22 @@ function populateMap() {
           <label for="showCounties">Show Counties</label>
           <input type="checkbox" name="showCounties" checked>
         </div>
-        `
-        this.stateToggle = this._container.querySelector("input[name=showStates");
-        this.stateToggle.addEventListener('change', function(){
-          var countyToggle = document.querySelector("input[name=showCounties");
-          if (this.checked){
-            map.addLayer(
-              {
-                id: 'CDS-state',
-                type: 'fill',
-                source: 'CDS-state',
-                layout: {},
-                paint: paintConfig
-              },
-              labelLayerId
-            );
-            if (countyToggle.checked){
-              map.addLayer(
-                {
-                  id: 'CDS-county',
-                  type: 'fill',
-                  source: 'CDS-county',
-                  layout: {},
-                  paint: paintConfig
-                },
-                labelLayerId
-              );
-            }
-          } else {
-            if (countyToggle.checked){
-              map.removeLayer('CDS-county');
-            }
-            map.removeLayer('CDS-state');
-          }
-        });
-
-        this.countyToggle= this._container.querySelector("input[name=showCounties");
-        this.countyToggle.addEventListener('change', function(){
-          if (this.checked){
+        `;
+      this.stateToggle = this._container.querySelector('input[name=showStates');
+      this.stateToggle.addEventListener('change', function() {
+        const countyToggle = document.querySelector('input[name=showCounties');
+        if (this.checked) {
+          map.addLayer(
+            {
+              id: 'CDS-state',
+              type: 'fill',
+              source: 'CDS-state',
+              layout: {},
+              paint: paintConfig
+            },
+            labelLayerId
+          );
+          if (countyToggle.checked) {
             map.addLayer(
               {
                 id: 'CDS-county',
@@ -293,21 +264,42 @@ function populateMap() {
               },
               labelLayerId
             );
-          } else {
+          }
+        } else {
+          if (countyToggle.checked) {
             map.removeLayer('CDS-county');
           }
-        });
-        return this._container;
+          map.removeLayer('CDS-state');
+        }
+      });
+
+      this.countyToggle = this._container.querySelector('input[name=showCounties');
+      this.countyToggle.addEventListener('change', function() {
+        if (this.checked) {
+          map.addLayer(
+            {
+              id: 'CDS-county',
+              type: 'fill',
+              source: 'CDS-county',
+              layout: {},
+              paint: paintConfig
+            },
+            labelLayerId
+          );
+        } else {
+          map.removeLayer('CDS-county');
+        }
+      });
+      return this._container;
     }
 
     onRemove() {
-        this._container.parentNode.removeChild(this._container);
-        this._map = undefined;
+      this._container.parentNode.removeChild(this._container);
+      this._map = undefined;
     }
-}
+  }
 
-var mapToggle = new ToggleDataLevelControl();
-map.addControl(mapToggle, 'top-left');
+  map.addControl(new ToggleDataLevelControl(), 'top-left');
 
   // Create a popup, but don't add it to the map yet.
   const popup = new mapboxgl.Popup({
