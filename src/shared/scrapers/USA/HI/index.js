@@ -25,6 +25,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       this.url = 'https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/';
+      this.type = 'table';
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('*:contains("Novel Coronavirus in Hawaii")').closest('table');
@@ -74,6 +75,7 @@ const scraper = {
     },
     '2020-3-26': async function() {
       this.url = 'https://health.hawaii.gov/coronavirusdisease2019/';
+      this.type = 'list';
       let counties = [];
 
       const $ = await fetch.page(this.url);
