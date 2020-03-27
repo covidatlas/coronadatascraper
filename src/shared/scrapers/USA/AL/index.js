@@ -121,7 +121,7 @@ const scraper = {
         const cases = parse.number(row.CONFIRMED);
         const deaths = parse.number(row.DIED);
 
-        console.log(county, cases, deaths);
+        // console.log(county, cases, deaths);
         counties.push({
           county,
           cases,
