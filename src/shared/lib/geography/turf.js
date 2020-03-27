@@ -4,10 +4,9 @@ import * as turfCenter from '@turf/center';
 import * as turfUnion from '@turf/union';
 import * as turfHelpers from '@turf/helpers';
 
-const booleanPointInPolygon = turfBooleanPointInPolygon;
-const center = turfCenter;
-const union = turfUnion;
-const point = turfHelpers;
-const feature = turfHelpers;
+const booleanPointInPolygon = turfBooleanPointInPolygon.default;
+const center = turfCenter.default;
+const union = turfUnion.default;
+const { point, feature } = turfHelpers;
 
 export { booleanPointInPolygon, center, feature, point, union };
