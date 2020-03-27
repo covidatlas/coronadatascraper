@@ -50,7 +50,7 @@ const scraper = {
           county: countyName,
           cases: parse.number(county.COVID19Cases),
           deaths: parse.number(county.COVID19Deaths),
-          tested: parse.number(county.COVID19Recovered)
+          recovered: parse.number(county.COVID19Recovered)
         });
       }
       counties.push(transform.sumData(counties));
