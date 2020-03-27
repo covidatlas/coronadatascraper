@@ -162,6 +162,40 @@ const scraper = {
       });
       regions = geography.addEmptyRegions(regions, this._counties, 'county');
       return regions;
+    },
+    '2020-3-26': async function() {
+      this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
+      this.type = 'table';
+      let regions = [];
+      const $ = await fetch.headless(this.url);
+      const $table = $('#covid-county-table').find('table');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        regions.push({
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          cases: parse.number($tr.find('td:last-child').text())
+        });
+      });
+      {
+        const stateData = { tested: 0 };
+        const $table = $('#covid-state-table').find('table');
+        const $trs = $table.find('tbody > tr');
+        $trs.each((index, tr) => {
+          const $tr = $(tr);
+          const label = parse.string($tr.find('td:first-child').text());
+          const value = parse.number($tr.find('td:last-child').text());
+          if (label === 'Positive') {
+            stateData.cases = value;
+            stateData.tested += value;
+          } else if (label === 'Negative') {
+            stateData.tested += value;
+          }
+        });
+        regions = geography.addEmptyRegions(regions, this._counties, 'county');
+        regions.push(stateData);
+      }
+      return regions;
     }
   }
 };

@@ -3,8 +3,11 @@ import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
+import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 
 export { usStates };
+
+const UNASSIGNED = '(unassigned)';
 
 /*
   Override some incorrect country names
@@ -216,4 +219,47 @@ export const getActiveFromLocation = function(location) {
     return location.cases - location.deaths - location.recovered;
   }
   return undefined;
+};
+
+/*
+  Return a minimized and stripped county name with no punctuation
+*/
+export const stripCountyName = function(county) {
+  // Strip off country/parish, all punctuation, lowercase
+  return county
+    .trim()
+    .toLowerCase()
+    .replace(/[^A-Za-z,]*/g, '')
+    .replace(/(parish|county)/, '');
+};
+
+/*
+  Get a proper state name
+*/
+export const getState = function(state) {
+  return usStates[state] || state;
+};
+
+/*
+  Get a proper county name
+*/
+export const getCounty = function(county, state) {
+  state = getState(state);
+
+  if (county.match(/city$/)) {
+    // These need to be handled on a case-by-case basis
+    return county;
+  }
+
+  if (county === 'Unknown') {
+    // These are cases we can't place in a given county
+    return UNASSIGNED;
+  }
+
+  // Compare
+  const foundCounty = strippedCountyMap[stripCountyName(`${county},${state}`)];
+  if (foundCounty) {
+    return foundCounty.replace(/, .*$/, '');
+  }
+  return county;
 };

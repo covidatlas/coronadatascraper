@@ -32,11 +32,12 @@ needle.defaults({
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  */
 export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
-  const { alwaysRun, disableSSL, toString, encoding } = {
+  const { alwaysRun, disableSSL, toString, encoding, cookies } = {
     alwaysRun: false,
     disableSSL: false,
     toString: true,
     encoding: 'utf8',
+    cookies: undefined,
     ...options
   };
 
@@ -63,7 +64,7 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       // TODO @AWS: if AWS infra get from endpoint instead of needle
 
       let errorMsg = '';
-      const response = await needle('get', url).catch(err => {
+      const response = await needle('get', url, { cookies }).catch(err => {
         // Errors we get here have the tendency of crashing the whole crawler
         // with no ability for us to catch them. Let's hear what these errors have to say,
         // and throw an error later down that won't bring the whole process down.

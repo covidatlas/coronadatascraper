@@ -17,7 +17,7 @@ const reportScraping = args => {
   for (const location of locations) {
     if (!location.state && !location.county) {
       locationCounts.countries++;
-    } else if (!location.county) {
+    } else if (!location.county && !location.city) {
       locationCounts.states++;
     } else if (!location.city) {
       locationCounts.counties++;

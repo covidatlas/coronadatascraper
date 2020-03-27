@@ -17,28 +17,33 @@ const scraper = {
   url:
     'https://docs.google.com/spreadsheets/d/1n-zMS9Al94CPj_Tc3K7Adin-tN9x1RSjjx2UzJ4SV7Q/gviz/tq?tqx=out:csv&sheet=County+Data#gid=0',
 
-  async scraper() {
-    const data = await fetch.csv(this.url);
-    const counties = [];
-    for (const row of data) {
-      const caseHdr = 'Number of  COVID-19 positive (including presumptive positive) cases';
+  scraper: {
+    '0': async function() {
+      const data = await fetch.csv(this.url);
+      const counties = [];
+      for (const row of data) {
+        const caseHdr = 'Number of  COVID-19 positive (including presumptive positive) cases';
 
-      const county = geography.addCounty(row.County);
-      const cases = parse.number(row[caseHdr]);
+        const county = geography.addCounty(row.County);
+        const cases = parse.number(row[caseHdr]);
 
-      // skip the last updated timestamp row
-      if (county.indexOf('last updated') !== -1) {
-        continue;
+        // skip the last updated timestamp row
+        if (county.indexOf('last updated') !== -1) {
+          continue;
+        }
+
+        counties.push({
+          county,
+          cases
+        });
       }
 
-      counties.push({
-        county,
-        cases
-      });
+      counties.push(transform.sumData(counties));
+      return counties;
+    },
+    '2020-3-26': async function() {
+      throw new Error('RI stopped reporting by county');
     }
-
-    counties.push(transform.sumData(counties));
-    return counties;
   }
 };
 

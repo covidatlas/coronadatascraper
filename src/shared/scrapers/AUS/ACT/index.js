@@ -18,9 +18,8 @@ const scraper = {
   url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
   async scraper() {
     const $ = await fetch.page(this.url);
-    const $table = $('.statuscontent');
-    const $rowWithCases = $table.find('div:first-child').text();
-    const $rowWithTestedMinusCases = $table.find('div:nth-child(2)').text();
+    const $rowWithCases = $('.statuscontent div:first-child').text();
+    const $rowWithTestedMinusCases = $('.statuscontent div:nth-child(2)').text();
     const cases = parse.number($rowWithCases);
     return {
       state: scraper.state,

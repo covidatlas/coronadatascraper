@@ -173,6 +173,12 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
+    },
+    '2020-3-26': async function() {
+      this.url =
+        'https://public.tableau.com/views/OverviewDashboard_15852499073250/DashboardOverview_1?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=no&:showAppBanner=false&iframeSizedToWindow=true&:loadOrderID=0';
+      await fetch.page(this.url);
+      throw new Error('Ohio has an impossible to access tablaeu dashboard');
     }
   }
 };

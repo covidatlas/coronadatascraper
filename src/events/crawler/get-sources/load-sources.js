@@ -3,7 +3,7 @@ import { basename } from 'path';
 import join from '../../../shared/lib/join.js';
 
 export default async args => {
-  console.log(`⏳ Fetching scrapers`);
+  console.log(`⏳ Fetching scrapers...`);
   const scrapers = join(__dirname, '..', '..', '..', 'shared', 'scrapers', '**', '*.js');
   let filePaths = await fastGlob([scrapers]);
   filePaths = filePaths.filter(file => !file.endsWith('.test.js'));
