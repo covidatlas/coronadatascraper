@@ -94,6 +94,48 @@ function updateMap(date) {
   color.createLegend(chartDataMin, chartDataMax);
 }
 
+function generateCountyFeatures() {
+  const countyFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      return isCounty(data.locations[feature.properties.locationId]);
+    })
+  };
+  return countyFeatures;
+}
+
+function generateStateFeatures(showSubregion = true) {
+  const stateFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (showSubregion) {
+        if (location && !location.county && location.aggregate === 'county') {
+          return false;
+        }
+      }
+      return isState(location);
+    })
+  };
+  return stateFeatures;
+}
+
+function generateCountryFeatures(showSubregion = true) {
+  const countryFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (showSubregion) {
+        if (location && location.country && !location.state && location.aggregate === 'state') {
+          return false;
+        }
+      }
+      return isCountry(location);
+    })
+  };
+  return countryFeatures;
+}
+
 function populateMap() {
   initData();
   updateMap();
@@ -130,28 +172,9 @@ function populateMap() {
     return htmlString;
   }
 
-  const countyFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
-    })
-  };
-
-  const stateFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      return isState(location);
-    })
-  };
-
-  const countryFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      return isCountry(location);
-    })
-  };
+  const countyFeatures = generateCountyFeatures();
+  const stateFeatures = generateStateFeatures();
+  const countryFeatures = generateCountryFeatures();
 
   const paintConfig = {
     // 'fill-outline-color': 'rgba(255, 255, 255, 1)',
@@ -265,7 +288,9 @@ function populateMap() {
               labelLayerId
             );
           }
+          map.getSource('CDS-country').setData(generateCountryFeatures(true));
         } else {
+          map.getSource('CDS-country').setData(generateCountryFeatures(false));
           if (countyToggle.checked) {
             map.removeLayer('CDS-county');
           }
@@ -286,7 +311,9 @@ function populateMap() {
             },
             labelLayerId
           );
+          map.getSource('CDS-state').setData(generateStateFeatures(true));
         } else {
+          map.getSource('CDS-state').setData(generateStateFeatures(false));
           map.removeLayer('CDS-county');
         }
       });
