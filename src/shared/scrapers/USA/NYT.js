@@ -1,7 +1,7 @@
-import * as fetch from '../../lib/fetch.js';
+import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
-import * as geography from '../../lib/geography.js';
+import * as geography from '../../lib/geography/index.js';
 import * as datetime from '../../lib/datetime.js';
 
 const scraper = {
@@ -10,7 +10,7 @@ const scraper = {
   country: 'USA',
   timeseries: true,
   aggregate: 'county',
-  priority: 1,
+  priority: -1,
   async scraper() {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
     const data = await fetch.csv(this.url, false);
