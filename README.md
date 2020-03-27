@@ -39,6 +39,9 @@ This project is licensed under the permissive [BSD 2-clause license](LICENSE).
 
 The data produced by this project is public domain.
 
+This project uses data from [ISO-3166 Country and Dependent Territories Lists with UN Regional Codes
+](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes) under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
 ## Attribution
 
 Please cite this project if you use it in your visualization or reporting.

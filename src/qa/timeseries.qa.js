@@ -1,7 +1,7 @@
-import entries from './utils/qaFetch.js';
-import { eachLocation } from './utils/qaUtils.js';
+import entries from './utils/qa-fetch.js';
+import { eachLocation } from './utils/qa-utils.js';
 
-import * as datetime from '../events/crawler/lib/datetime.js';
+import * as datetime from '../shared/lib/datetime.js';
 
 export default t => {
   eachLocation(t, entries, (t, _, location) => {

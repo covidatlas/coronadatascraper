@@ -120,7 +120,7 @@ We use [Jest](https://jestjs.io/).
     yarn test
 
     # Run a single test file
-    yarn test src/events/crawler/scrapers.all.test.js
+    yarn test src/shared/lib/__tests__/parse.test.js
 
 ### Building the website
 

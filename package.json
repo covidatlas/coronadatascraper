@@ -4,7 +4,7 @@
   "description": "A scraper for Coronavirus data",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
-  "main": "src/events/crawler/cli.js",
+  "main": "src/shared/cli/index.js",
   "type": "commonjs",
   "engines": {
     "node": ">=12.15.0 <13.0.0"
@@ -17,10 +17,10 @@
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
+    "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
-    "start": "node src/events/crawler/cli.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
-    "timeseries": "node src/events/crawler/timeseries.js",
+    "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "pretty": "prettier --write '**/*.js'"
@@ -29,10 +29,12 @@
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
-    "@architect/architect": "^6.2.4",
     "@js-joda/core": "^2.0.0",
+    "@turf/boolean-point-in-polygon": "^6.2.0-alpha.1",
+    "@turf/center": "^6.2.0-alpha.1",
+    "@turf/helpers": "^6.2.0-alpha.1",
+    "@turf/union": "^6.2.0-alpha.1",
     "@lorenzofox3/for-await": "^0.2.1",
-    "@turf/turf": "^5.1.6",
     "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
@@ -51,6 +53,8 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "@architect/architect": "^6.3.2",
+    "@architect/functions": "^3.8.1",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-json": "^4.0.2",
