@@ -85,7 +85,7 @@ const rateLocation = location => {
 };
 
 const calculateRatings = async args => {
-  console.log(`⏳ Calculate ratings`);
+  console.log(`⏳ Calculating ratings...`);
 
   const { sources, locations } = args;
 
