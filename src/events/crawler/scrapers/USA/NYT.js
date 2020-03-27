@@ -1,5 +1,6 @@
 import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
+import * as transform from '../../lib/transform.js';
 import * as geography from '../../lib/geography.js';
 import * as datetime from '../../lib/datetime.js';
 
@@ -8,6 +9,7 @@ const scraper = {
   type: 'csv',
   country: 'USA',
   timeseries: true,
+  aggregate: 'county',
   priority: 1,
   async scraper() {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
@@ -39,6 +41,7 @@ const scraper = {
     }
 
     const locations = [];
+    const locationsByState = {};
     for (const row of data) {
       if (datetime.getYYYYMD(`${row.date} 12:00:00`) === scrapeDateString) {
         const locationObj = {
@@ -46,6 +49,7 @@ const scraper = {
           cases: parse.number(row.cases),
           deaths: parse.number(row.deaths)
         };
+        locationsByState[locationObj.state] = locationsByState[locationObj.state] || [];
         if (row.county.toLowerCase().match(/city$/)) {
           // Data is not for a county
           // Todo: Check our citycounty to county map
@@ -53,8 +57,14 @@ const scraper = {
         } else {
           locationObj.county = geography.getCounty(row.county, row.state);
         }
+        locationsByState[locationObj.state].push(locationObj);
         locations.push(locationObj);
       }
+    }
+
+    // Roll-up states
+    for (const [state, stateLocations] of Object.entries(locationsByState)) {
+      locations.push(transform.sumData(stateLocations, { state }));
     }
 
     if (locations.length === 0) {
