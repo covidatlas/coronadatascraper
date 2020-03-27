@@ -163,33 +163,34 @@ const fetchHeadless = async url => {
         waitUntil: 'networkidle2'
       });
 
+      // Some sort of internal socket error or other badness, retry
       if (response === null) {
         browser.close();
         continue;
       }
 
+      // We got a good response, return it
       if (response._status < 400) {
         await page.waitFor(RESPONSE_TIMEOUT);
         const html = await page.content();
         browser.close();
         return html;
       }
+
+      // 400-499 means "not found", retrying is not likely to help
       if (response._status < 500) {
         console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
         browser.close();
         return null;
       }
     } catch (err) {
+      // Caught something, allow retry
       browser.close();
-
-      if (err.name === 'TimeoutError') {
-        console.log(`  ❌ Timed out trying to fetch ${url}`);
-      } else {
-        console.log(`  ❌ Caught error trying to fetch ${url}`);
-      }
+      console.log(`  ❌ Caught ${err.name} error trying to fetch ${url}`);
     }
   }
 
+  console.log(`  ❌ Too many trying to fetch ${url}`);
   return null;
 };
 
