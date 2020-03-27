@@ -2,10 +2,8 @@ import * as fetch from '../../lib/fetch.js';
 import * as parse from '../../lib/parse.js';
 import * as geography from '../../lib/geography.js';
 import * as datetime from '../../lib/datetime.js';
-import maintainers from '../../lib/maintainers.js';
 
 const scraper = {
-  maintainers: [maintainers.lazd],
   url: 'https://github.com/nytimes/covid-19-data',
   type: 'csv',
   country: 'USA',
@@ -40,19 +38,26 @@ const scraper = {
       throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
     }
 
-    const counties = [];
+    const locations = [];
     for (const row of data) {
       if (datetime.getYYYYMD(`${row.date} 12:00:00`) === scrapeDateString) {
-        counties.push({
-          county: geography.getCounty(row.county, row.state),
+        const locationObj = {
           state: geography.getState(row.state),
           cases: parse.number(row.cases),
           deaths: parse.number(row.deaths)
-        });
+        };
+        if (row.county.toLowerCase().match(/city$/)) {
+          // Data is not for a county
+          // Todo: Check our citycounty to county map
+          locationObj.city = row.county;
+        } else {
+          locationObj.county = geography.getCounty(row.county, row.state);
+        }
+        locations.push(locationObj);
       }
     }
 
-    return counties;
+    return locations;
   }
 };
 
