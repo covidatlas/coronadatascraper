@@ -1,3 +1,4 @@
+import path from 'path';
 import * as geography from '../../lib/geography.js';
 import * as transform from '../../lib/transform.js';
 
@@ -32,13 +33,21 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
   return exists;
 }
 
+function getCleanPath(scraperFilePath) {
+  const scraperFolderPath = path.resolve(__dirname, '..', '..', 'scrapers');
+  return path.relative(scraperFolderPath, scraperFilePath);
+}
+
 const dedupeLocations = args => {
+  console.log(`⏳ De-duping locations...`);
+
   const { locations } = args;
 
   const crosscheckReports = {};
   const seenLocations = {};
   let i = locations.length;
   let deDuped = 0;
+  let crossCheckFailures = 0;
   while (i-- > 0) {
     const location = locations[i];
     const locationName = geography.getName(location);
@@ -53,9 +62,9 @@ const dedupeLocations = args => {
         console.log(
           '⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily',
           locationName,
-          location.url,
+          getCleanPath(location._path),
           thisPriority,
-          otherLocation.url,
+          getCleanPath(otherLocation._path),
           otherPriority
         );
         // Delete the other location
@@ -66,9 +75,9 @@ const dedupeLocations = args => {
         console.log(
           '✂️  %s: Using %s (%d) instead of %s (%d)',
           locationName,
-          location.url,
+          getCleanPath(location._path),
           thisPriority,
-          otherLocation.url,
+          getCleanPath(otherLocation._path),
           otherPriority
         );
         locations.splice(locations.indexOf(otherLocation), 1);
@@ -78,9 +87,9 @@ const dedupeLocations = args => {
         console.log(
           '✂️  %s: Using %s (%d) instead of %s (%d)',
           locationName,
-          otherLocation.url,
+          getCleanPath(otherLocation._path),
           otherPriority,
-          location.url,
+          getCleanPath(location._path),
           thisPriority
         );
         locations.splice(i, 1);
@@ -90,11 +99,11 @@ const dedupeLocations = args => {
       const crosscheckReport = crosscheck(location, otherLocation);
       if (crosscheckReport) {
         console.log(
-          '🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)',
+          '  🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)',
           locationName,
-          otherLocation.url,
+          getCleanPath(otherLocation._path),
           otherPriority,
-          location.url,
+          getCleanPath(location._path),
           thisPriority
         );
 
@@ -107,10 +116,13 @@ const dedupeLocations = args => {
         if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
           crosscheckReports[locationName].push(stippedOtherLocation);
         }
+        crossCheckFailures++;
       }
     }
     seenLocations[locationName] = location;
   }
+
+  console.log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
 
   return { ...args, deDuped, crosscheckReports };
 };
