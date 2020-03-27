@@ -1,14 +1,17 @@
 // Crawler operations
 import fetchSources from '../events/crawler/get-sources/index.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
+import rateSources from '../events/crawler/rate-sources/index.js'; // TODO move into metadata ops
 
 // Metadata + geo processing operations
-import rateSources from '../events/processor/rate-sources/index.js';
 import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
 
+/**
+ * Entry file while we're still hosted on GitHub
+ */
 async function generate(date, options = {}) {
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
@@ -26,8 +29,8 @@ async function generate(date, options = {}) {
   // Crawler
   const output = await fetchSources({ date, report, options })
     .then(scrapeData)
-    // processor
     .then(rateSources)
+    // processor
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
     .then(cleanLocations)
