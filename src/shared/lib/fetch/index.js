@@ -153,7 +153,7 @@ const fetchHeadless = async url => {
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
-      console.log(`  ⚠️  retrying (${tries})`);
+      console.log(`  ⚠️  Retrying (${tries})...`);
       await new Promise(r => setTimeout(r, 2000));
     }
 
@@ -166,6 +166,12 @@ const fetchHeadless = async url => {
       // Some sort of internal socket error or other badness, retry
       if (response === null) {
         browser.close();
+        continue;
+      }
+
+      // try again if we got an error code which might be recoverable
+      if (response.statusCode >= 500) {
+        console.error(`  ❌ Got error ${response._status} trying to fetch ${url}`);
         continue;
       }
 
