@@ -41,7 +41,6 @@ const scraper = {
     '2020-3-27': async function() {
       this.url = await fetch.getArcGISCSVURL('', 'a54a945cac82424fa4928139ee83f911', 'Cases_current');
       this.type = 'csv';
-      console.log(this.url);
 
       const data = await fetch.csv(this.url);
       for (const row of data) {
