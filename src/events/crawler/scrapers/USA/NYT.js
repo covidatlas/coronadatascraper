@@ -57,6 +57,10 @@ const scraper = {
       }
     }
 
+    if (locations.length === 0) {
+      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+    }
+
     return locations;
   }
 };
