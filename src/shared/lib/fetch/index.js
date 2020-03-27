@@ -192,7 +192,7 @@ const fetchHeadless = async url => {
     } catch (err) {
       // Caught something, allow retry
       browser.close();
-      console.log(`  ❌ Caught ${err.name} error trying to fetch ${url}`);
+      console.log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
     }
   }
 
