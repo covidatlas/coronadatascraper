@@ -190,7 +190,7 @@ const fetchHeadless = async url => {
     }
   }
 
-  console.log(`  ❌ Too many trying to fetch ${url}`);
+  console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
 };
 
