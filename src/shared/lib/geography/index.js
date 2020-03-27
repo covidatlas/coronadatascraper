@@ -193,6 +193,10 @@ export const addCounty = function(string) {
   Add empty regions if they're not defined already
 */
 export const addEmptyRegions = function(regionDataArray, regionNameArray, regionGranularity) {
+  if (regionDataArray.length === 0) {
+    throw new Error(`Attempted to addEmptyRegions with without providing any ${regionGranularity} records`);
+  }
+
   // Get an object of all the tracked regions
   const trackedRegions = regionDataArray.reduce((a, region) => {
     a[region[regionGranularity]] = true;
