@@ -44,6 +44,7 @@ export const page = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const json = async (url, date, options = {}) => {
+  console.log(url);
   const body = await get(url, 'json', date, options);
 
   if (!body) {
