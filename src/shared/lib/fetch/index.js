@@ -170,13 +170,13 @@ const fetchHeadless = async url => {
       }
 
       // try again if we got an error code which might be recoverable
-      if (response.statusCode >= 500) {
-        console.error(`  ❌ Got error ${response._status} trying to fetch ${url}`);
+      if (response.status() >= 500) {
+        console.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         continue;
       }
 
       // We got a good response, return it
-      if (response._status < 400) {
+      if (response.status() < 400) {
         await page.waitFor(RESPONSE_TIMEOUT);
         const html = await page.content();
         browser.close();
@@ -184,8 +184,8 @@ const fetchHeadless = async url => {
       }
 
       // 400-499 means "not found", retrying is not likely to help
-      if (response._status < 500) {
-        console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
+      if (response.status() < 500) {
+        console.log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         browser.close();
         return null;
       }
