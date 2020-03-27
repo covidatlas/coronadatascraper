@@ -36,6 +36,8 @@ jobs:
         run: |
           git diff --name-only origin/master
           FILES_MODIFIED=$(git diff --name-only origin/master) yarn jest
+      - name: Timezone test
+          yarn test:tz
       - name: Lint
         run: |
           yarn lint
