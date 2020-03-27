@@ -1,4 +1,5 @@
 import needle from 'needle';
+import * as fetch from '../../lib/fetch.js';
 
 import populations from './populations.json';
 
@@ -35,11 +36,8 @@ const scraper = {
     const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
     const csrfCookies = csrfRequestResponse.cookies;
     const { csrfToken } = csrfRequestResponse.body;
-    // assert typeof csrfToken !== 'undefined'
 
-    const { body } = await needle('get', `${this.url}${csrfToken}`, { cookies: csrfCookies, parse_response: true });
-    const { data } = body;
-    // assert typeof data !== 'undefined'
+    const { data } = await fetch.json(`${this.url}${csrfToken}`, undefined, { cookies: csrfCookies });
 
     const ruEntries = data.items.filter(({ ru }) => ru);
     return ruEntries
