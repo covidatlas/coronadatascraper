@@ -1157,6 +1157,11 @@
   resolved "https://registry.yarnpkg.com/@js-joda/core/-/core-2.0.0.tgz#e9a351ee6feb91262770e2a3d085aa0219ad6afb"
   integrity sha512-OWm/xa9O9e4ugzNHoRT3IsXZZYfaV6Ia1aRwctOmCQ2GYWMnhKBzMC1WomqCh/oGxEZKNtPy5xv5//VIAOgMqw==
 
+"@js-joda/timezone@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@js-joda/timezone/-/timezone-2.2.0.tgz#6085937d83791cd0bda0b43b533273f2f76b678b"
+  integrity sha512-Ks1F35VAEhQjlXQd9iqkbCkYGOUmCtMPfrjurgdoAGFqy4Q83Ob/p865E6N+mFAhlpWW1iFpwsznhdrVmtSZ2w==
+  
 "@lorenzofox3/for-await@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@lorenzofox3/for-await/-/for-await-0.2.1.tgz#cb12c2bba25eaca8225db06027820624c5d2f5e5"
@@ -8952,6 +8957,11 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
+
+windows-iana@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/windows-iana/-/windows-iana-4.2.0.tgz#39890a614bfdedfb5402a7e0c2365b31a4a07256"
+  integrity sha512-DKmBOpZSZ18VSXHDZlbL9fQdrdGru6TTdm2C6blirlDSa9S+t3Yeg5FgzrTTSQr0dV3GHM81/RcNybTeuvSHww==
 
 word-wrap@~1.2.3:
   version "1.2.3"
