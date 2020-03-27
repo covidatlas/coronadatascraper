@@ -38,6 +38,7 @@ const scraper = {
           recovered: parse.number(row.dimessi_guariti),
           deaths: parse.number(row.deceduti),
           cases: parse.number(row.totale_casi),
+          tested: parse.number(row.tamponi),
           state: parse.string(row.denominazione_regione)
         };
       });
