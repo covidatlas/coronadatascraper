@@ -26,8 +26,7 @@ const scraper = {
       counties.push({
         county: geography.addCounty(countyName),
         cases: parse.number(county.Total_Positive),
-        deaths: parse.number(county.Total_Deaths),
-        tested: parse.number(county.Total_Tested)
+        deaths: parse.number(county.Total_Deaths)
       });
     }
     counties.push(transform.sumData(counties));
