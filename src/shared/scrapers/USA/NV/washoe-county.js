@@ -38,11 +38,20 @@ const scraper = {
         deaths: 0
       };
     },
-    '2020-3-X': async function() {
-      // Deaths: https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_public/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cdeaths%2Creportdt%2Cname&orderByFields=reportdt%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true
-      // Recovered: https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_public/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Crecovered%2Creportdt%2Cname&orderByFields=reportdt%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true
-      // Confirmed: https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_public/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cconfirmed%2Creportdt%2Cname&orderByFields=reportdt%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true
-      // Active: https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_public/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=OBJECTID%2Cactive%2Creportdt%2Cname&orderByFields=reportdt%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true
+    '2020-3-27': async function() {
+      this.url = await fetch.getArcGISCSVURL('', 'a54a945cac82424fa4928139ee83f911', 'Cases_current');
+      this.type = 'csv';
+      console.log(this.url);
+
+      const data = await fetch.csv(this.url);
+      for (const row of data) {
+        return {
+          cases: parse.number(row.confirmed),
+          deaths: parse.number(row.deaths),
+          recovered: parse.number(row.recovered),
+          active: parse.number(row.active)
+        };
+      }
     }
   }
 };
