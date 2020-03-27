@@ -148,30 +148,49 @@ const fetchHeadless = async url => {
   await page.setUserAgent(CHROME_AGENT);
   await page.setViewport(DEFAULT_VIEWPORT);
 
-  try {
-    const response = await page.goto(url, {
-      timeout: READ_TIMEOUT,
-      waitUntil: 'networkidle2'
-    });
+  let tries = 0;
+  while (tries < 5) {
+    tries++;
+    if (tries > 1) {
+      // sleep a moment before retrying
+      console.log(`  ⚠️  retrying (${tries})`);
+      await new Promise(r => setTimeout(r, 2000));
+    }
 
-    if (response._status < 400) {
-      await page.waitFor(RESPONSE_TIMEOUT);
-      const html = await page.content();
+    try {
+      const response = await page.goto(url, {
+        timeout: READ_TIMEOUT,
+        waitUntil: 'networkidle2'
+      });
+
+      if (response === null) {
+        browser.close();
+        continue;
+      }
+
+      if (response._status < 400) {
+        await page.waitFor(RESPONSE_TIMEOUT);
+        const html = await page.content();
+        browser.close();
+        return html;
+      }
+      if (response._status < 500) {
+        console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
+        browser.close();
+        return null;
+      }
+    } catch (err) {
       browser.close();
-      return html;
-    }
-    console.log(`  ❌ Got error ${response._status} trying to fetch ${url}`);
-    browser.close();
-    return null;
-  } catch (err) {
-    browser.close();
 
-    if (err.name === 'TimeoutError') {
-      console.log(`  ❌ Timed out trying to fetch ${url}`);
-      return null;
+      if (err.name === 'TimeoutError') {
+        console.log(`  ❌ Timed out trying to fetch ${url}`);
+      } else {
+        console.log(`  ❌ Caught error trying to fetch ${url}`);
+      }
     }
-    throw err;
   }
+
+  return null;
 };
 
 /**
