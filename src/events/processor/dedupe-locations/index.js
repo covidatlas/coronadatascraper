@@ -34,7 +34,7 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
 }
 
 function getCleanPath(scraperFilePath) {
-  const scraperFolderPath = path.resolve(__dirname, '..', '..', 'scrapers');
+  const scraperFolderPath = path.resolve(path.join('src', 'shared', 'scrapers'));
   return path.relative(scraperFolderPath, scraperFilePath);
 }
 
