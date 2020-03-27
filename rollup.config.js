@@ -36,12 +36,5 @@ export default [
     watch: {
       exclude: ['node_modules'] // jic
     }
-  },
-  {
-    input: 'scripts/turf.js',
-    output: {
-      file: 'src/shared/vendor/turf-5.1.6.js'
-    },
-    plugins: [resolve()]
   }
 ];

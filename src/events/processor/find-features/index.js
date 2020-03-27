@@ -1,6 +1,6 @@
 import geoTz from 'geo-tz';
 import { join } from 'path';
-import * as turf from '../../../shared/vendor/turf-5.1.6.js';
+import * as turf from '../../../shared/lib/geography/turf.js';
 import * as fs from '../../../shared/lib/fs.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';

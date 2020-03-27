@@ -1,4 +1,4 @@
-import * as turf from '../../vendor/turf-5.1.6.js';
+import * as turf from './turf.js';
 import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';
