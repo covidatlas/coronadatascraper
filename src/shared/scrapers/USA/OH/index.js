@@ -188,6 +188,7 @@ const scraper = {
     },
     '2020-3-28': async function() {
       this.url = 'https://coronavirus.ohio.gov/static/COVIDSummaryData.csv';
+      this.type = 'csv';
       const rows = await fetch.csv(this.url);
 
       // The CSV is coming in with the BOM bytes mangled onto the front.
