@@ -198,8 +198,9 @@ const scraper = {
       const $tr = $(tr);
       const name = $tr
         .find('td:first-child')
-        .text()
-        .replace('Mcduffie', 'McDuffie');
+        .text();
+
+        name = this._countyMap[name] || name;
       let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
 
       const cases = parse.number($tr.find('td:nth-child(2)').text());
