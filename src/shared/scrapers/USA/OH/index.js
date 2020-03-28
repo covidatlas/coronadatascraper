@@ -111,6 +111,7 @@ const scraper = {
       let counties = [];
       let arrayOfCounties = [];
       this.url = 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const regExp = /\(([^)]+)\)/;
@@ -136,6 +137,7 @@ const scraper = {
       let arrayOfCounties = [];
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ', '');
@@ -159,6 +161,7 @@ const scraper = {
       let arrayOfCounties = [];
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph
