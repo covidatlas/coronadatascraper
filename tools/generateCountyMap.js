@@ -1,8 +1,8 @@
 const imports = require('esm')(module);
 
 const path = imports('path');
-const geography = imports('../src/events/crawler/lib/geography.js');
-const fs = imports('../src/events/crawler/lib/fs.js');
+const geography = imports('../src/shared/lib/geography/index.js');
+const fs = imports('../src/shared/lib/fs.js');
 
 async function generate() {
   // Pull in entire county list

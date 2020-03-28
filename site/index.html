@@ -91,6 +91,7 @@
                 </ul>
               </li>
               <!-- <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://blog.lazd.net/coronaglobe" target="_blank">View on 3D map (Coronaglobe)</a></li> -->
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#crosscheck">Cross-check Report</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#sources">Sources</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/issues/new" target="_blank" rel="noopener">Report Issue</a></li>
@@ -120,6 +121,8 @@
                 <li><a class="spectrum-Link" href="https://public.tableau.com/profile/stevenzhang#!/vizhome/semilogplotsforcoronavirusliveupdates/specificregioncomparisons?publish=yes" target="_blank"><strong>Semilog plots</strong></a> by Steven Zhang</li>
                 <li><a class="spectrum-Link" href="https://colab.research.google.com/drive/1w-YaCRkhw2Zxwhz4BCiazIdKyRvG3JFZ" target="_blank"><strong>Quickstart plotting Jupyter notebook</strong></a> by Jason Curtis</li>
                 <li><a class="spectrum-Link" href="https://piccolbo.shinyapps.io/covid-19/" target="_blank"><strong>Smoothed trends, doubling time and projections</strong></a> by Antonio Piccolboni</li>
+                <li><a class="spectrum-Link" href="https://covid-19-by-states.glitch.me/" target="_blank"><strong>Simple visualization by US state</strong></a> by Travis Haby</li>
+                <li><a class="spectrum-Link" href="https://coronatab.app/dashboard" target="_blank"><strong>Pretty Browser extension + REST API</strong></a> from CoronaTab</li>
               </ul>
             </nav>
 
@@ -158,7 +161,7 @@
             <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">What does a good source look like?</h2>
             <p class="spectrum-Body spectrum-Body--L">
               First, please have a look at our <a href="example.csv" download class="spectrum-Link">example format</a>.<br/>
-              As the data itself is most important, please publish your total case count, deaths, recovered, and total tests administered.
+              As the data itself is most important, please publish <em>cumulative</em> counts for cases, deaths, hospitalized, discharged, recovered, and total tests administered.
               If you cannot publish in JSON or CSV, at a minimum, please include a HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have.<br/>
               Have a column for the name of this locality, and a column for each additional data point.<br/>
               The best published sources include timestamps, allowing citizens and researchers alike better understand the data you have, over time, within your specific geographic region(s).
@@ -167,6 +170,10 @@
             <ol class="cds-Sources-list">
             </ol>
           </div>
+        </div>
+
+        <div class="cds-CrossCheckReports" hidden>
+          <div class="spectrum-Site-page cds-CrossCheckReports-page"></div>
         </div>
 
         <div class="cds-Editor cds-Map" hidden>
