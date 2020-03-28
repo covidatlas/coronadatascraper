@@ -7,7 +7,7 @@ function crossCheckReportTemplate(locationName, report) {
   const slug = `crosscheck:${locationName.replace(/,/g, '-').replace(/\s/g, '')}`;
 
   let html = `<li class="cds-CrossCheckReport" id="${slug}">`;
-  html += `<h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${locationName}</a></h2>`;
+  html += `<h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${locationName}</a></h2>`;
 
   html += `<div class="cds-SourceComparison">`;
 
@@ -66,20 +66,36 @@ function crossCheckReportTemplate(locationName, report) {
   return html;
 }
 
-function showCrossCheckReport() {
-  const list = document.querySelector('.cds-CrossCheckReports-list');
-  const info = document.querySelector('.cds-CrossCheckReports-info');
-  fetch.json('report.json', function(report) {
-    info.innerHTML = `<p class="spectrum-Body spectrum-Body--L">A total of ${Object.keys(
-      report.scrape.crosscheckReports
+function generateCrossCheckReport(reports) {
+  let html = '';
+  for (const [locationName, crosscheckReport] of Object.entries(reports)) {
+    html += crossCheckReportTemplate(locationName, crosscheckReport);
+  }
+  return html;
+}
+
+export function generateCrossCheckPage(report) {
+  let html = `<h1 class="spectrum-Heading spectrum-Heading--L">Cross-check reports</h1>`;
+
+  if (report && Object.keys(report).length) {
+    html += `<p class="spectrum-Body spectrum-Body--L">A total of ${Object.keys(
+      report
     ).length.toLocaleString()} cross-checks reports were generated.</p>`;
-    if (report.scrape.crosscheckReports) {
-      for (const [locationName, crosscheckReport] of Object.entries(report.scrape.crosscheckReports)) {
-        list.insertAdjacentHTML('beforeend', crossCheckReportTemplate(locationName, crosscheckReport));
-      }
-    } else {
-      list.innerHTML = '<strong>No cross-check reports were generated.</strong>';
-    }
+
+    html += `<ol class="cds-CrossCheckReports-list">
+      ${generateCrossCheckReport(report)}
+    </ol>`;
+  } else {
+    html += '<strong>No cross-check reports were generated.</strong>';
+  }
+
+  return html;
+}
+
+function showCrossCheckReport() {
+  const reportContainer = document.querySelector('.cds-CrossCheckReports-page');
+  fetch.json('report.json', function(report) {
+    reportContainer.innerHTML = generateCrossCheckPage(report.scrape.crosscheckReports);
 
     if (window.location.hash.indexOf(':') !== -1) {
       document.getElementById(window.location.hash.substr(1)).scrollIntoView({
