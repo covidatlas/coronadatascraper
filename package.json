@@ -21,6 +21,7 @@
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/shared/timeseries.js",
+    "test:tz": "node scripts/testTimezones.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "pretty": "prettier --write '**/*.js'"
@@ -34,6 +35,7 @@
     "@turf/center": "^6.2.0-alpha.1",
     "@turf/helpers": "^6.2.0-alpha.1",
     "@turf/union": "^6.2.0-alpha.1",
+    "@js-joda/timezone": "^2.2.0",
     "@lorenzofox3/for-await": "^0.2.1",
     "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",
@@ -82,7 +84,8 @@
     "rollup-plugin-copy-glob": "^0.3.1",
     "rollup-plugin-livereload": "^1.1.0",
     "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-serve": "^1.0.1"
+    "rollup-plugin-serve": "^1.0.1",
+    "windows-iana": "^4.2.0"
   },
   "husky": {
     "hooks": {
