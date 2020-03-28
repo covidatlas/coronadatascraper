@@ -11,12 +11,38 @@ const scraper = {
   country: 'USA',
   url: 'https://www.co.fresno.ca.us/departments/public-health/covid-19',
   maintainers: [maintainers.jbencina],
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    return {
-      cases: parse.number($('li:contains("Total cases")').text()),
-      deaths: parse.number($('li:contains("Total deaths")').text())
-    };
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this.url);
+      return {
+        cases: parse.number($('li:contains("Total cases")').text()),
+        deaths: parse.number($('li:contains("Total deaths")').text())
+      };
+    },
+    '2020-3-19': async function() {
+      const $ = await fetch.page(this.url);
+
+      console.log(
+        $('li:contains("Total cases")')
+          .contents()
+          .filter(function() {
+            return this.nodeType === 3;
+          })
+          .text()
+      );
+
+      return {
+        cases: parse.number(
+          $('li:contains("Total cases")')
+            .contents()
+            .filter(function() {
+              return this.nodeType === 3;
+            })
+            .text()
+        ),
+        deaths: parse.number($('li:contains("Total deaths")').text())
+      };
+    }
   }
 };
 
