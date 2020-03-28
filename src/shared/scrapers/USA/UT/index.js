@@ -134,7 +134,8 @@ const scraper = {
       // Totals come from here
       counties.push({
         tested: parse.number($('#reported-people-tested .value-output').text()),
-        cases: parse.number($('#covid-19-cases .value-output').text())
+        cases: parse.number($('#covid-19-cases .value-output').text()),
+        deaths: parse.number($('#covid-19-deaths .value-output').text())
       });
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
