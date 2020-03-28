@@ -9,6 +9,13 @@ const scraper = {
   country: 'BRA',
   type: 'json',
   priority: 1,
+  sources: [
+    {
+      description: 'Secretaria de Vigilância em Saúde do Ministério da Saúde',
+      name: 'SVS-MS',
+      url: 'http://plataforma.saude.gov.br/'
+    }
+  ],
   url: `http://plataforma.saude.gov.br/novocoronavirus/resources/scripts/database.js?v=${datetime.getYYYYMMDD()}`,
   timeseries: true,
   aggregate: 'county',

@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'AZ',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.azdhs.gov/',
+      name: 'Arizona Department of Health Services'
+    }
+  ],
   url: 'https://tableau.azdhs.gov/views/COVID-19Dashboard/COVID-19table?%3AisGuestRedirectFromVizportal=y&%3Aembed=y',
   type: 'csv',
   aggregate: 'county',

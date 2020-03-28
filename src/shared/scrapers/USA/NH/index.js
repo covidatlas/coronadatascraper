@@ -10,6 +10,11 @@ import * as pdfUtils from '../../../lib/pdf.js';
 const scraper = {
   state: 'NH',
   country: 'USA',
+  sources: [
+    {
+      name: 'New Hampshire Department of Health an Human Services'
+    }
+  ],
   url: 'https://www.nh.gov/covid19/documents/case-map.pdf',
   aggregate: 'county',
   maintainers: [

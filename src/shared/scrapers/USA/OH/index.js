@@ -10,6 +10,12 @@ const scraper = {
   state: 'OH',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://odh.ohio.gov/',
+      name: 'Ohio Department of Health'
+    }
+  ],
   _counties: [
     'Adams County',
     'Allen County',
