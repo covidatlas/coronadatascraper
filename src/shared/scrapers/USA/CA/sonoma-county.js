@@ -14,6 +14,9 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $th = $('th:contains("Total in Sonoma County")');
+    if ($th.html() === null) {
+      throw new Error('Could not find table');
+    }
     const $table = $th.closest('table');
     const $td = $table.find('td:last-child');
     const cases = parse.number($td.text());
