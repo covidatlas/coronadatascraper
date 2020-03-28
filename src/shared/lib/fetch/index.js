@@ -2,8 +2,9 @@ import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
 import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
-import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
+import { stripBOM } from '../fs.js';
+import * as caching from './caching.js';
 import { get } from './get.js';
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
@@ -49,7 +50,7 @@ export const json = async (url, date, options = {}) => {
   if (!body) {
     return null;
   }
-  return JSON.parse(body);
+  return JSON.parse(stripBOM(body));
 };
 
 /**
