@@ -86,7 +86,7 @@ ${validate.errors.map(error => `  - ${error}`).join('\n')}`
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `Go to the data: http://blog.lazd.net/coronadatascraper`
+        text: `Go to the full report: https://github.com/lazd/coronadatascraper/actions/runs/${process.env.RUN_NUMBER}`
       }
     }
   ];
