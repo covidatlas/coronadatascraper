@@ -17,10 +17,12 @@ const scraper = {
   type: 'pdf',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
-  source: {
-    name: 'Kansas Department of Health and Environment',
-    url: 'https://govstatus.egov.com/coronavirus'
-  },
+  sources: [
+    {
+      name: 'Kansas Department of Health and Environment',
+      url: 'https://govstatus.egov.com/coronavirus'
+    }
+  ],
   maintainers: [maintainers.paulboal],
   _countyMap: {},
   _counties: [

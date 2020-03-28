@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'MS',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://msdh.ms.gov/',
+      name: 'Mississippi State Department of Health'
+    }
+  ],
   url: 'https://msdh.ms.gov/msdhsite/_static/14,0,420.html',
   type: 'table',
   aggregate: 'county',

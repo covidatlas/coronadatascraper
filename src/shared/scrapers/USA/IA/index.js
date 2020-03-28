@@ -11,6 +11,13 @@ const scraper = {
   country: 'USA',
   aggregate: 'county',
   headless: true,
+  sources: [
+    {
+      url: 'https://idph.iowa.gov',
+      name: 'IDPH',
+      description: 'Iowa Department of Public Health'
+    }
+  ],
   scraper: {
     '0': async function() {
       this.url = 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus';

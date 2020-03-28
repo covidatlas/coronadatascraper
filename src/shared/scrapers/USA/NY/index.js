@@ -12,6 +12,12 @@ const scraper = {
   country: 'USA',
   type: 'table',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.health.ny.gov',
+      name: 'New York State Department of Health'
+    }
+  ],
   _countyMap: {
     Broom: 'Broome'
   },

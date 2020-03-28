@@ -11,6 +11,12 @@ const scraper = {
   state: 'WI',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.dhs.wisconsin.gov',
+      name: 'Wisconsin Department of Health Services'
+    }
+  ],
   _counties: [
     'Adams County',
     'Ashland County',

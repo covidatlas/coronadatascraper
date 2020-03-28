@@ -11,6 +11,13 @@ const scraper = {
   state: 'WY',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://health.wyo.gov/publichealth',
+      name: 'Wyoming Department of Health',
+      description: 'Public Health Division'
+    }
+  ],
   url: 'https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/',
   type: 'paragraph',
   maintainers: [maintainers.lazd],

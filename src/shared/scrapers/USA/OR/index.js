@@ -9,6 +9,13 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'OR',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.oregon.gov/oha/PH',
+      name: 'Oregon Health Authority',
+      description: 'Public Health Division'
+    }
+  ],
   url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
   type: 'table',
   aggregate: 'county',

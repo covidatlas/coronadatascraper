@@ -10,6 +10,12 @@ const scraper = {
   state: 'PA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.health.pa.gov/',
+      name: 'Pennsylvania Department of Health'
+    }
+  ],
   _counties: [
     'Adams County',
     'Allegheny County',
