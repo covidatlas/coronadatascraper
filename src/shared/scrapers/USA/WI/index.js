@@ -176,14 +176,18 @@ const scraper = {
       const $ = await fetch.headless(this.url);
       const $table = $('#covid-county-table').find('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
+
       $trs.each((index, tr) => {
         const $tr = $(tr);
+
         regions.push({
           county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
-          cases: parse.number($tr.find('td:last-child').text())
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          deaths: parse.number($tr.find('td:nth-child(3)').text())
         });
       });
       {
+        // needs CR? not seeing this table on 3/26
         const stateData = { tested: 0 };
         const $table = $('#covid-state-table').find('table');
         const $trs = $table.find('tbody > tr');
