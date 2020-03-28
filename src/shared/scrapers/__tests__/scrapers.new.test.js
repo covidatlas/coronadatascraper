@@ -24,14 +24,14 @@ describe('new scrapers', () => {
     if (scrapers.length > 0) {
       each(scrapers).test('when "%s" is called, it does not fail', async scraperPath => {
         if (await fs.exists(scraperPath)) {
-          const location = (await import(scraperPath)).default;
+          const location = (await import(scraperPath.replace('src/shared/scrapers', '../'))).default;
 
           await runScraper(location);
         }
       });
       each(scrapers).test('scraper "%s" follows schema', async scraperPath => {
         if (await fs.exists(scraperPath)) {
-          const source = (await import(scraperPath)).default;
+          const source = (await import(scraperPath.replace('src/shared/scrapers', '../'))).default;
 
           expect(schema.schemaHasErrors(source, schema.schemas.scraperSchema)).toBeFalsy();
         }

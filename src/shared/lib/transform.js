@@ -135,3 +135,10 @@ export const toTitleCase = function(string) {
     .map(part => part.substr(0, 1).toUpperCase() + part.substr(1).toLowerCase())
     .join(' ');
 };
+
+/** Normalize a string (no accents, lowercase) for comparison */
+export const normalizeString = str =>
+  str
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
