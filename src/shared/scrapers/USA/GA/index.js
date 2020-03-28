@@ -180,6 +180,9 @@ const scraper = {
     'Wilkinson County',
     'Worth County'
   ],
+  _countyMap: {
+    Mcduffie: 'McDuffie'
+  },
   async scraper() {
     const afterChange = datetime.scrapeDateIsAfter('2020-3-26');
     let selector = 'table:contains(County):contains(Cases) tbody > tr';
