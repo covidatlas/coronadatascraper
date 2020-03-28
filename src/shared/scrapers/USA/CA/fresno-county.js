@@ -19,7 +19,7 @@ const scraper = {
         deaths: parse.number($('li:contains("Total deaths")').text())
       };
     },
-    '2020-3-27': async function() {
+    '2020-3-19': async function() {
       const $ = await fetch.page(this.url);
       return {
         cases: parse.number(
