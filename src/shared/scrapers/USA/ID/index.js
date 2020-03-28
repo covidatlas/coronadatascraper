@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'ID',
   country: 'USA',
+  sources: [
+    {
+      name: 'IDHW',
+      description: 'Idaho Department of Health and Welfare'
+    }
+  ],
   url: 'https://coronavirus.idaho.gov',
   type: 'table',
   aggregate: 'county',

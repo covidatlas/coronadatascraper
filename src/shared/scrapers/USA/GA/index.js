@@ -9,6 +9,12 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'GA',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://dph.georgia.gov',
+      name: 'Georgia Department of Public Health'
+    }
+  ],
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
   aggregate: 'county',

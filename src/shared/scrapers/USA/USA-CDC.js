@@ -7,6 +7,13 @@ import * as geography from '../../lib/geography/index.js';
 
 const scraper = {
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.cdc.gov',
+      name: 'CDC',
+      description: 'Centers for Disease Control and Prevention'
+    }
+  ],
   url: 'https://www.cdc.gov/coronavirus/2019-ncov/map-data-cases.csv',
   _getCaseNumber(string) {
     if (typeof string === 'string') {

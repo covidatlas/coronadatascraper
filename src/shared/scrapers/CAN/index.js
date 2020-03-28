@@ -11,6 +11,13 @@ import * as rules from '../../lib/rules.js';
 const scraper = {
   country: 'CAN',
   type: 'table',
+  sources: [
+    {
+      description: 'Health Promotion and Chronic Disease Prevention Branch',
+      name: 'Public Health Agency of Canada',
+      url: 'https://health-infobase.canada.ca/'
+    }
+  ],
   _reject: [{ state: 'Repatriated travellers' }, { state: 'Total cases' }, { state: 'Total' }, { state: 'Canada' }],
   aggregate: 'state',
   scraper: {

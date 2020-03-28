@@ -1,9 +1,11 @@
 /* global document, window */
 
 import { getContributors } from './lib/templates.js';
+import { getName } from './lib/geography.js';
 import * as fetch from './lib/fetch.js';
 
-function crossCheckReportTemplate(locationName, report) {
+function crossCheckReportTemplate(report) {
+  const locationName = getName(report[0]);
   const slug = `crosscheck:${locationName.replace(/,/g, '-').replace(/\s/g, '')}`;
 
   let html = `<li class="cds-CrossCheckReport" id="${slug}">`;
@@ -68,8 +70,8 @@ function crossCheckReportTemplate(locationName, report) {
 
 function generateCrossCheckReport(reports) {
   let html = '';
-  for (const [locationName, crosscheckReport] of Object.entries(reports)) {
-    html += crossCheckReportTemplate(locationName, crosscheckReport);
+  for (const [, crosscheckReport] of Object.entries(reports)) {
+    html += crossCheckReportTemplate(crosscheckReport);
   }
   return html;
 }

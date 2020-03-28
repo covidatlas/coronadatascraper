@@ -16,7 +16,7 @@ const scraper = {
   url: 'https://coronavirus.health.ok.gov/',
   sources: [
     {
-      name: 'Oklahoma State Deparment of Health'
+      name: 'Oklahoma State Department of Health'
     }
   ],
   maintainers: [
