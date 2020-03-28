@@ -25,13 +25,17 @@ const scraper = {
       const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
       const { casesString } = paragraph.match(/cases in Victoria \w* (?<casesString>\d+)./).groups;
       return {
+        state: this.state,
         cases: parse.number(casesString)
       };
     },
-    '2020-2-25': async function() {
-      return {
-        cases: 466
-      };
+    // Constantly changing free-text media release.
+    // They have a PowerBI dashboard at https://app.powerbi.com/view?r=eyJrIjoiODBmMmE3NWQtZWNlNC00OWRkLTk1NjYtMjM2YTY1MjI2NzdjIiwidCI6ImMwZTA2MDFmLTBmYWMtNDQ5Yy05Yzg4LWExMDRjNGViOWYyOCJ9
+    // No idea how to get the data out of that though.
+    // We've emailed them on 2020-03-28 to try to get a usable format.
+    // For now lets fall back to the AUS index scraper.
+    '2020-3-25': async function() {
+      return {};
     }
   }
 };
