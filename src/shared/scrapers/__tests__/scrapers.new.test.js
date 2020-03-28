@@ -1,21 +1,12 @@
-describe('new scrapers', () => {
-  it('is true', async () => {
-    expect(true).toEqual(true);
-  });
-});
-
-// eslint-disable-next-line
-/*
 import each from 'jest-each';
 
-import { runScraper } from '../tasks/scrapeData/runScraper.js';
-import * as fs from '../lib/fs.js';
-import * as schema from '../lib/schema.js';
+import * as fs from '../../lib/fs.js';
+import * as schema from '../../lib/schema.js';
+import runScraper from './run-scraper.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
 describe('new scrapers', () => {
-
   beforeAll(() => {
     jest.setTimeout(300000);
   });
@@ -52,4 +43,3 @@ describe('new scrapers', () => {
     noScrapersTest();
   }
 });
-*/

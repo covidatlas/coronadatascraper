@@ -8,6 +8,7 @@ import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
+import runScraper from './run-scraper.js';
 
 jest.mock('../../lib/fetch/get.js');
 
@@ -86,21 +87,13 @@ describe('all scrapers', () => {
         scraperObj.scraper = scraperObj.scraper[0];
       }
 
-      it('returns latest data', async () => {
-        const expectedPath = join(testDir, 'expected.json');
-        let result = await scraperObj.scraper();
-        result = result.map(stripFeatures);
-        const expected = await readJSON(expectedPath);
-        expect(result).toEqual(expected);
-      });
-
       const datedResults = glob(join(testDir, 'expected.*.json'));
       for (const expectedPath of datedResults) {
         const date = getDateFromPath(expectedPath);
 
         it(`returns data for ${date}`, async () => {
           process.env.SCRAPE_DATE = date;
-          let result = await scraperObj.scraper();
+          let result = await runScraper(scraperObj);
           result = result.map(stripFeatures);
           const expected = await readJSON(expectedPath);
           expect(result).toEqual(expected);
