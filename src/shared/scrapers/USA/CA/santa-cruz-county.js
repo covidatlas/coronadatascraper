@@ -14,6 +14,9 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
+    if ($h2.html() === null) {
+      throw new Error('H2 not found');
+    }
     const cases = parse.number($h2.text());
     return { cases };
   }
