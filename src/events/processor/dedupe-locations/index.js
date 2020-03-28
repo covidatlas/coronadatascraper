@@ -54,7 +54,7 @@ const dedupeLocations = args => {
   let crossCheckFailures = 0;
   while (i-- > 0) {
     const location = locations[i];
-    const locationName = geography.getName(location);
+    const locationName = transform.normalizeString(geography.getName(location));
     const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {
