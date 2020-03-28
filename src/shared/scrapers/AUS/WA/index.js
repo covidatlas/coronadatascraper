@@ -19,7 +19,7 @@ const getKey = rowLabel => {
   if (lowerLabel.includes('unknown source')) {
     return 'discard';
   }
-  throw new Error(`unknown row: ${lowerLabel}`);
+  throw new Error(`There is a row we are not expecting: ${lowerLabel}`);
 };
 
 const scraper = {
@@ -46,7 +46,9 @@ const scraper = {
       const key = getKey($tr.find('td:first-child').text());
       data[key] = parse.number($tr.find('td:last-child').text());
     });
-    data.tested += data.cases; // Tested is only negatives in this table.
+    if (data.tested > 0) {
+      data.tested += data.cases; // `tested` is only tested negative in this table, add the positive tested.
+    }
     return data;
   }
 };
