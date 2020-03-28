@@ -10,6 +10,12 @@ const scraper = {
   state: 'MD',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://health.maryland.gov/',
+      name: 'Maryland Department of Health'
+    }
+  ],
   scraper: {
     '0': async function() {
       this.url = 'https://coronavirus.maryland.gov/';

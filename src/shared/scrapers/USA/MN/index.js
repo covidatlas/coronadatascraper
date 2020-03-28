@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'MN', // Minnesota!
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.health.state.mn.us/',
+      name: 'Minnesota Department of Health'
+    }
+  ],
   url: 'https://www.health.state.mn.us/diseases/coronavirus/situation.html',
   type: 'table',
   aggregate: 'county',

@@ -10,6 +10,12 @@ const scraper = {
   state: 'UT',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://health.utah.gov/',
+      name: 'Utah Department of Health'
+    }
+  ],
   _counties: [
     'Beaver County',
     'Box Elder County',

@@ -12,6 +12,13 @@ const scraper = {
   state: 'VA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'http://www.vdh.virginia.gov/',
+      name: 'VDH',
+      description: 'Virginia Department of Health'
+    }
+  ],
   maintainers: [maintainers.aed3],
 
   _counties: [

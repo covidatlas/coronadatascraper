@@ -13,6 +13,13 @@ const scraper = {
   country: 'USA',
   aggregate: 'county',
   type: 'pdf',
+  sources: [
+    {
+      url: 'https://www.mass.gov/orgs/department-of-public-health',
+      name: 'Massachusetts DPH',
+      description: 'Massachusetts Department of Public Health'
+    }
+  ],
   maintainers: [
     {
       name: 'Quentin Golsteyn',
