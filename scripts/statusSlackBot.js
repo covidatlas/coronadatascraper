@@ -37,7 +37,7 @@ const generateReport = async report => {
 _Sources:_
 - *${sources.numSources}* sources
 - *${sources.errors.length}* invalid sources:
-${sources.errors.map(error => `  - ${error}`).join('\n')}`
+${filteredScaperErrors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
