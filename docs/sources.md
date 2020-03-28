@@ -5,8 +5,8 @@ _Last updated: 2020-03-27_
 **Table of contents**
 
 - [Criteria for sources](#criteria-for-sources)
-- [Writing a source](#writing-a-source)
 - [Source rating](#source-rating)
+- [Writing a source](#writing-a-source)
 - [Scraping](#scraping)
   - [Fetching different types of documents](#fetching-different-types-of-documents)
   - [Library functions](#library-functions)
@@ -41,6 +41,18 @@ Additional data is welcome.
 In keeping with other datasets, presumptive cases should be considered part of the case total.
 
 _If you have found a source that matches the criterias above, read on!_
+
+## Source rating
+
+Sources are rated based on:
+
+1. **How hard is it to read?** - `csv` and `json` give best scores, with `table` right behind it,
+   with `list` and `paragraph` worse. `pdf` gets no points, and `image` gets negative points.
+2. **Timeseries?** - Sources score points if they provide a timeseries.
+3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `hospitalized`,
+   `discharged`, `recovered`, `country`, `state`, `county`, and `city`.
+4. **SSL** - Sources get points for serving over ssl
+5. **Headless?** - Sources get docked points if they require a headless scraper
 
 ## Writing a source
 
@@ -102,18 +114,6 @@ page](https://coronadatascraper.com/#sources), add the following:
 
 Everything defined on the source object starting with `_` will be available to the scraper via the
 `this`.
-
-## Source rating
-
-Sources are rated based on:
-
-1. **How hard is it to read?** - `csv` and `json` give best scores, with `table` right behind it,
-   with `list` and `paragraph` worse. `pdf` gets no points, and `image` gets negative points.
-2. **Timeseries?** - Sources score points if they provide a timeseries.
-3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `hospitalized`,
-   `discharged`, `recovered`, `country`, `state`, `county`, and `city`.
-4. **SSL** - Sources get points for serving over ssl
-5. **Headless?** - Sources get docked points if they require a headless scraper
 
 ## Scraping
 
@@ -398,42 +398,46 @@ sure nothing crashes and the source object is in the correct form.
 To add test coverage for a scraper, you only need to provide test assets; no new tests need to be
 added.
 
-- Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
+- Add a `tests` folder to the scraper folder.
 
-- Add a sample response from the target URL. The filename should be the URL, without the
-  `http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
-  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
+- In the tests folder, add one folder per date being tested. The name of the folder should be the
+  date in ISO format, e.g. `2020-03-16`.
 
-  - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
+- In each dated folder, add the response(s) from the target URL(s) on that date. The filename should
+  be the URL, without the `http(s)://` prefix, and with all non-alphanumeric characters replaced
+  with an underscore `_`. The file extension should match the format of the contents (`html`, `csv`,
+  `json`, etc). Example:
 
-  - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
+  - URL: `https://raw.githubusercontent.com/opencovid19-fr/data/chiffres-cles.csv`
+  - File name: `raw_githubusercontent_com_opencovid19_fr_data_chiffres_cles.csv`
 
 - Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
+  return. (Strip out any geojson `features` properties.)
 
-For sources that have a time series, the `expected.json` file represents the latest result in the
-sample response provided. You can additionally test the return value for a specific date by adding a
-file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
+For example:
 
     📁 USA
-      📁 AK
-        📄 index.js     # scraper
+      📁 AL
+        📄 index.js # scraper
         📁 tests
-          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html     # sample response
-          📄 expected.json     # expected result
-    ...
-    📁 FRA
-      📄 index.js     # scraper
-      📁 tests
-        📄 raw_githubusercontent_com_covid19_fr_data_chiffres_cles.csv     # sample response
-        📄 expected.json     # expected result for most recent date in sample
-        📄 expected.2020-03-16.json # expected result for March 16, 2020
+          📁 2020-03-16
+            📄 www_alabamapublichealth_gov_coronavirus.html # sample response
+            📄 expected.json #
+          📁 2020-03-27
+            📄 opendata_arcgis_com_datasets_ff8def6b155facc6327_0.csv
+            📄 services7_arcgis_com_4RQmZZ0yaZkGR1zy.json
+            📄 expected.json
 
 ### Manual testing
 
-You should run your source with the crawler by running `yarn start -l "<name of your source>"`. Your
-source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for
-Montana, USA is "MN, USA").
+You should run your source with the crawler by running `yarn start -l "<name of your source>"`,
+where your source name is `<county name>, <state name>, <country name>`. For example:
+
+```
+  yarn start -l "Alameda County, CA, USA"
+  yarn start -l "MN, USA"
+  yarn start -l "ESP"
+```
 
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output
