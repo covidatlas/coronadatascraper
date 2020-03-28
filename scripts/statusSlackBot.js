@@ -3,8 +3,8 @@ const imports = require('esm')(module);
 const request = imports('request');
 const yargs = imports('yargs');
 
-const fs = imports('../src/events/crawler/lib/fs.js');
-const datetime = imports('../src/events/crawler/lib/datetime.js');
+const fs = imports('../src/shared/lib/fs.js');
+const datetime = imports('../src/shared/lib/datetime.js');
 
 const { argv } = yargs
   .scriptName('node ./scripts/statusSlackBot.js')

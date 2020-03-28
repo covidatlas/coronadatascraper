@@ -1,0 +1,14 @@
+Scrapers:
+- date agnostic -> data (UTC)
+- date aware:
+  - timeseries -> data (UTC)
+  - need to set URL to a particular date -> data (UTC)
+    - UTC?
+
+Core:
+- caching
+    - source:
+        - date in UTC
+- timeseries generation
+    - UTC
+    - Current date
