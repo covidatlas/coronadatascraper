@@ -10,14 +10,7 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'GA',
   country: 'USA',
-  url:
-    'https://d20s4vd27d0hk0.cloudfront.net/?initialWidth=746&childId=covid19dashdph&parentTitle=COVID-19%20Daily%20Status%20Report%20%7C%20Georgia%20Department%20of%20Public%20Health&parentUrl=https%3A%2F%2Fdph.georgia.gov%2Fcovid-19-daily-status-report',
-  sources: [
-    {
-      url: 'https://dph.georgia.gov/covid-19-daily-status-report',
-      name: 'Georgia Department of Public Health'
-    }
-  ],
+  url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
   aggregate: 'county',
   _counties: [
@@ -182,17 +175,21 @@ const scraper = {
     'Worth County'
   ],
   async scraper() {
-    let selector = 'table:nth-child(6) tbody tr:not(:first-child,:last-child)';
-    if (datetime.scrapeDateIsBefore('2020-3-28')) {
-      this.url = this.sources[0].url;
-      selector = 'table:contains(County):contains(Cases) tbody > tr';
+    let selector = 'table:contains(County):contains(Cases) tbody > tr';
+    if (datetime.scrapeDateIsAfter('2020-3-26')) {
+      const pageHTML = (await fetch.page(this.url)).html();
+      [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
+      selector = 'table:nth-child(6) tbody tr:not(:first-child,:last-child)';
     }
     const $ = await fetch.page(this.url);
     let counties = [];
     const $trs = $(selector);
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const name = $tr.find('td:first-child').text();
+      const name = $tr
+        .find('td:first-child')
+        .text()
+        .replace('Mcduffie', 'McDuffie');
       let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
 
       const cases = parse.number($tr.find('td:nth-child(2)').text());
