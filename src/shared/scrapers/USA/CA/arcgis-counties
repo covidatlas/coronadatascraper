@@ -1,0 +1,99 @@
+import * as fetch from '../../../lib/fetch/index.js';
+import * as parse from '../../../lib/parse.js';
+import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography/index.js';
+
+// Set county to this if you only have state data, but this isn't the entire state
+// const UNASSIGNED = '(unassigned)';
+
+function addCounty(county) {
+  return county + ' County';
+}
+
+const scraper = {
+  country: 'USA',
+  state: 'CA',
+  priority: 0,
+  url: 'https://opendata.arcgis.com/datasets/06fcfe6147574a75afea97a1f7565dc7_0.csv',
+  aggregate: 'county',
+  _counties: [
+    'Alameda County',
+    'Alpine County',
+    'Amador County',
+    'Butte County',
+    'Calaveras County',
+    'Colusa County',
+    'Contra Costa County',
+    'Del Norte County',
+    'El Dorado County',
+    'Fresno County',
+    'Glenn County',
+    'Humboldt County',
+    'Imperial County',
+    'Inyo County',
+    'Kern County',
+    'Kings County',
+    'Lake County',
+    'Lassen County',
+    'Los Angeles County',
+    'Madera County',
+    'Marin County',
+    'Mariposa County',
+    'Mendocino County',
+    'Merced County',
+    'Modoc County',
+    'Mono County',
+    'Monterey County',
+    'Napa County',
+    'Nevada County',
+    'Orange County',
+    'Placer County',
+    'Plumas County',
+    'Riverside County',
+    'Sacramento County',
+    'San Benito County',
+    'San Bernardino County',
+    'San Diego County',
+    'San Francisco County',
+    'San Joaquin County',
+    'San Luis Obispo County',
+    'San Mateo County',
+    'Santa Barbara County',
+    'Santa Clara County',
+    'Santa Cruz County',
+    'Shasta County',
+    'Sierra County',
+    'Siskiyou County',
+    'Solano County',
+    'Sonoma County',
+    'Stanislaus County',
+    'Sutter County',
+    'Tehama County',
+    'Trinity County',
+    'Tulare County',
+    'Tuolumne County',
+    'Ventura County',
+    'Yolo County',
+    'Yuba County'
+  ],
+  async scraper() {
+    const data = await fetch.csv(this.url);
+    const counties = [];
+    for (const county of data) {
+      let countyName = parse.string(addCounty(county.COUNTY_NAME));
+      countyName = this._counties[countyName] || countyName;
+      console.log(county);
+      counties.push({
+        county: geography.addCounty(countyName),
+        active: parse.number(county.Active),
+        deaths: parse.number(county.Deaths),
+        recovered: parse.number(county.Recovered),
+        cases: parse.number(county.Cumulative)
+      });
+    }
+    counties.push(transform.sumData(counties));
+    return counties;
+  }
+};
+
+export default scraper;
