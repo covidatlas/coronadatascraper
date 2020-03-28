@@ -408,25 +408,29 @@ added.
   with an underscore `_`. The file extension should match the format of the contents (`html`, `csv`,
   `json`, etc). Example:
 
-  - URL: `https://raw.githubusercontent.com/opencovid19-fr/data/chiffres-cles.csv`
-  - File name: `raw_githubusercontent_com_opencovid19_fr_data_chiffres_cles.csv`
+  ```
+  URL:        https://raw.github.com/opencovid19-fr/data/chiffres-cles.csv
+  File name:  raw_github_com_opencovid19_fr_data_chiffres_cles.csv
+  ```
 
 - Add a file named `expected.json` containing the array of values that the scraper is expected to
   return. (Strip out any geojson `features` properties.)
 
 For example:
 
-    📁 USA
-      📁 AL
-        📄 index.js # scraper
-        📁 tests
-          📁 2020-03-16
-            📄 www_alabamapublichealth_gov_coronavirus.html # sample response
-            📄 expected.json #
-          📁 2020-03-27
-            📄 opendata_arcgis_com_datasets_ff8def6b155facc6327_0.csv
-            📄 services7_arcgis_com_4RQmZZ0yaZkGR1zy.json
-            📄 expected.json
+```
+📁 USA
+  📁 AL
+    📄 index.js # scraper
+    📁 tests
+      📁 2020-03-16
+        📄 www_alabamapublichealth_gov_coronavirus.html # sample response
+        📄 expected.json #
+      📁 2020-03-27
+        📄 opendata_arcgis_com_datasets_ff8def6b155facc6327_0.csv
+        📄 services7_arcgis_com_4RQmZZ0yaZkGR1zy.json
+        📄 expected.json
+```
 
 ### Manual testing
 
@@ -434,9 +438,9 @@ You should run your source with the crawler by running `yarn start -l "<name of 
 where your source name is `<county name>, <state name>, <country name>`. For example:
 
 ```
-  yarn start -l "Alameda County, CA, USA"
-  yarn start -l "MN, USA"
-  yarn start -l "ESP"
+yarn start -l "Alameda County, CA, USA"
+yarn start -l "MN, USA"
+yarn start -l "ESP"
 ```
 
 After the crawler has finished running, look at how many counties, states, and countries were
