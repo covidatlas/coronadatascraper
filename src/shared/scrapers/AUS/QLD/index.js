@@ -1,6 +1,5 @@
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
-import * as transform from '../../../lib/transform.js';
 import maintainers from '../../../lib/maintainers.js';
 
 async function getCurrentArticlePage(listUrl) {
@@ -35,22 +34,13 @@ const scraper = {
       };
     },
     '2020-3-24': async function() {
-      const HHSs = []; // See https://www.health.qld.gov.au/maps
       const $ = await getCurrentArticlePage(this.url);
       const $table = $('#content table');
-      const $trs = $table.find('tbody > tr:not(:last-child)');
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        const cases = parse.number($tr.find('td:last-child').text());
-        const county = parse.string($tr.find('td:first-child').text());
-        HHSs.push({
-          county,
-          cases
-        });
-      });
-      const total = transform.sumData(HHSs);
-      HHSs.push(total);
-      return HHSs;
+      const $totalRow = $table.find('tbody > tr:last-child');
+      return {
+        state: scraper.state,
+        cases: parse.number($totalRow.find('td:last-child').text())
+      };
     }
   }
 };

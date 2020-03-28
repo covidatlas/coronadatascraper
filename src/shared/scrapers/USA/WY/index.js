@@ -23,13 +23,22 @@ const scraper = {
 
     for (const item of items) {
       const $item = cheerio.load(item);
-      const [county, count] = $item.text().split(':');
+
+      const pieces = $item.text().split(':');
+      const county = pieces[0];
+      let count = pieces[1];
+
       if (county === 'Cases by County') {
         continue;
       }
+      if (count === undefined) {
+        count = 0;
+      } else {
+        count = parse.number(parse.string(count) || 0);
+      }
       counties.push({
         county: geography.addCounty(parse.string(county)),
-        cases: parse.number(count || 0)
+        cases: count
       });
     }
 

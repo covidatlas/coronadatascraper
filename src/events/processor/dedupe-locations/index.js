@@ -2,7 +2,7 @@ import path from 'path';
 import * as geography from '../../../shared/lib/geography/index.js';
 import * as transform from '../../../shared/lib/transform.js';
 
-const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
+const numericalValues = ['cases', 'tested', 'recovered', 'deaths'];
 
 /*
   Returns a report if the crosscheck fails, or false if the two sets have identical data
@@ -11,6 +11,10 @@ function crosscheck(a, b) {
   const crosscheckReport = {};
   let failed = false;
   for (const prop of numericalValues) {
+    if ((a[prop] === 0 && b[prop] === undefined) || (b[prop] === 0 && a[prop] === undefined)) {
+      // Don't complain about undefined when there should be zero, it's noise
+      continue;
+    }
     if (a[prop] !== b[prop]) {
       crosscheckReport[prop] = [a[prop], b[prop]];
       failed = true;
@@ -34,7 +38,7 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
 }
 
 function getCleanPath(scraperFilePath) {
-  const scraperFolderPath = path.resolve(__dirname, '..', '..', 'scrapers');
+  const scraperFolderPath = path.resolve(path.join('src', 'shared', 'scrapers'));
   return path.relative(scraperFolderPath, scraperFilePath);
 }
 

@@ -57,7 +57,7 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       tries++;
       if (tries > 1) {
         // sleep a moment before retrying
-        console.log(`  ⚠️  retrying (${tries})`);
+        console.log(`  ⚠️  Retrying (${tries})...`);
         await new Promise(r => setTimeout(r, 2000));
       }
 
@@ -97,6 +97,10 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
       return null;
     }
+
+    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    return null;
   }
+
   return cachedBody;
 };
