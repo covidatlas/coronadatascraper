@@ -9,6 +9,7 @@ import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
 import runScraper from './run-scraper.js';
+import { looksLike } from '../../lib/iso-date.js';
 
 jest.mock('../../lib/fetch/get.js');
 
@@ -39,12 +40,9 @@ To add test coverage for a scraper, you only need to provide test assets; no new
 
 // Utility functions
 
-// Extract date from filename, e.g. `expected-2020-03-16.json` -> `2020-03-16`
-const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
-const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
-
 // e.g. `/coronadatascraper/src/shared/scrapers/USA/AK/tests` 🡒 `USA/AK`
-const scraperNameFromPath = s => s.replace(join(__dirname, '..', 'scrapers'), '').replace('/tests', '');
+const scrapersPath = join(__dirname, '..');
+const scraperNameFromPath = s => s.replace(scrapersPath, '').replace('/tests', '');
 
 // Remove geojson from scraper result
 const stripFeatures = d => {
@@ -59,17 +57,6 @@ describe('all scrapers', () => {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`
 
     describe(`scraper: ${scraperName}`, () => {
-      beforeAll(() => {
-        // Read sample responses for this scraper and pass them to the mock `get` function.
-        const sampleResponses = glob(join(testDir, '*')).filter(p => !p.includes('expected'));
-        for (const filePath of sampleResponses) {
-          const fileName = path.basename(filePath);
-          const fullPath = path.resolve(__dirname, filePath);
-          const source = { [fileName]: readFile(fullPath).toString() };
-          get.addSources(source);
-        }
-      });
-
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
 
