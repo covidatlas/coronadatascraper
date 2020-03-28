@@ -35,7 +35,7 @@ const scraper = {
       // No idea how to get the data out of that though.
       // We've emailed them on 2020-03-28 to try to get a usable format.
       // For now lets fall back to the AUS index scraper.
-      return new DeprecatedError('Victoria, AUS has no consistent format');
+      throw new DeprecatedError('Victoria, AUS has no consistent format');
     }
   }
 };
