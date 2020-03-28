@@ -20,12 +20,6 @@ const scraper = {
   ],
   type: 'table',
   aggregate: 'county',
-  sources: [
-    {
-      name: 'Georgia Department of Public Health',
-      url: 'https://dph.georgia.gov/covid-19-daily-status-report'
-    }
-  ],
   _counties: [
     'Appling County',
     'Atkinson County',
