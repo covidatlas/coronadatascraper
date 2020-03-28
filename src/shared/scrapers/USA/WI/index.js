@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import * as datetime from '../../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -164,7 +165,12 @@ const scraper = {
       return regions;
     },
     '2020-3-26': async function() {
-      this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
+      if (datetime.scrapeDateIsBefore('2020-3-27')) {
+        this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
+      } else {
+        this.url = 'https://www.dhs.wisconsin.gov/covid-19/data.htm';
+      }
+
       this.type = 'table';
       let regions = [];
       const $ = await fetch.headless(this.url);
