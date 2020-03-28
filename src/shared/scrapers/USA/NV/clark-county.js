@@ -17,17 +17,35 @@ const scraper = {
     }
   ],
   type: 'table',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    const $h1 = $('h1:contains("Total Cases:")');
-    const regexCases = /Total Cases: (\d+)/;
-    const cases = parse.number(regexCases.exec($h1[0].children[0].data)[1]);
-    const $td = $('td:contains("Deaths")').next();
-    const deaths = parse.number($td[0].children[0].data);
-    return {
-      cases,
-      deaths
-    };
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this.url);
+      const $h1 = $('h1:contains("Total Cases:")');
+      const regexCases = /Total Cases: (\d+)/;
+      const cases = parse.number(regexCases.exec($h1[0].children[0].data)[1]);
+      const $td = $('td:contains("Deaths")').next();
+      const deaths = parse.number($td[0].children[0].data);
+      return {
+        cases,
+        deaths
+      };
+    },
+    '2020-3-25': async function() {
+      const $ = await fetch.page(this.url);
+
+      const casesText = $('*:contains("Total Cases:")').text();
+      const regexCases = /Total Cases: (\d+)/;
+      const cases = parse.number(regexCases.exec(casesText)[1]);
+
+      const deathsText = $('*:contains("Total Deaths:")').text();
+      const regexDeaths = /Total Deaths: (\d+)/;
+      const deaths = parse.number(regexDeaths.exec(deathsText)[1]);
+
+      return {
+        cases,
+        deaths
+      };
+    }
   }
 };
 
