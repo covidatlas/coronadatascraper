@@ -214,7 +214,9 @@ const scraper = {
 
       const $ = await fetch.page(this.url);
       let counties = [];
-      const $trs = $('table:nth-child(6) tbody tr:not(:first-child,:last-child)');
+      const $trs = $('.tcell:contains("COVID-19 Confirmed Cases By County")')
+        .closest('tbody')
+        .find('tr:not(:first-child,:last-child)');
 
       $trs.each((index, tr) => {
         const $tr = $(tr);
