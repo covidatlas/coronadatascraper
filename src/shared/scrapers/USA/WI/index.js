@@ -180,27 +180,14 @@ const scraper = {
         const $tr = $(tr);
         regions.push({
           county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
-          cases: parse.number($tr.find('td:last-child').text())
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          deaths: parse.number($tr.find('td:nth-child(3)').text())
         });
       });
-      {
-        const stateData = { tested: 0 };
-        const $table = $('#covid-state-table').find('table');
-        const $trs = $table.find('tbody > tr');
-        $trs.each((index, tr) => {
-          const $tr = $(tr);
-          const label = parse.string($tr.find('td:first-child').text());
-          const value = parse.number($tr.find('td:last-child').text());
-          if (label === 'Positive') {
-            stateData.cases = value;
-            stateData.tested += value;
-          } else if (label === 'Negative') {
-            stateData.tested += value;
-          }
-        });
-        regions = geography.addEmptyRegions(regions, this._counties, 'county');
-        regions.push(stateData);
-      }
+
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
+      regions.push(transform.sumData(regions));
+
       return regions;
     }
   }
