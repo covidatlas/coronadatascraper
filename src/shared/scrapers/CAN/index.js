@@ -1,5 +1,8 @@
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
+import * as transform from '../../lib/transform.js';
+import * as geography from '../../lib/geography/index.js';
+import * as datetime from '../../lib/datetime.js';
 import * as rules from '../../lib/rules.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -7,12 +10,13 @@ import * as rules from '../../lib/rules.js';
 
 const scraper = {
   country: 'CAN',
-  url: 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html',
   type: 'table',
   _reject: [{ state: 'Repatriated travellers' }, { state: 'Total cases' }, { state: 'Total' }, { state: 'Canada' }],
   aggregate: 'state',
   scraper: {
+    /*
     '0': async function() {
+      this.url = 'https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html';
       const $ = await fetch.page(this.url);
       const $table = $('h2:contains("Current situation")')
         .nextAll('table')
@@ -29,25 +33,63 @@ const scraper = {
           regions.push(data);
         }
       });
+      regions.push(transform.sumData(regions));
       return regions;
     },
-    '2020-3-27': async function() {
-      const $ = await fetch.page(this.url);
-      const $table = $('th:contains("Province, territory or other")').closest('table');
-      const $trs = $table.find('tbody > tr');
+    */
+    '0': async function() {
+      this.type = 'csv';
+      this.url = 'https://health-infobase.canada.ca/src/data/summary_current.csv';
+      const data = await fetch.csv(this.url, false);
+
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
+      let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
+      const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
+
+      if (scrapeDate > lastDateInTimeseries) {
+        console.error(
+          `  🚨 timeseries for ${geography.getName(
+            this
+          )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
+            lastDateInTimeseries
+          )}. Using last sample anyway`
+        );
+        scrapeDate = lastDateInTimeseries;
+        scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
+      }
+
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+      }
+
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+      }
+
       const regions = [];
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        const region = parse.string($tr.find('td:first-child').text());
-        const data = {
-          state: region,
-          cases: parse.number($tr.find('td:nth-child(2)').text()),
-          deaths: parse.number($tr.find('td:last-child').text())
-        };
-        if (rules.isAcceptable(data, null, this._reject)) {
-          regions.push(data);
+      for (const row of data) {
+        if (row.date === scrapeDateString) {
+          const regionObj = {
+            state: parse.string(row.prname),
+            cases: parse.number(row.numconf),
+            deaths: parse.number(row.numdeaths)
+          };
+
+          if (!rules.isAcceptable(regionObj, null, this._reject)) {
+            continue;
+          }
+
+          regions.push(regionObj);
         }
-      });
+      }
+
+      if (regions.length === 0) {
+        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+      }
+
+      regions.push(transform.sumData(regions));
+
       return regions;
     }
   }
