@@ -1,6 +1,6 @@
 ﻿[
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 6211,
     "state": "Île-de-France",
     "population": 12246234,
@@ -8,7 +8,7 @@
     "recovered": 665
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 361,
     "deaths": 8,
     "state": "Centre-Val de Loire",
@@ -16,7 +16,7 @@
     "recovered": 15
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "deaths": 62,
     "state": "Bourgogne-Franche-Comté",
     "population": 2813289,
@@ -24,7 +24,7 @@
     "recovered": 198
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 511,
     "state": "Normandie",
     "population": 3342467,
@@ -32,7 +32,7 @@
     "recovered": 24
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 1269,
     "deaths": 86,
     "state": "Hauts-de-France",
@@ -40,7 +40,7 @@
     "recovered": 201
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 4256,
     "state": "Grand Est",
     "population": 5548090,
@@ -48,7 +48,7 @@
     "recovered": 470
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 293,
     "deaths": 9,
     "recovered": 74,
@@ -56,7 +56,7 @@
     "population": 3787411
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 490,
     "state": "Bretagne",
     "population": 3336643,
@@ -64,7 +64,7 @@
     "recovered": 68
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 676,
     "state": "Nouvelle-Aquitaine",
     "population": 5994336,
@@ -72,7 +72,7 @@
     "recovered": 59
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 767,
     "state": "Occitanie",
     "population": 5903190,
@@ -80,7 +80,7 @@
     "recovered": 117
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 1730,
     "deaths": 70,
     "state": "Auvergne-Rhône-Alpes",
@@ -88,7 +88,7 @@
     "recovered": 254
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 1510,
     "state": "Provence-Alpes-Côte d'Azur",
     "population": 5065723,
@@ -96,7 +96,7 @@
     "recovered": 377
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 194,
     "deaths": 7,
     "state": "Corse",
@@ -118,9 +118,9 @@
     "cases": 8,
     "state": "Saint-Martin"
   },
-  { "url": "", "cases": 19856, "deaths": 860, "recovered": 2567 },
+  { "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv", "cases": 19856, "deaths": 860, "recovered": 2567 },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 62,
     "deaths": 0,
     "state": "Guadeloupe",
@@ -128,7 +128,7 @@
     "recovered": 0
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 53,
     "state": "Martinique",
     "population": 376480,
@@ -136,7 +136,7 @@
     "recovered": 0
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 20,
     "deaths": 0,
     "recovered": 0,
@@ -144,7 +144,7 @@
     "population": 290691
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 71,
     "state": "La Réunion",
     "population": 853659,
@@ -152,7 +152,7 @@
     "recovered": 0
   },
   {
-    "url": "",
+    "url": "https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv",
     "cases": 24,
     "state": "Mayotte",
     "population": 270372,

@@ -52,7 +52,7 @@ const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
 const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
 
 // e.g. `/coronadatascraper/src/shared/scrapers/USA/AK/tests` 🡒 `USA/AK`
-const scraperNameFromPath = s => s.replace(join(__dirname, 'scrapers'), '').replace('/tests', '');
+const scraperNameFromPath = s => s.replace(join(__dirname, '..', 'scrapers'), '').replace('/tests', '');
 
 // Remove geojson from scraper result
 const stripFeatures = d => {
@@ -80,6 +80,11 @@ describe('all scrapers', () => {
 
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
+      if (scraperObj.state === 'AL' && scraperObj.country === 'USA') {
+        // Honestly these linter rules are absurd
+        // eslint-disable-next-line
+        scraperObj.scraper = scraperObj.scraper[0];
+      }
 
       it('returns latest data', async () => {
         const expectedPath = join(testDir, 'expected.json');
