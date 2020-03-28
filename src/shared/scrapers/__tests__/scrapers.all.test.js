@@ -8,7 +8,7 @@ import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
-import runScraper from './run-scraper.js';
+import { runScraper } from '../../lib/run-scraper.js';
 import { looksLike } from '../../lib/iso-date.js';
 
 jest.mock('../../lib/fetch/get.js');
