@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as geography from '../../../lib/geography/index.js';
+import * as datetime from '../../../lib/datetime.js';
 import * as transform from '../../../lib/transform.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -181,9 +182,14 @@ const scraper = {
     'Worth County'
   ],
   async scraper() {
+    let selector = 'table:nth-child(6) tbody tr:not(:first-child,:last-child)';
+    if (datetime.scrapeDateIsBefore('2020-3-28')) {
+      this.url = this.sources[0].url;
+      selector = 'table:contains(County):contains(Cases) tbody > tr';
+    }
     const $ = await fetch.page(this.url);
     let counties = [];
-    const $trs = $('table:nth-child(6) tbody tr:not(:first-child)');
+    const $trs = $(selector);
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const name = $tr.find('td:first-child').text();
