@@ -11,31 +11,36 @@ const scraper = {
   country: 'USA',
   maintainers: [maintainers.jbencina],
   url: 'https://hhsa.cosb.us/publichealth/communicable-disease/coronavirus/',
-  async scraper() {
-    const $ = await fetch.page(this.url);
-    const $table = $('h1:contains("San Benito County COVID-19 Case Count")')
-      .nextAll('table')
-      .first();
-    return {
-      cases: parse.number(
-        $table
-          .find('td:contains("Positive")')
-          .next('td')
-          .text()
-      ),
-      deaths: parse.number(
-        $table
-          .find('td:contains("Deaths")')
-          .next('td')
-          .text()
-      ),
-      recovered: parse.number(
-        $table
-          .find('td:contains("Recovered")')
-          .next('td')
-          .text()
-      )
-    };
+  scraper: {
+    '0': async function scraper() {
+      const $ = await fetch.page(this.url);
+      const $table = $('h1:contains("San Benito County COVID-19 Case Count")')
+        .nextAll('table')
+        .first();
+      return {
+        cases: parse.number(
+          $table
+            .find('td:contains("Positive")')
+            .next('td')
+            .text()
+        ),
+        deaths: parse.number(
+          $table
+            .find('td:contains("Deaths")')
+            .next('td')
+            .text()
+        ),
+        recovered: parse.number(
+          $table
+            .find('td:contains("Recovered")')
+            .next('td')
+            .text()
+        )
+      };
+    },
+    '2020-3-19': async function scraper() {
+      throw new Error('Need to scrape new arcgis');
+    }
   }
 };
 
