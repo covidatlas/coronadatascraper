@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'WV',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://dhhr.wv.gov',
+      name: 'West Virginia Department of Health & Human Resources'
+    }
+  ],
   url: 'https://dhhr.wv.gov/COVID-19/Pages/default.aspx',
   type: 'list',
   aggregate: 'county',

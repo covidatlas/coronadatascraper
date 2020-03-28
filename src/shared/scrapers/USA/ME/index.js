@@ -9,6 +9,13 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'ME',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.maine.gov/dhhs/mecdc',
+      name: 'MeCDC',
+      description: 'Maine Center for Disease Control & Prevention'
+    }
+  ],
   url: 'https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml',
   type: 'table',
   aggregate: 'county',

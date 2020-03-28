@@ -9,6 +9,12 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'WA',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.doh.wa.gov/',
+      name: 'Washington State Department of Health'
+    }
+  ],
   url: 'https://www.doh.wa.gov/Emergencies/Coronavirus',
   type: 'table',
   headless: true,

@@ -6,6 +6,13 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'AK',
   country: 'USA',
+  sources: [
+    {
+      url: 'http://dhss.alaska.gov/dph',
+      name: 'Alaska Department of Health and Social Services',
+      description: 'Division of Public Health'
+    }
+  ],
   url: 'http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx',
   type: 'table',
   headless: false,

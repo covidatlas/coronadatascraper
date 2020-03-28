@@ -11,6 +11,13 @@ const scraper = {
   state: 'DE',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.dhss.delaware.gov/dhss/dph',
+      name: 'DHSS Division of Public Health',
+      description: 'Delaware Health and Social Services Division of Public Health'
+    }
+  ],
   async scraper() {
     if (datetime.scrapeDateIsBefore('2020-3-16')) {
       this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';

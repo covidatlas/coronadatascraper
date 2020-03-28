@@ -12,6 +12,12 @@ const scraper = {
   priority: 1,
   type: 'csv',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://health.ri.gov',
+      name: 'State of Rhode Island Department of Health'
+    }
+  ],
   // This google sheet is linked from the HTML of https://health.ri.gov/data/covid-19/
   // It is used to render the little table of state totals, but contains a per-count tab
   url:
