@@ -9,7 +9,8 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'GA',
   country: 'USA',
-  url: 'https://dph.georgia.gov/covid-19-daily-status-report',
+  url:
+    'https://d20s4vd27d0hk0.cloudfront.net/?initialWidth=746&childId=covid19dashdph&parentTitle=COVID-19%20Daily%20Status%20Report%20%7C%20Georgia%20Department%20of%20Public%20Health&parentUrl=https%3A%2F%2Fdph.georgia.gov%2Fcovid-19-daily-status-report',
   type: 'table',
   aggregate: 'county',
   _counties: [
@@ -176,17 +177,19 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     let counties = [];
-    const $table = $('table:contains(County):contains(Cases)');
-    const $trs = $table.find('tbody > tr');
+    const $trs = $('table:nth-child(6) tbody tr:not(:first-child)');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const name = $tr.find('td:first-child').text();
       let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
-      const cases = parse.number($tr.find('td:last-child').text());
+
+      const cases = parse.number($tr.find('td:nth-child(2)').text());
+      const deaths = parse.number($tr.find('td:last-child').text());
+
       if (county === 'Unknown County') {
         county = UNASSIGNED;
       }
-      counties.push({ county, cases });
+      counties.push({ county, cases, deaths });
     });
 
     counties.push(transform.sumData(counties));
