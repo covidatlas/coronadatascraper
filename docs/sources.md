@@ -425,8 +425,8 @@ For example:
     📁 tests
       📁 2020-03-16
         📄 www_alabamapublichealth_gov_coronavirus.html # sample response
-        📄 expected.json #
-      📁 2020-03-27
+        📄 expected.json # expected output
+      📁 2020-03-27 # source changed on 03-26
         📄 opendata_arcgis_com_datasets_ff8def6b155facc6327_0.csv
         📄 services7_arcgis_com_4RQmZZ0yaZkGR1zy.json
         📄 expected.json
@@ -440,11 +440,14 @@ where your source name is `<county name>, <state name>, <country name>`. For exa
 ```
 yarn start -l "Alameda County, CA, USA"
 yarn start -l "MN, USA"
-yarn start -l "ESP"
+yarn start -l ESP
 ```
 
-After the crawler has finished running, look at how many counties, states, and countries were
-scraped. Also look for missing location or population information. Finally, look at the output
-located in the `dist` directory. `data.json` contains all the information the crawler could get from
-your source. `report.json` provides a report on crawling process. `ratings.json` provides a rating
-for your source.
+After the crawler has finished running:
+
+- Look at how many counties, states, and countries were scraped.
+- Look for missing location or population information.
+- Look at the output located in the `dist` directory:  
+  `data.json` contains all the information the crawler could get from your source.  
+  `report.json` provides a report on crawling process.  
+  `ratings.json` provides a rating for your source.
