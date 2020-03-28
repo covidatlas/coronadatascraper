@@ -1,6 +1,6 @@
 # Sources and Scrapers
 
-_Last updated: 2020-03-24_
+_Last updated: 2020-03-26_
 
 **Table of content**
 - [Sources and Scrapers](#sources-and-scrapers)
@@ -21,6 +21,8 @@ _Last updated: 2020-03-24_
     - [Features](#features)
     - [Population](#population)
   - [Testing sources](#testing-sources)
+    - [Test coverage](#test-coverage)
+    - [Manual testing](#manual-testing)
 
 This guide provides information on the criterias we use to determine whether a source should be added to the project, and offer technical details
 regarding how a source can be implemented.
@@ -47,7 +49,7 @@ _If you have found a source that matches the criterias above, read on!_
 
 Sources can pull JSON, CSV, or good ol' HTML down and are written in a sort of modular way, with a handful of helpers available to clean up the data. Sources can pull in data for anything -- cities, counties, states, countries, or collections thereof. See the existing scrapers for ideas on how to deal with different ways of data being presented.
 
-Start by going to `src/events/crawler/scrapers/` and creating a new file in the country, region, and region directory (`src/events/crawler/scrapers/USA/CA/mycounty-name.js`)
+Start by going to `src/shared/scrapers/` and creating a new file in the country, region, and region directory (`src/shared/scrapers/USA/CA/mycounty-name.js`)
 
 _Note:_ any files you create that start with `_` will be ignored by the crawler. This is a good way to create utility or shared functionality between scrapers.
 
@@ -62,7 +64,7 @@ Add the following directly to the scraper object if the data you're pulling in i
 * `state` - The state, province, or region
 * `county` - The county or parish
 * `city` - The city name
-  
+
 Additional flags can be set:
 
 * `type` - one of `json`, `csv`, `table`, `list`, `paragraph`, `pdf`, `image`. assumes `list` if `undefined`.
@@ -91,14 +93,14 @@ Sources are rated based on:
 
 1. **How hard is it to read?** - `csv` and `json` give best scores, with `table` right behind it, with `list` and `paragraph` worse. `pdf` gets no points, and `image` gets negative points.
 2. **Timeseries?** - Sources score points if they provide a timeseries.
-3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `recovered`, `country`, `state`, `county`, and `city`.
+3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `hospitalized`, `discharged`, `recovered`, `country`, `state`, `county`, and `city`.
 4. **SSL** - Sources get points for serving over ssl
 5. **Headless?** - Sources get docked points if they require a headless scraper
 
 ## Scraping
 
 Scrapers are `async` functions associated with the `scraper` attribute on the source object. You may implement one or multiple scrapers if the
-source changes its formating (see [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)).
+source changes its formatting (see [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)).
 
 Your scraper should return an object, an array of objects, or `null` in case the source does not have any data.
 
@@ -110,6 +112,8 @@ The object may contain the following attributes:
 * `city` - The city name (not required if defined on scraper object)
 * `cases` - Total number of cases
 * `deaths` - Total number of deaths
+* `hospitalized` - Total number of hospitalized
+* `discharged` - Total number of discharged
 * `recovered` - Total number recovered
 * `tested` - Total number tested
 * `feature` - GeoJSON feature associated with the location (See [Features and population data](#features-and-population-data))
@@ -117,9 +121,9 @@ The object may contain the following attributes:
 * `population` - The estimated population of the location (See [Features and population data](#features-and-population-data))
 * `coordinates` - Array of coordinates as `[longitude, latitude]` (See [Features and population data](#features-and-population-data))
 
-Returning an array of objects is useful for aggregate sources, sources that provide information for more than one geographical area. For example, [Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink) 
-provides information for all provinces of the country. If the scraper returns an array, each object in the array will have the attributes specified 
-in the source objeect appended, meaning you only need to specify the fields that change per location (`county`, `cases`, `deaths` for example).
+Returning an array of objects is useful for aggregate sources, sources that provide information for more than one geographical area. For example, [Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink)
+provides information for all provinces of the country. If the scraper returns an array, each object in the array will have the attributes specified
+in the source object appended, meaning you only need to specify the fields that change per location (`county`, `cases`, `deaths` for example).
 
 `null` should be returned in case no data is available. This could be the case if the source has not provided an update for today, or we are fetching historical
 information for which we have no cached data.
@@ -147,7 +151,7 @@ Key highlights:
 - [`lib/geography.js`](../src/events/crawler/lib/geography.js) provides helper functions related location geography. Make sure to look at `addEmptyRegions` and `addCounty` as
 they are often used.
 - [`lib/parse.js`](../src/events/crawler/lib/parse.js) provides helper functions to parse numbers, floats, and strings.
-- [`lib/transform.js`](../src/events/crawler/lib/transform.js) provides helper functions to perform common data manipulation operations. Make sure to look at 
+- [`lib/transform.js`](../src/events/crawler/lib/transform.js) provides helper functions to perform common data manipulation operations. Make sure to look at
 `sumData` as it is often used.
 - [`lib/datetime.js`](../src/events/crawler/lib/datetime.js) provides helper functions to perform date related manipulations.
 
@@ -298,7 +302,7 @@ this information may not be available and has to be added manually.
 
 ### Features
 
-Features can be specified in three ways: through the `country`, `state` and `county` field, by matching the `longitude` and `latitude` to a particular feature, 
+Features can be specified in three ways: through the `country`, `state` and `county` field, by matching the `longitude` and `latitude` to a particular feature,
 through the `featureId` field, or through the `feature` field.
 
 While the first two methods works most of the time, sometimes you will have to rely on `featureId` to help the crawler make the correct guess.
@@ -311,8 +315,8 @@ While the first two methods works most of the time, sometimes you will have to r
 - `code_hasc`
 - `postal`
 
-We compare the value you specify with the data stored in [world-states-provinces.json](./../coronavirus-data-sources/geojson/world-states-provinces.json) 
-(Careful, big file!). If we find a match across all the fields you specify, we select the feature. There are way way more attributes to use in that 
+We compare the value you specify with the data stored in [world-states-provinces.json](./../coronavirus-data-sources/geojson/world-states-provinces.json)
+(Careful, big file!). If we find a match across all the fields you specify, we select the feature. There are way way more attributes to use in that
 file, so make sure to give it a quick glance.
 
 In case we do not have any geographical information for the location you are trying to scrape, you can provide a GeoJSON feature directly in the `feature` attribute
@@ -330,8 +334,47 @@ in the returned object of the scraper.
 
 You should test your source first by running `yarn test`. This will perform some basic tests to make sure nothing crashes and the source object is in the correct form.
 
-You should then run your source with the crawler by running `yarn start -l "<name of your source>"`. Your source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for Montana, USA is "MN, USA").
+
+### Test coverage
+
+To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
+
+* Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
+
+* Add a sample response from the target URL. The filename should be the URL, without the
+`http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
+file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
+
+   * URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
+
+   * File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
+
+* Add a file named `expected.json` containing the array of values that the scraper is expected to
+return. (Leave out any geojson `features` properties.)
+
+For sources that have a time series, the `expected.json` file represents the latest result in the
+sample response provided. You can additionally test the return value for a specific date by adding
+a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
+
+
+    📁 USA
+      📁 AK
+        📄 index.js     # scraper
+        📁 tests
+          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html     # sample response
+          📄 expected.json     # expected result
+    ...
+    📁 FRA
+      📄 index.js     # scraper
+      📁 tests
+        📄 raw_githubusercontent_com_covid19_fr_data_chiffres_cles.csv     # sample response
+        📄 expected.json     # expected result for most recent date in sample
+        📄 expected.2020-03-16.json # expected result for March 16, 2020
+
+### Manual testing
+
+You should run your source with the crawler by running `yarn start -l "<name of your source>"`. Your source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for Montana, USA is "MN, USA").
 
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output located in the `dist` directory. `data.json` contains all the information
-the crawler could get from your source. `report.json` provides a report on crawling process. `ratings.json` provides a rating for your source. 
+the crawler could get from your source. `report.json` provides a report on crawling process. `ratings.json` provides a rating for your source.
