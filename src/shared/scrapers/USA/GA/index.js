@@ -13,6 +13,12 @@ const scraper = {
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://dph.georgia.gov',
+      name: 'Georgia Department of Public Health'
+    }
+  ],
   _counties: [
     'Appling County',
     'Atkinson County',
@@ -175,8 +181,9 @@ const scraper = {
     'Worth County'
   ],
   async scraper() {
+    const afterChange = datetime.scrapeDateIsAfter('2020-3-26');
     let selector = 'table:contains(County):contains(Cases) tbody > tr';
-    if (datetime.scrapeDateIsAfter('2020-3-26')) {
+    if (afterChange) {
       const pageHTML = (await fetch.page(this.url)).html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
       selector = 'table:nth-child(6) tbody tr:not(:first-child,:last-child)';
@@ -193,12 +200,17 @@ const scraper = {
       let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
 
       const cases = parse.number($tr.find('td:nth-child(2)').text());
-      const deaths = parse.number($tr.find('td:last-child').text());
 
       if (county === 'Unknown County') {
         county = UNASSIGNED;
       }
-      counties.push({ county, cases, deaths });
+
+      if (afterChange) {
+        const deaths = parse.number($tr.find('td:last-child').text());
+        counties.push({ county, cases, deaths });
+      } else {
+        counties.push({ county, cases });
+      }
     });
 
     counties.push(transform.sumData(counties));
