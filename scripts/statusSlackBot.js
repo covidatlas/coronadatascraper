@@ -37,7 +37,7 @@ const generateReport = async report => {
 _Sources:_
 - *${sources.numSources}* sources
 - *${sources.errors.length}* invalid sources:
-${filteredScaperErrors.map(error => `  - ${error}`).join('\n')}`
+${sources.errors.map(error => `  - ${error}`).join('\n')}`
       }
     },
     {
@@ -51,7 +51,7 @@ _Scrapers:_
 - *${scrape.numStates}* states
 - *${scrape.numCountries}* countries
 - *${filteredScaperErrors.length}* scraper errors:
-${scrape.errors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
+${filteredScaperErrors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
       }
     },
     {
