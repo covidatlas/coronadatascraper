@@ -1,5 +1,5 @@
-import entries from './utils/qaFetch.js';
-import { eachLocation, eachDate } from './utils/qaUtils.js';
+import entries from './utils/qa-fetch.js';
+import { eachLocation, eachDate } from './utils/qa-utils.js';
 
 export default t => {
   eachLocation(t, entries, (t, _, location) => {
