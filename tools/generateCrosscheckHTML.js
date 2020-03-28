@@ -2,6 +2,7 @@ const imports = require('esm')(module);
 
 const { generateCrossCheckPage } = imports('../site/crossCheckReport.js');
 const fs = imports('../src/shared/lib/fs.js');
+// eslint-disable-next-line import/no-unresolved
 const report = require('../dist/report.json');
 
 async function generate() {
