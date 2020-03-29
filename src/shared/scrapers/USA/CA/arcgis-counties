@@ -76,6 +76,10 @@ const scraper = {
     'Yolo County',
     'Yuba County'
   ],
+  sources: [{
+    name: 'Sonoma County Emergency and Preparedness Information',
+    url: 'https://socoemergency.org/'
+  }],
   async scraper() {
     const data = await fetch.csv(this.url);
     const counties = [];
