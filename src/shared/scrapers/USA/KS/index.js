@@ -14,7 +14,6 @@ import * as pdfUtils from '../../../lib/pdf.js';
 const scraper = {
   state: 'KS',
   country: 'USA',
-  type: 'json',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
   sources: [
