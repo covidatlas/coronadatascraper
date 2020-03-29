@@ -58,6 +58,7 @@ const scraper = {
         };
       }
     }
+    throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
   }
 };
 
