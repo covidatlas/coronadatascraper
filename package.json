@@ -16,8 +16,6 @@
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
-    "buildDocker": "docker build -t corona-nginx-html-server:v1 . && docker run -d -p 8080:8080 corona-nginx-html-server:v1 nginx",
-    "stopDockerContainer": "docker container stop $(docker ps -q --filter ancestor=corona-nginx-html-server:v1 )",
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
