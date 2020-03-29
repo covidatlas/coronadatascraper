@@ -7,3 +7,4 @@ node_modules
 public/static.json
 sam.json
 sam.yaml
+package-lock.json
