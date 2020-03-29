@@ -2,7 +2,7 @@ import each from 'jest-each';
 
 import * as fs from '../../lib/fs.js';
 import * as schema from '../../lib/schema.js';
-import { runScraper } from '../../lib/run-scraper.js';
+import runScraper from '../../lib/run-scraper.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
