@@ -2,6 +2,7 @@ import path from 'path';
 import * as datetime from '../../../shared/lib/datetime.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as countryLevels from '../../../shared/lib/country-levels.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -96,6 +97,11 @@ const runScrapers = async args => {
       path.basename(location._path, '.js') !== options.location &&
       geography.getName(location) !== options.location
     ) {
+      continue;
+    }
+    if (options.id && options.id !== countryLevels.getIdFromLocation(location)) {
+      // select location based on country level id
+      // for example "yarn start -i id3:AU-VIC"
       continue;
     }
     if (location.scraper) {
