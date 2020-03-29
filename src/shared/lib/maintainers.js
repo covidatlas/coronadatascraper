@@ -32,7 +32,7 @@ const maintainers = {
     name: 'Albert III',
     gitub: 'aed3',
     county: 'USA',
-    flag: 'us'
+    flag: '🇺🇸'
   },
   camjc: {
     name: 'Cameron Chamberlain',
