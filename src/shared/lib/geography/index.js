@@ -102,6 +102,10 @@ export const isCity = function(location) {
   return location && location.city;
 };
 
+export const getSmallestLocationStr = function(location) {
+  return location.city || location.county || location.state || location.country || null;
+};
+
 export const getLocationGranularityName = function(location) {
   if (isCountry(location)) {
     return 'country';
