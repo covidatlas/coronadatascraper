@@ -63,10 +63,7 @@ export const getCachedFilePath = (url, type, date = false) => {
   * @param {*} encoding for the resource to access, default to utf-8
 */
 export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
-  if (date) date = datetime.getYYYYMD(new Date(date));
   const filePath = getCachedFilePath(url, type, date);
-  // console.log({ filePath, url, type, date });
-
   if (await fs.exists(filePath)) {
     console.log('  ⚡️ Cache hit for %s (%s)', url, filePath);
     return fs.readFile(filePath, encoding);
