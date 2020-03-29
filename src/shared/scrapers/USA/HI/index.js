@@ -7,10 +7,12 @@ const scraper = {
   country: 'USA',
   state: 'HI',
   priority: 1,
-  source: {
-    name: 'Hawaii Department of Health - Disease Outbreak Control Division',
-    url: 'https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/'
-  },
+  sources: [
+    {
+      name: 'Hawaii Department of Health - Disease Outbreak Control Division',
+      url: 'https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/'
+    }
+  ],
   maintainers: [
     {
       name: 'Jordan Holt',

@@ -9,6 +9,11 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'MI',
   country: 'USA',
+  sources: [
+    {
+      name: 'Michigan Department of Health & Human Services'
+    }
+  ],
   url: 'https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html',
   type: 'table',
   aggregate: 'county',

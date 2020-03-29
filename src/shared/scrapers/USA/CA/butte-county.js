@@ -9,6 +9,13 @@ const scraper = {
   county: 'Butte County',
   state: 'CA',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.buttecounty.net/publichealth',
+      name: 'BCPHD',
+      description: 'Butte County Public Health Department'
+    }
+  ],
   url: 'https://www.buttecounty.net/publichealth',
   maintainers: [maintainers.jbencina],
   async scraper() {

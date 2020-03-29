@@ -12,10 +12,12 @@ const scraper = {
   url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
   type: 'table',
   aggregate: 'county',
-  source: {
-    name: 'Alabama Department of Public Health | Division of Infectious Diseases & Outbreaks',
-    url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html'
-  },
+  sources: [
+    {
+      name: 'Alabama Department of Public Health | Division of Infectious Diseases & Outbreaks',
+      url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html'
+    }
+  ],
   _counties: [
     'Autauga County',
     'Baldwin County',

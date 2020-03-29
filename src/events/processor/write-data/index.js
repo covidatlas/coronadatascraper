@@ -1,6 +1,7 @@
 import path from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 import * as stringify from './stringify.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const writeData = async ({ locations, featureCollection, report, options, sourceRatings }) => {
   let suffix = '';
@@ -19,6 +20,8 @@ const writeData = async ({ locations, featureCollection, report, options, source
   await fs.writeJSON('dist/report.json', report);
 
   await fs.writeJSON('dist/ratings.json', sourceRatings);
+
+  await fs.writeCSV('dist/reports/crawler-report.csv', reporter.getCSV());
 
   return { locations, featureCollection, report, options };
 };

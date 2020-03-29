@@ -13,6 +13,13 @@ const scraper = {
   country: 'USA',
   priority: 1,
   aggregate: 'county',
+  sources: [
+    {
+      url: 'http://www.dph.illinois.gov',
+      name: 'IDPH',
+      description: 'Illinois Department of Public Health'
+    }
+  ],
   _baseUrl: 'http://www.dph.illinois.gov/sites/default/files/COVID19/',
   _reject: [
     { county: 'Illinois County' },
