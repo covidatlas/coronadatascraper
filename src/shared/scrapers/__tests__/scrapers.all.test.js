@@ -20,34 +20,7 @@ jest.mock('../../lib/fetch/get.js');
 /**
 This suite automatically tests a scraper's results against its test cases.
 
-To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
-
-- Add a `tests` folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
-- Add a sample response from the target URL. The filename should be the URL, without the
-  `http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
-  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
-    - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
-    - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
-
-- Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
-- For sources that have a time series, the `expected.json` file represents the latest result in the
-  sample response provided. You can additionally test the return value for a specific date by adding
-  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
-
-    📁 USA
-      📁 AK
-        📄 index.js 🡐 scraper
-        📁 tests
-          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html 🡐 sample response
-          📄 expected.json 🡐 expected result
-    ...
-    📁 FRA
-      📄 index.js 🡐 scraper
-      📁 tests
-        📄 raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv 🡐 sample response
-        📄 expected.json 🡐 expected result for most recent date in sample
-        📄 expected.2020-03-16.json 🡐 expected result for March 16, 2020
+To add test coverage for a scraper, see https://github.com/lazd/coronadatascraper/blob/master/docs/sources.md#testing-sources
 
 */
 
