@@ -10,39 +10,47 @@ import runScraper from './lib/run-scraper.js';
 import sanitize from './lib/sanitize-url.js';
 
 const runScrapers = async args => {
-  console.log('runScrapers', args);
+  const results = [];
+
   const { options } = args;
   const { date, location } = options;
+
   const sources = args.sources.filter(s => s.scraper);
   const matchLocation = source => path.basename(source._path, '.js') === location || getName(source) === location;
   const sourcesToScrape = location !== undefined ? sources.filter(matchLocation) : sources;
-  const urls = endpoints[location];
   for (const source of sourcesToScrape) {
-    const datedTestDir = join(source._path, '..', 'tests', date);
-    try {
-      const data = await runScraper(source);
-      if (data) {
-        console.log(`✅ Ran scraper ${getName(source)} for date ${date}`);
+    const sourceName = getName(source);
+    const urls = endpoints[sourceName];
+    if (urls && urls.length > 0) {
+      const datedTestDir = join(source._path, '..', 'tests', date);
+      try {
+        const data = await runScraper(source);
+        if (data) {
+          console.log(`✅ Ran scraper ${getName(source)} for date ${date}`);
 
-        // Write expected.json file with scraper results
-        const expectedDataPath = join(datedTestDir, 'expected.json');
-        await writeJSON(expectedDataPath, data);
+          // Write expected.json file with scraper results
+          const expectedDataPath = join(datedTestDir, 'expected.json');
+          await writeJSON(expectedDataPath, data);
+          results.push(expectedDataPath);
 
-        // Add url responses
-        if (!fs.existsSync(datedTestDir)) fs.mkdirSync(datedTestDir, { recursive: true });
-        for (const url of urls) {
-          const type = source.type || path.extname(url) || 'txt';
-          const response = await fetch(url, type);
-          if (response) {
-            const assetPath = join(datedTestDir, sanitize(url));
-            fs.writeFileSync(assetPath, response);
+          // Add url responses
+          if (!fs.existsSync(datedTestDir)) fs.mkdirSync(datedTestDir, { recursive: true });
+          for (const url of urls) {
+            const type = source.type || path.extname(url) || 'txt';
+            const response = await fetch(url, type);
+            if (response) {
+              const assetPath = join(datedTestDir, sanitize(url));
+              fs.writeFileSync(assetPath, response);
+              results.push(assetPath);
+            }
           }
         }
+      } catch (err) {
+        console.error(err);
       }
-    } catch (err) {
-      console.error(err);
     }
   }
+  console.log(results.join('\n'));
   return sources;
 };
 
@@ -50,7 +58,11 @@ export default async options => {
   const { date } = options;
   if (date === undefined) throw new Error('Please provide a date for generating tests.');
   process.env.SCRAPE_DATE = date;
-  loadSources({ options }).then(runScrapers);
+  loadSources({ options })
+    .then(runScrapers)
+    .then(() => {
+      delete process.env.SCRAPE_DATE;
+    });
 };
 
 const endpoints = {
