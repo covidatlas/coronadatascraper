@@ -34,7 +34,7 @@ const scraper = {
     }
   ],
   scraper: {
-    '0': async function () {
+    '0': async function() {
       if (datetime.scrapeDateIsBefore('2020-3-16')) {
         this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';
         this.type = 'table';
@@ -72,7 +72,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-29': async function () {
+    '2020-3-29': async function() {
       this.url =
         'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
       this.type = 'json';
@@ -83,7 +83,9 @@ const scraper = {
         if (typeof countyData.attributes.Presumptive_Positive !== 'undefined') {
           if (countyData.attributes.Presumptive_Positive === null) countyData.attributes.Presumptive_Positive = 0;
           if (countyData.attributes.Total_Death === null) countyData.attributes.Total_Death = 0;
-          if (countyData.attributes.Recoved === null) countyData.attributes.Recovered = 0;
+          if (countyData.attributes.Recovered === null) countyData.attributes.Recovered = 0;
+
+          console.log(countyData.attributes);
 
           const countyObj = {
             county: geography.addCounty(parse.string(countyData.attributes.NAME)),
