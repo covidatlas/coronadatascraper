@@ -1,20 +1,24 @@
 {
-  "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
   "ignorePatterns": [
     "node_modules/",
     "dist/",
     "src/shared/scrapers/**/tests/",
     "vendor/"
   ],
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
   "rules": {
     "consistent-return": "off",
     "func-names": "off",
     "import/extensions": ["error", "ignorePackages"],
-    "jest/expect-expect": "off",
-    "jest/no-standalone-expect": "off",
-    "jest/no-test-callback": "off",
-    "jest/no-try-expect": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "no-async-promise-executor": "off",
     "no-await-in-loop": "off",
     "no-console": "off",
