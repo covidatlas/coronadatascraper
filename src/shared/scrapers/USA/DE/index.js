@@ -85,8 +85,6 @@ const scraper = {
           if (countyData.attributes.Total_Death === null) countyData.attributes.Total_Death = 0;
           if (countyData.attributes.Recovered === null) countyData.attributes.Recovered = 0;
 
-          console.log(countyData.attributes);
-
           const countyObj = {
             county: geography.addCounty(parse.string(countyData.attributes.NAME)),
             cases: parse.number(countyData.attributes.Presumptive_Positive),
@@ -94,7 +92,6 @@ const scraper = {
             recovered: parse.number(countyData.attributes.Recovered)
           };
           if (rules.isAcceptable(countyObj, null, this._reject)) {
-            console.log(countyObj);
             counties.push(countyObj);
           }
         }
