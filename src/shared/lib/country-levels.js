@@ -1,12 +1,11 @@
 import { promises as fsp } from 'fs';
-import * as fs from 'fs';
 
 import * as fs_ from './fs.js';
 import * as geography from './geography/index.js';
 import join from './join.js';
 
 import extract from 'extract-zip';
-import { downloadFile } from './fetch/index.js';
+import { downloadFile } from './fetch/utils.js';
 
 const countryLevelCache = {};
 const countryLevelsDir = join('src', 'shared', 'vendor', 'country-levels');

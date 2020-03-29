@@ -5,8 +5,10 @@ import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
 import { get } from './get.js';
-import * as request from 'request';
-import * as fs from 'fs';
+import stream from 'stream';
+import { promisify } from 'util';
+import fs from 'fs';
+const got = require('got');
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
 // order to be mocked independently of the rest of these functions. Here we re-export `get` as
@@ -254,11 +256,3 @@ export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerNa
   return getArcGISCSVURLFromOrgId(serverNumber, orgId, layerName);
 };
 
-export const downloadFile = async (url, dest) => {
-  await request
-    .get(url)
-    .on('error', function(err) {
-      throw err;
-    })
-    .pipe(fs.createWriteStream(dest));
-};
