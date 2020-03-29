@@ -92,10 +92,17 @@ const scraper = {
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
         1}${new Date(date).getUTCDate()}2020.pdf`;
 
-      const body = await fetch.pdf(this.url);
-
-      if (body === null) {
-        throw new Error(`No data for ${date}`);
+      let body;
+      try {
+        body = await fetch.pdf(this.url);
+      } catch (err) {
+        // The CT website does a 302 to a 404.html page if the PDF isn't yet available
+        // This manifests as a PDF parsing error
+        if (err.parserError !== undefined) {
+          throw new Error(`PDF parsing error. Likely no PDF available for ${date}`);
+        } else {
+          throw new Error(`Error: ${err}`);
+        }
       }
 
       const rows = pdfUtils.asWords(body, 0, 1).map(row => row.map(col => col.text));
