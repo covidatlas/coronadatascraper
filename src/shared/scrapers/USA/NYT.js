@@ -44,10 +44,6 @@ const scraper = {
       throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
     }
 
-    if (scrapeDate < firstDateInTimeseries) {
-      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
-    }
-
     const locations = [];
     const locationsByState = {};
     for (const row of data) {
