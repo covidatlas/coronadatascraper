@@ -1,4 +1,5 @@
 import needle from 'needle';
+import { DeprecatedError } from '../../lib/errors.js';
 import * as fetch from '../../lib/fetch/index.js';
 
 import populations from './populations.json';
@@ -32,31 +33,36 @@ const scraper = {
       email: 'arseniy+coronadatascraper@freeatnet.com'
     }
   ],
-  async scraper() {
-    const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
-    const csrfCookies = csrfRequestResponse.cookies;
-    const { csrfToken } = csrfRequestResponse.body;
+  scraper: {
+    '0': function() {
+      throw new DeprecatedError('RUS scraper did not exist for this date');
+    },
+    '2020-3-26': async function() {
+      const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
+      const csrfCookies = csrfRequestResponse.cookies;
+      const { csrfToken } = csrfRequestResponse.body;
 
-    const { data } = await fetch.json(`${this.url}${csrfToken}`, undefined, { cookies: csrfCookies });
+      const { data } = await fetch.json(`${this.url}${csrfToken}`, undefined, { cookies: csrfCookies });
 
-    const ruEntries = data.items.filter(({ ru }) => ru);
-    return ruEntries
-      .map(({ name, cases, cured: recovered, deaths, coordinates }) => ({
-        // The list contains data at federal subject level, which is the top-level political
-        // divisions (including cities of Moscow and St Petersburg)
-        state: name,
-        cases,
-        recovered,
-        deaths,
-        coordinates
-      }))
-      .map(entry => {
-        const { state } = entry;
-        const populationKey = state in POPULATION_REMAP ? POPULATION_REMAP[state] : state;
-        const populationObject = populations.find(({ state: key }) => key === populationKey);
+      const ruEntries = data.items.filter(({ ru }) => ru);
+      return ruEntries
+        .map(({ name, cases, cured: recovered, deaths, coordinates }) => ({
+          // The list contains data at federal subject level, which is the top-level political
+          // divisions (including cities of Moscow and St Petersburg)
+          state: name,
+          cases,
+          recovered,
+          deaths,
+          coordinates
+        }))
+        .map(entry => {
+          const { state } = entry;
+          const populationKey = state in POPULATION_REMAP ? POPULATION_REMAP[state] : state;
+          const populationObject = populations.find(({ state: key }) => key === populationKey);
 
-        return populationObject ? { ...entry, population: populationObject.population } : entry;
-      });
+          return populationObject ? { ...entry, population: populationObject.population } : entry;
+        });
+    }
   }
 };
 

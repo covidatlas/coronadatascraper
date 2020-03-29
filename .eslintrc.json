@@ -28,6 +28,7 @@
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
     "no-shadow": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-loop-func": "off"
   }
 }
