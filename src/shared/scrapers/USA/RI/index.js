@@ -1,3 +1,4 @@
+import cheerioTableparser from 'cheerio-tableparser';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
@@ -14,7 +15,7 @@ const scraper = {
   aggregate: 'county',
   sources: [
     {
-      url: 'https://health.ri.gov',
+      url: 'https://health.ri.gov/data/covid-19/',
       name: 'State of Rhode Island Department of Health'
     }
   ],
@@ -22,6 +23,59 @@ const scraper = {
   // It is used to render the little table of state totals, but contains a per-count tab
   url:
     'https://docs.google.com/spreadsheets/d/1n-zMS9Al94CPj_Tc3K7Adin-tN9x1RSjjx2UzJ4SV7Q/gviz/tq?tqx=out:csv&sheet=County+Data#gid=0',
+
+  _counties: ['Bristol County', 'Kent County', 'Newport County', 'Providence County', 'Washington County'],
+  _cities: {
+    Barrington: 'Bristol',
+    Bristol: 'Bristol',
+    Burrillville: 'Providence',
+    'Central Falls': 'Providence',
+    Charlestown: 'Washington',
+    Coventry: 'Kent',
+    Cranston: 'Providence',
+    Cumberland: 'Providence',
+    'East Greenwich': 'Kent',
+    'East Providence': 'Providence',
+    Exeter: 'Washington',
+    Foster: 'Providence',
+    Glocester: 'Providence',
+    Hopkinton: 'Washington',
+    Jamestown: 'Newport',
+    Johnston: 'Providence',
+    Lincoln: 'Providence',
+    'Little Compton': 'Newport',
+    Middletown: 'Newport',
+    Narragansett: 'Washington',
+    Newport: 'Newport',
+    'New Shoreham': 'Washington',
+    'North Kingstown': 'Washington',
+    'North Providence': 'Providence',
+    'North Smithfield': 'Providence',
+    Pawtucket: 'Providence',
+    Portsmouth: 'Newport',
+    Providence: 'Providence',
+    Richmond: 'Washington',
+    Scituate: 'Providence',
+    Smithfield: 'Providence',
+    'South Kingstown': 'Washington',
+    Tiverton: 'Newport',
+    Warren: 'Bristol',
+    Warwick: 'Kent',
+    Westerly: 'Washington',
+    'West Greenwich': 'Kent',
+    'West Warwick': 'Kent',
+    Woonsocket: 'Providence'
+  },
+
+  _good_headers(data) {
+    if (parse.string(data[0][0]) !== 'City/Town') {
+      return false;
+    }
+    if (parse.string(data[1][0]) !== 'Rhode Island COVID-19 patients by city/town of residence') {
+      return false;
+    }
+    return true;
+  },
 
   scraper: {
     '0': async function() {
@@ -48,7 +102,65 @@ const scraper = {
       return counties;
     },
     '2020-3-26': async function() {
-      throw new Error('RI stopped reporting by county');
+      let counties = [];
+
+      this.headless = true;
+      this.url = 'https://health.ri.gov/data/covid-19/';
+      const $ = await fetch.headless(this.url);
+      cheerioTableparser($);
+
+      // Need to pull this out explicitly because their html table includes
+      // non-numbers like "<5"
+      const stateCases = parse.number(
+        $('td:contains("Number of Rhode Island COVID-19 positive")')
+          .next()
+          .text()
+      );
+      const stateDeaths = parse.number(
+        $('td:contains("Number of Rhode Islanders to die")')
+          .next()
+          .text()
+      );
+      counties.push({
+        cases: stateCases,
+        deaths: stateDeaths
+      });
+
+      const $table = $('th:contains("COVID-19 patients")').closest('table');
+      const data = $table.parsetable(false, false, true);
+      if (!this._good_headers(data)) {
+        throw new Error('Unknown headers in html table');
+      }
+
+      const countyCases = {};
+      for (const county of this._counties) {
+        countyCases[county] = 0;
+      }
+
+      const numRows = data[0].length;
+      const startRow = 1; // skip the headers
+      for (let i = startRow; i < numRows; i++) {
+        const city = parse.string(data[0][i]);
+        let cases = parse.string(data[1][i]);
+        if (cases === '<5') {
+          cases = 3; // pick something!
+        } else {
+          cases = parse.number(cases);
+        }
+
+        const county = geography.addCounty(this._cities[city]);
+        countyCases[county] += cases;
+      }
+      for (const county of this._counties) {
+        counties.push({
+          cases: countyCases[county]
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      // no sum because we explicitly add it above
+
+      return counties;
     }
   }
 };
