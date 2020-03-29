@@ -138,51 +138,61 @@ const scraper = {
       const datePart = datetime.getMonthDYYYY(date);
       this.url = `${this._baseUrl}COVID-19_${datePart}_.pdf`;
 
-      const body = await fetch.pdf(this.url);
+      return this._scraperHelper(date);
+    },
+    '2020-03-28': async function() {
+      const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
+      const datePart = datetime.getMonthDYYYY(date);
+      this.url = `${this._baseUrl}COVID-19_${datePart}.pdf`;
 
-      if (body === null) {
-        throw new Error(`No data for ${date}`);
+      return this._scraperHelper(date);
+    }
+  },
+  async _scraperHelper(date) {
+    const body = await fetch.pdf(this.url);
+
+    if (body === null) {
+      throw new Error(`No data for ${date}`);
+    }
+
+    const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));
+
+    const counties = [];
+    const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Positive Case Information')) + 2;
+
+    for (let i = startIndex; i < rows.length; i++) {
+      const data = rows[i];
+
+      // First set of columns
+      const countyName1 = geography.addCounty(data[0]);
+
+      const cases1 = data[1];
+
+      if (this._counties.indexOf(countyName1) !== -1) {
+        counties.push({
+          county: countyName1,
+          cases: parse.number(cases1)
+        });
       }
 
-      const rows = pdfUtils.asRows(body).map(row => row.map(col => col.text));
+      // Optional second set of columns
+      if (data.length === 4) {
+        const countyName2 = geography.addCounty(data[2]);
+        const cases2 = data[3];
 
-      const counties = [];
-      const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('Positive Case Information')) + 2;
-
-      for (let i = startIndex; i < rows.length; i++) {
-        const data = rows[i];
-
-        // First set of columns
-        const countyName1 = geography.addCounty(data[0]);
-
-        const cases1 = data[1];
-
-        if (this._counties.indexOf(countyName1) !== -1) {
+        if (this._counties.indexOf(countyName2) !== -1) {
           counties.push({
-            county: countyName1,
-            cases: parse.number(cases1)
+            county: countyName2,
+            cases: parse.number(cases2)
           });
         }
-
-        // Optional second set of columns
-        if (data.length === 4) {
-          const countyName2 = geography.addCounty(data[2]);
-          const cases2 = data[3];
-
-          if (this._counties.indexOf(countyName2) !== -1) {
-            counties.push({
-              county: countyName2,
-              cases: parse.number(cases2)
-            });
-          }
-        }
       }
-
-      const summedData = transform.sumData(counties);
-      counties.push(summedData);
-
-      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
+
+    const summedData = transform.sumData(counties);
+    counties.push(summedData);
+
+    return geography.addEmptyRegions(counties, this._counties, 'county');
   }
 };
 
