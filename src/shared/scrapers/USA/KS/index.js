@@ -14,7 +14,6 @@ import * as pdfUtils from '../../../lib/pdf.js';
 const scraper = {
   state: 'KS',
   country: 'USA',
-  type: 'json',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
   sources: [
@@ -188,7 +187,8 @@ const scraper = {
 
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
-    '2020-03-28': async function() {
+    '2020-3-28': async function() {
+      this.type = 'json';
       this.url =
         'https://services9.arcgis.com/Q6wTdPdCh608iNrJ/arcgis/rest/services/COVID19_CountyStatus_KDHE/FeatureServer/0/query?f=json&where=Covid_Case%3D%27Yes%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=COUNTY%20asc&resultOffset=0&resultRecordCount=105&cacheHint=true';
       const data = await fetch.json(this.url);
