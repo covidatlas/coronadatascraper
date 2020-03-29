@@ -161,7 +161,7 @@ const scraper = {
         let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
 
         // The publisher is making typos in their html table!
-        if (county === 'De Soto County') {
+        if (county === 'De Soto County' || county === 'Desoto County') {
           county = 'DeSoto County';
         }
         if (county === 'Leeflore County') {
