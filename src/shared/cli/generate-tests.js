@@ -16,11 +16,15 @@ const runScrapers = async args => {
   const matchLocation = source => path.basename(source._path, '.js') === location || getName(source) === location;
   const sourcesToScrape = location !== undefined ? sources.filter(matchLocation) : sources;
   for (const source of sourcesToScrape) {
-    const data = await runScraper(source);
-    if (data) {
-      console.log(`✅ Ran scraper ${getName(source)} for date ${date}`);
-      const expectedDataPath = join(source._path, '..', 'tests', date, 'expected.json');
-      await fs.writeJSON(expectedDataPath, data);
+    try {
+      const data = await runScraper(source);
+      if (data) {
+        console.log(`✅ Ran scraper ${getName(source)} for date ${date}`);
+        const expectedDataPath = join(source._path, '..', 'tests', date, 'expected.json');
+        await fs.writeJSON(expectedDataPath, data);
+      }
+    } catch (err) {
+      console.error(err);
     }
   }
 };
