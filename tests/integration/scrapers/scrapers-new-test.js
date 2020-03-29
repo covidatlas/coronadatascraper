@@ -15,10 +15,13 @@ const command = CI && PR ? 'git diff --name-only origin/master' : 'git diff --na
 const result = exec(command);
 const files = result.toString();
 if (files) {
-  const scrapers = files.split('\n').filter(filePath =>
-    // Ignore any files or subdirectory in scrapers that starts with _
-    filePath.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi)
-  );
+  const scrapers = files
+    .split('\n')
+    .filter(filePath =>
+      // Ignore any files or subdirectory in scrapers that starts with _
+      filePath.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi)
+    )
+    .filter(filePath => !filePath.startsWith('tests/'));
 
   if (scrapers.length > 0) {
     test('Test updated scrapers', async t => {

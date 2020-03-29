@@ -60,7 +60,7 @@ const strip = d => {
   return d;
 };
 
-test('', async t => {
+test('Scraper tests', async t => {
   const testDirs = glob(join(shared, 'scrapers', '**', 'tests'), { onlyDirectories: true });
 
   for (const testDir of testDirs) {
