@@ -1,7 +1,78 @@
-﻿import fs from 'fs';
-import join from '../lib/join.js';
-import sanitize from '../lib/sanitize-url.js';
-import { fetch } from '../lib/fetch/index.js';
+﻿/* eslint-disable no-use-before-define */
+import fs from 'fs';
+import path from 'path';
+import loadSources from '../events/crawler/get-sources/load-sources.js';
+import { fetch } from './lib/fetch/index.js';
+import { writeJSON } from './lib/fs.js';
+import { getName } from './lib/geography/index.js';
+import join from './lib/join.js';
+import runScraper from './lib/run-scraper.js';
+import sanitize from './lib/sanitize-url.js';
+
+// const pathFromLocation = l => {
+//   const path = l
+//     .split(',')
+//     .map(s => s.trim())
+//     .reverse()
+//     .join('/');
+//   return join(__dirname, '..', 'scrapers', path);
+// };
+
+const runScrapers = async args => {
+  console.log('runScrapers', args);
+  const { options } = args;
+  const { date, location } = options;
+  const sources = args.sources.filter(s => s.scraper);
+  const matchLocation = source => path.basename(source._path, '.js') === location || getName(source) === location;
+  const sourcesToScrape = location !== undefined ? sources.filter(matchLocation) : sources;
+  const urls = endpoints[location];
+  for (const source of sourcesToScrape) {
+    const datedTestDir = join(source._path, '..', 'tests', date);
+    try {
+      const data = await runScraper(source);
+      if (data) {
+        console.log(`✅ Ran scraper ${getName(source)} for date ${date}`);
+
+        // Write expected.json file with scraper results
+        const expectedDataPath = join(datedTestDir, 'expected.json');
+        await writeJSON(expectedDataPath, data);
+
+        // Add url responses
+        if (!fs.existsSync(datedTestDir)) fs.mkdirSync(datedTestDir, { recursive: true });
+        for (const url of urls) {
+          const type = source.type || path.extname(url) || 'txt';
+          const response = await fetch(url, type);
+          if (response) {
+            const assetPath = join(datedTestDir, sanitize(url));
+            fs.writeFileSync(assetPath, response);
+          }
+        }
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  return sources;
+};
+
+export default async options => {
+  const { date } = options;
+  if (date === undefined) throw new Error('Please provide a date for generating tests.');
+  process.env.SCRAPE_DATE = date;
+  loadSources({ options }).then(runScrapers);
+};
+
+// const generateResponses = async args => {
+//   const { date, location } = args;
+//   const sources = Object.keys(endpoints);
+//   const sourcesToScrape = location !== undefined ? sources.filter(s => s === location) : sources;
+//   for (const source of sourcesToScrape) {
+//     const path = pathFromLocation(source);
+//     if (fs.existsSync(path)) {
+//     }
+//   }
+//   return args;
+// };
 
 const endpoints = {
   JHU: [
@@ -201,35 +272,4 @@ const endpoints = {
   'WI, USA': ['https://www.dhs.wisconsin.gov/covid-19/data.htm'],
   'WV, USA': ['https://dhhr.wv.gov/COVID-19/Pages/default.aspx'],
   'WY, USA': ['https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/']
-};
-
-const pathFromLocation = l => {
-  const path = l
-    .split(',')
-    .map(s => s.trim())
-    .reverse()
-    .join('/');
-  return join(__dirname, '..', 'scrapers', path);
-};
-export default async args => {
-  const { date, location } = args;
-  const sources = Object.keys(endpoints);
-  const sourcesToScrape = location !== undefined ? sources.filter(s => s === location) : sources;
-  for (const source of sourcesToScrape) {
-    const path = pathFromLocation(source);
-    if (fs.existsSync(path)) {
-      const urls = endpoints[source];
-      console.log(path, urls);
-      const datedAssetPath = join(path, 'tests', date);
-      if (!fs.existsSync(datedAssetPath)) fs.mkdirSync(datedAssetPath, { recursive: true });
-      for (const url of urls) {
-        const response = await fetch(url);
-        if (response) {
-          const assetPath = join(datedAssetPath, sanitize(url));
-          fs.writeFileSync(assetPath, response);
-        }
-      }
-    }
-  }
-  return args;
 };
