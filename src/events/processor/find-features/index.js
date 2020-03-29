@@ -108,11 +108,14 @@ function matchFeature(props, featuresData) {
  * @param {string?} locationItem
  * @param {{ properties: { name: string?; name_en: string?; region: string?; }; }} feature
  */
-const doesLocationMatchFeature = (locationItem, feature) =>
-  locationItem &&
-  [feature.properties.name, feature.properties.name_en, feature.properties.region].some(
-    toMatch => toMatch === locationItem
+function locationPropertyMatchesFeature(locationItem, feature) {
+  return (
+    locationItem &&
+    [feature.properties.name, feature.properties.name_en, feature.properties.region].some(
+      toMatch => toMatch === locationItem
+    )
   );
+}
 
 const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   const featureCollection = {
@@ -257,8 +260,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           for (const feature of provinceData.features) {
             const countryMatches =
               location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
-            const stateMatches = doesLocationMatchFeature(location.state, feature);
-            const countyMatches = doesLocationMatchFeature(location.county, feature);
+            const stateMatches = locationPropertyMatchesFeature(location.state, feature);
+            const countyMatches = locationPropertyMatchesFeature(location.county, feature);
             if (countryMatches && (stateMatches || countyMatches)) {
               found = true;
               storeFeature(feature, location);
