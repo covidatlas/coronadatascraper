@@ -18,6 +18,7 @@
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
+    "generateTests": "node src/shared/cli/generate-tests.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/shared/timeseries.js",
