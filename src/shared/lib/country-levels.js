@@ -1,8 +1,12 @@
+import { promises as fsp } from 'fs';
 import * as fs from 'fs';
-import * as util from 'util';
+
 import * as fs_ from './fs.js';
 import * as geography from './geography/index.js';
 import join from './join.js';
+
+import extract from 'extract-zip';
+import { downloadFile } from './fetch/index.js';
 
 const countryLevelCache = {};
 const countryLevelsDir = join('src', 'shared', 'vendor', 'country-levels');
@@ -30,10 +34,36 @@ export function splitId(id) {
 }
 
 const downloadCountryLevels = async () => {
-  const zipURL = `https://github.com/hyperknot/country-levels/releases/download/${TARGET_VERSION}/export_q7.zip`;
+  console.log('    Downloading country levels from GitHub');
 
-  const rmdir = util.promisify(fs.rmdir);
-  await rmdir(countryLevelsDir, { recursive: true });
+  await fsp.rmdir(countryLevelsDir, { recursive: true });
+  await fsp.mkdir(countryLevelsDir, { recursive: true });
+
+  const zipURL = `https://github.com/hyperknot/country-levels/releases/download/${TARGET_VERSION}/export_q5.zip`;
+  const zipFile = join(countryLevelsDir, 'tmp.zip');
+  try {
+    await downloadFile(zipURL, zipFile);
+  } catch (err) {
+    console.error(`    Error downloading country-levels zip: ${err}`);
+  }
+
+  // try {
+  //   const a = await needle('get', zipURL, { output: zipFile });
+  //
+  //   console.log('    Download done');
+  //   console.log(a);
+  // } catch (err) {
+  //   console.error('    Error downloading country-levels zip', err);
+  //   return;
+  // }
+
+  // try {
+  //   await extract(zipFile, { dir: countryLevelsDir });
+  //   console.log('  country-levels extracted');
+  // } catch (err) {
+  //   console.error('  Error extracting country-levels zip', err);
+  //   return;
+  // }
 };
 
 const loadCacheIfNeeded = async () => {
