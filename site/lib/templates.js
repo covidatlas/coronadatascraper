@@ -16,6 +16,9 @@ export const getURLFromContributor = function(curator) {
   return url;
 };
 
+/**
+ * @param {{name: string, country: string?, flag: string?}[]} contributors
+ */
 export const getContributors = function(contributors) {
   let html = '';
 
