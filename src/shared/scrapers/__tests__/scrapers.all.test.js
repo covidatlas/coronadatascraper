@@ -58,10 +58,9 @@ describe('all scrapers', () => {
             });
             it(`returns expected data`, async () => {
               process.env.SCRAPE_DATE = date;
-              let result = await runScraper(scraperObj);
-              result = result.map(stripFeatures);
+              const result = await runScraper(scraperObj);
               const expected = await readJSON(join(dateDir, 'expected.json'));
-              expect(result).toEqual(expected);
+              if (result) expect(result.map(stripFeatures)).toEqual(expected.map(stripFeatures));
             });
           });
         }
