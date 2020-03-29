@@ -10,6 +10,12 @@ const scraper = {
   state: 'PA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.health.pa.gov/',
+      name: 'Pennsylvania Department of Health'
+    }
+  ],
   _counties: [
     'Adams County',
     'Allegheny County',
@@ -94,7 +100,7 @@ const scraper = {
           .text()
           .match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          const county = geography.addCounty(parse.string(matches[1]));
+          const county = geography.getCounty(geography.addCounty(parse.string(matches[1])), 'PA');
           const cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -116,7 +122,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -135,7 +141,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -154,7 +160,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });

@@ -1,10 +1,23 @@
 @app
-covid-local
+covid-atlas
 
-@events
-crawler
-processor
+@aws
+profile covidatlas
+region us-west-1
 
-# @http
-# get /api/fetch/normal
-# get /api/fetch/headless
+@cdn
+
+@static
+fingerprint true
+
+@http
+
+# @events
+# crawler
+# processor
+
+# @scheduled
+# runner
+
+@macros
+architect/macro-node-prune

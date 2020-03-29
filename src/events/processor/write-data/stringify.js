@@ -20,10 +20,12 @@ export const csvForDay = function(data) {
     'url'
   ];
 
+  const skipColumns = ['maintainers', 'sources', 'curators'];
+
   // Get list of columns
   for (const location of data) {
     for (const column in location) {
-      if (columns.indexOf(column) === -1) {
+      if (!columns.includes(column) && !skipColumns.includes(column)) {
         columns.push(column);
       }
     }
@@ -42,6 +44,8 @@ export const csvForDay = function(data) {
         row.push(location.coordinates[1]);
       } else if (column === 'long' && location.coordinates) {
         row.push(location.coordinates[0]);
+      } else if (column === 'tz') {
+        row.push(location[column] ? location[column].join(',') : null);
       } else {
         row.push(location[column]);
       }

@@ -1,6 +1,7 @@
 import path from 'path';
 import * as datetime from '../../../shared/lib/datetime.js';
 import * as geography from '../../../shared/lib/geography/index.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -106,8 +107,11 @@ const runScrapers = async args => {
         errors.push({
           name: geography.getName(location),
           url: location.url,
+          type: err.name,
           err: err.toString()
         });
+
+        reporter.logError('scraper failure', 'scraper failed', err.toString(), 'critical', location);
       }
     }
   }

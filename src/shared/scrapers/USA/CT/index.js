@@ -11,6 +11,13 @@ import * as datetime from '../../../lib/datetime.js';
 const scraper = {
   state: 'CT',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://portal.ct.gov/dph',
+      name: 'Connecticut State DPH',
+      description: 'Connecticut State Department of Public Health'
+    }
+  ],
   url: 'https://portal.ct.gov/Coronavirus',
   type: 'pdf',
   aggregate: 'county',

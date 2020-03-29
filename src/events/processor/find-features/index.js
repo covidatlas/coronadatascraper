@@ -4,6 +4,7 @@ import * as turf from '../../../shared/lib/geography/turf.js';
 import * as fs from '../../../shared/lib/fs.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const DEBUG = false;
 
@@ -346,6 +347,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       if (!found) {
         console.error('  ❌ Could not find location %s', geography.getName(location));
         errors.push(geography.getName(location));
+        reporter.logError('locations', 'missing location', '', 'low', location);
       }
     }
 

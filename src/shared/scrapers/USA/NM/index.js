@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'NM',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://cv.nmhealth.org',
+      name: 'New Mexico Department of Health'
+    }
+  ],
   url: 'https://cv.nmhealth.org/cases-by-county/',
   type: 'table',
   headless: false,
