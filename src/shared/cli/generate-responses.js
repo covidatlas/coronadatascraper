@@ -224,8 +224,10 @@ export default async args => {
       if (!fs.existsSync(datedAssetPath)) fs.mkdirSync(datedAssetPath, { recursive: true });
       for (const url of urls) {
         const response = await fetch(url);
-        const assetPath = join(datedAssetPath, sanitize(url));
-        fs.writeFileSync(assetPath, response);
+        if (response) {
+          const assetPath = join(datedAssetPath, sanitize(url));
+          fs.writeFileSync(assetPath, response);
+        }
       }
     }
   }
