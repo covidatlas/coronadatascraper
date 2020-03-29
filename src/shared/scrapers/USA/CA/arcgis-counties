@@ -82,7 +82,6 @@ const scraper = {
     for (const county of data) {
       let countyName = parse.string(addCounty(county.COUNTY_NAME));
       countyName = this._counties[countyName] || countyName;
-      console.log(county);
       counties.push({
         county: geography.addCounty(countyName),
         active: parse.number(county.Active),
