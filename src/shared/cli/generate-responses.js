@@ -221,7 +221,7 @@ export default async args => {
       const urls = endpoints[source];
       console.log(path, urls);
       const datedAssetPath = join(path, 'tests', date);
-      if (!fs.existsSync(datedAssetPath)) fs.mkdirSync(datedAssetPath);
+      if (!fs.existsSync(datedAssetPath)) fs.mkdirSync(datedAssetPath, { recursive: true });
       for (const url of urls) {
         const response = await fetch(url);
         const assetPath = join(datedAssetPath, sanitize(url));
