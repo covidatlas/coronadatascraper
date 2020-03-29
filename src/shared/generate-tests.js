@@ -37,7 +37,7 @@ const runScrapers = async args => {
           if (!fs.existsSync(datedTestDir)) fs.mkdirSync(datedTestDir, { recursive: true });
           for (const url of urls) {
             const type = source.type || path.extname(url) || 'txt';
-            const response = await fetch(url, type);
+            const response = (await fetch(url, type)) || (await fetch(url, type, false));
             if (response) {
               const assetPath = join(datedTestDir, sanitize(url));
               fs.writeFileSync(assetPath, response);
@@ -50,7 +50,7 @@ const runScrapers = async args => {
       }
     }
   }
-  console.log(results.join('\n'));
+  // console.log('Results:', '\n', results.join('\n'));
   return sources;
 };
 
