@@ -29,7 +29,7 @@ const mockGet = async url => {
   const urlKey = sanitizeUrl(url);
   const sourceKey = keys.find(key => key.startsWith(urlKey));
   if (sourceKey === undefined) {
-    console.log({ url, keys, sourceKey });
+    // console.log({ url, keys, sourceKey });
     throw new Error(`You need to provide a mock source for ${url} . The file should be called ${urlKey}`);
   }
   return mockGet.sources[sourceKey];
