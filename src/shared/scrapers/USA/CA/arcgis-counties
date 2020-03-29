@@ -10,7 +10,6 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   country: 'USA',
   state: 'CA',
-  priority: 0,
   url: 'https://opendata.arcgis.com/datasets/06fcfe6147574a75afea97a1f7565dc7_0.csv',
   aggregate: 'county',
   _counties: [
