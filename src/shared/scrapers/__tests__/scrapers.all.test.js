@@ -20,7 +20,8 @@ jest.mock('../../lib/fetch/get.js');
 /**
 This suite automatically tests a scraper's results against its test cases.
 
-To add test coverage for a scraper, see https://github.com/lazd/coronadatascraper/blob/master/docs/sources.md#testing-sources
+To add test coverage for a scraper, see
+https://github.com/lazd/coronadatascraper/blob/master/docs/sources.md#testing-sources
 
 */
 
