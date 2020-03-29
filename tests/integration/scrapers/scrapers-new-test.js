@@ -11,7 +11,7 @@ const schema = imports(join(lib, 'schema.js'));
 const runScraper = imports('./run-scraper.js').default;
 
 const command = 'git diff --name-only HEAD';
-const result = exec(command)
+const result = exec(command);
 const files = result.toString();
 if (files) {
   const scrapers = files.split('\n').filter(filePath =>
