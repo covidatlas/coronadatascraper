@@ -14,16 +14,20 @@ import * as pdfUtils from '../../../lib/pdf.js';
 const scraper = {
   state: 'KS',
   country: 'USA',
-  type: 'pdf',
+  type: 'json',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
   sources: [
     {
       name: 'Kansas Department of Health and Environment',
       url: 'https://govstatus.egov.com/coronavirus'
+    },
+    {
+      name: 'Kansas Department of Health and Environment',
+      url: 'http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm'
     }
   ],
-  maintainers: [maintainers.paulboal],
+  maintainers: [maintainers.paulboal, maintainers.aed3],
   _countyMap: {},
   _counties: [
     'Allen County',
@@ -137,6 +141,7 @@ const scraper = {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
       const datePart = datetime.getMonthDYYYY(date);
       this.url = `${this._baseUrl}COVID-19_${datePart}_.pdf`;
+      this.type = 'pdf';
 
       const body = await fetch.pdf(this.url);
 
