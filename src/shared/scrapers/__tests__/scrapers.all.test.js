@@ -4,7 +4,7 @@
 
 import { sync as glob } from 'fast-glob';
 import { readFileSync as readFile } from 'fs';
-import path from 'path';
+import { basename } from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
@@ -49,34 +49,33 @@ const stripFeatures = d => {
   return d;
 };
 
-// Extract date from filename, e.g. `expected-2020-03-16.json` -> `2020-03-16`
-const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
+// Extract date from path, e.g. `expected-2020-03-16.json` -> `2020-03-16`
+const datedResultsRegex = /(\d{4}-\d{2}-\d{2})/i;
 const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
 
 describe('all scrapers', () => {
   const testDirs = glob(join(__dirname, '..', '**', 'tests'), { onlyDirectories: true });
-
   for (const testDir of testDirs) {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`
-
     describe(`scraper: ${scraperName}`, () => {
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
 
-      const datedResults = glob(join(testDir, 'expected.*.json'));
+      const datedResults = glob(join(testDir, '*'), { onlyDirectories: true });
+
+      console.log({ datedResults });
       for (const expectedPath of datedResults) {
         const date = getDateFromPath(expectedPath);
 
         beforeAll(() => {
           // Read sample responses for this scraper and pass them to the mock `get` function.
-          const sampleResponses = glob(join(testDir, '*')).filter(p => !p.includes('expected'));
+          const sampleResponses = glob(join(testDir, date, '*')).filter(p => !p.includes('expected'));
           for (const filePath of sampleResponses) {
-            const fileName = path.basename(filePath);
-            const fullPath = path.resolve(__dirname, filePath);
-            const source = { [fileName]: readFile(fullPath).toString() };
+            const fileName = basename(filePath);
+            const source = { [fileName]: readFile(filePath).toString() };
             get.addSources(source);
           }
-          // Run scraper for this date
+          // Set date for scraper
           process.env.SCRAPE_DATE = date;
         });
 
