@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
-import * as geography from '../../../lib/geography/index.js';
 import * as transform from '../../../lib/transform.js';
+import * as geography from '../../../lib/geography/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -12,12 +12,6 @@ const scraper = {
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
   aggregate: 'county',
-  sources: [
-    {
-      url: 'https://dph.georgia.gov',
-      name: 'Georgia Department of Public Health'
-    }
-  ],
   _counties: [
     'Appling County',
     'Atkinson County',
@@ -179,66 +173,27 @@ const scraper = {
     'Wilkinson County',
     'Worth County'
   ],
-  _countyMap: {
-    Mcduffie: 'McDuffie',
-    Dekalb: 'DeKalb'
-  },
-  scraper: {
-    '0': async function() {
-      const $ = await fetch.page(this.url);
-      let counties = [];
-      const $trs = $('table:contains(County):contains(Cases) tbody > tr');
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        let name = $tr.find('td:first-child').text();
-        name = this._countyMap[name] || name;
-        let county = geography.addCounty(parse.string(name));
+  async scraper() {
+    const $ = await fetch.page(this.url);
+    let counties = [];
+    const $table = $('table:contains(County):contains(Cases)');
+    const $trs = $table.find('tbody > tr');
+    $trs.each((index, tr) => {
+      const $tr = $(tr);
+      const name = $tr.find('td:first-child').text();
+      let county = geography.addCounty(parse.string(name.replace('Dekalb', 'DeKalb')));
+      const cases = parse.number($tr.find('td:last-child').text());
+      if (county === 'Unknown County') {
+        county = UNASSIGNED;
+      }
+      counties.push({ county, cases });
+    });
 
-        const cases = parse.number($tr.find('td:nth-child(2)').text());
+    counties.push(transform.sumData(counties));
 
-        if (county === 'Unknown County') {
-          county = UNASSIGNED;
-        }
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
-        counties.push({ county, cases });
-      });
-
-      counties.push(transform.sumData(counties));
-      counties = geography.addEmptyRegions(counties, this._counties, 'county');
-
-      return counties;
-    },
-    '2020-3-27': async function() {
-      const pageHTML = (await fetch.page(this.url)).html();
-      [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
-
-      const $ = await fetch.page(this.url);
-      let counties = [];
-      const $trs = $('.tcell:contains("COVID-19 Confirmed Cases By County")')
-        .closest('tbody')
-        .find('tr:not(:first-child,:last-child)');
-
-      $trs.each((index, tr) => {
-        const $tr = $(tr);
-        let name = $tr.find('td:first-child').text();
-        name = this._countyMap[name] || name;
-        let county = geography.addCounty(parse.string(name));
-
-        const cases = parse.number($tr.find('td:nth-child(2)').text());
-
-        if (county === 'Unknown County') {
-          county = UNASSIGNED;
-        }
-
-        const deaths = parse.number($tr.find('td:last-child').text());
-        counties.push({ county, cases, deaths });
-      });
-
-      counties.push(transform.sumData(counties));
-      counties = geography.addEmptyRegions(counties, this._counties, 'county');
-
-      return counties;
-    }
+    return counties;
   }
 };
 
