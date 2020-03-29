@@ -26,9 +26,9 @@ const runScrapers = async args => {
 };
 
 const generateExpected = async options => {
-  const { date, location } = options;
+  const { date } = options;
   if (date === undefined) throw new Error('Please provide a date for generating tests.');
-  if (location === undefined) throw new Error('Please provide a location for generating tests.');
+  // if (location === undefined) throw new Error('Please provide a location for generating tests.');
   process.env.SCRAPE_DATE = date;
   await loadSources({ options }).then(runScrapers);
 };
