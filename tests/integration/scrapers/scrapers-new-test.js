@@ -10,7 +10,8 @@ const fs = imports(join(lib, 'fs.js'));
 const schema = imports(join(lib, 'schema.js'));
 const runScraper = imports('./run-scraper.js').default;
 
-const command = 'git diff --name-only HEAD';
+const { CI, PR } = process.env;
+const command = CI && PR ? 'git diff --name-only origin/master' : 'git diff --name-only HEAD';
 const result = exec(command);
 const files = result.toString();
 if (files) {
