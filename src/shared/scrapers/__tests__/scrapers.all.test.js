@@ -24,24 +24,15 @@ To add test coverage for a scraper, you only need to provide test assets; no new
     - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
     - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
 
-- Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
-- For sources that have a time series, the `expected.json` file represents the latest result in the
-  sample response provided. You can additionally test the return value for a specific date by adding
-  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
+- Add a file named `expected.YYYY-MM-DD.json` containing the array of values that the scraper is expected to
+  return for a particular date. (Leave out any geojson `features` properties.); for example, `expected.2020-03-16.json`.
 
-    📁 USA
-      📁 AK
-        📄 index.js 🡐 scraper
-        📁 tests
-          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html 🡐 sample response
-          📄 expected.json 🡐 expected result
     ...
     📁 FRA
       📄 index.js 🡐 scraper
       📁 tests
         📄 raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv 🡐 sample response
-        📄 expected.json 🡐 expected result for most recent date in sample
+        📄 expected.2020-03-27.json 🡐 expected result for March 27, 2020
         📄 expected.2020-03-16.json 🡐 expected result for March 16, 2020
 
 */
@@ -81,11 +72,6 @@ describe('all scrapers', () => {
 
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
-      if (scraperObj.state === 'AL' && scraperObj.country === 'USA') {
-        // Honestly these linter rules are absurd
-        // eslint-disable-next-line
-        scraperObj.scraper = scraperObj.scraper[0];
-      }
 
       const datedResults = glob(join(testDir, 'expected.*.json'));
       for (const expectedPath of datedResults) {
