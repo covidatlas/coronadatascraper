@@ -31,6 +31,11 @@ const generateExpected = async options => {
   // if (location === undefined) throw new Error('Please provide a location for generating tests.');
   process.env.SCRAPE_DATE = date;
   await loadSources({ options }).then(runScrapers);
+  return options;
 };
 
-generateResponses(argv).then(generateExpected);
+generateExpected(argv)
+  .then(generateResponses)
+  .then(() => {
+    delete process.env.SCRAPE_DATE;
+  });
