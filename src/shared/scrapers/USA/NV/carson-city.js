@@ -16,6 +16,7 @@ const scraper = {
         'Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties.'
     }
   ],
+  certValidation: false,
   type: 'table',
   async scraper() {
     const counties = [];
