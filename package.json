@@ -43,6 +43,7 @@
     "d3-interpolate": "^1.4.0",
     "d3-scale": "^3.2.1",
     "esm": "^3.2.25",
+    "extract-zip": "^2.0.0",
     "fast-glob": "^3.2.2",
     "geo-tz": "^5.1.0",
     "mock-fs": "^4.11.0",
