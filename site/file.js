@@ -20,7 +20,9 @@ function showFile(url, dataLevels, noPush) {
       try {
         obj = JSON.parse(this.responseText);
       } catch (error) {
-        editor.querySelector('.cds-FileEditor-content').innerHTML = `<div class="cds-Error">Failed to load ${url}: ${error}</div>`;
+        editor.querySelector(
+          '.cds-FileEditor-content'
+        ).innerHTML = `<div class="cds-Error">Failed to load ${url}: ${error}</div>`;
         return;
       }
       const formatter = new JSONFormatter(obj, dataLevels || 1);

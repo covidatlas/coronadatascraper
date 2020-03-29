@@ -1,13 +1,11 @@
-/* globals mapboxgl */
+/* globals mapboxgl, document */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
-import * as d3interpolate from 'd3-interpolate';
-import * as d3scale from 'd3-scale';
 import * as fetch from './lib/fetch.js';
 
-import { adjustTanh, normalizePercent, getRatio } from './lib/math.js';
-import { getLightness } from './lib/color.js';
-import { isCounty, isState, isCountry, getLocationGranularityName } from '../lib/geography.js';
+import { getRatio, getPercent } from './lib/math.js';
+import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
+import * as color from './lib/color.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
 
@@ -15,124 +13,15 @@ const data = {};
 
 let map;
 
-const noCasesColor = '#faffef';
-const noPopulationDataColor = '#ffffff';
-
-const outlineColorHighlight = 'rgb(0,0,0)';
-const outlineColor = 'rgba(0, 0, 0, 0.3)';
-
-const choroplethColors = {
-  stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
-  yellowOrangePurple: ['#faffef', '#f3fac1', '#f6f191', '#ffe15d', '#fec327', '#ff9b00', '#fe7000', '#fa4d13', '#c52155', '#842e79'],
-  heat: ['#FFFFFF', '#ffff5e', '#ffe70c', '#fead0a', '#fd6f08', '#fd2907', '#fd0407'],
-  peach: ['rgb(253,222,166)', 'rgb(255,188,134)', 'rgb(249,152,133)', 'rgb(232,110,129)', 'rgb(224,88,136)'],
-  pink: ['rgb(255, 244, 221)', 'rgb(255, 221, 215)', 'rgb(255, 197, 210)', 'rgb(254, 174, 203)', 'rgb(250, 150, 196)', 'rgb(245, 126, 189)', 'rgb(239, 100, 181)', 'rgb(232, 70, 173)', 'rgb(210, 56, 161)', 'rgb(187, 46, 150)', 'rgb(163, 36, 140)', 'rgb(138, 27, 131)', 'rgb(113, 22, 124)', 'rgb(86, 15, 116)', 'rgb(55, 11, 110)', 'rgb(0, 9, 104)'],
-  viridis: ['#fde725', '#d8e219', '#addc30', '#84d44b', '#5ec962', '#3fbc73', '#28ae80', '#1fa088', '#21918c', '#26828e', '#2c728e', '#33638d', '#3b528b', '#424086', '#472d7b', '#48186a'],
-  magma: ['#fcfdbf', '#fde2a3', '#fec488', '#fea772', '#fc8961', '#f56b5c', '#e75263', '#d0416f', '#b73779', '#9c2e7f', '#832681', '#6a1c81', '#51127c', '#36106b', '#1d1147', '#0a0822']
-};
-
-const choroplethColor = 'yellowOrangePurple';
-
-let domainArray = [];
-const colorsArray = choroplethColors[choroplethColor];
-const lightnessArray = colorsArray.map(key => 1 - getLightness(key) / 100);
-
-const max = Math.max(...lightnessArray);
-const min = Math.min(...lightnessArray);
-
-for (let i = 0; i < colorsArray.length; i++) {
-  const l = lightnessArray[i]; // lightness value
-
-  const y = normalizePercent(min, max, l);
-  domainArray.push(Number(y.toFixed(2)));
-}
-
-domainArray = domainArray.sort();
-
-const fill = d3scale
-  .scaleLinear()
-  .domain(domainArray)
-  .range(colorsArray)
-  .interpolate(d3interpolate.interpolateHcl);
-
-const choroplethStyle = 'pureRatio';
-
 const type = 'cases';
+let currentDate;
+let currentData;
 
-const choroplethStyles = {
-  pureRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
-    // Color based on how bad it is, relative to the worst place
-    const affectedPercent = locationData[type] / location.population;
-    const percentRatio = affectedPercent / worstAffectedPercent;
-
-    return adjustTanh(percentRatio);
-  },
-  rankAdjustedRatio(location, locationData, type, rank, totalRanked, worstAffectedPercent) {
-    // Color based on rank
-    const rankRatio = (totalRanked - rank) / totalRanked;
-
-    // Color based on how bad it is, relative to the worst place
-    const percentRatio = locationData[type] / location.population / worstAffectedPercent;
-
-    const ratio = (rankRatio * 0.75 + percentRatio) / 1.75;
-
-    return ratio;
-  },
-  rankRatio(location, locationData, type, rank, totalRanked) {
-    // Color based on rank
-    const rankRatio = (totalRanked - rank) / totalRanked;
-
-    return rankRatio;
-  }
-};
-
-function getLocationsByRank(currentData, type, min = 3) {
-  let rankedItems = [];
-
-  for (const locationId of Object.keys(currentData)) {
-    const locationData = currentData[locationId];
-    const location = data.locations[locationId];
-
-    if (location.population && locationData[type] >= min) {
-      rankedItems.push({ locationId, rate: locationData[type] / location.population });
-    }
-  }
-
-  rankedItems = rankedItems.sort((a, b) => {
-    if (a.rate === b.rate) {
-      return 0;
-    }
-    if (a.rate > b.rate) {
-      return -1;
-    }
-
-    return 1;
-  });
-
-  return rankedItems.map(rankedItem => data.locations[rankedItem.locationId]);
-}
-
-function populateMap() {
-  const currentDate = Object.keys(data.timeseries).pop();
-  const currentData = data.timeseries[currentDate];
-
-  const locationsByRank = getLocationsByRank(currentData, type, 1);
-
+function initData() {
   let foundFeatures = 0;
-  let worstAffectedPercent = 0;
   data.locations.forEach(function(location, index) {
-    // Calculate worst affected percent
-    if (location.population) {
-      const locationData = currentData[index];
-      if (locationData) {
-        const infectionPercent = locationData.cases / location.population;
-        if (infectionPercent > worstAffectedPercent) {
-          worstAffectedPercent = infectionPercent;
-        }
-      }
-    }
     // Associated the feature with the location
-    if (location.featureId) {
+    if (location.featureId !== undefined) {
       const feature = data.features.features[location.featureId];
       if (feature) {
         foundFeatures++;
@@ -143,26 +32,71 @@ function populateMap() {
 
   data.features.features.forEach(function(feature, index) {
     feature.id = index;
-    let color = null;
+  });
+
+  console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
+}
+
+function updateMap(date) {
+  currentDate = date || Object.keys(data.timeseries).pop();
+  currentData = data.timeseries[currentDate];
+
+  let worstAffectedPercent = 0;
+  let lowestInfectionPercent = Infinity;
+
+  let chartDataMin;
+  let chartDataMax;
+  let lowestLocation = null;
+  let highestLocation = null;
+
+  data.locations.forEach(function(location, index) {
+    // Calculate worst affected percent
+    if (location.population) {
+      const locationData = currentData[index];
+      if (locationData) {
+        const infectionPercent = locationData.cases / location.population;
+        if (infectionPercent > worstAffectedPercent) {
+          worstAffectedPercent = infectionPercent;
+          highestLocation = location;
+        }
+        // Calculate least affected percent
+        if (infectionPercent !== 0 && infectionPercent < lowestInfectionPercent) {
+          lowestInfectionPercent = infectionPercent;
+          lowestLocation = location;
+        }
+        chartDataMax = worstAffectedPercent;
+        chartDataMin = lowestInfectionPercent;
+      }
+    }
+  });
+
+  data.features.features.forEach(function(feature) {
+    let regionColor = null;
     const { locationId } = feature.properties;
     const location = data.locations[locationId];
     if (location && location.population) {
       const locationData = currentData[locationId];
       if (locationData) {
         if (locationData.cases === 0) {
-          color = noCasesColor;
+          regionColor = color.noCasesColor;
         } else {
-          const rank = locationsByRank.indexOf(location);
-          const scaledColorValue = choroplethStyles[choroplethStyle](location, locationData, type, rank, locationsByRank.length, worstAffectedPercent);
-          color = fill(scaledColorValue);
+          regionColor = color.getScaledColorValue(location, locationData, type, worstAffectedPercent);
         }
       }
     }
 
-    feature.properties.color = color || noPopulationDataColor;
+    feature.properties.color = regionColor || color.noPopulationDataColor;
   });
 
-  console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
+  console.log('Lowest infection', lowestLocation);
+  console.log('Highest infection', highestLocation);
+
+  color.createLegend(chartDataMin, chartDataMax);
+}
+
+function populateMap() {
+  initData();
+  updateMap();
 
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;
@@ -176,6 +110,9 @@ function populateMap() {
     if (location.population && locationData.cases) {
       htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
     }
+    if (location.population && locationData.cases) {
+      htmlString += `<tr><th>Infected %:</th><td>${getPercent(locationData.cases, location.population)}</td></tr>`;
+    }
     if (locationData.cases !== undefined) {
       htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
     }
@@ -185,26 +122,13 @@ function populateMap() {
     if (locationData.recovered !== undefined) {
       htmlString += `<tr><th>Recovered:</th><td>${locationData.recovered.toLocaleString()}</td></tr>`;
     }
-    if (locationData.active !== locationData.cases) {
+    if (locationData.active && locationData.active !== locationData.cases) {
       htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
     }
     htmlString += `</tbody></table>`;
     htmlString += `</div>`;
     return htmlString;
   }
-  const countryFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCountry(data.locations[feature.properties.locationId]);
-    })
-  };
-
-  const stateFeatures = {
-    type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isState(data.locations[feature.properties.locationId]);
-    })
-  };
 
   const countyFeatures = {
     type: 'FeatureCollection',
@@ -213,51 +137,98 @@ function populateMap() {
     })
   };
 
+  const stateFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (location && !location.county && location.aggregate === 'county') {
+        return false;
+      }
+      return isState(location);
+    })
+  };
+
+  const countryFeatures = {
+    type: 'FeatureCollection',
+    features: data.features.features.filter(function(feature) {
+      const location = data.locations[feature.properties.locationId];
+      if (location && location.country && !location.state && location.aggregate === 'state') {
+        return false;
+      }
+      return isCountry(location);
+    })
+  };
+
   const paintConfig = {
     // 'fill-outline-color': 'rgba(255, 255, 255, 1)',
     'fill-color': ['get', 'color'],
-    'fill-outline-color': ['case', ['boolean', ['feature-state', 'hover'], false], outlineColorHighlight, outlineColor],
+    'fill-outline-color': [
+      'case',
+      ['boolean', ['feature-state', 'hover'], false],
+      color.outlineColorHighlight,
+      color.outlineColor
+    ],
     'fill-opacity': 1
   };
+
+  const { layers } = map.getStyle();
+  // Find the index of the first symbol layer (the label layer) in the map style
+  let labelLayerId;
+  for (let i = 0; i < layers.length; i++) {
+    if (layers[i].type === 'symbol') {
+      labelLayerId = layers[i].id;
+      break;
+    }
+  }
 
   map.addSource('CDS-country', {
     type: 'geojson',
     data: countryFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-country',
-    type: 'fill',
-    source: 'CDS-country',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-country',
+      type: 'fill',
+      source: 'CDS-country',
+      layout: {},
+      paint: paintConfig
+    },
+    // Place layer underneath label layer of template map.
+    labelLayerId
+  );
 
   map.addSource('CDS-state', {
     type: 'geojson',
     data: stateFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-state',
-    type: 'fill',
-    source: 'CDS-state',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-state',
+      type: 'fill',
+      source: 'CDS-state',
+      layout: {},
+      paint: paintConfig
+    },
+    labelLayerId
+  );
 
   map.addSource('CDS-county', {
     type: 'geojson',
     data: countyFeatures
   });
 
-  map.addLayer({
-    id: 'CDS-county',
-    type: 'fill',
-    source: 'CDS-county',
-    layout: {},
-    paint: paintConfig
-  });
+  map.addLayer(
+    {
+      id: 'CDS-county',
+      type: 'fill',
+      source: 'CDS-county',
+      layout: {},
+      paint: paintConfig
+    },
+    labelLayerId
+  );
 
   // Create a popup, but don't add it to the map yet.
   const popup = new mapboxgl.Popup({
@@ -321,7 +292,15 @@ function populateMap() {
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
 }
 
+let rendered = false;
 function showMap() {
+  if (rendered) {
+    return;
+  }
+  rendered = true;
+
+  document.body.classList.add('is-editing');
+
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',
