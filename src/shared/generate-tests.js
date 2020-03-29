@@ -9,6 +9,12 @@ import join from './lib/join.js';
 import runScraper from './lib/run-scraper.js';
 import sanitize from './lib/sanitize-url.js';
 
+const getType = (source, url) => {
+  if (source.type === 'table') return 'html';
+  if (source.type === 'headless') return 'html';
+  return source.type || path.extname(url) || 'html';
+};
+
 const runScrapers = async args => {
   const results = [];
 
@@ -36,8 +42,9 @@ const runScrapers = async args => {
           // Add url responses
           if (!fs.existsSync(datedTestDir)) fs.mkdirSync(datedTestDir, { recursive: true });
           for (const url of urls) {
-            const type = source.type || path.extname(url) || 'txt';
-            const response = (await fetch(url, type)) || (await fetch(url, type, false));
+            const type = getType(source, url);
+            const responseDate = source.timeseries ? false : date;
+            const response = await fetch(url, type, responseDate);
             if (response) {
               const assetPath = join(datedTestDir, sanitize(url));
               fs.writeFileSync(assetPath, response);
