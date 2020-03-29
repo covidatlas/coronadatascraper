@@ -8,16 +8,19 @@ import './style.css';
 import showMap from './map.js';
 import showFile from './file.js';
 import showSources from './sources.js';
+import showCrossCheckReport from './crossCheckReport.js';
 
 const pages = {
   '#home': '.cds-Home',
   '#editor': '.cds-FileEditor',
   '#sources': '.cds-Sources',
+  '#crosscheck': '.cds-CrossCheckReports',
   '#features.json': '.cds-Map'
 };
 
 const routes = {
   '#sources': showSources,
+  '#crosscheck': showCrossCheckReport,
   '#home': function() {},
   '#features.json': showMap
 };
@@ -38,7 +41,9 @@ function closeSidebar() {
 
 function showPage(pageToShow, noPush) {
   // Set selected
-  const currentSideLink = document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow}"]`) || document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow.replace('#', '')}"]`);
+  const currentSideLink =
+    document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow}"]`) ||
+    document.querySelector(`.spectrum-SideNav-item a[href="${pageToShow.replace('#', '')}"]`);
   const currentSideItem = currentSideLink && currentSideLink.closest('.spectrum-SideNav-item');
   const otherSideItem = document.querySelector('.spectrum-SideNav-item.is-selected');
   if (otherSideItem) {
@@ -56,6 +61,8 @@ function showPage(pageToShow, noPush) {
       document.querySelector(selector).hidden = true;
     }
   }
+
+  document.body.classList.remove('is-editing');
 
   if (routes[pageToShow]) {
     if (!noPush) {

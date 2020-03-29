@@ -2,32 +2,40 @@
   "name": "coronadatascraper",
   "version": "1.0.0",
   "description": "A scraper for Coronavirus data",
-  "main": "index.js",
   "author": "Larry Davis <lazdnet@gmail.com>",
   "license": "BSD",
+  "main": "src/shared/cli/index.js",
   "type": "commonjs",
   "engines": {
     "node": ">=12.15.0 <13.0.0"
   },
   "scripts": {
     "dev": "npx rollup -c --watch",
-    "build": "yarn start && yarn timeseries && yarn buildSite",
+    "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
     "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
-    "start": "node cli.js",
+    "start": "node src/shared/cli/index.js",
+    "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
-    "timeseries": "node timeseries.js",
+    "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
-    "updateModules": "git submodule update --remote"
+    "updateModules": "git submodule update --remote",
+    "pretty": "prettier --write '**/*.js'"
   },
   "dependencies": {
     "@adobe/focus-ring-polyfill": "^0.1.5",
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
-    "@turf/turf": "^5.1.6",
+    "@js-joda/core": "^2.0.0",
+    "@lorenzofox3/for-await": "^0.2.1",
+    "@turf/boolean-point-in-polygon": "^6.2.0-alpha.1",
+    "@turf/center": "^6.2.0-alpha.1",
+    "@turf/helpers": "^6.2.0-alpha.1",
+    "@turf/union": "^6.2.0-alpha.1",
+    "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",
@@ -36,12 +44,18 @@
     "d3-scale": "^3.2.1",
     "esm": "^3.2.25",
     "fast-glob": "^3.2.2",
+    "geo-tz": "^5.1.0",
     "mock-fs": "^4.11.0",
     "needle": "^2.3.3",
+    "pdfreader": "^1.0.6",
     "puppeteer": "^2.1.1",
+    "tap-parser": "^10.0.1",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "@architect/architect": "^6.3.2",
+    "@architect/functions": "^3.8.1",
+    "@architect/macro-node-prune": "^1.0.1",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-json": "^4.0.2",
@@ -63,6 +77,7 @@
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "prettier": "^1.19.1",
+    "pta": "^0.1.3",
     "request": "^2.88.2",
     "rollup": "^2.1.0",
     "rollup-plugin-copy-glob": "^0.3.1",
@@ -78,8 +93,18 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true
+  },
+  "jest": {
+    "rootDir": "src",
+    "testMatch": [
+      "**/?(*.)test.js"
     ]
   }
 }
