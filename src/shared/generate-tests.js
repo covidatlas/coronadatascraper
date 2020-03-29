@@ -9,15 +9,6 @@ import join from './lib/join.js';
 import runScraper from './lib/run-scraper.js';
 import sanitize from './lib/sanitize-url.js';
 
-// const pathFromLocation = l => {
-//   const path = l
-//     .split(',')
-//     .map(s => s.trim())
-//     .reverse()
-//     .join('/');
-//   return join(__dirname, '..', 'scrapers', path);
-// };
-
 const runScrapers = async args => {
   console.log('runScrapers', args);
   const { options } = args;
@@ -61,18 +52,6 @@ export default async options => {
   process.env.SCRAPE_DATE = date;
   loadSources({ options }).then(runScrapers);
 };
-
-// const generateResponses = async args => {
-//   const { date, location } = args;
-//   const sources = Object.keys(endpoints);
-//   const sourcesToScrape = location !== undefined ? sources.filter(s => s === location) : sources;
-//   for (const source of sourcesToScrape) {
-//     const path = pathFromLocation(source);
-//     if (fs.existsSync(path)) {
-//     }
-//   }
-//   return args;
-// };
 
 const endpoints = {
   JHU: [
