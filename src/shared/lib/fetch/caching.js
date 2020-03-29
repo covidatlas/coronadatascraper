@@ -63,17 +63,19 @@ export const getCachedFilePath = (url, type, date = false) => {
   * @param {*} encoding for the resource to access, default to utf-8
 */
 export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
+  if (date) date = datetime.getYYYYMD(new Date(date));
   const filePath = getCachedFilePath(url, type, date);
+  // console.log({ filePath, url, type, date });
 
   if (await fs.exists(filePath)) {
-    console.log('  ⚡️ Cache hit for %s from %s', url, filePath);
+    console.log('  ⚡️ Cache hit for %s (%s)', url, filePath);
     return fs.readFile(filePath, encoding);
   }
   if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
-    console.log('  ⚠️ Cannot go back in time to get %s, no cache present', url);
+    console.log('  ⚠️ Cannot go back in time to get %s, no cache present (%s)', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  console.log('  🐢  Cache miss for %s at %s', url, filePath);
+  console.log('  🐢  Cache miss for %s (%s)', url, filePath);
   return CACHE_MISS;
 };
 
