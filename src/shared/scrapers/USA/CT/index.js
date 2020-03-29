@@ -4,6 +4,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
 import * as datetime from '../../../lib/datetime.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -21,12 +22,7 @@ const scraper = {
   url: 'https://portal.ct.gov/Coronavirus',
   type: 'pdf',
   aggregate: 'county',
-  maintainers: [
-    {
-      name: 'Quentin Golsteyn',
-      github: 'qgolsteyn'
-    }
-  ],
+  maintainers: [maintainers.qgolsteyn],
   scraper: {
     '0': async function() {
       this.type = 'list';
