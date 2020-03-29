@@ -17,7 +17,7 @@ const getKey = rowLabel => {
 };
 
 const scraper = {
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainers: [maintainers.camjc],
   priority: 2,
   sources: [
@@ -27,7 +27,7 @@ const scraper = {
       url: 'https://www.health.act.gov.au'
     }
   ],
-  state: 'Australian Capital Territory',
+  state: 'iso2:AU-ACT',
   type: 'table',
   url: 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19',
   async scraper() {
