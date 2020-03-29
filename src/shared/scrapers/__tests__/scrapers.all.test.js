@@ -76,10 +76,11 @@ describe('all scrapers', () => {
             const source = { [fileName]: readFile(fullPath).toString() };
             get.addSources(source);
           }
+          // Run scraper for this date
+          process.env.SCRAPE_DATE = date;
         });
 
         it(`returns data for ${date}`, async () => {
-          process.env.SCRAPE_DATE = date;
           let result = await runScraper(scraperObj);
           result = result.map(stripFeatures);
           const expected = await readJSON(expectedPath);
@@ -87,8 +88,8 @@ describe('all scrapers', () => {
         });
       }
 
-      // clean up environment vars
-      afterEach(() => {
+      afterAll(() => {
+        // clean up environment vars
         delete process.env.SCRAPE_DATE;
       });
     });
