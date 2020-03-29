@@ -1,0 +1,108 @@
+[
+  {
+    "county": "Androscoggin County",
+    "cases": 5,
+    "recovered": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Aroostook County",
+    "cases": 0,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Cumberland County",
+    "cases": 90,
+    "recovered": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 1,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 0,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Kennebec County",
+    "cases": 6,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Knox County",
+    "cases": 1,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 5,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Oxford County",
+    "cases": 8,
+    "recovered": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Penobscot County",
+    "cases": 5,
+    "recovered": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Piscataquis County",
+    "cases": 0,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Sagadahoc County",
+    "cases": 4,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Somerset County",
+    "cases": 0,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Waldo County",
+    "cases": 2,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 0,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "county": "York County",
+    "cases": 27,
+    "recovered": 2,
+    "deaths": 0
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 1,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "cases": 155,
+    "recovered": 16
+  }
+]

@@ -1,0 +1,653 @@
+<!doctype html>
+
+<!--[if lte IE 9]><html dir="ltr" lang="en" class="old-ie"><![endif]-->
+<!--[if gt IE 9]><!--><html dir="ltr" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+<script id="datalayerPush">
+
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'lastUpdated': '26/03/2020',
+        'dateCreated': '03/03/2020',
+        'uuid': '92544e69-9aad-40d1-a6fd-27914e3d36fc'
+    })
+</script>
+    <!-- dataLayer code MUST be higher than google tag manager code -->
+<script id="gtm-datalayer">
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'gtm.whitelist': ['google', 'jsm', 'lcl'],
+        'format' : 'issuepage',
+        'siteid' : 'topics/coronavirus-covid-19'
+    });
+</script>
+<script>
+initGTM = function () {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PZ62X92');
+}
+</script>
+<title>Coronavirus in Scotland - gov.scot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="/webfiles/1584544378506/assets/css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href='/favicon.ico' type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href='/apple-touch-icon.png'>
+    <link rel="icon" type="image/png" sizes="32x32" href='/favicon-32x32.png'>
+    <link rel="icon" type="image/png" sizes="16x16" href='/favicon-16x16.png'>
+    <link rel="mask-icon" href='/safari-pinned-tab.svg' color="#0065bd">
+    <meta name="msapplication-TileColor" content="#0065bd">
+    <meta name="theme-color" content="#ffffff">
+
+<meta name="description" content="Up to date information on the coronavirus situation in Scotland, including confirmed cases, health and travel advice."/>
+<link rel="canonical" href="https://www.gov.scot/coronavirus-covid-19/"/>
+
+</head>
+<body class="fontawesome site-header__container" >
+
+
+
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ62X92"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script src="/assets/scripts/vendor/jquery.min.js"></script>
+
+<section class="skip-links">
+    <h2 class="skip-links__title">Accessibility links</h2>
+    <ul class="skip-links__listelement">
+        <li class="skip-links__listelement"><a class="skip-links__link" href="#page-content">Skip to content</a></li>
+        <li class="skip-links__listelement"><a class="skip-links__link" href="/accessibility/">Accessibility help</a></li>
+    </ul>
+</section>
+
+<div class="notification-wrapper">
+
+
+
+    <div id="cookie-notice" class="ds_notification  hidden  hidden--hard">
+        <div class="wrapper">
+            <div class="ds_notification__content  ds_notification__content--has-close">
+                <div class="ds_notification__text">
+                    <p>Gov.scot uses cookies which are essential for the site to work. We also use non-essential cookies to help us improve our websites. Any data collected is anonymised. By continuing to use this site, you agree to our use of cookies.  <a data-banner="banner-cookies-link" href="/cookies/">Find
+                    out more about cookies</a></p>
+                </div>
+
+                <button data-banner="banner-cookies-close" class="ds_notification__close  js-close-notification" type="button">
+                    <span class="hidden">Close this notification</span>
+                    <svg data-banner="banner-close" class="ds_icon" role="img"><use xlink:href="/webfiles/1584544378506/assets/images/icons/icons.stack.svg#close-21"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+    <div id="main-wrapper">
+
+
+
+<header class="ds_site-header" role="banner" id="page-top">
+    <div class="wrapper">
+        <div class="ds_site-header__content">
+            <div class="ds_site-branding">
+                <a data-header="header-logo" class="ds_site-branding__logo  ds_site-branding__link" href="/">
+                    <img class="ds_site-branding__logo-image" alt="Scottish Government" src="/assets/images/logos/scotgovlogo.svg"/>
+                </a>
+
+            </div>
+
+
+<div class="ds_site-header__search  ds_site-search  ds_site-search--collapsible">
+    <form role="search" class="ds_search-box__form" method="GET" action="/search/">
+        <label class="search-box__label hidden" for="search-box">Search</label>
+        <div class="ds_site-search__input-group">
+            <input name="q" required="" id="search-box" class="search-box__input" type="text" placeholder="Search site">
+            <input name="cat" value="sitesearch" hidden>
+
+            <button type="submit" title="search" class="search-box__button button button--primary">
+                <svg class="ds_icon  ds_site-search__icon" role="img"><use xlink:href="/webfiles/1584544378506/assets/images/icons/icons.stack.svg#search"></use></svg>
+                <span class="hidden">Search gov.scot</span>
+            </button>
+        </div>
+    </form>
+</div>
+        </div>
+
+
+        <nav role="navigation">
+            <button class="js-toggle-menu  ds_mobile-navigation__button" aria-expanded="false" aria-controls="mobile-navigation-menu">
+                <span class="ds_site-header__control-text">Menu</span>
+                <svg class="ds_icon  ds_site-header__control-icon" role="img"><use xlink:href="/webfiles/1584544378506/assets/images/icons/icons.stack.svg#menu-21"></use></svg>
+                <svg class="ds_icon  ds_site-header__control-icon--close  ds_site-header__control-icon" role="img"><use xlink:href="/webfiles/1584544378506/assets/images/icons/icons.stack.svg#close-21"></use></svg>
+            </button>
+
+            <div id="mobile-navigation-menu" class="ds_mobile-navigation" data-offsetselector=".ds_site-header">
+                <div class="ds_mobile-navigation__content">
+
+                    <div class="ds_mobile-navigation__block">
+                        <div class="ds_site-search">
+                            <form role="search" class="ds_site-search__form" method="GET" action="/search/">
+                                <label class="ds_site-search__label hidden" for="site-search--mobile">Search</label>
+
+                                <div class="ds_site-search__input-group">
+                                    <input name="q" required="" id="site-search--mobile" class="ds_site-search__input" type="text" placeholder="Search" autocomplete="off" />
+                                    <input name="cat" value="sitesearch" hidden>
+                                    <button type="submit" title="search" class="ds_site-search__button  button  button--primary">
+                                        <svg class="ds_icon  ds_site-search__icon" role="img"><use xlink:href="/webfiles/1584544378506/assets/images/icons/icons.stack.svg#search"></use></svg>
+
+                                        <span class="hidden">Search gov.scot</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                            <div class="ds_mobile-navigation__block">
+                                <ul class="ds_mobile-navigation__list"><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link" href="/about/" itemprop="url" data-header="header-link-1" data-gtm="nav-main">About</a>
+                                            </li><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link ds_current" href="/topics/" itemprop="url" data-header="header-link-2" data-gtm="nav-main">Topics</a>
+                                            </li><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link" href="/news/" itemprop="url" data-header="header-link-3" data-gtm="nav-main">News</a>
+                                            </li><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link" href="/publications/" itemprop="url" data-header="header-link-4" data-gtm="nav-main">Publications</a>
+                                            </li><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link" href="https://consult.scotland.gov.uk/" itemprop="url" data-header="header-link-5" data-gtm="nav-main">Consultations</a>
+                                            </li><!--
+                                        --><li class="ds_mobile-navigation__item">
+                                                <a class="ds_mobile-navigation__link" href="http://blogs.gov.scot/" itemprop="url" data-header="header-link-6" data-gtm="nav-main">Blogs</a>
+                                            </li><!--
+                                --></ul>
+                            </div>
+
+                    <button type="button" class="ds_mobile-navigation__backdrop  js-close-menu" aria-expanded="false" aria-controls="mobile-navigation-menu">
+                        <span class="hidden">Close menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+            <div class="ds_site-header__navigation">
+                <div class="wrapper">
+                    <nav class="ds_site-navigation">
+                        <ul class="ds_site-navigation__list"><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link" href="/about/" itemprop="url" data-header="header-link-1" data-gtm="nav-main">About</a>
+                                </li><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link ds_current" href="/topics/" itemprop="url" data-header="header-link-2" data-gtm="nav-main">Topics</a>
+                                </li><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link" href="/news/" itemprop="url" data-header="header-link-3" data-gtm="nav-main">News</a>
+                                </li><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link" href="/publications/" itemprop="url" data-header="header-link-4" data-gtm="nav-main">Publications</a>
+                                </li><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link" href="https://consult.scotland.gov.uk/" itemprop="url" data-header="header-link-5" data-gtm="nav-main">Consultations</a>
+                                </li><!--
+                             --><li class="ds_site-navigation__item">
+                                    <a class="ds_site-navigation__link" href="http://blogs.gov.scot/" itemprop="url" data-header="header-link-6" data-gtm="nav-main">Blogs</a>
+                                </li><!--
+                     --></ul>
+                    </nav>
+                </div>
+            </div>
+</header>
+
+
+
+
+
+<div class="mobile-layer__overlay js-mobile-search-overlay mobile-layer__overlay--grey js-mobile-search-toggle"></div>
+<div class="mobile-layer__overlay js-mobile-nav-overlay mobile-layer__overlay--grey js-mobile-nav-toggle"></div>
+
+        <div class="wrapper">
+            <!-- search & breadcrumbs -->
+            <!-- only show when not on homepage -->
+                <div class="breadcrumbs__container">
+
+                    <div class="grid"><!--
+
+                        --><div class="grid__item medium--four-twelfths large--three-twelfths push--medium--eight-twelfths push--large--nine-twelfths hidden-xsmall">
+                        </div><!--
+
+                        --><div class="grid__item medium--seven-twelfths large--seven-twelfths pull--medium--four-twelfths pull--large--three-twelfths">
+                            <nav>
+
+
+
+    <ol role="navigation" class="breadcrumbs">
+        <li class="breadcrumbs__item" itemprop="url">
+            <a class="breadcrumbs__link" href="/" data-gtm="bread-1">
+                <span class="breadcrumbs__title" itemprop="title">Home</span><!--
+            --></a>
+        </li>
+                <li class="breadcrumbs__item" itemprop="url">
+                    <a class="breadcrumbs__link" data-gtm="bread-2" href="/topics/">
+                        <span class="breadcrumbs__title" itemprop="title">Topics</span><!--
+                 --></a>
+                </li>
+    </ol>
+                            </nav>
+                        </div><!--
+                    --></div>
+                </div>
+
+        <!-- body / main -->
+
+
+
+<div class="layout--issue">
+
+
+    <header class="topic-header  " id="page-content">
+
+        <h1 class="article-header  topic-header__title">Coronavirus in Scotland</h1>
+
+
+    </header>
+
+    <div class="body-content">
+        <div class="grid"><!--
+         --><div class="grid__item  medium--eight-twelfths">
+
+                <div id="introduction">
+<p>Protect yourself and others:</p>
+
+<ul>
+ <li>s<span><span><span>tay at home</span></span></span></li>
+ <li><span><span><span>only go outside for essential food, health and work reasons</span></span></span></li>
+ <li><span><span><span>stay 2 metres (6 feet) away from other people</span></span></span></li>
+ <li><span><span><span>wash your hands regularly &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span></span></li>
+ <li><span><span><span>wash your hands as soon as you get home</span></span></span></li>
+</ul>                </div>
+
+                <div id="overview">
+<h3 style="margin-left:0px; margin-right:0px">Coronavirus symptoms</h3>
+
+<p style="margin-left:0px; margin-right:0px">Common symptoms include:</p>
+
+<ul style="list-style-type:disc; margin-left:5px; margin-right:0px">
+ <li>high temperature or fever</li>
+ <li>a persistent cough</li>
+ <li>shortness of breath&nbsp;</li>
+</ul>
+
+<h3 style="margin-left:0px; margin-right:0px">Health advice</h3>
+
+<p style="margin-left:0px; margin-right:0px">Health advice can be found on: <a href="https://www.nhsinform.scot/coronavirus">NHS Inform</a>.</p>
+
+<p><span><span>A free helpline can give advice if you do not have symptoms, but are looking for general advice: </span></span>0800 028 2816.</p>
+
+<p><span><span>The <a href="http://www.hps.scot.nhs.uk/a-to-z-of-topics/covid-19/">latest information and advice for professionals and organisations</a> is on the <span>Health Protection Scotland </span>website.</span></span></p>
+
+<p><span><span><span><span>Overseas visitors to Scotland, regardless of their residency status, are exempt from NHS charges for both the diagnosis and treatment of coronavirus </span></span></span></span><span>(COVID-19)</span><span><span><span><span>.&nbsp;</span></span></span></span></p>
+
+<ul style="margin-left:20px; margin-right:0px">
+ <li><a style="background-position: right; margin: 0px; transition:background-color 1s, color 1s; color: rgb(0, 101, 189); padding-right: 22px; text-decoration: underline; display: inline; box-sizing: inherit; background-image: url(&quot;../../../../assets/mygov/icons/arrows/ext_arrow_text_17px.png&quot;); background-repeat: no-repeat; background-color: transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); overflow-wrap: break-word;" href="https://www.nhsinform.scot/care-support-and-rights/health-rights/access/healthcare-for-overseas-visitors">healthcare for overseas visitors</a></li>
+ <li><a style="background-position: right; margin: 0px; transition:background-color 1s, color 1s; color: rgb(0, 101, 189); padding-right: 22px; text-decoration: underline; display: inline; box-sizing: inherit; background-image: url(&quot;../../../../assets/mygov/icons/arrows/ext_arrow_text_17px.png&quot;); background-repeat: no-repeat; background-color: transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); overflow-wrap: break-word;" href="https://www.nhsinform.scot/care-support-and-rights/health-rights/access/healthcare-for-refugees-and-asylum-seekers">healthcare for refugees and asylum seekers</a></li>
+</ul>
+
+<h3 style="margin-left:0px; margin-right:0px">Scottish test numbers: 26 March 2020</h3>
+
+<p style="margin-left:0cm; margin-right:0cm"><span><span><span>A<span> total of 11,487 Scottish tests have concluded. Of these:</span></span></span></span></p>
+
+<ul style="margin-left:20px; margin-right:0px">
+ <li>10,593&nbsp;<span><span><span><span> tests were confirmed negative</span></span></span></span></li>
+ <li>894 tests were positive</li>
+ <li><span><span><span><span><span>25 patients who tested positive for coronavirus (COVID-19) have died.</span></span></span></span></span></li>
+</ul>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">Health board</th>
+   <th scope="col">Positive cases</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><span>Ayrshire&nbsp;and Arran</span></td>
+   <td>74</td>
+  </tr>
+  <tr>
+   <td>Borders</td>
+   <td>23</td>
+  </tr>
+  <tr>
+   <td><span><span><span>Dumfries and Galloway</span></span></span></td>
+   <td>39</td>
+  </tr>
+  <tr>
+   <td>Fife</td>
+   <td>40</td>
+  </tr>
+  <tr>
+   <td>Forth Valley</td>
+   <td>75</td>
+  </tr>
+  <tr>
+   <td><span>Grampian</span></td>
+   <td>31</td>
+  </tr>
+  <tr>
+   <td><span>Greater Glasgow and Clyde</span></td>
+   <td>258</td>
+  </tr>
+  <tr>
+   <td>Highland</td>
+   <td>29</td>
+  </tr>
+  <tr>
+   <td><span>Lanarkshire</span></td>
+   <td>114</td>
+  </tr>
+  <tr>
+   <td>Lothian</td>
+   <td>111</td>
+  </tr>
+  <tr>
+   <td>Shetland</td>
+   <td>24</td>
+  </tr>
+  <tr>
+   <td><span>Tayside</span></td>
+   <td>76</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><span>T</span><span><span><span><span><span>he latest numbers will publish at 2pm each day.</span></span></span></span></span></p>
+
+<p style="margin-left:0cm; margin-right:0cm"><span><span>The Department of Health publ</span></span>ishes <a href="https://www.gov.uk/guidance/wuhan-novel-coronavirus-information-for-the-public">UK figures</a> on behalf of all UK Chief Medical Officers. <span>Test results from Scotland are included in the overall UK figure.</span></p>
+
+<h3>Help your community and volunteering advice</h3>
+
+<p>Help your community information is on the <a href="https://www.readyscotland.org/coronavirus/helping-in-your-community/">ReadyScotland</a> website.</p>
+
+<h3>Business advice</h3>
+
+<p><span><span><span><span>If you run a business you can get advice by calling the helpline: 0300 303 0660.&nbsp; </span></span></span></span><span><span><span><span>It is open Monday to Friday, 8.30am to 5.30pm. S</span></span></span></span><span><span><span><span>elect option 1 to speak to the COVID-19 team. </span></span></span></span></p>
+
+<p><span><span><span><span>T</span></span></span></span><span><span><span><span><span><span><span><span><span><span><span><span><span>he <a href="https://findbusinesssupport.gov.scot/coronavirus-advice">Find Business Support</a> website gives the latest information and advice. &nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="margin-left:0cm; margin-right:0cm">A<span><span><span><span><span><span><span><span><span><span><span><span><span>dvice about benefits and employment rights is on <a style="background-clip:border-box; background-origin:padding-box; background-position-x:0%; background-position-y:0%; background-size:auto; border-bottom-color:currentColor; border-image-outset:0; border-image-repeat:stretch; border-image-slice:100%; border-image-source:none; border-image-width:1; border-left-color:currentColor; border-right-color:currentColor; border-top-color:currentColor; box-sizing:border-box; background-attachment:scroll; color:#0563c1; text-decoration:underline" href="https://www.citizensadvice.org.uk/scotland/health/coronavirus-what-it-means-for-you/"><span>Citizens Advice Scotland</span></a>.</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<h3 style="margin-left:0cm; margin-right:0cm"><span><span><span><span><span><span><span><span><span><span><span><span><span>Advice for parents</span></span></span></span></span></span></span></span></span></span></span></span></span></h3>
+
+<p style="margin-left:0cm; margin-right:0cm">Advice for parents is on the <a href="https://www.parentclub.scot/topics/health/coronavirus">ParentClub</a> website.</p>
+
+<h3>Travel, visa and passport advice</h3>
+
+<p style="margin-left:0cm; margin-right:0cm"><span><span><span>You must stay at home, do not travel unless for food, health and essential work.</span></span></span></p>
+
+<p style="margin-left:0cm; margin-right:0cm"><span><span><span>Guidance for British people travelling abroad: <a style="color:blue; text-decoration:underline" href="https://www.gov.uk/guidance/travel-advice-novel-coronavirus">Travel advice: coronavirus (COVID-19)</a>.</span></span></span></p>
+
+<p>Travel advice and country specific information can be found at: <a href="https://www.fitfortravel.nhs.uk/advice/disease-prevention-advice/coronavirus-disease-covid-19">FitForTravel</a>.</p>
+
+<p style="margin-left:0cm; margin-right:0cm"><span><span><span><span><span>Guidance for visa holders and applicants in Scotland, and British nationals overseas who need to apply for a passport: <a href="https://www.gov.uk/guidance/coronavirus-covid-19-advice-for-uk-visa-applicants-and-temporary-uk-residents">Visa and passport advice (COVID-19)</a></span></span></span></span></span></p>
+
+<h3>Our approach</h3>
+
+<p>Our <span>approach is guided by the Chief Medical Officer, and we continue to monitor the situation closely and to work with the WHO and international community.</span></p>
+
+<p><span>We are working with the Welsh Government, Northern Ireland Executive, and the UK Government to respond to the ongoing outbreak.</span></p>                </div>
+
+            </div><!--
+
+         --><div class="grid__item  medium--four-twelfths">
+                <div >
+                        <section id="featured-items">
+
+                            <h2 class="crossbar-header"><span class="crossbar-header__text">Featured</span></h2>
+
+                            <ul class="no-bullets">
+                                    <li class="listed-content-item  listed-content-item--compact  listed-content-item--highlight">
+                                        <article class="listed-content-item__article ">
+                                            <header class="listed-content-item__header">
+                                                <div class="listed-content-item__meta">
+                                                    <p class="listed-content-item__label"></p>
+
+                                                        <p class="listed-content-item__date"></p>
+
+                                                </div>
+
+                                                <h3 class="gamma  listed-content-item__title" title="Coronavirus (COVID-19): guidance">
+                                                    <a data-gtm="featured-item-1" href="/collections/coronavirus-covid-19-guidance/" class="listed-content-item__link " title="Coronavirus (COVID-19): guidance">
+                                                        Coronavirus (COVID-19): guidance
+                                                    </a>
+                                                </h3>
+                                            </header>
+                                        </article>
+                                    </li>
+                            </ul>
+                        </section>
+
+                    <div>
+                        <section class="sidebar-block" id="related-news">
+                            <h2 class="gamma  emphasis  sidebar-block__title">News</h2>
+                            <ul class="no-bullets">
+                                    <li><a data-gtm="news-1" class="sidebar-block__link" href="/news/keeping-healthcare-workers-safe/">Keeping healthcare workers safe</a></li>
+                                    <li><a data-gtm="news-2" class="sidebar-block__link" href="/news/protecting-workers-during-coronavirus-outbreak/">Protecting workers during coronavirus outbreak</a></li>
+                                    <li><a data-gtm="news-3" class="sidebar-block__link" href="/news/new-expert-group-to-study-spread-of-covid-19/">New expert group to study spread of COVID-19</a></li>
+                                    <li><a data-gtm="news-4" class="sidebar-block__link" href="/news/support-for-seafood-fishing-industry/">Coronavirus support for seafood fishing industry</a></li>
+                            </ul>
+                            <a href="/news/?topics=Coronavirus+in+Scotland" class="see-all-button  see-all-button--icon  see-all-button--icon-grid"><span></span> See all news</a>
+                        </section>
+
+
+                        <section class="sidebar-block" id="related-publications">
+                            <h2 class="gamma  emphasis  sidebar-block__title">Publications</h2>
+                            <ul class="no-bullets">
+                                    <li><a data-gtm="publications-1" class="sidebar-block__link" href="/publications/coronavirus-covid-19-cmo-cno-cswa-letter-on-social-care-settings/">Coronavirus (COVID-19): CMO/CNO/CSWA letter on social care settings</a></li>
+                                    <li><a data-gtm="publications-2" class="sidebar-block__link" href="/publications/coronavirus-covid-19-social-care-guidance-care-homes-new-admission-transfer-form/">Coronavirus (COVID-19): social care guidance – care homes new admission/transfer form</a></li>
+                                    <li><a data-gtm="publications-3" class="sidebar-block__link" href="/publications/coronavirus-covid-19-clinical-guidance-for-nursing-home-and-residential-care-residents/">Coronavirus (COVID-19): clinical guidance for nursing home and residential care residents - updated March 26</a></li>
+                                    <li><a data-gtm="publications-4" class="sidebar-block__link" href="/publications/coronavirus-act-2020-c-7-direction-under-paragraph-22-of-schedule-14/">Coronavirus Act 2020 (C.7): direction under paragraph 2(2) of Schedule 14</a></li>
+                                    <li><a data-gtm="publications-5" class="sidebar-block__link" href="/publications/first-minister-covid-19-update-3/">Coronavirus (COVID-19) update: First Minister's speech 26 March 2020</a></li>
+                            </ul>
+                            <a href="/publications/?topics=Coronavirus+in+Scotland" class="see-all-button  see-all-button--icon  see-all-button--icon-grid"><span></span> See all publications</a>
+                        </section>
+                    </div>
+                </div>
+            </div><!--
+     --></div>
+    </div>
+
+
+    <div class="grid"><!--
+        --><div class="grid__item  medium--nine-twelfths  large--seven-twelfths">
+<input id="documentUuid" type="hidden" name="uuid" value="92544e69-9aad-40d1-a6fd-27914e3d36fc"/>
+
+<section id="feedback" class="feedback">
+    <form id="feedback-form" class="feedback__form">
+        <input id="page-category" type="hidden" value="issuepage" />
+
+        <h2 class="gamma">Was this helpful?</h2>
+        <p>Your feedback will help us improve this site</p>
+
+        <div class="input-group">
+          <fieldset>
+            <legend class="hidden">Feedback type</legend>
+            <input title="This page was helpful" type="radio" class="js-feedback-type" id="feedback-type-yes" data-gtm="fdbk-yes" name="feedback-type" value="yes"/><label class="feedback__radio-label" for="feedback-type-yes">Yes</label>
+
+            <input title="This page was not helpful" type="radio" class="js-feedback-type" id="feedback-type-no" data-gtm="fdbk-no" name="feedback-type" value="no"/><label class="feedback__radio-label" for="feedback-type-no">No</label>
+
+            <input title="This page was helpful but" type="radio" class="js-feedback-type" id="feedback-type-yesbut" data-gtm="fdbk-yesbut" name="feedback-type" value="yesbut"/><label class="feedback__radio-label" for="feedback-type-yesbut">Yes, but</label>
+          </fieldset>
+        </div>
+
+        <div class="grid"><!--
+            --><div class="grid__item medium--nine-twelfths">
+            <div class="input-group">
+                <select data-message="Please select a reason" title="Choose reason for your feedback" class="hidden feedback__field feedback__select feedback__field--no required--no reason">
+                    <option value="" selected disabled>Please select a reason</option>
+                    <option>It wasn't detailed enough</option>
+                    <option>It's hard to understand</option>
+                    <option>It's incorrect</option>
+                    <option>It needs updating</option>
+                    <option>There's a broken link</option>
+                    <option>It wasn't what I was looking for</option>
+                    <option>Other</option>
+                </select>
+
+                <select data-message="Please select a reason" title="Choose reason for your feedback" class="hidden feedback__field feedback__select feedback__field--yesbut required--yesbut reason">
+                    <option value="" selected disabled>Please select a reason</option>
+                    <option>It needs updating</option>
+                    <option>There's a spelling mistake</option>
+                    <option>It's hard to understand</option>
+                    <option>There's a broken link</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <textarea data-message="Please enter a comment" maxlength="250" title="Your comments - please do not enter any personal information" rows="5" id="feedback-comment" placeholder="Your comments - please do not enter any personal information" class="hidden comments required--no required--yesbut feedback__field feedback__field--yes feedback__field--no feedback__field--yesbut"></textarea>
+            </div>
+            </div><!--
+        --></div>
+
+
+        <div class="grid"><!--
+            --><div class="grid__item medium--six-twelfths">
+                <div class="feedback__field feedback__field--yes feedback__field--no feedback__field--yesbut hidden submit">
+                    <button type="submit" class="button button--primary" data-gtm="fdbk-send">Send</button>
+                </div>
+            </div><!--
+        --></div>
+    </form>
+
+    <p class="feedback__thanks hidden"><strong>Thanks for your feedback</strong></p>
+</section>
+        </div><!--
+    --></div>
+</div>
+
+<footer class="article-footer" id="article-footer">
+
+    <div class="wrapper">
+
+        <div class="grid"><!--
+
+     --></div>
+
+    </div>
+</footer>
+</div>
+
+
+
+
+
+
+            </div>
+
+    </div>
+
+    <!-- footer -->
+
+
+
+
+<footer id="site-footer" class="site-footer  ">
+    <div class="wrapper">
+        <div class="grid"><!--
+             --><div class="grid__item medium--four-twelfths large--four-twelfths">
+                    <ul class="site-items site-footer__list">
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/accessibility/" data-gtm="link-footer">Accessibility</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/archive/" data-gtm="link-footer">Archive</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/about/contact-information/" data-gtm="link-footer">Contact</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/cookies/" data-gtm="link-footer">Cookies</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/crown-copyright/" data-gtm="link-footer">Crown Copyright</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/about/contact-information/jobs-vacancies" data-gtm="link-footer">Jobs and vacancies</a>
+                            </li>
+                            <li>
+
+                                <a class="site-items__link site-footer__link" href="/privacy/" data-gtm="link-footer">Privacy</a>
+                            </li>
+                    </ul>
+                </div><!--
+             --><div class="grid__item medium--seven-twelfths large--seven-twelfths">
+                <ul class="social-links site-footer__list">
+                    <li class="social-links__item">
+                        <a title="Facebook" class="social-links__link" href="https://www.facebook.com/TheScottishGovernment/timeline/" data-gtm="social">
+                            <span class="fa fa-facebook"></span>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a title="Twitter" class="social-links__link" href="https://twitter.com/scotgov" data-gtm="social">
+                            <span class="fa fa-twitter"></span>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a title="Flickr" class="social-links__link" href="https://www.flickr.com/photos/26320652@N02" data-gtm="social">
+                            <span class="fa fa-flickr"></span>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a title="YouTube" class="social-links__link" href="https://www.youtube.com/user/scottishgovernment" data-gtm="social">
+                            <span class="fa fa-youtube-play"></span>
+                        </a>
+                    </li>
+                    <li class="social-links__item">
+                        <a title="Instagram" class="social-links__link" href="https://www.instagram.com/scotgov/" data-gtm="social">
+                            <span class="fa fa-instagram"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--
+         --></div>
+    </div>
+</footer>
+
+    
+    
+
+    <script type="module" src="/webfiles/1584544378506/assets/scripts/global.js"></script>
+    <script nomodule="true" src="/webfiles/1584544378506/assets/scripts/global.es5.js"></script>
+
+    <script defer src="/assets/scripts/vendor/svgxuse.min.js"></script>
+<script src="/webfiles/1584544378506/assets/scripts/issue-hub.js" type="module"></script>
+<script src="/webfiles/1584544378506/assets/scripts/issue-hub.es5.js" nomodule="true"></script>
+
+</body>
+</html>

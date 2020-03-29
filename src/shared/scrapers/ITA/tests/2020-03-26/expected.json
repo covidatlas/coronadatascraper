@@ -1,0 +1,155 @@
+[
+  {
+    "recovered": 23,
+    "deaths": 63,
+    "cases": 946,
+    "tested": 5488,
+    "state": "Abruzzo"
+  },
+  {
+    "recovered": 0,
+    "deaths": 1,
+    "cases": 134,
+    "tested": 1046,
+    "state": "Basilicata"
+  },
+  {
+    "recovered": 67,
+    "deaths": 48,
+    "cases": 906,
+    "tested": 7744,
+    "state": "P.A. Bolzano"
+  },
+  {
+    "recovered": 7,
+    "deaths": 14,
+    "cases": 393,
+    "tested": 5933,
+    "state": "Calabria"
+  },
+  {
+    "recovered": 58,
+    "deaths": 83,
+    "cases": 1310,
+    "tested": 8346,
+    "state": "Campania"
+  },
+  {
+    "recovered": 792,
+    "deaths": 1174,
+    "cases": 10816,
+    "tested": 42395,
+    "state": "Emilia Romagna"
+  },
+  {
+    "recovered": 197,
+    "deaths": 72,
+    "cases": 1223,
+    "tested": 10721,
+    "state": "Friuli Venezia Giulia"
+  },
+  {
+    "recovered": 155,
+    "deaths": 106,
+    "cases": 2096,
+    "tested": 22771,
+    "state": "Lazio"
+  },
+  {
+    "recovered": 260,
+    "deaths": 280,
+    "cases": 2567,
+    "tested": 7304,
+    "state": "Liguria"
+  },
+  {
+    "recovered": 7839,
+    "deaths": 4861,
+    "cases": 34889,
+    "tested": 87713,
+    "state": "Lombardia"
+  },
+  {
+    "recovered": 9,
+    "deaths": 310,
+    "cases": 3114,
+    "tested": 8623,
+    "state": "Marche"
+  },
+  {
+    "recovered": 14,
+    "deaths": 8,
+    "cases": 103,
+    "tested": 670,
+    "state": "Molise"
+  },
+  {
+    "recovered": 135,
+    "deaths": 449,
+    "cases": 6534,
+    "tested": 18054,
+    "state": "Piemonte"
+  },
+  {
+    "recovered": 22,
+    "deaths": 65,
+    "cases": 1182,
+    "tested": 9191,
+    "state": "Puglia"
+  },
+  {
+    "recovered": 13,
+    "deaths": 19,
+    "cases": 494,
+    "tested": 3461,
+    "state": "Sardegna"
+  },
+  {
+    "recovered": 36,
+    "deaths": 33,
+    "cases": 1164,
+    "tested": 9658,
+    "state": "Sicilia"
+  },
+  {
+    "recovered": 95,
+    "deaths": 158,
+    "cases": 3226,
+    "tested": 20952,
+    "state": "Toscana"
+  },
+  {
+    "recovered": 117,
+    "deaths": 86,
+    "cases": 1297,
+    "tested": 4600,
+    "state": "P.A. Trento"
+  },
+  {
+    "recovered": 12,
+    "deaths": 20,
+    "cases": 802,
+    "tested": 5428,
+    "state": "Umbria"
+  },
+  {
+    "recovered": 2,
+    "deaths": 28,
+    "cases": 408,
+    "tested": 1203,
+    "state": "Valle d'Aosta"
+  },
+  {
+    "recovered": 508,
+    "deaths": 287,
+    "cases": 6935,
+    "tested": 79759,
+    "state": "Veneto"
+  },
+  {
+    "cases": 80539,
+    "recovered": 10361,
+    "deaths": 8165,
+    "tested": 361060
+  }
+]

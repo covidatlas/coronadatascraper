@@ -1,0 +1,1589 @@
+<!DOCTYPE html><html lang="en-US" style="height: auto;"><head id="Head"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<meta name="RATING" content="GENERAL">
+<meta name="RESOURCE-TYPE" content="DOCUMENT">
+<meta content="text/javascript" http-equiv="Content-Script-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<style>
+.dnnFormMessage.dnnFormValidationSummary {display:none!important;}
+</style><title>
+	Novel Coronavirus Outbreak 2020 (COVID-19) :: Washington State Department of Health
+</title><meta id="MetaDescription" name="DESCRIPTION" content="Information regarding the 2020 novel coronavirus (COVID-19) outbreak in Washington State, including test results and numbers of persons under investigation (PUIs), resources for local health jurisdictions, healthcare providers, schools and employers."><meta id="MetaKeywords" name="KEYWORDS" content="coronavirus, COVID-19, 2019-nCoV, novel coronavirus, nCoV"><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW"><link href="/DependencyHandler.axd/d85133fef3105a8aa5b8ff7ffb55cba0/973/css" type="text/css" rel="stylesheet"><script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script async="" src="//cse.google.com/adsense/search/async-ads.js"></script><script type="text/javascript" async="" src="https://cse.google.com/cse.js?cx=006035765107648424017:j1daaui4aco"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="/DependencyHandler.axd/b4fce67f81f97508cc1130b6d373d625/973/js" type="text/javascript"></script><!--[if LT IE 9]><link id="IE6Minus" rel="stylesheet" type="text/css" href="/Portals/1/Skins/DnnGo33/ie.css" /><![endif]--><script type="text/javascript">
+//<![CDATA[
+    var analytics_page_startTime = (new Date()).getTime();
+//]]>
+</script>
+
+
+          <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-11667201-1', 'auto');
+            ga('send', 'pageview');
+            
+            // This script for tracking Printed Pages & Print Method in Google Analytics is provided as it is, and was put together by Eivind Savio April 2013. You need jQuery for this script to work. Happy tracking!
+            (function () {
+            var runOnce;
+            var afterPrint = function() {
+            if (!runOnce) { // Because of Chrome we can only allow the code to run once.
+	            runOnce = true;
+	            var printData = $('html').attr('printType');
+	            var mouseButton = $('html').attr('mouseBtn');
+		            if (printData === undefined && mouseButton === 'Right') { // Print activated using Right Mouse Button
+			            printData = 'Right Mouse Button';
+		            } else if (printData === undefined) { // Print (probably) activated using Browser Menu
+			            printData = 'Browser Menu';
+            }
+            //_gaq.push(['_trackEvent','Page Printed', printData, window.location.pathname]); // Send Print Data to Google Analytics
+            ga('send', 'event', 'Print Intent', printData, document.location.pathname); //for Universal GA
+            $('html').removeAttr('printType'); // Clear the attribute, if not printing from the menu can be tracked wrongly.
+            $('html').removeAttr('mouseBtn'); // Clear the attribute, if not printing from the menu can be tracked wrongly.
+            };
+            };
+            if (window.matchMedia) { // Track printing from browsers using the Webkit engine
+	            var mediaQueryList = window.matchMedia('print');
+		            mediaQueryList.addListener(function(mql) {
+	            if (!mql.matches) {
+		            afterPrint();
+	            }
+            });
+            }
+            window.onafterprint = afterPrint; // Internet Explorer
+            $(document).keydown(function(allBrowsers){ // Track printing using Ctrl/Cmd+P.
+            if (allBrowsers.keyCode==80 && (allBrowsers.ctrlKey || allBrowsers.metaKey)) {
+	            $('html').attr('printType', 'Ctrl/Cmd+P');
+		            if ($.browser.opera) { // Opera is a little different so we must send the afterPrint() function to get the tracking to work. 
+		            afterPrint();
+		            }
+	            }
+            });
+            // Detect Right Mouse Button Click
+            $('html').mousedown(function(e) {
+	            if( e.which == 3 ) {
+		            $('html').attr('mouseBtn', 'Right');
+	            }
+            });
+            }());
+          </script>
+
+        <style>
+.covid-alert {display:none;}
+.header_top {margin-bottom:20px!important;}
+@media only screen and (max-width: 767px){
+.phoneHeadBottom {padding: 10px 0 5px !important;}}
+.btn {margin-bottom:5px;}
+</style><link rel="SHORTCUT ICON" href="/Portals/1/DohFaviconRc.ico?ver=2012-08-23-081900-000" type="image/x-icon"><meta name="viewport" content="width=device-width,height=device-height, minimum-scale=1.0, maximum-scale=1.0"><script src="https://www.google.com/cse/static/element/8b2252448421acb3/cse_element__en.js?usqp=CAI%3D" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/element/8b2252448421acb3/default+en.css"><link type="text/css" rel="stylesheet" href="https://www.google.com/cse/static/style/look/v3/default.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#D9D9D9}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#2F5BB7;background-color:#4D90FE;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#CCCCCC;border-color:#CCCCCC;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover,.gsc-imageResult:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#1155CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#1155CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#1155CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#1155CC}.gsc-cursor-page{color:#1155CC}a.gsc-trailing-more-results:link{color:#1155CC}.gs-webResult .gs-snippet,.gs-imageResult .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl,.gs-imageResult div.gs-visibleUrl{color:#009933}.gs-webResult div.gs-visibleUrl-short{color:#009933}.gs-webResult div.gs-visibleUrl-short{display:none}.gs-webResult div.gs-visibleUrl-long{display:block}.gs-promotion div.gs-visibleUrl-short{display:none}.gs-promotion div.gs-visibleUrl-long{display:block}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#CCCCCC;background-color:#FFFFFF;color:#CCCCCC}.gsc-webResult.gsc-result.gsc-promotion{border-color:#F6F6F6;background-color:#F6F6F6}.gsc-completion-title{color:#1155CC}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#1155CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#1155CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#1155CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#1155CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#009933}.gcsc-find-more-on-google{color:#1155CC}.gcsc-find-more-on-google-magnifier{fill:#1155CC}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body id="Body"><div id="gomenua330199d8c" class="mobile_menu  mm-selected mm-menu mm-offcanvas mm-hasnavbar-top-2 mm-hasnavbar-bottom-1"><div class="mm-navbar mm-navbar-bottom mm-navbar-bottom-1 mm-navbar-size-1"><div class="menu_footer_box"></div></div><div class="mm-navbar mm-navbar-top mm-navbar-top-2 mm-navbar-size-1 mm-hasbtns" style="top: 0px;"><a class="mm-prev mm-btn mm-hidden"></a><a class="mm-title">Menu</a><a class="mm-close mm-btn" href="#Form"></a></div><div class="mm-navbar mm-navbar-top mm-navbar-top-1 mm-navbar-size-1"><div class="menu_header_box"><div class="HeadPane_mobile menu_header"><a href="/">Home</a> &nbsp;|&nbsp; <a href="/esp">Español</a> &nbsp;|&nbsp; <a href="/TopicsAtoZ">Topics A-Z</a></div></div></div><div class="mm-panels" style="top: 0px; bottom: 0px;"><div class="mm-panel mm-opened mm-current" id="mm-0"><div class="mm-navbar"><a class="mm-title">Menu</a></div><ul class="menu_list mm-listview"><li class="dir   Item-1 "><em class="mm-counter">7</em><a class="mm-next" href="#mm-1" data-target="#mm-1"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo" title="Estar preparado, es estar a salvo"><span>Estar preparado, es estar a salvo</span></a></li><li class="dir   Item-2 "><em class="mm-counter">7</em><a class="mm-next" href="#mm-10" data-target="#mm-10"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe" title="Be Prepared, Be Safe"><span>Be Prepared, Be Safe</span></a></li><li class="dir   Item-3 "><em class="mm-counter">2</em><a class="mm-next" href="#mm-20" data-target="#mm-20"></a><a href="https://www.doh.wa.gov/Emergencies/CurrentHazardsandIssues" title="Current Hazards and IssuesAffecting Washington State"><span>Current Hazards and Issues</span></a></li><li class="   Item-4 "><a href="https://www.doh.wa.gov/Emergencies/VapingAssociatedLungInjury" title="Vaping Associated Lung Injury"><span>Vaping Associated Lung Injury</span></a></li><li class="   Item-5 "><a href="https://www.doh.wa.gov/Emergencies/Danopulmonarasociadoalusodeproductosdevapeo" title="Daño pulmonar asociado al uso de productos de vapeo"><span>Dano pulmonar asociado al uso de productos de vapeo</span></a></li><li class="   Item-6 "><a href="https://www.doh.wa.gov/Emergencies/AFM" title="AFM"><span>AFM</span></a></li><li class="   Item-7 "><a href="https://www.doh.wa.gov/Emergencies/PreparacionyRespuestasenCasodeEmergencias" title="Preparación y Respuestas en Caso de Emergencias"><span>Preparación y Respuestas en Caso de Emergencias</span></a></li><li class="   Item-8 "><a href="https://www.doh.wa.gov/Emergencies/MalTiempo" title="Mal Tiempo"><span>Mal Tiempo</span></a></li><li class="   Item-9 "><a href="https://www.doh.wa.gov/Emergencies/IncendiosForestalesenWashington" title="Incendios Forestales en Washington"><span>Incendios Forestales en Washington</span></a></li><li class="   Item-10 "><a href="https://www.doh.wa.gov/Emergencies/MielitisFlacidaAgudaMFA" title="Mielitis Flácida Aguda (MFA)"><span>Mielitis Flácida Aguda (MFA)</span></a></li><li class="dir  current  Item-11"><em class="mm-counter">8</em><a class="mm-next" href="#mm-21" data-target="#mm-21"></a><a href="https://www.doh.wa.gov/Emergencies/Coronavirus" class="acurrent" title="Novel Coronavirus Outbreak 2020 (COVID-19)"><span>Novel Coronavirus Outbreak 2020 (COVID-19)</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-1"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">Estar preparado, es estar a salvo</a></div><ul class="mm-listview"><li class="dir   first-item SunItem-1 "><em class="mm-counter">5</em><a class="mm-next" href="#mm-2" data-target="#mm-2"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo" title="Bioterrorismo y terrorismo"><span>Bioterrorismo y terrorismo</span></a></li><li class="dir   SunItem-2 "><em class="mm-counter">11</em><a class="mm-next" href="#mm-3" data-target="#mm-3"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades" title="Enfermedades"><span>Enfermedades</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/NumerosdeTelefonosenCasodeEmergencias" title="Números de Teléfonos en Caso de Emergencias"><span>Números de Teléfonos en Caso de Emergencias</span></a></li><li class="dir   SunItem-4 "><em class="mm-counter">14</em><a class="mm-next" href="#mm-4" data-target="#mm-4"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales" title="Temporales y desastres naturales"><span>Temporales y desastres naturales</span></a></li><li class="dir   SunItem-5 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-7" data-target="#mm-7"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Informaciondeemergenciaparagruposespeciales" title="Información de emergencia para grupos especiales"><span>Información de emergencia para grupos especiales</span></a></li><li class="dir   SunItem-6 "><em class="mm-counter">7</em><a class="mm-next" href="#mm-8" data-target="#mm-8"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia" title="Prepárese para una emergencia"><span>Prepárese para una emergencia</span></a></li><li class="dir   last-item SunItem-7 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-9" data-target="#mm-9"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Publicaciones" title="Publicaciones"><span>Publicaciones</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-2"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Bioterrorismo y terrorismo</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo/Agentesquimicos" title="Agentes químicos"><span>Agentes químicos</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo/Amenazasdebomba" title="Amenazas de bomba"><span>Amenazas de bomba</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo/Antrax" title="Ántrax"><span>Ántrax</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo/Botulismo" title="Botulismo"><span>Botulismo</span></a></li><li class="   last-item SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Bioterrorismoyterrorismo/Preguntasfrecuentessobrebioterrorismo" title="Preguntas frecuentes sobre bioterrorismo"><span>Preguntas frecuentes sobre bioterrorismo</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-3"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Enfermedades</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Distribuciondemedicamentosduranteemergencias" title="Distribución de medicamentos durante emergencias"><span>Distribución de medicamentos durante emergencias</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Ebola" title="Ébola"><span>Ébola</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Ecoli" title="E. coli"><span>E. coli</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Enterovirus" title="Enterovirus"><span>Enterovirus</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Envenenamientos" title="Envenenamientos"><span>Envenenamientos</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/FiebresHemorragicasVirales" title="Fiebres Hemorrágicas Virales"><span>Fiebres Hemorrágicas Virales</span></a></li><li class="   SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/GermenesEvitelapropagacion" title="Gérmenes:  Evite la propagación"><span>Gérmenes:  Evite la propagación</span></a></li><li class="   SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/GripePandemica" title="Gripe Pandémica"><span>Gripe Pandémica</span></a></li><li class="   SunItem-9 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Pesteneumonica" title="Peste neumónica"><span>Peste neumónica</span></a></li><li class="   SunItem-10 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Tularemia" title="Tularemia"><span>Tularemia</span></a></li><li class="   last-item SunItem-11 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Enfermedades/Viruela" title="Viruela"><span>Viruela</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-4"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Temporales y desastres naturales</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Aguaalternativosenunaemergencia" title="Agua alternativos en una emergencia"><span>Agua alternativos en una emergencia</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Aguadeemergencia" title="Agua de emergencia"><span>Agua de emergencia</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Comoapagarlasutilidades" title="Cómo apagar las utilidades"><span>Cómo apagar las utilidades</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Cortesdeenergia" title="Cortes de energía"><span>Cortes de energía</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Incendiosdomesticos" title="Incendios domésticos"><span>Incendios domésticos</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Incendiossalvajes" title="Incendios forestales"><span>Incendios forestales</span></a></li><li class="dir   SunItem-7 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-5" data-target="#mm-5"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Inundaciones" title="Inundaciones"><span>Inundaciones</span></a></li><li class="   SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Precaucionesencasodecalorextremo" title="Precauciones en caso de calor extremo"><span>Precauciones en caso de calor extremo</span></a></li><li class="   SunItem-9 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Refugioenellugar" title="Refugio en el lugar"><span>Refugio en el lugar</span></a></li><li class="dir   SunItem-10 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-6" data-target="#mm-6"></a><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Temporalesinvernales" title="Temporales invernales"><span>Temporales invernales</span></a></li><li class="   SunItem-11 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Terremotos" title="Terremotos"><span>Terremotos</span></a></li><li class="   SunItem-12 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Tormentasdeviento" title="Tormentas de viento"><span>Tormentas de viento</span></a></li><li class="   SunItem-13 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Tsunamis" title="Tsunamis"><span>Tsunamis</span></a></li><li class="   last-item SunItem-14 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Volcanes" title="Volcanes"><span>Volcanes</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-5"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-4" data-target="#mm-4"></a><a class="mm-title" href="#mm-4">Inundaciones</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Inundaciones/InundacionesComolimpiarelsotano" title="Inundaciones: Cómo limpiar el sótano"><span>Inundaciones: Cómo limpiar el sótano</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-6"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-4" data-target="#mm-4"></a><a class="mm-title" href="#mm-4">Temporales invernales</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Temporalesydesastresnaturales/Temporalesinvernales/Hipotermia" title="Hipotermia"><span>Hipotermia</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-7"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Información de emergencia para grupos especiales</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Informaciondeemergenciaparagruposespeciales/Ninosydesastres" title="Niños y desastres"><span>Niños y desastres</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-8"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Prepárese para una emergencia</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Calentadoresdeagua" title="Calentadores de agua"><span>Calentadores de agua</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Contactosfueradelarea" title="Contactos fuera del área"><span>Contactos fuera del área</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Comoutilizarel911" title="Cómo utilizar el 9-1-1"><span>Cómo utilizar el 9-1-1</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Preparaciondelafamiliaduranteemergencias" title="Preparación de la familia durante emergencias"><span>Preparación de la familia durante emergencias</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Preparaciondesuvehiculo" title="Preparación de su vehículo"><span>Preparación de su vehículo</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Provisionesparaemergencias" title="Provisiones para emergencias"><span>Provisiones para emergencias</span></a></li><li class="   last-item SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Prepareseparaunaemergencia/Telefonosinteligentes" title="Teléfonos inteligentes"><span>Teléfonos inteligentes</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-9"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-1" data-target="#mm-1"></a><a class="mm-title" href="#mm-1">Publicaciones</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/Estarpreparadoesestarasalvo/Publicaciones/Hojasinformativas" title="Hojas informativas"><span>Hojas informativas</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-10"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">Be Prepared, Be Safe</a></div><ul class="mm-listview"><li class="dir   first-item SunItem-1 "><em class="mm-counter">7</em><a class="mm-next" href="#mm-11" data-target="#mm-11"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups" title="Emergency Information for Specific Groups"><span>Emergency Information for Specific Groups</span></a></li><li class="dir   SunItem-2 "><em class="mm-counter">17</em><a class="mm-next" href="#mm-12" data-target="#mm-12"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters" title="Severe Weather and Natural Disasters"><span>Severe Weather and Natural Disasters</span></a></li><li class="dir   SunItem-3 "><em class="mm-counter">10</em><a class="mm-next" href="#mm-16" data-target="#mm-16"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism" title="Bioterrorism and Terrorism"><span>Bioterrorism and Terrorism</span></a></li><li class="dir   SunItem-4 "><em class="mm-counter">9</em><a class="mm-next" href="#mm-17" data-target="#mm-17"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases" title="Diseases"><span>Diseases</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyTelephoneNumbers" title="Emergency Telephone Numbers"><span>Emergency Telephone Numbers</span></a></li><li class="dir   SunItem-6 "><em class="mm-counter">7</em><a class="mm-next" href="#mm-18" data-target="#mm-18"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady" title="National Preparedness Month"><span>Get Ready</span></a></li><li class="dir   last-item SunItem-7 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-19" data-target="#mm-19"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Publications" title="Emergency Preparedness Publications"><span>Publications</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-11"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Emergency Information for Specific Groups</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/ChildrenandDisasters" title="Children and Disasters"><span>Children and Disasters</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/DeafandHardofHearingDisastertips" title="Deaf and Hard of Hearing: Disaster tips"><span>Deaf and Hard of Hearing: Disaster tips</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/MedicalNeedsDisasterTips" title="Medical Needs: Disaster Tips"><span>Medical Needs: Disaster Tips</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/MobilityDisabilitiesDisasterTips" title="Mobility Disabilities: Disaster Tips"><span>Mobility Disabilities: Disaster Tips</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/PetsandEmergencies" title="Pets and Emergencies"><span>Pets and Emergencies</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/PsychologicalandEmotionalNeeds" title="Psychological and Emotional Needs"><span>Psychological and Emotional Needs</span></a></li><li class="   last-item SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyInformationforSpecificGroups/VisualDisabilitiesDisasterTips" title="Visual Disabilities: Disaster Tips"><span>Visual Disabilities: Disaster Tips</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-12"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Severe Weather and Natural Disasters</a></div><ul class="mm-listview"><li class="dir   first-item SunItem-1 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-13" data-target="#mm-13"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/ColdWeather" title="Cold Weather"><span>Cold Weather</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Earthquakes" title="Earthquakes"><span>Earthquakes</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/FiresintheHome" title="Fires in the Home"><span>Fires in the Home</span></a></li><li class="dir   SunItem-4 "><em class="mm-counter">1</em><a class="mm-next" href="#mm-14" data-target="#mm-14"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Floods" title="Floods"><span>Floods</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/HotWeatherSafety" title="Hot Weather Safety"><span>Hot Weather Safety</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/LandslidesandMudflows" title="Landslides and Mudflows"><span>Landslides and Mudflows</span></a></li><li class="dir   SunItem-7 "><em class="mm-counter">2</em><a class="mm-next" href="#mm-15" data-target="#mm-15"></a><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/PowerOutages" title="Power Outages"><span>Power Outages</span></a></li><li class="   SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/SewageSpillsCleaningThemUp" title="Sewage Spills: Cleaning Them Up"><span>Sewage Spills: Cleaning Them Up</span></a></li><li class="   SunItem-9 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/ShelterInPlace" title="Shelter In Place"><span>Shelter In Place</span></a></li><li class="   SunItem-10 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Smartphone" title="Smartphone"><span>Smartphone</span></a></li><li class="   SunItem-11 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Tsunamis" title="Tsunamis"><span>Tsunamis</span></a></li><li class="   SunItem-12 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/TurningOfftheUtilities" title="Turning Off the Utilities"><span>Turning Off the Utilities</span></a></li><li class="   SunItem-13 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Volcanoes" title="Volcanoes"><span>Volcanoes</span></a></li><li class="   SunItem-14 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/WaterPurification" title="Water Purification"><span>Water Purification</span></a></li><li class="   SunItem-15 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/WaterSources" title="Water Sources"><span>Water Sources</span></a></li><li class="   SunItem-16 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Wildfires" title="Wildfires"><span>Wildfires</span></a></li><li class="   last-item SunItem-17 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Windstorms" title="Windstorms"><span>Windstorms</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-13"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-12" data-target="#mm-12"></a><a class="mm-title" href="#mm-12">Cold Weather</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/ColdWeather/Hypothermia" title="Hypothermia"><span>Hypothermia</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-14"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-12" data-target="#mm-12"></a><a class="mm-title" href="#mm-12">Floods</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/Floods/FloodsCleaningaBasement" title="Floods: Cleaning a Basement"><span>Floods: Cleaning a Basement</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-15"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-12" data-target="#mm-12"></a><a class="mm-title" href="#mm-12">Power Outages</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/PowerOutages/CarbonMonoxideSafety" title="Carbon Monoxide Safety"><span>Carbon Monoxide Safety</span></a></li><li class="   last-item SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/SevereWeatherandNaturalDisasters/PowerOutages/GeneratorUseDuringaPowerOutage" title="Generator Use During a Power Outage"><span>Generator Use During a Power Outage</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-16"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Bioterrorism and Terrorism</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/Anthrax" title="Anthrax"><span>Anthrax</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/BioterrorismFAQ" title="Bioterrorism FAQ"><span>Bioterrorism FAQ</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/BombThreats" title="Bomb Threats"><span>Bomb Threats</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/Botulism" title="Botulism"><span>Botulism</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/ChemicalAgents" title="Chemical Agents"><span>Chemical Agents</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/PneumonicPlague" title="Pneumonic Plague"><span>Pneumonic Plague</span></a></li><li class="   SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/Smallpox" title="Smallpox"><span>Smallpox</span></a></li><li class="   SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/Terrorism" title="Terrorism"><span>Terrorism</span></a></li><li class="   SunItem-9 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/Tularemia" title="Tularemia"><span>Tularemia</span></a></li><li class="   last-item SunItem-10 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/BioterrorismandTerrorism/ViralHemorrhagicFevers" title="Viral Hemorrhagic Fevers"><span>Viral Hemorrhagic Fevers</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-17"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Diseases</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/Ebola" title="Ebola"><span>Ebola</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/GermsPreventTheirSpread" title="Germs: Prevent Their Spread"><span>Germs: Prevent Their Spread</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/MedicationDistributionDuringanEmergency" title="Medication Distribution During an Emergency"><span>Medication Distribution During an Emergency</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/PandemicFlu" title="Pandemic Flu"><span>Pandemic Flu</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/PneumonicPlague" title="Pneumonic Plague"><span>Pneumonic Plague</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/Poisoning" title="Poisoning"><span>Poisoning</span></a></li><li class="   SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/Smallpox" title="Smallpox"><span>Smallpox</span></a></li><li class="   SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/Tularemia" title="Tularemia"><span>Tularemia</span></a></li><li class="   last-item SunItem-9 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Diseases/ViralHemorrhagicFevers" title="Viral Hemorrhagic Fevers"><span>Viral Hemorrhagic Fevers</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-18"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Get Ready</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/Calling911" title="Calling 911"><span>Calling 911</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/EmergencySupplies" title="Emergency Supplies"><span>Emergency Supplies</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/HomeEmergencyPreparedness" title="Home Emergency Preparedness"><span>Home Emergency Preparedness</span></a></li><li class="   SunItem-4 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/OutofAreaContacts" title="Out-of-Area Contacts"><span>Out-of-Area Contacts</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/PreparednessTopicsAZ" title="Preparedness Topics A-Z"><span>Preparedness Topics A-Z</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/VehiclePreparedness" title="Vehicle Preparedness"><span>Vehicle Preparedness</span></a></li><li class="   last-item SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/GetReady/WaterHeatersHowtosecurethem" title="Water Heaters (How to secure them)"><span>Water Heaters (How to secure them)</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-19"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-10" data-target="#mm-10"></a><a class="mm-title" href="#mm-10">Publications</a></div><ul class="mm-listview"><li class="   last-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/Publications/Factsheets" title="Factsheets"><span>Factsheets</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-20"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">Current Hazards and Issues</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/CurrentHazardsandIssues/FentanylDeathReport" title="Fentanyl Death Report"><span>Fentanyl Death Report</span></a></li><li class="   last-item SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/CurrentHazardsandIssues/WashingtonWildfires" title="Washington Wildfires"><span>Washington Wildfires</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-21"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">Novel Coronavirus Outbreak 2020 (COVID-19)</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/TestingforCOVID19" title="Testing for COVID-19"><span>Testing for COVID-19</span></a></li><li class="   SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/ResourcesandRecommendations" title="Resources and Recommendations"><span>Resources and Recommendations</span></a></li><li class="   SunItem-3 "><a href="https://www.doh.wa.gov/Emergencies/Coronavirus/Resources" title="Local Health Jurisdictions"><span>Local Health Jurisdictions</span></a></li><li class="dir   SunItem-4 "><em class="mm-counter">2</em><a class="mm-next" href="#mm-22" data-target="#mm-22"></a><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders" title="Healthcare Providers"><span>Healthcare Providers</span></a></li><li class="   SunItem-5 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020/HealthEducation" title="Health Education Materials"><span>Health Education Materials</span></a></li><li class="   SunItem-6 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/StigmaReduction" title="Stigma Reduction"><span>Stigma Reduction</span></a></li><li class="   SunItem-7 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020/FactSheet" title="Novel Coronavirus Fact Sheet Translated into Multiple Languages"><span>Fact Sheet</span></a></li><li class="   last-item SunItem-8 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/FrequentlyAskedQuestions" title="Frequently Asked Questions"><span>Frequently Asked Questions</span></a></li></ul></div><div class="mm-panel mm-hidden" id="mm-22"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-21" data-target="#mm-21"></a><a class="mm-title" href="#mm-21">Healthcare Providers</a></div><ul class="mm-listview"><li class="   first-item SunItem-1 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders/EmergencyVolunteerHealthPractitioners" title="Emergency Volunteer Health Practitioners"><span>Emergency Volunteer Health Practitioners</span></a></li><li class="   last-item SunItem-2 "><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders/HealthcareFacilities" title="Healthcare Facilities"><span>Healthcare Facilities</span></a></li></ul></div></div></div>
+    <a id="skipnav" class="skipnav" href="#MainContent" tabindex="1">Skip to main content</a>
+    <form method="post" action="/Emergencies/Coronavirus" id="Form" enctype="multipart/form-data" class="mm-page mm-slideout">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="">
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value=";;System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35:en:92dc34f5-462f-43bd-99ec-66234f705cd1:ea597d4b:b25378d2">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV3wvWkQaYVYxURtpLFGyPFRkFmSTFSMeBdMfnLuZ5LwxMjfdC81&amp;t=637100574046795651" type="text/javascript"></script>
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a92dc34f5-462f-43bd-99ec-66234f705cd1%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="OZxZiyr5I8/+p/aVek5rR1HlhZYBB9X8vefhVLlP0/gkfypRU/f7lkedYdbeogK1Hycq5uNzIQ1XHRNvjvYZI0Nwy5VNPLZ831zOkAu5NGkUNeaC">
+</div><script src="/DependencyHandler.axd/4557ecc6898ef55ebc0c52be643b21ca/973/js" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 1200, '');
+//]]>
+</script>
+
+        
+        
+        
+
+<!--CDF(Javascript|/Portals/1/Skins/DnnGo33/scripts/wadohcustom.js)-->
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+ 
+ 
+<!-- header7 --> 
+
+<!-- header7 End --> 
+<div class="body_bg full"> 
+
+  
+  <div id="dnn_wrapper">
+    <div class="wrapper">
+      <img src="/Portals/1/DohLogoPrint.png" class="printlogo" alt="Logo">
+      <div class="hidden-xs"> 
+          <!-- header1~6 --> 
+          <!--header1 ~ header6 -->
+
+<!-- header3 -->
+<div id="header3">
+  <header>
+    <div class="dnn_layout LogoMenuBox  ">
+      <div class="head_mid clearfix">
+        <div class="dnn_logo  ">
+          <a id="dnn_dnnLOGO_hypLogo" title="Washington State Department of Health" href="https://www.doh.wa.gov/"><img id="dnn_dnnLOGO_imgLogo" src="/Portals/1/dohLogoHeader.gif?ver=2012-08-22-155036-000" alt="Washington State Department of Health" style="border-width:0px;"></a>
+        </div>
+        <div class="HeaderRight">
+          <div class="languageBox ElementHide-xs ElementHide-sm ElementHide-md ElementHide-lg">
+            <div class="language-object">
+
+
+</div>
+          </div>
+          <div class="wadohHeaderLinks  ">
+            <ul class="headerHotLinks">
+              <li><a href="/">Home</a></li>
+              <li><a href="/Newsroom">Newsroom</a></li>
+              <li><a href="/Publications">Publications</a></li>
+              <li><a href="/AboutUs">About Us</a></li>
+            </ul>
+          </div>
+          <div class="headerSearchPanel  ">
+            <div id="headerTopics">
+              <div class="btnTopicsAZ"><a title="View all topics alphabetically A-Z" href="/TopicsAtoZ" class="btn btn-default btn-sm"><i class="fa fa-th-list" aria-hidden="true"></i>Topics A-Z</a></div>
+              <div class="btnTopicsAZ"><a href="/esp" class="btn btn-default btn-sm"><i class="fa fa-th-list" aria-hidden="true"></i>Español</a></div>
+            </div>
+            <div id="headerSearch">
+                <label for="dnn_SEARCH1_txtSearch" class="sr-only">Search: </label>
+                
+                <div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" placeholder="Custom Search" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;" dir="ltr" spellcheck="false" x-webkit-grammar="builtin:search" lang="en"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roll_menu_deactivated">
+      <div class="header_top  " style="margin-bottom: 0;"><!-- Temporary style setting for coronavirus banner -->
+        <div class="dnn_layout">
+          <div class="head_mid clearfix">
+            <div class="roll_logo  ">
+              <a id="dnn_dnnLOGO2_hypLogo" title="Washington State Department of Health" href="https://www.doh.wa.gov/"><img id="dnn_dnnLOGO2_imgLogo" src="/Portals/1/dohLogoHeader.gif?ver=2012-08-22-155036-000" alt="Washington State Department of Health" style="border-width:0px;"></a>
+            </div>
+            <nav>
+              <div class="dnn_menu hidden-xs">
+                <div id="dnngo_megamenu" class="IHide-sm IHide-md">
+                      
+    <div class="dnngo_gomenu" id="dnngo_megamenu45caea7e71">
+      
+         <ul class="primary_structure">
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/AboutUs" aria-haspopup="true"><span>About Us</span></a>
+ <div class="dnngo_menuslide slide">
+ <ul class="dnngo_slide_menu ">
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/VisionMissionandValues" title="Vision, Mission and Values"><span>Vision, Mission and Values</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/StateHealthImprovementPlan" title="State Health Improvement Plan"><span>State Health Improvement Plan</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/StudentEngagement" title="Student Engagement"><span>Student Engagement</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/StrategicPlan" title="Strategic Plan"><span>Strategic Plan</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/OrganizationalChart" title="Organizational Chart"><span>Organizational Chart</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/Partners" title="Partners"><span>Partners</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/ContactUs" title="Contact Us"><span>Contact Us</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/BusinessHoursandLocations" title="Business Hours and Locations"><span>Business Hours and Locations</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.governmentjobs.com/careers/washington/doh" title="Current Employment Opportunities"><span>Employment</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/ProgramsandServices" title="Programs and Services"><span>Programs and Services</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/Leadership" title="Leadership"><span>Leadership</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/FrequentlyAskedQuestions" title="Frequently Asked Questions"><span>Frequently Asked Questions</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/AccessibilityPolicyAboutInformationandData" title="Accessibility Policy About Information and Data"><span>Accessibility Policy About Information and Data</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/BudgetContractsandGrants" title="Budget, Contracts and Grants"><span>Budget, Contracts and Grants</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/FileaComplaint" title="File a Complaint"><span>File a Complaint</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/PublicRecords" title="Public Records"><span>Public Records</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/RuleMaking" title="Rule Making"><span>Rule Making</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/WorkatHealth" title="Work@Health"><span>Work at Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/BoardsandCommissions" title="Boards and Commissions"><span>Boards and Commissions</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AboutUs/RainbowAllianceandInclusionNetworkRAIN" title="RAIN"><span>Rainbow Alliance and Inclusion Network - RAIN</span></a>
+</li>
+</ul>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/YouandYourFamily" aria-haspopup="true"><span>You and Your Family</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">You and Your Family</h2>
+<div class="columns250">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a href="/YouandYourFamily/Breastfeeding">Breastfeeding</a></li>
+<li><a href="https://www.doh.wa.gov/YouandYourFamily/DisabilityOrganizations">Disability Organizations</a></li>
+<li><a href="/DrugUserHealth">Drug User Health</a></li>
+<li><a href="/YouandYourFamily/FamilyPlanning">Family Planning</a></li>
+<li><a href="/YouandYourFamily/FoodSafety">Food Safety</a></li>
+<li><a href="/YouandYourFamily/HealthyAging">Healthy Aging</a></li>
+<li><a href="/YouandYourFamily/HealthyHome">Healthy Home</a></li>
+<li><a href="/YouandYourFamily/IllnessandDisease">Illness and Disease</a></li>
+<li><a href="/YouandYourFamily/Immunization">Immunization</a></li>
+<li><a href="/YouandYourFamily/InfantsandChildren">Infants and&nbsp;Children</a></li>
+<li><a href="/YouandYourFamily/InjuryandViolencePrevention">Injury and Violence Prevention</a></li>
+<li><a href="/YouandYourFamily/Marijuana">Marijuana</a></li>
+<li><a href="/YouandYourFamily/MensHealth">Men's Health</a></li>
+<li><a href="/YouandYourFamily/NutritionandPhysicalActivity">Nutrition and Physical Activity</a></li>
+<li><a href="/YouandYourFamily/OralHealth">Oral Health</a></li>
+<li><a href="/YouandYourFamily/PoisoningandDrugOverdose">Poisoning and Drug Overdose</a></li>
+<li><a href="/YouandYourFamily/TeensandYoungAdults">Teens and Young Adults</a></li>
+<li><a href="/YouandYourFamily/Tobacco">Tobacco</a></li>
+<li><a href="/YouandYourFamily/WIC">WIC</a></li>
+<li><a href="/YouandYourFamily/WomensHealth">Women's Health</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/CommunityandEnvironment" aria-haspopup="true"><span>Community and Environment</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">Community and Environment</h2>
+<div class="columns250">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a href="/CommunityandEnvironment/AirQuality">Air Quality</a></li>
+<li><a href="/CommunityandEnvironment/ClimateandHealth">Climate and Health</a></li>
+<li><a href="/CommunityandEnvironment/Contaminants">Contaminants</a></li>
+<li><a href="/CommunityandEnvironment/DrinkingWater">Drinking Water</a></li>
+<li><a href="/CommunityandEnvironment/EssentialsforChildhoodInitiative">Essentials for Childhood Initiative</a></li>
+<li><a href="/CommunityandEnvironment/Food">Food</a></li>
+<li><a href="/CommunityandEnvironment/HealthEquity">Health Equity</a></li>
+<li><a href="/healthiestnextgen">Healthiest Next Generation</a></li>
+<li><a href="/CommunityandEnvironment/HealthyCommunitiesWashington">Healthy Communities Washington</a></li>
+<li><a href="/CommunityandEnvironment/Noise">Noise</a></li>
+<li><a href="/CommunityandEnvironment/OneHealth">One Health</a></li>
+<li><a href="/CommunityandEnvironment/Opioids"><strong>Opioids</strong></a></li>
+<li><a href="/CommunityandEnvironment/Pests">Pests</a></li>
+<li><a href="/CommunityandEnvironment/Radiation">Radiation</a></li>
+<li><a href="/CommunityandEnvironment/Schools">Schools</a></li>
+<li><a href="/CommunityandEnvironment/Shellfish">Shellfish</a></li>
+<li><a href="/CommunityandEnvironment/WastewaterManagement">Wastewater Management</a></li>
+<li><a href="/CommunityandEnvironment/WaterRecreation">Water Recreation</a></li>
+<li><a href="/CommunityandEnvironment/WorksiteWellness">Worksite Wellness</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/LicensesPermitsandCertificates" aria-haspopup="true"><span>Licenses, Permits and Certificates</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">Licenses, Permits and Certificates</h2>
+<div class="columns300">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a href="/LicensesPermitsandCertificates/BirthDeathMarriageandDivorce">Birth, Death, Marriage and Divorce</a></li>
+<li><a href="/LicensesPermitsandCertificates/FacilitiesNewReneworUpdate">Facilities - New, Renew or Update</a></li>
+<li><a href="/LicensesPermitsandCertificates/FileComplaintAboutProviderorFacility">File Complaint About Provider or Facility</a></li>
+<li><a href="https://wmc.wa.gov">Medical Commission</a></li>
+<li><a href="/LicensesPermitsandCertificates/NursingCommission">Nursing Commission</a></li>
+<li><a href="/LicensesPermitsandCertificates/ProfessionsNewReneworUpdate">Professions - New, Renew or Update</a></li>
+<li><a href="/LicensesPermitsandCertificates/ProviderCredentialSearch">Provider Credential Search</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/DataandStatisticalReports" aria-haspopup="true"><span>Data and Statistical Reports</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">Data and Statistical Reports</h2>
+<div class="columns250">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a title="Data and Statistical Reports Catalog" href="/DataandStatisticalReports/DataTopicsAZ">Data Topics A-Z</a></li>
+<li><a title="Data Guidelines" href="/DataandStatisticalReports/DataGuidelines">Data Guidelines</a></li>
+<li><a title="Data Systems" href="/DataandStatisticalReports/DataSystems">Data Systems</a></li>
+<li><a title="Diseases and Chronic Conditions" href="/DataandStatisticalReports/DiseasesandChronicConditions">Diseases and Chronic Conditions</a></li>
+<li><a title="Environmental Health" href="/DataandStatisticalReports/EnvironmentalHealth">Environmental Health</a></li>
+<li><a title="Health Behaviors" href="/DataandStatisticalReports/HealthBehaviors">Health Behaviors</a></li>
+<li><a title="Healthcare in Washington" href="/DataandStatisticalReports/HealthcareinWashington">Healthcare in Washington</a></li>
+<li><a title="Injury Violence and Poisoning" href="/DataandStatisticalReports/InjuryViolenceandPoisoning">Injury Violence and Poisoning</a></li>
+<li><a title="Maternal and Child Health" href="/DataandStatisticalReports/MaternalandChildHealth">Maternal and Child Health</a></li>
+<li><a title="Vital Statistics Data Homepage" href="/DataandStatisticalReports/HealthStatistics">Health Statistics</a></li>
+<li><a href="/DataandStatisticalReports/StateHealthAssessment">State Health Assessment</a></li>
+<li><a href="/DataandStatisticalReports/WashingtonTrackingNetworkWTN">Washington Tracking Network (WTN)</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir current">
+<a href="https://www.doh.wa.gov/Emergencies" aria-haspopup="true"><span>Emergencies</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">Emergencies</h2>
+<div class="columns300">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a href="https://www.doh.wa.gov/Emergencies/CurrentHazardsandIssues">Current Hazards and Issues</a></li>
+<li><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe">Be Prepared, Be Safe</a></li>
+<li><a href="https://www.doh.wa.gov/Emergencies/BePreparedBeSafe/EmergencyTelephoneNumbers">Emergency Contacts and Numbers</a></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/ForPublicHealthandHealthcareProviders" aria-haspopup="true"><span>For Public Health and Healthcare Providers</span></a>
+<div class="dnngo_menuslide">
+<div class="dnngo_boxslide">
+<div class="menu_topbox">
+<h2 class="mega_title">For Public Health and Healthcare Providers</h2>
+<div class="columns300">
+<ul class="linklist tight flush" style="margin: 0px; font-weight: bold; list-style-type: none;">
+<li><a href="/ForPublicHealthandHealthcareProviders/BreastfeedingFriendlyWashington">Breastfeeding Friendly Washington</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/ClinicalLaboratoryReporting">Clinical Laboratory Reporting</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/EmergencyMedicalServicesEMSSystems">Emergency Medical Services (EMS) Systems</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/EmergencyPreparedness">Emergency Preparedness</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/HealthSystemsTransformation">Health Systems Transformation</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/HealthcareProfessionsandFacilities">Healthcare Professions and Facilities</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/NotifiableConditions">Notifiable Conditions</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/PublicHealthLaboratories">Public Health Laboratories</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/PublicHealthSystemResourcesandServices">Public Health System Resources and Services</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/RuralHealth">Rural Health</a></li>
+<li><a href="/ForPublicHealthandHealthcareProviders/TribalPublicHealth">Tribal Public Health</a></li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/Newsroom" aria-haspopup="true"><span>Newsroom</span></a>
+ <div class="dnngo_menuslide slide">
+ <ul class="dnngo_slide_menu ">
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Newsroom/2019NewsReleases" title="2019 News Releases"><span>2019 News Releases</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Newsroom/2018NewsReleases" title="2018 News Releases"><span>2018 News Releases</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Newsroom/MediaContacts" title="Media Contacts"><span>Media Contacts</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Newsroom/SocialMedia" title="Social Media"><span>Social Media</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Newsroom/ReportersGuidetoWashingtonStateHealthAgencies" title="Reporters' Guide to Washington State Health Agencies"><span>Reporters' Guide to Washington State Health Agencies</span></a>
+</li>
+</ul>
+</div>
+</li>
+ <li class="dir ">
+<a href="https://www.doh.wa.gov/Publications" aria-haspopup="true"><span>Publications</span></a>
+ <div class="dnngo_menuslide slide">
+ <ul class="dnngo_slide_menu ">
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/Adolescents" title="Publications on Adolescent Health"><span>Adolescents</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/Aging" title="Publications on Aging"><span>Aging</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/AnimalandInsectborneDiseases" title="Publications on Animal and Insectborne Diseases"><span>Animal and Insectborne Diseases</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/AntibioticResistance" title="Publications on Antibiotic Resistance"><span>Antibiotic Resistance</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/BirthControlandFamilyPlanning" title="Publications on Birth Control and Family Planning"><span>Birth Control and Family Planning</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/ChronicDiseasesAsthmaCancerDiabetesetc" title="Publications on Chronic Diseases"><span>Chronic Diseases - Asthma, Cancer, Diabetes, etc.</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/DentalandOralHealth" title="Publications on Dental and Oral Health"><span>Dental and Oral Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/DisabilitiesandSpecialHealthcareNeeds" title="Publications on Disabilities and Special Healthcare Needs"><span>Disabilities and Special Healthcare Needs</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/DrinkingWater" title="Drinking Water"><span>Drinking Water</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/EmergencyPreparednessandFirstResponders" title="Publications on Emergency Preparedness and First Responders"><span>Emergency Preparedness and First Responders</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/FacilitiesLicensedbytheDepartmentofHealth" title="Publications on Facilities Licensed by the Department of Health"><span>Facilities Licensed by the Department of Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/FoodSafety" title="Publications on Food Safety"><span>Food Safety</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/GeneticsandNewbornScreening" title="Publications on Genetics and Newborn Screening"><span>Genetics and Newborn Screening</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/HazardousMaterialsandToxicChemicals" title="Publications on Hazardous Materials and Toxic Chemicals"><span>Hazardous Materials and Toxic Chemicals</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/HealthStatistics" title="Publications on Health Statistics"><span>Health Statistics</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/Immunizations" title="Publications on Immunizations"><span>Immunizations</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/IndoorAirQualityandMold" title="Publications on Indoor Air Quality and Mold"><span>Indoor Air Quality and Mold</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/InfectiousDiseasesFluHepatitisTuberculosis" title="Publications on Infectious Diseases"><span>Infectious Diseases - Flu, Hepatitis, Tuberculosis</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/InjuryandViolencePrevention" title="Publications on Injury and Violence Prevention"><span>Injury and Violence Prevention</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/MentalHealth" title="Publications on Mental Health"><span>Mental Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/NutritionandPhysicalActivity" title="Publications on Nutrition and Physical Activity"><span>Nutrition and Physical Activity</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/PregnancyInfantsandChildren" title="Publications on Pregnancy, Infants and Children"><span>Pregnancy, Infants and Children</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/PreventiveHealth" title="Publications on Preventive Health"><span>Preventive Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/ProfessionsLicensedbytheDepartmentofHealth" title="Publications on Professions Licensed by the Department of Health"><span>Professions Licensed by the Department of Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/PublicHealthPlanningandPractice" title="Publications on Public Health Planning and Practice"><span>Public Health Planning and Practice</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/Radiation" title="Publications on Radiation"><span>Radiation</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/SchoolHealthandSafety" title="Publications on School Health and Safety"><span>School Health and Safety</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/SepticandSewage" title="Publications on Septic and Sewage"><span>Septic and Sewage</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/ShellfishandFish" title="Shellfish and Fish"><span>Shellfish and Fish</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/STDsHIVAIDSandSexualHealth" title="Publications on STDs, HIV/AIDS and Sexual Health"><span>STDs, HIV/AIDS and Sexual Health</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/SuccessStories" title="Success Stories"><span>Success Stories</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/TobaccoandSubstanceUse" title="Publications on Tobacco and Substance Use"><span>Tobacco and Substance Use</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Publications/WICWomenInfantsandChildren" title="Publications on WIC (Women, Infants and Children)"><span>WIC (Women, Infants and Children)</span></a>
+</li>
+</ul>
+</div>
+</li>
+ <li class="dir ">
+<a href="javascript:;" aria-haspopup="true"><span>Alternate Languages</span></a>
+ <div class="dnngo_menuslide slide">
+ <ul class="dnngo_slide_menu ">
+ <li class=" ">
+<a href="https://www.doh.wa.gov/amharic" title="Amharic"><span>Amharic</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/arabic" title="Arabic"><span>Arabic</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/chinese" title="Chinese"><span>Chinese</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/japanese" title="Japanese"><span>Japanese</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/khmer" title="Khmer"><span>Khmer</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/korean" title="Korean"><span>Korean</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/marshallese" title="Marshallese"><span>Marshallese</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Punjabi" title="Punjabi"><span>Punjabi</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/russian" title="Russian"><span>Russian</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/AlternateLanguages/Somali" title="Somali"><span>Somali</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/esp" title="Spanish"><span>Spanish</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Tagalog" title="Tagalog"><span>Tagalog</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/Ukrainian" title="Ukranian"><span>Ukranian</span></a>
+</li>
+ <li class=" ">
+<a href="https://www.doh.wa.gov/vietnamese" title="Vietnamese"><span>Vietnamese</span></a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $("#dnngo_megamenu45caea7e71").dnngomegamenu({
+            slide_speed: 200,
+            delay_disappear: 500,
+            popUp: "vertical",//level
+			delay_show:150,
+			direction:"ltr",//rtl ltr
+			megamenuwidth:"box",//full box
+			WidthBoxClassName:".dnn_layout"
+        });
+    });
+
+
+	jQuery(document).ready(function () {
+		jQuery("#dnngo_megamenu45caea7e71").has("ul").find(".dir > a").attr("aria-haspopup", "true");
+	}); 
+
+</script>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+<div class="alert alert-info covid-alert" style="color: #235067; text-align: center; border-radius: 0; font-weight: bold;">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;For more information about the 2019 Novel Coronavirus situation, please visit our <a href="/Emergencies/Coronavirus">COVID-19 page</a>.
+</div>
+<!-- header3 End --> 
+<!-- header6 --> 
+
+          <!-- header1~6 end --> 
+      </div>
+      <div class="visible-xs">
+          <!-- mobile header --> 
+          
+<header>
+    <div class=" phoneHeadTop clearfix"> 
+        <span class="  ">
+            <a id="dnn_dnnLOGO3_hypLogo" title="Washington State Department of Health" href="https://www.doh.wa.gov/"><img id="dnn_dnnLOGO3_imgLogo" src="/Portals/1/dohLogoHeader.gif?ver=2012-08-22-155036-000" alt="Washington State Department of Health" style="border-width:0px;"></a>
+        </span> 
+        <span class="fa fa-search  " id="mobile_search" tabindex="0"></span>
+        <nav class="">
+          
+<a href="#gomenua330199d8c" class="mobilemenu_close">X</a>
+
+ 
+ <script type="text/javascript">
+     jQuery(document).ready(function ($) {
+
+
+		 $('#gomenua330199d8c').find(".dir.mm-selected").removeClass("mm-selected").parent().parent().addClass("mm-selected")
+		 
+         $('#gomenua330199d8c').mobile_menu({
+             slidingSubmenus: true,
+             counters: true,
+             navbartitle: "Menu",
+             headerbox: ".menu_header",
+             footerbox: ".menu_footer"			 
+         });
+		 
+		  $('#gomenua330199d8c').find("a[href='javascript:;']").on("click",function (e) {
+			  e.preventDefault();
+			  $(this).siblings(".mm-next").click();
+		  })
+     });
+</script>
+
+
+ 
+        </nav>
+    </div>
+    <div class="phoneHeadBottom" style="padding:0"><!-- Temporary style setting for coronavirus banner -->
+        
+        <div class="searchBox2   " id="search2">
+          <label for="dnn_SEARCH2_txtSearch" class="sr-only">Search: </label>
+          
+            <div id="___gcse_1"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-en" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id2"><table cellspacing="0" cellpadding="0" id="gs_id51" class="gstl_51 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti51" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id2" placeholder="Custom Search" style="width: 100%; padding: 0px; border: none; margin: -0.0625em 0px 0px; height: 1.25em; background: url(&quot;https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png&quot;) left center no-repeat rgb(255, 255, 255); text-indent: 48px; outline: none;" dir="ltr" spellcheck="false" x-webkit-grammar="builtin:search" lang="en"></td><td class="gsib_b"><div class="gsst_b" id="gs_st51" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;" title="Clear search box" role="button"><span class="gscb_a" id="gs_cb51" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>search</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table></form></div></div>
+        </div>
+    </div>
+</header>
+<div class="alert alert-info covid-alert" style="color: #235067; text-align: center; border-radius: 0; margin-bottom: 20px; font-weight: bold;">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp;&nbsp;For more information about the 2019 Novel Coronavirus situation, please visit our <a href="/Emergencies/Coronavirus">COVID-19 page</a>.
+</div>
+
+          <!-- mobile end --> 
+      </div>
+      <div class="Breadcrumb_bg" id="Breadcrumb_style_4">
+      
+        <!-- breadcrumb  --> 
+        <div class="shade"></div>
+<div class="breadcrumbBox   ">
+  <div class="dnn_layout">
+    <div class="content_mid clearfix">
+      <div class="breadcrumbborder">
+        <h3>Novel Coronavirus Outbreak 2020 (COVID-19) </h3>
+        <div class="breadcrumbRight"> <a href="https://www.doh.wa.gov/" title="Home"> <span class="fa fa-home"></span><span class="sr-only">Home</span></a>&nbsp;
+          <span id="dnn_dnnBREADCRUMB_lblBreadCrumb" itemprop="breadcrumb" itemscope="" itemtype="https://schema.org/breadcrumb"><span itemscope="" itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="https://www.doh.wa.gov/Emergencies" class="breadcrumb" itemprop="item"><span itemprop="name">Emergencies</span></a><meta itemprop="position" content="1"></span> &nbsp;&nbsp;&gt;&nbsp;&nbsp; <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="https://www.doh.wa.gov/Emergencies/Coronavirus" class="breadcrumb" itemprop="item"><span itemprop="name">Novel Coronavirus Outbreak 2020 (COVID-19)</span></a><meta itemprop="position" content="2"></span></span></span>
+        </div>
+        <div class="clear"></div>
+        <div id="dnn_breadcrumb_Pane" class="breadcrumb_Pane DNNEmptyPane"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- breadcrumb end --> 
+      </div>    
+    <section id="dnn_content">
+        <div class="dnn_layout">
+        <div class="content_mid clearfix">
+            <div class="row LeftPage_Box">
+            <div class="hidden-xs col-sm-3 LeftBox" id="ListBox">
+                <nav>
+                <div id="left_menu">
+                    <div class="gomenu">
+  <div class="topic-title"><a href="https://www.doh.wa.gov/Emergencies/Coronavirus" class="current">Novel Coronavirus Outbreak 2020 (COVID-19)</a></div>
+  <div class="panel-group accordion_3" id="accLeftMenu">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/TestingforCOVID19" class="panel-title-link">Testing for COVID-19</a></div>
+      </div>
+      <div id="TabID-10941" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/ResourcesandRecommendations" class="panel-title-link">Resources and Recommendations</a></div>
+      </div>
+      <div id="TabID-10966" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/Coronavirus/Resources" class="panel-title-link">Local Health Jurisdictions</a></div>
+      </div>
+      <div id="TabID-10888" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title "><a data-toggle="collapse" data-parent="#accLeftMenu" href="#TabID-10935" class="panel-toggle collapsed"><span class="fa accordion_icon"></span></a><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders" class="panel-title-link">Healthcare Providers</a></div>
+      </div>
+      <div id="TabID-10935" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="panel-group accordion_3" id="accParent10935">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders/EmergencyVolunteerHealthPractitioners" class="panel-title-link">Emergency Volunteer Health Practitioners</a></div>
+              </div>
+              <div id="TabID-10948" class="panel-collapse collapse">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/HealthcareProviders/HealthcareFacilities" class="panel-title-link">Healthcare Facilities</a></div>
+              </div>
+              <div id="TabID-10952" class="panel-collapse collapse">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020/HealthEducation" class="panel-title-link">Health Education Materials</a></div>
+      </div>
+      <div id="TabID-10937" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/StigmaReduction" class="panel-title-link">Stigma Reduction</a></div>
+      </div>
+      <div id="TabID-10934" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020/FactSheet" class="panel-title-link">Fact Sheet</a></div>
+      </div>
+      <div id="TabID-10915" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title nodeless"><a href="https://www.doh.wa.gov/Emergencies/NovelCoronavirusOutbreak2020COVID19/FrequentlyAskedQuestions" class="panel-title-link">Frequently Asked Questions</a></div>
+      </div>
+      <div id="TabID-10955" class="panel-collapse collapse">
+        <div class="panel-body"></div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+                </nav>
+                
+            </div>
+            <div class="col-sm-9" id="ContentBox"> 
+            <!-- content pane --> 
+            <main id="MainContent">
+<div class="pane_layout">
+  <section class="row">
+    <div class="col-sm-12">
+      <div id="dnn_TopPane" class="TopPane DNNEmptyPane"></div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="row tabstack">
+    <div class="col-sm-6">
+      <div id="dnn_RowFour_Grid6_Pane1" class="RowFour_Grid6_Pane1 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="dnn_RowFour_Grid6_Pane2" class="RowFour_Grid6_Pane2 DNNEmptyPane"></div>
+    </div>
+  </section>
+  
+  <section class="row">
+    <div class="col-sm-8">
+      <div id="dnn_RowSix_Grid8_Pane" class="RowSix_Grid8_Pane DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-4">
+      <div id="dnn_RowSix_Grid4_Pane" class="RowSix_Grid4_Pane DNNEmptyPane"></div>
+    </div>
+  </section>
+  
+  <section class="row">
+    <div class="col-sm-4">
+      <div id="dnn_RowEight_Grid4_Pane1" class="RowEight_Grid4_Pane1 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-4">
+      <div id="dnn_RowEight_Grid4_Pane2" class="RowEight_Grid4_Pane2 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-4">
+      <div id="dnn_RowEight_Grid4_Pane3" class="RowEight_Grid4_Pane3 DNNEmptyPane"></div>
+    </div>
+  </section>
+  <section class="row tabstack">
+    <div class="col-sm-3">
+      <div id="dnn_RowNine_Grid3_Pane1" class="RownNine_Grid3_Pane1 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-3">
+      <div id="dnn_RowNine_Grid3_Pane2" class="RowNine_Grid3_Pane2 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-3">
+      <div id="dnn_RowNine_Grid3_Pane3" class="RowNine_Grid3_Pane3 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-3">
+      <div id="dnn_RowNine_Grid3_Pane4" class="RowNine_Grid3_Pane4 DNNEmptyPane"></div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-sm-12">
+      <div id="dnn_ContentPane" class="ContentPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-33855 DnnVersionableControl"><a name="33855"></a>
+
+<div class="Container-H1"> 
+  <!--Container Title-->
+  <div class="dnntitle">
+  <h1><span id="dnn_ctr33855_dnnTITLE_titleLabel" class="title-H1">2019 Novel Coronavirus Outbreak (COVID-19)</span>
+
+
+</h1>
+  </div>
+  <!--Container Title End--> 
+  <!--Container Content-->
+  <div class="contentmain">
+  
+    <div id="dnn_ctr33855_ContentPane" class="contentpane"><!-- Start_Module_33855 --><div id="dnn_ctr33855_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr33855_HtmlModule_lblContent"><p><a class="btn btn-default" href="/Emergencies/CoronavirusSpanish">en Español - Spanish</a> <a class="btn btn-default" href="/Emergencies/Coronavirus/Russian">Русский – Russian</a> <a class="btn btn-default" href="/Emergencies/NovelCoronavirusOutbreak2020COVID19/vietnamese">Tiếng Việt – Vietnamese</a> <a class="btn btn-default" href="/Emergencies/NovelCoronavirusOutbreak2020COVID19/Korean">한국어 – Korean</a></p>
+
+<p>On January 21, 2020, the Centers for Disease Control and Prevention (CDC) and Washington State Department of Health announced the first case of 2019 Novel Coronavirus (COVID-19) in the United States in Washington State.</p>
+
+<p>This guidance does not pertain to Gov. Jay Inslee’s Stay Home, Stay Healthy order issued 3/23/2020. Information on that order is available on the <a href="https://medium.com/wagovernor/inslee-announces-stay-home-stay-healthy-order-4891a7511f5e" rel="external">Governor's website<i class="fa fa-external-link" title="External Content"></i></a>.</p>
+
+<p>Learn more about the coronavirus from Washington State’s <a href="http://www.coronavirus.wa.gov/" rel="external">official COVID-19 website<i class="fa fa-external-link" title="External Content"></i></a>. Maintained by the state&nbsp;<a href="https://www.coronavirus.wa.gov/about" title="About" rel="external">Joint Information Center<i class="fa fa-external-link" title="External Content"></i></a>.</p>
+
+<div style="margin: 0px 0px 20px; padding: 15px; background-color: rgb(223, 249, 239);">
+<h3 style="color: rgb(13, 76, 6); margin-top: 0px;"><strong><span class="fa fa-medkit" style="margin-right: 7px;"><!-- not empty --></span><span> Washington Needs Health Practitioners for the COVID-19 State of Emergency</span></strong></h3>
+
+<p>Health professionals licensed in other states may practice in Washington by registering through the <a href="/Emergencies/NovelCoronavirusOutbreak2020/HealthcareProviders/EmergencyVolunteerHealthPractitioners">emergency volunteer health practitioner process</a> or by <a href="/LicensesPermitsandCertificates/ProfessionsNewReneworUpdate">applying for a WA license</a>, which may result in the department issuing a temporary practice permit.</p>
+</div>
+
+<div class="alert alert-info">
+<h3 style="margin-top: 0px;"><strong><span class="fa fa-phone" style="margin-right: 7px;"><!-- not empty --></span> <span style="color: rgb(54, 81, 106);">Contact our Call Center</span></strong></h3>
+
+<p><span style="color: rgb(54, 81, 106);">The Washington State Department of Health has established a call center to address questions from the public. If you have questions about what is happening in Washington, or how the virus is spread, please call <strong>1-800-525-0127</strong>. Phone lines are currently <strong>staffed from 6 a.m. to 10 p.m, seven days a week</strong>. Please note that this call center can not access COVID-19 testing results.&nbsp;For&nbsp;testing inquiries or&nbsp;results, please contact your health care provider.&nbsp;</span></p>
+</div>
+
+<h2>Symptoms and Testing</h2>
+
+<p><strong>What should I do if I have symptoms or have been exposed?</strong></p>
+
+<ul class="linklist">
+ <li>Call&nbsp; your healthcare provider, or call before going to the emergency room.</li>
+ <li>We have guidance available for people who have or think they may have COVID-19:
+ <ul class="linklist">
+  <li><a href="/Portals/1/Documents/1600/coronavirus/COVIDcasepositive.pdf">What to do if you have confirmed or suspected coronavirus disease (COVID-19) (PDF)</a></li>
+  <li><a href="/Portals/1/Documents/1600/coronavirus/COVIDexposed.pdf">What to do if you were potentially exposed to someone with confirmed coronavirus disease (COVID-19) (PDF)</a></li>
+  <li><a href="/Portals/1/Documents/1600/coronavirus/COVIDconcerned.pdf">What to do if you have symptoms of coronavirus disease 2019 (COVID-19) and have not been around anyone who has been diagnosed with COVID-19 (PDF)</a></li>
+ </ul>
+ </li>
+ <li>You can also use the online <a href="https://www.providence.org/patients-and-visitors/coronavirus-advisory" rel="external">Coronavirus Assessment Tool<i class="fa fa-external-link" title="External Content"></i></a> developed by Providence and Microsoft.</li>
+</ul>
+
+<p><strong>How do I get tested?</strong></p>
+
+<ul class="linklist">
+ <li>If you have symptoms, call your healthcare provider.</li>
+ <li><a href="/Emergencies/NovelCoronavirusOutbreak2020/TestingforCOVID19">Learn more about testing</a>.</li>
+</ul>
+
+<h2>Current Situation in Washington</h2>
+
+<p><strong>What's the current risk?</strong></p>
+
+<p>The risk posed by a virus outbreak depends on factors including how well it spreads between people, the severity of the illness it causes, and the medical or other measures we have to control the impact of the virus (for example, vaccine or treatment medications).</p>
+
+<ul class="condensed">
+ <li>COVID-19 is spreading in several communities in Washington, the risk of exposure is increasing for people who live in our state.</li>
+ <li>Healthcare workers caring for patients with COVID-19 are at elevated risk of exposure.</li>
+ <li>Those who have had close contact with persons with COVID-19 are at elevated risk of exposure.</li>
+ <li>Travelers returning from affected international locations where community spread is occurring are at elevated risk of exposure.</li>
+</ul>
+
+<p>Our knowledge of COVID-19 is still rapidly evolving. The risk assessment will be updated as needed.</p>
+
+<h2 style="text-align: center;">2019 Novel Coronavirus (COVID-19) in Washington</h2>
+
+<p style="text-align: center;"><em>Updated on March 26, 2020 at 3:45 p.m.</em></p>
+
+<h3 class="alert alert-info" role="alert" style="text-align: center;">Due to a nearly ten-fold increase in the number of lab reports received electronically, our database is experiencing a substantial slowdown in processing lab data. Our IT team is working to correct the issue. In the meantime, daily updates may be published late and there may be a delay in including some test results in our totals.</h3>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" class="table table-striped" style="width: 100%;">
+ <caption>
+ <h3>Confirmed Cases / Deaths by County</h3>
+ </caption>
+ <thead>
+  <tr>
+   <th style="width: 33%;">County</th>
+   <th style="width: 33%;">Positive/Confirmed Cases</th>
+   <th>Deaths</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="http://www.co.adams.wa.us/departments/health_department/index.php" rel="external">Adams<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>3</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.bfhd.wa.gov/" rel="external">Benton<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>19</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td><a href="https://cdhd.wa.gov/" rel="external">Chelan<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>10</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.clallam.net/hhs/PublicHealth/" rel="external">Clallam<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>5</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.clark.wa.gov/public-health" rel="external">Clark<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>48</td>
+   <td>5</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.columbiaco.com/index.aspx?nid=18" rel="external">Columbia<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.co.cowlitz.wa.us/205/Health-Human-Services" rel="external">Cowlitz<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>7</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://cdhd.wa.gov/" rel="external">Douglas<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>5</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.netchd.org/" rel="external">Ferry<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.bfhd.wa.gov/" rel="external">Franklin<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>7</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="http://granthealth.org/" rel="external">Grant<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>33</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.healthygh.org/covid19" rel="external">Grays Harbor<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.islandcountywa.gov/health/Pages/Home.aspx" rel="external">Island<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>64</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.jeffersoncountypublichealth.org/202/Public-Health" rel="external">Jefferson<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>11</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.kingcounty.gov/depts/health.aspx" rel="external">King<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1577</td>
+   <td>109</td>
+  </tr>
+  <tr>
+   <td><a href="https://kitsappublichealth.org/" rel="external">Kitsap<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>33</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.co.kittitas.wa.us/health/" rel="external">Kittitas<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>8</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="http://klickitatcounty.org/289/Public-Health/" rel="external">Klickitat<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>7</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://lewiscountywa.gov/departments/public-health/" rel="external">Lewis<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>5</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.co.lincoln.wa.us/public-health/" rel="external">Lincoln<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.co.mason.wa.us/health/index.php/" rel="external">Mason<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>2</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://okanogancounty.org/ocph/" rel="external">Okanogan<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>1</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.tpchd.org/" rel="external">Pierce<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>186</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.sanjuanco.com/378/Health-Community-Services" rel="external">San Juan<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>2</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.skagitcounty.net/Departments/HealthDiseases/coronavirus.htm" rel="external">Skagit<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>78</td>
+   <td>1</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.snohd.org/" rel="external">Snohomish<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>778</td>
+   <td>16</td>
+  </tr>
+  <tr>
+   <td><a href="https://srhd.org/" rel="external">Spokane<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>67</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.netchd.org/" rel="external">Stevens<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>2</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.thurstoncountywa.gov/phss/Pages/coronavirus.aspx" rel="external">Thurston<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>24</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.co.walla-walla.wa.us/government/health_department/index.php" rel="external">Walla Walla<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>2</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.whatcomcounty.us/3329/Novel-Coronavirus-COVID-19" rel="external">Whatcom<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>86</td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.whitmancountypublichealth.org/" rel="external">Whitman<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>3</td>
+   <td>0</td>
+  </tr>
+  <tr>
+   <td><a href="https://www.yakimacounty.us/2323/Human-Coronavirus" rel="external">Yakima<i class="fa fa-external-link" title="External Content"></i></a></td>
+   <td>61</td>
+   <td>2</td>
+  </tr>
+  <tr>
+   <td>Unassigned</td>
+   <td>69</td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><strong>Total</strong></td>
+   <td><strong>3207</strong></td>
+   <td><strong>147</strong></td>
+  </tr>
+ </tbody>
+</table>
+
+<table border="1" cellpadding="1" cellspacing="1" class="table table-striped">
+ <caption>
+ <h3>Number of Individuals Tested</h3>
+ </caption>
+ <thead>
+  <tr>
+   <th scope="col" style="width: 33%;">Result</th>
+   <th scope="col" style="width: 33%;">Number of Individuals Tested</th>
+   <th scope="col">Percent of Tests</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Negative</td>
+   <td>43,173</td>
+   <td>93%</td>
+  </tr>
+  <tr>
+   <td>Positive</td>
+   <td>3,207</td>
+   <td>7%</td>
+  </tr>
+ </tbody>
+</table>
+
+<table border="1" cellpadding="1" cellspacing="1" class="table table-striped" style="width: 100%;">
+ <caption>
+ <h3>Confirmed Cases / Deaths by Age</h3>
+ </caption>
+ <thead>
+  <tr>
+   <th scope="col" style="width: 33%;">Age Group</th>
+   <th scope="col" style="width: 33%;">Percent of Cases</th>
+   <th scope="col">Percent of Deaths</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>&lt;19</td>
+   <td>2%</td>
+   <td>0%</td>
+  </tr>
+  <tr>
+   <td>20-29</td>
+   <td>9%</td>
+   <td>0%</td>
+  </tr>
+  <tr>
+   <td>30-39</td>
+   <td>15%</td>
+   <td>0%</td>
+  </tr>
+  <tr>
+   <td>40-49</td>
+   <td>14%</td>
+   <td>1%</td>
+  </tr>
+  <tr>
+   <td>50-59</td>
+   <td>18%</td>
+   <td>7%</td>
+  </tr>
+  <tr>
+   <td>60-69</td>
+   <td>16%</td>
+   <td>13%</td>
+  </tr>
+  <tr>
+   <td>70-79</td>
+   <td>13%</td>
+   <td>29%</td>
+  </tr>
+  <tr>
+   <td>80+</td>
+   <td>13%</td>
+   <td>50%</td>
+  </tr>
+ </tbody>
+</table>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" class="table table-striped" style="width: 100%;">
+ <caption>
+ <h3>Confirmed Cases / Deaths by Gender</h3>
+ </caption>
+ <thead>
+  <tr>
+   <th style="width: 33%;">Sex at Birth</th>
+   <th style="width: 33%;">Percent of Cases</th>
+   <th>Percent of Deaths</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Female</td>
+   <td>51%</td>
+   <td>52%</td>
+  </tr>
+  <tr>
+   <td>Male</td>
+   <td>46%</td>
+   <td>47%</td>
+  </tr>
+  <tr>
+   <td>Unknown</td>
+   <td>3%</td>
+   <td>1%</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Note on the county and unassigned data:</strong> This data&nbsp;changes rapidly as labs conduct tests and discover new cases. Labs assign those cases to a county. Counties or the Department of Health then determine the appropriate county of jurisdiction. Those don’t always match initially. We’re working to reduce the “unassigned” number to 0. Contact the local health department for county specific information.</p>
+
+<p><strong>Note on the deaths:</strong> Some deaths may be reported by health care providers, medical examiners/coroners, local health departments, or others before they are included in the statewide count. It takes longer for the state to announce deaths because they are often reported first to the local health department and then to us.</p>
+
+<p><strong>Note on the number of infections:</strong> Public health experts agree that the true number of people who have been infected with COVID-19 in Washington greatly exceeds the number of COVID-19 infections that have been laboratory-confirmed. It is very difficult to know exactly how many people in Washington have been infected to date since most people with COVID-19 experience mild illness and the ability to get tested is still not widely available.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- End_Module_33855 --></div>
+  </div>
+  <!--Container Content End--> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-sm-4">
+      <div id="dnn_RowTen_Grid4_Pane1" class="RowTen_Grid4_Pane1 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-4">
+      <div id="dnn_RowTen_Grid4_Pane2" class="RowTen_Grid4_Pane2 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-4">
+      <div id="dnn_RowTen_Grid4_Pane3" class="RowTen_Grid4_Pane3 DNNEmptyPane"></div>
+    </div>
+  </section>
+  
+  
+  
+  <section class="row tabstack">
+    <div class="col-sm-6">
+      <div id="dnn_RowFourteen_Grid6_Pane1" class="RowFourteen_Grid6_Pane1 DNNEmptyPane"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="dnn_RowFourteen_Grid6_Pane2" class="RowFourteen_Grid6_Pane2 DNNEmptyPane"></div>
+    </div>
+  </section>
+  
+  
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="dnn_BottomPane" class="BottomPane"><div class="DnnModule DnnModule-DNN_HTML DnnModule-34131 DnnVersionableControl"><a name="34131"></a>
+<div class="White">
+     <div id="dnn_ctr34131_ContentPane" class="contentpane"><!-- Start_Module_34131 --><div id="dnn_ctr34131_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+	<div id="dnn_ctr34131_HtmlModule_lblContent"><div><img onclick="popupFunction()" src="/portals/1/Images/DOHChat.png" style="width: 60px !important; height: 60px !important; right: 16px; bottom: 80px; position: fixed; z-index: 1001; cursor: pointer;"> <script>
+    function popupFunction() {
+        var x = document.getElementById('chatFrame');
+        if (x.style.visibility == 'hidden') {
+            x.style.visibility = 'visible';
+        }
+        else {
+            x.style.visibility = 'hidden';
+        }
+    }
+</script><iframe id="chatFrame" src="https://webchat.botframework.com/embed/wa-doh-web-bot?s=dIzwyd5im1o.U55IUAvK_UZjdEqABUjLzGnaQrMTGZsIydAfXR36QJU" style="border: 1px solid rgb(118, 118, 118); border-image: none; width: 400px; height: 500px; max-height: calc(100% - 160px); right: 18px; bottom: 150px; visibility: hidden; position: fixed; z-index: 1001; background-color: rgb(255, 255, 255); max-width: calc(100% - 36px);"></iframe></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- End_Module_34131 --></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div>
+    </div>
+  </div>
+</div>
+</main>            <!-- content pane end --> 
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Footer --> 
+    <!-- Footer -->
+
+<div id="footer1">
+  <footer>
+    <div class="Footer_Contentbg  ">
+      <div class="dnn_layout">
+        <div class="footer_mid clearfix">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="FootPaneE  " id="dnn_FootPaneE">
+                 <div class="DnnModule DnnModule-DNN_HTML">
+                    <div class="Container-3">
+                        <div class="dnntitle">
+                            <span class="title3">Department of Health</span>
+                        </div>
+                        <div class="contentmain1">
+                            <div class="contentpane">
+                                <div class="DNNModuleContent ModDNNHTMLC">
+                                    <div>
+                                        <p><a href="/AboutUs/ContactUs">Contact Us</a></p>
+                                        <p><a href="/AboutUs/BusinessHoursandLocations">Locations and Directions</a></p>
+                                        <p><a href="/PrivacyandCopyright">Privacy and Copyright</a></p>
+                                        <p><a href="/AboutUs/ACA/Nondiscrimination">Notice of Nondiscrimination</a></p>
+                                        <p><a href="/AboutUs/WorkatHealth">Jobs - Work@Health</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="FootPaneF  " id="dnn_FootPaneF">
+                  <div class="DnnModule DnnModule-DNN_HTML">
+                    <div class="Container-3">
+                        <div class="dnntitle">
+                            <span class="title3">Available Languages</span>
+                        </div>
+                        <div class="contentmain1">
+                            <div class="contentpane">
+                                <div class="DNNModuleContent ModDNNHTMLC">
+                                    <div class="altLangLinks">
+                                        <a lang="es" href="/AboutUs/ACA/Nondiscrimination/Spanish">Español</a> |
+                                        <a lang="ru" href="/AboutUs/ACA/Nondiscrimination/Russian">Русский</a> |
+                                        <a lang="vi" href="/AboutUs/ACA/Nondiscrimination/Vietnamese">Tiếng&nbsp;Việt</a> |
+                                        <a lang="uk" href="/AboutUs/ACA/Nondiscrimination/Ukrainian">Українська</a> |
+                                        <a lang="ko" href="/AboutUs/ACA/Nondiscrimination/Korean">한국어</a> |
+                                        <a lang="so" href="/AboutUs/ACA/Nondiscrimination/Somali">Af‑soomaali</a> |
+                                        <a lang="tl" href="/AboutUs/ACA/Nondiscrimination/Tagalog">Tagalog</a> |
+                                        <a lang="ar" href="/AboutUs/ACA/Nondiscrimination/Arabic">العربية</a> |
+                                        <a lang="zh" href="/AboutUs/ACA/Nondiscrimination/Chinese">中文</a> |
+                                        <a lang="pa" href="/AboutUs/ACA/Nondiscrimination/Punjabi">ਪੰਜਾਬੀ</a> |
+                                        <a lang="km" href="/AboutUs/ACA/Nondiscrimination/CambodianKhmer">អក្សរខ្មែរ</a> |
+                                        <a lang="ja" href="/AboutUs/ACA/Nondiscrimination/Japanese">日本語</a> |
+                                        <a lang="am" href="/AboutUs/ACA/Nondiscrimination/Amharic">አማርኛ</a> |
+                                        <a lang="sm" href="/AboutUs/ACA/Nondiscrimination/Samoan">Gagana&nbsp;fa'a&nbsp;Samoa</a> |
+                                        <a lang="mh" href="/AboutUs/ACA/Nondiscrimination/Marshallese">Kajin&nbsp;Ṃajōḷ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DnnModule DnnModule-DNN_HTML" style="margin-top: 10px;">
+                    <div class="Container-3">
+                        <div class="dnntitle">
+                            <span class="title3">Alternate Format Requests</span>
+                        </div>
+                        <div class="contentmain1">
+                            <div class="contentpane">
+                                <div class="DNNModuleContent ModDNNHTMLC">
+                                    <div>For people with disabilities, Web documents in other formats are available on request. To submit a request, please contact us at <a href="mailto:civil.rights@doh.wa.gov">civil.rights@doh.wa.gov</a>.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="FootPaneG  " id="dnn_FootPaneG">
+                <div class="DnnModule DnnModule-DNN_HTML">
+                    <div class="Container-3">
+                        <div class="dnntitle">
+                            <span class="title3">Social Media</span>
+                        </div>
+                        <div class="contentmain1">
+                            <div class="contentpane">
+                                <div class="DNNModuleContent ModDNNHTMLC">
+                                    <ul class="footerSocialLinks">
+                                        <li><a title="Facebook" href="https://www.facebook.com/WADeptHealth" rel="external"><img alt="Facebook" src="/images/IconFB29.png"></a></li>
+                                        <li><a title="Twitter" href="https://twitter.com/WADeptHealth" rel="external"><img alt="Twitter" src="/images/IconTW29.png"></a></li>
+                                        <li><a title="YouTube" href="https://www.youtube.com/user/WADepartmentofHealth" rel="external"><img alt="YouTube" src="/images/IconYT29.png"></a></li>
+                                        <li><a title="Instagram" href="https://www.instagram.com/wadepthealth/" rel="external"><img alt="Instagram" src="/images/IconInstaMagenta29.png"></a></li>
+                                        <li><a title="Medium" href="https://medium.com/wadepthealth" rel="external"><img alt="Medium" src="/images/Icon-Medium29.png"></a></li>
+                                        <li><a title="LinkedIn" href="https://www.linkedin.com/company/wadepthealth/" rel="external"><img alt="LinkedIn" src="/images/Icon-Linkedin29.png"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div class="DnnModule DnnModule-DNN_HTML" style="margin-top: 10px;">
+                      <div class="Container-3">
+                          <div class="dnntitle">
+                              <span class="title3">Subscribe for Updates</span>
+                          </div>
+                          <div class="contentmain1">
+                              <div class="contentpane">
+                                  <div class="DNNModuleContent ModDNNHTMLC">
+                                      <div id="SubscribeGovDelivery">
+                                          <p>Get email or text alerts based on your topic preferences.</p>
+                                          <a href="https://public.govdelivery.com/accounts/WADOH/subscriber/new" target="_blank" class="btn btn-lg btn-primary" rel="external">Subscribe<i class="fa fa-external-link" title="External Content"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Footer_Bottombg  ">
+      <div class="dnn_layout">
+        <div class="footer_mid clearfix">
+          <div class="copyright_style">
+            
+          </div>
+          <div id="dnn_FooterPane" class="FooterPane   DNNEmptyPane"></div>
+          <div id="to_top" class=" "><span>&nbsp;</span></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+$(document).ready(function() {
+if ($("[id^='accordion']").length > 0) {
+      var accordionSection = $(window.location.hash);
+      if (accordionSection.length) {
+        $(accordionSection).click();
+        $(window).scrollTop(accordionSection.offset().top);
+      }
+    }
+});
+</script>
+<!-- Footer End --> 
+<!-- Footer2 --> 
+    <!-- Footer end--> 
+ 	</div>
+  </div>
+</div>
+<script type="text/javascript" src="/Portals/1/Skins/DnnGo33/scripts/script.js"></script> 
+<script type="text/javascript" src="/Portals/1/Skins/DnnGo33/scripts/custom.js"></script>
+<script type="text/javascript" src="/js/rwdImageMaps/jquery.rwdImageMaps.min.js"></script>
+<script>$(document).ready(function(e) {$('img[usemap]').rwdImageMaps();});</script>
+<script type="text/javascript" src="/Portals/1/Skins/DnnGo33/scripts/flying-focus.js"></script>
+<script>var cx = '006035765107648424017:j1daaui4aco';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);</script>
+        <input name="ScrollTop" type="hidden" id="ScrollTop">
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" value="`{`__scdoff`:`1`,`sf_siteRoot`:`/`,`sf_tabId`:`10887`,`evoq_TabId`:`10887`,`evoq_PageLanguage`:`en-US`,`evoq_ContentItemId`:`-1`,`evoq_UrlReferrer`:`https://coronavirus.wa.gov/`,`evoq_UrlPath`:`https%3a%2f%2fwww.doh.wa.gov%2fEmergencies%2fCoronavirus`,`evoq_UrlQuery`:`%3fTabId%3d10887%26language%3den-US`,`evoq_ContentItemReferrer`:`-1`,`evoq_PersonalizedUrlReferrer`:`-1`,`evoq_DisableAnalytics`:`False`}">
+        <input name="__RequestVerificationToken" type="hidden" value="jTi7mSeGMfYYLCe9SP6uDXzKlauva08nfvyK7mFSSyh27jN1xukHL-lTZuVw8__Y1ac6jA2">
+    
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+
+  var analyticsSettings;
+  var initAnalyticsSettings = function (e) {
+    analyticsSettings = {
+      pageStart: analytics_page_startTime,
+      servicesFramework: $.ServicesFramework(-1)
+    };
+  };
+  if(window.addEventListener) {
+    window.addEventListener('load', initAnalyticsSettings, false);
+  } else {
+    window.attachEvent('onload', initAnalyticsSettings);
+  };
+
+  var eventName = (window.onpagehide || window.onpagehide === null) ? 'pagehide' : 'unload';
+  if (window.addEventListener) {
+    window.addEventListener(eventName, function (e) {
+      if (analyticsSettings) {
+        analyticsSettings.eventSource = 'pagehide';
+        if(dnn && dnn.analytics) { dnn.analytics.clientUnloading(e,analyticsSettings); }
+      }
+    }, false);
+  } else {
+    window.attachEvent('on' + eventName, function (e) {
+      if (analyticsSettings) {
+        analyticsSettings.eventSource = 'pagehide';
+        if(dnn && dnn.analytics) { dnn.analytics.clientUnloading(e,analyticsSettings); }
+      }
+    });
+  }
+
+})();
+//]]>
+</script>
+</form><style>#flying-focus {	position: absolute;	margin: 0;	background: transparent;	-webkit-transition-property: left, top, width, height;	transition-property: left, top, width, height;	-webkit-transition-timing-function: cubic-bezier(0,1,0,1);	transition-timing-function: cubic-bezier(0,1,0,1);	visibility: hidden;	pointer-events: none;	box-shadow: 0 0 2px 3px #78aeda, 0 0 2px #78aeda inset; border-radius: 2px;}#flying-focus.flying-focus_visible {	visibility: visible;	z-index: 9999;}.flying-focus_target {	outline: none !important; /* Doesn't work in Firefox :( */}/* http://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links/199319 */.flying-focus_target::-moz-focus-inner {	border: 0 !important;}/* Replace it with @supports rule when browsers catch up */@media screen and (-webkit-min-device-pixel-ratio: 0) {	#flying-focus {		box-shadow: none;		outline: 5px auto -webkit-focus-ring-color;		outline-offset: -3px;	}}</style>
+    <!--CDF(Javascript|/js/dnncore.js)--><!--CDF(Javascript|/js/dnn.modalpopup.js)--><!--CDF(Css|/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css)--><!--CDF(Css|/Portals/1/Skins/DnnGo33/skin.css)--><!--CDF(Css|/Portals/1/Skins/DnnGo33/InsidePage-leftmenu.css)--><!--CDF(Javascript|/DesktopModules/DNNGo_xPlugin/Resource/js/dnngo-xplugin.js)--><!--CDF(Css|/Portals/1/Containers/DnnGo33/container.css)--><!--CDF(Css|/Portals/1/Containers/DnnGo33/container.css)--><!--CDF(Css|/Portals/1/portal.css)--><!--CDF(Css|/DesktopModules/DNNGo_xPlugin/Resource/css/jquery.mmenu.css)--><!--CDF(Javascript|/DesktopModules/DNNCorp/EvoqContentLibrary/ClientScripts/dnn.analytics.Injected.js)--><!--CDF(Javascript|/js/dnn.js)--><!--CDF(Javascript|/js/dnn.servicesframework.js)--><!--CDF(Javascript|/Resources/libraries/jQuery/01_09_01/jquery.js)--><!--CDF(Javascript|/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js)--><!--CDF(Javascript|/Resources/libraries/jQuery-UI/01_11_03/jquery-ui.js)-->
+    
+    <script>
+        $(document).ready(function() {
+            $('.dnnFormMessage.dnnFormValidationSummary').remove();
+        });
+    </script>
+
+<div id="mm-blocker" class="mm-slideout"></div><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 183px; display: none; top: 104px; left: 902px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gstl_51 gssb_c" style="width: 2px; display: none; top: 3px; left: -1px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

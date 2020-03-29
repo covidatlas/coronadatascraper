@@ -1,0 +1,323 @@
+[
+  {
+    "county": "Adams County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Allegheny County",
+    "cases": 133,
+    "deaths": 2
+  },
+  {
+    "county": "Armstrong County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Beaver County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Berks County",
+    "cases": 36,
+    "deaths": 0
+  },
+  {
+    "county": "Blair County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Bradford County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Bucks County",
+    "cases": 107,
+    "deaths": 0
+  },
+  {
+    "county": "Butler County",
+    "cases": 19,
+    "deaths": 1
+  },
+  {
+    "county": "Cambria County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Carbon County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Centre County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Chester County",
+    "cases": 84,
+    "deaths": 0
+  },
+  {
+    "county": "Clearfield County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Columbia County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Cumberland County",
+    "cases": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Dauphin County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Delaware County",
+    "cases": 156,
+    "deaths": 1
+  },
+  {
+    "county": "Erie County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Fayette County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Greene County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Indiana County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Juniata County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Lackawanna County",
+    "cases": 28,
+    "deaths": 2
+  },
+  {
+    "county": "Lancaster County",
+    "cases": 21,
+    "deaths": 0
+  },
+  {
+    "county": "Lawrence County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Lebanon County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Lehigh County",
+    "cases": 63,
+    "deaths": 1
+  },
+  {
+    "county": "Luzerne County",
+    "cases": 36,
+    "deaths": 1
+  },
+  {
+    "county": "Lycoming County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Mercer County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 67,
+    "deaths": 2
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 282,
+    "deaths": 2
+  },
+  {
+    "county": "Montour County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Northampton County",
+    "cases": 56,
+    "deaths": 3
+  },
+  {
+    "county": "Philadelphia County",
+    "cases": 402,
+    "deaths": 1
+  },
+  {
+    "county": "Pike County",
+    "cases": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Potter County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Schuylkill County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Somerset County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Susquehanna County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Westmoreland County",
+    "cases": 24,
+    "deaths": 0
+  },
+  {
+    "county": "York County",
+    "cases": 21,
+    "deaths": 0
+  },
+  {
+    "cases": 16,
+    "deaths": 16,
+    "tested": 16441
+  },
+  {
+    "county": "Bedford County",
+    "cases": 0
+  },
+  {
+    "county": "Cameron County",
+    "cases": 0
+  },
+  {
+    "county": "Clarion County",
+    "cases": 0
+  },
+  {
+    "county": "Clinton County",
+    "cases": 0
+  },
+  {
+    "county": "Elk County",
+    "cases": 0
+  },
+  {
+    "county": "Forest County",
+    "cases": 0
+  },
+  {
+    "county": "Fulton County",
+    "cases": 0
+  },
+  {
+    "county": "Huntingdon County",
+    "cases": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0
+  },
+  {
+    "county": "McKean County",
+    "cases": 0
+  },
+  {
+    "county": "Mifflin County",
+    "cases": 0
+  },
+  {
+    "county": "Northumberland County",
+    "cases": 0
+  },
+  {
+    "county": "Perry County",
+    "cases": 0
+  },
+  {
+    "county": "Snyder County",
+    "cases": 0
+  },
+  {
+    "county": "Sullivan County",
+    "cases": 0
+  },
+  {
+    "county": "Tioga County",
+    "cases": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 0
+  },
+  {
+    "county": "Venango County",
+    "cases": 0
+  },
+  {
+    "county": "Wyoming County",
+    "cases": 0
+  }
+]

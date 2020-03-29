@@ -1,0 +1,393 @@
+[
+  {
+    "county": "Anderson County",
+    "cases": 3
+  },
+  {
+    "county": "Bedford County",
+    "cases": 1
+  },
+  {
+    "county": "Benton County",
+    "cases": 1
+  },
+  {
+    "county": "Blount County",
+    "cases": 4
+  },
+  {
+    "county": "Bradley County",
+    "cases": 5
+  },
+  {
+    "county": "Campbell County",
+    "cases": 2
+  },
+  {
+    "county": "Cannon County",
+    "cases": 1
+  },
+  {
+    "county": "Carroll County",
+    "cases": 3
+  },
+  {
+    "county": "Cheatham County",
+    "cases": 7
+  },
+  {
+    "county": "Chester County",
+    "cases": 2
+  },
+  {
+    "county": "Claiborne County",
+    "cases": 2
+  },
+  {
+    "county": "Cocke County",
+    "cases": 1
+  },
+  {
+    "county": "Cumberland County",
+    "cases": 6
+  },
+  {
+    "county": "Davidson County",
+    "cases": 203
+  },
+  {
+    "county": "Dekalb County",
+    "cases": 2
+  },
+  {
+    "county": "Dickson County",
+    "cases": 7
+  },
+  {
+    "county": "Dyer County",
+    "cases": 3
+  },
+  {
+    "county": "Fayette County",
+    "cases": 3
+  },
+  {
+    "county": "Franklin County",
+    "cases": 3
+  },
+  {
+    "county": "Gibson County",
+    "cases": 2
+  },
+  {
+    "county": "Greene County",
+    "cases": 8
+  },
+  {
+    "county": "Grundy County",
+    "cases": 1
+  },
+  {
+    "county": "Hamblen County",
+    "cases": 2
+  },
+  {
+    "county": "Hamilton County",
+    "cases": 28
+  },
+  {
+    "county": "Hardin County",
+    "cases": 1
+  },
+  {
+    "county": "Hawkins County",
+    "cases": 1
+  },
+  {
+    "county": "Houston County",
+    "cases": 2
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 4
+  },
+  {
+    "county": "Knox County",
+    "cases": 26
+  },
+  {
+    "county": "Lewis County",
+    "cases": 2
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 1
+  },
+  {
+    "county": "Loudon County",
+    "cases": 6
+  },
+  {
+    "county": "Macon County",
+    "cases": 1
+  },
+  {
+    "county": "Madison County",
+    "cases": 2
+  },
+  {
+    "county": "Marion County",
+    "cases": 2
+  },
+  {
+    "county": "Maury County",
+    "cases": 7
+  },
+  {
+    "county": "McMinn County",
+    "cases": 3
+  },
+  {
+    "county": "Meigs County",
+    "cases": 1
+  },
+  {
+    "county": "Monroe County",
+    "cases": 2
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 6
+  },
+  {
+    "county": "Overton County",
+    "cases": 1
+  },
+  {
+    "county": "Perry County",
+    "cases": 1
+  },
+  {
+    "county": "Putnam County",
+    "cases": 11
+  },
+  {
+    "county": "Roane County",
+    "cases": 1
+  },
+  {
+    "county": "Robertson County",
+    "cases": 20
+  },
+  {
+    "county": "Rutherford County",
+    "cases": 27
+  },
+  {
+    "county": "Scott County",
+    "cases": 1
+  },
+  {
+    "county": "Sevier County",
+    "cases": 3
+  },
+  {
+    "county": "Shelby County",
+    "cases": 147
+  },
+  {
+    "county": "Sullivan County",
+    "cases": 4
+  },
+  {
+    "county": "Sumner County",
+    "cases": 43
+  },
+  {
+    "county": "Tipton County",
+    "cases": 8
+  },
+  {
+    "county": "Unicoi County",
+    "cases": 1
+  },
+  {
+    "county": "Washington County",
+    "cases": 9
+  },
+  {
+    "county": "White County",
+    "cases": 1
+  },
+  {
+    "county": "Williamson County",
+    "cases": 70
+  },
+  {
+    "county": "Wilson County",
+    "cases": 13
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 117
+  },
+  {
+    "cases": 845
+  },
+  {
+    "county": "Bledsoe County",
+    "cases": 0
+  },
+  {
+    "county": "Carter County",
+    "cases": 0
+  },
+  {
+    "county": "Clay County",
+    "cases": 0
+  },
+  {
+    "county": "Coffee County",
+    "cases": 0
+  },
+  {
+    "county": "Crockett County",
+    "cases": 0
+  },
+  {
+    "county": "Decatur County",
+    "cases": 0
+  },
+  {
+    "county": "DeKalb County",
+    "cases": 0
+  },
+  {
+    "county": "Fentress County",
+    "cases": 0
+  },
+  {
+    "county": "Giles County",
+    "cases": 0
+  },
+  {
+    "county": "Grainger County",
+    "cases": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 0
+  },
+  {
+    "county": "Hardeman County",
+    "cases": 0
+  },
+  {
+    "county": "Haywood County",
+    "cases": 0
+  },
+  {
+    "county": "Henderson County",
+    "cases": 0
+  },
+  {
+    "county": "Henry County",
+    "cases": 0
+  },
+  {
+    "county": "Hickman County",
+    "cases": 0
+  },
+  {
+    "county": "Humphreys County",
+    "cases": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 0
+  },
+  {
+    "county": "Johnson County",
+    "cases": 0
+  },
+  {
+    "county": "Lake County",
+    "cases": 0
+  },
+  {
+    "county": "Lauderdale County",
+    "cases": 0
+  },
+  {
+    "county": "Lawrence County",
+    "cases": 0
+  },
+  {
+    "county": "Marshall County",
+    "cases": 0
+  },
+  {
+    "county": "McNairy County",
+    "cases": 0
+  },
+  {
+    "county": "Moore County",
+    "cases": 0
+  },
+  {
+    "county": "Morgan County",
+    "cases": 0
+  },
+  {
+    "county": "Obion County",
+    "cases": 0
+  },
+  {
+    "county": "Pickett County",
+    "cases": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 0
+  },
+  {
+    "county": "Rhea County",
+    "cases": 0
+  },
+  {
+    "county": "Sequatchie County",
+    "cases": 0
+  },
+  {
+    "county": "Smith County",
+    "cases": 0
+  },
+  {
+    "county": "Stewart County",
+    "cases": 0
+  },
+  {
+    "county": "Trousdale County",
+    "cases": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 0
+  },
+  {
+    "county": "Van Buren County",
+    "cases": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 0
+  },
+  {
+    "county": "Weakley County",
+    "cases": 0
+  }
+]

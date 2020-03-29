@@ -1,0 +1,50 @@
+[
+  {
+    "county": "Ayrshire and Arran",
+    "cases": 74
+  },
+  {
+    "county": "Borders",
+    "cases": 23
+  },
+  {
+    "county": "Dumfries and Galloway",
+    "cases": 39
+  },
+  {
+    "county": "Fife",
+    "cases": 40
+  },
+  {
+    "county": "Forth Valley",
+    "cases": 75
+  },
+  {
+    "county": "Grampian",
+    "cases": 31
+  },
+  {
+    "county": "Greater Glasgow and Clyde",
+    "cases": 258
+  },
+  {
+    "county": "Highland",
+    "cases": 29
+  },
+  {
+    "county": "Lanarkshire",
+    "cases": 114
+  },
+  {
+    "county": "Lothian",
+    "cases": 111
+  },
+  {
+    "county": "Shetland",
+    "cases": 24
+  },
+  {
+    "county": "Tayside",
+    "cases": 76
+  }
+]

@@ -1,0 +1,938 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" class="ms-isBot" lang="en-US">
+    
+    <head><meta http-equiv="X-UA-Compatible" content="IE=10" /><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0" /><meta http-equiv="Expires" content="0" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="320" /><meta name="format-detection" content="telephone=yes" /><meta name="robots" content="index, follow" /><meta name="viewport" content="width = device-width, initial-scale=1.0" /><meta name="msapplication-TileColor" content="#ffffff" /><meta name="msapplication-TileImage" content="/_layouts/15/images/SharePointMetroAppTile.png" /><meta name="msapplication-TileColor" content="#0072C6" /><title>
+	
+    
+    
+    Cases
+    
+    
+</title><link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=WBDzE8Kp2NMrldHsGGXlEQ%3D%3D"/>
+<script type="text/javascript" src="/_layouts/15/init.js?rev=AS%2Bv0UYCkcLYkV95cqJXGA%3D%3D"></script>
+<script type="text/javascript" src="/ScriptResource.axd?d=Q_4HnoqIbCr8P804u6-qVGpWjKw4byKBuRkOXpG3Q2OmJ_CFc8h01_NNNo5y5ectYxhGEKtWZuN-IbeVHR9mnneMrbKKN9NHWXJ2w6r5NafVF129WKXjzBl53sYDndszQ65XUDU5GP2Id6c3y1i0S3qgBCppA3SXt0ge_3Jv5H01&amp;t=ffffffff9a9577e8"></script>
+<script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
+<script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=S11vfGURQYVuACMEY0tLTg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=xXYZY4hciX287lShPZuClw\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sp.init.js", "\u002f_layouts\u002f15\u002fsp.init.js?rev=jvJC3Kl5gbORaLtf7kxULQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=yNk\u00252FhRzgBn40LJVP\u00252BqfgdQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=3Oh2QbaaiXSb7ldu2zd6QQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.init.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=GpU7vxyOqzS0F9OfEX3CCw\u00253D\u00253D");RegisterSodDep("core.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=cXv35JACAh0ZCqUwKU592w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mQuery.js", "\u002f_layouts\u002f15\u002fmquery.js?rev=VYAJYBo5H8I3gVSL3MzD6A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("callout.js", "\u002f_layouts\u002f15\u002fcallout.js?rev=ryx2n4ePkYj1\u00252FALmcsXZfA\u00253D\u00253D");RegisterSodDep("callout.js", "strings.js");RegisterSodDep("callout.js", "mQuery.js");RegisterSodDep("callout.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=vCg84VTu4zrudFscfeq8Cg\u00253D\u00253D");RegisterSodDep("clienttemplates.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=XxxHIxIIc8BsW9ikVc6dgA\u00253D\u00253D");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=REwVU5jSsadDdOZlCx4wpA\u00253D\u00253D");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002f15\u002fsp.runtime.js?rev=5f2WkYJoaxlIRdwUeg4WEg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=BJ9b7Ak8FOS3NwGiaTXOjA\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=p5tCOm\u00252FlHUwcfll7W3pKNw\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=jWqEDmcjCSPmnQw2ZIfItQ\u00253D\u00253D");RegisterSodDep("followingcommon.js", "strings.js");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
+<script type="text/javascript">RegisterSod("profilebrowserscriptres.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=ProfileBrowserScriptRes\u0026rev=J5HzNnB\u00252FO1Id\u00252FGI18rpRcw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.mysitecommon.js", "\u002f_layouts\u002f15\u002fsp.ui.mysitecommon.js?rev=Ua8qmZSU9nyf53S7PEyJwQ\u00253D\u00253D");RegisterSodDep("sp.ui.mysitecommon.js", "sp.init.js");RegisterSodDep("sp.ui.mysitecommon.js", "sp.runtime.js");RegisterSodDep("sp.ui.mysitecommon.js", "userprofile");RegisterSodDep("sp.ui.mysitecommon.js", "profilebrowserscriptres.resx");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002fnon_ie.js?rev=W2q45TO627Zi6ztdktTOtA\u00253D\u00253D");RegisterSodDep("browserScript", "strings.js");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=iMf5THfqukSYut7sl9HwUg\u00253D\u00253D");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<link type="text/xml" rel="alternate" href="/topics/disease/coronavirus/_vti_bin/spsdisco.aspx" />
+        
+    
+    
+    
+    
+    
+    
+        <link rel="canonical" href="https://www.health.pa.gov:443/topics/disease/coronavirus/Pages/Cases.aspx" />
+        
+<![CDATA[ [if IE 9] ]]>        <style type="text/css">//<![CDATA[
+         .ms-core-animation-transparent {
+            opacity: 0;
+        }
+
+        .ms-isBot .ms-core-animation-transparent {
+            opacity: 1;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        //]] >
+    
+        //]]></style>
+<![CDATA[ [endif] ]]>        <!--[if lte IE 8]>
+    <style type="text/css">//<![CDATA[
+    .ms-core-animation-transparent,
+    .ms-core-animation-transparent img
+    {
+       -ms-filter:"alpha(opacity=0)";
+    }
+    .ms-isBot .ms-core-animation-transparent,
+    .ms-isBot .ms-core-animation-transparent img
+    {
+       -ms-filter:"";
+    }
+    //]]></style>
+    <![endif]-->
+        <script type="text/javascript">//<![CDATA[
+
+        var g_pageLoadAnimationParams = { elementSlideIn : "sideNavBox", elementSlideInPhase2 : "contentBox" };
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        //]]></script>
+        <!-- Start Master Page Assets --><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/foundation.min.css?Ver=2' /><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/PAI_New_Custom.css?Ver=5' /><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/custom_icon_i8.min.css?Ver=2' /><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/enterprise.min.css?Ver=1' /><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/pai-font.min.css?Ver=2' /><link rel='stylesheet' type='text/css' href='//assets.apps.pa.gov/SP2013v1/Enterprise/CSS/print.css?Ver=4' /><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/jquery.js?Ver=2'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/what-input.js?Ver=2'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/foundation.min.js?Ver=2'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/enterprise.min.js'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/jquery.cookie.js?Ver=2'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/fontsizer.js?Ver=2'></script><script src='//assets.apps.pa.gov/SP2013v1/Enterprise/JS/knockout.min.js?Ver=1'></script><!-- End Master Page Assets --><!-- Google Search Key --><script>function googleID(key) {key = '007572080359491747877:-o2sxg2obgu';return key}</script><!-- End Google Search Key --><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRZNZW');</script><!-- End Google Tag Manager --><!-- Google Webmaster Verification Tag --><meta name="google-site-verification" content="Tt293AUOBjZQYjeVzVcvxI4PYje2gJMEaNchepmuPVY" /><!-- End Google Webmaster Verification Tag --><link href='../../../_layouts/15/PA.SpEnterprise.TopNav/css/TopNav.css?Ver=5' rel='stylesheet' /><script src='../../../_layouts/15/PA.SpEnterprise.TopNav/js/TopNav.js?Ver=3'></script><link id='favicon' rel='shortcut icon' href='https://www.health.pa.gov/PublishingImages/DOH_Keystone.png' /> <link rel='stylesheet' type='text/css' href='../../_layouts/15/PA.SpEnterprise.IconBar/css/IconBar.css?v=9' /><link href='../_layouts/15/PA.SpEnterprise.IconBar/css/slick-theme-icon.css?v=3' rel='stylesheet' /><link href='../_layouts/15/PA.SpEnterprise.IconBar/css/slick.css?v=2' rel='stylesheet' /><script src='../../_layouts/15/PA.SpEnterprise.IconBar/js/IconBar.js?v=5'></script><script src='../../_layouts/15/PA.SpEnterprise.IconBar/js/slick.js?v=1'></script><meta property="og:type" content="article" /><meta property="og:title" content="Cases" /><meta property="og:image" content="https://www.health.pa.gov/PublishingImages/DOH_Keystone.png" /><meta property="og:site_name" content="Department of Health" /><!-- Begin Structured Data --><script type="application/ld+json"> {"@context" : "http://schema.org","@type" : "Organization","name" : "Health","url" : "https://www.health.pa.gov","sameAs" : ["https://www.facebook.com/pennsylvaniadepartmentofhealth","https://twitter.com/PAHealthDept","https://www.youtube.com/playlist?list=PLPptG_EW3WhQ-cISTl0wUxCqONR6LmA-a"]} </script><!-- End Structured Data --><link rel='stylesheet' type='text/css' href='../../_layouts/15/PA.SpEnterprise.ColorPicker/css/blue.css?ver=12' /><link rel='stylesheet' type='text/css' href='../../_layouts/15/PA.SpEnterprise.ColorPicker/css/TopBarGray.css?ver=1' /><link rel='stylesheet' type='text/css' href='../../_layouts/15/PA.SpEnterprise.GovernorGoals/govGoals.css?version=9 ' /><link rel='stylesheet' type='text/css' href='../../../_layouts/15/PA.SpEnterprise.AgencyFooter/css/AgencyFooter.css?v=1' /><link href='../../../_layouts/15/PA.SpEnterprise.EnterpriseFooter/css/EnterpriseFooter.css?ver=4' rel='stylesheet' /><!-- Custom Subsite Header Image --> <style type="text/css" rel="stylesheet">                        #wrap.Home .banner {
+                        	background: url('https://www.health.pa.gov/banners/COVID Banner.jpg') center no-repeat;
+                        }
+
+                        @media only screen and (min-width: 48em) {
+                            .banner {
+                                background: url('https://www.health.pa.gov/banners/COVID Banner.jpg') center no-repeat;
+	                            background-size: cover;
+                            }
+
+                            #wrap.Information .banner, #wrap.Home .banner {
+                                background: url('https://www.health.pa.gov/banners/COVID Banner.jpg') center no-repeat;
+	                            background-size: cover;
+                            }
+
+                            .banner.interior {
+                                background: url('https://www.health.pa.gov/banners/COVID Banner.jpg') center no-repeat;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            #wrap.Home .banner {
+                                background: none;
+                        }
+                    </style>
+                    <!-- End Custom Subsite Header Image --><!-- Start Agency Assets --><link rel='stylesheet' type='text/css' href='//www.health.pa.gov/Style%20Library/Agency/css/overwrites.css?Ver=5' /><link rel='stylesheet' type='text/css' href='//www.health.pa.gov/Style%20Library/Agency/css/AgencyFonts.css?Ver=2' /><script src='//www.health.pa.gov/Style%20Library/Agency/js/overwrites.js?Ver=2'></script><!-- End Agency Assets --><!-- Start Agency Additional Assets --><!-- End Agency Additional Assets --></head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();"><form method="post" action="./Cases.aspx" id="aspnetForm">
+<input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
+<input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="noDigest" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWBAIPD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAhoPZBYCAgMPZBYCZg9kFgJmDzwrAAYAZAIDD2QWAgIRD2QWBgIBD2QWAgICD2QWAgIFD2QWAgIDDxYCHgdWaXNpYmxlaBYCZg9kFgQCAg9kFgYCAQ8WAh8BaGQCAw8WAh8BaGQCBQ8WAh8BaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAg0PZBYCAgIPZBYCAgUPFgIfAAsrBAFkAjkPZBYCZg9kFgICAQ8WAh8BZxYCAgEPZBYCAgEPFgQeBWNsYXNzBQpsYXJnZS1saXN0Hglpbm5lcmh0bWwFxAo8bGkgY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0gJyAgcm9sZT0nbGlzdGl0ZW0nPjxhIGhyZWY9J2h0dHBzOi8vZGF0YS5wYS5nb3Yvc3Rvcmllcy9zL0hlYWx0aC1hbmQtSHVtYW4tU2VydmljZXMvNHdmYi1hZjdrJyBjbGFzcz0nbm8tZXh0ZXJuYWwnPjxpIGNsYXNzPSdwYWlyIHBhaS1oZWFydGJlYXQnPjwvaT48ZGl2IGNsYXNzPSdmb290ZXItZ292LWdvYWwtbGlzdC1pdGVtLWJvZHknPjxoMiBjbGFzcz0nZm9vdGVyLWdvdi1nb2FsLWxpc3QtaXRlbS1jYXRlZ29yeSc+R292ZXJubWVudCB0aGF0IFdvcmtzPC9oMj48cCBjbGFzcz0nJyByb2xlPSdsaXN0aXRlbSc+PHNwYW4gY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0tc3VtbWFyeSc+U3RlbSB0aGUgdGlkZSBvZiB0aGUgb3Bpb2lkIGVwaWRlbWljPC9zcGFuPjwvcD48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0gJyAgcm9sZT0nbGlzdGl0ZW0nPjxhIGhyZWY9J2h0dHBzOi8vZGF0YS5wYS5nb3Yvc3Rvcmllcy9zL0hlYWx0aC1hbmQtSHVtYW4tU2VydmljZXMvcmRwcS1hYWM4JyBjbGFzcz0nbm8tZXh0ZXJuYWwnPjxpIGNsYXNzPSdwYWlyIHBhaS1tZWRraXQnPjwvaT48ZGl2IGNsYXNzPSdmb290ZXItZ292LWdvYWwtbGlzdC1pdGVtLWJvZHknPjxoMiBjbGFzcz0nZm9vdGVyLWdvdi1nb2FsLWxpc3QtaXRlbS1jYXRlZ29yeSc+R292ZXJubWVudCB0aGF0IFdvcmtzPC9oMj48cCBjbGFzcz0nJyByb2xlPSdsaXN0aXRlbSc+PHNwYW4gY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0tc3VtbWFyeSc+SW5jcmVhc2UgYWNjZXNzIHRvIGhlYWx0aCBjYXJlPC9zcGFuPjwvcD48L2Rpdj48L2E+PC9saT48bGkgY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0gJyAgcm9sZT0nbGlzdGl0ZW0nPjxhIGhyZWY9J2h0dHBzOi8vZGF0YS5wYS5nb3Yvc3Rvcmllcy9zL0hlYWx0aC1hbmQtSHVtYW4tU2VydmljZXMvbjg0ay1zdWluJyBjbGFzcz0nbm8tZXh0ZXJuYWwnPjxpIGNsYXNzPSdwYWlyIHBhaS11c2Vycyc+PC9pPjxkaXYgY2xhc3M9J2Zvb3Rlci1nb3YtZ29hbC1saXN0LWl0ZW0tYm9keSc+PGgyIGNsYXNzPSdmb290ZXItZ292LWdvYWwtbGlzdC1pdGVtLWNhdGVnb3J5Jz5Hb3Zlcm5tZW50IHRoYXQgV29ya3M8L2gyPjxwIGNsYXNzPScnIHJvbGU9J2xpc3RpdGVtJz48c3BhbiBjbGFzcz0nZm9vdGVyLWdvdi1nb2FsLWxpc3QtaXRlbS1zdW1tYXJ5Jz5Qcm92aWRlIGhpZ2gtcXVhbGl0eSBzdXBwb3J0cyBhbmQgcHJvdGVjdGlvbnMgdG8gdnVsbmVyYWJsZSBQZW5uc3lsdmFuaWFuczwvc3Bhbj48L3A+PC9kaXY+PC9hPjwvbGk+ZGQWPAkcumL1pdQtCvVqfOa8kwBBLYpyJMhO+jmz3uwjqw==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaQoSEnabled = false;
+var g_wsaQoSDataPoints = [];
+var g_wsaLCID = 1033;
+var g_wsaListTemplateId = 850;
+var g_wsaSiteTemplateId = 'CMSPUBLISHING#0';
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002ftopics\u002fdisease\u002fcoronavirus", webAbsoluteUrl: "https:\u002f\u002fwww.health.pa.gov\u002ftopics\u002fdisease\u002fcoronavirus", siteAbsoluteUrl: "https:\u002f\u002fwww.health.pa.gov", serverRequestPath: "\u002ftopics\u002fdisease\u002fcoronavirus\u002fPages\u002fCases.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Coronavirus", webTemplate: "39", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2020-03-27T05:16:54.9698782Z") - new Date(), siteClientTag: "20457$$15.0.5207.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{f2fffd76-b72f-447e-b710-c1a1c7242096}",pageItemId:9, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};//]]>
+</script>
+
+<script src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+           
+      function redirectToMetaTagsEditPage() {
+       var customPage = _spPageContextInfo.webAbsoluteUrl + '/_Layouts/PA.SpEnterprise.CustomMetaTags/EditPageMetaTags.aspx?pageid='+_spPageContextInfo.pageItemId;
+        window.location= customPage;
+ 
+      }  
+    (function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() 
+        {
+          ExecuteOrDelayUntilScriptLoaded(
+            function()
+            {
+              var pairs = SP.ScriptHelpers.getDocumentQueryPairs();
+              var followDoc, itemId, listId, docName;
+              for (var key in pairs)
+              {
+                if(key.toLowerCase() == 'followdocument') 
+                  followDoc = pairs[key];
+                else if(key.toLowerCase() == 'itemid') 
+                  itemId = pairs[key];
+                else if(key.toLowerCase() == 'listid') 
+                  listId = pairs[key];
+                else if(key.toLowerCase() == 'docname') 
+                  docName = decodeURI(pairs[key]);
+              } 
+
+              if(followDoc != null && followDoc == '1' && listId!=null && itemId != null && docName != null)
+              {
+                SP.SOD.executeFunc('followingcommon.js', 'FollowDocumentFromEmail', function() 
+                { 
+                  FollowDocumentFromEmail(itemId, listId, docName);
+                });
+              }
+
+            }, 'SP.init.js');
+
+        });
+    })();(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() {
+
+            if (typeof(SPClientTemplates) === 'undefined' || SPClientTemplates === null || (typeof(APD_InAssetPicker) === 'function' && APD_InAssetPicker())) {
+                return;
+            }
+
+            var renderFollowFooter = function(renderCtx,  calloutActionMenu)
+            {
+                if (renderCtx.ListTemplateType == 700) 
+                    myDocsActionsMenuPopulator(renderCtx, calloutActionMenu);
+                else
+                    CalloutOnPostRenderTemplate(renderCtx, calloutActionMenu);
+
+                var listItem = renderCtx.CurrentItem;
+                if (typeof(listItem) === 'undefined' || listItem === null) {
+                    return;
+                }
+                if (listItem.FSObjType == 0) {
+                    calloutActionMenu.addAction(new CalloutAction({
+                        text: Strings.STS.L_CalloutFollowAction,
+                        tooltip: Strings.STS.L_CalloutFollowAction_Tooltip,
+                        onClickCallback: function (calloutActionClickEvent, calloutAction) {
+                            var callout = GetCalloutFromRenderCtx(renderCtx);
+                            if (!(typeof(callout) === 'undefined' || callout === null))
+                                callout.close();
+                            SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(renderCtx); });
+                        }
+                    }));
+                }
+            };
+
+            var registerOverride = function(id) {
+                var followingOverridePostRenderCtx = {};
+                followingOverridePostRenderCtx.BaseViewID = 'Callout';
+                followingOverridePostRenderCtx.ListTemplateType = id;
+                followingOverridePostRenderCtx.Templates = {};
+                followingOverridePostRenderCtx.Templates.Footer = function(renderCtx) {
+                    var  renderECB;
+                    if (typeof(isSharedWithMeView) === 'undefined' || isSharedWithMeView === null) {
+                        renderECB = true;
+                    } else {
+                        var viewCtx = getViewCtxFromCalloutCtx(renderCtx);
+                        renderECB = !isSharedWithMeView(viewCtx);
+                    }
+                    return CalloutRenderFooterTemplate(renderCtx, renderFollowFooter, renderECB);
+                };
+                SPClientTemplates.TemplateManager.RegisterTemplateOverrides(followingOverridePostRenderCtx);
+            }
+            registerOverride(101);
+            registerOverride(700);
+        });
+    })();if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
+</script>
+
+			<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CB5687A9" />
+			<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAANMFQm1uxe7UPKbSjSY/Tu/BQHXCMm5kphfWoVWItaLzacXjpW+oe6Fc+kTX6Cz/c3l1ME4ls2ZmWfTm3AgizJuapdxdHIqdEusTNTDaCxr4g==" />
+        <!-- PAI Internal Controls -->
+        <!-- Google Tag Manager (noscript) --><noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-TRZNZW'height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+
+        
+        <noscript><div class='noindex'>You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page.</div></noscript>
+        
+        <script type="text/javascript">//<![CDATA[
+ var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } };
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+        //]]></script>
+        
+        
+        <span id="DeltaDelegateControls">
+        
+        
+        </span>
+        
+        <div id="authWrapper" class="">
+        <div class="ms-belltown-anonShow">
+            <div id="ms-designer-ribbon">
+                <div>
+	
+	<div id="s4-ribbonrow" style="visibility:hidden;display:none"></div>
+
+</div>
+
+
+                
+            </div>
+            <span>
+            </span>
+        </div>
+        <div id="s4-workspace">
+            <div id="s4-bodyContainer">
+                <!--SPG: Enterprise Assets Delegate Control-->
+                
+                <!-- Top Nav -->
+                
+
+<!-- Language Bar -->
+<div class="language-bar" id="language-bar">
+    <div>
+        <a href="http://www.pa.gov/">
+            <img src="../../../../_layouts/15/PA.SpEnterprise.TopNav/img/pa-keystone-navy.svg" id="ctl00_ctl65_imgKeystone" alt="PA" class="h3 lang-logo" />
+        </a>
+    </div>
+    <div class="language-bar-left">
+        <a href="http://www.pa.gov/">
+            <span>An Official <strong>Pennsylvania</strong> Government Website</span>
+        </a>
+    </div>
+
+    <div class="text-right">
+        <div id="google_translate_element"></div>
+        <a id="btn-language" href="#" alt="Translate Button">
+            <i class="pais pai-globe pai-fw"></i>
+            <span>Translate</span>
+        </a>
+    </div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            var googleTranslateLanguages = $('[id$="hdnGoogleTransLanguagesID"]').val();
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, includedLanguages: googleTranslateLanguages }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+<!-- Top Navigation -->
+
+<!--Add sticky to top-nav container -->
+<div class="nav-container" id="nav-container">
+    <div class="top-bar " id="top-bar">
+        <input type="hidden" name="ctl00$ctl65$hdnGoogleTransLanguagesID" id="hdnGoogleTransLanguagesID" />
+
+        <div class="top-bar-title">
+            <a href="https://www.health.pa.gov" id="ctl00_ctl65_aHomeLink" alt="Back to Home">
+                <div class="top-bar-logo">
+                    <img src="https://www.health.pa.gov/PublishingImages/DOH_Keystone.svg" id="ctl00_ctl65_imgAgencyLogoResponsive" class="agency-logo" alt="Department of Health" />
+                </div>
+                <div class='top-bar-agencyTitleSmall'>
+                    <span id="ctl00_ctl65_spanAbbr">DOH</span>
+                </div>
+                <div class="top-bar-agencyTitle">
+                    <span id="ctl00_ctl65_spanAcronym">Department of Health</span>
+                </div>
+            </a>
+        </div>
+        <div class="top-bar-right show-for-large">
+            <nav role="navigation">
+                <ul id="ctl00_ctl65_TopNavMenu" class="dropdown menu" role="application">
+                <li class='is-dropdown-submenu-parent' aria-haspopup='true' aria-expanded='false'><a class='top-nav-parent top-nav-top-item' href='#'>I am a/an:</a><ul class='menu vertical dropdown submenu is-dropdown-submenu' role='menu' aria-label='submenu'><li role='menuitem'><a href='https://www.health.pa.gov/I_am_a/Pages/default.aspx'>I am a/an:</a><li><a href='https://www.health.pa.gov/I_am_a/Adult/Pages/Adult.aspx'>Adult</a></li><li><a href='https://www.health.pa.gov/I_am_a/Business-Owner/Pages/Business-Owner.aspx'>Business Owner</a></li><li><a href='https://www.health.pa.gov/I_am_a/Caregiver/Pages/Caregiver.aspx'>Caregiver</a></li><li><a href='https://www.health.pa.gov/I_am_a/Contractor-Grantee/Pages/Contractor-Grantee.aspx'>Contractor/Grantee</a></li><li><a href='https://www.health.pa.gov/I_am_a/healthcareprofessional/Pages/Health-Care-Professional.aspx'>Health Care Professional</a></li><li><a href='https://www.health.pa.gov/I_am_a/olderadult/Pages/Older-Adult.aspx'>Older Adult</a></li><li><a href='https://www.health.pa.gov/I_am_a/parent/Pages/Parent.aspx'>Parent</a></li><li><a href='https://www.health.pa.gov/I_am_a/Researcher/Pages/Researcher.aspx'>Researcher</a></li><li><a href='https://www.health.pa.gov/I_am_a/School%20Representative/Pages/School-Representative.aspx'>School Representative</a></li><li><a href='https://www.health.pa.gov/I_am_a/teen/Pages/Teen.aspx'>Teen</a></li></ul></li><li class='is-dropdown-submenu-parent' aria-haspopup='true' aria-expanded='false'><a class='top-nav-parent top-nav-top-item' href='#'>I'm looking for:</a><ul class='menu vertical dropdown submenu is-dropdown-submenu' role='menu' aria-label='submenu'><li role='menuitem'><a href='https://www.health.pa.gov/Im_looking_for/Pages/default.aspx'>I'm looking for:</a><li><a href='https://www.health.pa.gov/topics/certificates/Pages/Vital%20Records.aspx'>Birth & Death Certificates</a></li><li><a href='https://www.health.pa.gov/topics/disease/Pages/Diseases-Conditions.aspx'>Diseases & Conditions</a></li><li><a href='https://www.health.pa.gov/topics/EMS/Pages/EMS.aspx'>Emergency Medical Services</a></li><li><a href='https://www.health.pa.gov/topics/envirohealth/Pages/Environmental%20Health.aspx'>Environmental Health</a></li><li><a href='https://www.health.pa.gov/topics/facilities/Pages/Facilities-Licensing.aspx'>Facilities and Licensing</a></li><li><a href='https://www.health.pa.gov/topics/Research/Pages/Research.aspx'>Health Research</a></li><li><a href='https://www.health.pa.gov/topics/HealthStatistics/Pages/health-statistics.aspx'>Health Statistics</a></li><li><a href='https://www.health.pa.gov/topics/programs/Pages/Programs.aspx'>Our Programs</a></li><li><a href='https://www.health.pa.gov/topics/Reporting-Registries/Pages/Reporting-Registries.aspx'>Reporting & Registries</a></li><li><a href='https://www.health.pa.gov/topics/programs/violence-prevention/Pages/Violence-Injury%20Prevention.aspx'>Violence & Injury Prevention</a></li></ul></li><li class='is-dropdown-submenu-parent' aria-haspopup='true' aria-expanded='false'><a class='top-nav-parent top-nav-top-item' href='#'>About Us</a><ul class='menu vertical dropdown submenu is-dropdown-submenu' role='menu' aria-label='submenu'><li role='menuitem'><a href='https://www.health.pa.gov/About/Pages/About.aspx'>About Us</a><li><a href='https://www.health.pa.gov/About/Pages/Bureaus%20and%20Offices.aspx'>Bureaus and Offices</a></li><li><a href='https://www.health.pa.gov/About/Pages/Contact.aspx'>Contact</a></li><li><a href='https://www.health.pa.gov/About/Pages/County-Municipal%20Health%20Depts.aspx'>County-Municipal Health Depts</a></li><li><a href='https://www.health.pa.gov/About/Pages/Leadership.aspx'>Leadership</a></li><li><a href='https://www.health.pa.gov/About/Pages/State%20Health%20Centers.aspx'>State Health Centers</a></li><li><a href='https://www.health.pa.gov/About/Pages/Customer-Service.aspx'>Customer Service</a></li><li><a href='https://www.health.pa.gov/About/Pages/Communications.aspx'>Communications</a></li></ul></li><li><a class='top-nav-top-item' href='https://expressforms.pa.gov/apps/pa/health/feedback'>Feedback</a></li><li><a class='top-nav-search' href='https://www.health.pa.gov/pages/search.aspx'><span class='show-for-sr'>Search</span><i class='pair pai-fw pai-search'></i></a></li></ul>
+            </nav>
+        </div>
+        <div class="top-bar-right hide-for-large">
+            <ul class="menu">
+                <li>
+                    <a href="https://www.health.pa.gov/pages/search.aspx" id="ctl00_ctl65_mobileSearch"><span class="show-for-sr">Search</span><i class="pais pai-search pai-fw"></i></a>
+                </li>
+                <li>
+                    <div class="nav-divider"></div>
+                </li>
+                <li>
+                    <a id="topNavMenuBtn" class="menu-button mobile-menu" href="#" data-toggle="topNavMobileNav">
+                        <div id="openMenu">
+                            <div id="nav-icon1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <span class="menu-title">Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="topNavMobileNav" class="hide-for-large nav-container-mobile is-closed off-canvas position-left" data-off-canvas="" data-content-overlay="false" aria-hidden="true">
+        <div class="top-bar" id="top-bar-mobile">
+            <div class="top-bar-title title-overlay">
+                <a href="https://www.health.pa.gov" id="ctl00_ctl65_aHomeLinkMobile">
+                    <div class="top-bar-logo">
+                        <img src="https://www.health.pa.gov/PublishingImages/DOH_Keystone.svg" id="ctl00_ctl65_imgAgencyLogoMobile" class="agency-logo" alt="Department of Health" />
+                    </div>
+                    <div class="top-bar-agencyTitle">
+                        <span id="ctl00_ctl65_spanAcronymMobile" class="hide-for-large">Department of Health</span>
+                    </div>
+                </a>
+            </div>
+            <div class="top-bar-right hide-for-large">
+                <ul class="menu">
+                    <li>
+                        <a id="AccordianMenuBtn" class="menu-button mobile-menu" href="#" data-toggle="topNavMobileNav">
+                            <div id="closeMenu">
+                                <i class="pais pai-times" aria-hidden="true"></i>
+                            </div>
+                            <span class="menu-title">Menu</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion mobile-accordion" data-accordion="ymsj7y-accordion" data-allow-all-closed="true" role="tablist">
+            
+                    <div id="ctl00_ctl65_rptAccordion_ctl00_divAccordionItem" class="accordion-item " data-accordion-item="">
+                        <a id="ctl00_ctl65_rptAccordion_ctl00_lnkAccordionTitle" class="accordion-title " href="../../../../_CONTROLTEMPLATES/15/PA.SPEnterprise.TopNav/#">I am a/an:</a>
+                        <div class="accordion-content" data-tab-content="">
+                            <ul id="ctl00_ctl65_rptAccordion_ctl00_ulAccordionList" class="accordion-list">
+                            <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Pages/default.aspx' class='accordion-link primary-hover'>I am a/an:</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Adult/Pages/Adult.aspx' class='accordion-link primary-hover'>Adult</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Business-Owner/Pages/Business-Owner.aspx' class='accordion-link primary-hover'>Business Owner</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Caregiver/Pages/Caregiver.aspx' class='accordion-link primary-hover'>Caregiver</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Contractor-Grantee/Pages/Contractor-Grantee.aspx' class='accordion-link primary-hover'>Contractor/Grantee</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/healthcareprofessional/Pages/Health-Care-Professional.aspx' class='accordion-link primary-hover'>Health Care Professional</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/olderadult/Pages/Older-Adult.aspx' class='accordion-link primary-hover'>Older Adult</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/parent/Pages/Parent.aspx' class='accordion-link primary-hover'>Parent</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/Researcher/Pages/Researcher.aspx' class='accordion-link primary-hover'>Researcher</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/School%20Representative/Pages/School-Representative.aspx' class='accordion-link primary-hover'>School Representative</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/I_am_a/teen/Pages/Teen.aspx' class='accordion-link primary-hover'>Teen</a></li> </ul>
+                        </div>
+                    </div>
+                    
+                
+                    <div id="ctl00_ctl65_rptAccordion_ctl01_divAccordionItem" class="accordion-item " data-accordion-item="">
+                        <a id="ctl00_ctl65_rptAccordion_ctl01_lnkAccordionTitle" class="accordion-title " href="../../../../_CONTROLTEMPLATES/15/PA.SPEnterprise.TopNav/#">I'm looking for:</a>
+                        <div class="accordion-content" data-tab-content="">
+                            <ul id="ctl00_ctl65_rptAccordion_ctl01_ulAccordionList" class="accordion-list">
+                            <li class='accordion-list-item'><a href='https://www.health.pa.gov/Im_looking_for/Pages/default.aspx' class='accordion-link primary-hover'>I'm looking for:</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/certificates/Pages/Vital%20Records.aspx' class='accordion-link primary-hover'>Birth & Death Certificates</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/disease/Pages/Diseases-Conditions.aspx' class='accordion-link primary-hover'>Diseases & Conditions</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/EMS/Pages/EMS.aspx' class='accordion-link primary-hover'>Emergency Medical Services</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/envirohealth/Pages/Environmental%20Health.aspx' class='accordion-link primary-hover'>Environmental Health</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/facilities/Pages/Facilities-Licensing.aspx' class='accordion-link primary-hover'>Facilities and Licensing</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/Research/Pages/Research.aspx' class='accordion-link primary-hover'>Health Research</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/HealthStatistics/Pages/health-statistics.aspx' class='accordion-link primary-hover'>Health Statistics</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/programs/Pages/Programs.aspx' class='accordion-link primary-hover'>Our Programs</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/Reporting-Registries/Pages/Reporting-Registries.aspx' class='accordion-link primary-hover'>Reporting & Registries</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/topics/programs/violence-prevention/Pages/Violence-Injury%20Prevention.aspx' class='accordion-link primary-hover'>Violence & Injury Prevention</a></li> </ul>
+                        </div>
+                    </div>
+                    
+                
+                    <div id="ctl00_ctl65_rptAccordion_ctl02_divAccordionItem" class="accordion-item " data-accordion-item="">
+                        <a id="ctl00_ctl65_rptAccordion_ctl02_lnkAccordionTitle" class="accordion-title " href="../../../../_CONTROLTEMPLATES/15/PA.SPEnterprise.TopNav/#">About Us</a>
+                        <div class="accordion-content" data-tab-content="">
+                            <ul id="ctl00_ctl65_rptAccordion_ctl02_ulAccordionList" class="accordion-list">
+                            <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/About.aspx' class='accordion-link primary-hover'>About Us</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/Bureaus%20and%20Offices.aspx' class='accordion-link primary-hover'>Bureaus and Offices</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/Contact.aspx' class='accordion-link primary-hover'>Contact</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/County-Municipal%20Health%20Depts.aspx' class='accordion-link primary-hover'>County-Municipal Health Depts</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/Leadership.aspx' class='accordion-link primary-hover'>Leadership</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/State%20Health%20Centers.aspx' class='accordion-link primary-hover'>State Health Centers</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/Customer-Service.aspx' class='accordion-link primary-hover'>Customer Service</a></li> <li class='accordion-list-item'><a href='https://www.health.pa.gov/About/Pages/Communications.aspx' class='accordion-link primary-hover'>Communications</a></li> </ul>
+                        </div>
+                    </div>
+                    
+                
+                    
+                    <div id="ctl00_ctl65_rptAccordion_ctl03_divMobileNoChildren" class="">
+                        <a id="ctl00_ctl65_rptAccordion_ctl03_lnkMobileNoChildren" class="no-children accordion-link" href="https://expressforms.pa.gov/apps/pa/health/feedback">Feedback</a>
+                    </div>
+                
+        </div>
+    </div>
+</div>
+
+                <div class="ms-belltown-anonspacer">
+                </div>
+                <div id="ms-belltown-table" class="ms-table">
+                    <div class="ms-tableRow">
+                    </div>
+                    <div class="banner" role="banner" style="height:340px; background-size:cover;">
+                        <div class="TextContainer">
+                            <h1 id="bannerHeader" style="display:none;" class="BannerHeading">
+                            </h1>
+                            <h2 id="bannerSubheader" style="display:none;" class="BannerSubtext">
+                            </h2>
+                            <p id="buttonText" style="display:none!important">
+                            </p>
+                            <a id="BannerButtonLink" style="display:none" role="link" aria-labelledby="buttonText" class="morebutton button primary-color BannerButton">
+                            </a>
+                        </div>
+                        <div id="BannerArrows">
+                            <button type="button" role="button" id="BannerPrev" style="display:none;" aria-label="Previous Carousel Content" href="#" class="pais pai-angle-left" onclick="setCustIndex('prev')">
+                            </button>
+                            <button type="button" role="button" id="BannerNext" style="display:none;" aria-label="Next Carousel Content" href="#" class="pais pai-angle-right" onclick="setCustIndex('next')">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Icon Bar -->
+                    <div id="ctl00_ctl67_divIconBarContainer" class="iconbar-container show-for-medium">
+    <ul id="ctl00_ctl67_divIconBar" class="row full-width small-up-1 medium-up-5 large-up-8 iconbar menu" role="list">
+    </ul>
+</div>
+
+<div class="Icon_Bar_Wrapper">
+    <nav id="ctl00_ctl67_Icon_Bar_Nav" class="Icon_Bar">
+        <div id="ctl00_ctl67_productNavContent" data-equalizer="" class="Icon_Bar_Contents"><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.health.pa.gov/topics/disease/coronavirus/Pages/Travelers.aspx'> <i class='pair pai-plane'></i><span>Travelers</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.health.pa.gov/topics/disease/coronavirus/Pages/Educators.aspx'> <i class='pair pai-book'></i><span>Educators</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.health.pa.gov/topics/disease/coronavirus/Pages/Health%20Care.aspx'> <i class='pair pai-heartbeat'></i><span>Health Care Professionals</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.cdc.gov/coronavirus/2019-ncov/prepare/pregnancy-breastfeeding.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fspecific-groups%2Fpregnancy-faq.html'> <i class='pair pai-female'></i><span>Pregnant or Nursing</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.cdc.gov/coronavirus/2019-ncov/prepare/children-faq.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fspecific-groups%2Fchildren-faq.html'> <i class='pair pai-child'></i><span>Children</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://acl.gov/COVID-19'> <i class='pai-icon-wheelchair'></i><span>Older Adults</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.health.pa.gov/topics/Documents/Diseases%20and%20Conditions/Coronavirus%20Businesses%20Fact%20Sheet.pdf'> <i class='pair pai-briefcase'></i><span>Businesses</span></a></div><div><a class='Icon_Bar_Link' data-equalizer-watch='' href='https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/index.html'> <i class='pair pai-life-ring'></i><span>Community & Faith Organizations</span></a></div></div>
+    </nav>
+</div>
+
+                    <div id="page" class="primary">
+                        <div id="wrap">
+                            <nav class="row column breadcrumbs text-left" aria-label="Breadcrumb">
+                                <!--SPG: Breadcrumb -->
+                                <span SiteMapProviders="SPSiteMapProvider,SPXmlContentMapProvider" HideInteriorRootNodes="true"><span><a class="breadcrumbRootNode" href="/Pages/default.aspx">Health</a></span><span> &gt; </span><span><a class="breadcrumbNode" href="/topics/Pages/default.aspx">All Health Topics</a></span><span> &gt; </span><span><a title="Diseases and Conditions" class="breadcrumbNode" href="/topics/disease/Pages/Diseases-Conditions.aspx">Diseases &amp; Conditions</a></span><span> &gt; </span><span><a title="Coronavirus subsite" class="breadcrumbNode" href="/topics/disease/coronavirus/Pages/Coronavirus.aspx">Coronavirus</a></span><span> &gt; </span><span class="breadcrumbCurrentNode">Cases</span></span>
+                                </nav>
+                                <div class="contentwrapper">
+                                    <div class="ms-table ms-fullWidth">
+                                        <div class="ms-tableRow">
+                                            <div id="contentBox" class="ms-pub-contentLayout" aria-live="polite" aria-relevant="all">
+                                                <a id="mainContent" name="mainContent" tabindex="-1" alt="Begin Main Content Area" class="show-for-sr">Begin Main Content Area
+                                        
+                                                </a>
+                                                <div class="primary-content">
+                                                    <div id="DeltaPlaceHolderMain">
+	
+                                                    
+    <div data-name="EditModePanelShowInEdit">
+        
+        
+        
+        
+    </div>
+    <div class="content-container">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="content-zone">
+                    <!-- Slider Web Part Zone -->
+                    <div class="row full-width">
+                        <div data-name="SliderWebPartZone">
+                            
+                            
+                            <div>
+                                <div id="sliderWebPartZone" class="AspNet-WebPartZone-Vertical">
+
+			</div>
+		
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Content Editor Zone -->
+                    <div class="row">
+                        <div data-name="Page Field: Page Content">
+                            
+                            
+                            <div id="ctl00_PlaceHolderMain_PageContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PageContent_label"><h2 style="text-align&#58;center;">​COVID-19 Testing in Pennsylvania*</h2><table class="ms-rteTable-default" cellspacing="0" style="width&#58;419px;text-align&#58;center;"><tbody><tr class="ms-rteTableEvenRow-default"><td class="ms-rteTableEvenCol-default" style="width&#58;326.6px;"><strong>​Negative</strong></td><td class="ms-rteTableOddCol-default" style="width&#58;326.6px;"><strong>Positive</strong></td><td class="ms-rteTableEvenCol-default" colspan="1" style="width&#58;326.6px;">​<strong>Deaths</strong></td></tr><tr class="ms-rteTableOddRow-default"><td class="ms-rteTableEvenCol-default">16,441<br></td><td class="ms-rteTableOddCol-default">1,687<br></td><td class="ms-rteTableEvenCol-default" colspan="1">16<br></td></tr></tbody></table><p style="text-align&#58;left;font-size&#58;16px;margin-bottom&#58;10px;"><span class="ms-rteStyle-Quote">* Map, table&#160;and&#160;case&#160;count last updated at 12&#58;00 p.m. on 3/26/2020</span><strong><br><br>Counties impacted to date include&#58;&#160;</strong></p><div style="text-align&#58;center;"><table class="ms-rteTable-default" cellspacing="0" style="width&#58;419px;height&#58;1830px;"><tbody><tr><td class="ms-rteTable-default" style="width&#58;35%;">County</td><td class="ms-rteTable-default" style="width&#58;129px;">Cases</td><td class="ms-rteTable-default" style="width&#58;119px;">Deaths&#160;</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Adams</td><td class="ms-rteTable-default" style="width&#58;129px;">7</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Allegheny</td><td class="ms-rteTable-default" style="width&#58;129px;">133</td><td class="ms-rteTable-default" style="width&#58;119px;">2</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Armstrong</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Beaver</td><td class="ms-rteTable-default" style="width&#58;129px;">13</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Berks</td><td class="ms-rteTable-default" style="width&#58;129px;">36</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Blair</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Bradford</td><td class="ms-rteTable-default" style="width&#58;129px;">2</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Bucks</td><td class="ms-rteTable-default" style="width&#58;129px;">107</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Butler</td><td class="ms-rteTable-default" style="width&#58;129px;">19</td><td class="ms-rteTable-default" style="width&#58;119px;">1</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Cambria</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Carbon</td><td class="ms-rteTable-default" style="width&#58;129px;">2</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Centre</td><td class="ms-rteTable-default" style="width&#58;129px;">9</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Chester</td><td class="ms-rteTable-default" style="width&#58;129px;">84</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Clearfield</td><td class="ms-rteTable-default" style="width&#58;129px;">2</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Columbia</td><td class="ms-rteTable-default" style="width&#58;129px;">3</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Crawford</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Cumberland</td><td class="ms-rteTable-default" style="width&#58;129px;">15</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Dauphin</td><td class="ms-rteTable-default" style="width&#58;129px;">13</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Delaware</td><td class="ms-rteTable-default" style="width&#58;129px;">156</td><td class="ms-rteTable-default" style="width&#58;119px;">1</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Erie</td><td class="ms-rteTable-default" style="width&#58;129px;">4</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Fayette</td><td class="ms-rteTable-default" style="width&#58;129px;">8</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Franklin</td><td class="ms-rteTable-default" style="width&#58;129px;">5</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Greene</td><td class="ms-rteTable-default" style="width&#58;129px;">3</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Indiana</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Juniata</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lackawanna</td><td class="ms-rteTable-default" style="width&#58;129px;">28</td><td class="ms-rteTable-default" style="width&#58;119px;">2</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lancaster</td><td class="ms-rteTable-default" style="width&#58;129px;">21</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lawrence</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lebanon</td><td class="ms-rteTable-default" style="width&#58;129px;">4</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lehigh</td><td class="ms-rteTable-default" style="width&#58;129px;">63</td><td class="ms-rteTable-default" style="width&#58;119px;">1</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Luzerne</td><td class="ms-rteTable-default" style="width&#58;129px;">36</td><td class="ms-rteTable-default" style="width&#58;119px;">1</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Lycoming</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Mercer</td><td class="ms-rteTable-default" style="width&#58;129px;">3</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Monroe</td><td class="ms-rteTable-default" style="width&#58;129px;">67</td><td class="ms-rteTable-default" style="width&#58;119px;">2</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Montgomery</td><td class="ms-rteTable-default" style="width&#58;129px;">282</td><td class="ms-rteTable-default" style="width&#58;119px;">2</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Montour</td><td class="ms-rteTable-default" style="width&#58;129px;">4</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Northampton</td><td class="ms-rteTable-default" style="width&#58;129px;">56</td><td class="ms-rteTable-default" style="width&#58;119px;">3</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Philadelphia</td><td class="ms-rteTable-default" style="width&#58;129px;">402</td><td class="ms-rteTable-default" style="width&#58;119px;">1</td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Pike</td><td class="ms-rteTable-default" style="width&#58;129px;">15</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Potter</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Schuylkill</td><td class="ms-rteTable-default" style="width&#58;129px;">9</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Somerset</td><td class="ms-rteTable-default" style="width&#58;129px;">2</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Susquehanna</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Warren</td><td class="ms-rteTable-default" style="width&#58;129px;">1</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Washington</td><td class="ms-rteTable-default" style="width&#58;129px;">12</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Wayne</td><td class="ms-rteTable-default" style="width&#58;129px;">6</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">Westmoreland</td><td class="ms-rteTable-default" style="width&#58;129px;">24</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr><tr><td class="ms-rteTable-default" style="width&#58;35%;">York&#160;</td><td class="ms-rteTable-default" style="width&#58;129px;">21</td><td class="ms-rteTable-default" style="width&#58;119px;"><br></td></tr></tbody></table>&#160;</div><div style="text-align&#58;center;"><br></div><h4 style="text-align&#58;center;"><a href="https&#58;//www.google.com/maps/d/embed?mid=1lpLPPrltIuVkwFtXhoWdWEA4B1DvNmne">View as a clickable county map</a><br></h4></div>
+                            
+                        </div>
+                    </div>
+                    <!-- Web Part Zone -->
+                    <div class="row">
+                        <div data-name="WebPartZone">
+                            
+                            
+                            <div>
+                                <div id="xacda2d62758b4f9a919325c0af749a94" class="AspNet-WebPartZone-Vertical">
+
+				</div>
+			
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style='display:none' id='hidZone'><div id="wpz" class="AspNet-WebPartZone-Vertical">
+
+					</div>
+				</div>
+                                                    
+			</div>
+                                                </div>
+                                            </div>
+                                            <div class="ms-tableCell ms-verticalAlignTop">
+                                                <div id="DeltaFormDigest">
+				
+                                                
+    <script type="text/javascript">//<![CDATA[
+        var formDigestElement = document.getElementsByName('__REQUESTDIGEST')[0];
+        if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
+            (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
+        {
+            formDigestElement.value = '0xF0DF2E043BBD783F2299E013B3C710E7CFE850C4215E1F4FA44E7F6C592707735F25F390C223D419C23FC162A750DB966CDE178D769F59E0CE54325E60F57893,27 Mar 2020 05:16:55 -0000';
+            g_updateFormDigestPageLoaded = new Date();
+        }
+        //]]>
+        </script>
+    
+                                                
+			</div>
+                                                <div class="ms-hide">
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SPG:Begin PAI Delegate Control Section-->
+                    <!-- Custom Meta Tags -->
+                    
+                    <!-- Color Picker -->
+                    
+                    <!-- Governor Goals -->
+                    
+
+<div>
+    <div id="ctl00_ctl74_divGovGoalsContainer" class="GovGoals-container">
+        <div class="footer-gov-goals text-center">
+            <div id="ctl00_ctl74_divGovGoalsFooter" class="">
+                <div class="footer-gov-goal-logo">
+                    <img src="https://assets.apps.pa.gov/SP2013v1/Enterprise/Assets/gov-seal.png" alt="Governor Seal" class="">
+                </div>
+                <a href="https://data.pa.gov/stories/s/kcju-zzfu" class="footer-gov-goal-link">
+                    <h1 class="text-weight-bold text-underline">Governor's Goals</h1>
+                </a>
+                <ul id="ctl00_ctl74_divGovGoals" class="large-list" role="list"><li class='footer-gov-goal-list-item '  role='listitem'><a href='https://data.pa.gov/stories/s/Health-and-Human-Services/4wfb-af7k' class='no-external'><i class='pair pai-heartbeat'></i><div class='footer-gov-goal-list-item-body'><h2 class='footer-gov-goal-list-item-category'>Government that Works</h2><p class='' role='listitem'><span class='footer-gov-goal-list-item-summary'>Stem the tide of the opioid epidemic</span></p></div></a></li><li class='footer-gov-goal-list-item '  role='listitem'><a href='https://data.pa.gov/stories/s/Health-and-Human-Services/rdpq-aac8' class='no-external'><i class='pair pai-medkit'></i><div class='footer-gov-goal-list-item-body'><h2 class='footer-gov-goal-list-item-category'>Government that Works</h2><p class='' role='listitem'><span class='footer-gov-goal-list-item-summary'>Increase access to health care</span></p></div></a></li><li class='footer-gov-goal-list-item '  role='listitem'><a href='https://data.pa.gov/stories/s/Health-and-Human-Services/n84k-suin' class='no-external'><i class='pair pai-users'></i><div class='footer-gov-goal-list-item-body'><h2 class='footer-gov-goal-list-item-category'>Government that Works</h2><p class='' role='listitem'><span class='footer-gov-goal-list-item-summary'>Provide high-quality supports and protections to vulnerable Pennsylvanians</span></p></div></a></li></ul>
+                <ul class="inline-list footer-gov-goal-text text-uppercase">
+                    <li class="footer-gov-goal-text-item">Schools That Teach</li>
+                    <li class="footer-gov-goal-text-item">Jobs That Pay</li>
+                    <li class="footer-gov-goal-text-item">Government That Works</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <!-- Agency Footer -->
+                    
+
+<div class="primary-color back-to-top">
+    <i class="pais pai-chevron-up"></i>
+    <!-- <p>TOP</p> -->
+</div>
+
+<footer id="divAgencyFooter" class="upper row full-width small-12">
+    <nav class="row show-for-large agency-footer-nav">
+        <div id="ctl00_ctl76_divAgencyFooterLeft" class="large-10 columns agency-footer-left">
+            <div class="row">
+                <div id="ctl00_ctl76_divLogo" class="large-6 columns logo-section">
+                    <div class="row columns">
+                        <a href="https://www.health.pa.gov" id="ctl00_ctl76_aAgencyImgLink">
+                            <img src="https://www.health.pa.gov/Style%20Library/Agency/img/logos/DOH-logo.png" id="ctl00_ctl76_imgAgencyImage" class="agency-image" alt="Agency Image" />
+                        </a>
+                    </div>
+                    <div id="ctl00_ctl76_divOfficials" class="row columns officials-section">
+                        
+                                <a id="ctl00_ctl76_rptOfficials_ctl00_HyperLink1" class="officials-link" href="https://www.governor.pa.gov/">Tom Wolf, Governor</a>
+                            
+                                <a id="ctl00_ctl76_rptOfficials_ctl01_HyperLink1" class="officials-link" href="https://www.health.pa.gov/About/Pages/Leadership.aspx">Dr. Rachel Levine, Secretary</a>
+                            
+                    </div>
+                    <div id="ctl00_ctl76_divContactUs" class="row columns">
+                        <a id="ctl00_ctl76_lnkContactUs" class="button primary-color" href="https://expressforms.pa.gov/apps/pa/health/contact-us">Contact Us</a>
+                    </div>
+                </div>
+                <div id="ctl00_ctl76_divLinks" class="large-6 columns">
+                    
+                            <div class="row">
+                                
+                                        <div class="columns large-6 divLinks">
+                                            <span class="agency-footer-title">Contact Us</span>
+                                            <ul class="agency-footer-sub-menu">
+                                                
+                                                        <li class="agency-footer-sub-menu-item">
+                                                            <a id="ctl00_ctl76_rptRows_ctl00_rptCats_ctl00_rptLnks_ctl00_CategoryLink" class="menu-link sub-menu-link" href="https://www.health.pa.gov/About/Pages/Contact.aspx">Bureaus, Offices and Programs</a>
+                                                            
+                                                        </li>
+                                                    
+                                                        <li class="agency-footer-sub-menu-item">
+                                                            <a id="ctl00_ctl76_rptRows_ctl00_rptCats_ctl00_rptLnks_ctl01_CategoryLink" class="menu-link sub-menu-link" href="https://www.health.pa.gov/About/Pages/Customer-Service.aspx">File a Complaint</a>
+                                                            
+                                                        </li>
+                                                    
+                                            </ul>
+                                        </div>
+                                    
+                            </div>
+                        
+                </div>
+            </div>
+        </div>
+        <div id="ctl00_ctl76_divAgencyFooterRight" class="large-2 columns agency-footer-right">
+            <div id="ctl00_ctl76_socialMediaContainer">
+                
+                        <span class="social-media-link">
+                            <i class='paib pai-fw pai-twitter'></i>
+                            <a id="ctl00_ctl76_rptSocMedia_ctl00_HyperLink2" href="https://twitter.com/PAHealthDept">Twitter</a>
+                        </span>
+                    
+                        <span class="social-media-link">
+                            <i class='paib pai-fw pai-facebook-square'></i>
+                            <a id="ctl00_ctl76_rptSocMedia_ctl01_HyperLink2" href="https://www.facebook.com/pennsylvaniadepartmentofhealth">Facebook</a>
+                        </span>
+                    
+                        <span class="social-media-link">
+                            <i class='paib pai-fw pai-youtube-square'></i>
+                            <a id="ctl00_ctl76_rptSocMedia_ctl02_HyperLink2" href="https://www.youtube.com/playlist?list=PLPptG_EW3WhQ-cISTl0wUxCqONR6LmA-a">YouTube</a>
+                        </span>
+                    
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="ctl00_ctl76_divAgencyFooterMobileMenu" class="small-12 columns hide-for-large agency-footer-mobile">
+        <div class="text-center row">
+            <div class="small-12">
+                <a href="https://www.health.pa.gov" id="ctl00_ctl76_a1">
+                    <img src="https://www.health.pa.gov/Style%20Library/Agency/img/logos/DOH-logo.png" id="ctl00_ctl76_mobileImage" class="agency-image" alt="Agency Image" />
+                </a>
+            </div>
+            <div id="ctl00_ctl76_div2" class="small-12">
+                
+                        <a id="ctl00_ctl76_rptMobileOfficials_ctl00_HyperLink1" class="officials-link" href="https://www.governor.pa.gov/">Tom Wolf, Governor</a>
+                    
+                        <a id="ctl00_ctl76_rptMobileOfficials_ctl01_HyperLink1" class="officials-link" href="https://www.health.pa.gov/About/Pages/Leadership.aspx">Dr. Rachel Levine, Secretary</a>
+                    
+            </div>
+            <div id="ctl00_ctl76_div3" class="small-12">
+                <a id="ctl00_ctl76_lnkMobileContact" class="button primary-color" href="https://expressforms.pa.gov/apps/pa/health/contact-us">Contact Us</a>
+            </div>
+        </div>
+
+        <ul class="accordion agency-accordion" data-accordion data-allow-all-closed='true'>
+            
+                    <li id="ctl00_ctl76_rptCategory_ctl00_accordionAgencyRow1" class="accordion-item agency-accordion-item" data-accordion-item="">
+                        <a id="ctl00_ctl76_rptCategory_ctl00_accordionlnkAgencyTitle1" class="accordion-title agency-accordion-title" href="../../../../_CONTROLTEMPLATES/15/PA.SpEnterprise.AgencyFooter/#">Contact Us</a>
+                        <div class="accordion-content agency-accordion-content" data-tab-content>
+                            <ul id="ctl00_ctl76_rptCategory_ctl00_accordionAgencyList1" class="accordion-list agency-accordion-list">
+                                
+                                        <li class="accordian-list-item">
+                                            <a id="ctl00_ctl76_rptCategory_ctl00_rptLinks_ctl00_mobilelink" class="accordian-link" href="https://www.health.pa.gov/About/Pages/Contact.aspx">Bureaus, Offices and Programs</a>
+                                            
+                                        </li>
+                                    
+                                        <li class="accordian-list-item">
+                                            <a id="ctl00_ctl76_rptCategory_ctl00_rptLinks_ctl01_mobilelink" class="accordian-link" href="https://www.health.pa.gov/About/Pages/Customer-Service.aspx">File a Complaint</a>
+                                            
+                                        </li>
+                                    
+                            </ul>
+                        </div>
+                    </li>
+                
+
+            <li id="ctl00_ctl76_mobileSocMedia" class="accordion-item agency-accordion-item" data-accordion-item="">
+                <a id="ctl00_ctl76_HyperLink3" class="accordion-title agency-accordion-title" href="../../../../_CONTROLTEMPLATES/15/PA.SpEnterprise.AgencyFooter/#">Social Media</a>
+                <div class="accordion-content agency-accordion-content" data-tab-content>
+                    <ul id="ctl00_ctl76_Ul1" class="accordion-list agency-accordion-list">
+                        
+                                <li>
+                                    <span class="social-media-link">
+                                        <i class='paib pai-fw pai-twitter'></i>
+                                        <a id="ctl00_ctl76_rptMobileSocMedia_ctl00_HyperLink4" href="https://twitter.com/PAHealthDept">Twitter</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <span class="social-media-link">
+                                        <i class='paib pai-fw pai-facebook-square'></i>
+                                        <a id="ctl00_ctl76_rptMobileSocMedia_ctl01_HyperLink4" href="https://www.facebook.com/pennsylvaniadepartmentofhealth">Facebook</a>
+                                    </span>
+                                </li>
+                            
+                                <li>
+                                    <span class="social-media-link">
+                                        <i class='paib pai-fw pai-youtube-square'></i>
+                                        <a id="ctl00_ctl76_rptMobileSocMedia_ctl02_HyperLink4" href="https://www.youtube.com/playlist?list=PLPptG_EW3WhQ-cISTl0wUxCqONR6LmA-a">YouTube</a>
+                                    </span>
+                                </li>
+                            
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+                    <!-- Enterprise Footer -->
+                    
+
+<footer class="main-footer">
+    <nav class="state-footer-nav">
+        <div class="row">
+            <div class="small-12 large-5 columns footer-left">
+                <div class="row footer-menu">
+                    <div class="small-12 large-6 columns footer-img">
+                        <img src="https://assets.apps.pa.gov/SiteCollectionImages/palogo/open-data-pa-branding-footer-logo-white.png" id="ctl00_ctl78_imgGovernorsLogo" class="gov-seal" title="Governor&#39;s Logo" alt="Governor&#39;s Logo" />
+                    </div>
+                    <div class="small-12 large-6 columns">
+                        <a href="http://www.pa.gov/" id="ctl00_ctl78_aCommonwealthTitle" target="_blank" class="menu-link main-menu-link commonwealth-title">COMMONWEALTH OF PENNSYLVANIA</a>
+                        <p id="ctl00_ctl78_pCommonwealthParagraph">Keystone State. Proudly founded in 1681 as a place of tolerance and freedom.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small-12 large-7 columns footer-right">
+                <div class="row footer-menu">
+                    <div id="ctl00_ctl78_divEnterpriseCategory1" class="small-12 large-4 columns">
+                        <a id="ctl00_ctl78_lnkEnterpriseCategory1" class="class menu-link main-menu-link" href="http://www.pa.gov/#" target="_blank">TOP SERVICES</a>
+                        <ul id="ctl00_ctl78_ulEnterpriseSubMenu1"><li class='sub-menu-item'><a target='_blank' href='https://www.pavoterservices.state.pa.us/Pages/VoterRegistrationApplication.aspx' class='menu-link sub-menu-link'><i class='fa fa-fw fa-check-square-o'></i><span>Register to Vote</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.dmv.state.pa.us/locator/locator.jsp?navigation=true' class='menu-link sub-menu-link'><i class='fa fa-fw fa-car'></i><span>Find a DMV</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.health.pa.gov/topics/certificates/Pages/Birth-Certificates.aspx' class='menu-link sub-menu-link'><i class='fa fa-fw fa-address-card-o'></i><span>Get a Birth Certificate</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://register.dmva.pa.gov/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-flag'></i><span>Join the Veterans Registry</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://visitpa.com/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-map-marker'></i><span>Visit Pennsylvania</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://pennwatch.pa.gov/Pages/default.aspx' class='menu-link sub-menu-link'><i class='fa fa-fw fa-info-circle'></i><span>PennWatch</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.openrecords.pa.gov/RTKL/CitizensGuide.cfm' class='menu-link sub-menu-link'><i class='fa fa-fw fa-info-circle'></i><span>Right-to-Know Law</span></a></li></ul>
+                    </div>
+                    <div id="ctl00_ctl78_divEnterpriseCategory2" class="small-12 large-4 columns">
+                        <a id="ctl00_ctl78_lnkEnterpriseCategory2" class="class menu-link main-menu-link" href="http://www.pa.gov/#government" target="_blank">GOVERNMENT</a>
+                        <ul id="ctl00_ctl78_ulEnterpriseSubMenu2"><li class='sub-menu-item'><a target='_blank' href='https://www.governor.pa.gov/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-star'></i><span>Governor Tom Wolf</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.pa.gov/directory/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-address-book'></i><span>Directory</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.house.state.pa.us/' class='menu-link sub-menu-link'><span>State House</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.pasen.gov/' class='menu-link sub-menu-link'><span>State Senate</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.pacourts.us/' class='menu-link sub-menu-link'><span>Courts</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.ltgov.pa.gov/Pages/Home.aspx' class='menu-link sub-menu-link'><span>Lieutenant Governor</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.attorneygeneral.gov/' class='menu-link sub-menu-link'><span>Attorney General</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.paauditor.gov/' class='menu-link sub-menu-link'><span>Auditor General</span></a></li><li class='sub-menu-item'><a target='_blank' href='http://www.patreasury.gov/' class='menu-link sub-menu-link'><span>Treasurer</span></a></li></ul>
+                    </div>
+                    <div id="ctl00_ctl78_divEnterpriseCategory3" class="small-12 large-4 columns">
+                        <a id="ctl00_ctl78_lnkEnterpriseCategory3" class="class menu-link main-menu-link" href="http://www.pa.gov/" target="_blank">PA.GOV</a>
+                        <ul id="ctl00_ctl78_ulEnterpriseSubMenu3"><li class='sub-menu-item'><a target='_blank' href='https://wslh.dced.pa.gov/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-map-signs'></i><span>Who We Are</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.facebook.com/PennsylvaniaGov/' class='menu-link sub-menu-link'><i class='fa fa-fw fa-facebook-official'></i><span>Pennsylvania Facebook</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://twitter.com/PennsylvaniaGov' class='menu-link sub-menu-link'><i class='fa fa-fw fa-twitter-square'></i><span>Pennsylvania Twitter</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.pa.gov/guides/state-symbols/' class='menu-link sub-menu-link'><span>State Symbols</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.pa.gov/news/' class='menu-link sub-menu-link'><span>News</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.pa.gov/directory/' class='menu-link sub-menu-link'><span>Social Media</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://pa.gov/apps/' class='menu-link sub-menu-link'><span>Apps</span></a></li><li class='sub-menu-item'><a target='_blank' href='https://www.pa.gov/guides/commonwealth-careers/' class='menu-link sub-menu-link'><span>Careers & Internships</span></a></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav id="copyright" class="clearfix row copyright-nav">
+        <ul id="ctl00_ctl78_ulBottomStrip" class="small-12 large-6 columns">
+        <li><a target='_blank' href='http://www.pa.gov/accessibility-policy/'>ACCESSIBILITY</a></li><li><a target='_blank' href='http://www.pa.gov/privacy-policy/'>PRIVACY & DISCLAIMERS</a></li><li><a target='_blank' href='https://www.pa.gov/translation-disclaimer/'>TRANSLATION DISCLAIMER</a></li><li><a target='_blank' href='http://www.pa.gov/security-policy/'>SECURITY</a></li></ul>
+        <span class="small-12 large-6 columns">Copyright ©
+                <span id="ctl00_ctl78_lblYear">2020</span>
+            Commonwealth of Pennsylvania. All rights reserved.
+        </span>
+    </nav>
+</footer>
+
+
+                    <!--SPG: Custom Header-->
+                    
+<script>
+   
+    var defaultBannerText;
+    
+    $(document).ready(function () {
+        try {
+            if (!allCarousels) {
+               if(!bannerLabel) {
+                    defaultBannerText = ($("#ctl00_ctl80_hfdefaultimgalt").val());
+                    $('.banner').attr('aria-label', defaultBannerText);
+                }
+            }
+        }
+        catch(err) {
+           defaultBannerText = ($("#ctl00_ctl80_hfdefaultimgalt").val());
+           $('.banner').attr('aria-label', defaultBannerText);
+        }
+    });
+</script>
+<input type="hidden" name="ctl00$ctl80$hfdefaultimgalt" id="ctl00_ctl80_hfdefaultimgalt" value="COVID Banner" />
+
+                    <!--SPG: Agency Assets Delegate Control-->
+                    
+                    <!--SPG:End PAI Delegate Control Section-->
+                </div>
+            </div>
+            </div>
+            <script type="text/javascript">// <![CDATA[ 
+
+
+            var g_Workspace = "s4-workspace";
+            // ]]>
+</script>
+            <script>//<![CDATA[
+        
+
+        $(document).ready(function () {
+            $(document).foundation();
+           
+        });
+       
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+            //]]></script>
+        
+			
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{f2fffd76-b72f-447e-b710-c1a1c7242096}",itemId: 9,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002ftopics\u002fdisease\u002fcoronavirus\u002fPages",itemPermissions:{High:16,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+};
+function __RegisterWebPartPageCUI() {
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js");}
+_spBodyOnLoadFunctionNames.push("__RegisterWebPartPageCUI");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';var g_clientIdDeltaPlaceHolderMain = "DeltaPlaceHolderMain";
+var g_clientIdDeltaPlaceHolderUtilityContent = "DeltaPlaceHolderUtilityContent";
+//]]>
+</script>
+</form><span id="DeltaPlaceHolderUtilityContent"></span></body>
+    </html>

@@ -1,0 +1,331 @@
+[
+  {
+    "county": "Bayfield County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Brown County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Calumet County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Chippewa County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Clark County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Columbia County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Dane County",
+    "cases": 114,
+    "deaths": 1
+  },
+  {
+    "county": "Dodge County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Douglas County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Dunn County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Eau Claire County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Fond du Lac County",
+    "cases": 17,
+    "deaths": 1
+  },
+  {
+    "county": "Grant County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Green County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Iowa County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Juneau County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Kenosha County",
+    "cases": 19,
+    "deaths": 0
+  },
+  {
+    "county": "La Crosse County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Marathon County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Milwaukee County",
+    "cases": 347,
+    "deaths": 5
+  },
+  {
+    "county": "Monroe County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Outagamie County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Ozaukee County",
+    "cases": 22,
+    "deaths": 1
+  },
+  {
+    "county": "Pierce County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Portage County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Racine County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Rock County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Sauk County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Sheboygan County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "St. Croix County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Vilas County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Walworth County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 25,
+    "deaths": 0
+  },
+  {
+    "county": "Waukesha County",
+    "cases": 56,
+    "deaths": 0
+  },
+  {
+    "county": "Winnebago County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Wood County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Adams County",
+    "cases": 0
+  },
+  {
+    "county": "Ashland County",
+    "cases": 0
+  },
+  {
+    "county": "Barron County",
+    "cases": 0
+  },
+  {
+    "county": "Buffalo County",
+    "cases": 0
+  },
+  {
+    "county": "Burnett County",
+    "cases": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 0
+  },
+  {
+    "county": "Door County",
+    "cases": 0
+  },
+  {
+    "county": "Florence County",
+    "cases": 0
+  },
+  {
+    "county": "Forest County",
+    "cases": 0
+  },
+  {
+    "county": "Green Lake County",
+    "cases": 0
+  },
+  {
+    "county": "Iron County",
+    "cases": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 0
+  },
+  {
+    "county": "Kewaunee County",
+    "cases": 0
+  },
+  {
+    "county": "Lafayette County",
+    "cases": 0
+  },
+  {
+    "county": "Langlade County",
+    "cases": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 0
+  },
+  {
+    "county": "Manitowoc County",
+    "cases": 0
+  },
+  {
+    "county": "Marinette County",
+    "cases": 0
+  },
+  {
+    "county": "Marquette County",
+    "cases": 0
+  },
+  {
+    "county": "Menominee County",
+    "cases": 0
+  },
+  {
+    "county": "Oconto County",
+    "cases": 0
+  },
+  {
+    "county": "Oneida County",
+    "cases": 0
+  },
+  {
+    "county": "Pepin County",
+    "cases": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 0
+  },
+  {
+    "county": "Price County",
+    "cases": 0
+  },
+  {
+    "county": "Richland County",
+    "cases": 0
+  },
+  {
+    "county": "Rusk County",
+    "cases": 0
+  },
+  {
+    "county": "Sawyer County",
+    "cases": 0
+  },
+  {
+    "county": "Shawano County",
+    "cases": 0
+  },
+  {
+    "county": "Taylor County",
+    "cases": 0
+  },
+  {
+    "county": "Trempealeau County",
+    "cases": 0
+  },
+  {
+    "county": "Vernon County",
+    "cases": 0
+  },
+  {
+    "county": "Washburn County",
+    "cases": 0
+  },
+  {
+    "county": "Waupaca County",
+    "cases": 0
+  },
+  {
+    "county": "Waushara County",
+    "cases": 0
+  },
+  {
+    "cases": 707,
+    "deaths": 8
+  }
+]

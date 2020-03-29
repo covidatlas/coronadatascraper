@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" __expr-val-dir="ltr" lang="en-us" dir="ltr">
 <head><title>
@@ -307,12 +306,12 @@ Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone
 		
 <div id="DhssZenContent">
     
-    <div id="ctl00_PlaceHolderMain_PageContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PageContent_label"><div class="grid1"><div class="box"><h2 class="dz-Element-h2">Coronavirus Disease 2019 </h2>
+    <div id="ctl00_PlaceHolderMain_PageContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PageContent_label"><div class="grid1"><div class="box"><h2 class="dz-Element-h2">Coronavirus Disease 2019 </h2>
 <div><h3 class="dz-Element-h3">About COVID-19:</h3></div>
 <ul><li><a href="/dph/Epi/id/Pages/COVID-19/default.aspx">COVID-19 Homepage</a></li>
 <li><a href="/dph/Epi/id/Pages/COVID-19/monitoring.aspx">Case Counts</a></li>
 <li><a href="/dph/Epi/id/Pages/Human-Coronavirus.aspx">About Human Coronaviruses</a></li>
-<li><a href="/dph/Epi/id/Pages/covid-19/communications.aspx">Media &amp; Communications</a></li></ul>
+<li><a href="/dph/Epi/id/Pages/COVID-19/communications.aspx">Media &amp; Communications</a></li></ul>
 <h3 class="dz-Element-h3">What to do:</h3>
 <ul><li><a href="/dph/Epi/id/Pages/COVID-19/Sick.aspx">If you are sick</a></li>
 <li><span><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx">If you may have been exposed</a><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx"><span style="display:inline-block"></span></a></span><br /></li>
@@ -333,7 +332,7 @@ Resources for:</h3>
 <li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=12">DHSS Press Releases</a></li></ul>
 <h3 class="dz-Element-h3">Questions?</h3>
 <p><span><a href="https://alaska211.org/"><img alt="Alaska 2-1-1: Get connected. Get answers." src="/dph/Epi/id/PublishingImages/COVID-19/logo_211.png" style="margin:0px;width:195px;height:106px" /></a><br /></span>For non-clinical questions,<br />call 2-1-1.</p>
-<p><img alt="Careline logo" src="/dbh/PublishingImages/prevention/Carelinewebad.jpg" style="margin:5px 0px;width:190px;height:129px" /><br /><br /><a href="https://alaska211.org/"></a> </p>
+<p><img alt="Careline logo" src="/dbh/PublishingImages/prevention/Carelinewebad.jpg" style="margin:5px 0px;width:190px;height:129px" /><br /><br /><a href="https://alaska211.org/"></a> </p>
 </div></div>
 
 
@@ -349,112 +348,186 @@ Resources for:</h3>
 
 <h4>Confirmed cases in Alaska by region</h4>
 <h4><img src="/dph/Epi/id/PublishingImages/COVID-19/COVID-19_confirmedcases_byday.png" alt="" style="margin:5px;width:450px;height:285px" /><span style="color:rgb(51, 51, 51);font-size:12.8px"></span><span style="color:rgb(51, 51, 51);font-size:12.8px"></span></h4>
-<div><ul><li>Cumulative number of cases hospitalized to date:  0​1</li>
-<li><span>Cumulative number of deaths to date:  0​1<span style="display:inline-block"></span></span><br /></li>
-<li><em><strong>Updated March 24, 2020; </strong>updates made daily by 5pm and reflect cases reported as of 3pm that day.</em></li></ul></div>
-<table width="100%" cellspacing="0" cellpadding="5" style="border:1px solid;border-collapse:collapse">
-  <tbody><tr>
-    <td width="109" valign="top"><p align="center"><strong>Region</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>Travel-Related</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>Non-Travel</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>Total</strong></p></td>
+<div><em>*Cases are assigned by date of onset, diagnosis, or report — whichever is earliest; therefore, case counts may be updated as new data become available.</em><br /><ul>
+<li><strong>Cumulative number of cases hospitalized to date:  0​3</strong></li>
+<strong>
+</strong><li><span><strong>Cumulative number of deaths to date:  0​1</strong><span style="display:inline-block"></span></span><br /></li>
+
+<li><em><strong>Updated March 26, 2020; </strong>updates made daily by 5pm and reflect cases reported as of 3pm that day.</em></li></ul>
+<div><h4 class="dz-Element-h4">Case by Residence* and Presumed Exposure Source</h4></div></div>
+<table width="100%" cellspacing="5" cellpadding="5" style="border:1px solid;border-collapse:collapse">
+     <tbody><tr>
+    <td width="138" valign="top"><p><strong> </strong></p></td>
+    <td width="62" valign="top"><p><strong>Travel-Related</strong></p></td>
+    <td width="59" valign="top"><p><strong>Non-Travel</strong></p></td>
+    <td width="62" valign="top"><p><strong>Close Contact</strong></p></td>
+    <td width="63" valign="top"><p><strong>Pending</strong></p></td>
+    <td width="57" valign="top"><p><strong>Total</strong></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Anchorage</strong><strong> </strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>11</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>6</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong><em>17</em></strong></p></td>
+    <td width="138" valign="top"><p><strong> Municipality of <br /> Anchorage</strong></p></td>
+    <td width="62" valign="top"><p><strong>15</strong></p></td>
+    <td width="59" valign="top"><p><strong>5</strong></p></td>
+    <td width="62" valign="top"><p><strong>3</strong></p></td>
+    <td width="63" valign="top"><p><strong>10</strong></p></td>
+    <td width="57" valign="top"><p><strong>33</strong></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Gulf Coast</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>​</strong><strong>2</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>4</strong></p></td>
+    <td width="138" valign="top"><p><strong> </strong><em>Anchorage<br /> (including JBER)</em></p></td>
+    <td width="62" valign="top"><p><em>14</em></p></td>
+    <td width="59" valign="top"><p><em>4</em></p></td>
+    <td width="62" valign="top"><p><em>3 </em></p></td>
+
+    <td width="63" valign="top"><p><em>9 </em></p></td>
+    <td width="57" valign="top"><p><em>30<br /></em></p>
+<br /></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Seward</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="138" valign="top"><p><em> Eagle River/<br /> Chugiak</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>1</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>1</em></p></td>
+    <td width="57" valign="top"><p><em>3</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Sterling</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>0</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>2</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+    <td width="138" valign="top"><p><strong> Gulf Coast</strong></p></td>
+    <td width="62" valign="top"><p><strong>3</strong></p></td>
+    <td width="59" valign="top"><p><strong>​0</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>5</strong></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Soldotna</em></p></td>
-    <td width="71" valign="top"><p align="center">1</p></td>
-    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>1</em></p></td>
+    <td width="138" valign="top"><p><em> Homer</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Interior</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>3</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>6</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>9</strong></p></td>
+    <td width="138" valign="top"><p><em> Seward</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Fairbanks</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>3</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>6</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>9</em></p></td>
+    <td width="138" valign="top"><p><em> Sterling</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>2</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Mat-Su</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>​</strong><strong>0</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>2</strong></p></td>
+    <td width="138" valign="top"><p><em> Soldotna</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Palmer</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>2</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>0</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+    <td width="138" valign="top"><p><strong> Interior</strong></p></td>
+    <td width="62" valign="top"><p><strong>4</strong></p></td>
+    <td width="59" valign="top"><p><strong>2</strong></p></td>
+    <td width="62" valign="top"><p><strong>6</strong></p></td>
+    <td width="63" valign="top"><p><strong>3</strong></p></td>
+    <td width="57" valign="top"><p><strong>15</strong></p></td>
   </tr>
   <tr>
-    <td valign="top"><p><strong> Northern</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>0</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>0</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="138" valign="top"><p><em> Fairbanks</em></p></td>
+    <td width="62" valign="top"><p><em>3</em></p></td>
+    <td width="59" valign="top"><p><em>2</em><br /></p></td>
+    <td width="62" valign="top"><p><em>4</em></p></td>
+    <td width="63" valign="top"><p><em>1</em></p></td>
+    <td width="57" valign="top"><p><em>10</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Southeast</strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>2</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>8</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>10</strong></p></td>
+    <td width="138" valign="top"><p><em> North Pole</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="63" valign="top"><p><em>2</em></p></td>
+    <td width="57" valign="top"><p><em>5</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Juneau</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>1</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>2</em></p></td>
+    <td width="138" valign="top"><p><strong> Mat-Su</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+    <td width="59" valign="top"><p><strong>​0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>2</strong></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><em> Ketchikan</em></p></td>
-    <td width="71" valign="top"><p align="center"><em>1</em></p></td>
-    <td width="58" valign="top"><p align="center"><em>7</em></p></td>
-    <td width="47" valign="top"><p align="center"><em>8</em></p></td>
+    <td width="138" valign="top"><p><em> Palmer</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>2</em></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> Southwest</strong><strong> </strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>0</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>0</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>0</strong></p></td>
+    <td width="138" valign="top"><p><strong> Northern</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="59" valign="top"><p><strong>0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>0</strong></p></td>
   </tr>
   <tr>
-    <td width="109" valign="top"><p><strong> TOTAL</strong><strong> </strong></p></td>
-    <td width="71" valign="top"><p align="center"><strong>20</strong></p></td>
-    <td width="58" valign="top"><p align="center"><strong>22</strong></p></td>
-    <td width="47" valign="top"><p align="center"><strong>42</strong></p></td>
+    <td width="138" valign="top"><p><strong> Southeast</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+    <td width="59" valign="top"><p><strong>3</strong></p></td>
+    <td width="62" valign="top"><p><strong>9</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>14</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Juneau</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>1</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>3</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Ketchikan</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+
+    <td width="59" valign="top"><p><em>2</em></p></td>
+    <td width="62" valign="top"><p><em>8</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>11</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Southwest</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="59" valign="top"><p><strong>0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>0</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> TOTAL</strong></p></td>
+    <td width="62" valign="top"><p><strong>26</strong></p></td>
+    <td width="59" valign="top"><p><strong>10</strong></p></td>
+    <td width="62" valign="top"><p><strong>20</strong></p></td>
+    <td width="63" valign="top"><p><strong>13</strong></p></td>
+    <td width="57" valign="top"><p><strong>69</strong></p></td>
   </tr>
 </tbody></table>
+<em>*Case residence may not always reflect location of exposure or testing.</em><br /><ul>
+<li style="font-size:12.8px"><a href="http://live.laborstats.alaska.gov/pop/index.cfm" style="font-size:12.8px"><strong style="font-size:12.8px"><em style="font-size:12.8px">Region:</em></strong> Economic regions definitions​</a></li>
+<li><span><strong><em>Travel-related:</em></strong> Exposure/source of the virus was outside of Alaska.<span style="display:inline-block"></span></span><br /><strong><em></em></strong></li>
+<li><strong><em>Pending:</em></strong> Under investigation<br /><strong><em></em></strong></li>
 
-
-<ul><li style="font-size:12.8px"><a href="http://live.laborstats.alaska.gov/pop/index.cfm" style="font-size:12.8px"><strong style="font-size:12.8px"><em style="font-size:12.8px">Region:</em></strong> Economic regions definitions​</a></li>
-<li><strong><em>Travel-related:</em></strong> Exposure/source of the virus was outside of Alaska.</li>
-<li><span><em><strong>Updated March 24, 2020;</strong> updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><span style="display:inline-block"></span></span><br /></li></ul>
+<li><span><em><strong>Updated March 26, 2020;</strong> updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><span style="display:inline-block"></span></span><br /></li></ul>
 <div class="box" style="margin-bottom:1em"><span><h3 class="dz-Element-h3">COVID-19 tests for Alaska residents</h3></span><span>
 <h4 class="dz-Element-h4">How many tests were completed in total? </h4>
 <div><div><span><span><h4><img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_cumulative.png" style="margin:5px 0px;width:98%;height:281px" /><span style="display:inline-block"></span></h4></span></span> <span><h4 class="dz-Element-h4">How many tests are completed each day?<img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_byday.png" style="width:98%;height:281px" /></h4>
@@ -482,7 +555,7 @@ Resources for:</h3>
 
 <br /></div>
 </div>
-​​​​​​</div>
+​​​​​​​</div>
 </div>
 <div id="DhssZenNav" class="grid1">
 	

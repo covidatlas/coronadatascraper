@@ -1,0 +1,326 @@
+[
+  {
+    "county": "Saguache County",
+    "cases": 0,
+    "population": 6837
+  },
+  {
+    "county": "Sedgwick County",
+    "cases": 0,
+    "population": 2275
+  },
+  {
+    "county": "Cheyenne County",
+    "cases": 0,
+    "population": 1862
+  },
+  {
+    "county": "Custer County",
+    "cases": 0,
+    "population": 4928
+  },
+  {
+    "county": "La Plata County",
+    "cases": 5,
+    "population": 56403
+  },
+  {
+    "county": "San Juan County",
+    "cases": 0,
+    "population": 762
+  },
+  {
+    "county": "Pitkin County",
+    "cases": 23,
+    "population": 17879
+  },
+  {
+    "county": "Park County",
+    "cases": 1,
+    "population": 18557
+  },
+  {
+    "county": "Alamosa County",
+    "cases": 0,
+    "population": 16184
+  },
+  {
+    "county": "Prowers County",
+    "cases": 0,
+    "population": 12078
+  },
+  {
+    "county": "Moffat County",
+    "cases": 0,
+    "population": 13181
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 131,
+    "population": 579491
+  },
+  {
+    "county": "Summit County",
+    "cases": 9,
+    "population": 30973
+  },
+  {
+    "county": "Pueblo County",
+    "cases": 3,
+    "population": 167116
+  },
+  {
+    "county": "Boulder County",
+    "cases": 66,
+    "population": 325476
+  },
+  {
+    "county": "Denver County",
+    "cases": 262,
+    "population": 717797
+  },
+  {
+    "county": "Montrose County",
+    "cases": 4,
+    "population": 42260
+  },
+  {
+    "county": "Eagle County",
+    "cases": 147,
+    "population": 54863
+  },
+  {
+    "county": "San Miguel County",
+    "cases": 1,
+    "population": 8177
+  },
+  {
+    "county": "Costilla County",
+    "cases": 0,
+    "population": 3809
+  },
+  {
+    "county": "Broomfield County",
+    "cases": 10,
+    "population": 69453
+  },
+  {
+    "county": "Chaffee County",
+    "cases": 5,
+    "population": 20028
+  },
+  {
+    "county": "Crowley County",
+    "cases": 1,
+    "population": 5857
+  },
+  {
+    "county": "Fremont County",
+    "cases": 1,
+    "population": 47912
+  },
+  {
+    "county": "Huerfano County",
+    "cases": 1,
+    "population": 6854
+  },
+  {
+    "county": "Delta County",
+    "cases": 1,
+    "population": 30936
+  },
+  {
+    "county": "Garfield County",
+    "cases": 16,
+    "population": 59807
+  },
+  {
+    "county": "Rio Blanco County",
+    "cases": 0,
+    "population": 6305
+  },
+  {
+    "county": "Morgan County",
+    "cases": 3,
+    "population": 28503
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 0,
+    "population": 5584
+  },
+  {
+    "county": "Montezuma County",
+    "cases": 0,
+    "population": 26159
+  },
+  {
+    "county": "Adams County",
+    "cases": 50,
+    "population": 511473
+  },
+  {
+    "county": "Mineral County",
+    "cases": 0,
+    "population": 777
+  },
+  {
+    "county": "Otero County",
+    "cases": 1,
+    "population": 18364
+  },
+  {
+    "county": "Phillips County",
+    "cases": 0,
+    "population": 4266
+  },
+  {
+    "county": "Ouray County",
+    "cases": 0,
+    "population": 4798
+  },
+  {
+    "county": "Bent County",
+    "cases": 0,
+    "population": 5819
+  },
+  {
+    "county": "Archuleta County",
+    "cases": 0,
+    "population": 13737
+  },
+  {
+    "county": "Routt County",
+    "cases": 9,
+    "population": 25683
+  },
+  {
+    "county": "Hinsdale County",
+    "cases": 1,
+    "population": 804
+  },
+  {
+    "county": "Weld County",
+    "cases": 107,
+    "population": 314251
+  },
+  {
+    "county": "Larimer County",
+    "cases": 61,
+    "population": 350362
+  },
+  {
+    "county": "Lake County",
+    "cases": 0,
+    "population": 7762
+  },
+  {
+    "county": "Rio Grande County",
+    "cases": 2,
+    "population": 11226
+  },
+  {
+    "county": "Gilpin County",
+    "cases": 0,
+    "population": 6097
+  },
+  {
+    "county": "Yuma County",
+    "cases": 2,
+    "population": 10029
+  },
+  {
+    "county": "Jackson County",
+    "cases": 0,
+    "population": 1396
+  },
+  {
+    "county": "Kit Carson County",
+    "cases": 1,
+    "population": 7157
+  },
+  {
+    "county": "Clear Creek County",
+    "cases": 3,
+    "population": 9663
+  },
+  {
+    "county": "Logan County",
+    "cases": 2,
+    "population": 21854
+  },
+  {
+    "county": "Washington County",
+    "cases": 1,
+    "population": 4729
+  },
+  {
+    "county": "Douglas County",
+    "cases": 67,
+    "population": 342842
+  },
+  {
+    "county": "Conejos County",
+    "cases": 0,
+    "population": 8136
+  },
+  {
+    "county": "El Paso County",
+    "cases": 137,
+    "population": 714395
+  },
+  {
+    "county": "Kiowa County",
+    "cases": 0,
+    "population": 1373
+  },
+  {
+    "county": "Teller County",
+    "cases": 7,
+    "population": 25060
+  },
+  {
+    "county": "Gunnison County",
+    "cases": 57,
+    "population": 17173
+  },
+  {
+    "county": "Baca County",
+    "cases": 0,
+    "population": 3547
+  },
+  {
+    "county": "Elbert County",
+    "cases": 3,
+    "population": 26218
+  },
+  {
+    "county": "Mesa County",
+    "cases": 6,
+    "population": 153630
+  },
+  {
+    "county": "Dolores County",
+    "cases": 0,
+    "population": 2053
+  },
+  {
+    "county": "Arapahoe County",
+    "cases": 119,
+    "population": 651342
+  },
+  {
+    "county": "Las Animas County",
+    "cases": 0,
+    "population": 14491
+  },
+  {
+    "county": "Grand County",
+    "cases": 2,
+    "population": 15474
+  },
+  {
+    "cases": 1328,
+    "population": 5695430
+  }
+]

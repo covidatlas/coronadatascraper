@@ -1,0 +1,200 @@
+[
+  {
+    "county": "Adams County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Benton County",
+    "cases": 19,
+    "deaths": 4
+  },
+  {
+    "county": "Chelan County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Clallam County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Clark County",
+    "cases": 48,
+    "deaths": 5
+  },
+  {
+    "county": "Columbia County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Cowlitz County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Douglas County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Ferry County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Grant County",
+    "cases": 33,
+    "deaths": 1
+  },
+  {
+    "county": "Grays Harbor County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Island County",
+    "cases": 64,
+    "deaths": 1
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 11,
+    "deaths": 0
+  },
+  {
+    "county": "King County",
+    "cases": 1577,
+    "deaths": 109
+  },
+  {
+    "county": "Kitsap County",
+    "cases": 33,
+    "deaths": 0
+  },
+  {
+    "county": "Kittitas County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Klickitat County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Lewis County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Mason County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Okanogan County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Pierce County",
+    "cases": 186,
+    "deaths": 4
+  },
+  {
+    "county": "San Juan County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Skagit County",
+    "cases": 78,
+    "deaths": 1
+  },
+  {
+    "county": "Snohomish County",
+    "cases": 778,
+    "deaths": 16
+  },
+  {
+    "county": "Spokane County",
+    "cases": 67,
+    "deaths": 0
+  },
+  {
+    "county": "Stevens County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Thurston County",
+    "cases": 24,
+    "deaths": 0
+  },
+  {
+    "county": "Walla Walla County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Whatcom County",
+    "cases": 86,
+    "deaths": 4
+  },
+  {
+    "county": "Whitman County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Yakima County",
+    "cases": 61,
+    "deaths": 2
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 69,
+    "deaths": 0
+  },
+  {
+    "county": "Skamania County",
+    "cases": 0
+  },
+  {
+    "county": "Wahkiakum County",
+    "cases": 0
+  },
+  {
+    "county": "Garfield County",
+    "cases": 0
+  },
+  {
+    "county": "Asotin County",
+    "cases": 0
+  },
+  {
+    "county": "Pacific County",
+    "cases": 0
+  },
+  {
+    "county": "Pend Oreille County",
+    "cases": 0
+  },
+  {
+    "cases": 3207,
+    "deaths": 147
+  }
+]

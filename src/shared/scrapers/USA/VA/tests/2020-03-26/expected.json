@@ -1,0 +1,537 @@
+[
+  {
+    "county": "Albemarle County",
+    "cases": 6
+  },
+  {
+    "county": "Amherst County",
+    "cases": 1
+  },
+  {
+    "county": "Appomattox County",
+    "cases": 0
+  },
+  {
+    "county": "Arlington County",
+    "cases": 54
+  },
+  {
+    "county": "Augusta County",
+    "cases": 0
+  },
+  {
+    "county": "Bedford County",
+    "cases": 2
+  },
+  {
+    "county": "Bland County",
+    "cases": 0
+  },
+  {
+    "county": "Brunswick County",
+    "cases": 0
+  },
+  {
+    "county": "Buchanan County",
+    "cases": 0
+  },
+  {
+    "county": "Buckingham County",
+    "cases": 0
+  },
+  {
+    "county": "Campbell County",
+    "cases": 0
+  },
+  {
+    "county": "Caroline County",
+    "cases": 0
+  },
+  {
+    "county": "Carroll County",
+    "cases": 0
+  },
+  {
+    "county": "Charles City County",
+    "cases": 1
+  },
+  {
+    "county": "Charlotte County",
+    "cases": 0
+  },
+  {
+    "county": "Clarke County",
+    "cases": 0
+  },
+  {
+    "county": "Culpeper County",
+    "cases": 2
+  },
+  {
+    "county": "Cumberland County",
+    "cases": 0
+  },
+  {
+    "county": "Dinwiddie County",
+    "cases": 0
+  },
+  {
+    "county": "Essex County",
+    "cases": 0
+  },
+  {
+    "county": "Grayson County",
+    "cases": 0
+  },
+  {
+    "county": "Greene County",
+    "cases": 0
+  },
+  {
+    "county": "Greensville County",
+    "cases": 0
+  },
+  {
+    "county": "Halifax County",
+    "cases": 1
+  },
+  {
+    "county": "Hanover County",
+    "cases": 2
+  },
+  {
+    "county": "Henrico County",
+    "cases": 21
+  },
+  {
+    "county": "Highland County",
+    "cases": 0
+  },
+  {
+    "county": "Isle of Wight County",
+    "cases": 2
+  },
+  {
+    "county": "King and Queen County",
+    "cases": 0
+  },
+  {
+    "county": "Lee County",
+    "cases": 2
+  },
+  {
+    "county": "Louisa County",
+    "cases": 4
+  },
+  {
+    "county": "Lunenburg County",
+    "cases": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 1
+  },
+  {
+    "county": "Mathews County",
+    "cases": 1
+  },
+  {
+    "county": "Middlesex County",
+    "cases": 0
+  },
+  {
+    "county": "New Kent County",
+    "cases": 0
+  },
+  {
+    "county": "Northampton County",
+    "cases": 0
+  },
+  {
+    "county": "Northumberland County",
+    "cases": 0
+  },
+  {
+    "county": "Patrick County",
+    "cases": 0
+  },
+  {
+    "county": "Pittsylvania County",
+    "cases": 1
+  },
+  {
+    "county": "Powhatan County",
+    "cases": 0
+  },
+  {
+    "county": "Prince George County",
+    "cases": 0
+  },
+  {
+    "county": "Prince William County",
+    "cases": 36
+  },
+  {
+    "county": "Pulaski County",
+    "cases": 0
+  },
+  {
+    "county": "Rockbridge County",
+    "cases": 1
+  },
+  {
+    "county": "Rockingham County",
+    "cases": 2
+  },
+  {
+    "county": "Russell County",
+    "cases": 0
+  },
+  {
+    "county": "Tazewell County",
+    "cases": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 1
+  },
+  {
+    "county": "Westmoreland County",
+    "cases": 0
+  },
+  {
+    "county": "Wythe County",
+    "cases": 0
+  },
+  {
+    "county": "York County",
+    "cases": 9
+  },
+  {
+    "county": "Alexandria County",
+    "cases": 14
+  },
+  {
+    "county": "Bristol County",
+    "cases": 0
+  },
+  {
+    "county": "Chesapeake County",
+    "cases": 4
+  },
+  {
+    "county": "Danville County",
+    "cases": 2
+  },
+  {
+    "county": "Fairfax city",
+    "cases": 1
+  },
+  {
+    "county": "Franklin city",
+    "cases": 0
+  },
+  {
+    "county": "Harrisonburg County",
+    "cases": 3
+  },
+  {
+    "county": "Lynchburg County",
+    "cases": 1
+  },
+  {
+    "county": "Manassas Park County",
+    "cases": 0
+  },
+  {
+    "county": "Martinsville County",
+    "cases": 0
+  },
+  {
+    "county": "Newport News County",
+    "cases": 8
+  },
+  {
+    "county": "Norfolk County",
+    "cases": 6
+  },
+  {
+    "county": "Salem County",
+    "cases": 0
+  },
+  {
+    "county": "Waynesboro County",
+    "cases": 0
+  },
+  {
+    "county": "Williamsburg County",
+    "cases": 5
+  },
+  {
+    "county": "Winchester County",
+    "cases": 0
+  },
+  {
+    "county": "Accomack County",
+    "cases": 2
+  },
+  {
+    "county": "Alleghany County",
+    "cases": 0
+  },
+  {
+    "county": "Amelia County",
+    "cases": 1
+  },
+  {
+    "county": "Bath County",
+    "cases": 0
+  },
+  {
+    "county": "Botetourt County",
+    "cases": 1
+  },
+  {
+    "county": "Chesterfield County",
+    "cases": 12
+  },
+  {
+    "county": "Craig County",
+    "cases": 0
+  },
+  {
+    "county": "Dickenson County",
+    "cases": 0
+  },
+  {
+    "county": "Fairfax County",
+    "cases": 79
+  },
+  {
+    "county": "Fauquier County",
+    "cases": 1
+  },
+  {
+    "county": "Floyd County",
+    "cases": 0
+  },
+  {
+    "county": "Fluvanna County",
+    "cases": 3
+  },
+  {
+    "county": "Franklin County",
+    "cases": 1
+  },
+  {
+    "county": "Frederick County",
+    "cases": 2
+  },
+  {
+    "county": "Giles County",
+    "cases": 0
+  },
+  {
+    "county": "Gloucester County",
+    "cases": 2
+  },
+  {
+    "county": "Goochland County",
+    "cases": 3
+  },
+  {
+    "county": "Henry County",
+    "cases": 0
+  },
+  {
+    "county": "James City County",
+    "cases": 49
+  },
+  {
+    "county": "King George County",
+    "cases": 0
+  },
+  {
+    "county": "King William County",
+    "cases": 0
+  },
+  {
+    "county": "Lancaster County",
+    "cases": 0
+  },
+  {
+    "county": "Loudoun County",
+    "cases": 28
+  },
+  {
+    "county": "Mecklenburg County",
+    "cases": 3
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 0
+  },
+  {
+    "county": "Nelson County",
+    "cases": 1
+  },
+  {
+    "county": "Nottoway County",
+    "cases": 1
+  },
+  {
+    "county": "Orange County",
+    "cases": 1
+  },
+  {
+    "county": "Page County",
+    "cases": 0
+  },
+  {
+    "county": "Prince Edward County",
+    "cases": 2
+  },
+  {
+    "county": "Rappahannock County",
+    "cases": 0
+  },
+  {
+    "county": "Richmond County",
+    "cases": 0
+  },
+  {
+    "county": "Roanoke County",
+    "cases": 1
+  },
+  {
+    "county": "Scott County",
+    "cases": 0
+  },
+  {
+    "county": "Shenandoah County",
+    "cases": 3
+  },
+  {
+    "county": "Smyth County",
+    "cases": 0
+  },
+  {
+    "county": "Southampton County",
+    "cases": 0
+  },
+  {
+    "county": "Spotsylvania County",
+    "cases": 2
+  },
+  {
+    "county": "Stafford County",
+    "cases": 7
+  },
+  {
+    "county": "Surry County",
+    "cases": 0
+  },
+  {
+    "county": "Sussex County",
+    "cases": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 1
+  },
+  {
+    "county": "Wise County",
+    "cases": 0
+  },
+  {
+    "county": "Buena Vista County",
+    "cases": 0
+  },
+  {
+    "county": "Charlottesville County",
+    "cases": 9
+  },
+  {
+    "county": "Colonial Heights County",
+    "cases": 0
+  },
+  {
+    "county": "Covington County",
+    "cases": 0
+  },
+  {
+    "county": "Emporia County",
+    "cases": 0
+  },
+  {
+    "county": "Falls Church County",
+    "cases": 0
+  },
+  {
+    "county": "Fredericksburg County",
+    "cases": 1
+  },
+  {
+    "county": "Galax County",
+    "cases": 0
+  },
+  {
+    "county": "Hampton County",
+    "cases": 1
+  },
+  {
+    "county": "Hopewell County",
+    "cases": 0
+  },
+  {
+    "county": "Lexington County",
+    "cases": 0
+  },
+  {
+    "county": "Manassas County",
+    "cases": 3
+  },
+  {
+    "county": "Norton County",
+    "cases": 0
+  },
+  {
+    "county": "Petersburg County",
+    "cases": 0
+  },
+  {
+    "county": "Poquoson County",
+    "cases": 1
+  },
+  {
+    "county": "Portsmouth County",
+    "cases": 3
+  },
+  {
+    "county": "Radford County",
+    "cases": 1
+  },
+  {
+    "county": "Richmond city",
+    "cases": 14
+  },
+  {
+    "county": "Roanoke city",
+    "cases": 0
+  },
+  {
+    "county": "Staunton County",
+    "cases": 0
+  },
+  {
+    "county": "Suffolk County",
+    "cases": 1
+  },
+  {
+    "county": "Virginia Beach County",
+    "cases": 26
+  },
+  {
+    "cases": 460
+  }
+]

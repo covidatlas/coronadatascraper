@@ -1,0 +1,223 @@
+[
+  {
+    "county": "Baker County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 6
+  },
+  {
+    "county": "Benton County",
+    "cases": 6,
+    "deaths": 0,
+    "tested": 222
+  },
+  {
+    "county": "Clackamas County",
+    "cases": 21,
+    "deaths": 2,
+    "tested": 690
+  },
+  {
+    "county": "Clatsop County",
+    "cases": 2,
+    "deaths": 0,
+    "tested": 61
+  },
+  {
+    "county": "Columbia County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 73
+  },
+  {
+    "county": "Coos County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 96
+  },
+  {
+    "county": "Crook County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 6
+  },
+  {
+    "county": "Curry County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 17
+  },
+  {
+    "county": "Deschutes County",
+    "cases": 15,
+    "deaths": 0,
+    "tested": 145
+  },
+  {
+    "county": "Douglas County",
+    "cases": 3,
+    "deaths": 0,
+    "tested": 124
+  },
+  {
+    "county": "Gilliam County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 3
+  },
+  {
+    "county": "Grant County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 2
+  },
+  {
+    "county": "Harney County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 19
+  },
+  {
+    "county": "Hood River County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 70
+  },
+  {
+    "county": "Jackson County",
+    "cases": 4,
+    "deaths": 0,
+    "tested": 685
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 9
+  },
+  {
+    "county": "Josephine County",
+    "cases": 4,
+    "deaths": 0,
+    "tested": 78
+  },
+  {
+    "county": "Klamath County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 69
+  },
+  {
+    "county": "Lake County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 3
+  },
+  {
+    "county": "Lane County",
+    "cases": 7,
+    "deaths": 1,
+    "tested": 361
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 49
+  },
+  {
+    "county": "Linn County",
+    "cases": 26,
+    "deaths": 1,
+    "tested": 482
+  },
+  {
+    "county": "Malheur County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 19
+  },
+  {
+    "county": "Marion County",
+    "cases": 57,
+    "deaths": 2,
+    "tested": 616
+  },
+  {
+    "county": "Morrow County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 15
+  },
+  {
+    "county": "Multnomah County",
+    "cases": 45,
+    "deaths": 2,
+    "tested": 1729
+  },
+  {
+    "county": "Polk County",
+    "cases": 6,
+    "deaths": 0,
+    "tested": 139
+  },
+  {
+    "county": "Sherman County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 2
+  },
+  {
+    "county": "Tillamook County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 30
+  },
+  {
+    "county": "Umatilla County",
+    "cases": 2,
+    "deaths": 0,
+    "tested": 73
+  },
+  {
+    "county": "Union County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 16
+  },
+  {
+    "county": "Wallowa County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 3
+  },
+  {
+    "county": "Wasco County",
+    "cases": 1,
+    "deaths": 0,
+    "tested": 35
+  },
+  {
+    "county": "Washington County",
+    "cases": 104,
+    "deaths": 3,
+    "tested": 1083
+  },
+  {
+    "county": "Wheeler County",
+    "cases": 0,
+    "deaths": 0,
+    "tested": 1
+  },
+  {
+    "county": "Yamhill County",
+    "cases": 7,
+    "deaths": 0,
+    "tested": 238
+  },
+  {
+    "tested": 7269,
+    "cases": 316,
+    "deaths": 11
+  }
+]

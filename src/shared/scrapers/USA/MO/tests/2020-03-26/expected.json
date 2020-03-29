@@ -1,0 +1,465 @@
+[
+  {
+    "county": "Adair County",
+    "cases": 1
+  },
+  {
+    "county": "Bates County",
+    "cases": 1
+  },
+  {
+    "county": "Benton County",
+    "cases": 1
+  },
+  {
+    "county": "Bollinger County",
+    "cases": 1
+  },
+  {
+    "county": "Boone County",
+    "cases": 25
+  },
+  {
+    "county": "Callaway County",
+    "cases": 2
+  },
+  {
+    "county": "Camden County",
+    "cases": 1
+  },
+  {
+    "county": "Cape Girardeau County",
+    "cases": 3
+  },
+  {
+    "county": "Carter County",
+    "cases": 1
+  },
+  {
+    "county": "Cass County",
+    "cases": 8
+  },
+  {
+    "county": "Christian County",
+    "cases": 2
+  },
+  {
+    "county": "Clay County",
+    "cases": 5
+  },
+  {
+    "county": "Clinton County",
+    "cases": 1
+  },
+  {
+    "county": "Cole County",
+    "cases": 8
+  },
+  {
+    "county": "Cooper County",
+    "cases": 1
+  },
+  {
+    "county": "Dunklin County",
+    "cases": 2
+  },
+  {
+    "county": "Franklin County",
+    "cases": 4
+  },
+  {
+    "county": "Greene County",
+    "cases": 25
+  },
+  {
+    "county": "Henry County",
+    "cases": 1
+  },
+  {
+    "county": "Jackson County",
+    "cases": 95
+  },
+  {
+    "county": "Jasper County",
+    "cases": 2
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 10
+  },
+  {
+    "county": "Johnson County",
+    "cases": 8
+  },
+  {
+    "county": "Lafayette County",
+    "cases": 2
+  },
+  {
+    "county": "McDonald County",
+    "cases": 1
+  },
+  {
+    "county": "Moniteau County",
+    "cases": 2
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 2
+  },
+  {
+    "county": "Newton County",
+    "cases": 3
+  },
+  {
+    "county": "Pemiscot County",
+    "cases": 1
+  },
+  {
+    "county": "Perry County",
+    "cases": 4
+  },
+  {
+    "county": "Platte County",
+    "cases": 5
+  },
+  {
+    "county": "Pulaski County",
+    "cases": 4
+  },
+  {
+    "county": "Ralls County",
+    "cases": 1
+  },
+  {
+    "county": "Randolph County",
+    "cases": 1
+  },
+  {
+    "county": "Scott County",
+    "cases": 1
+  },
+  {
+    "county": "Shelby County",
+    "cases": 1
+  },
+  {
+    "county": "St. Charles County",
+    "cases": 22
+  },
+  {
+    "county": "St. Francois County",
+    "cases": 2
+  },
+  {
+    "county": "St. Louis County",
+    "cases": 230
+  },
+  {
+    "county": "Stoddard County",
+    "cases": 1
+  },
+  {
+    "county": "Taney County",
+    "cases": 1
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 10
+  },
+  {
+    "cases": 502
+  },
+  {
+    "county": "Andrew County",
+    "cases": 0
+  },
+  {
+    "county": "Atchison County",
+    "cases": 0
+  },
+  {
+    "county": "Audrain County",
+    "cases": 0
+  },
+  {
+    "county": "Barry County",
+    "cases": 0
+  },
+  {
+    "county": "Barton County",
+    "cases": 0
+  },
+  {
+    "county": "Buchanan County",
+    "cases": 0
+  },
+  {
+    "county": "Butler County",
+    "cases": 0
+  },
+  {
+    "county": "Caldwell County",
+    "cases": 0
+  },
+  {
+    "county": "Carroll County",
+    "cases": 0
+  },
+  {
+    "county": "Cedar County",
+    "cases": 0
+  },
+  {
+    "county": "Chariton County",
+    "cases": 0
+  },
+  {
+    "county": "Clark County",
+    "cases": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 0
+  },
+  {
+    "county": "Dade County",
+    "cases": 0
+  },
+  {
+    "county": "Dallas County",
+    "cases": 0
+  },
+  {
+    "county": "Daviess County",
+    "cases": 0
+  },
+  {
+    "county": "DeKalb County",
+    "cases": 0
+  },
+  {
+    "county": "Dent County",
+    "cases": 0
+  },
+  {
+    "county": "Douglas County",
+    "cases": 0
+  },
+  {
+    "county": "Gasconade County",
+    "cases": 0
+  },
+  {
+    "county": "Gentry County",
+    "cases": 0
+  },
+  {
+    "county": "Grundy County",
+    "cases": 0
+  },
+  {
+    "county": "Harrison County",
+    "cases": 0
+  },
+  {
+    "county": "Hickory County",
+    "cases": 0
+  },
+  {
+    "county": "Holt County",
+    "cases": 0
+  },
+  {
+    "county": "Howard County",
+    "cases": 0
+  },
+  {
+    "county": "Howell County",
+    "cases": 0
+  },
+  {
+    "county": "Iron County",
+    "cases": 0
+  },
+  {
+    "county": "Knox County",
+    "cases": 0
+  },
+  {
+    "county": "Laclede County",
+    "cases": 0
+  },
+  {
+    "county": "Lawrence County",
+    "cases": 0
+  },
+  {
+    "county": "Lewis County",
+    "cases": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 0
+  },
+  {
+    "county": "Linn County",
+    "cases": 0
+  },
+  {
+    "county": "Livingston County",
+    "cases": 0
+  },
+  {
+    "county": "Macon County",
+    "cases": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 0
+  },
+  {
+    "county": "Maries County",
+    "cases": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 0
+  },
+  {
+    "county": "Mercer County",
+    "cases": 0
+  },
+  {
+    "county": "Miller County",
+    "cases": 0
+  },
+  {
+    "county": "Mississippi County",
+    "cases": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 0
+  },
+  {
+    "county": "Morgan County",
+    "cases": 0
+  },
+  {
+    "county": "New Madrid County",
+    "cases": 0
+  },
+  {
+    "county": "Nodaway County",
+    "cases": 0
+  },
+  {
+    "county": "Oregon County",
+    "cases": 0
+  },
+  {
+    "county": "Osage County",
+    "cases": 0
+  },
+  {
+    "county": "Ozark County",
+    "cases": 0
+  },
+  {
+    "county": "Pettis County",
+    "cases": 0
+  },
+  {
+    "county": "Phelps County",
+    "cases": 0
+  },
+  {
+    "county": "Pike County",
+    "cases": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 0
+  },
+  {
+    "county": "Putnam County",
+    "cases": 0
+  },
+  {
+    "county": "Ray County",
+    "cases": 0
+  },
+  {
+    "county": "Reynolds County",
+    "cases": 0
+  },
+  {
+    "county": "Ripley County",
+    "cases": 0
+  },
+  {
+    "county": "St. Clair County",
+    "cases": 0
+  },
+  {
+    "county": "Ste. Genevieve County",
+    "cases": 0
+  },
+  {
+    "county": "Saline County",
+    "cases": 0
+  },
+  {
+    "county": "Schuyler County",
+    "cases": 0
+  },
+  {
+    "county": "Scotland County",
+    "cases": 0
+  },
+  {
+    "county": "Shannon County",
+    "cases": 0
+  },
+  {
+    "county": "Stone County",
+    "cases": 0
+  },
+  {
+    "county": "Sullivan County",
+    "cases": 0
+  },
+  {
+    "county": "Texas County",
+    "cases": 0
+  },
+  {
+    "county": "Vernon County",
+    "cases": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 0
+  },
+  {
+    "county": "Webster County",
+    "cases": 0
+  },
+  {
+    "county": "Worth County",
+    "cases": 0
+  },
+  {
+    "county": "Wright County",
+    "cases": 0
+  }
+]

@@ -1,0 +1,1827 @@
+<!DOCTYPE html><html lang="en"><head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/P6KLRNy7h3K160ZmYNUOAce7/recaptcha__en.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-159925580-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'UA-159925580-1');
+	</script>
+  
+	  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        	<title>Oregon Health Authority | COVID-19 Updates</title>
+    	<meta name="description" content="Oregon Health Authority | COVID-19 Updates Informatioal Page">
+	    <meta property="og:title" content="Oregon Health Authority | COVID-19 Updates">
+		<meta property="og:description" content="Oregon Health Authority | COVID-19 Updates">
+		<meta property="og:image" content="https://govsite-assets.s3.amazonaws.com/DxFw3JqlRMmssJcRH8Jh_oha-hdr-bkd-v1.png">
+		<meta property="og:url" content="https://govstatus.egov.com/OR-OHA-COVID-19">
+		
+		<meta name="twitter:title" content="Oregon Health Authority | COVID-19 Updates">
+		<meta name="twitter:description" content="Oregon Health Authority | COVID-19 Updates">
+		<meta name="twitter:image" content="https://govsite-assets.s3.amazonaws.com/DxFw3JqlRMmssJcRH8Jh_oha-hdr-bkd-v1.png">
+		<meta name="twitter:card" content="summary_large_image">
+    	
+	<link rel="apple-touch-icon" sizes="57x57" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="https://govsite-assets.s3.amazonaws.com/assets/favicons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://s3.amazonaws.com/govstatus.site/assets/css/landing-page.min.css">
+	
+	    
+    <style>
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+a{color:#531fff;}
+
+.btn-primary{
+	color: #fff;
+    background-color: #531fff;
+    border-color: #531fff;
+}
+
+.btn-primary:hover{
+	color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
+
+header.masthead {
+  position: relative;
+  background: url("https://govsite-assets.s3.amazonaws.com/DxFw3JqlRMmssJcRH8Jh_oha-hdr-bkd-v1.png") no-repeat center center;
+  background-color: #000000;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+.container img{
+	max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+</style>    
+        
+        
+    <style>
+	    
+	    .iframe-container {
+position: relative;
+padding-bottom: 100%;
+padding-top: 30px;
+height: 0;
+overflow: scroll;}
+
+.iframe-container iframe,  .iframe-container object,  .iframe-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;}
+</style>
+    
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css"><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/translate_static/js/element/main.js"></script><style type="text/css"></style><script type="text/javascript" charset="UTF-8" src="https://translate.googleapis.com/element/TE_20200210_00/e/js/element/element_main.js"></script></head>
+  <body class="content-center">
+	  
+	  
+  	
+	
+  <!-- Masthead -->
+  <header class="masthead text-white text-center mb-5" id="masthead">
+    <div class="overlay" id="overlay"></div>
+    <div class="container" id="header-container">
+      <div class="row" id="header-row">
+        <div class="col-xl-12 mx-auto" id="header-title-column">
+          <h1 class="mb-5" id="title">Oregon Health Authority | COVID-19 Updates</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto" id="header-btn-column">
+            <div class="form-row" id="subscribe">
+              <div class="col-md-12 text-center">
+	                                            </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+   
+   
+   	<div class="container">
+	   	
+	   	   		
+   		<div class="row" id="google-translate">
+		    <div class="col-md-4 offset-md-8 text-right">
+		        <div id="google_translate_element"></div>
+		    </div>
+		</div>
+	
+   		<div class="row">
+<div class="column col-sm-12 text-right">
+<p class="align-right">
+    <a title="CDC Coronavirus website" class="btn btn-light" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank" data-or-analytics-event-attached="true">CDC website</a>
+    <a title="CDC Coronavirus website in Chinese" class="btn btn-light" href="https://www.cdc.gov/coronavirus/2019-ncov/index-Chinese.html" target="_blank" data-or-analytics-event-attached="true">中文</a>
+    <a title="CDC Coronavirus website in Spanish" class="btn btn-light" href="https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html" target="_blank" data-or-analytics-event-attached="true">Español</a>
+</p>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <img class="img-responsive" alt="Oregon Health Authority logo" src="https://govstatus.egov.com/covid-19-alerts-from-oregon-health-authority/images/oha-logo-color.png" data-image="bk6l7t8on029">
+    </div>
+    <div class="col-sm-9">
+        <p class="lead" autocomplete="off">On March 8, 2020, <a href="https://govstatus.egov.com/or-covid-19" target="_blank">Gov. Kate Brown</a> declared a state of emergency to address the spread of COVID-19 in Oregon. The <b>Oregon Health Authority </b>(OHA) serves as the lead agency for the public health response. The Office of Emergency Management (OEM) coordinates and supports state and local recovery efforts through the <a href="https://storymaps.arcgis.com/stories/6c96b225a8424992b56e59400a30dab4" target="_blank">Emergency Coordination Center</a> (ECC).&nbsp;</p>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="container text-center">
+        <p autocomplete="off" class="lead">For general information on COVID-19 in Oregon, <b>call 211</b>. If you are having a medical emergency, call 911.</p>
+        <p class="text-center">
+            <a title="Follow OHA on Facebook" href="https://www.facebook.com/OregonHealthAuthority" target="_blank">
+                <i class="fa fa-facebook-square blue fa-lg" aria-hidden="true"></i>
+            </a>
+            <a title="Follow OHA on Twitter" href="https://twitter.com/OHAOregon" target="_blank">
+                <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
+            </a>
+            <a title="OHA's COVID-19 YouTube Videos" href="https://www.youtube.com/playlist?list=PLd4xfJU3qzMXx_oEU7DzWPJB0Tl3WDUuG" target="_blank" data-or-analytics-event-attached="true">
+                <i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i>
+            </a>
+        </p>
+        <p autocomplete="off" class="text-center">
+            <a class="btn btn-primary" role="button" href="https://public.govdelivery.com/accounts/ORDHS/subscriber/new?topic_id=ORDHS_816" target="_blank">
+                <i class="fa fa-bell" aria-hidden="true"></i>&nbsp;Sign up for Updates
+            </a>
+            <a class="btn btn-primary" role="button" href="mailto:COVID.19@dhsoha.state.or.us">
+                <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Contact Us
+            </a>
+        </p>
+        <p class="text-center" autocomplete="off">
+            <a class="btn btn-light" href="https://www.oregon.gov/oha/erd/pages/covid-19-news.aspx" target="_blank">
+                <i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;Read OHA News Releases on COVID-19
+            </a>
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <p autocomplete="off" class="text-center">
+            <a class="btn btn-block btn-warning btn-lg" role="button" href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/COVID19-FAQ.aspx" target="_blank">&nbsp;
+					<i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;Frequently Asked Questions
+				</a>
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <p autocomplete="off" class="text-center">
+            <a class="btn btn-block btn-warning btn-lg" href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/COVID-19.aspx" target="_blank">
+                <i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;For Healthcare and Local Public Health
+            </a>
+        </p>
+    </div>
+</div>
+<br>
+
+<div class="alert alert-info">
+<h2 autocomplete="off"><i class="fa fa-house			 " aria-hidden="true"></i>&nbsp;Stay Home, Save Lives</h2>
+
+<p>In the effort to slow the spread of COVID-19, we are asking Oregonians around the state to share information on how to stay safe and save lives.&nbsp;</p><p><a class="btn btn-light" href="https://govstatus.egov.com/or-stay-home-save-lives"><i class="fa fa-share			 " aria-hidden="true"></i>&nbsp;Stay Home, Save Lives Resources for Sharing</a></p>
+	
+
+	
+
+<br>
+
+
+
+</div>
+
+<a name="stayhome"></a>
+<hr><br>
+
+<div class="alert alert-info">
+<h2 autocomplete="off"><i class="fa fa-map-marker			 " aria-hidden="true"></i>&nbsp;Situation in Oregon</h2>
+<div id="accordionSetOne">
+    <div class="card">
+        <div class="card-header" id="headingCases">
+            <h3 autocomplete="off">
+						<button class="btn btn-block btn-link text-left" aria-expanded="true" aria-controls="collapseCases" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" autocomplete="off" data-toggle="collapse" data-target="#collapseCases">
+							COVID-19 Cases in Oregon
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+						</button>
+					</h3>
+        </div>
+        <div class="collapse show" id="collapseCases" aria-labelledby="headingCases" style="">
+            <div class="card-body">
+ 
+
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th colspan="2" autocomplete="off">﻿As of 3/26/2020, 8:00 a.m. Updated daily.<!--EndFragment--></th></tr></thead><tbody><tr><td autocomplete="off">Positive</td><td class="table-warning" style="text-align: center;" autocomplete="off"><b>316</b></td></tr><tr><td autocomplete="off">Negative</td><td style="text-align: center;">6953</td></tr><tr><td>Total Completed Tests<!--EndFragment--></td><td style="text-align: center;" autocomplete="off">7269</td></tr><tr><td>Total Deaths</td><td class="text-center">11</td></tr></tbody></table>
+
+<ul>
+
+<li><a href="https://govsite-assets.s3.amazonaws.com/VooxlwVoTey3aArqqFkG_Oregon-COVID-19-Projections-2020-03-23.pdf" target="_blank"></a><a href="https://govsite-assets.s3.amazonaws.com/SLdyToaAQ2i1P0EsaL7t_Oregon-COVID-19-SitStat-03-26-2020-FINAL.pdf" target="_blank">Daily Situational Status Report</a> - Produced jointly by the Oregon Health Authority and the <a href="https://storymaps.arcgis.com/stories/6c96b225a8424992b56e59400a30dab4" target="_blank">Oregon Office of Emergency Management</a>. It details the overall picture of the COVID-19 response across government agencies.</li>
+
+<li><a href="https://govsite-assets.s3.amazonaws.com/VooxlwVoTey3aArqqFkG_Oregon-COVID-19-Projections-2020-03-23.pdf" target="_blank">Projected COVID-19 Epidemic Trends and Health System Needs for Oregon, March 23, 2020</a></li>
+
+<li><a href="https://govsite-assets.s3.amazonaws.com/A3Z1otTC64X9w1RwpTgl_Oregon-COVID-19-Joint-Task-Force-Initial-Report-2020-03-23.pdf" target="_blank">Governor’s Joint Task Force for Health Care Systems Response to COVID-19 Initial Report, March 23, 2020</a></li>
+
+</ul>
+</div>
+        </div>
+    </div>
+
+<br>
+
+
+
+
+
+<div class="card">
+        <div class="card-header" id="headingOne">
+            <h3 autocomplete="off">
+						<button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseOne" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseOne">
+							Demographic and Hospital Information<i class="fas fa-plus float-right" aria-hidden="true"></i>
+						</button>
+					</h3>
+        </div>
+        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" style="">
+            <div class="card-body">
+ 
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th>County</th><th style="text-align: center;">Positive</th><th style="text-align: center;">Deaths*</th><th style="text-align: center;">Negative</th></tr></thead><tbody><tr><td>Baker</td><td class="text-center">0</td><td class="text-center">0</td><td style="text-align: center;">6</td></tr><tr><td><!--StartFragment-->Benton<!--EndFragment--></td><td style="text-align: center;">6</td><td style="text-align: center;">0</td><td style="text-align: center;">216</td></tr><tr><td>Clackamas</td><td style="text-align: center;">21</td><td style="text-align: center;">2</td><td style="text-align: center;">669</td></tr><tr><td>Clatsop</td><td style="text-align: center;">2</td><td style="text-align: center;">0</td><td style="text-align: center;">59</td></tr><tr><td>Columbia</td><td class="text-center">0</td><td class="text-center">0</td><td class="text-center">73</td></tr><tr><td>Coos</td><td class="text-center">0</td><td class="text-center">0</td><td class="text-center">96</td></tr><tr><td>Crook</td><td class="text-center">0</td><td class="text-center">0</td><td class="text-center">6</td></tr><tr><td>Curry</td><td class="text-center">0</td><td class="text-center">0</td><td class="text-center">17</td></tr><tr><td>Deschutes</td><td style="text-align: center;">15</td><td style="text-align: center;"><!--StartFragment-->0<!--EndFragment--></td><td style="text-align: center;">130</td></tr><tr><td>Douglas</td><td style="text-align: center;">3</td><td style="text-align: center;"><!--StartFragment-->0<!--EndFragment--></td><td style="text-align: center;">121</td></tr><tr><td>Gilliam</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">3</td></tr><tr><td>Grant</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr><tr><td>Harney</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">19</td></tr><tr><td>Hood River</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">69</td></tr><tr><td>Jackson</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">681</td></tr><tr><td>Jefferson</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">9</td></tr><tr><td>Josephine</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">74</td></tr><tr><td>Klamath</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">68</td></tr><tr><td>Lake</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">3</td></tr><tr><td>Lane</td><td style="text-align: center;" autocomplete="off">7</td><td style="text-align: center;" autocomplete="off">1</td><td style="text-align: center;">354</td></tr><tr><td>Lincoln</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">48</td></tr><tr><td>Linn</td><td style="text-align: center;">26</td><td style="text-align: center;">1</td><td style="text-align: center;">456</td></tr><tr><td>Malheur</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">19</td></tr><tr><td>Marion</td><td style="text-align: center;">57</td><td style="text-align: center;">2</td><td style="text-align: center;">559</td></tr><tr><td>Morrow</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">15</td></tr><tr><td>Multnomah</td><td style="text-align: center;">45</td><td style="text-align: center;">2</td><td style="text-align: center;">1684</td></tr><tr><td>Polk</td><td style="text-align: center;">6</td><td style="text-align: center;">0</td><td style="text-align: center;">133</td></tr><tr><td>Sherman</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">2</td></tr><tr><td>Tillamook</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">29</td></tr><tr><td>Umatilla</td><td style="text-align: center;">2</td><td style="text-align: center;">0</td><td style="text-align: center;">71</td></tr><tr><td>Union</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">15</td></tr><tr><td>Wallowa</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">3</td></tr><tr><td>Wasco</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center;">34</td></tr><tr><td>Washington</td><td style="text-align: center;">104</td><td style="text-align: center;">3</td><td style="text-align: center;">979</td></tr><tr><td>Wheeler</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center;">1</td></tr><tr><td>Yamhill</td><td style="text-align: center;">7</td><td style="text-align: center;">0</td><td style="text-align: center;">231</td></tr><tr><td><b>Total</b></td><td style="text-align: center;"><b>316</b></td><td style="text-align: center;"><b>11</b></td><td style="text-align: center;"><b>6953</b></td></tr></tbody></table>
+
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th>Age group</th><th style="text-align: center;">Cases</th><th style="text-align: center;">Ever hospitalized<sup>‡</sup></th><th style="text-align: center;">Deaths*</th></tr></thead><tbody><tr><td>0 to 19</td><td style="text-align: center;">5</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td></tr><tr><td>20 to 29</td><td style="text-align: center;">19</td><td style="text-align: center;">3</td><td style="text-align: center;">0</td></tr><tr><td>30 to 39</td><td style="text-align: center;">39</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td></tr><tr><td>40 to 49</td><td style="text-align: center;">63</td><td style="text-align: center;">14</td><td style="text-align: center;">0</td></tr><tr><td>50 to 59</td><td style="text-align: center;" autocomplete="off">52</td><td style="text-align: center;" autocomplete="off">12</td><td style="text-align: center;" autocomplete="off">0</td></tr><tr><td>60 to 69</td><td class="text-center">70</td><td class="text-center">28</td><td class="text-center">3</td></tr><tr><td>70 to 79</td><td class="text-center">40</td><td class="text-center">21</td><td class="text-center">5</td></tr><tr><td>80 and over</td><td class="text-center">27</td><td class="text-center">8</td><td class="text-center">3</td></tr><tr><td>Not available</td><td class="text-center">1</td><td class="text-center">-</td><td class="text-center">-</td></tr><tr><td><b>Total</b></td><td style="text-align: center;" autocomplete="off"><b>316</b></td><td style="text-align: center;" autocomplete="off"><b>90</b></td><td style="text-align: center;" autocomplete="off"><b>11</b></td></tr></tbody></table>
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th>Sex</th><th style="text-align: center;">Cases</th><th style="text-align: center;">Deaths*</th></tr></thead><tbody><tr><td>Female</td><td style="text-align: center;">170</td><td style="text-align: center;">6</td></tr><tr><td>Male</td><td style="text-align: center;">144</td><td style="text-align: center;">5</td></tr><tr><td>Not available</td><td style="text-align: center;">2</td><td style="text-align: center;">-</td></tr><tr><td><b>Total</b></td><td style="text-align: center;" autocomplete="off"><b>316</b></td><td style="text-align: center;" autocomplete="off"><b>11</b></td></tr></tbody></table>
+
+
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th>Hospitalized<sup>‡</sup></th><th style="text-align: center;">Cases</th></tr></thead><tbody><tr><td>Yes</td><td style="text-align: center;">90</td></tr><tr><td>No</td><td style="text-align: center;">170</td></tr><tr><td>Not provided</td><td style="text-align: center;">56</td></tr><tr><td><b>Total</b></td><td style="text-align: center;" autocomplete="off"><b>316</b></td></tr></tbody></table>
+
+
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th>Hospital Capacity</th><th style="text-align: center;">Number</th></tr></thead><tbody><tr><td>Available ICU beds</td><td style="text-align: center;">362</td></tr><tr><td>Available non-ICU beds</td><td style="text-align: center;">2193</td></tr><tr><td>Available ventilators</td><td style="text-align: center;">684</td></tr></tbody></table>
+
+
+<div class="alert alert-info">
+
+<p>*For additional details on individuals who have died from COVID-19 in Oregon, please&nbsp;<a href="https://www.oregon.gov/oha/erd/pages/covid-19-news.aspx" target="_blank">refer to our press releases</a>.</p><p autocomplete="off"><sup>‡</sup>Ever hospitalized, if available.</p>
+
+
+
+<p>Notes:</p>
+<ol><li>Because community transmission is occurring in Oregon and recommendations on <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2268.pdf" target="_blank">social distancing</a> are in place, as of March 17, 2020, we no longer report daily counts of persons under monitoring.</li>
+<li>Confirmation by CDC of laboratory results from the Oregon State Public Health Laboratory is no longer required; therefore as of March 15, 2020, we no longer note the number of CDC-confirmed cases.</li>
+<li>Reporting of travel history is not available for cases reported to OHA by commercial laboratories; therefore as of March 15, 2020, we no longer include information about travel history.</li><li>As of March 26, 2020,&nbsp;OHA is releasing the <a href="https://govsite-assets.s3.amazonaws.com/SLdyToaAQ2i1P0EsaL7t_Oregon-COVID-19-SitStat-03-26-2020-FINAL.pdf" target="_blank">daily situational status report</a>, which is produced jointly with <a href="https://storymaps.arcgis.com/stories/6c96b225a8424992b56e59400a30dab4" target="_blank">Oregon Office of Emergency Management</a>. It details the overall picture of the COVID-19 response across government agencies.</li></ol>
+
+
+
+	
+</div>
+</div>
+        </div>
+    </div>
+
+<br>
+
+<div class="card">
+        <div class="card-header" id="headingLab">
+            <h3 autocomplete="off">
+						<button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseLab" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" autocomplete="off" data-toggle="collapse" data-target="#collapseLab">Testing by Oregon State Public Health Laboratory<i class="fas fa-plus float-right" aria-hidden="true"></i>
+						</button>
+					</h3>
+        </div>
+        <div class="collapse" id="collapseLab" aria-labelledby="headingLab" style="">
+            <div class="card-body">
+ 
+
+
+<table class="table table-bordered"><thead class="thead-light"><tr><th colspan="2" autocomplete="off">﻿Updated daily.<!--EndFragment--></th></tr></thead><tbody><tr><td autocomplete="off">Specimens received at OSPHL on 3/25/2020</td><td style="text-align: center;" autocomplete="off">78</td></tr><tr><td autocomplete="off">Test results released by OSPHL&nbsp;on 3/25/2020</td><td style="text-align: center;">121</td></tr><tr><td>Specimens pending at OSPHL as of 8:30 p.m. 3/25/2020<!--EndFragment--></td><td style="text-align: center;" autocomplete="off">32</td></tr><tr><td>Total persons tested for COVID-19 at OSPHL since 2/28/2020</td><td class="text-center">1620</td></tr><tr><td><i>Total persons tested at other laboratories</i></td><td class="text-center"><i>5649</i></td></tr><tr><td><i>Total completed tests in Oregon</i></td><td class="text-center"><i>7269</i></td></tr></tbody></table>
+
+
+<div class="alert alert-info">
+<p>Notes:<br></p>
+<ol><li>As of March 25, 2020, we are including the number of pending test results available from the Oregon State Public Health Laboratory (OSPHL). The OSPHL serves as the first source of testing during an outbreak and as commercial labs come online, OSPHL increases focus on priority testing. Commercial labs have the ability to conduct testing on an industrial scale, but do not report pending results, therefore we only include pending results from OSPHL.</li></ol>
+
+
+
+	
+</div>
+
+
+</div>
+        </div>
+    </div>
+
+
+<br>
+
+    
+</div>
+</div>
+
+<hr>
+<br>
+<div class="alert alert-info">
+
+<h2><i class="fa fa-file				 " aria-hidden="true"></i>&nbsp;Governor's Orders and OHA Guidance</h2>
+
+
+<div id="accordionSetGuidance">
+<div class="card">
+        <div class="card-header" id="headingGov">
+            <h3 autocomplete="off">
+									<button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseGov" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseGov">Executive Orders and Resources from the Governor's Office<i class="fas fa-plus float-right" aria-hidden="true"></i>
+									</button>
+								</h3>
+        </div>
+        <div class="collapse" id="collapseGov" aria-labelledby="headingGov" style="">
+            <div class="card-body">
+    
+
+<ul>
+<li><a href="https://www.oregon.gov/gov/admin/Pages/executive-orders.aspx" target="_blank">Governor Kate Brown’s Executive Orders</a></li>
+<li><a href="https://www.oregon.gov/gov/Pages/coronavirus2020.aspx" target="_blank">Governor Kate Brown's COVID-19 web page</a></li>
+<li><a href="https://www.oregon.gov/newsroom/Pages/Agency.aspx?agency=GOV" target="_blank">Press Releases from the Governor’s Office</a></li>
+
+</ul>
+</div>
+
+</div></div>
+<br>
+    <div class="card">
+        <div class="card-header" id="headingOHA">
+            <h3 autocomplete="off">
+									<button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseOHA" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseOHA" autocomplete="off">OHA Guidance and Emergency Rules<i class="fas fa-plus float-right" aria-hidden="true"></i>
+									</button>
+								</h3>
+        </div>
+        <div class="collapse" id="collapseOHA" aria-labelledby="headingOHA" style="">
+            <div class="card-body">
+         <div class="well">
+<div class="well">
+<h3>Guidance​ from OHA</h3>
+<ul autocomplete="off"><li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2262.pdf" target="_blank">Requirements and Recommendations for Large Events and Public Gatherings</a>&nbsp;3/12/2020</li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2263.pdf" target="_blank">Recommendations for Events Hosting Vulnerable Populations</a>&nbsp;3/15/2020<ul><li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2263.pdf" target="_blank">Spanish</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2263.pdf" target="_blank">Arabic</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2263.pdf" target="_blank">Simplified Chinese</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42263.pdf" target="_blank">Traditional Chinese</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2263.pdf" target="_blank">Hmong</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332263.pdf" target="_blank">Marshallese</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2263.pdf" target="_blank">Russian</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2263.pdf" target="_blank">Somali</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2263.pdf" target="_blank">Vietnamese</a></li></ul></li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2264.pdf" target="_blank">Guidance for Organizations With Prohibited Large Events and
+Public Gatherings</a>&nbsp;3/22/2020<ul><li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2264.pdf" target="_blank">Spanish</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2264.pdf" target="_blank">Arabic</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2264.pdf" target="_blank">Simplified Chinese</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42264.pdf" target="_blank">Traditional Chinese</a> |  <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332264.pdf" target="_blank">Marshallese</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2264.pdf" target="_blank">Russian</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2264.pdf" target="_blank">Somali</a> | <a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2264.pdf" target="_blank">Vietnamese</a></li></ul></li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2266.pdf" target="_blank">Guidance for Employers​</a>&nbsp;3/15/2020</li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2275.pdf" target="_blank">Guidance for Psychiatric Inpatient Care Programs</a>&nbsp;3/14/2020<br></li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2276.pdf" target="_blank">Guidance for Treatment Facilities​</a>&nbsp;3/13/2020</li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2277.pdf" target="_blank">Guidance for Adult Foster Homes​</a>&nbsp;3/14/2020</li>
+<li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2281.pdf" target="_blank">Guidance for Opioid Treatment Programs (OTPs)</a>&nbsp;3/21/2020</li><li><a href="https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/covid19/Covid-19-FPL-QA.pdf" target="_blank">Q &amp; A for Food, Pool and Lodging Facilities</a>&nbsp;3/21/2020</li><li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2282.pdf" target="_blank">Interim Visitation Guidance for Acute Care Facilities</a>&nbsp;3/22/2020</li><li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2284.pdf" target="_blank">Interim Guidance for Elective and Non-Urgent Healthcare Procedures</a>&nbsp;3/23/2020<!--EndFragment--></li></ul>
+
+<h3>OHA Emergency Rules​</h3>
+<ul autocomplete="off"><li><a href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/COMMUNICABLEDISEASE/REPORTINGCOMMUNICABLEDISEASE/Pages/Emergency-Rule-COVID-19.aspx" target="_blank">COVID-19 Emergency Disease Reporting Rule</a></li></ul>
+</div>
+
+</div>
+
+​​​​​​​​
+            
+        </div>
+    </div></div>
+</div>
+</div>
+<hr>
+<br>
+<div class="alert alert-info">
+<h2><i class="fa fa-users				 " aria-hidden="true"></i>&nbsp;Resources for the Community</h2>
+<div id="accordionSetTwo">
+<div class="card">
+    <div class="card-header" id="headingTesting">
+        <h3>
+        <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseTesting" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseTesting">
+          Testing for COVID-19
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+        </button>
+      </h3>
+    </div>
+    <div class="collapse" id="collapseTesting" aria-labelledby="headingTesting" data-parent="#accordionSetTwo" style="">
+        <div class="card-body">
+
+              <div class="alert alert-info">
+                        <h4>Testing Basics</h4><p>Information about who should be tested, where to get tested and what to expect.</p>
+                        <p>
+                            <a title="Testing Basics - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2279A.pdf" target="_blank">English</a>
+                            <a title="Testing Basics - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2279A.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Testing Basics - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2279A.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Testing Basics - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2279A.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Testing Basics - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2279A.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Testing Basics - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2279A.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Testing Basics - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2279A.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p><p><a class="btn btn-light" href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/COVID19-FAQ.aspx?wp1284=l:25,f:{c:77198,o:{t:2,o:[%22Testing%22]}}" target="_blank"><span class="fa fa-external-link" aria-hidden="true"></span> Visit our FAQ page for more testing information</a></p>
+                    </div>
+<div class="alert alert-info">
+                        <h4>What You Should Know about Testing for COVID-19</h4>
+                        <p>
+                            <a title="What you should know about testing- English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2681C.pdf" target="_blank">English</a>
+                            <a title="What you should know about testing- Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2681c.pdf" target="_blank">Español / Spanish</a>
+                            <a title="What you should know about testing - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2681c.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="What you should know about testing - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2681c.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="What you should know about testing- Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42681c.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="What you should know about testing- Chuukese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l272681C.pdf" target="_blank">Chuukese</a>
+                            <a title="What you should know about testing- Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2681c.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="What you should know about testing- Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2681c.pdf" target="_blank">Русский / Russian</a>
+                            <a title="What you should know about testing- Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2681c.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="What you should know about testing- Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2681c.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+
+
+</div>
+</div></div>
+<br>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h3 autocomplete="off">
+            <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseThree" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseThree">
+            Individuals and Families
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+            </button>
+            </h3>
+        </div>
+        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionSetTwo" style="">
+            <div class="card-body">
+                    <div class="alert alert-info">
+                        <h4>Social Distancing</h4>
+                        <p>
+                            <a title="Social Distancing- English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2268.pdf" target="_blank">English</a>
+
+<a title="Social Distancing Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2268.pdf" target="_blank">Español / Spanish</a>
+<a title="Social Distancing Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2268.pdf" target="_blank">اللغة العربية / Arabic</a>
+<a title="Social Distancing Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2268.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+<a title="Social Distancing Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l4-2268.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+
+<a title="Social Distancing Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2268.pdf" target="_blank">Lus Hmoob / Hmong</a>
+<a title="Social Distancing Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l33-2268.pdf" target="_blank">Kajin Majol / Marshallese</a>
+<a title="Social Distancing Korean" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lk2268.pdf" target="_blank">한국어 / Korean</a>
+
+<a title="Social Distancing Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2268.pdf" target="_blank">Русский / Russian</a>
+<a title="Social Distancing Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2268.pdf" target="_blank">Af Soomaali / Somali</a>
+<a title="Social Distancing Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2268.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                   
+                    
+                     <div class="alert alert-info">
+                        <h4>Novel Coronavirus Fact Sheet</h4>
+                        <p>
+                            <a title="Fact Sheet - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LE2356.pdf" target="_blank">English</a>
+                            <a title="Fact Sheet - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2356.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Fact Sheet - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2356.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Fact Sheet - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2356.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Fact Sheet - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L42356.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Fact Sheet - Chuukese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L272356.pdf" target="_blank">Chuukese</a>
+                            <a title="Fact Sheet - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2356.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="Fact Sheet - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2356.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Fact Sheet - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2356.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Fact Sheet - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2356.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4>Prevention Flyer</h4>
+                        <p>
+                            <a title="Prevention Flyer - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LE2681.pdf" target="_blank">English</a>
+                            <a title="Prevention Flyer - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2681.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Prevention Flyer - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2681.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Prevention Flyer - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2681.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Prevention Flyer - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L42681.pdf" target="_blank">繁體中文 / Traditional Chinese</a> <a title="Prevention Flyer - Chuukese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l272681.pdf" target="_blank">Chuukese</a> 
+                            <a title="Prevention Flyer - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2681.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                           <a title="Prevention Flyer - Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332681.pdf" target="_blank">Kajin Majol / Marshallese</a>
+                            <a title="Prevention Flyer - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2681.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Prevention Flyer - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//Li2681.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Prevention Flyer - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2681.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4>Don't Touch your Face (T-zone) Flyer</h4>
+                        <p>
+                            <a title="Don't Touch Your Face Flyer - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2257.pdf" target="_blank">English</a>
+                            <a title="Don't Touch Your Face Flyer - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//ls2257.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Don't Touch Your Face Flyer - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2257.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Don't Touch Your Face Flyer - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//lN2257.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Don't Touch Your Face Flyer - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//l42257.pdf" target="_blank">繁體中文 / Traditional Chinese</a> 
+<a title="Don't Touch Your T-Zone - Chuukese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l272257.pdf" target="_blank">Chuukese</a> 
+                            <a title="Don't Touch Your Face Flyer - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//lh2257.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                             <a title="Don't Touch Your T-Zone Flyer - Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332257.pdf" target="_blank">Kajin Majol / Marshallese</a>
+
+                            <a title="Don't Touch Your Face Flyer - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//lR2257.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Don't Touch Your Face Flyer - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//lV2257.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4>Traveler Information Flyer</h4>
+                        <p>
+                            <a title="Traveler Information - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LE2681B.pdf" target="_blank">English</a>
+                            <a title="Traveler Information - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2681B.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Traveler Information - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ha2681b.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Traveler Information - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2681B.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Traveler Information - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L42681B.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Traveler Information - Chuukese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L272681B.pdf" target="_blank">Chuukese</a>                            
+<a title="Traveler Information - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2681B.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                           <a title="Traveler Information - Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332681B.pdf" target="_blank">Kajin Majol / Marshallese</a>
+                            <a title="Traveler Information - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2681B.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Traveler Information - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//Li2681b.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Traveler Information - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2681B.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4>Monitoring for COVID-19 in Oregon: People at Risk for COVID-19</h4>
+                        <p>
+                            <a title="Monitoring Infographic - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2685.pdf" target="_blank">English</a>
+                            <a title="Monitoring Infographic - " class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2685.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Monitoring Infographic - " class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2685.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Monitoring Infographic - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2685.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Monitoring Infographic - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42685.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Monitoring Infographic - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2685.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                           <a title="Monitoring Infographic - Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332685.pdf" target="_blank">Kajin Majol / Marshallese</a>
+                            <a title="Monitoring Infographic - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2685.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Monitoring Infographic - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2685.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Monitoring Infographic - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2685.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+
+<div class="alert alert-info">
+<h4 autocomplete="off">Infographic: OHA and local health officials are monitoring COVID-19 in Oregon</h4>
+                        <p>
+                            <a title="Monitoring Infographic - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2681D.pdf" target="_blank">English</a>
+                            <a title="Monitoring Infographic - " class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2681D.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Monitoring Infographic - " class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2681D.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Monitoring Infographic - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2681D.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Monitoring Infographic - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42681D.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Monitoring Infographic - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2681D.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="Monitoring Infographic - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2681D.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Monitoring Infographic - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2681D.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Monitoring Infographic - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2681D.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+</div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header" id="headingFour">
+            <h3 autocomplete="off">
+																<button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseFour" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseFour">
+																	Discrimination and Stigma
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+																</button>
+															</h3>
+        </div>
+        <div class="collapse" id="collapseFour" aria-labelledby="headingFour" style="">
+            <div class="card-body">
+                <div class="ExternalClassE868DBCEA354498D950D447FBAC1497E">
+                    <div class="alert alert-info">
+                        <h4>Spread facts, not fear.</h4><p>Oregon is seeing an increase in incidents of discrimination and harassment related to the COVID-19 virus. It is important that all people, businesses, and other organizations act on facts, not bias or xenophobia. Health officials confirm there are no links between COVID-19 infection and a person’s race, color, gender, sexual orientation, gender identity, religion, ability, or national origin. COVID-19 can infect anyone who is exposed to it, and anyone can spread COVID-19.&nbsp;</p>
+                        <p>
+                            <a title="Spread facts, not fear - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2258A.pdf" target="_blank">English</a></p>
+                    </div><div class="alert alert-info">
+                        <h4>Viruses don’t discriminate. Neither should we.</h4>
+                        <p>
+                            <a title="Anti-discrimination - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LE2258.pdf" target="_blank">English</a>
+                           <a title="Anti-discrimination - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2258.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Anti-discrimination - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2258.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Anti-discrimination - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2258.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Anti-discrimination - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L42258.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Anti-discrimination - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2258.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="Anti-discrimination - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2258.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Anti-discrimination - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2258.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Anti-discrimination - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2258.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                    <div class="alert alert-info">
+                        <h4>Stop coronavirus racism. Combat fear and misinformation with facts.</h4>
+                        <p autocomplete="off">
+                            <a title="Stop Coronavirus Racism - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LE2273.pdf" target="_blank">English</a>
+                            <a title="Stop Coronavirus Racism - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LS2273.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Stop Coronavirus Racism - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2273.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Stop Coronavirus Racism - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LN2273.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Stop Coronavirus Racism - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//L42273.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Stop Coronavirus Racism - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2273.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="Stop Coronavirus Racism - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LR2273.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Stop Coronavirus Racism - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2273.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Stop Coronavirus Racism - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served//LV2273.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header" id="headingFive">
+            <h3 autocomplete="off">
+            <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseFive" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseFive">
+            Early Child Care, Schools and Higher Education
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+            </button>
+            </h3>
+        </div>
+        <div class="collapse" id="collapseFive" aria-labelledby="headingFive" style="">
+            <div class="card-body">
+                <div class="ExternalClass5C0D7AD5F0FF4C299C060FFCC9290122">
+
+
+<div class="alert alert-info">
+<p>In consideration of staffing challenges and health concerns due to COVID-19, Governor Kate Brown announced a statewide closure of Oregon K-12 schools from Monday, March 16 through Tuesday, April 28.</p>
+
+<p>OHA knows we are asking a lot of Oregonians in order to protect those who are particularly vulnerable to this virus, and there is a lot of fear and anxiety in our communities. Educators are the heart of our schools, which in turn are the heart of our communities. In the wake of COVID-19’s arrival in Oregon, our schools are facing operational and business challenges.</p>
+
+<p autocomplete="off">We stand with the governor and our education partners as they make difficult decisions in response to these operational challenges in their school communities.</p>
+</div>
+
+                    <div class="alert alert-info">
+                        <h3>Resources from Oregon Department of Education</h3>
+                        <ul>
+                            <a href="/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Emerging Respitory Infections/COVID-19-cases-in-Oregon-schools.pdf" target="_blank"></a>
+                            <li>
+                                <a href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Emerging Respitory Infections/COVID-19-cases-in-Oregon-schools.pdf" target="_blank"></a>
+                                <a href="https://www.oregon.gov/ode/students-and-family/healthsafety/Pages/COVID19.aspx" target="_blank">ODE's&nbsp;COVID-19 web page</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-info">
+                        <h3>Child Care Resources from Early Learning Division</h3>
+                        <p>In partnership with OHA, the Early Learning Division (ELD) has created new tools for addressing concerns in child care around COVID-19. </p>
+                        <ul>
+                            <li>
+                                <a href="https://oregonearlylearning.com/COVID-19-Resources" target="_blank">ELD's&nbsp;COVID-19 web page</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="alert alert-info">
+                        <h3>Resources from Oregon Higher Education</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.oregon.gov/highered/about/Pages/COVID19.aspx" target="_blank">Higher Education's COVID-19 web page</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card">
+    <div class="card-header" id="headingFood">
+        <h3 autocomplete="off">
+        <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseFood" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" autocomplete="off" data-toggle="collapse" data-target="#collapseFood">
+          Food Service
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+        </button>
+      </h3>
+    </div>
+    <div class="collapse" id="collapseFood" aria-labelledby="headingFood" style="" data-parent="#accordionSetTwo">
+        <div class="card-body">
+            <div class="alert alert-info">
+
+<h3>Guidance on Governor Brown's Executive Order 20-07</h3>
+
+<ul>
+<li><a href="https://www.oregon.gov/gov/Documents/executive_orders/eo_20-07.pdf" target="_blank">Executive Order 20-07</a></li>
+<li><a href="https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/covid19/Covid-19-FPL-QA.pdf" target="_blank">COVID-19 Q &amp; A for Food, Pool and Lodging Facilities</a></li>
+<li><a href="https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/covid19/Covid-19%20Governor's%20Exec%20Order%20Memo.pdf" target="_blank">COVID-19 Guidance Memo for Local Public Health Authorities</a></li>
+</ul>
+</div>
+
+                <div class="alert alert-info">
+                    <h4 autocomplete="off">Cleaning Tips for Restaurants, Food Carts and other Food Service Operations</h4>
+ <p>
+                            <a title="Cleaning Tips for Food Service - English" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2272.pdf" target="_blank">English</a>
+                            <a title="Cleaning Tips for Food Service - Spanish" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ls2272.pdf" target="_blank">Español / Spanish</a>
+                            <a title="Cleaning Tips for Food Service - Arabic" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/la2272.pdf" target="_blank">اللغة العربية / Arabic</a>
+                            <a title="Cleaning Tips for Food Service - Simplified Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/ln2272.pdf" target="_blank">简体中文 / Simplified Chinese</a>
+                            <a title="Cleaning Tips for Food Service - Traditional Chinese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l42272.pdf" target="_blank">繁體中文 / Traditional Chinese</a>
+                            <a title="Cleaning Tips for Food Service - Hmong" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lh2272.pdf" target="_blank">Lus Hmoob / Hmong</a>
+                            <a title="Cleaning Tips for Food Service - Marshallese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/l332272.pdf" target="_blank">Kajin Majol / Marshallese</a>
+                            <a title="Cleaning Tips for Food Service - Russian" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lr2272.pdf" target="_blank">Русский / Russian</a>
+                            <a title="Cleaning Tips for Food Service - Somali" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/li2272.pdf" target="_blank">Af Soomaali / Somali</a>
+                            <a title="Cleaning Tips for Food Service - Vietnamese" class="btn btn-primary" href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/lv2272.pdf" target="_blank">Tiếng Việt / Vietnamese</a>
+                        </p>
+
+   
+
+                </div>
+
+                <div class="alert alert-info">
+
+                    <h4>Resources from Oregon Department of Agriculture</h4>
+
+                    <ul>
+                        <li><a href="https://www.oregon.gov/ODA/shared/Documents/Publications/PesticidesPARC/DisinfectantsforEmergingPathogensCOVID-19.pdf" target="_blank">Disinfectants to help prevent the spread of COVID-19 on food contact surfaces</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+<br>
+
+<div class="card">
+    <div class="card-header" id="headingHCW">
+        <h3>
+        <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapseHCW" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseHCW">
+          Home Care Workers
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+        </button>
+        </h3>
+    </div>
+    <div class="collapse" id="collapseHCW" aria-labelledby="headingHCW" style="" data-parent="#accordionSetTwo">
+        <div class="card-body">
+            <div class="ExternalClassA29423582640472699751E675002BC29">
+                <div class="alert alert-info">
+                    <h4>Infection Control</h4>
+                    <ul>
+                        <li><a href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Emerging%20Respitory%20Infections/COVID-19-Interim-Infection-Control-Guidance-Home-Care-Workers.pdf" target="_blank">OHA Interim COVID-19&nbsp;Infection Control Guidance for Workers Providing In-home Personal Care</a> 3/10/2020</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<br>
+
+<div class="card">
+    <div class="card-header" id="headingHousing">
+        <h3>
+        <button class="btn btn-block btn-link text-left" aria-expanded="true" aria-controls="collapseHousing" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapseHousing">
+         	Housing Services and Homeless Camps
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+        </button>
+      </h3>
+    </div>
+    <div class="collapse" id="collapseHousing" aria-labelledby="headingHousing" data-parent="#accordionSetTwo">
+        <div class="card-body">
+            <div class="alert alert-info">
+                <h4>Shelter Guidance</h4>
+
+                <ul>
+                    <li><a href="https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Emerging%20Respitory%20Infections/COVID-19-Interim-Shelter-Guidance-OHA2256.pdf" target="_blank">Interim COVID-19 Shelter Guidance</a> Updated 3/9/2020</li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info">
+                <h4>Homeless Camps</h4>
+                <ul>
+                    <li><a href="https://sharedsystems.dhsoha.state.or.us/DHSForms/Served/le2278.pdf" target="_blank">Recommendations for Homeless Camps</a> 3/11/2020</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<br>
+
+<div class="card">
+    <div class="card-header" id="headingPregnancy">
+        <h3>
+        <button class="btn btn-block btn-link text-left collapsed" aria-expanded="false" aria-controls="collapsePregnancy" style="color: rgb(34, 34, 34); font-size: 0.7em; font-weight: bold;" data-toggle="collapse" data-target="#collapsePregnancy">
+          Pregnancy and Breastfeeding
+<i class="fas fa-plus float-right" aria-hidden="true"></i>
+        </button>
+      </h3>
+    </div>
+    <div class="collapse" id="collapsePregnancy" aria-labelledby="headingPregnancy" style="" data-parent="#accordionSetTwo">
+        <div class="card-body">
+            <div class="alert alert-info">
+                <h4>COVID-19 Resources: Pregnancy and Breastfeeding</h4>
+
+                <ul>
+                    <li><a title="CDC FAQ: Pregnancy and Breastfeeding" href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/pregnancy-faq.html" target="_blank">CDC: Frequently Asked Questions and Answers - COVID-19 and Pregnancy</a></li>
+                    <li><a title="CDC Interim Guidance: Breastfeeding" href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/pregnancy-breastfeeding.html?CDC_AA_refVal=https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/pregnancy-faq.html#anchor_1584169714" target="_blank">CDC: Interim Guidance on Breastfeeding for a Mother Confirmed or Under Investigation for COVID-19</a></li>
+                    <li><a href="https://www.bfmed.org/abm-statement-coronavirus" target="_blank">Academy of Breastfeeding Medicine:&nbsp;Statement on Coronavirus (COVID-19)</a></li>
+<li><a href="http://www.usbreastfeeding.org/emergencies" target="_blank">Infant and Young Child Feeding in Emergencies, including COVID-19</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <p class="badge badge-warning"></p>
+    </div>
+</div>
+</div>
+<hr>
+<br>
+<div class="alert alert-info">
+<h2 class="ews-h2-blue-stripe" autocomplete="off"><i class="fa fa-info-circle		 " aria-hidden="true"></i>&nbsp;Situation in the U.S. and Globally</h2>
+<p autocomplete="off">The Centers for Disease Control and Prevention (CDC) leads the U.S. response. The World Health Organization (WHO) guides the global response.</p>
+
+<p autocomplete="off"><a title="CDC Coronavirus website" class="btn btn-light" style="margin-bottom: 10px;" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank" data-or-analytics-event-attached="true">﻿<i class="fa fa-external-link		 " aria-hidden="true"></i>&nbsp;Information from CDC</a>&nbsp;&nbsp;<a title="CDC Coronavirus website in Spanish" class="btn btn-light" style="margin-bottom: 10px;" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank" data-or-analytics-event-attached="true"><i class="fa fa-external-link		 " aria-hidden="true"></i>&nbsp;Information from WHO</a></p></div>
+<br>
+
+<div class="row">
+    <div class="col-sm-3">
+        <figure><div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/jePXCdb5jmU?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" width="560" height="315" frameborder="0" id="iFrameResizer0" scrolling="no" style="overflow: hidden;"></iframe>
+            </div></figure>
+    </div>
+    <div class="col-sm-3">
+        <figure><div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/r5r4g7KWuts?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" width="560" height="315" frameborder="0" id="iFrameResizer1" scrolling="no" style="overflow: hidden;"></iframe>
+            </div></figure>
+    </div>
+    <div class="col-sm-3">
+        <figure><div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/bknMepfb2uI?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" width="560" height="315" frameborder="0" id="iFrameResizer2" scrolling="no" style="overflow: hidden;"></iframe>
+            </div></figure>
+    </div>
+    <div class="col-sm-3">
+        <figure><div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.youtube.com/embed/GDWTY5Jvi30?rel=0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" width="560" height="315" frameborder="0" id="iFrameResizer3" scrolling="no" style="overflow: hidden;"></iframe>
+            </div></figure>
+    </div>
+</div>
+
+<div class="row"></div>
+<div class="row"></div>
+<p class="text-center">
+    <a title="Follow OHA on Facebook" href="http://www.facebook.com/OregonHealthAuthority" target="_blank" data-or-analytics-event-attached="true">
+        <i class="fa fa-facebook-square fa-3x blue " aria-hidden="true"></i>
+    </a>
+    <a title="Follow OHA on Twitter" href="https://twitter.com/OHAOregon" target="_blank" data-or-analytics-event-attached="true">
+        <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+    </a>
+    <a title="OHA's COVID-19 YouTube Videos" href="https://www.youtube.com/playlist?list=PLd4xfJU3qzMXx_oEU7DzWPJB0Tl3WDUuG" target="_blank" data-or-analytics-event-attached="true">
+        <i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i>
+    </a>
+</p><hr>
+
+<p><i class="fa fa-universal-access			 " aria-hidden="true"></i><b> Accessibility:</b> Everyone has a right to know about and use Oregon Health Authority (OHA) programs and services. OHA provides free help. Some examples of the free help OHA can provide are:&nbsp;sign language and spoken language interpreters, written materials in other languages, Braille, large print, audio and other formats.&nbsp;If you need help or have questions, please contact Mavel Morales&nbsp;at 1-844-882-7889, 711 TTY, <a href="mailto:OHA.ADAModifications@dhsoha.state.or.us">OHA.ADAModifications@dhsoha.state.or.us</a>.</p>			
+		<div class="row mt-5 mb-3" id="updated-date">
+			<div class="col-sm-12 text-center">
+				<small class="text-muted">Updated on March 26th, 2020 06:46PM</small>
+			</div>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+    
+  	
+
+  	<script src="https://govsite-assets.s3.amazonaws.com/assets/js/iframeResizer.min.js"></script>
+  
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/3783433299.js" crossorigin="anonymous"></script><link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro-v4-shims.min.css" media="all"><link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro-v4-font-face.min.css" media="all"><link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/latest/css/pro.min.css" media="all">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+    
+     <script>
+	    $(function () {
+		  $('[data-toggle="popover"]').popover();
+		  $('#myTab li:first-child a').tab('show');
+			
+			$('iframe').iFrameResize();
+			
+		});
+		
+		function ifrhgh(){
+			var iframehght =  $("#print_frame").contents().height();
+			$("#print_frame").height(iframehght);
+		}
+		
+	</script>
+     <script>
+       function onSubmitEmail(token) {
+	     grecaptcha.execute();
+         document.getElementById("email-form").submit();
+       }
+       function onSubmitSms(token) {
+	     grecaptcha.execute();
+         document.getElementById("sms-form").submit();
+       }
+     </script>        
+
+   	
+    	<style>
+a {
+    color: #025595;
+}
+a:focus,  a:hover {
+    color: #b50010;
+}
+.btn a:visited {
+    color: #fff;
+}
+.btn-primary {
+    background-color: #025595;
+    border: 1px solid #023a64;
+margin:5px}
+</style>
+<script src="https://content.govdelivery.com/overlay/js/8537.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-3724630-25"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-3724630-25');
+</script>
+<script>
+	</script>
+    
+  
+  
+
+    
+<div id="scopedByScopedPolyfill_1" style="width: 500px; position: fixed; top: 50%; left: 50%; margin-top: -111px; margin-left: -250px; z-index: 3;">
+  <style scoped="">
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+/*
+OVERLAY MODAL
+=============================================================================================
+GovDelivery
+*/
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#prefix-overlay-outer p {
+  margin:0;
+  padding:0;
+}
+
+#prefix-overlay-outer {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding:0px;
+  padding-bottom:15px;
+  text-align:center;
+  -webkit-box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+  border-radius:10px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: 0 !important;
+}
+
+#prefix-overlay-header {
+  font: normal 24px 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding-bottom:0px;
+  padding-top:15px;
+  display:block;
+}
+
+#prefix-overlay-header img {
+  vertical-align:middle;
+}
+
+#prefix-overlay-header button.prefix-overlay-close {
+  padding: 0;
+  position: absolute;
+  top: -12.5px;
+  right: -12.5px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  text-indent: -9999px;
+  cursor:pointer;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAANjr9RwUqgAAACBjSFJNAABtmAAAc44AAPJxAACDbAAAg7sAANTIAAAx7AAAGbyeiMU/AAAG7ElEQVR42mJkwA8YoZjBwcGB6fPnz4w/fvxg/PnzJ2N6ejoLFxcX47Rp036B5Dk4OP7z8vL+P3DgwD+o3v9QjBUABBALHguZoJhZXV2dVUNDgxNIcwEtZnn27Nl/ZmZmQRYWFmag5c90dHQY5OXl/z98+PDn1atXv79+/foPUN9fIP4HxRgOAAggRhyWMoOwqKgoq6GhIZe3t7eYrq6uHBDb8/Pz27Gysloga/jz588FYGicPn/+/OapU6deOnXq1GdgqPwCOuA31AF/0S0HCCB0xAQNBU4FBQWB0NBQublz59oADV37Hw28ePHi74MHD/6ii3/8+HEFMGQUgQ6WEhQU5AeZBTWTCdkigABC9ylIAZeMjIxQTEyMysaNG/3+/v37AGTgr1+//s2cOfOXm5vbN6Caz8jY1NT0a29v76/v37//g6q9sHfv3khjY2M5YAgJgsyEmg0PYYAAQreUk4+PT8jd3V1l1apVgUAzfoIM2rlz5x9gHH5BtxAdA9PB1zNnzvyB+R6oLxoopgC1nBPZcoAAgiFQnLIDMb+enp5iV1eXBzDeHoI0z58//xcwIX0mZCkMg9S2trb+hFk+ffr0QCkpKVmQ2VA7QHYxAgQQzLesQMwjIiIilZWVZfPu3bstMJ+SYikyBmUzkBnA9HEMyNcCYgmQHVC7mAACCJagOEBBbGdnp7lgwYJEkIavX7/+BcY1SvAaGRl9tba2xohjMTGxL8nJyT+AWQsuxsbG9vnp06e/QWYdPHiwHmiWKlBcCGQXyNcAAQSzmBuoSQqYim3u37+/EKR48uTJv5ANB+bVr7Dga2xs/AkTV1JS+gq0AJyoQIkPWU9aWtoPkPibN2/2A/l6QCwJ9TULQADB4hcY//xKXl5eHt++fbsAUmxhYYHiM1DiAsr9R7ZcVVUVbikIdHd3/0TWIyws/AWYVsByAgICdkAxRSAWAGI2gACClV7C4uLiOv7+/lEgRZ8+ffqLLd6ABck3ZMuB6uCWrlu37je29HDx4kVwQisvL88FFqkaQDERUHADBBAomBl5eHiYgQmLE1hSgQQZgIUD1lJm69atf4HR8R1YKoH5QIPAWWP9+vV/gOI/gHkeQw+wGAXTwAJJ5t+/f/BUDRBA4NIEKMDMyMjICtQIiniG379/4yza7t69+//Lly8oDrty5co/bJaCAEwcZCkwwTJDLWYCCCCwxcDgY3z16hXDnTt3voP4EhISWA0BFgZMwNqHExh3jMiG1tbWsgHjnA2bHmAeBtdWwOL1MycnJ7wAAQggBmi+kgIW/OaKiorJwOLuFShO0LMSMPF9AUYBSpz6+vqixHlOTs4P9MIEWHaDsxSwYMoE2mEGFJcG5SKAAGJCqjv/AbPUn8ePH98ACQQHB6NUmZqamkzABIgSp5s3bwbHORCA1QDLAWZkPc7OzszA8oHl5cuXVy5duvQBGIXwWgoggGA+FgO6xkBNTS28r69vDrT2+Y1cIMDyJchX6KkXVEmAshd6KB06dAic94EO3AzkBwGxPhCLg8ptgACCZyeQp9jZ2b2AmsuAefM8tnxJCk5ISPgOLTKfAdNEOVDMA2QHLDsBBBC8AAFlbmCLwlZISCg5JSVlJizeQAaQaimoWAUFK0g/sGGwHiiWCMS2yAUIQAAxI7c4gEmeFZi4OJ48ecLMzc39CRiEmgEBASxA/QzA8vYvAxEgNjaWZc2aNezAsprp2LFjp4FpZRdQ+AkQvwLij0AMSoC/AQIIXklAC3AVUBoBxmE8sPXQAiyvN8J8fuPGjR/h4eHf0eMdhkENhOPHj8OT+NGjR88BxZuBOA5kJtRseCUBEECMSI0AdmgBDooDaaDl8sASTSkyMlKzpqZGU1paGlS7MABLrX83b978A6zwwakTmE0YgIkSnHpBfGCV+gxYh98qKSk5CeTeAxVeQPwUiN8AMSjxgdLNX4AAYkRqCLBAXcMHtVwSaLkMMMHJAvOq9IQJE9R8fHxElJWV1bEF8aNHj+7t27fvLTDlXwXGLyhoH0OD+DnU0k/QYAa1QP8BBBAjWsuSFWo5LzRYxKFYAljqiAHzqxCwIBEwMTERBdZeoOYMA7Bl+RFYEbwB5oS3IA9D4/IFEL+E4nfQ6IDFLTgvAwQQI5ZmLRtSsINSuyA0uwlBUyQPMPWD20/AKo8ByP4DTJTfgRgUjB+gFoEc8R6amGDB+wu5mQsQQIxYmrdMUJ+zQTM6NzQEeKGO4UJqOzFADQMZ/A1qCSzBfQXi71ALfyM17sEAIIAY8fQiWKAYFgIwzIbWTv4HjbdfUAf8RPLhH1icojfoAQKIEU8bG9kRyF0aRiz6YP0k5C4LsmUY9TtAADEyEA+IVfufGEUAAQYABejinPr4dLEAAAAASUVORK5CYII=) no-repeat 0 0;
+}
+
+.prefix-overlay-content {
+  color:#343D47;
+  text-align:center;
+  display:block;
+  font-weight:bold;
+  font-size:22px;
+  margin:0px;
+  line-height:26px;
+  padding:10px 15px;
+}
+
+#prefix-overlay-form-div form {
+  margin:0 auto;
+  padding-top:9px;
+}
+
+#prefix-overlay-form-div input {
+  margin:0 auto;
+  display:block;
+}
+
+#prefix-error-outer {
+  clear: both;
+  font-size:14px;
+  line-height: 1.2em;
+  color:#ff2222;
+  padding-top:10px;
+}
+
+.prefix-overlay-button-panel {
+  padding-top:10px;
+  line-height:20px;
+  font-size:12px;
+  line-height:20px;
+}
+
+#prefix-overlay-outer .prefix-overlay-button-panel button {
+  background-color:transparent;
+  border:none;
+  line-height:16px;
+  font-size:12px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#prefix-overlay-outer .prefix-overlay-button-panel button:hover, #prefix-overlay-outer  .prefix-overlay-button-panel button:focus {
+  cursor:pointer;
+  color:#43526C;
+  text-decoration:underline;
+}
+
+#prefix-overlay-outer .prefix-overlay-button-panel button:active { }
+
+#prefix-overlay-outer input[type='email'] {
+  width: 275px;
+  padding:7px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  text-align:center;
+  box-sizing: border-box;
+  line-height: 1.4;
+  display: block;
+  outline: 0;
+  box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);-moz-box-shadow:inset 0px 1px 4px rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip:padding-box;
+  text-shadow: 0 1px 0 #ffffff;
+  background:#ffffff;
+}
+
+#prefix-overlay-outer input[type='tel'] {
+  width: 275px;
+  padding:7px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:16px;
+  text-align:center;
+  box-sizing: border-box;
+  line-height: 1.4;
+  display: block;
+  outline: 0;
+  box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);-moz-box-shadow:inset 0px 1px 4px rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip:padding-box;
+  text-shadow: 0 1px 0 #ffffff;
+  background:#ffffff;
+}
+
+#prefix-overlay-outer input[type='submit'], #prefix-overlay-outer button.prefix-big {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform:uppercase;
+  width:175px;
+  padding:6px;
+  color:#ffffff;
+  cursor:pointer;
+  *padding:7px;
+  *border:none;
+  margin-top:7px;
+  font-size:17px;
+  font-weight: 400;
+  -webkit-transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-property: background-color;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-timing-function: linear;
+  -ms-transition-property: background-color;
+  -ms-transition-duration: 0.2s;
+  -ms-transition-timing-function: linear;
+  -o-transition-property: background-color;
+  -o-transition-duration: 0.2s;
+  -o-transition-timing-function: linear;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+#prefix-overlay-outer input[type='submit']:hover, #prefix-overlay-outer button.prefix-big:hover {
+  cursor:pointer;
+}
+
+#prefix-overlay-outer input[type='submit']:active, #prefix-overlay-outer button.prefix-big:active {
+  -webkit-box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 0 10px 4px rgba(0, 0, 0, 0.22);
+}
+
+#prefix-overlay-outer input[type='submit']::-moz-focus-inner{
+  border:0;
+  padding:0;
+}
+
+
+/* OVERRIDES */
+
+      #prefix-overlay-outer { background-color: #ffffff;}
+
+      #prefix-overlay-outer input[type='email'] {
+        border: 1px solid #347cbe;
+        color: #333;
+      }
+
+      #prefix-overlay-outer input[type='tel'] {
+        border: 1px solid #347cbe;
+        color: #333;
+      }
+
+      #prefix-overlay-outer input[type='email']::-webkit-input-placeholder {
+        color: #333;
+      }
+
+      #prefix-overlay-outer input[type='tel']::-webkit-input-placeholder {
+        color: #333;
+      }
+
+      #prefix-overlay-outer input[type='email']:-moz-placeholder {
+        /*Firefox 18- */ color: #333;
+        opacity: 1;
+      }
+
+      #prefix-overlay-outer input[type='tel']:-moz-placeholder {
+        /*Firefox 18- */ color: #333;
+        opacity: 1;
+      }
+
+      #prefix-overlay-outer input[type='email']::-moz-placeholder {
+        /*Firefox 19+ */ color: #333;
+        opacity: 1;
+      }
+
+      #prefix-overlay-outer input[type='tel']::-moz-placeholder {
+        /*Firefox 19+ */ color: #333;
+        opacity: 1;
+      }
+
+      #prefix-overlay-outer input[type='submit'], #prefix-overlay-outer button.prefix-big {
+        background-color: #005595;
+        border:1px solid #005595;
+      }
+
+      #prefix-overlay-outer input[type='submit']:hover, #prefix-overlay-outer button.prefix-big:hover {
+        background-color: #005595;
+        border:1px solid #005595;
+      }
+
+      #prefix-overlay-outer input[type='submit']:active, #prefix-overlay-outer button.prefix-big:active {
+        background-color: #005595;
+        border:1px solid #005595;
+      }
+
+      #prefix-overlay-outer #prefix-overlay-step1 p { color: #000000;}
+
+      #prefix-overlay-outer .prefix-overlay-button-panel button {
+        color : #005595;
+      }
+
+
+#prefix-overlay-outer {height: auto !important; border-radius:0; padding:0;}
+
+#prefix-overlay-outer #prefix-overlay-header {padding:0;}
+
+#prefix-overlay-outer #prefix-overlay-header img {width:100%; height:auto; border:none; max-width:500px;}
+
+#prefix-overlay-outer #prefix-overlay-step1, #prefix-overlay-outer #prefix-overlay-step2 {padding:20px 30px 30px;}
+
+#prefix-overlay-outer #prefix-overlay-step1 p {line-height:1.3; margin:0 0 10px 0; color:#333; font-size:17px;}
+
+#prefix-overlay-outer #prefix-overlay-step2 p {line-height:1.3; margin:0 0 10px 0; color:#333; font-size:17px;}
+
+#prefix-overlay-outer input[type="email"] { width:275px; display: inline-block; box-shadow: none; text-shadow: none; padding: 8px; margin:0; vertical-align:top; }
+
+#prefix-overlay-outer input[type="submit"], #prefix-overlay-outer button.prefix-big { width: auto; padding: 7px 25px; }
+
+#prefix-overlay-outer input[type="submit"] { display:inline-block; vertical-align:top; margin:0; }
+
+#prefix-overlay-outer .prefix-overlay-button-panel button { padding:1px 25px; }
+
+#prefix-overlay-outer div#prefix-questions {display:none !important;}
+  </style>
+
+
+<div id="prefix-webfonts"><link href="https://fonts.googleapis.com/css?family=Open+Sans:800,400" rel="stylesheet" type="text/css"></div><div id="prefix-overlay-outer" tabindex="0" role="dialog" style="height: 350px;">
+  <div class="prefix-overlay-inner">
+    <div id="prefix-overlay-header" rel="toggle"><img src="https://content.govdelivery.com/attachments/fancy_images/ORDHS/2020/02/3178540/covid-19header-soft_original.jpg" alt="Oregon Health Authority Coronavirus update">
+      <button class="prefix-overlay-close prefix-overlay-action-later">Close subscription dialog</button>
+    </div>
+
+    <div id="prefix-overlay-step1"><p id="prefix-overlay-label">Subscribe to receive OHA Coronavirus Updates - the latest news about COVID-19 in Oregon.</p>
+      <div id="prefix-overlay-form-div">
+        <form novalidate="">
+          <input placeholder="Email Address" name="e" type="email" required="" id="prefix-emailInput" aria-labelledby="prefix-overlay-label" title="Email Address"><div id="prefix-questions"></div>
+          <input type="submit" value="Subscribe" id="prefix-submitButton">
+        </form>
+      </div>
+      <div id="prefix-error-outer">
+        <span style="display:none"></span>
+      </div>
+      <div class="prefix-overlay-button-panel">
+        <button class="prefix-overlay-action-dismiss" id="prefix-dismissButton">No Thanks</button>
+        <button class="prefix-overlay-action-later" id="prefix-laterButton">Remind Me Later</button>
+      </div>
+    </div>
+
+    <!-- step2 is the success confirmation page -->
+    <div id="prefix-overlay-step2" style="display:none;"><p>Thank you for signing up. You will begin receiving updates shortly.</p><p><button class="prefix-big" rel="dismiss" title="Close overlay and go to site">Continue</button></p>
+    </div>
+
+    <div id="prefix-overlay-footer"></div>
+  </div>
+</div>
+
+</div><div style="top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; position: fixed; z-index: 2; background: rgb(0, 0, 0); opacity: 0.5;"></div></body></html>
