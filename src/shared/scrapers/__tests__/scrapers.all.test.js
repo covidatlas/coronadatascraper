@@ -4,11 +4,16 @@
 
 import { sync as glob } from 'fast-glob';
 import { readFileSync as readFile } from 'fs';
-import { basename } from 'path';
+import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
 import { runScraper } from '../../lib/run-scraper.js';
+
+// import { looksLike } from '../../lib/iso-date.js';
+const looksLike = {
+  isoDate: s => /^\d{4}-\d{2}-\d{2}$/.test(s) // YYYY-DD-MM
+};
 
 jest.mock('../../lib/fetch/get.js');
 
@@ -24,15 +29,24 @@ To add test coverage for a scraper, you only need to provide test assets; no new
     - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
     - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
 
-- Add a file named `expected.YYYY-MM-DD.json` containing the array of values that the scraper is expected to
-  return for a particular date. (Leave out any geojson `features` properties.); for example, `expected.2020-03-16.json`.
+- Add a file named `expected.json` containing the array of values that the scraper is expected to
+  return. (Leave out any geojson `features` properties.)
+- For sources that have a time series, the `expected.json` file represents the latest result in the
+  sample response provided. You can additionally test the return value for a specific date by adding
+  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
 
+    📁 USA
+      📁 AK
+        📄 index.js 🡐 scraper
+        📁 tests
+          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html 🡐 sample response
+          📄 expected.json 🡐 expected result
     ...
     📁 FRA
       📄 index.js 🡐 scraper
       📁 tests
         📄 raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv 🡐 sample response
-        📄 expected.2020-03-27.json 🡐 expected result for March 27, 2020
+        📄 expected.json 🡐 expected result for most recent date in sample
         📄 expected.2020-03-16.json 🡐 expected result for March 16, 2020
 
 */
@@ -49,46 +63,43 @@ const stripFeatures = d => {
   return d;
 };
 
-// Extract date from path, e.g. `expected-2020-03-16.json` -> `2020-03-16`
-const datedResultsRegex = /(\d{4}-\d{2}-\d{2})/i;
-const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
-
 describe('all scrapers', () => {
   const testDirs = glob(join(__dirname, '..', '**', 'tests'), { onlyDirectories: true });
+
   for (const testDir of testDirs) {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`
+
     describe(`scraper: ${scraperName}`, () => {
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
-
       const datedResults = glob(join(testDir, '*'), { onlyDirectories: true });
 
-      console.log({ datedResults });
-      for (const expectedPath of datedResults) {
-        const date = getDateFromPath(expectedPath);
-
-        beforeAll(() => {
-          // Read sample responses for this scraper and pass them to the mock `get` function.
-          const sampleResponses = glob(join(testDir, date, '*')).filter(p => !p.includes('expected'));
-          for (const filePath of sampleResponses) {
-            const fileName = basename(filePath);
-            const source = { [fileName]: readFile(filePath).toString() };
-            get.addSources(source);
-          }
-          // Set date for scraper
-          process.env.SCRAPE_DATE = date;
-        });
-
-        it(`returns data for ${date}`, async () => {
-          let result = await runScraper(scraperObj);
-          result = result.map(stripFeatures);
-          const expected = await readJSON(expectedPath);
-          expect(result).toEqual(expected);
-        });
+      for (const dateDir of datedResults) {
+        const date = path.basename(dateDir);
+        if (looksLike.isoDate(date)) {
+          describe(date, () => {
+            beforeAll(() => {
+              // Read sample responses for this scraper and pass them to the mock `get` function.
+              const sampleResponses = glob(join(dateDir, '*')).filter(p => !p.includes('expected'));
+              for (const filePath of sampleResponses) {
+                const fileName = path.basename(filePath);
+                const source = { [fileName]: readFile(filePath).toString() };
+                get.addSources(source);
+              }
+            });
+            it(`returns expected data`, async () => {
+              process.env.SCRAPE_DATE = date;
+              let result = await runScraper(scraperObj);
+              result = result.map(stripFeatures);
+              const expected = await readJSON(join(dateDir, 'expected.json'));
+              expect(result).toEqual(expected);
+            });
+          });
+        }
       }
 
-      afterAll(() => {
-        // clean up environment vars
+      // clean up environment vars
+      afterEach(() => {
         delete process.env.SCRAPE_DATE;
       });
     });
