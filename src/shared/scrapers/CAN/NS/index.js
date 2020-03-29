@@ -11,6 +11,7 @@ const scraper = {
   country: 'CAN',
   url: 'https://novascotia.ca/coronavirus/COVID-19-cases.csv',
   type: 'csv',
+  certValidation: false,
   sources: [
     {
       name: 'Government of Nova Scotia',
@@ -18,7 +19,7 @@ const scraper = {
     }
   ],
   async scraper() {
-    const data = await fetch.csv(this.url, false, { disableSSL: true });
+    const data = await fetch.csv(this.url);
 
     const headers = Object.keys(data[0]);
     if (headers[0] !== 'Date' || headers[1] !== 'Positive' || headers[2] !== 'Negative') {
