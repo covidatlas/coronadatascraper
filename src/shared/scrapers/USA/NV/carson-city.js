@@ -2,23 +2,21 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
-//const UNASSIGNED = '(unassigned)';
+// const UNASSIGNED = '(unassigned)';
 const scraper = {
-  county: 'Carson City',
   state: 'NV',
   country: 'USA',
   aggregate: 'county',
-  priority: 0,
   url: 'https://gethealthycarsoncity.org/novel-coronavirus-2019/',
   sources: [
     {
       name: 'Carson City Health and Human Services',
       url: 'https://gethealthycarsoncity.org/',
-      description: 'Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties.'
+      description:
+        'Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties.'
     }
   ],
   type: 'table',
-  certValidation: false,
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
@@ -27,8 +25,12 @@ const scraper = {
 
     $trs.each((index, tr) => {
       const $tr = $(tr);
+      const name = parse.string($tr.find('td:first-child').text());
+      if (name === 'TOTAL') {
+        return;
+      }
       counties.push({
-        county: parse.string($tr.find('td:first-child').text()),
+        county: name,
         cases: parse.number($tr.find('td:nth-child(2)').text()),
         active: parse.number($tr.find('td:nth-child(3)').text()),
         recovered: parse.number($tr.find('td:nth-child(4)').text()),
