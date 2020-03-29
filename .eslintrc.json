@@ -1,11 +1,6 @@
 {
   "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
-  "ignorePatterns": [
-    "node_modules/",
-    "dist/",
-    "src/shared/scrapers/**/tests/",
-    "vendor/"
-  ],
+  "ignorePatterns": ["node_modules/", "dist/", "src/shared/scrapers/**/tests/", "vendor/"],
   "parser": "babel-eslint",
   "rules": {
     "consistent-return": "off",
@@ -23,6 +18,7 @@
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
     "no-shadow": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-loop-func": "off"
   }
 }

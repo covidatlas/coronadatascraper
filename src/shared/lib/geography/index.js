@@ -37,7 +37,8 @@ const countryMap = {
   'The Gambia': 'GMB',
   'Republic of the Congo': 'COG',
   Syria: 'SYR',
-  Laos: 'LAO'
+  Laos: 'LAO',
+  Burma: 'MMR'
 };
 
 /*

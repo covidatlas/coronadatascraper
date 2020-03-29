@@ -1,4 +1,5 @@
 import * as schema from '../../../shared/lib/schema.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const validateSources = async args => {
   const { sources, report } = args;
@@ -11,6 +12,7 @@ const validateSources = async args => {
         .map(error => [error.dataPath, error.message].join(' '))
         .join('; ')}`;
       errors.push(msg);
+      reporter.logError('source validation', 'invalid source object', msg, 'low', source);
       console.log(`  ❌ ${msg}`);
     }
   }
