@@ -80,7 +80,7 @@ const scraper = {
     const data = await fetch.csv(this.url);
     const counties = [];
     for (const county of data) {
-      let countyName = parse.string(addCounty(county.COUNTY_NAME));
+      let countyName = parse.string(geography.addCounty(county.COUNTY_NAME));
       countyName = this._counties[countyName] || countyName;
       counties.push({
         county: geography.addCounty(countyName),
