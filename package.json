@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
-    "test": "npm run test:slow && npm run test:fast",
+    "test": "npm run test:jest && npm run test:tape",
     "test:tape": "tape tests/**/*-test.js | tap-spec",
     "test:jest": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/shared/timeseries.js",
