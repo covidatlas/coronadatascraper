@@ -1,12 +1,7 @@
 import path from 'path';
-<<<<<<< HEAD:src/events/crawler/scrape-data/run-scraper.js
-import * as datetime from '../../../shared/lib/datetime.js';
-import * as geography from '../../../shared/lib/geography/index.js';
-import reporter from '../../../shared/lib/error-reporter.js';
-=======
 import * as datetime from './datetime.js';
 import * as geography from './geography/index.js';
->>>>>>> 86b526a3... move run-scraper to shared, so tests can use it:src/shared/lib/run-scraper.js
+import reporter from './error-reporter.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
