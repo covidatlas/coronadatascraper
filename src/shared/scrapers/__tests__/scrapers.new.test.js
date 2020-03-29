@@ -1,21 +1,12 @@
-describe('new scrapers', () => {
-  it('is true', async () => {
-    expect(true).toEqual(true);
-  });
-});
-
-// eslint-disable-next-line
-/*
 import each from 'jest-each';
 
-import { runScraper } from '../tasks/scrapeData/runScraper.js';
-import * as fs from '../lib/fs.js';
-import * as schema from '../lib/schema.js';
+import * as fs from '../../lib/fs.js';
+import * as schema from '../../lib/schema.js';
+import runScraper from './run-scraper.js';
 
 const noScrapersTest = () => test('no scrapers modified', () => console.log('No scrapers modified, skipping tests'));
 
 describe('new scrapers', () => {
-
   beforeAll(() => {
     jest.setTimeout(300000);
   });
@@ -33,14 +24,14 @@ describe('new scrapers', () => {
     if (scrapers.length > 0) {
       each(scrapers).test('when "%s" is called, it does not fail', async scraperPath => {
         if (await fs.exists(scraperPath)) {
-          const location = (await import(scraperPath)).default;
+          const location = (await import(scraperPath.replace('src/shared/scrapers', '../'))).default;
 
           await runScraper(location);
         }
       });
       each(scrapers).test('scraper "%s" follows schema', async scraperPath => {
         if (await fs.exists(scraperPath)) {
-          const source = (await import(scraperPath)).default;
+          const source = (await import(scraperPath.replace('src/shared/scrapers', '../'))).default;
 
           expect(schema.schemaHasErrors(source, schema.schemas.scraperSchema)).toBeFalsy();
         }
@@ -52,4 +43,3 @@ describe('new scrapers', () => {
     noScrapersTest();
   }
 });
-*/

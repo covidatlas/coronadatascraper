@@ -10,6 +10,12 @@ const scraper = {
   state: 'UT',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://health.utah.gov/',
+      name: 'Utah Department of Health'
+    }
+  ],
   _counties: [
     'Beaver County',
     'Box Elder County',
@@ -131,14 +137,17 @@ const scraper = {
         this._pushCounty(counties, county, parse.number(data[1][index]) + parse.number(data[2][index]));
       }
 
+      // Totals come from here
       counties.push({
         tested: parse.number($('#reported-people-tested .value-output').text()),
-        cases: parse.number($('#covid-19-cases .value-output').text())
+        cases: parse.number($('#covid-19-cases .value-output').text()),
+        deaths: parse.number($('#covid-19-deaths .value-output').text())
       });
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
-      counties.push(transform.sumData(counties));
+      // We don't sum data because we already have totals from above
+      // counties.push(transform.sumData(counties));
 
       return counties;
     }

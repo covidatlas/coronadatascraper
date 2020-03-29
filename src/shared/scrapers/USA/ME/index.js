@@ -9,6 +9,13 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'ME',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.maine.gov/dhhs/mecdc',
+      name: 'MeCDC',
+      description: 'Maine Center for Disease Control & Prevention'
+    }
+  ],
   url: 'https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml',
   type: 'table',
   aggregate: 'county',
@@ -35,7 +42,7 @@ const scraper = {
   async scraper() {
     let counties = [];
     const $ = await fetch.page(this.url);
-    const $th = $('th:contains("Confirmed and Recovered Case Counts by County")');
+    const $th = $('th:contains("Case Counts by County")');
     const $table = $th.closest('table');
 
     const $trs = $table.find('tbody > tr');
@@ -47,7 +54,8 @@ const scraper = {
       const $tr = $(tr);
       let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
       const cases = parse.number($tr.find('> *:nth-child(2)').text());
-      const recovered = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
+      const recovered = parse.number(parse.string($tr.find('> *:nth-child(3)').text()) || 0);
+      const deaths = parse.number(parse.string($tr.find('> *:nth-child(4)').text()));
 
       if (county === 'Unknown County') {
         county = UNASSIGNED;
@@ -55,7 +63,8 @@ const scraper = {
       counties.push({
         county,
         cases,
-        recovered
+        recovered,
+        deaths
       });
     });
     counties = geography.addEmptyRegions(counties, this._counties, 'county');

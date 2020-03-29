@@ -9,6 +9,12 @@ const scraper = {
   county: 'Alameda County',
   state: 'CA',
   country: 'USA',
+  sources: [
+    {
+      url: 'http://www.acphd.org',
+      name: 'Alameda Count Public Health Department'
+    }
+  ],
   url: 'http://www.acphd.org/2019-ncov.aspx',
   headless: true,
   type: 'paragraph',

@@ -16,6 +16,12 @@ const scraper = {
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,
+  curators: [
+    {
+      name: 'JHU CSSE',
+      url: 'https://systems.jhu.edu/research/public-health/ncov/'
+    }
+  ],
   _urls: {
     cases:
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
@@ -126,7 +132,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       // Build a hash of US counties
-      const jhuUSCountyMap = await fs.readJSON(path.join('..', 'vendor', 'jhuUSCountyMap.json'));
+      const jhuUSCountyMap = await fs.readJSON(path.join(__dirname, '..', 'vendor', 'jhu-us-county-map.json'));
 
       const getOldData = datetime.scrapeDateIsBefore('2020-3-12');
 

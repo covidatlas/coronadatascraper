@@ -10,6 +10,12 @@ const scraper = {
   state: 'PA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.health.pa.gov/',
+      name: 'Pennsylvania Department of Health'
+    }
+  ],
   _counties: [
     'Adams County',
     'Allegheny County',
@@ -148,7 +154,7 @@ const scraper = {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
-      const $countyTable = $('table.ms-rteTable-default').eq(1);
+      const $countyTable = $('td:contains("County")').closest('table');
       const $trs = $countyTable.find('tbody > tr:not(:first-child)');
       let counties = [];
       $trs.each((index, tr) => {

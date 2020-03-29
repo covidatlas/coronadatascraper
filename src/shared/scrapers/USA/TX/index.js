@@ -12,6 +12,13 @@ const scraper = {
   country: 'USA',
   aggregate: 'county',
   certValidation: false,
+  sources: [
+    {
+      url: 'https://www.dshs.state.tx.us',
+      name: 'Texas Health and Human Services',
+      description: 'Texas Department of State Health Services'
+    }
+  ],
   _counties: [
     'Anderson County',
     'Andrews County',

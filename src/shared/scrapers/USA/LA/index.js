@@ -9,6 +9,12 @@ const scraper = {
   state: 'LA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'http://ldh.la.gov/',
+      name: 'Louisiana Department of Health'
+    }
+  ],
   _countyMap: { 'La Salle Parish': 'LaSalle Parish' },
   scraper: {
     '0': async function() {

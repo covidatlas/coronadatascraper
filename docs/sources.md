@@ -93,14 +93,14 @@ Sources are rated based on:
 
 1. **How hard is it to read?** - `csv` and `json` give best scores, with `table` right behind it, with `list` and `paragraph` worse. `pdf` gets no points, and `image` gets negative points.
 2. **Timeseries?** - Sources score points if they provide a timeseries.
-3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `recovered`, `country`, `state`, `county`, and `city`.
+3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `hospitalized`, `discharged`, `recovered`, `country`, `state`, `county`, and `city`.
 4. **SSL** - Sources get points for serving over ssl
 5. **Headless?** - Sources get docked points if they require a headless scraper
 
 ## Scraping
 
 Scrapers are `async` functions associated with the `scraper` attribute on the source object. You may implement one or multiple scrapers if the
-source changes its formating (see [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)).
+source changes its formatting (see [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)).
 
 Your scraper should return an object, an array of objects, or `null` in case the source does not have any data.
 
@@ -112,6 +112,8 @@ The object may contain the following attributes:
 * `city` - The city name (not required if defined on scraper object)
 * `cases` - Total number of cases
 * `deaths` - Total number of deaths
+* `hospitalized` - Total number of hospitalized
+* `discharged` - Total number of discharged
 * `recovered` - Total number recovered
 * `tested` - Total number tested
 * `feature` - GeoJSON feature associated with the location (See [Features and population data](#features-and-population-data))
@@ -121,7 +123,7 @@ The object may contain the following attributes:
 
 Returning an array of objects is useful for aggregate sources, sources that provide information for more than one geographical area. For example, [Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink)
 provides information for all provinces of the country. If the scraper returns an array, each object in the array will have the attributes specified
-in the source objeect appended, meaning you only need to specify the fields that change per location (`county`, `cases`, `deaths` for example).
+in the source object appended, meaning you only need to specify the fields that change per location (`county`, `cases`, `deaths` for example).
 
 `null` should be returned in case no data is available. This could be the case if the source has not provided an update for today, or we are fetching historical
 information for which we have no cached data.

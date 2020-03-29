@@ -320,6 +320,28 @@ div.spectrum-SideNav-itemLink:hover {
   overflow: hidden;
 }
 
+/* Reports */
+.cds-CrossCheckReports-list {
+  list-style: none;
+}
+
+.cds-SourceComparison {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.cds-SourceComparison-metric {
+  padding: 0 4px;
+}
+.cds-SourceComparison-source {
+  padding-right: 12px;
+  text-align: right;
+}
+.cds-SourceComparison-value {
+  text-align: center;
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;

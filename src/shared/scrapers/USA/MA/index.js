@@ -13,6 +13,13 @@ const scraper = {
   country: 'USA',
   aggregate: 'county',
   type: 'pdf',
+  sources: [
+    {
+      url: 'https://www.mass.gov/orgs/department-of-public-health',
+      name: 'Massachusetts DPH',
+      description: 'Massachusetts Department of Public Health'
+    }
+  ],
   maintainers: [
     {
       name: 'Quentin Golsteyn',
@@ -68,11 +75,25 @@ const scraper = {
         if (countyName === 'Dukes and') {
           countyObj.county = geography.addCounty(`Dukes and ${data[1]}`);
           countyObj.cases = parse.number(data[2]);
+        }
 
+        if (countyName === 'Dukes and Nantucket') {
           countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
             state: 'MA',
             country: 'USA'
           });
+        }
+
+        // Sometimes, numbers end up in two objects
+        if (data.length > 2) {
+          // Find all number parts
+          let caseString = '';
+          for (const part of data.slice(1)) {
+            if (!Number.isNaN(parseInt(part, 10))) {
+              caseString += part;
+            }
+          }
+          countyObj.cases = parse.number(caseString);
         }
         counties.push(countyObj);
       }
