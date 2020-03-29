@@ -5,6 +5,7 @@ import * as fs from '../../../shared/lib/fs.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as countryLevels from '../../../shared/lib/country-levels.js';
 
 const DEBUG = false;
 
@@ -162,6 +163,15 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     locationLoop: for (const location of locations) {
       let found = false;
+
+      // use countryLevel's getFeature if id is present
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        const feature = await countryLevels.getFeature(clId);
+        storeFeature(feature, location);
+        continue;
+      }
+
       let point;
       if (location.coordinates) {
         point = turf.point(location.coordinates);
