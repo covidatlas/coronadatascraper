@@ -3,14 +3,11 @@
 /* eslint-disable no-use-before-define */
 
 import { sync as glob } from 'fast-glob';
-import { readFileSync as readFile } from 'fs';
-import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
-import { get } from '../../lib/fetch/get.js';
 import runScraper from './run-scraper.js';
 
-jest.mock('../../lib/fetch/get.js');
+// jest.mock('../../lib/fetch/get.js');
 
 /**
 This suite automatically tests a scraper's results against its test cases.
@@ -55,9 +52,12 @@ const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
 // e.g. `/coronadatascraper/src/shared/scrapers/USA/AK/tests` 🡒 `USA/AK`
 const scraperNameFromPath = s => s.replace(join(__dirname, '..', 'scrapers'), '').replace('/tests', '');
 
-// Remove geojson from scraper result
-const stripFeatures = d => {
+// Remove geojson + undefined from scraper result
+const strip = d => {
   delete d.feature;
+  for (const prop of Object.keys(d)) {
+    if (d[prop] === undefined) delete d[prop];
+  }
   return d;
 };
 
@@ -68,16 +68,16 @@ describe('all scrapers', () => {
     const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`
 
     describe(`scraper: ${scraperName}`, () => {
-      beforeAll(() => {
-        // Read sample responses for this scraper and pass them to the mock `get` function.
-        const sampleResponses = glob(join(testDir, '*')).filter(p => !p.includes('expected'));
-        for (const filePath of sampleResponses) {
-          const fileName = path.basename(filePath);
-          const fullPath = path.resolve(__dirname, filePath);
-          const source = { [fileName]: readFile(fullPath).toString() };
-          get.addSources(source);
-        }
-      });
+      // beforeAll(() => {
+      //   // Read sample responses for this scraper and pass them to the mock `get` function.
+      //   const sampleResponses = glob(join(testDir, '*')).filter(p => !p.includes('expected'));
+      //   for (const filePath of sampleResponses) {
+      //     const fileName = path.basename(filePath);
+      //     const fullPath = path.resolve(__dirname, filePath);
+      //     const source = { [fileName]: readFile(fullPath).toString() };
+      //     get.addSources(source);
+      //   }
+      // });
 
       // dynamically import the scraper
       const scraperObj = require(join(testDir, '..', 'index.js')).default;
@@ -92,9 +92,10 @@ describe('all scrapers', () => {
         const date = getDateFromPath(expectedPath);
 
         it(`returns data for ${date}`, async () => {
+          process.env.OVERRIDE_CACHE_PATH = testDir;
           process.env.SCRAPE_DATE = date;
           let result = await runScraper(scraperObj);
-          result = result.map(stripFeatures);
+          result = result.map(strip);
           const expected = await readJSON(expectedPath);
           expect(result).toEqual(expected);
         });
@@ -103,6 +104,7 @@ describe('all scrapers', () => {
       // clean up environment vars
       afterEach(() => {
         delete process.env.SCRAPE_DATE;
+        delete process.env.OVERRIDE_CACHE_PATH;
       });
     });
   }

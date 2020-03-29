@@ -44,7 +44,9 @@ export const getCachedFileName = (url, type) => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
-  const cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
+  let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
+  // Rewire cache path for testing
+  if (process.env.OVERRIDE_CACHE_PATH) cachePath = process.env.OVERRIDE_CACHE_PATH;
   return join(cachePath, getCachedFileName(url, type));
 };
 

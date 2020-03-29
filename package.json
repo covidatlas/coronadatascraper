@@ -19,7 +19,9 @@
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qaReporter.js",
-    "test": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
+    "test": "npm run test:slow && npm run test:fast",
+    "test:fast": "tape tests/**/*-test.js | tap-spec",
+    "test:slow": "FILES_MODIFIED=$(git diff --name-only HEAD) jest",
     "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
@@ -83,7 +85,9 @@
     "rollup-plugin-copy-glob": "^0.3.1",
     "rollup-plugin-livereload": "^1.1.0",
     "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-serve": "^1.0.1"
+    "rollup-plugin-serve": "^1.0.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.2"
   },
   "husky": {
     "hooks": {
