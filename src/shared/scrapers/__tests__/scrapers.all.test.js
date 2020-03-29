@@ -8,7 +8,7 @@ import path from 'path';
 import join from '../../lib/join.js';
 import { readJSON } from '../../lib/fs.js';
 import { get } from '../../lib/fetch/get.js';
-import { runScraper } from '../../lib/run-scraper.js';
+import runScraper from '../../lib/run-scraper.js';
 
 // import { looksLike } from '../../lib/iso-date.js';
 const looksLike = {
@@ -17,13 +17,8 @@ const looksLike = {
 
 jest.mock('../../lib/fetch/get.js');
 
-/**
-This suite automatically tests a scraper's results against its test cases.
-
-To add test coverage for a scraper, see
-https://github.com/lazd/coronadatascraper/blob/master/docs/sources.md#testing-sources
-
-*/
+// This suite automatically tests a scraper's results against its test cases. To add test coverage for
+// a scraper, see https://github.com/lazd/coronadatascraper/blob/master/docs/sources.md#testing-sources
 
 // Utility functions
 
