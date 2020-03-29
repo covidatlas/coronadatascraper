@@ -107,6 +107,7 @@ const runScrapers = async args => {
         errors.push({
           name: geography.getName(location),
           url: location.url,
+          type: err.name,
           err: err.toString()
         });
 

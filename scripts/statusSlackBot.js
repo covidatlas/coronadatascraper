@@ -19,6 +19,8 @@ const { argv } = yargs
 const generateReport = async report => {
   const { sources, scrape, findFeatures, findPopulation, validate } = report;
 
+  const filteredScaperErrors = scrape.errors.filter(error => error.type !== 'DeprecatedError');
+
   return [
     {
       type: 'section',
@@ -48,8 +50,8 @@ _Scrapers:_
 - *${scrape.numCounties}* counties
 - *${scrape.numStates}* states
 - *${scrape.numCountries}* countries
-- *${scrape.numErrors}* scraper errors:
-${scrape.errors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
+- *${filteredScaperErrors.length}* scraper errors:
+${filteredScaperErrors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
       }
     },
     {

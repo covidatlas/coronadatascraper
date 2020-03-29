@@ -1,3 +1,4 @@
+import { DeprecatedError } from '../../../lib/errors.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import maintainers from '../../../lib/maintainers.js';
