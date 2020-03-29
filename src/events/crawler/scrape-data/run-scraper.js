@@ -5,9 +5,9 @@ import reporter from '../../../shared/lib/error-reporter.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
-/*
-  Check if the provided data contains any invalid fields
-*/
+/** Check if the provided data contains any invalid fields.
+ * @param {any[]} data
+ */
 function isValid(data) {
   for (const [prop, value] of Object.entries(data)) {
     if (value === null) {
@@ -36,11 +36,11 @@ function addData(cases, location, result) {
       throw new Error(`Invalid data: scraper for ${geography.getName(location)} returned 0 rows`);
     }
     for (const data of result) {
-      if (isValid(data, location)) {
+      if (isValid(data)) {
         cases.push({ ...location, ...data });
       }
     }
-  } else if (isValid(result, location)) {
+  } else if (isValid(result)) {
     cases.push({ ...location, ...result });
   }
 }
