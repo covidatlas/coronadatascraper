@@ -51,8 +51,10 @@ const scraper = {
 
       let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
       let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
-      const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
-      const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
+      const lastDateParts = data[data.length - 1].date.split('-');
+      const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);
+      const firstDateParts = data[data.length - 1].date.split('-');
+      const firstDateInTimeseries = new Date(`${firstDateParts[2]}-${firstDateParts[1]}-${firstDateParts[0]}12:00:00`);
 
       if (scrapeDate > lastDateInTimeseries) {
         console.error(
