@@ -1,5 +1,5 @@
 import * as turf from './turf.js';
-import * as log from '../log.js';
+import log from '../log.js';
 import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';

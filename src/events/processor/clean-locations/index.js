@@ -1,5 +1,5 @@
 import * as schema from '../../../shared/lib/schema.js';
-import * as log from '../../../shared/lib/log.js';
+import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 

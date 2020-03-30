@@ -13,4 +13,4 @@ log.warn = function(...args) {
   console.warn(...args);
 };
 
-export default log;
+export { log as default };

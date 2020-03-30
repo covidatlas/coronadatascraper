@@ -26,10 +26,10 @@ const { argv } = yargs
     description: 'The suffix to add to output files, i.e. passing TEST will produce data-TEST.json etc',
     type: 'string'
   })
-  .option('verbose', {
-    alias: 'v',
-    description: 'Dump out everything',
-    type: 'string'
+  .option('quiet', {
+    alias: 'q',
+    description: 'Suppress logs',
+    type: 'boolean'
   })
   .help()
   .alias('help', 'h');

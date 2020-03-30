@@ -1,7 +1,7 @@
 import fastGlob from 'fast-glob';
 import { basename } from 'path';
 import join from '../../../shared/lib/join.js';
-import * as log from '../../../shared/lib/log.js';
+import log from '../../../shared/lib/log.js';
 
 export default async args => {
   log(`⏳ Fetching scrapers...`);

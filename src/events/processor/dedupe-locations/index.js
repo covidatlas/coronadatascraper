@@ -1,7 +1,7 @@
 import path from 'path';
 import * as geography from '../../../shared/lib/geography/index.js';
 import * as transform from '../../../shared/lib/transform.js';
-import * as log from '../../../shared/lib/log.js';
+import log from '../../../shared/lib/log.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths'];
 

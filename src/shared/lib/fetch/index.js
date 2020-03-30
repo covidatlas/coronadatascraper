@@ -4,7 +4,7 @@ import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
-import * as log from '../log.js';
+import log from '../log.js';
 import { get } from './get.js';
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in

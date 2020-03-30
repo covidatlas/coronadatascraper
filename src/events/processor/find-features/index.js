@@ -2,7 +2,7 @@ import geoTz from 'geo-tz';
 import { join } from 'path';
 import * as turf from '../../../shared/lib/geography/turf.js';
 import * as fs from '../../../shared/lib/fs.js';
-import * as log from '../../../shared/lib/log.js';
+import log from '../../../shared/lib/log.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';

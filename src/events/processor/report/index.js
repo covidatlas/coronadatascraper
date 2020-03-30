@@ -1,4 +1,4 @@
-import * as log from '../../../shared/lib/log.js';
+import log from '../../../shared/lib/log.js';
 
 const reportScraping = args => {
   const { locations, scraperErrors, deDuped, crosscheckReports, report } = args;

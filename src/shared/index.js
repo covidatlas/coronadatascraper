@@ -23,6 +23,10 @@ async function generate(date, options = {}) {
     delete process.env.SCRAPE_DATE;
   }
 
+  if (options.quiet) {
+    process.env.LOG_LEVEL = 'off';
+  }
+
   // JSON used for reporting
   const report = {
     date

@@ -9,7 +9,7 @@ import crypto from 'crypto';
 import join from '../join.js';
 import * as datetime from '../datetime.js';
 import * as fs from '../fs.js';
-import * as log from '../log.js';
+import log from '../log.js';
 
 const DEFAULT_CACHE_PATH = 'coronadatascraper-cache';
 const TIMESERIES_CACHE_PATH = 'cache';

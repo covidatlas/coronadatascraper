@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import csvParse from 'csv-parse';
 import csvStringify from 'csv-stringify';
-import * as log from './log.js';
+import log from './log.js';
 
 /**
   Check if a file or directory exists
