@@ -5,30 +5,33 @@ import * as transform from '../../../shared/lib/transform.js';
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths'];
 
 /*
-  Returns a report if the crosscheck fails, or false if the two sets have identical data
+  Returns an array, the first element being the items in numericalValues that are different between the 2
+  sources, and the second element being the items that are the same
 */
 function crosscheck(a, b) {
-  const crosscheckReport = {};
-  let failed = false;
+  const discrepancies = [];
+  const agreements = [];
   for (const prop of numericalValues) {
     if ((a[prop] === 0 && b[prop] === undefined) || (b[prop] === 0 && a[prop] === undefined)) {
       // Don't complain about undefined when there should be zero, it's noise
+      agreements.push(prop);
       continue;
     }
     if (a[prop] !== b[prop]) {
-      crosscheckReport[prop] = [a[prop], b[prop]];
-      failed = true;
+      discrepancies.push(prop);
+    } else if (a[prop] !== undefined || b[prop] !== undefined) {
+      agreements.push(prop);
     }
   }
-  return failed ? crosscheckReport : false;
+  return [discrepancies, agreements];
 }
 
 /*
   Check if the passed stripped location object exists in the crosscheck report
 */
-function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
+function existsInCrosscheckSources(location, crosscheckSourcesByLocation) {
   let exists = false;
-  for (const existingLocation of crosscheckReportsByLocation) {
+  for (const existingLocation of crosscheckSourcesByLocation) {
     if (existingLocation.url === location.url) {
       exists = true;
       break;
@@ -40,6 +43,49 @@ function existsInCrosscheckReports(location, crosscheckReportsByLocation) {
 function getCleanPath(scraperFilePath) {
   const scraperFolderPath = path.resolve(path.join('src', 'shared', 'scrapers'));
   return path.relative(scraperFolderPath, scraperFilePath);
+}
+
+function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, usedLocation, droppedLocation) {
+  crosscheckReports[locationName] = crosscheckReports[locationName] || {
+    location: {},
+    used: 0,
+    dropped: [],
+    discrepancies: [],
+    agreements: [],
+    sources: []
+  };
+  const report = crosscheckReports[locationName];
+  for (const locationType of ['city', 'county', 'state', 'country']) {
+    if (usedLocation[locationType]) {
+      report.location[locationType] = usedLocation[locationType];
+    }
+  }
+
+  const discrepancies = [];
+  const agreements = [];
+  for (const prop of numericalValues) {
+    if (report.discrepancies.indexOf(prop) > -1 || crosscheckResult[0].indexOf(prop) > -1) {
+      discrepancies.push(prop);
+    } else if (report.agreements.indexOf(prop) > -1 || crosscheckResult[1].indexOf(prop) > -1) {
+      agreements.push(prop);
+    }
+  }
+  report.discrepancies = discrepancies;
+  report.agreements = agreements;
+
+  const strippedUsedLocation = transform.removePrivate({ ...usedLocation });
+  if (!existsInCrosscheckSources(strippedUsedLocation, report.sources)) {
+    // Add to beginning of array so that the used source is always at index 0
+    report.sources.unshift(strippedUsedLocation);
+  }
+  const strippedDroppedLocation = transform.removePrivate({ ...droppedLocation });
+  if (!existsInCrosscheckSources(strippedDroppedLocation, report.sources)) {
+    report.sources.push(strippedDroppedLocation);
+  }
+  /* Always add index to dropped because either we are adding a dropped item at the end of the array or
+   * adding a new used item at the beginning of the array
+   */
+  report.dropped.push(report.sources.length - 1);
 }
 
 const dedupeLocations = args => {
@@ -72,27 +118,16 @@ const dedupeLocations = args => {
       const thisPriority = geography.getPriority(location) + location.rating / 2;
       const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
-      if (otherPriority === thisPriority) {
-        log(
-          '⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily',
-          locationName,
-          getCleanPath(location._path),
-          thisPriority,
-          getCleanPath(otherLocation._path),
-          otherPriority
-        );
+      let usedLocation;
+      let droppedLocation;
+      if (otherPriority <= thisPriority) {
         // Delete the other location
-        const otherIndex = locations.indexOf(otherLocation);
-        if (otherIndex === -1) {
-          throw new Error(`Something went wrong in de-dupe, can't find index of other location`);
-        }
-        locations.splice(otherIndex, 1);
-        seenLocations[locationName] = location; // the location we're at becomes the new seen location
-        deDuped++;
-      } else if (otherPriority < thisPriority) {
-        // Delete the other location
+        const message =
+          otherPriority === thisPriority
+            ? '⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily'
+            : '✂️  %s: Using %s (%d) instead of %s (%d)';
         log(
-          '✂️  %s: Using %s (%d) instead of %s (%d)',
+          message,
           locationName,
           getCleanPath(location._path),
           thisPriority,
@@ -106,6 +141,8 @@ const dedupeLocations = args => {
         locations.splice(otherIndex, 1);
         seenLocations[locationName] = location; // the location we're at becomes the new seen location
         deDuped++;
+        usedLocation = location;
+        droppedLocation = otherLocation;
       } else {
         // Kill this location
         log(
@@ -119,28 +156,24 @@ const dedupeLocations = args => {
         // Note: Since we killed this location, it shouldn't end up seenLocations
         locations.splice(i, 1);
         deDuped++;
+        usedLocation = otherLocation;
+        droppedLocation = location;
       }
 
-      const crosscheckReport = crosscheck(location, otherLocation);
-      if (crosscheckReport) {
-        log(
-          '  🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)',
-          locationName,
-          getCleanPath(otherLocation._path),
-          otherPriority,
-          getCleanPath(location._path),
-          thisPriority
-        );
-
-        crosscheckReports[locationName] = crosscheckReports[locationName] || [];
-        const strippedLocation = transform.removePrivate({ ...location });
-        if (!existsInCrosscheckReports(strippedLocation, crosscheckReports[locationName])) {
-          crosscheckReports[locationName].push(strippedLocation);
-        }
-        const stippedOtherLocation = transform.removePrivate({ ...otherLocation });
-        if (!existsInCrosscheckReports(stippedOtherLocation, crosscheckReports[locationName])) {
-          crosscheckReports[locationName].push(stippedOtherLocation);
-        }
+      const crosscheckResult = crosscheck(location, otherLocation);
+      const message = crosscheckResult[0].length
+        ? '  🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)'
+        : '  ⚠️  Crosscheck passed for %s: %s (%d) has same data as %s (%d). Logging duplicate.';
+      log(
+        message,
+        locationName,
+        getCleanPath(otherLocation._path),
+        otherPriority,
+        getCleanPath(location._path),
+        thisPriority
+      );
+      addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, usedLocation, droppedLocation);
+      if (crosscheckResult[0].length) {
         crossCheckFailures++;
       }
     } else {

@@ -33,7 +33,7 @@ const hash = str => {
  */
 export const getCachedFileName = (url, type) => {
   const urlHash = hash(url);
-  const extension = type || path.extname(url) || 'txt';
+  const extension = type || path.extname(url).replace(/^\./, '') || 'txt';
   return `${urlHash}.${extension}`;
 };
 

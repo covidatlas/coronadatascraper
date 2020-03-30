@@ -9,8 +9,7 @@ const scraper = {
   priority: 2,
   sources: [
     {
-      description: 'Northern Territory Government Coronavirus site',
-      name: 'Northern Territory Government Coronavirus site',
+      name: 'Northern Territory Government - Coronavirus site',
       url: 'https://coronavirus.nt.gov.au'
     }
   ],
