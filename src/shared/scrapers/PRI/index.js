@@ -19,7 +19,6 @@ const scraper = {
     }
   ],
   async scraper() {
-    console.log('test');
     const $ = await fetch.page(this.url);
     const $table = $('table').first();
     const $dataRow = $table.find('tbody > tr:nth-child(2)');
