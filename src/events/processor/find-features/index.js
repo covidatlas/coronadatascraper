@@ -156,7 +156,9 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   }
 
   return new Promise(async resolve => {
-    console.log('⏳ Generating features...');
+    if (process.env.LOG_LEVEL === 'verbose') {
+      console.log('⏳ Generating features...');
+    }
 
     const usCountyData = await fs.readJSON(join(__dirname, '..', '..', '..', 'shared', 'vendor', 'usa-counties.json'));
     const countryData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-countries.json'));
@@ -204,12 +206,16 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
       // Breaks France
       if (location.country === 'REU' || location.country === 'MTQ' || location.country === 'GUF') {
-        console.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
+        if (process.env.LOG_LEVEL === 'verbose') {
+          console.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
+        }
         continue;
       }
 
       if (location.county === '(unassigned)') {
-        console.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
+        if (process.env.LOG_LEVEL === 'verbose') {
+          console.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
+        }
         continue;
       }
 
@@ -356,12 +362,14 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
     }
 
-    console.log(
-      '✅ Found features for %d out of %d regions for a total of %d features',
-      foundCount,
-      Object.keys(locations).length,
-      featureCollection.features.length
-    );
+    if (process.env.LOG_LEVEL === 'verbose') {
+      console.log(
+        '✅ Found features for %d out of %d regions for a total of %d features',
+        foundCount,
+        Object.keys(locations).length,
+        featureCollection.features.length
+      );
+    }
 
     report.findFeatures = {
       numFeaturesFound: foundCount,

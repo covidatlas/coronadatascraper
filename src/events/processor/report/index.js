@@ -32,17 +32,18 @@ const reportScraping = args => {
     }
   }
 
-  console.log('✅ Data scraped!');
-  for (const [name, count] of Object.entries(locationCounts)) {
-    console.log('   - %d %s', count, name);
-  }
-  console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
-  for (const [name, count] of Object.entries(caseCounts)) {
-    console.log('   - %d %s', count, name);
-  }
-
-  if (scraperErrors.length) {
-    console.log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('✅ Data scraped!');
+    for (const [name, count] of Object.entries(locationCounts)) {
+      console.log('   - %d %s', count, name);
+    }
+    console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
+    for (const [name, count] of Object.entries(caseCounts)) {
+      console.log('   - %d %s', count, name);
+    }
+    if (scraperErrors.length) {
+      console.log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
+    }
   }
 
   report.scrape = {

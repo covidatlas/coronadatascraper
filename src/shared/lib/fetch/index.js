@@ -44,7 +44,9 @@ export const page = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const json = async (url, date, options = {}) => {
-  console.log(url);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log(url);
+  }
   const body = await get(url, 'json', date, options);
 
   if (!body) {
@@ -140,7 +142,9 @@ export const pdf = async (url, date, options) => {
 };
 
 const fetchHeadless = async url => {
-  console.log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
+  }
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -153,7 +157,9 @@ const fetchHeadless = async url => {
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
-      console.log(`  ⚠️  Retrying (${tries})...`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ⚠️  Retrying (${tries})...`);
+      }
       await new Promise(r => setTimeout(r, 2000));
     }
 
@@ -185,18 +191,24 @@ const fetchHeadless = async url => {
 
       // 400-499 means "not found", retrying is not likely to help
       if (response.status() < 500) {
-        console.log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        if (process.env.LOG_LEVEL === 'verbose') {
+          console.log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        }
         browser.close();
         return null;
       }
     } catch (err) {
       // Caught something, allow retry
       browser.close();
-      console.log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
+      }
     }
   }
 
-  console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+  }
   return null;
 };
 

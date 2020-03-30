@@ -13,14 +13,18 @@ const validateSources = async args => {
         .join('; ')}`;
       errors.push(msg);
       reporter.logError('source validation', 'invalid source object', msg, 'low', source);
-      console.log(`  ❌ ${msg}`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ❌ ${msg}`);
+      }
     }
   }
 
-  if (errors.length) {
-    console.log(`❌ Found ${errors.length} invalid scrapers`);
-  } else {
-    console.log(`✅ All scrapers are valid!`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    if (errors.length) {
+      console.log(`❌ Found ${errors.length} invalid scrapers`);
+    } else {
+      console.log(`✅ All scrapers are valid!`);
+    }
   }
 
   report.sources = {

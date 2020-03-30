@@ -105,7 +105,7 @@ export const writeFile = async (filePath, data, options = {}) => {
 
   const ret = await fs.promises.writeFile(filePath, data);
 
-  if (!localOptions.silent) {
+  if (!localOptions.silent || process.env.LOG_LEVEL === 'verbose') {
     console.log(`✏️  ${filePath} written`);
   }
 

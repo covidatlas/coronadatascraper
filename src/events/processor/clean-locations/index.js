@@ -6,7 +6,9 @@ import reporter from '../../../shared/lib/error-reporter.js';
   Clean the passed data
 */
 const cleanLocations = args => {
-  console.log(`⏳ Validating and cleaning locations`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log(`⏳ Validating and cleaning locations`);
+  }
 
   const { locations, report } = args;
 
@@ -18,15 +20,19 @@ const cleanLocations = args => {
         .map(error => [error.dataPath, error.message].join(' '))
         .join('; ')}`;
       errors.push(msg);
-      console.log(`  ❌ ${msg}`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ❌ ${msg}`);
+      }
       reporter.logError('location validation', 'invalid location object', msg, 'low', location);
     }
   }
 
-  if (errors.length) {
-    console.log(`❌ Found ${errors.length} invalid locations`);
-  } else {
-    console.log(`✅ All locations are valid!`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    if (errors.length) {
+      console.log(`❌ Found ${errors.length} invalid locations`);
+    } else {
+      console.log(`✅ All locations are valid!`);
+    }
   }
 
   report.validate = {

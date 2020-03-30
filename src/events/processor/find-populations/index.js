@@ -66,7 +66,9 @@ async function readPopulationData(featureCollection) {
 }
 
 const generatePopulations = async ({ locations, featureCollection, report, options, sourceRatings }) => {
-  console.log('⏳ Getting population data...');
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('⏳ Getting population data...');
+  }
 
   const populations = await readPopulationData(featureCollection);
 
@@ -168,7 +170,9 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       reporter.logError('population', 'missing population', '', 'low', location);
     }
   }
-  console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
+  }
 
   report.findPopulation = {
     numLocationsWithPopulation: populationFound,

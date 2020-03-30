@@ -55,7 +55,7 @@ export function generateMultiCountyFeature(counties, properties) {
     }
   }
 
-  if (features.length !== counties.length) {
+  if (process.env.LOG_LEVEL === 'verbose' && features.length !== counties.length) {
     console.warn(
       '⚠️  ',
       counties.length,
@@ -156,7 +156,9 @@ export const toISO3166Alpha3 = function(string) {
       return country['alpha-3'];
     }
   }
-  console.warn('⚠️  Could not find country code for', localString);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.warn('⚠️  Could not find country code for', localString);
+  }
   return localString;
 };
 

@@ -43,13 +43,17 @@ function getCleanPath(scraperFilePath) {
 }
 
 const dedupeLocations = args => {
-  console.log(`⏳ De-duping locations...`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log(`⏳ De-duping locations...`);
+  }
 
   const { locations, options } = args;
 
   function log(...args) {
     if (options.verbose !== undefined) {
-      console.log(...args);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(...args);
+      }
     }
   }
 
@@ -144,7 +148,9 @@ const dedupeLocations = args => {
     }
   }
 
-  console.log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
+  }
 
   return { ...args, deDuped, crosscheckReports };
 };

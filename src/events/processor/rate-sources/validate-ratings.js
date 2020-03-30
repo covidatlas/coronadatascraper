@@ -9,11 +9,15 @@ const validateRatings = async args => {
       const msg = `"${rating._path}" ${schemaErrors
         .map(error => [error.dataPath, error.message].join(' '))
         .join('; ')}`;
-      console.log(`  ❌ ${msg}`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ❌ ${msg}`);
+      }
     }
   }
 
-  console.log('✅ Assigned ratings for %d sources', sourceRatings.length);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log('✅ Assigned ratings for %d sources', sourceRatings.length);
+  }
 
   return args;
 };

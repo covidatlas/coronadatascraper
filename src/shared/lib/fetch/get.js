@@ -44,10 +44,14 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    console.log('  🚦  Loading data for %s from server', url);
+    if (process.env.LOG_LEVEL === 'verbose') {
+      console.log('  🚦  Loading data for %s from server', url);
+    }
 
     if (disableSSL) {
-      console.log('  ⚠️  SSL disabled for this resource');
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log('  ⚠️  SSL disabled for this resource');
+      }
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
 
@@ -57,7 +61,9 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       tries++;
       if (tries > 1) {
         // sleep a moment before retrying
-        console.log(`  ⚠️  Retrying (${tries})...`);
+        if (process.env.LOG_LEVEL === 'verbose') {
+          console.log(`  ⚠️  Retrying (${tries})...`);
+        }
         await new Promise(r => setTimeout(r, 2000));
       }
 
@@ -100,11 +106,15 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       }
 
       // 400-499 means "not found" and a retry probably won't help -- return null
-      console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+      if (process.env.LOG_LEVEL === 'verbose') {
+        console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+      }
       return null;
     }
 
-    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    if (process.env.LOG_LEVEL === 'verbose') {
+      console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    }
     return null;
   }
 

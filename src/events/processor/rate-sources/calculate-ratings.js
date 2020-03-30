@@ -85,7 +85,9 @@ const rateLocation = location => {
 };
 
 const calculateRatings = async args => {
-  console.log(`⏳ Calculating ratings...`);
+  if (process.env.LOG_LEVEL === 'verbose') {
+    console.log(`⏳ Calculating ratings...`);
+  }
 
   const { sources, locations } = args;
 
