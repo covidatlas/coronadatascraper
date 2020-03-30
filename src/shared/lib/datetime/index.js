@@ -1,8 +1,4 @@
-import { dateIsBefore, dateIsBeforeOrEqualTo } from './compare.js';
-import { getYYYYMD, getYYYYMMDD, getDDMMYYYY, getMDYY, getMDYYYY, getMonthDYYYY } from './format.js';
-import { scrapeDate, scrapeDateIsBefore, scrapeDateIsAfter, scrapeDateIs } from './scrape-date.js';
-import { getDate } from './today.js';
-
+import old from './old/index.js';
 import iso from './iso/index.js';
 
 const datetime = process.env.USE_ISO_DATETIME
@@ -11,20 +7,8 @@ const datetime = process.env.USE_ISO_DATETIME
       iso
     }
   : {
-      getDate,
-      getYYYYMD,
-      getYYYYMMDD,
-      getDDMMYYYY,
-      getMDYY,
-      getMDYYYY,
-      getMonthDYYYY,
-      dateIsBefore,
-      dateIsBeforeOrEqualTo,
-      scrapeDate,
-      scrapeDateIsBefore,
-      scrapeDateIsAfter,
-      scrapeDateIs,
-      iso
+      ...old,
+      old
     };
 
 export default datetime;
