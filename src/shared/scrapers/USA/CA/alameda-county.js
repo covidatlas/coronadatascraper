@@ -12,7 +12,7 @@ const scraper = {
   sources: [
     {
       url: 'http://www.acphd.org',
-      name: 'Alameda Count Public Health Department'
+      name: 'Alameda County Public Health Department'
     }
   ],
   url: 'http://www.acphd.org/2019-ncov.aspx',

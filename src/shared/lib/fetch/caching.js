@@ -33,7 +33,7 @@ const hash = str => {
  */
 export const getCachedFileName = (url, type) => {
   const urlHash = hash(url);
-  const extension = type || path.extname(url) || 'txt';
+  const extension = type || path.extname(url).replace(/^\./, '') || 'txt';
   return `${urlHash}.${extension}`;
 };
 
@@ -75,6 +75,7 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
     console.log('  ⚠️ Cannot go back in time to get %s, no cache present', url);
     return RESOURCE_UNAVAILABLE;
   }
+
   console.log('  🐢  Cache miss for %s at %s', url, filePath);
   return CACHE_MISS;
 };
