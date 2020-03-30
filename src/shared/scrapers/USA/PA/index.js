@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import HtmlTableValidator from '../../../lib/html-table-validator.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -179,6 +180,22 @@ const scraper = {
       this.type = 'table';
       const $ = await fetch.page(this.url);
       const $countyTable = $('td:contains("County")').closest('table');
+
+      const rules = {
+        headings: {
+          0: /county/i,
+          1: /number of cases/i,
+          2: /deaths/i
+        },
+        data: [
+          { column: 0, row: 'ANY', rule: /Adams/ },
+          { column: 1, row: 'ALL', rule: /^[0-9]+$/ },
+          { column: 2, row: 'ALL', rule: /(^[0-9]+|)$/ }
+        ]
+      };
+      const opts = { includeErrCount: 5, logToConsole: true };
+      HtmlTableValidator.throwIfErrors(rules, $countyTable, opts);
+
       const $trs = $countyTable.find('tbody > tr:not(:first-child)');
       let counties = [];
       $trs.each((index, tr) => {
