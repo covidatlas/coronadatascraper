@@ -190,7 +190,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-02-22': async function() {
+    '2020-2-22': async function() {
       // updated to pull deaths
       let counties = {};
       const $ = await fetch.page(this.url);
