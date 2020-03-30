@@ -29,7 +29,7 @@ const scraper = {
       .map(([l, r]) => [l.trim().toLowerCase(), r.trim()])
       .reduce((acc, [key, val]) => acc.set(key.toLowerCase(), val), new Map());
 
-    if (data.size < 1) throw new Error(`Failed to parse data for ${this.country}`);
+    if (data.size < 1) throw new Error(`Failed to parse data for ${this.country}-${this.state}`);
     const positive = parse.number(data.get('positive'));
     const negative = parse.number(data.get('negative'));
     const pending = parse.number(data.get('pending'));
