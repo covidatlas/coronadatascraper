@@ -86,7 +86,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-03-21': async function() {
+    '2020-3-21': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
 
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
@@ -142,7 +142,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-03-30': async function() {
+    '2020-3-30': async function() {
       this.url =
         'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
       this.type = 'json';
