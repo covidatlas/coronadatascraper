@@ -6,6 +6,13 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'AK',
   country: 'USA',
+  sources: [
+    {
+      url: 'http://dhss.alaska.gov/dph',
+      name: 'Alaska Department of Health and Social Services',
+      description: 'Division of Public Health'
+    }
+  ],
   url: 'http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx',
   type: 'table',
   headless: false,
@@ -62,7 +69,12 @@ const scraper = {
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const cases = parse.number($tr.find('td:last-child').text());
-      const region = parse.string($tr.find('> *:first-child').text());
+      let region = parse.string($tr.find('> *:first-child').text());
+
+      // Later versions of the table changed the label
+      if (region === 'Municipality of Anchorage') {
+        region = 'Anchorage';
+      }
 
       const county = `${region} Economic Region`;
       const population = this._populations[region];

@@ -37,7 +37,8 @@ const countryMap = {
   'The Gambia': 'GMB',
   'Republic of the Congo': 'COG',
   Syria: 'SYR',
-  Laos: 'LAO'
+  Laos: 'LAO',
+  Burma: 'MMR'
 };
 
 /*
@@ -117,30 +118,11 @@ export const getLocationGranularityName = function(location) {
   return 'none';
 };
 
-/*
-  Get the full name of a location
-*/
-export const getName = function(location) {
-  let name = '';
-  let sep = '';
-  if (location.city) {
-    name += location.city;
-    sep = ', ';
-  }
-  if (location.county) {
-    name += sep + location.county;
-    sep = ', ';
-  }
-  if (location.state) {
-    name += sep + location.state;
-    sep = ', ';
-  }
-  if (location.country) {
-    name += sep + location.country;
-    sep = ', ';
-  }
-  return name;
-};
+/** Get the full name of a location
+ * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
+ */
+export const getName = location =>
+  [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
 
 /*
   Get the priority of a location

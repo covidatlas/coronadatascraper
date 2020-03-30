@@ -30,9 +30,9 @@ const maintainers = {
   },
   aed3: {
     name: 'Albert III',
-    gitub: 'aed3',
+    github: 'aed3',
     county: 'USA',
-    flag: 'us'
+    flag: '🇺🇸'
   },
   camjc: {
     name: 'Cameron Chamberlain',
@@ -42,6 +42,11 @@ const maintainers = {
     state: 'Victoria',
     city: 'Melbourne',
     flag: '🇦🇺'
+  },
+  qgolsteyn: {
+    name: 'Quentin Golsteyn',
+    github: 'qgolsteyn',
+    flag: '🇨🇦'
   }
 };
 

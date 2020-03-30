@@ -7,6 +7,11 @@ import * as parse from '../../../lib/parse.js';
 const scraper = {
   state: 'DC',
   country: 'USA',
+  sources: [
+    {
+      name: 'DC Public Health Laboratory'
+    }
+  ],
   url: 'https://coronavirus.dc.gov/page/coronavirus-data',
   type: 'paragraph',
   scraper: {

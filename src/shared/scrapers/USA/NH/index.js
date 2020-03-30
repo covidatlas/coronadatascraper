@@ -3,6 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -10,14 +11,14 @@ import * as pdfUtils from '../../../lib/pdf.js';
 const scraper = {
   state: 'NH',
   country: 'USA',
-  url: 'https://www.nh.gov/covid19/documents/case-map.pdf',
-  aggregate: 'county',
-  maintainers: [
+  sources: [
     {
-      name: 'Quentin Golsteyn',
-      github: 'qgolsteyn'
+      name: 'New Hampshire Department of Health and Human Services'
     }
   ],
+  url: 'https://www.nh.gov/covid19/documents/case-map.pdf',
+  aggregate: 'county',
+  maintainers: [maintainers.qgolsteyn],
   type: 'pdf',
   _counties: [
     'Coos',

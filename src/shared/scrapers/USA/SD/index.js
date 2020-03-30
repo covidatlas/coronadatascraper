@@ -9,6 +9,12 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'SD',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://doh.sd.gov',
+      name: 'South Dakota Department of Health'
+    }
+  ],
   url: 'https://doh.sd.gov/news/Coronavirus.aspx#SD',
   type: 'table',
   aggregate: 'county',

@@ -9,6 +9,13 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'TN',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://www.tn.gov/health/cedep',
+      name: 'Tennessee Department of Health CEDEP',
+      description: 'Communicable and Environmental Diseases and Emergency Preparedness Division'
+    }
+  ],
   url: 'https://www.tn.gov/health/cedep/ncov.html',
   type: 'table',
   aggregate: 'county',
@@ -183,7 +190,7 @@ const scraper = {
           return;
         }
 
-        if (countyName === 'Grand Total') {
+        if (countyName === 'Grand Total' || countyName === 'Pending') {
           return;
         }
 

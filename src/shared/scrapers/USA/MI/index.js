@@ -9,6 +9,11 @@ const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'MI',
   country: 'USA',
+  sources: [
+    {
+      name: 'Michigan Department of Health & Human Services'
+    }
+  ],
   url: 'https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html',
   type: 'table',
   aggregate: 'county',
@@ -114,12 +119,18 @@ const scraper = {
 
     let counties = [];
 
+    const unassignedObj = {
+      county: UNASSIGNED,
+      deaths: 0,
+      cases: 0
+    };
+
     $trs.each((index, tr) => {
       const $tr = $(tr);
 
       let cases = parse.number(parse.string($tr.find('> *:nth-child(2)').text()) || 0);
       let deaths = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
-      let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
+      const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
 
       // Remember these to add them to Wayne County instead
       if (county === 'Detroit City County') {
@@ -132,9 +143,12 @@ const scraper = {
         deaths += detroitDeaths;
       }
 
-      if (county === 'Out of State County') {
-        county = UNASSIGNED;
+      if (county === 'Out of State County' || county === 'Other County') {
+        unassignedObj.cases += cases;
+        unassignedObj.deaths += deaths;
+        return;
       }
+
       if (index < 1 || index > $trs.get().length - 2) {
         return;
       }
@@ -147,6 +161,8 @@ const scraper = {
         deaths
       });
     });
+
+    counties.push(unassignedObj);
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
     counties.push(transform.sumData(counties));

@@ -45,7 +45,13 @@ function getCleanPath(scraperFilePath) {
 const dedupeLocations = args => {
   console.log(`⏳ De-duping locations...`);
 
-  const { locations } = args;
+  const { locations, options } = args;
+
+  function log(...args) {
+    if (options.verbose !== undefined) {
+      console.log(...args);
+    }
+  }
 
   const crosscheckReports = {};
   const seenLocations = {};
@@ -54,7 +60,7 @@ const dedupeLocations = args => {
   let crossCheckFailures = 0;
   while (i-- > 0) {
     const location = locations[i];
-    const locationName = geography.getName(location);
+    const locationName = transform.normalizeString(geography.getName(location));
     const otherLocation = seenLocations[locationName];
 
     if (otherLocation) {
@@ -63,7 +69,7 @@ const dedupeLocations = args => {
       const otherPriority = geography.getPriority(otherLocation) + otherLocation.rating / 2;
 
       if (otherPriority === thisPriority) {
-        console.log(
+        log(
           '⚠️  %s: Equal priority sources choosing %s (%d) over %s (%d) arbitrarily',
           locationName,
           getCleanPath(location._path),
@@ -72,11 +78,16 @@ const dedupeLocations = args => {
           otherPriority
         );
         // Delete the other location
-        locations.splice(locations.indexOf(otherLocation), 1);
+        const otherIndex = locations.indexOf(otherLocation);
+        if (otherIndex === -1) {
+          throw new Error(`Something went wrong in de-dupe, can't find index of other location`);
+        }
+        locations.splice(otherIndex, 1);
+        seenLocations[locationName] = location; // the location we're at becomes the new seen location
         deDuped++;
       } else if (otherPriority < thisPriority) {
         // Delete the other location
-        console.log(
+        log(
           '✂️  %s: Using %s (%d) instead of %s (%d)',
           locationName,
           getCleanPath(location._path),
@@ -84,11 +95,16 @@ const dedupeLocations = args => {
           getCleanPath(otherLocation._path),
           otherPriority
         );
-        locations.splice(locations.indexOf(otherLocation), 1);
+        const otherIndex = locations.indexOf(otherLocation);
+        if (otherIndex === -1) {
+          throw new Error(`Something went wrong in de-dupe, can't find index of other location`);
+        }
+        locations.splice(otherIndex, 1);
+        seenLocations[locationName] = location; // the location we're at becomes the new seen location
         deDuped++;
       } else {
         // Kill this location
-        console.log(
+        log(
           '✂️  %s: Using %s (%d) instead of %s (%d)',
           locationName,
           getCleanPath(otherLocation._path),
@@ -96,13 +112,14 @@ const dedupeLocations = args => {
           getCleanPath(location._path),
           thisPriority
         );
+        // Note: Since we killed this location, it shouldn't end up seenLocations
         locations.splice(i, 1);
         deDuped++;
       }
 
       const crosscheckReport = crosscheck(location, otherLocation);
       if (crosscheckReport) {
-        console.log(
+        log(
           '  🚨  Crosscheck failed for %s: %s (%d) has different data than %s (%d)',
           locationName,
           getCleanPath(otherLocation._path),
@@ -122,8 +139,9 @@ const dedupeLocations = args => {
         }
         crossCheckFailures++;
       }
+    } else {
+      seenLocations[locationName] = location; // this is the first time we've seen this
     }
-    seenLocations[locationName] = location;
   }
 
   console.log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);

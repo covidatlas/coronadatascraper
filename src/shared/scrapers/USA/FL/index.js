@@ -11,6 +11,12 @@ const scraper = {
   country: 'USA',
   priority: 1,
   aggregate: 'county',
+  sources: [
+    {
+      url: 'http://www.floridahealth.gov',
+      name: 'Florida Health'
+    }
+  ],
   _counties: [
     'Alachua County',
     'Baker County',

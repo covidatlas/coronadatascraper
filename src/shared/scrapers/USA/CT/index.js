@@ -4,6 +4,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
 import * as datetime from '../../../lib/datetime.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -11,15 +12,17 @@ import * as datetime from '../../../lib/datetime.js';
 const scraper = {
   state: 'CT',
   country: 'USA',
+  sources: [
+    {
+      url: 'https://portal.ct.gov/dph',
+      name: 'Connecticut State DPH',
+      description: 'Connecticut State Department of Public Health'
+    }
+  ],
   url: 'https://portal.ct.gov/Coronavirus',
   type: 'pdf',
   aggregate: 'county',
-  maintainers: [
-    {
-      name: 'Quentin Golsteyn',
-      github: 'qgolsteyn'
-    }
-  ],
+  maintainers: [maintainers.qgolsteyn],
   scraper: {
     '0': async function() {
       this.type = 'list';
@@ -89,10 +92,17 @@ const scraper = {
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
         1}${new Date(date).getUTCDate()}2020.pdf`;
 
-      const body = await fetch.pdf(this.url);
-
-      if (body === null) {
-        throw new Error(`No data for ${date}`);
+      let body;
+      try {
+        body = await fetch.pdf(this.url);
+      } catch (err) {
+        // The CT website does a 302 to a 404.html page if the PDF isn't yet available
+        // This manifests as a PDF parsing error
+        if (err.parserError !== undefined) {
+          throw new Error(`PDF parsing error. Likely no PDF available for ${date}`);
+        } else {
+          throw new Error(`Error: ${err}`);
+        }
       }
 
       const rows = pdfUtils.asWords(body, 0, 1).map(row => row.map(col => col.text));

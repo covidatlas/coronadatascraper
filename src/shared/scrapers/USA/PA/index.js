@@ -10,6 +10,12 @@ const scraper = {
   state: 'PA',
   country: 'USA',
   aggregate: 'county',
+  sources: [
+    {
+      url: 'https://www.health.pa.gov/',
+      name: 'Pennsylvania Department of Health'
+    }
+  ],
   _counties: [
     'Adams County',
     'Allegheny County',
@@ -94,7 +100,7 @@ const scraper = {
           .text()
           .match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          const county = geography.addCounty(parse.string(matches[1]));
+          const county = geography.getCounty(geography.addCounty(parse.string(matches[1])), 'PA');
           const cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -116,7 +122,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -135,7 +141,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -148,21 +154,46 @@ const scraper = {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
-      const $countyTable = $('td:contains("County")').closest('table');
+      const $countyTable = $('th:contains("County")').closest('table');
       const $trs = $countyTable.find('tbody > tr:not(:first-child)');
       let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });
       });
       const $stateTable = $('table.ms-rteTable-default').eq(0);
       const stateData = transform.sumData(counties);
-      stateData.tested = parse.number($stateTable.find('tr:last-child td:first-child').text());
-      stateData.cases = parse.number($stateTable.find('tr:last-child td:last-child').text());
+      stateData.tested =
+        parse.number($stateTable.find('tr:last-child td:first-child').text()) +
+        parse.number($stateTable.find('tr:last-child td:nth-child(2)').text());
+      counties.push(stateData);
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
+    },
+    '2020-3-26': async function scraper() {
+      this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
+      const $countyTable = $('td:contains("County")').closest('table');
+      const $trs = $countyTable.find('tbody > tr:not(:first-child)');
+      let counties = [];
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        counties.push({
+          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
+        });
+      });
+      const $stateTable = $('table.ms-rteTable-default').eq(0);
+      const stateData = transform.sumData(counties);
+      stateData.tested =
+        parse.number($stateTable.find('tr:last-child td:first-child').text()) +
+        parse.number($stateTable.find('tr:last-child td:nth-child(2)').text());
       counties.push(stateData);
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;

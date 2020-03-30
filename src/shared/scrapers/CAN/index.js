@@ -11,6 +11,13 @@ import * as rules from '../../lib/rules.js';
 const scraper = {
   country: 'CAN',
   type: 'table',
+  sources: [
+    {
+      description: 'Health Promotion and Chronic Disease Prevention Branch',
+      name: 'Public Health Agency of Canada',
+      url: 'https://health-infobase.canada.ca/'
+    }
+  ],
   _reject: [{ state: 'Repatriated travellers' }, { state: 'Total cases' }, { state: 'Total' }, { state: 'Canada' }],
   aggregate: 'state',
   scraper: {
@@ -44,8 +51,10 @@ const scraper = {
 
       let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
       let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
-      const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
-      const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
+      const lastDateParts = data[data.length - 1].date.split('-');
+      const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);
+      const firstDateParts = data[data.length - 1].date.split('-');
+      const firstDateInTimeseries = new Date(`${firstDateParts[2]}-${firstDateParts[1]}-${firstDateParts[0]}12:00:00`);
 
       if (scrapeDate > lastDateInTimeseries) {
         console.error(
@@ -57,10 +66,6 @@ const scraper = {
         );
         scrapeDate = lastDateInTimeseries;
         scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
-      }
-
-      if (scrapeDate < firstDateInTimeseries) {
-        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
       }
 
       if (scrapeDate < firstDateInTimeseries) {
