@@ -9,21 +9,28 @@ const currentZdt = () => ZonedDateTime.parse(currentJsDate().toISOString());
 
 const normalize = d => d.replace(/[\\/.]/g, '-'); // replaces slashes & dots with dashes
 
-const truncate = d => d.slice(0, 10); // truncate ISO datetime to ISO date
+// truncate ISO datetime to ISO date
+const truncate = datetime =>
+  datetime
+    .split(' ')[0] //
+    .split('T')[0];
 
-export const looksLike = {
+const dateTester = pattern => {
   /**
+   * Checks that a string matches the pattern given. Doesn't check that string is a valid date,
+   * just that it has this form.
    * @param {string} s The string to check
    * @returns {boolean} true if the given string matches the pattern for an ISO date (YYYY-MM-DD).
-   * Doesn't check that string is a valid date, just that it has this form.
    */
-  isoDate: s => /^\d{4}-\d{2}-\d{2}$/.test(s),
+  const tester = s => pattern.test(normalize(s));
+  return tester;
+};
 
-  /**
-   * Checks that a string matches the pattern `YYYY-M-D` .
-   * Doesn't check that string is a valid date, just that it has this form.
-   */
-  YYYYMD: s => /^\d{4}-\d{1,2}-\d{1,2}$/.test(s)
+export const looksLike = {
+  isoDate: dateTester(/^\d{4}-\d{2}-\d{2}$/),
+  YYYYMD: dateTester(/^\d{4}-\d{1,2}-\d{1,2}$/),
+  MDYYYY: dateTester(/^\d{1,2}-\d{1,2}-\d{4}$/),
+  MDYY: dateTester(/^\d{1,2}-\d{1,2}-\d{2}$/)
 };
 
 /**
@@ -32,6 +39,9 @@ export const looksLike = {
  * @returns {string} The date as an ISO-formatted string, e.g. 2020-03-16
  */
 export const parse = date => {
+  if (date === undefined) throw new Error('datetime.parse: Cannot parse undefined as date');
+  if (date === null) throw new Error('datetime.parse: Cannot parse null as date');
+  if (date === '') throw new Error('datetime.parse: Cannot parse empty string as date');
   // JS Date object
   if (date instanceof Date) date = date.toISOString();
   // String
@@ -39,19 +49,30 @@ export const parse = date => {
     const s = truncate(normalize(date));
     // ISO date
     if (looksLike.isoDate(s)) return LocalDate.parse(s).toString();
-    // Other formats
+    // YYYY-M-D
     if (looksLike.YYYYMD(s)) {
-      const ymd = s.split('-'); // e.g. [2020,3,16]
-      return LocalDate.of(...ymd).toString();
+      const [y, m, d] = s.split('-').map(Number); // e.g. [2020, 3, 16]
+      return LocalDate.of(y, m, d).toString();
     }
+    // M-D-YYYY
+    if (looksLike.MDYYYY(s)) {
+      const [m, d, yyyy] = s.split('-').map(Number); // e.g. [3, 16, 2020]
+      return LocalDate.of(yyyy, m, d).toString();
+    }
+    // M-D-YY
+    if (looksLike.MDYY(s)) {
+      const [m, d, yy] = s.split('-').map(Number); // e.g. [3, 16, 20]
+      const yyyy = yy + 2000; // assume current century
+      return LocalDate.of(yyyy, m, d).toString();
+    }
+    // 0: Treat zero as the beginning of unix epoch
+    if (s === '0') return LocalDate.of(1970, 1, 1).toString();
   }
   throw new Error(`datetime.parse: Could not parse '${date.toString()}' as a date`);
 };
 
 export const today = {
-  /**
-   * @returns {string} The current date (UTC) in ISO format. Example: `2020-03-16`
-   */
+  /** @returns {string} The current date (UTC) in ISO format. Example: `2020-03-16` */
   utc: () => {
     return today.at('UTC');
   },
@@ -67,9 +88,7 @@ export const today = {
 };
 
 export const now = {
-  /**
-   * @returns {string} The current date and time (UTC) in ISO format. Example: `2020-03-16T23:45`
-   */
+  /** @returns {string} The current date and time (UTC) in ISO format. Example: `2020-03-16T23:45` */
   utc: () => {
     return now.at('UTC');
   },
@@ -84,9 +103,7 @@ export const now = {
   }
 };
 
-/**
- * @returns {string} The current date (UTC) as an ISO string.
- */
+/** @returns {string} The current date (UTC) as an ISO string. */
 export const getDate = () => today.utc();
 
 /**
@@ -156,9 +173,7 @@ export const dateIsBefore = (a, b) => parse(a) < parse(b);
  */
 export const dateIsBeforeOrEqualTo = (a, b) => parse(a) <= parse(b);
 
-/**
- * @returns {string} The value of the SCRAPE_DATE environment variable, as an ISO date
- */
+/** @returns {string} The value of the SCRAPE_DATE environment variable, as an ISO date */
 export const scrapeDate = () => (process.env.SCRAPE_DATE ? parse(process.env.SCRAPE_DATE) : undefined);
 
 /**

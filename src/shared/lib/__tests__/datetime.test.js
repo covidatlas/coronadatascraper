@@ -19,34 +19,65 @@ import {
 const mockDate = d => jest.spyOn(global.Date, 'now').mockImplementationOnce(() => new Date(d).valueOf());
 
 describe(`datetime (system timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone})`, () => {
+  //
   describe('looksLike', () => {
     describe('isoDate', () => {
-      test('valid date', () => expect(looksLike.isoDate('2020-03-16')).toBe(true));
-      test('invalid date but right form', () => expect(looksLike.isoDate('1234-99-52')).toBe(true));
-      test('no padding', () => expect(looksLike.isoDate('2020-3-16')).toBe(false));
-      test('two-digit year', () => expect(looksLike.isoDate('20-03-16')).toBe(false));
-      test('etc', () => expect(looksLike.isoDate('pizza')).toBe(false));
+      describe('true', () => {
+        test('valid date', () => expect(looksLike.isoDate('2020-03-16')).toBe(true));
+        test('invalid date but right form', () => expect(looksLike.isoDate('1234-99-52')).toBe(true));
+        test('using slashes', () => expect(looksLike.isoDate('2020/03/16')).toBe(true));
+      });
+      describe('false', () => {
+        test('no padding', () => expect(looksLike.isoDate('2020-3-16')).toBe(false));
+        test('two-digit year', () => expect(looksLike.isoDate('20-03-16')).toBe(false));
+        test('etc', () => expect(looksLike.isoDate('pizza')).toBe(false));
+      });
     });
 
     describe('YYYYMD', () => {
-      test('valid date', () => expect(looksLike.YYYYMD('2020-3-16')).toBe(true));
-      test('invalid date but right form', () => expect(looksLike.YYYYMD('1234-9-52')).toBe(true));
-      test('padding', () => expect(looksLike.YYYYMD('2020-03-16')).toBe(true));
-      test('two-digit year', () => expect(looksLike.YYYYMD('20-03-16')).toBe(false));
-      test('etc', () => expect(looksLike.YYYYMD('pizza')).toBe(false));
+      describe('true', () => {
+        test('valid date', () => expect(looksLike.YYYYMD('2020-3-16')).toBe(true));
+        test('invalid date but right form', () => expect(looksLike.YYYYMD('1234-9-52')).toBe(true));
+        test('padding', () => expect(looksLike.YYYYMD('2020-03-16')).toBe(true));
+      });
+      describe('false', () => {
+        test('two-digit year', () => expect(looksLike.YYYYMD('20-03-16')).toBe(false));
+        test('etc', () => expect(looksLike.YYYYMD('pizza')).toBe(false));
+      });
+    });
+
+    describe('MMDDYY', () => {
+      describe('true', () => {
+        test('valid date', () => expect(looksLike.MDYY('03-16-20')).toBe(true));
+        test('no padding', () => expect(looksLike.MDYY('3-16-20')).toBe(true));
+        test('using slashes', () => expect(looksLike.MDYY('3/16/20')).toBe(true));
+        test('invalid date but right form', () => expect(looksLike.MDYY('99-99-99')).toBe(true));
+      });
+      describe('false', () => {
+        test('four-digit year', () => expect(looksLike.MDYY('03-16')).toBe(false));
+        test('etc', () => expect(looksLike.MDYY('pizza')).toBe(false));
+      });
     });
   });
 
   describe('parse', () => {
-    test('from JS Date', () => expect(parse(new Date('2020-03-16'))).toEqual('2020-03-16'));
-    test('from ISO date', () => expect(parse('2020-03-16')).toEqual('2020-03-16'));
-    test('from ISO datetime', () => expect(parse('2020-03-16T23:45:00Z')).toEqual('2020-03-16'));
-    test('from unpadded ISO date', () => expect(parse('2020-3-1')).toEqual('2020-03-01'));
-    test('from inconsistently padded ISO date', () => expect(parse('2020-3-01')).toEqual('2020-03-01'));
-
-    test('from undefined', () => expect(() => parse(undefined)).toThrow());
-    test('from invalid date', () => expect(() => parse('9999-99-99')).toThrow());
-    test('from object', () => expect(() => parse({})).toThrow());
+    describe('valid dates', () => {
+      test('from JS Date', () => expect(parse(new Date('2020-03-16'))).toEqual('2020-03-16'));
+      test('from ISO date', () => expect(parse('2020-03-16')).toEqual('2020-03-16'));
+      test('from ISO datetime', () => expect(parse('2020-03-16T23:45:00Z')).toEqual('2020-03-16'));
+      test('from unpadded ISO date', () => expect(parse('2020-3-1')).toEqual('2020-03-01'));
+      test('from inconsistently padded ISO date', () => expect(parse('2020-3-01')).toEqual('2020-03-01'));
+      test('using slashes', () => expect(parse('2020/03/01')).toEqual('2020-03-01'));
+      test('from M-D-YYYY', () => expect(parse('3/16/2020')).toEqual('2020-03-16'));
+      test('from M-D-YY', () => expect(parse('3/16/20')).toEqual('2020-03-16'));
+      test('M-D-YY assumes current century', () => expect(parse('3/16/70')).toEqual('2070-03-16'));
+      test('yyyy-M-d hh:mm:ss', () => expect(parse('2020-3-24 16:00:00')).toEqual('2020-03-24'));
+    });
+    describe('invalid dates', () => {
+      test('from undefined', () => expect(() => parse(undefined)).toThrow());
+      test('from invalid date', () => expect(() => parse('9999-99-99')).toThrow());
+      test('from object', () => expect(() => parse({})).toThrow());
+    });
   });
 
   describe('today & now', () => {
