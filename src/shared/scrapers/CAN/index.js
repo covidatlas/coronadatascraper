@@ -70,10 +70,6 @@ const scraper = {
         throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
       }
 
-      if (scrapeDate < firstDateInTimeseries) {
-        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
-      }
-
       const regions = [];
       for (const row of data) {
         if (row.date === scrapeDateString) {

@@ -100,11 +100,7 @@ const scraper = {
     const numRows = data[0].length;
     const startRow = 1; // skip the headers
     for (let i = startRow; i < numRows; i++) {
-      const county = geography.addCounty(parse.string(data[0][i]).split(',')[0]);
-      if (this._counties.indexOf(county) === -1) {
-        console.log(`  ⚠️  Unknown county in table: "${county}"`);
-        continue;
-      }
+      const county = geography.addCounty(parse.string(data[0][i]));
       const tested = parse.number(parse.string(data[1][i]) || 0);
       const cases = parse.number(parse.string(data[2][i]) || 0);
 

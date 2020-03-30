@@ -69,7 +69,12 @@ const scraper = {
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const cases = parse.number($tr.find('td:last-child').text());
-      const region = parse.string($tr.find('> *:first-child').text());
+      let region = parse.string($tr.find('> *:first-child').text());
+
+      // Later versions of the table changed the label
+      if (region === 'Municipality of Anchorage') {
+        region = 'Anchorage';
+      }
 
       const county = `${region} Economic Region`;
       const population = this._populations[region];

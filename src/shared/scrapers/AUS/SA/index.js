@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
@@ -37,7 +38,7 @@ const scraper = {
       const paragraph = $('.middle-column p:first-of-type').text();
       const { casesString } = paragraph.match(/been (?<casesString>\d+) confirmed cases/).groups;
       return {
-        state: scraper.state,
+        state: this.state,
         cases: parse.number(casesString)
       };
     },
@@ -46,12 +47,13 @@ const scraper = {
       const $ = await fetch.page(this.url);
       const $table = $('table:first-of-type');
       const $trs = $table.find('tbody > tr:not(:first-child)');
-      const data = { state: scraper.state };
+      const data = { state: this.state };
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const key = getKey($tr.find('td:first-child').text());
         data[key] = parse.number($tr.find('td:last-child').text());
       });
+      assert(data.cases > 0, 'Cases is not reasonable');
       return data;
     }
   }
