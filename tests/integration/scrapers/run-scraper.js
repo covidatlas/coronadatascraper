@@ -1,7 +1,8 @@
-import * as datetime from '../../lib/datetime.js';
-import * as geography from '../../lib/geography/index.js';
+import * as datetime from '../../../src/shared/lib/datetime.js';
+import * as geography from '../../../src/shared/lib/geography/index.js';
 
 export default location => {
+  location = location.default;
   const rejectUnauthorized = location.certValidation === false;
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing

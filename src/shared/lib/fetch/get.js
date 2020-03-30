@@ -86,6 +86,12 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
         continue;
       }
 
+      const contentLength = parseInt(response.headers['content-length'], 10);
+      if (!Number.isNaN(contentLength) && contentLength !== response.bytes) {
+        console.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
+        continue;
+      }
+
       // any sort of success code -- return good data
       if (response.statusCode < 400) {
         const fetchedBody = toString ? response.body.toString() : response.body;

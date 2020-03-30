@@ -4,6 +4,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as datetime from '../../../lib/datetime.js';
 import * as pdfUtils from '../../../lib/pdf.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -20,12 +21,7 @@ const scraper = {
       description: 'Massachusetts Department of Public Health'
     }
   ],
-  maintainers: [
-    {
-      name: 'Quentin Golsteyn',
-      github: 'qgolsteyn'
-    }
-  ],
+  maintainers: [maintainers.qgolsteyn],
   _counties: [
     'Barnstable County',
     'Berkshire County',

@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
@@ -26,13 +27,20 @@ const scraper = {
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const state = parse.string($tr.find('td:first-child').text());
-      const cases = parse.number($tr.find('td:nth-child(2)').text());
+      const cases = parse.number($tr.find('td:last-child').text());
       states.push({
         state,
         cases
       });
     });
-    states.push(transform.sumData(states));
+    const summedData = transform.sumData(states);
+    states.push(summedData);
+
+    const casesFromTotalRow = parse.number($table.find('tbody > tr:last-child > td:last-child').text());
+
+    assert(casesFromTotalRow > 0, 'Total row is not reasonable');
+    assert.equal(summedData.cases, casesFromTotalRow, 'Summed total is not equal to number in total row');
+
     return states;
   }
 };

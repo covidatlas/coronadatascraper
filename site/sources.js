@@ -23,10 +23,12 @@ function ratingTemplate(source, index) {
     csv: '✅',
     table: '⚠️',
     list: '❌',
-    paragraph: '🤮'
+    paragraph: '🤮',
+    pdf: '🤮'
   };
   const typeNames = {
     json: 'JSON',
+    pdf: 'PDF',
     csv: 'CSV'
   };
 
