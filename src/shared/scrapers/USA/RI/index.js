@@ -12,7 +12,6 @@ const scraper = {
   country: 'USA',
   priority: 1,
   type: 'csv',
-  aggregate: 'county',
   sources: [
     {
       url: 'https://health.ri.gov/data/covid-19/',
@@ -98,11 +97,12 @@ const scraper = {
         });
       }
 
-      counties.push(transform.sumData(counties));
+      counties.push(transform.sumData(counties, { aggregate: 'county' }));
       return counties;
     },
-    '2020-3-26': async function() {
-      let counties = [];
+    '2020-3-29': async function() {
+      const cities = [];
+      let regions = [];
 
       this.headless = true;
       this.url = 'https://health.ri.gov/data/covid-19/';
@@ -121,12 +121,13 @@ const scraper = {
           .next()
           .text()
       );
-      counties.push({
+      regions.push({
         cases: stateCases,
-        deaths: stateDeaths
+        deaths: stateDeaths,
+        aggregate: 'county'
       });
 
-      const $table = $('th:contains("COVID-19 patients")').closest('table');
+      const $table = $('th:contains("Rhode Island COVID-19 patients by city/town of residence")').closest('table');
       const data = $table.parsetable(false, false, true);
       if (!this._good_headers(data)) {
         throw new Error('Unknown headers in html table');
@@ -150,17 +151,29 @@ const scraper = {
 
         const county = geography.addCounty(this._cities[city]);
         countyCases[county] += cases;
-      }
-      for (const county of this._counties) {
-        counties.push({
-          cases: countyCases[county]
+
+        cities.push({
+          county,
+          city,
+          cases
         });
       }
 
-      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      for (const county of this._counties) {
+        regions.push({
+          county,
+          cases: countyCases[county],
+          aggregate: 'city'
+        });
+      }
+
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
       // no sum because we explicitly add it above
 
-      return counties;
+      // Add in cities
+      regions = regions.concat(cities);
+
+      return regions;
     }
   }
 };
