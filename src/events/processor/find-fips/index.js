@@ -3,9 +3,10 @@ import * as fs from '../../../shared/lib/fs.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 const dataPath = join('./src/shared/vendor/');
-const DC = {state: 'DC', fips: '11001'};
+const DC = { state: 'DC', fips: '11001' };
 /*
-  Read FIPS codes from a CSV with correct datatypes
+  Read FIPS codes from a JSON with correct datatypes
+  County FIPS taken from: https://raw.githubusercontent.com/kjhealy/fips-codes/master/county_fips_master.csv
 */
 async function readFipsFromJSON(csvPath) {
   return fs.readJSON(resolve(dataPath, csvPath));
@@ -15,7 +16,6 @@ async function readFipsData() {
   const fips = {
     byCity: {},
     byCounty: {
-      //County FIPS taken from: https://raw.githubusercontent.com/kjhealy/fips-codes/master/county_fips_master.csv
       USA: await readFipsFromJSON('usa-county-fips.json')
     },
     byState: {},
@@ -48,7 +48,7 @@ const findFips = async ({ locations, featureCollection, report, options, sourceR
           fipsSource[countyNameJoined] ||
           fipsSource[countyNameReplacedJoined];
       }
-    } else if(location.state === DC.state){
+    } else if (location.state === DC.state) {
       return DC.fips;
     }
 
