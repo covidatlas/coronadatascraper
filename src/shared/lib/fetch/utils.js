@@ -51,7 +51,7 @@ export const folderFromZipURL = async (url, folder) => {
   }
 
   await fsp.unlink(tmpZip);
-  await fs_.writeJSON(path.join(tmpDir, '__cache__.json'), { url });
+  await fs_.writeJSON(path.join(tmpDir, '__cache__.json'), { url }, { silent: true });
 
   await fsp.mkdir(path.dirname(folder), { recursive: true });
   await fsp.rmdir(folder, { recursive: true });
