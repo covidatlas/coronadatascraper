@@ -7,7 +7,7 @@ import path from 'path';
 import crypto from 'crypto';
 
 import join from '../join.js';
-import * as datetime from '../datetime.js';
+import datetime from '../datetime/index.js';
 import * as fs from '../fs.js';
 import log from '../log.js';
 
@@ -72,7 +72,7 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
     return fs.readFile(filePath, encoding);
   }
-  if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
+  if (date && datetime.dateIsBefore(date, datetime.getDate())) {
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }

@@ -1,7 +1,7 @@
 import entries from './utils/qa-fetch.js';
 import { eachLocation } from './utils/qa-utils.js';
 
-import * as datetime from '../shared/lib/datetime.js';
+import datetime from '../shared/lib/datetime/index.js';
 
 export default t => {
   eachLocation(t, entries, (t, _, location) => {

@@ -1,5 +1,5 @@
 import path from 'path';
-import * as datetime from '../../../shared/lib/datetime.js';
+import datetime from '../../../shared/lib/datetime/index.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 

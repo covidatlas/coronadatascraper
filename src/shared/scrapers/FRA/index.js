@@ -1,6 +1,6 @@
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
-import * as datetime from '../../lib/datetime.js';
+import datetime from '../../lib/datetime/index.js';
 
 import { features } from './features.json';
 
