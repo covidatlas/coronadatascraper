@@ -202,9 +202,38 @@ const scraper = {
       }
 
       counties.push(transform.sumData(counties));
-
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
+    },
+    '2020-3-30': async function() {
+      console.log('USING RIGHT SCRAPER');
+      this.type = 'csv';
+      // this.url = await fetch.getArcGISCSVURL('1', 'a7887f1940b34bf5a02c6f7f27a5cb2c', 'Florida_COVID_Cases');
+      this.url = 'https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv';
+      const data = await fetch.csv(this.url);
+      let counties = [];
+      for (const county of data) {
+        let countyName = geography.addCounty(parse.string(county.County_1));
+        if (countyName === 'Unknown County') {
+          countyName = UNASSIGNED;
+        }
+        if (countyName === 'Dade County') {
+          countyName = 'Miami-Dade County';
+        }
+        if (countyName === 'Desoto County') {
+          countyName = 'DeSoto County';
+        }
 
+        counties.push({
+          county: countyName,
+          cases: parse.number(county.CasesAll || 0),
+          tested: parse.number(county.T_total || 0),
+          deaths: parse.number(county.FLResDeaths || 0)
+        });
+      }
+
+      counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     }
   }
