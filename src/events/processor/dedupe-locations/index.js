@@ -78,9 +78,9 @@ function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, 
     // Add to beginning of array so that the used source is always at index 0
     report.sources.unshift(strippedUsedLocation);
   }
-  const stippedDroppedLocation = transform.removePrivate({ ...droppedLocation });
-  if (!existsInCrosscheckSources(stippedDroppedLocation, report.sources)) {
-    report.sources.push(stippedDroppedLocation);
+  const strippedDroppedLocation = transform.removePrivate({ ...droppedLocation });
+  if (!existsInCrosscheckSources(strippedDroppedLocation, report.sources)) {
+    report.sources.push(strippedDroppedLocation);
   }
   /* Always add index to dropped because either we are adding a dropped item at the end of the array or
    * adding a new used item at the beginning of the array
