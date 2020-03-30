@@ -8,6 +8,7 @@ import dedupeLocations from '../events/processor/dedupe-locations/index.js';
 import reportScrape from '../events/processor/report/index.js';
 import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
+import findFips from '../events/processor/find-fips/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
 
@@ -37,6 +38,7 @@ async function generate(date, options = {}) {
     .then(reportScrape)
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
+    .then(findFips)
     .then(cleanLocations)
     .then(options.writeData !== false && writeData); // To be retired
 

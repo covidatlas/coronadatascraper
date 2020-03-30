@@ -19,7 +19,8 @@
     "featureId": { "type": "number" },
     "rating": { "type": "number" },
     "tz": { "type": "array" },
-    "aggregate": { "type": "string" }
+    "aggregate": { "type": "string" },
+    "fips": {"type": "string"}
   },
   "dependencies": {
     "state": ["country"],
