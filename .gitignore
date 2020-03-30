@@ -8,4 +8,6 @@ public/static.json
 sam.json
 sam.yaml
 package-lock.json
+
 /src/shared/vendor/country-levels
+/tmp

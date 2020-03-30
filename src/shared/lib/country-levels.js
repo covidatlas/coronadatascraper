@@ -5,7 +5,7 @@ import * as geography from './geography/index.js';
 import join from './join.js';
 
 import extract from 'extract-zip';
-import { downloadFile } from './fetch/utils.js';
+import { downloadFile, folderFromZipURL } from './fetch/utils.js';
 
 const countryLevelCache = {};
 const countryLevelsDir = join('src', 'shared', 'vendor', 'country-levels');
@@ -35,16 +35,9 @@ export function splitId(id) {
 const downloadCountryLevels = async () => {
   console.log('    Downloading country levels from GitHub');
 
-  await fsp.rmdir(countryLevelsDir, { recursive: true });
-  await fsp.mkdir(countryLevelsDir, { recursive: true });
-
   const zipURL = `https://github.com/hyperknot/country-levels/releases/download/${TARGET_VERSION}/export_q5.zip`;
-  const zipFile = join(countryLevelsDir, 'tmp.zip');
-  try {
-    await downloadFile(zipURL, zipFile);
-  } catch (err) {
-    console.error(`    Error downloading country-levels zip: ${err}`);
-  }
+
+  folderFromZipURL(zipURL, join('vendor', 'country-levels'));
 
   // try {
   //   const a = await needle('get', zipURL, { output: zipFile });
@@ -70,8 +63,6 @@ const loadCacheIfNeeded = async () => {
   if (countryLevelCache.iso1) return;
   console.log('  Loading country-levels cache...');
 
-  const versionFile = join(countryLevelsDir, 'version.json');
-
   let version;
   try {
     version = await fs_.readJSON(versionFile);
@@ -85,7 +76,11 @@ const loadCacheIfNeeded = async () => {
 };
 
 export const getFeature = async id => {
-  await loadCacheIfNeeded();
+  const zipURL = `https://github.com/hyperknot/country-levels/releases/download/${TARGET_VERSION}/export_q5.zip`;
+
+  await folderFromZipURL(zipURL, join('src', 'shared', 'vendor', 'country-levels'));
+
+  // await loadCacheIfNeeded();
   return;
 
   const { level, code } = splitId(id, true);
