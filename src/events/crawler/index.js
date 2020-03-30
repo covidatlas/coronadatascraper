@@ -19,6 +19,8 @@ async function crawler(event) {
     delete process.env.SCRAPE_DATE;
   }
 
+  process.env.LOG_LEVEL = 'off';
+
   // JSON used for reporting
   const report = {
     date

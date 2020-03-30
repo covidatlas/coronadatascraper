@@ -14,6 +14,7 @@ const writeData = imports('./write-data/index.js').default;
  */
 async function crawler(event) {
   const { options } = event;
+  process.env.LOG_LEVEL = 'off';
   const output = await rateSources(event)
     .then(dedupeLocations)
     .then(reportScrape)

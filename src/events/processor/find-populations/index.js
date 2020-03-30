@@ -1,5 +1,6 @@
 import { join, resolve } from 'path';
 import * as fs from '../../../shared/lib/fs.js';
+import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
@@ -66,7 +67,7 @@ async function readPopulationData(featureCollection) {
 }
 
 const generatePopulations = async ({ locations, featureCollection, report, options, sourceRatings }) => {
-  console.log('⏳ Getting population data...');
+  log('⏳ Getting population data...');
 
   const populations = await readPopulationData(featureCollection);
 
@@ -136,7 +137,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
             if (pop) {
               population += pop;
             } else {
-              console.error(
+              log.error(
                 '❌ Failed to find population for aggregated location %s',
                 geography.getName(aggregatedLocation)
               );
@@ -163,12 +164,12 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       location.population = population;
       populationFound++;
     } else {
-      console.error('  ❌ %s: ?', geography.getName(location));
+      log.error('  ❌ %s: ?', geography.getName(location));
       errors.push(geography.getName(location));
       reporter.logError('population', 'missing population', '', 'low', location);
     }
   }
-  console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
+  log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
 
   report.findPopulation = {
     numLocationsWithPopulation: populationFound,

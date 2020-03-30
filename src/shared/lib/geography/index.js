@@ -1,4 +1,5 @@
 import * as turf from './turf.js';
+import log from '../log.js';
 import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';
@@ -56,7 +57,7 @@ export function generateMultiCountyFeature(counties, properties) {
   }
 
   if (features.length !== counties.length) {
-    console.warn(
+    log.warn(
       '⚠️  ',
       counties.length,
       'counties provided to generateMultiCountyFeature, only',
@@ -156,7 +157,7 @@ export const toISO3166Alpha3 = function(string) {
       return country['alpha-3'];
     }
   }
-  console.warn('⚠️  Could not find country code for', localString);
+  log.warn('⚠️  Could not find country code for', localString);
   return localString;
 };
 
