@@ -3,7 +3,7 @@ import * as fs from '../../../shared/lib/fs.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 const dataPath = join('./src/shared/vendor/');
-const DC = {state: "DC", fips: "11001"};
+const DC = {state: 'DC', fips: '11001'};
 /*
   Read FIPS codes from a CSV with correct datatypes
 */
@@ -16,7 +16,7 @@ async function readFipsData() {
     byCity: {},
     byCounty: {
       //County FIPS taken from: https://raw.githubusercontent.com/kjhealy/fips-codes/master/county_fips_master.csv
-      USA: await readFipsFromJSON('usa-county-fips.json'),
+      USA: await readFipsFromJSON('usa-county-fips.json')
     },
     byState: {},
     byCountry: {}
@@ -25,11 +25,11 @@ async function readFipsData() {
   return fips;
 }
 
-function expectsFipsData(location){
-  return location.country === "USA" && (location.county || location.state === DC["state"]);
+function expectsFipsData(location) {
+  return location.country === 'USA' && (location.county || location.state === DC.state);
 }
 
-const findFips = async ({locations, featureCollection, report, options, sourceRatings}) => {
+const findFips = async ({ locations, featureCollection, report, options, sourceRatings }) => {
   console.log('⏳ Getting FIPS data...');
 
   const fips = await readFipsData();
@@ -48,8 +48,8 @@ const findFips = async ({locations, featureCollection, report, options, sourceRa
           fipsSource[countyNameJoined] ||
           fipsSource[countyNameReplacedJoined];
       }
-    }else if(location.state === DC["state"]){
-      return DC["fips"];
+    } else if(location.state === DC.state){
+      return DC.fips;
     }
 
     return fipsCode;
@@ -59,14 +59,14 @@ const findFips = async ({locations, featureCollection, report, options, sourceRa
 
   let fipsFound = 0;
   for (const location of locations) {
-    if (location["fips"] || !expectsFipsData(location)) {
+    if (location.fips || !expectsFipsData(location)) {
       continue;
     }
 
     const fips = getFips(location);
 
     if (fips) {
-      location["fips"] = fips;
+      location.fips = fips;
       fipsFound++;
     } else {
       console.error('  ❌ %s: ?', geography.getName(location));
@@ -80,7 +80,7 @@ const findFips = async ({locations, featureCollection, report, options, sourceRa
     missingFips: errors
   };
 
-  return {locations, featureCollection, report, options, sourceRatings};
+  return { locations, featureCollection, report, options, sourceRatings };
 };
 
 export default findFips;
