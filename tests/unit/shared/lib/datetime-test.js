@@ -38,6 +38,13 @@ test('system timezone', t => {
   t.end();
 });
 
+// Leaving this in to make sure timezone tests are working.
+// If enabled, this `yarn test:tz` will fail for any timezones east of GMT, e.g. `Australia/Sydney`
+test.skip('heisenbug', t => {
+  t.equal(new Date('3/16/20').toISOString().substring(0, 10), '2020-03-16', 'Fails east of GMT');
+  t.end();
+});
+
 test('looksLike.isoDate', t => {
   t.equal(looksLike.isoDate('2020-03-16'), true, 'valid date');
   t.equal(looksLike.isoDate('1234-99-52'), true, 'invalid date but right form');
