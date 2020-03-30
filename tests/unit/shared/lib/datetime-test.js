@@ -187,7 +187,7 @@ test('scrapeDateIsBefore', t => {
   t.end();
 });
 
-test('scrapeDateIsBefore', t => {
+test('scrapeDateIsAfter', t => {
   process.env.SCRAPE_DATE = '2020-3-16';
   t.equal(scrapeDateIsAfter('2020-3-20'), false, 'before');
   t.equal(scrapeDateIsAfter('2020-3-16'), false, 'same');
@@ -196,7 +196,7 @@ test('scrapeDateIsBefore', t => {
   t.end();
 });
 
-test('scrapeDateIsBefore', t => {
+test('scrapeDateIs', t => {
   process.env.SCRAPE_DATE = '2020-3-16';
   t.equal(scrapeDateIs('2020-3-20'), false, 'before');
   t.equal(scrapeDateIs('2020-3-16'), true, 'same');
