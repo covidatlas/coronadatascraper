@@ -43,6 +43,10 @@ describe(`datetime (system timezone: ${Intl.DateTimeFormat().resolvedOptions().t
     test('from ISO datetime', () => expect(parse('2020-03-16T23:45:00Z')).toEqual('2020-03-16'));
     test('from unpadded ISO date', () => expect(parse('2020-3-1')).toEqual('2020-03-01'));
     test('from inconsistently padded ISO date', () => expect(parse('2020-3-01')).toEqual('2020-03-01'));
+
+    test('from undefined', () => expect(() => parse(undefined)).toThrow());
+    test('from invalid date', () => expect(() => parse('9999-99-99')).toThrow());
+    test('from object', () => expect(() => parse({})).toThrow());
   });
 
   describe('today & now', () => {
@@ -73,6 +77,11 @@ describe(`datetime (system timezone: ${Intl.DateTimeFormat().resolvedOptions().t
     test('from ISO datetime', () => expect(getYYYYMMDD('2020-03-16T00:00:00')).toBe('2020-03-16'));
     test('slash as separator', () => expect(getYYYYMMDD('2020-03-16', '/')).toBe('2020/03/16'));
     test('no separator', () => expect(getYYYYMMDD('2020-03-16', '')).toBe('20200316'));
+
+    test('defaults to current date', () => {
+      mockDate('2020-03-16');
+      expect(getYYYYMMDD()).toBe('2020-03-16');
+    });
   });
 
   describe('getYYYYMD', () => {
