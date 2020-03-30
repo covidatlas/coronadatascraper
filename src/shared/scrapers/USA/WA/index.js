@@ -91,7 +91,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       let counties = [];
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
@@ -123,7 +123,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-23': async function() {
+    '2020-03-23': async function() {
       let counties = [];
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
@@ -156,7 +156,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       let counties = [];
       this.url =
         'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';

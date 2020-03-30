@@ -75,7 +75,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-26': async function() {
+    '2020-03-26': async function() {
       this.url = 'https://health.hawaii.gov/coronavirusdisease2019/';
       this.type = 'list';
       let counties = [];

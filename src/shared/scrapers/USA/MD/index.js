@@ -40,7 +40,7 @@ const scraper = {
       });
       return counties;
     },
-    '2020-3-17': async function() {
+    '2020-03-17': async function() {
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/3d9ca88970dd4689a701354d7fa6830b_0.csv';
       const data = await fetch.csv(this.url);
@@ -62,7 +62,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       // 2020-3-24 is the last day this was updated
       this.type = 'csv';
       this.url = await fetch.getArcGISCSVURL(

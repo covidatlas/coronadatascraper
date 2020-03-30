@@ -59,7 +59,7 @@ const scraper = {
       assert(data.cases > 0, 'Cases is not reasonable');
       return getDataWithTestedNegativeApplied(data);
     },
-    '2020-3-29': async function() {
+    '2020-03-29': async function() {
       const $ = await fetch.page(this.url);
       const $table = $('h2:contains("Cases") + table');
       const $trs = $table.find('tr');

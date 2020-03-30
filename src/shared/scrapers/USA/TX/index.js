@@ -285,7 +285,7 @@ const scraper = {
       this.type = 'table';
       const $ = await fetch.page(this.url);
       let $table;
-      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+      if (datetime.scrapeDateIsBefore('2020-03-16')) {
         $table = $('table[summary="Texas COVID-19 Cases"]');
       } else {
         $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
@@ -309,7 +309,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24 16:00:00': async function() {
+    '2020-03-24 16:00:00': async function() {
       let counties = [];
       this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
       this.type = 'table';
@@ -341,7 +341,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24': async function() {
+    '2020-03-24': async function() {
       let counties = [];
       this.url = 'https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv';
       this.type = 'csv';

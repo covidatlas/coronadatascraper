@@ -124,7 +124,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       this.url = 'https://coronavirus-dashboard.utah.gov/';
       this.type = 'table';
       const $ = await fetch.page(this.url);

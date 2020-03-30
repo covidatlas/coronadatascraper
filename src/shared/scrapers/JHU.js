@@ -137,7 +137,7 @@ const scraper = {
       // Build a hash of US counties
       const jhuUSCountyMap = await fs.readJSON(path.join(__dirname, '..', 'vendor', 'jhu-us-county-map.json'));
 
-      const getOldData = datetime.scrapeDateIsBefore('2020-3-12');
+      const getOldData = datetime.scrapeDateIsBefore('2020-03-12');
 
       if (getOldData) {
         console.log('  🕰  Fetching old data for %s', process.env.SCRAPE_DATE);
@@ -247,7 +247,7 @@ const scraper = {
 
       return countries;
     },
-    '2020-3-24': async function() {
+    '2020-03-24': async function() {
       const urls = this._urlsNew;
       const cases = await fetch.csv(urls.cases, false);
       const deaths = await fetch.csv(urls.deaths, false);

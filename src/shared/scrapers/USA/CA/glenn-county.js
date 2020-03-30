@@ -12,13 +12,13 @@ const scraper = {
   country: 'USA',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    if (datetime.scrapeDateIsBefore('2020-3-16')) {
+    if (datetime.scrapeDateIsBefore('2020-03-16')) {
       this.url = 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome';
     } else {
       this.url = 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19';
     }
     const $ = await fetch.page(this.url);
-    if (datetime.scrapeDateIsBefore('2020-3-17')) {
+    if (datetime.scrapeDateIsBefore('2020-03-17')) {
       const cases = parse.number(
         $('font:contains("Glenn County COVID-19 Cases")')
           .first()

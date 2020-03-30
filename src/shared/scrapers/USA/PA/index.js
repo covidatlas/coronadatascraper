@@ -112,7 +112,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-16': async function scraper() {
+    '2020-03-16': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
@@ -131,7 +131,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-17': async function scraper() {
+    '2020-03-17': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
@@ -150,7 +150,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-18': async function scraper() {
+    '2020-03-18': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
@@ -174,7 +174,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-26': async function scraper() {
+    '2020-03-26': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);

@@ -43,10 +43,10 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       throw new Error('Iowa is putting an image on their site, not data!');
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/6a84756c2e444a87828bb7ce699fdac6_0.csv';
       this.type = 'csv';
       const data = await fetch.csv(this.url);

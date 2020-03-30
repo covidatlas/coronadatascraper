@@ -35,7 +35,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+      if (datetime.scrapeDateIsBefore('2020-03-16')) {
         this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';
         this.type = 'table';
         const $ = await fetch.page(this.url);
@@ -72,7 +72,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-29': async function() {
+    '2020-03-29': async function() {
       this.url =
         'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
       this.type = 'json';

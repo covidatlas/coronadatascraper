@@ -29,7 +29,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/84737ef7f760486293b6afa536f028e0_0.csv';
       const data = await fetch.csv(this.url);
       const counties = [];
@@ -42,7 +42,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       this.url = await fetch.getArcGISCSVURL(7, 'ec4bffd48f7e495182226eee7962b422', 'DailyCaseCounts');
       const data = await fetch.csv(this.url);
       const counties = [];

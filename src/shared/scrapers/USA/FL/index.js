@@ -130,7 +130,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-16': async function() {
+    '2020-03-16': async function() {
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/b4930af3f43a48138c70bca409b5c452_0.csv';
       const data = await fetch.csv(this.url);
@@ -148,7 +148,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       this.type = 'json';
       this.url =
         'https://services1.arcgis.com/CY1LXxl9zlJeBuRZ/arcgis/rest/services/Florida_Testing/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=true&spatialRel=esriSpatialRelIntersects&maxAllowableOffset=4891&geometry=%7B%22xmin%22%3A-10018754.1713954%2C%22ymin%22%3A2504688.542850271%2C%22xmax%22%3A-7514065.628547024%2C%22ymax%22%3A5009377.085698649%2C%22spatialReference%22%3A%7B%22wkid%22%3A102100%2C%22latestWkid%22%3A3857%7D%7D&geometryType=esriGeometryEnvelope&inSR=102100&outFields=*&outSR=102100&resultType=tile';
@@ -178,7 +178,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       this.type = 'csv';
       this.url = await fetch.getArcGISCSVURL(1, '74c7375b03894e68920c2d0131eef1e6', 'Florida_Testing');
       const data = await fetch.csv(this.url);

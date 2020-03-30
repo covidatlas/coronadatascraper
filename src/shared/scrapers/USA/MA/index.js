@@ -121,7 +121,7 @@ const scraper = {
 
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       this.type = 'json';
       this.url =
         'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';

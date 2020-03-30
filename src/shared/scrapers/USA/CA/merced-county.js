@@ -42,7 +42,7 @@ const scraper = {
         recovered
       };
     },
-    '2020-3-16': async function() {
+    '2020-03-16': async function() {
       this.type = 'table';
 
       const $ = await fetch.page(this.url);

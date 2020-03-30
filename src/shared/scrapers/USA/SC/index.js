@@ -95,7 +95,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       this.url = await fetch.getArcGISCSVURL(
         2,
         '3732035614af4246877e20c3a496e397',
@@ -117,7 +117,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-28': async function() {
+    '2020-03-28': async function() {
       this.url = await fetch.getArcGISCSVURL(
         2,
         '3732035614af4246877e20c3a496e397',
