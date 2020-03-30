@@ -1,10 +1,9 @@
-﻿/* eslint-disable jest/no-commented-out-tests */
+﻿/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-use-before-define */
-
-const { spawn, execSync } = require('child_process');
+const test = require('tape');
+const spawn = require('tape-spawn');
+const { execSync } = require('child_process');
 const os = require('os');
-
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 const ianaWin = require('windows-iana');
 
 // This script runs date-related tests in multiple timezones to make sure that we don't have any
@@ -12,69 +11,22 @@ const ianaWin = require('windows-iana');
 //
 // ```js
 // test('timezone heisenbug', () => {
-//   const d = new Date('2020-03-16');
+//   const d = new Date('2020-3-16');
 //   expect(getYYYYMMDD(d)).toBe('2020-03-16'); // sometimes we get 2020-03-15
 // });
 // ```
-
-// WARNING: On Windows, this script actually changes the system timezone. If the script doesn't exit
-// normally, you may be left in the wrong timezone. You can set it back by running this from the
-// command line:
-//
-// ```bash
-// tzutil /s "Eastern Standard Time"
-// ```
-// (replacing `Eastern Standard Time`) with your timezone)
 
 const isWindows = os.platform() === 'win32';
 const currentSystemTimezone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
 const startingTimezone = currentSystemTimezone();
 
-const timezones = ['America/Chicago', 'UTC', 'Australia/Sydney', startingTimezone];
+const WARNING = `
+WARNING: On Windows, this script actually changes the system timezone. If the script doesn't exit
+normally, you may be left in the wrong timezone. You can set it back by running this from the
+command line:
 
-const run = async () => {
-  console.log(`⏲  Initial timezone: ${startingTimezone}`);
-
-  let failures = 0;
-  for (const timezone of timezones) {
-    setTZ(timezone);
-    await pause(); // sometimes takes a few ticks to register
-
-    console.log('');
-    console.log('---------------------------');
-    console.log(`⏲  Timezone changed to ${timezone}`);
-    console.log('');
-    try {
-      await runTest(timezone);
-      console.log(`✅ Tests passed for timezone ${timezone}`);
-    } catch (err) {
-      console.error(`❌ Tests failed for timezone ${timezone}`);
-      failures++;
-    }
-    await pause();
-  }
-
-  console.log('');
-  console.log('---------------------------');
-  if (failures === 0) console.log(`✅ Tests passed for all ${timezones.length} timezones`);
-  else console.error(`❌ Tests failed for ${failures} out of ${timezones.length} timezones`);
-
-  console.log(`⏲  Timezone reset to ${currentSystemTimezone()}`);
-
-  return failures ? 1 : 0;
-};
-
-const runTest = async () => {
-  return new Promise((resolve, reject) => {
-    const results = [];
-    const pipeOutputToConsole = { stdio: [process.stdin, process.stdout, process.stderr] };
-    const testWorker = spawn('node', ['./scripts/testTimezones_worker.js'], pipeOutputToConsole);
-    testWorker.on('close', code => {
-      if (code === 0) resolve(results);
-      else reject(results);
-    });
-  });
-};
+    tzutil /s "${startingTimezone}"
+`;
 
 // Utilities to change & restore the system timezone
 
@@ -109,10 +61,26 @@ const lookupTZ = inputTZ => {
   return tz;
 };
 
-const pause = (t = 500) => new Promise(ok => setTimeout(() => ok(), t));
+// Test
 
-// Execution
+const timezones = ['America/Chicago', 'UTC', 'Australia/Sydney', startingTimezone];
 
-run().then(result => {
-  process.exit(result);
-});
+if (isWindows) console.log('\n', WARNING);
+
+process.env.DEBUG = 'tape-spawn';
+for (const timezone of timezones) {
+  test(`${timezone}`, async t => {
+    await new Promise(resolve => {
+      setTZ(timezone);
+      console.log(`changed to ${timezone}`);
+      const st = spawn(t, `yarn tape tests/**/datetime-test.js`, { end: false });
+      st.succeeds('datetime tests pass');
+      st.end(() => {
+        t.end();
+        resolve();
+      });
+    });
+  });
+}
+
+restoreTZ();
