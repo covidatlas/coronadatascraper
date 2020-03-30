@@ -1,12 +1,12 @@
 import extract from 'extract-zip';
 import fs, { promises as fsp } from 'fs';
 import got from 'got';
+import * as path from 'path';
 import { sep } from 'path';
 import stream from 'stream';
 import { promisify } from 'util';
 import * as fs_ from '../fs.js';
 import join from '../join.js';
-import * as path from 'path';
 
 const pipeline = promisify(stream.pipeline);
 
@@ -27,6 +27,7 @@ export const folderFromZipURL = async (url, folder) => {
       console.log(`  ZIP already downloaded: ${url}`);
       return;
     }
+    // eslint-disable-next-line no-empty
   } catch (err) {}
 
   console.log(`  Downloading ZIP: ${url}`);
