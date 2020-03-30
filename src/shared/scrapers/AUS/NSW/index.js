@@ -18,7 +18,7 @@ const getKey = rowLabel => {
 };
 
 const scraper = {
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainer: [maintainers.camjc],
   priority: 2,
   sources: [
@@ -28,7 +28,7 @@ const scraper = {
       url: 'https://www.health.nsw.gov.au'
     }
   ],
-  state: 'New South Wales',
+  state: 'iso2:AU-NSW',
   type: 'table',
   url:
     'https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx',
