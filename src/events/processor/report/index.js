@@ -1,3 +1,5 @@
+import * as log from '../../../shared/lib/log.js';
+
 const reportScraping = args => {
   const { locations, scraperErrors, deDuped, crosscheckReports, report } = args;
 
@@ -32,18 +34,16 @@ const reportScraping = args => {
     }
   }
 
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log('✅ Data scraped!');
-    for (const [name, count] of Object.entries(locationCounts)) {
-      console.log('   - %d %s', count, name);
-    }
-    console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
-    for (const [name, count] of Object.entries(caseCounts)) {
-      console.log('   - %d %s', count, name);
-    }
-    if (scraperErrors.length) {
-      console.log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
-    }
+  log('✅ Data scraped!');
+  for (const [name, count] of Object.entries(locationCounts)) {
+    log('   - %d %s', count, name);
+  }
+  log('ℹ️  Total counts (tracked cases, may contain duplicates):');
+  for (const [name, count] of Object.entries(caseCounts)) {
+    log('   - %d %s', count, name);
+  }
+  if (scraperErrors.length) {
+    log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
   }
 
   report.scrape = {

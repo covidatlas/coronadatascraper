@@ -2,6 +2,7 @@ import geoTz from 'geo-tz';
 import { join } from 'path';
 import * as turf from '../../../shared/lib/geography/turf.js';
 import * as fs from '../../../shared/lib/fs.js';
+import * as log from '../../../shared/lib/log.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
@@ -156,9 +157,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
   }
 
   return new Promise(async resolve => {
-    if (process.env.LOG_LEVEL === 'verbose') {
-      console.log('⏳ Generating features...');
-    }
+    log('⏳ Generating features...');
 
     const usCountyData = await fs.readJSON(join(__dirname, '..', '..', '..', 'shared', 'vendor', 'usa-counties.json'));
     const countryData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-countries.json'));
@@ -206,16 +205,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
       // Breaks France
       if (location.country === 'REU' || location.country === 'MTQ' || location.country === 'GUF') {
-        if (process.env.LOG_LEVEL === 'verbose') {
-          console.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
-        }
+        log.warn('  ⚠️  Skipping %s because it breaks France', geography.getName(location));
         continue;
       }
 
       if (location.county === '(unassigned)') {
-        if (process.env.LOG_LEVEL === 'verbose') {
-          console.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
-        }
+        log.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
         continue;
       }
 
@@ -356,20 +351,18 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
 
       if (!found) {
-        console.error('  ❌ Could not find location %s', geography.getName(location));
+        log.error('  ❌ Could not find location %s', geography.getName(location));
         errors.push(geography.getName(location));
         reporter.logError('locations', 'missing location', '', 'low', location);
       }
     }
 
-    if (process.env.LOG_LEVEL === 'verbose') {
-      console.log(
-        '✅ Found features for %d out of %d regions for a total of %d features',
-        foundCount,
-        Object.keys(locations).length,
-        featureCollection.features.length
-      );
-    }
+    log(
+      '✅ Found features for %d out of %d regions for a total of %d features',
+      foundCount,
+      Object.keys(locations).length,
+      featureCollection.features.length
+    );
 
     report.findFeatures = {
       numFeaturesFound: foundCount,

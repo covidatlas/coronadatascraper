@@ -16,8 +16,6 @@ const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'grow
 
 let dates;
 
-process.env.LOG_LEVEL = 'verbose';
-
 /*
   Drop everything but case data from a location
 */

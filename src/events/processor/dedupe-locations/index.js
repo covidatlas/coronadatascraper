@@ -1,6 +1,7 @@
 import path from 'path';
 import * as geography from '../../../shared/lib/geography/index.js';
 import * as transform from '../../../shared/lib/transform.js';
+import * as log from '../../../shared/lib/log.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths'];
 
@@ -89,19 +90,9 @@ function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, 
 }
 
 const dedupeLocations = args => {
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log(`⏳ De-duping locations...`);
-  }
+  log(`⏳ De-duping locations...`);
 
-  const { locations, options } = args;
-
-  function log(...args) {
-    if (options.verbose !== undefined) {
-      if (process.env.LOG_LEVEL === 'verbose') {
-        console.log(...args);
-      }
-    }
-  }
+  const { locations } = args;
 
   const crosscheckReports = {};
   const seenLocations = {};
@@ -181,9 +172,7 @@ const dedupeLocations = args => {
     }
   }
 
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
-  }
+  log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
 
   return { ...args, deDuped, crosscheckReports };
 };

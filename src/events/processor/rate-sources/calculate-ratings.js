@@ -1,3 +1,5 @@
+import * as log from '../../../shared/lib/log.js';
+
 const scoresheet = {
   easeOfRead: {
     json: 1,
@@ -85,9 +87,7 @@ const rateLocation = location => {
 };
 
 const calculateRatings = async args => {
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log(`⏳ Calculating ratings...`);
-  }
+  log(`⏳ Calculating ratings...`);
 
   const { sources, locations } = args;
 

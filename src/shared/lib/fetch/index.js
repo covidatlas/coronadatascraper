@@ -4,6 +4,7 @@ import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
+import * as log from '../log.js';
 import { get } from './get.js';
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
@@ -44,9 +45,7 @@ export const page = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const json = async (url, date, options = {}) => {
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log(url);
-  }
+  log(url);
   const body = await get(url, 'json', date, options);
 
   if (!body) {
@@ -142,9 +141,7 @@ export const pdf = async (url, date, options) => {
 };
 
 const fetchHeadless = async url => {
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
-  }
+  log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -157,9 +154,7 @@ const fetchHeadless = async url => {
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
-      if (process.env.LOG_LEVEL === 'verbose') {
-        console.log(`  ⚠️  Retrying (${tries})...`);
-      }
+      log(`  ⚠️  Retrying (${tries})...`);
       await new Promise(r => setTimeout(r, 2000));
     }
 
@@ -191,24 +186,18 @@ const fetchHeadless = async url => {
 
       // 400-499 means "not found", retrying is not likely to help
       if (response.status() < 500) {
-        if (process.env.LOG_LEVEL === 'verbose') {
-          console.log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
-        }
+        log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         browser.close();
         return null;
       }
     } catch (err) {
       // Caught something, allow retry
       browser.close();
-      if (process.env.LOG_LEVEL === 'verbose') {
-        console.log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
-      }
+      log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
     }
   }
 
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
-  }
+  log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
 };
 

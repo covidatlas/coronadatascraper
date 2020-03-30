@@ -1,4 +1,5 @@
 import * as schema from '../../../shared/lib/schema.js';
+import * as log from '../../../shared/lib/log.js';
 
 const validateRatings = async args => {
   const { sourceRatings } = args;
@@ -9,15 +10,11 @@ const validateRatings = async args => {
       const msg = `"${rating._path}" ${schemaErrors
         .map(error => [error.dataPath, error.message].join(' '))
         .join('; ')}`;
-      if (process.env.LOG_LEVEL === 'verbose') {
-        console.log(`  ❌ ${msg}`);
-      }
+      log(`  ❌ ${msg}`);
     }
   }
 
-  if (process.env.LOG_LEVEL === 'verbose') {
-    console.log('✅ Assigned ratings for %d sources', sourceRatings.length);
-  }
+  log('✅ Assigned ratings for %d sources', sourceRatings.length);
 
   return args;
 };
