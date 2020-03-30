@@ -155,7 +155,7 @@ const scraper = {
         const deaths = item.attributes.Deaths;
         const county = geography.addCounty(item.attributes.COUNTY);
 
-        if (datetime.scrapeDateIsBefore(item.attributes.DateLastUpdated)) {
+        if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
           throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
         }
 
