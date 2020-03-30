@@ -96,6 +96,7 @@ const scraper = {
           }
         }
       }
+      counties.push(transform.sumData(counties));
       return counties;
     }
   }
