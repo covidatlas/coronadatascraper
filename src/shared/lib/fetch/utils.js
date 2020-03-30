@@ -1,6 +1,7 @@
 import extract from 'extract-zip';
 import fs, { promises as fsp } from 'fs';
 import got from 'got';
+import * as os from 'os';
 import * as path from 'path';
 import { sep } from 'path';
 import stream from 'stream';
@@ -30,15 +31,15 @@ export const folderFromZipURL = async (url, folder) => {
 
   console.log(`  Downloading ZIP: ${url}`);
 
-  const projectTmp = path.resolve('tmp');
-  await fsp.mkdir(projectTmp, { recursive: true });
-  const tmpDir = await fsp.mkdtemp(`${projectTmp}${sep}`);
+  const osTmp = os.tmpdir();
+  const tmpDir = await fsp.mkdtemp(`${osTmp}${sep}`);
   const tmpZip = join(tmpDir, 'tmp.zip');
 
   try {
     await downloadFile(url, tmpZip);
   } catch (err) {
     console.error(`  Error downloading zip: ${err}`);
+    await fsp.rmdir(tmpDir, { recursive: true });
     throw err;
   }
 
@@ -47,6 +48,7 @@ export const folderFromZipURL = async (url, folder) => {
     console.log('  Extraction complete');
   } catch (err) {
     console.error(`  Error extracting zip: ${err}`);
+    await fsp.rmdir(tmpDir, { recursive: true });
     throw err;
   }
 
