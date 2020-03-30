@@ -1,5 +1,5 @@
-import * as datetime from '../../lib/datetime.js';
-import { looksLike } from '../../lib/datetime.js';
+import * as datetime from '../../lib/datetime/index.js';
+import { looksLike } from '../../lib/datetime/index.js';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
 import * as parse from '../../lib/parse.js';

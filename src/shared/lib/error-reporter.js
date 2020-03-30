@@ -1,4 +1,4 @@
-import * as datetime from './datetime.js';
+import * as datetime from './datetime/index.js';
 
 export const SEVERITY_LOW = 'low';
 export const SEVERITY_MED = 'medium';

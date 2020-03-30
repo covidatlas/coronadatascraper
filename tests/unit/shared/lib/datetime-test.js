@@ -3,7 +3,7 @@ const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
 
-const datetime = imports(join(process.cwd(), 'src', 'shared', 'lib', 'datetime.js'));
+const datetime = imports(join(process.cwd(), 'src', 'shared', 'lib', 'datetime', 'index.js'));
 
 const {
   today,

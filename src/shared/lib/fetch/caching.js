@@ -7,7 +7,7 @@ import path from 'path';
 import crypto from 'crypto';
 
 import join from '../join.js';
-import * as datetime from '../datetime.js';
+import * as datetime from '../datetime/index.js';
 import * as fs from '../fs.js';
 
 const DEFAULT_CACHE_PATH = 'coronadatascraper-cache';
