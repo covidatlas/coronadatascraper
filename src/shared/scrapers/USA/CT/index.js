@@ -156,7 +156,7 @@ const scraper = {
         const county = geography.addCounty(item.attributes.COUNTY);
 
         if (datetime.scrapeDateIsBefore(item.attributes.DateLastUpdated)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.CV_Updated).toLocaleString()}`);
+          throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
         }
 
         counties.push({
