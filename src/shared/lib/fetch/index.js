@@ -2,6 +2,7 @@ import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
 import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
+import Tesseract from 'tesseract.js';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
 import { get } from './get.js';
@@ -250,4 +251,32 @@ export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerNa
   const dashboardManifest = await json(`https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`);
   const { orgId } = dashboardManifest;
   return getArcGISCSVURLFromOrgId(serverNumber, orgId, layerName);
+};
+
+/**
+ * Get the  text of a png file
+ * @param {*} url URL of the resource
+ * @param {*} language language(s) used of OCR model (see https://github.com/naptha/tesseract.js/blob/master/docs/api.md#worker-load-language)
+ * @param {*} tesseditOcrEngineMode OCR engine mode, determines OCR model for given language  (see https://github.com/naptha/tesseract.js/blob/master/src/constants/OEM.js)
+ * @param {*} tesseditPagesegModeOCR  How your text should be treated by the OCR engine  (see https://github.com/naptha/tesseract.js/blob/master/src/constants/PSM.js)
+ */
+
+export const png = async function(url, language = 'eng', tesseditOcrEngineMode = 3, tesseditPagesegMode = '12') {
+  const worker = Tesseract.createWorker();
+
+  const imageToText = async () => {
+    await worker.load();
+    await worker.loadLanguage(language);
+    await worker.initialize(language);
+    await worker.setParameters({
+      tessedit_ocr_engine_mode: tesseditOcrEngineMode,
+      tessedit_pageseg_mode: tesseditPagesegMode
+    });
+    const {
+      data: { text }
+    } = await worker.recognize(url);
+    return text;
+  };
+  const result = await imageToText();
+  return result;
 };
