@@ -191,10 +191,13 @@ const scraper = {
       return counties;
     },
     '2020-02-22': async function() {
-      // this needs to be updated for deaths from 2-22 to 3-29
+      // updated to pull deaths
       let counties = {};
       const $ = await fetch.page(this.url);
       const $table = $('table').first();
+      const $deaths = $('table')
+        .eq(1)
+        .first();
 
       const $trs = $table.find('tr');
       $trs.each((index, tr) => {
@@ -213,7 +216,31 @@ const scraper = {
             counties[countyName].cases += casesTotal;
           } else {
             counties[countyName] = {
-              cases: casesTotal
+              cases: casesTotal,
+              deaths: 0
+            };
+          }
+        }
+      });
+
+      const $trsDeaths = $deaths.find('tr');
+      $trsDeaths.each((index, tr) => {
+        const $tr = $(tr);
+        let countyName = parse.string($tr.find('td:nth-child(1)').text());
+        countyName = this._countyMap[countyName] || countyName;
+        const deathsTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
+        countyName = geography.addCounty(countyName);
+
+        if (countyName === 'TBD County') {
+          countyName = UNASSIGNED;
+        }
+
+        if (countyName !== ' County') {
+          if (countyName in counties) {
+            counties[countyName].deaths += deathsTotal;
+          } else {
+            counties[countyName] = {
+              deaths: deathsTotal
             };
           }
         }
@@ -226,7 +253,7 @@ const scraper = {
     },
 
     '2020-3-29': async function() {
-      let counties = {};
+      const counties = {};
       this.url = await fetch.getArcGISCSVURL(6, '6f2a47a25872470a815bcd95f52c2872', 'lpha_boundry');
       const data = await fetch.csv(this.url);
 
