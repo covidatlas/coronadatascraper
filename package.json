@@ -19,8 +19,8 @@
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
-    "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test": "tape tests/**/*-test.js | tap-spec",
+    "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "node scripts/testTimezones.js",
     "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
@@ -100,11 +100,5 @@
     "printWidth": 120,
     "semi": true,
     "singleQuote": true
-  },
-  "jest": {
-    "rootDir": "src",
-    "testMatch": [
-      "**/?(*.)test.js"
-    ]
   }
 }
