@@ -35,7 +35,7 @@ const pivotTheTable = ($trs, $) => {
 };
 
 const scraper = {
-  country: 'iso1:AU',
+  country: 'AUS',
   maintainers: [maintainers.camjc],
   priority: 2,
   sources: [
@@ -45,7 +45,7 @@ const scraper = {
       url: 'https://www.health.act.gov.au'
     }
   ],
-  state: 'iso2:AU-ACT',
+  state: 'Australian Capital Territory',
   type: 'table',
   url: 'https://www.covid19.act.gov.au/updates/confirmed-case-information',
   scraper: {
