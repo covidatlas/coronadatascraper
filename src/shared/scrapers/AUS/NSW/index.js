@@ -1,21 +1,11 @@
 import assert from 'assert';
-import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
+import * as parse from '../../../lib/parse.js';
+import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
+import getKey from '../_shared/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const getKey = rowLabel => {
-  const lowerLabel = rowLabel.toLowerCase();
-  if (lowerLabel.includes('confirmed cases')) {
-    return 'cases';
-  }
-  if (lowerLabel.includes('total')) {
-    return 'tested';
-  }
-  if (lowerLabel.includes('tested and excluded')) {
-    return 'discard';
-  }
-  throw new Error(`unknown row: ${lowerLabel}`);
-};
+const labelFragmentsByKey = [{ cases: 'confirmed case' }, { testedNegative: 'tested and excluded' }];
 
 const scraper = {
   country: 'AUS',
@@ -39,15 +29,15 @@ const scraper = {
     const $currentArticlePage = await fetch.page(currentArticleUrl);
 
     const $table = $currentArticlePage('.maincontent table:first-of-type');
-    const $trs = $table.find('tbody > tr:not(:first-child)');
-    const data = { state: this.state };
+    const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
+    const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey($tr.find('td:first-child').text());
+      const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
       data[key] = parse.number($tr.find('td:last-child').text());
     });
     assert(data.cases > 0, 'Cases is not reasonable');
-    return data;
+    return getDataWithTestedNegativeApplied(data);
   }
 };
 
