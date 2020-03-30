@@ -15,11 +15,7 @@ function getClassNames(classNames) {
     .join(' ');
 }
 
-function getCacheLink(fileName, date) {
-  return `https://github.com/lazd/coronadatascraper-cache/tree/master/${date}`;
-}
-
-function crossCheckReportTemplate(report, date) {
+function crossCheckReportTemplate(report) {
   const locationName = getName(report.location);
   const slug = `crosscheck:${locationName.replace(/,/g, '-').replace(/\s/g, '')}`;
 
@@ -62,7 +58,7 @@ function crossCheckReportTemplate(report, date) {
     const curators = getContributors(source.curators, { shortNames: true, link: false });
     const sources = getContributors(source.sources, { shortNames: true, link: false });
     html += `<th class="cds-SourceComparison-source">`;
-    html += `<a class="spectrum-Link" target="_blank" href="${getCacheLink(date)}">`;
+    html += `<a class="spectrum-Link" target="_blank" href="${source.url}">`;
     if (index === report.used) {
       html += '✅ ';
     }
@@ -119,7 +115,7 @@ export function generateCrossCheckPage(report, date) {
   const identicalReports = Object.values(report).filter(r => r.discrepancies.length === 0).length;
 
   if (report && Object.keys(report).length) {
-    html += `<p class="spectrum-Body spectrum-Body--L">A total of ${totalReports.toLocaleString()} cross-check reports were generated.</p>`;
+    html += `<p class="spectrum-Body spectrum-Body--L">A total of ${totalReports.toLocaleString()} cross-check reports were generated for ${date}.</p>`;
     if (identicalReports !== 0) {
       html += `<p class="spectrum-Body spectrum-Body--L">${identicalReports.toLocaleString()} cross-checks resulted in no discrepancies and are not shown below.</p>`;
     }
