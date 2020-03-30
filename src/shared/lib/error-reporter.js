@@ -5,75 +5,77 @@ export const SEVERITY_MED = 'medium';
 export const SEVERITY_HIGH = 'high';
 export const SEVERITY_CRITICAL = 'critical';
 
+const errors = [];
+
 /**
- * This class handles location-related errors. With a standardized format,
+ * This method handles location-related errors. With a standardized format,
  * errors can be writen as a CSV file allowing for an easy navigation of errors via
  * Google Sheets or Excel.
  */
-class ErrorReporter {
-  errors = [
-    {
-      date: 'date',
-      country: 'country',
-      state: 'state',
-      county: 'county',
-      city: 'city',
-      type: 'type',
-      description: 'description',
-      severity: 'severity',
-      category: 'category'
-    }
-  ];
+// function ErrorReporter {
+// FIXME this is not valid js ↓
+// errors = [
+//   {
+//     date: 'date',
+//     country: 'country',
+//     state: 'state',
+//     county: 'county',
+//     city: 'city',
+//     type: 'type',
+//     description: 'description',
+//     severity: 'severity',
+//     category: 'category'
+//   }
+// ];
 
-  /**
-   * Logs an error.
-   *
-   * @param category the high-level category for this error, for example "parser" or "qa"
-   * @param type a more detailed error category, for example "missing date" or "parser has thrown an error"
-   * @param description a description to help with debugging, if available
-   * @param severity how urgent is a fix for this error
-   * @param location assigns an error to a particular location to help with filtering, can be a location/source object, or a string
-   * @param date assigns a particular date to the error, to help with filtering
-   */
-  logError = (
-    category,
+/**
+ * Logs an error.
+ *
+ * @param category the high-level category for this error, for example "parser" or "qa"
+ * @param type a more detailed error category, for example "missing date" or "parser has thrown an error"
+ * @param description a description to help with debugging, if available
+ * @param severity how urgent is a fix for this error
+ * @param location assigns an error to a particular location to help with filtering, can be a location/source object, or a string
+ * @param date assigns a particular date to the error, to help with filtering
+ */
+function logError(
+  category,
+  type,
+  description,
+  severity,
+  location = '',
+  date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD()
+) {
+  const errorObj = {
+    date: datetime.getYYYYMMDD(date),
+    country: location.country,
+    state: location.state,
+    county: location.county,
+    city: location.city,
     type,
+    category,
     description,
-    severity,
-    location = '',
-    date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD()
-  ) => {
-    const errorObj = {
-      date: datetime.getYYYYMMDD(date),
-      country: location.country,
-      state: location.state,
-      county: location.county,
-      city: location.city,
-      type,
-      category,
-      description,
-      severity
-    };
+    severity
+  };
 
-    if (typeof location === 'string') {
-      const locationComponents = location.split(',');
-      const { length } = locationComponents;
+  if (typeof location === 'string') {
+    const locationComponents = location.split(',');
+    const { length } = locationComponents;
 
-      const locationAttributes = ['country', 'state', 'county', 'city'];
-      for (let i = 0; i < length; i++) {
-        errorObj[locationAttributes[i]] = locationComponents.pop().trim();
-      }
+    const locationAttributes = ['country', 'state', 'county', 'city'];
+    for (let i = 0; i < length; i++) {
+      errorObj[locationAttributes[i]] = locationComponents.pop().trim();
     }
+  }
 
-    this.errors.push(errorObj);
-  };
-
-  /**
-   * Get the list of errors as a CSV
-   */
-  getCSV = () => {
-    return this.errors;
-  };
+  errors.push(errorObj);
 }
 
-export default new ErrorReporter();
+/**
+ * Get the list of errors as a CSV
+ */
+function getCSV() {
+  return errors;
+}
+
+export default { logError, getCSV };

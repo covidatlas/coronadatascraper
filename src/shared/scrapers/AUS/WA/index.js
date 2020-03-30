@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
@@ -40,7 +41,7 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('table:first-of-type');
     const $trs = $table.find('tbody > tr:not(:first-child)');
-    const data = { state: scraper.state };
+    const data = { state: this.state };
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const key = getKey($tr.find('td:first-child').text());
@@ -49,6 +50,7 @@ const scraper = {
     if (data.tested > 0) {
       data.tested += data.cases; // `tested` is only tested negative in this table, add the positive tested.
     }
+    assert(data.cases > 0, 'Cases is not reasonable');
     return data;
   }
 };
