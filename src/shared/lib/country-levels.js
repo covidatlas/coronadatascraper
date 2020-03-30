@@ -71,37 +71,19 @@ export const getFeature = async id => {
     return;
   }
 
-  const geojsonPath = locationData.geojson_path;
-  console.log(geojsonPath);
-  return;
-
-  const geojsonDir = `./coronavirus-data-sources/country-levels/export/geojson/small`;
-  //
-  // // let geojsonPath;
-  // if (['id0', 'id1', 'id2'].includes(level)) {
-  //   geojsonPath = `${geojsonDir}/${level}/${code}.geojson`;
-  // }
-  //
-  // if (level === 'id3') {
-  //   const { country, state } = splitId3(code, true);
-  //   geojsonPath = `${geojsonDir}/${level}/${country}/${state}.geojson`;
-  // }
-  //
-  // const feature = await fs_.readJSON(geojsonPath);
-  // if (!feature) {
-  //   console.error(`  ❌ GeoJSON missing for id: ${id}`);
-  //   return {};
-  // }
-  // cleanProperties(feature);
-  // return feature;
+  const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+  const feature = await readJSON(geojsonPath);
+  return feature;
 };
 
 export const getPopulation = async id => {
-  return;
-  const feature = await getFeature(id);
-  if (!feature) {
-    console.error(`  ❌ Population missing for id: ${id}`);
-    return null;
+  let locationData;
+  try {
+    locationData = await getLocationData(id);
+  } catch (err) {
+    console.error(err);
+    return;
   }
-  return feature.properties.population;
+
+  console.log(locationData);
 };
