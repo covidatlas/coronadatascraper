@@ -14,7 +14,7 @@ const scraper = {
   aggregate: 'county',
   sources: [
     {
-      name: 'Alabama Department of Public Health | Division of Infectious Diseases & Outbreaks',
+      name: 'Alabama Department of Public Health - Division of Infectious Diseases & Outbreaks',
       url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html'
     }
   ],

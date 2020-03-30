@@ -2,11 +2,12 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import * as rules from '../../../lib/rules.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
-// Based on the MO scraper, which was based on NY
+// updated to include deaths in timeseries
 
 const scraper = {
   state: 'OK',
@@ -17,6 +18,11 @@ const scraper = {
   sources: [
     {
       name: 'Oklahoma State Department of Health'
+    }
+  ],
+  _reject: [
+    {
+      county: 'Total County'
     }
   ],
   maintainers: [
@@ -110,33 +116,24 @@ const scraper = {
     'Woodward County'
   ],
   async scraper() {
-    let counties = {};
+    const counties = [];
     const $ = await fetch.page(this.url);
     const $table = $("table[summary='COVID-19 Cases by County']").first();
 
     const $trs = $table.find('tbody').find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      let countyName = parse.string($tr.find('td:nth-child(1)').text());
-      countyName = this._countyMap[countyName] || countyName;
-
-      const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-      if (countyName !== 'Total') {
-        countyName = geography.addCounty(countyName);
-        if (countyName in counties) {
-          counties[countyName].cases += casesState;
-        } else {
-          counties[countyName] = {
-            cases: casesState
-          };
-        }
+      const countyName = parse.string($tr.find('td:nth-child(1)').text());
+      const countyObj = {
+        county: geography.addCounty(parse.string(countyName)),
+        cases: parse.number($tr.find('td:nth-child(2)').text() || 0),
+        deaths: parse.number($tr.find('td:nth-child(3)').text() || 0)
+      };
+      if (rules.isAcceptable(countyObj, null, this._reject)) {
+        counties.push(countyObj);
       }
     });
-
-    const countiesList = transform.objectToArray(counties);
-    countiesList.push(transform.sumData(countiesList));
-    counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
-
+    counties.push(transform.sumData(counties));
     return counties;
   }
 };
