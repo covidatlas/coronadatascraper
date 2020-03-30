@@ -9,7 +9,7 @@ export const noCasesColor = '#ffffff';
 export const noPopulationDataColor = 'rgba(0,0,0,0)';
 
 export const outlineColorHighlight = 'rgb(0,0,0)';
-export const outlineColor = 'rgba(0, 0, 0, 0)';
+export const outlineColor = 'rgba(0, 0, 0, 0.3)';
 
 const choroplethColors = {
   stoplight: ['#eeffcd', '#b4ffa5', '#ffff00', '#ff7f00', '#ff0000'],
