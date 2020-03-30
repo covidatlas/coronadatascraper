@@ -6,8 +6,6 @@ import * as geography from '../../../lib/geography/index.js';
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
 
-// Based on the NY scraper
-
 const scraper = {
   state: 'MO',
   country: 'USA',
@@ -30,10 +28,14 @@ const scraper = {
     }
   ],
   _countyMap: {
-    // MO reporting KC as a county, which is really part of several counties.
     'Kansas City': 'Jackson County',
-    // MO reporting St. Louis City, which is it's own county, but is being reported as missing.
-    'St. Louis City': 'St. Louis County'
+    'St Louis': 'St. Louis County',
+    'St Charles': 'St. Charles County',
+    'St Clair': 'St. Clair County',
+    'Ste Genevieve': 'Ste. Genevieve County',
+    'St Francois': 'St. Francois County',
+    Joplin: 'Jasper County',
+    'St Louis City': 'St. Louis County'
   },
   _counties: [
     'Adair County',
@@ -189,6 +191,7 @@ const scraper = {
       return counties;
     },
     '2020-02-22': async function() {
+      // this needs to be updated for deaths from 2-22 to 3-29
       let counties = {};
       const $ = await fetch.page(this.url);
       const $table = $('table').first();
@@ -219,8 +222,44 @@ const scraper = {
       const countiesList = transform.objectToArray(counties);
       countiesList.push(transform.sumData(countiesList));
       counties = geography.addEmptyRegions(countiesList, this._counties, 'county');
-
       return counties;
+    },
+
+    '2020-3-29': async function() {
+      let counties = {};
+      this.url = await fetch.getArcGISCSVURL(6, '6f2a47a25872470a815bcd95f52c2872', 'lpha_boundry');
+      const data = await fetch.csv(this.url);
+
+      const unassigned = {
+        county: UNASSIGNED,
+        cases: 0,
+        deaths: 0
+      };
+
+      for (const countyData of data) {
+        let countyName = parse.string(this._countyMap[countyData.NAME] || countyData.NAME);
+
+        if (countyName === 'TBD' || countyName === 'Out of State') {
+          unassigned.cases += parse.number(countyData.Cases || 0);
+          unassigned.deaths += parse.number(countyData.Deaths || 0);
+        } else {
+          countyName = geography.addCounty(countyName);
+
+          if (countyName in counties) {
+            counties[countyName].cases += parse.number(countyData.Cases || 0);
+            counties[countyName].deaths += parse.number(countyData.Deaths || 0);
+          } else {
+            counties[countyName] = {
+              cases: parse.number(countyData.Cases || 0),
+              deaths: parse.number(countyData.Deaths || 0)
+            };
+          }
+        }
+      }
+      const countiesList = transform.objectToArray(counties);
+      countiesList.push(unassigned);
+      countiesList.push(transform.sumData(countiesList));
+      return countiesList;
     }
   }
 };
