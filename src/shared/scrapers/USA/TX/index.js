@@ -351,7 +351,8 @@ const scraper = {
         county = this._countyMap[county] || county;
         const data = {
           county,
-          cases: parse.number(row.Count_ || 0)
+          cases: parse.number(row.Count_ || 0),
+          deaths: parse.number(row.Deaths || 0)
         };
         counties.push(data);
       }
