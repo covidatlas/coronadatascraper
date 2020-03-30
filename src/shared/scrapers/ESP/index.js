@@ -1,5 +1,5 @@
-import * as isoDate from '../../lib/iso-date.js';
-import { looksLike } from '../../lib/iso-date.js';
+import * as datetime from '../../lib/datetime.js';
+import { looksLike } from '../../lib/datetime.js';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
 import * as parse from '../../lib/parse.js';
@@ -90,7 +90,7 @@ const scraper = {
           .map(date => {
             return {
               state: parse.string(location),
-              date: isoDate.parse(date).toString(),
+              date: datetime.parse(date).toString(),
               cases: parse.number(casesRow[date]),
               deaths: parse.number(deathsRow[date] || 0),
               recovered: parse.number(recoveredRow[date] || 0)
@@ -109,12 +109,12 @@ const scraper = {
     // },
     // ```
 
-    const scrapeDate = process.env.SCRAPE_DATE ? isoDate.parse(process.env.SCRAPE_DATE) : undefined;
+    const scrapeDate = process.env.SCRAPE_DATE ? datetime.parse(process.env.SCRAPE_DATE) : undefined;
 
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
       .filter(looksLike.isoDate)
-      .map(isoDate.parse)
+      .map(datetime.parse)
       .sort();
 
     const firstDate = dates[0];
