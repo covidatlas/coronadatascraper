@@ -73,8 +73,6 @@ const scraper = {
       const data = await fetch.csv(this.url);
       const counties = [];
       for (const county of data) {
-        console.log(county);
-
         let countyName;
         if (county.COUNTY === 'Baltimore City') {
           countyName = parse.string(county.COUNTY);

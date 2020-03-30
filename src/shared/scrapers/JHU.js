@@ -60,6 +60,9 @@ const scraper = {
       'Province/State': 'From Diamond Princess'
     },
     {
+      'Country/Region': 'MS Zaandam'
+    },
+    {
       'Country/Region': 'West Bank and Gaza'
     }
   ],
