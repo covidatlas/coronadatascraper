@@ -22,9 +22,6 @@ function crossCheckReportTemplate(report) {
   let html = `<li class="cds-CrossCheckReport" id="${slug}">`;
   html += `<h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${locationName}</a></h2>`;
 
-  // html += `<p class="spectrum-Body spectrum-Body--L">All sources agree on ${report.agreements.join(', ')}</p>`;
-  // html += `<p class="spectrum-Body spectrum-Body--L">Sources disagree on ${report.discrepancies.join(', ')}</p>`;
-
   html += `<div class="cds-SourceComparison">`;
 
   const metrics = ['cases', 'deaths', 'tested', 'recovered'];
@@ -58,16 +55,15 @@ function crossCheckReportTemplate(report) {
     const curators = getContributors(source.curators, { shortNames: true, link: false });
     const sources = getContributors(source.sources, { shortNames: true, link: false });
     html += `<th class="cds-SourceComparison-source">`;
-    html += `<a class="spectrum-Link" target="_blank" href="${source.url}">`;
     if (index === report.used) {
       html += '✅ ';
     }
+    html += `<a class="spectrum-Link" target="_blank" href="${source.url}">`;
     if (source.curators) {
       html += `<strong>${curators}</strong>`;
     } else if (source.sources) {
       html += `<strong>${sources}</strong>`;
     } else {
-      // html += `<strong><a href="${source.url}" class="spectrum-Link" target="_blank">${sourceURLShort}</a></strong>`;
       html += `<strong>${sourceURLShort}</strong>`;
     }
     html += `</a>`;
