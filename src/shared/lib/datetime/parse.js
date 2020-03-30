@@ -3,7 +3,7 @@ import { LocalDate } from '@js-joda/core';
 import '@js-joda/timezone/dist/js-joda-timezone-10-year-range'; // minimize package size by only importing tz data for current year ±5 yrs
 
 import { truncate, normalize } from './utils.js';
-import { looksLike } from './looksLike.js';
+import { looksLike } from './looks-like.js';
 
 /**
  * Attempts to interpret the input as a date.
