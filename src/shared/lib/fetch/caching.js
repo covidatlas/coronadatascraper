@@ -72,7 +72,7 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
     return fs.readFile(filePath, encoding);
   }
   if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
-    console.log('  ⚠️ Cannot go back in time to get %s, no cache present', url);
+    console.log('  ⚠️ Cannot go back in time to get %s, no cache present at %s', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
 
