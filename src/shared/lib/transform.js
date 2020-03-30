@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import * as datetime from './datetime/index.js';
+import datetime from './datetime/index.js';
 
 /*
   Remove "private" object properties

@@ -2,7 +2,7 @@ import path from 'path';
 import * as fetch from '../lib/fetch/index.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography/index.js';
-import * as datetime from '../lib/datetime/index.js';
+import datetime from '../lib/datetime/index.js';
 import * as transform from '../lib/transform.js';
 import * as rules from '../lib/rules.js';
 import * as fs from '../lib/fs.js';

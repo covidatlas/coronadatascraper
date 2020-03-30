@@ -2,7 +2,7 @@
 
 import needle from 'needle';
 import * as caching from './caching.js';
-import * as datetime from '../datetime/index.js';
+import datetime from '../datetime/index.js';
 
 const CHROME_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';

@@ -1,8 +1,9 @@
-import * as datetime from '../../lib/datetime/index.js';
-import { looksLike } from '../../lib/datetime/index.js';
+import datetime from '../../lib/datetime/iso/index.js';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
 import * as parse from '../../lib/parse.js';
+
+const { looksLike } = datetime;
 
 const scraper = {
   country: 'ESP',

@@ -1,43 +1,98 @@
-﻿import { DateTimeFormatter, LocalDate } from '@js-joda/core';
-import '@js-joda/timezone/dist/js-joda-timezone-10-year-range'; // minimize package size by only importing tz data for current year ±5 yrs
-import { parse } from './parse.js';
-import { today } from './today.js';
+﻿import { getDate } from './today.js';
 
-/**
- * @param {string} pattern using [SimpleDateFormat](http://js-joda.github.io/js-joda/manual/formatting.html#format-patterns) codes
- * @param {string=} defaultSeparator the separator used in the pattern provided (can be replaced by caller)
- * @returns A formatting function that takes a date and an optional separator, and returns a string
- */
-const buildFormatter = (pattern, defaultSeparator = '-') => {
-  /**
-   * @param {string|Date} date The date to format. Defaults to the current date.
-   * @param {string=} separator The separator to use instead of the default
-   * @returns {string} The formatted date
-   */
-  const formatterFunction = (date = today.utc(), separator = defaultSeparator) => {
-    const separatorRegex = new RegExp(defaultSeparator, 'g');
-    const patternWithSeparator = pattern.replace(separatorRegex, separator);
-    const formatter = DateTimeFormatter.ofPattern(patternWithSeparator);
-    const isoDate = parse(date);
-    return LocalDate.parse(isoDate).format(formatter);
-  };
-  return formatterFunction;
+/*
+  Get date formatted in YYYY-M-D
+*/
+export const getYYYYMD = function(date = getDate(), sep = '-') {
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
+  }
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate.getUTCFullYear();
+
+  return `${year}${sep}${month}${sep}${day}`;
 };
 
-export const getYYYYMMDD = buildFormatter('yyyy-MM-dd');
-export const getYYYYMD = buildFormatter('yyyy-M-d');
-export const getDDMMYYYY = buildFormatter('dd-MM-yyyy');
-export const getMDYYYY = buildFormatter('M/d/yyyy', '/');
-export const getMDYY = buildFormatter('M/d/yy', '/');
+/*
+  Get date formatted in YYYY-M-D
+*/
+export const getYYYYMMDD = function(date = getDate(), sep = '-') {
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
+  }
+  const month = (localDate.getUTCMonth() + 1).toString().padStart(2, '0');
+  const day = localDate
+    .getUTCDate()
+    .toString()
+    .padStart(2, '0');
+  const year = localDate.getUTCFullYear();
 
-/**
- * @param {string|Date} date The date to format. Defaults to the current date.
- * @param {string} [separator='_'] The separator to use instead of the default
- * @returns The formatted date
- */
-export const getMonthDYYYY = (date = today.utc(), sep = '_') => {
-  // not worth bringing in @js-joda/locale_en just for this, so we'll keep this one artisanal
-  const MONTHS = [
+  return `${year}${sep}${month}${sep}${day}`;
+};
+
+/*
+  Get date formatted in DD-MM-YYYY
+*/
+export const getDDMMYYYY = function(date = getDate(), sep = '-') {
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
+  }
+  const month = (localDate.getUTCMonth() + 1).toString().padStart(2, '0');
+  const day = localDate
+    .getUTCDate()
+    .toString()
+    .padStart(2, '0');
+  const year = localDate.getUTCFullYear();
+
+  return `${day}${sep}${month}${sep}${year}`;
+};
+
+/*
+  Get date formatted in M/D/YYYY
+*/
+export const getMDYYYY = function(date = getDate(), sep = '/') {
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
+  }
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate.getUTCFullYear();
+
+  return `${month}${sep}${day}${sep}${year}`;
+};
+
+/*
+  Get date formatted in M/D/YY
+*/
+export const getMDYY = function(date = getDate(), sep = '/') {
+  let localDate = date;
+  if (typeof localDate === 'string') {
+    localDate = new Date(localDate);
+  }
+  const month = localDate.getUTCMonth() + 1;
+  const day = localDate.getUTCDate();
+  const year = localDate
+    .getUTCFullYear()
+    .toString()
+    .substr(2, 2);
+
+  return `${month}${sep}${day}${sep}${year}`;
+};
+
+/*
+  Get date formatted in Month_D_YYYY
+*/
+export const getMonthDYYYY = function(date = getDate(), sep = '_') {
+  if (typeof date === 'string') {
+    date = new Date(date);
+  }
+
+  const months = [
     'January',
     'February',
     'March',
@@ -51,7 +106,10 @@ export const getMonthDYYYY = (date = today.utc(), sep = '_') => {
     'November',
     'December'
   ];
-  const isoDate = parse(date);
-  const [y, m, d] = isoDate.split('-').map(Number);
-  return `${MONTHS[m - 1]}${sep}${d}${sep}${y}`;
+
+  const month = months[date.getUTCMonth()];
+  const day = date.getUTCDate().toString();
+  const year = date.getUTCFullYear().toString();
+
+  return `${month}${sep}${day}${sep}${year}`;
 };
