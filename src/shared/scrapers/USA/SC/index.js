@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as parse from '../../../lib/parse.js';
+import * as datetime from '../../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -11,6 +12,11 @@ const scraper = {
   country: 'USA',
   url:
     'https://services2.arcgis.com/XZg2efAbaieYAXmu/arcgis/rest/services/COVID19_County_View/FeatureServer/0/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Confirmed%20desc&resultOffset=0&resultRecordCount=1000&cacheHint=true',
+  source: {
+    name: 'South Carolina Department of Health and Environmental Control',
+    url:
+      'https://www.scdhec.gov/infectious-diseases/viruses/coronavirus-disease-2019-covid-19/monitoring-testing-covid-19'
+  },
   type: 'json',
   aggregate: 'county',
 
@@ -103,6 +109,31 @@ const scraper = {
           cases: parse.number(county.Confirmed),
           deaths: parse.number(county.Death),
           recovered: parse.number(county.Recovered)
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-3-28': async function() {
+      this.url = await fetch.getArcGISCSVURL(
+        2,
+        '3732035614af4246877e20c3a496e397',
+        'COVID19_County_Polygon_SharingView2' // they started updating this view
+      );
+      const data = await fetch.csv(this.url);
+      let counties = [];
+      for (const county of data) {
+        if (datetime.scrapeDateIsBefore(county.Date_)) {
+          throw new Error(`Data only available until ${county.Date_}`);
+        }
+
+        counties.push({
+          county: geography.addCounty(county.NAME),
+          cases: parse.number(county.Confirmed),
+          deaths: parse.number(county.Death)
         });
       }
 

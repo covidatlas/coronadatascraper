@@ -43,7 +43,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -54,6 +54,8 @@ async function generateTidyCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'tz') {
+        row.push(location[column] ? location[column].join(',') : null);
       } else {
         row.push(location[column]);
       }
@@ -81,7 +83,7 @@ async function generateTidyCSV(timeseriesByLocation) {
 }
 
 async function generateCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -92,6 +94,8 @@ async function generateCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'tz') {
+        row.push(location[column] ? location[column].join(',') : null);
       } else {
         row.push(location[column]);
       }
@@ -122,7 +126,7 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 async function generateJHUCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'url'];
+  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'url', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -132,6 +136,8 @@ async function generateJHUCSV(timeseriesByLocation) {
         row.push(location.coordinates ? location.coordinates[1] : '');
       } else if (column === 'long') {
         row.push(location.coordinates ? location.coordinates[0] : '');
+      } else if (column === 'tz') {
+        row.push(location[column] ? location[column].join(',') : null);
       } else {
         row.push(location[column]);
       }

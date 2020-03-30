@@ -190,7 +190,7 @@ const scraper = {
           return;
         }
 
-        if (countyName === 'Grand Total') {
+        if (countyName === 'Grand Total' || countyName === 'Pending') {
           return;
         }
 

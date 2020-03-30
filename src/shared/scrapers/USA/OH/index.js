@@ -12,7 +12,7 @@ const scraper = {
   aggregate: 'county',
   sources: [
     {
-      url: 'https://odh.ohio.gov/',
+      url: 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/',
       name: 'Ohio Department of Health'
     }
   ],
@@ -111,6 +111,7 @@ const scraper = {
       let counties = [];
       let arrayOfCounties = [];
       this.url = 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const regExp = /\(([^)]+)\)/;
@@ -136,6 +137,7 @@ const scraper = {
       let arrayOfCounties = [];
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ', '');
@@ -159,6 +161,7 @@ const scraper = {
       let arrayOfCounties = [];
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
+      this.type = 'paragraph';
       const $ = await fetch.page(this.url);
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph
@@ -185,6 +188,49 @@ const scraper = {
         'https://public.tableau.com/views/OverviewDashboard_15852499073250/DashboardOverview_1?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=no&:showAppBanner=false&iframeSizedToWindow=true&:loadOrderID=0';
       await fetch.page(this.url);
       throw new Error('Ohio has an impossible to access tablaeu dashboard');
+    },
+    '2020-3-28': async function() {
+      this.url = 'https://coronavirus.ohio.gov/static/COVIDSummaryData.csv';
+      this.type = 'csv';
+      const rows = await fetch.csv(this.url);
+
+      // The CSV is coming in with the BOM bytes mangled onto the front.
+      // So the header of the first column is 'ï»¿County'
+      // This hack lets me determine the header value for sure
+      const countyCol = Object.keys(rows[0])[0];
+      // Make sure it's actually the County header
+      if (countyCol.indexOf('County') === -1) {
+        throw new Error('First column of csv is no longer county!');
+      }
+
+      const cases = {};
+      const deaths = {};
+
+      for (const county of this._counties) {
+        cases[county] = 0;
+        deaths[county] = 0;
+      }
+
+      for (const row of rows) {
+        const county = geography.addCounty(row[countyCol]);
+        if (county !== 'Grand Total County') {
+          cases[county] += parse.number(row['Case Count']);
+          deaths[county] += parse.number(row['Death Count']);
+        }
+      }
+
+      let counties = [];
+      for (const county of this._counties) {
+        counties.push({
+          county,
+          cases: cases[county],
+          deaths: deaths[county]
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
     }
   }
 };

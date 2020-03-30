@@ -14,7 +14,7 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $table = $('th:contains("Confirmed")').closest('table');
-    const $tds = $table.find('tr:last-child > td');
+    const $tds = $table.find('tr:nth-child(2) > td');
     return {
       cases: parse.number($tds.first().text()),
       deaths: parse.number($tds.last().text())

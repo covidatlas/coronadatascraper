@@ -4,6 +4,7 @@ import * as turf from '../../../shared/lib/geography/turf.js';
 import * as fs from '../../../shared/lib/fs.js';
 import espGeoJson from '../vendor/esp.json';
 import * as geography from '../../../shared/lib/geography/index.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const DEBUG = false;
 
@@ -101,6 +102,19 @@ function matchFeature(props, featuresData) {
     }
   }
   return undefined;
+}
+
+/**
+ * @param {string?} locationItem
+ * @param {{ properties: { name: string?; name_en: string?; region: string?; }; }} feature
+ */
+function locationPropertyMatchesFeature(locationItem, feature) {
+  return (
+    locationItem &&
+    [feature.properties.name, feature.properties.name_en, feature.properties.region].some(
+      toMatch => toMatch === locationItem
+    )
+  );
 }
 
 const generateFeatures = ({ locations, report, options, sourceRatings }) => {
@@ -246,16 +260,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           for (const feature of provinceData.features) {
             const countryMatches =
               location.country === feature.properties.gu_a3 || location.country === feature.properties.adm0_a3;
-            const stateMatches =
-              location.state &&
-              (location.state === feature.properties.name ||
-                location.state === feature.properties.name_en ||
-                location.state === feature.properties.region);
-            const countyMatches =
-              location.county &&
-              (location.county === feature.properties.name ||
-                location.county === feature.properties.name_en ||
-                location.county === feature.properties.region);
+            const stateMatches = locationPropertyMatchesFeature(location.state, feature);
+            const countyMatches = locationPropertyMatchesFeature(location.county, feature);
             if (countryMatches && (stateMatches || countyMatches)) {
               found = true;
               storeFeature(feature, location);
@@ -346,6 +352,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       if (!found) {
         console.error('  ❌ Could not find location %s', geography.getName(location));
         errors.push(geography.getName(location));
+        reporter.logError('locations', 'missing location', '', 'low', location);
       }
     }
 

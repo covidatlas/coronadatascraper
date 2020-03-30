@@ -35,8 +35,8 @@ function crossCheckReportTemplate(report) {
             <tr>
     `;
     const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
-    const curators = getContributors(source.curators, 'Curated by');
-    const sources = getContributors(source.sources, 'Sourced from');
+    const curators = getContributors(source.curators);
+    const sources = getContributors(source.sources);
     html += `<th class="cds-SourceComparison-source">`;
     if (source.curators) {
       html += `<strong>${curators}</strong>`;

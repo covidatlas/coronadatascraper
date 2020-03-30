@@ -1,5 +1,6 @@
 import * as schema from '../../../shared/lib/schema.js';
 import * as geography from '../../../shared/lib/geography/index.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 /*
   Clean the passed data
@@ -18,6 +19,7 @@ const cleanLocations = args => {
         .join('; ')}`;
       errors.push(msg);
       console.log(`  ❌ ${msg}`);
+      reporter.logError('location validation', 'invalid location object', msg, 'low', location);
     }
   }
 

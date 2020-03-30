@@ -1,6 +1,7 @@
 import { join, resolve } from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 import * as geography from '../../../shared/lib/geography/index.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 
 const dataPath = join(__dirname, '..', 'vendor', 'population');
 
@@ -164,6 +165,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
     } else {
       console.error('  ❌ %s: ?', geography.getName(location));
       errors.push(geography.getName(location));
+      reporter.logError('population', 'missing population', '', 'low', location);
     }
   }
   console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
