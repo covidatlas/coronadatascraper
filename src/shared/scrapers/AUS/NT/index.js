@@ -21,7 +21,6 @@ const scraper = {
     const $rowWithCases = $('.header-widget p:first-of-type');
     assert($rowWithCases.text().includes('confirmed cases'));
     const data = {
-      state: this.state,
       cases: parse.number($rowWithCases.text())
     };
     assert(data.cases > 0, 'Cases is not reasonable');

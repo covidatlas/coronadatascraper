@@ -31,6 +31,7 @@ const maintainers = {
   aed3: {
     name: 'Albert III',
     github: 'aed3',
+    url: 'https://aed3.github.io',
     county: 'USA',
     flag: '🇺🇸'
   },
