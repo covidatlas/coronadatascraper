@@ -1,5 +1,15 @@
 import PDFParser from 'pdf2json';
 
+/**
+ * Parses a PDF from a buffer.
+ *
+ * @return a null terminated array of text elements. Each element contains the following:
+ * - x: x position of the text element in pixels
+ * - y: y position of the text element in pixels
+ * - w: width of the text element in pixels
+ * - text: the text contained in this element
+ * - page: the page number this element is situated in
+ */
 export default buffer =>
   new Promise((resolve, reject) => {
     const parser = new PDFParser();

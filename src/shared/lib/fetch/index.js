@@ -109,8 +109,6 @@ export const tsv = async (url, date, options = {}) => {
  * @param {*} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
- *  - rowTolerance: allowed variance in the y-axis. Allows elements with small discrepancies in their y
- *                  value to be considered as being part of the same row, defaults to 1 unit
  */
 export const pdf = async (url, date, options) => {
   const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
