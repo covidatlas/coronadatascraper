@@ -13,7 +13,7 @@ export const downloadFile = async (url, dest) => {
   await pipeline(got.stream(url), fs.createWriteStream(dest));
 };
 
-export const folderFromZipURL = async (url, folder) => {
+export const folderFromZipURL = async (url, folder, debug = false) => {
   // downloads a zip from an URL and extracts into a folder
   // uses __cache__.json to cache the url and only download if needed
 
@@ -21,7 +21,9 @@ export const folderFromZipURL = async (url, folder) => {
     const cache = await fs_.readJSON(path.join(folder, '__cache__.json'));
     const cacheURL = cache.url;
     if (cacheURL === url) {
-      console.log(`  ZIP already downloaded: ${url}`);
+      if (debug) {
+        console.log(`  ZIP already downloaded: ${url}`);
+      }
       return;
     }
     // eslint-disable-next-line no-empty
