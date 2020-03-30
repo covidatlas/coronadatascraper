@@ -131,10 +131,9 @@ const scraper = {
       };
       if (rules.isAcceptable(countyObj, null, this._reject)) {
         counties.push(countyObj);
-    }
+      }
     });
     counties.push(transform.sumData(counties));
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
     return counties;
   }
 };
