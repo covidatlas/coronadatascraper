@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import * as datetime from '../../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -35,7 +36,8 @@ const scraper = {
     'Ste Genevieve': 'Ste. Genevieve County',
     'St Francois': 'St. Francois County',
     Joplin: 'Jasper County',
-    'St Louis City': 'St. Louis County'
+    'St Louis City': 'St. Louis County',
+    'St. Louis City': 'St. Louis County'
   },
   _counties: [
     'Adair County',
@@ -191,13 +193,9 @@ const scraper = {
       return counties;
     },
     '2020-2-22': async function() {
-      // updated to pull deaths
       let counties = {};
       const $ = await fetch.page(this.url);
       const $table = $('table').first();
-      const $deaths = $('table')
-        .eq(1)
-        .first();
 
       const $trs = $table.find('tr');
       $trs.each((index, tr) => {
@@ -223,28 +221,34 @@ const scraper = {
         }
       });
 
-      const $trsDeaths = $deaths.find('tr');
-      $trsDeaths.each((index, tr) => {
-        const $tr = $(tr);
-        let countyName = parse.string($tr.find('td:nth-child(1)').text());
-        countyName = this._countyMap[countyName] || countyName;
-        const deathsTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-        countyName = geography.addCounty(countyName);
+      if (datetime.scrapeDateIsAfter('2020-3-24')) {
+        const $deaths = $('table')
+          .eq(1)
+          .first();
 
-        if (countyName === 'TBD County') {
-          countyName = UNASSIGNED;
-        }
+        const $trsDeaths = $deaths.find('tr');
+        $trsDeaths.each((index, tr) => {
+          const $tr = $(tr);
+          let countyName = parse.string($tr.find('td:nth-child(1)').text());
+          countyName = this._countyMap[countyName] || countyName;
+          const deathsTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
+          countyName = geography.addCounty(countyName);
 
-        if (countyName !== ' County') {
-          if (countyName in counties) {
-            counties[countyName].deaths += deathsTotal;
-          } else {
-            counties[countyName] = {
-              deaths: deathsTotal
-            };
+          if (countyName === 'TBD County') {
+            countyName = UNASSIGNED;
           }
-        }
-      });
+
+          if (countyName !== ' County') {
+            if (countyName in counties) {
+              counties[countyName].deaths += deathsTotal;
+            } else {
+              counties[countyName] = {
+                deaths: deathsTotal
+              };
+            }
+          }
+        });
+      }
 
       const countiesList = transform.objectToArray(counties);
       countiesList.push(transform.sumData(countiesList));
