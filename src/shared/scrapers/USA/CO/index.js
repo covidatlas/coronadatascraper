@@ -141,6 +141,7 @@ const scraper = {
       }
       const stateData = transform.sumData(counties);
       stateData.population = parse.number(data[0].State_Population);
+      stateData.deaths = parse.number(data[0].State_Deaths);
       counties.push(stateData);
       return counties;
     }

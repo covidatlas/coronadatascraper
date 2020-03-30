@@ -141,6 +141,33 @@ const scraper = {
       counties.push(transform.sumData(counties));
 
       return counties;
+    },
+    '2020-03-30': async function() {
+      this.url =
+        'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+      this.type = 'json';
+
+      const data = await fetch.json(this.url);
+      const counties = [];
+
+      data.features.forEach(item => {
+        const cases = item.attributes.ConfirmedCases;
+        const deaths = item.attributes.Deaths;
+        const county = geography.addCounty(item.attributes.COUNTY);
+
+        if (datetime.scrapeDateIsBefore(item.attributes.DateLastUpdated)) {
+          throw new Error(`Data only available until ${new Date(item.attributes.CV_Updated).toLocaleString()}`);
+        }
+
+        counties.push({
+          county,
+          cases,
+          deaths
+        });
+      });
+
+      counties.push(transform.sumData(counties));
+      return counties;
     }
   }
 };
