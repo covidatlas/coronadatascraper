@@ -71,6 +71,65 @@ const scraper = {
     },
 
     '2020-3-18': async function() {
+      this.url = 'https://www.ventura.org/covid19/';
+      const $ = await fetch.page(this.url);
+
+      const cases = parse.number(
+        $('td:contains("COVID-19 Cases")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+
+      return { cases };
+    },
+
+    '2020-3-19': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+
+      const cases = parse.number(
+        $('td:contains("COVID-19 Cases")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+      const deaths = parse.number(
+        $('td:contains("Death")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+
+      return { cases, deaths };
+    },
+
+    '2020-3-25': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+
+      const cases = parse.number(
+        $('td:contains("Positive Cases")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+      const deaths = parse.number(
+        $('td:contains("Death")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+
+      return { cases, deaths };
+    },
+
+    '2020-3-26': async function() {
       this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
 
