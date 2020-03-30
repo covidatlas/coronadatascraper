@@ -26,6 +26,7 @@ const scraper = {
     return {
       tested: parse.number($dataRow.find('td:first-child h2').text()),
       cases: parse.number($dataRow.find('td:nth-child(2) h2').text()),
+      active: parse.number($dataRow.find('td:nth-child(4) h2').text()),
       deaths: parse.number($dataRow.find('td:nth-child(5) h2').text())
     };
   }

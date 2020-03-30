@@ -15,19 +15,19 @@
      </tr> 
      <tr class="ms-rteTableOddRow-10"> 
         <td class="ms-rteTableEvenCol-10" colspan="1" style="text-align: center; width: 153px;"> 
-           <h2 class="ms-rteElement-H2B">​1,785<br></h2> 
+           <h2 class="ms-rteElement-H2B">​1,899<br></h2> 
         </td> 
         <td class="ms-rteTableOddCol-10" colspan="3" style="text-align: center; width: 134px;"> 
-           <h2 class="ms-rteElement-H2B">127<br></h2> 
+           <h2 class="ms-rteElement-H2B">174<br></h2> 
         </td> 
         <td class="ms-rteTableEvenCol-10" colspan="1" style="text-align: center; width: 140px;"> 
-           <h2 class="ms-rteElement-H2B">​841<br></h2> 
+           <h2 class="ms-rteElement-H2B">​931<br></h2> 
         </td> 
         <td class="ms-rteTableOddCol-10" colspan="3" style="text-align: center; width: 133px;"> 
-           <h2 class="ms-rteElement-H2B">817<br></h2> 
+           <h2 class="ms-rteElement-H2B">794<br></h2> 
         </td> 
         <td class="ms-rteTableEvenCol-10" colspan="1" style="text-align: center; width: 128px;"> 
-           <h2 class="ms-rteElement-H2B">5​</h2> 
+           <h2 class="ms-rteElement-H2B">6​</h2> 
         </td> 
      </tr> 
   </tbody> 

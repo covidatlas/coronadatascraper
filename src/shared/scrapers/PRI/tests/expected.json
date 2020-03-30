@@ -1,7 +1,7 @@
 [{
-  "country": "USA",
-  "state": "Puerto Rico",
-  "tested": 1785,
-  "cases": 127,
-  "deaths": 5
+  "country": "PRI",
+  "tested": 1899,
+  "cases": 174,
+  "active": 794,
+  "deaths": 6
 }]
