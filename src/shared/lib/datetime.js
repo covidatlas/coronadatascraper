@@ -159,7 +159,7 @@ export const dateIsBeforeOrEqualTo = (a, b) => parse(a) <= parse(b);
 /**
  * @returns {string} The value of the SCRAPE_DATE environment variable, as an ISO date
  */
-export const scrapeDate = () => parse(process.env.SCRAPE_DATE);
+export const scrapeDate = () => (process.env.SCRAPE_DATE ? parse(process.env.SCRAPE_DATE) : undefined);
 
 /**
  * @param {string|Date} d The date to compare to the scrape date.
