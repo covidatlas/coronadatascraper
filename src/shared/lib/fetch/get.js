@@ -101,11 +101,11 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       }
 
       // 400-499 means "not found" and a retry probably won't help -- return null
-      log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+      log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
       return null;
     }
 
-    log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
     return null;
   }
 

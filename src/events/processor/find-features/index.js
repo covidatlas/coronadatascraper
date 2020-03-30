@@ -210,7 +210,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
 
       if (location.county === '(unassigned)') {
-        log.warn("  ⚠️  Skipping %s because it's unassigned", geography.getName(location));
+        log("  ℹ️  Skipping %s because it's unassigned", geography.getName(location));
         continue;
       }
 

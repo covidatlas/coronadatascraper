@@ -14,12 +14,12 @@ const validateSources = async args => {
         .join('; ')}`;
       errors.push(msg);
       reporter.logError('source validation', 'invalid source object', msg, 'low', source);
-      log(`  ❌ ${msg}`);
+      log.error(`  ❌ ${msg}`);
     }
   }
 
   if (errors.length) {
-    log(`❌ Found ${errors.length} invalid scrapers`);
+    log.error(`❌ Found ${errors.length} invalid scrapers`);
   } else {
     log(`✅ All scrapers are valid!`);
   }

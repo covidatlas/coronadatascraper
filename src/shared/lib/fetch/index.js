@@ -186,18 +186,18 @@ const fetchHeadless = async url => {
 
       // 400-499 means "not found", retrying is not likely to help
       if (response.status() < 500) {
-        log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         browser.close();
         return null;
       }
     } catch (err) {
       // Caught something, allow retry
       browser.close();
-      log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
+      log.error(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
     }
   }
 
-  log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+  log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
 };
 
