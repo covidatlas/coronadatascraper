@@ -73,15 +73,24 @@ const scraper = {
     '2020-3-18': async function() {
       this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
-      let cases = 0;
 
-      cases += parse.number(
-        $('tr.trFirstRow')
-          .find('td')
-          .first()
-          .text()
-      );
-      return { cases };
+      const positiveCases = $('td:contains("Positive Cases")').closest('tr');
+      if (positiveCases.text() !== 'Positive Cases') {
+        throw new Error('Unexpected table layout/labels');
+      }
+      if (
+        positiveCases
+          .next()
+          .next()
+          .text() !== 'Deaths'
+      ) {
+        throw new Error('Unexpected table layout/labels');
+      }
+
+      const cases = parse.number(positiveCases.prev().text());
+      const deaths = parse.number(positiveCases.next().text());
+
+      return { cases, deaths };
     }
   }
 };
