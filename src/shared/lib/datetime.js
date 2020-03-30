@@ -100,7 +100,7 @@ const buildFormatter = (pattern, defaultSeparator = '-') => {
    * @param {string=} separator The separator to use instead of the default
    * @returns {string} The formatted date
    */
-  const formatterFunction = (date, separator = defaultSeparator) => {
+  const formatterFunction = (date = today.utc(), separator = defaultSeparator) => {
     const separatorRegex = new RegExp(defaultSeparator, 'g');
     const patternWithSeparator = pattern.replace(separatorRegex, separator);
     const formatter = DateTimeFormatter.ofPattern(patternWithSeparator);
