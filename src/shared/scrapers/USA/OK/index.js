@@ -123,7 +123,7 @@ const scraper = {
     const $trs = $table.find('tbody').find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      let countyName = parse.string($tr.find('td:nth-child(1)').text());
+      const countyName = parse.string($tr.find('td:nth-child(1)').text());
       const countyObj = {
         county: geography.addCounty(parse.string(countyName)),
         cases: parse.number($tr.find('td:nth-child(2)').text() || 0),
