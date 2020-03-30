@@ -1,4 +1,5 @@
 import path from 'path';
+import * as countryLevels from '../../../shared/lib/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 const normalizeLocations = args => {
@@ -6,13 +7,15 @@ const normalizeLocations = args => {
 
   // Normalize data
   for (const location of locations) {
-    // Normalize states
-    if (location.country === 'USA') {
-      location.state = geography.toUSStateAbbreviation(location.state);
-    }
+    if (!countryLevels.getIdFromLocation(location)) {
+      if (location.country === 'USA') {
+        // Normalize states
+        location.state = geography.toUSStateAbbreviation(location.state);
+      }
 
-    // Normalize countries
-    location.country = geography.toISO3166Alpha3(location.country);
+      // Normalize countries
+      location.country = geography.toISO3166Alpha3(location.country);
+    }
 
     if (!location.active) {
       location.active = geography.getActiveFromLocation(location);
