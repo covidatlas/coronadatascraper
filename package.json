@@ -21,7 +21,7 @@
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
-    "test:tz": "node scripts/testTimezones.js",
+    "test:tz": "tape scripts/testTimezones.js | tap-spec",
     "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
@@ -82,6 +82,7 @@
     "rollup-plugin-serve": "^1.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^4.13.2",
+    "tape-spawn": "^1.4.2",
     "tape-watch": "^2.3.0",
     "windows-iana": "^4.2.0"
   },
