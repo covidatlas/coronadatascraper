@@ -1,13 +1,11 @@
 import extract from 'extract-zip';
 import fs, { promises as fsp } from 'fs';
 import got from 'got';
-import * as os from 'os';
-import * as path from 'path';
-import { sep } from 'path';
+import os from 'os';
+import path, { sep } from 'path';
 import stream from 'stream';
 import { promisify } from 'util';
 import * as fs_ from '../fs.js';
-import join from '../join.js';
 
 const pipeline = promisify(stream.pipeline);
 
@@ -20,7 +18,7 @@ export const folderFromZipURL = async (url, folder) => {
   // uses __cache__.json to cache the url and only download if needed
 
   try {
-    const cache = await fs_.readJSON(join(folder, '__cache__.json'));
+    const cache = await fs_.readJSON(path.join(folder, '__cache__.json'));
     const cacheURL = cache.url;
     if (cacheURL === url) {
       console.log(`  ZIP already downloaded: ${url}`);
@@ -33,7 +31,7 @@ export const folderFromZipURL = async (url, folder) => {
 
   const osTmp = os.tmpdir();
   const tmpDir = await fsp.mkdtemp(`${osTmp}${sep}`);
-  const tmpZip = join(tmpDir, 'tmp.zip');
+  const tmpZip = path.join(tmpDir, 'tmp.zip');
 
   try {
     await downloadFile(url, tmpZip);
@@ -53,7 +51,7 @@ export const folderFromZipURL = async (url, folder) => {
   }
 
   await fsp.unlink(tmpZip);
-  await fs_.writeJSON(join(tmpDir, '__cache__.json'), { url });
+  await fs_.writeJSON(path.join(tmpDir, '__cache__.json'), { url });
 
   await fsp.mkdir(path.dirname(folder), { recursive: true });
   await fsp.rmdir(folder, { recursive: true });
