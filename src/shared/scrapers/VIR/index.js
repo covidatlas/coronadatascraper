@@ -21,8 +21,7 @@ const scraper = {
     const results = {
       cases: 0,
       tested: 0,
-      deaths: 0,
-      active: 0
+      deaths: 0
     };
     const $ = await fetch.page(this.url);
     const $widget = $('div.widget:has(div.title-box:has(h1:contains(COVID-19 Cases)))');
@@ -43,9 +42,6 @@ const scraper = {
           break;
         case 'negative':
           results.tested += parse.number(value);
-          break;
-        case 'pending':
-          results.active = parse.number(value);
           break;
         // There have been no deaths at the time of writing so different word
         // choices are being used to better prepare to scrape these numbers.
