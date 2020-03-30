@@ -1,4 +1,5 @@
 import { join, resolve } from 'path';
+import * as countryLevels from '../../../shared/lib/country-levels.js';
 import * as fs from '../../../shared/lib/fs.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
@@ -70,7 +71,13 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
 
   const populations = await readPopulationData(featureCollection);
 
-  function getPopulation(location) {
+  async function getPopulation(location) {
+    // use countryLevel's getPopulation if id is present
+    const clId = countryLevels.getIdFromLocation(location);
+    if (clId) {
+      return countryLevels.getPopulation(clId);
+    }
+
     let population = null;
 
     if (location.city) {
@@ -157,7 +164,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       continue;
     }
 
-    const population = getPopulation(location);
+    const population = await getPopulation(location);
 
     if (population) {
       location.population = population;

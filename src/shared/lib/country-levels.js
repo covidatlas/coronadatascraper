@@ -85,5 +85,5 @@ export const getPopulation = async id => {
     return;
   }
 
-  console.log(locationData);
+  return locationData.population;
 };
