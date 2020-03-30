@@ -5,28 +5,19 @@ export const SEVERITY_MED = 'medium';
 export const SEVERITY_HIGH = 'high';
 export const SEVERITY_CRITICAL = 'critical';
 
-const errors = [];
-
-/**
- * This method handles location-related errors. With a standardized format,
- * errors can be writen as a CSV file allowing for an easy navigation of errors via
- * Google Sheets or Excel.
- */
-// function ErrorReporter {
-// FIXME this is not valid js ↓
-// errors = [
-//   {
-//     date: 'date',
-//     country: 'country',
-//     state: 'state',
-//     county: 'county',
-//     city: 'city',
-//     type: 'type',
-//     description: 'description',
-//     severity: 'severity',
-//     category: 'category'
-//   }
-// ];
+const errors = [
+  {
+    date: 'date',
+    country: 'country',
+    state: 'state',
+    county: 'county',
+    city: 'city',
+    type: 'type',
+    description: 'description',
+    severity: 'severity',
+    category: 'category'
+  }
+];
 
 /**
  * Logs an error.
