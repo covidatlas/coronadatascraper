@@ -4,9 +4,20 @@ import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
 
+const countryLevelMap = {
+  'Australian Capital Territory': 'iso2:AU-ACT',
+  'New South Wales': 'iso2:AU-NSW',
+  'Northern Territory': 'iso2:AU-NT',
+  Queensland: 'iso2:AU-QLD',
+  'South Australia': 'iso2:AU-SA',
+  Tasmania: 'iso2:AU-TAS',
+  Victoria: 'iso2:AU-VIC',
+  'Western Australia': 'iso2:AU-WA'
+};
+
 const scraper = {
   aggregate: 'state',
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainer: [maintainers.camjc],
   priority: 1,
   sources: [
@@ -28,8 +39,14 @@ const scraper = {
       const $tr = $(tr);
       const state = parse.string($tr.find('td:first-child').text());
       const cases = parse.number($tr.find('td:last-child').text());
+
+      const stateMapped = countryLevelMap[state];
+      if (!stateMapped) {
+        console.error(`  ❌ ${state} not found in countryLevelMap.`);
+      }
+
       states.push({
-        state,
+        stateMapped,
         cases
       });
     });
@@ -40,7 +57,6 @@ const scraper = {
 
     assert(casesFromTotalRow > 0, 'Total row is not reasonable');
     assert.equal(summedData.cases, casesFromTotalRow, 'Summed total is not equal to number in total row');
-
     return states;
   }
 };
