@@ -103,10 +103,11 @@ describe('Fetching', () => {
     test('when fetching an example url, we get the correct data back', async () => {
       const key = 'foo1';
       const value = 'bar1';
+      const date = false;
 
       mockFs.restore();
       const body = (
-        await fetch.headless(`https://postman-echo.com/get?${key}=${value}`, 'json', { alwaysRun: true })
+        await fetch.headless(`https://postman-echo.com/get?${key}=${value}`, date, { alwaysRun: true })
       ).text();
 
       const jsonBody = JSON.parse(body);
