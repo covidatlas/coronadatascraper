@@ -13,7 +13,8 @@ const truncate = d => d.slice(0, 10); // truncate ISO datetime to ISO date
 
 export const looksLike = {
   /**
-   * Checks that a string matches the pattern for an ISO date (YYYY-MM-DD).
+   * @param {string} s The string to check
+   * @returns {boolean} true if the given string matches the pattern for an ISO date (YYYY-MM-DD).
    * Doesn't check that string is a valid date, just that it has this form.
    */
   isoDate: s => /^\d{4}-\d{2}-\d{2}$/.test(s),
@@ -72,6 +73,7 @@ export const now = {
   utc: () => {
     return now.at('UTC');
   },
+
   /**
    * @param {string} tz The IANA label for the target timezone. Examples: `Australia/Sydney`, `America/Los_Angeles`
    * @returns {string} The current date and time at the given timezone, in ISO format. Example: `2020-03-16T23:45`
@@ -116,7 +118,7 @@ export const getMDYY = buildFormatter('M/d/yy', '/');
 
 /**
  * @param {string|Date} date The date to format. Defaults to the current date.
- * @param {string=_} separator The separator to use instead of the default
+ * @param {string} [separator='_'] The separator to use instead of the default
  * @returns The formatted date
  */
 export const getMonthDYYYY = (date = today.utc(), sep = '_') => {
@@ -146,9 +148,33 @@ export const getMonthDYYYY = (date = today.utc(), sep = '_') => {
  * @returns {boolean} true if the first date is earlier than the second date
  */
 export const dateIsBefore = (a, b) => parse(a) < parse(b);
+
+/**
+ * @param {string|Date} a The first date
+ * @param {string|Date} b The second date
+ * @returns {boolean} true if the first date is earlier than or equal to the second date
+ */
 export const dateIsBeforeOrEqualTo = (a, b) => parse(a) <= parse(b);
 
+/**
+ * @returns {string} The value of the SCRAPE_DATE environment variable, as an ISO date
+ */
 export const scrapeDate = () => parse(process.env.SCRAPE_DATE);
+
+/**
+ * @param {string|Date} d The date to compare to the scrape date.
+ * @returns {boolean} true if the date is earlier than the scrape date.
+ */
 export const scrapeDateIsBefore = d => scrapeDate() < parse(d);
+
+/**
+ * @param {string|Date} d The date to compare to the scrape date.
+ * @returns {boolean} true if the date is later than the scrape date.
+ */
 export const scrapeDateIsAfter = d => scrapeDate() > parse(d);
+
+/**
+ * @param {string|Date} d The date to compare to the scrape date.
+ * @returns {boolean} true if the date is equal to the scrape date.
+ */
 export const scrapeDateIs = d => parse(d) === scrapeDate();

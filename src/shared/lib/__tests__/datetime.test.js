@@ -12,12 +12,31 @@ import {
   dateIsBeforeOrEqualTo,
   scrapeDateIsBefore,
   scrapeDateIsAfter,
-  scrapeDateIs
+  scrapeDateIs,
+  looksLike
 } from '../datetime.js';
 
 const mockDate = d => jest.spyOn(global.Date, 'now').mockImplementationOnce(() => new Date(d).valueOf());
 
 describe(`datetime (system timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone})`, () => {
+  describe('looksLike', () => {
+    describe('isoDate', () => {
+      test('valid date', () => expect(looksLike.isoDate('2020-03-16')).toBe(true));
+      test('invalid date but right form', () => expect(looksLike.isoDate('1234-99-52')).toBe(true));
+      test('no padding', () => expect(looksLike.isoDate('2020-3-16')).toBe(false));
+      test('two-digit year', () => expect(looksLike.isoDate('20-03-16')).toBe(false));
+      test('etc', () => expect(looksLike.isoDate('pizza')).toBe(false));
+    });
+
+    describe('YYYYMD', () => {
+      test('valid date', () => expect(looksLike.YYYYMD('2020-3-16')).toBe(true));
+      test('invalid date but right form', () => expect(looksLike.YYYYMD('1234-9-52')).toBe(true));
+      test('padding', () => expect(looksLike.YYYYMD('2020-03-16')).toBe(true));
+      test('two-digit year', () => expect(looksLike.YYYYMD('20-03-16')).toBe(false));
+      test('etc', () => expect(looksLike.YYYYMD('pizza')).toBe(false));
+    });
+  });
+
   describe('parse', () => {
     test('from JS Date', () => expect(parse(new Date('2020-03-16'))).toEqual('2020-03-16'));
     test('from ISO date', () => expect(parse('2020-03-16')).toEqual('2020-03-16'));
