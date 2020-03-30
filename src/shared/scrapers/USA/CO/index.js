@@ -101,12 +101,10 @@ const scraper = {
       for (const county of data) {
         counties.push({
           county: parse.string(county.FULL_),
-          cases: parse.number(county.Number_of_COVID_positive_cases_),
-          population: parse.number(county.County_Population)
+          cases: parse.number(county.Number_of_COVID_positive_cases_)
         });
       }
       const stateData = transform.sumData(counties);
-      stateData.population = data[0].State_Population;
       counties.push(stateData);
       return counties;
     },
@@ -118,12 +116,10 @@ const scraper = {
       for (const county of data) {
         counties.push({
           county: parse.string(county.FULL_),
-          cases: parse.number(county.Number_of_COVID_positive_cases_),
-          population: parse.number(county.County_Population)
+          cases: parse.number(county.Number_of_COVID_positive_cases_)
         });
       }
       const stateData = transform.sumData(counties);
-      stateData.population = data[0].State_Population;
       counties.push(stateData);
       return counties;
     },
@@ -135,12 +131,11 @@ const scraper = {
       for (const county of data) {
         counties.push({
           county: parse.string(county.FULL_),
-          cases: parse.number(county.County_Pos_Cases),
-          population: parse.number(county.County_Population)
+          cases: parse.number(county.County_Pos_Cases)
         });
       }
       const stateData = transform.sumData(counties);
-      stateData.population = parse.number(data[0].State_Population);
+      stateData.deaths = parse.number(data[0].State_Deaths);
       counties.push(stateData);
       return counties;
     }
