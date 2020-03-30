@@ -4,9 +4,10 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as datetime from '../../../lib/datetime.js';
 import * as pdfUtils from '../../../lib/pdf.js';
+import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'MA',
@@ -20,12 +21,7 @@ const scraper = {
       description: 'Massachusetts Department of Public Health'
     }
   ],
-  maintainers: [
-    {
-      name: 'Quentin Golsteyn',
-      github: 'qgolsteyn'
-    }
-  ],
+  maintainers: [maintainers.qgolsteyn],
   _counties: [
     'Barnstable County',
     'Berkshire County',
@@ -62,7 +58,7 @@ const scraper = {
 
       const startIndex = rows.findIndex(cols => cols[0] && cols[0].includes('County')) + 1;
 
-      for (let i = startIndex; !rows[i][0].includes('Unknown') && !rows[i][0].includes('Sex'); i++) {
+      for (let i = startIndex; !rows[i][0].includes('Sex'); i++) {
         const data = rows[i];
         const countyName = data[0];
         const cases = data[1];
@@ -84,14 +80,19 @@ const scraper = {
           });
         }
 
+        if (countyName === 'Unknown') {
+          countyObj.county = UNASSIGNED;
+        }
+
         // Sometimes, numbers end up in two objects
         if (data.length > 2) {
           // Find all number parts
           let caseString = '';
           for (const part of data.slice(1)) {
-            if (!Number.isNaN(parseInt(part, 10))) {
-              caseString += part;
+            if (Number.isNaN(parseInt(part, 10))) {
+              break;
             }
+            caseString += part;
           }
           countyObj.cases = parse.number(caseString);
         }

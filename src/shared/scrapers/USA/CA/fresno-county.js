@@ -14,7 +14,13 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     return {
-      cases: parse.number($('li:contains("Total cases")').text()),
+      cases: parse.number(
+        $('li:contains("Total cases")')
+          .children()
+          .remove()
+          .end()
+          .text()
+      ),
       deaths: parse.number($('li:contains("Total deaths")').text())
     };
   }

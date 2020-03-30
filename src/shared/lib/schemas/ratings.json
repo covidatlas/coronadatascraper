@@ -29,6 +29,15 @@
     },
     "aggregate": {
       "type": "string"
+    },
+    "sources": {
+      "type": "array"
+    },
+    "curators": {
+      "type": "array"
+    },
+    "maintainers": {
+      "type": "array"
     }
   },
   "dependencies": {

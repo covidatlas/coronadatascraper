@@ -12,15 +12,16 @@ const scraper = {
   type: 'paragraph',
   async scraper() {
     const $ = await fetch.page(this.url);
-    let cases = 0;
 
-    cases += parse.number(
-      $('tr.titlerow')
-        .find('td:contains("San Luis Obispo County")')
-        .next()
-        .text()
-    );
+    let cases = $('td:contains("San Luis Obispo County")')
+      .next()
+      .text();
 
+    if (cases === '') {
+      throw new Error('Empty cases string');
+    }
+
+    cases = parse.number(cases);
     return { cases };
   }
 };
