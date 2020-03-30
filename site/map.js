@@ -335,9 +335,8 @@ function showMap() {
     });
   }
 
-  loadData('locations.json', 'locations');
-  loadData('timeseries.json', 'timeseries');
   loadData('features.json', 'features');
+  loadData('timeseries-locations.json');
 }
 
 export default showMap;
