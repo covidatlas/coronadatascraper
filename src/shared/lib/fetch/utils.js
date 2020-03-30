@@ -18,10 +18,8 @@ export const folderFromZipURL = async (url, folder) => {
   // downloads a zip from an URL and extracts into a folder
   // uses __cache__.json to cache the url and only download if needed
 
-  const cacheFile = join(folder, '__cache__.json');
-
   try {
-    const cache = await fs_.readJSON(cacheFile);
+    const cache = await fs_.readJSON(join(folder, '__cache__.json'));
     const cacheURL = cache.url;
     if (cacheURL === url) {
       console.log(`  ZIP already downloaded: ${url}`);
