@@ -49,7 +49,10 @@ const scraper = {
       this.url = 'https://health-infobase.canada.ca/src/data/summary_current.csv';
       const data = await fetch.csv(this.url, false);
 
-      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
+      // FIXME when we roll out new TZ support!
+      const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/Toronto')) : datetime.getDate();
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+
       let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
       const lastDateParts = data[data.length - 1].date.split('-');
       const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);

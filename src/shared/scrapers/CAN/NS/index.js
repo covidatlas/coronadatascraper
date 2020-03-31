@@ -26,7 +26,9 @@ const scraper = {
       throw new Error('Unknown headers in CSV');
     }
 
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
+    // FIXME when we roll out new TZ support!
+    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/Halifax')) : datetime.getDate();
+    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
     let scrapeDateString = datetime.getYYYYMD(scrapeDate);
     const lastDateInTimeseries = new Date(`${data[data.length - 1].Date} 12:00:00`);
     const firstDateInTimeseries = new Date(`${data[0].Date} 12:00:00`);

@@ -1097,7 +1097,10 @@ const scraper = {
     Tocantins: ['TO', 1572866, [-10.1753, -48.2982]]
   },
   async scraper() {
-    const scrapeDate = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : datetime.getDate();
+    return {};
+    // FIXME when we roll out new TZ support!
+    const fallback = process.env.USE_ISO_DATETIME ? datetime.now.at('America/Sao_Paulo') : datetime.getDate();
+    const scrapeDate = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : fallback;
     const ufs = this._ufs;
     const labels = {};
     const dataIds = this._dataIds;
