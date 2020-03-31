@@ -18,7 +18,6 @@ const scraper = {
   ],
   url: `https://covid.saude.gov.br/`,
   timeseries: true,
-  aggregate: 'county',
   maintainers: [
     {
       name: 'Felipe Roberto',
@@ -87,11 +86,12 @@ const scraper = {
             10
           ),
           population: ufs[uf][1],
-          coordinates: [ufs[uf][2][1], ufs[uf][2][0]]
+          coordinates: [ufs[uf][2][1], ufs[uf][2][0]],
+          aggregate: 'state'
         });
       });
 
-    response.push(transform.sumData(response));
+    response.push(transform.sumData(response, { aggregate: 'state' }));
 
     return response;
   }
