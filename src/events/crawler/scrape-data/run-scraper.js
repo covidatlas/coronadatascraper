@@ -63,7 +63,10 @@ export function runScraper(location) {
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
-    const targetDate = process.env.SCRAPE_DATE || datetime.getDate();
+    let env;
+    if (process.env.SCRAPE_DATE) env = datetime.parse(process.env.SCRAPE_DATE);
+    const targetDate = env || datetime.getDate();
+
     let scraperToUse = null;
     for (const [date, scraper] of Object.entries(location.scraper)) {
       if (datetime.dateIsBeforeOrEqualTo(date, targetDate)) {

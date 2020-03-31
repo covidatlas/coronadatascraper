@@ -45,6 +45,8 @@ export const getCachedFileName = (url, type) => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
+  // FIXME when we roll out new TZ support!
+  if (date) date = datetime.getYYYYMD(date);
   let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
   // Rewire cache path for testing
   if (process.env.OVERRIDE_CACHE_PATH) cachePath = process.env.OVERRIDE_CACHE_PATH;
