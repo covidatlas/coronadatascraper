@@ -60,6 +60,11 @@ const scraper = {
           locationObj.city = row.county;
         } else {
           locationObj.county = geography.getCounty(row.county, row.state);
+
+          if (locationObj.county === '(unassigned)') {
+            // Skip unassigned locations from NYT, otherwise they mess up rollup totals
+            continue;
+          }
         }
         locationsByState[locationObj.state].push(locationObj);
         locations.push(locationObj);
