@@ -3,8 +3,8 @@
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import * as fetch from './lib/fetch.js';
 
-import { isCounty, isState, isCountry, getLocationGranularityName } from '../src/events/crawler/lib/geography.js';
 import { getRatio, getPercent } from './lib/math.js';
+import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
 
 import graph from './graph.js';
@@ -100,6 +100,10 @@ function populateMap() {
   initData();
   updateMap();
 
+  /**
+   * @param {{ name: string; population: string?; }} location
+   * @param {{ cases: number; deaths:number?; recovered:number?; active:number?; }} locationData
+   */
   function popupTemplate(location, locationData) {
     let htmlString = `<div class="cds-Popup">`;
     htmlString += `<h6 class="spectrum-Heading spectrum-Heading--XXS">${location.name}</h6>`;
@@ -294,7 +298,7 @@ function populateMap() {
       // based on the feature found.
       popup
         .setLngLat(e.lngLat)
-        .setHTML(popupTemplate(location, locationData, feature))
+        .setHTML(popupTemplate(location, locationData))
         .addTo(map);
     }
   }

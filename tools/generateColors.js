@@ -1,5 +1,5 @@
 import { generateAdaptiveTheme } from '@adobe/leonardo-contrast-colors';
-import * as fs from '../src/events/crawler/lib/fs.js';
+import * as fs from '../src/shared/lib/fs.js';
 // returns theme colors as JSON
 function generateColors() {
   const cdsTheme = generateAdaptiveTheme({

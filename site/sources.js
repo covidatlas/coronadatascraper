@@ -1,49 +1,16 @@
 /* global document, window */
 
 import { getGrade } from './lib/math.js';
-import { getName } from '../src/events/crawler/lib/geography.js';
+import { getContributors } from './lib/templates.js';
+import { getName } from './lib/geography.js';
 import * as fetch from './lib/fetch.js';
 
-function getURLFromContributor(curator) {
-  if (!curator) {
-    return '';
-  }
-
-  let url;
-  if (curator.url) {
-    url = curator.url;
-  } else if (curator.twitter) {
-    url = `https://twitter.com/${curator.twitter.replace('@', '')}`;
-  } else if (curator.github) {
-    url = `https://github.com/${curator.github}`;
-  } else if (curator.email) {
-    url = `mailto:${curator.email}`;
-  }
-  return url;
-}
-
-function getContributors(contributors, byString) {
+function getContributorsHeading(contributors, byString) {
   let html = '';
 
   if (contributors) {
     html += `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-contributorName">${byString} `;
-    for (const [index, contributor] of Object.entries(contributors)) {
-      if (index !== '0') {
-        html += ', ';
-      }
-      const contributorURL = getURLFromContributor(contributor);
-      if (contributorURL) {
-        html += `<a href="${getURLFromContributor(contributor)}" class="spectrum-Link">`;
-      }
-      html += contributor.name;
-      if (contributorURL) {
-        html += `</a>`;
-      }
-      if (contributor && (contributor.country || contributor.flag)) {
-        html += ' ';
-        html += contributor.flag ? contributor.flag : `(${contributor.country})`;
-      }
-    }
+    html += getContributors(contributors);
     html += `</h3>`;
   }
 
@@ -56,10 +23,12 @@ function ratingTemplate(source, index) {
     csv: '✅',
     table: '⚠️',
     list: '❌',
-    paragraph: '🤮'
+    paragraph: '🤮',
+    pdf: '🤮'
   };
   const typeNames = {
     json: 'JSON',
+    pdf: 'PDF',
     csv: 'CSV'
   };
 
@@ -80,9 +49,9 @@ function ratingTemplate(source, index) {
     .replace(/,/g, '-')
     .replace(/\s/g, '')}`;
 
-  const curators = getContributors(source.curators, 'Curated by');
-  const sources = getContributors(source.sources, 'Sourced from');
-  const maintainers = getContributors(source.maintainers, 'Maintained by');
+  const curators = getContributorsHeading(source.curators, 'Curated by');
+  const sources = getContributorsHeading(source.sources, 'Sourced from');
+  const maintainers = getContributorsHeading(source.maintainers, 'Maintained by');
   return `
   <li class="cds-ReportCard" id="${slug}">
     <div class="cds-ReportCard-grade cds-ReportCard-grade--${getGrade(source.rating).replace(

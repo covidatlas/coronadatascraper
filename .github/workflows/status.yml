@@ -31,9 +31,18 @@ jobs:
           yarn
       - name: Build
         run: |
-          yarn start
+          yarn build
+      - name: QA
+        run: |
+          yarn qa
+      - name: Upload reports
+        uses: actions/upload-artifact@v1
+        with:
+          name: reports
+          path: dist/reports
       - name: Notify Slack
         env:
+          RUN_NUMBER: ${{ github.run_id }}
           SLACK_STATUS_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
         run: |
           node ./scripts/statusSlackBot.js send ${SLACK_STATUS_HOOK}

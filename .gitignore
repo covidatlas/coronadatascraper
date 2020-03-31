@@ -1,5 +1,9 @@
-cache/*
-dist/
-node_modules
 .DS_Store
 .vscode
+cache/*
+coronavirus-data-sources/
+dist/
+node_modules
+public/static.json
+sam.json
+sam.yaml

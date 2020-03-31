@@ -1,14 +1,24 @@
 {
-  "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:jest/style", "plugin:prettier/recommended"],
-  "ignorePatterns": ["dist/", "src/events/crawler/scrapers/**/tests/"],
-  "parser": "babel-eslint",
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "src/shared/scrapers/**/tests/",
+    "vendor/"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
   "rules": {
     "consistent-return": "off",
     "func-names": "off",
     "import/extensions": ["error", "ignorePackages"],
-    "jest/expect-expect": "off",
-    "jest/no-standalone-expect": "off",
-    "jest/no-try-expect": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "no-async-promise-executor": "off",
     "no-await-in-loop": "off",
     "no-console": "off",
@@ -18,6 +28,7 @@
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
     "no-shadow": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-loop-func": "off"
   }
 }
