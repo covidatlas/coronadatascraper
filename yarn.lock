@@ -286,6 +286,11 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
+"@popperjs/core@^2.0.4":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.1.1.tgz#12c572ab88ef7345b43f21883fca26631c223085"
+  integrity sha512-sLqWxCzC5/QHLhziXSCAksBxHfOnQlhPRVgPK0egEw+ktWvG75T2k+aYWVjVh9+WKeT3tlG3ZNbZQvZLmfuOIw==
+
 "@rollup/plugin-json@^4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-json/-/plugin-json-4.0.2.tgz#482185ee36ac7dd21c346e2dbcc22ffed0c6f2d6"
@@ -344,10 +349,33 @@
     "@spectrum-web-components/shared" "^0.4.3"
     tslib "^1.10.0"
 
+"@spectrum-web-components/dropdown@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/dropdown/-/dropdown-0.4.2.tgz#f8ac5b8b9b444a888c2f89d000156edb07d915a5"
+  integrity sha512-Td5vHb4IzJezvzz+Kp1WSe6LrQXzutXvQFZ0fGr/aRZfDiPB56iiQ/kGlA10ujcLD+dIE0y7/Odid3CKbhoqQw==
+  dependencies:
+    "@spectrum-web-components/button" "^0.4.6"
+    "@spectrum-web-components/icon" "^0.4.4"
+    "@spectrum-web-components/icons" "^0.2.3"
+    "@spectrum-web-components/menu" "^0.2.4"
+    "@spectrum-web-components/menu-item" "^0.4.1"
+    "@spectrum-web-components/overlay" "^0.3.2"
+    "@spectrum-web-components/popover" "^0.3.4"
+    "@spectrum-web-components/shared" "^0.4.3"
+    tslib "^1.10.0"
+
 "@spectrum-web-components/icon@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/icon/-/icon-0.4.4.tgz#e299f14318248312cefa6c259aadc8b15c01e0cf"
   integrity sha512-AOb10ij6JOQnwZdUz3nidcGWFS1dDx5dmLFY1CD8wC7DUOqrKJcy58BeQOCYlY5ByGYisA7qw5266A+E921H5Q==
+  dependencies:
+    "@spectrum-web-components/iconset" "^0.1.7"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/icons@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons/-/icons-0.2.3.tgz#9f2c68cb40143521918a23b57e7e7a79cfa80b88"
+  integrity sha512-z0BrZYEfJi45ma7u4ElIROAMqODkfJKvwJHHF8/Apk3eQYiEZlLPHq9ZmTZ3w9/p7htfPXrUeaF+qY6dpC89vQ==
   dependencies:
     "@spectrum-web-components/iconset" "^0.1.7"
     tslib "^1.10.0"
@@ -359,12 +387,89 @@
   dependencies:
     tslib "^1.10.0"
 
+"@spectrum-web-components/menu-item@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/menu-item/-/menu-item-0.4.1.tgz#7d97e43ea68b191b49d6507f6ed4ee02c5c04dcc"
+  integrity sha512-8oQDXwScn61Q+KpaMWyzrt2dxhpIRLPCyR5ErXATPJRqYURyU70bmgG51Mn7VXXkztYpZLwAFqwKOHWvrBdFTA==
+  dependencies:
+    "@spectrum-web-components/button" "^0.4.6"
+    "@spectrum-web-components/icon" "^0.4.4"
+    "@spectrum-web-components/icons" "^0.2.3"
+    "@spectrum-web-components/shared" "^0.4.3"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/menu@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/menu/-/menu-0.2.4.tgz#9d2361312d8bdba35951e6b913e19f44f6e4a77e"
+  integrity sha512-+EH3WarecCVIQypiPvDz6FsmqGAW5XFfJKcxna90JYu6WzEhUmNlZkaJ5IUooMhhn93cS6vI+4UcdcAwDXjqgw==
+  dependencies:
+    tslib "^1.10.0"
+
+"@spectrum-web-components/overlay@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.3.2.tgz#fcfbdab3d71bff21583b6f85295ba46b6449d03c"
+  integrity sha512-U+2+W9Fg8DS6KfPP5nxL7FGsgXVURV/VREd9JcfMTE/1fvXT/ZArRgtngB+MM6XX0Ip/OXf6AWxhxgR9F5BU2Q==
+  dependencies:
+    "@popperjs/core" "^2.0.4"
+    "@spectrum-web-components/theme" "^0.3.1"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/popover@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.3.4.tgz#c33d258d6819860055e9873f49bb9e09b4405a2c"
+  integrity sha512-hdQn0Bx5UZ6c//Vg6dnCvt7/CedUGZGa8lcgXAQzig4xEjh0D3pF0QZgklWzR55HytVJleKlyavA3XyDrdH+sg==
+  dependencies:
+    "@spectrum-web-components/overlay" "^0.3.2"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/search@^0.2.10":
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/search/-/search-0.2.10.tgz#4174c801f23530021e7d9546a8a74fdd1ab083b1"
+  integrity sha512-fjD/Bc/aHsFMtUpkwTMsIRTjmO83PjM8T4Bylr8Ds2TjMz9bmkT0v6EqUZVhYFm1mSO5pIG6A7aY9GUfnfahSA==
+  dependencies:
+    "@spectrum-web-components/button" "^0.4.6"
+    "@spectrum-web-components/icon" "^0.4.4"
+    "@spectrum-web-components/icons" "^0.2.3"
+    "@spectrum-web-components/textfield" "^0.3.4"
+    tslib "^1.10.0"
+
 "@spectrum-web-components/shared@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/shared/-/shared-0.4.3.tgz#25834594c5bf1f56851edf145edcac72ca04e089"
   integrity sha512-ZHYhMSDSOUDh0axqnPRMx9aW/OzdrfiVRCDiMQoAqKi7++UCm25fuxkN3SfRxbmkAdeLhSGwg08fs1xauXVYtg==
   dependencies:
     focus-visible "^5.0.2"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/sidenav@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/sidenav/-/sidenav-0.3.4.tgz#8843ae8d450965321a46c0a0546d392e71d620f8"
+  integrity sha512-qVf1++K8/4250W16TQtgoS0Bcio0iJneLNKcP2a0z2nExD25AYl4K+NZ6/fpYSFqwbwD/VBjqAMpvI4lkSVTyg==
+  dependencies:
+    "@spectrum-web-components/shared" "^0.4.3"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/styles@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.5.0.tgz#94fa5280d2f774e4cc72e47b6c0b38f7ec73dcf3"
+  integrity sha512-Xq4YvOFYGOuzI3qgYF7eF17g049fQVUIntA+NcKSuU1ZfvMS41+cz67fkWydtorMguCbUgIr//g+xFygF4mrtQ==
+
+"@spectrum-web-components/textfield@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/textfield/-/textfield-0.3.4.tgz#4149a440d6f2a151764daf971e9e5c195e13cc7e"
+  integrity sha512-WHobKbSnPsbF5EuRJ9ruvLDbfq1ec24a+P4PlZXmA4j5bWpYqBLT9oIJiUbM7HS4GWMg3unvQA80bOYt939unQ==
+  dependencies:
+    "@spectrum-web-components/icon" "^0.4.4"
+    "@spectrum-web-components/icons" "^0.2.3"
+    "@spectrum-web-components/shared" "^0.4.3"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/theme@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.3.1.tgz#64a3e71cb4251793f3a959ded521a656db104957"
+  integrity sha512-gHdJ2U6vror6J1gf2n7uQevn6rP6Z9NmdYwDAdteP3ulj1JkocwrmKSOerWH713b2cJo133OlOBJFeI9y1zvNw==
+  dependencies:
+    "@spectrum-web-components/styles" "^0.5.0"
     tslib "^1.10.0"
 
 "@szmarczak/http-timer@^1.1.2":
