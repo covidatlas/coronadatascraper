@@ -5,8 +5,8 @@ import maintainers from '../../../lib/maintainers.js';
 
 // Changing free-text media release.
 // They have a PowerBI dashboard at https://app.powerbi.com/view?r=eyJrIjoiODBmMmE3NWQtZWNlNC00OWRkLTk1NjYtMjM2YTY1MjI2NzdjIiwidCI6ImMwZTA2MDFmLTBmYWMtNDQ5Yy05Yzg4LWExMDRjNGViOWYyOCJ9
-// No idea how to get the data out of that though.
-// We've emailed them on 2020-03-28 to try to get a usable format.
+// https://github.com/vungyn/vic-covid-19 has managed to scrape it.
+// We've emailed them on 2020-03-28 to try to get a more usable format.
 // For now lets fall back to the AUS index scraper when we can't scrape successfully.
 
 const scraper = {
@@ -32,7 +32,6 @@ const scraper = {
     const matches = paragraph.match(/cases in Victoria \w* (?<casesString>\d+)/) || {};
     const { casesString } = matches.groups || {};
     const data = {
-      state: this.state,
       cases: parse.number(casesString)
     };
 

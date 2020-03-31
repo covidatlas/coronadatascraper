@@ -4659,7 +4659,7 @@ pbf@^3.1.0, pbf@^3.2.0:
     ieee754 "^1.1.12"
     resolve-protobuf-schema "^2.1.0"
 
-pdf2json@^1.1.8:
+pdf2json@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pdf2json/-/pdf2json-1.2.0.tgz#fdb395fad1d18248756cfbc758066a2f15b903bf"
   integrity sha512-Z/m+OFOe13Nn2SHQNSINZ6Mh2b8t2bK3whL3L6b5Av1wqDvotYvpMg1Zi8aEPV37jF0jG0yQ83c8XuuNbIsn6Q==
@@ -4668,13 +4668,6 @@ pdf2json@^1.1.8:
     lodash "^4.17.13"
     optimist "^0.6.1"
     xmldom "^0.3.0"
-
-pdfreader@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/pdfreader/-/pdfreader-1.0.6.tgz#d39586af64cfe7a7868d14bc2e4c999be06ea388"
-  integrity sha512-BSGs9VPjfOoOwXGns/WU7ZOe83t12r3mTko6zVB7kYedAkC+HTa1iuG0KfgomHDEH+joRL7peXJvytcEXcda6w==
-  dependencies:
-    pdf2json "^1.1.8"
 
 pend@~1.2.0:
   version "1.2.0"

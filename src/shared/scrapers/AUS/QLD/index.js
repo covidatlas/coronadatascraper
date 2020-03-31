@@ -30,7 +30,6 @@ const scraper = {
       const paragraph = $('#content h2:first-of-type + p').text();
       const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
       return {
-        state: this.state,
         cases: parse.number(casesString)
       };
     },
@@ -39,7 +38,6 @@ const scraper = {
       const $table = $('#content table');
       const $totalRow = $table.find('tbody > tr:last-child');
       const data = {
-        state: this.state,
         cases: parse.number($totalRow.find('td:last-child').text())
       };
       assert(data.cases > 0, 'Cases is not reasonable');

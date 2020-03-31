@@ -1,4 +1,5 @@
 import * as schema from '../../../shared/lib/schema.js';
+import log from '../../../shared/lib/log.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
 const validateSources = async args => {
@@ -13,14 +14,14 @@ const validateSources = async args => {
         .join('; ')}`;
       errors.push(msg);
       reporter.logError('source validation', 'invalid source object', msg, 'low', source);
-      console.log(`  ❌ ${msg}`);
+      log.error(`  ❌ ${msg}`);
     }
   }
 
   if (errors.length) {
-    console.log(`❌ Found ${errors.length} invalid scrapers`);
+    log.error(`❌ Found ${errors.length} invalid scrapers`);
   } else {
-    console.log(`✅ All scrapers are valid!`);
+    log(`✅ All scrapers are valid!`);
   }
 
   report.sources = {

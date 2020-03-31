@@ -3,6 +3,7 @@
 import needle from 'needle';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
+import log from '../log.js';
 
 const CHROME_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';
@@ -44,10 +45,10 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    console.log('  🚦  Loading data for %s from server', url);
+    log('  🚦  Loading data for %s from server', url);
 
     if (disableSSL) {
-      console.log('  ⚠️  SSL disabled for this resource');
+      log('  ⚠️  SSL disabled for this resource');
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
 
@@ -57,7 +58,7 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       tries++;
       if (tries > 1) {
         // sleep a moment before retrying
-        console.log(`  ⚠️  Retrying (${tries})...`);
+        log(`  ⚠️  Retrying (${tries})...`);
         await new Promise(r => setTimeout(r, 2000));
       }
 
@@ -100,11 +101,11 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       }
 
       // 400-499 means "not found" and a retry probably won't help -- return null
-      console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+      log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
       return null;
     }
 
-    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
     return null;
   }
 

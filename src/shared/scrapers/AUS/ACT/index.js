@@ -1,24 +1,16 @@
 import assert from 'assert';
-import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
+import * as parse from '../../../lib/parse.js';
+import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
+import getKey from '../_shared/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
-/**
- * @param {string} rowLabel
- */
-const getKey = rowLabel => {
-  const lowerLabel = rowLabel.toLowerCase();
-  if (lowerLabel.includes('confirmed case')) {
-    return 'cases';
-  }
-  if (lowerLabel.includes('tested negative')) {
-    return 'tested';
-  }
-  if (lowerLabel.includes('recovered')) {
-    return 'recovered';
-  }
-  throw new Error(`There is a row we are not expecting: ${lowerLabel}`);
-};
+const labelFragmentsByKey = [
+  { cases: 'confirmed case' },
+  { testedNegative: 'tested negative' },
+  { recovered: 'recovered' },
+  { deaths: 'lives lost' }
+];
 
 const pivotTheTable = ($trs, $) => {
   const dataPairs = [];
@@ -55,20 +47,17 @@ const scraper = {
       const $trs = $table.find('div');
       const data = {
         deaths: 0,
-        recovered: 0,
-        state: this.state
+        recovered: 0
       };
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const [label, value] = $tr.text().split(': ');
-        const key = getKey(label);
+        const key = getKey({ label, labelFragmentsByKey });
         data[key] = parse.number(value);
       });
-      if (data.tested > 0) {
-        data.tested += data.cases; // `tested` is only tested negative in this table, add the positive tested.
-      }
+
       assert(data.cases > 0, 'Cases is not reasonable');
-      return data;
+      return getDataWithTestedNegativeApplied(data);
     },
     '2020-3-29': async function() {
       const $ = await fetch.page(this.url);
@@ -77,21 +66,14 @@ const scraper = {
 
       const dataPairs = pivotTheTable($trs, $);
 
-      const data = {
-        deaths: 0,
-        recovered: 0,
-        state: this.state
-      };
+      const data = {};
       dataPairs.forEach(([label, value]) => {
-        const key = getKey(label);
+        const key = getKey({ label, labelFragmentsByKey });
         data[key] = parse.number(value);
       });
 
-      if (data.tested > 0) {
-        data.tested += data.cases; // `tested` is only tested negative in this table, add the positive tested.
-      }
       assert(data.cases > 0, 'Cases is not reasonable');
-      return data;
+      return getDataWithTestedNegativeApplied(data);
     }
   }
 };
