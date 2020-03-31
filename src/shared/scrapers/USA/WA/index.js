@@ -157,7 +157,7 @@ const scraper = {
       return counties;
     },
     '2020-3-30': async function() {
-      let counties = [];
+      const counties = [];
       this.url =
         'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';
       this.type = 'json';
@@ -180,9 +180,12 @@ const scraper = {
         });
       });
 
-      counties.push(transform.sumData(counties));
-      counties = geography.addEmptyRegions(counties, this._counties, 'county');
-      return counties;
+      const totals = {
+        cases: data.features[0].attributes.CV_State_Cases,
+        deaths: data.features[0].attributes.CV_State_Deaths
+      };
+      counties.push(totals);
+      return geography.addEmptyRegions(counties, this._counties, 'county');;
     }
   }
 };
