@@ -58,5 +58,17 @@ export const parse = date => {
       throw couldNotParseDateError(date);
     }
   }
+
+  // Numbers
+  if (typeof date === 'number') {
+    // for some values, this will return the previous day when run > GMT
+    try {
+      const jsdate = new Date(date);
+      return truncate(jsdate.toISOString());
+    } catch (err) {
+      throw couldNotParseDateError(date);
+    }
+  }
+
   throw couldNotParseDateError(date);
 };

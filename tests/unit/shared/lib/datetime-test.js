@@ -85,6 +85,7 @@ test('parse', t => {
   t.equal(parse('3/16/20'), '2020-03-16', 'from M-D-YY');
   t.equal(parse('3/16/70'), '2070-03-16', 'M-D-YY assumes current century');
   t.equal(parse('2020-3-24 16:00:00'), '2020-03-24', 'yyyy-M-d hh:mm:ss');
+  t.equal(parse(1585540800000), '2020-03-30', 'from epoch number');
 
   // passes <= GMT, fails > GMT
   // t.equal(parse('March 16, 2020'), '2020-03-16', 'fallthrough to Date');
