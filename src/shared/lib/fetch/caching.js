@@ -9,6 +9,7 @@ import crypto from 'crypto';
 import join from '../join.js';
 import * as datetime from '../datetime.js';
 import * as fs from '../fs.js';
+import log from '../log.js';
 
 const DEFAULT_CACHE_PATH = 'coronadatascraper-cache';
 const TIMESERIES_CACHE_PATH = 'cache';
@@ -33,7 +34,7 @@ const hash = str => {
  */
 export const getCachedFileName = (url, type) => {
   const urlHash = hash(url);
-  const extension = type || path.extname(url) || 'txt';
+  const extension = type || path.extname(url).replace(/^\./, '') || 'txt';
   return `${urlHash}.${extension}`;
 };
 
@@ -68,14 +69,14 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
 
   if (await fs.exists(filePath)) {
-    console.log('  ⚡️ Cache hit for %s from %s', url, filePath);
+    log('  ⚡️ Cache hit for %s from %s', url, filePath);
     return fs.readFile(filePath, encoding);
   }
   if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
-    console.log('  ⚠️ Cannot go back in time to get %s, no cache present', url);
+    log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  console.log('  🐢  Cache miss for %s at %s', url, filePath);
+  log('  🐢  Cache miss for %s at %s', url, filePath);
   return CACHE_MISS;
 };
 

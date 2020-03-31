@@ -10,7 +10,6 @@ import * as rules from '../../lib/rules.js';
 
 const scraper = {
   country: 'CAN',
-  type: 'table',
   sources: [
     {
       description: 'Health Promotion and Chronic Disease Prevention Branch',
@@ -18,6 +17,8 @@ const scraper = {
       url: 'https://health-infobase.canada.ca/'
     }
   ],
+  url: 'https://health-infobase.canada.ca/src/data/covidLive/covid19.csv',
+  type: 'csv',
   _reject: [{ state: 'Repatriated travellers' }, { state: 'Total cases' }, { state: 'Total' }, { state: 'Canada' }],
   aggregate: 'state',
   scraper: {
@@ -45,11 +46,11 @@ const scraper = {
     },
     */
     '0': async function() {
-      this.type = 'csv';
-      this.url = 'https://health-infobase.canada.ca/src/data/summary_current.csv';
       const data = await fetch.csv(this.url, false);
 
-      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
+      let scrapeDate = process.env.SCRAPE_DATE
+        ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`)
+        : new Date(`${datetime.getYYYYMD()} 12:00:00`);
       let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
       const lastDateParts = data[data.length - 1].date.split('-');
       const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);

@@ -2,26 +2,16 @@ import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
+import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
+import getKey from '../_shared/get-key.js';
 
-const getKey = rowLabel => {
-  const lowerLabel = rowLabel.toLowerCase();
-  if (lowerLabel.includes('cases (positive)')) {
-    return 'cases';
-  }
-  if (lowerLabel.includes('tested (negative)')) {
-    return 'tested';
-  }
-  if (lowerLabel.includes('recovered')) {
-    return 'recovered';
-  }
-  if (lowerLabel.includes('deaths')) {
-    return 'deaths';
-  }
-  if (lowerLabel.includes('unknown source')) {
-    return 'discard';
-  }
-  throw new Error(`There is a row we are not expecting: ${lowerLabel}`);
-};
+const labelFragmentsByKey = [
+  { cases: 'cases (positive)' },
+  { tested: 'tested (negative)' },
+  { recovered: 'recovered' },
+  { deaths: 'deaths' },
+  { discard: 'unknown source' }
+];
 
 const scraper = {
   country: 'AUS',
@@ -41,17 +31,15 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('table:first-of-type');
     const $trs = $table.find('tbody > tr:not(:first-child)');
-    const data = { state: this.state };
+    const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey($tr.find('td:first-child').text());
+      const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
       data[key] = parse.number($tr.find('td:last-child').text());
     });
-    if (data.tested > 0) {
-      data.tested += data.cases; // `tested` is only tested negative in this table, add the positive tested.
-    }
+
     assert(data.cases > 0, 'Cases is not reasonable');
-    return data;
+    return getDataWithTestedNegativeApplied(data);
   }
 };
 

@@ -1,10 +1,11 @@
 import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
-import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
+import log from '../log.js';
 import { get } from './get.js';
+import pdfParser from './pdf-parser.js';
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
 // order to be mocked independently of the rest of these functions. Here we re-export `get` as
@@ -44,7 +45,7 @@ export const page = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const json = async (url, date, options = {}) => {
-  console.log(url);
+  log(url);
   const body = await get(url, 'json', date, options);
 
   if (!body) {
@@ -108,39 +109,21 @@ export const tsv = async (url, date, options = {}) => {
  * @param {*} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
- *  - rowTolerance: allowed variance in the y-axis. Allows elements with small discrepancies in their y
- *                  value to be considered as being part of the same row, defaults to 1 unit
  */
 export const pdf = async (url, date, options) => {
-  return new Promise(async (resolve, reject) => {
-    const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
+  const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
 
-    if (!body) {
-      resolve(null);
-      return;
-    }
+  if (!body) {
+    return null;
+  }
 
-    const data = [];
+  const data = await pdfParser(body);
 
-    let currentPage = 0;
-
-    new PdfReader().parseBuffer(body, (err, item) => {
-      if (err) {
-        reject(err);
-      } else if (!item) {
-        data.push(null);
-        resolve(data);
-      } else if (item.page) {
-        currentPage += 1;
-      } else if (item.text) {
-        data.push({ page: currentPage, x: item.x, y: item.y, w: item.w, text: item.text.trim() });
-      }
-    });
-  });
+  return data;
 };
 
 const fetchHeadless = async url => {
-  console.log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
+  log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -153,7 +136,7 @@ const fetchHeadless = async url => {
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
-      console.log(`  ⚠️  Retrying (${tries})...`);
+      log(`  ⚠️  Retrying (${tries})...`);
       await new Promise(r => setTimeout(r, 2000));
     }
 
@@ -185,18 +168,18 @@ const fetchHeadless = async url => {
 
       // 400-499 means "not found", retrying is not likely to help
       if (response.status() < 500) {
-        console.log(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         browser.close();
         return null;
       }
     } catch (err) {
       // Caught something, allow retry
       browser.close();
-      console.log(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
+      log.error(`  ❌ Caught ${err.name} (${err.message}) trying to fetch ${url}`);
     }
   }
 
-  console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+  log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
 };
 

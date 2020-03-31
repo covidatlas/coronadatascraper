@@ -47,7 +47,7 @@
     "fast-glob": "^3.2.2",
     "geo-tz": "^5.1.0",
     "needle": "^2.3.3",
-    "pdfreader": "^1.0.6",
+    "pdf2json": "^1.2.0",
     "puppeteer": "^2.1.1",
     "yargs": "^15.3.1"
   },
