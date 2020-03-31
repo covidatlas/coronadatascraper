@@ -36,6 +36,11 @@ const { argv } = yargs
     description: 'Use ISO datetime',
     type: 'boolean'
   })
+  .option('onlyUseCache', {
+    alias: 'c',
+    description: 'Only use cache (no http calls)',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h');
 
