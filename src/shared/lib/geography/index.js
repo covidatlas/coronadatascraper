@@ -179,6 +179,15 @@ export const addEmptyRegions = function(regionDataArray, regionNameArray, region
   if (regionDataArray.length === 0) {
     throw new Error(`Attempted to addEmptyRegions with without providing any ${regionGranularity} records`);
   }
+  let cases = 0;
+  for (const entry of regionDataArray) {
+    if (entry.cases !== undefined) {
+      cases += entry.cases;
+    }
+  }
+  if (cases === 0) {
+    throw new Error(`Attempted to addEmptyRegions with without providing any actual cases`);
+  }
 
   // Get an object of all the tracked regions
   const trackedRegions = regionDataArray.reduce((a, region) => {
