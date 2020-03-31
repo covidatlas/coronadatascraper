@@ -33,7 +33,7 @@ module.exports = function body(title, content) {
   
   ${content}
 
-  <script src="${arc.static('index.js')}"></script>
+  <script type="module" src="${arc.static('index.js')}"></script>
 </body>
 </html>
 `;
