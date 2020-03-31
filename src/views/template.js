@@ -27,13 +27,13 @@ module.exports = function body(title, content) {
   <meta name="msapplication-TileImage" content="${arc.static('favicon/ms-icon-144x144.png')}">
 
   <link rel="stylesheet" href="${arc.static('index.css')}">
-  <script src="${arc.static('index.js')}"></script>
 </head>
 
 <body class="spectrum spectrum--light spectrum--medium">
   
   ${content}
 
+  <script src="${arc.static('index.js')}"></script>
 </body>
 </html>
 `;
