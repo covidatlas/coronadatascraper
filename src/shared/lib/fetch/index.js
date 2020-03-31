@@ -1,11 +1,11 @@
 import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
-import { PdfReader } from 'pdfreader';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
 import * as datetime from '../datetime.js';
 import log from '../log.js';
 import { get } from './get.js';
+import pdfParser from './pdf-parser.js';
 
 // The core http-accessing function, `fetch.fetch`, needs to live in a separate module, `get`, in
 // order to be mocked independently of the rest of these functions. Here we re-export `get` as
@@ -109,35 +109,17 @@ export const tsv = async (url, date, options = {}) => {
  * @param {*} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
- *  - rowTolerance: allowed variance in the y-axis. Allows elements with small discrepancies in their y
- *                  value to be considered as being part of the same row, defaults to 1 unit
  */
 export const pdf = async (url, date, options) => {
-  return new Promise(async (resolve, reject) => {
-    const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
+  const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
 
-    if (!body) {
-      resolve(null);
-      return;
-    }
+  if (!body) {
+    return null;
+  }
 
-    const data = [];
+  const data = await pdfParser(body);
 
-    let currentPage = 0;
-
-    new PdfReader().parseBuffer(body, (err, item) => {
-      if (err) {
-        reject(err);
-      } else if (!item) {
-        data.push(null);
-        resolve(data);
-      } else if (item.page) {
-        currentPage += 1;
-      } else if (item.text) {
-        data.push({ page: currentPage, x: item.x, y: item.y, w: item.w, text: item.text.trim() });
-      }
-    });
-  });
+  return data;
 };
 
 const fetchHeadless = async url => {
