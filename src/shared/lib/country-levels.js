@@ -12,7 +12,7 @@ const countryLevelsDir = path.join('src', 'shared', 'vendor', 'country-levels');
 export function isId(str) {
   if (!str) return false;
   const [level, code] = str.split(':');
-  return LEVELS.includes(level) && !!code;
+  return LEVELS.includes(level) && Boolean(code);
 }
 
 export function getIdFromLocation(location) {
