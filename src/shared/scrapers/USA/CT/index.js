@@ -156,7 +156,7 @@ const scraper = {
         const deaths = item.attributes.Deaths;
         const county = geography.addCounty(item.attributes.COUNTY);
 
-        mostRecent = Math.max(mostRecent, item.attributes.DateLastUpdated);
+        mostRecent = Math.max(mostRecent, item.attributes.DateLastUpdated + 86400000); // 1 Day = 86400000 millisecnds
 
         counties.push({
           county,

@@ -138,7 +138,7 @@ const scraper = {
           item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
         );
 
-        mostRecent = Math.max(mostRecent, item.attributes.EditDate);
+        mostRecent = Math.max(mostRecent, item.attributes.EditDate + 86400000); // 1 Day = 86400000 millisecnds
 
         const countyObj = {
           county,
