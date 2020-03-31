@@ -9,19 +9,19 @@ import { looksLike } from './looks-like.js';
 export default {
   dateIsBefore,
   dateIsBeforeOrEqualTo,
-  getYYYYMD,
-  getYYYYMMDD,
+  getDate,
   getDDMMYYYY,
   getMDYY,
   getMDYYYY,
   getMonthDYYYY,
-  scrapeDate,
-  scrapeDateIsBefore,
-  scrapeDateIsAfter,
-  scrapeDateIs,
-  getDate,
-  today,
+  getYYYYMD,
+  getYYYYMMDD,
+  looksLike,
   now,
   parse,
-  looksLike
+  scrapeDate,
+  scrapeDateIs,
+  scrapeDateIsAfter,
+  scrapeDateIsBefore,
+  today
 };

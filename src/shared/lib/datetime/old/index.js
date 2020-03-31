@@ -6,18 +6,18 @@ import { getDate } from './today.js';
 import iso from '../iso/index.js';
 
 export default {
+  dateIsBefore,
+  dateIsBeforeOrEqualTo,
   getDate,
-  getYYYYMD,
-  getYYYYMMDD,
   getDDMMYYYY,
   getMDYY,
   getMDYYYY,
   getMonthDYYYY,
-  dateIsBefore,
-  dateIsBeforeOrEqualTo,
+  getYYYYMD,
+  getYYYYMMDD,
   scrapeDate,
-  scrapeDateIsBefore,
-  scrapeDateIsAfter,
   scrapeDateIs,
+  scrapeDateIsAfter,
+  scrapeDateIsBefore,
   iso
 };
