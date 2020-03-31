@@ -1,6 +1,6 @@
 const _body = require('./_body');
 
-exports.handler = async function http(req) {
+exports.handler = async function http() {
   const body = _body();
   return {
     headers: {

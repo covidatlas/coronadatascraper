@@ -10,6 +10,8 @@
     "node": ">=12.15.0 <13.0.0"
   },
   "scripts": {
+    "devcovidatlas": "npx arc sandbox & npx rollup -c covidatlas.rollup.config.js --watch",
+    "buildcovidatlas": "npx rollup -c covidatlas.rollup.config.js",
     "dev": "npx rollup -c --watch",
     "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
@@ -56,6 +58,7 @@
     "@architect/functions": "^3.8.1",
     "@architect/macro-node-prune": "^1.0.1",
     "@rollup/plugin-json": "^4.0.2",
+    "@spectrum-web-components/button": "^0.4.6",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "editorconfig": "^0.15.3",
     "eslint": "^6.8.0",
@@ -66,6 +69,8 @@
     "gh-pages": "^2.2.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1",
     "mock-fs": "^4.11.0",
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",

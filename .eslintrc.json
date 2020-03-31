@@ -3,6 +3,7 @@
   "ignorePatterns": [
     "node_modules/",
     "dist/",
+    "public/",
     "src/shared/scrapers/**/tests/",
     "vendor/"
   ],
@@ -17,6 +18,7 @@
     "consistent-return": "off",
     "func-names": "off",
     "import/extensions": ["error", "ignorePackages"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!*.rollup.js  "]}],
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
     "no-async-promise-executor": "off",

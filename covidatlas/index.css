@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,500");
+
+/* CSS-only components */
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-global.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-light.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
+
+@import "./colors.css";
+
+.spectrum--light {
+  /* Reassign spectrum color variables with our own generated colors */
+  --spectrum-global-color-gray-50: var(--Gray33);
+  --spectrum-global-color-gray-75: var(--Gray67);
+  --spectrum-global-color-gray-100: var(--Gray100);
+  --spectrum-global-color-gray-200: var(--Gray200);
+  --spectrum-global-color-gray-300: var(--Gray300);
+  --spectrum-global-color-gray-400: var(--Gray400);
+  --spectrum-global-color-gray-500: var(--Gray500);
+  --spectrum-global-color-gray-500: var(--Gray500);
+  --spectrum-global-color-gray-700: var(--Gray700);
+  --spectrum-global-color-gray-800: var(--Gray800);
+  --spectrum-global-color-gray-900: var(--Gray900);
+
+/*
+  --spectrum-global-color-blue-400: var(--Blue100);
+  --spectrum-global-color-blue-500: var(--Blue200);
+  --spectrum-global-color-blue-600: var(--Blue300);
+  --spectrum-global-color-blue-700: var(--Blue400);
+
+  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-blue-600);
+  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-blue-700);
+  --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-blue-600);
+*/
+
+  /* Base vars */
+  --spectrum-body-text-font-family: "Merriweather", Georgia, serif;
+  --spectrum-heading-text-font-family: "Open Sans", Helvetica, sans-serif;
+  --spectrum-sociallinks-text-font-family: var(--spectrum-heading-text-font-family);
+
+  /* Font overrides */
+  --spectrum-alias-body-text-font-family: var(--spectrum-body-text-font-family);
+  --spectrum-heading-ml-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-l-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-xl-text-font-family: var(--spectrum-heading-text-font-family);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.ca-Logo {
+  max-width: 800px;
+  margin: var(--spectrum-alias-grid-margin-medium) auto;
+}
+
+.ca-Page,
+.ca-Footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spectrum-alias-grid-margin-medium);
+}
+
+.ca-SocialLinks {
+  text-transform: uppercase;
+  display: inline-flex;
+  flex-direction: column;
+
+  margin-top: var(--spectrum-alias-grid-margin-large);
+  font-family: var(--spectrum-sociallinks-text-font-family);
+}
