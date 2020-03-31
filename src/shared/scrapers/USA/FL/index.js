@@ -86,6 +86,10 @@ const scraper = {
     'Walton County',
     'Washington County'
   ],
+  _countyMap: {
+    Dade: 'Miami-Dade',
+    Desoto: 'DeSoto'
+  },
   _getCountyName(testCountyName) {
     const lowerCountyName = testCountyName.toLowerCase();
     for (const countyName of this._counties) {
@@ -206,32 +210,35 @@ const scraper = {
       return counties;
     },
     '2020-3-30': async function() {
-      console.log('USING RIGHT SCRAPER');
       this.type = 'csv';
-      // this.url = await fetch.getArcGISCSVURL('1', 'a7887f1940b34bf5a02c6f7f27a5cb2c', 'Florida_COVID_Cases');
       this.url = 'https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv';
       const data = await fetch.csv(this.url);
       let counties = [];
+
+      const unassigned = {
+        county: UNASSIGNED,
+        cases: 0,
+        tested: 0,
+        deaths: 0
+      };
+
       for (const county of data) {
-        let countyName = geography.addCounty(parse.string(county.County_1));
-        if (countyName === 'Unknown County') {
-          countyName = UNASSIGNED;
+        let countyName = this._countyMap[county.County_1] || county.County_1;
+        if (countyName === 'Unknown') {
+          unassigned.cases += parse.number(county.CasesAll);
+          unassigned.tested += parse.number(county.T_total);
+          unassigned.deaths += parse.number(county.FLResDeaths);
+        } else {
+          countyName = geography.addCounty(parse.string(countyName));
+          counties.push({
+            county: countyName,
+            cases: parse.number(county.CasesAll),
+            tested: parse.number(county.T_total),
+            deaths: parse.number(county.FLResDeaths)
+          });
         }
-        if (countyName === 'Dade County') {
-          countyName = 'Miami-Dade County';
-        }
-        if (countyName === 'Desoto County') {
-          countyName = 'DeSoto County';
-        }
-
-        counties.push({
-          county: countyName,
-          cases: parse.number(county.CasesAll || 0),
-          tested: parse.number(county.T_total || 0),
-          deaths: parse.number(county.FLResDeaths || 0)
-        });
       }
-
+      counties.push(unassigned);
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
