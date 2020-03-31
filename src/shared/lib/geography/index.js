@@ -1,4 +1,5 @@
 import * as turf from './turf.js';
+import log from '../log.js';
 import usStates from '../../vendor/usa-states.json';
 
 import countryCodes from '../../vendor/country-codes.json';
@@ -56,7 +57,7 @@ export function generateMultiCountyFeature(counties, properties) {
   }
 
   if (features.length !== counties.length) {
-    console.warn(
+    log.warn(
       '⚠️  ',
       counties.length,
       'counties provided to generateMultiCountyFeature, only',
@@ -160,17 +161,17 @@ export const toISO3166Alpha3 = function(string) {
       return country['alpha-3'];
     }
   }
-  console.warn('⚠️  Could not find country code for', localString);
+  log.warn('⚠️  Could not find country code for', localString);
   return localString;
 };
 
 /*
   Append ' County' to the end of a string, if not already present
 */
-export const addCounty = function(string) {
+export const addCounty = function(string, suffix = 'County') {
   let localString = string;
-  if (!localString.match(/ County$/)) {
-    localString += ' County';
+  if (localString.substr(-1 * suffix.length) !== suffix) {
+    localString += ` ${suffix}`;
   }
   return localString;
 };
@@ -236,6 +237,9 @@ export const getState = function(state) {
 export const getCounty = function(county, state) {
   state = getState(state);
 
+  // Drop suffix so we get it right
+  county = county.replace(' County', '').replace(' Parish', '');
+
   if (county.match(/city$/)) {
     // These need to be handled on a case-by-case basis
     return county;
@@ -247,7 +251,10 @@ export const getCounty = function(county, state) {
   }
 
   // Compare
-  const foundCounty = strippedCountyMap[stripCountyName(`${county},${state}`)];
+  const foundCounty =
+    strippedCountyMap[stripCountyName(`${county},${state}`)] ||
+    strippedCountyMap[stripCountyName(`${addCounty(county)},${state}`)] ||
+    strippedCountyMap[stripCountyName(`${addCounty(county, 'Parish')},${state}`)];
   if (foundCounty) {
     return foundCounty.replace(/, .*$/, '');
   }
