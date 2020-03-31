@@ -10,6 +10,7 @@ import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
+import * as datetime from './lib/datetime.js';
 
 /**
  * Entry file while we're still hosted on GitHub
@@ -29,7 +30,7 @@ async function generate(date, options = {}) {
 
   // JSON used for reporting
   const report = {
-    date
+    date: date || datetime.getYYYYMD()
   };
 
   // Crawler
