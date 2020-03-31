@@ -2,6 +2,7 @@ import path from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 import * as stringify from './stringify.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as datetime from '../../../shared/lib/datetime.js';
 
 const writeData = async ({ locations, featureCollection, report, options, sourceRatings }) => {
   let suffix = '';
@@ -11,7 +12,14 @@ const writeData = async ({ locations, featureCollection, report, options, source
     suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
-  await fs.writeFile(path.join('dist', `data${suffix}.json`), JSON.stringify(locations, null, 2));
+  // Add scrape date.
+  const scrapeDate = process.env.SCRAPE_DATE || datetime.getYYYYMD();
+  const outlocs = locations.map(loc => {
+    loc.scrapeDate = scrapeDate;
+    return loc;
+  });
+
+  await fs.writeFile(path.join('dist', `data${suffix}.json`), JSON.stringify(outlocs, null, 2));
 
   await fs.writeCSV(path.join('dist', `data${suffix}.csv`), stringify.csvForDay(locations));
 
