@@ -27,6 +27,23 @@ export default t => {
       }
     });
 
+    // Once we have >50 cases, they better keep changing every day or else
+    // we are probably reading from a stale data source. With 1.2 growth factor,
+    // we would expect ~10 new cases per day.
+    t.test('numbers should change each day', t => {
+      let lastData;
+      for (const entry of Object.entries(location.dates)) {
+        if (lastData !== undefined) {
+          t.test(`d>${lastData[0]}`, t => {
+            if (entry[1].cases > 100 && entry[1].cases === lastData[1].cases) {
+              t.fail(`${entry[1].cases} cases did not change between ${lastData[0]} and ${entry[0]}`);
+            }
+          });
+        }
+        lastData = entry;
+      }
+    });
+
     t.test('data is monotically increasing', t => {
       let lastData;
       for (const entry of Object.entries(location.dates)) {

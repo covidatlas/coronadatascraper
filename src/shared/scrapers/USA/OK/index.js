@@ -116,7 +116,7 @@ const scraper = {
     'Woodward County'
   ],
   async scraper() {
-    const counties = [];
+    let counties = [];
     const $ = await fetch.page(this.url);
     const $table = $("table[summary='COVID-19 Cases by County']").first();
 
@@ -133,6 +133,7 @@ const scraper = {
         counties.push(countyObj);
       }
     });
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
     counties.push(transform.sumData(counties));
     return counties;
   }

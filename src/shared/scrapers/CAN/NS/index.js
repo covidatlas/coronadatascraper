@@ -27,8 +27,11 @@ const scraper = {
     }
 
     // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/Halifax')) : datetime.getDate();
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+    // const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/Halifax')) : datetime.getDate();
+    // let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+    let scrapeDate = process.env.SCRAPE_DATE
+      ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`)
+      : new Date(`${datetime.getYYYYMD()} 12:00:00`);
     let scrapeDateString = datetime.getYYYYMD(scrapeDate);
     const lastDateInTimeseries = new Date(`${data[data.length - 1].Date} 12:00:00`);
     const firstDateInTimeseries = new Date(`${data[0].Date} 12:00:00`);
