@@ -181,7 +181,8 @@ const scraper = {
   ],
   _countyMap: {
     Mcduffie: 'McDuffie',
-    Dekalb: 'DeKalb'
+    Dekalb: 'DeKalb',
+    Mcintosh: 'McIntosh'
   },
   scraper: {
     '0': async function() {
