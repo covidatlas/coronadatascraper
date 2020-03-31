@@ -36,7 +36,7 @@ const scraper = {
         }
         const cases = parse.number($tr.find('td:last-child').text());
         counties.push({
-          county: geography.getCounty(this._countyMap[county] || county),
+          county: geography.getCounty(county),
           cases
         });
       });
