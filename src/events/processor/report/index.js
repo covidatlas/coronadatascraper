@@ -17,14 +17,14 @@ const reportScraping = args => {
     active: 0
   };
   for (const location of locations) {
-    if (!location.state && !location.county) {
-      locationCounts.countries++;
-    } else if (!location.county && !location.city) {
-      locationCounts.states++;
-    } else if (!location.city) {
-      locationCounts.counties++;
-    } else {
+    if (location.city) {
       locationCounts.cities++;
+    } else if (location.county) {
+      locationCounts.counties++;
+    } else if (location.state) {
+      locationCounts.states++;
+    } else {
+      locationCounts.countries++;
     }
 
     for (const type of Object.keys(caseCounts)) {
