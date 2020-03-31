@@ -75,7 +75,8 @@ const scraper = {
     'Williams County'
   ],
   _good_headers(data) {
-    if (parse.string(data[0][0]) !== 'County') {
+    const col0 = parse.string(data[0][0]);
+    if (col0 !== 'County' && col0 !== 'County_State') {
       return false;
     }
     if (parse.string(data[1][0]) !== 'Total Tests') {
