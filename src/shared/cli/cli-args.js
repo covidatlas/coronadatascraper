@@ -31,6 +31,11 @@ const { argv } = yargs
     description: 'Suppress logs',
     type: 'boolean'
   })
+  .option('onlyUseCache', {
+    alias: 'c',
+    description: 'Only use cache (no http calls)',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h');
 

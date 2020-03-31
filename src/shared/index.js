@@ -18,15 +18,14 @@ import datetime from './lib/datetime/index.js';
 async function generate(date, options = {}) {
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
-  if (date) {
-    process.env.SCRAPE_DATE = date;
-  } else {
-    delete process.env.SCRAPE_DATE;
-  }
+  if (date) process.env.SCRAPE_DATE = date;
+  else delete process.env.SCRAPE_DATE;
 
-  if (options.quiet) {
-    process.env.LOG_LEVEL = 'off';
-  }
+  const { onlyUseCache } = options;
+  if (onlyUseCache) process.env.ONLY_USE_CACHE = true;
+  else delete process.env.ONLY_USE_CACHE;
+
+  if (options.quiet) process.env.LOG_LEVEL = 'off';
 
   // JSON used for reporting
   const report = {
