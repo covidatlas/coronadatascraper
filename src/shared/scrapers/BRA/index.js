@@ -1,6 +1,6 @@
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
-import * as datetime from '../../lib/datetime.js';
+// import * as datetime from '../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -60,20 +60,36 @@ const scraper = {
   },
   async scraper() {
     const response = [];
-    const ufs = this._ufs
-    const $ = await fetch.headless(this.url); //, false
-        
-    $.root().find('.list-itens .teste').each(function(){
-      const uf = $(this).prev().text()
+    const ufs = this._ufs;
+    const $ = await fetch.headless(this.url); // , false
 
-      response.push({
-        state: ufs[uf][0],
-        cases: parseInt($(this).find('.lb-nome').eq(0).text(), 10),
-        deaths: parseInt($(this).find('.lb-nome').eq(1).text(), 10),
-        population: ufs[uf][1],
-        coordinates: [ufs[uf][2][1], ufs[uf][2][0]]
+    $.root()
+      .find('.list-itens .teste')
+      .each(function() {
+        const uf = $(this)
+          .prev()
+          .text();
+
+        response.push({
+          state: ufs[uf][0],
+          cases: parseInt(
+            $(this)
+              .find('.lb-nome')
+              .eq(0)
+              .text(),
+            10
+          ),
+          deaths: parseInt(
+            $(this)
+              .find('.lb-nome')
+              .eq(1)
+              .text(),
+            10
+          ),
+          population: ufs[uf][1],
+          coordinates: [ufs[uf][2][1], ufs[uf][2][0]]
+        });
       });
-    })
 
     response.push(transform.sumData(response));
 
