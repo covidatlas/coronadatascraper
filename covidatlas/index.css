@@ -7,6 +7,7 @@
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
 
 @import "./colors.css";
 
@@ -24,7 +25,6 @@
   --spectrum-global-color-gray-800: var(--Gray800);
   --spectrum-global-color-gray-900: var(--Gray900);
 
-/*
   --spectrum-global-color-blue-400: var(--Blue100);
   --spectrum-global-color-blue-500: var(--Blue200);
   --spectrum-global-color-blue-600: var(--Blue300);
@@ -34,7 +34,6 @@
   --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-blue-700);
   --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-blue-700);
   --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-blue-600);
-*/
 
   /* Base vars */
   --spectrum-body-text-font-family: "Merriweather", Georgia, serif;
@@ -48,14 +47,32 @@
   --spectrum-heading-xl-text-font-family: var(--spectrum-heading-text-font-family);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
+  height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 .ca-Logo {
   max-width: 800px;
   margin: var(--spectrum-alias-grid-margin-medium) auto;
+}
+
+.ca-Logo--small {
+  max-width: 100%;
 }
 
 .ca-Page,

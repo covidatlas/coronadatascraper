@@ -12,6 +12,7 @@ fingerprint true
 
 @http
 get /
+get /sandbox
 
 # @events
 # crawler
