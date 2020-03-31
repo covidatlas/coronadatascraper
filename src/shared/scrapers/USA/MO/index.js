@@ -192,7 +192,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-2-22': async function() {
+    '2020-02-22': async function() {
       let counties = {};
       const $ = await fetch.page(this.url);
       const $table = $('table').first();
@@ -221,7 +221,7 @@ const scraper = {
         }
       });
 
-      if (datetime.scrapeDateIsAfter('2020-3-24')) {
+      if (datetime.scrapeDateIsAfter('2020-03-24')) {
         const $deaths = $('table')
           .eq(1)
           .first();
@@ -256,7 +256,7 @@ const scraper = {
       return counties;
     },
 
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       const counties = {};
       this.url = await fetch.getArcGISCSVURL(6, '6f2a47a25872470a815bcd95f52c2872', 'lpha_boundry');
       const data = await fetch.csv(this.url);

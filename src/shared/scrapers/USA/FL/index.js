@@ -209,7 +209,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv';
       const data = await fetch.csv(this.url);

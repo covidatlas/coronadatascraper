@@ -145,7 +145,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       const counties = [];
       this.url =
         'https://services1.arcgis.com/RQG3sksSXcoDoIfj/arcgis/rest/services/MN_COVID19_County_Tracking_Public_View/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
