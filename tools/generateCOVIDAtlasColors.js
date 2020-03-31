@@ -10,21 +10,21 @@ function generateColors() {
     baseScale: 'Gray',
     colorScales: [
       {
-        name: 'Gray',
-        colorKeys: ['#355166'],
-        colorspace: 'RGB',
-        ratios: [-1.2, -1.05, 1, 1.1, 1.2, 1.5, 1.93, 3.01, 4.54, 8, 12.81]
+        name: 'Blue',
+        colorKeys: ['#388de1', '#1e0a46'],
+        colorspace: 'CAM02',
+        ratios: [3.46, 4.51, 6, 8, 11, 14.5, 17.69]
       },
       {
-        name: 'Blue',
-        colorKeys: ['#21385e', '#829800', '#007e60', '#efef00'],
-        colorspace: 'LCH',
-        ratios: [3.2, 4.8, 7.4, 11.7]
+        name: 'Gray',
+        colorKeys: ['#1e0a46'],
+        colorspace: 'CAM02',
+        ratios: [1, 1.15, 1.5, 3, 4.5, 6, 8, 17.69, 21]
       }
     ]
   });
 
-  const cdsThemeLight = cdsTheme(97);
+  const cdsThemeLight = cdsTheme(100);
 
   const varPrefix = '--';
   const cssVariables = {};
@@ -41,6 +41,11 @@ function generateColors() {
         // create CSS property with name and value
         cssVariables[prop] = value.value;
       }
+    } else if (colorTheme.background) {
+      const key = 'BackgroundColor';
+      const prop = varPrefix.concat(key);
+      // create CSS property with name and value
+      cssVariables[prop] = colorTheme.background;
     }
   }
 
