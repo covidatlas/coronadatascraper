@@ -1,5 +1,6 @@
 import path from 'path';
 import datetime from '../../../shared/lib/datetime/index.js';
+import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
@@ -102,7 +103,7 @@ const runScrapers = async args => {
       try {
         addData(locations, location, await runScraper(location));
       } catch (err) {
-        console.error('  ❌ Error processing %s: ', geography.getName(location), err);
+        log.error('  ❌ Error processing %s: ', geography.getName(location), err);
 
         errors.push({
           name: geography.getName(location),

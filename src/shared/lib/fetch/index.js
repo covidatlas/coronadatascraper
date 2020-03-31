@@ -154,7 +154,7 @@ const fetchHeadless = async url => {
 
       // try again if we got an error code which might be recoverable
       if (response.status() >= 500) {
-        console.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         continue;
       }
 

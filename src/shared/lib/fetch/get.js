@@ -78,18 +78,18 @@ export const get = async (url, type, date = datetime.scrapeDate() || datetime.ge
 
       // try again if we got an error
       if (errorMsg) {
-        console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+        log.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
         continue;
       }
       // try again if we got an error code which might be recoverable
       if (response.statusCode >= 500) {
-        console.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
         continue;
       }
 
       const contentLength = parseInt(response.headers['content-length'], 10);
       if (!Number.isNaN(contentLength) && contentLength !== response.bytes) {
-        console.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
+        log.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
         continue;
       }
 
