@@ -163,14 +163,15 @@ const scraper = {
       this.type = 'json';
       this.headless = false;
       const data = await fetch.json(this.url);
-      let mostRecent = 0;
 
       data.features.forEach(item => {
         const cases = item.attributes.CV_PositiveCases;
         const deaths = item.attributes.CV_Deaths;
         const county = geography.addCounty(item.attributes.CNTY_NAME);
 
-        mostRecent = Math.max(mostRecent, item.attributes.CV_Updated + 86400000); // 1 Day = 86400000 millisecnds
+        if (datetime.scrapeDateIsAfter(item.attributes.CV_Updated)) {
+          throw new Error(`Data only available until ${new Date(item.attributes.CV_Updated).toLocaleString()}`);
+        }
 
         counties.push({
           county,
@@ -178,10 +179,6 @@ const scraper = {
           deaths
         });
       });
-
-      if (datetime.scrapeDateIsAfter(mostRecent)) {
-        throw new Error(`Data only available until ${new Date(mostRecent).toLocaleString()}`);
-      }
 
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
