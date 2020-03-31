@@ -35,7 +35,7 @@ export default t => {
       for (const entry of Object.entries(location.dates)) {
         if (lastData !== undefined) {
           t.test(`d>${lastData[0]}`, t => {
-            if (entry[1].cases > 50 && entry[1].cases === lastData[1].cases) {
+            if (entry[1].cases > 100 && entry[1].cases === lastData[1].cases) {
               t.fail(`${entry[1].cases} cases did not change between ${lastData[0]} and ${entry[0]}`);
             }
           });
