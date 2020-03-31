@@ -6,9 +6,9 @@ _Last updated: 2020-03-26_
 
 - [Sources and Scrapers](#sources-and-scrapers)
   - [Criteria for sources](#criteria-for-sources)
-    - [1. Sources must be government or health organizations](#1-sources-must-be-government-or-health-organizations)
-    - [2. Sources must provide the number of cases at a bare minimum](#2-sources-must-provide-the-number-of-cases-at-a-bare-minimum)
-    - [3. Presumptive cases are considered confirmed](#3-presumptive-cases-are-considered-confirmed)
+      - [1. Sources must be government or health organizations](#1-sources-must-be-government-or-health-organizations)
+      - [2. Sources must provide the number of cases at a bare minimum](#2-sources-must-provide-the-number-of-cases-at-a-bare-minimum)
+      - [3. Presumptive cases are considered confirmed](#3-presumptive-cases-are-considered-confirmed)
   - [Writing a source](#writing-a-source)
   - [Source rating](#source-rating)
   - [Scraping](#scraping)
@@ -258,8 +258,8 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
       ...
       return counties;
     },
-    // 2020-3-14 matches all dates starting with 2020-3-14
-    '2020-3-14': async function() {
+    // 2020-03-14 matches all dates starting with 2020-03-14
+    '2020-03-14': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
       this.type = 'csv';
       const counties = [];
@@ -267,8 +267,8 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
       ...
       return counties;
     },
-    // 2020-3-17 matches all dates after 2020-3-14 and starting with 2020-3-17
-    '2020-3-17': async function() {
+    // 2020-03-17 matches all dates after 2020-03-14 and starting with 2020-03-17
+    '2020-03-17': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/79e1165ecb95496589d39faa25a83ad4_0.csv';
       this.type = 'csv';
       const counties = [];
@@ -286,7 +286,7 @@ Another example is when HTML on the page changes, you can simply change the sele
 
 ```javascript
 let $table;
-if (datetime.scrapeDateIsBefore('2020-3-16')) {
+if (datetime.scrapeDateIsBefore('2020-03-16')) {
   $table = $('table[summary="Texas COVID-19 Cases"]');
 } else {
   $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
