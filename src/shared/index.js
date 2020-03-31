@@ -10,7 +10,7 @@ import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
-import * as datetime from './lib/datetime.js';
+import datetime from './lib/datetime/index.js';
 
 /**
  * Entry file while we're still hosted on GitHub

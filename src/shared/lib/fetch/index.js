@@ -2,7 +2,7 @@ import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
-import * as datetime from '../datetime.js';
+import datetime from '../datetime/index.js';
 import log from '../log.js';
 import { get } from './get.js';
 import pdfParser from './pdf-parser.js';
@@ -154,7 +154,7 @@ const fetchHeadless = async url => {
 
       // try again if we got an error code which might be recoverable
       if (response.status() >= 500) {
-        console.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.status()} (${response.statusText()}) trying to fetch ${url}`);
         continue;
       }
 
@@ -189,7 +189,7 @@ const fetchHeadless = async url => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */
-export const headless = async (url, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
+export const headless = async (url, date = datetime.scrapeDate() || datetime.getYYYYMD(), options = {}) => {
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);

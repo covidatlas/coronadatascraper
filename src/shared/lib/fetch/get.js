@@ -2,7 +2,7 @@
 
 import needle from 'needle';
 import * as caching from './caching.js';
-import * as datetime from '../datetime.js';
+import datetime from '../datetime/index.js';
 import log from '../log.js';
 
 const CHROME_AGENT =
@@ -32,7 +32,7 @@ needle.defaults({
  *  - toString: returns data as a string instead of buffer, defaults to true
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  */
-export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
+export const get = async (url, type, date = datetime.scrapeDate() || datetime.getYYYYMD(), options = {}) => {
   const { alwaysRun, disableSSL, toString, encoding, cookies } = {
     alwaysRun: false,
     disableSSL: false,
@@ -78,18 +78,18 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
 
       // try again if we got an error
       if (errorMsg) {
-        console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+        log.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
         continue;
       }
       // try again if we got an error code which might be recoverable
       if (response.statusCode >= 500) {
-        console.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
         continue;
       }
 
       const contentLength = parseInt(response.headers['content-length'], 10);
       if (!Number.isNaN(contentLength) && contentLength !== response.bytes) {
-        console.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
+        log.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
         continue;
       }
 

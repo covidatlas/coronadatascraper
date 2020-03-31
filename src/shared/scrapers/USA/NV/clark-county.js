@@ -30,7 +30,7 @@ const scraper = {
         deaths
       };
     },
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       const $ = await fetch.page(this.url);
 
       const casesText = $('*:contains("Total Cases:")').text();

@@ -18,7 +18,7 @@ const scraper = {
       const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d+)/);
       return { cases: parse.number(matches[1]) };
     },
-    '2020-3-23': async function() {
+    '2020-03-23': async function() {
       const $ = await fetch.page(this.url);
 
       const lines = $('font:contains("Confirmed COVID-19")')
@@ -29,7 +29,7 @@ const scraper = {
 
       return { cases, deaths };
     },
-    '2020-3-24': async function() {
+    '2020-03-24': async function() {
       throw new Error('Solano County, CA now uses a PDF');
     }
   }

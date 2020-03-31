@@ -21,7 +21,7 @@ const scraper = {
       const cases = parse.number(h3.match(/\((\d+)\)/)[1]);
       return { cases };
     },
-    '2020-3-17': async function() {
+    '2020-03-17': async function() {
       const $ = await fetch.page(this.url);
       this.type = 'table';
       const $table = $('h3:contains("San Joaquin County COVID-19 Numbers at a Glance")').closest('table');
