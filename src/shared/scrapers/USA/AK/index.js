@@ -64,7 +64,8 @@ const scraper = {
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
-    const $table = $('td:contains("Gulf Coast")').closest('table');
+    const $table = $('td:contains("Seward")').closest('table');
+    console.log($table.html());
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
