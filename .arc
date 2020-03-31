@@ -11,6 +11,7 @@ region us-west-1
 fingerprint true
 
 @http
+get /
 
 # @events
 # crawler
