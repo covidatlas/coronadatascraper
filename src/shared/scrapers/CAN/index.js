@@ -48,21 +48,25 @@ const scraper = {
     '0': async function() {
       const data = await fetch.csv(this.url, false);
 
-      const scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
-      const scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
+      let scrapeDate = process.env.SCRAPE_DATE
+        ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`)
+        : new Date(`${datetime.getYYYYMD()} 12:00:00`);
+      let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
       const lastDateParts = data[data.length - 1].date.split('-');
       const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);
       const firstDateParts = data[data.length - 1].date.split('-');
       const firstDateInTimeseries = new Date(`${firstDateParts[2]}-${firstDateParts[1]}-${firstDateParts[0]}12:00:00`);
 
       if (scrapeDate > lastDateInTimeseries) {
-        throw new Error(
+        console.error(
           `  🚨 timeseries for ${geography.getName(
             this
           )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
             lastDateInTimeseries
-          )}.`
+          )}. Using last sample anyway`
         );
+        scrapeDate = lastDateInTimeseries;
+        scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
       }
 
       if (scrapeDate < firstDateInTimeseries) {
