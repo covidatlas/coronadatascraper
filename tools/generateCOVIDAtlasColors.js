@@ -1,5 +1,9 @@
-import { generateAdaptiveTheme } from '@adobe/leonardo-contrast-colors';
-import * as fs from '../src/shared/lib/fs.js';
+const imports = require('esm')(module);
+
+const fs = imports('../src/shared/lib/fs.js');
+
+const { generateAdaptiveTheme } = imports('@adobe/leonardo-contrast-colors');
+
 // returns theme colors as JSON
 function generateColors() {
   const cdsTheme = generateAdaptiveTheme({
