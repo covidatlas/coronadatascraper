@@ -20,9 +20,13 @@ async function generate(date, options = {}) {
   if (date) process.env.SCRAPE_DATE = date;
   else delete process.env.SCRAPE_DATE;
 
-  const { iso } = options;
+  const { iso, onlyUseCache } = options;
+
   if (iso) process.env.USE_ISO_DATETIME = true;
   else delete process.env.USE_ISO_DATETIME;
+
+  if (onlyUseCache) process.env.ONLY_USE_CACHE = true;
+  else delete process.env.ONLY_USE_CACHE;
 
   if (options.quiet) process.env.LOG_LEVEL = 'off';
 
