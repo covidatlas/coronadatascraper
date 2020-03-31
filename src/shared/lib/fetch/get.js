@@ -43,8 +43,11 @@ export const get = async (url, type, date = datetime.scrapeDate() || datetime.ge
   };
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
+  const cacheMiss = cachedBody === caching.CACHE_MISS;
 
-  if (cachedBody === caching.CACHE_MISS || alwaysRun) {
+  const onlyUseCache = process.env.ONLY_USE_CACHE;
+
+  if (!onlyUseCache && (cacheMiss || alwaysRun)) {
     log('  🚦  Loading data for %s from server', url);
 
     if (disableSSL) {
