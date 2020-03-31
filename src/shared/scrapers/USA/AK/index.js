@@ -15,7 +15,6 @@ const scraper = {
   ],
   url: 'http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx',
   type: 'table',
-  headless: false,
   aggregate: 'county',
 
   _regions: {
@@ -64,7 +63,7 @@ const scraper = {
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
-    const $table = $('td:contains("Gulf Coast")').closest('table');
+    const $table = $('td:contains("Travel-Related")').closest('table');
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
