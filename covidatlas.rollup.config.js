@@ -1,5 +1,6 @@
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 import postcssNested from 'postcss-nested';
 import postcssImport from 'postcss-import';
@@ -21,6 +22,11 @@ export default [
         inject: false,
         extract: true,
         plugins: [postcssImport(), postcssNested()]
+      }),
+      replace({
+        values: {
+          'process.env.NODE_ENV': '"production"'
+        }
       })
     ],
     watch: {
