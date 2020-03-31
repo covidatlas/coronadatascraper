@@ -130,7 +130,6 @@ const scraper = {
 
       let onlySumDeaths = true;
       let sumDeaths = 0;
-      let mostRecent = 0;
 
       data.features.forEach(item => {
         const cases = item.attributes.CASES;
@@ -138,7 +137,9 @@ const scraper = {
           item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
         );
 
-        mostRecent = Math.max(mostRecent, item.attributes.EditDate);
+        if (datetime.scrapeDateIsAfter(item.attributes.EditDate)) {
+          throw new Error(`Data only available until ${new Date(item.attributes.EditDate).toLocaleString()}`);
+        }
 
         const countyObj = {
           county,
@@ -162,10 +163,6 @@ const scraper = {
 
         counties.push(countyObj);
       });
-
-      if (datetime.scrapeDateIsAfter(mostRecent)) {
-        throw new Error(`Data only available until ${new Date(mostRecent).toLocaleString()}`);
-      }
 
       const summedData = transform.sumData(counties);
       if (onlySumDeaths) {
