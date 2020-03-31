@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import * as datetime from '../../../lib/datetime.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -13,10 +14,12 @@ const scraper = {
     {
       url: 'https://www.health.state.mn.us/',
       name: 'Minnesota Department of Health'
+    },
+    {
+      url: 'https://www.health.state.mn.us/diseases/coronavirus/situation.html',
+      name: 'Minnesota Department of Health'
     }
   ],
-  url: 'https://www.health.state.mn.us/diseases/coronavirus/situation.html',
-  type: 'table',
   aggregate: 'county',
 
   _counties: [
@@ -109,35 +112,63 @@ const scraper = {
     'Yellow Medicine County'
   ],
 
-  async scraper() {
-    const $ = await fetch.page(this.url);
+  scraper: {
+    '0': async function() {
+      this.url = 'https://www.health.state.mn.us/diseases/coronavirus/situation.html';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
 
-    const $th = $('th:contains("County")');
-    const $table = $th.closest('table');
-    const $trs = $table.find('tbody > tr');
+      const $th = $('th:contains("County")');
+      const $table = $th.closest('table');
+      const $trs = $table.find('tbody > tr');
 
-    let counties = [];
+      let counties = [];
 
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
 
-      const cases = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
-      const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
+        const cases = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
+        const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
 
-      if (index < 1 || index > $trs.get().length - 1) {
-        return;
-      }
+        if (index < 1 || index > $trs.get().length - 1) {
+          return;
+        }
 
-      counties.push({
-        county,
-        cases
+        counties.push({
+          county,
+          cases
+        });
       });
-    });
 
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
 
-    return counties;
+      return counties;
+    },
+    '2020-3-30': async function() {
+      const counties = [];
+      this.url =
+        'https://services1.arcgis.com/RQG3sksSXcoDoIfj/arcgis/rest/services/MN_COVID19_County_Tracking_Public_View/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+      this.type = 'json';
+      const data = await fetch.json(this.url);
+
+      data.features.forEach(item => {
+        const cases = item.attributes.COVID19POS || 0;
+        const county = geography.addCounty(item.attributes.CTY_NAME);
+
+        if (datetime.scrapeDateIsAfter(item.attributes.CV_Updated)) {
+          throw new Error(`Data only available until ${new Date(item.attributes.CV_Updated).toLocaleString()}`);
+        }
+
+        counties.push({
+          county,
+          cases
+        });
+      });
+
+      counties.push(transform.sumData(counties));
+      return geography.addEmptyRegions(counties, this._counties, 'county');
+    }
   }
 };
 
