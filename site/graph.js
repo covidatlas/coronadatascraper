@@ -28,12 +28,30 @@ const options = {
     ],
     yAxes: [
       {
+        type: 'linear',
         gridLines: {
           drawBorder: false
         },
         major: {
           enabled: true,
           fontStyle: 'bold'
+        },
+        scaleLabel: {
+          display: true,
+          labelString: 'Linear (click graph for logarithmic)'
+        },
+        ticks: {
+          autoSkip: true,
+
+          userCallback(label) {
+            if (this.options.type === 'linear') {
+              return label;
+            }
+            const remain = label / 10 ** Math.floor(Chart.helpers.log10(label));
+            if (remain === 1 || remain === 2 || remain === 5) {
+              return label;
+            }
+          }
         }
       }
     ]
@@ -67,6 +85,19 @@ const options = {
         return label;
       }
     }
+  },
+  events: ['mousemove', 'mouseout', 'click'],
+  onClick() {
+    const { type } = this.options.scales.yAxes[0];
+    if (type === 'linear') {
+      this.options.scales.yAxes[0].type = 'logarithmic';
+      this.options.scales.yAxes[0].scaleLabel.labelString = 'Logarithmic (click graph for linear)';
+    } else {
+      this.options.scales.yAxes[0].type = 'linear';
+      this.options.scales.yAxes[0].scaleLabel.labelString = 'Linear (click graph for logarithmic)';
+    }
+    this.update();
+    this.render();
   }
 };
 
@@ -117,6 +148,7 @@ const showGraph = (location, locationData) => {
         label: 'Total Cases',
         borderColor: '#FF00FF',
         backgroundColor: '#FFFFFF',
+        borderWidth: 1.5,
         data: casesData,
         ...lineSettings
       },
