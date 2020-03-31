@@ -19,12 +19,12 @@ function generateColors() {
         name: 'Gray',
         colorKeys: ['#1e0a46'],
         colorspace: 'CAM02',
-        ratios: [1.15, 1.5, 3, 4.5, 6, 8, 17.69, 21]
+        ratios: [1, 1.15, 1.5, 3, 4.5, 6, 8, 17.69, 21]
       }
     ]
   });
 
-  const cdsThemeLight = cdsTheme(97);
+  const cdsThemeLight = cdsTheme(100);
 
   const varPrefix = '--';
   const cssVariables = {};
@@ -41,6 +41,11 @@ function generateColors() {
         // create CSS property with name and value
         cssVariables[prop] = value.value;
       }
+    } else if (colorTheme.background) {
+      const key = 'BackgroundColor';
+      const prop = varPrefix.concat(key);
+      // create CSS property with name and value
+      cssVariables[prop] = colorTheme.background;
     }
   }
 
