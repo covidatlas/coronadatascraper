@@ -3,7 +3,7 @@ The main fields are the following, plus the geographical entity fields explained
 
 * date: the date the data point refers to
 * type: the type of data point: cases, tested, deaths, hospitalized, discharged, or recovered
-* value: the value of the data point (a count of events of a certain type)
+* value: the value of the data point (a cumulative count of events of a certain type)
 
 Each observation is associated with a geographical entity, identified in the following four fields.
 
