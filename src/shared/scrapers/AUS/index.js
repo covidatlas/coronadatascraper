@@ -41,9 +41,7 @@ const scraper = {
       const cases = parse.number($tr.find('td:last-child').text());
 
       const stateMapped = countryLevelMap[state];
-      if (!stateMapped) {
-        console.error(`  ❌ ${state} not found in countryLevelMap.`);
-      }
+      assert(stateMapped, `${state} not found in countryLevelMap`);
 
       states.push({
         stateMapped,
