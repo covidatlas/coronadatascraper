@@ -31,6 +31,11 @@ const { argv } = yargs
     description: 'Suppress logs',
     type: 'boolean'
   })
+  .option('iso', {
+    alias: 'i',
+    description: 'Use ISO datetime',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h');
 
