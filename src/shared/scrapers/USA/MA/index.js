@@ -137,8 +137,9 @@ const scraper = {
           item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
         );
 
-        if (datetime.scrapeDateIsBefore(item.attributes.EditDate)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.EditDate).toLocaleString()}`);
+        const editDate = new Date(item.attributes.EditDate);
+        if (datetime.scrapeDateIsBefore(editDate)) {
+          throw new Error(`Data only available until ${editDate.toLocaleString()}`);
         }
 
         const countyObj = {
