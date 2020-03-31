@@ -51,8 +51,9 @@ const options = {
   },
   tooltips: {
     intersect: false,
-    mode: 'index',
+    mode: 'nearest',
     position: 'nearest',
+    axis: 'x',
     callbacks: {
       title(tooltipItem) {
         return new Date(tooltipItem[0].label).toLocaleDateString();
@@ -114,10 +115,8 @@ const showGraph = (location, locationData) => {
     datasets: [
       {
         label: 'Total Cases',
-        borderColor: '#FF0000',
+        borderColor: '#FF00FF',
         backgroundColor: '#FFFFFF',
-        borderDash: [5, 5],
-        borderWidth: 1,
         data: casesData,
         ...lineSettings
       },
