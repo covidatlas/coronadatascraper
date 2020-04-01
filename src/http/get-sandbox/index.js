@@ -2,9 +2,14 @@
 const template = require('@architect/views/template');
 
 exports.handler = async function http() {
-  const body = template(
-    'Sandbox',
-    /* html */ `
+  return {
+    headers: {
+      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
+      'content-type': 'text/html; charset=utf8'
+    },
+    body: template(
+      'Sandbox',
+      /* html */ `
 <style>
   .ca-Sandbox {
     margin: var(--spectrum-alias-grid-margin-medium) 0;
@@ -194,12 +199,6 @@ exports.handler = async function http() {
 
 </div>
 `
-  );
-  return {
-    headers: {
-      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
-      'content-type': 'text/html; charset=utf8'
-    },
-    body
+    )
   };
 };

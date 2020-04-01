@@ -13,6 +13,10 @@ fingerprint true
 @http
 get /
 get /sandbox
+get /about
+get /map
+get /crosscheck
+get /sources
 
 # @events
 # crawler
