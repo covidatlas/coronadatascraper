@@ -44,6 +44,12 @@
   }
 }
 
+.ca-SideNav {
+  sp-sidenav {
+    --spectrum-alias-body-text-font-family: var(--spectrum-body-text-font-family);
+  }
+}
+
 .ca-SocialLinks {
   text-transform: uppercase;
   display: inline-flex;
