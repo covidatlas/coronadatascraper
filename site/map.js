@@ -50,9 +50,8 @@ function updateMap(date) {
   let highestLocation = null;
 
   data.locations.forEach(function(location, index) {
-    location.locationId = index;
     // Calculate worst affected percent
-    if (location.population && !location.city) {
+    if (location.population) {
       const locationData = currentData[index];
       if (locationData) {
         const infectionPercent = locationData.cases / location.population;
@@ -75,7 +74,7 @@ function updateMap(date) {
     let regionColor = null;
     const { locationId } = feature.properties;
     const location = data.locations[locationId];
-    if (location && location.population && !location.city) {
+    if (location && location.population) {
       const locationData = currentData[locationId];
       if (locationData) {
         if (locationData.cases === 0) {
@@ -137,13 +136,9 @@ function populateMap() {
 
   const countyFeatures = {
     type: 'FeatureCollection',
-    features: data.locations
-      .filter(function(location) {
-        return isCounty(location);
-      })
-      .map(function(location) {
-        return data.features.features[location.featureId];
-      })
+    features: data.features.features.filter(function(feature) {
+      return isCounty(data.locations[feature.properties.locationId]);
+    })
   };
 
   const stateFeatures = {
