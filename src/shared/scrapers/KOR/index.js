@@ -18,6 +18,7 @@ const scraper = {
       github: 'jacobmcgowan'
     }
   ],
+  _fieldHeadersOffset: 2,
   _fieldPositions: {
     cases: 3,
     recovered: 4,
@@ -62,10 +63,37 @@ const scraper = {
   _parseProvince(officialEnglishName) {
     return this._provinceNames[officialEnglishName] || officialEnglishName;
   },
+  /**
+   * Checks if the fields are in the expected order.
+   * @param {Cheerio} $headerRow The row of field headers.
+   * @returns {boolean} Whether or not the field order is expected.
+   */
+  _isFieldOrderExpected($headerRow) {
+    return (
+      $headerRow &&
+      $headerRow.length === 1 &&
+      parse
+        .string($headerRow.find(`th:nth-child(${this._fieldPositions.cases - this._fieldHeadersOffset})`).text())
+        .toLowerCase()
+        .includes('confirmed') &&
+      parse
+        .string($headerRow.find(`th:nth-child(${this._fieldPositions.recovered - this._fieldHeadersOffset})`).text())
+        .toLowerCase()
+        .includes('released') &&
+      parse
+        .string($headerRow.find(`th:nth-child(${this._fieldPositions.deaths - this._fieldHeadersOffset})`).text())
+        .toLowerCase()
+        .includes('deceased')
+    );
+  },
   async scraper() {
     const states = [];
     const $ = await fetch.page(this.url);
     const $table = $('table.num');
+
+    if ($table.length === 0) throw new Error('Table not found');
+    if (!this._isFieldOrderExpected($table.find('thead > tr:nth-child(2)'))) throw new Error('Unexpected field order');
+
     const $rows = $table.find('tbody > tr:not(.sumline)');
 
     $rows.each((index, row) => {
