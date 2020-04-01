@@ -1,6 +1,12 @@
 // eslint-disable-next-line
 const template = require('@architect/views/template');
 
+// eslint-disable-next-line
+const constants = require('@architect/views/constants');
+
+// eslint-disable-next-line
+const arc = require('@architect/functions');
+
 exports.handler = async function http() {
   return {
     headers: {
@@ -150,12 +156,18 @@ exports.handler = async function http() {
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>
+        <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${
+        constants.name
+      } logo">
       </div>
       <br/>
       <div class="spectrum--dark ca-SiteHeader spectrum-Site-header">
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>
+        <img src="${arc.static('logo-banner-dark.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${
+        constants.name
+      } logo">
       </div>
     </div>
   </div>
@@ -192,6 +204,34 @@ exports.handler = async function http() {
         <sp-search></sp-search>
         <sp-button>Go</sp-button>
       </div>
+    </div>
+  </div>
+
+  <div class="ca-Sandbox">
+    <h1 class="spectrum-Heading spectrum-Heading--M">Dropdown Menu</h1>
+    <div class="ca-Sandbox-example">
+    <sp-popover open style="position: relative">
+        <sp-menu>
+          <sp-menu-item>
+              Deselect
+          </sp-menu-item>
+          <sp-menu-item>
+              Select inverse
+          </sp-menu-item>
+          <sp-menu-item>
+              Feather...
+          </sp-menu-item>
+          <sp-menu-item>
+              Select and mask...
+          </sp-menu-item>
+          <sp-menu-item>
+              Save selection
+          </sp-menu-item>
+          <sp-menu-item disabled>
+              Make work path
+          </sp-menu-item>
+        </sp-menu>
+      </sp-popover>
     </div>
   </div>
 

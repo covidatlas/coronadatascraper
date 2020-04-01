@@ -25,6 +25,10 @@
   max-width: 100%;
 }
 
+.ca-Logo--extrasmall {
+  width: 158px;
+}
+
 .ca-Page,
 .ca-Footer {
   max-width: var(--page-max-width);
@@ -34,22 +38,24 @@
 
 .ca-Sidebar {
   width: 225px;
-}
 
-sp-sidenav {
-  max-width: 100%;
-  --spectrum-global-dimension-size-65: var(--spectrum-global-dimension-size-100);
+  sp-sidenav {
+    max-width: 100%;
+    --spectrum-global-dimension-size-65: var(--spectrum-global-dimension-size-100);
 
-  font-family: var(--ca-FontBody);
-
-  & + sp-sidenav {
-    margin-top: var(--spectrum-alias-grid-margin-medium);
+    & + sp-sidenav {
+      margin-top: var(--spectrum-alias-grid-margin-medium);
+    }
   }
+}
+.spectrum .ca-Sidebar sp-sidenav {
+  --spectrum-global-font-family-base: var(--ca-FontBody);
+  --spectrum-alias-body-text-font-family: var(--ca-FontBody);
 }
 
 /* Should work if markup is <sp-dropdown emphasized> */
 sp-dropdown[emphasized] {
-  --spectrum-fieldbutton-border-color: var(--spectrum-button-p\rimary-border-color);
+  --spectrum-fieldbutton-border-color: var(--spectrum-button-primary-border-color);
   --spectrum-fieldbutton-background-color: var(--spectrum-button-primary-background-color);
   --spectrum-fieldbutton-text-color: var(--spectrum-button-primary-text-color);
   --spectrum-dropdown-placeholder-text-color: var(--spectrum-button-primary-text-color);
@@ -123,18 +129,14 @@ sp-dropdown[emphasized] {
 }
 
 .ca-SiteHeader {
+  display: flex;
   background-color: var(--BackgroundColor);
   border-bottom-color: transparent;
-}
 
-.ca-SiteHeader--dark {
-  background: var(--BackgroundColor-dark);
-
-  sp-icon {
-    color: var(--BackgroundColor);
+  .ca-Logo {
+    margin: 0 auto;
   }
 }
-
 
 hr {
   border-top: 1px solid black;
