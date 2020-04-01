@@ -144,7 +144,7 @@ exports.handler = async function http() {
   <div class="ca-Sandbox">
     <h1 class="spectrum-Heading spectrum-Heading--M">Sidenav</h1>
     <div class="ca-Sandbox-example">
-      <div class="ca-SideNav">
+      <div class="ca-Sidebar">
         <sp-sidenav value="home">
           <sp-sidenav-item
               value="home"

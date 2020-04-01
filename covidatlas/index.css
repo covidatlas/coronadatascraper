@@ -36,6 +36,8 @@
   width: 225px;
 
   sp-sidenav {
+    --spectrum-alias-body-text-font-family: var(--spectrum-body-text-font-family);
+
     max-width: 100%;
 
     & + sp-sidenav {
@@ -44,15 +46,40 @@
   }
 }
 
-.ca-SideNav {
-  sp-sidenav {
-    --spectrum-alias-body-text-font-family: var(--spectrum-body-text-font-family);
-  }
-}
 
 /* Should work if markup is <sp-dropdown emphasized> */
 sp-dropdown[emphasized] {
-  
+  --spectrum-fieldbutton-border-color: var(--spectrum-button-primary-border-color);
+  --spectrum-fieldbutton-background-color: var(--spectrum-button-primary-background-color);
+  --spectrum-fieldbutton-text-color: var(--spectrum-button-primary-text-color);
+  --spectrum-dropdown-placeholder-text-color: var(--spectrum-button-primary-text-color);
+  --spectrum-dropdown-icon-color: var(--spectrum-button-primary-text-color);
+  --spectrum-dropdown-placeholder-text-font-style: regular;
+
+  --spectrum-fieldbutton-border-color-hover: var(--spectrum-button-primary-border-color-hover);
+  --spectrum-fieldbutton-background-color-hover: var(--spectrum-button-primary-background-color-hover);
+  --spectrum-fieldbutton-text-color-hover: var(--spectrum-button-primary-text-color-hover);
+  --spectrum-dropdown-placeholder-text-color-hover: var(--spectrum-button-primary-text-color-hover);
+  --spectrum-dropdown-icon-color-hover: var(--spectrum-button-primary-text-color-hover);
+
+  --spectrum-fieldbutton-border-color-key-focus: var(--spectrum-button-primary-border-color-key-focus);
+  --spectrum-fieldbutton-background-color-key-focus: var(--spectrum-button-primary-background-color-key-focus);
+  --spectrum-fieldbutton-text-color-key-focus: var(--spectrum-button-primary-text-color-key-focus);
+  --spectrum-dropdown-placeholder-text-color-key-focus: var(--spectrum-button-primary-text-color-key-focus);
+  --spectrum-dropdown-icon-color-key-focus: var(--spectrum-button-primary-text-color-key-focus);
+
+  --spectrum-fieldbutton-border-color-down: var(--spectrum-button-primary-border-color-down);
+  --spectrum-fieldbutton-background-color-down: var(--spectrum-button-primary-background-color-down);
+  --spectrum-fieldbutton-text-color-down: var(--spectrum-button-primary-text-color-down);
+  --spectrum-dropdown-placeholder-text-color-down: var(--spectrum-button-primary-text-color-down);
+  --spectrum-dropdown-placeholder-text-color-mouse-focus: var(--spectrum-button-primary-text-color-down);
+  --spectrum-dropdown-icon-color-down: var(--spectrum-button-primary-text-color-down);
+
+  --spectrum-fieldbutton-border-color-disabled: var(--spectrum-button-primary-border-color-disabled);
+  --spectrum-fieldbutton-background-color-disabled: var(--spectrum-button-primary-background-color-disabled);
+  --spectrum-fieldbutton-text-color-disabled: var(--spectrum-button-primary-text-color-disabled);
+  --spectrum-dropdown-placeholder-text-color-disabled: var(--spectrum-button-primary-text-color-disabled);
+  --spectrum-dropdown-icon-color-disabled: var(--spectrum-button-primary-text-color-disabled);
 }
 
 .ca-SocialLinks {
