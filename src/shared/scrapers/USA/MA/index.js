@@ -132,6 +132,10 @@ const scraper = {
       let sumDeaths = 0;
 
       data.features.forEach(item => {
+        if (item.attributes.County && item.attributes.County.toLowerCase() === 'totals') {
+          return;
+        }
+
         const cases = item.attributes.CASES;
         const county = geography.addCounty(
           item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
