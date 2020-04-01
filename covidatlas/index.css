@@ -99,6 +99,10 @@ sp-dropdown[emphasized] {
   background: var(--BackgroundColor-dark);
 }
 
+hr {
+  border-top: 1px solid black;
+}
+
 @media screen and (max-width: var(--responsive-breakpoint-mobile)) {
   .ca-Hero {
     display: initial;
