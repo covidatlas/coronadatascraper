@@ -146,7 +146,7 @@ exports.handler = async function http() {
   <div class="ca-Sandbox">
     <h1 class="spectrum-Heading spectrum-Heading--M">Site Header</h1>
     <div class="ca-Sandbox-example" style="background-color: var(--Gray200)">
-      <div class="ca-SiteHeader spectrum-Site-header ">
+      <div class="spectrum--light ca-SiteHeader spectrum-Site-header ">
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>

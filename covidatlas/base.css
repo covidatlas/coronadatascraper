@@ -1,5 +1,6 @@
 /* DIMENSIONS AND NON-COLOR RELATED VARIABLES */
-.spectrum {
+.spectrum--medium,
+.spectrum--large {
   /* Owr own invented values */
   --ButtonBorderSize: var(--spectrum-alias-border-size-thin);
   --ButtonBorderRadius: var(--spectrum-global-dimension-size-50);
@@ -39,9 +40,12 @@
   --page-max-width: 1200px;
   --hero-max-width: 800px;
   --responsive-breakpoint-mobile: 960px;
-
+}
   /* COLOR-RELATED VARIABLES */
-
+.spectrum--darkest,
+.spectrum--dark,
+.spectrum--light,
+.spectrum--lightest {
   /* Reassign spectrum color variables with our own generated colors */
   --spectrum-global-color-gray-50: var(--Gray100);
   --spectrum-global-color-gray-75: var(--Gray100);
@@ -70,15 +74,14 @@
   --spectrum-alias-background-color-default: var(--BackgroundColor);
   --spectrum-alias-border-color-focus: var(--Blue200);
 
-  --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-blue-400);
-  --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-blue-500);
-  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-blue-600);
-  --spectrum-semantic-cta-color-background-key-focus: var(--spectrum-global-color-blue-700);
-  --spectrum-semantic-cta-color-background-down: var(--spectrum-global-color-blue-600);
-  --spectrum-semantic-cta-text-color: var(--Blue200);
-  --spectrum-semantic-cta-text-color-hover: var(--Blue300);
-  --spectrum-semantic-cta-text-color-key-focus: var(--Blue300);
-  --spectrum-semantic-cta-text-color-down: var(--Blue400);
+  --spectrum-semantic-cta-color-background-default: var(--staticBlue200);
+  --spectrum-semantic-cta-color-background-hover: var(--staticBlue300);
+  --spectrum-semantic-cta-color-background-down: var(--staticBlue400);
+  --spectrum-semantic-cta-color-background-key-focus: var(--staticBlue300);
+  --spectrum-semantic-cta-text-color: var(--Blue300);
+  --spectrum-semantic-cta-text-color-hover: var(--Blue400);
+  --spectrum-semantic-cta-text-color-key-focus: var(--Blue400);
+  --spectrum-semantic-cta-text-color-down: var(--Blue500);
 
   --spectrum-alias-background-color-hover-overlay: rgba(29, 10, 68, 0.06); /* Gray800 at 15% */
   --spectrum-alias-highlight-hover: var(--spectrum-alias-background-color-hover-overlay);
@@ -104,19 +107,19 @@
   /* Primary Button */
   --spectrum-button-primary-border-color: var(--spectrum-semantic-cta-color-background-default);
   --spectrum-button-primary-background-color: var(--spectrum-semantic-cta-color-background-default);
-  --spectrum-button-primary-text-color: var(--Gray100);
+  --spectrum-button-primary-text-color: var(--staticGray100);
 
   --spectrum-button-primary-border-color-hover: var(--spectrum-semantic-cta-color-background-hover);
   --spectrum-button-primary-background-color-hover: var(--spectrum-semantic-cta-color-background-hover);
-  --spectrum-button-primary-text-color-hover: var(--Gray100);
+  --spectrum-button-primary-text-color-hover: var(--staticGray100);
 
   --spectrum-button-primary-border-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
   --spectrum-button-primary-background-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
-  --spectrum-button-primary-text-color-key-focus: var(--Gray100);
+  --spectrum-button-primary-text-color-key-focus: var(--staticGray100);
 
   --spectrum-button-primary-border-color-down: var(--spectrum-semantic-cta-color-background-down);
   --spectrum-button-primary-background-color-down: var(--spectrum-semantic-cta-color-background-down);
-  --spectrum-button-primary-text-color-down: var(--Gray100);
+  --spectrum-button-primary-text-color-down: var(--staticGray100);
 
   --spectrum-button-primary-border-color-disabled: var(--Gray300);
   --spectrum-button-primary-background-color-disabled: var(--Gray300);
@@ -129,15 +132,15 @@
 
   --spectrum-button-quiet-primary-border-color-hover: var(--spectrum-semantic-cta-color-background-hover);
   --spectrum-button-quiet-primary-background-color-hover: var(--spectrum-semantic-cta-color-background-hover);
-  --spectrum-button-quiet-primary-text-color-hover: var(--Gray100);
+  --spectrum-button-quiet-primary-text-color-hover: var(--staticGray100);
 
   --spectrum-button-quiet-primary-border-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
   --spectrum-button-quiet-primary-background-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
-  --spectrum-button-quiet-primary-text-color-key-focus: var(--Gray100);
+  --spectrum-button-quiet-primary-text-color-key-focus: var(--staticGray100);
 
   --spectrum-button-quiet-primary-border-color-down: var(--spectrum-semantic-cta-color-background-down);
   --spectrum-button-quiet-primary-background-color-down: var(--spectrum-semantic-cta-color-background-down);
-  --spectrum-button-quiet-primary-text-color-down: var(--Gray100);
+  --spectrum-button-quiet-primary-text-color-down: var(--staticGray100);
 
   --spectrum-button-quiet-primary-border-color-disabled: var(--Gray300);
   --spectrum-button-quiet-primary-background-color-disabled: var(--Gray300);
@@ -217,7 +220,7 @@
   /* Side Nav */
   --spectrum-sidenav-item-background-color-hover: var(--spectrum-alias-highlight-hover);
   --spectrum-sidenav-item-background-color-selected: var(--Blue200);
-  --spectrum-sidenav-item-text-color-selected: var(--BackgroundColor);
+  --spectrum-sidenav-item-text-color-selected: var(--staticGray100);
 
 }
 

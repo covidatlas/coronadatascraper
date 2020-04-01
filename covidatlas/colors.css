@@ -1,3 +1,21 @@
+.spectrum--light, .spectrum--dark {
+--staticBlue100: #388de0;
+--staticBlue200: #3d77c3;
+--staticBlue300: #3d61a7;
+--staticBlue400: #394c8d;
+--staticBlue500: #313571;
+--staticBlue600: #271f59;
+--staticBlue700: #1d0a44;
+--staticGray100: #fefefe;
+--staticGray200: #efeef1;
+--staticGray300: #d2d1d8;
+--staticGray400: #9492a4;
+--staticGray500: #76748c;
+--staticGray600: #63607d;
+--staticGray700: #514b6e;
+--staticGray800: #1d0a44;
+--staticGray900: #000000;
+}
 .spectrum--light {
 --BackgroundColor: #fefefe;
 --Blue100: #388de0;
