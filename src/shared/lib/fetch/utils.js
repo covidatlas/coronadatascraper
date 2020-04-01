@@ -7,6 +7,8 @@ import stream from 'stream';
 import { promisify } from 'util';
 import * as fs_ from '../fs.js';
 
+import AdmZip from 'adm-zip';
+
 const pipeline = promisify(stream.pipeline);
 
 export const downloadFile = async (url, dest) => {
@@ -44,7 +46,8 @@ export const folderFromZipURL = async (url, folder, debug = false) => {
   }
 
   try {
-    await extract(tmpZip, { dir: tmpDir });
+    const zip = new AdmZip(tmpZip);
+    zip.extractAllTo(tmpDir, false);
     console.log('  Extraction complete');
   } catch (err) {
     console.error(`  Error extracting zip: ${err}`);
@@ -53,7 +56,7 @@ export const folderFromZipURL = async (url, folder, debug = false) => {
   }
 
   await fsp.unlink(tmpZip);
-  await fs_.writeJSON(path.join(tmpDir, '__cache__.json'), { url }, { silent: true });
+  await fs_.writeJSON(path.join(tmpDir, '__cache__.json'), { url });
 
   await fsp.mkdir(path.dirname(folder), { recursive: true });
   await fsp.rmdir(folder, { recursive: true });
