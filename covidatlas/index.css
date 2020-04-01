@@ -173,6 +173,10 @@
   --spectrum-button-cta-border-color-disabled: var(--Gray300);
   --spectrum-button-cta-background-color-disabled: var(--Gray300);
   --spectrum-button-cta-text-color-disabled: var(--Gray200);
+
+  --page-max-width: 1200px;
+  --hero-max-width: 800px;
+  --responsive-breakpoint-mobile: 960px;
 }
 
 * {
@@ -196,7 +200,7 @@ body {
 }
 
 .ca-Logo {
-  max-width: 800px;
+  max-width: var(--hero-max-width);
   margin: var(--spectrum-alias-grid-margin-medium) auto;
 }
 
@@ -206,9 +210,17 @@ body {
 
 .ca-Page,
 .ca-Footer {
-  max-width: 1200px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
   padding: 0 var(--spectrum-alias-grid-margin-medium);
+}
+
+.ca-Sidebar {
+  width: 225px;
+
+  sp-sidenav {
+    max-width: 100%;
+  }
 }
 
 .ca-SocialLinks {
@@ -251,7 +263,7 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: var(--responsive-breakpoint-mobile)) {
   .ca-Hero {
     display: initial;
   }
