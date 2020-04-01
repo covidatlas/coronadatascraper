@@ -36,16 +36,18 @@
   width: 225px;
 
   sp-sidenav {
-    --spectrum-alias-body-text-font-family: var(--spectrum-body-text-font-family);
-
     max-width: 100%;
+    --spectrum-global-dimension-size-65: var(--spectrum-global-dimension-size-100);
 
     & + sp-sidenav {
       margin-top: var(--spectrum-alias-grid-margin-medium);
     }
   }
 }
-
+.spectrum .ca-Sidebar sp-sidenav {
+  --spectrum-global-font-family-base: var(--ca-FontBody);
+  --spectrum-alias-body-text-font-family: var(--ca-FontBody);
+}
 
 /* Should work if markup is <sp-dropdown emphasized> */
 sp-dropdown[emphasized] {
@@ -122,9 +124,19 @@ sp-dropdown[emphasized] {
   justify-content: center;
 }
 
+.ca-SiteHeader {
+  background-color: var(--BackgroundColor);
+  border-bottom-color: transparent;
+}
+
 .ca-SiteHeader--dark {
   background: var(--BackgroundColor-dark);
+
+  sp-icon {
+    color: var(--BackgroundColor);
+  }
 }
+
 
 hr {
   border-top: 1px solid black;
