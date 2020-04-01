@@ -39,6 +39,10 @@
 
   sp-sidenav {
     max-width: 100%;
+
+    & + sp-sidenav {
+      margin-top: var(--spectrum-alias-grid-margin-medium);
+    }
   }
 }
 

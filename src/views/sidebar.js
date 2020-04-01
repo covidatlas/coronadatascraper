@@ -43,7 +43,7 @@ module.exports = function body(selectedPage = 'home', className = '') {
           href="/about"
       ></sp-sidenav-item>
     </sp-sidenav>
-    <sp-sidenav value="home">
+    <sp-sidenav>
       <sp-sidenav-item
           value="github"
           label="Github"
