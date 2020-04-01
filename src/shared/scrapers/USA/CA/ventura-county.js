@@ -39,7 +39,7 @@ const scraper = {
       return { cases, tested };
     },
 
-    '2020-3-16': async function() {
+    '2020-03-16': async function() {
       this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.headless(this.url);
       let cases = 0;
@@ -70,18 +70,86 @@ const scraper = {
       return { cases, tested };
     },
 
-    '2020-3-18': async function() {
-      this.url = 'https://www.vcemergency.com';
+    '2020-03-18': async function() {
+      this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.page(this.url);
-      let cases = 0;
 
-      cases += parse.number(
-        $('tr.trFirstRow')
+      const cases = parse.number(
+        $('td:contains("COVID-19 Cases")')
+          .closest('table')
           .find('td')
           .first()
           .text()
       );
+
       return { cases };
+    },
+
+    '2020-03-19': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+
+      const cases = parse.number(
+        $('td:contains("COVID-19 Cases")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+      const deaths = parse.number(
+        $('td:contains("Death")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+
+      return { cases, deaths };
+    },
+
+    '2020-03-25': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+
+      const cases = parse.number(
+        $('td:contains("Positive Cases")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+      const deaths = parse.number(
+        $('td:contains("Death")')
+          .closest('table')
+          .find('td')
+          .first()
+          .text()
+      );
+
+      return { cases, deaths };
+    },
+
+    '2020-03-26': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+
+      const positiveCases = $('td:contains("Positive Cases")').closest('tr');
+      if (positiveCases.text() !== 'Positive Cases') {
+        throw new Error('Unexpected table layout/labels');
+      }
+      if (
+        positiveCases
+          .next()
+          .next()
+          .text() !== 'Deaths'
+      ) {
+        throw new Error('Unexpected table layout/labels');
+      }
+
+      const cases = parse.number(positiveCases.prev().text());
+      const deaths = parse.number(positiveCases.next().text());
+
+      return { cases, deaths };
     }
   }
 };

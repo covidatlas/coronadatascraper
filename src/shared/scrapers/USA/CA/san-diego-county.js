@@ -34,7 +34,7 @@ const scraper = {
         )
       };
     },
-    '2020-3-15': async function scraper() {
+    '2020-03-15': async function scraper() {
       const $ = await fetch.page(this.url);
       const cases = parse.number(
         $('td:contains("Total Positives")')

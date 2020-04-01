@@ -33,7 +33,7 @@ const scraper = {
         deaths
       };
     },
-    '2020-3-27': async function() {
+    '2020-03-27': async function() {
       await fetch.page(this.url);
       throw new DeprecatedError(`Guam stopped offering totals on their website, but there's a sweet coloring book`);
     }

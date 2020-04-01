@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
 import maintainers from '../../../lib/maintainers.js';
 
@@ -13,15 +13,19 @@ const scraper = {
   state: 'MA',
   country: 'USA',
   aggregate: 'county',
-  type: 'pdf',
+
   sources: [
     {
       url: 'https://www.mass.gov/orgs/department-of-public-health',
       name: 'Massachusetts DPH',
       description: 'Massachusetts Department of Public Health'
+    },
+    {
+      url: 'http://memamaps.maps.arcgis.com/apps/MapSeries/index.html?appid=9ef7ef55e4644af29e9ca07bfe6a509f',
+      name: 'Massachusetts Emergency Management Agency'
     }
   ],
-  maintainers: [maintainers.qgolsteyn],
+  maintainers: [maintainers.qgolsteyn, maintainers.aed3],
   _counties: [
     'Barnstable County',
     'Berkshire County',
@@ -41,6 +45,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
+      this.type = 'pdf';
 
       this.url = `https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-march-${new Date(
         date
@@ -114,6 +119,57 @@ const scraper = {
 
       counties.push(summedData);
 
+      return geography.addEmptyRegions(counties, this._counties, 'county');
+    },
+    '2020-03-30': async function() {
+      this.type = 'json';
+      this.url =
+        'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+      const counties = [];
+      const data = await fetch.json(this.url);
+
+      let onlySumDeaths = true;
+      let sumDeaths = 0;
+
+      data.features.forEach(item => {
+        const cases = item.attributes.CASES;
+        const county = geography.addCounty(
+          item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
+        );
+
+        const editDate = new Date(item.attributes.EditDate);
+        if (datetime.scrapeDateIsBefore(editDate)) {
+          throw new Error(`Data only available until ${editDate.toLocaleString()}`);
+        }
+
+        const countyObj = {
+          county,
+          cases
+        };
+
+        if (county.includes('nantucket')) {
+          countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
+            state: 'MA',
+            country: 'USA'
+          });
+          countyObj.county = 'Dukes and Nantucket County';
+        }
+
+        if (county.includes('Unknown')) {
+          countyObj.county = UNASSIGNED;
+          sumDeaths = item.attributes.DEATHS;
+        } else {
+          onlySumDeaths = onlySumDeaths && !item.attributes.DEATHS;
+        }
+
+        counties.push(countyObj);
+      });
+
+      const summedData = transform.sumData(counties);
+      if (onlySumDeaths) {
+        summedData.deaths = sumDeaths;
+      }
+      counties.push(summedData);
       return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }

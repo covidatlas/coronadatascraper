@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -110,7 +110,7 @@ const scraper = {
       regions.push(transform.sumData(regions));
       return regions;
     },
-    '2020-3-16': async function() {
+    '2020-03-16': async function() {
       this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
       this.type = 'table';
       let regions = [];
@@ -148,7 +148,7 @@ const scraper = {
       }
       return regions;
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       this.url =
         'https://services1.arcgis.com/ISZ89Z51ft1G16OK/arcgis/rest/services/COVID19_WI/FeatureServer/0//query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=NAME%2CPOSITIVE%2CDATE%2CCMNTY_SPRD&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=NAME+ASC&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson&token=';
       this.type = 'json';
@@ -170,8 +170,8 @@ const scraper = {
       regions = geography.addEmptyRegions(regions, this._counties, 'county');
       return regions;
     },
-    '2020-3-26': async function() {
-      if (datetime.scrapeDateIsBefore('2020-3-27')) {
+    '2020-03-26': async function() {
+      if (datetime.scrapeDateIsBefore('2020-03-27')) {
         this.url = 'https://www.dhs.wisconsin.gov/outbreaks/index.htm';
       } else {
         this.url = 'https://www.dhs.wisconsin.gov/covid-19/data.htm';

@@ -14,7 +14,7 @@ const scraper = {
   aggregate: 'county',
   sources: [
     {
-      name: 'Alabama Department of Public Health | Division of Infectious Diseases & Outbreaks',
+      name: 'Alabama Department of Public Health - Division of Infectious Diseases & Outbreaks',
       url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html'
     }
   ],
@@ -113,7 +113,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-26': async function() {
+    '2020-03-26': async function() {
       let counties = [];
       this.url = await fetch.getArcGISCSVURLFromOrgId(7, '4RQmZZ0yaZkGR1zy', 'COV19_Public_Dashboard_ReadOnly');
       this.type = 'csv';

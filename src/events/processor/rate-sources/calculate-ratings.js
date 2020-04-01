@@ -1,3 +1,5 @@
+import log from '../../../shared/lib/log.js';
+
 const scoresheet = {
   easeOfRead: {
     json: 1,
@@ -85,7 +87,7 @@ const rateLocation = location => {
 };
 
 const calculateRatings = async args => {
-  console.log(`⏳ Calculating ratings...`);
+  log(`⏳ Calculating ratings...`);
 
   const { sources, locations } = args;
 
