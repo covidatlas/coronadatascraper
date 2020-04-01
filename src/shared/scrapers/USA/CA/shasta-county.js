@@ -19,7 +19,7 @@ const scraper = {
       const matches = $el.text().match(/Positive cases:.*?(\d+)/);
       return { cases: parse.number(matches[1]) };
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       this.url = 'https://www.co.shasta.ca.us/covid-19/overview';
       this.type = 'table';
       const $ = await fetch.page(this.url);

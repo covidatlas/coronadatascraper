@@ -1,3 +1,4 @@
+import cheerioTableparser from 'cheerio-tableparser';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
@@ -116,6 +117,18 @@ const scraper = {
     'Williamson County',
     'Wilson County'
   ],
+  _good_headers(data) {
+    if (parse.string(data[0][0]) !== 'Patient county name') {
+      return false;
+    }
+    if (parse.string(data[1][0]) !== 'Positive') {
+      return false;
+    }
+    if (parse.string(data[2][0]) !== 'Negative') {
+      return false;
+    }
+    return true;
+  },
   scraper: {
     '0': async function() {
       let counties = [];
@@ -166,7 +179,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-21': async function() {
+    '2020-03-21': async function() {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('th:contains("Count")').closest('table');
@@ -204,6 +217,45 @@ const scraper = {
 
       counties.push(transform.sumData(counties));
 
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      return counties;
+    },
+    '2020-3-31': async function() {
+      let counties = [];
+      const $ = await fetch.page(this.url);
+      cheerioTableparser($);
+      const $table = $('td:contains("Blount")').closest('table');
+      const data = $table.parsetable(false, false, true);
+      if (!this._good_headers(data)) {
+        throw new Error('Unknown headers in html table');
+      }
+
+      const unassignedCounty = { county: UNASSIGNED, cases: 0, tested: 0 };
+
+      const numRows = data[0].length;
+      // skip headers and total line
+      for (let i = 1; i < numRows - 1; i++) {
+        const county = geography.addCounty(parse.string(data[0][i]));
+        const cases = parse.number(data[1][i]);
+        const neg = parse.number(data[2][i]);
+        const tested = cases + neg;
+
+        if (this._counties.indexOf(county) === -1) {
+          unassignedCounty.cases += cases;
+          unassignedCounty.tested += tested;
+          continue;
+        }
+
+        counties.push({
+          county,
+          cases,
+          tested
+        });
+      }
+
+      counties.push(unassignedCounty);
+      counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;

@@ -1,3 +1,5 @@
+import log from '../../../shared/lib/log.js';
+
 const reportScraping = args => {
   const { locations, scraperErrors, deDuped, crosscheckReports, report } = args;
 
@@ -15,14 +17,14 @@ const reportScraping = args => {
     active: 0
   };
   for (const location of locations) {
-    if (!location.state && !location.county) {
-      locationCounts.countries++;
-    } else if (!location.county && !location.city) {
-      locationCounts.states++;
-    } else if (!location.city) {
-      locationCounts.counties++;
-    } else {
+    if (location.city) {
       locationCounts.cities++;
+    } else if (location.county) {
+      locationCounts.counties++;
+    } else if (location.state) {
+      locationCounts.states++;
+    } else {
+      locationCounts.countries++;
     }
 
     for (const type of Object.keys(caseCounts)) {
@@ -32,17 +34,16 @@ const reportScraping = args => {
     }
   }
 
-  console.log('✅ Data scraped!');
+  log('✅ Data scraped!');
   for (const [name, count] of Object.entries(locationCounts)) {
-    console.log('   - %d %s', count, name);
+    log('   - %d %s', count, name);
   }
-  console.log('ℹ️  Total counts (tracked cases, may contain duplicates):');
+  log('ℹ️  Total counts (tracked cases, may contain duplicates):');
   for (const [name, count] of Object.entries(caseCounts)) {
-    console.log('   - %d %s', count, name);
+    log('   - %d %s', count, name);
   }
-
   if (scraperErrors.length) {
-    console.log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
+    log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
   }
 
   report.scrape = {

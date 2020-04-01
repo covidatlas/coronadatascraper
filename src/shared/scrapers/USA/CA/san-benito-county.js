@@ -38,7 +38,7 @@ const scraper = {
         )
       };
     },
-    '2020-3-19': async function scraper() {
+    '2020-03-19': async function scraper() {
       throw new Error('Need to scrape new arcgis');
     }
   }

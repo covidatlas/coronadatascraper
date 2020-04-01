@@ -127,7 +127,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-15': async function() {
+    '2020-03-15': async function() {
       const $ = await fetch.page(this.url);
       const $table = $('h4:contains("All Mississippi cases to date")')
         .nextAll('table')
@@ -149,11 +149,25 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       const $ = await fetch.page(this.url);
-      const $table = $('h4:contains("All Mississippi cases")')
-        .nextAll('table')
-        .first();
+
+      // Pick the last one, because older pages had a table of "new cases"
+      // before the table of "total cases"
+      const $td = $('td:contains("County")').last();
+
+      if (
+        $td.text() !== 'County' ||
+        $td.next().text() !== 'Cases' ||
+        $td
+          .next()
+          .next()
+          .text() !== 'Deaths'
+      ) {
+        throw new Error('Unexpected table headers');
+      }
+
+      const $table = $td.closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
       let counties = [];
       $trs.each((index, tr) => {

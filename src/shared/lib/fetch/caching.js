@@ -7,8 +7,9 @@ import path from 'path';
 import crypto from 'crypto';
 
 import join from '../join.js';
-import * as datetime from '../datetime.js';
+import datetime from '../datetime/index.js';
 import * as fs from '../fs.js';
+import log from '../log.js';
 
 const DEFAULT_CACHE_PATH = 'coronadatascraper-cache';
 const TIMESERIES_CACHE_PATH = 'cache';
@@ -44,6 +45,8 @@ export const getCachedFileName = (url, type) => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
+  // FIXME when we roll out new TZ support!
+  if (date) date = datetime.getYYYYMD(date);
   let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
   // Rewire cache path for testing
   if (process.env.OVERRIDE_CACHE_PATH) cachePath = process.env.OVERRIDE_CACHE_PATH;
@@ -68,15 +71,14 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
 
   if (await fs.exists(filePath)) {
-    console.log('  ⚡️ Cache hit for %s from %s', url, filePath);
+    log('  ⚡️ Cache hit for %s from %s', url, filePath);
     return fs.readFile(filePath, encoding);
   }
-  if (date && datetime.dateIsBefore(new Date(date), datetime.getDate())) {
-    console.log('  ⚠️ Cannot go back in time to get %s, no cache present at %s', url, filePath);
+  if (date && datetime.dateIsBefore(date, datetime.getDate())) {
+    log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-
-  console.log('  🐢  Cache miss for %s at %s', url, filePath);
+  log('  🐢  Cache miss for %s at %s', url, filePath);
   return CACHE_MISS;
 };
 

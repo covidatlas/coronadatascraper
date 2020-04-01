@@ -1,12 +1,4 @@
-/*
-  Get a date object offset for the current timezone
-*/
-export const getDate = function() {
-  const date = new Date();
-  const utcDate = new Date(date.toUTCString());
-  utcDate.setHours(utcDate.getHours() - 7);
-  return new Date(utcDate);
-};
+﻿import { getDate } from './today.js';
 
 /*
   Get date formatted in YYYY-M-D
@@ -120,70 +112,4 @@ export const getMonthDYYYY = function(date = getDate(), sep = '_') {
   const year = date.getUTCFullYear().toString();
 
   return `${month}${sep}${day}${sep}${year}`;
-};
-
-/*
-  Check of the *date* of the passed date is before the other passed date
-  *sigh*
-*/
-export const dateIsBefore = function(a, b) {
-  let localA = a;
-  let localB = b;
-  localA = new Date(localA);
-  localB = new Date(localB);
-  localA.setHours(0, 0, 0, 0);
-  localB.setHours(0, 0, 0, 0);
-  return localA.getTime() < localB.getTime();
-};
-
-/*
-  Check of the *date* of the passed date is before or equal to the other passed date
-  *sigh*
-*/
-export const dateIsBeforeOrEqualTo = function(a, b) {
-  let localA = a;
-  let localB = b;
-  localA = new Date(localA);
-  localB = new Date(localB);
-  localA.setHours(0, 0, 0, 0);
-  localB.setHours(0, 0, 0, 0);
-  return localA.getTime() < localB.getTime() || localA.getTime() === localB.getTime();
-};
-
-/*
-  Check if the date we're scraping is before the passed date
-*/
-export const scrapeDateIsBefore = function(date) {
-  let scrapeDate = getDate();
-  if (process.env.SCRAPE_DATE) {
-    scrapeDate = new Date(process.env.SCRAPE_DATE);
-  }
-  return dateIsBefore(scrapeDate, new Date(date));
-};
-
-/*
-  Check if the date we're scraping is after the passed date
-*/
-export const scrapeDateIsAfter = function(date) {
-  let scrapeDate = getDate();
-  if (process.env.SCRAPE_DATE) {
-    scrapeDate = new Date(process.env.SCRAPE_DATE);
-  }
-  return dateIsBefore(new Date(date), scrapeDate);
-};
-
-/*
-  Check if the date we're scraping is equal to the passed date
-*/
-export const scrapeDateIs = function(date) {
-  let scrapeDate = getDate();
-  if (process.env.SCRAPE_DATE) {
-    scrapeDate = new Date(process.env.SCRAPE_DATE);
-  }
-
-  const compareDate = new Date(date);
-  scrapeDate.setHours(0, 0, 0, 0);
-  compareDate.setHours(0, 0, 0, 0);
-
-  return compareDate.getTime() === scrapeDate.getTime();
 };

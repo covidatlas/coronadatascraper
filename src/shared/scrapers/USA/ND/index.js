@@ -75,7 +75,8 @@ const scraper = {
     'Williams County'
   ],
   _good_headers(data) {
-    if (parse.string(data[0][0]) !== 'County') {
+    const col0 = parse.string(data[0][0]);
+    if (col0 !== 'County' && col0 !== 'County_State') {
       return false;
     }
     if (parse.string(data[1][0]) !== 'Total Tests') {
@@ -90,7 +91,13 @@ const scraper = {
     let counties = [];
     const $ = await fetch.page(this.url);
     cheerioTableparser($);
-    const $table = $('td:contains("Positive")').closest('table');
+    let $table = $('td:contains("Positive")').closest('table');
+    if ($table.length === 0) {
+      $table = $('th:contains("Positive")').closest('table');
+    }
+    if ($table.length === 0) {
+      throw new Error('Can not find table');
+    }
     const data = $table.parsetable(false, false, true);
 
     if (!this._good_headers(data)) {

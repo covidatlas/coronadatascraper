@@ -75,7 +75,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-15': async function() {
+    '2020-03-15': async function() {
       this.url =
         'https://docs.google.com/document/d/e/2PACX-1vRSxDeeJEaDxir0cCd9Sfji8ZPKzNaCPZnvRCbG63Oa1ztz4B4r7xG_wsoC9ucd_ei3--Pz7UD50yQD/pub';
       this.type = 'paragraph';
@@ -93,7 +93,7 @@ const scraper = {
         )
       };
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/46c727cc29424b1fb9db67554c7df04e_0.csv';
       this.type = 'csv';
       const data = await fetch.csv(this.url);
@@ -108,7 +108,7 @@ const scraper = {
       counties.push(stateData);
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/dec84f18254341419c514af8f9e784ba_0.csv';
       this.type = 'csv';
       const data = await fetch.csv(this.url);
@@ -123,7 +123,7 @@ const scraper = {
       counties.push(stateData);
       return counties;
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv';
       this.type = 'csv';
       const data = await fetch.csv(this.url);

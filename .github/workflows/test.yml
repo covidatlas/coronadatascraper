@@ -38,6 +38,9 @@ jobs:
           PR: true
         run: |
           yarn test
+      - name: Timezone test
+        run: |
+          yarn test:tz
       - name: Lint
         run: |
           yarn lint

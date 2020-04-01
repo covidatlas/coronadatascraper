@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import csvParse from 'csv-parse';
 import csvStringify from 'csv-stringify';
+import log from './log.js';
 
 /**
   Check if a file or directory exists
@@ -92,12 +93,11 @@ export const readCSV = async filePath => {
  * @param {*} filePath path to write
  * @param {*} data data to write
  * @param {*} options
- *  - silent: the function will not write to console on write success
  *  - ensureDir: creates a directory if it is missing
  */
 export const writeFile = async (filePath, data, options = {}) => {
   let localOptions = options;
-  localOptions = { silent: false, ensureDir: true, ...localOptions };
+  localOptions = { ensureDir: true, ...localOptions };
 
   if (localOptions.ensureDir) {
     await ensureDir(path.dirname(filePath));
@@ -105,9 +105,7 @@ export const writeFile = async (filePath, data, options = {}) => {
 
   const ret = await fs.promises.writeFile(filePath, data);
 
-  if (!localOptions.silent) {
-    console.log(`✏️  ${filePath} written`);
-  }
+  log(`✏️  ${filePath} written`);
 
   return ret;
 };
