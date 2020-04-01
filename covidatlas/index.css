@@ -15,6 +15,7 @@
 @import "./base.css";
 
 @import "./sources.css";
+@import "./reports.css";
 
 .ca-Logo {
   max-width: var(--hero-max-width);

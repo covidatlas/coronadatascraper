@@ -35,7 +35,7 @@ module.exports = function body(title = constants.name, content = 'No content.', 
 
   <link rel="stylesheet" href="${arc.static('index.css')}">
   <script type="text/javascript">
-    window.NODE_ENV = ${prod ? 'production' : 'testing'};
+    window.NODE_ENV = "${prod ? 'production' : 'testing'}";
   </script>
 </head>
 
