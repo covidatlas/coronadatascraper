@@ -151,7 +151,7 @@ exports.handler = async function http() {
         </sp-action-button>
       </div>
       <br/>
-      <div class="ca-SiteHeader spectrum-Site-header ca-SiteHeader--dark">
+      <div class="spectrum--dark ca-SiteHeader spectrum-Site-header">
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>

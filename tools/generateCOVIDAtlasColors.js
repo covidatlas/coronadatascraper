@@ -25,9 +25,11 @@ function generateColors() {
   });
 
   const cdsThemeLight = cdsTheme(100);
+  const cdsThemeDark = cdsTheme(8);
 
   const varPrefix = '--';
-  const cssVariables = {};
+  const cssLightVariables = {};
+  const cssDarkVariables = {};
 
   // Iterate each color object
   // for (let i = 0; i < cdsThemeLight.length; i++) {
@@ -39,21 +41,45 @@ function generateColors() {
         const key = value.name;
         const prop = varPrefix.concat(key);
         // create CSS property with name and value
-        cssVariables[prop] = value.value;
+        cssLightVariables[prop] = value.value;
       }
     } else if (colorTheme.background) {
       const key = 'BackgroundColor';
       const prop = varPrefix.concat(key);
       // create CSS property with name and value
-      cssVariables[prop] = colorTheme.background;
+      cssLightVariables[prop] = colorTheme.background;
     }
   }
 
-  const cssArray = Object.entries(cssVariables).map(v => {
+  const cssLightArray = Object.entries(cssLightVariables).map(v => {
     return `${v.join(': ')};\n`;
   });
-  const cssString = cssArray.toString().replace(/,/g, '');
+  const cssLightString = cssLightArray.toString().replace(/,/g, '');
 
-  fs.writeFile('./covidatlas/colors.css', `.spectrum {\n${cssString}}\n`);
+  // Create dark theme
+  for (const colorTheme of cdsThemeDark) {
+    console.log(cdsThemeDark);
+    if (colorTheme.values) {
+      for (const value of colorTheme.values) {
+        // output "name" of color and prefix
+        const key = value.name;
+        const prop = varPrefix.concat(key);
+        // create CSS property with name and value
+        cssDarkVariables[prop] = value.value;
+      }
+    } else if (colorTheme.background) {
+      const key = 'BackgroundColor';
+      const prop = varPrefix.concat(key);
+      // create CSS property with name and value
+      cssDarkVariables[prop] = colorTheme.background;
+    }
+  }
+
+  const cssDarkArray = Object.entries(cssDarkVariables).map(v => {
+    return `${v.join(': ')};\n`;
+  });
+  const cssDarkString = cssDarkArray.toString().replace(/,/g, '');
+
+  fs.writeFile('./covidatlas/colors.css', `.spectrum--light {\n${cssLightString}}\n` + `.spectrum--dark {\n${cssDarkString}}\n`);
 }
 generateColors();

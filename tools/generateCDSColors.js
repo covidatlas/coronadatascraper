@@ -21,7 +21,6 @@ function generateColors() {
   });
 
   const cdsThemeLight = cdsTheme(100);
-  const cdsThemeDark = cdsTheme(100);
 
   const varPrefix = '--';
   const cssVariables = {};
@@ -48,25 +47,5 @@ function generateColors() {
 
   fs.writeFile('./site/colors.css', `.spectrum--light {\n${cssString}}\n`);
 
-
-  for (const colorTheme of cdsThemeDark) {
-    console.log(cdsThemeDark);
-    if (colorTheme.values) {
-      for (const value of colorTheme.values) {
-        // output "name" of color and prefix
-        const key = value.name;
-        const prop = varPrefix.concat(key);
-        // create CSS property with name and value
-        cssVariables[prop] = value.value;
-      }
-    }
-  }
-
-  const cssArray = Object.entries(cssVariables).map(v => {
-    return `${v.join(': ')};\n`;
-  });
-  const cssString = cssArray.toString().replace(/,/g, '');
-
-  fs.writeFile('./site/colors.css', `.spectrum--dark {\n${cssString}}\n`);
 }
 generateColors();
