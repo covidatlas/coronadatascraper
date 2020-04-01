@@ -53,7 +53,7 @@ exports.handler = async function http() {
 
 </style>
 
-<div class="ca-Page">
+<div class="spectrum-Site-mainContainer ca-Page">
   <h1 class="ca-Sandbox-pageTitle spectrum-Heading spectrum-Heading--XL">COVID Atlas Design Language</h1>
   <p class="spectrum-Body spectrum-Body--M">This is the kitchen sink of styles and restyled components for the COVID Atlas project.</p>
   <div class="ca-Sandbox">
