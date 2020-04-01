@@ -16,6 +16,7 @@
 
 @import "./sources.css";
 @import "./reports.css";
+@import "./map.css";
 
 .ca-Logo {
   max-width: var(--hero-max-width);
@@ -75,10 +76,6 @@
 
 .ca-SiteHeader--dark {
   background: var(--BackgroundColor-dark);
-}
-
-.mapboxgl-map {
-  height: 100%;
 }
 
 @media screen and (max-width: var(--responsive-breakpoint-mobile)) {
