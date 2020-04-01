@@ -1,5 +1,5 @@
 import path from 'path';
-import * as countryLevels from '../../../shared/lib/country-levels.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 const normalizeLocations = args => {

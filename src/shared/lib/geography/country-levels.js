@@ -1,7 +1,7 @@
 import assert from 'assert';
 import path from 'path';
-import { readJSON } from './fs.js';
-import * as geography from './geography/index.js';
+import { readJSON } from '../fs.js';
+import * as geography from './index.js';
 
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
