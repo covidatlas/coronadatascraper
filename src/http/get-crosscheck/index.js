@@ -141,7 +141,7 @@ exports.handler = async function http() {
     `
 ${header()}
 <div class="spectrum-Site-content">
-  ${sidebar('sources')}
+  ${sidebar('crosscheck')}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     ${reportHTML}
   </div>
