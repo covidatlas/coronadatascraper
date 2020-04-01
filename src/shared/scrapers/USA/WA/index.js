@@ -185,7 +185,7 @@ const scraper = {
         deaths: data.features[0].attributes.CV_State_Deaths
       };
       counties.push(totals);
-      return geography.addEmptyRegions(counties, this._counties, 'county');;
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };
