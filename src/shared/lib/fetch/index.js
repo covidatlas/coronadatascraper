@@ -193,8 +193,10 @@ export const headless = async (url, date = datetime.scrapeDate() || datetime.get
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);
+  const cacheMiss = cachedBody === caching.CACHE_MISS;
+  const onlyUseCache = process.env.ONLY_USE_CACHE;
 
-  if (cachedBody === caching.CACHE_MISS || alwaysRun) {
+  if (!onlyUseCache && (cacheMiss || alwaysRun)) {
     const fetchedBody = await fetchHeadless(url);
     await caching.saveFileToCache(url, 'html', date, fetchedBody);
 
