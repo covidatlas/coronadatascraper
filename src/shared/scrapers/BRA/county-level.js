@@ -31,8 +31,8 @@ const scraper = {
       })
       .map(row => {
         return {
-          cases: parse.number(row.confirmed) || 0,
-          deaths: parse.number(row.deaths) || 0,
+          cases: parse.number(row.confirmed),
+          deaths: parse.number(row.deaths),
           county: `${parse.string(row.city)}, ${parse.string(row.state)}`
         };
       });
