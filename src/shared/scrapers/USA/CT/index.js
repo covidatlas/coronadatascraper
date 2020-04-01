@@ -91,7 +91,7 @@ const scraper = {
 
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
         1}${new Date(date).getUTCDate()}2020.pdf`;
-      
+
       let body;
       try {
         body = await fetch.pdf(this.url);
