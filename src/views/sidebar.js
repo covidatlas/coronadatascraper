@@ -47,7 +47,7 @@ module.exports = function body(selectedPage = 'home', className = '') {
       <sp-sidenav-item
           value="github"
           label="Github"
-          href="https://github.com/covidatlas/coronadatascraper"
+          href="${constants.repoURL}"
           target="_blank"
       ></sp-sidenav-item>
     </sp-sidenav>
