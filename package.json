@@ -20,6 +20,8 @@
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
+    "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
+    "test:tz": "tape scripts/testTimezones.js | tap-spec",
     "timeseries": "node src/shared/timeseries.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
@@ -30,6 +32,7 @@
     "@adobe/leonardo-contrast-colors": "^1.0.0-alpha.4",
     "@adobe/spectrum-css": "^2.18.0",
     "@js-joda/core": "^2.0.0",
+    "@js-joda/timezone": "^2.2.0",
     "@lorenzofox3/for-await": "^0.2.1",
     "@turf/boolean-point-in-polygon": "^6.2.0-alpha.1",
     "@turf/center": "^6.2.0-alpha.1",
@@ -78,7 +81,10 @@
     "rollup-plugin-postcss": "^2.5.0",
     "rollup-plugin-serve": "^1.0.1",
     "tap-spec": "^5.0.0",
-    "tape": "^4.13.2"
+    "tape": "^4.13.2",
+    "tape-spawn": "^1.4.2",
+    "tape-watch": "^2.3.0",
+    "windows-iana": "^4.2.0"
   },
   "husky": {
     "hooks": {
@@ -95,11 +101,5 @@
     "printWidth": 120,
     "semi": true,
     "singleQuote": true
-  },
-  "jest": {
-    "rootDir": "src",
-    "testMatch": [
-      "**/?(*.)test.js"
-    ]
   }
 }

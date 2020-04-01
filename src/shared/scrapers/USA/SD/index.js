@@ -104,7 +104,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('caption:contains("SOUTH DAKOTA COUNTIES WITH COVID-19 CASES")').closest('table');
@@ -123,7 +123,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-3-23': async function() {
+    '2020-03-23': async function() {
       let counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('caption:contains("SD COUNTY OF RESIDENCE")').closest('table');

@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as geography from '../../../lib/geography/index.js';
 import maintainers from '../../../lib/maintainers.js';
 
@@ -200,7 +200,7 @@ const scraper = {
   ],
 
   async scraper() {
-    const usePDFs = datetime.scrapeDateIsBefore('2020-3-26');
+    const usePDFs = datetime.scrapeDateIsBefore('2020-03-26');
     this.url = usePDFs
       ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
       : 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';

@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
 import maintainers from '../../../lib/maintainers.js';
 
@@ -121,7 +121,7 @@ const scraper = {
 
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       this.type = 'json';
       this.url =
         'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
@@ -137,8 +137,9 @@ const scraper = {
           item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
         );
 
-        if (datetime.scrapeDateIsBefore(item.attributes.EditDate)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.EditDate).toLocaleString()}`);
+        const editDate = new Date(item.attributes.EditDate);
+        if (datetime.scrapeDateIsBefore(editDate)) {
+          throw new Error(`Data only available until ${editDate.toLocaleString()}`);
         }
 
         const countyObj = {

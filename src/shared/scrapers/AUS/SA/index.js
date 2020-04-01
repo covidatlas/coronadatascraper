@@ -30,7 +30,7 @@ const scraper = {
         cases: parse.number(casesString)
       };
     },
-    '2020-3-27': async function() {
+    '2020-03-27': async function() {
       this.type = 'table';
       const $ = await fetch.page(this.url);
       const $table = $('table:first-of-type');

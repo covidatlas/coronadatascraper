@@ -1,5 +1,6 @@
 import path from 'path';
-import * as datetime from '../../../shared/lib/datetime.js';
+import datetime from '../../../shared/lib/datetime/index.js';
+import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
@@ -62,7 +63,10 @@ export function runScraper(location) {
   }
   if (typeof location.scraper === 'object') {
     // Find the closest date
-    const targetDate = process.env.SCRAPE_DATE || datetime.getDate();
+    let env;
+    if (process.env.SCRAPE_DATE) env = datetime.parse(process.env.SCRAPE_DATE);
+    const targetDate = env || datetime.getDate();
+
     let scraperToUse = null;
     for (const [date, scraper] of Object.entries(location.scraper)) {
       if (datetime.dateIsBeforeOrEqualTo(date, targetDate)) {
@@ -102,7 +106,7 @@ const runScrapers = async args => {
       try {
         addData(locations, location, await runScraper(location));
       } catch (err) {
-        console.error('  ❌ Error processing %s: ', geography.getName(location), err);
+        log.error('  ❌ Error processing %s: ', geography.getName(location), err);
 
         errors.push({
           name: geography.getName(location),

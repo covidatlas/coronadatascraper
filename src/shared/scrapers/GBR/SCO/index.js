@@ -36,7 +36,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-29': async function() {
+    '2020-03-29': async function() {
       const counties = [];
       const $ = await fetch.page(this.url);
       const $table = $('td:contains("Positive cases")').closest('table');

@@ -4,7 +4,7 @@ const request = imports('request');
 const yargs = imports('yargs');
 
 const fs = imports('../src/shared/lib/fs.js');
-const datetime = imports('../src/shared/lib/datetime.js');
+const datetime = imports('../src/shared/lib/datetime/index.js');
 
 const { argv } = yargs
   .scriptName('node ./scripts/statusSlackBot.js')

@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import * as geography from '../../lib/geography/index.js';
-import * as datetime from '../../lib/datetime.js';
+import datetime from '../../lib/datetime/index.js';
 
 const scraper = {
   url: 'https://github.com/nytimes/covid-19-data',
@@ -23,7 +23,9 @@ const scraper = {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
     const data = await fetch.csv(this.url, false);
 
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : datetime.getDate();
+    // FIXME when we roll out new TZ support!
+    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
+    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
     let scrapeDateString = datetime.getYYYYMD(scrapeDate);
     const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
     const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
