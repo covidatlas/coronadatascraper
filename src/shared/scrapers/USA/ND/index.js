@@ -91,7 +91,13 @@ const scraper = {
     let counties = [];
     const $ = await fetch.page(this.url);
     cheerioTableparser($);
-    const $table = $('td:contains("Positive")').closest('table');
+    let $table = $('td:contains("Positive")').closest('table');
+    if ($table.length === 0) {
+      $table = $('th:contains("Positive")').closest('table');
+    }
+    if ($table.length === 0) {
+      throw new Error('Can not find table');
+    }
     const data = $table.parsetable(false, false, true);
 
     if (!this._good_headers(data)) {
