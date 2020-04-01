@@ -4,7 +4,6 @@ import { folderFromZipURL } from './fetch/utils.js';
 import { readJSON } from './fs.js';
 import * as geography from './geography/index.js';
 
-const TARGET_VERSION = 'v1.1.0';
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
 const levelCache = {};
