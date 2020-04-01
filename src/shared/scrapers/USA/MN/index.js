@@ -156,10 +156,6 @@ const scraper = {
         const cases = item.attributes.COVID19POS || 0;
         const county = geography.addCounty(item.attributes.CTY_NAME);
 
-        if (datetime.scrapeDateIsAfter(item.attributes.CV_Updated)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.CV_Updated).toLocaleString()}`);
-        }
-
         counties.push({
           county,
           cases
