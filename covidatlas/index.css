@@ -50,6 +50,11 @@
   }
 }
 
+/* Should work if markup is <sp-dropdown emphasized> */
+sp-dropdown[emphasized] {
+  
+}
+
 .ca-SocialLinks {
   text-transform: uppercase;
   display: inline-flex;
