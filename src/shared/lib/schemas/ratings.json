@@ -16,6 +16,10 @@
       "type": "boolean",
       "default": false
     },
+    "timeseries": {
+      "type": "boolean",
+      "default": false
+    },
     "certValidation": {
       "type": "boolean",
       "default": true
