@@ -1,13 +1,12 @@
 import assert from 'assert';
 import path from 'path';
-import { folderFromZipURL } from './fetch/utils.js';
 import { readJSON } from './fs.js';
 import * as geography from './geography/index.js';
 
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
 const levelCache = {};
-const countryLevelsDir = path.join('src', 'shared', 'vendor', 'country-levels');
+const countryLevelsDir = path.dirname(require.resolve('country-levels/license.md'));
 
 export function isId(str) {
   if (!str) return false;
@@ -32,12 +31,6 @@ const getLevelData = async level => {
   if (levelCache[level]) {
     return levelCache[level];
   }
-
-  console.log(`Loading Country Levels data for ${level}`);
-
-  const zipURL = `https://github.com/hyperknot/country-levels/releases/download/${TARGET_VERSION}/export_q7.zip`;
-
-  await folderFromZipURL(zipURL, countryLevelsDir);
 
   const levelData = await readJSON(path.join(countryLevelsDir, `${level}.json`));
   levelCache[level] = levelData;
