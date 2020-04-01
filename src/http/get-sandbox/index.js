@@ -144,7 +144,12 @@ exports.handler = async function http() {
   <div class="ca-Sandbox">
     <h1 class="spectrum-Heading spectrum-Heading--M">Sidenav</h1>
     <div class="ca-Sandbox-example">
-      <sp-sidenav defaultValue="map">
+      <sp-sidenav value="home">
+        <sp-sidenav-item
+            value="home"
+            label="Home"
+            href="/"
+        ></sp-sidenav-item>
         <sp-sidenav-item
             value="map"
             label="World Map"
@@ -162,7 +167,10 @@ exports.handler = async function http() {
   <div class="ca-Sandbox">
     <h1 class="spectrum-Heading spectrum-Heading--M">Search</h1>
     <div class="ca-Sandbox-example">
-      <sp-search></sp-search>
+      <div class="spectrum-ComboField">
+        <sp-search></sp-search>
+        <sp-button>Go</sp-button>
+      </div>
     </div>
   </div>
 

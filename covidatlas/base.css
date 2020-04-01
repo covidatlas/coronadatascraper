@@ -21,7 +21,13 @@
   --spectrum-global-color-blue-600: var(--Blue400);
   --spectrum-global-color-blue-700: var(--Blue500);
 
+  /* Aliases and Semantics */
+  --spectrum-alias-text-color-disabled: var(--Gray300);
+  --spectrum-alias-placeholder-text-color: var(--Gray400);
+  --spectrum-alias-placeholder-text-color-hover: var(--Gray400);
+
   --spectrum-alias-background-color-default: var(--BackgroundColor);
+  --spectrum-alias-border-color-focus: var(--Blue200);
 
   --spectrum-semantic-cta-color-background-default: var(--spectrum-global-color-blue-400);
   --spectrum-semantic-cta-color-background-hover: var(--spectrum-global-color-blue-500);
@@ -32,6 +38,13 @@
   --spectrum-semantic-cta-text-color-hover: var(--Blue300);
   --spectrum-semantic-cta-text-color-key-focus: var(--Blue300);
   --spectrum-semantic-cta-text-color-down: var(--Blue400);
+
+  --spectrum-alias-background-color-hover-overlay: rgba(29, 10, 68, 0.06); /* Gray800 at 15% */
+  --spectrum-alias-highlight-hover: var(--spectrum-alias-background-color-hover-overlay);
+
+  /* Focus ring */
+  --spectrum-alias-focus-ring-size: var(--spectrum-alias-border-size-thick);
+  --spectrum-alias-focus-ring-color: var(--spectrum-alias-border-color-focus);
 
   /* Base vars */
   --spectrum-body-text-font-family: "Merriweather", Georgia, serif;
@@ -61,6 +74,9 @@
   --spectrum-button-primary-border-radius: var(--ButtonBorderRadius);
   --spectrum-button-primary-text-font-weight: var(--spectrum-global-font-weight-normal, 400);
   --spectrum-button-primary-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-button-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+  --spectrum-button-primary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+  --spectrum-button-primary-min-width: var(--spectrum-alias-single-line-height);
 
   /* Primary Button */
   --spectrum-button-primary-border-color: var(--spectrum-semantic-cta-color-background-default);
@@ -155,6 +171,33 @@
   --spectrum-button-cta-border-color-disabled: var(--Gray300);
   --spectrum-button-cta-background-color-disabled: var(--Gray300);
   --spectrum-button-cta-text-color-disabled: var(--Gray200);
+
+  /* Input Fields */
+  --spectrum-textfield-border-radius: var(--ButtonBorderRadius);
+  --spectrum-textfield-border-color: var(--Gray400);
+  --spectrum-textfield-border-color-hover: var(--Gray500);
+  --spectrum-textfield-border-color-down: var(--Blue500);
+  --spectrum-textfield-border-color-key-focus: var(--Blue200);
+  --spectrum-textfield-background-color: var(--BackgroundColor);
+
+  --spectrum-fieldbutton-background-color: var(--BackgroundColor);
+  --spectrum-fieldbutton-border-radius: var(--ButtonBorderRadius);
+  --spectrum-fieldbutton-border-color: var(--Gray400);
+  --spectrum-fieldbutton-border-color-hover: var(--Gray500);
+  --spectrum-fieldbutton-border-color-down: var(--Blue500);
+  --spectrum-fieldbutton-border-color-key-focus: var(--Blue200);
+  --spectrum-fieldbutton-background-color: var(--BackgroundColor);
+
+
+  /* Select Lists */
+  --spectrum-selectlist-option-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
+  --spectrum-selectlist-option-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
+
+  /* Side Nav */
+  --spectrum-sidenav-item-background-color-hover: var(--spectrum-alias-highlight-hover);
+  --spectrum-sidenav-item-background-color-selected: var(--Blue200);
+  --spectrum-sidenav-item-text-color-selected: var(--BackgroundColor);
+  --spectrum-sidenav-item-text-size: 18px;
 }
 
 * {
