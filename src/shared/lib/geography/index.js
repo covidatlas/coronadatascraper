@@ -1,10 +1,11 @@
-import * as turf from './turf.js';
-import log from '../log.js';
-import usStates from '../../vendor/usa-states.json';
+import assert from 'assert';
 
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
+import usStates from '../../vendor/usa-states.json';
+import log from '../log.js';
+import * as turf from './turf.js';
 
 export { usStates };
 
@@ -104,7 +105,9 @@ export const isCity = function(location) {
 };
 
 export const getSmallestLocationStr = function(location) {
-  return location.city || location.county || location.state || location.country || null;
+  const smallestStr = location.city || location.county || location.state || location.country;
+  assert(smallestStr, `Illegal location: ${location}`);
+  return smallestStr;
 };
 
 export const getLocationGranularityName = function(location) {
