@@ -3,7 +3,7 @@ const test = require('tape');
 
 const { join } = require('path');
 const imports = require('esm')(module);
-const htmlTableValidator = imports(join(process.cwd(), 'src', 'shared', 'lib', 'html-table-validator.js'));
+const htmlTableValidator = imports(join(process.cwd(), 'src', 'shared', 'lib', 'html', 'table-validation.js'));
 
 // The html table that most tests will be using.
 // Summarized:

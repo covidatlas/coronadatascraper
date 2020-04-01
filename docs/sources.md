@@ -179,7 +179,7 @@ expect, prior to scraping.
 At the top of your scraper, import the module:
 
 ```
-import * as htmlTableValidation from '../../../lib/html-table-validator.js';
+import * as htmlTableValidation from '../../../lib/html/table-validation.js';
 ```
 
 And use it like this during your scrape (assuming the table is named `$table`):
