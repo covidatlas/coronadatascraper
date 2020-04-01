@@ -53,7 +53,7 @@ const scraper = {
     }
     if (county === 'TriCounty') {
       counties.push({
-        county: 'TriCounty (Uintah, Duchesne, Daggett)',
+        county: 'Uintah, Duchesne, & Daggett Counties',
         cases,
         feature: geography.generateMultiCountyFeature(
           ['Uintah County, UT', 'Duchesne County, UT', 'Daggett County, UT'],
@@ -90,8 +90,12 @@ const scraper = {
     }
     if (county === 'Bear River') {
       counties.push({
-        city: geography.addCounty(county),
-        cases
+        county: 'Box Elder, Cache, & Rich Counties',
+        cases,
+        feature: geography.generateMultiCountyFeature(['Box Elder County, UT', 'Cache County, UT', 'Rich County, UT'], {
+          state: 'UT',
+          country: 'USA'
+        })
       });
       return;
     }
