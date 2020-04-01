@@ -3,6 +3,8 @@
   --ButtonBorderSize: var(--spectrum-alias-border-size-thin);
   --ButtonBorderRadius: var(--spectrum-global-dimension-size-50);
 
+  --BackgroundColor-dark: var(--Blue700);
+
   /* Reassign spectrum color variables with our own generated colors */
   --spectrum-global-color-gray-50: var(--Gray100);
   --spectrum-global-color-gray-75: var(--Gray100);
