@@ -79,7 +79,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       let counties = [];
       const $ = await fetch.headless(this.url);
       const $table = $('th:contains("County")').closest('table');

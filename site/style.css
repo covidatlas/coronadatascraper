@@ -342,6 +342,16 @@ div.spectrum-SideNav-itemLink:hover {
   text-align: center;
 }
 
+.cds-SourceComparison-discrepancyMetric {
+  color: var(--spectrum-global-color-static-white);
+  background: var(--spectrum-global-color-red-400);
+}
+
+.cds-SourceComparison-agreedMetric {
+  color: var(--spectrum-global-color-static-white);
+  background: var(--spectrum-global-color-green-400);
+}
+
 @media screen and (max-width: 960px) {
   .is-editing .cds-SiteHeader {
     display: none;

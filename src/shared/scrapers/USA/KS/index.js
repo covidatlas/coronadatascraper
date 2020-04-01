@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import maintainers from '../../../lib/maintainers.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
@@ -187,7 +187,7 @@ const scraper = {
 
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
-    '2020-3-28': async function() {
+    '2020-03-28': async function() {
       this.type = 'json';
       this.url =
         'https://services9.arcgis.com/Q6wTdPdCh608iNrJ/arcgis/rest/services/COVID19_CountyStatus_KDHE/FeatureServer/0/query?f=json&where=Covid_Case%3D%27Yes%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=COUNTY%20asc&resultOffset=0&resultRecordCount=105&cacheHint=true';

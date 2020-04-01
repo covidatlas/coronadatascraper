@@ -27,7 +27,7 @@ const scraper = {
         )
       };
     },
-    '2020-3-18': async function scraper() {
+    '2020-03-18': async function scraper() {
       this.url = 'https://occovid19.ochealthinfo.com/coronavirus-in-oc';
       await fetch.page(this.url);
       throw new Error('Need to scrape new page');

@@ -39,7 +39,7 @@ const scraper = {
       return { cases, tested };
     },
 
-    '2020-3-16': async function() {
+    '2020-03-16': async function() {
       this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.headless(this.url);
       let cases = 0;
@@ -70,7 +70,7 @@ const scraper = {
       return { cases, tested };
     },
 
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       this.url = 'https://www.ventura.org/covid19/';
       const $ = await fetch.page(this.url);
 
@@ -85,7 +85,7 @@ const scraper = {
       return { cases };
     },
 
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
 
@@ -107,7 +107,7 @@ const scraper = {
       return { cases, deaths };
     },
 
-    '2020-3-25': async function() {
+    '2020-03-25': async function() {
       this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
 
@@ -129,7 +129,7 @@ const scraper = {
       return { cases, deaths };
     },
 
-    '2020-3-26': async function() {
+    '2020-03-26': async function() {
       this.url = 'https://www.vcemergency.com';
       const $ = await fetch.page(this.url);
 
