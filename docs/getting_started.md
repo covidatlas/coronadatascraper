@@ -28,6 +28,7 @@ git submodule update
 ```
 yarn install
 ```
+Note: on a Mac (Catalina) simply running `brew install yarn` may give you an incompatible version of `node`. If that's the case, [install the n package](https://www.npmjs.com/package/n) and run, e.g. `n lts`.
 
 ##### 3. Run the scraper
 
