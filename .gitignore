@@ -7,6 +7,6 @@ public/*.js.map
 coronavirus-data-sources/
 dist/
 node_modules
-public/static.json
+public/*.json
 sam.json
 sam.yaml

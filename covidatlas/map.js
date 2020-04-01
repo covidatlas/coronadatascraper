@@ -1,4 +1,4 @@
-/* globals mapboxgl, document */
+/* globals window, mapboxgl, document */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import * as fetch from './lib/fetch.js';
@@ -335,9 +335,11 @@ function showMap() {
     });
   }
 
-  loadData('_static/locations.json', 'locations');
-  loadData('_static/timeseries.json', 'timeseries');
-  loadData('_static/features.json', 'features');
+  const baseURL = window.NODE_ENV === 'production' ? 'https://coronadatascraper.com/' : '_static/';
+
+  loadData(`${baseURL}locations.json`, 'locations');
+  loadData(`${baseURL}timeseries.json`, 'timeseries');
+  loadData(`${baseURL}features.json`, 'features');
 }
 
 showMap();

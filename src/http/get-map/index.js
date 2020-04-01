@@ -9,6 +9,9 @@ const header = require('@architect/views/header');
 // eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
+// build step to copy data into public/
+// sandbox can run a script when it starts
+
 exports.handler = async function http() {
   return {
     headers: {

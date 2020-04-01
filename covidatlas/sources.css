@@ -1,0 +1,63 @@
+/* Ratings */
+.cds-ReportCard {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0 32px 0;
+}
+
+.cds-ReportCard h2.spectrum-Heading--L {
+  margin-top: 0;
+}
+
+.cds-ReportCard-grade {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  width: 78px;
+  height: 78px;
+
+  margin-right: 16px;
+
+  border: 4px solid transparent;
+  border-radius: 100%;
+
+  font-family: aglet-slab, sans-serif;
+  font-size: 48px;
+
+  --b-color: rgb(131, 154, 20);
+}
+.cds-ReportCard-grade--A {
+  color: green;
+  border-color: green;
+}
+.cds-ReportCard-grade--B {
+  color: var(--b-color);
+  border-color: var(--b-color);
+}
+.cds-ReportCard-grade--C {
+  color: orange;
+  border-color: orange;
+}
+.cds-ReportCard-grade--D,
+.cds-ReportCard-grade--F {
+  color: red;
+  border-color: red;
+}
+.cds-ReportCard-criteria {
+  margin-top: 12px;
+}
+
+.cds-ReportCard-plusMinus {
+  position: absolute;
+  right: 4px;
+  top: 6px;
+  font-size: 36px;
+}
+
+.cds-ReportCard-contributorName {
+  margin-bottom: 0 !important;
+}
