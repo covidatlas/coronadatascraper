@@ -39,10 +39,9 @@
   --page-max-width: 1200px;
   --hero-max-width: 800px;
   --responsive-breakpoint-mobile: 960px;
-}
 
-/* COLOR-RELATED VARIABLES */
-.spectrum--light {
+  /* COLOR-RELATED VARIABLES */
+
   /* Reassign spectrum color variables with our own generated colors */
   --spectrum-global-color-gray-50: var(--Gray100);
   --spectrum-global-color-gray-75: var(--Gray100);

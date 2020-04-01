@@ -54,6 +54,7 @@ exports.handler = async function http() {
 </style>
 
 <div class="spectrum-Site-mainContainer ca-Page">
+  <sp-button variant="secondary" onClick="toggleTheme()">Toggle Theme</sp-button>
   <h1 class="ca-Sandbox-pageTitle spectrum-Heading spectrum-Heading--XL">COVID Atlas Design Language</h1>
   <p class="spectrum-Body spectrum-Body--M">This is the kitchen sink of styles and restyled components for the COVID Atlas project.</p>
   <div class="ca-Sandbox">
@@ -252,6 +253,15 @@ exports.handler = async function http() {
   </div>
 
 </div>
+<script>
+  function toggleTheme() {
+    let examples = document.getElementsByClassName('ca-Sandbox-example');
+
+    for (let i=0; i < examples.length; i++) {
+      examples[i].classList.toggle('spectrum--dark');
+    }
+  }
+</script>
 `
     )
   };
