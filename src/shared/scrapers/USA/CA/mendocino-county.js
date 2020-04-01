@@ -21,13 +21,13 @@ const scraper = {
       );
       return { cases };
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       const $ = await fetch.page(this.url);
       const $strong = $('strong:contains("current case")');
       const cases = parse.number($strong.text().match(/(\d+) current/)[1]);
       return { cases };
     },
-    '2020-3-23': async function() {
+    '2020-03-23': async function() {
       const $ = await fetch.page(this.url);
       const $outerLI = $('li:contains("Testing Numbers")');
       const $li = $outerLI.find('li:contains("Total Positives")');

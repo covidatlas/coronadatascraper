@@ -3,6 +3,7 @@
 _Last updated: 2020-03-26_
 
 **Table of content**
+
 - [Sources and Scrapers](#sources-and-scrapers)
   - [Criteria for sources](#criteria-for-sources)
       - [1. Sources must be government or health organizations](#1-sources-must-be-government-or-health-organizations)
@@ -55,35 +56,35 @@ _Note:_ any files you create that start with `_` will be ignored by the crawler.
 
 Your source should export an object containing at a minimum the following properties:
 
-* `url` - The source of the data
-* `scraper` - An async function that scrapes data and returns objects, defined below
+- `url` - The source of the data
+- `scraper` - An async function that scrapes data and returns objects, defined below
 
 Add the following directly to the scraper object if the data you're pulling in is specific to a given location:
 
-* `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
-* `state` - The state, province, or region
-* `county` - The county or parish
-* `city` - The city name
+- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
+- `state` - The state, province, or region
+- `county` - The county or parish
+- `city` - The city name
 
 Additional flags can be set:
 
-* `type` - one of `json`, `csv`, `table`, `list`, `paragraph`, `pdf`, `image`. assumes `list` if `undefined`.
-* `timeseries` - `true` if this source provides timeseries data, `false` or `undefined` if it only provides the latest data
-* `headless` - whether this source requires a headless browser to scrape
-* `certValidation` - `false` to skip certificate validation when running this scraper (used to workaround certificate errors)
-* `priority` - any number (negative or positive). `0` is default, higher priority wins if duplicate data is present, ties are broken by rating (see "Source rating" below).
+- `type` - one of `json`, `csv`, `table`, `list`, `paragraph`, `pdf`, `image`. assumes `list` if `undefined`.
+- `timeseries` - `true` if this source provides timeseries data, `false` or `undefined` if it only provides the latest data
+- `headless` - whether this source requires a headless browser to scrape
+- `certValidation` - `false` to skip certificate validation when running this scraper (used to workaround certificate errors)
+- `priority` - any number (negative or positive). `0` is default, higher priority wins if duplicate data is present, ties are broken by rating (see "Source rating" below).
 
 For each scraper, we're now asking that you provide:
 
-* `sources` - Array of objects with `{ name, url, description }` detailing the true source of the data, with `name` as a human readible name and `url` as the URL for source's landing page. This is required when using CSV and JSON sources that aren't webpages a human can read.
+- `sources` - Array of objects with `{ name, url, description }` detailing the true source of the data, with `name` as a human readible name and `url` as the URL for source's landing page. This is required when using CSV and JSON sources that aren't webpages a human can read.
 
 If this is a curated source (data aggregated by a single person or organization from multiple organizations):
 
-* `curators` - Array of objects with `{ name, url, twitter, github, email }` indicating the name of the curator and their information so that they can get credit on the page.
+- `curators` - Array of objects with `{ name, url, twitter, github, email }` indicating the name of the curator and their information so that they can get credit on the page.
 
 If you're interested in maintaining the scraper and would like your name to appear on the [sources page](https://coronadatascraper.com/#sources), add the following:
 
-* `maintainers` - Array of objects with `{ name, url, twitter, github, email }`. If you provide a `url`, that will be used on the site, otherwise it will go down the list and link to whatever information you've provided. Anything beyond a name is totally optional, but `github` is encouraged.
+- `maintainers` - Array of objects with `{ name, url, twitter, github, email }`. If you provide a `url`, that will be used on the site, otherwise it will go down the list and link to whatever information you've provided. Anything beyond a name is totally optional, but `github` is encouraged.
 
 Everything defined on the source object starting with `_` will be available to the scraper via the `this`.
 
@@ -106,20 +107,20 @@ Your scraper should return an object, an array of objects, or `null` in case the
 
 The object may contain the following attributes:
 
-* `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) [required]
-* `state` - The state, province, or region (not required if defined on scraper object)
-* `county` - The county or parish (not required if defined on scraper object)
-* `city` - The city name (not required if defined on scraper object)
-* `cases` - Total number of cases
-* `deaths` - Total number of deaths
-* `hospitalized` - Total number of hospitalized
-* `discharged` - Total number of discharged
-* `recovered` - Total number recovered
-* `tested` - Total number tested
-* `feature` - GeoJSON feature associated with the location (See [Features and population data](#features-and-population-data))
-* `featureId` - Additional identifiers to aid with feature matching (See [Features and population data](#features-and-population-data))
-* `population` - The estimated population of the location (See [Features and population data](#features-and-population-data))
-* `coordinates` - Array of coordinates as `[longitude, latitude]` (See [Features and population data](#features-and-population-data))
+- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) [required]
+- `state` - The state, province, or region (not required if defined on scraper object)
+- `county` - The county or parish (not required if defined on scraper object)
+- `city` - The city name (not required if defined on scraper object)
+- `cases` - Total number of cases
+- `deaths` - Total number of deaths
+- `hospitalized` - Total number of hospitalized
+- `discharged` - Total number of discharged
+- `recovered` - Total number recovered
+- `tested` - Total number tested
+- `feature` - GeoJSON feature associated with the location (See [Features and population data](#features-and-population-data))
+- `featureId` - Additional identifiers to aid with feature matching (See [Features and population data](#features-and-population-data))
+- `population` - The estimated population of the location (See [Features and population data](#features-and-population-data))
+- `coordinates` - Array of coordinates as `[longitude, latitude]` (See [Features and population data](#features-and-population-data))
 
 Returning an array of objects is useful for aggregate sources, sources that provide information for more than one geographical area. For example, [Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink)
 provides information for all provinces of the country. If the scraper returns an array, each object in the array will have the attributes specified
@@ -135,12 +136,12 @@ At the moment, we provide support for scraping `HTML`, `CSV`, `TSV`, `JSON`, and
 
 - `await fetch.page(url)` retrieves an HTML document and loads it using [Cheerio](https://cheerio.js.org/). Make sure to refer to their documentation.
 - `await fetch.csv(url)` and `await fetch.tsv(url)` retrieves a CSV/TSV document and loads it as a JSON array. Each row of the CSV is an item in the array,
-and the CSV columns are the attributes of each item in the returned array.
+  and the CSV columns are the attributes of each item in the returned array.
 - `await fetch.json(url)` retrieves a JSON document
 - `await fetch.pdf(url)` retrieves a PDF document. Returns an array of text object with their associated x/y positions. We provide a number of helper functions
-to process documents in [`lib/pdf.js`](../../src/../coronadatascraper/src/events/crawler/lib/pdf.js).
+  to process documents in [`lib/pdf.js`](../../src/../coronadatascraper/src/events/crawler/lib/pdf.js).
 - `await fetch.headless(url)` In certain instances, the page fetched requires a full browser to be able to fetch the data (eg. we need Javascript enabled).
-Uses a headless browser and returns the loaded HTML document using [Cheerio](https://cheerio.js.org/).
+  Uses a headless browser and returns the loaded HTML document using [Cheerio](https://cheerio.js.org/).
 
 ### Library functions
 
@@ -149,11 +150,11 @@ See [library functions](../../coronadatascraper/site/lib) for API of the availab
 Key highlights:
 
 - [`lib/geography.js`](../src/events/crawler/lib/geography.js) provides helper functions related location geography. Make sure to look at `addEmptyRegions` and `addCounty` as
-they are often used.
+  they are often used.
 - [`lib/parse.js`](../src/events/crawler/lib/parse.js) provides helper functions to parse numbers, floats, and strings.
 - [`lib/transform.js`](../src/events/crawler/lib/transform.js) provides helper functions to perform common data manipulation operations. Make sure to look at
-`sumData` as it is often used.
-- [`lib/datetime.js`](../src/events/crawler/lib/datetime.js) provides helper functions to perform date related manipulations.
+  `sumData` as it is often used.
+- [`lib/datetime/index.js`](../src/events/crawler/lib/datetime/index.js) provides helper functions to perform date related manipulations.
 
 Of course, if something is missing, `yarn add` it as a dependency and `import` it!
 
@@ -161,11 +162,11 @@ Of course, if something is missing, `yarn add` it as a dependency and `import` i
 
 It's a tough challenge to write scrapers that will work when websites are inevitably updated. Here are some tips:
 
-* If data for a field is not present (eg. no recovered information), **do not put 0 for that field**. Make sure to leave the field undefined so the scraper knows there is no information for that particular field.
-* Write your scraper so it handles aggregate data with a single scraper entry (i.e. find a table, process the table)
-* Try not to hardcode county or city names, instead let the data on the page populate that
-* Try to make your scraper less brittle by avoiding using generated class names (i.e. CSS modules)
-* When targeting elements, don't assume order will be the same (i.e. if there are multiple `.count` elements, don't assume the second one is deaths, verify it by parsing the label)
+- If data for a field is not present (eg. no recovered information), **do not put 0 for that field**. Make sure to leave the field undefined so the scraper knows there is no information for that particular field.
+- Write your scraper so it handles aggregate data with a single scraper entry (i.e. find a table, process the table)
+- Try not to hardcode county or city names, instead let the data on the page populate that
+- Try to make your scraper less brittle by avoiding using generated class names (i.e. CSS modules)
+- When targeting elements, don't assume order will be the same (i.e. if there are multiple `.count` elements, don't assume the second one is deaths, verify it by parsing the label)
 
 ### Sample scraper
 
@@ -200,6 +201,7 @@ Here's the scraper for Indiana that gets data from a CSV:
 You can see that `country` and `state` are already defined on the object, and all the scraper has to do is pull down the CSV and return an array of objects.
 
 Here's the scraper for Oregon that pulls data from a HTML table:
+
 ```javascript
   {
     state: 'OR',
@@ -256,8 +258,8 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
       ...
       return counties;
     },
-    // 2020-3-14 matches all dates starting with 2020-3-14
-    '2020-3-14': async function() {
+    // 2020-03-14 matches all dates starting with 2020-03-14
+    '2020-03-14': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
       this.type = 'csv';
       const counties = [];
@@ -265,8 +267,8 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
       ...
       return counties;
     },
-    // 2020-3-17 matches all dates after 2020-3-14 and starting with 2020-3-17
-    '2020-3-17': async function() {
+    // 2020-03-17 matches all dates after 2020-03-14 and starting with 2020-03-17
+    '2020-03-17': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/79e1165ecb95496589d39faa25a83ad4_0.csv';
       this.type = 'csv';
       const counties = [];
@@ -284,10 +286,9 @@ Another example is when HTML on the page changes, you can simply change the sele
 
 ```javascript
 let $table;
-if (datetime.scrapeDateIsBefore('2020-3-16')) {
+if (datetime.scrapeDateIsBefore('2020-03-16')) {
   $table = $('table[summary="Texas COVID-19 Cases"]');
-}
-else {
+} else {
   $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
 }
 ```
@@ -334,28 +335,26 @@ in the returned object of the scraper.
 
 You should test your source first by running `yarn test`. This will perform some basic tests to make sure nothing crashes and the source object is in the correct form.
 
-
 ### Test coverage
 
 To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
 
-* Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
+- Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
 
-* Add a sample response from the target URL. The filename should be the URL, without the
-`http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
-file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
+- Add a sample response from the target URL. The filename should be the URL, without the
+  `http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
+  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
 
-   * URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
+  - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
 
-   * File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
+  - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
 
-* Add a file named `expected.json` containing the array of values that the scraper is expected to
-return. (Leave out any geojson `features` properties.)
+- Add a file named `expected.json` containing the array of values that the scraper is expected to
+  return. (Leave out any geojson `features` properties.)
 
 For sources that have a time series, the `expected.json` file represents the latest result in the
 sample response provided. You can additionally test the return value for a specific date by adding
 a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
-
 
     📁 USA
       📁 AK

@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as geography from '../../../lib/geography/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -94,13 +94,13 @@ const scraper = {
   },
   _boroughURL: 'https://www1.nyc.gov/assets/doh/downloads/pdf/imm/covid-19-daily-data-summary.pdf',
   async scraper() {
-    this.url = datetime.scrapeDateIsBefore('2020-3-17')
+    this.url = datetime.scrapeDateIsBefore('2020-03-17')
       ? 'https://www.health.ny.gov/diseases/communicable/coronavirus/'
       : 'https://coronavirus.health.ny.gov/county-county-breakdown-positive-cases';
     let counties = [];
     const $ = await fetch.page(this.url);
     let $table;
-    if (datetime.scrapeDateIsBefore('2020-3-17')) {
+    if (datetime.scrapeDateIsBefore('2020-03-17')) {
       $table = $('#case_count_table');
     } else {
       $table = $('table').first();

@@ -127,7 +127,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-15': async function() {
+    '2020-03-15': async function() {
       const $ = await fetch.page(this.url);
       const $table = $('h4:contains("All Mississippi cases to date")')
         .nextAll('table')
@@ -149,7 +149,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-20': async function() {
+    '2020-03-20': async function() {
       const $ = await fetch.page(this.url);
 
       // Pick the last one, because older pages had a table of "new cases"

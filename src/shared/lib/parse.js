@@ -40,8 +40,8 @@ export const float = function(string) {
 export const string = function(string) {
   return string
     .replace(/\n/g, ' ')
-    .replace(/\s+/, ' ')
     .replace(/\u200B/g, '')
     .replace(/\*/g, '')
+    .replace(/\s+/g, ' ') // do this last since the prev 2 can create contiguous spaces
     .trim();
 };
