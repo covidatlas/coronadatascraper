@@ -1,6 +1,9 @@
 const cheerio = require('cheerio');
 const test = require('tape');
-const HtmlTableValidator = require('../../../../src/shared/lib/html-table-validator.js');
+
+const { join } = require('path');
+const imports = require('esm')(module);
+const htmlTableValidator = imports(join(process.cwd(), 'src', 'shared', 'lib', 'html-table-validator.js'));
 
 // The html table that most tests will be using.
 // Summarized:
@@ -31,14 +34,9 @@ let $rules = {};
 
 // Validate $table using $rules.
 function expectErrors(t, expected) {
-  const v = new HtmlTableValidator($rules);
-  const actual = v.errors($table);
+  const actual = htmlTableValidator.validate($table, $rules);
   // console.log(actual);
   t.equal(actual.toString(), expected.toString());
-
-  // Don't bother -- success() just checks error length.
-  // const shouldBeSuccessful = expected.length === 0;
-  // t.equal(v.success($table), shouldBeSuccessful);
 }
 
 function setup() {
@@ -46,28 +44,28 @@ function setup() {
   $table = c('table#tid').eq(0);
 }
 
-// CONSTRUCTOR
+// Rule validation
 
-test('constructor: throws error if a bad rule is used', t => {
+test('validate: throws error if a bad rule is used', t => {
   setup();
   const rules = {
     headings: { 0: {} }
   };
   t.throws(() => {
     // eslint-disable-next-line no-new
-    new HtmlTableValidator(rules);
+    htmlTableValidator.validate($table, rules);
   });
   t.end();
 });
 
-test('constructor: throws error if an invalid rule is passed', t => {
+test('validate: throws error if an invalid rule is passed', t => {
   setup();
   const rules = {
     badHeading: 'this should throw'
   };
   t.throws(() => {
     // eslint-disable-next-line no-new
-    new HtmlTableValidator(rules);
+    htmlTableValidator.validate($table, rules);
   });
   t.end();
 });
@@ -332,7 +330,7 @@ test('throwIfErrors: throws if errors', t => {
     }
   };
   t.throws(() => {
-    HtmlTableValidator.throwIfErrors($rules, $table, { logToConsole: false });
+    HtmlTableValidator.throwIfErrors($table, $rules, { logToConsole: false });
   });
   t.end();
 });
@@ -344,7 +342,7 @@ test('throwIfErrors: does not throw if no errors', t => {
       0: /location/
     }
   };
-  HtmlTableValidator.throwIfErrors($rules, $table, { logToConsole: false });
+  htmlTableValidator.throwIfErrors($table, $rules, { logToConsole: false });
   t.equal(1, 1);
   t.end();
 });
@@ -365,7 +363,7 @@ test('throwIfErrors: can specify count of errors to include in thrown message', 
   let errMsg;
   try {
     const opts = { includeErrCount: 1, logToConsole: false };
-    HtmlTableValidator.throwIfErrors($rules, $table, opts);
+    htmlTableValidator.throwIfErrors($table, $rules, opts);
   } catch (e) {
     errMsg = e.message;
   }
@@ -391,7 +389,7 @@ test('throwIfErrors: count of errors requested may be more than actual errors', 
   let errMsg;
   try {
     const opts = { includeErrCount: 999, logToConsole: false };
-    HtmlTableValidator.throwIfErrors($rules, $table, opts);
+    htmlTableValidator.throwIfErrors($table, $rules, opts);
   } catch (e) {
     errMsg = e.message;
   }

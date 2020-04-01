@@ -15,7 +15,7 @@ _Last updated: 2020-03-26_
     - [Fetching different types of documents](#fetching-different-types-of-documents)
     - [Library functions](#library-functions)
     - [Making sure your scraper doesn't break](#making-sure-your-scraper-doesnt-break)
-    - [Using the HtmlTableValidator](#using-the-htmltablevalidator)
+    - [Validate HTML tables](#validate-html-tables)
     - [Sample scraper](#sample-scraper)
     - [Generating data retroactively](#generating-data-retroactively)
     - [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)
@@ -163,23 +163,23 @@ Of course, if something is missing, `yarn add` it as a dependency and `import` i
 
 It's a tough challenge to write scrapers that will work when websites are inevitably updated. Here are some tips:
 
-- If your source is an HTML table, use the HtmlTableValidator if possible
+- If your source is an HTML table, validate its structure
 - If data for a field is not present (eg. no recovered information), **do not put 0 for that field**. Make sure to leave the field undefined so the scraper knows there is no information for that particular field.
 - Write your scraper so it handles aggregate data with a single scraper entry (i.e. find a table, process the table)
 - Try not to hardcode county or city names, instead let the data on the page populate that
 - Try to make your scraper less brittle by avoiding using generated class names (i.e. CSS modules)
 - When targeting elements, don't assume order will be the same (i.e. if there are multiple `.count` elements, don't assume the second one is deaths, verify it by parsing the label)
 
-### Using the HtmlTableValidator
+### Validate HTML tables
 
 If your source is an HTML page, you can use a simple HTML table
-validator to verify that the structure of your table is what you
+validation to verify that the structure of your table is what you
 expect, prior to scraping.
 
-At the top of your scraper, import the class:
+At the top of your scraper, import the module:
 
 ```
-import HtmlTableValidator from '../../../lib/html-table-validator.js';
+import * as htmlTableValidation from '../../../lib/html-table-validator.js';
 ```
 
 And use it like this during your scrape (assuming the table is named `$table`):
@@ -198,7 +198,7 @@ const rules = {
   ]
 };
 const opts = { includeErrCount: 5, logToConsole: true };
-HtmlTableValidor.throwIfErrors(rules, $table, opts);
+htmlTableValidation.throwIfErrors($countyTable, rules, opts);
 ```
 
 When this runs, if any rules are not satisfied, it will throw
