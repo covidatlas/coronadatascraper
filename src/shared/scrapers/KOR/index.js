@@ -19,9 +19,9 @@ const scraper = {
     }
   ],
   _fieldPositions: {
-    cases: 2,
-    recovered: 3,
-    deaths: 4
+    cases: 3,
+    recovered: 4,
+    deaths: 5
   },
   _provinceNames: {
     'Chungcheongbuk-do': 'North Chungcheong',
