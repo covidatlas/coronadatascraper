@@ -132,7 +132,7 @@ const scraper = {
       let sumDeaths = 0;
 
       data.features.forEach(item => {
-        if (item.attributes.County === 'TOTALS') {
+        if (item.attributes.County && item.attributes.County.toLowerCase() === 'totals') {
           return;
         }
 
