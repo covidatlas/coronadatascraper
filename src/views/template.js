@@ -4,11 +4,6 @@ const arc = require('@architect/functions');
 const constants = require('@architect/views/constants');
 
 module.exports = function body(title = constants.name, content = 'No content.', className = '') {
-  // local: testing (only on your machine, going up the filesystem, etc)
-  // staging: staging
-  // prod: production
-  const prod = process.env.NODE_ENV === 'production';
-
   return /* html */ `<!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +30,7 @@ module.exports = function body(title = constants.name, content = 'No content.', 
 
   <link rel="stylesheet" href="${arc.static('index.css')}">
   <script type="text/javascript">
-    window.NODE_ENV = "${prod ? 'production' : 'testing'}";
+    window.NODE_ENV = "${constants.prod ? 'production' : 'testing'}";
   </script>
 </head>
 

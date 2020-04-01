@@ -51,6 +51,8 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <p class="spectrum-Body spectrum-Body--L">We're all in this together.</p>
     </section>
 
+    <hr>
+
     <section class="ca-Section ca-Download">
       <h1 class="spectrum-Heading spectrum-Heading--L">Data available for download</h1>
       <sp-button href="/data">Download</sp-button>
