@@ -147,7 +147,44 @@ sp-dropdown[emphasized] {
 }
 
 hr {
-  border-top: 1px solid black;
+  display: block;
+  --hr-width: 150px;
+  --bubble-size: 16px;
+  --bubble-spacing: calc(var(--hr-width) / 2 - var(--bubble-size) / 2);
+  --bubble-thickness: 2px;
+  --bubble-color: var(--spectrum-global-color-gray-300);
+  --bubble-background-color: var(--BackgroundColor);
+  width: var(--hr-width);
+  height: var(--bubble-size);
+  border: none;
+  background: none;
+  position: relative;
+  &:after {
+    z-index: 1;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    content: '';
+    border: var(--bubble-thickness) solid var(--bubble-color);
+    background: var(--bubble-background-color);
+    border-radius: 100%;
+    width: var(--bubble-size);
+    height: var(--bubble-size);
+    left: 0;
+    box-shadow: var(--bubble-spacing) 0 0 calc(-1 * var(--bubble-thickness)) var(--bubble-background-color), var(--bubble-spacing) 0 0 0 var(--bubble-color),
+                calc(var(--bubble-spacing) * 2) 0 0 calc(-1 * var(--bubble-thickness)) var(--bubble-background-color), calc(var(--bubble-spacing) * 2) 0 0 0 var(--bubble-color);
+  }
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+    top: calc(50% - var(--bubble-thickness) / 2);
+    height: var(--bubble-thickness);
+    background-color: var(--spectrum-global-color-gray-300);
+  }
 }
 
 @media screen and (max-width: var(--responsive-breakpoint-mobile)) {
