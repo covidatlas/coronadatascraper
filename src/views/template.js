@@ -3,7 +3,7 @@ const arc = require('@architect/functions');
 // eslint-disable-next-line
 const constants = require('@architect/views/constants');
 
-module.exports = function body(title = constants.name, content = 'No content.') {
+module.exports = function body(title = constants.name, content = 'No content.', className = '') {
   return /* html */ `<!DOCTYPE html>
 <html lang="en">
 
@@ -32,8 +32,9 @@ module.exports = function body(title = constants.name, content = 'No content.') 
 </head>
 
 <body class="spectrum spectrum--light spectrum--medium">
-  
-  <div class="spectrum-Site">
+  <sp-icons-medium></sp-icons-medium>
+
+  <div class="spectrum-Site ${className}">
     <div class="spectrum-Site-overlay"></div>
     ${content}
   </div>

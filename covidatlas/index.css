@@ -4,6 +4,7 @@
 /* CSS-only components */
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-global.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-light.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-dark.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
@@ -33,6 +34,10 @@
   --spectrum-global-color-blue-500: var(--Blue300);
   --spectrum-global-color-blue-600: var(--Blue400);
   --spectrum-global-color-blue-700: var(--Blue500);
+
+  --Purple: #1e0a46;
+
+  --BackgroundColor-dark: var(--Purple);
 
   --spectrum-alias-background-color-default: var(--BackgroundColor);
 
@@ -183,6 +188,7 @@ html {
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 [hidden] {
@@ -212,4 +218,37 @@ body {
 
   margin-top: var(--spectrum-alias-grid-margin-large);
   font-family: var(--spectrum-sociallinks-text-font-family);
+}
+
+.ca-Hero {
+  display: none;
+}
+
+.ca-Landing {
+  background-color: var(--BackgroundColor-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
+}
+
+.ca-Landing-logo {
+  width: 100%;
+}
+
+.ca-Home {
+}
+
+.ca-SiteHeader--dark {
+  background: var(--BackgroundColor-dark);
+}
+
+@media screen and (max-width: 960px) {
+  .ca-Hero {
+    display: initial;
+  }
 }

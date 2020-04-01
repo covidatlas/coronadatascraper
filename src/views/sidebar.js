@@ -3,9 +3,9 @@ const arc = require('@architect/functions');
 // eslint-disable-next-line
 const constants = require('@architect/views/constants');
 
-module.exports = function body(selectedPage) {
+module.exports = function body(selectedPage = 'home', className = '') {
   return /* html */ `
-<div class="ca-Sidebar spectrum-Site-sideBar">
+<div class="ca-Sidebar spectrum-Site-sideBar ${className}">
   <a class="spectrum-Site-sideBarHeader" href="/">
     <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo--small" alt="${constants.name} logo">
   </a>

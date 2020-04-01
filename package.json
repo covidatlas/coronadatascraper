@@ -62,6 +62,8 @@
     "@rollup/plugin-replace": "^2.3.1",
     "@spectrum-web-components/button": "^0.4.6",
     "@spectrum-web-components/dropdown": "^0.4.2",
+    "@spectrum-web-components/icon": "^0.4.4",
+    "@spectrum-web-components/icons": "^0.2.3",
     "@spectrum-web-components/menu": "^0.2.4",
     "@spectrum-web-components/search": "^0.2.10",
     "@spectrum-web-components/sidenav": "^0.3.4",

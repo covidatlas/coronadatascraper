@@ -18,28 +18,28 @@ exports.handler = async function http() {
     body: template(
       'About',
       `
-${header()}
+${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
 <div class="spectrum-Site-content">
   ${sidebar('home')}
 
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-    <div class="spectrum-Site-page">
-      <div class="ca-Hero">
-        <div class="ca-Logo">
-          <img src="${arc.static('logo-banner-light.svg')}" alt="${constants.name}">
-        </div>
+    <div class="ca-Landing">
+      <div class="ca-Logo ca-Landing-logo">
+        <img src="${arc.static('logo-banner-dark.svg')}" alt="${constants.name}">
       </div>
 
-      <sp-textfield placeholder="Zip code, location"></sp-textfield>
-
-    </section>
+      <div class="ca-Landing-search">
+        <sp-textfield placeholder="Zip code, location"></sp-textfield>
+      </div>
+    </div>
 
   </div>
 
 </div>
-`
+`,
+      'ca-Home'
     )
   };
 };
