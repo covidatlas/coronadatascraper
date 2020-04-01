@@ -119,6 +119,7 @@ sp-dropdown[emphasized] {
 
 .ca-Landing-logo {
   width: 100%;
+  max-width: 500px;
 }
 
 .ca-Download {
@@ -132,6 +133,7 @@ sp-dropdown[emphasized] {
   display: flex;
   background-color: var(--BackgroundColor);
   border-bottom-color: transparent;
+  padding-right: 40px; /* offset logo until search button is added */
 
   .ca-Logo {
     margin: 0 auto;
