@@ -81,64 +81,8 @@ There are some ASSUMPTIONS documented in the code:
 
 */
 
-
-/** throw an error if the table doesn't meet layout rules
-*
-* Options defaults:
-* {
-*   includeErrCount: 5,
-*   logToConsole: false
-* }
-*/
-export function throwIfErrors(table, rules, options = {}) {
-  const includeErrCount = options.includeErrCount || 5;
-  const logToConsole = options.logToConsole || false;
-
-  const fullrules = validateRules(rules);
-  const errs = validate(table, fullrules);
-  const errCount = errs.length;
-  if (errCount === 0) return;
-
-  const msg = `${errCount} validation errors.`;
-  const firstN = errs.slice(0, includeErrCount);
-  if (logToConsole) {
-    console.error(msg);
-    console.error(firstN);
-  }
-  throw new Error(`${msg}.  Sample: ${firstN.join(';')}.`);
-}
-
-
-
-/** Validates a cheerio table using a set of rules.
-* Returns list of error messages.
-*/
-export function validate(table, rules) {
-  const result = [];
-  if (table === null || table === undefined) {
-    result.push('null/undefined table');
-    return result;
-  }
-
-  // ASSUMPTION: table must have 1 header row,
-  // and at least one data row.
-  const trs = table.find('tr');
-  if (trs.length <= 1) {
-    return ['no rows in table'];
-  }
-
-  const fullrules = validateRules(rules);
-  result.push(...checkHeadings(table, fullrules.headings));
-  result.push(...checkMinRows(table, fullrules.minrows));
-  result.push(...checkData(table, fullrules.data));
-
-  return result;
-}
-
-
-/** Validate the rules, and return a full ruleset.
-*/
-function  validateRules(rules) {
+/** Validate the rules, and return a full ruleset. */
+function validateRules(rules) {
   const useRules = {
     headings: {},
     minrows: 0,
@@ -174,6 +118,15 @@ function  validateRules(rules) {
   return useRules;
 }
 
+/** Test a cell at a given row/column with a regex. */
+function matchCell(trs, row, column, regex) {
+  const dr = trs.eq(row);
+  let cells = dr.find('td');
+  if (cells.length === 0) cells = dr.find('th');
+  const cell = cells.eq(column);
+  const txt = cell.text();
+  return { result: regex.test(txt), text: txt };
+}
 
 /** Validate that table follows table heading rules. */
 function checkHeadings(table, headingRules) {
@@ -190,7 +143,6 @@ function checkHeadings(table, headingRules) {
   return errs;
 }
 
-
 /** Validate that table has a minimum number of rows. */
 function checkMinRows(table, minrows) {
   const trs = table.find('tr');
@@ -201,9 +153,9 @@ function checkMinRows(table, minrows) {
 }
 
 /** Validate that table follows data rules.
-* Assume that the data starts on the second row.
-*/
-function  checkData(table, dataRules) {
+ * Assume that the data starts on the second row.
+ */
+function checkData(table, dataRules) {
   const trs = table.find('tr');
 
   const datatrs = trs.slice(1);
@@ -266,11 +218,53 @@ function  checkData(table, dataRules) {
   return errs;
 }
 
-function matchCell(trs, row, column, regex) {
-  const dr = trs.eq(row);
-  let cells = dr.find('td');
-  if (cells.length === 0) cells = dr.find('th');
-  const cell = cells.eq(column);
-  const txt = cell.text();
-  return { result: regex.test(txt), text: txt };
+/** Validates a cheerio table using a set of rules.
+ * Returns list of error messages.
+ */
+export function validate(table, rules) {
+  const result = [];
+  if (table === null || table === undefined) {
+    result.push('null/undefined table');
+    return result;
+  }
+
+  // ASSUMPTION: table must have 1 header row,
+  // and at least one data row.
+  const trs = table.find('tr');
+  if (trs.length <= 1) {
+    return ['no rows in table'];
+  }
+
+  const fullrules = validateRules(rules);
+  result.push(...checkHeadings(table, fullrules.headings));
+  result.push(...checkMinRows(table, fullrules.minrows));
+  result.push(...checkData(table, fullrules.data));
+
+  return result;
+}
+
+/** throw an error if the table doesn't meet layout rules
+ *
+ * Options defaults:
+ * {
+ *   includeErrCount: 5,
+ *   logToConsole: false
+ * }
+ */
+export function throwIfErrors(table, rules, options = {}) {
+  const includeErrCount = options.includeErrCount || 5;
+  const logToConsole = options.logToConsole || false;
+
+  const fullrules = validateRules(rules);
+  const errs = validate(table, fullrules);
+  const errCount = errs.length;
+  if (errCount === 0) return;
+
+  const msg = `${errCount} validation errors.`;
+  const firstN = errs.slice(0, includeErrCount);
+  if (logToConsole) {
+    console.error(msg);
+    console.error(firstN);
+  }
+  throw new Error(`${msg}.  Sample: ${firstN.join(';')}.`);
 }

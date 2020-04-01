@@ -1,8 +1,8 @@
 const cheerio = require('cheerio');
 const test = require('tape');
-
 const { join } = require('path');
 const imports = require('esm')(module);
+
 const htmlTableValidator = imports(join(process.cwd(), 'src', 'shared', 'lib', 'html', 'table-validation.js'));
 
 // The html table that most tests will be using.
@@ -330,7 +330,7 @@ test('throwIfErrors: throws if errors', t => {
     }
   };
   t.throws(() => {
-    HtmlTableValidator.throwIfErrors($table, $rules, { logToConsole: false });
+    htmlTableValidator.throwIfErrors($table, $rules, { logToConsole: false });
   });
   t.end();
 });
