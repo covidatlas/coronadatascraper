@@ -155,9 +155,13 @@ const scraper = {
         const deaths = item.attributes.Deaths;
         const county = geography.addCounty(item.attributes.COUNTY);
 
-        if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
-        }
+        // On 3/31 these case counts were clearly updated, and agreed with the
+        // state published PDF for 3/31. Yet this DateLastUpdated field still
+        // showed 3/30. So this date field can not be trusted.
+        //
+        // if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
+        //  throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
+        // }
 
         counties.push({
           county,
