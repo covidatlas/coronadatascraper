@@ -1,5 +1,4 @@
-// import assert from 'assert';
-
+import assert from 'assert';
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
@@ -106,11 +105,8 @@ export const isCity = function(location) {
 
 export const getSmallestLocationStr = function(location) {
   const smallestStr = location.city || location.county || location.state || location.country;
-  if (!smallestStr) {
-    console.error(`    🚨 illegal location: ${location._path}`);
-  }
-  // assert(smallestStr, `Illegal location: ${JSON.stringify(location)}`);
-  return smallestStr || null;
+  assert(smallestStr, `Illegal location: ${JSON.stringify(location)}`);
+  return smallestStr;
 };
 
 export const getLocationGranularityName = function(location) {
