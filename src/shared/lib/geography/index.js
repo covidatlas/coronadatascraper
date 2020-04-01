@@ -1,4 +1,4 @@
-import assert from 'assert';
+// import assert from 'assert';
 
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
