@@ -91,6 +91,7 @@ const scraper = {
 
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
         1}${new Date(date).getUTCDate()}2020.pdf`;
+      console.log(this.url);
 
       let body;
       try {
@@ -104,7 +105,6 @@ const scraper = {
           throw new Error(`Error: ${err}`);
         }
       }
-
       const rows = pdfUtils.asWords(body, 0, 1).map(row => row.map(col => col.text));
 
       const counties = [];
@@ -140,33 +140,6 @@ const scraper = {
 
       counties.push(transform.sumData(counties));
 
-      return counties;
-    },
-    '2020-03-30': async function() {
-      this.url =
-        'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
-      this.type = 'json';
-
-      const data = await fetch.json(this.url);
-      const counties = [];
-
-      data.features.forEach(item => {
-        const cases = item.attributes.ConfirmedCases;
-        const deaths = item.attributes.Deaths;
-        const county = geography.addCounty(item.attributes.COUNTY);
-
-        if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
-        }
-
-        counties.push({
-          county,
-          cases,
-          deaths
-        });
-      });
-
-      counties.push(transform.sumData(counties));
       return counties;
     }
   }
