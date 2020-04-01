@@ -32,5 +32,16 @@ export default [
     watch: {
       exclude: ['node_modules']
     }
+  },
+  {
+    input: 'covidatlas/map.js',
+    output: {
+      dir: 'public/',
+      sourcemap: true
+    },
+    plugins: [resolve(), json()],
+    watch: {
+      exclude: ['node_modules']
+    }
   }
 ];
