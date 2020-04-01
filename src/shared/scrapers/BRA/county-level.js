@@ -33,7 +33,9 @@ const scraper = {
         return {
           cases: parse.number(row.confirmed),
           deaths: parse.number(row.deaths),
-          county: `${parse.string(row.city)}, ${parse.string(row.state)}`
+          county: `${parse.string(row.city)}, ${parse.string(row.state)}`,
+          state: parse.string(row.state),
+          aggregate: 'county'
         };
       });
 
