@@ -204,6 +204,32 @@ exports.handler = async function http() {
               </sp-menu-item>
           </sp-menu>
       </sp-dropdown>
+
+      <sp-dropdown emphasized
+          label="Action"
+      >
+          <sp-menu>
+              <sp-menu-item>
+                  Deselect
+              </sp-menu-item>
+              <sp-menu-item>
+                  Select inverse
+              </sp-menu-item>
+              <sp-menu-item>
+                  Feather...
+              </sp-menu-item>
+              <sp-menu-item>
+                  Select and mask...
+              </sp-menu-item>
+              <sp-menu-divider></sp-menu-divider>
+              <sp-menu-item>
+                  Save selection
+              </sp-menu-item>
+              <sp-menu-item disabled>
+                  Make work path
+              </sp-menu-item>
+          </sp-menu>
+      </sp-dropdown>
     </div>
   </div>
 
