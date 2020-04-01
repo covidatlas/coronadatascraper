@@ -67,11 +67,19 @@
   padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
 }
 
+.ca-Section {
+  margin: calc(var(--spectrum-alias-grid-margin-large) * 2) 0;
+}
+
 .ca-Landing-logo {
   width: 100%;
 }
 
-.ca-Home {
+.ca-Download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .ca-SiteHeader--dark {

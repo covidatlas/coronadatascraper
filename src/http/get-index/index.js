@@ -35,6 +35,27 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </div>
     </div>
 
+    <section class="ca-Section">
+      <h1 class="spectrum-Heading spectrum-Heading--L">Local official COVID-19 Resources</h1>
+      <p class="spectrum-Body spectrum-Body--L">COVID Atlas scrapes public data from local resources.</p>
+    </section>
+
+    <section class="ca-Section">
+      <h1 class="spectrum-Heading spectrum-Heading--L">Updated Daily</h1>
+      <p class="spectrum-Body spectrum-Body--L">Our data updates daily at 9PM PST so you can access the most recent data available.</p>
+    </section>
+
+    <section class="ca-Section">
+      <h1 class="spectrum-Heading spectrum-Heading--L">Built by a community</h1>
+      <p class="spectrum-Body spectrum-Body--L">COVID Atlas is entirely open-source, built by a community of people concerned with all the same things you are.</p>
+      <p class="spectrum-Body spectrum-Body--L">We're all in this together.</p>
+    </section>
+
+    <section class="ca-Section ca-Download">
+      <h1 class="spectrum-Heading spectrum-Heading--L">Data available for download</h1>
+      <sp-button href="/data">Download</sp-button>
+    </section>
+
   </div>
 
 </div>
