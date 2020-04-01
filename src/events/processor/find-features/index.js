@@ -227,7 +227,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
               if (!location.county) {
                 continue;
               }
-              if (feature.properties.name === `${location.county.replace('Parish', 'County')}, ${location.state}`) {
+              if (feature.properties.name === `${location.county.replace('County', 'Parish')}, ${location.state}`) {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;
