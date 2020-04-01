@@ -21,7 +21,7 @@ function initData() {
   let foundFeatures = 0;
   data.locations.forEach(function(location, index) {
     // Associated the feature with the location
-    if (location.featureId !== undefined) {
+    if (location.featureId !== undefined && !location.city) {
       const feature = data.features.features[location.featureId];
       if (feature) {
         foundFeatures++;
@@ -50,8 +50,9 @@ function updateMap(date) {
   let highestLocation = null;
 
   data.locations.forEach(function(location, index) {
+    location.locationId = index;
     // Calculate worst affected percent
-    if (location.population) {
+    if (location.population && !location.city) {
       const locationData = currentData[index];
       if (locationData) {
         const infectionPercent = locationData.cases / location.population;
@@ -74,7 +75,7 @@ function updateMap(date) {
     let regionColor = null;
     const { locationId } = feature.properties;
     const location = data.locations[locationId];
-    if (location && location.population) {
+    if (location && location.population && !location.city) {
       const locationData = currentData[locationId];
       if (locationData) {
         if (locationData.cases === 0) {
@@ -136,9 +137,13 @@ function populateMap() {
 
   const countyFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
-    })
+    features: data.locations
+      .filter(function(location) {
+        return isCounty(location);
+      })
+      .map(function(location) {
+        return data.features.features[location.featureId];
+      })
   };
 
   const stateFeatures = {
