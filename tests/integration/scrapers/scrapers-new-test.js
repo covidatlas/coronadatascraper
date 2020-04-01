@@ -1,4 +1,3 @@
-/*
 const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
@@ -39,4 +38,3 @@ if (files) {
     });
   }
 }
-*/
