@@ -66,6 +66,7 @@ export const getName = async id => {
 
 // this function transforms ids to Id columns and replaces names
 // with human readable version
+// it mutates the object
 export const transformLocationIds = async location => {
   for (const loc of ['country', 'state', 'county', 'city']) {
     const locId = location[loc];
