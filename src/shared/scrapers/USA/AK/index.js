@@ -49,15 +49,6 @@ const scraper = {
       'Bethel Census Area'
     ]
   },
-  _populations: {
-    Anchorage: 294356,
-    'Mat-Su': 107610,
-    'Gulf Coast': 80866,
-    Interior: 109847,
-    Northern: 27432,
-    Southeast: 72373,
-    Southwest: 42206
-  },
 
   async scraper() {
     const counties = [];
@@ -74,20 +65,19 @@ const scraper = {
         region = 'Anchorage';
       }
 
-      // const county = `${region} Economic Region`;
-      const population = this._populations[region];
+      const name = `${region} Economic Region, AK, USA`;
+      const subCounties = this._regions[region];
 
       // Only process the rows which match an economic region
-      if (population === undefined) {
+      if (!subCounties) {
+        console.warn(`  ⚠️  AK, USA: Skippping ${name}, we don't yet know how to handle it`);
         return;
       }
 
-      const subCounties = this._regions[region];
-
       const countyObj = {
+        name,
         county: subCounties,
-        cases,
-        population
+        cases
       };
 
       counties.push(countyObj);
