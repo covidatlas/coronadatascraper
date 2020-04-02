@@ -29,7 +29,8 @@ async function readPopulationData(featureCollection) {
     byCity: {},
     byCounty: {
       USA: await readPopulationFromCSV(join(dataPath, 'population-usa-counties.csv')),
-      GBR: await readPopulationFromCSV(join(dataPath, 'population-gbr-counties.csv'))
+      GBR: await readPopulationFromCSV(join(dataPath, 'population-gbr-counties.csv')),
+      BRA: await readPopulationFromCSV(join(dataPath, 'population-bra-counties.csv'))
     },
     byState: {
       China: await readPopulationFromCSV(join(dataPath, 'population-china-admin-divisions.csv')),
