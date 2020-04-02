@@ -36,19 +36,24 @@ const normalizeLocations = args => {
 
         if (location.county && location.county !== UNASSIGNED) {
           // Find county ID
-          if (location.feature && location.feature._aggregatedLocations) {
+          if (Array.isArray(location.county)) {
             const aggregatedCounty = [];
             let fipsFound = true;
-            for (const aggregatedLocation of location.feature._aggregatedLocations) {
-              const countryLevelId = findCountryLevelID(aggregatedLocation);
+            for (const subCounty of location.county) {
+              const subLocation = {
+                county: subCounty,
+                state: location.state,
+                country: location.country
+              };
+              const countryLevelId = findCountryLevelID(subLocation);
               if (countryLevelId) {
                 aggregatedCounty.push(countryLevelId);
               } else {
                 fipsFound = false;
                 log.error(
                   '❌ Failed to find FIPS code for subset of combined region %s, %s',
-                  aggregatedLocation.county,
-                  aggregatedLocation.state
+                  subLocation.county,
+                  subLocation.state
                 );
               }
             }
