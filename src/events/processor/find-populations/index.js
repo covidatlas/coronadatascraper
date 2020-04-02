@@ -135,7 +135,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
           const featuresToCheck = feature._aggregatedLocations.slice();
           while (featuresToCheck.length) {
             const aggregatedLocation = featuresToCheck.pop();
-            const pop = getPopulation(aggregatedLocation);
+            const pop = await getPopulation(aggregatedLocation);
             if (pop) {
               population += pop;
             } else {
