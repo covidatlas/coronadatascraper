@@ -8,27 +8,27 @@ import * as transform from '../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const countryLevelMap = {
-  Abruzzo: 'IT-65',
-  Basilicata: 'IT-77',
-  'P.A. Bolzano': 'IT-BZ',
-  Calabria: 'IT-78',
-  Campania: 'IT-72',
-  'Emilia Romagna': 'IT-45',
-  'Friuli Venezia Giulia': 'IT-36',
-  Lazio: 'IT-62',
-  Liguria: 'IT-42',
-  Lombardia: 'IT-25',
-  Marche: 'IT-57',
-  Molise: 'IT-67',
-  Piemonte: 'IT-21',
-  Puglia: 'IT-75',
-  Sardegna: 'IT-88',
-  Sicilia: 'IT-82',
-  Toscana: 'IT-52',
-  'P.A. Trento': 'IT-32',
-  Umbria: 'IT-55',
-  "Valle d'Aosta": 'IT-23',
-  Veneto: 'IT-34'
+  Abruzzo: 'iso2:IT-65',
+  Basilicata: 'iso2:IT-77',
+  'P.A. Bolzano': 'iso2:IT-BZ',
+  Calabria: 'iso2:IT-78',
+  Campania: 'iso2:IT-72',
+  'Emilia Romagna': 'iso2:IT-45',
+  'Friuli Venezia Giulia': 'iso2:IT-36',
+  Lazio: 'iso2:IT-62',
+  Liguria: 'iso2:IT-42',
+  Lombardia: 'iso2:IT-25',
+  Marche: 'iso2:IT-57',
+  Molise: 'iso2:IT-67',
+  Piemonte: 'iso2:IT-21',
+  Puglia: 'iso2:IT-75',
+  Sardegna: 'iso2:IT-88',
+  Sicilia: 'iso2:IT-82',
+  Toscana: 'iso2:IT-52',
+  'P.A. Trento': 'iso2:IT-32',
+  Umbria: 'iso2:IT-55',
+  "Valle d'Aosta": 'iso2:IT-23',
+  Veneto: 'iso2:IT-34'
 };
 
 const scraper = {
@@ -75,9 +75,6 @@ const scraper = {
       });
 
     states.push(transform.sumData(states));
-
-    console.log(states);
-
     return states;
   }
 };
