@@ -46,7 +46,7 @@ export const getCachedFileName = (url, type) => {
  */
 export const getCachedFilePath = (url, type, date = false) => {
   // FIXME when we roll out new TZ support!
-  if (date) date = datetime.getYYYYMD(date);
+  if (date) date = datetime.old.getYYYYMD(date);
   let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
   // Rewire cache path for testing
   if (process.env.OVERRIDE_CACHE_PATH) cachePath = process.env.OVERRIDE_CACHE_PATH;
@@ -74,7 +74,7 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
     return fs.readFile(filePath, encoding);
   }
-  if (date && datetime.dateIsBefore(date, datetime.getDate())) {
+  if (date && datetime.dateIsBefore(date, datetime.old.getDate())) {
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
