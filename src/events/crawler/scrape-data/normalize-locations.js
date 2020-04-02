@@ -53,8 +53,7 @@ const normalizeLocations = args => {
               }
             }
             if (fipsFound) {
-              // I have no idea if this is useful at all, but it sort of matches what we discussed
-              location.countyId = aggregatedCounty.join('+');
+              location.county = aggregatedCounty.join('+');
             }
           } else {
             let fipsFound = false;
