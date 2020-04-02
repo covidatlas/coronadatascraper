@@ -93,6 +93,10 @@ sp-dropdown[emphasized] {
   --spectrum-dropdown-icon-color-disabled: var(--spectrum-button-primary-text-color-disabled);
 }
 
+.spectrum-Link--silent {
+  text-decoration: none;
+}
+
 .ca-SocialLinks {
   text-transform: uppercase;
   display: inline-flex;
