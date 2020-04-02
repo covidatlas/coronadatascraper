@@ -53,26 +53,15 @@ const scraper = {
     }
     if (county === 'TriCounty') {
       counties.push({
-        county: 'Uintah, Duchesne, & Daggett Counties',
-        cases,
-        feature: geography.generateMultiCountyFeature(
-          ['Uintah County, UT', 'Duchesne County, UT', 'Daggett County, UT'],
-          {
-            state: 'UT',
-            country: 'USA'
-          }
-        )
+        county: ['Uintah County', 'Duchesne County', 'Daggett County'],
+        cases
       });
       return;
     }
     if (county === 'Weber-Morgan') {
       counties.push({
-        county,
-        cases,
-        feature: geography.generateMultiCountyFeature(['Weber County, UT', 'Morgan County, UT'], {
-          state: 'UT',
-          country: 'USA'
-        })
+        county: ['Weber County', 'Morgan County'],
+        cases
       });
       return;
     }
@@ -90,12 +79,8 @@ const scraper = {
     }
     if (county === 'Bear River') {
       counties.push({
-        county,
-        cases,
-        feature: geography.generateMultiCountyFeature(['Box Elder County, UT', 'Cache County, UT', 'Rich County, UT'], {
-          state: 'UT',
-          country: 'USA'
-        })
+        county: ['Box Elder County', 'Cache County', 'Rich County'],
+        cases
       });
       return;
     }
