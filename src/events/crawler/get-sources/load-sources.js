@@ -1,4 +1,4 @@
-import path, { basename } from 'path';
+import path from 'path';
 import fastGlob from 'fast-glob';
 import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
@@ -16,7 +16,10 @@ export default async args => {
   filePaths = filePaths.filter(file => !file.endsWith('.test.js'));
 
   // Enable shared code files in the scrapers directory w/o treating them as scrapers. See #196.
-  const filterFiles = file => !basename(file).startsWith('_');
+  const filterFiles = file => {
+    const parts = file.split('/');
+    return !parts.some(part => part.startsWith('_'));
+  };
   filePaths = filePaths.filter(filterFiles);
 
   // Prob doesn't need to be a Promise.all as we aren't actually executing yet, but jic...

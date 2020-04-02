@@ -10,22 +10,18 @@ const scraper = {
   url: 'https://github.com/datadista/datasets/tree/master/COVID%2019',
   priority: 1,
   timeseries: true,
+  type: 'csv',
   aggregate: 'state',
   sources: [
     {
-      name: 'cases',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_casos.csv',
-      description: 'Cases by date and community'
+      name: 'Ministerio de Sanidad',
+      url: 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm',
+      description: 'Government of Spain, Ministry of Health'
     },
     {
-      name: 'recovered',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_altas.csv',
-      description: 'Recoveries by date and community'
-    },
-    {
-      name: 'deaths',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_fallecidos.csv',
-      description: 'Deaths by date and community'
+      name: 'Departamento de Seguridad Nacional',
+      url: 'https://www.dsn.gob.es/gl/current-affairs/press-room',
+      description: 'Government of Spain, Department of National Security'
     }
   ],
   curators: [
@@ -44,9 +40,26 @@ const scraper = {
       github: 'herbcaudill'
     }
   ],
+  _endpoints: [
+    {
+      name: 'cases',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_casos.csv',
+      description: 'Cases by date and community'
+    },
+    {
+      name: 'recovered',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_altas.csv',
+      description: 'Recoveries by date and community'
+    },
+    {
+      name: 'deaths',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_fallecidos.csv',
+      description: 'Deaths by date and community'
+    }
+  ],
   async scraper() {
     const rawData = {};
-    for (const { name, url } of this.sources) {
+    for (const { name, url } of this._endpoints) {
       rawData[name] = await fetch.csv(url, false);
     }
 
