@@ -129,7 +129,7 @@ sp-dropdown[emphasized] {
 }
 
 .ca-Section {
-  margin: calc(var(--spectrum-alias-grid-margin-large) * 2) 0;
+  margin: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-small);
 }
 
 .ca-Landing-logo {
