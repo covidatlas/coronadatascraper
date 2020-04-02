@@ -53,6 +53,11 @@ sp-sidenav {
   }
 }
 
+sp-sidenav-item {
+  display: block;
+  margin: var(--spectrum-global-dimension-size-50) 0;
+}
+
 /* Should work if markup is <sp-dropdown emphasized> */
 sp-dropdown[emphasized] {
   --spectrum-fieldbutton-border-color: var(--spectrum-button-primary-border-color);
