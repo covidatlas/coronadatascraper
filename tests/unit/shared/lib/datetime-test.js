@@ -6,21 +6,22 @@ const test = require('tape');
 const datetime = imports(join(process.cwd(), 'src', 'shared', 'lib', 'datetime', 'iso', 'index.js')).default;
 
 const {
-  today,
-  now,
-  parse,
-  getYYYYMMDD,
-  getYYYYMD,
-  getDDMMYYYY,
-  getMDYYYY,
-  getMDYY,
-  getMonthDYYYY,
+  cast,
   dateIsBefore,
   dateIsBeforeOrEqualTo,
-  scrapeDateIsBefore,
-  scrapeDateIsAfter,
+  getDDMMYYYY,
+  getMDYY,
+  getMDYYYY,
+  getMonthDYYYY,
+  getYYYYMD,
+  getYYYYMMDD,
+  looksLike,
+  now,
+  parse,
   scrapeDateIs,
-  looksLike
+  scrapeDateIsAfter,
+  scrapeDateIsBefore,
+  today
 } = datetime;
 
 const mockDate = d => {
@@ -34,47 +35,48 @@ mockDate.reset = () => {
 };
 
 test('system timezone', t => {
-  t.pass(Intl.DateTimeFormat().resolvedOptions().timeZone);
-  t.end();
+  t.plan(1);
+  t.ok(Intl.DateTimeFormat().resolvedOptions().timeZone);
 });
 
 // Leaving this in to make sure timezone tests are working.
 // If enabled, this `yarn test:tz` will fail for any timezones east of GMT, e.g. `Australia/Sydney`
 test.skip('heisenbug', t => {
+  t.plan(1);
   t.equal(new Date('3/16/20').toISOString().substring(0, 10), '2020-03-16', 'Fails east of GMT');
-  t.end();
 });
 
 test('looksLike.isoDate', t => {
+  t.plan(6);
   t.equal(looksLike.isoDate('2020-03-16'), true, 'valid date');
   t.equal(looksLike.isoDate('1234-99-52'), true, 'invalid date but right form');
   t.equal(looksLike.isoDate('2020/03/16'), true, 'using slashes');
   t.equal(looksLike.isoDate('2020-3-16'), false, 'no padding');
   t.equal(looksLike.isoDate('20-03-16'), false, 'two-digit year');
   t.equal(looksLike.isoDate('pizza'), false, 'etc');
-  t.end();
 });
 
 test('looksLike.YYYYMD', t => {
+  t.plan(5);
   t.equal(looksLike.YYYYMD('2020-3-16'), true, 'valid date');
   t.equal(looksLike.YYYYMD('1234-9-52'), true, 'invalid date but right form');
   t.equal(looksLike.YYYYMD('2020-03-16'), true, 'padding');
   t.equal(looksLike.YYYYMD('20-03-16'), false, 'two-digit year');
   t.equal(looksLike.YYYYMD('pizza'), false, 'etc');
-  t.end();
 });
 
 test('looksLike.MDYY', t => {
+  t.plan(6);
   t.equal(looksLike.MDYY('03-16-20'), true, 'valid date');
   t.equal(looksLike.MDYY('3-16-20'), true, 'no padding');
   t.equal(looksLike.MDYY('3/16/20'), true, 'using slashes');
   t.equal(looksLike.MDYY('99-99-99'), true, 'invalid date but right form');
   t.equal(looksLike.MDYY('03-16'), false, 'four-digit year');
   t.equal(looksLike.MDYY('pizza'), false, 'etc');
-  t.end();
 });
 
 test('parse', t => {
+  t.plan(14);
   t.equal(parse(new Date('2020-03-16')), '2020-03-16', 'from JS Date');
   t.equal(parse('2020-03-16'), '2020-03-16', 'from ISO date');
   t.equal(parse('2020-03-16T23:45:00Z'), '2020-03-16', 'from ISO datetime');
@@ -93,40 +95,40 @@ test('parse', t => {
   t.throws(() => parse(undefined), 'from undefined');
   t.throws(() => parse('9999-99-99'), 'from invalid date');
   t.throws(() => parse({}), 'from object');
-  t.end();
 });
 
 test('today.utc', t => {
+  t.plan(1);
   mockDate('2020-03-16T23:45Z');
   t.equal(today.utc(), '2020-03-16', 'returns the date in UTC');
   mockDate.reset();
-  t.end();
 });
 
 test('today.at', t => {
+  t.plan(2);
   mockDate('2020-03-16T23:45Z');
   t.equal(today.at('America/Los_Angeles'), '2020-03-16', 'returns the date in Los Angeles');
   t.equal(today.at('Australia/Sydney'), '2020-03-17', 'returns the date in Sydney'); // next day
   mockDate.reset();
-  t.end();
 });
 
 test('now.utc', t => {
+  t.plan(1);
   mockDate('2020-03-16T23:45Z');
   t.equal(now.utc(), '2020-03-16T23:45', 'returns the time in UTC');
   mockDate.reset();
-  t.end();
 });
 
 test('now.at', t => {
+  t.plan(2);
   mockDate('2020-03-16T23:45Z');
   t.equal(now.at('America/Los_Angeles'), '2020-03-16T16:45', 'returns the time in Los Angeles'); // 7 hrs earlier
   t.equal(now.at('Australia/Sydney'), '2020-03-17T10:45', 'returns the time in Australia'); // 11 hrs later, next day
   mockDate.reset();
-  t.end();
 });
 
 test('getYYYYMMDD', t => {
+  t.plan(6);
   t.equal(getYYYYMMDD('2020-03-16'), '2020-03-16', 'from ISO date');
   t.equal(getYYYYMMDD('2020-3-16'), '2020-03-16', 'from unpadded ISO date');
   t.equal(getYYYYMMDD('2020-03-16T00:00:00'), '2020-03-16', 'from ISO datetime');
@@ -136,76 +138,80 @@ test('getYYYYMMDD', t => {
   mockDate('2020-03-16');
   t.equal(getYYYYMMDD(), '2020-03-16', 'defaults to current date');
   mockDate.reset();
-
-  t.end();
 });
 
 test('getYYYYMD', t => {
+  t.plan(2);
   t.equal(getYYYYMD('2020-03-16'), '2020-3-16', 'from ISO date');
   t.equal(getYYYYMD('2020-03-16T00:00:00'), '2020-3-16', 'from ISO datetime');
-  t.end();
 });
 
 test('getDDMMYYYY', t => {
+  t.plan(1);
   t.equal(getDDMMYYYY('2020-03-16'), '16-03-2020', 'from ISO date');
-  t.end();
 });
 
 test('getMDYYYY', t => {
+  t.plan(2);
   t.equal(getMDYYYY('2020-03-16'), '3/16/2020', 'from ISO date');
   t.equal(getMDYYYY('2020-03-16', '-'), '3-16-2020', 'dash as separator');
-  t.end();
 });
 
 test('getMDYY', t => {
+  t.plan(1);
   t.equal(getMDYY('2020-03-16'), '3/16/20', 'from ISO date');
-  t.end();
 });
 
 test('getMonthDYYYY', t => {
+  t.plan(2);
   t.equal(getMonthDYYYY('2020-03-16'), 'March_16_2020', 'from ISO date');
   t.equal(getMonthDYYYY('2020-03-06'), 'March_6_2020', `doesn't pad date`);
-  t.end();
 });
 
 test('dateIsBefore', t => {
+  t.plan(3);
   t.equal(dateIsBefore('2020-03-16', '2020-03-20'), true, 'before');
   t.equal(dateIsBefore('2020-03-16', '2020-03-16'), false, 'same');
   t.equal(dateIsBefore('2020-03-20', '2020-03-16'), false, 'after');
-  t.end();
 });
 
 test('dateIsBeforeOrEqualTo', t => {
+  t.plan(3);
   t.equal(dateIsBeforeOrEqualTo('2020-03-16', '2020-03-20'), true, 'before');
   t.equal(dateIsBeforeOrEqualTo('2020-03-16', '2020-03-16'), true, 'same');
   t.equal(dateIsBeforeOrEqualTo('2020-03-20', '2020-03-16'), false, 'after');
-  t.end();
 });
 
 test('scrapeDateIsBefore', t => {
+  t.plan(3);
   process.env.SCRAPE_DATE = '2020-3-16';
   t.equal(scrapeDateIsBefore('2020-3-20'), true, 'before');
   t.equal(scrapeDateIsBefore('2020-3-16'), false, 'same');
   t.equal(scrapeDateIsBefore('2020-3-10'), false, 'after');
   delete process.env.SCRAPE_DATE;
-  t.end();
 });
 
 test('scrapeDateIsAfter', t => {
+  t.plan(3);
   process.env.SCRAPE_DATE = '2020-3-16';
   t.equal(scrapeDateIsAfter('2020-3-20'), false, 'before');
   t.equal(scrapeDateIsAfter('2020-3-16'), false, 'same');
   t.equal(scrapeDateIsAfter('2020-3-10'), true, 'after');
   delete process.env.SCRAPE_DATE;
-  t.end();
+});
+
+test.only('cast', t => {
+  t.plan(3);
+  t.equal(cast(`2020-04-02T01:23:45.678Z`, 'America/Los_Angeles'), '2020-04-01', 'Returns the day before');
+  t.equal(cast(`2020-04-02T01:23:45.678Z`, 'Europe/Rome'), '2020-04-02', 'Returns the same day');
+  t.equal(cast(`2020-04-02T01:23:45.678Z`), '2020-04-01', 'Returns default tz (US / PT)');
 });
 
 test('scrapeDateIs', t => {
+  t.plan(3);
   process.env.SCRAPE_DATE = '2020-3-16';
   t.equal(scrapeDateIs('2020-3-20'), false, 'before');
   t.equal(scrapeDateIs('2020-3-16'), true, 'same');
   t.equal(scrapeDateIs('2020-3-10'), false, 'after');
-
   delete process.env.SCRAPE_DATE;
-  t.end();
 });

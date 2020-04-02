@@ -1,3 +1,4 @@
+import cast from './cast.js';
 import { dateIsBefore, dateIsBeforeOrEqualTo } from './compare.js';
 import { getYYYYMD, getYYYYMMDD, getDDMMYYYY, getMDYY, getMDYYYY, getMonthDYYYY } from './format.js';
 import { scrapeDate, scrapeDateIsBefore, scrapeDateIsAfter, scrapeDateIs } from './scrape-date.js';
@@ -7,6 +8,7 @@ import { parse } from './parse.js';
 import { looksLike } from './looks-like.js';
 
 export default {
+  cast,
   dateIsBefore,
   dateIsBeforeOrEqualTo,
   getDate,
