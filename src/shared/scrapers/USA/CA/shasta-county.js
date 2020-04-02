@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'fips:06089',
   state: 'iso2:US-CA',
-  country: 'iso1:US',
+  country: 'USA',
   maintainers: [maintainers.jbencina],
   scraper: {
     '0': async function() {
