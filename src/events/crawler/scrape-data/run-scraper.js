@@ -93,8 +93,6 @@ const runScrapers = async args => {
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (location.country !== 'AUS') continue;
-
     if (options.skip && geography.getName(location) === options.skip) {
       continue;
     }
