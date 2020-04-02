@@ -22,7 +22,7 @@ const scraper = {
 
     if (datetime.dateIsBefore(latestDate, scrapeDate)) {
       console.error(
-        '🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s',
+        '  🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s',
         datetime.getYYYYMMDD(latestDate),
         datetime.getYYYYMMDD(scrapeDate)
       );
