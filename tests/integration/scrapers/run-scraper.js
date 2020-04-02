@@ -1,4 +1,4 @@
-import * as datetime from '../../../src/shared/lib/datetime.js';
+import datetime from '../../../src/shared/lib/datetime/index.js';
 import * as geography from '../../../src/shared/lib/geography/index.js';
 
 export default location => {

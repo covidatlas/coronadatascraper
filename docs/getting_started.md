@@ -114,13 +114,14 @@ yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
 
 ### Tests
 
-We use [Jest](https://jestjs.io/).
+We use [Tape](https://github.com/substack/tape).
 
     # Run all tests
     yarn test
 
     # Run a single test file
-    yarn test src/shared/lib/__tests__/parse.test.js
+    node path/to/file.js
+
 
 ### Building the website
 

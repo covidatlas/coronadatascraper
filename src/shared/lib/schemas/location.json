@@ -13,6 +13,8 @@
     "deaths": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
     "recovered": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
     "tested": { "type": "number", "minimum": 0 },
+    "hospitalized": { "type": "number", "minimum": 0 },
+    "discharged": { "type": "number", "minimum": 0 },
     "population": { "type": "number", "minimum": 0 },
     "coordinates": { "type": "array" },
     "active": { "type": "number", "minimum": 0 },

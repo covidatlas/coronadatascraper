@@ -31,14 +31,14 @@ const scraper = {
         recovered
       };
     },
-    '2020-3-26': async function() {
+    '2020-03-26': async function() {
       return {
         cases: 67,
         recovered: 4,
         deaths: 0
       };
     },
-    '2020-3-27': async function() {
+    '2020-03-27': async function() {
       this.url = await fetch.getArcGISCSVURL('', 'a54a945cac82424fa4928139ee83f911', 'Cases_current');
       this.type = 'csv';
 

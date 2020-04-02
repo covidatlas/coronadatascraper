@@ -33,7 +33,7 @@ const scraper = {
         cases: parse.number(casesString)
       };
     },
-    '2020-3-24': async function() {
+    '2020-03-24': async function() {
       const $ = await getCurrentArticlePage(this.url);
       const $table = $('#content table');
       const $totalRow = $table.find('tbody > tr:last-child');

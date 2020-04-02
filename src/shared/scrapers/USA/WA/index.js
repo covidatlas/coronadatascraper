@@ -1,8 +1,8 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -91,7 +91,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       let counties = [];
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
@@ -123,7 +123,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-23': async function() {
+    '2020-03-23': async function() {
       let counties = [];
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
@@ -156,21 +156,23 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-30': async function() {
-      let counties = [];
+    '2020-03-30': async function() {
+      const counties = [];
       this.url =
         'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';
       this.type = 'json';
       this.headless = false;
       const data = await fetch.json(this.url);
-      let mostRecent = 0;
 
       data.features.forEach(item => {
         const cases = item.attributes.CV_PositiveCases;
         const deaths = item.attributes.CV_Deaths;
         const county = geography.addCounty(item.attributes.CNTY_NAME);
 
-        mostRecent = Math.max(mostRecent, item.attributes.CV_Updated + 86400000); // 1 Day = 86400000 millisecnds
+        const updated = new Date(item.attributes.CV_Updated);
+        if (datetime.scrapeDateIsBefore(updated)) {
+          throw new Error(`Data only available until ${updated.toLocaleString()}`);
+        }
 
         counties.push({
           county,
@@ -179,13 +181,12 @@ const scraper = {
         });
       });
 
-      if (datetime.scrapeDateIsAfter(mostRecent)) {
-        throw new Error(`Data only available until ${new Date(mostRecent).toLocaleString()}`);
-      }
-
-      counties.push(transform.sumData(counties));
-      counties = geography.addEmptyRegions(counties, this._counties, 'county');
-      return counties;
+      const totals = {
+        cases: data.features[0].attributes.CV_State_Cases,
+        deaths: data.features[0].attributes.CV_State_Deaths
+      };
+      counties.push(totals);
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };

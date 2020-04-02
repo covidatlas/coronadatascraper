@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import maintainers from '../../../lib/maintainers.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
@@ -187,7 +187,7 @@ const scraper = {
 
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
-    '2020-3-28': async function() {
+    '2020-03-28': async function() {
       this.type = 'json';
       this.url =
         'https://services9.arcgis.com/Q6wTdPdCh608iNrJ/arcgis/rest/services/COVID19_CountyStatus_KDHE/FeatureServer/0/query?f=json&where=Covid_Case%3D%27Yes%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=COUNTY%20asc&resultOffset=0&resultRecordCount=105&cacheHint=true';
@@ -205,6 +205,56 @@ const scraper = {
 
       counties.push(transform.sumData(counties));
       return geography.addEmptyRegions(counties, this._counties, 'county');
+    },
+    '2020-04-01': async function() {
+      this.type = 'image';
+      this.url =
+        'https://public.tableau.com/profile/kdhe.epidemiology#!/vizhome/COVID-19Data_15851817634470/KSCOVID-19CaseData';
+
+      return Object.entries({
+        'Atchison County': 1,
+        'Barton County': 2,
+        'Bourbon County': 3,
+        'Butler County': 5,
+        'Chautauqua County': 1,
+        'Cherokee County': 3,
+        'Clay County': 1,
+        'Coffey County': 16,
+        'Crawford County': 3,
+        'Doniphan County': 1,
+        'Douglas County': 30,
+        'Finney County': 1,
+        'Franklin County': 7,
+        'Gove County': 1,
+        'Harvey County': 2,
+        'Jackson County': 1,
+        'Jefferson County': 1,
+        'Johnson County': 143,
+        'Labette County': 25,
+        'Linn County': 5,
+        'Lyon County': 12,
+        'McPherson County': 5,
+        'Mitchell County': 2,
+        'Montgomery County': 6,
+        'Morris County': 2,
+        'Neosho County': 1,
+        'Osage County': 3,
+        'Ottawa County': 1,
+        'Pottawatomie County': 2,
+        'Pratt County': 1,
+        'Reno County': 8,
+        'Riley County': 4,
+        'Saline County': 1,
+        'Sedgwick County': 64,
+        'Shawnee County': 18,
+        'Stafford County': 1,
+        'Stevens County': 1,
+        'Sumner County': 1,
+        'Woodson County': 3,
+        'Wyandotte County': 93
+      }).map(([name, value]) => {
+        return { county: name, cases: value };
+      });
     }
   }
 };

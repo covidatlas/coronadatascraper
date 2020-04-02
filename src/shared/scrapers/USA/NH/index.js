@@ -4,6 +4,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
 import maintainers from '../../../lib/maintainers.js';
+import { DeprecatedError } from '../../../lib/errors.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -35,7 +36,6 @@ const scraper = {
   scraper: {
     '0': async function() {
       const body = await fetch.pdf(this.url);
-
       const rows = pdfUtils.asWords(body, 0, 1000).map(row => row[0]);
 
       const counties = [];
@@ -74,6 +74,10 @@ const scraper = {
       counties.push(transform.sumData(counties));
 
       return counties;
+    },
+    '2020-3-31': async function() {
+      await fetch.pdf(this.url);
+      throw new DeprecatedError('New Hampshire stopped reporting county-level data as of 2020/3/31');
     }
   }
 };

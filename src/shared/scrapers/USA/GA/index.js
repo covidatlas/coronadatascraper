@@ -181,7 +181,8 @@ const scraper = {
   ],
   _countyMap: {
     Mcduffie: 'McDuffie',
-    Dekalb: 'DeKalb'
+    Dekalb: 'DeKalb',
+    Mcintosh: 'McIntosh'
   },
   scraper: {
     '0': async function() {
@@ -208,7 +209,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-27': async function() {
+    '2020-03-27': async function() {
       const pageHTML = (await fetch.page(this.url)).html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
 

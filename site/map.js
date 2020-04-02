@@ -21,7 +21,7 @@ function initData() {
   let foundFeatures = 0;
   data.locations.forEach(function(location, index) {
     // Associated the feature with the location
-    if (location.featureId !== undefined) {
+    if (location.featureId !== undefined && !location.city) {
       const feature = data.features.features[location.featureId];
       if (feature) {
         foundFeatures++;

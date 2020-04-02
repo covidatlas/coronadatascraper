@@ -66,6 +66,27 @@ const scraper = {
             .split(': ')[1] || ''
         )
       };
+    },
+    '2020-04-01': async function() {
+      const $ = await fetch.page(this.url);
+
+      let cases = 0;
+      cases += parse.number(
+        $('li:contains("Number of PHL positives")')
+          .first()
+          .text()
+          .split(': ')[1]
+      );
+      cases += parse.number(
+        $('li:contains("Number of commercial lab positives")')
+          .first()
+          .text()
+          .split(': ')[1]
+      );
+      return {
+        cases,
+        tested: 3759 // hardcoded because they failed to deliver data for today "Number of people tested overall: Data forthcoming"
+      };
     }
   }
 };

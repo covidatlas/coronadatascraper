@@ -100,7 +100,7 @@ const scraper = {
       counties.push(transform.sumData(counties, { aggregate: 'county' }));
       return counties;
     },
-    '2020-3-29': async function() {
+    '2020-03-29': async function() {
       const cities = [];
       let regions = [];
 

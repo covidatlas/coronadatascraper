@@ -1,7 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import * as geography from '../../../lib/geography/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -285,7 +285,7 @@ const scraper = {
       this.type = 'table';
       const $ = await fetch.page(this.url);
       let $table;
-      if (datetime.scrapeDateIsBefore('2020-3-16')) {
+      if (datetime.scrapeDateIsBefore('2020-03-16')) {
         $table = $('table[summary="Texas COVID-19 Cases"]');
       } else {
         $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
@@ -309,7 +309,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24 16:00:00': async function() {
+    '2020-03-24 16:00:00': async function() {
       let counties = [];
       this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
       this.type = 'table';
@@ -341,7 +341,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-24': async function() {
+    '2020-03-24': async function() {
       let counties = [];
       this.url = 'https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv';
       this.type = 'csv';
