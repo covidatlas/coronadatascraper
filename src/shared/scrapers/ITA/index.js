@@ -10,7 +10,6 @@ import * as transform from '../../lib/transform.js';
 const countryLevelMap = {
   Abruzzo: 'iso2:IT-65',
   Basilicata: 'iso2:IT-77',
-  'P.A. Bolzano': 'iso2:IT-BZ',
   Calabria: 'iso2:IT-78',
   Campania: 'iso2:IT-72',
   'Emilia Romagna': 'iso2:IT-45',
@@ -29,7 +28,8 @@ const countryLevelMap = {
   'P.A. Trento': 'iso2:IT-32',
   Umbria: 'iso2:IT-55',
   "Valle d'Aosta": 'iso2:IT-23',
-  Veneto: 'iso2:IT-34'
+  Veneto: 'iso2:IT-34',
+  'P.A. Bolzano': '-' // skipping Bolsano, it shouldn't be in this level
 };
 
 const scraper = {
@@ -73,7 +73,8 @@ const scraper = {
           tested: parse.number(row.tamponi),
           state: stateMapped
         };
-      });
+      })
+      .filter(data => data.state !== '-');
 
     states.push(transform.sumData(states));
     return states;
