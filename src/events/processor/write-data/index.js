@@ -15,11 +15,11 @@ const writeData = async ({ locations, featureCollection, report, options, source
 
   await fs.writeCSV(path.join('dist', `data${suffix}.csv`), stringify.csvForDay(locations));
 
-  await fs.writeJSON(path.join('dist', `features${suffix}.json`), featureCollection);
+  await fs.writeJSON(path.join('dist', `features${suffix}.json`), featureCollection, { space: 0 });
 
-  await fs.writeJSON('dist/report.json', report);
+  await fs.writeJSON('dist/report.json', report, { space: 0 });
 
-  await fs.writeJSON('dist/ratings.json', sourceRatings);
+  await fs.writeJSON('dist/ratings.json', sourceRatings, { space: 0 });
 
   await fs.writeCSV('dist/reports/crawler-report.csv', reporter.getCSV());
 

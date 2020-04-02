@@ -223,8 +223,8 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
-  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation);
-  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
+  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
+  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
 
   const { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
   await fs.writeFile(path.join('dist', `timeseries.json`), JSON.stringify(timeseriesByDate, null, 2));
