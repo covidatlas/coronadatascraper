@@ -151,7 +151,7 @@ const scraper = {
           cases
         };
 
-        if (county.includes('nantucket') && county.includes('dukes')) {
+        if (county.toLowerCase().includes('nantucket') && county.toLowerCase().includes('dukes')) {
           countyObj.county = ['Dukes County', 'Nantucket County'];
         }
 
