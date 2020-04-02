@@ -47,11 +47,10 @@ The following fields detail the data sources:
 * `maintainers` - An array of maintainers responsible for writing the scraper code that obtains the data
 
 
-### `timeseries.csv`
+### `timeseries-tidy.csv`
 
 For each entry, the following data is provided:
 
 * `date` - the date the data point refers to
 * `type` - the type of data point: cases, tested, deaths, hospitalized, discharged, or recovered
 * `value` - the value of the data point (a cumulative count of events of a certain type)
-
