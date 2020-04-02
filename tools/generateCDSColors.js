@@ -46,6 +46,5 @@ function generateColors() {
   const cssString = cssArray.toString().replace(/,/g, '');
 
   fs.writeFile('./site/colors.css', `.spectrum--light {\n${cssString}}\n`);
-
 }
 generateColors();

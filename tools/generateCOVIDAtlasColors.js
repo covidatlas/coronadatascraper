@@ -78,7 +78,6 @@ function generateColors() {
   });
   const cssStaticString = cssStaticArray.toString().replace(/,/g, '');
 
-
   // Create dark theme
   for (const colorTheme of cdsThemeDark) {
     console.log(cdsThemeDark);
@@ -103,6 +102,11 @@ function generateColors() {
   });
   const cssDarkString = cssDarkArray.toString().replace(/,/g, '');
 
-  fs.writeFile('./covidatlas/colors.css', `.spectrum--light, .spectrum--dark {\n${cssStaticString}}\n` + `.spectrum--light {\n${cssLightString}}\n` + `.spectrum--dark {\n${cssDarkString}}\n`);
+  fs.writeFile(
+    './covidatlas/colors.css',
+    `.spectrum--light, .spectrum--dark {\n${cssStaticString}}\n` +
+      `.spectrum--light {\n${cssLightString}}\n` +
+      `.spectrum--dark {\n${cssDarkString}}\n`
+  );
 }
 generateColors();
