@@ -123,6 +123,11 @@ sp-dropdown[emphasized] {
 
 .ca-Landing {
   background-color: var(--BackgroundColor-dark);
+  background-image: url('logo-outlined.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: 120%;
+  background-position-y: 120%;
 
   display: flex;
   align-items: center;
