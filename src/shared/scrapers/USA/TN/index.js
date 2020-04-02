@@ -118,7 +118,7 @@ const scraper = {
     'Wilson County'
   ],
   _good_headers(data) {
-    if (parse.string(data[0][0]) !== 'Patient county name') {
+    if (parse.string(data[0][0]) !== 'Patient county name' && parse.string(data[0][0]) !== 'County') {
       return false;
     }
     if (parse.string(data[1][0]) !== 'Positive') {
