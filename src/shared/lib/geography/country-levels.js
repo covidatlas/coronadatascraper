@@ -38,6 +38,16 @@ const getLevelData = async level => {
 };
 
 export const getLocationData = async id => {
+  // Split and sum populations for aggregated features (i.e. tricounties)
+  if (id.indexOf('+') !== -1) {
+    const parts = id.split('+');
+    let data = await Promise.all(parts.map(getLocationData));
+    data = data.reduce((a, d) => {
+      a.population += d.population;
+      return a;
+    }, { population: 0 })
+    return data;
+  }
   const { level, code } = splitId(id, true);
   const levelData = await getLevelData(level);
   const locationData = levelData[code];
@@ -49,9 +59,12 @@ export const getLocationData = async id => {
 
 export const getFeature = async id => {
   const locationData = await getLocationData(id);
-  const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
-  const feature = await readJSON(geojsonPath);
-  return feature;
+  if (locationData.geojson_path) {
+    const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+    const feature = await readJSON(geojsonPath);
+    return feature;
+  }
+  return null;
 };
 
 export const getPopulation = async id => {

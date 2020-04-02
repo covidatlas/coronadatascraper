@@ -185,6 +185,18 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
     locationLoop: for (const location of locations) {
       let found = false;
 
+      // If the location already comes with its own feature, store it98
+      if (location.feature) {
+        found = true;
+        if (Array.isArray(location.feature)) {
+          location.feature.forEach(feature => storeFeature(feature, location));
+        } else {
+          storeFeature(location.feature, location);
+        }
+        delete location.feature;
+        continue;
+      }
+
       // use countryLevel's getFeature if id is present
       const clId = countryLevels.getIdFromLocation(location);
       if (clId) {
@@ -196,18 +208,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       let point;
       if (location.coordinates) {
         point = turf.point(location.coordinates);
-      }
-
-      // If the location already comes with its own feature, store it98
-      if (location.feature) {
-        found = true;
-        if (Array.isArray(location.feature)) {
-          location.feature.forEach(feature => storeFeature(feature, location));
-        } else {
-          storeFeature(location.feature, location);
-        }
-        delete location.feature;
-        continue;
       }
 
       if (location._featureId) {
