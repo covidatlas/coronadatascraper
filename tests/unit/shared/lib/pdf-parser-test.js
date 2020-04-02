@@ -2,7 +2,7 @@ const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
 
-const pdfParser = imports(join(process.cwd(), 'src', 'shared', 'lib', 'fetch', 'pdf-parser.js')).default;
+const pdfParser = imports(join(process.cwd(), 'src', 'shared', 'lib', 'fetch', 'types', 'pdf-parser.js')).default;
 const pdfUtils = imports(join(process.cwd(), 'src', 'shared', 'lib', 'pdf.js'));
 const fs = imports(join(process.cwd(), 'src', 'shared', 'lib', 'fs.js'));
 

@@ -200,7 +200,7 @@ test('scrapeDateIsAfter', t => {
   delete process.env.SCRAPE_DATE;
 });
 
-test.only('cast', t => {
+test('cast', t => {
   t.plan(3);
   t.equal(cast(`2020-04-02T01:23:45.678Z`, 'America/Los_Angeles'), '2020-04-01', 'Returns the day before');
   t.equal(cast(`2020-04-02T01:23:45.678Z`, 'Europe/Rome'), '2020-04-02', 'Returns the same day');
