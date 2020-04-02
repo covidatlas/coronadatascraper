@@ -160,7 +160,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
     log('⏳ Generating features...');
 
     const usCountyData = await fs.readJSON(join(__dirname, '..', '..', '..', 'shared', 'vendor', 'usa-counties.json'));
-    const brCountyData = await fs.readJSON(join(__dirname, '..', 'vendor', 'bra-counties.json'));
     const countryData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-countries.json'));
     const itaRegionsData = await fs.readJSON(join(__dirname, '..', 'vendor', 'ita-regions.json'));
     const provinceData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-states-provinces.json'));
@@ -173,7 +172,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     const errors = [];
 
-    const featuresData = [provinceData, usCountyData, brCountyData, countryData];
+    const featuresData = [provinceData, usCountyData, countryData];
 
     locationLoop: for (const location of locations) {
       let found = false;
@@ -259,28 +258,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           if (feature) {
             found = true;
             storeFeature(feature, location);
-          }
-        } else if (location.country === 'BRA') {
-          if (location.county) {
-            // Find county
-            for (const feature of brCountyData.features) {
-              if (!location.county) {
-                continue;
-              }
-              if (feature.properties.name === location.county) {
-                found = true;
-                storeFeature(feature, location);
-                continue locationLoop;
-              }
-              if (point && feature.geometry) {
-                const poly = turf.feature(feature.geometry);
-                if (turf.booleanPointInPolygon(point, poly)) {
-                  found = true;
-                  storeFeature(feature, location);
-                  continue locationLoop;
-                }
-              }
-            }
           }
         } else {
           // Check if the location exists within our provinces
