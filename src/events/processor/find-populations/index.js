@@ -150,7 +150,6 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
     const clId = countryLevels.getIdFromLocation(location);
     if (clId) {
       population = await countryLevels.getPopulation(clId);
-      await countryLevels.transformLocationIds(location);
     } else {
       population = await getPopulation(location);
     }
