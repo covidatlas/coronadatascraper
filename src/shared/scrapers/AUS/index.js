@@ -44,7 +44,7 @@ const scraper = {
       assert(stateMapped, `${state} not found in countryLevelMap`);
 
       states.push({
-        stateMapped,
+        state: stateMapped,
         cases
       });
     });
