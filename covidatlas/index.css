@@ -10,6 +10,8 @@
 @import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";
 
+@import "./flexboxgrid.min.css";
+
 @import "./colors.css";
 @import "./base.css";
 @import "./sources.css";
@@ -116,6 +118,7 @@ sp-dropdown[emphasized] {
 
 .spectrum-Site-mainContainer {
   padding: 0 var(--spectrum-alias-grid-margin-small);
+  margin: 0;
 }
 
 .ca-Landing {
@@ -133,7 +136,7 @@ sp-dropdown[emphasized] {
 }
 
 .ca-Section {
-  margin: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-small);
+  margin: calc(var(--spectrum-alias-grid-margin-large) * 2) 0;
 }
 
 .ca-Landing-logo {
@@ -211,4 +214,13 @@ hr {
   .spectrum-Site-header {
     display: flex;
   }
+}
+
+.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-offset-0, .col-md-offset-1, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-offset-9 {
+  padding-right: var(--spectrum-alias-grid-margin-small);
+  padding-left: var(--spectrum-alias-grid-margin-small);
+}
+.row {
+  margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
+  margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
 }
