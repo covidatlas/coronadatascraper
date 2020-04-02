@@ -1,4 +1,3 @@
-import path from 'path';
 import datetime from '../../../shared/lib/datetime/index.js';
 import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
@@ -87,21 +86,11 @@ export function runScraper(location) {
 }
 
 const runScrapers = async args => {
-  const { sources, options } = args;
+  const { sources } = args;
 
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.skip && geography.getName(location) === options.skip) {
-      continue;
-    }
-    if (
-      options.location &&
-      path.basename(location._path, '.js') !== options.location &&
-      geography.getName(location) !== options.location
-    ) {
-      continue;
-    }
     if (location.scraper) {
       try {
         addData(locations, location, await runScraper(location));
