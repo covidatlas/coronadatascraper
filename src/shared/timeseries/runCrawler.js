@@ -18,15 +18,16 @@ export default options =>
       options.writeData
     ];
 
-    if (options.d) {
-      args = args.concat(['-d', options.d]);
+    if (options.date) {
+      args = args.concat(['-d', options.date]);
     }
-    if (options.e) {
-      args = args.concat(['-e', options.e]);
+    if (options.endDate) {
+      args = args.concat(['-e', options.endDate]);
     }
     if (options.q) {
       args = args.concat(['-q', options.q]);
     }
+
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
       // Pass options as arguments
