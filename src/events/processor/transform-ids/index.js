@@ -17,8 +17,8 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
         location.name = geography.getName(location);
       }
 
-      // Store type
-      location.type = geography.getLocationGranularityName(location);
+      // Store level
+      location.level = geography.getLocationGranularityName(location);
     }
   }
   log('✅ Transformed IDs for %d out of %d locations', idsFound, Object.keys(locations).length);
