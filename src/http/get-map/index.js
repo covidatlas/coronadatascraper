@@ -19,7 +19,7 @@ exports.handler = async function http() {
       'content-type': 'text/html; charset=utf8'
     },
     body: template(
-      'About',
+      'World Map',
       `
 ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 

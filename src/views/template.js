@@ -8,7 +8,7 @@ module.exports = function body(title = constants.name, content = 'No content.', 
 <html lang="en">
 
 <head>
-  <title>${title}</title>
+  <title>${title} - ${constants.name}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
   <link rel="icon" type="image/png" sizes="192x192" href="${arc.static('favicon/android-icon-192x192.png')}">
