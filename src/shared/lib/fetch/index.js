@@ -189,7 +189,7 @@ const fetchHeadless = async url => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */
-export const headless = async (url, date = datetime.scrapeDate() || datetime.getYYYYMD(), options = {}) => {
+export const headless = async (url, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);
