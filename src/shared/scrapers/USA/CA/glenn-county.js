@@ -7,14 +7,15 @@ import maintainers from '../../../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  url: datetime.scrapeDateIsBefore('2020-03-16')
-    ? 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome'
-    : 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19',
   county: 'Glenn County',
   state: 'CA',
   country: 'USA',
   maintainers: [maintainers.jbencina],
   async scraper() {
+    this.url = datetime.scrapeDateIsBefore('2020-03-16')
+      ? 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome'
+      : 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19';
+
     const $ = await fetch.page(this.url);
     if (datetime.scrapeDateIsBefore('2020-03-17')) {
       const cases = parse.number(
