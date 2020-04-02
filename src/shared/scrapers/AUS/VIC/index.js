@@ -20,7 +20,7 @@ const scraper = {
       url: 'https://www.dhhs.vic.gov.au'
     }
   ],
-  state: 'Victoria',
+  state: 'iso2:AU-VIC',
   type: 'paragraph',
   url: 'https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19',
   async scraper() {

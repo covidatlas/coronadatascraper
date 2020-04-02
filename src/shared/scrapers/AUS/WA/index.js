@@ -24,7 +24,7 @@ const scraper = {
       url: 'https://ww2.health.wa.gov.au'
     }
   ],
-  state: 'Western Australia',
+  state: 'iso2:AU-WA',
   type: 'table',
   url: 'https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics',
   async scraper() {
