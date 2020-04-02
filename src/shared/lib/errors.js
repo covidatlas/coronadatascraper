@@ -9,3 +9,13 @@ export class DeprecatedError extends Error {
     this.name = 'DeprecatedError';
   }
 }
+
+export class NotImplemented extends Error {
+  /**
+   * @param {string} message
+   */
+  constructor(message) {
+    super(message);
+    this.name = 'NotImplemented';
+  }
+}
