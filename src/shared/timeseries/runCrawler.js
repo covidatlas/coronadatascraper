@@ -27,6 +27,9 @@ export default options =>
     if (options.q) {
       args = args.concat(['-q', options.q]);
     }
+    if (options.c) {
+      args = args.concat(['-c', options.c]);
+    }
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
       // Pass options as arguments
