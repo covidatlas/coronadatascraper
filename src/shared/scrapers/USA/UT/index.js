@@ -67,7 +67,7 @@ const scraper = {
     }
     if (county === 'Weber-Morgan') {
       counties.push({
-        county: 'Weber & Morgan Counties',
+        county,
         cases,
         feature: geography.generateMultiCountyFeature(['Weber County, UT', 'Morgan County, UT'], {
           state: 'UT',
@@ -90,7 +90,7 @@ const scraper = {
     }
     if (county === 'Bear River') {
       counties.push({
-        county: 'Box Elder, Cache, & Rich Counties',
+        county,
         cases,
         feature: geography.generateMultiCountyFeature(['Box Elder County, UT', 'Cache County, UT', 'Rich County, UT'], {
           state: 'UT',

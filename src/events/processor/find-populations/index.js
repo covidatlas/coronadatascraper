@@ -129,21 +129,6 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
         const feature = featureCollection.features[location.featureId];
         if (feature.properties.pop_est) {
           population = feature.properties.pop_est;
-        } else if (feature._aggregatedLocations) {
-          population = 0;
-          const featuresToCheck = feature._aggregatedLocations.slice();
-          while (featuresToCheck.length) {
-            const aggregatedLocation = featuresToCheck.pop();
-            const pop = await getPopulation(aggregatedLocation);
-            if (pop) {
-              population += pop;
-            } else {
-              log.error(
-                '❌ Failed to find population for aggregated location %s',
-                geography.getName(aggregatedLocation)
-              );
-            }
-          }
         }
       }
     }
