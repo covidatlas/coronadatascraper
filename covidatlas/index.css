@@ -136,7 +136,6 @@ sp-dropdown[emphasized] {
 }
 
 .ca-SiteHeader {
-  display: flex;
   background-color: var(--BackgroundColor);
   border-bottom-color: transparent;
   padding-right: 40px; /* offset logo until search button is added */
@@ -191,8 +190,12 @@ hr {
   width: var(--DownloadDropdownWidth);
 }
 
-@media screen and (max-width: var(--responsive-breakpoint-mobile)) {
+@media screen and (max-width: 960px) {
   .ca-Hero {
     display: initial;
+  }
+
+  .spectrum-Site-header {
+    display: flex;
   }
 }
