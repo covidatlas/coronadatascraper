@@ -11,16 +11,11 @@ export default options =>
   new Promise((resolve, reject) => {
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
-      [
-        '-d',
-        options.date,
-        '--findFeatures',
-        options.findFeatures,
-        '--findPopulations',
-        options.findPopulations,
-        '--writeData',
-        options.writeData
-      ],
+      // Pass options as arguments
+      Object.entries(options).reduce((args, entry) => {
+        args.push(`--${entry[0]}`, entry[1]);
+        return args;
+      }, []),
       {
         stdio: ['ignore', 1, 2, 'ipc']
       }
