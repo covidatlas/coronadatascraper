@@ -14,6 +14,7 @@ const countryLevelMap = {
   Calabria: 'iso2:IT-78',
   Campania: 'iso2:IT-72',
   'Emilia Romagna': 'iso2:IT-45',
+  'Emilia-Romagna': 'iso2:IT-45', // changes depending on the scrape date
   'Friuli Venezia Giulia': 'iso2:IT-36',
   Lazio: 'iso2:IT-62',
   Liguria: 'iso2:IT-42',
