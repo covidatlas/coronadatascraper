@@ -38,19 +38,19 @@
 
 .ca-Sidebar {
   width: 225px;
-
-  sp-sidenav {
-    max-width: 100%;
-    --spectrum-global-dimension-size-65: var(--spectrum-global-dimension-size-100);
-
-    & + sp-sidenav {
-      margin-top: var(--spectrum-alias-grid-margin-medium);
-    }
-  }
 }
-.spectrum .ca-Sidebar sp-sidenav {
-  --spectrum-global-font-family-base: var(--ca-FontBody);
-  --spectrum-alias-body-text-font-family: var(--ca-FontBody);
+
+sp-sidenav {
+  max-width: 100%;
+
+  font-family: var(--ca-FontBody);
+
+  /* this comopnent uses a global variable, override it */
+  --spectrum-global-dimension-size-65: var(--spectrum-global-dimension-size-100);
+
+  & + sp-sidenav {
+    margin-top: var(--spectrum-alias-grid-margin-medium);
+  }
 }
 
 /* Should work if markup is <sp-dropdown emphasized> */
