@@ -172,6 +172,11 @@ const scraper = {
       let counties = [];
       $trs.each((index, tr) => {
         const $tr = $(tr);
+        if ($tr.children().length === 0) {
+          // Skip blank TRs
+          return;
+        }
+
         let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
 
         // The publisher is making typos in their html table!
