@@ -1,9 +1,9 @@
 ﻿/* eslint-disable import/prefer-default-export */
 
 import needle from 'needle';
-import * as caching from './caching.js';
-import datetime from '../datetime/index.js';
-import log from '../log.js';
+import * as caching from '../caching/index.js';
+import datetime from '../../datetime/index.js';
+import log from '../../log.js';
 
 const CHROME_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';
@@ -21,6 +21,11 @@ needle.defaults({
   read_timeout: READ_TIMEOUT // Maximum time to wait for data to transfer
 });
 
+const dateFallback = process.env.NEW_CACHE
+  ? // FIXME once find-features can move the crawler, make newcache `iso`, not `old`
+    datetime.scrapeDate() || datetime.old.getYYYYMMDD() // ← make `iso`, not `old`
+  : datetime.old.scrapeDate() || datetime.old.getYYYYMD();
+
 /**
  * Fetch whatever is at the provided URL. Use cached version if available.
  * @param {*} url URL of the resource
@@ -32,7 +37,7 @@ needle.defaults({
  *  - toString: returns data as a string instead of buffer, defaults to true
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  */
-export const get = async (url, type, date = datetime.scrapeDate() || datetime.getYYYYMD(), options = {}) => {
+export default async function get(url, type, date = dateFallback, options = {}) {
   const { alwaysRun, disableSSL, toString, encoding, cookies } = {
     alwaysRun: false,
     disableSSL: false,
@@ -110,4 +115,4 @@ export const get = async (url, type, date = datetime.scrapeDate() || datetime.ge
   }
 
   return cachedBody;
-};
+}
