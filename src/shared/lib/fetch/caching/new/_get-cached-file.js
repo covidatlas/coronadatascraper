@@ -28,7 +28,8 @@ const local = !process.env.NODE_ENV || process.env.NODE_ENV === 'testing';
  */
 export default async function getCachedFile(url, type, date, encoding = 'utf8', tz) {
   // FIXME date normalization needs to be locale-aware; right now the locale is assumed US/PT
-  if (date) date = datetime.old.getYYYYMMDD(date);
+  if (date === false) date = datetime.cast(); // For timeseries, set it to now US/PT
+  date = datetime.getYYYYMMDD(date);
 
   if (local) {
     const folder = hash(url);

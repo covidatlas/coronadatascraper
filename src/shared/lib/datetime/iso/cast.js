@@ -7,6 +7,7 @@ import '@js-joda/timezone/dist/js-joda-timezone-10-year-range';
  * @param {*} utc ISO8601Z string, e.g. `2020-04-02T01:23:45.678Z`
  */
 export default function cast(utc, tz = 'America/Los_Angeles') {
+  utc = utc || new Date().toISOString();
   const parsed = ZonedDateTime.parse(utc);
   const adjusted = parsed.withZoneSameInstant(ZoneId.of(tz));
   return adjusted.toString().split('T')[0];
