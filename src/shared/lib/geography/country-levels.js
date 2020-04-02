@@ -9,6 +9,9 @@ const levelCache = {};
 const countryLevelsDir = path.dirname(require.resolve('country-levels/license.md'));
 
 export function isId(str) {
+  if (Array.isArray(str)) {
+    return false;
+  }
   if (!str) return false;
   const [level, code] = str.split(':');
   return LEVELS.includes(level) && Boolean(code);
@@ -55,6 +58,10 @@ export const getLocationData = async id => {
 
 export const getFeature = async id => {
   const locationData = await getLocationData(id);
+  if (Array.isArray(locationData)) {
+    const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
+    return geography.combineFeatures(features);
+  }
   if (locationData.geojson_path) {
     const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
     const feature = await readJSON(geojsonPath);
