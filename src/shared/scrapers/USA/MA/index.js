@@ -79,10 +79,7 @@ const scraper = {
         }
 
         if (countyName === 'Dukes and Nantucket') {
-          countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
-            state: 'MA',
-            country: 'USA'
-          });
+          countyObj.county = ['Dukes County', 'Nantucket County'];
         }
 
         if (countyName === 'Unknown') {
