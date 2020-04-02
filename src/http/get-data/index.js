@@ -37,7 +37,7 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <h1 class="spectrum-Heading spectrum-Heading--L">Global timeseries</h1>
       <p class="spectrum-Body spectrum-Body--L">Worldwide COVID-19 data in a time-series format since the start of the pandemic.</p>
       <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button>
-      <sp-dropdown emphasized label="Download">
+      <sp-dropdown emphasized class="ca-DownloadDropdown" label="Download">
         <sp-menu>
           <sp-menu-item download target="_blank" href="${baseURL}timeseries.csv">CSV</sp-menu-item>
           <sp-menu-item download target="_blank" href="${baseURL}timeseries.json">JSON</sp-menu-item>
@@ -50,7 +50,7 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <h1 class="spectrum-Heading spectrum-Heading--L">Global daily</h1>
       <p class="spectrum-Body spectrum-Body--L">The latest worldwide COVID-19 data.</p>
       <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button>
-      <sp-dropdown emphasized label="Download">
+      <sp-dropdown emphasized class="ca-DownloadDropdown" label="Download">
         <sp-menu>
           <sp-menu-item download target="_blank" href="${baseURL}data.csv">CSV</sp-menu-item>
           <sp-menu-item download target="_blank" href="${baseURL}data.json">JSON</sp-menu-item>

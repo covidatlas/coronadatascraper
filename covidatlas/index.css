@@ -147,13 +147,13 @@ sp-dropdown[emphasized] {
 }
 
 hr {
-  display: block;
   --hr-width: 150px;
   --bubble-size: 16px;
   --bubble-spacing: calc(var(--hr-width) / 2 - var(--bubble-size) / 2);
   --bubble-thickness: 2px;
   --bubble-color: var(--spectrum-global-color-gray-300);
   --bubble-background-color: var(--BackgroundColor);
+  display: block;
   width: var(--hr-width);
   height: var(--bubble-size);
   border: none;
@@ -185,6 +185,10 @@ hr {
     height: var(--bubble-thickness);
     background-color: var(--spectrum-global-color-gray-300);
   }
+}
+
+.ca-DownloadDropdown {
+  width: var(--DownloadDropdownWidth);
 }
 
 @media screen and (max-width: var(--responsive-breakpoint-mobile)) {
