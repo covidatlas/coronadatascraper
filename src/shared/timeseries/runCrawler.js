@@ -9,13 +9,28 @@ const childProcess = require('child_process');
  */
 export default options =>
   new Promise((resolve, reject) => {
+    let args = [
+      '--findFeatures',
+      options.findFeatures,
+      '--findPopulations',
+      options.findPopulations,
+      '--writeData',
+      options.writeData
+    ];
+
+    if (options.d) {
+      args = args.concat(['-d', options.d]);
+    }
+    if (options.e) {
+      args = args.concat(['-e', options.e]);
+    }
+    if (options.q) {
+      args = args.concat(['-q', options.q]);
+    }
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
       // Pass options as arguments
-      Object.entries(options).reduce((args, entry) => {
-        args.push(`--${entry[0]}`, entry[1]);
-        return args;
-      }, []),
+      args,
       {
         stdio: ['ignore', 1, 2, 'ipc']
       }
