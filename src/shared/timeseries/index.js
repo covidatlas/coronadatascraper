@@ -2,14 +2,14 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const generate = imports('./index.js').default;
-const argv = imports('./cli/cli-args.js').default;
-const fs = imports('./lib/fs.js');
-const transform = imports('./lib/transform.js');
-const geography = imports('./lib/geography/index.js');
-const datetime = imports('./lib/datetime/index.js').default;
+const argv = imports('../cli/cli-args.js').default;
+const fs = imports('../lib/fs.js');
+const transform = imports('../lib/transform.js');
+const geography = imports('../lib/geography/index.js');
+const datetime = imports('../lib/datetime/index.js').default;
+const runCrawler = imports('./runCrawler.js').default;
 
-const clearAllTimeouts = imports('./utils/timeouts.js').default;
+const clearAllTimeouts = imports('../utils/timeouts.js').default;
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
@@ -190,7 +190,8 @@ async function generateTimeseries(options = {}) {
   const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
-    const data = await generate(date === today ? undefined : date, {
+    const data = await runCrawler({
+      date: date === today ? undefined : date,
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false,
