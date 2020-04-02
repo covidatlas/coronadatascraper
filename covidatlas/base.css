@@ -5,7 +5,8 @@
   --ButtonBorderSize: var(--spectrum-alias-border-size-thin);
   --ButtonBorderRadius: var(--spectrum-global-dimension-size-50);
   --spectrum-alias-focus-ring-size: var(--spectrum-alias-border-size-thick);
-  --DownloadDropdownWidth: calc(var(--spectrum-global-dimension-size-1250) + var(--spectrum-global-dimension-size-200));
+  --HeadingWeight: 700;
+  --BodyWeight: 300;
 
   /* Base vars */
   --ca-FontBody: "Merriweather", Georgia, serif;
@@ -20,10 +21,13 @@
 
   /* Typography overrides */
   --spectrum-alias-body-text-font-family: var(--spectrum-component-text-font-family);
+  --spectrum-alias-body-text-font-weight: var(--BodyWeight);
   --spectrum-body-xl-text-font-family: var(--spectrum-body-text-font-family);
   --spectrum-heading-ml-text-font-family: var(--spectrum-heading-text-font-family);
   --spectrum-heading-l-text-font-family: var(--spectrum-heading-text-font-family);
   --spectrum-heading-xl-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-l-text-font-weight: var(--HeadingWeight);
+  --spectrum-heading-xl-text-font-weight: var(--HeadingWeight);
 
   /* Button overrides */
   --spectrum-button-primary-text-font-family: var(--spectrum-body-text-font-family);

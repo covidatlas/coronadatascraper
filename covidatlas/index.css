@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500");
-@import url("https://fonts.googleapis.com/css?family=Merriweather:400,500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400,700");
 
 /* CSS-only components */
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-global.css";
@@ -15,6 +15,10 @@
 @import "./sources.css";
 @import "./reports.css";
 @import "./map.css";
+
+p.spectrum-Body {
+  max-width: 70ch; /* Give paragraphs a reasonable character length max for readability */
+}
 
 .ca-Logo {
   max-width: var(--hero-max-width);
