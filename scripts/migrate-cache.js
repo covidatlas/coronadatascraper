@@ -64,7 +64,7 @@ function cast(date, tz) {
       contents = hash(contents, 5);
       const parsed = parse(filePath);
 
-      const folder = join(process.cwd(), 'crawler-cache', parsed.name.substr(0, 10));
+      const folder = join(process.cwd(), 'crawler-cache', parsed.name);
 
       fs.mkdirSync(folder, { recursive: true });
       const finalName = `${fileTs}-${contents}${parsed.ext}`;

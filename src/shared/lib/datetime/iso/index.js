@@ -1,5 +1,5 @@
 import cast from './cast.js';
-import { dateIsBefore, dateIsBeforeOrEqualTo } from './compare.js';
+import { dateIsBefore, dateIsBeforeOrEqualTo, dateIsAfter } from './compare.js';
 import { getYYYYMD, getYYYYMMDD, getDDMMYYYY, getMDYY, getMDYYYY, getMonthDYYYY } from './format.js';
 import { scrapeDate, scrapeDateIsBefore, scrapeDateIsAfter, scrapeDateIs } from './scrape-date.js';
 import { getDate, today } from './today.js';
@@ -11,6 +11,7 @@ export default {
   cast,
   dateIsBefore,
   dateIsBeforeOrEqualTo,
+  dateIsAfter,
   getDate,
   getDDMMYYYY,
   getMDYY,

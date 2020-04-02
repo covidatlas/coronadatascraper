@@ -3,7 +3,7 @@ import crypto from 'crypto';
 /**
  * Hash a given thing
  */
-export default function hash(thing, len = 10) {
+export default function hash(thing, len = 100) {
   return (
     crypto
       // This *should* be a SHA, but it was massively faster to migrate the cache using the same also as before

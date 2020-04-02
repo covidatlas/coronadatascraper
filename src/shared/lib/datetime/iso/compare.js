@@ -13,3 +13,10 @@ export const dateIsBefore = (a, b) => parse(a) < parse(b);
  * @returns {boolean} true if the first date is earlier than or equal to the second date
  */
 export const dateIsBeforeOrEqualTo = (a, b) => parse(a) <= parse(b);
+
+/**
+ * @param {string|Date} a The first date
+ * @param {string|Date} b The second date
+ * @returns {boolean} true if the first date is later than the second date
+ */
+export const dateIsAfter = (a, b) => parse(a) > parse(b);

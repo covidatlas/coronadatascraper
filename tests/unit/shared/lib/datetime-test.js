@@ -9,6 +9,7 @@ const {
   cast,
   dateIsBefore,
   dateIsBeforeOrEqualTo,
+  dateIsAfter,
   getDDMMYYYY,
   getMDYY,
   getMDYYYY,
@@ -180,6 +181,13 @@ test('dateIsBeforeOrEqualTo', t => {
   t.equal(dateIsBeforeOrEqualTo('2020-03-16', '2020-03-20'), true, 'before');
   t.equal(dateIsBeforeOrEqualTo('2020-03-16', '2020-03-16'), true, 'same');
   t.equal(dateIsBeforeOrEqualTo('2020-03-20', '2020-03-16'), false, 'after');
+});
+
+test('dateIsAfter', t => {
+  t.plan(3);
+  t.equal(dateIsAfter('2020-03-20', '2020-03-16'), true, 'after');
+  t.equal(dateIsAfter('2020-03-16', '2020-03-16'), false, 'same');
+  t.equal(dateIsAfter('2020-03-16', '2020-03-20'), false, 'before');
 });
 
 test('scrapeDateIsBefore', t => {
