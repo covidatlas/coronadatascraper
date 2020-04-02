@@ -17,7 +17,7 @@ const scraper = {
       url: 'https://www.sahealth.sa.gov.au'
     }
   ],
-  state: 'South Australia',
+  state: 'iso2:AU-SA',
   type: 'paragraph',
   url:
     'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia',

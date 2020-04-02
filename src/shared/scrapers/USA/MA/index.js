@@ -78,11 +78,11 @@ const scraper = {
           countyObj.cases = parse.number(data[2]);
         }
 
-        if (countyName === 'Dukes and Nantucket') {
-          countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
-            state: 'MA',
-            country: 'USA'
-          });
+        if (
+          countyName === 'Dukes and' ||
+          (countyName.toLowerCase().includes('nantucket') && countyName.toLowerCase().includes('dukes'))
+        ) {
+          countyObj.county = ['Dukes County', 'Nantucket County'];
         }
 
         if (countyName === 'Unknown') {
@@ -151,12 +151,8 @@ const scraper = {
           cases
         };
 
-        if (county.includes('nantucket')) {
-          countyObj.feature = geography.generateMultiCountyFeature(['Dukes County, MA', 'Nantucket County, MA'], {
-            state: 'MA',
-            country: 'USA'
-          });
-          countyObj.county = 'Dukes and Nantucket County';
+        if (county.toLowerCase().includes('nantucket') && county.toLowerCase().includes('dukes')) {
+          countyObj.county = ['Dukes County', 'Nantucket County'];
         }
 
         if (county.includes('Unknown')) {

@@ -7,7 +7,7 @@ import reporter from '../../../shared/lib/error-reporter.js';
   Clean the passed data
 */
 const cleanLocations = args => {
-  log(`⏳ Validating and cleaning locations`);
+  log(`⏳ Validating and cleaning locations...`);
 
   const { locations, report } = args;
 
