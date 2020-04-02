@@ -195,6 +195,29 @@ const scraper = {
       regions.push(transform.sumData(regions));
 
       return regions;
+    },
+    '2020-04-01': async function() {
+      this.url = 'https://www.dhs.wisconsin.gov/covid-19/data.htm';
+
+      this.type = 'table';
+      let regions = [];
+      const $ = await fetch.headless(this.url);
+      const $table = $('#covid-county-table').find('table');
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        regions.push({
+          county: geography.addCounty(parse.string($tr.find('td:first-child').text())),
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          tested: parse.number($tr.find('td:nth-child(2)').text()) + parse.number($tr.find('td:nth-child(3)').text()),
+          deaths: parse.number($tr.find('td:nth-child(4)').text())
+        });
+      });
+
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
+      regions.push(transform.sumData(regions));
+
+      return regions;
     }
   }
 };
