@@ -152,10 +152,13 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       location.tz = geoTz(location.coordinates[1], location.coordinates[0]);
     }
 
-    // if it has an id, we use it
-    const clId = countryLevels.getIdFromLocation(location);
-    if (clId) {
-      index = clId;
+    if (!location.feature) {
+      // unless the location comes with its own feature
+      // if it has an id, we use it
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        index = clId;
+      }
     }
 
     feature.properties.id = index;
