@@ -42,10 +42,13 @@ export const getLocationData = async id => {
   if (id.indexOf('+') !== -1) {
     const parts = id.split('+');
     let data = await Promise.all(parts.map(getLocationData));
-    data = data.reduce((a, d) => {
-      a.population += d.population;
-      return a;
-    }, { population: 0 })
+    data = data.reduce(
+      (a, d) => {
+        a.population += d.population;
+        return a;
+      },
+      { population: 0 }
+    );
     return data;
   }
   const { level, code } = splitId(id, true);
