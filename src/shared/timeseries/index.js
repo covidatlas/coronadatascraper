@@ -43,7 +43,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
+  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
