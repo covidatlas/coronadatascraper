@@ -73,12 +73,6 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
   const populations = await readPopulationData(featureCollection);
 
   async function getPopulation(location) {
-    // use countryLevel's getPopulation if id is present
-    const clId = countryLevels.getIdFromLocation(location);
-    if (clId) {
-      return countryLevels.getPopulation(clId);
-    }
-
     let population = null;
 
     if (location.city) {
@@ -165,7 +159,16 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       continue;
     }
 
-    const population = await getPopulation(location);
+    let population;
+
+    // get data from id if present
+    const clId = countryLevels.getIdFromLocation(location);
+    if (clId) {
+      population = await countryLevels.getPopulation(clId);
+      await countryLevels.transformLocationIds(location);
+    } else {
+      population = await getPopulation(location);
+    }
 
     if (population) {
       location.population = population;

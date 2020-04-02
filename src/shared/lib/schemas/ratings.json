@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "url": { "type": "string", "format": "uri" },
-    "country": { "type": "string", "not": { "pattern": "unassigned" }, "maxLength": 8, "minLength": 3 },
+    "country": { "type": "string", "not": { "pattern": "unassigned" } },
     "state": { "type": "string", "not": { "pattern": "unassigned" } },
     "county": { "type": "string", "not": { "pattern": "unassigned" } },
     "city": { "type": "string", "not": { "pattern": "unassigned" } },

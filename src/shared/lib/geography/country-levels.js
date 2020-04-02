@@ -61,5 +61,17 @@ export const getPopulation = async id => {
 
 export const getName = async id => {
   const locationData = await getLocationData(id);
-  return locationData.name_long || locationData.name;
+  return locationData.name;
+};
+
+// this function transforms ids to Id columns and replaces names
+// with human readable version
+export const transformLocationIds = async location => {
+  for (const loc of ['country', 'state', 'county', 'city']) {
+    const locId = location[loc];
+    if (isId(locId)) {
+      location[`${loc}Id`] = locId;
+      location[loc] = await getName(locId);
+    }
+  }
 };

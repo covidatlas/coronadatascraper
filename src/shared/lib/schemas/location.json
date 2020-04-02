@@ -5,7 +5,7 @@
     "maintainers": { "type": "array" },
     "sources": { "type": "array" },
     "curators": { "type": "array" },
-    "country": { "type": "string", "maxLength": 8, "minLength": 3 },
+    "country": { "type": "string"},
     "state": { "type": "string" },
     "county": { "type": "string" },
     "city": { "type": "string" },
@@ -18,10 +18,16 @@
     "population": { "type": "number", "minimum": 0 },
     "coordinates": { "type": "array" },
     "active": { "type": "number", "minimum": 0 },
-    "featureId": { "type": "number" },
     "rating": { "type": "number" },
     "tz": { "type": "array" },
-    "aggregate": { "type": "string" }
+    "aggregate": { "type": "string" },
+
+    "featureId": { },
+    "countryId": { "type": "string" },
+    "stateId": { "type": "string" },
+    "countyId": { "type": "string" },
+    "cityId": { "type": "string" }
+
   },
   "dependencies": {
     "state": ["country"],
