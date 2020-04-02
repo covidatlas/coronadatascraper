@@ -43,6 +43,27 @@ const countryMap = {
 };
 
 /*
+  Given a list of features, return the combined polygono
+*/
+export function combineFeatures(features, properties = {}) {
+  // Collect a list of features and polygons matching the list of counties
+  const polygons = [];
+  for (const countyFeature of features) {
+    polygons.push(turf.feature(countyFeature.geometry));
+  }
+
+  // Generate a combined feature from all of the polygons
+  let combinedPolygon = polygons.pop();
+  while (polygons.length) {
+    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
+  }
+  const combinedFeature = combinedPolygon;
+  combinedFeature.properties = properties;
+
+  return combinedFeature;
+}
+
+/*
   Given a list of counties and a set of properties, combine the GeoJSON for the counties and slap the properties on it
 */
 export function generateMultiCountyFeature(counties, properties) {
@@ -73,16 +94,6 @@ export function generateMultiCountyFeature(counties, properties) {
   }
   const combinedFeature = combinedPolygon;
   combinedFeature.properties = properties;
-
-  // Store each of the locations so we can reference them later and get populatin data
-  combinedFeature._aggregatedLocations = features.map(f => {
-    const [county, state] = f.split(', ');
-    return {
-      county,
-      state,
-      ...properties
-    };
-  });
 
   return combinedFeature;
 }
