@@ -15,7 +15,7 @@ const local = !process.env.NODE_ENV || process.env.NODE_ENV === 'testing';
  */
 export default async function saveFileToCache(url, type, date, data) {
   if (local) {
-    const base = 'new-cache';
+    const base = 'crawler-cache';
     const dir = join(base, hash(url));
     const contents = hash(data, 5);
     const time = convert.Z8601ToFilename(new Date().toISOString());

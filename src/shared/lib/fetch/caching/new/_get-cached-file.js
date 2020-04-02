@@ -28,7 +28,7 @@ export default async function getCachedFile(url, type, date, encoding = 'utf8', 
   const folder = hash(url);
 
   if (local) {
-    const cachePath = join(process.cwd(), 'new-cache', folder);
+    const cachePath = join(process.cwd(), 'crawler-cache', folder);
     let files = await fastGlob([join(cachePath, '**')]);
 
     /**
