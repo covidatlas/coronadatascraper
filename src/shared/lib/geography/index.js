@@ -139,8 +139,9 @@ export const getLocationGranularityName = function(location) {
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
  */
-export const getName = location =>
-  [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+export const getName = function(location) {
+  return location.name || [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+};
 
 /*
   Get the priority of a location

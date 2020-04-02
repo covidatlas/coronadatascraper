@@ -26,8 +26,9 @@
     "countryId": { "type": "string" },
     "stateId": { "type": "string" },
     "countyId": { "type": "string" },
-    "cityId": { "type": "string" }
-
+    "cityId": { "type": "string" },
+    "name": { "type": "string" },
+    "type": { "type": "string" }
   },
   "dependencies": {
     "state": ["country"],
