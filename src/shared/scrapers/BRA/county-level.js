@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import * as geography from '../../lib/geography/index.js';
-import datetime from '../../lib/datetime/index.js';
+import datetime from '../../lib/datetime/old/index.js';
 
 import countiesList from './countiesList.json';
 
