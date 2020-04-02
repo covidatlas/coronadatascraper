@@ -49,15 +49,18 @@ export default async function getCachedFile(url, type, date, encoding = 'utf8', 
       /**
        * If date is earlier than we have cached, bail
        */
-      const { earliest, latest } = getDateBounds(files);
+      const { earliest /* latest */ } = getDateBounds(files);
       if (datetime.dateIsBefore(date, earliest)) {
         log('  ⚠️ Sorry McFly, we cannot go back in time to get %s, no cache present', url);
         return RESOURCE_UNAVAILABLE;
       }
+      /*
+      // Fix this soon: it won't work until we can cast the requested date to today for the locale in question, otherwise we'll get false positives on future
       if (datetime.dateIsAfter(date, latest)) {
         log('  ⚠️ Sorry, %s is in the future; without increasing gravity we cannot speed up time to get %s', date, url);
         return RESOURCE_UNAVAILABLE;
       }
+      */
 
       // Filter files that match date when locale-cast from UTC
       files = files.filter(filename => {
