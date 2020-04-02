@@ -101,6 +101,10 @@ sp-dropdown[emphasized] {
   display: none;
 }
 
+.spectrum-Site-mainContainer {
+  padding: 0 var(--spectrum-alias-grid-margin-small);
+}
+
 .ca-Landing {
   background-color: var(--BackgroundColor-dark);
 
@@ -111,6 +115,8 @@ sp-dropdown[emphasized] {
   flex-direction: column;
 
   padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
+  margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
+  margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
 }
 
 .ca-Section {
