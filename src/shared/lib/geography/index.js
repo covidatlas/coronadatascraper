@@ -244,7 +244,7 @@ export const stripCountyName = function(county) {
     .trim()
     .toLowerCase()
     .replace(/[^A-Za-z,]*/g, '')
-    .replace(/(parish|county)/, '');
+    .replace(/(parish|county|municipality|borough)/, '');
 };
 
 /*
