@@ -4,7 +4,7 @@ const request = imports('request');
 const yargs = imports('yargs');
 
 const fs = imports('../src/shared/lib/fs.js');
-const datetime = imports('../src/shared/lib/datetime/index.js');
+const datetime = imports('../src/shared/lib/datetime/index.js').default;
 
 const { argv } = yargs
   .scriptName('node ./scripts/statusSlackBot.js')
@@ -26,7 +26,7 @@ const generateReport = async report => {
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `*Report for ${datetime.getDate().toUTCString()}:*`
+        text: `*Report for ${datetime.now.utc()}:*`
       }
     },
     {
