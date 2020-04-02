@@ -30,6 +30,8 @@ function initData() {
       if (feature) {
         foundFeatures++;
         feature.properties.locationId = index;
+      } else {
+        console.log('Failed to find feature for', location);
       }
     }
   });
