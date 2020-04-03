@@ -23,33 +23,30 @@ const scraper = {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
     const data = await fetch.csv(this.url, false);
 
-    // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
-    let scrapeDateString = datetime.getYYYYMD(scrapeDate);
-    const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
-    const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
+    // Get or set a date; always format it into YYYY-MM-DD
+    const date = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : datetime.now.at('America/New_York');
+    let scrapeDate = datetime.getYYYYMMDD(date);
+
+    const firstDateInTimeseries = data[0].date;
+    const lastDateInTimeseries = data[data.length - 1].date;
 
     if (scrapeDate > lastDateInTimeseries) {
       console.error(
         `  🚨 timeseries for ${geography.getName(
           this
-        )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
-          lastDateInTimeseries
-        )}. Using last sample anyway`
+        )}: SCRAPE_DATE ${scrapeDate} is newer than last sample time ${lastDateInTimeseries}. Using last sample anyway`
       );
       scrapeDate = lastDateInTimeseries;
-      scrapeDateString = datetime.getYYYYMD(scrapeDate);
     }
 
     if (scrapeDate < firstDateInTimeseries) {
-      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDate}`);
     }
 
     const locations = [];
     const locationsByState = {};
     for (const row of data) {
-      if (datetime.getYYYYMD(`${row.date} 12:00:00`) === scrapeDateString) {
+      if (row.date === scrapeDate) {
         const locationObj = {
           state: geography.getState(row.state),
           cases: parse.number(row.cases),
@@ -79,7 +76,7 @@ const scraper = {
     }
 
     if (locations.length === 0) {
-      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDate}`);
     }
 
     return locations;
