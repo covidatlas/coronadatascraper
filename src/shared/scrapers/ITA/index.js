@@ -40,26 +40,26 @@ const scraper = {
   priority: 1,
   async scraper() {
     const data = await fetch.csv(this.url, false);
-    // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? datetime.now.at('Europe/Rome') : datetime.getDate();
-    const scrapeDate = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : fallback;
-    let latestDate = new Date(data[data.length - 1].data);
-    latestDate.setHours(0, 0, 0, 0); // TODO should probably remove this!
 
-    if (datetime.dateIsBefore(latestDate, scrapeDate)) {
+    // Get or set a date; normalize to YYYY-MM-DD (for now)
+    const date = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : datetime.now.at('Europe/Rome');
+    let scrapeDate = datetime.getYYYYMMDD(date);
+
+    // Returns a psuedo 8601 string (like 2020-04-01T17:00:00)
+    const lastDateInTimeseries = data[data.length - 1].data;
+
+    if (scrapeDate > lastDateInTimeseries) {
       console.error(
         '  🚨 Timeseries for ITA has not been updated, latest date is using %s instead of %s',
-        datetime.getYYYYMMDD(latestDate),
-        datetime.getYYYYMMDD(scrapeDate)
+        datetime.getYYYYMMDD(lastDateInTimeseries),
+        scrapeDate
       );
-      latestDate = datetime.getYYYYMMDD(latestDate, '-');
-    } else {
-      latestDate = datetime.getYYYYMMDD(scrapeDate, '-');
+      scrapeDate = lastDateInTimeseries;
     }
 
     const states = data
       .filter(row => {
-        return row.data.substr(0, 10) === latestDate;
+        return row.data === lastDateInTimeseries;
       })
       .map(row => {
         const state = parse.string(row.denominazione_regione);
