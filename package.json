@@ -20,6 +20,8 @@
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
+    "test:unit": "tape tests/unit/**/*-test.js | tap-spec",
+    "test:integration": "tape tests/integration/**/*-test.js | tap-spec",
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "tape scripts/testTimezones.js | tap-spec",
     "timeseries": "node src/shared/timeseries/index.js",
