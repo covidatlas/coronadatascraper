@@ -6,6 +6,7 @@
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-light.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-dark.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-medium.css";
+@import "../node_modules/@adobe/spectrum-css/dist/components/vars/spectrum-large.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/typography/index-vars.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/link/index-vars.css";
 @import "../node_modules/@adobe/spectrum-css/dist/components/site/index-vars.css";

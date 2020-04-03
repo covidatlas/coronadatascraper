@@ -31,7 +31,10 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </div>
 
       <div class="ca-Landing-search">
-        <sp-textfield placeholder="Zip code, location"></sp-textfield>
+        <div class="spectrum-ComboField spectrum--large">
+          <sp-search></sp-search>
+          <sp-button>Go</sp-button>
+        </div>
       </div>
     </div>
 
