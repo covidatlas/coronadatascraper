@@ -2,6 +2,7 @@ import cheerio from 'cheerio';
 import csvParse from 'csv-parse';
 import puppeteer from 'puppeteer';
 import * as caching from './caching.js';
+import { stripBOM } from '../fs.js';
 import datetime from '../datetime/index.js';
 import log from '../log.js';
 import { get } from './get.js';
@@ -51,7 +52,7 @@ export const json = async (url, date, options = {}) => {
   if (!body) {
     return null;
   }
-  return JSON.parse(body);
+  return JSON.parse(stripBOM(body));
 };
 
 /**
