@@ -3,6 +3,7 @@ import fastGlob from 'fast-glob';
 import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 
 export default async args => {
   const { options } = args;
@@ -40,11 +41,22 @@ export default async args => {
     if (options.skip && geography.getName(location) === options.skip) {
       continue;
     }
+
     if (
       options.location &&
       path.basename(location._path, '.js') !== options.location &&
       geography.getName(location) !== options.location
     ) {
+      continue;
+    }
+
+    if (options.country && location.country !== options.country) {
+      continue;
+    }
+
+    if (options.id && options.id !== countryLevels.getIdFromLocation(location)) {
+      // select location based on country level id
+      // for example "yarn start -i id3:AU-VIC"
       continue;
     }
     sources.push(location);
