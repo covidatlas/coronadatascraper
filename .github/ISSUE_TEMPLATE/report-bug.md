@@ -1,5 +1,5 @@
 ---
-name: Bug report
+name: "🐛 Bug report"
 about: Non-data issues
 title: ''
 labels: bug

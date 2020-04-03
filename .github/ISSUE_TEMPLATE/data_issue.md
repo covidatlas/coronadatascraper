@@ -1,5 +1,5 @@
 ---
-name: Data issue
+name: "👾 Data issue"
 about: Report a data issue
 title: ''
 labels: scraper, data issue

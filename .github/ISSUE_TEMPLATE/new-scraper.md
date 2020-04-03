@@ -1,7 +1,7 @@
 ---
-name: New scraper
-about: Add a new scraper
-title: Scraper for [LOCATION_HERE]
+name: "📥 New scraper source"
+about: Provide a source for a new scraper
+title: Add scraper for [LOCATION_HERE]
 labels: scraper
 assignees: ''
 

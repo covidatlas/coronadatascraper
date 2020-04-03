@@ -1,5 +1,5 @@
 ---
-name: Tech debt
+name: "💸 Tech debt"
 about: (Devs/QA only) A change that would help us go harder/better/faster/stronger
 title: ''
 labels: tech debt
