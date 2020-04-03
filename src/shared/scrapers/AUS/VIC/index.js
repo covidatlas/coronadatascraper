@@ -29,7 +29,7 @@ const scraper = {
     const currentArticleUrl = $anchor.attr('href');
     const $currentArticlePage = await fetch.page(`https://www.dhhs.vic.gov.au${currentArticleUrl}`);
     const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
-    const matches = paragraph.match(/cases in Victoria \w* (?<casesString>\d+)/) || {};
+    const matches = paragraph.match(/cases in Victoria \w* (?<casesString>[\d,]+)/) || {};
     const { casesString } = matches.groups || {};
     const data = {
       cases: parse.number(casesString)
