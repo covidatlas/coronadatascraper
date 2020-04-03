@@ -30,6 +30,27 @@ function isValid(data) {
 }
 
 /*
+  Add output data to the cases array, input must be an object
+*/
+function processData(cases, location, data) {
+  const caseInfo = { ...location, ...data };
+
+  /*
+  if (datetime.scrapeDate()) {
+    // This must come from cache
+    // caseInfo.collectedDate = datetime.scrapeDate();
+  }
+  else {
+    // Add collection date as current UTC time
+    // Even this is likely wrong -- it's gotta be cache aware
+    caseInfo.collectedDate = (new Date()).toISOString();
+  }
+  */
+
+  cases.push(caseInfo);
+}
+
+/*
   Add output data to the cases array. Input can be either an object or an array
 */
 function addData(cases, location, result) {
@@ -39,11 +60,11 @@ function addData(cases, location, result) {
     }
     for (const data of result) {
       if (isValid(data)) {
-        cases.push({ ...location, ...data });
+        processData(cases, location, data);
       }
     }
   } else if (isValid(result)) {
-    cases.push({ ...location, ...result });
+    processData(cases, location, result);
   }
 }
 
