@@ -271,6 +271,29 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
+  // function sourceIsEqual(a, b) {
+  //   return a.url === b.url;
+  // }
+
+  // // Post-process multivalent sources to have only one sources object
+  // for (let location of timeseriesMultivalent) {
+  //   // Gather all sources and store unique IDs
+  //   let allSources = [];
+  //   for (const date of dates) {
+  //     for (let source of date.sources) {
+  //       if (!allSources.find(otherSource => sourceIsEqual(otherSource, source))) {
+  //         allSources.push(source);
+  //       }
+  //     }
+  //   }
+
+  //   for (const date of dates) {
+  //     for (let source of allSources) {
+
+  //     }
+  //   }
+  // }
+
   await fs.writeJSON(path.join('dist', 'timeseries-multivalent.json'), timeseriesMultivalent, { space: 0 });
   await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
   await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
