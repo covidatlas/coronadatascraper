@@ -283,29 +283,7 @@ const scraper = {
           cases[index]['Province/State'] = '';
         }
 
-        // Use their US states
-        if (
-          cases[index]['Country/Region'] === 'US' &&
-          geography.usStates[parse.string(cases[index]['Province/State'] || '')]
-        ) {
-          const state = geography.usStates[parse.string(cases[index]['Province/State'])];
-          const caseData = {
-            aggregate: 'state',
-            country: 'USA',
-            state,
-            cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0)
-          };
-
-          if (recoveredData) {
-            const recoveredCount = recoveredData[date];
-            if (recoveredCount !== undefined) {
-              caseData.recovered = parse.number(recoveredCount);
-            }
-          }
-
-          countries.push(caseData);
-        } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
+        if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           const caseData = {
             aggregate: 'country',
             country: parse.string(cases[index]['Country/Region']),
