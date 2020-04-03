@@ -294,12 +294,11 @@ const scraper = {
             country: 'USA',
             state,
             cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            recovered: parse.number(recoveredData[date] || 0)
+            deaths: parse.number(deaths[index][date] || 0)
           };
 
           if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
+            const recoveredCount = recoveredData[date];
             if (recoveredCount !== undefined) {
               caseData.recovered = parse.number(recoveredCount);
             }
@@ -316,7 +315,7 @@ const scraper = {
           };
 
           if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
+            const recoveredCount = recoveredData[date];
             if (recoveredCount !== undefined) {
               caseData.recovered = parse.number(recoveredCount);
             }
