@@ -6,7 +6,7 @@ import maintainers from '../../../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  county: 'fips:06089',
+  county: 'Shasta County',
   state: 'CA',
   country: 'USA',
   maintainers: [maintainers.jbencina],
