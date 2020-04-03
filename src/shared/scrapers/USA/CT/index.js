@@ -3,7 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
-import * as datetime from '../../../lib/datetime.js';
+import datetime from '../../../lib/datetime/index.js';
 import maintainers from '../../../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -46,7 +46,7 @@ const scraper = {
       });
       return counties;
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       this.type = 'paragraph';
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -65,7 +65,7 @@ const scraper = {
       }
       return counties;
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       this.type = 'table';
       const counties = [];
       const $ = await fetch.page(this.url);
@@ -86,7 +86,7 @@ const scraper = {
       counties.push(transform.sumData(counties));
       return counties;
     },
-    '2020-3-21': async function() {
+    '2020-03-21': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
 
       this.url = `https://portal.ct.gov/-/media/Coronavirus/CTDPHCOVID19summary${new Date(date).getMonth() +
@@ -142,7 +142,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-3-30': async function() {
+    '2020-03-30': async function() {
       this.url =
         'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
       this.type = 'json';
@@ -155,9 +155,13 @@ const scraper = {
         const deaths = item.attributes.Deaths;
         const county = geography.addCounty(item.attributes.COUNTY);
 
-        if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
-          throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
-        }
+        // On 3/31 these case counts were clearly updated, and agreed with the
+        // state published PDF for 3/31. Yet this DateLastUpdated field still
+        // showed 3/30. So this date field can not be trusted.
+        //
+        // if (datetime.scrapeDateIsAfter(item.attributes.DateLastUpdated)) {
+        //  throw new Error(`Data only available until ${new Date(item.attributes.DateLastUpdated).toLocaleString()}`);
+        // }
 
         counties.push({
           county,

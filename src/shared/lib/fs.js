@@ -130,7 +130,8 @@ export const copyFile = async (srcPath, destPath) => {
   Write JSON to a file
 */
 export const writeJSON = async (filePath, data, options = {}) => {
-  return writeFile(filePath, JSON.stringify(data, null, 2), options);
+  const space = 'space' in options ? options.space : 2;
+  return writeFile(filePath, JSON.stringify(data, null, space), options);
 };
 
 /**

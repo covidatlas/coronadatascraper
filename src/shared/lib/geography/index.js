@@ -1,10 +1,10 @@
-import * as turf from './turf.js';
-import log from '../log.js';
-import usStates from '../../vendor/usa-states.json';
-
+import assert from 'assert';
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
+import usStates from '../../vendor/usa-states.json';
+import log from '../log.js';
+import * as turf from './turf.js';
 
 export { usStates };
 
@@ -43,6 +43,27 @@ const countryMap = {
 };
 
 /*
+  Given a list of features, return the combined polygono
+*/
+export function combineFeatures(features, properties = {}) {
+  // Collect a list of features and polygons matching the list of counties
+  const polygons = [];
+  for (const countyFeature of features) {
+    polygons.push(turf.feature(countyFeature.geometry));
+  }
+
+  // Generate a combined feature from all of the polygons
+  let combinedPolygon = polygons.pop();
+  while (polygons.length) {
+    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
+  }
+  const combinedFeature = combinedPolygon;
+  combinedFeature.properties = properties;
+
+  return combinedFeature;
+}
+
+/*
   Given a list of counties and a set of properties, combine the GeoJSON for the counties and slap the properties on it
 */
 export function generateMultiCountyFeature(counties, properties) {
@@ -74,16 +95,6 @@ export function generateMultiCountyFeature(counties, properties) {
   const combinedFeature = combinedPolygon;
   combinedFeature.properties = properties;
 
-  // Store each of the locations so we can reference them later and get populatin data
-  combinedFeature._aggregatedLocations = features.map(f => {
-    const [county, state] = f.split(', ');
-    return {
-      county,
-      state,
-      ...properties
-    };
-  });
-
   return combinedFeature;
 }
 
@@ -101,6 +112,12 @@ export const isCounty = function(location) {
 
 export const isCity = function(location) {
   return location && location.city;
+};
+
+export const getSmallestLocationStr = function(location) {
+  const smallestStr = location.city || location.county || location.state || location.country;
+  assert(smallestStr, `Illegal location: ${JSON.stringify(location)}`);
+  return smallestStr;
 };
 
 export const getLocationGranularityName = function(location) {
@@ -122,8 +139,9 @@ export const getLocationGranularityName = function(location) {
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
  */
-export const getName = location =>
-  [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+export const getName = function(location) {
+  return location.name || [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+};
 
 /*
   Get the priority of a location
@@ -179,6 +197,15 @@ export const addEmptyRegions = function(regionDataArray, regionNameArray, region
   if (regionDataArray.length === 0) {
     throw new Error(`Attempted to addEmptyRegions with without providing any ${regionGranularity} records`);
   }
+  let cases = 0;
+  for (const entry of regionDataArray) {
+    if (entry.cases !== undefined) {
+      cases += entry.cases;
+    }
+  }
+  if (cases === 0) {
+    throw new Error(`Attempted to addEmptyRegions with without providing any actual cases`);
+  }
 
   // Get an object of all the tracked regions
   const trackedRegions = regionDataArray.reduce((a, region) => {
@@ -217,7 +244,7 @@ export const stripCountyName = function(county) {
     .trim()
     .toLowerCase()
     .replace(/[^A-Za-z,]*/g, '')
-    .replace(/(parish|county)/, '');
+    .replace(/(parish|county|municipality|borough)/, '');
 };
 
 /*

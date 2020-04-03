@@ -32,6 +32,7 @@
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "no-loop-func": "off",
-    "no-multi-assign": "off"
+    "no-multi-assign": "off",
+    "max-classes-per-file": "off"
   }
 }

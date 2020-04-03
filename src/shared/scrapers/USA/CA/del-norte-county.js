@@ -44,7 +44,7 @@ const scraper = {
         tested
       };
     },
-    '2020-3-18': async function() {
+    '2020-03-18': async function() {
       const $ = await fetch.page(this.url);
       const cases = parse.number(
         $('font:contains("Number of Positive")')

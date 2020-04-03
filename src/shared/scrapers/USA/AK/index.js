@@ -1,7 +1,6 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
-import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'AK',
@@ -18,52 +17,43 @@ const scraper = {
   aggregate: 'county',
 
   _regions: {
-    Anchorage: ['Anchorage County, AK'],
-    'Gulf Coast': ['Valdez-Cordova County, AK', 'Kodiak Island County, AK', 'Kenai Peninsula County, AK'],
+    Anchorage: ['Anchorage Municipality'],
+    'Gulf Coast': ['Valdez-Cordova Census Area', 'Kodiak Island Borough', 'Kenai Peninsula Borough'],
     Interior: [
-      'Denali County, AK',
-      'Yukon-Koyukuk County, AK',
-      'Southeast Fairbanks County, AK',
-      'Fairbanks North Star County, AK'
+      'Denali Borough',
+      'Yukon-Koyukuk Census Area',
+      'Southeast Fairbanks Census Area',
+      'Fairbanks North Star Borough'
     ],
-    'Mat-Su': ['Matanuska-Susitna County, AK'],
-    Northern: ['Northwest Arctic County, AK', 'Nome County, AK', 'North Slope County, AK'],
+    'Mat-Su': ['Matanuska-Susitna Borough'],
+    Northern: ['Northwest Arctic Borough', 'Nome Census Area', 'North Slope Borough'],
     Southeast: [
-      'Yakutat County, AK',
-      'Skagway County, AK',
-      'Hoonah-Angoon County, AK',
-      'Wrangell County, AK',
-      'Haines County, AK',
-      'Petersburg County, AK',
-      'Prince of Wales-Hyder County, AK',
-      'Sitka County, AK',
-      'Ketchikan Gateway County, AK',
-      'Juneau County, AK'
+      'Yakutat City and Borough',
+      'Skagway Municipality',
+      'Hoonah-Angoon Census Area',
+      'Wrangell City and Borough',
+      'Haines Borough',
+      'Petersburg Borough',
+      'Prince of Wales-Hyder Census Area',
+      'Sitka City and Borough',
+      'Ketchikan Gateway Borough',
+      'Juneau City and Borough'
     ],
     Southwest: [
-      'Bristol Bay County, AK',
-      'Lake and Peninsula County, AK',
-      'Aleutians East County, AK',
-      'Dillingham County, AK',
-      'Aleutians West County, AK',
-      'Wade Hampton County, AK', // aka 'Kusilvak County, AK',
-      'Bethel County, AK'
+      'Bristol Bay Borough',
+      'Lake and Peninsula Borough',
+      'Aleutians East Borough',
+      'Dillingham Census Area',
+      'Aleutians West Census Area',
+      'Kusilvak Census Area', // aka 'Wade Hampton',
+      'Bethel Census Area'
     ]
-  },
-  _populations: {
-    Anchorage: 294356,
-    'Mat-Su': 107610,
-    'Gulf Coast': 80866,
-    Interior: 109847,
-    Northern: 27432,
-    Southeast: 72373,
-    Southwest: 42206
   },
 
   async scraper() {
     const counties = [];
     const $ = await fetch.page(this.url);
-    const $table = $('td:contains("Travel-Related")').closest('table');
+    const $table = $('td:contains("Seward")').closest('table');
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
@@ -75,25 +65,20 @@ const scraper = {
         region = 'Anchorage';
       }
 
-      const county = `${region} Economic Region`;
-      const population = this._populations[region];
+      const name = `${region} Economic Region, AK, USA`;
+      const subCounties = this._regions[region];
 
       // Only process the rows which match an economic region
-      if (population === undefined) {
+      if (!subCounties) {
+        console.warn(`  ⚠️  AK, USA: Skippping ${name}, we don't yet know how to handle it`);
         return;
       }
 
       const countyObj = {
-        county,
-        cases,
-        population
+        name,
+        county: subCounties,
+        cases
       };
-
-      const subCounties = this._regions[region];
-      countyObj.feature = geography.generateMultiCountyFeature(subCounties, {
-        state: 'AK',
-        country: 'USA'
-      });
 
       counties.push(countyObj);
     });
