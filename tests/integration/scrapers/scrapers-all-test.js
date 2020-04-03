@@ -1,94 +1,172 @@
+﻿/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require  */
+/* eslint-disable no-use-before-define */
+
 const imports = require('esm')(module);
-const path = require('path');
+const { join } = require('path');
 const test = require('tape');
-const glob = require('fast-glob').sync;
+const fastGlob = require('fast-glob');
+const path = require('path');
+const { EventEmitter } = require('events');
 
-const shared = path.join(process.cwd(), 'src', 'shared');
-const lib = path.join(shared, 'lib');
-const join = imports(path.join(lib, 'join.js')).default;
-const { readJSON } = imports(path.join(lib, 'fs.js'));
-const runScraper = imports('./run-scraper.js').default;
+const fs = imports(join(process.cwd(), 'src', 'shared', 'lib', 'fs.js'));
+const runScraper = imports(join(process.cwd(), 'src', 'events', 'crawler', 'scrape-data', 'run-scraper.js'));
+const get = imports(join(process.cwd(), 'src', 'shared', 'lib', 'fetch', 'get.js'));
 
-/**
-This suite automatically tests a scraper's results against its test cases.
+// This suite automatically tests a scraper's results against its test
+// cases. To add test coverage for a scraper, see
+// docs/sources.md#testing-sources
 
-To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
+// The tests monkeypatch get.get, so make sure that's restored at the end!
+const oldGetGet = get.get;
 
-- Add a `tests` folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
-- Add a sample response from the target URL. The filename should be an MD5 hash of the URL + its original ext (the same as we have it in cache):
-    - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
-    - File name: 70837a5939e6cb1950dc07178d47aeb3.csv
+// Utility functions
 
-- Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
-- For sources that have a time series, the `expected.json` file represents the latest result in the
-  sample response provided. You can additionally test the return value for a specific date by adding
-  a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
-
-    📁 USA
-      📁 AK
-        📄 index.js 🡐 scraper
-        📁 tests
-          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html 🡐 sample response
-          📄 expected.json 🡐 expected result
-    ...
-    📁 FRA
-      📄 index.js 🡐 scraper
-      📁 tests
-        📄 70837a5939e6cb1950dc07178d47aeb3.csv 🡐 sample response
-        📄 expected.json 🡐 expected result for most recent date in sample
-        📄 expected.2020-03-16.json 🡐 expected result for March 16, 2020
-
-*/
-
-/**
- * Utility functions
+/** Splits folder path into the scraper name and test date hash.
+ * e.g. 'X/Y/2020-03-04' => { scraperName: 'X/Y', date: '2020-03-04' }
  */
-// Extract date from filename, e.g. `expected-2020-03-16.json` -> `2020-03-16`
-const datedResultsRegex = /expected.(\d{4}-\d{2}-\d{2}).json/i;
-const getDateFromPath = path => datedResultsRegex.exec(path, '$1')[1];
+function scraperNameAndDateFromPath(s) {
+  const parts = s.split(path.sep);
 
-// e.g. `/coronadatascraper/src/shared/scrapers/USA/AK/tests` 🡒 `USA/AK`
-const scraperNameFromPath = s => s.replace(join(__dirname, '..', 'scrapers'), '').replace('/tests', '');
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  const name = parts.filter(s => !dateRegex.test(s)).join(path.sep);
+  const dt = parts.filter(s => dateRegex.test(s));
 
-// Remove geojson + undefined from scraper result
-const strip = d => {
-  delete d.feature;
-  for (const prop of Object.keys(d)) {
-    if (d[prop] === undefined) delete d[prop];
-  }
-  return d;
+  const date = dt.length === 0 ? null : dt[0];
+  return {
+    scraperName: name,
+    date
+  };
+}
+
+/** Changes a URL to a filesystem-friendly name, removes extension. */
+function sanitizeUrl(s) {
+  const ext = path.extname(s);
+  return s
+    .replace(ext, '')
+    .replace(/^https?:\/\//i, '')
+    .replace(/[^a-z0-9]/gi, '_');
 };
 
-test('Scraper tests', async t => {
-  const testDirs = glob(join(shared, 'scrapers', '**', 'tests'), { onlyDirectories: true });
+/** Run a single scraper test directory. */
+async function runTest(t, cacheRoot, testDirectory) {
+  const { scraperName, date } = scraperNameAndDateFromPath(testDirectory);
 
-  for (const testDir of testDirs) {
-    const scraperName = scraperNameFromPath(testDir); // e.g. `USA/AK`
-    process.env.OVERRIDE_CACHE_PATH = testDir;
+  // Monkeypatch global get for this test.
+  // eslint-disable-next-line no-unused-vars
+  get.get = async (url, type, date, options) => {
+    const sanurl = sanitizeUrl(url);
+    const respFile = join(testDirectory, sanurl);
+    // console.log(`  Call: ${url}\n  Sanitized: ${sanurl}\n  Response: ${respFile}`);
+    return fs.readFile(join(cacheRoot, respFile));
+  };
 
-    // dynamically import the scraper
-    // eslint-disable-next-line
-    const scraperObj = imports(join(testDir, '..', 'index.js'));
+  const pathParts = [__dirname, '..', '..', '..', 'src', 'shared', 'scrapers', scraperName, 'index.js'];
+  const scraperObj = imports(join(...pathParts)).default;
 
-    if (scraperObj.state === 'AL' && scraperObj.country === 'USA') {
-      // Honestly these linter rules are absurd
-      // eslint-disable-next-line
-      scraperObj.scraper = scraperObj.scraper[0];
-    }
-
-    const datedResults = glob(join(testDir, 'expected.*.json'));
-
-    for (const expectedPath of datedResults) {
-      const date = getDateFromPath(expectedPath);
-      process.env.SCRAPE_DATE = date;
-      let result = await runScraper(scraperObj);
-      result = result.map(strip);
-      const expected = await readJSON(expectedPath);
-      t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
-      delete process.env.SCRAPE_DATE;
-    }
-    delete process.env.OVERRIDE_CACHE_PATH;
+  let result = null;
+  try {
+    process.env.SCRAPE_DATE = date;
+    result = await runScraper.runScraper(scraperObj);
+  } catch (e) {
+    t.fail(`${scraperName} on ${date}, error scraping: ${e}`);
+  } finally {
+    delete process.env.SCRAPE_DATE;
+    get.get = oldGetGet;
   }
-  t.end();
+
+  if (result) {
+    // Writing the actual scraper result so ppl can diff/investigate.
+    // These are ignored in .gitignore.
+    const actualFilepath = join(cacheRoot, testDirectory, 'actual.json');
+    await fs.writeJSON(actualFilepath, result, { log: false });
+
+    const expectedPath = join(cacheRoot, testDirectory, 'expected.json');
+    const fullExpected = await fs.readJSON(expectedPath);
+
+    // Ignore features (for now?).
+    const removeFeatures = d => {
+      delete d.feature;
+      return d;
+    };
+    const actual = JSON.stringify(result.map(removeFeatures));
+    const expected = JSON.stringify(fullExpected.map(removeFeatures));
+    const testCacheFolder = __dirname.replace(process.cwd, '');
+    const msg = `${scraperName} on ${date} (actual.json vs expected.json in ${testCacheFolder}/${testDirectory})`;
+    t.equal(actual, expected, msg);
+  } else {
+    t.fail(`should have had a result for ${scraperName} on ${date}`);
+  }
+}
+
+// Mutex
+
+// Each test folder modifies global state (get.get, and
+// process.env.SCRAPE_DATE), so we need to make sure that they're run
+// one at a time.  Global state is bad!
+
+// https://medium.com/trabe/synchronize-cache-updates-in-node-js-with-a-mutex-d5b395457138
+class Lock {
+  constructor(maxListeners = 20) {
+    this._locked = false;
+    this._ee = new EventEmitter();
+    this._ee.setMaxListeners(maxListeners);
+  }
+
+  acquire() {
+    return new Promise(resolve => {
+      // If nobody has the lock, take it and resolve immediately
+      if (!this._locked) {
+        // Safe because JS doesn't interrupt you on synchronous operations,
+        // so no need for compare-and-swap or anything like that.
+        this._locked = true;
+        return resolve();
+      }
+
+      // Otherwise, wait until somebody releases the lock and try again
+      const tryAcquire = () => {
+        if (!this._locked) {
+          this._locked = true;
+          this._ee.removeListener('release', tryAcquire);
+          return resolve();
+        }
+      };
+      this._ee.on('release', tryAcquire);
+    });
+  }
+
+  release() {
+    // Release the lock immediately
+    this._locked = false;
+    setImmediate(() => this._ee.emit('release'));
+  }
+}
+
+// Tests.
+
+const cachePath = join(process.cwd(), 'tests', 'integration', 'scrapers', 'testcache');
+const testDirs = fastGlob
+  .sync(join(cachePath, '**'), { onlyDirectories: true })
+  .filter(s => /\d{4}-\d{2}-\d{2}$/.test(s))
+  .map(s => s.replace(`${cachePath}${path.sep}`, ''));
+// console.log(`======== ${testDirs} =======`);
+
+const lock = new Lock(testDirs.length);
+
+test('scrapers-all-test, Parsers', async t => {
+  t.plan(testDirs.length);
+  testDirs.forEach(async d => {
+    await lock.acquire();
+    try {
+      await runTest(t, cachePath, d);
+    } catch (e) {
+      t.fail(`Failure for ${d}: ${e}`);
+    } finally {
+      lock.release();
+    }
+  });
 });
+
+// Final cleanup.
+delete process.env.SCRAPE_DATE;
+get.get = oldGetGet;
