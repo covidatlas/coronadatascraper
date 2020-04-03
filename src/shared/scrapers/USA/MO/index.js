@@ -284,7 +284,7 @@ const scraper = {
             counties[countyName] = {
               cases: parse.number(countyData.Cases || 0),
               deaths: parse.number(countyData.Deaths || 0),
-              updatedDate: countyData.EditDate
+              publishedDate: countyData.EditDate
             };
           }
         }
