@@ -119,14 +119,14 @@ const scraper = {
   ],
   _good_headers(data) {
     const countyHeader = parse.string(data[0][0]);
-    const validCountyHeaders = ['Patient county name', 'County', ''];
-    if (validCountyHeaders.indexOf(countyHeader) === -1) {
+    const validCountyHeaders = new Set(['Patient county name', 'County', '']);
+    if (!validCountyHeaders.has(countyHeader)) {
       return false;
     }
-    if (['Positive', 'positives'].indexOf(parse.string(data[1][0])) === -1) {
+    if (!['Positive', 'positives'].includes(parse.string(data[1][0]))) {
       return false;
     }
-    if (['Negative', 'negatives'].indexOf(parse.string(data[2][0])) === -1) {
+    if (!['Negative', 'negatives'].includes(parse.string(data[2][0]))) {
       return false;
     }
     return true;
