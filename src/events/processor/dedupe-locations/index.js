@@ -89,6 +89,16 @@ function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, 
   report.dropped.push(report.sources.length - 1);
 }
 
+function storeSource(location, otherLocation) {
+  location._sources = location._sources || [];
+  if (!location._sources.includes(otherLocation)) {
+    location._sources.push(otherLocation);
+  }
+  if (!location._sources.includes(location)) {
+    location._sources.push(location);
+  }
+}
+
 const dedupeLocations = args => {
   log(`⏳ De-duping locations...`);
 
@@ -134,6 +144,8 @@ const dedupeLocations = args => {
         deDuped++;
         usedLocation = location;
         droppedLocation = otherLocation;
+
+        storeSource(location, otherLocation);
       } else {
         // Kill this location
         log(
@@ -149,6 +161,8 @@ const dedupeLocations = args => {
         deDuped++;
         usedLocation = otherLocation;
         droppedLocation = location;
+
+        storeSource(otherLocation, location);
       }
 
       const crosscheckResult = crosscheck(location, otherLocation);

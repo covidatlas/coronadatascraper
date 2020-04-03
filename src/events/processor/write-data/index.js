@@ -3,7 +3,7 @@ import * as fs from '../../../shared/lib/fs.js';
 import * as stringify from './stringify.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
-const writeData = async ({ locations, featureCollection, report, options, sourceRatings }) => {
+const writeData = async ({ locations, featureCollection, report, options, sourceRatings, multivalentLocations }) => {
   let suffix = '';
   if (options.outputSuffix !== undefined) {
     suffix = options.outputSuffix;
@@ -12,6 +12,11 @@ const writeData = async ({ locations, featureCollection, report, options, source
   }
 
   await fs.writeFile(path.join('dist', `data${suffix}.json`), JSON.stringify(locations, null, 2));
+
+  await fs.writeFile(
+    path.join('dist', `data-multivalent${suffix}.json`),
+    JSON.stringify(multivalentLocations, null, 2)
+  );
 
   await fs.writeCSV(path.join('dist', `data${suffix}.csv`), stringify.csvForDay(locations));
 

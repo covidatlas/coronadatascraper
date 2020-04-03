@@ -116,7 +116,7 @@ export const isCity = function(location) {
 
 export const getSmallestLocationStr = function(location) {
   const smallestStr = location.city || location.county || location.state || location.country;
-  assert(smallestStr, `Illegal location: ${JSON.stringify(location)}`);
+  assert(smallestStr, `Illegal location: `, location);
   return smallestStr;
 };
 

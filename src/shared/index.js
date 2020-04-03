@@ -9,6 +9,7 @@ import reportScrape from '../events/processor/report/index.js';
 import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
 import transformIds from '../events/processor/transform-ids/index.js';
+import generateMultivalent from '../events/processor/generate-multivalent/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
 import datetime from './lib/datetime/index.js';
@@ -44,6 +45,7 @@ async function generate(date, options = {}) {
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
     .then(transformIds)
+    .then(generateMultivalent)
     .then(cleanLocations)
     .then(options.writeData !== false && writeData); // To be retired
 
