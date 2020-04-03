@@ -1,0 +1,282 @@
+[
+  {
+    "county": "Abbeville County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Aiken County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Allendale County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Anderson County",
+    "cases": 21,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Bamberg County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Barnwell County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Beaufort County",
+    "cases": 29,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Berkeley County",
+    "cases": 8,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Charleston County",
+    "cases": 60,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "Cherokee County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Chester County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Chesterfield County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Clarendon County",
+    "cases": 5,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "Colleton County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Darlington County",
+    "cases": 8,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dillon County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dorchester County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Edgefield County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Fairfield County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Florence County",
+    "cases": 5,
+    "deaths": 2,
+    "recovered": 0
+  },
+  {
+    "county": "Georgetown County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Greenville County",
+    "cases": 51,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Greenwood County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Hampton County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Horry County",
+    "cases": 21,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "Jasper County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Kershaw County",
+    "cases": 64,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "Lancaster County",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Laurens County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Lee County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Lexington County",
+    "cases": 20,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "McCormick County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Marlboro County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Newberry County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Oconee County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Orangeburg County",
+    "cases": 11,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Pickens County",
+    "cases": 6,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Richland County",
+    "cases": 60,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Saluda County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Spartanburg County",
+    "cases": 9,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Sumter County",
+    "cases": 10,
+    "deaths": 2,
+    "recovered": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Williamsburg County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "York County",
+    "cases": 19,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "cases": 456,
+    "deaths": 9
+  }
+]

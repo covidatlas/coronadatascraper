@@ -1,0 +1,1354 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Coronavirus updates and information</title>
+    <meta name="description" content="South Dakota's The South Dakota Department of Health (SD-DOH) continues to monitor the emergence of the novel coronavirus. We are working with the CDC and our healthcare partners across the state to prepare for and respond to a potential case." />
+    <meta name="keywords" content="South Dakota Department of Health, Coronavirus, COVID-19, Novel Coronavirus, Respiratory, healthcare" />
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/user.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="30 days" />
+
+	    
+    <meta name="viewport" content="width=1000, initial-scale=1, minimum-scale=0.45"/>
+    
+   	<link rel="stylesheet" type="text/css" href="/includes/css/user.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/includes/css/screen.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/includes/css/form.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/includes/css/search.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/includes/css/print.css" media="print">
+    
+	
+	<link rel="shortcut icon" href="/images/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	
+    <!--[if lt IE 8]>
+    <link href="/includes/css/screen_ie7.css" rel="stylesheet" type="text/css" media="screen"/>
+    <![endif]-->
+
+	
+    <script type="text/javascript" src="/includes/js/jquery/jquery-3.3.1.min.js"></script>
+    
+    
+	<script type="text/javascript" src="/includes/js/jquery/jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+	    $(function () {
+
+	        if ($(window).width() > 830) {
+	            $("#middle #main").show();
+	        }
+
+	        $(window).resize(function () {
+	            if ($(window).width() > 813) {
+	                $('#main li').bind('mouseenter', function () {
+	                    $(this).find('.dropdown_box').stop(true, true).slideDown(500, 'easeOutBounce');
+	                }).bind('mouseleave', function () {
+	                    $(this).find('.dropdown_box').stop(true, true).hide();
+	                });
+	                $("#middle #main").show();
+	            }
+	            else {
+	                $('#main li').bind('mouseenter', function () {
+	                    $(this).find('.dropdown_box').stop(true, true).hide();
+	                }).bind('mouseleave', function () {
+	                    $(this).find('.dropdown_box').stop(true, true).hide();
+	                });
+	                $("#middle #main").hide();
+	            }
+
+	        });
+	        //This will fire each time the window is resized:
+	        if ($(window).width() > 813) {
+
+	            $('#main li').bind('mouseenter', function () {
+	                $(this).find('.dropdown_box').stop(true, true).slideDown(500, 'easeOutBounce');
+	            }).bind('mouseleave', function () {
+	                $(this).find('.dropdown_box').stop(true, true).hide();
+	            });
+	            $("#middle #main").show();
+	        }
+	        else {
+	            $('#main li').bind('mouseenter', function () {
+	                $(this).find('.dropdown_box').stop(true, true).hide();
+	            }).bind('mouseleave', function () {
+	                $(this).find('.dropdown_box').stop(true, true).hide();
+	            });
+	            $("#middle #main").hide();
+	        }
+
+
+
+
+	    });
+    </script>           
+	
+	<script src="/includes/js/jquery/jquery-treeview/jquery.treeview.js"></script>
+    
+	<script type="text/javascript" src="/includes/js/jquery/jquery.li-scroller.1.0.js"></script>
+	<script type="text/javascript" src="/includes/js/jquery/jquery.cookie.js"></script>
+ 
+	<script type="text/javascript">
+		$(function(){
+			$("#alerts ul").liScroll();		
+		});
+
+		$(document).ready(function(){
+			var n = $("#alerts ul li").length;
+			
+			if(n<2){
+				$('#alerts_section').hide();
+			}
+			
+			if($.cookie('alert_status') == "off"){
+				$('#alerts_section').hide();
+			}
+			
+			$('#close_btn').click(function(){
+				$.cookie('alert_status', 'off', {expires: 1}); //create cookie and set value, expires 1 day
+				$('#alerts_section').hide();
+			});
+		});
+	</script>
+    <script>
+    $(document).ready(function () {
+        $(".stateDOTsdDOTus").click(function () {
+            var domain = $(this).attr("class");
+            domain = domain.replace(/DOT/, '.');
+            domain = domain.replace(/DOT/, '.');
+            var name = $(this).children("span").attr("class");
+
+            var email = name + "@" + domain;
+            location.href = "mailto:" + email;
+        });
+    });
+</script>
+
+<script>
+       $(document).ready(function () {
+              $(".stateDOTsdDOTusSUBJECT").click(function () {
+                     var domain = $(this).attr("class");
+                     domain = domain.replace(/DOT/, '.');
+                     domain = domain.replace(/DOT/, '.');
+                     domain = domain.replace(/SUBJECT/, '?subject=' + $(this).attr("name"));
+                     var name = $(this).children("span").attr("class");
+
+                     var email = name + "@" + domain;
+                     location.href = "mailto:" + email;
+              });
+       });
+</script>
+
+
+    <script language="javascript">
+        if (top.frames.length != 0)
+            top.location = self.document.location;
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <style type="text/css">
+        <!--
+        p.MsoNormal {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 11.0pt;
+            font-family: "Calibri","sans-serif";
+        }
+
+        table.MsoNormalTable {
+            font-size: 10.0pt;
+            font-family: "Times New Roman","serif";
+        }
+        -->
+    </style>
+    <style type="text/css">
+        <!--
+        table.MsoTableGrid {
+            border: solid windowtext 1.0pt;
+            font-size: 11.0pt;
+            font-family: "Calibri",sans-serif;
+        }
+        -->
+    </style>
+    <style type="text/css">
+        <!--
+        p.TableParagraph {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            text-autospace: none;
+            font-size: 11.0pt;
+            font-family: "Segoe UI",sans-serif;
+        }
+        -->
+    </style>
+    <style type="text/css">
+        <!--
+        li.MsoListParagraphCxSpFirst {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: .0001pt;
+            margin-left: .5in;
+            line-height: 105%;
+            font-size: 11.0pt;
+            font-family: "Calibri",sans-serif;
+        }
+
+        li.MsoListParagraphCxSpMiddle {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: .0001pt;
+            margin-left: .5in;
+            line-height: 105%;
+            font-size: 11.0pt;
+            font-family: "Calibri",sans-serif;
+        }
+
+        li.MsoListParagraphCxSpLast {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 8.0pt;
+            margin-left: .5in;
+            line-height: 105%;
+            font-size: 11.0pt;
+            font-family: "Calibri",sans-serif;
+        }
+        -->
+    </style>
+    <style type="text/css">
+        <!--
+        li.MsoListParagraph {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: .0001pt;
+            margin-left: .5in;
+            font-size: 11.0pt;
+            font-family: "Calibri",sans-serif;
+        }
+        -->
+    </style>
+
+    <style>
+        .tableWrapper {
+            display: flex;
+            flex-direction: row;
+        }
+        .tableWrapper > div {
+            width: 50%;
+        }
+        @media screen and (max-width: 767px) {
+            .tableWrapper {
+                flex-direction: column;
+            }
+            .tableWrapper > div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <style type="text/css">
+.container.clearfix #upper font {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<div id="alerts_section">
+	<a id="close_btn">CLOSE<div id="alert_x"></div></a>
+    
+	<div class="tkr_container">
+		<div id="alert_box">
+			<div id="alerts">
+                                    
+                                    		
+                                    
+            </div>
+        </div>
+    </div>
+</div>
+            
+<header>
+    <div class="container clearfix">
+        <div id="logo"><a href="/" title="SD DOH Home"><img src="/images/layout/logo.png" alt="South Dakota Department of Health logo" /></a></div>
+        <div id="upper" class="clearfix">
+        <!--<a href="/social/" title="Social media links" class="button">Social Media links</a>-->
+		WEBSITE OF THE STATE OF SOUTH DAKOTA DEPARTMENT OF HEALTH<br />
+		<strong><font face="Times New Roman, Times, serif">Kim Malsam-Rysdon, Secretary of Health
+            </font></strong><a href="https://www.youtube.com/user/GoodandHealthySD/videos" target="_blank">
+          <div class="YTLogo"></div></a>
+        <a href="https://twitter.com/SDDOH" target="_blank">
+        <div class="twLogo"></div></a>
+        <a href="https://www.facebook.com/SDHealthDepartment" target="_blank"><div class="fbLogo"></div></a>
+        </div>
+		
+        <div id="lower" class="clearfix">  
+            <div id="search">
+                <form id="cse-search-box" action="https://google.com/cse" target="search">
+                  <input type="hidden" name="cx" value="012382400048732927914:v2d9d_dbrdw" />
+                  <input type="hidden" name="ie" value="UTF-8" />
+                  <input type="text" name="q" id="search_text" style="border:none;" /><input type="submit" name="sa" id="search_arrow" value="" />                  
+                </form>
+                  <script type="text/javascript" src="/includes/js/brand.js"></script>            
+            </div>
+            
+            
+                
+            <a href="/contact/" title="Contact us" class="button" id="head_contact">Contact us</a>
+            <a href="https://listserv.sd.gov/scripts/wa.exe?SUBED1=SDEPI&A=1" title="Subscribe to Listserv" class="button" target="_blank" id="subscribe">Subscribe to Listserv</a>
+        </div>
+        <div id="menu"><img src="/images/menu.png" alt="menu" /><br />MENU</div>
+    </div>
+</header>
+        
+<div class="force-clear"></div>
+
+    <div id="middle" class="clearfix">
+        <div class="container clearfix">
+            <nav id="main" class="clearfix">
+                	<div class="centerer">
+                    
+					
+                            
+                            
+					<ul>
+                    
+                    	<li><a href="/a-z-topics/" title="A-Z Topics" class="">A-Z Topics</a>
+						  
+                            
+                           
+                        </li>
+                        
+						<li id="coronavirusNavItem"><a href="/news/Coronavirus.aspx" title="Coronavirus" class="">COVID-19</a>
+							
+						</li>
+
+                        <li><a href="/news/" title="News" class="active">News</a>
+						  <br /><div class='dropdown_box'><ul id='subtree' class='treeview'><li><a href='/news/recent-releases.aspx' title='Recent Releases'>Recent Releases</a></li></ul></div>
+                        </li>
+                        
+                        
+                        <li><a href="/local-offices/" title="Local Offices" class="">Local Offices</a>
+						  <br /><div class='dropdown_box'><ul id='subtree' class='treeview'><li><a href='/local-offices/child-family-services/' title='Child & Family Services, WIC'>Child & Family Services, WIC</a></li><li><a href='/local-offices/family-planning/' title='Family Planning'>Family Planning</a></li><li><a href='/local-offices/hiv-std-testing/' title='HIV &amp; STD Testing'>HIV &amp; STD Testing</a></li><li><a href='/local-offices/vaccine-providers/' title='Vaccine Providers'>Vaccine Providers</a></li></ul></div>
+                        </li>
+                          
+                        
+                        <li><a href="/boards/" title="Licensing Boards" class="">Licensing Boards</a>
+						  <br /><div class='dropdown_box'><ul id='subtree' class='treeview'><li><a href='/boards/chiropractic/' title='South Dakota Board of Chiropractic Examiners'>South Dakota Board of Chiropractic Examiners</a></li><li><a href='/boards/dentistry/' title='South Dakota Board of Dentistry'>South Dakota Board of Dentistry</a></li><li><a href='/boards/funeral/' title='South Dakota Board of Funeral Service'>South Dakota Board of Funeral Service</a></li><li><a href='/boards/audiology/' title='South Dakota Board of Hearing Aid Dispensers and Audiologists'>South Dakota Board of Hearing Aid Dispensers and Audiologists</a></li><li><a href='/boards/massage/' title='South Dakota Board of Massage Therapy'>South Dakota Board of Massage Therapy</a></li><li><a href='/boards/medicine/' title='South Dakota Board of Medical and Osteopathic Examiners'>South Dakota Board of Medical and Osteopathic Examiners</a></li><li><a href='/boards/midwives/' title='South Dakota Board of Certified Professional Midwives'>South Dakota Board of Certified Professional Midwives</a></li><li><a href='/boards/nursing/' title='South Dakota Board of Nursing'>South Dakota Board of Nursing</a></li><li><a href='/boards/nursingfacility/' title='South Dakota Board of Nursing Facility Administrators '>South Dakota Board of Nursing Facility Administrators </a></li><li><a href='/boards/optometry/' title='South Dakota Board of Examiners in Optometry'>South Dakota Board of Examiners in Optometry</a></li><li><a href='/boards/pharmacy/' title='South Dakota Board of Pharmacy'>South Dakota Board of Pharmacy</a></li><li><a href='/boards/podiatry/' title='South Dakota Board of Podiatry Examiners'>South Dakota Board of Podiatry Examiners</a></li><li><a href='/boards/speechpath/' title='South Dakota Board of Examiners for Speech-Language Pathology '>South Dakota Board of Examiners for Speech-Language Pathology </a></li></ul></div>
+                        </li>
+                        
+                        <li><a href="/calendar/" title="Event Calendar" class="">Event Calendar</a>
+							  
+                        </li>
+                        
+                        <li><a href="/resources/" title="Resources and Publications" class="">Resources &amp; Publications</a>
+						  <br /><div class='dropdown_box'><ul id='subtree' class='treeview'><li><a href='/resources/publications/' title='Publications'>Publications</a></li><li><a href='/resources/statute-rules/' title='Statute &amp; Rules'>Statute &amp; Rules</a></li><li><a href='/resources/links/' title='Links'>Links</a></li><li><a href='/resources/bulletin.aspx' title='SD Public Health Bulletin'>SD Public Health Bulletin</a></li></ul></div>
+                        </li>
+                        
+                        <li><a href="/faqs/" title="FAQs" class="">FAQs</a>
+						  
+                        </li>
+                        
+                       
+                       
+                  	</ul>
+                   	</div>
+				</nav>
+            	<div class="force-clear"></div>
+<nav id="breadcrumbs" class="clearfix">
+    <div class="centerer">
+    <a href="/" title="Home">Home</a>
+    
+<img src='/images/layout/breadcrumb.png' alt='separator' /><a href='/news' title='News'>News</a>
+    </div>
+</nav>
+
+<div class="force-clear"></div>
+
+
+                    <div id="covidBanner">
+                        <a href="/news/coronavirus.aspx">COVID-19 Updates and Information</a>
+                    </div>
+<div class="force-clear"></div>
+            <div id="content" class="clearfix news">
+                	<div id="sidebar">
+    	<h2><a href='/news/' title='News'>News</a></h2><div id='treecontrol'><a title='Collapse the entire tree below' href='#'> Collapse All</a> | <a title='Expand the entire tree below' href='#'> Expand All</a></div><ul id='subtree' class='treeview'><li class='news sub'><a href='/news/recent-releases.aspx?' title='Recent Releases' >Recent Releases</a></ul>    
+    </div>   
+                <div id="content_block">
+                    <h1 style="text-align: center">
+                        <img src="../images/COVID_Header.jpg" alt="South Dakota Department of Health Logo and covid.sd.gov button." id="top" /></h1>
+                    <h1 style="text-align: center">Novel Coronavirus  (COVID-19) updates and information </h1>
+                    <p align="center" style="text-align: center;"> <a href="#SD">COVID-19 in South  Dakota</a> <strong>|</strong> <a href="#map">Community Impact Map </a><strong>|</strong> <a href="#news">News</a><a href="#Avoid"><br />
+                      Precautions to Avoid Illness</a> <strong>|</strong> <a href="#Symptoms">If You Develop Symptoms</a><a href="#self"><br />
+  </a><a href="#Groups">Community Guidance and Resources</a><br />
+  <a href="#business">Businesses Impacted by COVID-19</a><br />
+  <a href="#Providers">For Medical  Providers </a><strong>|</strong> <a href="#SDGuidance">SD Healthcare Provider Guidance</a><a href="#CDCGuidance"><br />
+    CDC Healthcare Provider Guidance</a> <strong>|</strong> <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html" target="_blank"  rel="noopener noreferrer">CDC Website</a></p>
+                    <hr />
+                    <p> The South Dakota Department of Health (SD-DOH) continues to  respond to the emergence of the novel coronavirus. We are working with the CDC and  our healthcare partners across the state to protect South Dakotans from COVID-19.<a href="tel:1-800-997-2880"><img src="../images/COVID_Hotline.jpg" alt="South Dakota COVID-19 Information Line.
+Questions about COVID-19? We're here to help.
+Please Call: 1-800-997-2880" /></a> </p>
+					<div>
+                   <p align="center" style="text-align: center;"> <span style="text-align: center">
+                   <iframe width="448" height="252" src="https://www.youtube.com/embed/u6S-9vReSgI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </span></p>
+				  </div>
+					<h3>Updates include:</h3>
+				  <ul> <li><a href="../documents/COVID19/covid_faqs.pdf" target="_blank"  rel="noopener noreferrer">South Dakota FAQs</a>: Recommendations, testing information, healthcare readiness, effects and symptoms.</li>
+				    <li>Interested in volunteering your services? Join the <a href="https://volunteers.sd.gov/" target="_blank">State Emergency Registry of Volunteers</a> for South Dakota.</li>
+ <li><a href="../documents/COVID19/COVID-19_WhatShouldIDo_Infographic.pdf" target="_blank"  rel="noopener noreferrer">What Should I Do? Infographic</a></li>
+ <li><a href="../documents/COVID19/COVID_TestingFacts.pdf" target="_blank"  rel="noopener noreferrer">COVID-19 Testing Facts</a></li>
+ <li>The number of cases and countries with infections worldwide is increasing and can be found on the <a href="https://web.archive.org/web/20200320002502/https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank"  rel="noopener noreferrer">WHO website</a>.</li>
+ <li>Case counts and other information about the novel coronavirus can be found on the <a href="https://web.archive.org/web/20200320042635/https://www.cdc.gov/coronavirus/2019-ncov/about/index.html" target="_blank"  rel="noopener noreferrer">CDC website</a>.</li>
+ <li>Travelers returning from High Risk Countries (<a href="https://web.archive.org/web/20200319234059/https:/www.cdc.gov/coronavirus/2019-ncov/travelers/after-travel-precautions.html" target="_blank"  rel="noopener noreferrer">See CDC Travel Advisories</a>) should self-monitor for 14 days for novel coronavirus symptoms (e.g., fever, cough, or shortness of breath) and call their medical provider to discuss their symptoms.</li></ul>
+<h3 id="SD">COVID-19 in South Dakota</h3>
+                    <p>On March 4, 2020, CDC updated the clinical criteria for testing a  symptomatic individual after evaluation by their healthcare provider. As a  result, the South Dakota Department of Health (SD-DOH) expects the number of  persons under investigation (PUI) being tested for COVID-19 to increase.</p>
+                    <p><strong>The number of PUI being tested does not reflect the level of risk to  the public in the state.</strong> For more information about the outbreak, potential risks, and  protective recommendations, visit the <a href="https://doh.sd.gov/news/Coronavirus.aspx" target="_blank"  rel="noopener noreferrer">SD-DOH website</a> or <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank"  rel="noopener noreferrer">CDC website</a>.<br />
+                      This table shows the total number of positive COVID-19 cases in  South Dakota residents, the total number of persons that tested negative, and the total  number of PUIs that are pending results.</p>
+                    <div class="tableWrapper">
+                        <div>
+
+                            
+                            <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+                                <caption>
+                                SOUTH DAKOTA CASE COUNTS
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Test Results</th>
+                                        <th># of Cases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Positive*</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="                                                    margin-bottom: .0001pt;
+                                                    text-align: center;
+                                                    line-height: normal;">46</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Negative</strong>**</p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1973</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Pending</strong>***</p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">125</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" width="72" valign="top" style="width: .75in; border-top: none; border-left: solid windowtext 1.0pt; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="font-size: 0.8em; margin-bottom: .0001pt; text-align: left; line-height: normal;"><em>*Positive test results are no longer required to be sent to the CDC for confirmation. <br />
+                                            **Negative test results now include testing conducted by the South Dakota Public Health Laboratory and private laboratories. <br />
+                                            ***Tests currently pending at the South Dakota Public Health Lab. </em><em></em></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+
+                            
+                            
+                          
+                        </div>
+
+                        <div>
+                            
+                            <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none;">
+                                <caption>
+                                COVID-19 IN SOUTH DAKOTA
+                                </caption>
+                                <tbody>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Number of Cases</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">46</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Deaths</strong></p></td>
+                                      <td valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Recovered</strong></p></td>
+                                      <td valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">16</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+
+                            
+                            
+                            
+                            <br />
+                        </div>
+                    </div>
+
+                    <div class="tableWrapper">
+                        <div>
+                            
+                            <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none;">
+                                <caption>
+                                SD COUNTY OF RESIDENCE <br />
+                                OF COVID-19 CASES
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            County
+                                        </th>
+                                        <th>
+                                            # of Cases
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Beadle</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">14</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Bon Homme</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Brown</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Brookings</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Charles Mix</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Codington</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Davison</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Hughes</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p></td>
+                                    </tr>
+                                       <tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Lincoln</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p></td>
+                                    </tr>
+									<tr>
+                                      <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Lyman</strong></p></td>
+                                      <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;"><p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>McCook</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p>
+                                        </td>
+                                    </tr>
+									                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Meade</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Minnehaha</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">16</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Pennington</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+
+                            
+                            
+                            
+                            
+                        </div>
+                        <div>
+                            
+                            <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none;">
+                                <caption>AGE GROUP OF SOUTH DAKOTA COVID-19 CASES</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Age Range</th>
+                                        <th># of Cases</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>0 to 19 years</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>20 to 29 years</strong></p>
+                                        </td>
+                                        <td width="72" valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">8</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>30 to 39 years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">7</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>40 to 49 years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">4</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>50 to 59 years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">14</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>60 to 69 years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">8</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>70 to 79 years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">2</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; border-top: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>80+ years</strong></p>
+                                        </td>
+                                        <td valign="top" style="width: .75in; border-top: none; border-left: none; border-bottom: solid windowtext 1.0pt; border-right: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                            <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">1</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+
+                            
+                            
+                            
+                        </div>
+                    </div>
+
+                    
+                    <table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none;">
+                        <caption>SEX OF SOUTH DAKOTA <br />
+                        COVID-19 CASES
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Sex</th>
+                                <th># of Cases</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="144" valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                    <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Male</strong></p>
+                                </td>
+                                <td width="72" valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                    <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top" style="width: 107.75pt; border: solid windowtext 1.0pt; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                    <p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><strong>Female</strong></p>
+                                </td>
+                                <td valign="top" style="width: .75in; border: solid windowtext 1.0pt; border-left: none; padding: 2.15pt 5.75pt 2.15pt 5.75pt;">
+                                    <p class="MsoNormal" align="center" style="margin-bottom: .0001pt; text-align: center; line-height: normal;">20</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+
+                    
+                    
+                    
+
+                    <br />
+
+                  <p>Data is updated daily by about 12 p.m. noon and includes cases reported through 5 p.m. the previous day. <br />
+                  Last updated: 12:00 pm; March 26, 2020</p>
+<p align="right"><a href="#top">BACK TO TOP</a></p>
+                    <h3 id="map">Community Impact Map</h3>
+                    <p>Everyone has a role to play to get ready, stay healthy, and  protect yourself, your family, and your community from COVID-19. The goal is to  slow the spread of COVID-19 to reduce illness and death, while minimizing  disruptions to daily life. </p>
+                    <h2>What does &ldquo;community mitigation&rdquo; mean? </h2>
+                  <p>Any actions that individuals, schools, businesses, and  health care facilities take to slow the spread of the infection. </p>
+                    <p><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/community-mitigation-strategy.pdf" target="_blank"  rel="noopener noreferrer"><strong>CDC has developed steps</strong></a> that can be taken based on the level of COVID-19 spread in the community. As  more COVID-19 is spread in a community, additional preventive steps can  be taken. Community spread is defined as three levels:                    </p>
+                    <ul>
+                      <li> <strong>None:</strong> COVID-19 cases may occur in the community, but there is NO  community transmission.                      </li>
+                      <li><strong>Minimal to Moderate:</strong> There is a single case of community-acquired COVID-19  in a county.</li>
+                      <li><strong>Substantial:</strong> There are five or more cases of community-acquired COVID-19  in a county or a distinct group of cases in a single area (e.g., city or county).</li>
+                    </ul>
+                    <div class='tableauPlaceholder' id='viz1584120431520' style='position: relative'>
+                        <noscript><a href='#'>
+                      <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19CountyMap&#47;COVID-19MAP&#47;1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display: none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='COVID-19CountyMap&#47;COVID-19MAP' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19CountyMap&#47;COVID-19MAP&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                  </div>
+                    <p>
+                        <script type='text/javascript'>                    var divElement = document.getElementById('viz1584120431520'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '700px'; vizElement.style.height = '627px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                        <script type='text/javascript'>                    var divElement = document.getElementById('viz1584120431520'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '700px'; vizElement.style.height = '627px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                        </script>
+                        <span style="font-family:'Calibri',sans-serif; font-size:11.0pt; "><em>NOTE: this data is best viewed on a desktop or laptop computer.</em></span>
+                    <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 class="MsoNormal" id="news">News</h3>
+                        <ul>
+							 <li>March 26, 2020 - <a href="https://youtu.be/7UiO8_onLyc" target="_blank">Press Conference</a></li>
+							 <li>March 25, 2020 - <a href="https://youtu.be/hl6OL79OEsc" target="_blank"  rel="noopener noreferrer">Noem Addresses Media and Public</a></li>
+							<li>March 24, 2020 - <a href="https://youtu.be/Yq7NpNpS81M" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+<ul>
+          <li>Governor Noem provides information on Executive Order 2020-08.</li>
+	</ul>
+                          </li>
+                          <li>March 23, 2020 - <a href="https://youtu.be/qlXVkS68Wv4?t=200" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+<ul>
+          <li>Governor Noem provides information on Executive Order 2020-07.</li>
+          </ul>
+                          </li>
+                          <li>March 23, 2020 - <a href="https://news.sd.gov/newsitem.aspx?id=26560" target="_blank"  rel="noopener noreferrer">Noem Issues Executive Order Regarding COVID-19 Guidelines</a></li>
+                          <li>March 23, 2020 - <a href="https://youtu.be/fbzjiNOti9U" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+                            <ul>
+                              <li>Governor Noem and Secretary of Health Kim Malsam-Rysdon provide an update on COVID-19 response efforts in South Dakota.</li>
+                            </ul>
+                          </li>
+                          <li>March 22, 2020 - <a href="https://youtu.be/-V21Rkuc_wM" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+                            <ul>
+                              <li>Governor Noem and Secretary of Health Kim Malsam-Rysdon provide an update on COVID-19 response efforts in South Dakota. </li>
+                            </ul>
+                          </li>
+                          <li>March 19, 2020 -  <a href="https://www.youtube.com/watch?v=U7MNqWuSYzA" target="_blank"  rel="noopener noreferrer">Press Conference</a></li>
+                          <li> March 18, 2020 - <a href="../documents/news/COVID_Briefing_Municipalities_&_Counties_03-18-2020.pdf" target="_blank"  rel="noopener noreferrer">COVID-19 Briefing for Municipalities and Counties</a></li>
+<li>March 17, 2020 - <a href="https://www.facebook.com/govnoem/videos/1113989952267470/" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+  <ul>
+    <li>Governor Noem and state officials provide updates on COVID-19 response efforts.</li>
+    </ul>
+</li>
+                            <li>March 16, 2020 - <a href="https://youtu.be/Xpn_Xxa1dGg?t=407" target="_blank"  rel="noopener noreferrer">Press Conference</a>
+                              <ul>
+                                <li>Governor Noem and state officials provide updates on COVID-19 response efforts including support for small businesses. </li>
+                              </ul>
+                            </li>
+                            <li>March 16, 2020 - <a href="https://news.sd.gov/newsitem.aspx?id=26514" target="_blank"  rel="noopener noreferrer">COVID-19 Guidance to Childcare Facilities</a> (DSS) </li>
+                            <li>March 13, 2020 - <a href="https://www.youtube.com/watch?v=NIjuy-HlICw" target="_blank"  rel="noopener noreferrer">Press Conference</a></li>
+                            <ul type="circle">
+                                <li>Governor        Noem announces additional COVID-19 response efforts including declaring a        state of emergency, recommending school closures for the week of March        16, nursing home visitation restrictions, and an executive order for        state employee remote work.&nbsp; </li>
+                            </ul>
+                            <li>March       12, 2020 - <a href="https://www.youtube.com/watch?v=E4XI1w7NoFQ" target="_blank"  rel="noopener noreferrer">Press       Conference</a></li>
+                            <ul type="circle">
+                                <li>Governor        Noem and Health Department Officials provide an update on South Dakota&rsquo;s        COVID-19 response. </li>
+                            </ul>
+                            <li>March 10, 2020 - <a href="https://www.youtube.com/watch?v=Q6FULqu-6k0" target="_blank"  rel="noopener noreferrer">Press Conference</a></li>
+                            <ul type="circle">
+                                <li>Governor        Noem, Health Department officials announce South Dakota&rsquo;s first        presumptive positive cases of COVID-19.</li>
+                            </ul>
+                            <li>March 5, 2020 - <a href="https://doh.sd.gov/media/COVID-19/UpdateWebinar_HealthcareProviders.mp4" target="_blank"  rel="noopener noreferrer">Update Webinar for Healthcare Providers</a> | <a href="../documents/news/COVID-19_UpdateForProviders.pdf" target="_blank"  rel="noopener noreferrer">Slides</a></li>
+                            <li>March 4, 2020 - <a href="../documents/news/senate_health_coronavirus_03-04-2020.pdf" target="_blank"  rel="noopener noreferrer">Informational Briefing for Senate  Health and Human Services Committee</a></li>
+                            <li>February 27, 2020 - <a href="https://news.sd.gov/newsitem.aspx?id=26450" target="_blank"  rel="noopener noreferrer">South Dakota Prepares for COVID-19</a></li>
+                        </ul>
+					
+					For more South Dakota state news, visit <a href="https://news.sd.gov/" target="_blank"  rel="noopener noreferrer">news.sd.gov</a>.
+                  <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="Avoid">Precautions to avoid illness</h3>
+                        <h2>What  can you do? </h2>
+                        <ul type="disc">
+                          <li>Wash your       hands often with soap and water for at least 20 seconds or use an       alcohol-based hand sanitizer.
+                            <ul>
+                              <li><a href="https://www.fda.gov/drugs/information-drug-class/qa-consumers-hand-sanitizers-and-covid-19" target="_blank"  rel="noopener noreferrer">Q&amp;A for Consumers: Hand Sanitizers and COVID-19</a></li>
+                            </ul>
+                          </li>
+                          <li>Cover your       coughs and sneezes with a tissue.</li>
+                          <li>Avoid close contact with people       who are sick.</li>
+                          <li>Refraining from touching your       eyes, nose and mouth. </li>
+                          <li>Clean frequently       touched surfaces and objects.</li>
+                          <li>Individuals       at higher risk for severe COVID-19 illness, such as older adults and       people who have chronic medical conditions like heart, lung or kidney       disease, should <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html" target="_blank"  rel="noopener noreferrer">take actions</a> to reduce your risk of exposure.</li>
+                          <li>Create a       family <a href="https://www.cdc.gov/coronavirus/2019-ncov/community/home/index.html" target="_blank"  rel="noopener noreferrer">plan</a> to prepare for COVID-19 and develop a <a href="https://bready.sd.gov/family/family.aspx" target="_blank"  rel="noopener noreferrer">stay at home kit</a> with food, water, medication, and other necessary items.</li>
+                        </ul>
+                  <h2>Cleaning and Disinfection Recommendations:</h2>
+                        <ul>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/cleaning-disinfection.html" target="_blank"  rel="noopener noreferrer">Environmental Cleaning and Disinfection Recommendations</a> (CDC)</li>
+                          <li><a href="../documents/COVID19/COVID19_cleaninganddisinfecting 3-19.pdf" target="_blank"  rel="noopener noreferrer">COVID-19: How to Clean and Disinfect</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/disinfecting-building-facility.html" target="_blank"  rel="noopener noreferrer">Disinfecting Your Facility if Someone is Sick</a> (CDC)</li>
+                        </ul>
+                        <p><a href="../documents/COVID19/COVID19_Recommendations_Travelers_Returning_Winter.pdf" target="_blank"  rel="noopener noreferrer">South Dakota Travelers Returning Home: What You Should Know?</a></p>
+                        <p>South  Dakota&rsquo;s healthcare system is prepared to identify and treat cases of COVID-19.</p>
+                        <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="Symptoms">WHAT  TO DO IF YOU DEVELOP SYMPTOMS</h3>
+                        <h2>If  you develop symptoms:</h2>
+                        <ul type="disc">
+                          <li>Call       your health care provider immediately and tell them about any recent       travel or exposure. </li>
+                          <li>Individuals       who are concerned that they have COVID-19 should contact their healthcare       provider via phone before going to a clinic or hospital to prevent spread       in healthcare facilities. </li>
+                          <li>Avoid contact with other       people.</li>
+                          <li>Follow the directions of your       healthcare provider and public health officials.</li>
+                          <li><a href="../documents/COVID19/SymptomCheckerAlgorithm.pdf">Symptom Checker Algorithm</a></li>
+							<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/index.html" target="_blank"  rel="noopener noreferrer">Symptoms and Testing Guidance</a> (CDC)</li>
+							<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/10Things.pdf" target="_blank"  rel="noopener noreferrer">10 Ways to Manage  Respiratory Symptoms at Home</a> (CDC)</li>
+                        </ul>
+                        <p><strong><a href="https://www.communityhealthcare.net/find-a-chc-map" target="_blank"  rel="noopener noreferrer">Find Federally Qualified Health Centers in South Dakota</a></strong> - community-based  primary care services in underserved areas providing care on a sliding fee scale based on ability to pay.</p>
+                        <h2><strong>Self-Quarantine, Self-Isolation, and Self-Monitoring:</strong></h2>
+                  <ul>
+                          <li><a href="../documents/COVID19/COVID19_Self-isolation guidance_3-17-20.pdf" target="_blank"  rel="noopener noreferrer">Self-isolation Guidance</a></li>
+                          <li><a href="../documents/COVID19/Temperature_Tracker_3_19_20.pdf">Temperature Tracker</a></li>
+                          <li><a href="../documents/COVID19/TakingYourTemperatureInstructions.pdf" target="_blank"  rel="noopener noreferrer">Taking Your Temperature</a></li>
+                          <li><a href="../documents/COVID19/COVID19 release of isolation 3-19.pdf">Release from Isolation Guidance</a></li>
+                        </ul>
+                        <p><strong>Personal  Protective Equipment (PPE) Guidance:</strong> <br />
+                          CDC  does not recommend that people who are well wear a facemask to protect  themselves from respiratory illnesses, including COVID-19. You should only wear  a mask if a healthcare professional recommends it. A facemask should be used by  people who have COVID-19 and are showing symptoms. This is to protect others  from the risk of getting infected. The use of facemasks also is crucial  for&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/ppe-strategy/index.html" target="_blank"  rel="noopener noreferrer">health workers</a>&nbsp;and  other&nbsp;<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-home-care.html" target="_blank"  rel="noopener noreferrer">people who are taking care of  someone infected with COVID-19 in close settings</a>&nbsp;(at home or in  a health care facility).                        </p>
+                        <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="Groups">Community Guidance &amp; Resources </h3>
+                        <h2><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/community-mitigation-strategy.pdf" target="_blank"  rel="noopener noreferrer">
+                            <img src="../images/COVID_CommunityPrevention1.jpg" alt="Local COVID-19 transmission in your community? CLICK HERE for Mitigation Strategies. CDC" align="right" /></a>Guidance from the CDC is available for:</h2>
+                        <ul>
+                            <ul type="circle">
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/home/index.html" target="_blank"  rel="noopener noreferrer">Households</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/index.html" target="_blank"  rel="noopener noreferrer">People at Higher risk</a></li>
+                                <li><a href="https://www.cdc.gov/aging/covid19-guidance.html?deliveryName=USCDC_944_DM22631" target="_blank"  rel="noopener noreferrer">Older Adults</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/retirement/index.html" target="_blank"  rel="noopener noreferrer">Retirement Communities and Independent Living</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/guidance-business-response.html?" target="_blank"  rel="noopener noreferrer">Businesses</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/index.html" target="_blank"  rel="noopener noreferrer">Schools and childcare centers</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/colleges-universities.html" target="_blank"  rel="noopener noreferrer">Colleges and Universities</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/index.html" target="_blank"  rel="noopener noreferrer">Community and faith-based organizations</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/large-events/index.html" target="_blank"  rel="noopener noreferrer">Large events</a></li>
+                                <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-law-enforcement.html" target="_blank"  rel="noopener noreferrer">Law enforcement</a>                        </li>
+                            </ul>
+                        </ul>
+                        <h2>Behavioral Health</h2>
+                        <ul>
+                          <li><a href="https://www.samhsa.gov/sites/default/files/tips-social-distancing-quarantine-isolation-031620.pdf" target="_blank"  rel="noopener noreferrer">Taking Care of Your Behavioral Health: Tips for Social Distancing, Quarantine, and Isolation</a> (SAMHSA)</li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/managing-stress-anxiety.html" target="_blank"  rel="noopener noreferrer">Handling COVID-19 Anxiety &amp; Stress</a> (CDC)</li>
+                        </ul>
+                        <h2>Communities</h2>
+                        <ul>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/community-mitigation-strategy.pdf" target="_blank"  rel="noopener noreferrer" class="MsoNormal">Implementation of Mitigation Strategies for Communities with  Local COVID-19 Transmission</a> (CDC)</li>
+                            <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/organizations/cleaning-disinfection.html" target="_blank"  rel="noopener noreferrer">Environmental Cleaning and Disinfection Recommendations</a> (CDC)</li>
+                            <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/schools-childcare/talking-with-children.html" target="_blank"  rel="noopener noreferrer">Talking with Children About Coronavirus Disease</a> (CDC)</li>
+                            <li><a href="../Documents/COVID19/COVID19_Community_Mitigation.pdf" target="_blank"  rel="noopener noreferrer">South Dakota Community Mitigation Guidance</a></li>
+                        </ul>
+                        <h2>Retirement and Independent Living Facilities</h2>
+                        <ul>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/retirement/index.html" target="_blank"  rel="noopener noreferrer">Plan, Prepare, and Respond </a>(CDC)</li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/community/retirement/guidance-retirement-response.html" target="_blank"  rel="noopener noreferrer">Interim Guidance on Preventing the Spread of COVID-19</a> (CDC)</li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/novel-coronavirus-2019-Nursing-Homes-Preparedness-Checklist_3_13.pdf" target="_blank"  rel="noopener noreferrer">Preparedness Checklist for Nursing Homes and other Long-Term Care Settings</a> (CDC)</li>
+                        </ul>
+                        <h2><strong>Schools</strong><br />
+                        </h2>
+                        <ul>
+                          <li>CDC Guidance: <a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/considerations-for-school-closure.pdf" target="_blank"  rel="noopener noreferrer">Considerations for School Closure</a><a href="https://www.cdc.gov/coronavirus/2019-ncov/downloads/considerations-for-school-closure.pdf" target="_blank"  rel="noopener noreferrer"></a></li>
+                            <li><a href="../documents/news/COVID_school_QA.pdf" target="_blank"  rel="noopener noreferrer" class="MsoNormal">COVID-19 and Schools: Information for School Administrators and Nurses</a>
+                              <ul>
+                                  <li><a href="../documents/news/COVID_presentation4schools.pdf" target="_blank"  rel="noopener noreferrer">Presentation for Schools</a></li>
+                                  </ul>
+                            </li>
+                        </ul>
+                        <h2>Businesses and Employers</h2>
+                        <ul>
+                            <li>                              <a href="../documents/news/COVID_business_QA.pdf" target="_blank"  rel="noopener noreferrer" class="MsoNormal">Workplace and Employer Resources &amp; Recommendations</a><br />
+                            </li>
+                            <li>                              <a href="https://dlr.sd.gov/employment_laws/publications/families_first_coronavirus_response_act.pdf" target="_blank"  rel="noopener noreferrer">Families First Coronavirus Response  Act:&nbsp;What does it mean for employers?</a>&nbsp;A summary of  how some of the key provisions like Emergency Family and Medical Leave (FLMA)  Expansion Act and Emergency Paid Sick Leave Act impact employers.</li>
+                            <li><a href="../documents/COVID19/BusinessScreening_Q&amp;A.pdf" target="_blank"  rel="noopener noreferrer">Employee Screening Questions and Guidelines</a>: questions to ask employees reporting to work and guidance to help reduce the spread of the virus that causes COVID-19.
+                              <ul>
+                                <li><a href="../documents/COVID19/COVID_Daily_Screening_Log.pdf" target="_blank"  rel="noopener noreferrer">COVID-19 Daily Screening Log</a>: a resource for employers to track symptoms of employees reporting to work.</li>
+                                <li><a href="../documents/COVID19/SymptomCheckerAlgorithm.pdf">Symptom Checker Algorithm</a></li>
+                              </ul>
+                            </li>
+                          <li><a href="../documents/COVID19/covid_other_state_resources.pdf" target="_blank"  rel="noopener noreferrer">Resources from other State Agencies</a></li>
+                        </ul>
+                        <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="business">Are you a business impacted by COVID-19?</h3>
+                  <p>Governor Kristi Noem announced Friday, March 20, 2020 that small businesses and non-profit organizations in South Dakota that have been negatively impacted by the global COVID-19 virus are now eligible for economic assistance from the U.S. <a href="https://www.sba.gov/funding-programs/disaster-assistance" target="_blank"  rel="noopener noreferrer">Small Business Administration</a> (SBA).</p>
+                  <p>Visit GOED&rsquo;s  website at <a href="https://sdreadytowork.com/" target="_blank"  rel="noopener noreferrer">sdreadytowork.com</a> or call <a href="tel:605-773-4633">605-773-4633</a>.</p>
+<ul>
+      <li>March 20, 2020 - <a href="https://news.sd.gov/newsitem.aspx?id=26544" target="_blank"  rel="noopener noreferrer">SBA Approves Economic Injury Disaster Loan Fund Program Access for South Dakota</a></li>
+	<li>March 16, 2020 - <a href="https://news.sd.gov/newsitem.aspx?id=26516" target="_blank"  rel="noopener noreferrer">Governor Noem Works to Activate Small Business Administration&rsquo;s Economic Injury Disaster Loan Fund Program in South Dakota</a></li>
+	
+                  </ul>
+                 <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="Providers">information for Medical Providers</h3>
+                        <ul>
+                          
+                          <li><a href="https://www.hhs.gov/about/news/2020/03/17/ocr-announces-notification-of-enforcement-discretion-for-telehealth-remote-communications-during-the-covid-19.html">Office for Civil Rights (OCR) Announces Notification of Enforcement Discretion for Telehealth Remote Communications During the COVID-19 Nationwide Public Health Emergency</a>                        </li>
+                        </ul>
+                        <ul>
+                          <li>Medical providers who       are concerned a patient may be infected with COVID-19 should:</li>
+                          <ul type="circle">
+                            <li>Mask the patient</li>
+                            <li>Isolate the Patient in        a private room or separate area, and</li>
+                            <li>                              Contact with SD-DOH        (800-592-1861) immediately for consultation and guidance<br />
+                              <br />
+                            </li>
+                          </ul>
+                          <li>Clinicians are strongly       encouraged to test for other infectious causes of respiratory illness,       such as influenza and RSV. <strong>Note</strong>: Asymptomatic patients are <strong><u>not       eligible</u></strong> for testing at the SD Public Health Laboratory.
+                            <br />High-priority specimens for testing include:
+                          </li>
+                          <table width="100%" border="1" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td colspan="3">
+                                <hr />
+                              </td>
+                            </tr>
+                            <tr>
+                              
+                              <td width="57%"><strong>Clinical    Features</strong></td>
+                              <td width="26%"><strong>Risk    Exposure</strong></td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <hr />
+                              </td>
+                            </tr>
+                            <tr>
+                        
+                              <td width="26%">Fever OR Cough    OR Shortness of Breath </td>
+                              <td width="57%">-Individuals who are hospitalized
+							  </br>OR
+							  </br>
+								-Persons in institutional settings (long-term care facilities, assisted living centers, etc.)
+								  </td>
+                            </tr>
+                            
+                           
+                            <tr>
+                              <td colspan="3">
+                                <hr />
+                              </td>
+                            </tr>
+                           
+                            <tr>
+                            
+                              <td width="57%">Fever OR Cough    OR Sore Throat OR Shortness of Breath </td>
+                              <td width="26%">-Healthcare workers and first responders </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                              <td height="26" colspan="3">
+                                <hr />
+                              </td>
+                            </tr>
+                          </table>
+                        </ul>
+                       
+                        <p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 id="SDGuidance">SD Guidance for Healthcare Providers<br />
+                        </h3>
+                        <ul>
+                            <li>Guidance on specimen       collection and testing, infection control practices, and other       considerations are available at:
+                                  <ul>
+                                      <li>SD-HAN 20-007:<a href="../documents/news/HAN_20-007_CoronavirusGuidance.pdf" target="_blank"  rel="noopener noreferrer"> Guidance on Evaluating Persons for COVID-19 Infection</a> <em>(Updates SD-HAN 20-003) </em></li>
+                                      <li>SD-HAN 20-006:<a href="../documents/news/HAN_20-006_HealthcareChecklists.pdf" target="_blank"  rel="noopener noreferrer">&nbsp;Healthcare Facility Checklist</a></li>
+                                      <li>SD-HAN 20-005:<a href="../documents/news/HAN_20-005_CDC_COCA_Call.pdf" target="_blank"  rel="noopener noreferrer"> CDC       COCA Call</a></li>
+                                  </ul>
+                            </li>
+                            <ul>
+                                <li>SD-HAN 20-004:<a href="../documents/news/HAN_20-004_WebinarforHealthcare.pdf" target="_blank"  rel="noopener noreferrer">&nbsp;Webinar for Healthcare</a></li>
+                                <li>SD-HAN 20-003:<a href="../documents/news/HAN_20-003_EvaluatingPersonsforCOVID-19.pdf" target="_blank"  rel="noopener noreferrer">&nbsp;Evaluating Persons for COVID-19</a></li>
+                                <li>SD-HAN 20-002:<a href="../documents/news/HAN_20-002_NovelCoronavirusGuidance.pdf" target="_blank"  rel="noopener noreferrer"> Monitoring and Movement  Guidance on Novel Coronavirus</a></li>
+                                <li>CDC Clinician Call: <a href="https://emergency.cdc.gov/coca/calls/2020/callinfo_030520.asp" target="_blank"  rel="noopener noreferrer">What Clinicians Need to Know  to Prepare for COVID-19</a></li>
+                                <li>CDC HAN 427:<a href="https://emergency.cdc.gov/han/han00427.asp" target="_blank"  rel="noopener noreferrer"> Updated and Interim  Guidance on Outbreak of 2019 Novel Coronavirus</a></li>
+                                <li>CMS: <a href="../documents/COVID19/COVID_CMS_PrioritizationofSurveyActivities.pdf" target="_blank"  rel="noopener noreferrer">Prioritization of Survey Activities</a> <em>(3/23/20)</em></li>
+                                <li>CMS:<a href="../documents/news/COVID_CMS_NursingHomeGuidance.pdf" target="_blank"  rel="noopener noreferrer"> Guidance for Infection Control and Prevention of COVID-19 in nursing homes</a> <em>(Revised 3/13/20)</em></li>
+                                <li>CMS: <a href="../documents/news/CMS_COVID-19EmergencyDeclarationHealthcareProviders_FactSheet.pdf" target="_blank"  rel="noopener noreferrer">COVID-19 Emergency Declaration - Healthcare Providers Fact Sheet</a> <em>(3/13/20)</em><br />
+                                  <a href="../documents/COVID19/COVID_SubmitterForm.pdf" target="_blank"  rel="noopener noreferrer"><br />
+                              </a></li>
+                            </ul>
+                            <li><a href="../documents/news/COVID_SubmitterForm.pdf" target="_blank"  rel="noopener noreferrer"><strong>SARS-CoV-2 Laboratory  Requisition and PUI Evaluation Form</strong></a> <em>(Updated 3/26/20)</em>
+                              <ul>
+          <li><a href="../lab/Medical-Microbiology/default.aspx#Resources" target="_blank"  rel="noopener noreferrer">SD Public Health Lab        Specimen Guidance</a></li>
+                                      <li><a href="https://www.state.sd.us/eforms/secure/eforms/E1820V6-OrdersFormLab-SK05.pdf" target="_blank"  rel="noopener noreferrer">Order Medical Shipping Supplies</a><br />
+                              <br />
+                            </li>
+                                  </ul>
+                            </li>
+<li><strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/ppe-strategy/index.html" target="_blank"  rel="noopener noreferrer">Personal Protective Equipment (PPE) optimization  strategies:</a> </strong>Provides options for extended use, reprocessing, and reuse  of the various PPE components given current shortages of PPE being reported in  many areas of the country.<br />
+  <br />
+</li>
+<li>  <strong><a href="https://www.cdc.gov/coronavirus/2019-ncov/healthcare-facilities/index.html" target="_blank"  rel="noopener noreferrer">Public Health reminder:</a> </strong>CDC urges healthcare facilities and clinicians to delay and  reschedule elective ambulatory visits, surgeries and admissions, and routine  dental and eye care to preserve staff, personal protective equipment, and  patient care supplies, ensure staff and patient safety, and expand available  hospital capacity during the COVID-19 pandemic.<a href="https://multimedia.3m.com/mws/media/1793956O/cleaning-and-disinfecting-3m-paprs-following-potential-exposure-to-coronaviruses.pdf" target="_blank"  rel="noopener noreferrer"><br />
+  </a></li>
+</li>
+<li><a href="https://multimedia.3m.com/mws/media/1793956O/cleaning-and-disinfecting-3m-paprs-following-potential-exposure-to-coronaviruses.pdf" target="_blank"  rel="noopener noreferrer">Cleaning and Disinfecting 3M Powered Air Purifying Respirators following  Potential Exposure to Coronaviruses</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="../lab/default.aspx" target="_blank"  rel="noopener noreferrer">South Dakota Public Health Lab website</a><a href="COVID19/Calls.aspx" target="_blank"  rel="noopener noreferrer"><br />
+    <br />
+  </a></li>
+                          <li><a href="COVID19/Calls.aspx" target="_blank"  rel="noopener noreferrer">Archived COVID-19 Conference Calls</a><a href="../lab/Medical-Microbiology/COVID_Calls.aspx"></a><br />
+                            <br />
+                          </li>
+                          
+                          <li>SD-DOH would like to remind medical providers,  hospitals, and laboratories that cases of COVID-19, caused by the SARS-CoV-2  virus, are considered immediately <a href="../diseases/infectious/Reporting.aspx" target="_blank"  rel="noopener noreferrer">reportable</a> in South Dakota (under Coronavirus Respiratory  syndromes).</li>
+                  </ul>
+                        <h2>Important LISTSERVs for Healthcare Providers</h2>
+                        <p>The Department of Health maintains a variety of LISTSERVs  that provide  useful information on COVID-19, including  current guidance and scheduled calls.</p>
+                        <ul>
+                          <li><a href="https://sdhan.sd.gov/" target="_blank"  rel="noopener noreferrer">Health Alert Network</a></li>
+                          <li><a href="https://listserv.sd.gov/scripts/wa.exe?SUBED1=SDLABLIST&amp;A=1" target="_blank"  rel="noopener noreferrer">Laboratory LISTSERV</a></li>
+                          <li><a href="https://listserv.sd.gov/scripts/wa.exe?SUBED1=SDEPI&amp;A=1" target="_blank"  rel="noopener noreferrer">Epi LISTSERV</a></li>
+                          <li><a href="https://listserv.sd.gov/scripts/wa.exe?SUBED1=SDHCASSOCINFECTIONS&amp;A=1" target="_blank"  rel="noopener noreferrer">Healthcare-associated Infections LISTSERV</a></li>
+                          <li><a href="https://listserv.sd.gov/scripts/wa.exe?A0=SDOLC" target="_blank"  rel="noopener noreferrer">Office of Licensure and Certification LISTSERV</a></li>
+                        </ul>
+                        <h2>ATTENTION  RETIRED OR INACTIVE MEDICAL PROFESSIONALS:                        </h2>
+                        <p><strong>Governor  Noem is reaching out to our state&rsquo;s licensed medical professionals (physicians,  nurses, EMTs, etc.) who are willing to volunteer their services during this  COVID-19 pandemic through the Department of Health&rsquo;s </strong>Statewide  Emergency Registry of Volunteers in South Dakota (SERV SD)<strong>. </strong>SERV SD coordinates the  pre-registration of medical and health care professionals who may be willing to  volunteer in the event of an emergency. </p>
+                        <p>Whether  you work in a health field or not, active or retired, if you have an interest  in assisting your community or state during the COVID-19 pandemic, we invite  you to join SERV SD. SERV SD will create a database of medical and  health care volunteers who can be mobilized immediately in response to an  emergency. <strong>Participation in a deployment  opportunity is optional. You may decide at the time a call is made to volunteer  if you are willing and able to respond.</strong>                        </p>
+                        <p>Registering with SERV SD is easy. Go to <a href="https://volunteers.sd.gov/" target="_blank"  rel="noopener noreferrer"><strong>https://volunteers.sd.gov/</strong></a>.</p>
+<p align="right"><a href="#top">BACK TO TOP</a></p>
+                        <h3 class="MsoNormal" id="CDCGuidance">CDC Guidance for Healthcare Providers                              </h3>
+                        <blockquote>CDC issued guidance to       healthcare facilities in the event that  illness is       identified.                              </blockquote>
+                        <ul>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-nCoV/hcp/clinical-criteria.html" target="_blank"  rel="noopener noreferrer">Evaluating and reporting persons under        investigation</a>
+                            <ul>
+                              <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/php/guidance-evaluating-pui.html" target="_blank"  rel="noopener noreferrer">Evaluating PUIs and Asymptomatic Close         Contracts</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/infection-control/control-recommendations.html?" target="_blank"  rel="noopener noreferrer">Healthcare infection control guidance</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/clinical-guidance-management-patients.html" target="_blank"  rel="noopener noreferrer">Clinical care guidance</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-home-care.html" target="_blank"  rel="noopener noreferrer">Home care guidance</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html" target="_blank"  rel="noopener noreferrer">Guidance for EMS</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-risk-assesment-hcp.html" target="_blank"  rel="noopener noreferrer">Healthcare personnel with potential exposure        guidance</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/inpatient-obstetric-healthcare-guidance.html" target="_blank"  rel="noopener noreferrer">Inpatient Obstetrics Care</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/disposition-hospitalized-patients.html" target="_blank"  rel="noopener noreferrer">Disposition of patients with novel coronavirus</a></li>
+                          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-postmortem-specimens.html" target="_blank"  rel="noopener noreferrer">Collection and testing of postmortem samples</a></li>
+                        </ul>
+                        <p align="right"><a href="#top">BACK TO TOP</a></p>
+                </div>
+                <div class="force-clear">&nbsp;</div>
+            </div>
+            <nav id="quicklinks-footer">
+    <hr class="top" />
+    
+    <div id="quicklinks-lnk" class="centerer clearfix">
+        <a href="/records/">
+            <img src="/images/layout/sections/records-small.png" alt="Certificates and Records" /><br />
+            Certificates <br />
+            &amp; Records
+        </a>
+        
+        <a href="/statistics/">
+            <img src="/images/layout/sections/statistics-small.png" alt="Health Data and Statistics" /><br />
+            Health Data <br />
+            &amp; Statistics
+        </a>
+        
+        <a href="/diseases/">
+            <img src="/images/layout/sections/diseases-small.png" alt="Diseases and Conditions" /><br />
+            Diseases &amp; <br />
+            Conditions
+        </a>
+        
+        <a href="/family/">
+            <img src="/images/layout/sections/family-small.png" alt="Family and Child Development" /><br />
+            Family &amp; Child <br />
+            Development
+        </a>
+        
+        <a href="/prevention/">
+            <img src="/images/layout/sections/prevention-small.png" alt="Prevention and Healthy Living" /><br />
+            Prevention &amp; <br />
+            Healthy Living
+        </a>
+        
+        <a href="/food/">
+            <img src="/images/layout/sections/food-small.png" alt="Food and Lodging Safety" /><br />
+            Food &amp; <br />
+            Lodging Safety
+        </a>
+        
+        <a href="/providers/">
+            <img src="/images/layout/sections/providers-small.png" alt="Healthcare Providers" /><br />
+            Healthcare <br />
+            Providers
+        </a>
+    
+        <a href="/services/">
+            <img src="/images/layout/sections/services-small.png" alt="Services and Programs" /><br />
+            Services &amp;<br />
+            Programs
+        </a>
+        
+        <a href="/a-z-topics/" class="quicklast">
+            <img src="/images/layout/sections/a-z-topics-small.png" alt="A-Z Topics" /><br />
+            A-Z <br />
+            Topics
+        </a>
+    </div>
+    
+    <hr />
+    <hr />
+</nav>
+                
+    <nav id="outside-agencies" class="clearfix">
+        <div class="centerer clearfix">
+            <div id="left">
+              <h2>OTHER STATE AGENCY LINKS</h2>
+                <table>
+                
+                <tr>
+	                <td width="303"><a href="http://dss.sd.gov/medicaid/" target="_blank" title="Medicaid">Medicaid</a></td>
+    	            <td width="312"><a href="http://www.healthcare.gov" target="_blank">Federal Health Insurance Exchange</a><a href="http://dlr.sd.gov/insurance/" target="_blank" title="Consumer insurance complaints"></a></td>
+                </tr>
+                <tr>
+        	        <td><a href="http://dss.sd.gov/medicaid/recipients/medicarepartD/" target="_blank" title="Medicare Prescription Drug Coverage">Medicare Prescription Drug Coverage</a></td>
+            	    <td><a href="http://dlr.sd.gov/insurance/" target="_blank" title="Consumer insurance complaints">Consumer insurance complaints</a><a href="http://dlr.sd.gov/insurance/license_inquiry_service.aspx" target="_blank" title="Licensed insurance companies"></a></td>
+                </tr>
+                <tr>
+                	<td><a href="http://dss.sd.gov/medicaid/generalinfo/medicalprograms.aspx#chip" target="_blank" title="Children's Health Insurance Program">Children's Health Insurance Program</a></td>
+                	<td><a href="http://dlr.sd.gov/insurance/license_inquiry_service_intro.aspx" target="_blank" title="Licensed insurance companies">Licensed insurance companies</a></td>
+                </tr>
+                <tr>
+                  <td><a href ="https://dhs.sd.gov/LTSS/default.aspx" target ="_blank">SD Nursing Facility Bed Availability</a></td>
+                  <td></td>
+                </tr>
+                </table>
+			</div>
+            
+            <div id="right">
+                <div class="clearfix">
+                  <h2>Featured Programs &amp; Services</h2>&nbsp;&nbsp;&nbsp;<a href="/programs/" class="button" title="View All">View All</a></div>
+                <div id="program_slides">
+                  <div class="program_slides_container">
+                      <div class="program_single_slide"><a href="https://doh.sd.gov/prevention/carsafety/" target="_blank"><img src="/images/18_SDDOH_WebGraphic_Homepage_230x110.jpg" alt="Strategic Plan" /></a></div>
+					  <div class="program_single_slide"><a href="http://doh.sd.gov/strategicplan/" target="_blank"><img src="/images/DOHSP_SliderLogo.jpg" alt="Strategic Plan" /></a></div>
+                      <div class="program_single_slide"><a href="https://sdwic.org/" target="_blank"><img src="/images/WIC_Logo_Color_Tag.jpg " alt="South Dakota WIC Program " /></a></div>
+                        <div class="program_single_slide"><a href="http://forbabysakesd.com/" target="_blank"><img src="/images/ForBabysSake.jpg" alt="For Baby's Sake South Dakota" /></a></div>
+                        <div class="program_single_slide"><a href="http://www.healthysd.gov/" target="_blank"><img src="/images/healthysd.jpg" alt="Healthysd.gov" /></a></div><div class="program_single_slide"><a href="http://getscreened.sd.gov/" target="_blank"><img src="/images/get-screened.jpg" alt="Get Screened SD" /></a></div>
+                        <div class="program_single_slide"><a href="http://sdsuicideprevention.org/" target="_blank"><img src="/images/SuicideHotline_Slider.jpg" alt="SD Suicide Hotline" /></a></div>
+                        <div class="program_single_slide"><a href="https://www.avoidopioidsd.com/" target="_blank"><img src="/images/AvoidOpioids.jpg" alt="Opioid Abuse Prevention" /></a></div>
+                        <div class="program_single_slide"><a href="http://www.befreesd.com/" target="_blank"><img src="/images/befree.jpg" alt="Be Free SD" /></a></div>
+                        <div class="program_single_slide"><a href="http://rethinktobacco.com/" target="_blank"><img src="/images/rethink.jpg" alt="Rethink tobacco" /></a></div>
+                        <div class="program_single_slide"><a href="http://www.sdquitline.com" target="_blank"><img src="/images/QuitLine.jpg" alt="QuitLine" /></a></div>
+                         <div class="program_single_slide"><a href="https://doh.sd.gov/healthequity/" target="_blank"><img src="/images/layout/HealthEquity.jpg" alt="Health Equity and Cultural Competency" /></a></div>
+                             <div class="program_single_slide"><a href="https://volunteers.sd.gov/" target="_blank"><img src="/images/servsd.jpg" alt="ServSD" /></a></div>
+                         <div class="program_single_slide"><a href="http://doh.sd.gov/food/restaurants-lodging/inspection-scores.aspx" target="_blank"><img src="/images/FoodandLodgingInspectionResults.jpg" alt="Food and Lodging Inspection Results" /></a></div>
+                        <div class="program_single_slide"><a href="http://www.sdhealthlink.org/" target="_blank"><img src="../images/SDHealthLink.jpg" alt="SDHealthLink" /></a></div>
+                        <div class="program_single_slide"><a href="http://www.sim.sd.gov/" target="_blank"><img src="../images/layout/SIMSD-logo.jpg" alt="SIM-SD" /></a></div> 
+                          <div class="program_single_slide"><a href="http://scrubscamps.sd.gov/" target="_blank"><img src="../images/layout/Scrubs_Camp_FINAL.jpg" alt="Scrubs Camp" /></a></div>
+                                <div class="program_single_slide"><a href="http://healthcareers.sd.gov/" target="_blank"><img src="/images/hott.jpg" alt="Health Careers SD" /></a></div> 
+                                      <div class="program_single_slide"><a href="https://doh.sd.gov/Lab/" target="_blank"><img src="../images/layout/Lab_StatePublicHealthLaboratory.jpg" alt="PointOfCare" /></a></div>
+    </nav>
+                
+				
+
+
+            <div class="force-clear">&nbsp;</div>
+        </div>
+        <!--#container-->
+    </div>
+    <!--#middle-->
+    	<footer>
+        <div class="container">
+            <div id="left"><a href="http://sd.gov/" target="_blank" title="State of SD Home"><img src="/images/layout/sdgov.png" alt="State of South Dakota Home" title="State of South Dakota Home" /></a></div>
+            <div id="center">
+            	<p><a href="/" title="Dept of Healh Home">DOH Home</a>&nbsp;    <a href="http://intranet.doh.sd.gov/">DOH Intranet&nbsp;</a>&nbsp;&nbsp;<a href="http://sd.gov/accpolicy.aspx" target="_blank" title="Accessibility Policy" target="_blank">Accessibility Policy</a>&nbsp;&nbsp;&nbsp;<a href="http://sd.gov/privacy.aspx" target="_blank" title="Privacy Policy" target="_blank">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="http://sd.gov/disclaim.aspx">Disclaimer</a></a>&nbsp;&nbsp;&nbsp;<a href="/documents/HIPAANotice.pdf" title="DOH HIPAA" target="_blank">DOH HIPAA</a>	            </p>
+            	<div id="disclaimer">
+    		        &copy;2019 South Dakota Department of Health. All Rights Reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="mailto:DOH.info@state.sd.us">DOH.info@state.sd.us</a><br />
+            		600 East Capitol Avenue&nbsp;&nbsp;|&nbsp;&nbsp;Pierre, SD 57501-2536&nbsp;&nbsp;|&nbsp;&nbsp;605-773-3361&nbsp;&nbsp;|&nbsp;&nbsp;1-800-738-2301 (In State)<br />
+		            <div id="imd"></div>
+        	    </div>
+            </div>
+            <div id="right"><a href="/contact/" title="Contact DOH" class="button">Contact DOH</a></div>
+        </div>
+	</footer>
+
+	
+	<script src="/includes/js/jquery/slides.jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#slides').slides({				
+				preload: true, 
+				generateNextPrev: false, 
+				pagination: true, 
+				generatePagination: true, 
+				paginationClass: 'pagination', 
+				fadeSpeed: 1000, 
+				effect: 'slide', 
+				crossfade: true, 
+				play: 5000, 
+				pause: 2500, 
+				hoverPause: true, 
+				autoHeight: false, 
+				bigTarget: false 
+			});
+		});
+	</script>
+
+	
+	<script type="text/javascript">
+		$(function(){
+			$('#program_slides').slides({
+				preload: true, 
+				container: 'program_slides_container', 
+				generateNextPrev: true, 
+				pagination: false, 
+				generatePagination: false, 
+				effect: 'slide', 
+				play: 5000, 
+				pause: 2500, 
+				hoverPause: true, 
+				bigTarget: false 
+				
+				
+			});
+		});
+	</script>
+
+
+
+<script>// This 
+    var dropdown = $(".dropdown-btn");
+        dropdown.click( function() {
+            $(".active").removeClass("active")
+            $(this).toggleClass("active")
+            $(".dropdown-container").hide()
+            var dropdownContent = $(this).next();
+            if (dropdownContent.is(":visible")){
+                dropdownContent.hide()
+            }
+            else dropdownContent.show()
+        });
+</script>
+
+
+
+    
+	<script type="text/javascript">
+	    $(document).ready(function () {
+
+	        if ($(window).width() > 830) {
+	            $("#sidebar").treeview({
+	                animated: "fast",
+	                collapsed: true,
+	                control: "#treecontrol",
+	                persist: "location"
+	            });
+	        }
+	        else {
+	            $("#sidebar").treeview({
+
+	            });
+	        }
+
+	        $("#menu").click(function () {
+	            $("#middle #main").toggle();
+
+	        });
+
+	        $("#sidebar").click(function () {
+
+	            $("#sidebar #subtree").toggle();
+	            $("#sidebar h2").toggleClass("select");
+
+            });
+
+	        $("#sidebar li, #subtree, .treeview").click(function (e) {
+	           //e.stopPropagation()
+	        });
+
+            
+
+	    });
+	</script>
+    
+    
+    
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-41724005-1', 'auto');
+	  ga('send', 'pageview');	
+	</script>
+</body>
+</html>

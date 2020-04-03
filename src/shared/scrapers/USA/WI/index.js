@@ -197,7 +197,11 @@ const scraper = {
       return regions;
     },
     '2020-04-01': async function() {
-      this.url = 'https://www.dhs.wisconsin.gov/covid-19/data.htm';
+      if (datetime.scrapeDateIsBefore('2020-04-03')) {
+        this.url = 'https://www.dhs.wisconsin.gov/covid-19/data.htm';
+      } else {
+        this.url = 'https://www.dhs.wisconsin.gov/covid-19/county.htm';
+      }
 
       this.type = 'table';
       let regions = [];

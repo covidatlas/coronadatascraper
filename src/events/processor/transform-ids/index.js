@@ -23,7 +23,7 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
   }
   log('✅ Transformed IDs for %d out of %d locations', idsFound, Object.keys(locations).length);
 
-  report.findPopulation = {
+  report.transformIds = {
     idsResolved: idsFound
   };
 

@@ -20,7 +20,10 @@ const scraper = {
   ],
   async scraper() {
     const $ = await fetch.page(this.url);
-    const $table = $('table').first();
+    const $table = $('th:contains("CONFIRMADOS")').closest('table');
+    if ($table.length === 0) {
+      throw new Error('Table not found');
+    }
     const $dataRow = $table.find('tbody > tr:nth-child(2)');
 
     return {

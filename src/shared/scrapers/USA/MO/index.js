@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import * as datetime from '../../../lib/datetime/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -36,8 +36,7 @@ const scraper = {
     'Ste Genevieve': 'Ste. Genevieve County',
     'St Francois': 'St. Francois County',
     Joplin: 'Jasper County',
-    'St Louis City': 'St. Louis County',
-    'St. Louis City': 'St. Louis County'
+    'St Louis City': 'St. Louis City'
   },
   _counties: [
     'Adair County',
@@ -135,6 +134,7 @@ const scraper = {
     'St. Clair County',
     'St. Francois County',
     'St. Louis County',
+    'St. Louis City',
     'Ste. Genevieve County',
     'Saline County',
     'Schuyler County',
@@ -274,15 +274,17 @@ const scraper = {
           unassigned.cases += parse.number(countyData.Cases || 0);
           unassigned.deaths += parse.number(countyData.Deaths || 0);
         } else {
-          countyName = geography.addCounty(countyName);
-
+          if (countyName.toUpperCase().indexOf(' CITY') === -1) {
+            countyName = geography.addCounty(countyName);
+          }
           if (countyName in counties) {
             counties[countyName].cases += parse.number(countyData.Cases || 0);
             counties[countyName].deaths += parse.number(countyData.Deaths || 0);
           } else {
             counties[countyName] = {
               cases: parse.number(countyData.Cases || 0),
-              deaths: parse.number(countyData.Deaths || 0)
+              deaths: parse.number(countyData.Deaths || 0),
+              publishedDate: countyData.EditDate
             };
           }
         }

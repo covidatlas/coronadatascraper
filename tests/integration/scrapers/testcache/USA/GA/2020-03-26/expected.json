@@ -1,0 +1,645 @@
+[
+  {
+    "county": "Fulton County",
+    "cases": 231
+  },
+  {
+    "county": "Dougherty County",
+    "cases": 164
+  },
+  {
+    "county": "DeKalb County",
+    "cases": 137
+  },
+  {
+    "county": "Cobb County",
+    "cases": 119
+  },
+  {
+    "county": "Bartow County",
+    "cases": 93
+  },
+  {
+    "county": "Gwinnett County",
+    "cases": 79
+  },
+  {
+    "county": "Carroll County",
+    "cases": 52
+  },
+  {
+    "county": "Cherokee County",
+    "cases": 44
+  },
+  {
+    "county": "Clayton County",
+    "cases": 37
+  },
+  {
+    "county": "Clarke County",
+    "cases": 29
+  },
+  {
+    "county": "Henry County",
+    "cases": 29
+  },
+  {
+    "county": "Lee County",
+    "cases": 29
+  },
+  {
+    "county": "Hall County",
+    "cases": 22
+  },
+  {
+    "county": "Douglas County",
+    "cases": 18
+  },
+  {
+    "county": "Floyd County",
+    "cases": 17
+  },
+  {
+    "county": "Forsyth County",
+    "cases": 15
+  },
+  {
+    "county": "Coweta County",
+    "cases": 14
+  },
+  {
+    "county": "Fayette County",
+    "cases": 14
+  },
+  {
+    "county": "Lowndes County",
+    "cases": 14
+  },
+  {
+    "county": "Rockdale County",
+    "cases": 13
+  },
+  {
+    "county": "Newton County",
+    "cases": 12
+  },
+  {
+    "county": "Richmond County",
+    "cases": 11
+  },
+  {
+    "county": "Spalding County",
+    "cases": 11
+  },
+  {
+    "county": "Columbia County",
+    "cases": 10
+  },
+  {
+    "county": "Mitchell County",
+    "cases": 10
+  },
+  {
+    "county": "Polk County",
+    "cases": 10
+  },
+  {
+    "county": "Troup County",
+    "cases": 10
+  },
+  {
+    "county": "Chatham County",
+    "cases": 9
+  },
+  {
+    "county": "Gordon County",
+    "cases": 9
+  },
+  {
+    "county": "Houston County",
+    "cases": 9
+  },
+  {
+    "county": "Bibb County",
+    "cases": 8
+  },
+  {
+    "county": "Laurens County",
+    "cases": 8
+  },
+  {
+    "county": "Early County",
+    "cases": 7
+  },
+  {
+    "county": "Oconee County",
+    "cases": 7
+  },
+  {
+    "county": "Paulding County",
+    "cases": 7
+  },
+  {
+    "county": "Sumter County",
+    "cases": 7
+  },
+  {
+    "county": "Tift County",
+    "cases": 7
+  },
+  {
+    "county": "Glynn County",
+    "cases": 6
+  },
+  {
+    "county": "Muscogee County",
+    "cases": 6
+  },
+  {
+    "county": "Whitfield County",
+    "cases": 6
+  },
+  {
+    "county": "Worth County",
+    "cases": 6
+  },
+  {
+    "county": "Barrow County",
+    "cases": 5
+  },
+  {
+    "county": "Peach County",
+    "cases": 5
+  },
+  {
+    "county": "Terrell County",
+    "cases": 5
+  },
+  {
+    "county": "Colquitt County",
+    "cases": 4
+  },
+  {
+    "county": "Crisp County",
+    "cases": 4
+  },
+  {
+    "county": "Lumpkin County",
+    "cases": 4
+  },
+  {
+    "county": "Pickens County",
+    "cases": 4
+  },
+  {
+    "county": "Bryan County",
+    "cases": 3
+  },
+  {
+    "county": "Burke County",
+    "cases": 3
+  },
+  {
+    "county": "Butts County",
+    "cases": 3
+  },
+  {
+    "county": "Effingham County",
+    "cases": 3
+  },
+  {
+    "county": "Irwin County",
+    "cases": 3
+  },
+  {
+    "county": "Lamar County",
+    "cases": 3
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 3
+  },
+  {
+    "county": "Madison County",
+    "cases": 3
+  },
+  {
+    "county": "Meriwether County",
+    "cases": 3
+  },
+  {
+    "county": "Monroe County",
+    "cases": 3
+  },
+  {
+    "county": "Baldwin County",
+    "cases": 2
+  },
+  {
+    "county": "Camden County",
+    "cases": 2
+  },
+  {
+    "county": "Coffee County",
+    "cases": 2
+  },
+  {
+    "county": "Dawson County",
+    "cases": 2
+  },
+  {
+    "county": "Decatur County",
+    "cases": 2
+  },
+  {
+    "county": "Jackson County",
+    "cases": 2
+  },
+  {
+    "county": "Jasper County",
+    "cases": 2
+  },
+  {
+    "county": "Miller County",
+    "cases": 2
+  },
+  {
+    "county": "Randolph County",
+    "cases": 2
+  },
+  {
+    "county": "Seminole County",
+    "cases": 2
+  },
+  {
+    "county": "Tattnall County",
+    "cases": 2
+  },
+  {
+    "county": "Turner County",
+    "cases": 2
+  },
+  {
+    "county": "Twiggs County",
+    "cases": 2
+  },
+  {
+    "county": "Ware County",
+    "cases": 2
+  },
+  {
+    "county": "Washington County",
+    "cases": 2
+  },
+  {
+    "county": "Baker County",
+    "cases": 1
+  },
+  {
+    "county": "Ben Hill County",
+    "cases": 1
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 1
+  },
+  {
+    "county": "Catoosa County",
+    "cases": 1
+  },
+  {
+    "county": "Charlton County",
+    "cases": 1
+  },
+  {
+    "county": "Chattooga County",
+    "cases": 1
+  },
+  {
+    "county": "Clinch County",
+    "cases": 1
+  },
+  {
+    "county": "Dodge County",
+    "cases": 1
+  },
+  {
+    "county": "Fannin County",
+    "cases": 1
+  },
+  {
+    "county": "Franklin County",
+    "cases": 1
+  },
+  {
+    "county": "Greene County",
+    "cases": 1
+  },
+  {
+    "county": "Haralson County",
+    "cases": 1
+  },
+  {
+    "county": "Harris County",
+    "cases": 1
+  },
+  {
+    "county": "Heard County",
+    "cases": 1
+  },
+  {
+    "county": "Jones County",
+    "cases": 1
+  },
+  {
+    "county": "Liberty County",
+    "cases": 1
+  },
+  {
+    "county": "Long County",
+    "cases": 1
+  },
+  {
+    "county": "Macon County",
+    "cases": 1
+  },
+  {
+    "county": "McDuffie County",
+    "cases": 1
+  },
+  {
+    "county": "Morgan County",
+    "cases": 1
+  },
+  {
+    "county": "Pierce County",
+    "cases": 1
+  },
+  {
+    "county": "Pulaski County",
+    "cases": 1
+  },
+  {
+    "county": "Stephens County",
+    "cases": 1
+  },
+  {
+    "county": "Taylor County",
+    "cases": 1
+  },
+  {
+    "county": "Thomas County",
+    "cases": 1
+  },
+  {
+    "county": "Toombs County",
+    "cases": 1
+  },
+  {
+    "county": "White County",
+    "cases": 1
+  },
+  {
+    "county": "Wilkes County",
+    "cases": 1
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 178
+  },
+  {
+    "cases": 1643
+  },
+  {
+    "county": "Appling County",
+    "cases": 0
+  },
+  {
+    "county": "Atkinson County",
+    "cases": 0
+  },
+  {
+    "county": "Bacon County",
+    "cases": 0
+  },
+  {
+    "county": "Banks County",
+    "cases": 0
+  },
+  {
+    "county": "Berrien County",
+    "cases": 0
+  },
+  {
+    "county": "Bleckley County",
+    "cases": 0
+  },
+  {
+    "county": "Brantley County",
+    "cases": 0
+  },
+  {
+    "county": "Brooks County",
+    "cases": 0
+  },
+  {
+    "county": "Bulloch County",
+    "cases": 0
+  },
+  {
+    "county": "Candler County",
+    "cases": 0
+  },
+  {
+    "county": "Chattahoochee County",
+    "cases": 0
+  },
+  {
+    "county": "Clay County",
+    "cases": 0
+  },
+  {
+    "county": "Cook County",
+    "cases": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 0
+  },
+  {
+    "county": "Dade County",
+    "cases": 0
+  },
+  {
+    "county": "Dooly County",
+    "cases": 0
+  },
+  {
+    "county": "Echols County",
+    "cases": 0
+  },
+  {
+    "county": "Elbert County",
+    "cases": 0
+  },
+  {
+    "county": "Emanuel County",
+    "cases": 0
+  },
+  {
+    "county": "Evans County",
+    "cases": 0
+  },
+  {
+    "county": "Gilmer County",
+    "cases": 0
+  },
+  {
+    "county": "Glascock County",
+    "cases": 0
+  },
+  {
+    "county": "Grady County",
+    "cases": 0
+  },
+  {
+    "county": "Habersham County",
+    "cases": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 0
+  },
+  {
+    "county": "Hart County",
+    "cases": 0
+  },
+  {
+    "county": "Jeff Davis County",
+    "cases": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0
+  },
+  {
+    "county": "Jenkins County",
+    "cases": 0
+  },
+  {
+    "county": "Johnson County",
+    "cases": 0
+  },
+  {
+    "county": "Lanier County",
+    "cases": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 0
+  },
+  {
+    "county": "McIntosh County",
+    "cases": 0
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 0
+  },
+  {
+    "county": "Murray County",
+    "cases": 0
+  },
+  {
+    "county": "Oglethorpe County",
+    "cases": 0
+  },
+  {
+    "county": "Pike County",
+    "cases": 0
+  },
+  {
+    "county": "Putnam County",
+    "cases": 0
+  },
+  {
+    "county": "Quitman County",
+    "cases": 0
+  },
+  {
+    "county": "Rabun County",
+    "cases": 0
+  },
+  {
+    "county": "Schley County",
+    "cases": 0
+  },
+  {
+    "county": "Screven County",
+    "cases": 0
+  },
+  {
+    "county": "Stewart County",
+    "cases": 0
+  },
+  {
+    "county": "Talbot County",
+    "cases": 0
+  },
+  {
+    "county": "Taliaferro County",
+    "cases": 0
+  },
+  {
+    "county": "Telfair County",
+    "cases": 0
+  },
+  {
+    "county": "Towns County",
+    "cases": 0
+  },
+  {
+    "county": "Treutlen County",
+    "cases": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 0
+  },
+  {
+    "county": "Upson County",
+    "cases": 0
+  },
+  {
+    "county": "Walker County",
+    "cases": 0
+  },
+  {
+    "county": "Walton County",
+    "cases": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 0
+  },
+  {
+    "county": "Webster County",
+    "cases": 0
+  },
+  {
+    "county": "Wheeler County",
+    "cases": 0
+  },
+  {
+    "county": "Wilcox County",
+    "cases": 0
+  },
+  {
+    "county": "Wilkinson County",
+    "cases": 0
+  }
+]
