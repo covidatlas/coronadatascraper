@@ -54,7 +54,7 @@ function getSingleContributorLink(location) {
 }
 
 function renderCaseInfo(label, count) {
-  return `<h2 class="spectrum-Heading spectrum-Heading--M">${label}: ${count.toLocaleString()}</p>`;
+  return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalDataData">${label}: <span class="spectrum-Heading--L ca-LocalCount"> ${count.toLocaleString()}</span></h2>`;
 }
 
 function locationDetail(location, lastDate, caseInfo) {
@@ -88,13 +88,13 @@ function locationDetail(location, lastDate, caseInfo) {
 
   html += `</div>`;
   html += `<div class="col-xs-12 col-md-7 col-lg-8">`;
-  html += `<h2 class="spectrum-Heading spectrum-Heading--L">Timeline</h1>`;
+  html += `<h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>`;
   html += `<div class="ca-Placeholder"></div>`;
   html += `</div>`;
   html += `</div>`;
   html += `<div class="row">`;
   html += `<div class="col-xs-12 col-md-12">`;
-  html += `<h2 class="spectrum-Heading spectrum-Heading--L">Map View</h1>`;
+  html += `<h2 class="spectrum-Heading spectrum-Heading--M">Map View</h1>`;
   html += `<div class="ca-Placeholder"></div>`;
   html += `</div>`;
   html += `</div>`;
