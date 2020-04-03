@@ -255,6 +255,59 @@ const scraper = {
       }).map(([name, value]) => {
         return { county: name, cases: value };
       });
+    },
+    '2020-04-02': async function() {
+      this.type = 'pdf';
+      this.url = 'https://public.tableau.com/views/COVID-19Data_15851817634470/CountyCounts.pdf?:showVizHome=no';
+      const pdfScrape = await fetch.pdf(this.url);
+
+      const data = pdfScrape
+        .sort((a, b) => {
+          if (a && b) {
+            const yDiff = a.y - b.y;
+            const xDiff = a.x - b.x;
+            return yDiff || xDiff;
+          }
+          return -1;
+        })
+        .filter(item => item && item.y > 6);
+
+      let name = '';
+      let caseNum = '';
+      const counties = [];
+      data.forEach((item, i) => {
+        const c = item.text;
+        if (data[i - 1] && data[i - 1].y !== item.y) {
+          counties.push({
+            county: name.replace(/(?<!\s)County/, ' County'),
+            cases: parse.number(caseNum)
+          });
+          name = '';
+          caseNum = '';
+        }
+
+        if (c.match(/[0-9]/)) {
+          caseNum += c;
+        } else {
+          name += c.replace('ﬀ', 'ff');
+        }
+      });
+
+      const deathData = await fetch.pdf(
+        'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no'
+      );
+      let totalDeaths = '';
+      deathData.forEach(item => {
+        if (item && item.text.match(/[0-9]/)) {
+          totalDeaths += item.text;
+        }
+      });
+
+      const totalRow = transform.sumData(counties);
+      totalRow.deaths = parse.number(totalDeaths);
+
+      counties.push(totalRow);
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };
