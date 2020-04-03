@@ -213,9 +213,25 @@ hr {
 }
 
 .ca-Placeholder {
-  width: 250px;
-  height: 130px;
-  background: gray;
+  width: 100%;
+  height: 180px;
+  background: var(--Gray200);
+}
+
+.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-offset-0, .col-md-offset-1, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-offset-9 {
+  padding-right: var(--spectrum-alias-grid-margin-small);
+  padding-left: var(--spectrum-alias-grid-margin-small);
+}
+.row {
+  margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
+  margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
+}
+
+.ca-LocationMeta + .ca-LocationMeta {
+  margin-top: calc(var(--spectrum-body-xs-margin-bottom, var(--spectrum-global-dimension-size-115)) * -1);
+}
+.ca-LocationTitle {
+  font-size: var(--spectrum-heading-m-text-size, var(--spectrum-alias-heading-m-text-size));
 }
 
 @media screen and (max-width: 960px) {
@@ -228,11 +244,14 @@ hr {
   }
 }
 
-.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-offset-0, .col-md-offset-1, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-offset-9 {
-  padding-right: var(--spectrum-alias-grid-margin-small);
-  padding-left: var(--spectrum-alias-grid-margin-small);
+@media screen and (min-width: 640px) {
+  .ca-LocationTitle {
+    font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size));
+  }
 }
-.row {
-  margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
-  margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
+
+@media screen and (min-width: 800px) {
+  .ca-LocationTitle {
+    font-size: var(--spectrum-heading-xl-text-size, var(--spectrum-alias-heading-xl-text-size));
+  }
 }

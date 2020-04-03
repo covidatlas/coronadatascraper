@@ -60,11 +60,15 @@ function renderCaseInfo(label, count) {
 function locationDetail(location, lastDate, caseInfo) {
   // <p class="spectrum-Body spectrum-Body--L">Latest confirmed COVID-19 data</p>
   let html = `
-<h1 class="spectrum-Heading spectrum-Heading--L">${location.name}</h1>
+<h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${location.name}</h1>
 `;
 
-  html += `<p class="spectrum-Body spectrum-Body--XS">Updated: ${lastDate}</p>`;
-  html += `<p class="spectrum-Body spectrum-Body--XS">Data from ${getSingleContributorLink(location)}</p>`;
+  html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Updated: ${lastDate}</p>`;
+  html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
+    location
+  )}</p>`;
+  html += `<div class="row">`;
+  html += `<div class="col-xs-12 col-md-5 col-lg-4">`;
 
   if (caseInfo.active !== undefined) {
     html += renderCaseInfo('Active Cases', caseInfo.active);
@@ -82,10 +86,18 @@ function locationDetail(location, lastDate, caseInfo) {
     html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged);
   }
 
+  html += `</div>`;
+  html += `<div class="col-xs-12 col-md-7 col-lg-8">`;
   html += `<h2 class="spectrum-Heading spectrum-Heading--L">Timeline</h1>`;
   html += `<div class="ca-Placeholder"></div>`;
+  html += `</div>`;
+  html += `</div>`;
+  html += `<div class="row">`;
+  html += `<div class="col-xs-12 col-md-12">`;
   html += `<h2 class="spectrum-Heading spectrum-Heading--L">Map View</h1>`;
   html += `<div class="ca-Placeholder"></div>`;
+  html += `</div>`;
+  html += `</div>`;
 
   return html;
 }
