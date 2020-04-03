@@ -19,7 +19,7 @@ module.exports = function body(selectedPage = 'home', className = '') {
       ></sp-sidenav-item>
       <sp-sidenav-item
           value="map"
-          label="World Map"
+          label="Map"
           href="/map"
       ></sp-sidenav-item>
       <sp-sidenav-item
