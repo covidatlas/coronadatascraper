@@ -48,6 +48,15 @@ const maintainers = {
     name: 'Quentin Golsteyn',
     github: 'qgolsteyn',
     flag: '🇨🇦'
+  },
+  slezakbs: {
+    name: 'Brendan Slezak',
+    email: 'brendan.slezak@geospark.io',
+    github: 'slezakbs',
+    country: 'US',
+    state: 'VA',
+    city: 'Richmond',
+    flag: '🇺🇸'
   }
 };
 

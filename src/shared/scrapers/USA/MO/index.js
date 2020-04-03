@@ -36,8 +36,7 @@ const scraper = {
     'Ste Genevieve': 'Ste. Genevieve County',
     'St Francois': 'St. Francois County',
     Joplin: 'Jasper County',
-    'St Louis City': 'St. Louis County',
-    'St. Louis City': 'St. Louis County'
+    'St Louis City': 'St. Louis City'
   },
   _counties: [
     'Adair County',
@@ -135,6 +134,7 @@ const scraper = {
     'St. Clair County',
     'St. Francois County',
     'St. Louis County',
+    'St. Louis City',
     'Ste. Genevieve County',
     'Saline County',
     'Schuyler County',
@@ -274,8 +274,9 @@ const scraper = {
           unassigned.cases += parse.number(countyData.Cases || 0);
           unassigned.deaths += parse.number(countyData.Deaths || 0);
         } else {
-          countyName = geography.addCounty(countyName);
-
+          if(countyName.toUpperCase().indexOf(" CITY") === -1){
+            countyName = geography.addCounty(countyName);
+          }
           if (countyName in counties) {
             counties[countyName].cases += parse.number(countyData.Cases || 0);
             counties[countyName].deaths += parse.number(countyData.Deaths || 0);
