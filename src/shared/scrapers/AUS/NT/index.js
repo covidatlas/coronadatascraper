@@ -13,7 +13,7 @@ const scraper = {
       url: 'https://coronavirus.nt.gov.au'
     }
   ],
-  state: 'Northern Territory',
+  state: 'iso2:AU-NT',
   type: 'table',
   url: 'https://coronavirus.nt.gov.au/',
   async scraper() {

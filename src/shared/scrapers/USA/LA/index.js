@@ -36,7 +36,7 @@ const scraper = {
         }
         const cases = parse.number($tr.find('td:last-child').text());
         counties.push({
-          county: geography.getCounty(county),
+          county: geography.getCounty(county, 'LA'),
           cases
         });
       });
@@ -66,7 +66,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName),
+          county: geography.getCounty(countyName, 'LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });
@@ -98,7 +98,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName),
+          county: geography.getCounty(countyName, 'LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });

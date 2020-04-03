@@ -18,7 +18,6 @@ const scraper = {
 
       // Pull out and fetch the embedded iframe
       const frameURL = $('iframe').attr('src');
-      console.log(frameURL);
 
       $ = await fetch.headless(frameURL);
 

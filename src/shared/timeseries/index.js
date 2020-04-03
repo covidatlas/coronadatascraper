@@ -43,7 +43,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'aggregate', 'tz'];
+  let columns = ['name', 'level', 'city', 'county', 'state', 'country', 'population', 'lat', 'long', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -83,7 +83,20 @@ async function generateTidyCSV(timeseriesByLocation) {
 }
 
 async function generateCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
+  let columns = [
+    'name',
+    'level',
+    'city',
+    'county',
+    'state',
+    'country',
+    'population',
+    'lat',
+    'long',
+    'url',
+    'aggregate',
+    'tz'
+  ];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -126,7 +139,20 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 async function generateJHUCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'url', 'aggregate', 'tz'];
+  let columns = [
+    'name',
+    'level',
+    'city',
+    'county',
+    'state',
+    'country',
+    'lat',
+    'long',
+    'population',
+    'url',
+    'aggregate',
+    'tz'
+  ];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {

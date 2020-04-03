@@ -1,11 +1,12 @@
 import geoTz from 'geo-tz';
 import { join } from 'path';
-import * as turf from '../../../shared/lib/geography/turf.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 import * as fs from '../../../shared/lib/fs.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import * as geography from '../../../shared/lib/geography/index.js';
+import * as turf from '../../../shared/lib/geography/turf.js';
 import log from '../../../shared/lib/log.js';
 import espGeoJson from '../vendor/esp.json';
-import * as geography from '../../../shared/lib/geography/index.js';
-import reporter from '../../../shared/lib/error-reporter.js';
 
 const DEBUG = false;
 
@@ -151,6 +152,15 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       location.tz = geoTz(location.coordinates[1], location.coordinates[0]);
     }
 
+    if (!location.feature) {
+      // unless the location comes with its own feature
+      // if it has an id, we use it
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        index = clId;
+      }
+    }
+
     feature.properties.id = index;
     location.featureId = index;
     foundCount++;
@@ -160,7 +170,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
     log('⏳ Generating features...');
 
     const usCountyData = await fs.readJSON(join(__dirname, '..', '..', '..', 'shared', 'vendor', 'usa-counties.json'));
-    const brCountyData = await fs.readJSON(join(__dirname, '..', 'vendor', 'bra-counties.json'));
     const countryData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-countries.json'));
     const itaRegionsData = await fs.readJSON(join(__dirname, '..', 'vendor', 'ita-regions.json'));
     const provinceData = await fs.readJSON(join(__dirname, '..', 'vendor', 'world-states-provinces.json'));
@@ -173,14 +182,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     const errors = [];
 
-    const featuresData = [provinceData, usCountyData, brCountyData, countryData];
+    const featuresData = [provinceData, usCountyData, countryData];
 
     locationLoop: for (const location of locations) {
       let found = false;
-      let point;
-      if (location.coordinates) {
-        point = turf.point(location.coordinates);
-      }
 
       // If the location already comes with its own feature, store it98
       if (location.feature) {
@@ -192,6 +197,19 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         }
         delete location.feature;
         continue;
+      }
+
+      // use countryLevel's getFeature if id is present
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        const feature = await countryLevels.getFeature(clId);
+        storeFeature(feature, location);
+        continue;
+      }
+
+      let point;
+      if (location.coordinates) {
+        point = turf.point(location.coordinates);
       }
 
       if (location._featureId) {
@@ -259,28 +277,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           if (feature) {
             found = true;
             storeFeature(feature, location);
-          }
-        } else if (location.country === 'BRA') {
-          if (location.county) {
-            // Find county
-            for (const feature of brCountyData.features) {
-              if (!location.county) {
-                continue;
-              }
-              if (feature.properties.name === location.county) {
-                found = true;
-                storeFeature(feature, location);
-                continue locationLoop;
-              }
-              if (point && feature.geometry) {
-                const poly = turf.feature(feature.geometry);
-                if (turf.booleanPointInPolygon(point, poly)) {
-                  found = true;
-                  storeFeature(feature, location);
-                  continue locationLoop;
-                }
-              }
-            }
           }
         } else {
           // Check if the location exists within our provinces

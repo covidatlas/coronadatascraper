@@ -143,7 +143,12 @@ const scraper = {
         deaths += detroitDeaths;
       }
 
-      if (county === 'Out of State County' || county === 'Other County' || county === 'Not Reported County') {
+      if (
+        county === 'Out of State County' ||
+        county === 'Other County' ||
+        county === 'Not Reported County' ||
+        county === 'Unknown County'
+      ) {
         unassignedObj.cases += cases;
         unassignedObj.deaths += deaths;
         return;
