@@ -17,6 +17,7 @@ const scraper = {
       github: 'COVID19Tracking'
     }
   ],
+  scraperTz: 'America/Los_Angeles',
   aggregate: 'state',
   priority: -0.5,
   async scraper() {
