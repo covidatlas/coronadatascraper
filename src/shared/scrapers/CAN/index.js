@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import * as geography from '../../lib/geography/index.js';
-import datetime from '../../lib/datetime/old/index.js';
+import datetime from '../../lib/datetime/index.js';
 import * as rules from '../../lib/rules.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -48,34 +48,34 @@ const scraper = {
     '0': async function() {
       const data = await fetch.csv(this.url, false);
 
-      // FIXME when we roll out new TZ support!
-      const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/Toronto')) : datetime.getDate();
-      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
-      let scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
+      // Get or set a date; normalize to YYYY-MM-DD (for now)
+      const date = process.env.SCRAPE_DATE ? process.env.SCRAPE_DATE : datetime.now.at('America/Toronto');
+      let scrapeDate = datetime.getYYYYMMDD(date);
+      let scrapeDateCAN = datetime.getDDMMYYYY(scrapeDate);
+
+      // Reformat CAN dates to ISO-style for comparison
       const lastDateParts = data[data.length - 1].date.split('-');
-      const lastDateInTimeseries = new Date(`${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]} 12:00:00`);
-      const firstDateParts = data[data.length - 1].date.split('-');
-      const firstDateInTimeseries = new Date(`${firstDateParts[2]}-${firstDateParts[1]}-${firstDateParts[0]}12:00:00`);
+      const lastDateInTimeseries = `${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]}`;
+      const firstDateParts = data[0].date.split('-');
+      const firstDateInTimeseries = `${firstDateParts[2]}-${firstDateParts[1]}-${firstDateParts[0]}`;
 
       if (scrapeDate > lastDateInTimeseries) {
         console.error(
           `  🚨 timeseries for ${geography.getName(
             this
-          )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
-            lastDateInTimeseries
-          )}. Using last sample anyway`
+          )}: SCRAPE_DATE ${scrapeDate} is newer than last sample time ${lastDateInTimeseries}. Using last sample anyway`
         );
         scrapeDate = lastDateInTimeseries;
-        scrapeDateString = datetime.getDDMMYYYY(scrapeDate);
+        scrapeDateCAN = datetime.getDDMMYYYY(scrapeDate);
       }
 
       if (scrapeDate < firstDateInTimeseries) {
-        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDate}`);
       }
 
       const regions = [];
       for (const row of data) {
-        if (row.date === scrapeDateString) {
+        if (row.date === scrapeDateCAN) {
           const regionObj = {
             state: parse.string(row.prname),
             cases: parse.number(row.numconf),
@@ -91,7 +91,7 @@ const scraper = {
       }
 
       if (regions.length === 0) {
-        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDate}`);
       }
 
       regions.push(transform.sumData(regions));
