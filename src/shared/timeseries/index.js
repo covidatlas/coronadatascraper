@@ -211,6 +211,7 @@ async function generateTimeseries(options = {}) {
     curDate.setDate(curDate.getDate() + 1);
   }
 
+  const timeseriesMultivalent = {};
   const timeseriesByLocation = {};
   let previousDate = null;
   const lastDate = dates[dates.length - 1];
@@ -246,9 +247,31 @@ async function generateTimeseries(options = {}) {
       timeseriesByLocation[name].dates[date] = strippedLocation;
     }
 
+    for (const location of data.multivalentLocations) {
+      const name = geography.getName(location);
+
+      timeseriesMultivalent[name] = { dates: {}, ...timeseriesMultivalent[name], ...stripCases(location) };
+
+      const strippedLocation = stripInfo(location);
+
+      // Add growth factor
+      if (previousDate && timeseriesMultivalent[name].dates[previousDate]) {
+        strippedLocation.growthFactor = getGrowthfactor(
+          strippedLocation.cases,
+          timeseriesMultivalent[name].dates[previousDate].cases
+        );
+      }
+
+      timeseriesMultivalent[name].dates[date] = strippedLocation;
+      timeseriesMultivalent[name].dates[date].sources = location.sources;
+
+      delete timeseriesMultivalent[name].sources;
+    }
+
     previousDate = date;
   }
 
+  await fs.writeJSON(path.join('dist', 'timeseries-multivalent.json'), timeseriesMultivalent, { space: 0 });
   await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
   await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
 
