@@ -274,7 +274,7 @@ const scraper = {
           unassigned.cases += parse.number(countyData.Cases || 0);
           unassigned.deaths += parse.number(countyData.Deaths || 0);
         } else {
-          if(countyName.toUpperCase().indexOf(" CITY") === -1){
+          if (countyName.toUpperCase().indexOf(' CITY') === -1) {
             countyName = geography.addCounty(countyName);
           }
           if (countyName in counties) {
