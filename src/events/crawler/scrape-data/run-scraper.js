@@ -3,6 +3,7 @@ import datetime from '../../../shared/lib/datetime/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
+import { calculateScraperTz } from '../../../shared/lib/geography/timezone.js';
 import log from '../../../shared/lib/log.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
@@ -50,12 +51,16 @@ function addData(cases, location, result) {
 /*
   Run the correct scraper for this location
 */
-export function runScraper(location) {
+export async function runScraper(location) {
   const rejectUnauthorized = location.certValidation === false;
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
+  if (!location.scraperTz) {
+    await calculateScraperTz(location);
+  }
+
   if (typeof location.scraper === 'function') {
     return location.scraper();
   }
