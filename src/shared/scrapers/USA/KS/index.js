@@ -286,7 +286,7 @@ const scraper = {
           caseNum = '';
         }
 
-        if (item.text.match(/[0-9]/)) {
+        if (c.match(/[0-9]/)) {
           caseNum += c;
         } else {
           name += c.replace('ﬀ', 'ff');
