@@ -164,6 +164,7 @@ test('scrapers-all-test, Parsers', async t => {
     } finally {
       lock.release();
     }
+    t.end();
   });
 });
 
