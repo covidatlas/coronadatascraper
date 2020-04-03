@@ -218,6 +218,21 @@ hr {
   background: var(--Gray200);
 }
 
+.ca-LocalData {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--Gray300);
+
+  &.spectrum-Heading {
+    margin-top: var(--spectrum-heading-m-margin-top, var(--spectrum-alias-heading-m-margin-top));
+  }
+  .spectrum-Heading--L {
+    margin: 0;
+  }
+}
+
 .ca-LocalCount {
   text-align: right;
 }
