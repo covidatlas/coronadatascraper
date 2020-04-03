@@ -4,7 +4,12 @@ import * as parse from '../../../lib/parse.js';
 import getKey from '../_shared/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [{ cases: 'confirmed case' }, { hospitalized: 'icu' }, { deaths: 'deaths' }];
+const labelFragmentsByKey = [
+  { cases: 'confirmed case' },
+  { deaths: 'deaths' },
+  { hospitalized: 'icu' },
+  { recovered: 'cases cleared' }
+];
 
 const scraper = {
   country: 'AUS',
