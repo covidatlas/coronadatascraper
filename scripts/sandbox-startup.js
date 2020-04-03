@@ -35,6 +35,7 @@ async function prepare() {
   }
 
   await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap);
+  await fs.writeJSON('src/http/get-index/dist/location-map.json', locationMap);
 }
 
 module.exports = prepare;

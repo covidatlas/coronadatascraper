@@ -9,6 +9,8 @@ const header = require('@architect/views/header');
 // eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
+const locations = require('./dist/location-map.json');
+
 exports.handler = async function http() {
   return {
     headers: {
@@ -32,8 +34,8 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
       <div class="ca-Landing-search">
         <div class="spectrum-ComboField spectrum--large">
-          <sp-search></sp-search>
-          <sp-button>Go</sp-button>
+          <sp-search id="searchField"></sp-search>
+          <sp-button id="searchButton">Go</sp-button>
         </div>
       </div>
     </div>
@@ -65,6 +67,27 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
   </div>
 
 </div>
+
+<script>
+  var locations = ${JSON.stringify(locations)};
+  function handleSearch(input) {
+    let searchQuery = searchField.value.toLowerCase();
+    for (let [shortName, location] of Object.entries(locations)) {
+      if (location.name.toLowerCase().match(searchQuery)) {
+        window.location = '/'+shortName;
+        break;
+      }
+    }
+  }
+  searchField.addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    handleSearch();
+  });
+  searchButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    handleSearch();
+  });
+</script>
 `,
       'ca-Home'
     )
