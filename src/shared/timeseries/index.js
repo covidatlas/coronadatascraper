@@ -216,6 +216,19 @@ async function generateTimeseries(options = {}) {
   let previousDate = null;
   const lastDate = dates[dates.length - 1];
   let featureCollection;
+
+  const multivalentSourcesByLocation = {};
+  function sourceIsEqual(a, b) {
+    return a.url === b.url;
+  }
+  function addSource(sources, source) {
+    let actualSource = sources.find(otherSource => sourceIsEqual(otherSource, source));
+    if (!actualSource) {
+      sources.push(source);
+    }
+    return actualSource || source;
+  }
+
   for (const date of dates) {
     const data = await runCrawler({
       date: date === today ? undefined : date,
@@ -254,12 +267,12 @@ async function generateTimeseries(options = {}) {
 
       const strippedLocation = stripInfo(location);
 
-      // Add growth factor
-      if (previousDate && timeseriesMultivalent[name].dates[previousDate]) {
-        strippedLocation.growthFactor = getGrowthfactor(
-          strippedLocation.cases,
-          timeseriesMultivalent[name].dates[previousDate].cases
-        );
+      // Store every source throughout history for this location
+      multivalentSourcesByLocation[name] = multivalentSourcesByLocation[name] || [];
+      for (let [index, source] of Object.entries(location.sources)) {
+        let actualSource = addSource(multivalentSourcesByLocation[name], source);
+        // Overwrite the existing source
+        location.sources[index] = actualSource;
       }
 
       timeseriesMultivalent[name].dates[date] = strippedLocation;
@@ -271,28 +284,41 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
-  // function sourceIsEqual(a, b) {
-  //   return a.url === b.url;
-  // }
+  const caseFields = ['cases', 'tested', 'recovered', 'deaths', 'active', 'hospitalized', 'discharged'];
 
-  // // Post-process multivalent sources to have only one sources object
-  // for (let location of timeseriesMultivalent) {
-  //   // Gather all sources and store unique IDs
-  //   let allSources = [];
-  //   for (const date of dates) {
-  //     for (let source of date.sources) {
-  //       if (!allSources.find(otherSource => sourceIsEqual(otherSource, source))) {
-  //         allSources.push(source);
-  //       }
-  //     }
-  //   }
+  // Post-process multivalent sources to have only one sources object
+  for (let [locationName, location] of Object.entries(timeseriesMultivalent)) {
+    let dates = location.dates;
+    let locationSources = multivalentSourcesByLocation[locationName];
 
-  //   for (const date of dates) {
-  //     for (let source of allSources) {
+    // Store combined locations
+    location.sources = locationSources;
 
-  //     }
-  //   }
-  // }
+    for (const [date, caseInfo] of Object.entries(dates)) {
+      // generate a map
+      // key: the index in the final array of sources
+      // value: the index within this date's list
+      let indexMap = {};
+      for (let [sourceIndex, source] of Object.entries(caseInfo.sources)) {
+        indexMap[locationSources.indexOf(source)] = sourceIndex;
+      }
+
+      // remap case fields
+      for (let field of caseFields) {
+        if (caseInfo[field]) {
+          let newCaseInfoForField = [];
+          for (let [index, source] of Object.entries(locationSources)) {
+            newCaseInfoForField[index] = caseInfo[field][indexMap[index]];
+          }
+          // store new case info
+          caseInfo[field] = newCaseInfoForField;
+        }
+      }
+  
+      // Remove old sources
+      delete caseInfo.sources;
+    }
+  }
 
   await fs.writeJSON(path.join('dist', 'timeseries-multivalent.json'), timeseriesMultivalent, { space: 0 });
   await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
