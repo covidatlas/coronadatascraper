@@ -8,9 +8,17 @@ assignees: ''
 ---
 
 
-**The source**
+## Location name
+<!-- Name here, e.g., "County x, CA, USA" -->
 
-Please ensure the source meets our [source guidelines](../../tree/master/docs/sources.md#criteria-for-sources).  Thank you!
+## Source URL
+<!-- URL -->
 
-* **Full location name: ** [Name here, e.g., "County x, CA, USA")]
-* **Source URL: ** [URL]
+## Notes/comments
+<!-- Anything else we should know about? -->
+
+<!--
+  Please ensure the source meets our source guidelines.  See
+  ../../tree/master/docs/sources.md#criteria-for-sources
+  Thank you!
+-->

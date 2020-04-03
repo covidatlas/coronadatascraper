@@ -7,23 +7,14 @@ assignees: ''
 
 ---
 
-**Description.
+## Description
+<!-- Describe your suggested feature in detail -->
 
-[A clear and concise description of what the problem is. Ex. I'm
-always frustrated when ... / It would be great if ...]
+## Why do you need this feature or component?
+<!-- Tell us what this solves or why this is important to your use case -->
 
-**Describe the solution you'd like**
-
-[A clear and concise description of what you want to happen.]
-
-**Describe alternatives you've considered**
-
-[A clear and concise description of any alternative solutions or
-features you've considered.]
-
-**Additional context**
-
-[Add any other context or screenshots about the feature request here.]
+## Additional context
+<!-- Add any other context, workarounds, or screenshots about your request -->
 
 
 <!--- Delete any section that doesn't apply.  Thank you very much! -->
