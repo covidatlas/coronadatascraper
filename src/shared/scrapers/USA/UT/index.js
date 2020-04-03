@@ -17,85 +17,79 @@ const scraper = {
     }
   ],
   _counties: [
-    'Beaver County',
-    'Box Elder County',
-    'Cache County',
-    'Carbon County',
+    // 'Beaver County',
+    // 'Box Elder County',
+    // 'Cache County',
+    // 'Carbon County',
     // 'Daggett County',
     'Davis County',
     // 'Duchesne County',
-    'Emery County',
-    'Garfield County',
-    'Grand County',
-    'Iron County',
-    'Juab County',
-    'Kane County',
-    'Millard County',
+    // 'Emery County',
+    // 'Garfield County',
+    // 'Grand County',
+    // 'Iron County',
+    // 'Juab County',
+    // 'Kane County',
+    // 'Millard County',
     // 'Morgan County',
-    'Piute County',
-    'Rich County',
+    // 'Piute County',
+    // 'Rich County',
     'Salt Lake County',
     'San Juan County',
-    'Sanpete County',
-    'Sevier County',
+    // 'Sanpete County',
+    // 'Sevier County',
     'Summit County',
     'Tooele County',
     // 'Uintah County',
     'Utah County',
-    'Wasatch County',
-    'Washington County',
-    'Wayne County'
+    'Wasatch County'
+    // 'Washington County',
+    // 'Wayne County'
     // 'Weber County'
   ],
   _pushCounty(counties, county, cases) {
     if (county === 'State Total') {
       return;
     }
-    if (county === 'TriCounty') {
+    if (county === 'TriCounty' || county === 'Tri County') {
       counties.push({
-        county: 'Uintah, Duchesne, & Daggett Counties',
-        cases,
-        feature: geography.generateMultiCountyFeature(
-          ['Uintah County, UT', 'Duchesne County, UT', 'Daggett County, UT'],
-          {
-            state: 'UT',
-            country: 'USA'
-          }
-        )
+        county: ['Uintah County', 'Duchesne County', 'Daggett County'],
+        cases
       });
       return;
     }
     if (county === 'Weber-Morgan') {
       counties.push({
-        county: 'Weber & Morgan Counties',
-        cases,
-        feature: geography.generateMultiCountyFeature(['Weber County, UT', 'Morgan County, UT'], {
-          state: 'UT',
-          country: 'USA'
-        })
+        county: ['Weber County', 'Morgan County'],
+        cases
       });
       return;
     }
     if (county === 'Southeast Utah') {
-      // ?
+      counties.push({
+        county: ['Carbon County', 'Emery County', 'Grand County'],
+        cases
+      });
       return;
     }
     if (county === 'Southwest Utah') {
-      // ?
+      counties.push({
+        county: ['Beaver County', 'Garfield County', 'Iron County', 'Kane County', 'Washington County'],
+        cases
+      });
       return;
     }
     if (county === 'Central Utah') {
-      // ?
+      counties.push({
+        county: ['Juab County', 'Millard County', 'Piute County', 'Sanpete County', 'Sevier County', 'Wayne County'],
+        cases
+      });
       return;
     }
     if (county === 'Bear River') {
       counties.push({
-        county: 'Box Elder, Cache, & Rich Counties',
-        cases,
-        feature: geography.generateMultiCountyFeature(['Box Elder County, UT', 'Cache County, UT', 'Rich County, UT'], {
-          state: 'UT',
-          country: 'USA'
-        })
+        county: ['Box Elder County', 'Cache County', 'Rich County'],
+        cases
       });
       return;
     }

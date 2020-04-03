@@ -1,14 +1,54 @@
 ﻿[
+  { "name": "Anchorage Economic Region, AK, USA", "county": ["Anchorage Municipality"], "cases": 17 },
   {
-    "county": "Anchorage Economic Region",
-    "cases": 17,
-    "population": 294356
+    "name": "Gulf Coast Economic Region, AK, USA",
+    "county": ["Valdez-Cordova Census Area", "Kodiak Island Borough", "Kenai Peninsula Borough"],
+    "cases": 4
   },
-  { "county": "Gulf Coast Economic Region", "cases": 4, "population": 80866 },
-  { "county": "Interior Economic Region", "cases": 9, "population": 109847 },
-  { "county": "Mat-Su Economic Region", "cases": 2, "population": 107610 },
-  { "county": "Northern Economic Region", "cases": 0, "population": 27432 },
-  { "county": "Southeast Economic Region", "cases": 10, "population": 72373 },
-  { "county": "Southwest Economic Region", "cases": 0, "population": 42206 },
+  {
+    "name": "Interior Economic Region, AK, USA",
+    "county": [
+      "Denali Borough",
+      "Yukon-Koyukuk Census Area",
+      "Southeast Fairbanks Census Area",
+      "Fairbanks North Star Borough"
+    ],
+    "cases": 9
+  },
+  { "name": "Mat-Su Economic Region, AK, USA", "county": ["Matanuska-Susitna Borough"], "cases": 2 },
+  {
+    "name": "Northern Economic Region, AK, USA",
+    "county": ["Northwest Arctic Borough", "Nome Census Area", "North Slope Borough"],
+    "cases": 0
+  },
+  {
+    "name": "Southeast Economic Region, AK, USA",
+    "county": [
+      "Yakutat City and Borough",
+      "Skagway Municipality",
+      "Hoonah-Angoon Census Area",
+      "Wrangell City and Borough",
+      "Haines Borough",
+      "Petersburg Borough",
+      "Prince of Wales-Hyder Census Area",
+      "Sitka City and Borough",
+      "Ketchikan Gateway Borough",
+      "Juneau City and Borough"
+    ],
+    "cases": 10
+  },
+  {
+    "name": "Southwest Economic Region, AK, USA",
+    "county": [
+      "Bristol Bay Borough",
+      "Lake and Peninsula Borough",
+      "Aleutians East Borough",
+      "Dillingham Census Area",
+      "Aleutians West Census Area",
+      "Kusilvak Census Area",
+      "Bethel Census Area"
+    ],
+    "cases": 0
+  },
   { "cases": 42 }
 ]

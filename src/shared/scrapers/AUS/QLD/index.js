@@ -21,7 +21,7 @@ const scraper = {
       url: 'https://www.health.qld.gov.au'
     }
   ],
-  state: 'Queensland',
+  state: 'iso2:AU-QLD',
   type: 'paragraph',
   url: 'https://www.health.qld.gov.au/news-events/doh-media-releases',
   scraper: {

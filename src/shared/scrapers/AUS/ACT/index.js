@@ -37,7 +37,7 @@ const scraper = {
       url: 'https://www.health.act.gov.au'
     }
   ],
-  state: 'Australian Capital Territory',
+  state: 'iso2:AU-ACT',
   type: 'table',
   url: 'https://www.covid19.act.gov.au/updates/confirmed-case-information',
   scraper: {

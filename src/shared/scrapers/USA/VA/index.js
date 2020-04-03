@@ -280,6 +280,13 @@ const scraper = {
             county: name,
             cases: parse.number(location['Total Cases'])
           });
+        } else if (this._citiesAScounties.includes(location.Locality.replace(' city', ''))) {
+          location.Locality.replace(' city', ' City');
+          const name = parse.string(location.Locality);
+          counties.push({
+            county: name,
+            cases: parse.number(location['Total Cases'])
+          });
         } else {
           const name = parse.string(geography.addCounty(location.Locality));
           counties.push({
