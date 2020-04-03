@@ -55,7 +55,11 @@ const scraper = {
       let county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
       const cases = parse.number($tr.find('> *:nth-child(2)').text());
       const recovered = parse.number(parse.string($tr.find('> *:nth-child(3)').text()) || 0);
-      const deaths = parse.number(parse.string($tr.find('> *:nth-child(4)').text()));
+      if (datetime.scrapeDateIsBefore('2020-04-02')) {
+        const deaths = parse.number(parse.string($tr.find('> *:nth-child(4)').text()) || 0);
+        } else {
+        const deaths = parse.number(parse.string($tr.find('> *:nth-child(5)').text()) || 0);
+        }
 
       if (county === 'Unknown County') {
         county = UNASSIGNED;
