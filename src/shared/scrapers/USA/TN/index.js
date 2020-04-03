@@ -118,15 +118,13 @@ const scraper = {
     'Wilson County'
   ],
   _good_headers(data) {
-    const countyHeader = parse.string(data[0][0]);
-    const validCountyHeaders = ['Patient county name', 'County', ''];
-    if (validCountyHeaders.indexOf(countyHeader) === -1) {
+    if (parse.string(data[0][0]) !== 'Patient county name' && parse.string(data[0][0]) !== 'County') {
       return false;
     }
-    if (['Positive', 'positives'].indexOf(parse.string(data[1][0])) === -1) {
+    if (parse.string(data[1][0]) !== 'Positive') {
       return false;
     }
-    if (['Negative', 'negatives'].indexOf(parse.string(data[2][0])) === -1) {
+    if (parse.string(data[2][0]) !== 'Negative') {
       return false;
     }
     return true;
