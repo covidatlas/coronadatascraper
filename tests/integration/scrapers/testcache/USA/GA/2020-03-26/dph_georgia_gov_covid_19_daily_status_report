@@ -1,0 +1,1732 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5360c08ecf",applicationID:"99788169"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2982645-7"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-2982645-7", {"groups":"default","anonymize_ip":true});gtag("config", "UA-24934301-1", {"groups":"default","anonymize_ip":true});</script>
+<meta name="title" content="COVID-19 Daily Status Report | Georgia Department of Public Health" />
+<link rel="canonical" href="https://dph.georgia.gov/covid-19-daily-status-report" />
+<meta property="og:site_name" content="Georgia Department of Public Health" />
+<link rel="shortlink" href="https://dph.georgia.gov/node/30571" />
+<meta name="twitter:card" content="summary" />
+<meta name="description" content="Report For: 03/26/2020 (7:00 pm)
+*Note: To ensure the most updated version of this webpage, please refresh your browser.*
+To ensure that the numbers being provided through the COVID-19 data tool are the most current numbers available, the updates are done at NOON and 7:00 pm every day.
+These data represent confirmed cases of COVID-19 reported to the Georgia Department of Public Health as of 7:00pm 03/26/2020. A confirmed case is defined as a person who has tested positive for 2019 novel coronavirus.
+ " />
+<meta name="twitter:title" content="Georgia Department of Public Health COVID-19 Daily Status Report" />
+<meta name="twitter:site" content="@GaDPH" />
+<meta name="twitter:description" content="Report For: 03/26/2020 (7:00 pm)
+*Note: To ensure the most updated version of this webpage, please refresh your browser.*
+To ensure that the numbers being provided through the COVID-19 data tool are the most current numbers available, the updates are done at NOON and 7:00 pm every day.
+These data represent confirmed cases of COVID-19 reported to the Georgia Department of Public Health as of 7:00pm 03/26/2020. A confirmed case is defined as a person who has tested positive for 2019 novel coronavirus.
+ " />
+<meta property="og:url" content="https://dph.georgia.gov/covid-19-daily-status-report" />
+<meta property="og:title" content="Georgia Department of Public Health COVID-19 Daily Status Report" />
+<meta name="twitter:url" content="https://dph.georgia.gov/covid-19-daily-status-report" />
+<meta property="og:description" content="Report For: 03/26/2020 (7:00 pm)
+*Note: To ensure the most updated version of this webpage, please refresh your browser.*
+To ensure that the numbers being provided through the COVID-19 data tool are the most current numbers available, the updates are done at NOON and 7:00 pm every day.
+These data represent confirmed cases of COVID-19 reported to the Georgia Department of Public Health as of 7:00pm 03/26/2020. A confirmed case is defined as a person who has tested positive for 2019 novel coronavirus.
+ " />
+<meta name="twitter:image" content="https://dph.georgia.gov/themes/custom/ga_forest/assets/images/social/pillars-placeholder-wide-stars-stripes-1.png" />
+<meta property="og:image" content="https://dph.georgia.gov/themes/custom/ga_forest/assets/images/social/pillars-placeholder-wide-stars-stripes-1.png" />
+<meta property="og:image:width" content="1201" />
+<meta property="og:image:height" content="629" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="ga:citation:metadata" last_updated="1585263910" internal_url="node/30571" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Georgia Department of Public Health COVID-19 Daily Status Report",
+            "name": "Georgia Department of Public Health COVID-19 Daily Status Report",
+            "description": "These data represent confirmed cases of COVID-19 reported to the Georgia Department of Public Health.",
+            "datePublished": "2020-03-13T14:23:00-0400",
+            "dateModified": "2020-03-26T19:05:10-0400",
+            "author": {
+                "@type": "Organization",
+                "name": "Georgia Department of Public Health",
+                "url": "https://dph.georgia.gov/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://dph.georgia.gov/themes/custom/ga_forest/orchard/assets/images/icons/logo/ga-logo--gold.svg",
+                    "width": "80",
+                    "height": "90"
+                }
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Georgia Department of Public Health",
+                "url": "https://dph.georgia.gov/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://dph.georgia.gov/themes/custom/ga_forest/orchard/assets/images/icons/logo/ga-logo--gold.svg",
+                    "width": "80",
+                    "height": "90"
+                }
+            },
+            "mainEntityOfPage": "https://dph.georgia.gov/covid-19-daily-status-report"
+        },
+        {
+            "@type": "ItemPage",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://dph.georgia.gov/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Georgia Department of Public Health COVID-19 Daily Status Report",
+                        "item": "https://dph.georgia.gov/covid-19-daily-status-report"
+                    }
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Georgia Department of Public Health",
+                "url": "https://dph.georgia.gov/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://dph.georgia.gov/themes/custom/ga_forest/orchard/assets/images/icons/logo/ga-logo--gold.svg",
+                    "width": "80",
+                    "height": "90"
+                }
+            }
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="https://dph.georgia.gov/covid-19-daily-status-report" />
+
+    <title>COVID-19 Daily Status Report | Georgia Department of Public Health</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font preload -->
+    <link rel="preload" href="/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_0_0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_1_0.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inline font styles -->
+    <style type="text/css">
+      @charset "UTF-8";
+/* Import the variables */
+/* Color palette variables
+   ========================================================================== */
+/* Font stack variables
+   ========================================================================== */
+/* Spacer variables
+   ========================================================================== */
+/* Text size variables
+   ========================================================================== */
+/* Type style variables
+   ========================================================================== */
+/* Import the functions */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3639026, 2018-09-10T15:17:38-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: ProximaNova-Regular by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ *
+ * Webfont: ProximaNova-Semibold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3639026
+ * Licensed pageviews: 30,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ *
+ * © 2018 MyFonts Inc
+*/
+/* @import must be at top of file, otherwise CSS will not work
+  ... unless you load this asynchronously with JS, as we are doing.
+  @import url('//hello.myfonts.net/count/3786f2');
+*/
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_0_0.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_0_0.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  font-style: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_1_0.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/proxima-nova/3786F2_1_0.woff") format("woff"); }
+
+/* Import the variables */
+/* Color palette variables
+   ========================================================================== */
+/* Font stack variables
+   ========================================================================== */
+/* Spacer variables
+   ========================================================================== */
+/* Text size variables
+   ========================================================================== */
+/* Type style variables
+   ========================================================================== */
+/* Import the functions */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-ExtraLight.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-ExtraLight.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-ExtraLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-ExtraLightIt.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-ExtraLightIt.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-ExtraLightIt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Light.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-Light.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-LightIt.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-LightIt.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-LightIt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Regular.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-Regular.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-It.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-It.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-It.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Semibold.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-Semibold.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Semibold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-SemiboldIt.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-SemiboldIt.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-SemiboldIt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Bold.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-Bold.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-BoldIt.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-BoldIt.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-BoldIt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-Black.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-Black.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff2/SourceSerifPro-BlackIt.woff2") format("woff2"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/woff/SourceSerifPro-BlackIt.woff") format("woff"), url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/ttf/SourceSerifPro-BlackIt.ttf") format("truetype"); }
+
+/* Variable Fonts */
+@font-face {
+  font-family: 'Source Serif Pro VF';
+  font-weight: 200 900;
+  /* default: 389 */
+  font-style: normal;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/var/SourceSerifVariable-Roman.woff2") format("woff2-variations"); }
+
+@font-face {
+  font-family: 'Source Serif Pro VF';
+  font-weight: 200 900;
+  /* default: 389 */
+  font-style: italic;
+  font-stretch: normal;
+  src: url("/themes/custom/ga_forest/orchard/assets/fonts/source-serif-pro/var/SourceSerifVariable-Italic.woff2") format("woff2-variations"); }
+/*# sourceMappingURL=fonts.css.map */    </style>
+
+    <link rel="stylesheet" media="all" href="/sites/dph.georgia.gov/files/css/css_9VvI82URCC-qIz1utMQmsOQyJ07kr_ENYJx5_TkGSAo.css?q7sqmf" />
+<link rel="stylesheet" media="all" href="//cloud.typenetwork.com/projects/2738/fontface.css" />
+<link rel="stylesheet" media="all" href="/sites/dph.georgia.gov/files/css/css_dCSOPSLGH4fgH40QftZDbLmojEtL_SN3nQYef3QC4KM.css?q7sqmf" />
+
+
+    <!-- Inline preferred font loader js -->
+    <script>
+      "use strict";(function(doc){var docEl=doc.documentElement,rootClasses=docEl.classList,activateFonts=function activateFonts(){rootClasses.add("fonts-active");rootClasses.remove("fonts-inactive")},fallbackLoader="/themes/custom/ga_forest/orchard/dist/js/ga-font-loader-fallback.min.js";rootClasses.add("fonts-inactive");// Check session storage to see if fonts are loaded.
+if(sessionStorage.gaFontsLoaded){activateFonts()}// Use CSS Font Loading API if available.
+else if("fonts"in doc){Promise.all([doc.fonts.load("389 1em 'Source Serif Pro VF'"),doc.fonts.load("italic 389 1em 'Source Serif Pro VF'"),doc.fonts.load("400 1em 'Proxima Nova'"),doc.fonts.load("600 1em 'Proxima Nova'")]).then(function(){activateFonts();// Store loading status for future page loads.
+sessionStorage.gaFontsLoaded=true})}// Load FontFaceObserver if CSS Font Loading API is not available.
+else{var ref=doc.getElementsByTagName("script")[0];var script=doc.createElement("script");script.src=fallbackLoader;script.async=true;ref.parentNode.insertBefore(script,ref)}})(document);
+    </script>
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/dph.georgia.gov/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="mq-breakpoints--hide path-node page-node-type-topic-page u-palette--stars-stripes">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page js-menu-screen-overlay">
+  <div class="page__header">
+          <header>
+  <div class="header-top-hat" data-swatch-role="header-top-hat" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-top-hat__inner">
+    <div class="header-official-site">
+  <div class="header-official-site__description">
+    <span class="header-official-site__description-icon">
+      <img class="header-official-site__description-icon-image" src="/themes/custom/ga_forest/orchard/assets/images/icons/flag/ga-flag.svg" alt="Georgia State Flag" />
+    </span>
+    <p class="header-official-site__description-text">
+      <span class="header-official-site__description-text-content">An official website of the State of Georgia government.</span>
+      <a href="#" class="header-official-site__link">
+        <span class="header-official-site__link-text">Here’s how you know</span><img class="header-official-site__link-image" src="/themes/custom/ga_forest/orchard/assets/images/icons/arrows/short-down/arrow-short-down--white.svg" />
+      </a>
+    </p>
+  </div>
+</div>
+    <div class="header-utility-wide">
+  
+    <a id="block-googletranslator" href="#" class="notranslate google-translator-switch header-utility-wide__language-selector">
+  <span class="header-utility-wide__language-selector-image">
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="19px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title">
+  <title id="title" lang="en">Translate website</title>
+  <g>
+    <path d="M24.33,4.17 C24.994621,4.83810223 25.5940018,5.56807445 26.12,6.35 C26.6350967,7.12058729 27.0706615,7.94145943 27.42,8.8 C27.7723373,9.6560377 28.0435272,10.5432641 28.23,11.45 C28.6033333,13.298 28.6033333,15.202 28.23,17.05 C28.0435272,17.9567359 27.7723373,18.8439623 27.42,19.7 C27.0688291,20.5576831 26.6333593,21.3783761 26.12,22.15 C25.5964154,22.9306385 24.9968239,23.6575175 24.33,24.32 C23.6653853,24.9844812 22.9387439,25.5838766 22.16,26.11 C21.3884495,26.6262553 20.5678002,27.0650515 19.71,27.42 C18.8513525,27.7722346 17.9604959,28.0401614 17.05,28.22 C15.200699,28.5800881 13.299301,28.5800881 11.45,28.22 C10.5424078,28.0415302 9.65473659,27.773554 8.8,27.42 C7.94119967,27.0671701 7.12034398,26.6282636 6.35,26.11 C5.56807445,25.5840018 4.83810223,24.984621 4.17,24.32 C2.84714532,22.9974145 1.79723365,21.4276437 1.08,19.7 C0.718670596,18.8472053 0.447204201,17.9590745 0.27,17.05 C-0.0900880855,15.200699 -0.0900880855,13.299301 0.27,11.45 C0.447204201,10.5409255 0.718670596,9.65279471 1.08,8.8 C1.43282993,7.94119967 1.87173644,7.12034398 2.39,6.35 C3.43726264,4.75837677 4.79837677,3.39726264 6.39,2.35 C7.14931404,1.8479359 7.95660835,1.42251525 8.8,1.08 C9.65279471,0.718670596 10.5409255,0.447204201 11.45,0.27 C13.299301,-0.0900880855 15.200699,-0.0900880855 17.05,0.27 C17.9619779,0.448547171 18.8532883,0.719961226 19.71,1.08 C20.5678002,1.43494852 21.3884495,1.87374468 22.16,2.39 C22.9385594,2.91261692 23.6652175,3.50867747 24.33,4.17 Z M6,13.49 C6,13.09 6,12.69 6.07,12.3 C6.14,11.91 6.14,11.51 6.19,11.13 C6.24,10.75 6.29,10.36 6.36,9.98 C6.43,9.6 6.5,9.24 6.58,8.88 C6.32,8.98 6.06,9.1 5.81,9.22 L5.06,9.59 C4.59659888,9.85181405 4.1521707,10.1458718 3.73,10.47 C3.36739089,10.7543498 3.03255923,11.0724398 2.73,11.42 C2.45354158,11.7278426 2.20896107,12.0628844 2,12.42 C1.81704945,12.7525654 1.68236546,13.109478 1.6,13.48 L6,13.49 Z M6,15 L1.58,15 C1.66745432,15.3719573 1.80895844,15.7290867 2,16.06 C2.2093581,16.4168554 2.45391047,16.7518586 2.73,17.06 C3.03013691,17.4249543 3.36504573,17.7598631 3.73,18.06 C4.15482515,18.377354 4.59901984,18.6679174 5.06,18.93 C5.3,19.06 5.55,19.19 5.81,19.31 C6.07,19.43 6.32,19.54 6.58,19.64 C6.5,19.28 6.43,18.91 6.36,18.54 C6.29,18.17 6.24,17.78 6.19,17.4 C6.14,17.02 6.1,16.62 6.07,16.22 C6.04,15.82 6,15.4 6,15 Z M9.67,2.34 C8.84033725,2.67551895 8.04358997,3.0872833 7.29,3.57 C6.57186518,4.06195986 5.90217943,4.62114745 5.29,5.24 C4.00678407,6.48932675 3.00749019,8.00020453 2.36,9.67 C2.649323,9.40557476 2.95673549,9.16164963 3.28,8.94 C3.6218041,8.70506997 3.97561708,8.48810919 4.34,8.29 C4.76,8.06 5.2,7.84 5.66,7.64 C6.12,7.44 6.6,7.26 7.09,7.09 C7.26,6.59 7.44,6.09 7.64,5.65 C7.84,5.21 8.06,4.76 8.29,4.34 C8.52,3.92 8.73,3.6 9,3.27 C9.20512929,2.94728285 9.42883976,2.63675937 9.67,2.34 Z M2.36,18.82 C2.67845382,19.6537044 3.08403492,20.4514589 3.57,21.2 C4.0541328,21.9424231 4.61377888,22.632765 5.24,23.26 C5.86535309,23.8842795 6.55217343,24.4437868 7.29,24.93 C8.03714743,25.4210794 8.83509844,25.8301131 9.67,26.15 C9.42883976,25.8532406 9.20512929,25.5427172 9,25.22 C8.77,24.89 8.55,24.54 8.33,24.16 C8.11,23.78 7.88,23.3 7.68,22.84 C7.48,22.38 7.3,21.9 7.13,21.4 C6.64,21.24 6.13,21.05 5.7,20.85 C5.27,20.65 4.8,20.43 4.38,20.2 C4.0135253,20.0055315 3.65950779,19.7884453 3.32,19.55 C2.98298199,19.3298983 2.66216121,19.0859408 2.36,18.82 Z M13.51,7.51 C13.04,7.51 12.58,7.51 12.13,7.59 C11.68,7.67 11.24,7.68 10.8,7.75 L9.52,8 C9.1,8.09 8.69,8.19 8.29,8.31 C8.17,8.71 8.07,9.12 7.98,9.54 C7.89,9.96 7.82,10.39 7.76,10.82 C7.7,11.25 7.64,11.7 7.6,12.15 C7.56,12.6 7.52,13.05 7.51,13.51 L13.51,13.51 L13.51,7.51 Z M7.51,15 C7.51,15.46 7.51,15.91 7.6,16.36 C7.69,16.81 7.69,17.25 7.76,17.69 C7.83,18.13 7.9,18.55 8,19 C8.1,19.45 8.19,19.83 8.31,20.23 C8.71,20.35 9.12,20.45 9.54,20.54 C9.96,20.63 10.39,20.7 10.82,20.77 C11.25,20.84 11.7,20.89 12.15,20.93 C12.6,20.97 13,21 13.51,21 L13.51,15 L7.51,15 Z M13.51,1.58 C13.1360334,1.66145587 12.7756931,1.79616251 12.44,1.98 C12.075362,2.17322533 11.7389029,2.4154759 11.44,2.7 C11.0951346,3.00536194 10.7772869,3.3399385 10.49,3.7 C10.1657153,4.11784508 9.87798731,4.56281976 9.63,5.03 C9.48609545,5.26908443 9.35588578,5.51614893 9.24,5.77 C9.12,6.03 9,6.29 8.9,6.55 C9.26,6.46 9.63,6.39 10,6.32 L11.15,6.16 L12.32,6.03 C12.72,6.03 13.12,5.98 13.53,5.97 L13.51,1.58 Z M13.51,22.49 C13.1,22.49 12.7,22.49 12.3,22.43 C11.9,22.37 11.52,22.36 11.13,22.31 C10.74,22.26 10.36,22.2 9.98,22.13 C9.6,22.06 9.24,21.99 8.88,21.9 C8.98,22.17 9.1,22.44 9.22,22.69 C9.34,22.94 9.47,23.19 9.61,23.42 C9.85327538,23.8930716 10.1412541,24.3417826 10.47,24.76 C10.7547985,25.1222212 11.0728502,25.4570125 11.42,25.76 C11.7216725,26.0383666 12.0577368,26.2769723 12.42,26.47 C12.7556931,26.6538375 13.1160334,26.7885441 13.49,26.87 L13.51,22.49 Z M15,6 C15.4,6 15.8,6 16.19,6.06 L17.37,6.19 L18.51,6.35 C18.88,6.42 19.26,6.49 19.63,6.58 C19.51,6.32 19.39,6.06 19.28,5.8 C19.17,5.54 19,5.3 18.9,5.07 C18.6282229,4.60820961 18.3276277,4.16399678 18,3.74 C17.6968408,3.37779971 17.3622003,3.04315918 17,2.74 C16.6992706,2.45768605 16.3631213,2.21565858 16,2.02 C15.6889008,1.82725711 15.3522823,1.67914495 15,1.58 L15,6 Z M21,13.48 C21,13.02 21,12.57 20.91,12.12 C20.82,11.67 20.82,11.23 20.76,10.79 C20.7,10.35 20.62,9.93 20.53,9.51 C20.44,9.09 20.33,8.68 20.21,8.28 C19.81,8.16 19.4,8.06 18.99,7.97 L17.7,7.75 C17.26,7.68 16.81,7.63 16.36,7.59 C15.91,7.55 15.46,7.52 15,7.51 L15,13.51 L21,13.48 Z M15,21 C15.46,21 15.91,21 16.36,20.91 C16.81,20.82 17.26,20.82 17.7,20.75 C18.14,20.68 18.56,20.61 18.98,20.52 C19.4,20.43 19.8,20.33 20.2,20.21 C20.32,19.81 20.42,19.4 20.52,18.98 C20.62,18.56 20.69,18.13 20.75,17.7 C20.81,17.27 20.86,16.82 20.9,16.37 C20.94,15.92 21,15.46 21,15 L15,15 L15,21 Z M15,26.92 C15.3708792,26.8388362 15.7279603,26.7040886 16.06,26.52 C16.4207831,26.3245862 16.7565628,26.0861827 17.06,25.81 C17.424535,25.5094012 17.7594012,25.174535 18.06,24.81 C18.3818387,24.3848305 18.672593,23.937002 18.93,23.47 C19.06,23.24 19.19,22.99 19.31,22.74 C19.43,22.49 19.55,22.22 19.66,21.95 C19.29,22.04 18.91,22.12 18.54,22.18 C18.17,22.24 17.78,22.31 17.4,22.36 C17.02,22.41 16.62,22.45 16.22,22.48 C15.82,22.51 15.43,22.53 15.03,22.54 L15,26.92 Z M26.15,9.67 C25.8321531,8.83418947 25.4230084,8.03602186 24.93,7.29 C24.4459563,6.56590536 23.886129,5.8954534 23.26,5.29 C22.6352484,4.64633828 21.9448174,4.06986196 21.2,3.57 C20.453366,3.08737994 19.6632643,2.67558963 18.84,2.34 C19.08,2.63 19.32,2.93 19.55,3.27 C19.7882726,3.61506745 20.0085659,3.97220973 20.21,4.34 C20.44,4.76 20.65,5.2 20.85,5.65 C21.0573339,6.12048603 21.2408986,6.60109186 21.4,7.09 C21.9,7.26 22.4,7.44 22.84,7.64 C23.28,7.84 23.74,8.06 24.16,8.29 C24.5243829,8.48810919 24.8781959,8.70506997 25.22,8.94 C25.5464539,9.16160872 25.8571949,9.40552368 26.15,9.67 Z M18.84,26.15 C20.4955429,25.4992187 21.9999111,24.5155933 23.26,23.26 C23.8891054,22.635367 24.4490096,21.9447068 24.93,21.2 C25.4230084,20.4539781 25.8321531,19.6558105 26.15,18.82 C25.8571949,19.0844763 25.5464539,19.3283913 25.22,19.55 C24.8804922,19.7884453 24.5264747,20.0055315 24.16,20.2 C23.74,20.43 23.3,20.65 22.84,20.85 C22.369514,21.0573339 21.8889081,21.2408986 21.4,21.4 C21.2408986,21.8889081 21.0573339,22.369514 20.85,22.84 C20.65,23.3 20.44,23.74 20.21,24.16 C20.0085449,24.5245479 19.7882467,24.8783601 19.55,25.22 C19.32,25.56 19.08,25.86 18.84,26.15 Z M22.49,13.49 L26.92,13.49 C26.8417217,13.1182717 26.7068157,12.7607708 26.52,12.43 C26.3180033,12.0708848 26.0765044,11.7354697 25.8,11.43 C25.4970125,11.0828502 25.1622212,10.7647985 24.8,10.48 C24.3829563,10.1536121 23.9416826,9.8594296 23.48,9.6 L22.73,9.23 C22.48,9.11 22.21,8.99 21.94,8.89 C22.03,9.25 22.11,9.62 22.17,9.99 C22.23,10.36 22.3,10.75 22.35,11.14 C22.4,11.53 22.44,11.91 22.47,12.31 C22.5,12.71 22.48,13.09 22.49,13.49 Z M22.49,15 C22.49,15.4 22.49,15.8 22.43,16.19 C22.37,16.58 22.36,16.98 22.31,17.37 C22.26,17.76 22.2,18.13 22.13,18.51 C22.06,18.89 21.99,19.25 21.9,19.61 C22.17,19.51 22.44,19.39 22.69,19.28 L23.44,18.9 C23.9001436,18.6306655 24.3411876,18.3299537 24.76,18 C25.124535,17.6994012 25.4594012,17.364535 25.76,17 C26.0361182,16.6942183 26.2775848,16.3588479 26.48,16 C26.6682928,15.669922 26.8032883,15.3121841 26.88,14.94 L22.49,15 Z"></path>
+  </g>
+</svg>
+  </span>
+  <span class="header-utility-wide__language-selector-text">Language: English</span>
+</a>
+
+  
+
+
+  <a class="header-utility-wide__agency-selector" href="https://georgia.gov/agency-list">
+    <span class="header-utility-wide__agency-selector-image">
+      <?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="19px" viewBox="0 0 29 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M0.617419355,3.59225806 C0.216776503,3.20566764 -0.00660702525,2.67090101 -5.68317041e-13,2.11419355 C-0.0106802799,1.55123316 0.212938939,1.00912596 0.617419355,0.617419355 C1.00912596,0.212938939 1.55123316,-0.0106802799 2.11419355,1.39428399e-16 C2.67090101,-0.00660702525 3.20566764,0.216776503 3.59225806,0.617419355 C3.99673848,1.00912596 4.2203577,1.55123316 4.20967742,2.11419355 C4.21628444,2.67090101 3.99290092,3.20566764 3.59225806,3.59225806 C3.20566764,3.99290092 2.67090101,4.21628444 2.11419355,4.20967742 C1.55123316,4.2203577 1.00912596,3.99673848 0.617419355,3.59225806 Z M0.617419355,10.6083871 C-0.2033369,9.78660882 -0.2033369,8.45532666 0.617419355,7.63354839 C1.00912596,7.22906797 1.55123316,7.00544875 2.11419355,7.01612903 C2.67090101,7.00952201 3.20566764,7.23290554 3.59225806,7.63354839 C4.41301432,8.45532666 4.41301432,9.78660882 3.59225806,10.6083871 C3.20566764,11.0090299 2.67090101,11.2324135 2.11419355,11.2258065 C1.55123316,11.2364867 1.00912596,11.0128675 0.617419355,10.6083871 Z M0.617419355,17.6245161 C-0.2033369,16.8027379 -0.2033369,15.4714557 0.617419355,14.6496774 C1.00912596,14.245197 1.55123316,14.0215778 2.11419355,14.0322581 C2.67090101,14.025651 3.20566764,14.2490346 3.59225806,14.6496774 C4.41301432,15.4714557 4.41301432,16.8027379 3.59225806,17.6245161 C3.20566764,18.025159 2.67090101,18.2485425 2.11419355,18.2419355 C1.55123316,18.2526158 1.00912596,18.0289965 0.617419355,17.6245161 Z M1.55290323,1.59967742 C1.41931181,1.73744669 1.34537146,1.92229758 1.34709677,2.11419355 C1.3476755,2.29738488 1.4218314,2.47266245 1.55290323,2.60064516 C1.69920772,2.7506635 1.9055909,2.82633733 2.11419355,2.80645161 C2.29827569,2.81036931 2.47526917,2.73548745 2.60064516,2.60064516 C2.73548745,2.47526917 2.81036931,2.29827569 2.80645161,2.11419355 C2.81248097,1.92151358 2.73789398,1.73504611 2.60064516,1.59967742 C2.47266245,1.46860559 2.29738488,1.39444969 2.11419355,1.39387097 C1.92229758,1.39214565 1.73744669,1.46608601 1.59967742,1.59967742 L1.55290323,1.59967742 Z M1.55290323,8.61580645 C1.41931181,8.75357573 1.34537146,8.93842661 1.34709677,9.13032258 C1.3476755,9.31351391 1.4218314,9.48879149 1.55290323,9.61677419 C1.68827192,9.75402301 1.87473939,9.82861 2.06741935,9.82258065 C2.25150149,9.82649834 2.42849498,9.75161648 2.55387097,9.61677419 C2.70614804,9.50019665 2.79870255,9.32194352 2.80645161,9.13032258 C2.81248097,8.93764262 2.73789398,8.75117515 2.60064516,8.61580645 C2.47111864,8.48816631 2.29603284,8.41745858 2.11419355,8.41935484 C1.92361093,8.41511543 1.73893664,8.48562743 1.59967742,8.61580645 L1.55290323,8.61580645 Z M1.55290323,15.6319355 C1.41931181,15.7697048 1.34537146,15.9545556 1.34709677,16.1464516 C1.3476755,16.3296429 1.4218314,16.5049205 1.55290323,16.6329032 C1.68827192,16.770152 1.87473939,16.844739 2.06741935,16.8387097 C2.25150149,16.8426274 2.42849498,16.7677455 2.55387097,16.6329032 C2.70614804,16.5163257 2.79870255,16.3380726 2.80645161,16.1464516 C2.81248097,15.9537716 2.73789398,15.7673042 2.60064516,15.6319355 C2.47266245,15.5008637 2.29738488,15.4267078 2.11419355,15.426129 C1.92229758,15.4244037 1.73744669,15.4983441 1.59967742,15.6319355 L1.55290323,15.6319355 Z M6.31451613,2.80645161 C6.13043399,2.81036931 5.95344051,2.73548745 5.82806452,2.60064516 C5.6897622,2.47695514 5.61137492,2.29973173 5.61290323,2.11419355 C5.60687387,1.92151358 5.68146086,1.73504611 5.81870968,1.59967742 C5.94669239,1.46860559 6.12196996,1.39444969 6.30516129,1.39387097 L27.3535484,1.39387097 C27.539565,1.39403473 27.7179031,1.46806187 27.8493548,1.59967742 C27.9866037,1.73504611 28.0611906,1.92151358 28.0551613,2.11419355 C28.059079,2.29827569 27.9841971,2.47526917 27.8493548,2.60064516 C27.7204064,2.7359545 27.5404134,2.81066857 27.3535484,2.80645161 L6.31451613,2.80645161 Z M6.31451613,9.82258065 C5.93065011,9.82261477 5.61802144,9.51415448 5.61290323,9.13032258 C5.60687387,8.93764262 5.68146086,8.75117515 5.81870968,8.61580645 C5.95052102,8.48582921 6.12945195,8.41493205 6.31451613,8.41935484 L27.3629032,8.41935484 C27.5489198,8.4195186 27.727258,8.49354574 27.8587097,8.62516129 C27.9959585,8.76052998 28.0705455,8.94699745 28.0645161,9.13967742 C28.0684338,9.32375956 27.993552,9.50075304 27.8587097,9.62612903 C27.7297612,9.76143837 27.5497682,9.83615245 27.3629032,9.83193548 L6.31451613,9.82258065 Z M6.31451613,16.8387097 C5.93065011,16.8387438 5.61802144,16.5302835 5.61290323,16.1464516 C5.60687387,15.9537716 5.68146086,15.7673042 5.81870968,15.6319355 C5.94669239,15.5008637 6.12196996,15.4267078 6.30516129,15.426129 L27.3535484,15.426129 C27.539565,15.4262928 27.7179031,15.5003199 27.8493548,15.6319355 C27.9866037,15.7673042 28.0611906,15.9537716 28.0551613,16.1464516 C28.059079,16.3305338 27.9841971,16.5075272 27.8493548,16.6329032 C27.7204064,16.7682126 27.5404134,16.8429266 27.3535484,16.8387097 L6.31451613,16.8387097 Z"></path>
+</svg>
+    </span>
+    <span class="header-utility-wide__agency-selector-text">Organizations A-Z</span>
+  </a>
+</div>  </div>
+    
+<div class="header-official-site__information" aria-hidden="true">
+  <div class="header-official-site__information-official">
+    <strong>The .gov means it’s official.</strong>
+    <p>State government websites often end in .gov. Before sharing sensitive information, make sure you’re on a state website. Still not sure? Call 1-800-GEORGIA to verify that a website is an official website of the State of Georgia.</p>
+  </div>
+  <div class="header-official-site__information-secure">
+    <strong>The site is secure.</strong>
+    <p>The <strong>https://</strong> ensures that any information you provide is encrypted and transmitted securely.</p>
+  </div>
+</div>
+</div>
+      <div class="emergency-wrapper">
+      <div class="alert alert--emergency alert--hidden">
+                <div class="alert__icon-wrapper">
+            <img src="/themes/custom/ga_forest/orchard/assets/images/icons/alerts/alert-emergency.svg" class="alert__icon">
+          </div>
+        
+  <div class="alert__inner-wrapper">
+    <div class="alert__inner">
+                  <a href="#" class="alert__link--close">
+            <img src="/themes/custom/ga_forest/orchard/assets/images/icons/interaction/close/close--black.svg" class="alert__link--close-icon">
+          </a>
+        
+
+                <div class="alert__content">
+            <div class="alert__title-wrapper">
+              <div class="alert__type">emergency</div><div class="alert__colon">:</div>
+                          </div>
+
+                          <div class="alert__body">
+                
+                                                                </div>
+                      </div>
+        
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="header-branding-bar" data-swatch-role="header-branding" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-branding-bar__inner">
+      <div class="header-branding-lockup header-branding-lockup--dph">
+  <a class="header-branding-lockup__link" href="/" title="Georgia Department of Public Health">
+    <span class="header-branding-lockup__logo header-branding-lockup__logo--agency header-branding-lockup__logo--dph">
+      <img class="header-branding-lockup__logo-image" src="/themes/custom/ga_forest/orchard/assets/images/icons/logo/ga-logo--gold.svg" alt="" />
+    </span>
+    <span class="header-branding-lockup__wordmark header-branding-lockup__wordmark--agency header-branding-lockup__wordmark--dph">
+  <span class="header-branding-lockup__wordmark-text">
+    <span class="header-branding-lockup__wordmark-text-lines header-branding-lockup__wordmark-text-lines--two">
+      <strong>Georgia Department</strong><br />
+      <em>of</em><strong>&nbsp;Public Health</strong>
+    </span>
+    <span class="header-branding-lockup__wordmark-text-lines header-branding-lockup__wordmark-text-lines--two-wider">
+      <strong>Georgia Department&nbsp;</strong><em>of</em><br />
+      <strong>Public Health</strong>
+    </span>
+    <span class="header-branding-lockup__wordmark-text-lines header-branding-lockup__wordmark-text-lines--three">
+      <strong>Georgia</strong><br />
+      <strong>Department&nbsp;</strong><em>of</em><br />
+      <strong>Public Health</strong>
+    </span>
+    <span class="header-branding-lockup__wordmark-text-lines header-branding-lockup__wordmark-text-lines--four">
+      <strong>Georgia</strong><br />
+      <strong>Department&nbsp;</strong><br />
+      <em>of</em><strong> Public</strong><br />
+      <strong>Health</strong>
+    </span>
+  </span>
+</span>
+  </a>
+</div>
+              <div class="header-search-trigger">
+  <button class="header-search-trigger__button header-search-trigger__button--open">
+    <span class="header-search-trigger__button-icon">
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--light" src="/themes/custom/ga_forest/orchard/assets/images/icons/interaction/search/search--white.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--dark" src="/themes/custom/ga_forest/orchard/assets/images/icons/interaction/search/search--black.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--light-active" src="/themes/custom/ga_forest/orchard/assets/images/icons/interaction/search/search--gold.svg" alt="" />
+      <img class="header-search-trigger__button-image header-search-trigger__button-image--dark-active" src="/themes/custom/ga_forest/orchard/assets/images/icons/interaction/search/search--red.svg" alt="" />
+    </span>
+    <span class="header-search-trigger__button-text">Search</span>
+  </button>
+</div>
+        <div class="header-menu-trigger">
+  <button class="header-menu-trigger__button">
+    <!-- This span is being used to create the menu toggle button. -->
+    <span class="header-menu-trigger__button-icon">
+    </span>
+    <span class="header-menu-trigger__button-text header-menu-trigger__button-text--to-open">Menu</span>
+    <span class="header-menu-trigger__button-text header-menu-trigger__button-text--to-close">Close</span>
+  </button>
+</div>
+
+<div class="js-breakpoint-indicators"></div>
+  </div>
+</div>
+        <div class="header-search-bar" data-swatch-role="header-search-bar" data-swatch-type="global" data-swatch-text-type="dark-text">
+  <div class="header-search-bar__inner">
+        <div class="header-search-form">
+  <div class="header-search-form__button-wrapper">
+    <h2 class="header-search-form__header">Search this site</h2>
+
+    <div class="header-search-trigger header-search-trigger--close">
+      <button class="header-search-trigger__button header-search-trigger__button--close">
+        <span class="header-search-trigger__button-icon header-search-trigger__button-icon--close"></span>
+        <span class="header-search-trigger__button-text">Close</span>
+      </button>
+    </div>
+  </div>
+    <div>
+    <div class="js-search-api-federated-solr-block-form-autocomplete" id="block-federatedsearchpageformblock">
+  
+    
+      <form class="federated-search-page-block-form header-search-form__form" data-drupal-selector="federated-search-page-block-form" novalidate="novalidate" action="/search" method="get" id="federated-search-page-block-form" accept-charset="UTF-8">
+  <div class="header-search-form__form-input-wrapper">
+    <label for="edit-search" class="visually-hidden">Search</label>
+<input title="Enter the terms you wish to search for." placeholder="Search for topics, services, etc..." autocomplete="off" data-drupal-selector="edit-search" type="search" id="edit-search" name="search" value="" size="15" maxlength="128" class="form-search header-search-form__text-input" />
+
+<input data-drupal-selector="edit-sm-site-name" type="hidden" name="sm_site_name" value="dph" />
+<button data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="js-form-submit form-submit header-search-form__submit" />
+
+</div>
+
+</form>
+
+
+  </div>
+
+  </div>
+
+  <div class="header-search-form__popular-choice">
+    <h3 class="header-search-form__popular-choice-header">Popular searches</h3>
+    <ul class="header-search-form__popular-choice-list-items">
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Mission Statement</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Organization of the office</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">History</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Meeting Requests</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Key Staff</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Duties of the Office</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Event Requests</a></li>
+      <li class="header-search-form__popular-choice-list-item"><a href="#" class="header-search-form__popular-choice-link">Contact</a></li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+    <div class="header-site-nav-bar" data-swatch-role="header-site-nav" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="header-site-nav-bar__inner">
+    
+  
+  
+
+                      
+          <nav class="header-site-nav" role="navigation">
+        <ul class="header-site-nav__menu-item-list header-site-nav__menu-item-list--level-0">
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/about-dph">
+          <span class="header-site-nav__menu-item-link-text">
+            About DPH
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/about-dph/mission-and-values">
+          <span class="header-site-nav__menu-item-link-text">
+            Mission Statement
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/about-dph/commissioners-message">
+          <span class="header-site-nav__menu-item-link-text">
+            Commissioner&#039;s Message
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/about-dph/board-public-health">
+          <span class="header-site-nav__menu-item-link-text">
+            Board of Public Health
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/public-health-regulations">
+          <span class="header-site-nav__menu-item-link-text">
+            Public Health Regulations
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/institutional-review-board">
+          <span class="header-site-nav__menu-item-link-text">
+            Institutional Review Board
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/general-information-about-dph">
+          <span class="header-site-nav__menu-item-link-text">
+            General Information
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/LiveWellGA">
+          <span class="header-site-nav__menu-item-link-text">
+            Blog
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/about-dph/contact-dph">
+          <span class="header-site-nav__menu-item-link-text">
+            Contact DPH
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/lab">
+          <span class="header-site-nav__menu-item-link-text">
+            Georgia Public Health Laboratory
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/EMS">
+          <span class="header-site-nav__menu-item-link-text">
+            Emergency Medical Services
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/health-data-and-statistics">
+          <span class="header-site-nav__menu-item-link-text">
+            Health Data and Statistics
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/district-and-county-relations">
+          <span class="header-site-nav__menu-item-link-text">
+            District and County Relations
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/capitolhillfitness">
+          <span class="header-site-nav__menu-item-link-text">
+            Capitol Hill Fitness Center
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/health-topics">
+          <span class="header-site-nav__menu-item-link-text">
+            Health Topics
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/novelcoronavirus">
+          <span class="header-site-nav__menu-item-link-text">
+            Coronavirus (COVID-19)
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/AlzheimersDisease">
+          <span class="header-site-nav__menu-item-link-text">
+            Alzheimer&#039;s Disease
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/chronic-disease-prevention">
+          <span class="header-site-nav__menu-item-link-text">
+            Chronic Disease Prevention Section
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/health-topics/office-hivaids">
+          <span class="header-site-nav__menu-item-link-text">
+            HIV/AIDS
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/injury-prevention-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Injury Prevention Program
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/office-nursing">
+          <span class="header-site-nav__menu-item-link-text">
+            Nursing
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/stopopioidaddiction">
+          <span class="header-site-nav__menu-item-link-text">
+            Opioid and Substance Misuse Response
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/office-pharmacy">
+          <span class="header-site-nav__menu-item-link-text">
+            Pharmacy
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/refugee-health-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Refugee Health Program
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/STDs">
+          <span class="header-site-nav__menu-item-link-text">
+            STDs
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/health-topics/tuberculosis-tb-prevention-and-control">
+          <span class="header-site-nav__menu-item-link-text">
+            Tuberculosis (TB) Prevention and Control
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/VitalRecords">
+          <span class="header-site-nav__menu-item-link-text">
+            Vital Records
+          </span>
+        </a>
+                              
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--narrow" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/about-vital-records">
+          <span class="header-site-nav__menu-item-link-text">
+            About Vital Records
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/ways-request-vital-record">
+          <span class="header-site-nav__menu-item-link-text">
+            Ways to Request a Vital Record
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/VitalRecords/partners">
+          <span class="header-site-nav__menu-item-link-text">
+            SOVR Partners and Stakeholders
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/VR-Resources">
+          <span class="header-site-nav__menu-item-link-text">
+            Resources
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/quick-links-0">
+          <span class="header-site-nav__menu-item-link-text">
+            Quick Links
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/women-and-children">
+          <span class="header-site-nav__menu-item-link-text">
+            Women and Children
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--medium" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/WIC">
+          <span class="header-site-nav__menu-item-link-text">
+            Georgia WIC
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/childrens-health">
+          <span class="header-site-nav__menu-item-link-text">
+            Children&#039;s Health
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/georgia-shape-0">
+          <span class="header-site-nav__menu-item-link-text">
+            Georgia Shape
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/oralhealthprogramga">
+          <span class="header-site-nav__menu-item-link-text">
+            Oral Health Program in Georgia
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/womens-health">
+          <span class="header-site-nav__menu-item-link-text">
+            Women&#039;s Health
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/homevisiting">
+          <span class="header-site-nav__menu-item-link-text">
+            Home Visiting Program
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/immunization-section">
+          <span class="header-site-nav__menu-item-link-text">
+            Immunization
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-section/child-and-adolescent-immunizations">
+          <span class="header-site-nav__menu-item-link-text">
+            Child and Adolescent Immunizations
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-section/immunization-faq">
+          <span class="header-site-nav__menu-item-link-text">
+            Frequently Asked Questions
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/georgia-immunization-registry-grits">
+          <span class="header-site-nav__menu-item-link-text">
+            Georgia Immunization Registry (GRITS)
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-section/health-care-professionals">
+          <span class="header-site-nav__menu-item-link-text">
+            Health Care Professionals
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-publications">
+          <span class="header-site-nav__menu-item-link-text">
+            Immunization Publications
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-schedules">
+          <span class="header-site-nav__menu-item-link-text">
+            Immunization Schedules
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/related-links-1">
+          <span class="header-site-nav__menu-item-link-text">
+            Related Links
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/Vaccinate-teens">
+          <span class="header-site-nav__menu-item-link-text">
+            School Vaccines and Updates
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/immunization-section/travel-immunizations">
+          <span class="header-site-nav__menu-item-link-text">
+            Travel Immunizations
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/vaccine-safety">
+          <span class="header-site-nav__menu-item-link-text">
+            Vaccine Safety
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/vaccines-children-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Vaccines for Children
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/epidemiology">
+          <span class="header-site-nav__menu-item-link-text">
+            Epidemiology
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/acute-disease-epidemiology">
+          <span class="header-site-nav__menu-item-link-text">
+            Acute Disease Epidemiology
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/EIP">
+          <span class="header-site-nav__menu-item-link-text">
+            Emerging Infections Program (EIP)
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/viral-hepatitis">
+          <span class="header-site-nav__menu-item-link-text">
+            Viral Hepatitis
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology-emergency-preparedness">
+          <span class="header-site-nav__menu-item-link-text">
+            Epidemiology Emergency Preparedness
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/georgia-occupational-health-and-safety-surveillance-program">
+          <span class="header-site-nav__menu-item-link-text">
+            Occupational Health and Safety Surveillance
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/georgias-hivaids-epidemiology-section">
+          <span class="header-site-nav__menu-item-link-text">
+            HIV/AIDS Epidemiology Section
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/health-behavior-and-policy">
+          <span class="header-site-nav__menu-item-link-text">
+            Health Behaviors and Policies
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/disease-reporting">
+          <span class="header-site-nav__menu-item-link-text">
+            Disease Reporting
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/influenza">
+          <span class="header-site-nav__menu-item-link-text">
+            Influenza
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/stroke">
+          <span class="header-site-nav__menu-item-link-text">
+            Stroke
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/epidemiology/drug-surveillance-unit">
+          <span class="header-site-nav__menu-item-link-text">
+            Drug Surveillance Unit
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/PRAMS">
+          <span class="header-site-nav__menu-item-link-text">
+            Pregnancy Risk Assessment Monitoring System (PRAMS)
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-0
+      header-site-nav__menu-item--has-dropdown " aria-haspopup="true">
+        <a class="header-site-nav__menu-item-link" href="/environmental-health">
+          <span class="header-site-nav__menu-item-link-text">
+            Environmental Health
+          </span>
+        </a>
+                                        
+          <ul class="header-site-nav__menu-item-list
+      header-site-nav__menu-item-list--level-1 header-site-nav__menu-item-list--wide" >
+              <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/body-art">
+          <span class="header-site-nav__menu-item-link-text">
+            Body Art
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/chemical-hazards">
+          <span class="header-site-nav__menu-item-link-text">
+            Chemical Hazards
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/wastewater-management/environmental-health-education-and-training">
+          <span class="header-site-nav__menu-item-link-text">
+            Education and Training
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/emergency-preparedness">
+          <span class="header-site-nav__menu-item-link-text">
+            Environmental Health Emergency Preparedness
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/environmental-health-rules-and-regulations">
+          <span class="header-site-nav__menu-item-link-text">
+            Environmental Health Rules and Regulations
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/food-service">
+          <span class="header-site-nav__menu-item-link-text">
+            Food Service
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/healthy-homes-and-lead-poisoning-prevention">
+          <span class="header-site-nav__menu-item-link-text">
+            Healthy Homes and Lead
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/hotels-motels-and-campgrounds">
+          <span class="header-site-nav__menu-item-link-text">
+            Hotels, Motels and Campgrounds
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/EnvironmentalHealth">
+          <span class="header-site-nav__menu-item-link-text">
+            Mosquito-borne Illness
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/pools">
+          <span class="header-site-nav__menu-item-link-text">
+            Pools
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/rabies">
+          <span class="header-site-nav__menu-item-link-text">
+            Rabies
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/tanning">
+          <span class="header-site-nav__menu-item-link-text">
+            Tanning
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/wastewater-management">
+          <span class="header-site-nav__menu-item-link-text">
+            Wastewater Management
+          </span>
+        </a>
+              </li>
+          <li class="header-site-nav__menu-item
+      header-site-nav__menu-item--level-1 " >
+        <a class="header-site-nav__menu-item-link" href="/environmental-health/well-water">
+          <span class="header-site-nav__menu-item-link-text">
+            Well Water
+          </span>
+        </a>
+              </li>
+          </ul>
+      
+              </li>
+          </ul>
+          </nav>
+      
+
+
+
+    <div class="header-utility-narrow">Header Utility Narrow</div>
+  </div>
+</div>
+</header>
+      </div>
+  <div class="page__content" id="main-content">
+      
+      
+  
+  <div class="content-page" data-swatch-role="lighter-bg" data-swatch-type="functional" data-swatch-text-type="dark-text">
+
+  <div class="content-page__messages">
+        <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+  </div>
+
+  <div class="content-page__top">
+      
+  
+  
+    
+<nav class="breadcrumb">
+  <h2 class="breadcrumb__title visually-hidden">Breadcrumb</h2>
+  <ul class="breadcrumb__items">
+          <li class="breadcrumb__item">
+                              <a href="/" class="breadcrumb__link">
+              <span class="visually-hidden">Home</span>
+              
+                            <?xml version="1.0" encoding="UTF-8"?>
+              <svg class="breadcrumb__icon-image" width="29px" height="28px" fill="#000300" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M24.610423,27.7469443 L18.0961373,27.7469443 C17.5076201,27.7392503 17.0324028,27.264033 17.0247088,26.6755158 L17.0247088,20.6040872 L12.0247088,20.6040872 L12.0247088,26.6755158 C12.0170147,27.264033 11.5417974,27.7392503 10.9532802,27.7469443 L4.45328019,27.7469443 C3.86476295,27.7392503 3.38954563,27.264033 3.38185162,26.6755158 L3.38185162,16.5898015 C3.38185162,15.9980678 3.86154653,15.5183729 4.45328019,15.5183729 C5.04501385,15.5183729 5.52470876,15.9980678 5.52470876,16.5898015 L5.52470876,25.6040872 L9.88185162,25.6040872 L9.88185162,19.5326586 C9.88954563,18.9441414 10.364763,18.4689241 10.9532802,18.4612301 L18.0961373,18.4612301 C18.6846546,18.4689241 19.1598719,18.9441414 19.1675659,19.5326586 L19.1675659,25.6040872 L23.5389945,25.6040872 L23.5389945,16.5898015 C23.5389945,15.9980678 24.0186894,15.5183729 24.610423,15.5183729 C25.2021567,15.5183729 25.6818516,15.9980678 25.6818516,16.5898015 L25.6818516,26.6755158 C25.6741576,27.264033 25.1989403,27.7392503 24.610423,27.7469443 Z"></path>
+                <path d="M27.8961373,15.9469443 C27.5979319,15.9469805 27.3132027,15.822735 27.110423,15.6040872 L14.4675659,2.08980149 L1.95328019,15.6040872 C1.71635142,15.9473884 1.30171889,16.1219776 0.890584114,16.0515562 C0.479449342,15.9811349 0.146557289,15.6785058 0.03738749,15.2759229 C-0.0717823086,14.8733401 0.0626173909,14.4439938 0.381851615,14.1755158 L13.0247088,0.63265863 C13.4246143,0.227841413 13.969959,-3.46944695e-17 14.5389945,0 C15.10803,3.46944695e-17 15.6533746,0.227841413 16.0532802,0.63265863 L28.6675659,14.1469443 C28.8824183,14.3518353 29.0039948,14.6357717 29.0039948,14.9326586 C29.0039948,15.2295456 28.8824183,15.513482 28.6675659,15.7183729 C28.449185,15.8905469 28.1730635,15.9723607 27.8961373,15.9469443 Z"></path>
+              </svg>
+            </a>
+                        </li>
+          <li class="breadcrumb__item">
+                  Georgia Department of Public Health COVID-19 Daily Status Report
+              </li>
+      </ul>
+</nav>
+
+
+
+  </div>
+
+  <div class="content-page__mid">
+    <div class="content-page__mid-main">
+                  
+            
+      <div class="content-page__main-primary ">
+
+        <div class="content-page__main-top">
+                
+
+        </div>
+
+        <main class="content-page__main" role="main">
+                <div class="topic-top">
+  <h1 class="page-title__topic">      Georgia Department of Public Health COVID-19 Daily Status Report
+  </h1>
+    </div>
+              <div class="body-content body-content--offset">
+        <p>Report For: 03/26/2020 <strong>(7:00 pm)</strong></p>
+<p>*Note: To ensure the most updated version of this webpage, please refresh your browser.*</p>
+<p>To ensure that the numbers being provided through the COVID-19 data tool are the most current numbers available, the updates are done at <strong>NOON and 7:00 pm</strong> every day.</p>
+<p><em>These data represent confirmed cases of COVID-19 reported to the Georgia Department of Public Health as of 7:00pm 03/26/2020. A confirmed case is defined as a person who has tested positive for 2019 novel coronavirus.</em><br />
+ </p>
+<p>
+
+
+<article data-embed-button="image_media" data-entity-embed-display="view_mode:media.embedded" data-entity-embed-display-settings="full" data-entity-type="media" data-entity-uuid="009893ee-cfa4-489c-9706-03e3812bc978" data-langcode="en" class="embedded-entity embed embed--align-center embedded-entity--image"><img src="https://dph.georgia.gov/sites/dph.georgia.gov/files/styles/flexheight/public/2020-03/Screen%20Shot%202020-03-26%20at%206.39.45%20PM.png?itok=e0W9yjk1" width="800" height="930" alt="This map of Georgia shows the distribution of confirmed COVID-19 cases by county. The highest rates are in and around the metro Atlanta area, with a total of 487 confirmed cases across Fulton, DeKalb, and Cobb counties." typeof="foaf:Image" /></article><br /></p><table class="stacked-row-plus"><caption>Confirmed cases and deaths in Georgia.</caption>
+<thead><tr><th scope="col">COVID-19 Confirmed Cases</th>
+<th scope="col">No. Cases (%)</th>
+</tr></thead><tbody><tr><td>Total</td>
+<td>1643 (100%)</td>
+</tr><tr><td>Hospitalized</td>
+<td>509(30.98%)</td>
+</tr><tr><td>Deaths</td>
+<td>56 (3.41%)</td>
+</tr></tbody></table><p>
+
+
+<article data-embed-button="image_media" data-entity-embed-display="view_mode:media.embedded" data-entity-embed-display-settings="full" data-entity-type="media" data-entity-uuid="fa08c718-6fb1-4cb3-8f02-5256b3186027" data-langcode="en" class="embedded-entity embed embed--align-center embedded-entity--image"><img src="https://dph.georgia.gov/sites/dph.georgia.gov/files/styles/flexheight/public/2020-03/Screen%20Shot%202020-03-26%20at%206.39.59%20PM.png?itok=7dPR9iao" width="790" height="874" alt="This chart shows confirmed cases by age group: ages 0-17 make up 1% of cases, ages 18-59 make up 57% of cases, ages 60+ make up 35% of cases, and the remaining 7% of cases are of an unknown age. By sex: females make up 50% of cases, and males make up 46% of cases; 4% of cases are of an unknown sex." typeof="foaf:Image" /></article><br /></p><table class="stacked-row-plus"><caption>COVID-19 Testing by Lab</caption>
+<thead><tr><th scope="col">Lab</th>
+<th scope="col">Number of Positive Tests</th>
+<th scope="col">Total Tests</th>
+</tr></thead><tbody><tr><td>Commercial Lab</td>
+<td>1390</td>
+<td>7302</td>
+</tr><tr><td>GPHL</td>
+<td>253</td>
+<td>1646</td>
+</tr></tbody></table><p> </p>
+<table class="stacked-row-plus"><caption>COVID-19 Confirmed Cases by County</caption>
+<thead><tr><th scope="col">County</th>
+<th scope="col">Cases</th>
+</tr></thead><tbody><tr><td>Fulton</td>
+<td>231</td>
+</tr><tr><td>Dougherty</td>
+<td>164</td>
+</tr><tr><td>Dekalb</td>
+<td>137</td>
+</tr><tr><td>Cobb</td>
+<td>119</td>
+</tr><tr><td>Bartow</td>
+<td>93</td>
+</tr><tr><td>Gwinnett</td>
+<td>79</td>
+</tr><tr><td>Carroll</td>
+<td>52</td>
+</tr><tr><td>Cherokee</td>
+<td>44</td>
+</tr><tr><td>Clayton</td>
+<td>37</td>
+</tr><tr><td>Clarke</td>
+<td>29</td>
+</tr><tr><td>Henry</td>
+<td>29</td>
+</tr><tr><td>Lee</td>
+<td>29</td>
+</tr><tr><td>Hall</td>
+<td>22</td>
+</tr><tr><td>Douglas</td>
+<td>18</td>
+</tr><tr><td>Floyd</td>
+<td>17</td>
+</tr><tr><td>Forsyth</td>
+<td>15</td>
+</tr><tr><td>Coweta</td>
+<td>14</td>
+</tr><tr><td>Fayette</td>
+<td>14</td>
+</tr><tr><td>Lowndes</td>
+<td>14</td>
+</tr><tr><td>Rockdale</td>
+<td>13</td>
+</tr><tr><td>Newton</td>
+<td>12</td>
+</tr><tr><td>Richmond</td>
+<td>11</td>
+</tr><tr><td>Spalding</td>
+<td>11</td>
+</tr><tr><td>Columbia</td>
+<td>10</td>
+</tr><tr><td>Mitchell</td>
+<td>10</td>
+</tr><tr><td>Polk</td>
+<td>10</td>
+</tr><tr><td>Troup</td>
+<td>10</td>
+</tr><tr><td>Chatham</td>
+<td>9</td>
+</tr><tr><td>Gordon</td>
+<td>9</td>
+</tr><tr><td>Houston</td>
+<td>9</td>
+</tr><tr><td>Bibb</td>
+<td>8</td>
+</tr><tr><td>Laurens</td>
+<td>8</td>
+</tr><tr><td>Early</td>
+<td>7</td>
+</tr><tr><td>Oconee</td>
+<td>7</td>
+</tr><tr><td>Paulding</td>
+<td>7</td>
+</tr><tr><td>Sumter</td>
+<td>7</td>
+</tr><tr><td>Tift</td>
+<td>7</td>
+</tr><tr><td>Glynn</td>
+<td>6</td>
+</tr><tr><td>Muscogee</td>
+<td>6</td>
+</tr><tr><td>Whitfield</td>
+<td>6</td>
+</tr><tr><td>Worth</td>
+<td>6</td>
+</tr><tr><td>Barrow</td>
+<td>5</td>
+</tr><tr><td>Peach</td>
+<td>5</td>
+</tr><tr><td>Terrell</td>
+<td>5</td>
+</tr><tr><td>Colquitt</td>
+<td>4</td>
+</tr><tr><td>Crisp</td>
+<td>4</td>
+</tr><tr><td>Lumpkin</td>
+<td>4</td>
+</tr><tr><td>Pickens</td>
+<td>4</td>
+</tr><tr><td>Bryan</td>
+<td>3</td>
+</tr><tr><td>Burke</td>
+<td>3</td>
+</tr><tr><td>Butts</td>
+<td>3</td>
+</tr><tr><td>Effingham</td>
+<td>3</td>
+</tr><tr><td>Irwin</td>
+<td>3</td>
+</tr><tr><td>Lamar</td>
+<td>3</td>
+</tr><tr><td>Lincoln</td>
+<td>3</td>
+</tr><tr><td>Madison</td>
+<td>3</td>
+</tr><tr><td>Meriwether</td>
+<td>3</td>
+</tr><tr><td>Monroe</td>
+<td>3</td>
+</tr><tr><td>Baldwin</td>
+<td>2</td>
+</tr><tr><td>Camden</td>
+<td>2</td>
+</tr><tr><td>Coffee</td>
+<td>2</td>
+</tr><tr><td>Dawson</td>
+<td>2</td>
+</tr><tr><td>Decatur</td>
+<td>2</td>
+</tr><tr><td>Jackson</td>
+<td>2</td>
+</tr><tr><td>Jasper</td>
+<td>2</td>
+</tr><tr><td>Miller</td>
+<td>2</td>
+</tr><tr><td>Randolph</td>
+<td>2</td>
+</tr><tr><td>Seminole</td>
+<td>2</td>
+</tr><tr><td>Tattnall</td>
+<td>2</td>
+</tr><tr><td>Turner</td>
+<td>2</td>
+</tr><tr><td>Twiggs</td>
+<td>2</td>
+</tr><tr><td>Ware</td>
+<td>2</td>
+</tr><tr><td>Washington</td>
+<td>2</td>
+</tr><tr><td>Baker</td>
+<td>1</td>
+</tr><tr><td>Ben Hill</td>
+<td>1</td>
+</tr><tr><td>Calhoun</td>
+<td>1</td>
+</tr><tr><td>Catoosa</td>
+<td>1</td>
+</tr><tr><td>Charlton</td>
+<td>1</td>
+</tr><tr><td>Chattooga</td>
+<td>1</td>
+</tr><tr><td>Clinch</td>
+<td>1</td>
+</tr><tr><td>Dodge</td>
+<td>1</td>
+</tr><tr><td>Fannin</td>
+<td>1</td>
+</tr><tr><td>Franklin</td>
+<td>1</td>
+</tr><tr><td>Greene</td>
+<td>1</td>
+</tr><tr><td>Haralson</td>
+<td>1</td>
+</tr><tr><td>Harris</td>
+<td>1</td>
+</tr><tr><td>Heard</td>
+<td>1</td>
+</tr><tr><td>Jones</td>
+<td>1</td>
+</tr><tr><td>Liberty</td>
+<td>1</td>
+</tr><tr><td>Long</td>
+<td>1</td>
+</tr><tr><td>Macon</td>
+<td>1</td>
+</tr><tr><td>Mcduffie</td>
+<td>1</td>
+</tr><tr><td>Morgan</td>
+<td>1</td>
+</tr><tr><td>Pierce</td>
+<td>1</td>
+</tr><tr><td>Pulaski</td>
+<td>1</td>
+</tr><tr><td>Stephens</td>
+<td>1</td>
+</tr><tr><td>Taylor</td>
+<td>1</td>
+</tr><tr><td>Thomas</td>
+<td>1</td>
+</tr><tr><td>Toombs</td>
+<td>1</td>
+</tr><tr><td>White</td>
+<td>1</td>
+</tr><tr><td>Wilkes</td>
+<td>1</td>
+</tr><tr><td>Unknown</td>
+<td>178</td>
+</tr></tbody></table><p>*Based on patient county of residence when known</p>
+<p><em>Report generated on: 03/26/2020 18:28:13</em></p>
+
+  
+</div>
+
+  
+
+         
+        </main>
+
+        
+      </div>
+
+                </div>
+    <div class="content-page__mid-side">
+        
+    </div>
+  </div>
+
+    
+</div>
+
+
+
+  </div>
+  <div class="page__footer">
+      
+
+
+
+
+
+<footer>
+  <div class="footer-top" data-swatch-role="footer-top" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-top__inner">
+      <div class="footer-brand">
+  <div class="footer-branding-lockup footer-branding-lockup--dph">
+    <a class="footer-branding-lockup__link" href="/" title="Georgia Department of Public Health">
+      <span class="footer-branding-lockup__logo footer-branding-lockup__logo--agency footer-branding-lockup__logo--dph">
+        <img class="footer-branding-lockup__logo-image" src="/themes/custom/ga_forest/orchard/assets/images/icons/logo/ga-logo--gold.svg" alt="" />
+      </span>
+      <span class="footer-branding-lockup__wordmark footer-branding-lockup__wordmark--agency footer-branding-lockup__wordmark--dph">
+  <span class="footer-branding-lockup__wordmark-text">
+    <span class="footer-branding-lockup__wordmark-text-lines footer-branding-lockup__wordmark-text-lines--two">
+      <strong>Georgia Department</strong><br />
+      <em>of</em><strong>&nbsp;Public Health</strong>
+    </span>
+    <span class="footer-branding-lockup__wordmark-text-lines footer-branding-lockup__wordmark-text-lines--two-wider">
+      <strong>Georgia Department&nbsp;</strong><em>of</em><br />
+      <strong>Public Health</strong>
+    </span>
+  </span>
+</span>
+    </a>
+  </div>
+</div>
+    <div class="footer-social">
+  <ul class="footer-social__items">
+                  <li class="footer-social__item">
+          <a href="https://www.facebook.com/GaDPH" title="Facebook" class="footer-social__icon-link">
+            <span class="visually-hidden">Facebook</span>
+            <img class="footer-social__icon-image footer-social__icon-image--default" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/facebook/social-facebook--fill-white.svg" alt="Facebook" />
+            <img class="footer-social__icon-image footer-social__icon-image--active" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/facebook/social-facebook--fill-gold.svg" alt="Facebook" />
+          </a>
+        </li>
+                        <li class="footer-social__item">
+          <a href="https://www.twitter.com/GaDPH" title="Twitter" class="footer-social__icon-link">
+            <span class="visually-hidden">Twitter</span>
+            <img class="footer-social__icon-image footer-social__icon-image--default" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/twitter/social-twitter--fill-white.svg" alt="Twitter" />
+            <img class="footer-social__icon-image footer-social__icon-image--active" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/twitter/social-twitter--fill-gold.svg" alt="Twitter" />
+          </a>
+        </li>
+                                  <li class="footer-social__item">
+          <a href="https://www.youtube.com/user/GaDPH" title="YouTube" class="footer-social__icon-link">
+            <span class="visually-hidden">YouTube</span>
+            <img class="footer-social__icon-image footer-social__icon-image--default" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/youtube/social-youtube--fill-white.svg" alt="YouTube" />
+            <img class="footer-social__icon-image footer-social__icon-image--active" src="/themes/custom/ga_forest/orchard/assets/images/icons/social/youtube/social-youtube--fill-gold.svg" alt="YouTube" />
+          </a>
+        </li>
+                                                    </ul>
+</div>
+  </div>
+</div>
+  <div class="footer-mid footer-mid--with-secondary" data-swatch-role="footer-bottom" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-mid__inner">
+    <div class="footer-contact">
+  <h3 class="footer-contact__title">How can we help?</h3>
+      <div class="footer-contact__list">
+              <ul class="footer-contact-info__list">
+      
+<li class="footer-contact-info__item">
+    <div class="footer-contact-info__icon-wrapper">
+      <img class="footer-contact-info__icon footer-contact-info__icon--light-text" src="/themes/custom/ga_forest/orchard/assets/images/icons/monoline/phone/monoline-phone--white.svg" />
+      <img class="footer-contact-info__icon footer-contact-info__icon--dark-text" src="/themes/custom/ga_forest/orchard/assets/images/icons/monoline/phone/monoline-phone--black.svg" />
+    </div>
+    <div class="footer-contact-info__wrapper">
+              <div class="footer-contact-info__title">Call Us</div>
+                          <div class="footer-contact-info__phone">
+                    <div class="footer-contact-info__phone-number"><strong>Main:</strong> <a href="tel:+1-404-657-2700">(404) 657-2700</a></div>
+        </div>
+                    <div class="footer-contact-info__link"><a href="/contact-dph">All Contacts</a></div>
+          </div>
+</li>
+      
+<li class="footer-contact-info__item">
+    <div class="footer-contact-info__icon-wrapper">
+      <img class="footer-contact-info__icon footer-contact-info__icon--light-text" src="/themes/custom/ga_forest/orchard/assets/images/icons/monoline/location/monoline-location--white.svg" />
+      <img class="footer-contact-info__icon footer-contact-info__icon--dark-text" src="/themes/custom/ga_forest/orchard/assets/images/icons/monoline/location/monoline-location--black.svg" />
+    </div>
+    <div class="footer-contact-info__wrapper">
+              <div class="footer-contact-info__title"><strong>Visit</strong><br /></div>
+                    <div class="footer-contact-info__address">2 Peachtree Street, NW<br />15th Floor<br />ATLANTA, GA 30303</div>
+                          <div class="footer-contact-info__link"><a href="/directions-2-peachtree-st-nw">Driving Directions</a></div>
+              <div class="footer-contact-info__link"><a href="/public-health-districts">Public Health Districts</a></div>
+          </div>
+</li>
+  </ul>
+          </div>
+      <div class="footer-contact__hours">
+<div class="hourbox">
+  <div class="hourbox__section">
+    <img class="hourbox__icon" src="/themes/custom/ga_forest/orchard/assets/images/icons/monoline/calendar/monoline-calendar--black.svg" alt="Calendar icon">
+    <div class="hourbox__wrapper">
+                
+<ul class="hourbox-schedule">
+            <li class="hourbox-schedule__item">
+  <span class="hourbox-schedule__day">Monday to Friday, &nbsp;</span>
+  <span class="hourbox-schedule__time">08:00 a.m. - 05:00 p.m.</span>
+</li>
+      </ul>
+
+          </div>
+  </div>
+    <div class="hourbox__section">
+    <div class="hourbox__icon"></div>
+    <div class="hourbox__note">All in Eastern Time Zone</div>
+  </div>
+  </div>
+</div>
+  </div>
+          <div class="footer-mid__menus">
+        <div class="footer-primary">
+      <div class="footer-link-group">
+  <h3 class="footer-link-group__title">Your Government</h3>
+  <ul class="footer-link-group__list">
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://georgia.gov/agency-list">
+          State Organizations
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://georgia.gov/elected-officials">
+          Elected Officials
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://dol.georgia.gov/state-local-and-federal-government-jobs">
+          State Jobs
+        </a>
+      </li>
+      </ul>
+</div>
+  </div>
+        <div class="footer-secondary">
+      <div class="footer-link-group">
+  <h3 class="footer-link-group__title">About Us</h3>
+  <ul class="footer-link-group__list">
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="/organization/department-public-health">
+          About DPH
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="https://gets.sharepoint.com/sites/DPHIntranet/">
+          Employee Intranet
+        </a>
+      </li>
+          <li class="footer-link-group__list-item">
+        <a class="footer-link-group__list-item-link" href="/careers">
+          Careers
+        </a>
+      </li>
+      </ul>
+</div>
+  </div>
+      </div>
+      </div>
+</div>
+  <div class="footer-bottom" data-swatch-role="footer-bottom" data-swatch-type="global" data-swatch-text-type="light-text">
+  <div class="footer-bottom__inner">
+    <div class="footer-copyright">© Georgia.gov</div>
+    
+<div class="footer-meta">
+  <ul class="footer-meta__items">
+          <li class="footer-meta__item"><a href="/sitemap">Site Map</a></li>
+          <li class="footer-meta__item"><a href="http://georgia.gov/accessibility ">Accessibility</a></li>
+          <li class="footer-meta__item"><a href="http://georgia.gov/privacysecurity">Privacy/Security</a></li>
+          <li class="footer-meta__item"><a href="https://gbi.georgia.gov/human-trafficking-notice">Human Trafficking Notice</a></li>
+      </ul>
+</div>
+  </div>
+</div>
+</footer>
+  </div>
+</div>
+
+  </div>
+
+    
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/30571","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"core\/html5shiv,entity_embed\/caption,ga_emergency\/ga_emergency,ga_forest\/global,ga_forest\/palette-stars-stripes,ga_media_download\/document_link,ga_search\/analytics,ga_wysiwyg\/entity_embed,genpass\/genpass,google_translator\/disclaimer,search_api_federated_solr\/search_form_autocomplete,system\/base","theme":"ga_forest","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"google_analytics":{"account":"UA-2982645-7","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"gaEmergency":{"endpoint":"https:\/\/trunk.georgia.gov\/api\/v1\/node\/emergency?filter[status][value]=1\u0026sort=-changed","auth":"Og=="},"searchApiFederatedSolr":{"block":{"autocomplete":{"isEnabled":1,"proxyIsDisabled":1,"directUrl":"\/search-api-federated-solr-block-form-autocomplete\/exposed-filter?title=[val]\u0026search_term=[val]\u0026_format=json","use_search_app_creds":0,"mode":"result","url":"\/search-api-federated-solr-block-form-autocomplete\/exposed-filter?title=[val]\u0026search_term=[val]\u0026_format=json"}}},"googleTranslatorDisclaimer":{"jquerySelector":".google-translator-switch","disclaimer":"\u003Ch2\u003EAutomatic translation disclaimer\u003C\/h2\u003E\r\n\u003Cp\u003EThe State of Georgia provides automatic translation for georgia.gov into seven languages, courtesy of Google Translate. Please remember, though, that the English language version is considered the most accurate. In the event of a disagreement or discrepancy between the translation and the original English version of this web site or any notice or disclaimer, the original version will prevail.\u003C\/p\u003E","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","languages":"zh-CN,ht,ko,pt,ru,es,vi","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"07a613947f8924e7019661da310bc8b27f351e95971078f02e1b113247c7e95c"}}</script>
+<script src="/sites/dph.georgia.gov/files/js/js_GIoYJfmA5qaZQ8B3oY5AS__rg9sNKbxb7RS5oSwy6so.js"></script>
+<script src="//cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
+<script src="/sites/dph.georgia.gov/files/js/js_OxzY2Uyth1edMzBffKmPMVqmvf-3LtxnXZUhiRP6Cag.js"></script>
+
+    <script type="text/javascript" src="//hello.myfonts.net/count/3786f2" async defer></script>
+    <script type="text/javascript">
+        /*<![CDATA[*/
+        (function() {
+            var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+            sz.src = '//siteimproveanalytics.com/js/siteanalyze_637444.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+        })();
+        /*]]>*/
+    </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5360c08ecf","applicationID":"99788169,308637395","transactionName":"NQFQMhAADBZRUBFYCwxLZxQLTgsLVFYdHxQKFA==","queueTime":0,"applicationTime":152,"atts":"GUZTRFgaHxg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

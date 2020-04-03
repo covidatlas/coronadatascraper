@@ -1,0 +1,415 @@
+[
+  {
+    "county": "Gilchrist County",
+    "cases": 0,
+    "tested": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Putnam County",
+    "cases": 12,
+    "tested": 188,
+    "deaths": 0
+  },
+  {
+    "county": "Taylor County",
+    "cases": 0,
+    "tested": 26,
+    "deaths": 0
+  },
+  {
+    "county": "Okaloosa County",
+    "cases": 22,
+    "tested": 144,
+    "deaths": 0
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 0,
+    "tested": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Palm Beach County",
+    "cases": 174,
+    "tested": 1409,
+    "deaths": 3
+  },
+  {
+    "county": "St. Lucie County",
+    "cases": 11,
+    "tested": 172,
+    "deaths": 0
+  },
+  {
+    "county": "Pasco County",
+    "cases": 21,
+    "tested": 477,
+    "deaths": 1
+  },
+  {
+    "county": "Gadsden County",
+    "cases": 1,
+    "tested": 30,
+    "deaths": 0
+  },
+  {
+    "county": "Leon County",
+    "cases": 13,
+    "tested": 311,
+    "deaths": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0,
+    "tested": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 0,
+    "tested": 17,
+    "deaths": 0
+  },
+  {
+    "county": "Liberty County",
+    "cases": 0,
+    "tested": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Hamilton County",
+    "cases": 0,
+    "tested": 11,
+    "deaths": 0
+  },
+  {
+    "county": "Bay County",
+    "cases": 3,
+    "tested": 69,
+    "deaths": 0
+  },
+  {
+    "county": "Columbia County",
+    "cases": 3,
+    "tested": 95,
+    "deaths": 0
+  },
+  {
+    "county": "Baker County",
+    "cases": 5,
+    "tested": 45,
+    "deaths": 0
+  },
+  {
+    "county": "Holmes County",
+    "cases": 0,
+    "tested": 21,
+    "deaths": 0
+  },
+  {
+    "county": "Martin County",
+    "cases": 11,
+    "tested": 120,
+    "deaths": 0
+  },
+  {
+    "county": "Hillsborough County",
+    "cases": 151,
+    "tested": 2372,
+    "deaths": 1
+  },
+  {
+    "county": "Manatee County",
+    "cases": 25,
+    "tested": 206,
+    "deaths": 1
+  },
+  {
+    "county": "Clay County",
+    "cases": 20,
+    "tested": 205,
+    "deaths": 4
+  },
+  {
+    "county": "Hardee County",
+    "cases": 0,
+    "tested": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 5,
+    "tested": 380,
+    "deaths": 0
+  },
+  {
+    "county": "Volusia County",
+    "cases": 34,
+    "tested": 376,
+    "deaths": 0
+  },
+  {
+    "county": "Dixie County",
+    "cases": 0,
+    "tested": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Lake County",
+    "cases": 26,
+    "tested": 462,
+    "deaths": 0
+  },
+  {
+    "county": "Levy County",
+    "cases": 0,
+    "tested": 42,
+    "deaths": 0
+  },
+  {
+    "county": "Sumter County",
+    "cases": 24,
+    "tested": 308,
+    "deaths": 0
+  },
+  {
+    "county": "Seminole County",
+    "cases": 40,
+    "tested": 587,
+    "deaths": 0
+  },
+  {
+    "county": "Orange County",
+    "cases": 119,
+    "tested": 1548,
+    "deaths": 4
+  },
+  {
+    "county": "Citrus County",
+    "cases": 11,
+    "tested": 139,
+    "deaths": 1
+  },
+  {
+    "county": "Hernando County",
+    "cases": 9,
+    "tested": 144,
+    "deaths": 0
+  },
+  {
+    "county": "Pinellas County",
+    "cases": 65,
+    "tested": 1230,
+    "deaths": 1
+  },
+  {
+    "county": "Suwannee County",
+    "cases": 0,
+    "tested": 43,
+    "deaths": 0
+  },
+  {
+    "county": "Duval County",
+    "cases": 82,
+    "tested": 1473,
+    "deaths": 3
+  },
+  {
+    "county": "Lafayette County",
+    "cases": 0,
+    "tested": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Gulf County",
+    "cases": 0,
+    "tested": 27,
+    "deaths": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 0,
+    "tested": 29,
+    "deaths": 0
+  },
+  {
+    "county": "Bradford County",
+    "cases": 1,
+    "tested": 38,
+    "deaths": 0
+  },
+  {
+    "county": "Wakulla County",
+    "cases": 0,
+    "tested": 26,
+    "deaths": 0
+  },
+  {
+    "county": "Brevard County",
+    "cases": 14,
+    "tested": 311,
+    "deaths": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 20,
+    "tested": 497,
+    "deaths": 0
+  },
+  {
+    "county": "Osceola County",
+    "cases": 45,
+    "tested": 416,
+    "deaths": 0
+  },
+  {
+    "county": "Highlands County",
+    "cases": 5,
+    "tested": 59,
+    "deaths": 1
+  },
+  {
+    "county": "Lee County",
+    "cases": 66,
+    "tested": 791,
+    "deaths": 3
+  },
+  {
+    "county": "Collier County",
+    "cases": 67,
+    "tested": 765,
+    "deaths": 0
+  },
+  {
+    "county": "Miami-Dade County",
+    "cases": 654,
+    "tested": 4802,
+    "deaths": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 14,
+    "tested": 139,
+    "deaths": 0
+  },
+  {
+    "county": "Santa Rosa County",
+    "cases": 12,
+    "tested": 137,
+    "deaths": 1
+  },
+  {
+    "county": "Walton County",
+    "cases": 13,
+    "tested": 82,
+    "deaths": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 1,
+    "tested": 48,
+    "deaths": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 1,
+    "tested": 21,
+    "deaths": 0
+  },
+  {
+    "county": "Nassau County",
+    "cases": 5,
+    "tested": 63,
+    "deaths": 0
+  },
+  {
+    "county": "Glades County",
+    "cases": 0,
+    "tested": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Charlotte County",
+    "cases": 4,
+    "tested": 127,
+    "deaths": 0
+  },
+  {
+    "county": "Sarasota County",
+    "cases": 34,
+    "tested": 582,
+    "deaths": 2
+  },
+  {
+    "county": "DeSoto County",
+    "cases": 5,
+    "tested": 50,
+    "deaths": 0
+  },
+  {
+    "county": "Flagler County",
+    "cases": 8,
+    "tested": 101,
+    "deaths": 0
+  },
+  {
+    "county": "Hendry County",
+    "cases": 0,
+    "tested": 24,
+    "deaths": 0
+  },
+  {
+    "county": "Indian River County",
+    "cases": 14,
+    "tested": 175,
+    "deaths": 0
+  },
+  {
+    "county": "Broward County",
+    "cases": 505,
+    "tested": 5254,
+    "deaths": 3
+  },
+  {
+    "county": "Escambia County",
+    "cases": 20,
+    "tested": 282,
+    "deaths": 0
+  },
+  {
+    "county": "Okeechobee County",
+    "cases": 0,
+    "tested": 34,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 0,
+    "tested": 14,
+    "deaths": 0
+  },
+  {
+    "county": "Alachua County",
+    "cases": 53,
+    "tested": 954,
+    "deaths": 0
+  },
+  {
+    "county": "St. Johns County",
+    "cases": 36,
+    "tested": 547,
+    "deaths": 1
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 0,
+    "tested": 5,
+    "deaths": 0
+  },
+  {
+    "tested": 29114,
+    "cases": 2484,
+    "deaths": 30
+  }
+]
