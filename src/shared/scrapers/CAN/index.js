@@ -53,7 +53,7 @@ const scraper = {
       let scrapeDate = datetime.getYYYYMMDD(date);
       let scrapeDateCAN = datetime.getDDMMYYYY(scrapeDate);
 
-      // Reformat CAN dates to ISO-style for comparison
+      // Reformat CAN dates (DD-MM-YYYY) to ISO-style for comparison
       const lastDateParts = data[data.length - 1].date.split('-');
       const lastDateInTimeseries = `${lastDateParts[2]}-${lastDateParts[1]}-${lastDateParts[0]}`;
       const firstDateParts = data[0].date.split('-');
