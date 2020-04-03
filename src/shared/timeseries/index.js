@@ -7,7 +7,7 @@ const fs = imports('../lib/fs.js');
 const transform = imports('../lib/transform.js');
 const geography = imports('../lib/geography/index.js');
 const datetime = imports('../lib/datetime/index.js').default;
-const runCrawler = imports('./runCrawler.js').default;
+const runCrawler = imports('./run-crawler.js').default;
 
 const clearAllTimeouts = imports('../utils/timeouts.js').default;
 

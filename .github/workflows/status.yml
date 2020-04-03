@@ -45,4 +45,4 @@ jobs:
           RUN_NUMBER: ${{ github.run_id }}
           SLACK_STATUS_HOOK: ${{ secrets.SLACK_STATUS_HOOK }}
         run: |
-          node ./scripts/statusSlackBot.js send ${SLACK_STATUS_HOOK}
+          node ./scripts/status-slack-bot.js send ${SLACK_STATUS_HOOK}
