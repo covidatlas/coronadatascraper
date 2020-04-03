@@ -5,7 +5,7 @@
     "maintainers": { "type": "array" },
     "sources": { "type": "array" },
     "curators": { "type": "array" },
-    "country": { "type": "string", "maxLength": 3, "minLength": 3 },
+    "country": { "type": "string"},
     "state": { "type": "string" },
     "county": { "type": "string" },
     "city": { "type": "string" },
@@ -13,13 +13,22 @@
     "deaths": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
     "recovered": { "type": "number", "minimum": 0, "maximum": { "$data": "/cases" } },
     "tested": { "type": "number", "minimum": 0 },
+    "hospitalized": { "type": "number", "minimum": 0 },
+    "discharged": { "type": "number", "minimum": 0 },
     "population": { "type": "number", "minimum": 0 },
     "coordinates": { "type": "array" },
     "active": { "type": "number", "minimum": 0 },
-    "featureId": { "type": "number" },
     "rating": { "type": "number" },
     "tz": { "type": "array" },
-    "aggregate": { "type": "string" }
+    "aggregate": { "type": "string" },
+
+    "featureId": { },
+    "countryId": { "type": "string" },
+    "stateId": { "type": "string" },
+    "countyId": { "type": "string" },
+    "cityId": { "type": "string" },
+    "name": { "type": "string" },
+    "level": { "type": "string" }
   },
   "dependencies": {
     "state": ["country"],

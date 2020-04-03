@@ -1,8 +1,9 @@
 import { join, resolve } from 'path';
-import * as fs from '../../../shared/lib/fs.js';
-import log from '../../../shared/lib/log.js';
-import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as fs from '../../../shared/lib/fs.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import * as geography from '../../../shared/lib/geography/index.js';
+import log from '../../../shared/lib/log.js';
 
 const dataPath = join(__dirname, '..', 'vendor', 'population');
 
@@ -71,7 +72,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
 
   const populations = await readPopulationData(featureCollection);
 
-  function getPopulation(location) {
+  async function getPopulation(location) {
     let population = null;
 
     if (location.city) {
@@ -128,21 +129,6 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
         const feature = featureCollection.features[location.featureId];
         if (feature.properties.pop_est) {
           population = feature.properties.pop_est;
-        } else if (feature._aggregatedLocations) {
-          population = 0;
-          const featuresToCheck = feature._aggregatedLocations.slice();
-          while (featuresToCheck.length) {
-            const aggregatedLocation = featuresToCheck.pop();
-            const pop = getPopulation(aggregatedLocation);
-            if (pop) {
-              population += pop;
-            } else {
-              log.error(
-                '❌ Failed to find population for aggregated location %s',
-                geography.getName(aggregatedLocation)
-              );
-            }
-          }
         }
       }
     }
@@ -158,7 +144,15 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       continue;
     }
 
-    const population = getPopulation(location);
+    let population;
+
+    // get data from id if present
+    const clId = countryLevels.getIdFromLocation(location);
+    if (clId) {
+      population = await countryLevels.getPopulation(clId);
+    } else {
+      population = await getPopulation(location);
+    }
 
     if (population) {
       location.population = population;

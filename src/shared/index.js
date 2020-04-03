@@ -8,8 +8,10 @@ import dedupeLocations from '../events/processor/dedupe-locations/index.js';
 import reportScrape from '../events/processor/report/index.js';
 import findFeatures from '../events/processor/find-features/index.js';
 import findPopulations from '../events/processor/find-populations/index.js';
+import transformIds from '../events/processor/transform-ids/index.js';
 import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
+import datetime from './lib/datetime/index.js';
 
 /**
  * Entry file while we're still hosted on GitHub
@@ -29,7 +31,7 @@ async function generate(date, options = {}) {
 
   // JSON used for reporting
   const report = {
-    date
+    date: date || datetime.getYYYYMD()
   };
 
   // Crawler
@@ -41,6 +43,7 @@ async function generate(date, options = {}) {
     .then(reportScrape)
     .then(options.findFeatures !== false && findFeatures)
     .then(options.findPopulations !== false && findPopulations)
+    .then(transformIds)
     .then(cleanLocations)
     .then(options.writeData !== false && writeData); // To be retired
 

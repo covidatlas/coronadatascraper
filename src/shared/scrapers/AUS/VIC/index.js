@@ -20,7 +20,7 @@ const scraper = {
       url: 'https://www.dhhs.vic.gov.au'
     }
   ],
-  state: 'Victoria',
+  state: 'iso2:AU-VIC',
   type: 'paragraph',
   url: 'https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19',
   async scraper() {
@@ -29,7 +29,7 @@ const scraper = {
     const currentArticleUrl = $anchor.attr('href');
     const $currentArticlePage = await fetch.page(`https://www.dhhs.vic.gov.au${currentArticleUrl}`);
     const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
-    const matches = paragraph.match(/cases in Victoria \w* (?<casesString>\d+)/) || {};
+    const matches = paragraph.match(/cases in Victoria \w* (?<casesString>[\d,]+)/) || {};
     const { casesString } = matches.groups || {};
     const data = {
       cases: parse.number(casesString)

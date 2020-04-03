@@ -23,7 +23,7 @@ const scraper = {
       );
       return { cases };
     },
-    '2020-3-19': async function() {
+    '2020-03-19': async function() {
       const $ = await fetch.headless(this.url);
       const cases = parse.number(
         $('h4:contains("POSITIVECASES")')

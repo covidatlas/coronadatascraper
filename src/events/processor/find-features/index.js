@@ -1,11 +1,12 @@
 import geoTz from 'geo-tz';
 import { join } from 'path';
-import * as turf from '../../../shared/lib/geography/turf.js';
+import reporter from '../../../shared/lib/error-reporter.js';
 import * as fs from '../../../shared/lib/fs.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import * as geography from '../../../shared/lib/geography/index.js';
+import * as turf from '../../../shared/lib/geography/turf.js';
 import log from '../../../shared/lib/log.js';
 import espGeoJson from '../vendor/esp.json';
-import * as geography from '../../../shared/lib/geography/index.js';
-import reporter from '../../../shared/lib/error-reporter.js';
 
 const DEBUG = false;
 
@@ -151,6 +152,15 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       location.tz = geoTz(location.coordinates[1], location.coordinates[0]);
     }
 
+    if (!location.feature) {
+      // unless the location comes with its own feature
+      // if it has an id, we use it
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        index = clId;
+      }
+    }
+
     feature.properties.id = index;
     location.featureId = index;
     foundCount++;
@@ -176,10 +186,6 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
     locationLoop: for (const location of locations) {
       let found = false;
-      let point;
-      if (location.coordinates) {
-        point = turf.point(location.coordinates);
-      }
 
       // If the location already comes with its own feature, store it98
       if (location.feature) {
@@ -191,6 +197,19 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         }
         delete location.feature;
         continue;
+      }
+
+      // use countryLevel's getFeature if id is present
+      const clId = countryLevels.getIdFromLocation(location);
+      if (clId) {
+        const feature = await countryLevels.getFeature(clId);
+        storeFeature(feature, location);
+        continue;
+      }
+
+      let point;
+      if (location.coordinates) {
+        point = turf.point(location.coordinates);
       }
 
       if (location._featureId) {
@@ -227,7 +246,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
               if (!location.county) {
                 continue;
               }
-              if (feature.properties.name === `${location.county.replace('Parish', 'County')}, ${location.state}`) {
+              if (
+                feature.properties.name === `${location.county.replace('County', 'Parish')}, ${location.state}` ||
+                feature.properties.name === `${location.county.replace('Parish', 'County')}, ${location.state}`
+              ) {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;

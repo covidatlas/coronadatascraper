@@ -4,7 +4,12 @@ import * as parse from '../../../lib/parse.js';
 import getKey from '../_shared/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [{ cases: 'confirmed case' }, { hospitalized: 'icu' }, { deaths: 'deaths' }];
+const labelFragmentsByKey = [
+  { cases: 'confirmed case' },
+  { deaths: 'deaths' },
+  { hospitalized: 'icu' },
+  { recovered: 'cases cleared' }
+];
 
 const scraper = {
   country: 'AUS',
@@ -17,7 +22,7 @@ const scraper = {
       url: 'https://www.sahealth.sa.gov.au'
     }
   ],
-  state: 'South Australia',
+  state: 'iso2:AU-SA',
   type: 'paragraph',
   url:
     'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia',
@@ -30,7 +35,7 @@ const scraper = {
         cases: parse.number(casesString)
       };
     },
-    '2020-3-27': async function() {
+    '2020-03-27': async function() {
       this.type = 'table';
       const $ = await fetch.page(this.url);
       const $table = $('table:first-of-type');

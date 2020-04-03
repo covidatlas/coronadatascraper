@@ -1,0 +1,104 @@
+[
+  {
+    "state": "Seoul",
+    "cases": 450,
+    "recovered": 107,
+    "deaths": 0
+  },
+  {
+    "state": "Busan",
+    "cases": 119,
+    "recovered": 87,
+    "deaths": 3
+  },
+  {
+    "state": "Daegu",
+    "cases": 6684,
+    "recovered": 3946,
+    "deaths": 114
+  },
+  {
+    "state": "Incheon",
+    "cases": 64,
+    "recovered": 16,
+    "deaths": 0
+  },
+  {
+    "state": "Gwangju",
+    "cases": 20,
+    "recovered": 14,
+    "deaths": 0
+  },
+  {
+    "state": "Daejeon",
+    "cases": 36,
+    "recovered": 18,
+    "deaths": 0
+  },
+  {
+    "state": "Ulsan",
+    "cases": 39,
+    "recovered": 19,
+    "deaths": 0
+  },
+  {
+    "state": "Sejong",
+    "cases": 46,
+    "recovered": 12,
+    "deaths": 0
+  },
+  {
+    "state": "Chungcheongbuk-do",
+    "cases": 44,
+    "recovered": 22,
+    "deaths": 0
+  },
+  {
+    "state": "Chungcheongnam-do",
+    "cases": 128,
+    "recovered": 90,
+    "deaths": 0
+  },
+  {
+    "state": "Gangwon-do",
+    "cases": 36,
+    "recovered": 23,
+    "deaths": 1
+  },
+  {
+    "state": "Gyeonggi-do",
+    "cases": 476,
+    "recovered": 166,
+    "deaths": 6
+  },
+  {
+    "state": "Gyeongsangbuk-do",
+    "cases": 1300,
+    "recovered": 808,
+    "deaths": 38
+  },
+  {
+    "state": "Gyeongsangnam-do",
+    "cases": 96,
+    "recovered": 67,
+    "deaths": 0
+  },
+  {
+    "state": "Jeollabuk-do",
+    "cases": 13,
+    "recovered": 7,
+    "deaths": 0
+  },
+  {
+    "state": "Jeollanam-do",
+    "cases": 9,
+    "recovered": 3,
+    "deaths": 0
+  },
+  {
+    "state": "Jeju",
+    "cases": 9,
+    "recovered": 3,
+    "deaths": 0
+  }
+]

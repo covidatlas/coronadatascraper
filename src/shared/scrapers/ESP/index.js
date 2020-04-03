@@ -1,29 +1,27 @@
-import { LocalDate } from '@js-joda/core';
+import datetime from '../../lib/datetime/iso/index.js';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
 import * as parse from '../../lib/parse.js';
+
+const { looksLike } = datetime;
 
 const scraper = {
   country: 'ESP',
   url: 'https://github.com/datadista/datasets/tree/master/COVID%2019',
   priority: 1,
   timeseries: true,
+  type: 'csv',
   aggregate: 'state',
   sources: [
     {
-      name: 'cases',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_casos.csv',
-      description: 'Cases by date and community'
+      name: 'Ministerio de Sanidad',
+      url: 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm',
+      description: 'Government of Spain, Ministry of Health'
     },
     {
-      name: 'recovered',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_altas.csv',
-      description: 'Recoveries by date and community'
-    },
-    {
-      name: 'deaths',
-      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_fallecidos.csv',
-      description: 'Deaths by date and community'
+      name: 'Departamento de Seguridad Nacional',
+      url: 'https://www.dsn.gob.es/gl/current-affairs/press-room',
+      description: 'Government of Spain, Department of National Security'
     }
   ],
   curators: [
@@ -42,15 +40,26 @@ const scraper = {
       github: 'herbcaudill'
     }
   ],
+  _endpoints: [
+    {
+      name: 'cases',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_casos.csv',
+      description: 'Cases by date and community'
+    },
+    {
+      name: 'recovered',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_altas.csv',
+      description: 'Recoveries by date and community'
+    },
+    {
+      name: 'deaths',
+      url: 'https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/ccaa_covid19_fallecidos.csv',
+      description: 'Deaths by date and community'
+    }
+  ],
   async scraper() {
-    const isIsoDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s);
-
-    const parseDate = s => {
-      return LocalDate.parse(s);
-    };
-
     const rawData = {};
-    for (const { name, url } of this.sources) {
+    for (const { name, url } of this._endpoints) {
       rawData[name] = await fetch.csv(url, false);
     }
 
@@ -91,11 +100,11 @@ const scraper = {
         const deathsRow = rawData.deaths.find(isSameLocation);
         const recoveredRow = rawData.recovered.find(isSameLocation);
         return Object.keys(casesRow)
-          .filter(isIsoDate)
+          .filter(looksLike.isoDate)
           .map(date => {
             return {
               state: parse.string(location),
-              date: parseDate(date).toString(),
+              date: datetime.parse(date).toString(),
               cases: parse.number(casesRow[date]),
               deaths: parse.number(deathsRow[date] || 0),
               recovered: parse.number(recoveredRow[date] || 0)
@@ -114,15 +123,12 @@ const scraper = {
     // },
     // ```
 
-    // Need to jump through a couple extra hoops here because SCRAPE_DATE doesn't use leading zeroes
-    const scrapeDate = process.env.SCRAPE_DATE
-      ? LocalDate.of(...process.env.SCRAPE_DATE.split('-')) // e.g. '2020-3-8' -> LocalDate.of(2020, 3, 8)
-      : undefined;
+    const scrapeDate = process.env.SCRAPE_DATE ? datetime.parse(process.env.SCRAPE_DATE) : undefined;
 
     const sampleRow = rawData.cases[0];
     const dates = Object.keys(sampleRow)
-      .filter(isIsoDate)
-      .map(parseDate)
+      .filter(looksLike.isoDate)
+      .map(datetime.parse)
       .sort();
 
     const firstDate = dates[0];
@@ -131,7 +137,7 @@ const scraper = {
     // use the scrape date, or the latest available
     const queryDate = scrapeDate || lastDate;
 
-    if (queryDate.isBefore(firstDate)) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
+    if (queryDate < firstDate) throw new Error(`Timeseries starts later than SCRAPE_DATE ${queryDate}`);
 
     // return data from that date
     const locations = data.filter(d => d.date === queryDate.toString());

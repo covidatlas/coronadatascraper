@@ -2,14 +2,14 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const generate = imports('./index.js').default;
-const argv = imports('./cli/cli-args.js').default;
-const fs = imports('./lib/fs.js');
-const transform = imports('./lib/transform.js');
-const geography = imports('./lib/geography/index.js');
-const datetime = imports('./lib/datetime.js');
+const argv = imports('../cli/cli-args.js').default;
+const fs = imports('../lib/fs.js');
+const transform = imports('../lib/transform.js');
+const geography = imports('../lib/geography/index.js');
+const datetime = imports('../lib/datetime/index.js').default;
+const runCrawler = imports('./runCrawler.js').default;
 
-const clearAllTimeouts = imports('./utils/timeouts.js').default;
+const clearAllTimeouts = imports('../utils/timeouts.js').default;
 
 // The props to keep on a date object
 const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
@@ -43,7 +43,7 @@ function stripCases(location) {
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
+  let columns = ['name', 'level', 'city', 'county', 'state', 'country', 'population', 'lat', 'long', 'aggregate', 'tz'];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -83,7 +83,20 @@ async function generateTidyCSV(timeseriesByLocation) {
 }
 
 async function generateCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'population', 'lat', 'long', 'url', 'aggregate', 'tz'];
+  let columns = [
+    'name',
+    'level',
+    'city',
+    'county',
+    'state',
+    'country',
+    'population',
+    'lat',
+    'long',
+    'url',
+    'aggregate',
+    'tz'
+  ];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -126,7 +139,20 @@ async function generateCSV(timeseriesByLocation) {
 }
 
 async function generateJHUCSV(timeseriesByLocation) {
-  let columns = ['city', 'county', 'state', 'country', 'lat', 'long', 'population', 'url', 'aggregate', 'tz'];
+  let columns = [
+    'name',
+    'level',
+    'city',
+    'county',
+    'state',
+    'country',
+    'lat',
+    'long',
+    'population',
+    'url',
+    'aggregate',
+    'tz'
+  ];
 
   const csvData = [];
   for (const [, location] of Object.entries(timeseriesByLocation)) {
@@ -190,7 +216,8 @@ async function generateTimeseries(options = {}) {
   const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
-    const data = await generate(date === today ? undefined : date, {
+    const data = await runCrawler({
+      date: date === today ? undefined : date,
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false,
@@ -222,12 +249,12 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
-  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation);
-  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection);
+  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
+  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
 
   const { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
-  await fs.writeFile(path.join('dist', `timeseries.json`), JSON.stringify(timeseriesByDate, null, 2));
-  await fs.writeFile(path.join('dist', `locations.json`), JSON.stringify(locations, null, 2));
+  await fs.writeJSON(path.join('dist', `timeseries.json`), timeseriesByDate, { space: 2 });
+  await fs.writeJSON(path.join('dist', `locations.json`), locations, { space: 2 });
 
   await generateCSV(timeseriesByLocation);
 

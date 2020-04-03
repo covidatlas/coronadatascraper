@@ -21,7 +21,7 @@ const scraper = {
       const cases = parse.number($td.text());
       return { cases };
     },
-    '2020-3-28': async function() {
+    '2020-03-28': async function() {
       await fetch.page(this.url);
       throw new DeprecatedError('Sonoma switched to ArcGIS, which is handled by another scraper');
     }

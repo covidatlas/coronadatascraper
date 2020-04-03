@@ -19,15 +19,21 @@ const type = 'cases';
 let currentDate;
 let currentData;
 
+function findFeature(id) {
+  return data.features.features.find(feature => feature.properties.id === id);
+}
+
 function initData() {
   let foundFeatures = 0;
   data.locations.forEach(function(location, index) {
     // Associated the feature with the location
-    if (location.featureId !== undefined) {
-      const feature = data.features.features[location.featureId];
+    if (location.featureId !== undefined && !location.city) {
+      const feature = findFeature(location.featureId);
       if (feature) {
         foundFeatures++;
         feature.properties.locationId = index;
+      } else {
+        console.log('Failed to find feature for', location);
       }
     }
   });

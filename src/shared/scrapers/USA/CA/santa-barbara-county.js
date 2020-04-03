@@ -27,7 +27,7 @@ const scraper = {
 
       return { cases };
     },
-    '2020-3-26': async function() {
+    '2020-03-26': async function() {
       this.type = 'table';
 
       const $ = await fetch.page(this.url);

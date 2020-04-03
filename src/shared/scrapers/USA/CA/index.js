@@ -16,7 +16,7 @@ const scraper = {
     'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
   curators: [
     {
-      name: 'Harriet Rowan',
+      name: 'The Mercury News',
       email: 'hattierowan@gmail.com',
       twitter: '@hattierowan',
       github: 'HarrietRowan'
