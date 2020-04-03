@@ -211,6 +211,12 @@ hr {
   width: var(--DownloadDropdownWidth);
 }
 
+.ca-Placeholder {
+  width: 250px;
+  height: 130px;
+  background: gray;
+}
+
 @media screen and (max-width: 960px) {
   .ca-Hero {
     display: initial;
