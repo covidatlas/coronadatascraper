@@ -53,8 +53,8 @@ function getSingleContributorLink(location) {
   return html;
 }
 
-function renderCaseInfo(label, count) {
-  return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount"> ${count.toLocaleString()}</span></h2>`;
+function renderCaseInfo(label, count, labelClass) {
+  return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
 }
 
 function locationDetail(location, lastDate, caseInfo) {
@@ -63,41 +63,100 @@ function locationDetail(location, lastDate, caseInfo) {
 <h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${location.name}</h1>
 `;
 
+  html += `<div class="row">
+    <div class="col-xs-12 col-sm-6">`
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Updated: ${lastDate}</p>`;
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
     location
   )}</p>`;
+  html += `</div>
+    <div class="col-xs-12 col-sm-6 end-sm">
+      <sp-button quiet variant="secondary">Download</sp-button>
+      <sp-button quiet variant="secondary">Share</sp-button>
+    </div>
+  </div>`;
   html += `<div class="row">`;
   html += `<div class="col-xs-12 col-md-5 col-lg-4">`;
 
   if (caseInfo.active !== undefined) {
-    html += renderCaseInfo('Active Cases', caseInfo.active);
+    html += renderCaseInfo('Active Cases', caseInfo.active, 'ca-Active');
   }
   if (caseInfo.cases !== undefined) {
-    html += renderCaseInfo('Total Cases', caseInfo.cases);
+    html += renderCaseInfo('Total Cases', caseInfo.cases, 'ca-Total');
   }
   if (caseInfo.deaths !== undefined) {
-    html += renderCaseInfo('Deaths', caseInfo.deaths);
+    html += renderCaseInfo('Deaths', caseInfo.deaths, 'ca-Deaths');
   }
   if (caseInfo.recovered !== undefined) {
-    html += renderCaseInfo('Recovered', caseInfo.recovered);
+    html += renderCaseInfo('Recovered', caseInfo.recovered, 'ca-Recovered');
   }
   if (caseInfo.hospitalized !== undefined && caseInfo.discharged !== undefined) {
-    html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged);
+    html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
   }
 
-  html += `</div>`;
-  html += `<div class="col-xs-12 col-md-7 col-lg-8">`;
-  html += `<h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>`;
-  html += `<div class="ca-Placeholder"></div>`;
-  html += `</div>`;
-  html += `</div>`;
-  html += `<div class="row">`;
-  html += `<div class="col-xs-12 col-md-12">`;
-  html += `<h2 class="spectrum-Heading spectrum-Heading--M">Map View</h1>`;
-  html += `<div class="ca-Placeholder"></div>`;
-  html += `</div>`;
-  html += `</div>`;
+  html += `</div>
+    <div class="col-xs-12 col-md-7 col-lg-8">
+      <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
+      <div class="ca-Placeholder"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-12">
+      <h2 class="spectrum-Heading spectrum-Heading--M">Map View</h1>
+      <div class="ca-Placeholder"></div>
+    </div>
+  </div>
+
+  <div class="ca-Callout--Disclaimer">
+    <p class="spectrum-Body spectrum-Body--M">
+      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
+    </p>
+  </div>
+
+  <div class="ca-Section">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="spectrum-Heading spectrum-Heading--M">Sources</h1>
+        <p class="spectrum-Body spectrum-Body--S">
+          Corona Data Scraper pulls information from a variety of openly available world government data sources and curated datasets.
+          <strong>Ratings have nothing to do with the accuracy of the data.</strong>
+          The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.
+        </p>
+        <a href="#" class="spectrum-Link">Learn more about COVID Atlas sources</a>
+      </div>
+    </div>
+    <div class="row">
+      <section class="col-xs-12 col-sm-6 col-md-4">
+        <h4 class="spectrum-Heading spectrum-Heading--S">[Data Source]</h4>
+        <p class="spectrum-Body spectrum-Body--S"> Report card</p>
+      </section>
+
+      <section class="col-xs-12 col-sm-6 col-md-8">
+        <h4 class="spectrum-Heading spectrum-Heading--S">[Location Cross-Check]</h4>
+        <p class="spectrum-Body spectrum-Body--S"> Cross-Check report for this locations's sources</p>
+      </section>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+  <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+      <h1 class="spectrum-Heading spectrum-Heading--M">Local resources</h1>
+      <p class="spectrum-Body spectrum-Body--M">List of links</p>
+    </section>
+
+    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+      <h1 class="spectrum-Heading spectrum-Heading--M">National resources</h1>
+      <p class="spectrum-Body spectrum-Body--M">List of links</p>
+    </section>
+
+    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+      <h1 class="spectrum-Heading spectrum-Heading--M">Global resources</h1>
+      <p class="spectrum-Body spectrum-Body--M">List of links</p>
+    </section>
+  </div>
+</div>`
 
   return html;
 }
