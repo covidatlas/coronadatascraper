@@ -1,0 +1,71 @@
+[
+  {
+    "state": "British Columbia",
+    "cases": 725,
+    "deaths": 14
+  },
+  {
+    "state": "Alberta",
+    "cases": 486,
+    "deaths": 2
+  },
+  {
+    "state": "Saskatchewan",
+    "cases": 95,
+    "deaths": 0
+  },
+  {
+    "state": "Manitoba",
+    "cases": 11,
+    "deaths": 0
+  },
+  {
+    "state": "Ontario",
+    "cases": 858,
+    "deaths": 15
+  },
+  {
+    "state": "Quebec",
+    "cases": 1629,
+    "deaths": 8
+  },
+  {
+    "state": "Newfoundland and Labrador",
+    "cases": 82,
+    "deaths": 0
+  },
+  {
+    "state": "New Brunswick",
+    "cases": 33,
+    "deaths": 0
+  },
+  {
+    "state": "Nova Scotia",
+    "cases": 73,
+    "deaths": 0
+  },
+  {
+    "state": "Prince Edward Island",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "state": "Northwest Territories",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "state": "Nunavut",
+    "cases": 0,
+    "deaths": 0
+  },
+  {
+    "state": "Yukon",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "cases": 4005,
+    "deaths": 39
+  }
+]

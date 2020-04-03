@@ -1,0 +1,860 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="mapp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- State Of Michigan - Mon Mar 23 11:43:57 2020 -->
+<!-- e-Michigan Portal - Process #8, Server www -->
+
+<link rel="canonical" href="https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html" />
+		<title>Coronavirus - Michigan Data:</title>
+		<meta name='DESCRIPTION' content="Description: Coronavirus -  Daily Confirmed COVID-19 Cases by County      &amp;nbsp; County   Cases   Deaths          &amp;nbsp; Allegan   1   &amp;nbsp;       &amp;nbsp; Berrien   1   &amp;nbsp;       &amp;nbsp; Calhoun   1   &amp;nbsp;       &amp;nbsp; Charlevoix   1   &amp;nbsp;       &amp;nbsp; Detroit City   77   1       &amp;nbsp; Emmet   1   &amp;nbsp;       &amp;nbsp; Genesee   7   &amp;nbsp;       &amp;nbsp; Gladwin   1   &amp;nbsp;       &amp;nbsp; Grand Traverse   1   &amp;nbsp;       &amp;nbsp; Kent   0   1       &amp;nbsp; Livingston   2   &amp;nbsp;       &amp;nbsp; Macomb   39   1       &amp;nbsp; Midland   2   &amp;nbsp;       &amp;nbsp; Monroe   3   &amp;nbsp;       &amp;nbsp; Oakland   48   &amp;nbsp;       &amp;nbsp; Ottawa   4   &amp;nbsp;       &amp;nbsp; Roscommon   1   &amp;nbsp;       &amp;nbsp; Saginaw   1   &amp;nbsp;       &amp;nbsp; Washtenaw   6   &amp;nbsp;       &amp;nbsp; Wayne   51   &amp;nbsp;       &amp;nbsp; Out of State   1   &amp;nbsp;       &amp;nbsp; Total   249   3       City of Detroit and Wayne County are reported separately.  This information is updated daily at 2 p.m. with COVID-19 results as of 10 a.m. To view overall totals click on the cumulative data button below. ">
+		<meta name='KEYWORDS' content="No Keywords">
+		
+	
+<base target="_top">
+
+	<!-- global scripts BOOTSTRAP -->
+	<!-- bow-scripts include -->
+
+
+<!-- CSS -->
+<link type="text/css" rel='stylesheet' type='text/css' href='/css/fullcalendar.css' />
+<link type="text/css" rel="stylesheet" href="/font-som-icons/css/somicons.min.css?20170525100940" />
+<link type="text/css" rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/css/jquery.bxslider.css" />
+
+<!-- javascript -->
+<!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script -->
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/fullcalendar.js" type="text/javascript"></script>
+<script src="/js/jquery.bxslider.js"></script>
+<script src="/js/jquery.rwdImageMaps.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/js/additional-methods.js"></script>
+<script src="/js/responsiveComponents.js"></script>
+<script src="/js/jquery.matchHeight-min.js"></script>
+<!-- [if (lt IE 9)]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('time');
+</script>
+<script src="/js/respond.js"></script>
+<link href="/css/migov_ie8_OLD.css" rel="stylesheet" media="all" />
+<![endif] -->
+	 <script type="text/javascript" src="/js/bow-general.js?v=1565985739"></script>
+
+	<link href='/css/body-theme-coronavirus.css?v=1583354301' type='text/css' rel='stylesheet' />
+	<!-- Agency Header do not include the globalcss file --><!--/ Agency Header--><script src="/js/underscorejslib.js?v=1493914450"></script>
+<script src="/js/angular_1_6.js?v=1493914427"></script>
+<script src="/js/angular_1_6_sanitize.js?v=1493914426"></script>
+<script src="/js/angular_1_6_animate.js?v=1493914426"></script>
+<script src="/js/angular_1_6_aria.js?v=1493914426"></script>
+<script src="/js/angular_1_6_touch.js?v=1493914427"></script>
+
+<script src="/js/angucomplete-alt.js?v=1545075608"></script>
+<script src="/js/bootstrapUIangular.js?v=1493914448"></script>
+
+<script type="text/javascript">
+window.navPath = '/agency/leftFullNav/0,,406,00.html';
+window.loadedData = [];
+$('body').addClass('matching-heights-processing');
+var mapp = angular.module('mapp',['ngSanitize','ngAnimate','ui.bootstrap','ngAria','angucomplete-alt','ngTouch']);
+</script>
+<script src='/js/angular_custom_factories.js?v=1502904335'></script>
+<script src='/js/angular_custom_filters.js?v=1506702035'></script>
+<script src='/js/SearchComponentAngular.js?v=1545075601'></script>
+<script src='/js/angularSelectList.js?v=1564771391'></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="/js/gtm.js?v=1501512057"></script>
+</head>
+<body class="agy-coronavirus has-offcanvas-menu off-canvas-center  bow-theme-1 horz-menu full-horz-menu1 body-theme-coronavirus matching-heights-processing">
+<div role='navigation' aria-label='skip nav'>
+<noscript>
+<div class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Browsers that can not handle javascript will not be able to access some features of this site. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<style type="text/css">
+body.matching-heights-processing:before,body.matching-heights-processing:after {
+content:'';
+height:0px;
+width:0px;
+}
+</style>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-WTW7M9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div id="noAdBlock" style="display:none;" class="alert bg bg-accent-1 text-center">
+<span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span> Some functions of this site are disabled for browsers blocking jQuery. <span class="fa fa-3x fa-exclamation-triangle" aria-hidden="true"></span>
+</div>
+<div id='_TopOfPage'></div>
+<script>
+			function doAnalyticsGo(sndx) {
+				var dest = sndx.options[sndx.selectedIndex].value;
+				if (dest == 0) {
+					alert('Please make a selection.');
+					return false;
+				} else {
+					document.location.href=dest;
+					return false;
+				}
+			}
+		</script><a href='#main' data-target-id='main' class='sr-only sr-only-focusable jump-to-id'>Skip to main content</a>
+</div>
+
+
+<!--START DIV CONTAINER-->
+<div id='main-mobile-canvas-container' class=''>
+	<div id='temp-toggler-mobile-menu' class='text-center toggle-mobile-menu-controls'>
+		<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+			<span class='fa fa-3x fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-3x fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>MENU
+		</a>
+	</div>
+	<div class='offcanvas-left toggle-mobile-menu-controls' id='mobile-canvas-menu-container'>
+		<div class="mobile-canvas-nav-header" >
+			<div class="mobile-canvas-menu-logo-block">
+				<div id='mobileLogoBlock'>
+					<a href='/coronavirus'>
+						<img class="img-responsive" src="/images/som/final_logo_migov_white_526452_7.png" alt="Description: Coronavirus " />
+					</a>
+				</div>
+				<div id='mobileSiteTitle'>
+					<a href='/coronavirus'>
+						<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div> </a>
+				</div>
+			</div>
+			<div class="inner-mobile-menu-toggle">
+				<a href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link btn btn-accent-black'><span class='fa fa-2x fa-bars mobile-menu-closed-icon'></span><span class='fa fa-2x fa-times mobile-menu-showing-icon'></span></a>
+			</div>
+		</div>
+		<div class='site-extra-text bg bg-primary-1'>Description: Coronavirus </div>
+		<div class='mobile-search-block bg bg-primary-1 padding-bottom-10'>
+			<div class="searchComponentDiv" id="searchComponentDiv_9910101010101" ng-controller="searchComponentController" ng-init="init(9910101010101)">
+				<div ng-if="loadedData">
+					<form ng-submit="submitFormLocal()" class="submit-override">
+						<div class="clearfix">
+							<div class="" angucomplete-alt id="searchInput_9910101010101"
+							  placeholder=""
+							  pause="10" 
+							  selected-object="optionChanged" 
+							  local-data="people"
+							  local-search="localSearch"
+							  title-field="name"
+							  description-field="twitter"
+							  minlength="1" 
+							  input-class="form-control form-control" 
+							  input-changed="inputChanged" 
+							  match-class="highlight">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<script>		
+				window.loadedData[9910101010101] = [];
+				window.loadedData[9910101010101]["GSA_COLLECTION"] = "coronavirus";
+				
+				window.loadedData[9910101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+				window.loadedData[9910101010101]["subcategories"] = [];			
+			</script>
+		</div>
+		<div id="containerMainMobileLinks"></div>
+		<div class="branding-bar-links-block">
+			<nav class="mobile-branding-links" aria-label="mobile global menu">
+				<ul id='m_bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li></ul>  </nav>
+		</div>
+	</div>
+	<script type="text/javascript">
+	window.agencySitePathCSS = 'coronavirus';
+	//window.agencySitePathCSS = window.location.pathname;
+	window.agencyText = 'Description:~Coronavirus';
+	//window.agencyText = document.getElementsByTagName("title")[0].innerHTML;
+	window.siteClient = window.agencySitePathCSS;
+	// Task 44300 - WEX
+	//window.default_collection = window.agencySitePathCSS == 'som' ? '' : window.agencySitePathCSS;
+	window.default_collection = 'som';
+	window.gsasearch = true;
+	window.usagovCollection = 'mi-'+window.agencySitePathCSS;
+
+	$('document').ready(function(){
+		$('.site-search-form').submit(function(e){
+			e.preventDefault();
+			siteSearchForm($(this));
+		});
+		$('#noAdBlock').hide();
+	});
+	</script>
+</div>
+
+<div id='container' class='container-fluid'>
+<div id="topMenuSearchContainer" class="search-extended">
+	<div class="searchComponentDiv padding-top-20 padding-bottom-20" id="searchComponentDiv_10101010101" ng-controller="searchComponentController" ng-init="init(10101010101)">
+		<div ng-if="loadedData">
+			<form ng-submit="submitFormLocal()" class="submit-override">
+				<div class="container">
+					<div class="col-xs-11" angucomplete-alt id="searchInput_10101010101"
+					  placeholder=""
+					  pause="10" 
+					  selected-object="optionChanged" 
+					  local-data="people"
+					  local-search="localSearch"
+					  title-field="name"
+					  description-field="twitter"
+					  minlength="1" 
+					  input-class="form-control form-control" 
+					  input-changed="inputChanged" 
+					  match-class="highlight">
+					</div>
+					<div class="col-xs-1 bg bg-accent-black">
+						<a href="#" onclick="$('body').removeClass('show-search-form');$('#top-right-search-bar').focus(); return false;" title="Close Search Panel" class="fa-2x">
+							<span class="fa fa-remove"></span> 
+							<span class="sr-only">Close Search Box</span>
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>		
+		window.loadedData[10101010101] = [];
+		window.loadedData[10101010101]["GSA_COLLECTION"] = "coronavirus";
+		window.loadedData[10101010101]["gsaAgencyText"] = "Description:~Coronavirus";
+		window.loadedData[10101010101]["subcategories"] = [];
+	</script>
+</div>
+<!-- agencyHeaderNavPath agencyCreateHeaderNavP3 -->
+
+	<!--div id="bannerArea" role='banner'--><!-- HEADER 1.1 Live --><div id='bannerArea' role='banner'><div id='superTop'><!-- agency banner text -->
+			<div class='col-sm-3 col-xs-12 sub-agency-mi-global-logo'><a href='/'><img src='/bootstrap/images/migov_brandingbar_2017.png' alt='Michigan.gov Home' class='img-responsive' /></a></div>
+			<div class='col-sm-9 col-xs-12'><ul id='bannerLinks'><li><a href='/coronavirus/0,9753,7-406-98178_98541---,00.html' title='Alternate Languages'>Alternate Languages</a></li><li><a href='/coronavirus' title='Home'>Home</a></li><li><a href='/mdhhs' title='MDHHS'>MDHHS</a></li><li class='migovlink'><a href='http://www.michigan.gov/' title='MI Gov Home'>MI.gov</a></li><li id='top-right-search-bar' style='display:none;'>
+			<a href='#topMenuSearchContainer' aria-haspopup='true' title='Search Mi.gov' class='top-header-search-link' data-search-field-id=''>
+                <span>Search</span>
+            </a>
+			</li></ul></div></div><div id='siteBanner'><!-- agency banner text -->
+			<div class='col-xs-12 visible-xs-block sub-agency-global-tag'>Official Website of <a href='/' title='return to Michigan.gov'>Michigan.gov</a></div>
+			<div id='headerRow'>
+			<div class='header-site-title-text'>
+				<a class='site-title-link' accesskey='1' href='/coronavirus/' title='Coronavirus - Description: Coronavirus '>
+					<div class='page-site-header'><div class='bannerSmTxt'></div><div class='bannerLgTxt'>Coronavirus</div></div>
+				</a>
+			</div>
+			<div class='header-nav-block'><nav class='main-navigation' role='navigation' aria-label='main navigation'><ul id='nav' class='nav-main'>
+			<!-- State Of Michigan - Thu Mar 26 19:18:45 2020 -->
+			
+	<!-- e-Michigan Portal - Process #6 -->
+<!-- Begin Global Nav section --><!-- End Global Nav section -->
+
+		<!-- Begin Responsive Navigation -->
+		<li  id='98178' class='id-98178 has-subs'>
+		<a class='lvl1' title="Resources" href='/coronavirus/0,9753,7-406-98178---,00.html'>Resources</a>
+		<a title="show sub link for Resources" href='#ul_98178' data-target-list='ul_98144' class='toggle-sub-list' style='display:none;'></a>
+
+
+			<ul id='ul_98178' class='sub-list'>
+			<li  id='98155' class='id-98155 '>
+			<a class='lvl2' title="Resources, For Residents" href='/coronavirus/0,9753,7-406-98178_98155---,00.html'>For Residents</a>
+
+			</li>
+			<li  id='98156' class='id-98156 '>
+			<a class='lvl2' title="Resources, For Health Professionals" href='/coronavirus/0,9753,7-406-98178_98156---,00.html'>For Health Professionals</a>
+
+			</li>
+			<li  id='98157' class='id-98157 '>
+			<a class='lvl2' title="Resources, For Childcare" href='/coronavirus/0,9753,7-406-98178_98157---,00.html'>For Childcare</a>
+
+			</li>
+			<li  id='98541' class='id-98541 '>
+			<a class='lvl2' title="Resources, Alternate Languages" href='/coronavirus/0,9753,7-406-98178_98541---,00.html'>Alternate Languages</a>
+
+			</li>
+			<li  id='98737' class='id-98737 '>
+			<a class='lvl2' title="Resources, Guidance for Business" href='/coronavirus/0,9753,7-406-98178_98737---,00.html'>Guidance for Business</a>
+
+			</li>
+			<li  id='98179' class='id-98179 '>
+			<a class='lvl2' title="Resources, For Employers & Workers" href='/coronavirus/0,9753,7-406-98178_98179---,00.html'>For Employers & Workers</a>
+
+			</li>
+			<li  id='98558' class='id-98558 '>
+			<a class='lvl2' title="Resources, For Schools and Colleges" href='/coronavirus/0,9753,7-406-98178_98558---,00.html'>For Schools and Colleges</a>
+
+			</li>
+			<li  id='98281' class='id-98281 '>
+			<a class='lvl2' title="Resources, Communications Resources" href='/coronavirus/0,9753,7-406-98178_98281---,00.html'>Communications Resources</a>
+
+			</li>
+			<li  id='98455' class='id-98455 '>
+			<a class='lvl2' title="Resources, Executive Orders & Directives" href='/coronavirus/0,9753,7-406-98178_98455---,00.html'>Executive Orders & Directives</a>
+
+		</li>
+		</ul>
+		</li>
+		<li  id='98158' class='id-98158 '>
+		<a class='lvl1' title="Press Releases" href='/coronavirus/0,9753,7-406-98158---,00.html'>Press Releases</a>
+
+		</li>
+		<li  id='98414' class='id-98414 '>
+		<a class='lvl1' title="Video Updates" href='/coronavirus/0,9753,7-406-98414---,00.html'>Video Updates</a>
+
+		</li>
+		</ul>
+		<ul id='desktopMobileButton' style='display:none;'>
+		<li><a aria-haspopup='true' href='#mobile-canvas-menu-container' data-toggle-class='show-mobile-nav' class='toggle-mobile-menu outer-link text-center toggle-mobile-menu-controls'>
+				<span class='fa fa-bars mobile-menu-closed-icon toggle-mobile-menu-controls'></span><span class='fa fa-times mobile-menu-showing-icon toggle-mobile-menu-controls'></span>
+				<!--<div class='clearfix'>MENU</div>-->
+			</a></li>
+		</ul>
+	</nav>
+	</div>
+	<!-- End Flyout Navigation --><!-- Left Links --><!-- End Left Links --></div></div><div class='siteBannerTxt'>Description: Coronavirus </div>
+	<div id="horzMenuSubLinksBlock_container" class="container"><div id="horzMenuSubLinksRow"><div id="horzMenuSubLinksBlockBreadCrumb"></div></div><div id="horzMenuSubLinksBlock"></div></div></div>
+			<div id='topNavSearch'>
+<!-- SEARCH --><form id='searchform' onsubmit="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			<input accesskey='s' type='TEXT' autocomplete='off' id='query' name='q' placeholder='Search' title='Search'>
+			<input id='go' type='submit' value='search' name='button' onClick="location.href='https://search.michigan.gov/AppBuilder/search?ctx=CORONAVIRUS&q=' + document.getElementById('query').value;return false;">
+			</form><!-- /SEARCH --></div><!-- LEFTNAV agencyCreateLeftNavRD -->
+<!-- bodyWrapper -->
+<div id='bodyWrapper'>
+
+	<!-- contentWrapper -->
+<div id='contentWrapper'>
+	<!-- main --><div id='main' class='DW page' role='main'>
+	<div id='breadcrumbContainer'><div id='breadcrumb' role='navigation' aria-label='breadcrumbs'><span style='display: none' id='breadcrumblabel'>You are here</span><ol class='breadcrumb' aria-labelledby='breadcrumblabel'><li><a href='/coronavirus/'>Coronavirus</a></li></ol></div></div>
+	
+		  
+		     <div class='page-header sr-only'><h1><span class="sr-only">Michigan Data:</span></h1></div>
+
+	<!-- Body Begin -->
+		
+			  <!-- State Of Michigan - Thu Mar 26 18:04:33 2020 -->
+			<!-- Begin CDA Create Content HTML -->
+		<div class='fullContent'><h2 id='TITLETXT_520743' class='TITLETEXT'><span class="sr-only">Michigan Data:</span></h2><!-- BODY -->
+			<p><strong>This information is updated daily at 2 p.m.</strong>, with COVID-19 results included as of 10 a.m..</p>
+
+<p><strong>Note on cumulative counts: </strong>This report is provisional and subject to change. &nbsp;As public health investigations of individual cases continue, there will be corrections to the status and details of referred cases that result in changes to this report.</p>
+
+<p><strong>Note on the deaths:</strong> Deaths must be reported by health care providers, medical examiners/coroners, and recorded by local health departments in order to be counted.</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="height:400px;width:339px;" width="339">
+	<caption><strong>Overall Confirmed COVID-19 Cases by County</strong></caption>
+	<thead>
+	</thead>
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;"><strong>&nbsp; County</strong></td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;"><strong>Cases</strong></td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;"><strong>Deaths</strong></td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Allegan</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Barry</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Bay</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">4</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Berrien</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">11</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Calhoun</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">7</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Cass</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Charlevoix</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">4</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Clare</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Clinton</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">7</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Detroit City</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">851</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">15</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Eaton</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">4</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Emmet</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Genesee</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">63</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Gladwin</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Grand Traverse</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Hillsdale</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">5</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Ingham</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">22</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Ionia</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Iosco</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Isabella</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Jackson</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">17</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Kalamazoo</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">10</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Kalkaska</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Kent</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">41</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Lapeer</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Leelanau</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Lenawee</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">5</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Livingston</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">21</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Macomb</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">347</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">11</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Manistee</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Marquette</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Mecosta</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Midland</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">6</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Missaukee</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Monroe</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">21</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Montcalm</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Muskegon</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Newaygo</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Oakland</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">668</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">15</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Oceana</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Ogemaw</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Otsego</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">7</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Ottawa</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">18</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Roscommon</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Saginaw</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">10</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Sanilac</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Shiawassee</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; St. Clair</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">13</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Tuscola</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Van Buren</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">2</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Washtenaw</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">92</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">3</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Wayne</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">538</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">11</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Wexford</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">1</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Other</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">13</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px;">&nbsp; Out of State</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">7</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">&nbsp;</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 251px; vertical-align: middle;">
+			<p><strong>&nbsp; Total</strong></p>
+			</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;">
+			<p style="text-align: center;"><b>2,856</b></p>
+			</td>
+			<td nowrap="nowrap" style="width: 88px; text-align: center;"><strong>60</strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><em>City of Detroit and Wayne County are reported separately.</em></p>
+
+<p>For consistency with previous outbreak reporting methodology, the Michigan Department of Corrections (MDOC) has been added as a separate jurisdiction under the "Other" category. This has resulted in the reclassification of&nbsp;some confirmed cases previously indicated among&nbsp;county case counts.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 748px;">
+	<caption><strong>Cumulative Number of Specimens Tested for COVID-19 -&nbsp;Last Updated 3/26/2020 14:00</strong></caption>
+	<thead>
+		<tr>
+			<th scope="col" style="width: 108px;">&nbsp; Lab Type</th>
+			<th scope="col" style="text-align: center; width: 185px;">Negative Tests</th>
+			<th scope="col" style="text-align: center; width: 187px;">Positive Tests</th>
+			<th scope="col" style="text-align: center; width: 265px;">Total Specimens Tested</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width: 108px;">&nbsp; Commercial</td>
+			<td style="text-align: center; width: 185px;">929</td>
+			<td style="text-align: center; width: 187px;">40</td>
+			<td style="text-align: center; width: 265px;">970</td>
+		</tr>
+		<tr>
+			<td style="width: 108px;">&nbsp; Hospital</td>
+			<td style="text-align: center; width: 185px;">5411</td>
+			<td style="text-align: center; width: 187px;">1965</td>
+			<td style="text-align: center; width: 265px;">7477</td>
+		</tr>
+		<tr>
+			<td style="width: 108px;">&nbsp; Public Health</td>
+			<td style="text-align: center; width: 185px;">2822</td>
+			<td style="text-align: center; width: 187px;">611</td>
+			<td style="text-align: center; width: 265px;">3439</td>
+		</tr>
+		<tr>
+			<td style="width: 108px;">&nbsp; <strong>Grand Total</strong></td>
+			<td style="text-align: center; width: 185px;"><strong>9162</strong></td>
+			<td style="text-align: center; width: 187px;"><strong>2616</strong></td>
+			<td style="text-align: center; width: 265px;"><strong>11886</strong></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>Notes:<br />
+This is a new reporting system and additional laboratories will be included over time.&nbsp; Counts of specimens tested positive will not equal number of people with COVID-19. People may have more than one test or may have had their test from an out of state lab.&nbsp;</strong><br />
+Total samples tested includes test that were negative, positive, and inconclusive.<br />
+Commercial labs only includes data from LabCorp.<br />
+Public health labs include the Michigan Department of Health and Human Services Bureau of Laboratories.<br />
+Counts represent the total specimens tested, not total patients tested. A patient can have more than one specimen tested, therefore the number of specimens tested may be more than the number of patients tested.</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:339px;" width="339">
+	<caption>
+	<p><strong>Overall Percentage of Cases by Sex</strong></p>
+	</caption>
+	<thead>
+		<tr>
+			<th nowrap="nowrap" scope="col" style="width: 250px; height: 28px;"><strong>&nbsp; Sex</strong></th>
+			<th nowrap="nowrap" scope="col" style="width: 89px; height: 28px; text-align: center;"><strong>%</strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" style="width: 250px; height: 28px;">&nbsp; Male</td>
+			<td nowrap="nowrap" style="width: 89px; height: 28px; text-align: center;">51%</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 250px; height: 28px;">&nbsp; Female</td>
+			<td nowrap="nowrap" style="width: 89px; height: 28px; text-align: center;">49%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:339px;" width="339">
+	<caption>
+	<p><strong>Overall Percentage of Deceased by Sex</strong></p>
+	</caption>
+	<thead>
+		<tr>
+			<th nowrap="nowrap" scope="col" style="width: 250px; height: 28px;"><strong>&nbsp; Sex</strong></th>
+			<th nowrap="nowrap" scope="col" style="width: 89px; height: 28px; text-align: center;"><strong>%</strong></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td nowrap="nowrap" style="width: 250px; height: 28px;">&nbsp; Male</td>
+			<td nowrap="nowrap" style="width: 89px; height: 28px; text-align: center;">60%</td>
+		</tr>
+		<tr>
+			<td nowrap="nowrap" style="width: 250px; height: 28px;">&nbsp; Female</td>
+			<td nowrap="nowrap" style="width: 89px; height: 28px; text-align: center;">40%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:339px;" width="339">
+	<caption><strong>Percentage of Cases by Age</strong></caption>
+	<tbody>
+		<tr>
+			<td style="width:251px;height:28px;"><strong>&nbsp; Age</strong></td>
+			<td style="width: 88px; height: 28px; text-align: center;"><strong>%</strong></td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 0 to 19 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">1%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 20 to 29 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">7%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 30 to 39 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">12%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 40 to 49 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">16%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 50 to 59 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">19%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 60 to 69 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">21%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 70 to 79 years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">15%</td>
+		</tr>
+		<tr>
+			<td style="width:251px;height:28px;">&nbsp; 80+ years</td>
+			<td style="width: 88px; height: 28px; text-align: center;">8%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><br />
+&nbsp;</p>
+
+<div>&nbsp;</div>
+
+			
+		
+			</div><!-- /End CDA Create Content--> <!-- Body End -->
+	</div>
+	
+		  
+		<!-- START RIGHT_NAV 7-406-98163-520743-- ~ 7-406-98163-520743-- ~ 7-406-98163-520743-- -->
+		
+
+<!-- State Of Michigan - Thu Mar 26 18:04:34 2020 -->
+
+<!-- BEGIN RIGHTNAV HTML CODE  -->
+
+<!-- Agency category --><!-- Begin Global Nav section RD --><!-- End Global Nav section RD --><!-- End My Interests/RightNav Links/Related Content/Right Links -->
+<!-- Cache Debug Info
+
+-->
+ <!-- END RIGHT_NAV -->
+		<!-- /div -->
+		 </div><!-- /contentWrapper -->
+	</div><!-- /bodyWrapper -->
+<!-- BOTTOMNAV -->
+<!-- BEGIN FOOTER RD -->
+<div id="footerArea" role="contentinfo" style="clear: both">
+
+	<!-- begin expanded footer --><div id='expandedFooter'><div id='cat_98152' class='footer_1'><h2>brandarea</h2><ul><li><a href='/som'><img src="/images/som/somFooterLogoBOW2015_491229_7.png" alt="Michigan.gov"></a></li></ul></div><div id='agencylinks' class='footer_1'><ul></ul></div><div id='policylinks' class='footer_1'><ul><li><a href='/'>Michigan.gov Home</a></li><li><a href='/adaform'>ADA</a></li><li><a href='/minewswire'>Michigan News</a></li><li><a href='/coronavirus/0,9753,7-406--281460--,00.html'>Policies</a></li></ul></div></div><br><span class='copyright'><br>Copyright 2020 State of Michigan</span><!-- end expanded footer --><script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    document.querySelector('body').classList.remove('matching-heights-processing');
+	document.getElementById("noAdBlock").style.display = "block";
+}
+</script>
+
+</div>
+<!--END DIV CONTAINER-->
+</div>
+
+<!-- Mega Menu Block -->
+<div id="megaMenuBlock">
+	<div id="megaMenuSubLinksBlock_container">
+		<div class="container">
+			<div class="col-xs-3">
+				<div id="megaMenuLogoBlock" >
+					<a href='/coronavirus'>
+						<img src="/images/som/final_logo_migov_white_526452_7.png" class="img-responsive logo" alt="Description: Coronavirus " />
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div id="megaMenuSubLinksBlockBreadCrumb"></div>
+				<div id="megaMenuSubLinksBlock"></div>
+			</div>
+		</div>
+	</div>
+	<div id="megaMenuSearchBlock"></div>
+</div>
+<style type="text/css">
+
+</style>
+<!-- stmiws103 rjp NT -->
+</body>
+</html>

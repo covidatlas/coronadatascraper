@@ -1,0 +1,598 @@
+[
+  {
+    "county": "Barking and Dagenham",
+    "cases": 72
+  },
+  {
+    "county": "Barnet",
+    "cases": 103
+  },
+  {
+    "county": "Barnsley",
+    "cases": 27
+  },
+  {
+    "county": "Bath and North East Somerset",
+    "cases": 23
+  },
+  {
+    "county": "Bedford",
+    "cases": 10
+  },
+  {
+    "county": "Bexley",
+    "cases": 77
+  },
+  {
+    "county": "Birmingham",
+    "cases": 290
+  },
+  {
+    "county": "Blackburn with Darwen",
+    "cases": 6
+  },
+  {
+    "county": "Blackpool",
+    "cases": 8
+  },
+  {
+    "county": "Bolton",
+    "cases": 25
+  },
+  {
+    "county": "Bournemouth, Christchurch and Poole",
+    "cases": 15
+  },
+  {
+    "county": "Bracknell Forest",
+    "cases": 3
+  },
+  {
+    "county": "Bradford",
+    "cases": 23
+  },
+  {
+    "county": "Brent",
+    "cases": 228
+  },
+  {
+    "county": "Brighton and Hove",
+    "cases": 30
+  },
+  {
+    "county": "Bristol, City of",
+    "cases": 51
+  },
+  {
+    "county": "Bromley",
+    "cases": 149
+  },
+  {
+    "county": "Buckinghamshire",
+    "cases": 66
+  },
+  {
+    "county": "Bury",
+    "cases": 27
+  },
+  {
+    "county": "Calderdale",
+    "cases": 9
+  },
+  {
+    "county": "Cambridgeshire",
+    "cases": 47
+  },
+  {
+    "county": "Camden",
+    "cases": 85
+  },
+  {
+    "county": "Central Bedfordshire",
+    "cases": 28
+  },
+  {
+    "county": "Cheshire East",
+    "cases": 31
+  },
+  {
+    "county": "Cheshire West and Chester",
+    "cases": 24
+  },
+  {
+    "county": "Cornwall and Isles of Scilly",
+    "cases": 43
+  },
+  {
+    "county": "County Durham",
+    "cases": 29
+  },
+  {
+    "county": "Coventry",
+    "cases": 35
+  },
+  {
+    "county": "Croydon",
+    "cases": 181
+  },
+  {
+    "county": "Cumbria",
+    "cases": 176
+  },
+  {
+    "county": "Darlington",
+    "cases": 5
+  },
+  {
+    "county": "Derby",
+    "cases": 58
+  },
+  {
+    "county": "Derbyshire",
+    "cases": 139
+  },
+  {
+    "county": "Devon",
+    "cases": 55
+  },
+  {
+    "county": "Doncaster",
+    "cases": 21
+  },
+  {
+    "county": "Dorset",
+    "cases": 25
+  },
+  {
+    "county": "Dudley",
+    "cases": 60
+  },
+  {
+    "county": "Ealing",
+    "cases": 165
+  },
+  {
+    "county": "East Riding of Yorkshire",
+    "cases": 21
+  },
+  {
+    "county": "East Sussex",
+    "cases": 26
+  },
+  {
+    "county": "Enfield",
+    "cases": 110
+  },
+  {
+    "county": "Essex",
+    "cases": 130
+  },
+  {
+    "county": "Gateshead",
+    "cases": 12
+  },
+  {
+    "county": "Gloucestershire",
+    "cases": 64
+  },
+  {
+    "county": "Greenwich",
+    "cases": 118
+  },
+  {
+    "county": "Hackney and City of London",
+    "cases": 119
+  },
+  {
+    "county": "Halton",
+    "cases": 8
+  },
+  {
+    "county": "Hammersmith and Fulham",
+    "cases": 94
+  },
+  {
+    "county": "Hampshire",
+    "cases": 267
+  },
+  {
+    "county": "Haringey",
+    "cases": 91
+  },
+  {
+    "county": "Harrow",
+    "cases": 167
+  },
+  {
+    "county": "Hartlepool",
+    "cases": 3
+  },
+  {
+    "county": "Havering",
+    "cases": 70
+  },
+  {
+    "county": "Herefordshire, County of",
+    "cases": 21
+  },
+  {
+    "county": "Hertfordshire",
+    "cases": 170
+  },
+  {
+    "county": "Hillingdon",
+    "cases": 103
+  },
+  {
+    "county": "Hounslow",
+    "cases": 112
+  },
+  {
+    "county": "Isle of Wight",
+    "cases": 7
+  },
+  {
+    "county": "Islington",
+    "cases": 96
+  },
+  {
+    "county": "Kensington and Chelsea",
+    "cases": 110
+  },
+  {
+    "county": "Kent",
+    "cases": 112
+  },
+  {
+    "county": "Kingston upon Hull, City of",
+    "cases": 4
+  },
+  {
+    "county": "Kingston upon Thames",
+    "cases": 42
+  },
+  {
+    "county": "Kirklees",
+    "cases": 24
+  },
+  {
+    "county": "Knowsley",
+    "cases": 12
+  },
+  {
+    "county": "Lambeth",
+    "cases": 248
+  },
+  {
+    "county": "Lancashire",
+    "cases": 102
+  },
+  {
+    "county": "Leeds",
+    "cases": 67
+  },
+  {
+    "county": "Leicester",
+    "cases": 45
+  },
+  {
+    "county": "Leicestershire",
+    "cases": 98
+  },
+  {
+    "county": "Lewisham",
+    "cases": 144
+  },
+  {
+    "county": "Lincolnshire",
+    "cases": 32
+  },
+  {
+    "county": "Liverpool",
+    "cases": 72
+  },
+  {
+    "county": "Luton",
+    "cases": 30
+  },
+  {
+    "county": "Manchester",
+    "cases": 55
+  },
+  {
+    "county": "Medway",
+    "cases": 32
+  },
+  {
+    "county": "Merton",
+    "cases": 108
+  },
+  {
+    "county": "Middlesbrough",
+    "cases": 9
+  },
+  {
+    "county": "Milton Keynes",
+    "cases": 38
+  },
+  {
+    "county": "Newcastle upon Tyne",
+    "cases": 80
+  },
+  {
+    "county": "Newham",
+    "cases": 109
+  },
+  {
+    "county": "Norfolk",
+    "cases": 51
+  },
+  {
+    "county": "North East Lincolnshire",
+    "cases": 5
+  },
+  {
+    "county": "North Lincolnshire",
+    "cases": 6
+  },
+  {
+    "county": "North Somerset",
+    "cases": 22
+  },
+  {
+    "county": "North Tyneside",
+    "cases": 27
+  },
+  {
+    "county": "North Yorkshire",
+    "cases": 50
+  },
+  {
+    "county": "Northamptonshire",
+    "cases": 64
+  },
+  {
+    "county": "Northumberland",
+    "cases": 23
+  },
+  {
+    "county": "Nottingham",
+    "cases": 67
+  },
+  {
+    "county": "Nottinghamshire",
+    "cases": 109
+  },
+  {
+    "county": "Oldham",
+    "cases": 48
+  },
+  {
+    "county": "Oxfordshire",
+    "cases": 98
+  },
+  {
+    "county": "Peterborough",
+    "cases": 10
+  },
+  {
+    "county": "Plymouth",
+    "cases": 26
+  },
+  {
+    "county": "Portsmouth",
+    "cases": 42
+  },
+  {
+    "county": "Reading",
+    "cases": 10
+  },
+  {
+    "county": "Redbridge",
+    "cases": 89
+  },
+  {
+    "county": "Redcar and Cleveland",
+    "cases": 10
+  },
+  {
+    "county": "Richmond upon Thames",
+    "cases": 55
+  },
+  {
+    "county": "Rochdale",
+    "cases": 38
+  },
+  {
+    "county": "Rotherham",
+    "cases": 30
+  },
+  {
+    "county": "Rutland",
+    "cases": 0
+  },
+  {
+    "county": "Salford",
+    "cases": 52
+  },
+  {
+    "county": "Sandwell",
+    "cases": 65
+  },
+  {
+    "county": "Sefton",
+    "cases": 24
+  },
+  {
+    "county": "Sheffield",
+    "cases": 240
+  },
+  {
+    "county": "Shropshire",
+    "cases": 44
+  },
+  {
+    "county": "Slough",
+    "cases": 22
+  },
+  {
+    "county": "Solihull",
+    "cases": 29
+  },
+  {
+    "county": "Somerset",
+    "cases": 23
+  },
+  {
+    "county": "South Gloucestershire",
+    "cases": 31
+  },
+  {
+    "county": "South Tyneside",
+    "cases": 10
+  },
+  {
+    "county": "Southampton",
+    "cases": 32
+  },
+  {
+    "county": "Southend-on-Sea",
+    "cases": 12
+  },
+  {
+    "county": "Southwark",
+    "cases": 253
+  },
+  {
+    "county": "St. Helens",
+    "cases": 17
+  },
+  {
+    "county": "Staffordshire",
+    "cases": 121
+  },
+  {
+    "county": "Stockport",
+    "cases": 48
+  },
+  {
+    "county": "Stockton-on-Tees",
+    "cases": 16
+  },
+  {
+    "county": "Stoke-on-Trent",
+    "cases": 16
+  },
+  {
+    "county": "Suffolk",
+    "cases": 42
+  },
+  {
+    "county": "Sunderland",
+    "cases": 27
+  },
+  {
+    "county": "Surrey",
+    "cases": 142
+  },
+  {
+    "county": "Sutton",
+    "cases": 54
+  },
+  {
+    "county": "Swindon",
+    "cases": 11
+  },
+  {
+    "county": "Tameside",
+    "cases": 40
+  },
+  {
+    "county": "Telford and Wrekin",
+    "cases": 17
+  },
+  {
+    "county": "Thurrock",
+    "cases": 20
+  },
+  {
+    "county": "Torbay",
+    "cases": 21
+  },
+  {
+    "county": "Tower Hamlets",
+    "cases": 93
+  },
+  {
+    "county": "Trafford",
+    "cases": 46
+  },
+  {
+    "county": "Wakefield",
+    "cases": 24
+  },
+  {
+    "county": "Walsall",
+    "cases": 78
+  },
+  {
+    "county": "Waltham Forest",
+    "cases": 95
+  },
+  {
+    "county": "Wandsworth",
+    "cases": 204
+  },
+  {
+    "county": "Warrington",
+    "cases": 10
+  },
+  {
+    "county": "Warwickshire",
+    "cases": 74
+  },
+  {
+    "county": "West Berkshire",
+    "cases": 18
+  },
+  {
+    "county": "West Sussex",
+    "cases": 69
+  },
+  {
+    "county": "Westminster",
+    "cases": 172
+  },
+  {
+    "county": "Wigan",
+    "cases": 16
+  },
+  {
+    "county": "Wiltshire",
+    "cases": 43
+  },
+  {
+    "county": "Windsor and Maidenhead",
+    "cases": 14
+  },
+  {
+    "county": "Wirral",
+    "cases": 22
+  },
+  {
+    "county": "Wokingham",
+    "cases": 13
+  },
+  {
+    "county": "Wolverhampton",
+    "cases": 103
+  },
+  {
+    "county": "Worcestershire",
+    "cases": 76
+  },
+  {
+    "county": "York",
+    "cases": 14
+  }
+]

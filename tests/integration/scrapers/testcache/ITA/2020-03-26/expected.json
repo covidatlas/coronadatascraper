@@ -1,0 +1,148 @@
+[
+  {
+    "recovered": 23,
+    "deaths": 63,
+    "cases": 946,
+    "tested": 5488,
+    "state": "iso2:IT-65"
+  },
+  {
+    "recovered": 0,
+    "deaths": 1,
+    "cases": 134,
+    "tested": 1046,
+    "state": "iso2:IT-77"
+  },
+  {
+    "recovered": 7,
+    "deaths": 14,
+    "cases": 393,
+    "tested": 5933,
+    "state": "iso2:IT-78"
+  },
+  {
+    "recovered": 58,
+    "deaths": 83,
+    "cases": 1310,
+    "tested": 8346,
+    "state": "iso2:IT-72"
+  },
+  {
+    "recovered": 792,
+    "deaths": 1174,
+    "cases": 10816,
+    "tested": 42395,
+    "state": "iso2:IT-45"
+  },
+  {
+    "recovered": 197,
+    "deaths": 72,
+    "cases": 1223,
+    "tested": 10721,
+    "state": "iso2:IT-36"
+  },
+  {
+    "recovered": 155,
+    "deaths": 106,
+    "cases": 2096,
+    "tested": 22771,
+    "state": "iso2:IT-62"
+  },
+  {
+    "recovered": 260,
+    "deaths": 280,
+    "cases": 2567,
+    "tested": 7304,
+    "state": "iso2:IT-42"
+  },
+  {
+    "recovered": 7839,
+    "deaths": 4861,
+    "cases": 34889,
+    "tested": 87713,
+    "state": "iso2:IT-25"
+  },
+  {
+    "recovered": 9,
+    "deaths": 310,
+    "cases": 3114,
+    "tested": 8623,
+    "state": "iso2:IT-57"
+  },
+  {
+    "recovered": 14,
+    "deaths": 8,
+    "cases": 103,
+    "tested": 670,
+    "state": "iso2:IT-67"
+  },
+  {
+    "recovered": 135,
+    "deaths": 449,
+    "cases": 6534,
+    "tested": 18054,
+    "state": "iso2:IT-21"
+  },
+  {
+    "recovered": 22,
+    "deaths": 65,
+    "cases": 1182,
+    "tested": 9191,
+    "state": "iso2:IT-75"
+  },
+  {
+    "recovered": 13,
+    "deaths": 19,
+    "cases": 494,
+    "tested": 3461,
+    "state": "iso2:IT-88"
+  },
+  {
+    "recovered": 36,
+    "deaths": 33,
+    "cases": 1164,
+    "tested": 9658,
+    "state": "iso2:IT-82"
+  },
+  {
+    "recovered": 95,
+    "deaths": 158,
+    "cases": 3226,
+    "tested": 20952,
+    "state": "iso2:IT-52"
+  },
+  {
+    "recovered": 117,
+    "deaths": 86,
+    "cases": 1297,
+    "tested": 4600,
+    "state": "iso2:IT-32"
+  },
+  {
+    "recovered": 12,
+    "deaths": 20,
+    "cases": 802,
+    "tested": 5428,
+    "state": "iso2:IT-55"
+  },
+  {
+    "recovered": 2,
+    "deaths": 28,
+    "cases": 408,
+    "tested": 1203,
+    "state": "iso2:IT-23"
+  },
+  {
+    "recovered": 508,
+    "deaths": 287,
+    "cases": 6935,
+    "tested": 79759,
+    "state": "iso2:IT-34"
+  },
+  {
+    "cases": 79633,
+    "recovered": 10294,
+    "deaths": 8117,
+    "tested": 353316
+  }
+]

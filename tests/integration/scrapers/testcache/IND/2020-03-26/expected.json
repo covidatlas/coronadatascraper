@@ -1,0 +1,191 @@
+[
+  {
+    "state": "Andaman and Nicobar Islands",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 380520
+  },
+  {
+    "state": "Andhra Pradesh",
+    "cases": 12,
+    "deaths": 0,
+    "recovered": 1,
+    "population": 49577103
+  },
+  {
+    "state": "Bihar",
+    "cases": 6,
+    "deaths": 1,
+    "recovered": 0,
+    "population": 104099452
+  },
+  {
+    "state": "Chandigarh",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 1147494
+  },
+  {
+    "state": "Chhattisgarh",
+    "cases": 6,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 25545198
+  },
+  {
+    "state": "Delhi",
+    "cases": 35,
+    "deaths": 1,
+    "recovered": 6,
+    "population": 16787941
+  },
+  {
+    "state": "Goa",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 1500000
+  },
+  {
+    "state": "Gujarat",
+    "cases": 42,
+    "deaths": 3,
+    "recovered": 0,
+    "population": 60439692
+  },
+  {
+    "state": "Haryana",
+    "cases": 16,
+    "deaths": 0,
+    "recovered": 11,
+    "population": 25351462
+  },
+  {
+    "state": "Himachal Pradesh",
+    "cases": 3,
+    "deaths": 1,
+    "recovered": 0,
+    "population": 6864602
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "cases": 13,
+    "deaths": 1,
+    "recovered": 1,
+    "population": 12267032
+  },
+  {
+    "state": "Karnataka",
+    "cases": 55,
+    "deaths": 2,
+    "recovered": 3,
+    "population": 61095297
+  },
+  {
+    "state": "Kerala",
+    "cases": 129,
+    "deaths": 0,
+    "recovered": 11,
+    "population": 33406061
+  },
+  {
+    "state": "Ladakh",
+    "cases": 13,
+    "deaths": 0,
+    "recovered": 3,
+    "population": 274000
+  },
+  {
+    "state": "Madhya Pradesh",
+    "cases": 20,
+    "deaths": 1,
+    "recovered": 0,
+    "population": 72626809
+  },
+  {
+    "state": "Maharashtra",
+    "cases": 127,
+    "deaths": 4,
+    "recovered": 15,
+    "population": 112374333
+  },
+  {
+    "state": "Manipur",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 3351200
+  },
+  {
+    "state": "Mizoram",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 1668800
+  },
+  {
+    "state": "Odisha",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 41974218
+  },
+  {
+    "state": "Puducherry",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 1247953
+  },
+  {
+    "state": "Punjab",
+    "cases": 33,
+    "deaths": 1,
+    "recovered": 0,
+    "population": 27743338
+  },
+  {
+    "state": "Rajasthan",
+    "cases": 39,
+    "deaths": 0,
+    "recovered": 3,
+    "population": 68548437
+  },
+  {
+    "state": "Tamil Nadu",
+    "cases": 23,
+    "deaths": 1,
+    "recovered": 1,
+    "population": 72147030
+  },
+  {
+    "state": "Telengana",
+    "cases": 35,
+    "deaths": 0,
+    "recovered": 1,
+    "population": 35003674
+  },
+  {
+    "state": "Uttarakhand",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "population": 10086292
+  },
+  {
+    "state": "Uttar Pradesh",
+    "cases": 40,
+    "deaths": 0,
+    "recovered": 11,
+    "population": 199812341
+  },
+  {
+    "state": "West Bengal",
+    "cases": 10,
+    "deaths": 1,
+    "recovered": 0,
+    "population": 91276115
+  }
+]

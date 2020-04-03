@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ministry of Health and Family Welfare | GOI RSS</title>
+<link rel="shortcut icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/common.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+<!--[if lt IE 9]>
+		<script type="text/javascript" src="assets/js/html5.js"></script>
+        <script type="text/javascript" src="assets/js/respond.min.js"></script>
+<![endif]-->
+<style>
+.contribution {
+    max-width: 100%;
+}
+.dropdownmenu {
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    width: 500px;
+    max-width: 100%;
+    z-index: 9;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.4);
+    border: 1px solid #ccc;
+}
+	.menu_list{}
+.menu_list li {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+.menu_list li:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.menu_list p {
+    margin-bottom: 0;
+}
+.menu_list p a{text-decoration:none;}
+.menu_list p a:hover{color:#fff;}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+.dropbtn {
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  font-weight:bold;
+}
+
+.dropdown {
+  position: inherit;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ffffff;}
+.newtab p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+</style>
+</head>
+<body>
+<!-- Header section -->
+<header class="header">
+  <div class="theme-controller">
+    <div class="container">
+      <div class="gov-logo fleft"><a title="Government of India" href="http://india.gov.in/" target="_blank"><img alt="image alt text" src="assets/images/flag.gif" typeof="foaf:Image">GOVERNMENT OF INDIA</a></div>
+	  
+      <div class="page-conroler fright"> 
+        <div class="share-with">		
+		<a href="https://www.facebook.com/MoHFWIndia/posts/?ref=page_internal" rel="nofollow nofollow noopener noreferrer" target="_BLANK" title="External site that opens in a new window"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href="https://twitter.com/MoHFW_INDIA" rel="nofollow nofollow noopener noreferrer" target="_BLANK" title="External site that opens in a new window"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+		<a href="https://pib.gov.in/newsite/pmreleases.aspx?mincode=31" rel="nofollow nofollow noopener noreferrer" target="_BLANK" title="External site that opens in a new window">PIB</a> 
+		 
+		<a href="https://www.youtube.com/user/mohfwindia" rel="nofollow nofollow noopener noreferrer" target="_BLANK" title="External site that opens in a new window"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+		<a href="https://www.who.int/" rel="nofollow nofollow noopener noreferrer" target="_BLANK" title="External site that opens in a new window"><img src="assets/images/who.png" alt="" title="" style="max-width:17px;" /></a> 
+		<a href="https://main.mohfw.gov.in" rel="nofollow nofollow noopener noreferrer" target="_BLANK">Click here for the main site</a>
+		</div>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="container"> 
+    <div class="logo_wrap"><div class="logo"><a href="index.html"><img src="assets/images/logo.jpg" alt="" title=""></a></div> 
+      <div class="sb_logo"><a href="https://swachhbharat.mygov.in/" target="_blank"><img src="assets/images/sb.png" alt="" title=""></a> </div>
+       </div>
+    </div>
+  </div>
+</header>
+<!-- Header section End -->
+
+<div class="container" >
+<div class="menu">
+
+<div class="menuicon"><i class="fa fa-bars"></i></div>
+<div  class="menu-ee">
+<div class="dropdown">
+  <a class="dropbtn" href="index.html">HOME</a>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnT">Travel Advisories</button>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnC">For Citizens</button>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnH">For Hospitals</button>
+ </div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnS">For States/Departments/Ministries</button>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnE">For Employees</button>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" id="btnA">Awareness Material</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main section -->
+<div class="main-section">
+<div class="container">
+    <div class="progress-block-area col-sm-3">
+	<p class="mblock">Helpline Number Toll free: 1075<br> +91-11-23978046</p>
+	<p class="mblock" style="margin-top:1px;">Helpline Email ID : ncov2019[at]gov[dot]in OR <br>ncov2019[at]gmail[dot]com</p>
+	<p class="mblock" style="margin-top:1px;"><a style="background:white; color:red; padding:0px 0px;" href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" target="_blank">States & Union Territories</a></p>
+	<p class="mblock" style="margin-top:1px;"><a style="background:white; color:red; padding:0px 0px;" href = "https://www.mohfw.gov.in/pdf/DistrictWiseList324.pdf" target= "_blank">List of Districts reporting COVID-19 cases</a></p>
+	<p class="mblock" style="margin-top:1px;"><a style="background:white; color:red; padding:0px 0px;" href="https://www.mohfw.gov.in/pdf/FAQ.pdf" target="_blank">Frequently Asked Questions (FAQs)</a></p>
+	<p class="mblockin"><img src="assets/images/m1.jpg" alt=""></p>
+	<p class="mblockin"><img src="assets/images/m2.jpg" alt=""></p>
+   </div>
+   
+  <div class="contribution col-sm-9">
+    <div class="information_block">
+      <div class="information_row">
+        <div class="iblock"> <img src="assets/images/passengers.png" alt="">
+          <div class="iblock_text"> <span class="icount">15,24,266</span>
+            <div class="info_label">Passengers screened at airport</div>
+          </div>
+        </div>
+       <div class="iblock"> <img src="assets/images/active_patient.png" alt="">
+          <div class="iblock_text"> <span class="icount">640</span>
+		 <!-- <div class="info_label">*</div>-->
+
+           <div class="info_label">Active COVID 2019 cases *</div>
+          </div>
+        </div>
+        <div class="iblock"><img src="assets/images/cured.png" alt="">
+          <div class="iblock_text"> <span class="icount">66</span>
+            <div class="info_label">Cured/discharged cases </div>
+          </div>
+        </div>
+        <div class="iblock"> <img src="assets/images/death.png" alt="">
+          <div class="iblock_text"> <span class="icount">17</span>
+            <div class="info_label">Death cases </div>
+          </div>
+        </div>
+        <div class="iblock"> <img src="assets/images/migrated_icon.png" alt="">
+          <div class="iblock_text"> <span class="icount">1</span>
+            <div class="info_label">Migrated COVID-19 Patient </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<p><strong>*District wise details awaited</p>
+	<!--<p><strong>#2nd Death Reported in Delhi is Covid-19 Negative</p>-->
+    
+<!--<p><strong>*Total number of confirmed cases so far in the country as on 23 March 2020 at 08.15 PM including foreign nationals = 468 (State and District wise details awaited)</p>--> 
+   <!-- Travel Advisory Start-->
+ <div class="table-responsive" id="dvT" style="display:none; font-weight:bold;">	<div style="color:red; font-style:italic;">TRAVEL ADVISORIES	</div>
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>Date</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	
+	<tr>
+      <td align="centre" width="20%" >20-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DGSOrder04of2020.pdf" target="_BLANK">Instructions to all major and minor ports for dealing with(COVID-19) pandemic</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >19-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Traveladvisory.pdf" target="_BLANK">Additional Travel Advisory </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" > <a href="https://www.mohfw.gov.in/pdf/SOPQuarantineofPassengers.pdf" target="_BLANK">Standard Operating Procedure for Passenger Movement post Disembarkation </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/TravelAdvisory17thMarch.pdf" target="_BLANK">Additional Travel Advisory</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >16-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/TravelAdvisory16thMarch.pdf" target="_BLANK">Additional Travel Advisory </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >14-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a href="https://www.mohfw.gov.in/pdf/NewinstructionsDt14032020Restirctiononinternationalpassengertraffic.pdf" target="_BLANK"> Restrictions on International passenger traffic through Land Check Posts </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >13-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/GuidelinesDT13032020.pdf" target="_BLANK">Restrictions on International passenger traffic through land check posts-COVID 19 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ConsolidatedTraveladvisoryUpdated11032020.pdf" target="_BLANK">Consolidated Travel Advisory - 11 March 2020</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/VisarestrictionsrelatedtoCOVID19Ministries.pdf" target="_BLANK">Visa restrictions issued by Bureau of Immigration (BOI) after meeting of GoM on COVID19 - 11 March 2020 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/HFWnCoVGoM11March2020II.pdf" target="_BLANK">Decisions- High level Group of Ministers meeting to review current status and actions for prevention and management of COVID-19 </a></td>
+    </tr>	
+	<tr>
+      <td align="centre" width="20%" >10-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/InternationalCruiseShipsSOPforCovid19.pdf" target="_BLANK">Standard Operating Procedure (SOP) for COVID-19 Management- International Cruise Ships at major Indian Ports</a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%" >10-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/AdditionalTravelAdvisory10032020.pdf" target="_BLANK">Additional Travel Advisory</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >10-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/AdditionalTravelAdvisory1homeisolation.pdf" target="_BLANK">Travel Advisory (Home Isolation)</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >06-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DraftTraveladvisorytotravelersUpdated06032020.pdf" target="_BLANK">Travel Advisory</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >05-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/TravelAdvisory5thMarch.pdf" target="_BLANK">Travel Advisory </a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%" >03-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://boi.gov.in/content/advisory-travel-and-visa-restrictions-related-covid-19" target="_BLANK">Travel and Visa restrictions related to COVID-19 in respect of Bureau of Immigration </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >02-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Consolidated%20Travel%20advisory%20to%20travelers%20Updated%2002032020.pdf" target="_BLANK">Travel Advisory</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >26-02-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Consolidated%20Travel%20advisory%20to%20travelers%20Updated%2026-02-2020.pdf" target="_BLANK">Travel Advisory </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >05-02-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Traveladvisory05022020.pdf" target="_BLANK">Travel Advisory </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >25-01-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/TraveladvisorytotravelersvisitingChina25012020.pdf" target="_BLANK">Travel Advisory </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >17-01-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/TraveladvisorytotravelersvisitingChina17012020.pdf" target="_BLANK">Travel Advisory </a></td>
+    </tr>
+	</tbody>
+  </table>	
+</div>
+<!--TRAVEL ADVISORIES End-->
+
+
+
+<!---CITIZEN ADVISORIES Starts-->
+
+ <div class="table-responsive" id="dvC" style="display:none; font-weight:bold;">	 <div style="color:red; font-style:italic;">FOR CITIZENS</div>	
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>DATE</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/218927g.pdf" target="_BLANK">Gazette Notification - Hydroxychloroquine  now a schedule H1 drug, can be sold on prescription only</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/MoFPMGaribKalyanYojanaPackage.pdf" target="_BLANK">Press Note on Pradhan Mantri Garib Kalyan Yojna package from Ministry of Finance</a></td>
+    </tr>
+	
+	<tr>
+      <td align="centre" width="20%">16-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/SocialDistancingAdvisorybyMOHFW.pdf" target="_BLANK"> Advisory - Social Distancing</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >15-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/1584423700568_COVID19GuidelinesonDeadbodymanagement.pdf" target="_BLANK">Guidelines on Dead Body Management</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/Guidelinesforhomequarantine.pdf" target="_BLANK">Guidelines for home quarantine</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/Useofmaskbypublic.pdf" target="_BLANK">Guidelines on use of masks by public</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">05-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/advisoryformassgathering.pdf" target="_BLANK"> Advisory - Mass Gatherings</a></td>
+    </tr>
+</tbody>
+ </table>	
+	
+	</div>
+<!---CITIZEN ADVISORIES End-->
+
+<!--HOSPITAL ADVISORIES Start-->
+ <div class="table-responsive" id="dvH" style="display:none; font-weight:bold;">		<div style="color:red; font-style:italic;">FOR HOSPITALS</div>
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>DATE</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/218927g.pdf" target="_BLANK">Gazette Notification - Hydroxychloroquine  now a schedule H1 drug, can be sold on prescription only</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/COVIDWebinarSchedule26March2019.pdf" target="_BLANK">Webinar schedule of COVID-19 of AIIMS New Delhi</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Doorstepdelivery26B.pdf" target="_BLANK">Doorstep Delivery of Drugs to Consumers</a></td>
+    </tr>
+	
+	<tr>
+	<td align="centre" width="20%" >25-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Telemedicine.pdf" target="_BLANK">Telemedicine Practice Guidelines</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ReviewofpricesofEssentialCommodities.pdf" target="_BLANK">Letter from Ministry of Consumer Affairs, Food & Public Distribution to States to take appropriate measures to ensure the availability of Ethyl Alcohol/Ethanol/ENA to the manufacturers of hand sanitizers in order to contain Corona Virus COVID- l9 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/GuidelinesonrationaluseofPersonalProtectiveEquipment.pdf" target="_BLANK">Guidelines on rational use of Personal Protective Equipment   </a></td>
+    </tr>
+	
+	<tr>
+      <td align="centre" width="20%" >23-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/AdvisoryontheuseofHydroxychloroquinasprophylaxisforSARSCoV2infection.pdf" target="_BLANK">Advisory on the use of Hydroxy-chloroquin as prophylaxis for SARS-CoV-2 infection </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >22-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/NotificationofICMguidelinesforCOVID19testinginprivatelaboratoriesiIndia.pdf" target="_BLANK">Notification of ICMR guidelines for COVID-19 testing in private laboratories in India </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">20-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/AdvisoryforHospitalsandMedicalInstitutions.pdf" target="_BLANK">Advisory for Hospitals and Medical Institutions </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/LabTestingAdvisory.pdf" target="_BLANK">Latest Testing Guidelines of Indian Council of Medical Research (ICMR) </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/GuidelinesfornotifyingCOVID-19affectedpersonsbyPrivateInstitutions.pdf" target="_BLANK">Guidelines for notifying COVID-19 affected persons by Private Institutions</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/Corona%20Discharge-Policy.pdf" target="_BLANK">Discharge policy for suspect or confirmed Novel Coronavirus (2019-nCoV) cases</a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/GuidelinesonClinicalManagementofCOVID1912020.pdf" target="_BLANK">Updated Guidelines on Clinical Management of COVID-19</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >15-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/MockDrill.pdf" target="_BLANK">SOP for Mock Drill on 22nd March 2020 for Hospital Preparedness </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >15-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ICMRrevisedtestingstrategyforCOVID.pdf" target="_BLANK">Revised Guidelines/Strategy for COVID-19 testing by Indian Council of Medical Research (ICMR)</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >15-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/1584423700568_COVID19GuidelinesonDeadbodymanagement.pdf" target="_BLANK">Guidelines on Dead Body Management</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">09-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/ICMRstrategyforCOVID19testinginIndia.pdf" target="_BLANK">ICMR strategy for COVID-19 testing in India</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">25-01-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf//National%20Guidelines%20for%20IPC%20in%20HCF%20-%20final%281%29.pdf" target="_BLANK">Guidelines for Infection Prevention and Control in Healthcare Facilities</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">24-01-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/5Sample%20collection_packaging%20%202019-nCoV.pdf" target="_BLANK">Guidance for sample Collection, Packaging and Transportation for Novel Coronavirus</a></td>
+    </tr>		
+	</tbody>
+  </table>	
+</div>
+	<!--HOSPITAL ADVISORIES End-->
+
+	<!--STATE ADVISORIES Start -->
+	
+ <div class="table-responsive" id="dvS" style="display:none;  font-weight:bold;">		<div style="color:red; font-style:italic;">FOR STATES/DEPARTMENTS/MINISTRY</div>
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>DATE</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/218927g.pdf" target="_BLANK">Gazette Notification - Hydroxychloroquine  now a schedule H1 drug, can be sold on prescription only</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >26-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ChiefSecretary26032020.pdf" target="_BLANK">D.O. Letter  from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 26.03.2020   </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DOtoChiefSecretariesregCOVID19.pdf" target="_BLANK">D.O. Letter 3 from Secretary, Human Resource Development to Chief Secretaries for temporary Medical camps in Jawahar Navodaya Vidyalayas dated 24th March 2020  </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DOletter_secretary.pdf" target="_BLANK">DO Letter of Home Secretary regarding urgent need to take stringent actions to contain the spread of COVID-19.   </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Annexure_MHA.pdf" target="_BLANK">Annexure to Ministry of Home Affairs Order No. 40-3/2020-D Dated 24-3-2020. </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/cbsecretary2020.pdf" target="_BLANK">D.O. Letter 2 from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 24.03.2020   </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DOHealthSHIPPING.pdf" target="_BLANK">D.O. Letter from Secretary Shipping to States for smooth carrying of goods to & from ports   </a></td>
+    </tr>
+	<tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/GuidelinesonrationaluseofPersonalProtectiveEquipment.pdf" target="_BLANK">Guidelines on rational use of Personal Protective Equipment   </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ModelMicroplanforcontainmentoflocaltransmissionofCOVID19.pdf" target="_BLANK">Model Micro-plan for containment of local transmission of COVID-19 </a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DOtoChiefSecretariesregCOVID19.pdf" target="_BLANK">D.O. Letter from Secretary, Human Resource Development to Chief Secretaries for temporary Medical camps in Jawahar Navodaya Vidyalayas dated 24th March 2020  </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ReviewofpricesofEssentialCommodities.pdf" target="_BLANK">Letter from Ministry of Consumer Affairs, Food & Public Distribution to States to take appropriate measures to ensure the availability of Ethyl Alcohol/Ethanol/ENA to the manufacturers of hand sanitizers in order to contain Corona Virus COVID- l9 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >24-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/doletter24032020.pdf" target="_BLANK">D.O. Letter from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 24.03.2020 </a></td>
+    </tr>
+	
+	
+	<tr>
+      <td align="centre" width="20%" >23-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DOletter23032020.pdf" target="_BLANK">D.O. Letter from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 23.03.2020 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >23-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ClosingofImmigrationCheckPosts.pdf" target="_BLANK">Letter from Ministry of Home Affairs - Restrictions on international passenger traffic through Authorized Immigration Check Posts in view of the COVID-19 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >23-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ministryofshippingOrderdated2332020.pdf" target="_BLANK"> Office Order from Ministry of Shipping - State Government/Union Territories have issued prohibitory orders, Imposing restrictions on non-essential services in view of the COVID-19 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >22-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" > <a href="https://www.mohfw.gov.in/pdf/ChiefSecyDOLetter.pdf" target="_BLANK">D.O. Letter from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 22.03.2020</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >21-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" > <a href="https://www.mohfw.gov.in/pdf/ICMRrevisedtestingstrategyforCOVID.pdf" target="_BLANK">Revised Guidelines/Strategy for COVID-19 testing by Indian Council of Medical Research (ICMR)</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >20-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DGSOrder04of2020.pdf" target="_BLANK">Instructions to all major and minor ports for dealing with(COVID-19) pandemic</a></td>
+    </tr>
+	<tr>
+	      <td align="centre" width="20%" >20-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Covid19.pdf" target="_BLANK">Letter from Secretary, Dept of Higher Education/School Education regarding Digital/e-Learning </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >20-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/MockDrill.pdf" target="_BLANK">SOP for Mock Drill on 22nd March 2020 for Hospital Preparedness </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >19-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/DepttofSports.pdf" target="_BLANK">Advisory from Department of Sports for Sports Organizations </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >19-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/InstructionsforTrainingInstitutes.pdf" target="_BLANK">DOPT OM - Preventive measures to contain the spread of COVID-19 in Training Institutes  </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >19-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/SanitizerLetter.pdf" target="_BLANK">Letter from Department of Food & Public Distribution regarding Hand Sanitizer Production and Availability </a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Letterdated2032020toCSs.pdf" target="_BLANK">DO Letter from Secretary, DoHFW to State Chief Secretaries regarding Social Distancing Measures</a></td>
+    </tr>	
+	<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Monitoringofthequalitystandardsofhandsanitizers2020.pdf" target="_BLANK">Monitoring of the quality standards of hand Sanitizers</a></td>
+    </tr>	
+	<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/DOSecyHE.pdf" target="_BLANK">Directives from MoHRD for all Educational Institutions and Examination Boards regarding precautions to be taken in light of COVID-19</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/PreventivemeasuresDOPT.pdf" target="_BLANK">DoPT OM - Preventive measures to be taken to contain the spread of Novel Coronavirus (COVID-19)</a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/GuidelinesfornotifyingCOVID-19affectedpersonsbyPrivateInstitutions.pdf" target="_BLANK">Guidelines for notifying COVID-19 affected persons by Private Institutions</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">17-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/LabTestingAdvisory.pdf" target="_BLANK">Latest Testing Guidelines of Indian Council of Medical Research (ICMR) </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >16-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/SocialDistancingAdvisorybyMOHFW.pdf" target="_BLANK">Advisory - Social Distancing </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >15-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/1584423700568_COVID19GuidelinesonDeadbodymanagement.pdf" target="_BLANK">Guidelines on Dead Body Management</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >14-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/RevisedItem&NormsforutilisationofSDRFdt14032020.pdf" target="_BLANK">Norms of assistance from State Disaster Response Fund (SDRF) in wake of COVID-19 outbreak</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >13-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Orderdated1332020.pdf" target="_BLANK">National Pharmaceutical Pricing Authority (NPPA) Order regarding Masks, Hand Sanitizers and Gloves </a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%" >13-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/218645.pdf" target="_BLANK">Gazette Notification - Essential Commodities Order, 2020 - with regards to Masks and Hand Sanitizers (770KB)  </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/disastermanagmentact.pdf" target="_BLANK">Invoking powers under Disaster Management Act 2005 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >11-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/HFWnCoVGoM11March2020II.pdf" target="_BLANK">Decisions- High level Group of Ministers meeting to review current status and actions for prevention and management of COVID-19 </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >10-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/InternationalCruiseShipsSOPforCovid19.pdf" target="_BLANK">Standard Operating Procedure (SOP) for COVID-19 Management- International Cruise Ships at major Indian Ports</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">09-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/ICMRstrategyforCOVID19testinginIndia.pdf" target="_BLANK">ICMR strategy for COVID-19 testing in India</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">09-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/COVIDCabSecLetterGuidelines.pdf" target="_BLANK">Cabinet Secretary DO letter dated 8th March, 2020 to all Government of India Ministries on COVID-19 management</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">06-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/advisoryforbiometricattendance.pdf" target="_BLANK">Advisory for Exemption to mark biometric attendance in AEBAS</a></td>
+    </tr>	
+	<!--<tr>
+      <td align="centre" width="20%" ></td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/SocialDistancingAdvisorybyMOHFW.pdf" target="_BLANK">DOPT OM - Latest Testing Guidelines of Indian Council of Medical Research (ICMR) </a></td>
+    </tr>-->
+	<tr>
+      <td align="centre" width="20%">05-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/advisoryformassgathering.pdf" target="_BLANK"> Advisory - Mass Gatherings</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >03-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="http://dhs.kerala.gov.in/public-health-2019-n-corona-virus/#" target="_BLANK">Kerala COVID 19 updates and advisory </a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%" >03-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/AdvisoryforHospitalsandMedicalInstitutions.pdf" target="_BLANK">Advisory for Hospitals and Medical Institutions </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">25-01-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/Guidance%20document%20-%202019-nCoV.pdf" target="_BLANK">Guidance on Surveillance for human infection with 2019-nCoV</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">24-01-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/5Sample%20collection_packaging%20%202019-nCoV.pdf" target="_BLANK">Guidance for sample Collection, Packaging and Transportation for Novel Coronavirus</a></td>
+    </tr>
+	</tbody>
+  </table>	
+	
+	</div>
+	<!--STATE Advisories End-->
+
+	
+	<!--FOR EMPLOYEES Start-->
+<div class="table-responsive" id="dvE" style="display:none;  font-weight:bold;">		<div style="color:red; font-style:italic;">FOR EMPLOYEES</div>
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>DATE</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+      <td align="centre" width="20%" >19-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/InstructionsforTrainingInstitutes.pdf" target="_BLANK">DOPT OM - Preventive measures to contain the spread of COVID-19 in Training Institutes</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/DOSecyHE.pdf" target="_BLANK">Directives from MoHRD for all Educational Institutions and Examination Boards regarding precautions to be taken in light of COVID-19</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/PreventivemeasuresDOPT.pdf" target="_BLANK">DoPT OM - Preventive measures to be taken to contain the spread of Novel Coronavirus (COVID-19)</a></td>
+    </tr>
+		<tr>
+      <td align="centre" width="20%">18-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Letterdated2032020toCSs.pdf" target="_BLANK">DO Letter from Secretary, DoHFW to State Chief Secretaries regarding Social Distancing Measures</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%">06-03-2020</td>
+      <td align="centre" width="80%" valign="bottom"><a  href="https://www.mohfw.gov.in/pdf/advisoryforbiometricattendance.pdf" target="_BLANK">Advisory for Exemption to mark biometric attendance in AEBAS</a></td>
+    </tr>
+	</tbody>
+  </table>	
+</div>
+	<!--FOR EMPLOYEES End-->
+	
+	<!--AWARENESS MATERIAL Start-->
+<div class="table-responsive" id="dvA" style="display:none;  font-weight:bold;">	<div style="color:red; font-style:italic;">AWARENESS MATERIAL	</div>
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/PreventionandManagementofCOVID19FLWEnglish.pdf" target="_BLANK">Role of Frontline Workers in Prevention and Management of CORONA VIRUS- English </a></td>
+    </tr>
+	<tr>
+      
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/PreventionandManagementofCOVID19FLWHindi.pdf" target="_BLANK"> Role of Frontline Workers in Prevention and Management of CORONA VIRUS - Hindi </a></td>
+    </tr>
+	<tr>
+      
+	<tr>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ProtectivemeasuresEng.pdf" target="_BLANK">Posters for Safety measures against COVID-19 - English </a></td>
+    </tr>
+	<tr>
+      
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ProtectivemeasuresHin.pdf" target="_BLANK"> Posters for Safety measures against COVID-19 - Hindi </a></td>
+    </tr>
+	<tr>
+      
+      <td align="centre" width="80%" valign="bottom" > <a href="https://www.mohfw.gov.in/pdf/CoronaComic2PGIPU22Mar20.pdf" target="_BLANK">KIDS, VAAYU & CORONA : Comic book for children to provide correct information about COVID-19 - Part 2</a></td>
+	  </tr>
+	<tr>
+          <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/PostrerEnglishtraveller.pdf" target="_BLANK">Posters for Indians traveling from abroad - English  </a></td>
+    </tr>
+	<tr>
+           <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/PosterTravellerHindi.pdf" target="_BLANK">Posters for Indians traveling from abroad - Hindi </a></td>
+    </tr>
+	<tr>
+         <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Mask-Eng.pdf" target="_BLANK">When to wear mask?: English </a></td>
+    </tr>
+	<tr>
+        <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Mask-Hindi.pdf" target="_BLANK">When to wear mask?: Hindi </a></td>
+    </tr>
+	<tr>
+           <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/FINAL_14_03_2020_ENg.pdf" target="_BLANK">When to get tested for COVID-19 English </a></td>
+    </tr>
+	<tr>
+         <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/FINAL_14_03_2020_Hindi.pdf" target="_BLANK">When to get tested for COVID-19 Hindi </a></td>
+    </tr>
+	<tr>
+         <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Poster_Corona_ad_Eng.pdf" target="_BLANK">Do's and Don't Poster in English </a></td>
+    </tr>
+	<tr>
+        <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Poster_Corona_ad_Hin.pdf" target="_BLANK">Do's and Don't Poster in Hindi </a></td>
+    </tr>
+	<tr>
+        <td align="centre" width="80%" valign="bottom"> <a href="https://www.youtube.com/playlist?list=PL1a9DHjZmejE-Ep2PAu2OR8HBfLP0BLIk" target="_BLANK">Watch all COVID-19 management videos here </a></td>
+    </tr>
+	<tr>
+     <td align="centre" width="80%" valign="bottom"><a  href="https://drive.google.com/drive/folders/1wvEmLyv3w3gUMpJP5VhgZgXruuusRpJS" target="_BLANK">TV and Radio Spots (English & Hindi) for COVID-19</a></td>
+    </tr>
+	<tr>
+       <td align="centre" width="80%" valign="bottom"> <a href="https://www.mohfw.gov.in/pdf/Corona_comic_PGI.pdf" target="_BLANK">KIDS, VAAYU & CORONA : Comic book for children to provide correct information about COVID-19</a></td>
+    </tr>
+	
+	</tbody>
+  </table>	
+</div>
+	<!--AWARENESS MATERIAL End End-->
+	
+	
+	<!--Latest Update Start-->
+<div class="table-responsive"  id="latest" style="display:block; font-weight:bold;">		
+<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark">
+	<thead class="thead-dark">
+	<tr bgcolor="#ff0000">
+<th align="centre" colspan="2"><strong>LATEST UPDATES</strong></th>
+</tr>
+    <tr bgcolor="#f8f8f8">
+      <th align="centre" width="20%"><strong>DATE</strong></th>
+      <th align="centre" width="80%"><strong>TITLE</strong></th>
+    </tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/218927g.pdf" target="_BLANK">Gazette Notification - Hydroxychloroquine  now a schedule H1 drug, can be sold on prescription only</a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >26-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/ChiefSecretary26032020.pdf" target="_BLANK">D.O. Letter  from Cabinet Secretary to Chief Secretaries for management and containment of COVID-19 dated 26.03.2020   </a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/MoFPMGaribKalyanYojanaPackage.pdf" target="_BLANK">Press Note on Pradhan Mantri Garib Kalyan Yojna package from Ministry of Finance</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/COVIDWebinarSchedule26March2019.pdf" target="_BLANK">Webinar schedule of COVID-19 of AIIMS New Delhi</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >26-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Doorstepdelivery26B.pdf" target="_BLANK">Doorstep Delivery of Drugs to Consumers</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >25-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/Telemedicine.pdf" target="_BLANK">Telemedicine Practice Guidelines</a></td>
+    </tr>
+	<tr>
+	<td align="centre" width="20%" >25-03-2020</td>
+     
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/PreventionandManagementofCOVID19FLWEnglish.pdf" target="_BLANK">Role of Frontline Workers in Prevention and Management of CORONA VIRUS- English </a></td>
+    </tr>
+	<tr>
+      <td align="centre" width="20%" >25-03-2020</td>
+      <td align="centre" width="80%" valign="bottom" ><a  href="https://www.mohfw.gov.in/pdf/PreventionandManagementofCOVID19FLWHindi.pdf" target="_BLANK"> Role of Frontline Workers in Prevention and Management of CORONA VIRUS - Hindi </a></td>
+    </tr>
+		
+	
+	
+	
+
+
+	</tbody>
+  </table>	
+</div>
+	<div id="cases" style="display:block;">
+<button type="button" class="collapsible">CLICK TO SEE COVID19 STATEWISE STATUS</button>
+<div class="content newtab">
+<p><strong>(*including foreign nationals, as on 27.03.2020 at 09:15 AM)</strong></p>
+
+ <div class="table-responsive">		
+	<table border="1" cellspacing="1" cellpadding="1" class="table table-striped table-dark" style="font-weight:bold">
+	<thead class="thead-dark">
+    <tr bgcolor="#f8f8f8">
+      <th align="left" width="47"><strong>S. No.</strong></th>
+      <th align="left" width="83"><strong>Name of State / UT</strong></th>
+      <th align="left" width="91"><strong>Total Confirmed cases (Indian National)</strong></th>
+      <th align="left" width="90"><strong>Total Confirmed cases ( Foreign National )</strong></th>
+	  <th align="left" width="83"><strong>Cured/<br>Discharged/Migrated</strong></th>
+	  <th align="left" width="83"><strong>Death</strong></th>
+    </tr>
+	</thead>	
+	
+	<tbody>
+	<tr>
+      <td align="'centre" width="47">1</td>
+      <td align="'centre" width="83" valign="bottom">Andaman and Nicobar Islands</td>
+      <td align="'centre" width="91" valign="bottom">1</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">2</td>
+      <td align="'centre" width="83" valign="bottom">Andhra Pradesh</td>
+      <td align="'centre" width="91" valign="bottom">12</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">3</td>
+      <td align="'centre" width="83" valign="bottom">Bihar</td>
+      <td align="'centre" width="91" valign="bottom">6</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">4</td>
+      <td align="'centre" width="83" valign="bottom">Chandigarh</td>
+      <td align="'centre" width="91" valign="bottom">7</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="90" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">5</td>
+      <td align="'centre" width="83" align="bottom">Chhattisgarh</td>
+      <td align="'centre" width="91" valign="bottom">6</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+    <tr>
+      <td align="'centre" width="47">6</td>
+      <td align="'centre" width="83" valign="bottom">Delhi</td>
+      <td align="'centre" width="91" valign="bottom">35</td>
+      <td align="'centre" width="90" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">6</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">7</td>
+      <td align="'centre" width="83" valign="bottom">Goa</td>
+      <td align="'centre" width="91" valign="bottom">3</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">8</td>
+      <td align="'centre" width="83" valign="bottom">Gujarat</td>
+      <td align="'centre" width="91" valign="bottom">42</td>
+      <td align="'centre" width="90" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">3</td>
+    </tr>
+    <tr>
+      <td align="'centre" width="47">9</td>
+      <td align="'centre" width="83" valign="bottom">Haryana</td>
+      <td align="'centre" width="91" valign="bottom">16</td>
+      <td align="'centre" width="90" valign="top">14</td>
+	  <td align="'centre" width="83" valign="bottom">11</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	    <tr>
+      <td align="'centre" width="47">10</td>
+      <td align="'centre" width="83" valign="bottom">Himachal Pradesh</td>
+      <td align="'centre" width="91" valign="bottom">3</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="bottom">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">11</td>
+      <td align="'centre" width="83" valign="bottom">Jammu and Kashmir</td>
+      <td align="'centre" width="91" valign="bottom">13</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+	  <td align="'centre" width="90" valign="top">1</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">12</td>
+      <td align="'centre" width="83" valign="bottom">Karnataka</td>
+      <td align="'centre" width="91" valign="bottom">55</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">3</td>
+	  <td align="'centre" width="83" valign="top">2</td>
+    </tr>
+    <tr>
+      <td align="'centre" width="47">13</td>
+      <td align="'centre" width="83" valign="bottom">Kerala</td>
+      <td align="'centre" width="91" valign="bottom">129</td>
+      <td align="'centre" width="90" valign="top">8</td>
+	  <td align="'centre" width="83" valign="top">11</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">14</td>
+      <td align="'centre" width="83" valign="bottom">Ladakh</td>
+      <td align="'centre" width="91" valign="bottom">13</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">3</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	    <tr>
+      <td align="'centre" width="47">15</td>
+      <td align="'centre" width="83" valign="bottom">Madhya Pradesh</td>
+      <td align="'centre" width="91" valign="bottom">20</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">16</td>
+      <td align="'centre" width="83" valign="bottom">Maharashtra</td>
+      <td align="'centre" width="91" valign="bottom">127</td>
+      <td align="'centre" width="90" valign="top">3</td>
+	  <td align="'centre" width="83" valign="top">15</td>
+	  <td align="'centre" width="83" valign="top">4</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">17</td>
+      <td align="'centre" width="83" valign="bottom">Manipur</td>
+      <td align="'centre" width="91" valign="bottom">1</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">18</td>
+      <td align="'centre" width="83" valign="bottom">Mizoram</td>
+      <td align="'centre" width="91" valign="bottom">1</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">19</td>
+      <td align="'centre" width="83" valign="bottom">Odisha</td>
+      <td align="'centre" width="91" valign="bottom">2</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">20</td>
+      <td align="'centre" width="83" valign="bottom">Puducherry</td>
+      <td align="'centre" width="91" valign="bottom">1</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">21</td>
+      <td align="'centre" width="83" valign="bottom">Punjab</td>
+      <td align="'centre" width="91" valign="bottom">33</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+    <tr>
+      <td align="'centre" width="47">22</td>
+      <td align="'centre" width="83" valign="bottom">Rajasthan</td>
+      <td align="'centre" width="91" valign="bottom">39</td>
+      <td align="'centre" width="90" valign="top">2</td>
+	  <td align="'centre" width="83" valign="top">3</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">23</td>
+      <td align="'centre" width="83" valign="bottom">Tamil Nadu</td>
+      <td align="'centre" width="91" valign="bottom">23</td>
+      <td align="'centre" width="90" valign="top">6</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+    <tr>
+      <td align="'centre" width="47">24</td>
+      <td align="'centre" width="83" valign="bottom">Telengana</td>
+      <td align="'centre" width="91" valign="bottom">35</td>
+      <td align="'centre" width="90" valign="top">10</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	<tr>
+      <td align="'centre" width="47">25</td>
+      <td align="'centre" width="83" valign="bottom">Uttarakhand</td>
+      <td align="'centre" width="91" valign="bottom">4</td>
+      <td align="'centre" width="90" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	
+	
+    <tr>
+      <td align="'centre" width="47">26</td>
+      <td align="'centre" width="83" valign="bottom">Uttar Pradesh</td>
+      <td align="'centre" width="91" valign="bottom">40</td>
+      <td align="'centre" width="90" valign="top">1</td>
+	  <td align="'centre" width="83" valign="top">11</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+    </tr>
+	
+	
+	<tr>
+      <td align="'centre" width="47">27</td>
+      <td align="'centre" width="83" valign="bottom">West Bengal</td>
+      <td align="'centre" width="91" valign="bottom">10</td>
+      <td align="'centre" width="90" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">0</td>
+	  <td align="'centre" width="83" valign="top">1</td>
+    </tr>
+	
+	
+	
+    <tr>
+      <td align="'centre" height="61" colspan="2" valign="bottom"><strong>Total number of confirmed cases in India</strong></td>
+      <td align="'centre" width="91" valign="bottom"><strong>677#</strong></td>
+      <td align="'centre" width="90" valign="top">
+        <strong>47 </strong>
+        </td>
+		<td align="'centre" width="83" valign="top">
+        <strong>67</strong>
+        </td>
+		<td align="'centre" width="83" valign="top">
+        <strong>17</strong>
+        </td>
+    </tr>
+	<tr><td align="'centre" height="61" colspan="6" valign="bottom"><strong> # Few of the new cases have been reassigned States as per latest information </td></tr>
+	</tbody>
+  </table>
+  
+	</div>
+</div>	
+</div>
+</div>
+</div>
+<!-- Main section End  --> 
+
+</div>
+<!-- Footer section -->
+<footer class="footer">
+  <div class="copyright-content">
+            	Website Content Managed by  <strong>Ministry of Health and Family Welfare | GOI</strong><br>
+            <span>Designed, Developed and Hosted by  <a href="http://www.nic.in/" title="NIC, External Link that opens in a new window" target="_blank" rel="noopener noreferrer"><strong>National Informatics Centre( NIC )</strong></a> </span> 
+            </div>
+</footer>
+<script src="assets/js/jquery-3.3.1.min.js"></script> 
+
+<script src="assets/js/custom.js" ></script>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+$('.carousel').carousel({
+  interval: 2000
+})
+</script>
+
+<script>
+$(document).ready(function(){
+  $(".menuicon").click(function(){
+    $(".menu-ee").toggleClass("opennew");
+  });
+});
+
+$("#btnT").click(function () {
+           // if ($(this).val() == "Yes") {
+                $("#dvT").show();
+				$("#dvC").hide();
+				$("#dvH").hide();
+				$("#dvS").hide();
+				$("#dvE").hide();
+				$("#dvA").hide();
+				$("#cases").hide();
+				$("#latest").hide();
+
+            //    $(this).val("No");
+           // } else {
+            //    $("#dvT").hide();
+           //     $(this).val("Yes");
+           // }
+        });
+		
+$("#btnC").click(function () {
+           // if ($(this).val() == "Yes") {
+                $("#dvT").hide();
+				$("#dvC").show();
+				$("#dvH").hide();
+				$("#dvS").hide();
+				$("#dvE").hide();
+				$("#dvA").hide();
+				$("#cases").hide();
+				$("#latest").hide();
+            //    $(this).val("No");
+           // } else {
+            //    $("#dvC").hide();
+            //    $(this).val("Yes");
+            //}
+        });
+
+
+$("#btnH").click(function () {
+                $("#dvT").hide();
+				$("#dvC").hide();
+				$("#dvH").show();
+				$("#dvS").hide();
+				$("#dvE").hide();
+				$("#dvA").hide();
+				$("#cases").hide();
+				$("#latest").hide();
+        });		
+		
+$("#btnS").click(function () {
+                $("#dvT").hide();
+				$("#dvC").hide();
+				$("#dvH").hide();
+				$("#dvS").show();
+				$("#dvE").hide();
+				$("#dvA").hide();
+				$("#cases").hide();
+				$("#latest").hide();
+        });		
+		
+$("#btnE").click(function () {
+                $("#dvT").hide();
+				$("#dvC").hide();
+				$("#dvH").hide();
+				$("#dvS").hide();
+				$("#dvE").show();
+				$("#dvA").hide();
+				$("#cases").hide();
+				$("#latest").hide();
+        });	
+
+$("#btnA").click(function () {
+                $("#dvT").hide();
+				$("#dvC").hide();
+				$("#dvH").hide();
+				$("#dvS").hide();
+				$("#dvE").hide();
+				$("#dvA").show();
+				$("#cases").hide();
+				$("#latest").hide();
+        });			
+</script>
+</body>
+</html>
