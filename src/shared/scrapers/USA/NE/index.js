@@ -123,12 +123,12 @@ const scraper = {
       const text = $(li).text();
 
       const cases = parse.number(text.match(/: (\d*)/)[1]);
-      let county = geography.addCounty(text.slice(0, text.search(/[^\w\s]/)));
+      let county = geography.addCounty(text.slice(0, text.search(/[^\s\w]/)));
       if (county === 'Douglas County/Omaha County') {
         county = 'Douglas County';
       }
 
-      if (this._counties.indexOf(county) !== -1) {
+      if (this._counties.includes(county)) {
         counties.push({
           county,
           cases

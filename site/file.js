@@ -10,7 +10,7 @@ function showFile(url, dataLevels, noPush) {
   const editor = document.querySelector('.cds-FileEditor');
 
   fetch.url(url, function() {
-    editor.querySelector('.cds-Heading').innerText = url;
+    editor.querySelector('.cds-Heading').textContent = url;
 
     const extension = url.split('.').pop();
 
@@ -28,7 +28,7 @@ function showFile(url, dataLevels, noPush) {
       const formatter = new JSONFormatter(obj, dataLevels || 1);
 
       editor.querySelector('.cds-Editor-content').innerHTML = '<div class="cds-Editor-JSON"></div>';
-      editor.querySelector('.cds-Editor-content').firstElementChild.appendChild(formatter.render());
+      editor.querySelector('.cds-Editor-content').firstElementChild.append(formatter.render());
     } else {
       const parsedData = Papa.parse(this.responseText, {
         header: true,

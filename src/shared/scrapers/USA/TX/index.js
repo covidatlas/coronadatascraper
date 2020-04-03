@@ -297,7 +297,7 @@ const scraper = {
           $tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '')
+            .replace(/\d*/g, '')
         );
         const cases = parse.number($tr.find('td:last-child').text());
         counties.push({
@@ -322,7 +322,7 @@ const scraper = {
           $tr
             .find('td:first-child')
             .text()
-            .replace(/[\d]*/g, '')
+            .replace(/\d*/g, '')
         );
         const cases = parse.number($tr.find('td:nth-child(2)').text());
         let deaths = $tr.find('td:last-child').text();

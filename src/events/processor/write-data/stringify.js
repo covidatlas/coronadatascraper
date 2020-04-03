@@ -22,12 +22,12 @@ export const csvForDay = function(data) {
     'url'
   ];
 
-  const skipColumns = ['maintainers', 'sources', 'curators'];
+  const skipColumns = new Set(['maintainers', 'sources', 'curators']);
 
   // Get list of columns
   for (const location of data) {
     for (const column in location) {
-      if (!columns.includes(column) && !skipColumns.includes(column)) {
+      if (!columns.includes(column) && !skipColumns.has(column)) {
         columns.push(column);
       }
     }

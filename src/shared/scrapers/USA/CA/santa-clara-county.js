@@ -14,7 +14,7 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const scriptData = $('script:contains("Total_Confirmed_Cases")')[0].children[0].data;
-    const regExp = /\[.*\]/;
+    const regExp = /\[.*]/;
     const data = JSON.parse(regExp.exec(scriptData))[0];
     const cases = parse.number(data.Total_Confirmed_Cases);
     const deaths = parse.number(data.Deaths);

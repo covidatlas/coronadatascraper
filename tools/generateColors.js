@@ -43,7 +43,7 @@ function generateColors() {
   const cssArray = Object.entries(cssVariables).map(v => {
     return `${v.join(': ')};\n`;
   });
-  const cssString = cssArray.toString().replace(/,/g, '');
+  const cssString = cssArray.toString().replaceAll(',', '');
 
   fs.writeFile('./site/colors.css', `.spectrum {\n${cssString}}\n`);
 }

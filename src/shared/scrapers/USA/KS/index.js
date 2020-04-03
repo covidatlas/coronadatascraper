@@ -161,7 +161,7 @@ const scraper = {
 
         const cases1 = data[1];
 
-        if (this._counties.indexOf(countyName1) !== -1) {
+        if (this._counties.includes(countyName1)) {
           counties.push({
             county: countyName1,
             cases: parse.number(cases1)
@@ -173,7 +173,7 @@ const scraper = {
           const countyName2 = geography.addCounty(data[2]);
           const cases2 = data[3];
 
-          if (this._counties.indexOf(countyName2) !== -1) {
+          if (this._counties.includes(countyName2)) {
             counties.push({
               county: countyName2,
               cases: parse.number(cases2)
@@ -286,7 +286,7 @@ const scraper = {
           caseNum = '';
         }
 
-        if (c.match(/[0-9]/)) {
+        if (c.match(/\d/)) {
           caseNum += c;
         } else {
           name += c.replace('ﬀ', 'ff');
@@ -298,7 +298,7 @@ const scraper = {
       );
       let totalDeaths = '';
       deathData.forEach(item => {
-        if (item && item.text.match(/[0-9]/)) {
+        if (item && item.text.match(/\d/)) {
           totalDeaths += item.text;
         }
       });

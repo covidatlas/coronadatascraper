@@ -3,7 +3,7 @@ import path from 'path';
 import { readJSON } from '../fs.js';
 import * as geography from './index.js';
 
-const LEVELS = ['iso1', 'iso2', 'fips'];
+const LEVELS = new Set(['iso1', 'iso2', 'fips']);
 
 const levelCache = {};
 const countryLevelsDir = path.dirname(require.resolve('country-levels/license.md'));
@@ -14,7 +14,7 @@ export function isId(str) {
   }
   if (!str) return false;
   const [level, code] = str.split(':');
-  return LEVELS.includes(level) && Boolean(code);
+  return LEVELS.has(level) && Boolean(code);
 }
 
 export function getIdFromLocation(location) {
@@ -29,7 +29,7 @@ export function splitId(id) {
 }
 
 const getLevelData = async level => {
-  assert(LEVELS.includes(level), `Country Level ID: not supported ${level}`);
+  assert(LEVELS.has(level), `Country Level ID: not supported ${level}`);
 
   if (levelCache[level]) {
     return levelCache[level];
@@ -42,7 +42,7 @@ const getLevelData = async level => {
 
 export const getLocationData = async id => {
   // Return an array of aggregated features
-  if (id.indexOf('+') !== -1) {
+  if (id.includes('+')) {
     const parts = id.split('+');
     const data = await Promise.all(parts.map(getLocationData));
     return data;

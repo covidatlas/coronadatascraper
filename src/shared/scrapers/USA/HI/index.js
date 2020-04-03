@@ -86,7 +86,7 @@ const scraper = {
         .find('dd');
       $list.each((index, row) => {
         const text = $(row).text();
-        if (text.indexOf('County') === -1) {
+        if (!text.includes('County')) {
           return;
         }
         const pieces = text.split(' ');

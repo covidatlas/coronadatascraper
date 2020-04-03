@@ -208,7 +208,7 @@ const scraper = {
 
     if (usePDFs) {
       const pdfBaseURL = `${this.url}.pdf?:showVizHome=no&Locality=`;
-      const fullNameCounties = [
+      const fullNameCounties = new Set([
         'Buena Vista City',
         'Fairfax City',
         'Franklin City',
@@ -218,12 +218,12 @@ const scraper = {
         'Richmond County',
         'Roanoke City',
         'Roanoke County'
-      ];
+      ]);
       this.type = 'pdf';
 
       for (const name of this._counties) {
         let endURL = name;
-        if (!fullNameCounties.includes(name)) {
+        if (!fullNameCounties.has(name)) {
           endURL = endURL.slice(0, name.lastIndexOf(' '));
         }
         const pdfUrl = pdfBaseURL + endURL;
@@ -255,7 +255,7 @@ const scraper = {
       this.type = 'csv';
 
       data.forEach(location => {
-        const fullNameCounties = [
+        const fullNameCounties = new Set([
           'Buena Vista City',
           'Fairfax City',
           'Franklin City',
@@ -265,9 +265,9 @@ const scraper = {
           'Richmond County',
           'Roanoke City',
           'Roanoke County'
-        ];
+        ]);
 
-        if (fullNameCounties.includes(location.Locality)) {
+        if (fullNameCounties.has(location.Locality)) {
           const name = location.Locality;
           counties.push({
             county: name,

@@ -87,7 +87,7 @@ const scraper = {
         const cases = parse.number(row[caseHdr]);
 
         // skip the last updated timestamp row
-        if (county.indexOf('last updated') !== -1) {
+        if (county.includes('last updated')) {
           continue;
         }
 

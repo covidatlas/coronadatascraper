@@ -111,7 +111,7 @@ const scraper = {
         const $tr = $(tr);
         const county = parse.string($tr.find('td:first-child').text());
         const cases = parse.number($tr.find('td:last-child').text());
-        if (index > 0 && county.indexOf('Non-Utah') === -1) {
+        if (index > 0 && !county.includes('Non-Utah')) {
           this._pushCounty(counties, county, cases);
         }
       });

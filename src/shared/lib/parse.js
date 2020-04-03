@@ -23,7 +23,7 @@ export const number = function(string) {
   if (typeof string === 'number') return string;
   if (string === '') return 0;
   if (string === undefined) throw new Error('Cannot parse undefined as number.');
-  return parseInt(string.replace(/[^\d-]/g, ''), 10);
+  return Number.parseInt(string.replace(/[^\d-]/g, ''), 10);
 };
 
 /*
@@ -31,7 +31,7 @@ export const number = function(string) {
 */
 export const float = function(string) {
   if (string === '') return 0;
-  return parseFloat(string.replace(/[^\d.-]/g, ''));
+  return Number.parseFloat(string.replace(/[^\d.-]/g, ''));
 };
 
 /*
@@ -41,7 +41,7 @@ export const string = function(string) {
   return string
     .replace(/\n/g, ' ')
     .replace(/\u200B/g, '')
-    .replace(/\*/g, '')
+    .replaceAll('*', '')
     .replace(/\s+/g, ' ') // do this last since the prev 2 can create contiguous spaces
     .trim();
 };

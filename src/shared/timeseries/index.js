@@ -35,7 +35,7 @@ function stripInfo(location) {
 function stripCases(location) {
   const newLocation = {};
   for (const prop in location) {
-    if (caseDataProps.indexOf(prop) === -1) {
+    if (!caseDataProps.includes(prop)) {
       newLocation[prop] = location[prop];
     }
   }

@@ -15,7 +15,7 @@ async function readPopulationFromCSV(csvPath) {
   const populationData = {};
   for (const item of output) {
     if (item.population) {
-      populationData[item.name] = parseInt(item.population, 10);
+      populationData[item.name] = Number.parseInt(item.population, 10);
     } else {
       throw new Error(`Invalid data in ${csvPath} for ${item.name}`);
     }
@@ -59,7 +59,7 @@ async function readPopulationData(featureCollection) {
         populations.byCountry[feature.properties.name_en] = feature.properties.pop_est;
       }
       if (feature.properties.abbrev) {
-        populations.byCountry[feature.properties.abbrev.replace(/\./g, '')] = feature.properties.pop_est;
+        populations.byCountry[feature.properties.abbrev.replaceAll('.', '')] = feature.properties.pop_est;
       }
     }
   }

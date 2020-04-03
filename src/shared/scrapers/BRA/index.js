@@ -71,14 +71,14 @@ const scraper = {
 
         response.push({
           state: ufs[uf][0],
-          cases: parseInt(
+          cases: Number.parseInt(
             $(this)
               .find('.lb-nome')
               .eq(0)
               .text(),
             10
           ),
-          deaths: parseInt(
+          deaths: Number.parseInt(
             $(this)
               .find('.lb-nome')
               .eq(1)

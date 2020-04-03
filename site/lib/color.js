@@ -120,7 +120,7 @@ export const fill = d3scale
 function ramp(color, n, containerId) {
   const base = document.getElementById(containerId);
   const canvas = document.createElement('canvas');
-  base.appendChild(canvas);
+  base.append(canvas);
   canvas.setAttribute('width', `${n}px`);
   canvas.setAttribute('height', '16px');
   const context = canvas.getContext('2d');
@@ -154,9 +154,9 @@ export function createLegend(min, max) {
   const heading = document.createElement('span');
   heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
   heading.innerHTML = 'Percent of population infected';
-  container.appendChild(heading);
+  container.append(heading);
 
-  base.appendChild(container);
+  base.append(container);
   ramp(fill, 300, containerId);
 
   // Correct value of max percent so that it's easier to parse
@@ -171,7 +171,7 @@ export function createLegend(min, max) {
   const endText = document.createElement('span');
   endText.className = 'spectrum-Body spectrum-Body--XS';
   endText.innerHTML = `${worstPercent}%`;
-  scaleText.appendChild(startText);
-  scaleText.appendChild(endText);
-  container.appendChild(scaleText);
+  scaleText.append(startText);
+  scaleText.append(endText);
+  container.append(scaleText);
 }

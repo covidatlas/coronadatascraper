@@ -16,9 +16,9 @@ export const asRows = (data, rowTolerance = 1) => {
       output.push(
         ...Object.keys(currentRows) // => array of y-positions (type: float)
           // sort float positions
-          .sort((y1, y2) => parseFloat(y1) - parseFloat(y2))
+          .sort((y1, y2) => Number.parseFloat(y1) - Number.parseFloat(y2))
           // sort x positions and add to data array
-          .map(y => currentRows[y].sort((item1, item2) => parseFloat(item1.x) - parseFloat(item2.x)))
+          .map(y => currentRows[y].sort((item1, item2) => Number.parseFloat(item1.x) - Number.parseFloat(item2.x)))
       );
       rows = {}; // clear rows for next page
       currentPage += 1;

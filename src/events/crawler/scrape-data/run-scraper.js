@@ -16,7 +16,7 @@ function isValid(data) {
       throw new Error(`Invalid data: ${prop} is null`);
     }
     if (Number.isNaN(value)) {
-      throw new Error(`Invalid data: ${prop} is not a number`);
+      throw new TypeError(`Invalid data: ${prop} is not a number`);
     }
   }
 

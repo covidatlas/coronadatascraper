@@ -243,7 +243,7 @@ const scraper = {
         const neg = parse.number(data[2][i]);
         const tested = cases + neg;
 
-        if (this._counties.indexOf(county) === -1) {
+        if (!this._counties.includes(county)) {
           unassignedCounty.cases += cases;
           unassignedCounty.tested += tested;
           continue;

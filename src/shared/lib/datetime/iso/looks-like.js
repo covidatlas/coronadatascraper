@@ -16,7 +16,7 @@ const dateTester = pattern => {
 
 export const looksLike = {
   isoDate: dateTester(/^\d{4}-\d{2}-\d{2}$/),
-  YYYYMD: dateTester(/^\d{4}-\d{1,2}-\d{1,2}$/),
-  MDYYYY: dateTester(/^\d{1,2}-\d{1,2}-\d{4}$/),
-  MDYY: dateTester(/^\d{1,2}-\d{1,2}-\d{2}$/)
+  YYYYMD: dateTester(/^\d{4}(?:-\d{1,2}){2}$/),
+  MDYYYY: dateTester(/^(?:\d{1,2}-){2}\d{4}$/),
+  MDYY: dateTester(/^(?:\d{1,2}-){2}\d{2}$/)
 };

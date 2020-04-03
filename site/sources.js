@@ -44,9 +44,9 @@ function ratingTemplate(source, index) {
     granularity = 'state-level';
   }
 
-  const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+  const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^\n/@]+@)?(?:www\.)?([^\n/:?]+)/)[1];
   const slug = `sources:${getName(source)
-    .replace(/,/g, '-')
+    .replaceAll(',', '-')
     .replace(/\s/g, '')}`;
 
   const curators = getContributorsHeading(source.curators, 'Curated by');
@@ -100,7 +100,7 @@ function showSources() {
     for (let i = 0; i < ratings.length; i++) {
       list.insertAdjacentHTML('beforeend', ratingTemplate(ratings[i], i));
     }
-    if (window.location.hash.indexOf(':') !== -1) {
+    if (window.location.hash.includes(':')) {
       document.getElementById(window.location.hash.substr(1)).scrollIntoView({
         behavior: 'smooth',
         block: 'start'

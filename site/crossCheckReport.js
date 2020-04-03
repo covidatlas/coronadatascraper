@@ -17,7 +17,7 @@ function getClassNames(classNames) {
 
 function crossCheckReportTemplate(report) {
   const locationName = getName(report.location);
-  const slug = `crosscheck:${locationName.replace(/,/g, '-').replace(/\s/g, '')}`;
+  const slug = `crosscheck:${locationName.replaceAll(',', '-').replace(/\s/g, '')}`;
 
   let html = `<li class="cds-CrossCheckReport" id="${slug}">`;
   html += `<h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${locationName}</a></h2>`;
@@ -51,7 +51,7 @@ function crossCheckReportTemplate(report) {
     html += `
             <tr>
     `;
-    const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+    const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^\n/@]+@)?(?:www\.)?([^\n/:?]+)/)[1];
     const curators = getContributors(source.curators, { shortNames: true, link: false });
     const sources = getContributors(source.sources, { shortNames: true, link: false });
     html += `<th class="cds-SourceComparison-source">`;
@@ -131,7 +131,7 @@ function showCrossCheckReport() {
   fetch.json('report.json', function(report) {
     reportContainer.innerHTML = generateCrossCheckPage(report.scrape.crosscheckReports, report.date);
 
-    if (window.location.hash.indexOf(':') !== -1) {
+    if (window.location.hash.includes(':')) {
       document.getElementById(window.location.hash.substr(1)).scrollIntoView({
         behavior: 'smooth',
         block: 'start'

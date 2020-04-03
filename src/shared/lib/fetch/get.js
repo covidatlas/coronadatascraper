@@ -87,7 +87,7 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
         continue;
       }
 
-      const contentLength = parseInt(response.headers['content-length'], 10);
+      const contentLength = Number.parseInt(response.headers['content-length'], 10);
       if (!Number.isNaN(contentLength) && contentLength !== response.bytes) {
         log.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
         continue;

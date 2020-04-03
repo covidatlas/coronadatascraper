@@ -94,7 +94,7 @@ const scraper = {
           // Find all number parts
           let caseString = '';
           for (const part of data.slice(1)) {
-            if (Number.isNaN(parseInt(part, 10))) {
+            if (Number.isNaN(Number.parseInt(part, 10))) {
               break;
             }
             caseString += part;

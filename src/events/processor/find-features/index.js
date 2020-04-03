@@ -302,7 +302,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
             // Match alternate names
             // No known location, but might be useful in the future
-            if (feature.properties.alt && feature.properties.alt.split('|').indexOf(location.state) !== -1) {
+            if (feature.properties.alt && feature.properties.alt.split('|').includes(location.state)) {
               found = true;
               storeFeature(feature, location);
               break;
@@ -325,7 +325,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
           }
 
           // Find by abbreviation
-          if (feature.properties.abbrev && feature.properties.abbrev.replace(/\./g, '') === location.country) {
+          if (feature.properties.abbrev && feature.properties.abbrev.replaceAll('.', '') === location.country) {
             found = true;
             storeFeature(feature, location);
             break;

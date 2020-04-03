@@ -6,7 +6,7 @@ export const currentJsDate = () => new Date(Date.now()); // allows us to mock cu
 
 export const currentZdt = () => ZonedDateTime.parse(currentJsDate().toISOString());
 
-export const normalize = d => d.replace(/[\\/.]/g, '-'); // replaces slashes & dots with dashes
+export const normalize = d => d.replace(/[./\\]/g, '-'); // replaces slashes & dots with dashes
 
 // truncate ISO datetime to ISO date
 export const truncate = datetime =>
