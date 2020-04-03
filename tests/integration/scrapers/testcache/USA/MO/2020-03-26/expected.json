@@ -190,9 +190,14 @@
     "deaths": 0
   },
   {
+    "county": "St. Louis City",
+    "cases": 57,
+    "deaths": 1
+  },
+  {
     "county": "St. Louis County",
-    "cases": 230,
-    "deaths": 2
+    "cases": 173,
+    "deaths": 1
   },
   {
     "county": "Stoddard County",
