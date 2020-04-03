@@ -105,7 +105,7 @@ export function runScraper(location) {
     return scraperToUse.call(location);
   }
 
-  throw new Error('Why on earth is the scraper for %s a %s?', geography.getName(location), typeof scraper);
+  throw new Error(`Why on earth is the scraper for ${geography.getName(location)} a ${typeof scraper}?`);
 }
 
 const runScrapers = async args => {
