@@ -24,8 +24,9 @@ Hi there!  Some things to double-check prior to submission:
 ## Additional notes
 
 <!--
+  * mention any test coverage added or changed
   * what are success/failure conditions?
-  * any side effects?
+  * are there any side effects?
 -->
 
 <!-- Erase any parts of this template if they're not applicable.  Cheers! -->
