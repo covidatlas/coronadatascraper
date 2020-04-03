@@ -28,7 +28,7 @@ const scraper = {
       cases: parse.number(data.Cumulative_Cases),
       deaths: parse.number(data.Deaths),
       recovered: parse.number(data.Cases_Recovered),
-      updatedDate: data.edit_date
+      publishedDate: data.edit_date
     };
   }
 };
