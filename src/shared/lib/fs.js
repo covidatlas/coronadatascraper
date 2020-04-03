@@ -100,7 +100,7 @@ export const readCSV = async filePath => {
  */
 export const writeFile = async (filePath, data, options = {}) => {
   let localOptions = options;
-  localOptions = { ensureDir: true, ...localOptions };
+  localOptions = { ensureDir: true, log: true, ...localOptions };
 
   if (localOptions.ensureDir) {
     await ensureDir(path.dirname(filePath));
@@ -108,7 +108,9 @@ export const writeFile = async (filePath, data, options = {}) => {
 
   const ret = await fs.promises.writeFile(filePath, data);
 
-  log(`✏️  ${filePath} written`);
+  if (localOptions.log) {
+    log(`✏️  ${filePath} written`);
+  }
 
   return ret;
 };
