@@ -1,7 +1,7 @@
 import * as fetch from '../lib/fetch/index.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography/index.js';
-import * as datetime from '../lib/datetime.js';
+import datetime from '../lib/datetime/index.js';
 import maintainers from '../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
@@ -44,22 +44,39 @@ const scraper = {
         date = customDate;
       }
 
+      const unassignedCounties = {};
       for (let index = 0; index < cases.length; index++) {
         // Use their US states
         const state = geography.usStates[parse.string(cases[index].Province_State)];
         let county = geography.getCounty(cases[index].Admin2, state);
-        if (county === 'Unassigned') {
+        if (county === 'Unassigned' || county.startsWith('Out of ')) {
           county = UNASSIGNED;
+
+          // Sum with other unassigned cases
+          if (unassignedCounties[state]) {
+            unassignedCounties[state].cases += parse.number(cases[index][date] || 0);
+            unassignedCounties[state].deaths += parse.number(deaths[index][date] || 0);
+            continue;
+          }
         }
         if (!county) {
           continue;
         }
+
+        // todo: figure out where to put this
+        // let fips = parse.number(cases[index].FIPS);
+
         const caseData = {
           state,
           county,
           cases: parse.number(cases[index][date] || 0),
           deaths: parse.number(deaths[index][date] || 0)
         };
+
+        // Store so we can add more
+        if (county === UNASSIGNED) {
+          unassignedCounties[state] = caseData;
+        }
 
         regions.push(caseData);
       }
