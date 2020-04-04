@@ -17,7 +17,6 @@ import datetime from './lib/datetime/index.js';
  * Entry file while we're still hosted on GitHub
  */
 async function generate(date, options = {}) {
-
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
   // JSON used for reporting

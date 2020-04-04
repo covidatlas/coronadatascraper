@@ -43,8 +43,7 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
   };
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
-  if (process.env.ONLY_USE_CACHE)
-    return cachedBody;
+  if (process.env.ONLY_USE_CACHE) return cachedBody;
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
     log('  🚦  Loading data for %s from server', url);
