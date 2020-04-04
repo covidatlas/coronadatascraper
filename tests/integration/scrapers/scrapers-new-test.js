@@ -30,12 +30,14 @@ if (scrapers.length > 0) {
       const scraperFilename = scraperPath.replace(/^.*?src.shared.scrapers/i, '');
       if (await fs.exists(scraperPath)) {
         const scraper = imports(scraperPath).default;
-        await runScraper.runScraper(scraper);
-
-        // Technically we don't need this test because the test would
-        // fail if the scraper did, but maybe someone will feel better.
-        t.pass(`Scraper ${scraperFilename} ran`);
-
+        // Have to try/catch, as failures here cause tape to completely explode
+        // with failures everywhere.
+        try {
+          await runScraper.runScraper(scraper);
+          t.pass(`Scraper ${scraperFilename} ran`);
+        } catch (e) {
+          t.fail(`Scraper ${scraperFilename} failed: ${e}`);
+        }
         const hasErrors = schema.schemaHasErrors(scraper, schema.schemas.scraperSchema);
         t.notOk(hasErrors, `Scraper ${scraperFilename} had no errors`);
       }
