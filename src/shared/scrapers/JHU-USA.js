@@ -38,7 +38,7 @@ const scraper = {
       const cases = await fetch.csv(urls.cases, false);
       const deaths = await fetch.csv(urls.deaths, false);
 
-      const regions = [];
+      let regions = [];
       let date = Object.keys(cases[0]).pop();
 
       if (process.env.SCRAPE_DATE) {
@@ -111,6 +111,9 @@ const scraper = {
       for (const [state, locations] of Object.entries(stateLocations)) {
         regions.push(transform.sumData(locations, { state }));
       }
+
+      // remove unassigned counties one we summed them up
+      regions = regions.filter(r => r.county !== UNASSIGNED);
 
       return regions;
     }
