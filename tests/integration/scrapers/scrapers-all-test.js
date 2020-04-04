@@ -46,7 +46,7 @@ function sanitizeUrl(s) {
     .replace(ext, '')
     .replace(/^https?:\/\//i, '')
     .replace(/[^a-z0-9]/gi, '_');
-};
+}
 
 /** Run a single scraper test directory. */
 async function runTest(t, cacheRoot, testDirectory) {
@@ -91,8 +91,8 @@ async function runTest(t, cacheRoot, testDirectory) {
     };
     const actual = JSON.stringify(result.map(removeFeatures));
     const expected = JSON.stringify(fullExpected.map(removeFeatures));
-    const testCacheFolder = __dirname.replace(process.cwd, '');
-    const msg = `${scraperName} on ${date} (actual.json vs expected.json in ${testCacheFolder}/${testDirectory})`;
+    const shortPath = cacheRoot.replace(process.cwd(), '');
+    const msg = `${scraperName} on ${date} (actual.json vs expected.json in ${shortPath}/${testDirectory})`;
     t.equal(actual, expected, msg);
   } else {
     t.fail(`should have had a result for ${scraperName} on ${date}`);
