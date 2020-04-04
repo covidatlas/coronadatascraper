@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Anchorage Economic Region, AK, USA",
+    "county": [
+      "Anchorage Municipality"
+    ],
+    "cases": 33
+  },
+  {
+    "name": "Gulf Coast Economic Region, AK, USA",
+    "county": [
+      "Valdez-Cordova Census Area",
+      "Kodiak Island Borough",
+      "Kenai Peninsula Borough"
+    ],
+    "cases": 5
+  },
+  {
+    "name": "Interior Economic Region, AK, USA",
+    "county": [
+      "Denali Borough",
+      "Yukon-Koyukuk Census Area",
+      "Southeast Fairbanks Census Area",
+      "Fairbanks North Star Borough"
+    ],
+    "cases": 15
+  },
+  {
+    "name": "Mat-Su Economic Region, AK, USA",
+    "county": [
+      "Matanuska-Susitna Borough"
+    ],
+    "cases": 2
+  },
+  {
+    "name": "Northern Economic Region, AK, USA",
+    "county": [
+      "Northwest Arctic Borough",
+      "Nome Census Area",
+      "North Slope Borough"
+    ],
+    "cases": 0
+  },
+  {
+    "name": "Southeast Economic Region, AK, USA",
+    "county": [
+      "Yakutat City and Borough",
+      "Skagway Municipality",
+      "Hoonah-Angoon Census Area",
+      "Wrangell City and Borough",
+      "Haines Borough",
+      "Petersburg Borough",
+      "Prince of Wales-Hyder Census Area",
+      "Sitka City and Borough",
+      "Ketchikan Gateway Borough",
+      "Juneau City and Borough"
+    ],
+    "cases": 14
+  },
+  {
+    "name": "Southwest Economic Region, AK, USA",
+    "county": [
+      "Bristol Bay Borough",
+      "Lake and Peninsula Borough",
+      "Aleutians East Borough",
+      "Dillingham Census Area",
+      "Aleutians West Census Area",
+      "Kusilvak Census Area",
+      "Bethel Census Area"
+    ],
+    "cases": 0
+  },
+  {
+    "cases": 69
+  }
+]

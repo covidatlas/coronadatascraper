@@ -1,0 +1,600 @@
+[
+  {
+    "county": "Lyon County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Osceola County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dickinson County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Emmet County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Allamakee County",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Kossuth County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Winneshiek County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Howard County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Winnebago County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Mitchell County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Worth County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Sioux County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "O'Brien County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Clay County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Palo Alto County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Cerro Gordo County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Chickasaw County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Floyd County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Clayton County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Fayette County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Plymouth County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Cherokee County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Buena Vista County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Pocahontas County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Humboldt County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Wright County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Bremer County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Butler County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dubuque County",
+    "cases": 6,
+    "deaths": 1,
+    "recovered": 0
+  },
+  {
+    "county": "Delaware County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Webster County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Buchanan County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Black Hawk County",
+    "cases": 5,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Woodbury County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Ida County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Sac County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Hamilton County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Hardin County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Grundy County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Jones County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Linn County",
+    "cases": 12,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Benton County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Tama County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Monona County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Carroll County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Greene County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Boone County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Story County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Marshall County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Clinton County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Cedar County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Harrison County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Shelby County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Audubon County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Guthrie County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Johnson County",
+    "cases": 49,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dallas County",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Iowa County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 24,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Poweshiek County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Jasper County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Scott County",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Muscatine County",
+    "cases": 6,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Pottawattamie County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Cass County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 8,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Adair County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Keokuk County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Mahaska County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Louisa County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Mills County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Adams County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Henry County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Wapello County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Clarke County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Lucas County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Des Moines County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Fremont County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Page County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Taylor County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Ringgold County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Van Buren County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Davis County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Decatur County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Appanoose County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Lee County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "cases": 179,
+    "deaths": 1
+  }
+]

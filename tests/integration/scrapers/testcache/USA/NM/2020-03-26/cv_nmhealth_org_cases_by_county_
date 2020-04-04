@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://cv.nmhealth.org/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<script>var et_site_url='https://cv.nmhealth.org';var et_post_id='1132';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+</script><title>Cases by County | NMDOH - Coronavirus Updates</title>
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="NMDOH - Coronavirus Updates &raquo; Feed" href="https://cv.nmhealth.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NMDOH - Coronavirus Updates &raquo; Comments Feed" href="https://cv.nmhealth.org/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/cv.nmhealth.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="Divi v.4.4.1" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://cv.nmhealth.org/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='et_pb_dmb_breadcrumbs-css-css'  href='https://cv.nmhealth.org/wp-content/plugins/divi-module-breadcrumbs/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='https://cv.nmhealth.org/wp-content/themes/Divi/style.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='et-builder-googlefonts-cached-css'  href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.3.2#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://cv.nmhealth.org/wp-includes/css/dashicons.min.css?ver=5.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='//cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var et_core_api_spam_recaptcha = {"site_key":"","page_action":{"action":"cases_by_county"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-content/themes/Divi/core/admin/js/recaptcha.js?ver=5.3.2'></script>
+<link rel='https://api.w.org/' href='https://cv.nmhealth.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cv.nmhealth.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://cv.nmhealth.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://cv.nmhealth.org/cases-by-county/" />
+<link rel='shortlink' href='https://cv.nmhealth.org/?p=1132' />
+<link rel="alternate" type="application/json+oembed" href="https://cv.nmhealth.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcv.nmhealth.org%2Fcases-by-county%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://cv.nmhealth.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcv.nmhealth.org%2Fcases-by-county%2F&#038;format=xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="shortcut icon" href="" /><script>
+
+jQuery(function($){
+
+    $("#logo").after( "<div class='logoText'>Coronavirus Disease 2019<span>in New Mexico</span></div>" );
+	
+	$(".main-location-map").append("<iframe src='https://www.google.com/maps/d/embed?mid=12SvscyP8D0FNVzt9RvZUqMOWik1qwZUz' width='640' height='480'></iframe>");
+	
+	$(".alamogordo01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.93073635225!2d-105.93690408481412!3d32.926428180927104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e05030a9dccc79%3A0x2bb36985ad3b3c33!2s2669%20N%20Scenic%20Dr%2C%20Alamogordo%2C%20NM%2088310!5e0!3m2!1sen!2sus!4v1585227063925!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".alb-lovelace-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.823329373927!2d-106.64214138475738!3d35.08614678033725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220ca4a242f4b5%3A0x3108b6424ad51819!2s601%20Dr%20Martin%20Luther%20King%20Jr%20Ave%20NE%2C%20Albuquerque%2C%20NM%2087102!5e0!3m2!1sen!2sus!4v1585227667401!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".abq-optum-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4738882676434!2d-106.58812718475512!3d35.169739580316715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8722744b965c9969%3A0x7906108291e1892d!2s5150%20Journal%20Center%20Blvd%20NE%2C%20Albuquerque%2C%20NM%2087109!5e0!3m2!1sen!2sus!4v1584884981915!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".abq-optum-02").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.116386059751!2d-106.66240588475353!3d35.22847268030235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872270e26a5f09f5%3A0x87a826724fb2e4bf!2s1721%20Rio%20Rancho%20Blvd%20SE%2C%20Rio%20Rancho%2C%20NM%2087124!5e0!3m2!1sen!2sus!4v1584885252498!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");$
+	
+	$(".abq-optum-03").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.2567512653577!2d-106.49850208475769!3d35.07531708033997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8718a0f90b0de2a7%3A0xc5b5ed99b118cdc3!2s13701%20Encantado%20Rd%20NE%2C%20Albuquerque%2C%20NM%2087123!5e0!3m2!1sen!2sus!4v1584885290821!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".abq-pres-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13041.406978142637!2d-106.5968612!3d35.1977065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2736aa9a5550be4e!2sBalloon%20Fiesta%20Park!5e0!3m2!1sen!2sus!4v1584887766503!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+		$(".map-clayton-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3209.123662251752!2d-103.1959724847198!3d36.454567680021256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87055d94d3ebd457%3A0x3e98ce1f9eaa4838!2s300%20Wilson%20St%2C%20Clayton%2C%20NM%2088415!5e0!3m2!1sen!2sus!4v1584897402723!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".esp-pres-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3227.941847346438!2d-106.09054798473248!3d35.997287480121855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87183cf2c643327d%3A0x1da91e579327dfba!2s1010%20Spruce%20St%2C%20Espa%C3%B1ola%2C%20NM%2087532!5e0!3m2!1sen!2sus!4v1585229020899!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-farm-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.927026234964!2d-108.21071498471225!3d36.72431377996424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x873b856175cc5705%3A0xb523af783313017a!2s400%20W%20Maple%20St%2C%20Farmington%2C%20NM%2087401!5e0!3m2!1sen!2sus!4v1584897532290!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-gal-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.8662880210413!2d-108.73218288474597!3d35.50758438023519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8724de622845a0bd%3A0x4313b733bfc6fbe9!2s516%20Nizhoni%20Blvd%2C%20Gallup%2C%20NM%2087301!5e0!3m2!1sen!2sus!4v1585229470692!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-grants-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.7716581354202!2d-107.82958228475532!3d35.16231508031845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87239b1340c886b5%3A0xbf9880e3c6d49a61!2s1016%20Roosevelt%20Ave%2C%20Grants%2C%20NM%2087020!5e0!3m2!1sen!2sus!4v1584889235705!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-gal-02").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.8744214955796!2d-108.72931708474599!3d35.50738328023519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8724de630be6706b%3A0xd2e503c96270adb2!2s1901%20Redrock%20Dr%2C%20Gallup%2C%20NM%2087301!5e0!3m2!1sen!2sus!4v1584929768585!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-lc-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3372.762000696153!2d-106.73933258483021!3d32.29137618112134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86de17ede259b055%3A0xce68a151ec04f2e6!2s2450%20S%20Telshor%20Blvd%2C%20Las%20Cruces%2C%20NM%2088011!5e0!3m2!1sen!2sus!4v1584890202014!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-lv-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.1682796224327!2d-105.21297508474278!3d35.623577780207754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8719781bab6953db%3A0xaddeda2cbfc3c4d9!2s104%20Legion%20Dr%2C%20Las%20Vegas%2C%20NM%2087701!5e0!3m2!1sen!2sus!4v1584889450494!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	
+	$(".map-sf-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.4328416992826!2d-106.03397038474294!3d35.61705448020935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185bd90aeea107%3A0xff9a9e7b0e92e70f!2s5501%20Herrera%20Drive%2C%20Santa%20Fe%2C%20NM%2087505!5e0!3m2!1sen!2sus!4v1584897823770!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	
+	$(".map-sf-02").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.4516477230854!2d-106.02731258445031!3d35.616590741121094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87185bd657a39581%3A0xcbd22249fc0ab0a4!2s4801%20Beckner%20Rd%2C%20Santa%20Fe%2C%20NM%2087507!5e0!3m2!1sen!2sus!4v1585230854397!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-sr-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.0626104901876!2d-104.69544938476163!3d34.92996668037623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x871c0b62b6501f8d%3A0x30ea5a823f135dce!2s117%20Camino%20De%20Vida%20%23100%2C%20Santa%20Rosa%2C%20NM%2088435!5e0!3m2!1sen!2sus!4v1584891311115!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-taos-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.6741971498236!2d-105.5784062847222!3d36.36866978003977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x871764bc0e7ae2b1%3A0xb432368db9c9141c!2s1397%20Weimer%20Rd%2C%20Taos%2C%20NM%2087571!5e0!3m2!1sen!2sus!4v1584891543344!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-taos-02").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.680349084423!2d-105.57729368443506!3d36.39273149822885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x871764dee85599e9%3A0xfcfb0fbb148267ba!2s134%20Cervantes%20St%2C%20Taos%2C%20NM%2087571!5e0!3m2!1sen!2sus!4v1585231598206!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-af-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.1915763921593!2d-105.29474268472123!3d36.40455998003205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87175be9aa66ce39%3A0xb3098ce3ca878309!2s11%20Elliott%20Barker%20Ln%2C%20Angel%20Fire%2C%20NM%2087710!5e0!3m2!1sen!2sus!4v1585253737601!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	$(".map-cim-01").append("<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.7787689562447!2d-104.91711418443279!3d36.51120209161315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8710ae3d829a97e3%3A0x392fd1263392d9c9!2s356%209th%20St%2C%20Cimarron%2C%20NM%2087714!5e0!3m2!1sen!2sus!4v1585254622761!5m2!1sen!2sus' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>");
+	
+	
+	
+	
+
+});
+
+</script>
+<script>
+jQuery(function($){
+    $('.et_pb_accordion .et_pb_toggle_open').addClass('et_pb_toggle_close').removeClass('et_pb_toggle_open');
+
+    $('.et_pb_accordion .et_pb_toggle').click(function() {
+      $this = $(this);
+      setTimeout(function(){
+         $this.closest('.et_pb_accordion').removeClass('et_pb_accordion_toggling');
+      },700);
+    });
+});
+</script><link rel="stylesheet" id="et-core-unified-1132-cached-inline-styles" href="https://cv.nmhealth.org/wp-content/et-cache/1/1/1132/et-core-unified-1132-15852852932319.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" /></head>
+<body class="page-template-default page page-id-1132 et_pb_button_helper_class et_fullwidth_nav et_fullwidth_secondary_nav et_fixed_nav et_show_nav et_secondary_nav_enabled et_secondary_nav_only_menu et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters2 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
+	<div id="page-container">
+
+					<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-secondary-menu">
+				<ul id="et-secondary-nav" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-983"><a href="/spanish/">En Español</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1672"><a href="https://cv.nmhealth.org/vietnamese/">Tiếng Việt</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-531"><a href="tel:1-855-600-3453">Coronavirus Hotline: 1-855-600-3453</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-977"><a href="https://cv.nmhealth.org/public-health-orders-and-executive-orders/">Public Health Orders &#038; Executive Orders</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="http://www.nmdoh.org">Return to the Main NMDOH Site</a></li>
+</ul>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+		
+	
+			<header id="main-header" data-height-onload="100">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://cv.nmhealth.org/">
+						<img src="https://cv.nmhealth.org/wp-content/uploads/2020/02/NMDOH-Logo-Color.jpg" alt="NMDOH - Coronavirus Updates" id="logo" data-height-percentage="60" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="100" data-fixed-height="40">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-329"><a href="https://cv.nmhealth.org/newsroom/">Newsroom &amp; Updates</a></li>
+<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="https://cv.nmhealth.org/public/">Public Info</a></li>
+<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://cv.nmhealth.org/clinicians/">Clinician Info</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="https://cv.nmhealth.org/laboratories/">Laboratory Info</a></li>
+<li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a href="https://cv.nmhealth.org/about-covid-19/">About COVID-19</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="https://cv.nmhealth.org/faq/">FAQ&#8217;s</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://cv.nmhealth.org/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-1132" class="post-1132 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+			
+		<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters2">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_0 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_post_title et_pb_post_title_0 et_pb_bg_layout_dark  et_pb_text_align_left"   >
+				
+				
+				
+				<div class="et_pb_title_container">
+					<h1 class="entry-title">Cases by County</h1>
+				</div>
+				
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_1 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module  et_pb_dmb_breadcrumbs_0 et_pb_dmb_breadcrumbs" style="visibility:hidden"><ol vocab="http://schema.org/" typeof="BreadcrumbList"><li property="itemListElement" typeof="ListItem"><a href="https://cv.nmhealth.org" class="et_pb_inline_icon" data-icon="&#xe009;" property="item" typeof="WebPage"><span>Home</span><meta property="name" content="Home"/></a><meta property="position" content="1"/></li><li class="et_pb_inline_icon" data-icon="&#x39;" property="itemListElement" typeof="ListItem"><span property="name">Cases by County</span><meta property="position" content="2"/></li></ol></div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_2 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h3>Below you will find the number of positive COVID-19 cases in New Mexico broken down by county.</h3></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_1 totalsTable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><table>
+<tbody>
+<tr>
+<td>County</td>
+<td style="text-align: center">Cases</td>
+<td style="text-align: center">Deaths</td>
+</tr>
+<tr>
+<td>Bernalillo County</td>
+<td style="text-align: center">55</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Catron County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Chaves County</td>
+<td style="text-align: center">4</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Cibola County</td>
+<td style="text-align: center">1</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Colfax County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Curry County</td>
+<td style="text-align: center">1</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>De Baca County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Do<span>ñ</span>a Ana County</td>
+<td style="text-align: center">16</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Eddy County</td>
+<td style="text-align: center">1</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>Grant County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Guadalupe County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Harding County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Hidalgo County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Lea County</td>
+<td style="text-align: center">1</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Lincoln County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Los Alamos County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Luna County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>McKinley County</td>
+<td style="text-align: center">3</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Mora County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Otero County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Quay County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Rio Arriba County</td>
+<td style="text-align: center">2</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Roosevelt County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>San Juan County</td>
+<td style="text-align: center">14</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>San Miguel County</td>
+<td style="text-align: center">1</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Sandoval County</td>
+<td style="text-align: center">10</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Santa Fe County</td>
+<td style="text-align: center">22</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Sierra County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Socorro County</td>
+<td style="text-align: center">2</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Taos County</td>
+<td style="text-align: center">3</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Torrance County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Union County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+<tr>
+<td>Valencia County</td>
+<td style="text-align: center">0</td>
+<td style="text-align: center">&#8212;</td>
+</tr>
+</tbody>
+</table></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_2_5 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h2>What can I do to protect myself from COVID-19?</h2>
+<p>Just like with many other respiratory illnesses, the best way to protect yourself is to wash your hands thoroughly and regularly, to cough or sneeze into your sleeve or a tissue, and avoid contact with people who are coughing or sneezing. Also stay home from work or school when you are sick.</p>
+</div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h2><strong>What are the symptoms of COVID-19?</strong></h2>
+<p>People with COVID-19 have reported symptoms of fever, cough, or trouble breathing.</p>
+</div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_3 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center">Copyright New Mexico Department of Health | Powered by <a href="http://rtsolutions.com" target="_blank" rel="noopener noreferrer" style="color:#fff">Real Time Solutions</a></p></div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
+	</div><!-- .et-l -->
+	
+			
+		</div><!-- #et-boc -->
+							</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+    <div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="archives-2" class="fwidget et_pb_widget widget_archive"><h4 class="title">Archives</h4>		<ul>
+				<li><a href='https://cv.nmhealth.org/2020/03/'>March 2020</a></li>
+	<li><a href='https://cv.nmhealth.org/2020/02/'>February 2020</a></li>
+	<li><a href='https://cv.nmhealth.org/2020/01/'>January 2020</a></li>
+		</ul>
+			</div> <!-- end .fwidget --><div id="categories-2" class="fwidget et_pb_widget widget_categories"><h4 class="title">Categories</h4>		<ul>
+				<li class="cat-item cat-item-10"><a href="https://cv.nmhealth.org/category/press-room/">Press Room</a>
+</li>
+		</ul>
+			</div> <!-- end .fwidget --><div id="meta-2" class="fwidget et_pb_widget widget_meta"><h4 class="title">Meta</h4>			<ul>
+						<li><a href="https://cv.nmhealth.org/505login/">Log in</a></li>
+			<li><a href="https://cv.nmhealth.org/feed/">Entries feed</a></li>
+			<li><a href="https://cv.nmhealth.org/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget"></div> <!-- end .footer-widget --><div class="footer-widget"></div> <!-- end .footer-widget --><div class="footer-widget"></div> <!-- end .footer-widget -->    </div> <!-- #footer-widgets -->
+</div>    <!-- .container -->
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-twitter">
+		<a href="#" class="icon">
+			<span>Twitter</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-instagram">
+		<a href="#" class="icon">
+			<span>Instagram</span>
+		</a>
+	</li>
+
+</ul><p id="footer-info">Designed by <a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a> | Powered by <a href="http://www.wordpress.org">WordPress</a></p>					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160705917-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-160705917-1');
+</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-45084453-1', 'nmhealth.org');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24155035-3"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+ 
+
+  gtag('config', 'UA-24155035-3');
+
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"https:\/\/cv.nmhealth.org\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/cv.nmhealth.org\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/cv.nmhealth.org\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"01e138e3de","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"7493baea41","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"1132","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [];
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-content/themes/Divi/js/custom.unified.js?ver=4.4.1'></script>
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-content/themes/Divi/core/admin/js/common.js?ver=4.4.1'></script>
+<script type='text/javascript' src='https://cv.nmhealth.org/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+</body>
+</html>

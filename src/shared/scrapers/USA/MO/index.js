@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import * as datetime from '../../../lib/datetime/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -155,6 +155,19 @@ const scraper = {
     'Worth County',
     'Wright County'
   ],
+  _getCountyName(countyName) {
+    countyName = this._countyMap[countyName] || countyName;
+
+    if (countyName.toUpperCase().indexOf(' CITY') === -1) {
+      countyName = geography.addCounty(countyName);
+    }
+
+    if (countyName === 'TBD County') {
+      countyName = UNASSIGNED;
+    }
+
+    return countyName;
+  },
   scraper: {
     '0': async function() {
       let counties = {};
@@ -165,7 +178,7 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         let countyName = parse.string($tr.find('td:nth-child(1)').text());
-        countyName = this._countyMap[countyName] || countyName;
+        countyName = this._getCountyName(countyName);
 
         const casesState = parse.number($tr.find('td:nth-child(2)').text()) || 0;
         const casesOther = parse.number($tr.find('td:nth-child(3)').text()) || 0;
@@ -201,13 +214,9 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         let countyName = parse.string($tr.find('td:nth-child(1)').text());
-        countyName = this._countyMap[countyName] || countyName;
-        const casesTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-        countyName = geography.addCounty(countyName);
+        countyName = this._getCountyName(countyName);
 
-        if (countyName === 'TBD County') {
-          countyName = UNASSIGNED;
-        }
+        const casesTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
 
         if (countyName !== ' County') {
           if (countyName in counties) {
@@ -230,13 +239,9 @@ const scraper = {
         $trsDeaths.each((index, tr) => {
           const $tr = $(tr);
           let countyName = parse.string($tr.find('td:nth-child(1)').text());
-          countyName = this._countyMap[countyName] || countyName;
-          const deathsTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
-          countyName = geography.addCounty(countyName);
+          countyName = this._getCountyName(countyName);
 
-          if (countyName === 'TBD County') {
-            countyName = UNASSIGNED;
-          }
+          const deathsTotal = parse.number($tr.find('td:nth-child(2)').text()) || 0;
 
           if (countyName !== ' County') {
             if (countyName in counties) {
@@ -268,15 +273,14 @@ const scraper = {
       };
 
       for (const countyData of data) {
-        let countyName = parse.string(this._countyMap[countyData.NAME] || countyData.NAME);
+        let countyName = parse.string(countyData.NAME);
 
         if (countyName === 'TBD' || countyName === 'Out of State') {
           unassigned.cases += parse.number(countyData.Cases || 0);
           unassigned.deaths += parse.number(countyData.Deaths || 0);
         } else {
-          if (countyName.toUpperCase().indexOf(' CITY') === -1) {
-            countyName = geography.addCounty(countyName);
-          }
+          countyName = this._getCountyName(countyName);
+
           if (countyName in counties) {
             counties[countyName].cases += parse.number(countyData.Cases || 0);
             counties[countyName].deaths += parse.number(countyData.Deaths || 0);

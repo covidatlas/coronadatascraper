@@ -1,0 +1,149 @@
+[
+  {
+    "county": "Allegany County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Anne Arundel County",
+    "cases": 24,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Baltimore County",
+    "cases": 42,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Baltimore City",
+    "cases": 41,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Calvert County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Caroline County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Carroll County",
+    "cases": 5,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Cecil County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Charles County",
+    "cases": 5,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Dorchester County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Frederick County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Garrett County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Harford County",
+    "cases": 5,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Howard County",
+    "cases": 30,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Kent County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 107,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Prince George's County",
+    "cases": 63,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Queen Anne's County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Somerset County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "St. Mary's County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Talbot County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Wicomico County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "county": "Worcester County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0
+  },
+  {
+    "cases": 349
+  }
+]

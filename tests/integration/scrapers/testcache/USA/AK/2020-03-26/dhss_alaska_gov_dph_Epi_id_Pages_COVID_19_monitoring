@@ -1,0 +1,798 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" __expr-val-dir="ltr" lang="en-us" dir="ltr">
+<head><title>
+	
+	COVID-19: Monitoring
+
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta http-equiv="x-ua-compatible" content="IE=Edge" /><link rel="shortcut icon" href="/Style Library/DhssZen/Images/favicon.ico" type="image/vnd.microsoft.icon" /><link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=cubXjmzpjBGT%2FzzR9ULbAw%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/Menu.css?rev=j46FAsDJga%2BaixwEf8A%2Fgg%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Core%20Styles/page-layouts-21.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/DhssZen/css/alt_campaign.css"/>
+
+
+    <script type="text/javascript">
+	    var _fV4UI = true;
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="/Style Library/DhssZen/css/reset.css?v=1.3" /><link rel="stylesheet" type="text/css" href="/Style Library/DhssZen/css/DhssZen.css?v=1.3" /><link rel="stylesheet" type="text/css" href="/Style Library/DhssZen/css/soa-structure.css?v=1.3" /><link rel="stylesheet" type="text/css" href="/Style Library/DhssZen/css/dhss-content.css?v=1.3" /><link rel="stylesheet" type="text/css" href="/Style Library/DhssZen/css/dhss-legacy.css?v=1.3" /><script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/style%20library/dhsszen/scripts/jquery-1.7.2.min.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/style%20library/dhsszen/scripts/menu.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=mdjxRHK1V7KZ%2BuOTcNNcmQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/1033/jquery-1.4.4.min.js?rev=c6nDNMXKcdcNCStCBk9kdg%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/1033/jquery-noconflict.js?rev=nBDuS1QCCe5SuB%2BmQlVskQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/listimport/listimport.js?rev=jZKUH8ts44bwUzFbeAf%2F1Q%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=ea23uepthaEvF_TU_KFnyhfDmINentVRWBgrZWYeHp-2_5dpwQPMTO-0VYOlpRzmkTTSHLhJtdKg84IzdzkOPNFtP0l9tJ9WmX6iCOeQr8tVdevmP6W5pprRYRFEv6pzHjANzlNlNgMoFfkHCguA90MY2Xs1&amp;t=3f4a792d"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=tQwg-L91KLVNsxE9MgkiFCt9taVRYcp3amAPXh97Hv098z4Y6dOerprYfJaWfG_hK54Ar3ZEANw0uWmiai6kwl0bTnffS7AQl6bOlqcR0y4lcHmKVDWEb-YO9E5Qpm0y74jQURncLcje8QWtOlKy7bZo0I6dwPXjyzmLRA5DLTAO7Jbe0&amp;t=3f4a792d"></' + 'script>');
+// ]]>
+</script>
+
+	
+	<script type="text/javascript">
+		function ProcessImn(){}
+		function ProcessImnMarkers(){}	
+	</script>
+
+	
+    
+	
+<meta name="google-site-verification" content="jPGd8CiqqcBFgCHw2lVALvEzN1eZi3hHuHZGv3s0lW0" /><style type="text/css">
+	.ctl00_wpz_0 { border-color:Black;border-width:1px;border-style:Solid; }
+
+</style></head>
+
+<body onload="javascript:_spBodyOnLoadWrapper();">
+<form name="aspnetForm" method="post" action="monitoring.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="noDigest" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWAmYPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCAw9kFggCAw9kFgIFJmdfMDBhZWNkOTBfYjcyYl80NDBlXzllMDNfZmQ1ZTliNTEwNGFlD2QWBGYPFgIeB1Zpc2libGVoZAIBDxYCHwFoZAIHD2QWAgIBD2QWBGYPZBYCAgEPFgIfAWgWAmYPZBYEAgIPZBYGAgEPFgIfAWhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFhAFqYXZhU2NyaXB0OkNvcmVJbnZva2UoJ1Rha2VPZmZsaW5lVG9DbGllbnRSZWFsJywxLCA1MywgJ2h0dHA6XHUwMDJmXHUwMDJmZGhzcy5hbGFza2EuZ292XHUwMDJmZHBoXHUwMDJmRXBpXHUwMDJmaWQnLCAtMSwgLTEsICcnLCAnJykeGENsaWVudE9uQ2xpY2tOYXZpZ2F0ZVVybGQeKENsaWVudE9uQ2xpY2tTY3JpcHRDb250YWluaW5nUHJlZml4ZWRVcmxkHgxIaWRkZW5TY3JpcHQFIlRha2VPZmZsaW5lRGlzYWJsZWQoMSwgNTMsIC0xLCAtMSlkAgUPFgIfAWhkAgMPDxYKHglBY2Nlc3NLZXkFAS8eD0Fycm93SW1hZ2VXaWR0aAIFHhBBcnJvd0ltYWdlSGVpZ2h0AgMeEUFycm93SW1hZ2VPZmZzZXRYZh4RQXJyb3dJbWFnZU9mZnNldFkC6wNkZAIBD2QWBAIDD2QWAgIBDxAWAh8BaGQUKwEAZAIFD2QWAmYPZBYCZg8UKwADZGRkZAIND2QWAgICD2QWAgIDDxYCHwALKwQBZAIRD2QWAgIBD2QWAmYPZBYCAgMPZBYCAgUPDxYEHgZIZWlnaHQbAAAAAAAAeUABAAAAHgRfIVNCAoABZBYCAgEPPCsACQEADxYEHg1QYXRoU2VwYXJhdG9yBAgeDU5ldmVyRXhwYW5kZWRnZGQYAgUoY3RsMDAkUGxhY2VIb2xkZXJNYWluJEJvdHRvbVJpZ2h0TmF2TWVudQ8PZAUESG9tZWQFJWN0bDAwJFBsYWNlSG9sZGVyTWFpbiRUb3BSaWdodE5hdk1lbnUPD2QFEkluZmVjdGlvdXMgRGlzZWFzZWRZc3VLvbUDhetCTetBT5D5stQ/SA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=dwElU2F6v5o-y0FrGZK0Um1wIQLYQo3j_3X7ayblsxyNjoNJrq0pUIedN4unLdA5bC-5FUTUZ5aeAo1sDTW1vziDeeU1&amp;t=636271383501517547" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaLCID = 1033;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
+var g_wsaListTemplateId = 850;
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdph\u002fEpi\u002fid", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{43e7fa95-79e4-49c4-931c-67a03394dcfd}",pageItemId:150, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};//]]>
+</script>
+<script type="text/javascript">
+<!--
+var L_Menu_BaseUrl="/dph/Epi/id";
+var L_Menu_LCID="1033";
+var L_Menu_SiteTheme="";
+//-->
+</script>
+<script type="text/javascript">
+//<![CDATA[
+document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/dph\/Epi\/id"};//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContext, type) {
+    CoreInvoke('ProcessDefaultNavigateHierarchy', nodeDiv, dataSourceId, dataPath, url, listInContext, type, document.forms.aspnetForm, "", "\u002fdph\u002fEpi\u002fid\u002fPages\u002fCOVID-19\u002fmonitoring.aspx");
+
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var _spWebPartComponents = new Object();//]]>
+</script>
+<script type="text/javascript" >
+<!--
+//-->
+</script>
+<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
+UpdateFormDigest('\u002fdph\u002fEpi\u002fid', 1440000);if (typeof(vwpcm) != 'undefined') {vwpcm.SetWpcmVal();};return _spFormOnSubmitWrapper();
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$panelZone'], [], [], 90);
+//]]>
+</script>
+
+
+
+
+
+
+<!-- =====  Start Main Area ============================================================ -->
+<div id="s4-bodyContainer">
+
+<a href="#soa-content" id="soa-skip-content">Skip to content</a>
+<div id="top-wrapper">
+	<div id="soa-bar">
+		<a id="soa-title" href="http://www.alaska.gov/" name="soa">State of Alaska</a>
+		<ul class="menu">
+	      <li><a href="https://my.alaska.gov/">myAlaska</a></li>
+	      <li><a href="http://www.alaska.gov/akdir1.html">My Government</a></li>
+	      <li><a href="http://www.alaska.gov/residentHome.html">Resident</a></li>
+	      <li><a href="http://www.alaska.gov/businessHome.html">Business in Alaska</a></li>
+	      <li><a href="http://www.alaska.gov/visitorHome.html">Visiting Alaska</a></li>
+	      <li><a href="http://www.alaska.gov/employeeHome.html">State Employees</a></li>
+		</ul>
+	</div>
+
+	<div id="soa-header">
+  		<a href="/dph/Epi/id/"><img class="soa-banner" src="http://hss.state.ak.us/css/images/Header_DHSS.jpg" alt="Infectious Disease" style="border-width:0px;" /></a>
+
+	     <div id="soa-search">
+                            <input id="soa-searchquery" name="q" title="Search" type="text" value="" />
+                            <input type="button" id="soa-searchsubmit" alt="Search" />
+                            <input value="DHSS" name="client" type="hidden" />
+                            <input value="DHSS" name="proxystylesheet" type="hidden" />
+                            <input value="date:D:L:d1" name="sort" type="hidden" />
+                            <input value="xml_no_dtd" name="output" type="hidden" />
+                            <input value="UTF-8" name="ie" type="hidden" />
+                            <input value="UTF-8" name="oe" type="hidden" />
+                        </div>
+	</div>
+
+    <div id="menu">
+      <ul id="menu_list">
+        <li id="first_nav"><a href="http://dhss.alaska.gov/">Home</a></li>
+        <li><a href="http://dhss.alaska.gov/Pages/Services.aspx">Divisions and Agencies</a>
+          <div>
+            <ul class="left">
+                <li><a href="http://dhss.alaska.gov/daph">Alaska Pioneer Homes</a></li>
+				<li><a href="http://dhss.alaska.gov/api">Alaska Psychiatric Institute</a></li>
+		        <li><a href="http://dhss.alaska.gov/dbh">Behavioral Health</a></li>
+				<li><a href="http://dhss.alaska.gov/ocs">Office of Children's Services</a></li>
+				<li><a href="http://dhss.alaska.gov/Commissioner">Office of the Commissioner</a></li>
+			    <li><a href="http://dhss.alaska.gov/osmap">Office of Substance Misuse and Addiction Prevention</a></li>
+				
+			</ul>
+            <ul class=" left">
+                <li><a href="http://dhss.alaska.gov/fms">Finance &amp; Management Services</a></li>
+                <li><a href="http://dhss.alaska.gov/dhcs">Health Care Services</a></li>
+				<li><a href="http://dhss.alaska.gov/djj">Juvenile Justice</a></li>
+				<li><a href="http://dhss.alaska.gov/dpa">Public Assistance</a></li>
+				<li><a href="http://dhss.alaska.gov/dph">Public Health</a></li>
+				<li><a href="http://dhss.alaska.gov/dsds">Seniors &amp; Disabilities Services</a></li>
+
+<li><a href="http://dhss.alaska.gov/Commissioner/Pages/Boards/default.aspx">Boards, Councils &amp; Commissions</a></li>            </ul>  
+            <br class="clear" />
+          </div>
+       </li>
+       <li><a href="http://dhss.alaska.gov/Pages/Services.aspx">Services</a>
+          <div>
+            <ul class="left">
+                <li><a href="http://dhss.alaska.gov/dph/VitalStats">Birth &amp; Marriage Certificates </a></li>
+                <li><a href="http://dhss.alaska.gov/dpa/Pages/ccare">Child Care </a></li>
+                <li><a href="http://dhss.alaska.gov/ocs">Child Protection</a></li>
+                <li><a href="http://dhss.alaska.gov/dpa/Pages/dkc/default.aspx">Denali KidCare</a></li>
+                <li><a href="http://dhss.alaska.gov/dpa/Pages/SNAP/default.aspx">Supplemental Nutrition Assistance Program (SNAP) </a></li>
+                <li><a href="http://dhss.alaska.gov/dph/Epi/iz/Pages/default.aspx">Immunization Information </a></li>
+                <li><a href="http://dhss.alaska.gov/dhcs/Pages/Medicaid_Medicare">Medicaid</a></li>
+                <li><a href="http://dhss.alaska.gov/dph/Nursing/Pages/locations.aspx">Public Health Centers </a></li>
+                <li><a href="http://dhss.alaska.gov/dpa/Pages/atap">Temporary &quot;Cash&quot; Assistance </a> </li>
+                <li><a href="http://dhss.alaska.gov/dpa/Pages/seniorbenefits">Senior Benefits Program</a></li>
+                <li><a href="http://dhss.alaska.gov/dsds/Pages/Medicare">Medicare</a></li>
+                <li><a href="http://dhss.alaska.gov/dbh/Pages/TreatmentRecovery/SubstanceAbuse">Substance Abuse Treatment</a></li>
+			</ul>
+            <ul class="left">
+ <li><a href="http://dhss.alaska.gov/ocs/Pages/icwa/default.aspx">Alaska Tribal Child Welfare Compact</a></li>
+                <li><a href="http://dhss.alaska.gov/dph/Director/Pages/LivingWill.aspx">Alaska Directives for Health Care &mdash; Living Will</a></li>
+                <li><a href="http://dhss.alaska.gov/dph/Chronic/Pages/brfss">Behavioral Risk Factor Survey</a></li>
+                <li><a href="http://permaudit.alaska.gov/">PERM</a></li>              <li><a href="http://dhss.alaska.gov/dph/Epi/Pages/phan/default.aspx">Public Health Alert Network (PHAN)</a></li>
+                <li><a href="http://dhss.alaska.gov/dhcs/Pages/CertificateOfNeed/default.aspx">Certificate of Need</a></li>
+                <li><a href="http://dhss.alaska.gov/fms/facilities/Pages/safetyplan.aspx">Department Safety Plan</a></li>
+                <li><a href="http://dhss.alaska.gov/fms/facilities/Documents/DHSS-Capital-Funding-Allocation-Plan-FY16.pdf">Facilities Funding Allocation Plan</a></li>
+            </ul>
+            <br class="clear" />
+          </div>
+		</li>
+        <li><a href="http://dhss.alaska.gov/News">News</a>
+          <div>
+            <ul class=" left">
+                <li><a href="http://dhss.alaska.gov/News/Pages/2020index.aspx">Press Releases</a></li>
+<li><a href="http://dhss.alaska.gov/News/Pages/newsletter/index.aspx">DHSS Newsletter</a></li> 
+<li><a href="http://dhss.alaska.gov/News/Pages/newsletter/CMO/CMO_News.aspx">Chief Medical Officer News</a></li> 
+<li><a href="http://dhss.alaska.gov/Commissioner/Pages/photos.aspx">Press Photos</a></li>
+<li><a href="https://aws.state.ak.us/OnlinePublicNotices/default.aspx">Public Notices</a></li>
+                <li><a href="http://dhss.alaska.gov/Pages/Publications.aspx">Publications</a></li>
+                <li><a href="http://dhss.alaska.gov/News/Pages/Newsroom.aspx">Newsroom</a></li>
+            </ul>
+            <br class="clear" />
+          </div>
+        </li>
+        <li><a href="http://dhss.alaska.gov/Commissioner/Pages/Contacts">Contact Us</a>
+            <div>
+                <ul class="left">
+                    <li><a href="http://dhss.alaska.gov/Commissioner/Pages/Contacts">Contacts</a></li>
+			        <li><a href="mailto:hsswebmaster@alaska.gov">Webmaster</a></li>
+			        <li><a href="http://dhss.alaska.gov/Pages/Accessibility.aspx">Accessibility</a></li>
+                    <li><a href="http://dhss.alaska.gov/Pages/Careers.aspx">DHSS Careers</a></li>
+                </ul>
+                <ul class="left">
+                    <li><a href="http://www.facebook.com/pages/Anchorage-AK/Alaska-Department-of-Health-and-Social-Services/99962144928" >Facebook</a></li>
+				    <li><a href="http://twitter.com/Alaska_DHSS" >Twitter</a></li>
+				    <li><a href="http://vimeo.com/alaskadhss" >Vimeo</a></li>
+				    <li><a href="http://www.youtube.com/alaskadhss" >YouTube</a></li>
+				    <li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=AKDHSS_14" >GovDelivery</a></li>
+                </ul>
+                <br class="clear" />
+            </div>
+        </li>
+
+<li><a href="http://coronavirus.alaska.gov/">COVID-19 Resources</a>
+            <div>
+                <ul class="left">
+                    <li><a href="http://coronavirus.alaska.gov/">COVID-19 Website</a></li>
+<li><a href="https://gov.alaska.gov/home/covid19-healthmandates/">COVID-19 Health Mandates</a></li>
+<li><a href="https://gov.alaska.gov/home/covid-19-economy/">COVID-19 Economic Stabilization</a></li>
+<li><a href="https://ready.alaska.gov/covid19">COVID-19 Unified Command: Press Releases</a></li>
+<li><a href="https://gov.alaska.gov/home/covid19news/">COVID-19 News & Video from Governor Mike Dunleavy</a></li>
+                    <li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=AKDHSS_157">Sign up for COVID-19 updates</a></li>
+                </ul>
+              
+                <br class="clear" />
+            </div>
+        </li>
+
+
+      </ul>
+    </div>
+
+	<div id="soa-breadcrumbs">
+		<span><a href="#ctl00_ctl37_SkipLink"><img alt="Skip Navigation Links" height="0" width="0" src="/WebResource.axd?d=Ylnie978DEV5711jLlQRdDn5MusmPX42s1MI0vQZfl06TNXLzB3nmC-pqSSXcz0sHH2njqI71A0oM3BZzO8JaXX1n_01&amp;t=636271383501517547" style="border-width:0px;" /></a><span><a title="Department of Health and Social Services" href="/Pages/default.aspx">Health and Social Services</a></span><span> &gt; </span><span><a title="Division of Public Health" href="/dph/Pages/default.aspx">Public Health</a></span><span> &gt; </span><span><a title="Section of Epidemiology
+" href="/dph/Epi/Pages/default.aspx">Epidemiology</a></span><span> &gt; </span><span><a title="Infectious Disease Program" href="/dph/Epi/id/Pages/default.aspx">Infectious Disease</a></span><span> &gt; </span><span>COVID-19: Monitoring</span><a id="ctl00_ctl37_SkipLink"></a></span>
+	</div>
+</div>
+
+<div id="ctl00_MSO_ContentDiv">
+<div id="content-wrapper">
+    <div id="soa-content">
+    <!-- s4-ca is the main body div -->
+	<div class="s4-ca">
+		
+<div id="DhssZenContent">
+    
+    <div id="ctl00_PlaceHolderMain_PageContent_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderMain_PageContent__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_PageContent_label"><div class="grid1"><div class="box"><h2 class="dz-Element-h2">Coronavirus Disease 2019 </h2>
+<div><h3 class="dz-Element-h3">About COVID-19:</h3></div>
+<ul><li><a href="/dph/Epi/id/Pages/COVID-19/default.aspx">COVID-19 Homepage</a></li>
+<li><a href="/dph/Epi/id/Pages/COVID-19/monitoring.aspx">Case Counts</a></li>
+<li><a href="/dph/Epi/id/Pages/Human-Coronavirus.aspx">About Human Coronaviruses</a></li>
+<li><a href="/dph/Epi/id/Pages/COVID-19/communications.aspx">Media &amp; Communications</a></li></ul>
+<h3 class="dz-Element-h3">What to do:</h3>
+<ul><li><a href="/dph/Epi/id/Pages/COVID-19/Sick.aspx">If you are sick</a></li>
+<li><span><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx">If you may have been exposed</a><a href="/dph/Epi/id/Pages/COVID-19/exposed.aspx"><span style="display:inline-block"></span></a></span><br /></li>
+</ul>
+
+<h3 class="dz-Element-h3">
+Resources for:</h3>
+<ul><li><a href="/dph/Epi/id/Pages/COVID-19/general.aspx">General Public</a></li>
+<li><a href="/dph/Epi/id/Pages/COVID-19/healthcare.aspx">Health Care</a></li>
+<li><a href="/dph/Epi/id/Pages/COVID-19/populations.aspx">Specific Groups</a><br /></li>
+</ul>
+<h3 class="dz-Element-h3">Stay informed:</h3>
+<p class="dz-Element-p"><em>Subscribe to DHSS's updates by email or text:</em></p>
+
+<ul>
+<li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=AKDHSS_157">COVID-19 Health Alerts</a><br /></li>
+
+<li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=12">DHSS Press Releases</a></li></ul>
+<h3 class="dz-Element-h3">Questions?</h3>
+<p><span><a href="https://alaska211.org/"><img alt="Alaska 2-1-1: Get connected. Get answers." src="/dph/Epi/id/PublishingImages/COVID-19/logo_211.png" style="margin:0px;width:195px;height:106px" /></a><br /></span>For non-clinical questions,<br />call 2-1-1.</p>
+<p><img alt="Careline logo" src="/dbh/PublishingImages/prevention/Carelinewebad.jpg" style="margin:5px 0px;width:190px;height:129px" /><br /><br /><a href="https://alaska211.org/"></a> </p>
+</div></div>
+
+
+<div class="grid2">
+<img alt="COVID-19: Alaska Department of Health and Social Services, State of Alaska" src="/dph/Epi/id/PublishingImages/COVID-19/Coronavirus-page-banner.jpg" style="width:100%;margin-bottom:10px" />
+<h1>Case Counts</h1>
+
+
+<h2 class="dz-Element-h2">How many cases are there?</h2>
+
+<ul><li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-reports/">WHO's global situation reports</a></li>
+<li><a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-in-us.html">CDC's U.S.  case counts</a></li></ul>
+
+<h4>Confirmed cases in Alaska by region</h4>
+<h4><img src="/dph/Epi/id/PublishingImages/COVID-19/COVID-19_confirmedcases_byday.png" alt="" style="margin:5px;width:450px;height:285px" /><span style="color:rgb(51, 51, 51);font-size:12.8px"></span><span style="color:rgb(51, 51, 51);font-size:12.8px"></span></h4>
+<div><em>*Cases are assigned by date of onset, diagnosis, or report — whichever is earliest; therefore, case counts may be updated as new data become available.</em><br /><ul>
+<li><strong>Cumulative number of cases hospitalized to date:  0​3</strong></li>
+<strong>
+</strong><li><span><strong>Cumulative number of deaths to date:  0​1</strong><span style="display:inline-block"></span></span><br /></li>
+
+<li><em><strong>Updated March 26, 2020; </strong>updates made daily by 5pm and reflect cases reported as of 3pm that day.</em></li></ul>
+<div><h4 class="dz-Element-h4">Case by Residence* and Presumed Exposure Source</h4></div></div>
+<table width="100%" cellspacing="5" cellpadding="5" style="border:1px solid;border-collapse:collapse">
+     <tbody><tr>
+    <td width="138" valign="top"><p><strong> </strong></p></td>
+    <td width="62" valign="top"><p><strong>Travel-Related</strong></p></td>
+    <td width="59" valign="top"><p><strong>Non-Travel</strong></p></td>
+    <td width="62" valign="top"><p><strong>Close Contact</strong></p></td>
+    <td width="63" valign="top"><p><strong>Pending</strong></p></td>
+    <td width="57" valign="top"><p><strong>Total</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Municipality of <br /> Anchorage</strong></p></td>
+    <td width="62" valign="top"><p><strong>15</strong></p></td>
+    <td width="59" valign="top"><p><strong>5</strong></p></td>
+    <td width="62" valign="top"><p><strong>3</strong></p></td>
+    <td width="63" valign="top"><p><strong>10</strong></p></td>
+    <td width="57" valign="top"><p><strong>33</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> </strong><em>Anchorage<br /> (including JBER)</em></p></td>
+    <td width="62" valign="top"><p><em>14</em></p></td>
+    <td width="59" valign="top"><p><em>4</em></p></td>
+    <td width="62" valign="top"><p><em>3 </em></p></td>
+
+    <td width="63" valign="top"><p><em>9 </em></p></td>
+    <td width="57" valign="top"><p><em>30<br /></em></p>
+<br /></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Eagle River/<br /> Chugiak</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>1</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>1</em></p></td>
+    <td width="57" valign="top"><p><em>3</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Gulf Coast</strong></p></td>
+    <td width="62" valign="top"><p><strong>3</strong></p></td>
+    <td width="59" valign="top"><p><strong>​0</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>5</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Homer</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Seward</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Sterling</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>2</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Soldotna</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>1</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Interior</strong></p></td>
+    <td width="62" valign="top"><p><strong>4</strong></p></td>
+    <td width="59" valign="top"><p><strong>2</strong></p></td>
+    <td width="62" valign="top"><p><strong>6</strong></p></td>
+    <td width="63" valign="top"><p><strong>3</strong></p></td>
+    <td width="57" valign="top"><p><strong>15</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Fairbanks</em></p></td>
+    <td width="62" valign="top"><p><em>3</em></p></td>
+    <td width="59" valign="top"><p><em>2</em><br /></p></td>
+    <td width="62" valign="top"><p><em>4</em></p></td>
+    <td width="63" valign="top"><p><em>1</em></p></td>
+    <td width="57" valign="top"><p><em>10</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> North Pole</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="63" valign="top"><p><em>2</em></p></td>
+    <td width="57" valign="top"><p><em>5</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Mat-Su</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+    <td width="59" valign="top"><p><strong>​0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>2</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Palmer</em></p></td>
+    <td width="62" valign="top"><p><em>2</em></p></td>
+    <td width="59" valign="top"><p><em>0</em></p></td>
+    <td width="62" valign="top"><p><em>0</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>2</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Northern</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="59" valign="top"><p><strong>0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>0</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Southeast</strong></p></td>
+    <td width="62" valign="top"><p><strong>2</strong></p></td>
+    <td width="59" valign="top"><p><strong>3</strong></p></td>
+    <td width="62" valign="top"><p><strong>9</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>14</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Juneau</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="59" valign="top"><p><em>1</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>3</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><em> Ketchikan</em></p></td>
+    <td width="62" valign="top"><p><em>1</em></p></td>
+
+    <td width="59" valign="top"><p><em>2</em></p></td>
+    <td width="62" valign="top"><p><em>8</em></p></td>
+    <td width="63" valign="top"><p><em>0</em></p></td>
+    <td width="57" valign="top"><p><em>11</em></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> Southwest</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="59" valign="top"><p><strong>0</strong></p></td>
+    <td width="62" valign="top"><p><strong>0</strong></p></td>
+    <td width="63" valign="top"><p><strong>0</strong></p></td>
+    <td width="57" valign="top"><p><strong>0</strong></p></td>
+  </tr>
+  <tr>
+    <td width="138" valign="top"><p><strong> TOTAL</strong></p></td>
+    <td width="62" valign="top"><p><strong>26</strong></p></td>
+    <td width="59" valign="top"><p><strong>10</strong></p></td>
+    <td width="62" valign="top"><p><strong>20</strong></p></td>
+    <td width="63" valign="top"><p><strong>13</strong></p></td>
+    <td width="57" valign="top"><p><strong>69</strong></p></td>
+  </tr>
+</tbody></table>
+<em>*Case residence may not always reflect location of exposure or testing.</em><br /><ul>
+<li style="font-size:12.8px"><a href="http://live.laborstats.alaska.gov/pop/index.cfm" style="font-size:12.8px"><strong style="font-size:12.8px"><em style="font-size:12.8px">Region:</em></strong> Economic regions definitions​</a></li>
+<li><span><strong><em>Travel-related:</em></strong> Exposure/source of the virus was outside of Alaska.<span style="display:inline-block"></span></span><br /><strong><em></em></strong></li>
+<li><strong><em>Pending:</em></strong> Under investigation<br /><strong><em></em></strong></li>
+
+<li><span><em><strong>Updated March 26, 2020;</strong> updates made daily by 5pm and reflect cases reported as of 3pm that day.</em><span style="display:inline-block"></span></span><br /></li></ul>
+<div class="box" style="margin-bottom:1em"><span><h3 class="dz-Element-h3">COVID-19 tests for Alaska residents</h3></span><span>
+<h4 class="dz-Element-h4">How many tests were completed in total? </h4>
+<div><div><span><span><h4><img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_cumulative.png" style="margin:5px 0px;width:98%;height:281px" /><span style="display:inline-block"></span></h4></span></span> <span><h4 class="dz-Element-h4">How many tests are completed each day?<img alt="The number of tests per day is increasing at ASPHL." src="/dph/Epi/id/PublishingImages/COVID-19/COVID-1_AKtesting_byday.png" style="width:98%;height:281px" /></h4>
+</span></div>
+<div><ul><li><span><a href="/dph/Epi/id/SiteAssets/Pages/HumanCoV/COVID-19_epi_testingcurve.csv">COVID-19 testing data for Alaska residents in CSV format</a><a href="/dph/Epi/id/SiteAssets/Pages/HumanCoV/COVID-19_epi_testingcurve.csv"><span style="display:inline-block"></span></a></span><span><br /></span></li></ul></div></div></span><span>
+</span></div>
+<h2 class="dz-Element-h2">CDC Case Counts</h2>
+<div>Thank you for your patience while this page loads. Embedded content brought to you through CDC content syndication:<br /></div>
+<div><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 00aecd90-b72b-440e-9e03-fd5e9b5104ae" id="div_00aecd90-b72b-440e-9e03-fd5e9b5104ae" unselectable="on"><table style='width:100%' cellpadding='0' cellspacing='0'><tr><td id="MSOZoneCell_WebPartWPQ1" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr class="ms-WPHeader">
+				<td align="left" class="ms-wpTdSpace">&#160;</td><td title="COVID-19 Case Counts: CDC Content Syndication - Allows authors to enter rich text content." id="WebPartTitleWPQ1" class="ms-WPHeaderTd"><h3 style="text-align:justify;" class="ms-standardheader ms-WPTitle"><nobr><span>COVID-19 Case Counts: CDC Content Syndication</span><span id="WebPartCaptionWPQ1"></span></nobr></h3></td><td class="ms-WPHeaderTdSelection"><span class="ms-WPHeaderTdSelSpan"><input type="checkbox" id="SelectionCbxWebPartWPQ1" class="ms-WPHeaderCbxHidden" title="Select or deselect COVID-19 Case Counts: CDC Content Syndication Web Part" onblur="this.className='ms-WPHeaderCbxHidden'" onfocus="this.className='ms-WPHeaderCbxVisible'" onkeyup="WpCbxKeyHandler(event);" onmouseup="WpCbxSelect(event); return false;" onclick="TrapMenuClick(event); return false;" /></span></td><td align="left" class="ms-wpTdSpace">&#160;</td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td class="" valign="top"><div WebPartID="39deda76-3d17-40ee-a7cd-f2edc2013d17" WebPartID2="00aecd90-b72b-440e-9e03-fd5e9b5104ae" HasPers="false" id="WebPartWPQ1" width="100%" class="ms-WPBody ms-wpContentDivSpace" allowRemove="false" allowDelete="false" style="" >
+<!-- Markup for HTML (2019 Novel Coronavirus (2019-nCoV) Case Count in the U.S. : People Under Investigation (PUI) in the United States) --><small><div class='rid_64fed498_403398' data-mediatype='html' data-iframeembedsrc='//tools.cdc.gov/TemplatePackage/contrib/widgets/tp-widget-external-loader.js' data-apiembedsrc='//tools.cdc.gov/api/embed/html/js/embed-2.0.3.js' data-cdc-widget='syndicationIframe' data-iframe='true' data-nw='true' data-postprocess='' data-ns='cdc' data-of='xhtml' data-oe='utf-8' data-xpath='' data-ids='' data-cssclasses='2019coronavirus' data-stripstyles='true' data-stripcomments='true' data-stripimages='true' data-stripanchors='false' data-stripscripts='true' data-mediaid='403398' data-apiroot='//tools.cdc.gov/api' data-font='Tahoma'></small></div><script src='//tools.cdc.gov/TemplatePackage/contrib/widgets/tp-widget-external-loader.js' ></script><noscript>You need javascript enabled to view this content or go to <a href='//tools.cdc.gov/api/v2/resources/media/403398/noscript'>source URL</a>.</noscript>
+
+</div></td>
+	</tr>
+</table></td></tr></table></div>
+<div id="vid_00aecd90-b72b-440e-9e03-fd5e9b5104ae" unselectable="on" style="display:none"></div></div>
+
+
+<br /></div>
+</div>
+​​​​​​​</div>
+</div>
+<div id="DhssZenNav" class="grid1">
+	
+	<div id="zz1_TopRightNavMenu" class="DhssZenNav">
+	<div class="menu vertical menu-vertical">
+		<ul class="root static">
+			<li class="static"><span class="static menu-item"><span class="additional-background"><span class="menu-item-text">Section of Epidemiology</span></span></span></li><li class="static"><a class="static menu-item" href="/dph/Epi"><span class="additional-background"><span class="menu-item-text">Home</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Pages/pubs/conditions/default.aspx"><span class="additional-background"><span class="menu-item-text">Conditions Reportable</span></span></a></li><li class="static"><a class="static menu-item" href="http://epibulletins.dhss.alaska.gov/"><span class="additional-background"><span class="menu-item-text">Epidemiology Bulletins</span></span></a><ul class="static">
+				<li class="static"><a class="static menu-item" href="/dph/Epi/Pages/bulletins/subscribe.aspx"><span class="additional-background"><span class="menu-item-text">Subscribe</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Pages/bulletins/unsubscribe.aspx"><span class="additional-background"><span class="menu-item-text">Unsubscribe</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Pages/bulletins/feedback.aspx"><span class="additional-background"><span class="menu-item-text">Feedback</span></span></a></li>
+			</ul></li><li class="static"><a class="static menu-item" href="/dph/Epi/Pages/epidir.aspx"><span class="additional-background"><span class="menu-item-text">Contact Us</span></span></a></li><li class="static"><span class="static menu-item"><span class="additional-background"><span class="menu-item-text">Programs</span></span></span></li><li class="static"><a class="static menu-item" href="/dph/Epi/eph"><span class="additional-background"><span class="menu-item-text">Environmental Public Health</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/hia"><span class="additional-background"><span class="menu-item-text">Health Impact Assessment</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/hivstd"><span class="additional-background"><span class="menu-item-text">HIV/STD</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/iz"><span class="additional-background"><span class="menu-item-text">Immunization</span></span></a></li><li class="static selected"><a class="static selected menu-item" href="/dph/Epi/id"><span class="additional-background"><span class="menu-item-text">Infectious Disease</span><span class="ms-hidden">Currently selected</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/injury"><span class="additional-background"><span class="menu-item-text">Injury Surveillance</span></span></a></li>
+		</ul>
+	</div>
+</div>
+
+	
+	<div id="zz2_BottomRightNavMenu" class="DhssZenNav">
+	<div class="menu vertical menu-vertical">
+		<ul class="root static">
+			<li class="static"><span class="static menu-item"><span class="additional-background"><span class="menu-item-text"> Infectious Disease</span></span></span></li><li class="static selected"><a class="static selected menu-item" href="/dph/Epi/id/Pages/default.aspx"><span class="additional-background"><span class="menu-item-text">Home</span><span class="ms-hidden">Currently selected</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/dod/foodwater/default.aspx"><span class="additional-background"><span class="menu-item-text">Food and Waterborne Diseases</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/hai/default.aspx"><span class="additional-background"><span class="menu-item-text">Healthcare Associated Infections</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/hepatitis/default.aspx"><span class="additional-background"><span class="menu-item-text">Hepatitis Prevention</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/homelessness.aspx"><span class="additional-background"><span class="menu-item-text">Homelessness and Health</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/influenza/fluinfo.aspx"><span class="additional-background"><span class="menu-item-text">Influenza</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/synd_surv/default.aspx"><span class="additional-background"><span class="menu-item-text">Syndromic Surveillance</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/tb.aspx"><span class="additional-background"><span class="menu-item-text">Tuberculosis Control</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/id/Pages/VPD.aspx"><span class="additional-background"><span class="menu-item-text">Vaccine-Preventable Diseases (VPD)</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Pages/pubs/mmm/default.aspx"><span class="additional-background"><span class="menu-item-text">Epi Procedure Manual</span></span></a><ul class="static">
+				<li class="static"><a class="static menu-item" href="/dph/Epi/Pages/pubs/mmm/default.aspx"><span class="additional-background"><span class="menu-item-text">Home</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Documents/pubs/mmm/MMM_Chapter_ArboviralDiseases.pdf"><span class="additional-background"><span class="menu-item-text">Arboviral Disease Chapter</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Documents/pubs/mmm/MMM_Chapter_BloodBodyFluids.pdf"><span class="additional-background"><span class="menu-item-text">Blood and Body Fluids Chapter</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Documents/pubs/mmm/MMM_Chapter_BotulismFoodborne.pdf"><span class="additional-background"><span class="menu-item-text">Botulism Chapter</span></span></a></li><li class="static"><a class="static menu-item" href="/dph/Epi/Documents/pubs/mmm/MMM_Chapter_Brucellosis.pdf"><span class="additional-background"><span class="menu-item-text">Brucellosis Chapter</span></span></a></li>
+			</ul></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+	</div>
+
+	<div id="DeveloperDashboard" class="ms-developerdashboard">
+		
+	</div>
+
+    <div id="dhss-footer">
+	
+		<div id="footer-social">
+			<ul>
+				<li><a href="http://www.facebook.com/pages/Anchorage-AK/Alaska-Department-of-Health-and-Social-Services/99962144928" class="facebook" title="Facebook">&nbsp;</a></li>
+				<li><a href="http://twitter.com/Alaska_DHSS" class="twitter" title="Twitter">&nbsp;</a></li>
+				<li><a href="http://vimeo.com/alaskadhss" class="vimeo" title="Vimeo">&nbsp;</a></li>
+				<li><a href="http://www.youtube.com/alaskadhss" class="youtube" title="YouTube">&nbsp;</a></li>
+				<li><a href="https://public.govdelivery.com/accounts/AKDHSS/subscriber/new?topic_id=AKDHSS_14" class="govdelivery" title="GovDelivery">&nbsp;</a></li>
+			</ul>
+	  
+		</div>
+
+		<div id="footer-general">
+			<ul>
+				<li><a href="http://dhss.alaska.gov/Commissioner/Pages/Contacts">Contacts</a></li>
+				<li><a href="http://dhss.alaska.gov/Pages/Accessibility.aspx">Accessibility</a></li>
+				<li><a href="https://aws.state.ak.us/OnlinePublicNotices/default.aspx">Public Notices</a></li>
+				<li><a href="http://dhss.alaska.gov/Pages/Staff.aspx">Staff</a></li>
+			</ul>
+			<ul>
+				<li class="webmaster"><a href="mailto:hsswebmaster@alaska.gov">Webmaster</a></li>
+			</ul>
+		</div>
+	  
+		<div id="footer-divisions">
+			<ul>
+				<li><a href="http://dhss.alaska.gov/daph">Alaska Pioneer Homes</a></li>
+				<li><a href="http://dhss.alaska.gov/api">Alaska Psychiatric Institute</a></li>
+				<li><a href="http://dhss.alaska.gov/dbh">Behavioral Health</a></li>
+
+<li><a href="http://dhss.alaska.gov/fms">Finance &amp; Management Services</a></li>
+
+						</ul>
+<ul>
+
+<li><a href="http://dhss.alaska.gov/dhcs">Health Care Services</a></li>
+
+<li><a href="http://dhss.alaska.gov/djj">Juvenile Justice</a></li>
+	
+<li><a href="http://dhss.alaska.gov/ocs">Office of Children's Services</a></li>
+
+<li><a href="http://dhss.alaska.gov/dpa">Public Assistance</a></li>
+
+</ul>
+
+<ul>
+
+<li><a href="http://dhss.alaska.gov/dph">Public Health</a></li>
+
+<li><a href="http://dhss.alaska.gov/dsds">Seniors &amp; Disabilities Services</a></li>
+
+<li><a href="http://dhss.alaska.gov/osmap">Substance Misuse and Addiction Prevention</a></li>
+</ul>
+</div>
+
+    </div>
+
+	</div>
+</div>
+</div>
+
+<div id="footer-wrapper">
+	<div id="soa-footer">
+		<ul class="menu">
+			<li><a href="http://www.alaska.gov/">State of Alaska</a></li>
+			<li><a href="https://myalaska.state.ak.us/home/app">myAlaska</a></li>
+			<li><a href="http://www.alaska.gov/akdir1.html">My Government</a></li>
+			<li><a href="http://www.alaska.gov/residentHome.html">Resident</a></li>
+			<li><a href="http://www.alaska.gov/businessHome.html">Business in Alaska</a></li>
+			<li><a href="http://www.alaska.gov/visitorHome.html">Visiting Alaska</a></li>
+			<li><a href="http://www.alaska.gov/employeeHome.html">State Employees</a></li>
+		</ul>
+		<ul class="footer">
+			<li>State of Alaska</li>
+			<li>&copy; 2019</li>
+			<li class="last-child"><a  href="mailto:hsswebmaster@alaska.gov">Webmaster</a></li>
+		</ul>
+	</div>
+</div>
+</div>
+<!-- =====  End Main ============================================================ -->
+
+
+	
+
+
+
+
+<div id="ctl00_panelZone">
+	<div style='display:none' id='hidZone'><table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td id="MSOZoneCell_WebPartWPQ1" valign="top" class="s4-wpcell-plain"></td>
+		</tr>
+	</table></div>
+</div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/>
+
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);function loadMDN2() { EnsureScript('MDN.js', typeof(loadFilterFn), null); }
+function loadMDN1() { ExecuteOrDelayUntilScriptLoaded(loadMDN2, 'sp.ribbon.js'); }
+_spBodyOnLoadFunctionNames.push('loadMDN1');
+function _spNavigateHierarchyEx(nodeDiv, dataSourceId, dataPath, url, listInContext, type, additionalQString) {
+    SetAdditionalNavigateHierarchyQString(additionalQString);
+    g_originalSPNavigateFunc(nodeDiv, dataSourceId, dataPath, url, listInContext, type);
+}
+
+g_originalSPNavigateFunc = _spNavigateHierarchy;
+_spNavigateHierarchy = _spNavigateHierarchyEx;
+
+function EnsureScripts(scriptInfoList, finalFunction)
+{
+if (scriptInfoList.length == 0)
+{
+finalFunction();
+}
+else
+{
+var scriptInfo = scriptInfoList.shift();
+var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
+var defd;
+try
+{
+eval('defd = typeof(' + scriptInfo[1] + ');');
+}
+catch (e)
+{
+defd = 'undefined';
+}
+if (scriptInfo[2])
+{
+EnsureScript(scriptInfo[0], defd, null);
+ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
+}
+else
+{
+EnsureScript(scriptInfo[0], defd, rest);
+}
+}
+}
+function PublishingRibbonUpdateRibbon()
+{
+var pageManager = SP.Ribbon.PageManager.get_instance();
+if (pageManager)
+{
+pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
+}
+}var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{43e7fa95-79e4-49c4-931c-67a03394dcfd}",itemId: 150,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fdph\u002fEpi\u002fid\u002fPages",itemPermissions:{High:0,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+}
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002fsp.runtime.js?rev=IGffcZfunndj0247nOxKVg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.core.js");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=Tpcmo1\u00252FSu6R0yewHowDl5g\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002fsp.js?rev=\u00252B4ZEyA892P3T0504qi0paw\u00253D\u00253D");RegisterSodDep("sp.js", "sp.core.js");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=OOyJv78CADNBeet\u00252FvTvniQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=Emb5hNX1RZMNXk9oS82yvA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=WB6Gy8a027aeNCq7koVCUg\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("ribbon", "\u002f_layouts\u002fsp.ribbon.js?rev=F\u00252BUEJ66rbXzSvpf7nN69wQ\u00253D\u00253D");RegisterSodDep("ribbon", "core.js");RegisterSodDep("ribbon", "sp.core.js");RegisterSodDep("ribbon", "sp.js");RegisterSodDep("ribbon", "cui.js");RegisterSodDep("ribbon", "sp.res.resx");RegisterSodDep("ribbon", "sp.runtime.js");RegisterSodDep("ribbon", "inplview");</script>
+<script type="text/javascript">RegisterSod("sp.ui.policy.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EUI\u00252EPolicy\u00252EResources\u0026rev=YhBHGmUAGyJ3lAgSdE4V\u00252Fw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mdn.js", "\u002f_layouts\u002fmdn.js?rev=gwmFFJ2\u00252FfFacqXWAqG\u00252FqKg\u00253D\u00253D");RegisterSodDep("mdn.js", "sp.core.js");RegisterSodDep("mdn.js", "sp.runtime.js");RegisterSodDep("mdn.js", "sp.js");RegisterSodDep("mdn.js", "cui.js");RegisterSodDep("mdn.js", "ribbon");RegisterSodDep("mdn.js", "sp.ui.policy.resources.resx");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=epwnP\u00252FbdljnctbCVld1nnA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+function init_zz1_TopRightNavMenu() {$create(SP.UI.AspMenu, null, null, null, $get('zz1_TopRightNavMenu'));}ExecuteOrDelayUntilScriptLoaded(init_zz1_TopRightNavMenu, 'sp.js');
+function init_zz2_BottomRightNavMenu() {$create(SP.UI.AspMenu, null, null, null, $get('zz2_BottomRightNavMenu'));}ExecuteOrDelayUntilScriptLoaded(init_zz2_BottomRightNavMenu, 'sp.js');
+//]]>
+</script>
+</form>
+
+
+</body>
+</html>

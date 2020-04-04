@@ -1,0 +1,20 @@
+[
+  {
+    "county": "New Castle County",
+    "cases": 79,
+    "recovered": 0
+  },
+  {
+    "county": "Kent County",
+    "cases": 14,
+    "recovered": 0
+  },
+  {
+    "county": "Sussex County",
+    "cases": 26,
+    "recovered": 0
+  },
+  {
+    "cases": 119
+  }
+]

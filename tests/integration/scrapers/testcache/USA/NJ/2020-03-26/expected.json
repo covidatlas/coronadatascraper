@@ -1,0 +1,89 @@
+[
+  {
+    "county": "Atlantic County",
+    "cases": 10
+  },
+  {
+    "county": "Bergen County",
+    "cases": 1206
+  },
+  {
+    "county": "Burlington County",
+    "cases": 64
+  },
+  {
+    "county": "Camden County",
+    "cases": 73
+  },
+  {
+    "county": "Cape May County",
+    "cases": 6
+  },
+  {
+    "county": "Cumberland County",
+    "cases": 4
+  },
+  {
+    "county": "Essex County",
+    "cases": 609
+  },
+  {
+    "county": "Gloucester County",
+    "cases": 33
+  },
+  {
+    "county": "Hudson County",
+    "cases": 441
+  },
+  {
+    "county": "Hunterdon County",
+    "cases": 39
+  },
+  {
+    "county": "Mercer County",
+    "cases": 111
+  },
+  {
+    "county": "Monmouth County",
+    "cases": 501
+  },
+  {
+    "county": "Ocean County",
+    "cases": 389
+  },
+  {
+    "county": "Passaic County",
+    "cases": 399
+  },
+  {
+    "county": "Salem County",
+    "cases": 2
+  },
+  {
+    "county": "Somerset County",
+    "cases": 179
+  },
+  {
+    "county": "Sussex County",
+    "cases": 49
+  },
+  {
+    "county": "Union County",
+    "cases": 432
+  },
+  {
+    "county": "Warren County",
+    "cases": 31
+  },
+  {
+    "county": "Morris County",
+    "cases": 315
+  },
+  {
+    "county": "Middlesex County",
+    "cases": 505
+  },
+  {
+    "cases": 5398
+  }
+]

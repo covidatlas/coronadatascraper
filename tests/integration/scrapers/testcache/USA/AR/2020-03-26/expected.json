@@ -1,0 +1,540 @@
+[
+  {
+    "county": "(unassigned)",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 181
+  },
+  {
+    "county": "Howard County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 4
+  },
+  {
+    "county": "Pulaski County",
+    "cases": 83,
+    "deaths": 1,
+    "recovered": 2,
+    "tested": 325
+  },
+  {
+    "county": "Lonoke County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 24
+  },
+  {
+    "county": "Prairie County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Desha County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 10
+  },
+  {
+    "county": "Phillips County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 8
+  },
+  {
+    "county": "Searcy County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Independence County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 11
+  },
+  {
+    "county": "Jackson County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Mississippi County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Greene County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 8
+  },
+  {
+    "county": "Clay County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Randolph County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 6
+  },
+  {
+    "county": "Lawrence County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 4
+  },
+  {
+    "county": "Baxter County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 6
+  },
+  {
+    "county": "Marion County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Perry County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 8
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 23,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 122
+  },
+  {
+    "county": "Washington County",
+    "cases": 12,
+    "deaths": 0,
+    "recovered": 2,
+    "tested": 95
+  },
+  {
+    "county": "Crawford County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 7
+  },
+  {
+    "county": "Little River County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 0
+  },
+  {
+    "county": "Miller County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 7
+  },
+  {
+    "county": "Lafayette County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 0
+  },
+  {
+    "county": "Columbia County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 10
+  },
+  {
+    "county": "Union County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 25
+  },
+  {
+    "county": "Ashley County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 17
+  },
+  {
+    "county": "Chicot County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Benton County",
+    "cases": 23,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 132
+  },
+  {
+    "county": "Carroll County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Madison County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Sebastian County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 16
+  },
+  {
+    "county": "Polk County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 13
+  },
+  {
+    "county": "Sevier County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 8
+  },
+  {
+    "county": "Garland County",
+    "cases": 19,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 67
+  },
+  {
+    "county": "Saline County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 47
+  },
+  {
+    "county": "Franklin County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Scott County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 4
+  },
+  {
+    "county": "Logan County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Yell County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Pike County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 20
+  },
+  {
+    "county": "Hempstead County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 5
+  },
+  {
+    "county": "Drew County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 9
+  },
+  {
+    "county": "Bradley County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 23
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Ouachita County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Nevada County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Clark County",
+    "cases": 15,
+    "deaths": 0,
+    "recovered": 2,
+    "tested": 20
+  },
+  {
+    "county": "Dallas County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Cleveland County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 10
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 5,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 12
+  },
+  {
+    "county": "Arkansas County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 6
+  },
+  {
+    "county": "Grant County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 17
+  },
+  {
+    "county": "Monroe County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Lee County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 0
+  },
+  {
+    "county": "Hot Spring County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 10
+  },
+  {
+    "county": "St. Francis County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 7
+  },
+  {
+    "county": "Crittenden County",
+    "cases": 7,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 10
+  },
+  {
+    "county": "Cross County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 1
+  },
+  {
+    "county": "Woodruff County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "White County",
+    "cases": 6,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 40
+  },
+  {
+    "county": "Faulkner County",
+    "cases": 24,
+    "deaths": 0,
+    "recovered": 2,
+    "tested": 218
+  },
+  {
+    "county": "Conway County",
+    "cases": 2,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 19
+  },
+  {
+    "county": "Newton County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 0
+  },
+  {
+    "county": "Pope County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 67
+  },
+  {
+    "county": "Johnson County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 3
+  },
+  {
+    "county": "Van Buren County",
+    "cases": 13,
+    "deaths": 0,
+    "recovered": 1,
+    "tested": 29
+  },
+  {
+    "county": "Cleburne County",
+    "cases": 46,
+    "deaths": 2,
+    "recovered": 3,
+    "tested": 92
+  },
+  {
+    "county": "Poinsett County",
+    "cases": 3,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 6
+  },
+  {
+    "county": "Craighead County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 9
+  },
+  {
+    "county": "Sharp County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 6
+  },
+  {
+    "county": "Izard County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 2
+  },
+  {
+    "county": "Fulton County",
+    "cases": 0,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 1
+  },
+  {
+    "county": "Stone County",
+    "cases": 4,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 7
+  },
+  {
+    "county": "Boone County",
+    "cases": 1,
+    "deaths": 0,
+    "recovered": 0,
+    "tested": 8
+  },
+  {
+    "cases": 349,
+    "recovered": 19,
+    "tested": 1882,
+    "deaths": 3
+  }
+]

@@ -1,0 +1,353 @@
+[
+  {
+    "county": "Anoka County",
+    "cases": 8
+  },
+  {
+    "county": "Benton County",
+    "cases": 1
+  },
+  {
+    "county": "Big Stone County",
+    "cases": 1
+  },
+  {
+    "county": "Blue Earth County",
+    "cases": 6
+  },
+  {
+    "county": "Carver County",
+    "cases": 8
+  },
+  {
+    "county": "Cass County",
+    "cases": 1
+  },
+  {
+    "county": "Chisago County",
+    "cases": 2
+  },
+  {
+    "county": "Clay County",
+    "cases": 4
+  },
+  {
+    "county": "Dakota County",
+    "cases": 25
+  },
+  {
+    "county": "Dodge County",
+    "cases": 5
+  },
+  {
+    "county": "Fillmore County",
+    "cases": 3
+  },
+  {
+    "county": "Goodhue County",
+    "cases": 1
+  },
+  {
+    "county": "Hennepin County",
+    "cases": 128
+  },
+  {
+    "county": "Jackson County",
+    "cases": 1
+  },
+  {
+    "county": "Kandiyohi County",
+    "cases": 1
+  },
+  {
+    "county": "Lac qui Parle County",
+    "cases": 1
+  },
+  {
+    "county": "Le Sueur County",
+    "cases": 6
+  },
+  {
+    "county": "Mahnomen County",
+    "cases": 1
+  },
+  {
+    "county": "Martin County",
+    "cases": 12
+  },
+  {
+    "county": "Mower County",
+    "cases": 10
+  },
+  {
+    "county": "Nicollet County",
+    "cases": 3
+  },
+  {
+    "county": "Olmsted County",
+    "cases": 29
+  },
+  {
+    "county": "Ramsey County",
+    "cases": 32
+  },
+  {
+    "county": "Renville County",
+    "cases": 1
+  },
+  {
+    "county": "Rice County",
+    "cases": 2
+  },
+  {
+    "county": "Scott County",
+    "cases": 6
+  },
+  {
+    "county": "Sherburne County",
+    "cases": 1
+  },
+  {
+    "county": "Sibley County",
+    "cases": 1
+  },
+  {
+    "county": "St. Louis County",
+    "cases": 5
+  },
+  {
+    "county": "Stearns County",
+    "cases": 5
+  },
+  {
+    "county": "Steele County",
+    "cases": 5
+  },
+  {
+    "county": "Wabasha County",
+    "cases": 4
+  },
+  {
+    "county": "Waseca County",
+    "cases": 2
+  },
+  {
+    "county": "Washington County",
+    "cases": 15
+  },
+  {
+    "county": "Wilkin County",
+    "cases": 1
+  },
+  {
+    "county": "Winona County",
+    "cases": 4
+  },
+  {
+    "county": "Wright County",
+    "cases": 5
+  },
+  {
+    "county": "Aitkin County",
+    "cases": 0
+  },
+  {
+    "county": "Becker County",
+    "cases": 0
+  },
+  {
+    "county": "Beltrami County",
+    "cases": 0
+  },
+  {
+    "county": "Brown County",
+    "cases": 0
+  },
+  {
+    "county": "Carlton County",
+    "cases": 0
+  },
+  {
+    "county": "Chippewa County",
+    "cases": 0
+  },
+  {
+    "county": "Clearwater County",
+    "cases": 0
+  },
+  {
+    "county": "Cook County",
+    "cases": 0
+  },
+  {
+    "county": "Cottonwood County",
+    "cases": 0
+  },
+  {
+    "county": "Crow Wing County",
+    "cases": 0
+  },
+  {
+    "county": "Douglas County",
+    "cases": 0
+  },
+  {
+    "county": "Faribault County",
+    "cases": 0
+  },
+  {
+    "county": "Freeborn County",
+    "cases": 0
+  },
+  {
+    "county": "Grant County",
+    "cases": 0
+  },
+  {
+    "county": "Houston County",
+    "cases": 0
+  },
+  {
+    "county": "Hubbard County",
+    "cases": 0
+  },
+  {
+    "county": "Isanti County",
+    "cases": 0
+  },
+  {
+    "county": "Itasca County",
+    "cases": 0
+  },
+  {
+    "county": "Kanabec County",
+    "cases": 0
+  },
+  {
+    "county": "Kittson County",
+    "cases": 0
+  },
+  {
+    "county": "Koochiching County",
+    "cases": 0
+  },
+  {
+    "county": "Lake County",
+    "cases": 0
+  },
+  {
+    "county": "Lake of the Woods County",
+    "cases": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 0
+  },
+  {
+    "county": "Lyon County",
+    "cases": 0
+  },
+  {
+    "county": "McLeod County",
+    "cases": 0
+  },
+  {
+    "county": "Marshall County",
+    "cases": 0
+  },
+  {
+    "county": "Meeker County",
+    "cases": 0
+  },
+  {
+    "county": "Mille Lacs County",
+    "cases": 0
+  },
+  {
+    "county": "Morrison County",
+    "cases": 0
+  },
+  {
+    "county": "Murray County",
+    "cases": 0
+  },
+  {
+    "county": "Nobles County",
+    "cases": 0
+  },
+  {
+    "county": "Norman County",
+    "cases": 0
+  },
+  {
+    "county": "Otter Tail County",
+    "cases": 0
+  },
+  {
+    "county": "Pennington County",
+    "cases": 0
+  },
+  {
+    "county": "Pine County",
+    "cases": 0
+  },
+  {
+    "county": "Pipestone County",
+    "cases": 0
+  },
+  {
+    "county": "Polk County",
+    "cases": 0
+  },
+  {
+    "county": "Pope County",
+    "cases": 0
+  },
+  {
+    "county": "Red Lake County",
+    "cases": 0
+  },
+  {
+    "county": "Redwood County",
+    "cases": 0
+  },
+  {
+    "county": "Rock County",
+    "cases": 0
+  },
+  {
+    "county": "Roseau County",
+    "cases": 0
+  },
+  {
+    "county": "Stevens County",
+    "cases": 0
+  },
+  {
+    "county": "Swift County",
+    "cases": 0
+  },
+  {
+    "county": "Todd County",
+    "cases": 0
+  },
+  {
+    "county": "Traverse County",
+    "cases": 0
+  },
+  {
+    "county": "Wadena County",
+    "cases": 0
+  },
+  {
+    "county": "Watonwan County",
+    "cases": 0
+  },
+  {
+    "county": "Yellow Medicine County",
+    "cases": 0
+  },
+  {
+    "cases": 346
+  }
+]

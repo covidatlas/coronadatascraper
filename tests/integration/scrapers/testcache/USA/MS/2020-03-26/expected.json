@@ -1,0 +1,398 @@
+[
+  {
+    "county": "Adams County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Attala County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Benton County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Bolivar County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Chickasaw County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Choctaw County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Clay County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Coahoma County",
+    "cases": 17,
+    "deaths": 0
+  },
+  {
+    "county": "Copiah County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "DeSoto County",
+    "cases": 49,
+    "deaths": 0
+  },
+  {
+    "county": "Forrest County",
+    "cases": 16,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "George County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Grenada County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 6,
+    "deaths": 1
+  },
+  {
+    "county": "Harrison County",
+    "cases": 31,
+    "deaths": 0
+  },
+  {
+    "county": "Hinds County",
+    "cases": 43,
+    "deaths": 0
+  },
+  {
+    "county": "Holmes County",
+    "cases": 7,
+    "deaths": 1
+  },
+  {
+    "county": "Humphreys County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Itawamba County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 16,
+    "deaths": 0
+  },
+  {
+    "county": "Jones County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Lafayette County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Lamar County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Lauderdale County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Lawrence County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Leake County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Lee County",
+    "cases": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Leflore County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Lowndes County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 21,
+    "deaths": 0
+  },
+  {
+    "county": "Marion County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Marshall County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Newton County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Noxubee County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Oktibbeha County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Panola County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Pearl River County",
+    "cases": 16,
+    "deaths": 0
+  },
+  {
+    "county": "Perry County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Pike County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Pontotoc County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Prentiss County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Quitman County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Rankin County",
+    "cases": 23,
+    "deaths": 1
+  },
+  {
+    "county": "Scott County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Simpson County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Smith County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Sunflower County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Tallahatchie County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Tate County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Tippah County",
+    "cases": 14,
+    "deaths": 0
+  },
+  {
+    "county": "Tunica County",
+    "cases": 5,
+    "deaths": 1
+  },
+  {
+    "county": "Union County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Walthall County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Washington County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Webster County",
+    "cases": 2,
+    "deaths": 1
+  },
+  {
+    "county": "Wilkinson County",
+    "cases": 8,
+    "deaths": 1
+  },
+  {
+    "county": "Winston County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Yalobusha County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Yazoo County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Alcorn County",
+    "cases": 0
+  },
+  {
+    "county": "Amite County",
+    "cases": 0
+  },
+  {
+    "county": "Carroll County",
+    "cases": 0
+  },
+  {
+    "county": "Claiborne County",
+    "cases": 0
+  },
+  {
+    "county": "Clarke County",
+    "cases": 0
+  },
+  {
+    "county": "Covington County",
+    "cases": 0
+  },
+  {
+    "county": "Greene County",
+    "cases": 0
+  },
+  {
+    "county": "Issaquena County",
+    "cases": 0
+  },
+  {
+    "county": "Jasper County",
+    "cases": 0
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 0
+  },
+  {
+    "county": "Jefferson Davis County",
+    "cases": 0
+  },
+  {
+    "county": "Kemper County",
+    "cases": 0
+  },
+  {
+    "county": "Neshoba County",
+    "cases": 0
+  },
+  {
+    "county": "Sharkey County",
+    "cases": 0
+  },
+  {
+    "county": "Stone County",
+    "cases": 0
+  },
+  {
+    "county": "Tishomingo County",
+    "cases": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 0
+  },
+  {
+    "cases": 485,
+    "deaths": 6
+  }
+]
