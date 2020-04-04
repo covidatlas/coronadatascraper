@@ -71,10 +71,7 @@ const scraper = {
         if (caseInfo.code3 !== '840') {
           location.country = `iso1:${caseInfo.iso2}`;
           regions.push(location);
-          console.log(caseInfo.iso2);
         }
-
-        continue;
 
         if (caseInfo.Admin2.startsWith('Out of ')) {
           console.warn('⚠️  Skipping out of state data for %s', caseInfo.Combined_Key);
