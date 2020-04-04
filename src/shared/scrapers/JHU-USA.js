@@ -1,3 +1,4 @@
+import fipsCodes from 'country-levels/fips.json';
 import * as fetch from '../lib/fetch/index.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography/index.js';
@@ -6,8 +7,6 @@ import maintainers from '../lib/maintainers.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
-
-import fipsCodes from 'country-levels/fips.json';
 
 function findCountryLevelID(fips) {
   return fipsCodes[fips];
@@ -53,47 +52,58 @@ const scraper = {
       const unassignedCounties = {};
       for (let index = 0; index < cases.length; index++) {
         // Get location info
-        let caseInfo = cases[index];
-        let deathInfo = deaths[index];
-        let fips = caseInfo.FIPS.replace(/\.0$/, '').padStart(5, '0');
+        const caseInfo = cases[index];
+        const deathInfo = deaths[index];
+        const fips = caseInfo.FIPS.replace(/\.0$/, '').padStart(5, '0');
 
-        if (fips === '00000') {
-          console.warn('⚠️ Skipping incorrect FIPS code 00000 for %s', caseInfo.Combined_Key);
+        if (fips === '00000' || fips === '88888') {
+          console.warn('⚠️  Skipping incorrect FIPS code %s for %s', fips, caseInfo.Combined_Key);
           continue;
         }
 
-        if (caseInfo.Admin2 === 'Unassigned' || caseInfo.Admin2.startsWith('Out of ')) {
-          console.warn('⚠️ Skipping unassigned data for %s', caseInfo.Combined_Key);
-          continue;
-          // const state = geography.usStates[parse.string(caseInfo.Province_State)];
-          // county = UNASSIGNED;
-
-          // // Store so we can add more
-          // if (county === UNASSIGNED) {
-          //   unassignedCounties[state] = caseData;
-          // }
-
-          // // Sum with other unassigned cases
-          // if (unassignedCounties[state]) {
-          //   unassignedCounties[state].cases += parse.number(caseInfo[date] || 0);
-          //   unassignedCounties[state].deaths += parse.number(deathInfo[date] || 0);
-          //   continue;
-          // }
-        }
-
-        // Determine if it's a city, skip if so
-        if (!findCountryLevelID(fips)) {
-          console.warn('⚠️ Skipping %s at (FIPS %s)', caseInfo.Combined_Key, fips);
-        }
-
-        const caseData = {
-          // state: `iso2:${caseInfo.iso2}`,
-          county: `fips:${fips}`,
+        const location = {
           cases: parse.number(caseInfo[date] || 0),
           deaths: parse.number(deathInfo[date] || 0)
         };
 
-        regions.push(caseData);
+        if (caseInfo.Admin2.startsWith('Out of ')) {
+          console.warn('⚠️  Skipping out of state data for %s', caseInfo.Combined_Key);
+          continue;
+        }
+
+        if (caseInfo.Admin2 === 'Unassigned') {
+          // This will be normalized in a later step
+          location.state = geography.usStates[parse.string(caseInfo.Province_State)];
+          location.county = UNASSIGNED;
+
+          if (unassignedCounties[location.state]) {
+            // Sum with other unassigned cases
+            unassignedCounties[location.state].cases += parse.number(caseInfo[date] || 0);
+            unassignedCounties[location.state].deaths += parse.number(deathInfo[date] || 0);
+          } else {
+            // Store so we can add more
+            unassignedCounties[location.state] = location;
+          }
+
+          continue;
+        }
+
+        // Only include places we have data for
+        const countryLevelIDInfo = findCountryLevelID(fips);
+        if (!countryLevelIDInfo) {
+          console.warn('⚠️  Skipping %s at (FIPS %s)', caseInfo.Combined_Key, fips);
+          continue;
+        }
+
+        location.county = `fips:${fips}`;
+        location.state = `iso2:${countryLevelIDInfo.state_code_iso}`;
+
+        regions.push(location);
+      }
+
+      // Add unnassigned data
+      for (const state in unassignedCounties) {
+        regions.push(unassignedCounties[state]);
       }
 
       return regions;
