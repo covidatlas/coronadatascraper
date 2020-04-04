@@ -337,38 +337,62 @@ You should test your source first by running `yarn test`. This will perform some
 
 ### Test coverage
 
-To add test coverage for a scraper, you only need to provide test assets; no new tests need to be added.
+To add test coverage for a scraper, you only need to provide test
+assets; no new tests need to be added.
 
-- Add a tests folder to the scraper folder, e.g. `scrapers/FRA/tests` or `scrapers/USA/AK/tests`
+Test assets are stored in `tests/integration/scrapers/testcache`,
+mirroring the subfolders in `src/shared/scrapers`.
 
-- Add a sample response from the target URL. The filename should be the URL, without the
-  `http(s)://` prefix, and with all non-alphanumeric characters replaced with an underscore `_`. The
-  file extension should match the format of the contents (`html`, `csv`, `json`, etc). Example:
+- Add the corresponding folder to
+  `tests/integration/scrapers/testcache`.  e.g., for
+  `src/shared/scrapers/XX/YY`, you would add
+  `tests/integration/scrapers/testcache/XX/YY`.
 
-  - URL: https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv
+- For each date that you wish to test, add a subfolder named
+  `yyyy-mm-dd`.  e.g.,
+  `tests/integration/scrapers/testcache/XX/YY/2020-03-26`.  Add one
+  subfolder per date you wish to test.
 
-  - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
+- Add a sample response from the target URL. The filename should be
+  the URL, without the `http(s)://` prefix, and with all
+  non-alphanumeric characters replaced with an underscore `_`, and no
+  extension. Example:
 
-- Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
+  - URL: `https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv`
 
-For sources that have a time series, the `expected.json` file represents the latest result in the
-sample response provided. You can additionally test the return value for a specific date by adding
-a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-16.json`.
+  - File name: `raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles`
 
-    📁 USA
-      📁 AK
-        📄 index.js     # scraper
-        📁 tests
-          📄 dhss_alaska_gov_dph_Epi_id_Pages_COVID_19_monitoring.html     # sample response
-          📄 expected.json     # expected result
-    ...
-    📁 FRA
-      📄 index.js     # scraper
-      📁 tests
-        📄 raw_githubusercontent_com_covid19_fr_data_chiffres_cles.csv     # sample response
-        📄 expected.json     # expected result for most recent date in sample
-        📄 expected.2020-03-16.json # expected result for March 16, 2020
+- Add a file named `expected.json` containing the array of values that
+  the scraper is expected to return. (Leave out any geojson `features`
+  properties.)
+
+Note: Your test assets should match real urls, but you can edit the
+data in the test assets if you wish.  For example, you may wish to add
+particular values, or remove some, to exercise your scraper as needed.
+
+
+For sources that have a time series, the `expected.json` file
+represents the latest result in the sample response provided.
+
+#### Dealing with test failures
+
+If you update an existing scraper, the existing `expected.json` in the
+`tests/integration/scrapers/testcache` may no longer be correct.  In
+this case, you'll see an error when you `yarn test`:
+
+```
+  Failed Tests: There was 1 failure
+
+    scrapers-all-test, Parsers
+
+      ✖ XX/YY on 2020-03-26 (actual.json vs expected.json in /tests/integration/scrapers/testcache/USA/MO/2020-03-26)
+```
+
+If something fails, check the `actual.json` (which your scraper
+actually returned) at the given path, and ensure that everything is as
+expected.  You can then either update the `expected.json`, or just
+replace it with `actual.json`, and commit `expected.json` again.  The
+`actual.json` files are ignored in `.gitignore`.
 
 ### Manual testing
 
