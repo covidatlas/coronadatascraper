@@ -17,7 +17,7 @@ const scraper = {
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,
-  country: '_JHU_USA',
+  country: 'iso1:US',
   aggregate: 'county',
   curators: [
     {
@@ -62,8 +62,7 @@ const scraper = {
 
         const location = {
           cases: parse.number(caseInfo[date] || 0),
-          deaths: parse.number(deathInfo[date] || 0),
-          country: 'iso1:US'
+          deaths: parse.number(deathInfo[date] || 0)
         };
 
         if (caseInfo.Admin2.startsWith('Out of ')) {
@@ -71,11 +70,11 @@ const scraper = {
           continue;
         }
 
-        // unassigned actually means States
         if (caseInfo.Admin2 === 'Unassigned') {
           const stateCode = geography.usStates[parse.string(caseInfo.Province_State)];
           const stateClid = `iso2:US-${stateCode}`;
           location.state = stateClid;
+          location.county = UNASSIGNED;
 
           regions.push(location);
           continue;
