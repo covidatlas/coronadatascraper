@@ -35,16 +35,30 @@ export default async function getCachedFile(url, type, date, encoding = 'utf8', 
     const folder = hash(url);
 
     const cachePath = join(process.cwd(), 'crawler-cache', folder);
-    let files = await fastGlob([join(cachePath, '**')]);
+    let folders = await fs.getFilesInDir(cachePath);
 
     /**
      * All cache data is saved with a 8601Z timestamp
      *   In order to match the date requested to the timestamp, we must re-cast it to the locale in question
-     *   FIXME that can't happen yet, as we need geo-tz to live in the scraper
+     *   FIXME that can't happen yet, as we need tz to live in the scraper
      */
-    if (files.length) {
+    if (folders.length) {
       // Sort from earliest to latest
-      files = sorter(files);
+      folders = sorter(folders);
+
+      /**
+       * Gather yesterday (UTC+), today, and tomorrow (UTC-)
+       */
+      let files = [];
+      const today = folders.findIndex(f => f === date);
+      const cacheDirs = [today - 1, today, today + 1];
+      for (const cacheDir of cacheDirs) {
+        try {
+          const result = await fs.getFilesInDir(join(cachePath, folders[cacheDir]));
+          files = files.concat(result);
+          // eslint-disable-next-line
+        } catch (err) { /* noop */ }
+      }
 
       /**
        * If date is earlier than we have cached, bail
@@ -77,7 +91,9 @@ export default async function getCachedFile(url, type, date, encoding = 'utf8', 
       // TODO we may want to do more here, including:
       // - analysis of contents (e.g. stale files, etc.)
       // - attempting to scrape this file, and if it doesn't work, trying a previous scrape from the same day?
-      const filePath = files[files.length - 1];
+      const file = files[files.length - 1];
+      const dir = file.substr(0, 10);
+      const filePath = join(cachePath, dir, file);
 
       if (fs.exists(filePath)) {
         log('  ⚡️ Cache hit for %s from %s', url, filePath);

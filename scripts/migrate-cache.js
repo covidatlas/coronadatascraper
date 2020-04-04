@@ -51,6 +51,7 @@ function cast(date, tz) {
     // JS Joda doesn't output directly to 8601 and it's faster for me to just do this
     const iso = castUTC.replace('Z[UTC]', ':00.000Z');
     const fileTs = convertTS.Z8601ToFilename(iso);
+    const castDate = iso.substr(0, 10);
 
     // Cache dir contents
     const dir = join(oldCacheDir, folder);
@@ -64,7 +65,7 @@ function cast(date, tz) {
       contents = hash(contents, 5);
       const parsed = parse(filePath);
 
-      const folder = join(process.cwd(), 'crawler-cache', parsed.name);
+      const folder = join(process.cwd(), 'crawler-cache', parsed.name, castDate);
 
       fs.mkdirSync(folder, { recursive: true });
       const finalName = `${fileTs}-${contents}${parsed.ext}`;
