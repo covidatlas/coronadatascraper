@@ -56,4 +56,14 @@ const { argv } = yargs
   .help()
   .alias('help', 'h');
 
+if (argv.date) {
+  process.env.SCRAPE_DATE = argv.date;
+} else {
+  delete process.env.SCRAPE_DATE;
+}
+
+if (argv.quiet) {
+  process.env.LOG_LEVEL = 'off';
+}
+
 export default argv;

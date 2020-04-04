@@ -17,17 +17,8 @@ import datetime from './lib/datetime/index.js';
  * Entry file while we're still hosted on GitHub
  */
 async function generate(date, options = {}) {
+
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
-
-  if (date) {
-    process.env.SCRAPE_DATE = date;
-  } else {
-    delete process.env.SCRAPE_DATE;
-  }
-
-  if (options.quiet) {
-    process.env.LOG_LEVEL = 'off';
-  }
 
   // JSON used for reporting
   const report = {
