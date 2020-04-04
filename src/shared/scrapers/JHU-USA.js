@@ -17,7 +17,7 @@ const scraper = {
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,
-  country: 'USA',
+  country: '_JHU_USA',
   aggregate: 'county',
   curators: [
     {
@@ -49,7 +49,6 @@ const scraper = {
         date = customDate;
       }
 
-      const unassignedCounties = {};
       for (let index = 0; index < cases.length; index++) {
         // Get location info
         const caseInfo = cases[index];
@@ -63,7 +62,8 @@ const scraper = {
 
         const location = {
           cases: parse.number(caseInfo[date] || 0),
-          deaths: parse.number(deathInfo[date] || 0)
+          deaths: parse.number(deathInfo[date] || 0),
+          country: 'iso1:US'
         };
 
         if (caseInfo.Admin2.startsWith('Out of ')) {
@@ -71,20 +71,13 @@ const scraper = {
           continue;
         }
 
+        // unassigned actually means States
         if (caseInfo.Admin2 === 'Unassigned') {
-          // This will be normalized in a later step
-          location.state = geography.usStates[parse.string(caseInfo.Province_State)];
-          location.county = UNASSIGNED;
+          const stateCode = geography.usStates[parse.string(caseInfo.Province_State)];
+          const stateClid = `iso2:US-${stateCode}`;
+          location.state = stateClid;
 
-          if (unassignedCounties[location.state]) {
-            // Sum with other unassigned cases
-            unassignedCounties[location.state].cases += parse.number(caseInfo[date] || 0);
-            unassignedCounties[location.state].deaths += parse.number(deathInfo[date] || 0);
-          } else {
-            // Store so we can add more
-            unassignedCounties[location.state] = location;
-          }
-
+          regions.push(location);
           continue;
         }
 
@@ -99,11 +92,6 @@ const scraper = {
         location.state = `iso2:${countryLevelIDInfo.state_code_iso}`;
 
         regions.push(location);
-      }
-
-      // Add unnassigned data
-      for (const state in unassignedCounties) {
-        regions.push(unassignedCounties[state]);
       }
 
       return regions;
