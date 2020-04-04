@@ -2,6 +2,7 @@ import fipsCodes from 'country-levels/fips.json';
 import * as fetch from '../lib/fetch/index.js';
 import * as parse from '../lib/parse.js';
 import * as geography from '../lib/geography/index.js';
+import * as transform from '../lib/transform.js';
 import datetime from '../lib/datetime/index.js';
 import maintainers from '../lib/maintainers.js';
 
@@ -49,6 +50,7 @@ const scraper = {
         date = customDate;
       }
 
+      const stateLocations = {};
       for (let index = 0; index < cases.length; index++) {
         // Get location info
         const caseInfo = cases[index];
@@ -90,7 +92,18 @@ const scraper = {
         location.county = `fips:${fips}`;
         location.state = `iso2:${countryLevelIDInfo.state_code_iso}`;
 
+        stateLocations[location.state] = stateLocations[location.state] || [];
+        stateLocations[location.state].push(location);
+
         regions.push(location);
+      }
+
+      // Sum the whole country
+      regions.push(transform.sumData(regions));
+
+      // Sum individual states
+      for (const [state, locations] of Object.entries(stateLocations)) {
+        regions.push(transform.sumData(locations, { state }));
       }
 
       return regions;
