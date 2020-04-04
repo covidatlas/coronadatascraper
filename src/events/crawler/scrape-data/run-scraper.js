@@ -3,8 +3,9 @@ import datetime from '../../../shared/lib/datetime/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
-import { calculateScraperTz } from '../../../shared/lib/geography/timezone.js';
 import log from '../../../shared/lib/log.js';
+
+// import { calculateScraperTz } from '../../../shared/lib/geography/timezone.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -81,7 +82,7 @@ export async function runScraper(location) {
 
   // scraperTz will be used by the cache PR
   // eslint-disable-next-line no-unused-vars
-  const scraperTz = await calculateScraperTz(location);
+  // const scraperTz = await calculateScraperTz(location);
 
   if (typeof location.scraper === 'function') {
     return location.scraper();
