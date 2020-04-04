@@ -50,7 +50,7 @@ const scraper = {
         if (visitorInfo !== null && visitorInfo.length === 3) {
           const county = `${visitorInfo[1]} County`;
           const cases = visitorInfo[2];
-          if (county.indexOf('information') === -1) {
+          if (!county.includes('information')) {
             const data = {
               county: geography.addCounty(parse.string(county)),
               cases: parse.number(cases)

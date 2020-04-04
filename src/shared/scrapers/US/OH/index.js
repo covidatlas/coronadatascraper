@@ -199,7 +199,7 @@ const scraper = {
       // This hack lets me determine the header value for sure
       const countyCol = Object.keys(rows[0])[0];
       // Make sure it's actually the County header
-      if (countyCol.indexOf('County') === -1) {
+      if (!countyCol.includes('County')) {
         throw new Error('First column of csv is no longer county!');
       }
 
