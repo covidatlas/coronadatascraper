@@ -5,6 +5,8 @@ import * as countryLevels from '../../../shared/lib/geography/country-levels.js'
 import * as geography from '../../../shared/lib/geography/index.js';
 import log from '../../../shared/lib/log.js';
 
+// import { calculateScraperTz } from '../../../shared/lib/geography/timezone.js';
+
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
 /** Check if the provided data contains any invalid fields.
@@ -71,12 +73,17 @@ function addData(cases, location, result) {
 /*
   Run the correct scraper for this location
 */
-export function runScraper(location) {
+export async function runScraper(location) {
   const rejectUnauthorized = location.certValidation === false;
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
+
+  // scraperTz will be used by the cache PR
+  // eslint-disable-next-line no-unused-vars
+  // const scraperTz = await calculateScraperTz(location);
+
   if (typeof location.scraper === 'function') {
     return location.scraper();
   }

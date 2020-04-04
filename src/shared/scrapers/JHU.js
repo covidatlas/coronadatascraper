@@ -17,6 +17,7 @@ const scraper = {
   timeseries: true,
   priority: -1,
   country: '_JHU', // every location needs to have a valid country
+  scraperTz: 'America/Los_Angeles',
   curators: [
     {
       name: 'JHU CSSE',
@@ -283,30 +284,7 @@ const scraper = {
           cases[index]['Province/State'] = '';
         }
 
-        // Use their US states
-        if (
-          cases[index]['Country/Region'] === 'US' &&
-          geography.usStates[parse.string(cases[index]['Province/State'] || '')]
-        ) {
-          const state = geography.usStates[parse.string(cases[index]['Province/State'])];
-          const caseData = {
-            aggregate: 'state',
-            country: 'USA',
-            state,
-            cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            recovered: parse.number(recoveredData[date] || 0)
-          };
-
-          if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
-            if (recoveredCount !== undefined) {
-              caseData.recovered = parse.number(recoveredCount);
-            }
-          }
-
-          countries.push(caseData);
-        } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
+        if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
           const caseData = {
             aggregate: 'country',
             country: parse.string(cases[index]['Country/Region']),
@@ -316,7 +294,7 @@ const scraper = {
           };
 
           if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
+            const recoveredCount = recoveredData[date];
             if (recoveredCount !== undefined) {
               caseData.recovered = parse.number(recoveredCount);
             }
