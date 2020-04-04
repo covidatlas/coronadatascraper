@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -70,6 +71,7 @@ const scraper = {
         'c34e541dd8b742d993159dbebb094d8b',
         'MD_COVID19_Case_Counts_by_County'
       );
+
       const data = await fetch.csv(this.url);
       const counties = [];
       for (const county of data) {
@@ -79,12 +81,20 @@ const scraper = {
         } else {
           countyName = geography.addCounty(parse.string(county.COUNTY));
         }
-        counties.push({
-          county: countyName,
-          cases: parse.number(county.COVID19Cases),
-          deaths: parse.number(county.COVID19Deaths),
-          recovered: parse.number(county.COVID19Recovered)
-        });
+        if (datetime.scrapeDateIsBefore('2020-04-03')) {
+          counties.push({
+            county: countyName,
+            cases: parse.number(county.COVID19Cases),
+            deaths: parse.number(county.COVID19Deaths),
+            recovered: parse.number(county.COVID19Recovered)
+          });
+        } else {
+          counties.push({
+            county: countyName,
+            cases: parse.number(county.TotalCaseCount),
+            deaths: parse.number(county.TotalDeathCount)
+          });
+        }
       }
       counties.push(transform.sumData(counties));
       return counties;
