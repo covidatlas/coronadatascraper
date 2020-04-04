@@ -143,6 +143,9 @@ const scraper = {
               const countyPieces = parse.string(row).split('(');
               const county = geography.addCounty(parse.string(countyPieces[0]));
               const cases = parse.number(countyPieces[1]);
+              if (cases === 0) {
+                throw new Error('They are only listed counties with >0 cases, but I found 0?');
+              }
               counties.push({
                 county,
                 cases
