@@ -22,7 +22,7 @@ const scrapers = scraperFiles.map(f => {
   };
 });
 
-test('srapers-all-test: all scraper schema', async t => {
+test('scrapers-all-test: all scraper schema', async t => {
   t.plan(scrapers.length);
   for (const s of scrapers) {
     const hasErrors = schema.schemaHasErrors(s.scraperObj, schema.schemas.scraperSchema);
