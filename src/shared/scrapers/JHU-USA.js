@@ -73,8 +73,6 @@ const scraper = {
           regions.push(location);
         }
 
-        continue;
-
         if (caseInfo.Admin2.startsWith('Out of ')) {
           console.warn('⚠️  Skipping out of state data for %s', caseInfo.Combined_Key);
           continue;
