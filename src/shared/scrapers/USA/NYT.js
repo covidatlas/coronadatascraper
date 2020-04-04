@@ -11,6 +11,7 @@ const scraper = {
   timeseries: true,
   aggregate: 'county',
   priority: -1,
+  scraperTz: 'America/Los_Angeles',
   curators: [
     {
       name: 'The New York Times',

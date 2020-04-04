@@ -17,6 +17,7 @@ const scraper = {
   timeseries: true,
   priority: -1,
   country: '_JHU', // every location needs to have a valid country
+  scraperTz: 'America/Los_Angeles',
   curators: [
     {
       name: 'JHU CSSE',
