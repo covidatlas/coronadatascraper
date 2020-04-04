@@ -78,9 +78,10 @@ export async function runScraper(location) {
     // Important: this prevents SSL from failing
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
-  if (!location.scraperTz) {
-    await calculateScraperTz(location);
-  }
+
+  // scraperTz will be used by the cache PR
+  // eslint-disable-next-line no-unused-vars
+  const scraperTz = await calculateScraperTz(location);
 
   if (typeof location.scraper === 'function') {
     return location.scraper();
