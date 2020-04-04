@@ -11,7 +11,7 @@ const scraper = {
   country: 'USA',
   sources: [
     {
-      url: 'https://dhhr.wv.gov',
+      url: 'https://dhhr.wv.gov/COVID-19/Pages/default.aspx',
       name: 'West Virginia Department of Health & Human Resources'
     }
   ],
@@ -77,43 +77,88 @@ const scraper = {
     'Wyoming County'
   ],
 
-  async scraper() {
-    const $ = await fetch.page(this.url);
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this.url);
 
-    const $p = $('p:contains("Counties with positive cases")');
+      const $p = $('p:contains("Counties with positive cases")');
 
-    const list = $p
-      .text()
-      .split(':')[1]
-      .split(',');
+      const list = $p
+        .text()
+        .split(':')[1]
+        .split(',');
 
-    let counties = [];
+      let counties = [];
 
-    for (const item of list) {
-      const items = item.split('(');
-      if (items.length !== 2) {
-        continue;
+      for (const item of list) {
+        const items = item.split('(');
+        if (items.length !== 2) {
+          continue;
+        }
+
+        const county = geography.addCounty(parse.string(items[0]));
+        let cases = items[1];
+
+        if (cases.slice(-1) !== ')') {
+          continue;
+        }
+
+        cases = parse.number(cases.slice(0, -1));
+
+        counties.push({
+          county,
+          cases
+        });
       }
 
-      const county = geography.addCounty(parse.string(items[0]));
-      let cases = items[1];
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
 
-      if (cases.slice(-1) !== ')') {
-        continue;
+      return counties;
+    },
+    '2020-04-03': async function() {
+      this.url =
+        'https://wabi-us-gov-virginia-api.analysis.usgovcloudapi.net/public/reports/187b4de8-78ef-40be-9510-7fa9a1ef89f2/modelsAndExploration';
+      const options = {
+        headers: { 'X-PowerBI-ResourceKey': '187b4de8-78ef-40be-9510-7fa9a1ef89f2' }
+      };
+      const data = await fetch.json(this.url, undefined, options);
+      const { sections } = data.exploration;
+
+      let counties = [];
+
+      // This is all insanely horrible
+      const heading = 'CONFIRMED CASES PER COUNTY:';
+      for (const sec of sections) {
+        for (const vc of sec.visualContainers) {
+          if (vc.config.indexOf(heading) !== -1) {
+            const config = JSON.parse(vc.config);
+            let { textRuns } = config.singleVisual.objects.general[0].properties.paragraphs[0];
+            textRuns = textRuns.map(tr => parse.string(tr.value));
+            if (textRuns[0] !== heading) {
+              throw new Error('Unknown json layout');
+            }
+            const pieces = textRuns[1].split(',');
+            for (const row of pieces) {
+              const countyPieces = parse.string(row).split('(');
+              const county = geography.addCounty(parse.string(countyPieces[0]));
+              const cases = parse.number(countyPieces[1]);
+              if (cases === 0) {
+                throw new Error('They are only listed counties with >0 cases, but I found 0?');
+              }
+              counties.push({
+                county,
+                cases
+              });
+            }
+          }
+        }
       }
 
-      cases = parse.number(cases.slice(0, -1));
-
-      counties.push({
-        county,
-        cases
-      });
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
     }
-
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
-
-    return counties;
   }
 };
 
