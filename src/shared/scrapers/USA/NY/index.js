@@ -10,17 +10,13 @@ import * as geography from '../../../lib/geography/index.js';
 const scraper = {
   state: 'NY',
   country: 'USA',
-  type: 'table',
   aggregate: 'county',
   sources: [
     {
-      url: 'https://www.health.ny.gov',
+      url: 'https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e',
       name: 'New York State Department of Health'
     }
   ],
-  _countyMap: {
-    Broom: 'Broome'
-  },
   _counties: [
     'Albany County',
     'Allegany County',
@@ -85,6 +81,63 @@ const scraper = {
     'Wyoming County',
     'Yates County'
   ],
+  async scraper() {
+    this.url = 'https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD';
+    this.type = 'csv';
+    const data = await fetch.csv(this.url, false);
+
+    const dateField = 'Test Date';
+
+    // FIXME when we roll out new TZ support!
+    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
+    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+    let scrapeDateString = datetime.getYYYYMD(scrapeDate);
+    const firstDateInTimeseries = new Date(`${data[data.length - 1][dateField]} 12:00:00`);
+    const lastDateInTimeseries = new Date(`${data[0][dateField]} 12:00:00`);
+
+    if (scrapeDate > lastDateInTimeseries) {
+      console.error(
+        `  🚨 timeseries for ${geography.getName(
+          this
+        )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
+          lastDateInTimeseries
+        )}. Using last sample anyway`
+      );
+      scrapeDate = lastDateInTimeseries;
+      scrapeDateString = datetime.getYYYYMD(scrapeDate);
+    }
+
+    if (scrapeDate < firstDateInTimeseries) {
+      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+    }
+
+    let counties = [];
+    for (const row of data) {
+      if (datetime.getYYYYMD(`${row[dateField]} 12:00:00`) !== scrapeDateString) {
+        continue;
+      }
+      counties.push({
+        county: geography.addCounty(parse.string(row.County)),
+        cases: parse.number(row['Cumulative Number of Positives']),
+        tested: parse.number(row['Cumulative Number of Tests Performed'])
+      });
+    }
+
+    if (counties.length === 0) {
+      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+    }
+    counties = geography.addEmptyRegions(counties, this._counties, 'county');
+    counties.push(transform.sumData(counties));
+    return counties;
+  }
+};
+
+export default scraper;
+
+/* Saving for posterity...
+  _countyMap: {
+    Broom: 'Broome'
+  },
   _boroughs: {
     Bronx: 'Bronx County',
     Brooklyn: 'Kings County',
@@ -154,7 +207,5 @@ const scraper = {
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
     return counties;
-  }
-};
-
-export default scraper;
+  },
+  */
