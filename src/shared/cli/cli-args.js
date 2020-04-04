@@ -53,6 +53,10 @@ const { argv } = yargs
     description: 'Write to dist folder',
     type: 'boolean'
   })
+  .option('onlyUseCache', {
+    description: 'Only use cache (no http calls)',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h');
 
@@ -64,6 +68,12 @@ if (argv.date) {
 
 if (argv.quiet) {
   process.env.LOG_LEVEL = 'off';
+}
+
+if (argv.onlyUseCache) {
+  process.env.ONLY_USE_CACHE = true;
+} else {
+  delete process.env.ONLY_USE_CACHE;
 }
 
 export default argv;

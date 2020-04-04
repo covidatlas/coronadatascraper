@@ -193,6 +193,8 @@ export const headless = async (url, date = datetime.old.scrapeDate() || datetime
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);
+  if (process.env.ONLY_USE_CACHE)
+    return await cheerio.load(cachedBody);
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
     const fetchedBody = await fetchHeadless(url);
