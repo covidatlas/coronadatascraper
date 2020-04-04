@@ -56,7 +56,7 @@ const scraper = {
         const deathInfo = deaths[index];
         const fips = caseInfo.FIPS.replace(/\.0$/, '').padStart(5, '0');
 
-        if (fips === '00000' || fips === '88888') {
+        if (['00000', '88888', '99999'].includes(fips)) {
           console.warn('⚠️  Skipping incorrect FIPS code %s for %s', fips, caseInfo.Combined_Key);
           continue;
         }
