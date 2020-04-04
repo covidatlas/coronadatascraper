@@ -1,4 +1,3 @@
-import fastGlob from 'fast-glob';
 import datetime from '../../../datetime/index.js';
 import * as fs from '../../../fs.js';
 import getDateBounds from './_get-date-bounds.js';
