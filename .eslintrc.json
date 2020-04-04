@@ -30,6 +30,7 @@
     "no-shadow": "off",
     "no-underscore-dangle": "off",
     "no-loop-func": "off",
-    "max-classes-per-file": "off"
+    "max-classes-per-file": "off",
+    "guard-for-in": "off"
   }
 }
