@@ -167,7 +167,7 @@ ${header()}
   ${sidebar('sources')}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     <h1 class="spectrum-Heading spectrum-Heading--L">About the data sources</h1>
-    <p class="spectrum-Body spectrum-Body--L">Corona Data Scraper pulls information from a variety of openly available world government data sources and curated datasets.</p>
+    <p class="spectrum-Body spectrum-Body--L">COVID Atlas pulls information from a variety of openly available world government data sources and curated datasets.</p>
 
     <h2 class="spectrum-Heading spectrum-Heading--M">Ratings have nothing to do with the accuracy of the data</h2>
     <p class="spectrum-Body spectrum-Body--L">The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.</p>

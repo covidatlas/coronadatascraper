@@ -42,12 +42,12 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
     <div class="row">
       <section class="ca-Section col-xs-12 col-md-4">
-        <h1 class="spectrum-Heading spectrum-Heading--L">Local official COVID-19 Resources</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--L">Local official COVID-19 resources</h1>
         <p class="spectrum-Body spectrum-Body--L">COVID Atlas scrapes public data from local resources.</p>
       </section>
 
       <section class="ca-Section col-xs-12 col-md-4">
-        <h1 class="spectrum-Heading spectrum-Heading--L">Updated Daily</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--L">Updated daily</h1>
         <p class="spectrum-Body spectrum-Body--L">Our data updates daily at 9PM PST so you can access the most recent data available.</p>
       </section>
 

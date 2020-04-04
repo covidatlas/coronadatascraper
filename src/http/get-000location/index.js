@@ -64,7 +64,7 @@ function locationDetail(location, lastDate, caseInfo) {
 `;
 
   html += `<div class="row">
-    <div class="col-xs-12 col-sm-6">`
+    <div class="col-xs-12 col-sm-6">`;
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Updated: ${lastDate}</p>`;
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
     location
@@ -82,7 +82,7 @@ function locationDetail(location, lastDate, caseInfo) {
     html += renderCaseInfo('Active Cases', caseInfo.active, 'ca-Active');
   }
   if (caseInfo.cases !== undefined) {
-    html += renderCaseInfo('Total Cases', caseInfo.cases, 'ca-Total');
+    html += renderCaseInfo('Total cases', caseInfo.cases, 'ca-Total');
   }
   if (caseInfo.deaths !== undefined) {
     html += renderCaseInfo('Deaths', caseInfo.deaths, 'ca-Deaths');
@@ -102,7 +102,7 @@ function locationDetail(location, lastDate, caseInfo) {
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Map View</h1>
+      <h2 class="spectrum-Heading spectrum-Heading--M">Map view</h1>
       <div class="ca-Placeholder"></div>
     </div>
   </div>
@@ -118,21 +118,21 @@ function locationDetail(location, lastDate, caseInfo) {
       <div class="col-xs-12">
         <h2 class="spectrum-Heading spectrum-Heading--M">Sources</h1>
         <p class="spectrum-Body spectrum-Body--S">
-          Corona Data Scraper pulls information from a variety of openly available world government data sources and curated datasets.
+          COVID Atlas pulls information from a variety of openly available world government data sources and curated datasets.
           <strong>Ratings have nothing to do with the accuracy of the data.</strong>
           The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.
         </p>
-        <a href="#" class="spectrum-Link">Learn more about COVID Atlas sources</a>
+        <a href="/sources" class="spectrum-Link">Learn more about COVID Atlas sources</a>
       </div>
     </div>
     <div class="row">
       <section class="col-xs-12 col-sm-6 col-md-4">
-        <h4 class="spectrum-Heading spectrum-Heading--S">[Data Source]</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
         <p class="spectrum-Body spectrum-Body--S"> Report card</p>
       </section>
 
       <section class="col-xs-12 col-sm-6 col-md-8">
-        <h4 class="spectrum-Heading spectrum-Heading--S">[Location Cross-Check]</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--S">[Location cross-check]</h4>
         <p class="spectrum-Body spectrum-Body--S"> Cross-Check report for this locations's sources</p>
       </section>
     </div>
@@ -156,7 +156,7 @@ function locationDetail(location, lastDate, caseInfo) {
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
   </div>
-</div>`
+</div>`;
 
   return html;
 }

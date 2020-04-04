@@ -40,7 +40,6 @@ p.spectrum-Body {
 .ca-Footer {
   max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 var(--spectrum-alias-grid-margin-medium);
 }
 
 .ca-Sidebar {
