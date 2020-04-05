@@ -1,12 +1,21 @@
 # Getting started
 
-_Last updated: 2020-03-24_
+_Last updated: 2020-04-04_
+
+## Tools
+
+You'll need the following:
+
+* [node](https://nodejs.org/en/download/)
+* [yarn](https://classic.yarnpkg.com/en/docs/install/)
+
+Install them using your favorite method (`homebrew`, etc).
+
+## Repo
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
 
-Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
-
-##### 1. Clone, init submodules, and add upstream
+### 1. Clone, init submodules, and add upstream
 
 Replace `yourusername` below with your Github username:
 
@@ -23,19 +32,24 @@ git submodule init
 git submodule update
 ```
 
-##### 2. Install dependencies
+### 2. Install dependencies
 
 ```
 yarn install
 ```
 
-##### 3. Run the scraper
+If you get an error message saying you have an incompatible version of
+`node`, you may need to change version.  You can use `n` to change
+node versions: [install](https://www.npmjs.com/package/n) it and run
+`n lts`.
+
+### 3. Run the scraper
 
 ```
 yarn start
 ```
 
-##### 4. Pull from upstream often
+### 4. Pull from upstream often
 
 This gets you the latest scrapers, as well as the cache so we're not hammering servers.
 
@@ -48,7 +62,7 @@ Note: If you are encountering issues updating a submodule such as `Could not acc
 git submodule update --init --recursive
 ```
 
-### Run scrapers
+## Run scrapers
 
 To run the scrapers for today:
 
@@ -112,7 +126,7 @@ This can be combined with `-l` to test a single scraper:
 yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
 ```
 
-### Tests
+## Tests
 
 We use [Tape](https://github.com/substack/tape).
 
@@ -123,7 +137,7 @@ We use [Tape](https://github.com/substack/tape).
     node path/to/file.js
 
 
-### Building the website
+## Building the website
 
 To build the website and start a development server at http://localhost:3000/:
 
