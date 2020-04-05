@@ -59,18 +59,17 @@ const scraper = {
 
     const stateNameByCountry = {};
     for (const data of Object.values(iso2Codes)) {
-      const iso2 = data['iso2'];
-      const name = data['name'];
-      const countrylevelId = data['countrylevel_id'];
+      const { iso2, name } = data;
+      const countrylevelId = data.countrylevel_id;
       const countryCode = iso2.slice(0, 2);
       stateNameByCountry[countryCode] = stateNameByCountry[countryCode] || {};
       stateNameByCountry[countryCode][name] = countrylevelId;
     }
 
     for (const row of isoMapCsv) {
-      const country = row['Country_Region'];
-      const state = row['Province_State'];
-      const countryCode = row['iso2'];
+      const country = row.Country_Region;
+      const state = row.Province_State;
+      const countryCode = row.iso2;
 
       if (!countryCode) {
         continue;
