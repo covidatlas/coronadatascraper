@@ -79,12 +79,7 @@ const scraper = {
   ],
   _getRecovered(recovered, state, country) {
     for (const location of recovered) {
-      // Believe it or not, the conditional for Province/State is intentionally duplicate -- there is an invisible space in there
-      // Thanks, JHU!
-      if (
-        (location['﻿Province/State'] === state || location['Province/State'] === state) &&
-        location['Country/Region'] === country
-      ) {
+      if (location['Province/State'] === state && location['Country/Region'] === country) {
         return location;
       }
     }
