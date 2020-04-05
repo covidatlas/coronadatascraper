@@ -262,15 +262,13 @@ const scraper = {
       const pdfScrape = await fetch.pdf(this.url);
 
       const data = pdfScrape
+        .filter(item => item && item.y > 6 && item.y < 46)
         .sort((a, b) => {
-          if (a && b) {
-            const yDiff = a.y - b.y;
-            const xDiff = a.x - b.x;
-            return yDiff || xDiff;
-          }
-          return -1;
-        })
-        .filter(item => item && item.y > 6);
+          const yDiff = a.y - b.y;
+          const xDiff = a.x - b.x;
+          const pageDiff = a.page - b.page;
+          return pageDiff || yDiff || xDiff;
+        });
 
       let name = '';
       let caseNum = '';
@@ -291,6 +289,11 @@ const scraper = {
         } else {
           name += c.replace('ﬀ', 'ff');
         }
+      });
+
+      counties.push({
+        county: name.replace(/(?<!\s)County/, ' County'),
+        cases: parse.number(caseNum)
       });
 
       const deathData = await fetch.pdf(

@@ -122,13 +122,24 @@ const scraper = {
     if (!validCountyHeaders.test(parse.string(data[0][0]))) {
       return false;
     }
-    if (!/positive/i.test(parse.string(data[1][0]))) {
+    if (!/positive|confirmed/i.test(parse.string(data[1][0]))) {
       return false;
     }
     if (!/negative/i.test(parse.string(data[2][0]))) {
       return false;
     }
-    return true;
+    if (data.length === 4) {
+      const deathHeader = parse.string(data[3][0]);
+      if (!/death/i.test(deathHeader)) {
+        return false;
+      }
+      return true;
+    }
+    if (data.length === 3) {
+      return true;
+    }
+
+    return false;
   },
   scraper: {
     '0': async function() {
@@ -233,6 +244,11 @@ const scraper = {
       }
 
       const unassignedCounty = { county: UNASSIGNED, cases: 0, tested: 0 };
+      const hasDeaths = data.length === 4;
+
+      if (hasDeaths) {
+        unassignedCounty.deaths = 0;
+      }
 
       const numRows = data[0].length;
       // skip headers and total line
@@ -242,17 +258,24 @@ const scraper = {
         const neg = parse.number(data[2][i]);
         const tested = cases + neg;
 
+        const rec = { county, cases, tested };
+
+        let deaths;
+        if (hasDeaths) {
+          deaths = parse.number(data[3][i]);
+          rec.deaths = deaths;
+        }
+
         if (this._counties.indexOf(county) === -1) {
           unassignedCounty.cases += cases;
           unassignedCounty.tested += tested;
+          if (hasDeaths) {
+            unassignedCounty.deaths += deaths;
+          }
           continue;
         }
 
-        counties.push({
-          county,
-          cases,
-          tested
-        });
+        counties.push(rec);
       }
 
       counties.push(unassignedCounty);
