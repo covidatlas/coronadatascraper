@@ -5,7 +5,7 @@ import datetime from '../../lib/datetime/index.js';
 import { features } from './features.json';
 
 const scraper = {
-  country: 'FRA',
+  country: 'iso1:FR',
   url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
   timeseries: true,
   priority: 1,
