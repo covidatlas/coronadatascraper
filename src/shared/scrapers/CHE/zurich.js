@@ -7,7 +7,7 @@ import datetime from '../../lib/datetime/index.js';
 
 const scraper = {
   country: 'iso1:CH',
-  county: 'Zurich',
+  county: 'iso2:CH-ZH',
   url:
     'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/COVID19_Fallzahlen_Kanton_ZH_total.csv',
   timeseries: true,
