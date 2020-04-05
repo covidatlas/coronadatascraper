@@ -27,7 +27,7 @@ const pivotTheTable = ($trs, $) => {
 };
 
 const scraper = {
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainers: [maintainers.camjc],
   priority: 2,
   sources: [

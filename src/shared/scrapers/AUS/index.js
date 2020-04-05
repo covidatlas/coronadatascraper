@@ -17,7 +17,7 @@ const countryLevelMap = {
 
 const scraper = {
   aggregate: 'state',
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainer: [maintainers.camjc],
   priority: 1,
   sources: [

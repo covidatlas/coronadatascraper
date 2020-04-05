@@ -39,7 +39,7 @@ const maintainers = {
     name: 'Cameron Chamberlain',
     email: 'corona@camjc.com',
     github: 'camjc',
-    country: 'AUS',
+    country: 'iso1:AU',
     state: 'Victoria',
     city: 'Melbourne',
     flag: '🇦🇺'

@@ -10,7 +10,7 @@ import maintainers from '../../../lib/maintainers.js';
 // For now lets fall back to the AUS index scraper when we can't scrape successfully.
 
 const scraper = {
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainers: [maintainers.camjc],
   priority: 2,
   sources: [

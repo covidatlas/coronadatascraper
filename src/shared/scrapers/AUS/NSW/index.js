@@ -18,7 +18,7 @@ const getDeathsFromParagraph = $currentArticlePage => {
 };
 
 const scraper = {
-  country: 'AUS',
+  country: 'iso1:AU',
   maintainer: [maintainers.camjc],
   priority: 2,
   sources: [
