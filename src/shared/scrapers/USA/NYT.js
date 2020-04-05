@@ -25,26 +25,25 @@ const scraper = {
     const data = await fetch.csv(this.url, false);
 
     // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+    let scrapeDate = process.env.SCRAPE_DATE
+      ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`)
+      : new Date(datetime.now.at('America/New_York'));
     let scrapeDateString = datetime.getYYYYMD(scrapeDate);
     const lastDateInTimeseries = new Date(`${data[data.length - 1].date} 12:00:00`);
     const firstDateInTimeseries = new Date(`${data[0].date} 12:00:00`);
 
     if (scrapeDate > lastDateInTimeseries) {
       console.error(
-        `  🚨 timeseries for ${geography.getName(
-          this
-        )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
-          lastDateInTimeseries
-        )}. Using last sample anyway`
+        `  🚨 timeseries for NYT: SCRAPE_DATE ${datetime.getYYYYMD(
+          scrapeDate
+        )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
       );
       scrapeDate = lastDateInTimeseries;
       scrapeDateString = datetime.getYYYYMD(scrapeDate);
     }
 
     if (scrapeDate < firstDateInTimeseries) {
-      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
+      throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
     }
 
     const locations = [];
@@ -80,7 +79,7 @@ const scraper = {
     }
 
     if (locations.length === 0) {
-      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
+      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
     }
 
     return locations;
