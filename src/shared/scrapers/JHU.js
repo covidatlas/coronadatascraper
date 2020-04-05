@@ -138,28 +138,26 @@ const scraper = {
 
       const countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
-        const recoveredData = this._getRecovered(
-          recovered,
-          cases[index]['Province/State'],
-          cases[index]['Country/Region']
-        );
-        if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
+        const row = cases[index];
+
+        const recoveredData = this._getRecovered(recovered, row['Province/State'], row['Country/Region']);
+        if (row['Country/Region'] === row['Province/State']) {
           // Axe incorrectly categorized data
-          delete cases[index]['Province/State'];
+          delete row['Province/State'];
         }
 
         // These two incorrectly have a state set
-        if (cases[index]['Province/State'] === 'United Kingdom' || cases[index]['Province/State'] === 'France') {
-          cases[index]['Province/State'] = '';
+        if (row['Province/State'] === 'United Kingdom' || row['Province/State'] === 'France') {
+          row['Province/State'] = '';
         }
 
-        if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
+        if (rules.isAcceptable(row, this._accept, this._reject)) {
           const caseData = {
             aggregate: 'country',
-            country: parse.string(cases[index]['Country/Region']),
-            cases: parse.number(cases[index][date] || 0),
+            country: parse.string(row['Country/Region']),
+            cases: parse.number(row[date] || 0),
             deaths: parse.number(deaths[index][date] || 0),
-            coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
+            coordinates: [parse.float(row.Long), parse.float(row.Lat)]
           };
 
           if (recoveredData) {
@@ -169,9 +167,9 @@ const scraper = {
             }
           }
 
-          if (cases[index]['Province/State']) {
+          if (row['Province/State']) {
             caseData.aggregate = 'state';
-            caseData.state = parse.string(cases[index]['Province/State']);
+            caseData.state = parse.string(row['Province/State']);
           }
 
           countries.push(caseData);
