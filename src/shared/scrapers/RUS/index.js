@@ -12,7 +12,7 @@ const POPULATION_REMAP = {
 };
 
 const scraper = {
-  country: 'RUS',
+  country: 'iso1:RU',
   aggregate: 'state',
   url: 'https://yandex.ru/maps/api/covid?csrfToken=',
   type: 'json',
