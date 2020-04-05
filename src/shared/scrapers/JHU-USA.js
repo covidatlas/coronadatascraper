@@ -39,15 +39,24 @@ const scraper = {
       const deaths = await fetch.csv(urls.deaths, false);
 
       let regions = [];
-      let date = Object.keys(cases[0]).pop();
 
-      if (process.env.SCRAPE_DATE) {
-        // Find old date
-        const customDate = datetime.getMDYY(new Date(process.env.SCRAPE_DATE));
-        if (!cases[0][customDate]) {
-          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
-        }
-        date = customDate;
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+      let scrapeDateString = datetime.getMDYY(new Date(scrapeDate));
+      const lastDateInTimeseries = new Date(`${Object.keys(cases[0]).pop()} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${Object.keys(cases[0])[4]} 12:00:00`);
+
+      if (scrapeDate > lastDateInTimeseries) {
+        console.error(
+          `  🚨 timeseries for JHU-USA: SCRAPE_DATE ${datetime.getYYYYMD(
+            scrapeDate
+          )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
+        );
+        scrapeDate = lastDateInTimeseries;
+        scrapeDateString = datetime.getMDYY(scrapeDate);
+      }
+
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
       }
 
       const stateLocations = {};
@@ -63,8 +72,8 @@ const scraper = {
         }
 
         const location = {
-          cases: parse.number(caseInfo[date] || 0),
-          deaths: parse.number(deathInfo[date] || 0)
+          cases: parse.number(caseInfo[scrapeDateString] || 0),
+          deaths: parse.number(deathInfo[scrapeDateString] || 0)
         };
 
         // Puerto Rico, Guam, etc.
@@ -114,6 +123,10 @@ const scraper = {
 
       // remove unassigned counties one we summed them up
       regions = regions.filter(r => r.county !== UNASSIGNED);
+
+      if (regions.length === 0) {
+        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
+      }
 
       return regions;
     }
