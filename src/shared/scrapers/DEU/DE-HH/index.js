@@ -3,7 +3,7 @@ import defaultScraperDEU, { sharedSchema } from '../_shared.js';
 
 const scraper = {
   ...sharedSchema,
-  country: 'DEU',
+  country: 'iso1:DE',
   state: 'DE-HH', // ISO 3166 notation
   scraper: defaultScraperDEU,
   _rowToResult: row => {
