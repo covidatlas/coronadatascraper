@@ -1,4 +1,5 @@
 import path from 'path';
+import { isId } from '../../../shared/lib/geography/country-levels.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 // eslint-disable-next-line
@@ -28,15 +29,12 @@ const normalizeLocations = args => {
 
   // Normalize data
   for (const location of locations) {
-    if (!countryLevels.getIdFromLocation(location)) {
-      // Normalize countries
-      const isoAlpha2 = geography.toISO3166Alpha2(location.country);
-      if (isoAlpha2) {
-        location.country = `iso1:${isoAlpha2}`;
-      } else {
-        log.error('  ❌ Failed to find ISO-3166 alpha 2 code for %s', location.county);
-      }
+    // make sure location.country is always in country-level id form
+    if (!isId(location.country)) {
+      log.error(`  ❌ location.country not in country-level id: ${location.country}, ${location._path}`);
+    }
 
+    if (!countryLevels.getIdFromLocation(location)) {
       if (location.country === 'iso1:US') {
         // Normalize states
         location.state = geography.toUSStateAbbreviation(location.state);
