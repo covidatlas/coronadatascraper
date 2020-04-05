@@ -1,5 +1,6 @@
 import geoTz from 'geo-tz';
 import { join } from 'path';
+import geojsonArea from '@mapbox/geojson-area';
 import reporter from '../../../shared/lib/error-reporter.js';
 import * as fs from '../../../shared/lib/fs.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
@@ -139,9 +140,11 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
     }
 
-    // Store coordinates on location
+    // Store coordinates and area on location
     if (feature.geometry) {
       location.coordinates = turf.center(feature).geometry.coordinates;
+      // Convert area from square meters to square miles
+      location.area = geojsonArea.geometry(feature.geometry) / 2589988.1103;
     }
 
     if (DEBUG) {

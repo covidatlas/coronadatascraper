@@ -2,6 +2,7 @@
   "dependencies": {
     "@architect/functions": "^3.7.6",
     "esm": "^3.2.25",
-    "geo-tz": "^5.1.0"
+    "geo-tz": "^5.1.0",
+    "@mapbox/geojson-area": "^0.2.2"
   }
 }

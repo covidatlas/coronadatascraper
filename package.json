@@ -34,6 +34,7 @@
     "@js-joda/core": "^2.0.0",
     "@js-joda/timezone": "^2.2.0",
     "@lorenzofox3/for-await": "^0.2.1",
+    "@mapbox/geojson-area": "^0.2.2",
     "@turf/boolean-point-in-polygon": "^6.2.0-alpha.1",
     "@turf/center": "^6.2.0-alpha.1",
     "@turf/helpers": "^6.2.0-alpha.1",
