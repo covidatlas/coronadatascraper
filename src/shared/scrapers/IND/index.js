@@ -17,7 +17,7 @@ const scraper = {
     this.url = 'https://www.mohfw.gov.in/';
     const $ = await fetch.page(this.url);
 
-    const $table = $('#cases table');
+    const $table = $('#state-data');
     const $trs = $table.find('tbody > tr');
     const regions = [];
 
