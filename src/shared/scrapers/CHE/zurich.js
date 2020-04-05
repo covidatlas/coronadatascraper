@@ -6,7 +6,7 @@ import datetime from '../../lib/datetime/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'CHE',
+  country: 'iso1:CH',
   county: 'Zurich',
   url:
     'https://raw.githubusercontent.com/openZH/covid_19/master/fallzahlen_kanton_total_csv/COVID19_Fallzahlen_Kanton_ZH_total.csv',

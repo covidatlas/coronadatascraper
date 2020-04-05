@@ -7,7 +7,7 @@ import * as transfrom from '../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'CHE',
+  country: 'iso1:CH',
   url: 'https://github.com/daenuprobst/covid19-cases-switzerland/',
   timeseries: true,
   priority: 1,
