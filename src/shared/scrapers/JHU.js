@@ -17,6 +17,7 @@ const scraper = {
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,
+  country: '_JHU', // every location needs to have a valid country
   scraperTz: 'America/Los_Angeles',
   curators: [
     {
