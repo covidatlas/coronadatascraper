@@ -6,7 +6,7 @@ import * as transform from '../../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'GBR',
+  country: 'iso1:GB',
   state: 'Scotland',
   url: 'https://www.gov.scot/coronavirus-covid-19/',
   aggregate: 'county',

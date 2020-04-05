@@ -28,7 +28,7 @@ const countryMap = {
   Brunei: 'Brunei Darussalam',
   Reunion: 'Réunion',
   Curacao: 'Curaçao',
-  'United Kingdom': 'GBR',
+  'United Kingdom': 'iso1:GB',
   'occupied Palestinian territory': 'PSE',
   'Congo (Brazzaville)': 'COG',
   Tanzania: 'TZA',

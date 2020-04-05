@@ -5,7 +5,7 @@ import * as parse from '../../../lib/parse.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'GBR',
+  country: 'iso1:GB',
   state: 'England',
   url: 'https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data',
   aggregate: 'county',
