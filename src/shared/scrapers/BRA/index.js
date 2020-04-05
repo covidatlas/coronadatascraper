@@ -6,7 +6,7 @@ import * as transform from '../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'BRA',
+  country: 'iso1:BR',
   type: 'list',
   priority: 1,
   sources: [
@@ -24,7 +24,7 @@ const scraper = {
       email: 'contato@feliperoberto.com.br',
       url: 'http://feliperoberto.com.br',
       github: 'feliperoberto',
-      country: 'BRA',
+      country: 'iso1:BR',
       flag: '🇧🇷'
     }
   ],
