@@ -16,7 +16,7 @@
     "hospitalized": { "type": "number", "minimum": 0 },
     "discharged": { "type": "number", "minimum": 0 },
     "population": { "type": "number", "minimum": 0 },
-    "populationDensitySqMi": { "type": "number", "minimum": 0 },
+    "populationDensity": { "type": "number", "minimum": 0 },
     "coordinates": { "type": "array" },
     "active": { "type": "number", "minimum": 0 },
     "rating": { "type": "number" },

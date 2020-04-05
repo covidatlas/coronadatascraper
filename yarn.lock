@@ -298,13 +298,6 @@
   resolved "https://registry.yarnpkg.com/@lorenzofox3/for-await/-/for-await-0.2.1.tgz#cb12c2bba25eaca8225db06027820624c5d2f5e5"
   integrity sha512-fMpDQioAnl0a97Y3sKTpX8iWidQ1EkmsGh09YTnQrwBgRBZAbBaMF5WGdfYPUMY7qWiQuvDqgwKbuyvW6MRDBA==
 
-"@mapbox/geojson-area@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@mapbox/geojson-area/-/geojson-area-0.2.2.tgz#18d7814aa36bf23fbbcc379f8e26a22927debf10"
-  integrity sha1-GNeBSqNr8j+7zDefjiaiKSfevxA=
-  dependencies:
-    wgs84 "0.0.0"
-
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
@@ -382,6 +375,14 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@turf/area@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/area/-/area-6.0.1.tgz#50ed63c70ef2bdb72952384f1594319d94f3b051"
+  integrity sha512-Zv+3N1ep9P5JvR0YOYagLANyapGWQBh8atdeR3bKpWcigVXFsEKNUw03U/5xnh+cKzm7yozHD6MFJkqQv55y0g==
+  dependencies:
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
 "@turf/bbox@^6.2.0-alpha.1":
   version "6.2.0-alpha.1"
   resolved "https://registry.yarnpkg.com/@turf/bbox/-/bbox-6.2.0-alpha.1.tgz#a917802edfa4f0a1e04387804b3c26a1113b2eae"
@@ -437,6 +438,13 @@
   integrity sha512-jfF0CubozlqpwhyQ7SYbuKx/JtaxADrWCNG9MtoN3GY7R8laZzcLa3TU9J2XaOr34TCDaLLi5wMYyusgyERBbQ==
   dependencies:
     "@turf/helpers" "^6.2.0-alpha.1"
+
+"@turf/meta@6.x":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-6.0.2.tgz#eb92951126d24a613ac1b7b99d733fcc20fd30cf"
+  integrity sha512-VA7HJkx7qF1l3+GNGkDVn2oXy4+QoLP6LktXAaZKjuT1JI0YESat7quUkbCMy4zP9lAUuvS4YMslLyTtr919FA==
+  dependencies:
+    "@turf/helpers" "6.x"
 
 "@turf/meta@^6.2.0-alpha.1":
   version "6.2.0-alpha.1"
@@ -7284,11 +7292,6 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
-
-wgs84@0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/wgs84/-/wgs84-0.0.0.tgz#34fdc555917b6e57cf2a282ed043710c049cdc76"
-  integrity sha1-NP3FVZF7blfPKigu0ENxDASc3HY=
 
 which-module@^2.0.0:
   version "2.0.0"

@@ -158,7 +158,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       location.population = population;
       populationFound++;
       if (location.area) {
-        location.populationDensitySqMi = population / location.area;
+        location.populationDensity = population / location.area;
       }
     } else {
       log.error('  ❌ %s: ?', geography.getName(location));

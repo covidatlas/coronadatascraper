@@ -17,7 +17,7 @@ export const csvForDay = function(data) {
     'tested',
     'active',
     'population',
-    'populationDensitySqMi',
+    'populationDensity',
     'lat',
     'long',
     'url'
