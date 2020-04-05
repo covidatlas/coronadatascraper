@@ -7,7 +7,7 @@ import datetime from '../../../lib/datetime/old/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'Nova Scotia',
+  state: 'iso2:CA-NS',
   country: 'iso1:CA',
   url: 'https://novascotia.ca/coronavirus/COVID-19-cases.csv',
   type: 'csv',

@@ -1,12 +1,30 @@
-import * as fetch from '../../lib/fetch/index.js';
-import * as parse from '../../lib/parse.js';
-import * as transform from '../../lib/transform.js';
-import * as geography from '../../lib/geography/index.js';
+import assert from 'assert';
 import datetime from '../../lib/datetime/old/index.js';
+import * as fetch from '../../lib/fetch/index.js';
+import * as geography from '../../lib/geography/index.js';
+import * as parse from '../../lib/parse.js';
 import * as rules from '../../lib/rules.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
+
+const countryLevelMap = {
+  Canada: 'iso1:CA',
+  'British Columbia': 'iso2:CA-BC',
+  'New Brunswick': 'iso2:CA-NB',
+  'Newfoundland and Labrador': 'iso2:CA-NL',
+  'Northwest Territories': 'iso2:CA-NT',
+  'Nova Scotia': 'iso2:CA-NS',
+  'Prince Edward Island': 'iso2:CA-PE',
+  'Repatriated travellers': '-',
+  Alberta: 'iso2:CA-AB',
+  Manitoba: 'iso2:CA-MB',
+  Nunavut: 'iso2:CA-NU',
+  Ontario: 'iso2:CA-ON',
+  Quebec: 'iso2:CA-QC',
+  Saskatchewan: 'iso2:CA-SK',
+  Yukon: 'iso2:CA-YT'
+};
 
 const scraper = {
   country: 'iso1:CA',
@@ -76,11 +94,24 @@ const scraper = {
       const regions = [];
       for (const row of data) {
         if (row.date === scrapeDateString) {
+          const state = parse.string(row.prname);
+          const stateMapped = countryLevelMap[state];
+          assert(stateMapped, `${state} not found in countryLevelMap`);
+
+          if (stateMapped === '-') {
+            continue;
+          }
+
           const regionObj = {
-            state: parse.string(row.prname),
             cases: parse.number(row.numconf),
             deaths: parse.number(row.numdeaths)
           };
+
+          if (stateMapped === 'iso1:CA') {
+            regionObj.country = stateMapped;
+          } else {
+            regionObj.state = stateMapped;
+          }
 
           if (!rules.isAcceptable(regionObj, null, this._reject)) {
             continue;
@@ -94,7 +125,8 @@ const scraper = {
         throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
       }
 
-      regions.push(transform.sumData(regions));
+      // no need to do this as they provide as the summary data
+      // regions.push(transform.sumData(regions));
 
       return regions;
     }
