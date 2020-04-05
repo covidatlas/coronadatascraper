@@ -4,7 +4,7 @@ import * as parse from '../../lib/parse.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'KOR',
+  country: 'iso1:KR',
   aggregate: 'state', // Special cities have equal status to states.
   type: 'table',
   url: 'http://ncov.mohw.go.kr/en/bdBoardList.do?brdId=16&brdGubun=162&dataGubun=&ncvContSeq=&contSeq=&board_id=',
