@@ -1,6 +1,8 @@
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 
+const UNASSIGNED = '(unassigned)';
+
 const scraper = {
   country: 'KOR',
   aggregate: 'state', // Special cities have equal status to states.
@@ -33,7 +35,7 @@ const scraper = {
     'Gyeongsangnam-do': 'South Gyeongsang',
     'Jeollabuk-do': 'North Jeolla',
     'Jeollanam-do': 'South Jeolla',
-    Lazaretto: 'Quarantine'
+    Lazaretto: UNASSIGNED // quarantine
   },
   _population: {
     'Chungcheongbuk-do': 1588633,
