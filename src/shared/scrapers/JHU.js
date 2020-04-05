@@ -1,12 +1,16 @@
+import iso2Codes from 'country-levels/iso2.json';
 import datetime from '../lib/datetime/index.js';
 import * as fetch from '../lib/fetch/index.js';
+import { splitId } from '../lib/geography/country-levels.js';
 import maintainers from '../lib/maintainers.js';
 import * as parse from '../lib/parse.js';
-import * as rules from '../lib/rules.js';
 import * as transform from '../lib/transform.js';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const stateMap = {
+  'Hong Kong': 'iso1:HK',
+  Macau: 'iso1:MO',
+  Greenland: 'iso1:GL'
+};
 
 const scraper = {
   maintainers: [maintainers.lazd],
@@ -28,55 +32,10 @@ const scraper = {
     deaths:
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
     recovered:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
+    isoMap:
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv'
   },
-
-  _reject: [
-    {
-      'Province/State': 'Diamond Princess'
-    },
-    {
-      'Country/Region': 'Diamond Princess'
-    },
-    {
-      'Province/State': 'Grand Princess'
-    },
-    {
-      'Province/State': 'From Diamond Princess'
-    },
-    {
-      'Country/Region': 'MS Zaandam'
-    },
-    {
-      'Country/Region': 'West Bank and Gaza'
-    }
-  ],
-  _accept: [
-    {
-      'Province/State': ''
-    },
-    {
-      'Country/Region': 'France'
-    },
-    {
-      'Country/Region': 'United Kingdom'
-    },
-    {
-      'Country/Region': 'China'
-    },
-    {
-      'Country/Region': 'Denmark'
-    },
-    {
-      'Country/Region': 'Belgium'
-    },
-    {
-      'Country/Region': 'Netherlands'
-    },
-    {
-      'Country/Region': 'Australia'
-    }
-  ],
   _getRecovered(recovered, state, country) {
     for (const location of recovered) {
       if (location['Province/State'] === state && location['Country/Region'] === country) {
@@ -112,12 +71,67 @@ const scraper = {
       locations.push(transform.sumData(regions, { country, aggregate: 'state' }));
     }
   },
+  _createIsoMap(isoMapCsv) {
+    const isoMap = {};
+
+    const stateNameByCountry = {};
+    for (const data of Object.values(iso2Codes)) {
+      const iso2 = data['iso2'];
+      const name = data['name'];
+      const countrylevelId = data['countrylevel_id'];
+      const countryCode = iso2.slice(0, 2);
+      stateNameByCountry[countryCode] = stateNameByCountry[countryCode] || {};
+      stateNameByCountry[countryCode][name] = countrylevelId;
+    }
+
+    for (const row of isoMapCsv) {
+      const country = row['Country_Region'];
+      const state = row['Province_State'];
+      const countryCode = row['iso2'];
+
+      if (!countryCode) {
+        continue;
+      }
+
+      // using a key like 'Australia#New South Wales'
+      const key = `${country}#${state}`;
+
+      // US is in other file
+      if (country === 'US') {
+        continue;
+      }
+
+      if (state in stateMap) {
+        isoMap[key] = stateMap[state];
+        continue;
+      }
+
+      if (!state) {
+        isoMap[key] = `iso1:${countryCode}`;
+      } else {
+        const stateNames = stateNameByCountry[countryCode];
+        if (!stateNames) {
+          console.warn(`  createIsoMap 1: ${state} needs to be added to stateMap`);
+          continue;
+        }
+        const clId = stateNames[state];
+        if (!clId) {
+          console.warn(`  createIsoMap 2: ${state} needs to be added added to stateMap`);
+        }
+        isoMap[key] = clId;
+      }
+    }
+    return isoMap;
+  },
   scraper: {
     '0': async function() {
       const urls = this._urls;
       const cases = await fetch.csv(urls.cases, false);
       const deaths = await fetch.csv(urls.deaths, false);
       const recovered = await fetch.csv(urls.recovered, false);
+      const isoMapCsv = await fetch.csv(urls.isoMap, false);
+
+      const isoMap = this._createIsoMap(isoMapCsv);
 
       const countries = [];
       let date = Object.keys(cases[0]).pop();
@@ -131,43 +145,47 @@ const scraper = {
         date = customDate;
       }
 
-      const countyTotals = {};
       for (let index = 0; index < cases.length; index++) {
         const row = cases[index];
+        const country = row['Country/Region'];
+        const state = row['Province/State'];
 
-        const recoveredData = this._getRecovered(recovered, row['Province/State'], row['Country/Region']);
-
-        if (rules.isAcceptable(row, this._accept, this._reject)) {
-          const caseData = {
-            aggregate: 'country',
-            country: parse.string(row['Country/Region']),
-            cases: parse.number(row[date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            coordinates: [parse.float(row.Long), parse.float(row.Lat)]
-          };
-
-          if (recoveredData) {
-            const recoveredCount = recoveredData[date];
-            if (recoveredCount !== undefined) {
-              caseData.recovered = parse.number(recoveredCount);
-            }
-          }
-
-          if (row['Province/State']) {
-            caseData.aggregate = 'state';
-            caseData.state = parse.string(row['Province/State']);
-          }
-
-          countries.push(caseData);
+        const key = `${country}#${state}`;
+        const clId = isoMap[key];
+        if (!clId) {
+          console.warn(`Skipping ${country} ${state}`);
+          continue;
         }
+
+        const recoveredData = this._getRecovered(recovered, state, country);
+
+        const caseData = {
+          cases: parse.number(row[date] || 0),
+          deaths: parse.number(deaths[index][date] || 0)
+        };
+
+        if (recoveredData) {
+          const recoveredCount = recoveredData[date];
+          if (recoveredCount !== undefined) {
+            caseData.recovered = parse.number(recoveredCount);
+          }
+        }
+
+        const { level, code } = splitId(clId);
+        if (level === 'iso1') {
+          caseData.aggregate = 'country';
+          caseData.country = clId;
+        } else {
+          const countryCode = code.slice(0, 2);
+          caseData.aggregate = 'state';
+          caseData.state = clId;
+          caseData.country = `iso1:${countryCode}`;
+        }
+
+        countries.push(caseData);
       }
 
-      // Add counties
-      for (const [, countyData] of Object.entries(countyTotals)) {
-        countries.push(countyData);
-      }
-
-      this._rollup(countries);
+      // this._rollup(countries);
 
       return countries;
     }
