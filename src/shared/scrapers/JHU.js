@@ -44,31 +44,14 @@ const scraper = {
     }
   },
   _rollup(locations) {
-    const countriesToRoll = {};
-    const countriesToNotRoll = {};
+    // get all countries with states
+    const countriesToRoll = new Set(locations.filter(l => l.state).map(l => l.country));
 
-    for (const location of locations) {
-      if (location.state && location.country && !location.county) {
-        countriesToRoll[location.country] = true;
-      }
-      if (!location.state && location.country && !location.county) {
-        countriesToNotRoll[location.country] = true;
-      }
-    }
-
-    for (const country of Object.keys(countriesToNotRoll)) {
-      delete countriesToRoll[country];
-    }
-
-    for (const country of Object.keys(countriesToRoll)) {
-      // Find everything matching this region and roll it up
-      const regions = [];
-      for (const location of locations) {
-        if (location.country === country) {
-          regions.push(location);
-        }
-      }
-      locations.push(transform.sumData(regions, { country, aggregate: 'state' }));
+    // calculate sumData for each country
+    for (const country of countriesToRoll) {
+      const regions = locations.filter(l => l.country === country);
+      const countrySum = transform.sumData(regions, { country, aggregate: 'state' });
+      locations.push(countrySum);
     }
   },
   _createIsoMap(isoMapCsv) {
@@ -185,7 +168,7 @@ const scraper = {
         countries.push(caseData);
       }
 
-      // this._rollup(countries);
+      this._rollup(countries);
 
       return countries;
     }
