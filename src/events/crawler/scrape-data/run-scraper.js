@@ -133,7 +133,7 @@ const runScrapers = async args => {
       continue;
     }
 
-    if (options.country && location.country !== options.country) {
+    if (options.country && ![options.country, `iso1:${options.country}`].includes(location.country)) {
       continue;
     }
 
