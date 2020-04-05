@@ -7,7 +7,7 @@ import populationState from './populationState.json';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'IND',
+  country: 'iso1:IN',
   url: 'https://www.mohfw.gov.in/', // dashaputra.com/goi
   type: 'table',
   aggregate: 'state',
