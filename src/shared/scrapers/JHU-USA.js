@@ -67,7 +67,7 @@ const scraper = {
         const fips = caseInfo.FIPS.replace(/\.0$/, '').padStart(5, '0');
 
         if (['00000', '88888', '99999'].includes(fips)) {
-          console.warn('⚠️  Skipping incorrect FIPS code %s for %s', fips, caseInfo.Combined_Key);
+          console.warn('  ⚠️  Skipping incorrect FIPS code %s for %s', fips, caseInfo.Combined_Key);
           continue;
         }
 
@@ -83,7 +83,7 @@ const scraper = {
         }
 
         if (caseInfo.Admin2.startsWith('Out of ')) {
-          console.warn('⚠️  Skipping out of state data for %s', caseInfo.Combined_Key);
+          console.warn('  ⚠️  Skipping out of state data for %s', caseInfo.Combined_Key);
           continue;
         }
 
@@ -100,7 +100,7 @@ const scraper = {
         // Only include places we have data for
         const countryLevelIDInfo = findCountryLevelID(fips);
         if (!countryLevelIDInfo) {
-          console.warn('⚠️  Skipping %s at (FIPS %s)', caseInfo.Combined_Key, fips);
+          console.warn('  ⚠️  Skipping %s at (FIPS %s)', caseInfo.Combined_Key, fips);
           continue;
         }
 

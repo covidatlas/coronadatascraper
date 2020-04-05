@@ -34,7 +34,7 @@ const scraper = {
 
     if (scrapeDate > lastDateInTimeseries) {
       console.error(
-        `  🚨 timeseries for NYT: SCRAPE_DATE ${datetime.getYYYYMD(
+        `  🚨 Timeseries for NYT: SCRAPE_DATE ${datetime.getYYYYMD(
           scrapeDate
         )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
       );

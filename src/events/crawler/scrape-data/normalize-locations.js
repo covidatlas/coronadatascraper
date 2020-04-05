@@ -19,6 +19,8 @@ function findCountryLevelID(location) {
 }
 
 const normalizeLocations = args => {
+  log('⏳ Normalizing locations...');
+
   const { locations } = args;
 
   // Normalize data
@@ -51,7 +53,7 @@ const normalizeLocations = args => {
               } else {
                 fipsFound = false;
                 log.error(
-                  '❌ Failed to find FIPS code for subset of combined region %s, %s',
+                  '  ❌ Failed to find FIPS code for subset of combined region %s, %s',
                   subLocation.county,
                   subLocation.state
                 );
@@ -68,7 +70,7 @@ const normalizeLocations = args => {
               location.county = countryLevelId;
             }
             if (!fipsFound) {
-              log.error('❌ Failed to find FIPS code for %s, %s', location.county, location.state);
+              log.error('  ❌ Failed to find FIPS code for %s, %s', location.county, location.state);
             }
           }
         }
@@ -78,7 +80,7 @@ const normalizeLocations = args => {
           if (iso2Codes[`US-${location.state}`]) {
             location.state = iso2Codes[`US-${location.state}`].countrylevel_id;
           } else {
-            log.error('❌ Failed to find FIPS code for state %s', location.state);
+            log.error('  ❌ Failed to find FIPS code for state %s', location.state);
           }
         }
       }
