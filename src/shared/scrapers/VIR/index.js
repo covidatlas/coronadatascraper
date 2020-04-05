@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 
 const scraper = {
-  country: 'VIR',
+  country: 'iso1:VI',
   type: 'table',
   url: 'https://doh.vi.gov/covid19usvi',
   sources: [
