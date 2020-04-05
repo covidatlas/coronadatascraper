@@ -9,7 +9,7 @@ import * as rules from '../../lib/rules.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'CAN',
+  country: 'iso1:CA',
   sources: [
     {
       description: 'Health Promotion and Chronic Disease Prevention Branch',

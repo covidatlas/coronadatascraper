@@ -8,7 +8,7 @@ import datetime from '../../../lib/datetime/old/index.js';
 
 const scraper = {
   state: 'Nova Scotia',
-  country: 'CAN',
+  country: 'iso1:CA',
   url: 'https://novascotia.ca/coronavirus/COVID-19-cases.csv',
   type: 'csv',
   certValidation: false,
