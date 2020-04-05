@@ -7,7 +7,7 @@ import * as parse from '../../../lib/parse.js';
 const scraper = {
   county: 'San Luis Obispo County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://www.emergencyslo.org/en/covid19.aspx',
   type: 'paragraph',
   async scraper() {

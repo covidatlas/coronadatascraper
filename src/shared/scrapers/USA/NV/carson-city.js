@@ -5,7 +5,7 @@ import * as parse from '../../../lib/parse.js';
 // const UNASSIGNED = '(unassigned)';
 const scraper = {
   state: 'NV',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   url: 'https://gethealthycarsoncity.org/novel-coronavirus-2019/',
   sources: [

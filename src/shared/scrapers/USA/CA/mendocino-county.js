@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Mendocino County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.mendocinocounty.org/community/novel-coronavirus',
   scraper: {

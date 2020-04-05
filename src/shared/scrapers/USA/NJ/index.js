@@ -6,7 +6,7 @@ import * as transform from '../../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'USA',
+  country: 'iso1:US',
   state: 'NJ',
   aggregate: 'county',
   type: 'csv',

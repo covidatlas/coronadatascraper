@@ -9,7 +9,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'CO',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   priority: 1,
   scraper: {

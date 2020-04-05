@@ -8,7 +8,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'AR',
-  country: 'USA',
+  country: 'iso1:US',
   url:
     'https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*',
   type: 'json',

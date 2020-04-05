@@ -239,7 +239,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
 
       if (location.state || location.county) {
-        if (location.country === 'USA') {
+        if (location.country === 'iso1:US') {
           if (location.county) {
             // Find county
             for (const feature of usCountyData.features) {
@@ -265,7 +265,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
             }
           } else if (location.state) {
             for (const feature of provinceData.features) {
-              if (location.state === feature.properties.postal && feature.properties.adm0_a3 === 'USA') {
+              if (location.state === feature.properties.postal && feature.properties.adm0_a3 === 'iso1:US') {
                 found = true;
                 storeFeature(feature, location);
                 continue locationLoop;

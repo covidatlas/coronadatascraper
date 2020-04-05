@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'USA',
+  country: 'iso1:US',
   state: 'CA',
   url: 'https://opendata.arcgis.com/datasets/06fcfe6147574a75afea97a1f7565dc7_0.csv',
   aggregate: 'county',

@@ -9,7 +9,7 @@ import datetime from '../../../lib/datetime/index.js';
 
 const scraper = {
   state: 'WI',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   sources: [
     {

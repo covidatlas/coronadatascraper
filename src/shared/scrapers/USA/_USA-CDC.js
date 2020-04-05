@@ -6,7 +6,7 @@ import * as geography from '../../lib/geography/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.cdc.gov',

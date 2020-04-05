@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Santa Cruz County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'http://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx',
   async scraper() {

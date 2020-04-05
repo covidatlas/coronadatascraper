@@ -10,7 +10,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   state: 'VA',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   sources: [
     {

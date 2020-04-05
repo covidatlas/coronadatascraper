@@ -9,7 +9,7 @@ import datetime from '../../../lib/datetime/index.js';
 
 const scraper = {
   state: 'SC',
-  country: 'USA',
+  country: 'iso1:US',
   url:
     'https://services2.arcgis.com/XZg2efAbaieYAXmu/arcgis/rest/services/COVID19_County_View/FeatureServer/0/query?f=json&where=Confirmed%20%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Confirmed%20desc&resultOffset=0&resultRecordCount=1000&cacheHint=true',
   source: {

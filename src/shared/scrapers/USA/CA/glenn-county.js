@@ -9,7 +9,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Glenn County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   async scraper() {
     this.url = datetime.scrapeDateIsBefore('2020-03-16')

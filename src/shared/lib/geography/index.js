@@ -34,7 +34,7 @@ const countryMap = {
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB',
-  US: 'USA',
+  US: 'iso1:US',
   'Bahamas, The': 'BHS',
   'Cape Verde': 'CPV',
   'East Timor': 'TLS',

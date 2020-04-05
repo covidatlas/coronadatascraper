@@ -9,7 +9,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'MO',
-  country: 'USA',
+  country: 'iso1:US',
   type: 'table',
   aggregate: 'county',
   url: 'https://health.mo.gov/living/healthcondiseases/communicable/novel-coronavirus/results.php',
@@ -24,7 +24,7 @@ const scraper = {
       email: 'paul.boal@amitechsolutions.com',
       url: 'https://amitechsolutions.com',
       github: 'paulboal',
-      country: 'USA',
+      country: 'iso1:US',
       flag: '🇺🇸'
     }
   ],

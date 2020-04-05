@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Mono County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://monocovid19-monomammoth.hub.arcgis.com/',
   scraper: {

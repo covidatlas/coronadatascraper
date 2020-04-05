@@ -9,7 +9,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Yolo County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url:
     'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',

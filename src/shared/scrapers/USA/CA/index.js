@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   priority: 1,
   type: 'csv',
   aggregate: 'county',

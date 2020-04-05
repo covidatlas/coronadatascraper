@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Del Norte County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'http://www.co.del-norte.ca.us/departments/health-human-services/public-health',
   maintainers: [maintainers.jbencina],
   scraper: {

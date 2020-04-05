@@ -8,7 +8,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'ME',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.maine.gov/dhhs/mecdc',

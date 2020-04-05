@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'MN', // Minnesota!
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.health.state.mn.us/',

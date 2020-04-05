@@ -6,7 +6,7 @@ import * as transform from '../../lib/transform.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://covidtracking.com/api/states',
   type: 'json',
   curators: [

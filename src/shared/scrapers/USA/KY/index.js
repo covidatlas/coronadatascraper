@@ -5,7 +5,7 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
-  country: 'USA',
+  country: 'iso1:US',
   state: 'KY',
   priority: 1,
   aggregate: 'county',
@@ -21,7 +21,7 @@ const scraper = {
       name: 'Jordan Holt',
       email: 'jordholt@gmail.com',
       github: 'Jord-Holt',
-      country: 'USA',
+      country: 'iso1:US',
       flag: '🇺🇸'
     }
   ],

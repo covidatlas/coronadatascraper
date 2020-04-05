@@ -11,7 +11,7 @@ import * as rules from '../../../lib/rules.js';
 
 const scraper = {
   state: 'OK',
-  country: 'USA',
+  country: 'iso1:US',
   type: 'table',
   aggregate: 'county',
   url: 'https://coronavirus.health.ok.gov/',
@@ -31,7 +31,7 @@ const scraper = {
       email: 'paul.boal@amitechsolutions.com',
       url: 'https://amitechsolutions.com',
       github: 'paulboal',
-      country: 'USA',
+      country: 'iso1:US',
       flag: '🇺🇸'
     }
   ],

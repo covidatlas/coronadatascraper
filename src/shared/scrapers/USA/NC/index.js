@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   url: 'https://opendata.arcgis.com/datasets/969678bce431494a8f64d7faade6e5b8_0.csv',
-  country: 'USA',
+  country: 'iso1:US',
   state: 'NC',
   aggregate: 'county',
   async scraper() {

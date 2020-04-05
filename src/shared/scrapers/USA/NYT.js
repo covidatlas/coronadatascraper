@@ -7,7 +7,7 @@ import datetime from '../../lib/datetime/index.js';
 const scraper = {
   url: 'https://github.com/nytimes/covid-19-data',
   type: 'csv',
-  country: 'USA',
+  country: 'iso1:US',
   timeseries: true,
   aggregate: 'county',
   priority: -1,

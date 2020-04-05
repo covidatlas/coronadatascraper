@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'AL',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
   type: 'table',
   aggregate: 'county',

@@ -10,7 +10,7 @@ import * as rules from '../../../lib/rules.js';
 
 const scraper = {
   state: 'IL',
-  country: 'USA',
+  country: 'iso1:US',
   priority: 1,
   aggregate: 'county',
   sources: [

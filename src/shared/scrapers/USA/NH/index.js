@@ -11,7 +11,7 @@ import { DeprecatedError } from '../../../lib/errors.js';
 
 const scraper = {
   state: 'NH',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       name: 'New Hampshire Department of Health and Human Services'

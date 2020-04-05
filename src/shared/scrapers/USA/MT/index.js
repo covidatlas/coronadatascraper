@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'MT',
-  country: 'USA',
+  country: 'iso1:US',
   url:
     'https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query?f=json&where=Total%20%3C%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAMELABEL%20asc&resultOffset=0&resultRecordCount=56&cacheHint=true',
   type: 'json',

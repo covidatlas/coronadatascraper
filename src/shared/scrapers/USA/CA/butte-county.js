@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Butte County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.buttecounty.net/publichealth',

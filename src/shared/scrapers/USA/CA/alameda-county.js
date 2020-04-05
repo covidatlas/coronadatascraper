@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Alameda County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'http://www.acphd.org',

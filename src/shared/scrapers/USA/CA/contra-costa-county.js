@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Contra Costa County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://www.coronavirus.cchealth.org/',
   maintainers: [maintainers.jbencina],
   async scraper() {

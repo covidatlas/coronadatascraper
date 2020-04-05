@@ -9,7 +9,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'RI',
-  country: 'USA',
+  country: 'iso1:US',
   priority: 1,
   type: 'csv',
   sources: [

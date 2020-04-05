@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Ventura County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   type: 'paragraph',
   maintainers: [maintainers.jbencina],
   scraper: {

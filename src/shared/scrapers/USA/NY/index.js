@@ -9,7 +9,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'NY',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   sources: [
     {
@@ -178,7 +178,7 @@ export default scraper;
             ['Bronx County, NY', 'Kings County, NY', 'New York County, NY', 'Queens County, NY', 'Richmond County, NY'],
             {
               state: 'NY',
-              country: 'USA'
+              country: 'iso1:US'
             }
           );
         } else {

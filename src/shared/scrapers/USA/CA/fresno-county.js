@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Fresno County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://www.co.fresno.ca.us/departments/public-health/covid-19',
   maintainers: [maintainers.jbencina],
   async scraper() {

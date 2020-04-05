@@ -11,7 +11,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'MA',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
 
   sources: [

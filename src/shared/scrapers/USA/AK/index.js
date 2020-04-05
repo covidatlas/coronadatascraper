@@ -4,7 +4,7 @@ import * as transform from '../../../lib/transform.js';
 
 const scraper = {
   state: 'AK',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'http://dhss.alaska.gov/dph',

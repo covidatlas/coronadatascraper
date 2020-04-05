@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'OR',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.oregon.gov/oha/PH',

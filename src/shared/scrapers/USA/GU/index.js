@@ -7,7 +7,7 @@ import { DeprecatedError } from '../../../lib/errors.js';
 
 const scraper = {
   state: 'GU',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'http://dphss.guam.gov/2019-novel-coronavirus-2019-n-cov/',
   sources: [
     {

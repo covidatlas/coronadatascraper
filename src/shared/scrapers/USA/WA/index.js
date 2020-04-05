@@ -9,7 +9,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'WA',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.doh.wa.gov/',

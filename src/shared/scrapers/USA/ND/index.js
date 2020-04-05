@@ -9,7 +9,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   state: 'ND',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://www.health.nd.gov/diseases-conditions/coronavirus/north-dakota-coronavirus-cases',
   type: 'table',
   aggregate: 'county',

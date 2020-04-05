@@ -9,7 +9,7 @@ import maintainers from '../../../lib/maintainers.js';
 const scraper = {
   county: 'Santa Barbara County',
   state: 'CA',
-  country: 'USA',
+  country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://publichealthsbc.org',
   type: 'paragraph',

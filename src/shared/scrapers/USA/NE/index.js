@@ -9,7 +9,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   state: 'NE',
-  country: 'USA',
+  country: 'iso1:US',
   url: 'https://www.lincoln.ne.gov/city/covid19/',
   type: 'list',
   aggregate: 'county',

@@ -8,7 +8,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'MI',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       name: 'Michigan Department of Health & Human Services'

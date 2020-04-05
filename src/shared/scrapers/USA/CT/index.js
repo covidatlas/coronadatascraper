@@ -11,7 +11,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   state: 'CT',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://portal.ct.gov/dph',

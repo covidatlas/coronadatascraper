@@ -9,7 +9,7 @@ const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'TN',
-  country: 'USA',
+  country: 'iso1:US',
   sources: [
     {
       url: 'https://www.tn.gov/health/cedep',
