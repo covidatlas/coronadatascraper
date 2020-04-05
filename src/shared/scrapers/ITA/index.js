@@ -33,7 +33,7 @@ const countryLevelMap = {
 };
 
 const scraper = {
-  country: 'ITA',
+  country: 'iso1:IT',
   url: 'https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv',
   timeseries: true,
   aggregate: 'state',
