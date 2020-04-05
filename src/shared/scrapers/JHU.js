@@ -136,15 +136,6 @@ const scraper = {
         const row = cases[index];
 
         const recoveredData = this._getRecovered(recovered, row['Province/State'], row['Country/Region']);
-        if (row['Country/Region'] === row['Province/State']) {
-          // Axe incorrectly categorized data
-          delete row['Province/State'];
-        }
-
-        // These two incorrectly have a state set
-        if (row['Province/State'] === 'United Kingdom' || row['Province/State'] === 'France') {
-          row['Province/State'] = '';
-        }
 
         if (rules.isAcceptable(row, this._accept, this._reject)) {
           const caseData = {
