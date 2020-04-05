@@ -272,7 +272,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
               }
             }
           }
-        } else if (location.country === 'ESP') {
+        } else if (location.country === 'iso1:ES') {
           const feature = espGeoJson.features.find(d => d.properties.name === location.state);
           if (feature) {
             found = true;

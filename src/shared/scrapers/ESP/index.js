@@ -6,7 +6,7 @@ import * as parse from '../../lib/parse.js';
 const { looksLike } = datetime;
 
 const scraper = {
-  country: 'ESP',
+  country: 'iso1:ES',
   url: 'https://github.com/datadista/datasets/tree/master/COVID%2019',
   priority: 1,
   timeseries: true,
