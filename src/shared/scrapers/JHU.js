@@ -17,7 +17,6 @@ const scraper = {
   url: 'https://github.com/CSSEGISandData/COVID-19',
   timeseries: true,
   priority: -1,
-  country: '_JHU', // every location needs to have a valid country
   scraperTz: 'America/Los_Angeles',
   curators: [
     {
@@ -93,12 +92,12 @@ const scraper = {
       } else {
         const stateNames = stateNameByCountry[countryCode];
         if (!stateNames) {
-          console.warn(`  createIsoMap 1: ${state} needs to be added to stateMap`);
+          console.warn(`  ℹ️  createIsoMap 1: ${state} needs to be added to stateMap`);
           continue;
         }
         const clId = stateNames[state];
         if (!clId) {
-          console.warn(`  createIsoMap 2: ${state} needs to be added added to stateMap`);
+          console.warn(`  ℹ️  createIsoMap 2: ${state} needs to be added added to stateMap`);
         }
         isoMap[key] = clId;
       }
@@ -116,15 +115,24 @@ const scraper = {
       const isoMap = this._createIsoMap(isoMapCsv);
 
       const countries = [];
-      let date = Object.keys(cases[0]).pop();
 
-      if (process.env.SCRAPE_DATE) {
-        // Find old date
-        const customDate = datetime.getMDYY(new Date(process.env.SCRAPE_DATE));
-        if (!cases[0][customDate]) {
-          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
-        }
-        date = customDate;
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+      let scrapeDateString = datetime.getMDYY(new Date(scrapeDate));
+      const lastDateInTimeseries = new Date(`${Object.keys(cases[0]).pop()} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${Object.keys(cases[0])[4]} 12:00:00`);
+
+      if (scrapeDate > lastDateInTimeseries) {
+        console.error(
+          `  🚨 timeseries for JHU: SCRAPE_DATE ${datetime.getYYYYMD(
+            scrapeDate
+          )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
+        );
+        scrapeDate = lastDateInTimeseries;
+        scrapeDateString = datetime.getMDYY(scrapeDate);
+      }
+
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
       }
 
       for (let index = 0; index < cases.length; index++) {
@@ -135,19 +143,19 @@ const scraper = {
         const key = `${country}#${state}`;
         const clId = isoMap[key];
         if (!clId) {
-          console.warn(`Skipping ${country} ${state}`);
+          console.warn(`  ⚠️  Skipping ${country} ${state}`);
           continue;
         }
 
         const recoveredData = this._getRecovered(recovered, state, country);
 
         const caseData = {
-          cases: parse.number(row[date] || 0),
-          deaths: parse.number(deaths[index][date] || 0)
+          cases: parse.number(row[scrapeDateString] || 0),
+          deaths: parse.number(deaths[index][scrapeDateString] || 0)
         };
 
         if (recoveredData) {
-          const recoveredCount = recoveredData[date];
+          const recoveredCount = recoveredData[scrapeDateString];
           if (recoveredCount !== undefined) {
             caseData.recovered = parse.number(recoveredCount);
           }
@@ -168,6 +176,10 @@ const scraper = {
       }
 
       this._rollup(countries);
+
+      if (countries.length === 0) {
+        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
+      }
 
       return countries;
     }
