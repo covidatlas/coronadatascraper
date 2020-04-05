@@ -1,10 +1,19 @@
 # Getting started
 
-_Last updated: 2020-03-24_
+_Last updated: 2020-04-04_
+
+### Tools
+
+You'll need the following:
+
+* [node](https://nodejs.org/en/download/)
+* [yarn](https://classic.yarnpkg.com/en/docs/install/).
+
+Install them using your favorite method (`homebrew`, etc).
+
+### Repo
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
-
-Before following these instructions, install [yarn](https://classic.yarnpkg.com/en/docs/install/).
 
 ##### 1. Clone, init submodules, and add upstream
 
@@ -28,7 +37,11 @@ git submodule update
 ```
 yarn install
 ```
-Note: on a Mac (Catalina) simply running `brew install yarn` may give you an incompatible version of `node`. If that's the case, [install the n package](https://www.npmjs.com/package/n) and run, e.g. `n lts`.
+
+If you get an error message saying you have an incompatible version of
+`node`, you may need to change version.  You can use `n` to change
+node versions: [install](https://www.npmjs.com/package/n) it and run
+`n lts`.
 
 ##### 3. Run the scraper
 
@@ -57,7 +70,7 @@ To run the scrapers for today:
 yarn start
 ```
 
-### Run only one scraper
+#### Run only one scraper
 
 To scrape just one location, use `--location`/`-l`
 
@@ -71,7 +84,7 @@ Alternatively, you can pass a filename (without extension or directory name) to 
 yarn start --location "JHU"
 ```
 
-### Skipping a scraper
+#### Skipping a scraper
 
 To skip a scraper, use `--skip`/`-s`
 
@@ -79,7 +92,7 @@ To skip a scraper, use `--skip`/`-s`
 yarn start --skip "Ventura County, CA, USA"
 ```
 
-### Re-generating old data
+#### Re-generating old data
 
 To re-generate old data from cache (or timeseries), use `--date`/`-d`:
 
@@ -93,7 +106,7 @@ To output files without the date suffix, use `--outputSuffix`/`-o`:
 yarn start -d 2020-3-12 -o
 ```
 
-### Generating timeseries data
+#### Generating timeseries data
 
 To generate a timeseries for the entire history of the pandemic using cached data:
 
