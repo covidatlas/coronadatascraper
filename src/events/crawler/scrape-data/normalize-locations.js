@@ -5,6 +5,9 @@ import * as geography from '../../../shared/lib/geography/index.js';
 import fipsCodes from 'country-levels/fips.json';
 // eslint-disable-next-line
 import iso2Codes from 'country-levels/iso2.json';
+// eslint-disable-next-line
+import countryCodes from '../../../shared/vendor/country-codes.json';
+
 import log from '../../../shared/lib/log.js';
 
 const UNASSIGNED = '(unassigned)';
@@ -27,17 +30,19 @@ const normalizeLocations = args => {
   for (const location of locations) {
     if (!countryLevels.getIdFromLocation(location)) {
       // Normalize countries
-      location.country = geography.toISO3166Alpha3(location.country);
+      const isoAlpha2 = geography.toISO3166Alpha2(location.country);
+      if (isoAlpha2) {
+        location.country = `iso1:${isoAlpha2}`;
+      } else {
+        log.error('  ❌ Failed to find ISO-3166 alpha 2 code for %s', location.county);
+      }
 
-      if (location.country === 'USA') {
-        // Set country FIPS
-        location.country = 'iso1:US';
-
+      if (location.country === 'iso1:US') {
         // Normalize states
         location.state = geography.toUSStateAbbreviation(location.state);
 
         if (location.county && location.county !== UNASSIGNED) {
-          // Find county ID
+          // Find county FIPS ID
           if (Array.isArray(location.county)) {
             const aggregatedCounty = [];
             let fipsFound = true;
