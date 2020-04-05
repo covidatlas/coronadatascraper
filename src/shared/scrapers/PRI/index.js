@@ -2,7 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 
 const scraper = {
-  country: 'PRI',
+  country: 'iso1:PR',
   type: 'table',
   timeseries: false,
   url: 'http://salud.gov.pr/Pages/coronavirus.aspx',
