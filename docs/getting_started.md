@@ -2,20 +2,20 @@
 
 _Last updated: 2020-04-04_
 
-### Tools
+## Tools
 
 You'll need the following:
 
 * [node](https://nodejs.org/en/download/)
-* [yarn](https://classic.yarnpkg.com/en/docs/install/).
+* [yarn](https://classic.yarnpkg.com/en/docs/install/)
 
 Install them using your favorite method (`homebrew`, etc).
 
-### Repo
+## Repo
 
 First, [fork the repository](https://github.com/lazd/coronadatascraper/fork) so you're ready to contribute back.
 
-##### 1. Clone, init submodules, and add upstream
+### 1. Clone, init submodules, and add upstream
 
 Replace `yourusername` below with your Github username:
 
@@ -32,7 +32,7 @@ git submodule init
 git submodule update
 ```
 
-##### 2. Install dependencies
+### 2. Install dependencies
 
 ```
 yarn install
@@ -43,13 +43,13 @@ If you get an error message saying you have an incompatible version of
 node versions: [install](https://www.npmjs.com/package/n) it and run
 `n lts`.
 
-##### 3. Run the scraper
+### 3. Run the scraper
 
 ```
 yarn start
 ```
 
-##### 4. Pull from upstream often
+### 4. Pull from upstream often
 
 This gets you the latest scrapers, as well as the cache so we're not hammering servers.
 
@@ -62,7 +62,7 @@ Note: If you are encountering issues updating a submodule such as `Could not acc
 git submodule update --init --recursive
 ```
 
-### Run scrapers
+## Run scrapers
 
 To run the scrapers for today:
 
@@ -70,7 +70,7 @@ To run the scrapers for today:
 yarn start
 ```
 
-#### Run only one scraper
+### Run only one scraper
 
 To scrape just one location, use `--location`/`-l`
 
@@ -84,7 +84,7 @@ Alternatively, you can pass a filename (without extension or directory name) to 
 yarn start --location "JHU"
 ```
 
-#### Skipping a scraper
+### Skipping a scraper
 
 To skip a scraper, use `--skip`/`-s`
 
@@ -92,7 +92,7 @@ To skip a scraper, use `--skip`/`-s`
 yarn start --skip "Ventura County, CA, USA"
 ```
 
-#### Re-generating old data
+### Re-generating old data
 
 To re-generate old data from cache (or timeseries), use `--date`/`-d`:
 
@@ -106,7 +106,7 @@ To output files without the date suffix, use `--outputSuffix`/`-o`:
 yarn start -d 2020-3-12 -o
 ```
 
-#### Generating timeseries data
+### Generating timeseries data
 
 To generate a timeseries for the entire history of the pandemic using cached data:
 
@@ -126,7 +126,7 @@ This can be combined with `-l` to test a single scraper:
 yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
 ```
 
-### Tests
+## Tests
 
 We use [Tape](https://github.com/substack/tape).
 
@@ -137,7 +137,7 @@ We use [Tape](https://github.com/substack/tape).
     node path/to/file.js
 
 
-### Building the website
+## Building the website
 
 To build the website and start a development server at http://localhost:3000/:
 
