@@ -5,6 +5,7 @@ import { NotImplemented } from '../../lib/errors.js';
 import log from '../../lib/log.js';
 
 const scraper = {
+  certValidation: false,
   country: 'UKR',
   sources: [
     {
@@ -36,7 +37,7 @@ const scraper = {
       this.url += date;
       // Use functions from the fetch module, which does all the caching for you.
       log(`Gonna fetch from ${this.url}`);
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this.url, false, { disableSSL: true });
       // I personally like to check that this isn't empty, otherwise the console
       // may have a cryptic error message like "$ is not a function"
       // (you'll see that one often);
