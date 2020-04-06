@@ -10,6 +10,10 @@ import espGeoJson from '../vendor/esp.json';
 
 const DEBUG = false;
 
+// sets the caching strategy of the geo-tz library to store data in memory
+// without an expiring timeout
+geoTz.setCache({ expires: 0 });
+
 function cleanProps(obj) {
   if (obj.wikipedia === -99) {
     delete obj.wikipedia;
