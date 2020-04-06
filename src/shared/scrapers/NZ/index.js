@@ -29,8 +29,8 @@ const scraper = {
   async scraper() {
     const data = {};
     const $ = await fetch.page(this.url);
-    const $table = $('h2:contains("Summary") + table tbody');
-    const $trs = $table.find('tr');
+    const $table = $('h2:contains("Summary") + table');
+    const $trs = $table.find('tbody tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
       const key = getKey({ label: $tr.find('th').text(), labelFragmentsByKey });
