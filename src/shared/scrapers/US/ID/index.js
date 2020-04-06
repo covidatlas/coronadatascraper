@@ -12,10 +12,9 @@ const scraper = {
   sources: [
     {
       name: 'IDHW',
-      description: 'Idaho Department of Health and Welfare'
+      description: 'Idaho State Government'
     }
   ],
-  url: 'https://coronavirus.idaho.gov',
   type: 'table',
   aggregate: 'county',
 
@@ -66,49 +65,127 @@ const scraper = {
     'Washington County'
   ],
 
-  async scraper() {
-    const $ = await fetch.page(this.url);
+  scraper: {
+    '0': async function() {
+      this.url = 'https://coronavirus.idaho.gov';
+      const $ = await fetch.page(this.url);
 
-    const $th = $('th:contains("Public Health District")');
-    const $table = $th.closest('table');
-    const $tds = $table.find('td');
+      const $th = $('th:contains("Public Health District")');
+      const $table = $th.closest('table');
+      const $tds = $table.find('td');
 
-    let counties = [];
+      let counties = [];
 
-    let county = null;
-    let cases = 0;
-    let deaths = 0;
+      let county = null;
+      let cases = 0;
+      let deaths = 0;
 
-    $tds.each((index, td) => {
-      const $td = $(td);
-      const columnNum = parse.number($td.attr('class').slice(-1));
+      $tds.each((index, td) => {
+        const $td = $(td);
+        const columnNum = parse.number($td.attr('class').slice(-1));
 
-      if (columnNum === 2) {
-        county = geography.addCounty(parse.string($td.text()));
-      } else if (columnNum === 3) {
-        cases = parse.number($td.text());
-      } else if (columnNum === 4) {
-        deaths = parse.number($td.text());
+        if (columnNum === 2) {
+          county = geography.addCounty(parse.string($td.text()));
+        } else if (columnNum === 3) {
+          cases = parse.number($td.text());
+        } else if (columnNum === 4) {
+          deaths = parse.number($td.text());
 
-        // There is no Placer County in Idaho?!
-        if (county !== 'TOTAL County' && county !== 'Placer County') {
-          counties.push({
-            county,
-            cases,
-            deaths
-          });
+          // There is no Placer County in Idaho?!
+          if (county !== 'TOTAL County' && county !== 'Placer County') {
+            counties.push({
+              county,
+              cases,
+              deaths
+            });
+          }
+
+          county = null;
+          cases = 0;
+          deaths = 0;
         }
+      });
 
-        county = null;
-        cases = 0;
-        deaths = 0;
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-04-05': async function() {
+      this.url =
+        'https://public.tableau.com/views/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y&%3AbootstrapWhenNotified=true';
+
+      // Get the Tableau chart
+      const $ = await fetch.page(this.url);
+
+      // Pull out our session id from the json stuffed inside the textarea
+      const textArea = $('textarea#tsConfigContainer').text();
+      const j = JSON.parse(textArea);
+      const sessionId = j.sessionid;
+
+      // Get the blob of psuedo-json using our session ID
+      const url = `https://public.tableau.com/vizql/w/DPHIdahoCOVID-19Dashboard_V2/v/DPHCOVID19Dashboard2/bootstrapSession/sessions/${sessionId}`;
+      // For the specific sheet we need
+      const sheet = 'County%20Case%20Map';
+
+      // POST
+      const options = { method: 'post', args: { sheet_id: sheet } };
+      let data = await fetch.raw(url, undefined, options);
+
+      // Now regex out the chunk of json we need
+      const re = /^\d+;({.*})\d+;({.*})$/;
+      data = data.match(re);
+      data = JSON.parse(data[2]);
+
+      // Grovel through it to find...
+      const pmm = data.secondaryInfo.presModelMap;
+
+      // ... the arrays which hold integer and string values
+      const values = pmm.dataDictionary.presModelHolder.genDataDictionaryPresModel.dataSegments['0'].dataColumns;
+
+      let integers;
+      let strings;
+      for (const kind of values) {
+        if (kind.dataType === 'integer') {
+          integers = kind.dataValues;
+        }
+        if (kind.dataType === 'cstring') {
+          strings = kind.dataValues;
+        }
       }
-    });
+      integers.push(0); // stick a 0 on the end of the integer list
 
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
+      // console.log(integers);
+      // console.log(strings);
 
-    return counties;
+      // ... the indicies into those arrays for list of counties and cases
+      const columns =
+        pmm.vizData.presModelHolder.genPresModelMapPresModel.presModelMap['County Case Map'].presModelHolder
+          .genVizDataPresModel.paneColumnsData.paneColumnsList[0].vizPaneColumns;
+
+      const countyIdx = columns[1].aliasIndices;
+      // Negative indicies are meant to specify the value 0, so change the index
+      // to be the 0 we stuck on the end of the integer list
+      const countIdx = columns[2].aliasIndices.map(x => (x < 0 ? integers.length - 1 : x));
+
+      // console.log(countyIdx);
+      // console.log(countIdx);
+
+      // Ok, easy now. Just rip through the list indexing into the strings & integers
+      let counties = [];
+      for (let i = 0; i < countyIdx.length; i += 1) {
+        const county = geography.addCounty(strings[countyIdx[i]]);
+        const cases = integers[countIdx[i]];
+        counties.push({
+          county,
+          cases
+        });
+      }
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    }
   }
 };
 
