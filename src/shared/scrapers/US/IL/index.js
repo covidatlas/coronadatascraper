@@ -6,7 +6,7 @@ import datetime from '../../../lib/datetime/index.js';
 import * as rules from '../../../lib/rules.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const UNASSIGNED = '(unassigned)';
 
 const scraper = {
   state: 'IL',
@@ -42,6 +42,9 @@ const scraper = {
     const counties = [];
     const cookCounty = { county: 'Cook County', cases: 0, deaths: 0, tested: 0 };
     for (const county of data.characteristics_by_county.values) {
+      if (county.County === 'Unassigned') {
+        county.County = UNASSIGNED;
+      }
       const output = {
         county: geography.addCounty(county.County),
         cases: parse.number(county.confirmed_cases),
