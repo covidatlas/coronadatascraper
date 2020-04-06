@@ -7,7 +7,6 @@ import getKey from '../../utils/get-key.js';
 const labelFragmentsByKey = [
   { cases: 'confirmed case' },
   { discard: 'probable case' },
-  { discard: 'probable case' },
   { hospitalized: 'cases in hospital' },
   { recovered: 'recovered cases' },
   { deaths: 'deaths' }
