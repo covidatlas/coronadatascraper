@@ -1,31 +1,17 @@
-// import assert from 'assert';
+import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
-// import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
+import getKey from '../../utils/get-key.js';
 
-const countryLevelMap = {
-  Auckland: 'iso2:NZ-AUK',
-  'Bay of Plenty': 'iso2:NZ-BOP',
-  Canterbury: 'iso2:NZ-CAN',
-  // 'Capital and Coast': 'iso2:NZ-?',
-  // 'Counties Manukau': 'iso2:NZ-?',
-  "Hawke's Bay": 'iso2:NZ-HKB',
-  // 'Hutt Valley': 'iso2:NZ-?',
-  // Lakes: 'iso2:NZ-?',
-  // MidCentral: 'iso2:NZ-?',
-  // 'Nelson Marlborough': 'iso2:NZ-?',
-  Northland: 'iso2:NZ-NTL',
-  // 'South Canterbury': 'iso2:NZ-?',
-  // Southern: 'iso2:NZ-?',
-  // Tairāwhiti: 'iso2:NZ-?',
-  Taranaki: 'iso2:NZ-TKI',
-  Waikato: 'iso2:NZ-WKO',
-  // Wairarapa: 'iso2:NZ-?',
-  // Waitemata: 'iso2:NZ-?',
-  'West Coast': 'iso2:NZ-WTC'
-  // Whanganui: 'iso2:NZ-?'
-};
+const labelFragmentsByKey = [
+  { cases: 'confirmed case' },
+  { discard: 'probable case' },
+  { discard: 'probable case' },
+  { hospitalized: 'cases in hospital' },
+  { recovered: 'recovered cases' },
+  { deaths: 'deaths' }
+];
 
 const scraper = {
   aggregate: 'state',
@@ -36,35 +22,25 @@ const scraper = {
     {
       description: 'New Zealand Government Ministry of Health',
       name: 'New Zealand Government Ministry of Health',
-      url: 'https://www.health.gov.au/'
+      url: 'https://www.health.govt.nz'
     }
   ],
   type: 'table',
   url:
     'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases',
   async scraper() {
-    const states = [];
+    const data = {};
     const $ = await fetch.page(this.url);
-    const $tableBody = $('table > caption:contains("Total cases by DHB") + thead + tbody');
-    const $trs = $tableBody.find('tr:not(:last-child)');
+    const $table = $('h2:contains("Summary") + table tbody');
+    const $trs = $table.find('tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const state = parse.string($tr.find('td:first-child').text());
-      const cases = parse.number($tr.find('td:nth-child(2)').text());
-
-      const stateMapped = countryLevelMap[state];
-      // assert(stateMapped, `${state} not found in countryLevelMap`);
-
-      states.push({
-        state: stateMapped,
-        cases
-      });
+      const key = getKey({ label: $tr.find('th').text(), labelFragmentsByKey });
+      const value = $tr.find('td:first-of-type').text();
+      data[key] = parse.number(value);
     });
-    // const summedData = transform.sumData(states);
-    // states.push(summedData);
-
-    // assert(summedData > 0, 'Total is not reasonable');
-    return states;
+    assert(data.cases > 0, 'Cases is not reasonable');
+    return data;
   }
 };
 
