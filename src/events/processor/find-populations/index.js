@@ -75,10 +75,10 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
   async function getPopulation(location) {
     let population = null;
 
-    let city = location.city && location.city.split(':').pop();
-    let county = location.county && location.county.split(':').pop();
-    let state = location.state && location.state.split(':').pop();
-    let country = location.country && location.country.split(':').pop();
+    const city = location.city && location.city.split(':').pop();
+    const county = location.county && location.county.split(':').pop();
+    const state = location.state && location.state.split(':').pop();
+    const country = location.country && location.country.split(':').pop();
 
     if (city) {
       // Use either city by country or city by state
