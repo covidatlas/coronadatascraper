@@ -11,10 +11,6 @@ test('Module exists', t => {
 
 test('Geography functions', t => {
   t.plan(5);
-  const friendly = 'France';
-  const converted = 'iso1:FR';
-  t.equal(geography.toISO3166Alpha3(friendly), converted, `${friendly} converted to ${converted}`);
-
   let counties = [
     {
       county: 'a',
