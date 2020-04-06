@@ -1,0 +1,22 @@
+﻿[
+  { "state": "iso2:ES-AN", "date": "2020-03-25", "cases": 3010, "deaths": 113, "recovered": 71 },
+  { "state": "iso2:ES-AR", "date": "2020-03-25", "cases": 907, "deaths": 40, "recovered": 4 },
+  { "state": "iso2:ES-AS", "date": "2020-03-25", "cases": 779, "deaths": 25, "recovered": 35 },
+  { "state": "iso2:ES-IB", "date": "2020-03-25", "cases": 562, "deaths": 13, "recovered": 28 },
+  { "state": "iso2:ES-CN", "date": "2020-03-25", "cases": 657, "deaths": 21, "recovered": 15 },
+  { "state": "iso2:ES-CB", "date": "2020-03-25", "cases": 510, "deaths": 14, "recovered": 12 },
+  { "state": "iso2:ES-CM", "date": "2020-03-25", "cases": 2780, "deaths": 263, "recovered": 71 },
+  { "state": "iso2:ES-CL", "date": "2020-03-25", "cases": 2940, "deaths": 165, "recovered": 213 },
+  { "state": "iso2:ES-CT", "date": "2020-03-25", "cases": 9937, "deaths": 516, "recovered": 1274 },
+  { "state": "iso2:ES-CE", "date": "2020-03-25", "cases": 9, "deaths": 0, "recovered": 0 },
+  { "state": "iso2:ES-VC", "date": "2020-03-25", "cases": 2616, "deaths": 143, "recovered": 44 },
+  { "state": "iso2:ES-EX", "date": "2020-03-25", "cases": 742, "deaths": 39, "recovered": 8 },
+  { "state": "iso2:ES-GA", "date": "2020-03-25", "cases": 1653, "deaths": 27, "recovered": 25 },
+  { "state": "iso2:ES-MD", "date": "2020-03-25", "cases": 14597, "deaths": 1825, "recovered": 3031 },
+  { "state": "iso2:ES-ML", "date": "2020-03-25", "cases": 38, "deaths": 0, "recovered": 0 },
+  { "state": "iso2:ES-MC", "date": "2020-03-25", "cases": 477, "deaths": 5, "recovered": 4 },
+  { "state": "iso2:ES-NC", "date": "2020-03-25", "cases": 1197, "deaths": 33, "recovered": 23 },
+  { "state": "iso2:ES-PV", "date": "2020-03-25", "cases": 3271, "deaths": 155, "recovered": 466 },
+  { "state": "iso2:ES-RI", "date": "2020-03-25", "cases": 928, "deaths": 37, "recovered": 43 },
+  { "cases": 47610, "recovered": 5367, "deaths": 3434 }
+]

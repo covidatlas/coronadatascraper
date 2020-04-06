@@ -1,16 +1,24 @@
 ---
-name: New scraper
-about: Add a new scraper
-title: Scraper for [LOCATION_HERE]
+name: "📥 New scraper source"
+about: Provide a source for a new scraper
+title: Add scraper for [LOCATION_HERE]
 labels: scraper
 assignees: ''
 
 ---
 
 
-**The source**
+## Location name
+<!-- Name here, e.g., "County x, CA, USA" -->
 
-Please ensure the source meets our [source guidelines](../../tree/master/docs/sources.md#criteria-for-sources).  Thank you!
+## Source URL
+<!-- URL -->
 
-* **Full location name: ** [Name here, e.g., "County x, CA, USA")]
-* **Source URL: ** [URL]
+## Notes/comments
+<!-- Anything else we should know about? -->
+
+<!--
+  Please ensure the source meets our source guidelines.  See
+  ../../tree/master/docs/sources.md#criteria-for-sources
+  Thank you!
+-->

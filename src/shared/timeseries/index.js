@@ -207,7 +207,7 @@ async function generateTimeseries(options = {}) {
     curDate = new Date(options.date);
   }
   while (curDate <= endDate) {
-    dates.push(datetime.getYYYYMD(curDate));
+    dates.push(datetime.getYYYYMMDD(curDate));
     curDate.setDate(curDate.getDate() + 1);
   }
 
@@ -217,11 +217,11 @@ async function generateTimeseries(options = {}) {
   let featureCollection;
   for (const date of dates) {
     const data = await runCrawler({
+      ...options,
       date: date === today ? undefined : date,
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
-      writeData: false,
-      ...options
+      writeData: false
     });
 
     if (date === lastDate) {
