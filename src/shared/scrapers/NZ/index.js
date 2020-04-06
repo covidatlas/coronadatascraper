@@ -14,7 +14,6 @@ const labelFragmentsByKey = [
 ];
 
 const scraper = {
-  aggregate: 'state',
   country: 'iso1:NZ',
   maintainer: [maintainers.camjc],
   priority: 1,
