@@ -1,8 +1,10 @@
 import * as fetch from '../../lib/fetch/index.js';
 import datetime from '../../lib/datetime/index.js';
 import maintainers from '../../lib/maintainers.js';
-import { NotImplemented } from '../../lib/errors.js';
+// import { NotImplemented } from '../../lib/errors.js';
 import log from '../../lib/log.js';
+import * as geography from '../../lib/geography/index.js';
+import * as parse from '../../lib/parse.js';
 
 const scraper = {
   certValidation: false,
@@ -22,9 +24,8 @@ const scraper = {
   maintainers: [maintainers.you], // create an entry in maintainers.js
   scraper: {
     '0': async function() {
-      // We need to generate the URL with the date we want to scrape.
+      const regions = [];
       let date = process.env.SCRAPE_DATE;
-      // but we need to be sure that it's in the right format.
       date = datetime.getYYYYMMDD(date);
       // Let's see what we've done so far?
       // Note the angled single quote, which allows easy formatting:
@@ -33,7 +34,6 @@ const scraper = {
       // These types of messages are for development only; you'd go remove them
       // all after.
       log(`The date is ${date}`);
-      // confirmed, it's what we want:
       this.url += date;
       // Use functions from the fetch module, which does all the caching for you.
       log(`Gonna fetch from ${this.url}`);
@@ -48,7 +48,17 @@ const scraper = {
       }
       // Here's where you'd parse the data and return what it needs to have.
       // But we won't do anything.
-      throw new NotImplemented(`UKR scraper is cache-only for this date.`);
+      // throw new NotImplemented(`UKR scraper is cache-only for this date.`);
+      for (const field of data.ukraine) {
+        regions.push({
+          county: geography.addCounty(field.label.en, 'region'),
+          cases: parse.number(field.confirmed),
+          deaths: parse.number(field.deaths),
+          recovered: parse.number(field.recovered)
+        });
+      }
+      log(regions);
+      return regions;
     }
   }
 };
