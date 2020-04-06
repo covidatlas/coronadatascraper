@@ -2,7 +2,7 @@ import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
-import getKey from '../_shared/get-key.js';
+import getKey from '../../../utils/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
 const labelFragmentsByKey = [
