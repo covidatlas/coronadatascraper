@@ -19,6 +19,7 @@
     "publishSite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
+    "fetchOnly": "node src/shared/fetchOnly.js",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",

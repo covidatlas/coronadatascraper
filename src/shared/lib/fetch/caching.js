@@ -5,6 +5,7 @@
 
 import path from 'path';
 import crypto from 'crypto';
+import fsBuiltIn from 'fs';
 
 import join from '../join.js';
 import datetime from '../datetime/index.js';
@@ -62,13 +63,31 @@ export const getCachedFilePath = (url, type, date = false) => {
   If we are able to fetch this URL (because it is a timeseries or we are requesting today's data), the function
   returns `CACHE_MISS`.
 
+  * @param {*} scraper the scraper requesting the file
   * @param {string} url URL of the cached resource
   * @param {string} type type of the cached resource
   * @param {*} date the date associated with this resource, or false if a timeseries data
   * @param {string} encoding for the resource to access, default to utf-8
 */
-export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
+export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
+  const cacheExists = await fs.exists(filePath);
+
+  const cacheCheck = {
+    scraperPath: scraper._filepath,
+    date,
+    requestedUrl: url,
+    cacheFilePath: filePath,
+    cacheFileExists: cacheExists,
+    type
+  };
+
+  // Write data to aid in cache migration.
+  const newData = `${JSON.stringify(cacheCheck, null, 2)},\n`;
+  fsBuiltIn.appendFile(join(process.cwd(), 'scripts', 'cacheMigration', 'cacheCalls.txt'), newData, err => {
+    if (err) throw err;
+  });
+  // console.error(cacheCheck);
 
   if (await fs.exists(filePath)) {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
