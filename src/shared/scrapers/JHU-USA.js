@@ -121,7 +121,7 @@ const scraper = {
         regions.push(transform.sumData(locations, { state }));
       }
 
-      // remove unassigned counties one we summed them up
+      // remove unassigned counties once we have summed them up
       regions = regions.filter(r => r.county !== UNASSIGNED);
 
       if (regions.length === 0) {
