@@ -71,7 +71,7 @@ test('Scraper tests', async t => {
     // eslint-disable-next-line
     const scraperObj = imports(join(testDir, '..', 'index.js'));
 
-    if (scraperObj.state === 'AL' && scraperObj.country === 'USA') {
+    if (scraperObj.state === 'AL' && scraperObj.country === 'iso1:US') {
       // Honestly these linter rules are absurd
       // eslint-disable-next-line
       scraperObj.scraper = scraperObj.scraper[0];

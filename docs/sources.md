@@ -175,7 +175,7 @@ Here's the scraper for Indiana that gets data from a CSV:
 ```javascript
   {
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
-    country: 'USA',
+    country: 'iso1:US',
     state: 'IN',
     scraper: async function() {
       let data = await fetch.csv(this.url);
@@ -205,7 +205,7 @@ Here's the scraper for Oregon that pulls data from a HTML table:
 ```javascript
   {
     state: 'OR',
-    country: 'USA',
+    country: 'iso1:US',
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
     scraper: async function() {
       let counties = [];
@@ -244,7 +244,7 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
 ```javascript
 {
   state: 'LA',
-  country: 'USA',
+  country: 'iso1:US',
   aggregate: 'county',
   _countyMap: { 'La Salle Parish': 'LaSalle Parish' },
   scraper: {
