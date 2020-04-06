@@ -42,11 +42,14 @@ const scraper = {
     const counties = [];
     const cookCounty = { county: 'Cook County', cases: 0, deaths: 0, tested: 0 };
     for (const county of data.characteristics_by_county.values) {
+      let countyName = county.County;
       if (county.County === 'Unassigned') {
-        county.County = UNASSIGNED;
+        countyName = UNASSIGNED;
+      } else {
+        countyName = geography.addCounty(countyName);
       }
       const output = {
-        county: geography.addCounty(county.County),
+        county: countyName,
         cases: parse.number(county.confirmed_cases),
         deaths: parse.number(county.deaths || 0),
         tested: parse.number(county.total_tested)
