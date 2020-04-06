@@ -187,10 +187,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
     locationLoop: for (const location of locations) {
       let found = false;
 
-      let city = location.city && location.city.split(':').pop();
-      let county = location.county && location.county.split(':').pop();
-      let state = location.state && location.state.split(':').pop();
-      let country = location.country && location.country.split(':').pop();
+      // const city = location.city && location.city.split(':').pop();
+      const county = location.county && location.county.split(':').pop();
+      const state = location.state && location.state.split(':').pop();
+      const country = location.country && location.country.split(':').pop();
 
       // Apply transforms
       if (locationTransforms[state]) {
@@ -286,8 +286,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         } else {
           // Check if the location exists within our provinces
           for (const feature of provinceData.features) {
-            const countryMatches =
-              country === feature.properties.gu_a3 || country === feature.properties.iso_a2;
+            const countryMatches = country === feature.properties.gu_a3 || country === feature.properties.iso_a2;
             const stateMatches = locationPropertyMatchesFeature(state, feature);
             const countyMatches = locationPropertyMatchesFeature(county, feature);
             if (countryMatches && (stateMatches || countyMatches)) {
@@ -323,7 +322,11 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         // Check if the location exists within our countries
         for (const feature of countryData.features) {
           // Find by full name
-          if (country === feature.properties.adm0_a3 || country === feature.properties.iso_a2 || country === feature.properties.gu_a3) {
+          if (
+            country === feature.properties.adm0_a3 ||
+            country === feature.properties.iso_a2 ||
+            country === feature.properties.gu_a3
+          ) {
             found = true;
             storeFeature(feature, location);
             break;
