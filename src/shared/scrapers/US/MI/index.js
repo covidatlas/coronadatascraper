@@ -130,7 +130,7 @@ const scraper = {
 
       let cases = parse.number(parse.string($tr.find('> *:nth-child(2)').text()) || 0);
       let deaths = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
-      const county = geography.addCounty(parse.string($tr.find('> *:first-child').text()));
+      const county = geography.getCounty(parse.string($tr.find('> *:first-child').text()), 'MI');
 
       // Remember these to add them to Wayne County instead
       if (county === 'Detroit City County') {
@@ -143,12 +143,7 @@ const scraper = {
         deaths += detroitDeaths;
       }
 
-      if (
-        county === 'Out of State County' ||
-        county === 'Other County' ||
-        county === 'Not Reported County' ||
-        county === 'Unknown County'
-      ) {
+      if (county === 'Out of State' || county === 'Other' || county === 'Not Reported' || county === 'Unknown') {
         unassignedObj.cases += cases;
         unassignedObj.deaths += deaths;
         return;
@@ -158,7 +153,15 @@ const scraper = {
         return;
       }
 
-      // console.log(county, cases, deaths);
+      if (county === 'Detroit City') {
+        counties.push({
+          city: county,
+          county: 'Wayne County',
+          cases,
+          deaths
+        });
+        return;
+      }
 
       counties.push({
         county,
