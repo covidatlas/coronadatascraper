@@ -4,6 +4,13 @@ import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
 
+/**
+ * Sometimes the AUS government doesn't sum numbers properly, so give them 10% slack.
+ * @param {number} computed
+ * @param {number} scraped
+ */
+const areNumbersInTheBallpark = (computed, scraped) => computed * 0.9 < scraped && computed * 1.1 > scraped;
+
 const countryLevelMap = {
   'Australian Capital Territory': 'iso2:AU-ACT',
   'New South Wales': 'iso2:AU-NSW',
@@ -54,7 +61,10 @@ const scraper = {
     const casesFromTotalRow = parse.number($table.find('tbody > tr:last-child > td:last-child').text());
 
     assert(casesFromTotalRow > 0, 'Total row is not reasonable');
-    assert.equal(summedData.cases, casesFromTotalRow, 'Summed total is not equal to number in total row');
+    assert(
+      areNumbersInTheBallpark(summedData.cases, casesFromTotalRow),
+      'Summed total is not anywhere close to number in total row'
+    );
     return states;
   }
 };
