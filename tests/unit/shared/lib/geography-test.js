@@ -10,7 +10,7 @@ test('Module exists', t => {
 });
 
 test('Geography functions', t => {
-  t.plan(5);
+  t.plan(4);
   let counties = [
     {
       county: 'a',
