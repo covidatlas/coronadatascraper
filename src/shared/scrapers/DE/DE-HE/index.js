@@ -9,9 +9,7 @@ const scraper = {
   _rowToResult: row => {
     return {
       cases: parse.number(row[`${scraper.state.slice(5)}_cases`]),
-      deaths: parse.number(row[`${scraper.state.slice(5)}_deaths`]),
-      coordinates: [9.162, 50.652],
-      population: 6.24 * 10 ** 6
+      deaths: parse.number(row[`${scraper.state.slice(5)}_deaths`])
     };
   }
 };
