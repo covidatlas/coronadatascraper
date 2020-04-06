@@ -10,8 +10,10 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
     const clId = countryLevels.getIdFromLocation(location);
     if (clId) {
       idsFound++;
-      await countryLevels.transformLocationIds(location);
     }
+
+    // Transform no matter what
+    await countryLevels.transformLocationIds(location);
 
     if (!location.name) {
       // Store location name if not provided
@@ -21,7 +23,7 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
     // Store level
     location.level = geography.getLocationGranularityName(location);
   }
-  log('✅ Transformed IDs for %d out of %d locations', idsFound, Object.keys(locations).length);
+  log('✅ Found direct matches for %d out of %d locations', idsFound, Object.keys(locations).length);
 
   report.transformIds = {
     idsResolved: idsFound

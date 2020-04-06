@@ -14,7 +14,7 @@ export const calculateScraperTz = async location => {
 
   const { country, state } = location;
 
-  if (country === 'USA') {
+  if (country === 'iso1:US') {
     assert(!usStates[state], `calculateScraperTz: Long form of state name used: ${state}, ${location._path}`);
     const stateCode = `US-${state}`;
     const stateData = iso2Codes[stateCode];
