@@ -66,11 +66,10 @@ const scraper = {
     '2020-03-25': async function() {
       // 2020-3-24 is the last day this was updated
       this.type = 'csv';
-      this.url = await fetch.getArcGISCSVURL(
-        '',
-        'c34e541dd8b742d993159dbebb094d8b',
-        'MD_COVID19_Case_Counts_by_County'
-      );
+      const serverNumber = '';
+      const dashboardId = 'c34e541dd8b742d993159dbebb094d8b';
+      const layerName = 'MD_COVID19_Case_Counts_by_County';
+      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
 
       const data = await fetch.csv(this.url);
       const counties = [];

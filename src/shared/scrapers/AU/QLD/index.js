@@ -12,8 +12,8 @@ const labelFragmentsByKey = [
   { discard: 'active' } // Active will be calculated.
 ];
 
-async function getCurrentArticlePage(listUrl) {
-  const $ = await fetch.page(listUrl);
+async function getCurrentArticlePage(obj) {
+  const $ = await fetch.page(obj.url);
   const anchors = $('#content h3:first-of-type > a');
   const currentArticleUrl = anchors[0].attribs.href;
   return fetch.page(currentArticleUrl);
@@ -35,7 +35,7 @@ const scraper = {
   url: 'https://www.health.qld.gov.au/news-events/doh-media-releases',
   scraper: {
     '0': async function() {
-      const $ = await getCurrentArticlePage(this.url);
+      const $ = await getCurrentArticlePage(this);
       const paragraph = $('#content h2:first-of-type + p').text();
       const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
       this.type = 'paragraph';
@@ -44,7 +44,7 @@ const scraper = {
       };
     },
     '2020-03-24': async function() {
-      const $ = await getCurrentArticlePage(this.url);
+      const $ = await getCurrentArticlePage(this);
       const $table = $('#content table');
       const $totalRow = $table.find('tbody > tr:last-child');
       const data = {
