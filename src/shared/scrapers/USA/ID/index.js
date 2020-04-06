@@ -114,10 +114,9 @@ const scraper = {
     '2020-04-05': async function() {
       this.url =
         'https://public.tableau.com/views/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y&%3AbootstrapWhenNotified=true';
-      this.headless = true;
 
       // Get the Tableau chart
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.page(this.url);
 
       // Pull out our session id from the json stuffed inside the textarea
       const textArea = $('textarea#tsConfigContainer').text();
