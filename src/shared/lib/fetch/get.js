@@ -43,7 +43,7 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
     cookies: undefined,
     headers: undefined,
     method: 'get',
-    args: {},
+    args: undefined,
     ...options
   };
 
@@ -69,20 +69,13 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
 
       // TODO @AWS: if AWS infra get from endpoint instead of needle
 
-      // Errors we get here have the tendency of crashing the whole crawler
-      // with no ability for us to catch them. Let's hear what these errors have to say,
-      // and throw an error later down that won't bring the whole process down.
       let errorMsg = '';
-      let response;
-      if (method === 'get') {
-        response = await needle('get', url, { cookies, headers }).catch(err => {
-          errorMsg = err.toString();
-        });
-      } else {
-        response = await needle('post', url, args, { cookies, headers }).catch(err => {
-          errorMsg = err.toString();
-        });
-      }
+      const response = await needle(method, url, args, { cookies, headers }).catch(err => {
+        // Errors we get here have the tendency of crashing the whole crawler
+        // with no ability for us to catch them. Let's hear what these errors have to say,
+        // and throw an error later down that won't bring the whole process down.
+        errorMsg = err.toString();
+      });
 
       if (disableSSL) {
         delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
