@@ -338,12 +338,15 @@ div.spectrum-SideNav-itemLink:hover {
   box-sizing: border-box;
 }
 
-#mapControl {
+.cds-MapControl {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-style: solid;
   border-width: 1px;
   border-color: var(--spectrum-global-color-gray-50);
   border-radius: 4px;
+  padding: 4px;
 }
 
 /* Reports */

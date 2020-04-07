@@ -13,7 +13,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2N
 const data = {};
 
 let map;
-let slider;
 
 let currentType = 'cases';
 let currentDate;
@@ -162,10 +161,6 @@ window.updateMap = updateMap;
 function populateMap() {
   initData();
 
-  slider = document.querySelector('.cds-Map-dateSlider');
-  slider.max = Object.keys(data.timeseries).length - 1;
-  slider.value = Object.keys(data.timeseries).length - 1;
-
   /**
    * @param {{ name: string; population: string?; }} location
    * @param {{ cases: number; deaths:number?; recovered:number?; active:number?; }} locationData
@@ -282,28 +277,19 @@ function populateMap() {
     },
     labelLayerId
   );
+
+  // Level Toggle
   class ToggleDataLevelControl {
     onAdd(map) {
-      this._map = map;
       this._container = document.createElement('div');
-      this._container.id = 'mapControl';
-      this._container.className = 'mapboxgl-ctrl';
+      this._container.className = 'mapboxgl-ctrl cds-MapControl';
       this._container.innerHTML = `
-        <div class="mapToggleInput">
-          <label for="showStates">Show Countries</label>
-          <input type="checkbox" name="country" checked>
-        </div>
-        <div class="mapToggleInput">
-          <label for="showStates">Show States</label>
-          <input type="checkbox" name="state" checked>
-        </div>
-        <div class="mapToggleInput">
-          <label for="showCounties">Show Counties</label>
-          <input type="checkbox" name="county" checked>
-        </div>
+        <label class="cds-MapToggle"><input type="checkbox" name="country" checked> Show Countries</label>
+        <label class="cds-MapToggle"><input type="checkbox" name="state" checked> Show States</label>
+        <label class="cds-MapToggle"><input type="checkbox" name="county" checked> Show Counties</label>
         `;
 
-      this._container.addEventListener('change', function(evt) {
+      this._container.addEventListener('change', evt => {
         const { target } = evt;
         const visibility = target.checked ? 'visible' : 'none';
         const { name } = evt.target;
@@ -315,11 +301,36 @@ function populateMap() {
 
     onRemove() {
       this._container.parentNode.removeChild(this._container);
-      this._map = undefined;
     }
   }
 
   map.addControl(new ToggleDataLevelControl(), 'top-left');
+
+  // Date selector
+  class DateSelector {
+    onAdd() {
+      const max = Object.keys(data.timeseries).length - 1;
+
+      this._container = document.createElement('div');
+      this._container.className = 'mapboxgl-ctrl cds-MapControl';
+      this._container.innerHTML = `
+        <input type="range" min="0" max="${max}" value="${max}" step="1" class="cds-Map-dateSlider" aria-label="Day number">
+      `;
+
+      this._container.addEventListener('input', evt => {
+        const { target } = evt;
+        updateMap(Object.keys(data.timeseries)[target.value]);
+      });
+
+      return this._container;
+    }
+
+    onRemove() {
+      this._container.parentNode.removeChild(this._container);
+    }
+  }
+
+  map.addControl(new DateSelector(), 'top-right');
 
   setData();
 
@@ -383,10 +394,6 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
-
-  slider.addEventListener('input', () => {
-    updateMap(Object.keys(data.timeseries)[slider.value]);
-  });
 
   updateMap();
 }
