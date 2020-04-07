@@ -3,8 +3,8 @@ const imports = require('esm')(module);
 const request = imports('request');
 const yargs = imports('yargs');
 
-const fs = imports('../src/events/crawler/lib/fs.js');
-const datetime = imports('../src/events/crawler/lib/datetime.js');
+const fs = imports('../src/shared/lib/fs.js');
+const datetime = imports('../src/shared/lib/datetime/index.js').default;
 
 const { argv } = yargs
   .scriptName('node ./scripts/statusSlackBot.js')
@@ -19,12 +19,14 @@ const { argv } = yargs
 const generateReport = async report => {
   const { sources, scrape, findFeatures, findPopulation, validate } = report;
 
+  const filteredScaperErrors = scrape.errors.filter(error => error.type !== 'DeprecatedError');
+
   return [
     {
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `*Report for ${datetime.getDate().toUTCString()}:*`
+        text: `*Report for ${datetime.now.utc()}:*`
       }
     },
     {
@@ -48,8 +50,8 @@ _Scrapers:_
 - *${scrape.numCounties}* counties
 - *${scrape.numStates}* states
 - *${scrape.numCountries}* countries
-- *${scrape.numErrors}* scraper errors:
-${scrape.errors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
+- *${filteredScaperErrors.length}* scraper errors:
+${filteredScaperErrors.map(error => `  - ${error.name}: ${error.err}`).join('\n')}`
       }
     },
     {
@@ -86,7 +88,7 @@ ${validate.errors.map(error => `  - ${error}`).join('\n')}`
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `Go to the data: http://blog.lazd.net/coronadatascraper`
+        text: `Go to the full report: https://github.com/lazd/coronadatascraper/actions/runs/${process.env.RUN_NUMBER}`
       }
     }
   ];
