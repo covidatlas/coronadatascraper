@@ -7,7 +7,7 @@ The following fields are available in all files for each geographical entity:
 * `name` - the full name of the geographical entity being represented
 * `city` - the name of the city
 * `county` - county or parish or the appropriate name of the administrative subdivision below the level of state or equivalent
-* `state` - state, province or region depending on jurisdiction. In general, the first administrative subdivision below the level of country.
+* `state` - state, province or region depending on jurisdiction. In general, the first administrative subdivision below the level of country
 * `country` - ISO 3166-1 alpha-3 (three letter) country code
 * `level` - one of `city`, `county`, `state`, `country`. Provided in order to facilitate filtering
 
@@ -22,6 +22,7 @@ In general, whenever the record is about administrative subdivisions of a level,
 The following fields are uniquely determined by the geographical entity and are provided as a convenience.
 
 * `population` - a recent estimate of the population in the geographical entity, determined from census data or official sources
+* `populationDensity` - the population density in residents per square meter
 * `lat` - latitude of the geographical entity
 * `long` - longitude of the geographical entity
 * `tz` - an array of time zones for the geographical entity
