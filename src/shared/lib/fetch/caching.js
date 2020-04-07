@@ -97,7 +97,7 @@ export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8')
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  log('  🐢  Cache miss for %s at %s', url, filePath);
+  log('  🐢  Cache miss for scraper: %s; url: %s; filepath: %s', scraper._filepath, url, filePath);
   return CACHE_MISS;
 };
 
