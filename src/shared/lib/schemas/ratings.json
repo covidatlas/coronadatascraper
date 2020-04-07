@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "url": { "type": "string", "format": "uri" },
-    "country": { "type": "string", "not": { "pattern": "unassigned" }, "maxLength": 3, "minLength": 3 },
+    "country": { "type": "string", "not": { "pattern": "unassigned" } },
     "state": { "type": "string", "not": { "pattern": "unassigned" } },
     "county": { "type": "string", "not": { "pattern": "unassigned" } },
     "city": { "type": "string", "not": { "pattern": "unassigned" } },
@@ -13,6 +13,10 @@
       "default": "list"
     },
     "headless": {
+      "type": "boolean",
+      "default": false
+    },
+    "timeseries": {
       "type": "boolean",
       "default": false
     },

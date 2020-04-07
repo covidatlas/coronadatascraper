@@ -1,8 +1,11 @@
 import path from 'path';
 import datetime from '../../../shared/lib/datetime/index.js';
-import log from '../../../shared/lib/log.js';
-import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import * as geography from '../../../shared/lib/geography/index.js';
+import log from '../../../shared/lib/log.js';
+
+// import { calculateScraperTz } from '../../../shared/lib/geography/timezone.js';
 
 const numericalValues = ['cases', 'tested', 'recovered', 'deaths', 'active'];
 
@@ -29,6 +32,27 @@ function isValid(data) {
 }
 
 /*
+  Add output data to the cases array, input must be an object
+*/
+function processData(cases, location, data) {
+  const caseInfo = { ...location, ...data };
+
+  /*
+  if (datetime.scrapeDate()) {
+    // This must come from cache
+    // caseInfo.collectedDate = datetime.scrapeDate();
+  }
+  else {
+    // Add collection date as current UTC time
+    // Even this is likely wrong -- it's gotta be cache aware
+    caseInfo.collectedDate = (new Date()).toISOString();
+  }
+  */
+
+  cases.push(caseInfo);
+}
+
+/*
   Add output data to the cases array. Input can be either an object or an array
 */
 function addData(cases, location, result) {
@@ -38,23 +62,28 @@ function addData(cases, location, result) {
     }
     for (const data of result) {
       if (isValid(data)) {
-        cases.push({ ...location, ...data });
+        processData(cases, location, data);
       }
     }
   } else if (isValid(result)) {
-    cases.push({ ...location, ...result });
+    processData(cases, location, result);
   }
 }
 
 /*
   Run the correct scraper for this location
 */
-export function runScraper(location) {
+export async function runScraper(location) {
   const rejectUnauthorized = location.certValidation === false;
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
+
+  // scraperTz will be used by the cache PR
+  // eslint-disable-next-line no-unused-vars
+  // const scraperTz = await calculateScraperTz(location);
+
   if (typeof location.scraper === 'function') {
     return location.scraper();
   }
@@ -95,6 +124,7 @@ const runScrapers = async args => {
     if (options.skip && geography.getName(location) === options.skip) {
       continue;
     }
+
     if (
       options.location &&
       path.basename(location._path, '.js') !== options.location &&
@@ -102,6 +132,17 @@ const runScrapers = async args => {
     ) {
       continue;
     }
+
+    if (options.country && ![options.country, `iso1:${options.country}`].includes(location.country)) {
+      continue;
+    }
+
+    if (options.id && options.id !== countryLevels.getIdFromLocation(location)) {
+      // select location based on country level id
+      // for example "yarn start -i id3:AU-VIC"
+      continue;
+    }
+
     if (location.scraper) {
       try {
         addData(locations, location, await runScraper(location));

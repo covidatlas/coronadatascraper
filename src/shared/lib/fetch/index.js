@@ -102,6 +102,19 @@ export const tsv = async (url, date, options = {}) => {
 };
 
 /**
+ * Load the given URL and return a raw response
+ * @param {*} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {*} options customizable options:
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ */
+export const raw = async (url, date, options = {}) => {
+  const body = await get(url, 'raw', date, options);
+  return body;
+};
+
+/**
  * Load and parse PDF from the given URL
  *
  * @param {*} url URL of the resource
@@ -189,7 +202,7 @@ const fetchHeadless = async url => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */
-export const headless = async (url, date = datetime.scrapeDate() || datetime.getYYYYMD(), options = {}) => {
+export const headless = async (url, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);

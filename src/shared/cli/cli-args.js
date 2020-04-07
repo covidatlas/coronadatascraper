@@ -16,6 +16,16 @@ const { argv } = yargs
     description: 'Scrape only the location provided by full name, i.e City, County, State, Country',
     type: 'string'
   })
+  .option('country', {
+    alias: 'c',
+    description: 'Scrape only the country provided, like AUS',
+    type: 'string'
+  })
+  .option('id', {
+    alias: 'i',
+    description: 'Scrape only the location provided by id',
+    type: 'string'
+  })
   .option('skip', {
     alias: 's',
     description: 'Skip the location provided by full name, i.e City, County, State, Country',
@@ -29,6 +39,18 @@ const { argv } = yargs
   .option('quiet', {
     alias: 'q',
     description: 'Suppress logs',
+    type: 'boolean'
+  })
+  .option('findFeatures', {
+    description: 'Include feature information in output data',
+    type: 'boolean'
+  })
+  .options('findPopulations', {
+    description: 'Include population information in output data',
+    type: 'boolean'
+  })
+  .options('writeData', {
+    description: 'Write to dist folder',
     type: 'boolean'
   })
   .help()

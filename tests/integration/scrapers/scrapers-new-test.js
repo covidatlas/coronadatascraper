@@ -1,4 +1,3 @@
-/*
 const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
@@ -30,13 +29,16 @@ if (files) {
       for (const scraperPath of scrapers) {
         if (await fs.exists(scraperPath)) {
           const scraper = imports(join(process.cwd(), scraperPath));
-          await runScraper(scraper);
+          try {
+            await runScraper(scraper);
+            t.pass('Scraper ran');
+          } catch (err) {
+            t.fail(`Scraper failed with error: ${err}`);
+          }
           const hasErrors = schema.schemaHasErrors(scraper.default, schema.schemas.scraperSchema);
           t.notOk(hasErrors, 'Scraper had no errors');
-          t.pass('Scraper ran'); // Technically we don't need this test because the test would fail if the scraper did, but maybe someone will feel better
         }
       }
     });
   }
 }
-*/
