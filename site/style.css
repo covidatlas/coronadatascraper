@@ -347,6 +347,12 @@ div.spectrum-SideNav-itemLink:hover {
   border-color: var(--spectrum-global-color-gray-50);
   border-radius: 4px;
   padding: 4px;
+
+  &,
+  input {
+    font-family: Helvetica;
+    font-size: 16px;
+  }
 }
 
 /* Reports */
