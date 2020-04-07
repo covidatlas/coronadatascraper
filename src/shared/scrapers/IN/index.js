@@ -2,8 +2,6 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 
-import populationState from './populationState.json';
-
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
@@ -83,12 +81,13 @@ const scraper = {
         stateMapped,
         cases: parse.number($tr.find('td:nth-child(3)').text()),
         deaths: parse.number($tr.find('td:nth-child(6)').text()),
-        recovered: parse.number($tr.find('td:nth-child(5)').text()),
-        population: populationState[state]
+        recovered: parse.number($tr.find('td:nth-child(5)').text())
       };
 
       regions.push(data);
     });
+
+    console.log(regions);
     return regions;
   }
 };
