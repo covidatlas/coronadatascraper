@@ -143,9 +143,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
     }
 
-    // Store coordinates on location
+    // Store coordinates and area on location
     if (feature.geometry) {
       location.coordinates = turf.center(feature).geometry.coordinates;
+      location.area = turf.area(feature.geometry);
     }
 
     if (DEBUG) {
