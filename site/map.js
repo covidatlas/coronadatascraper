@@ -5,7 +5,7 @@ import * as fetch from './lib/fetch.js';
 
 import { getSource } from './lib/templates.js';
 import { getRatio, getPercent } from './lib/math.js';
-import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
+import { getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
@@ -13,7 +13,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2N
 const data = {};
 
 let map;
-let slider;
 
 let currentType = 'cases';
 let currentDate;
@@ -45,35 +44,36 @@ function initData() {
   console.log('Found locations for %d of %d features', foundFeatures, data.features.features.length);
 }
 
-function setData() {
+function generateCountyFeatures() {
   const countyFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
-    })
+    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'county')
   };
+  return countyFeatures;
+}
 
+function generateStateFeatures() {
   const stateFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (location && !location.county && location.aggregate === 'county') {
-        return false;
-      }
-      return isState(location);
-    })
+    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'state')
   };
+  return stateFeatures;
+}
 
+function generateCountryFeatures() {
   const countryFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (location && location.country && !location.state && location.aggregate === 'state') {
-        return false;
-      }
-      return isCountry(location);
-    })
+    features: data.features.features.filter(
+      feature => data.locations[feature.properties.locationId].level === 'country'
+    )
   };
+  return countryFeatures;
+}
+
+function setData() {
+  const countyFeatures = generateCountyFeatures();
+  const stateFeatures = generateStateFeatures();
+  const countryFeatures = generateCountryFeatures();
 
   map.getSource('CDS-county').setData(countyFeatures);
   map.getSource('CDS-state').setData(stateFeatures);
@@ -144,10 +144,6 @@ window.updateMap = updateMap;
 
 function populateMap() {
   initData();
-
-  slider = document.querySelector('.cds-Map-dateSlider');
-  slider.max = Object.keys(data.timeseries).length - 1;
-  slider.value = Object.keys(data.timeseries).length - 1;
 
   /**
    * @param {{ name: string; population: string?; }} location
@@ -266,6 +262,65 @@ function populateMap() {
     labelLayerId
   );
 
+  // Level Toggle
+  class ToggleDataLevelControl {
+    onAdd(map) {
+      this._container = document.createElement('div');
+      this._container.className = 'mapboxgl-ctrl cds-MapControl';
+      this._container.innerHTML = `
+        <label class="cds-MapToggle"><input type="checkbox" name="country" checked> Show Countries</label>
+        <label class="cds-MapToggle"><input type="checkbox" name="state" checked> Show States</label>
+        <label class="cds-MapToggle"><input type="checkbox" name="county" checked> Show Counties</label>
+        `;
+
+      this._container.addEventListener('change', evt => {
+        const { target } = evt;
+        const visibility = target.checked ? 'visible' : 'none';
+        const { name } = evt.target;
+        map.setLayoutProperty(`CDS-${name}`, 'visibility', visibility);
+      });
+
+      return this._container;
+    }
+
+    onRemove() {
+      this._container.parentNode.removeChild(this._container);
+    }
+  }
+
+  map.addControl(new ToggleDataLevelControl(), 'top-left');
+
+  // Date selector
+  class DateSelector {
+    onAdd() {
+      const dates = Object.keys(data.timeseries);
+      const firstDate = dates[0];
+      const lastDate = dates[dates.length - 1];
+
+      this._container = document.createElement('div');
+      this._container.className = 'mapboxgl-ctrl cds-MapControl';
+      this._container.innerHTML = `
+        <input type="date" min="${firstDate}" max="${lastDate}" value="${lastDate}" class="cds-Map-datePicker" aria-label="Date">
+      `;
+
+      this._container.addEventListener('input', evt => {
+        const { target } = evt;
+        const date = target.value;
+        if (dates.includes(date)) {
+          updateMap(date);
+        }
+      });
+
+      return this._container;
+    }
+
+    onRemove() {
+      this._container.parentNode.removeChild(this._container);
+    }
+  }
+
+  map.addControl(new DateSelector(), 'top-right');
+
   setData();
 
   // Create a popup, but don't add it to the map yet.
@@ -328,10 +383,6 @@ function populateMap() {
   map.on('mouseleave', 'CDS-country', handleMouseLeave);
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
-
-  slider.addEventListener('input', () => {
-    updateMap(Object.keys(data.timeseries)[slider.value]);
-  });
 
   updateMap();
 }

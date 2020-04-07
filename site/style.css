@@ -338,6 +338,23 @@ div.spectrum-SideNav-itemLink:hover {
   box-sizing: border-box;
 }
 
+.cds-MapControl {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--spectrum-global-color-gray-50);
+  border-radius: 4px;
+  padding: 4px;
+
+  &,
+  input {
+    font-family: Helvetica;
+    font-size: 16px;
+  }
+}
+
 /* Reports */
 .cds-CrossCheckReports-list {
   list-style: none;
