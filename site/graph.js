@@ -2,6 +2,14 @@
 
 let chart;
 
+const changeTitleSize = opts => {
+  if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
+    opts.title.text = opts.title.text.split(',');
+  } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
+    opts.title.text = opts.title.text.join(', ');
+  }
+};
+
 const options = {
   maintainAspectRatio: false,
   title: {
@@ -21,6 +29,7 @@ const options = {
             enabled: true,
             fontStyle: 'bold'
           },
+          autoSkip: true,
           source: 'data',
           sampleSize: 100
         }
@@ -98,6 +107,9 @@ const options = {
     }
     this.update();
     this.render();
+  },
+  onResize(_chart) {
+    changeTitleSize(_chart.options);
   }
 };
 
@@ -178,6 +190,7 @@ const showGraph = (location, locationData) => {
 
   options.scales.xAxes[0].ticks.max = casesData[casesData.length - 1].t;
   options.title.text = location.name;
+  changeTitleSize(options);
 
   if (chart) {
     chart.options = options;
