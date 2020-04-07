@@ -68,17 +68,13 @@
         <div class="u-scrollable spectrum-Site-nav">
           <nav>
             <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Snapshot</div>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="features.json">Map</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#crosscheck">Cross-check Report</a></li>
+              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#sources">Sources</a></li>
+              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Today's data</div>
                 <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV</a></li>
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="data.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> JSON</a></li>
-                </ul>
-              </li>
-              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Metadata</div>
-                <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="features.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> GeoJSON Features</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="locations.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Location Metadata</a></li>
-                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
                 </ul>
               </li>
               <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Timeseries</div>
@@ -90,9 +86,13 @@
                   <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="timeseries-jhu.csv"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> CSV (like JHU)</a></li>
                 </ul>
               </li>
+              <li class="spectrum-SideNav-item"><div class="spectrum-SideNav-itemLink" href="#">Metadata</div>
+                <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="locations.json"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Location Metadata</a></li>
+                  <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" download href="report.json" data-levels="2"><span class="spectrum-SideNav-itemIcon icon icon-file"></span> Scrape Report</a></li>
+                </ul>
+              </li>
               <!-- <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://blog.lazd.net/coronaglobe" target="_blank">View on 3D map (Coronaglobe)</a></li> -->
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#crosscheck">Cross-check Report</a></li>
-              <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="#sources">Sources</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/" target="_blank" rel="noopener">Github</a></li>
               <li class="spectrum-SideNav-item"><a class="spectrum-SideNav-itemLink" href="https://github.com/lazd/coronadatascraper/issues/new" target="_blank" rel="noopener">Report Issue</a></li>
             </ul>
