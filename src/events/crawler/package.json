@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@architect/functions": "^3.7.6",
+    "esm": "^3.2.25",
+    "fast-glob": "^3.2.2"
+  }
+}

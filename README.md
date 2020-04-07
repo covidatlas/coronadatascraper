@@ -1,9 +1,9 @@
 # coronadatascraper
-> A scraper that pulls COVID-19 Coronavirus data scraped from government and curated data sources.
+> A crawler that scrapes COVID-19 Coronavirus data from government and curated data sources.
 
 This project exists to scrape, de-duplicate, and cross-check county-level data on the COVID-19 coronavirus pandemic.
 
-Every piece of data produced includes the URL where the data was sourced from as well as a rating of the source's technical quality (completeness, machine readability, best practices -- not accuracy).
+Every piece of data includes GeoJSON and population data, cites the source from which the data was obtained, and includes a rating of the source's technical quality (completeness, machine readability, best practices -- not accuracy).
 
 ## Where's the data?
 
@@ -13,7 +13,11 @@ https://coronadatascraper.com/
 
 We upload fresh data every day at around 9PM PST.
 
-## Getting started
+## How do I use this data?
+
+Read the [Data Fields](./docs/data_fields.md) documentation for details on exactly what each field in the dataset means.
+
+## How can I run the crawler locally?
 
 Check out our [Getting Started](./docs/getting_started.md) guide to help get our project running on your local machine.
 
@@ -39,6 +43,11 @@ This project is licensed under the permissive [BSD 2-clause license](LICENSE).
 
 The data produced by this project is public domain.
 
+This project uses data from [ISO-3166 Country and Dependent Territories Lists with UN Regional Codes
+](https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes) under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
 ## Attribution
 
 Please cite this project if you use it in your visualization or reporting.
+
+> Data obtained from Corona Data Scraper

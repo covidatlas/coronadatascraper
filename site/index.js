@@ -8,16 +8,19 @@ import './style.css';
 import showMap from './map.js';
 import showFile from './file.js';
 import showSources from './sources.js';
+import showCrossCheckReport from './crossCheckReport.js';
 
 const pages = {
   '#home': '.cds-Home',
   '#editor': '.cds-FileEditor',
   '#sources': '.cds-Sources',
+  '#crosscheck': '.cds-CrossCheckReports',
   '#features.json': '.cds-Map'
 };
 
 const routes = {
   '#sources': showSources,
+  '#crosscheck': showCrossCheckReport,
   '#home': function() {},
   '#features.json': showMap
 };
