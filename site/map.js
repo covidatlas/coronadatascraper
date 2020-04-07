@@ -133,9 +133,15 @@ function populateMap() {
     }
     if (location.population !== undefined) {
       htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
-      htmlString += `<tr><th>Density:</th><td>${Math.floor(
-        location.populationDensity / 0.621371
-      ).toLocaleString()} persons / sq. mi</td></tr>`;
+      if (location.populationDensity !== undefined) {
+        let density = location.populationDensity / 0.621371;
+        if (density < 1) {
+          density = (location.populationDensity / 0.621371).toFixed(2);
+        } else {
+          density = Math.floor(density);
+        }
+        htmlString += `<tr><th>Density:</th><td>${density.toLocaleString()} persons / sq. mi</td></tr>`;
+      }
     } else {
       htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
     }
