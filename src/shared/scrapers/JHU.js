@@ -1,15 +1,16 @@
-import path from 'path';
-import * as fetch from '../lib/fetch/index.js';
-import * as parse from '../lib/parse.js';
-import * as geography from '../lib/geography/index.js';
+import iso2Codes from 'country-levels/iso2.json';
 import datetime from '../lib/datetime/index.js';
-import * as transform from '../lib/transform.js';
-import * as rules from '../lib/rules.js';
-import * as fs from '../lib/fs.js';
+import * as fetch from '../lib/fetch/index.js';
+import { splitId } from '../lib/geography/country-levels.js';
 import maintainers from '../lib/maintainers.js';
+import * as parse from '../lib/parse.js';
+import * as transform from '../lib/transform.js';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const stateMap = {
+  'Hong Kong': 'iso1:HK',
+  Macau: 'iso1:MO',
+  Greenland: 'iso1:GL'
+};
 
 const scraper = {
   maintainers: [maintainers.lazd],
@@ -17,326 +18,169 @@ const scraper = {
   timeseries: true,
   priority: -1,
   country: '_JHU', // every location needs to have a valid country
+  scraperTz: 'America/Los_Angeles',
   curators: [
     {
       name: 'JHU CSSE',
       url: 'https://systems.jhu.edu/research/public-health/ncov/'
     }
   ],
+
   _urls: {
-    cases:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
-    deaths:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
-    recovered:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/fe22260f2e5e1f7326f3164d27ccaef48c183cb5/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
-  },
-  _urlsNew: {
     cases:
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv',
     deaths:
       'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv',
     recovered:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv'
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv',
+    isoMap:
+      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/UID_ISO_FIPS_LookUp_Table.csv'
   },
-  _urlsOld: {
-    cases:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv',
-    deaths:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv',
-    recovered:
-      'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/a3e83c7bafdb2c3f310e2a0f6651126d9fe0936f/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv'
-  },
-  _reject: [
-    {
-      'Province/State': 'Diamond Princess'
-    },
-    {
-      'Country/Region': 'Diamond Princess'
-    },
-    {
-      'Province/State': 'Grand Princess'
-    },
-    {
-      'Province/State': 'From Diamond Princess'
-    },
-    {
-      'Country/Region': 'MS Zaandam'
-    },
-    {
-      'Country/Region': 'West Bank and Gaza'
-    }
-  ],
-  _accept: [
-    {
-      'Province/State': ''
-    },
-    {
-      'Country/Region': 'France'
-    },
-    {
-      'Country/Region': 'United Kingdom'
-    },
-    {
-      'Country/Region': 'China'
-    },
-    {
-      'Country/Region': 'Denmark'
-    },
-    {
-      'Country/Region': 'Belgium'
-    },
-    {
-      'Country/Region': 'Netherlands'
-    },
-    {
-      'Country/Region': 'Australia'
-    }
-  ],
   _getRecovered(recovered, state, country) {
     for (const location of recovered) {
-      // Believe it or not, the conditional for Province/State is intentionally duplicate -- there is an invisible space in there
-      // Thanks, JHU!
-      if (
-        (location['﻿Province/State'] === state || location['Province/State'] === state) &&
-        location['Country/Region'] === country
-      ) {
+      if (location['Province/State'] === state && location['Country/Region'] === country) {
         return location;
       }
     }
   },
   _rollup(locations) {
-    const countriesToRoll = {};
-    const countriesToNotRoll = {};
+    // get all countries with states
+    const countriesToRoll = new Set(locations.filter(l => l.state).map(l => l.country));
 
-    for (const location of locations) {
-      if (location.state && location.country && !location.county) {
-        countriesToRoll[location.country] = true;
-      }
-      if (!location.state && location.country && !location.county) {
-        countriesToNotRoll[location.country] = true;
-      }
+    // calculate sumData for each country
+    for (const country of countriesToRoll) {
+      const regions = locations.filter(l => l.country === country);
+      const countrySum = transform.sumData(regions, { country, aggregate: 'state' });
+      locations.push(countrySum);
+    }
+  },
+  _createIsoMap(isoMapCsv) {
+    const isoMap = {};
+
+    const stateNameByCountry = {};
+    for (const data of Object.values(iso2Codes)) {
+      const { iso2, name } = data;
+      const countrylevelId = data.countrylevel_id;
+      const countryCode = iso2.slice(0, 2);
+      stateNameByCountry[countryCode] = stateNameByCountry[countryCode] || {};
+      stateNameByCountry[countryCode][name] = countrylevelId;
     }
 
-    for (const country of Object.keys(countriesToNotRoll)) {
-      delete countriesToRoll[country];
-    }
+    for (const row of isoMapCsv) {
+      const country = row.Country_Region;
+      const state = row.Province_State;
+      const countryCode = row.iso2;
 
-    for (const country of Object.keys(countriesToRoll)) {
-      // Find everything matching this region and roll it up
-      const regions = [];
-      for (const location of locations) {
-        if (location.country === country) {
-          regions.push(location);
+      if (!countryCode) {
+        continue;
+      }
+
+      // using a key like 'Australia#New South Wales'
+      const key = `${country}#${state}`;
+
+      // US is in other file
+      if (country === 'US') {
+        continue;
+      }
+
+      if (state in stateMap) {
+        isoMap[key] = stateMap[state];
+        continue;
+      }
+
+      if (!state) {
+        isoMap[key] = `iso1:${countryCode}`;
+      } else {
+        const stateNames = stateNameByCountry[countryCode];
+        if (!stateNames) {
+          console.warn(`  ℹ️  createIsoMap 1: ${state} needs to be added to stateMap`);
+          continue;
         }
+        const clId = stateNames[state];
+        if (!clId) {
+          console.warn(`  ℹ️  createIsoMap 2: ${state} needs to be added added to stateMap`);
+        }
+        isoMap[key] = clId;
       }
-      locations.push(transform.sumData(regions, { country, aggregate: 'state' }));
     }
+    return isoMap;
   },
   scraper: {
     '0': async function() {
-      // Build a hash of US counties
-      const jhuUSCountyMap = await fs.readJSON(path.join(__dirname, '..', 'vendor', 'jhu-us-county-map.json'));
-
-      const getOldData = datetime.scrapeDateIsBefore('2020-03-12');
-
-      if (getOldData) {
-        console.log('  🕰  Fetching old data for %s', process.env.SCRAPE_DATE);
-      }
-
-      const urls = getOldData ? this._urlsOld : this._urls;
+      const urls = this._urls;
       const cases = await fetch.csv(urls.cases, false);
       const deaths = await fetch.csv(urls.deaths, false);
       const recovered = await fetch.csv(urls.recovered, false);
+      const isoMapCsv = await fetch.csv(urls.isoMap, false);
+
+      const isoMap = this._createIsoMap(isoMapCsv);
 
       const countries = [];
-      let date = Object.keys(cases[0]).pop();
 
-      if (process.env.SCRAPE_DATE) {
-        // Find old date
-        const customDate = datetime.getMDYY(new Date(process.env.SCRAPE_DATE));
-        if (!cases[0][customDate]) {
-          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
-        }
-        date = customDate;
-      }
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+      let scrapeDateString = datetime.getMDYY(new Date(scrapeDate));
+      const lastDateInTimeseries = new Date(`${Object.keys(cases[0]).pop()} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${Object.keys(cases[0])[4]} 12:00:00`);
 
-      const countyTotals = {};
-      for (let index = 0; index < cases.length; index++) {
-        if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
-          // Axe incorrectly categorized data
-          delete cases[index]['Province/State'];
-        }
-        if (getOldData) {
-          // See if it's a county
-          const countyAndState = jhuUSCountyMap[cases[index]['Province/State']];
-          if (countyAndState) {
-            if (countyTotals[countyAndState]) {
-              // Add
-              countyTotals[countyAndState].cases += parse.number(cases[index][date] || 0);
-              countyTotals[countyAndState].deaths += parse.number(deaths[index][date] || 0);
-              countyTotals[countyAndState].recovered += parse.number(recovered[index][date] || 0);
-            } else {
-              let [county, state] = countyAndState.split(', ');
-              const regionObj = {
-                aggregate: 'state',
-                country: 'USA',
-                cases: parse.number(cases[index][date] || 0),
-                recovered: parse.number(recovered[index][date] || 0),
-                deaths: parse.number(deaths[index][date] || 0),
-                coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
-              };
-              if (county === 'District of Columbia') {
-                county = null;
-                state = 'DC';
-              }
-              if (county) {
-                regionObj.county = county;
-              }
-              if (state) {
-                regionObj.state = state;
-              }
-              countyTotals[countyAndState] = regionObj;
-            }
-          }
-        }
-
-        // These two incorrectly have a state set
-        if (cases[index]['Province/State'] === 'United Kingdom' || cases[index]['Province/State'] === 'France') {
-          cases[index]['Province/State'] = '';
-        }
-
-        // Use their US states
-        if (
-          cases[index]['Country/Region'] === 'US' &&
-          geography.usStates[parse.string(cases[index]['Province/State'] || '')]
-        ) {
-          const state = geography.usStates[parse.string(cases[index]['Province/State'])];
-          countries.push({
-            aggregate: 'state',
-            country: 'USA',
-            state,
-            cases: parse.number(cases[index][date] || 0),
-            recovered: parse.number(recovered[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0)
-          });
-        } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
-          const caseData = {
-            aggregate: 'country',
-            country: parse.string(cases[index]['Country/Region']),
-            cases: parse.number(cases[index][date] || 0),
-            recovered: parse.number(recovered[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
-          };
-
-          if (cases[index]['Province/State']) {
-            caseData.aggregate = 'state';
-            caseData.state = parse.string(cases[index]['Province/State']);
-          }
-
-          countries.push(caseData);
-        }
-      }
-
-      // Add counties
-      for (const [, countyData] of Object.entries(countyTotals)) {
-        countries.push(countyData);
-      }
-
-      this._rollup(countries);
-
-      return countries;
-    },
-    '2020-03-24': async function() {
-      const urls = this._urlsNew;
-      const cases = await fetch.csv(urls.cases, false);
-      const deaths = await fetch.csv(urls.deaths, false);
-      const recovered = await fetch.csv(urls.recovered, false);
-
-      const countries = [];
-      let date = Object.keys(cases[0]).pop();
-
-      if (process.env.SCRAPE_DATE) {
-        // Find old date
-        const customDate = datetime.getMDYY(new Date(process.env.SCRAPE_DATE));
-        if (!cases[0][customDate]) {
-          console.warn('  ⚠️  No data present for %s, output will be empty', customDate);
-        }
-        date = customDate;
-      }
-
-      const countyTotals = {};
-      for (let index = 0; index < cases.length; index++) {
-        const recoveredData = this._getRecovered(
-          recovered,
-          cases[index]['Province/State'],
-          cases[index]['Country/Region']
+      if (scrapeDate > lastDateInTimeseries) {
+        console.error(
+          `  🚨 timeseries for JHU: SCRAPE_DATE ${datetime.getYYYYMD(
+            scrapeDate
+          )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
         );
-        if (cases[index]['Country/Region'] === cases[index]['Province/State']) {
-          // Axe incorrectly categorized data
-          delete cases[index]['Province/State'];
-        }
-
-        // These two incorrectly have a state set
-        if (cases[index]['Province/State'] === 'United Kingdom' || cases[index]['Province/State'] === 'France') {
-          cases[index]['Province/State'] = '';
-        }
-
-        // Use their US states
-        if (
-          cases[index]['Country/Region'] === 'US' &&
-          geography.usStates[parse.string(cases[index]['Province/State'] || '')]
-        ) {
-          const state = geography.usStates[parse.string(cases[index]['Province/State'])];
-          const caseData = {
-            aggregate: 'state',
-            country: 'USA',
-            state,
-            cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            recovered: parse.number(recoveredData[date] || 0)
-          };
-
-          if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
-            if (recoveredCount !== undefined) {
-              caseData.recovered = parse.number(recoveredCount);
-            }
-          }
-
-          countries.push(caseData);
-        } else if (rules.isAcceptable(cases[index], this._accept, this._reject)) {
-          const caseData = {
-            aggregate: 'country',
-            country: parse.string(cases[index]['Country/Region']),
-            cases: parse.number(cases[index][date] || 0),
-            deaths: parse.number(deaths[index][date] || 0),
-            coordinates: [parse.float(cases[index].Long), parse.float(cases[index].Lat)]
-          };
-
-          if (recoveredData) {
-            const recoveredCount = recoveredData[datetime.getMDYYYY(date)];
-            if (recoveredCount !== undefined) {
-              caseData.recovered = parse.number(recoveredCount);
-            }
-          }
-
-          if (cases[index]['Province/State']) {
-            caseData.aggregate = 'state';
-            caseData.state = parse.string(cases[index]['Province/State']);
-          }
-
-          countries.push(caseData);
-        }
+        scrapeDate = lastDateInTimeseries;
+        scrapeDateString = datetime.getMDYY(scrapeDate);
       }
 
-      // Add counties
-      for (const [, countyData] of Object.entries(countyTotals)) {
-        countries.push(countyData);
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
+      }
+
+      for (let index = 0; index < cases.length; index++) {
+        const row = cases[index];
+        const country = row['Country/Region'];
+        const state = row['Province/State'];
+
+        const key = `${country}#${state}`;
+        const clId = isoMap[key];
+        if (!clId) {
+          console.warn(`  ⚠️  Skipping ${country} ${state}`);
+          continue;
+        }
+
+        const recoveredData = this._getRecovered(recovered, state, country);
+
+        const caseData = {
+          cases: parse.number(row[scrapeDateString] || 0),
+          deaths: parse.number(deaths[index][scrapeDateString] || 0)
+        };
+
+        if (recoveredData) {
+          const recoveredCount = recoveredData[scrapeDateString];
+          if (recoveredCount !== undefined) {
+            caseData.recovered = parse.number(recoveredCount);
+          }
+        }
+
+        const { level, code } = splitId(clId);
+        if (level === 'iso1') {
+          caseData.aggregate = 'country';
+          caseData.country = clId;
+        } else {
+          const countryCode = code.slice(0, 2);
+          caseData.aggregate = 'state';
+          caseData.state = clId;
+          caseData.country = `iso1:${countryCode}`;
+        }
+
+        countries.push(caseData);
       }
 
       this._rollup(countries);
+
+      if (countries.length === 0) {
+        throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
+      }
 
       return countries;
     }

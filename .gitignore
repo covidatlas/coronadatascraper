@@ -7,3 +7,7 @@ node_modules
 public/static.json
 sam.json
 sam.yaml
+
+# Integration tests save the generated json files for devs
+# to compare against the expected.json.
+tests/integration/scrapers/testcache/**/actual.json
