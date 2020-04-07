@@ -7,6 +7,7 @@ import * as parse from '../../../lib/parse.js';
 const scraper = {
   state: 'DC',
   country: 'iso1:US',
+  county: 'District of Columbia',
   sources: [
     {
       name: 'DC Public Health Laboratory'
