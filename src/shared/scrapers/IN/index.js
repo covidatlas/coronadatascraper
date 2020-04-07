@@ -36,7 +36,7 @@ const countryLevelMap = {
   Uttarakhand: '-', //'iso2:IN-UT',
   'Uttar Pradesh': 'iso2:IN-UP',
   'West Bengal': 'iso2:IN-WB',
-  Tripura: 'IN-TR'
+  Tripura: 'iso2:IN-TR'
 };
 
 const scraper = {
@@ -78,7 +78,7 @@ const scraper = {
       }
 
       const data = {
-        stateMapped,
+        state: stateMapped,
         cases: parse.number($tr.find('td:nth-child(3)').text()),
         deaths: parse.number($tr.find('td:nth-child(6)').text()),
         recovered: parse.number($tr.find('td:nth-child(5)').text())
