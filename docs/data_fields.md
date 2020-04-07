@@ -22,7 +22,7 @@ In general, whenever the record is about administrative subdivisions of a level,
 The following fields are uniquely determined by the geographical entity and are provided as a convenience.
 
 * `population` - a recent estimate of the population in the geographical entity, determined from census data or official sources
-* `populationDensity` - the population density in residents per square meter
+* `populationDensity` - the population density in residents per square kilometer
 * `lat` - latitude of the geographical entity
 * `long` - longitude of the geographical entity
 * `tz` - an array of time zones for the geographical entity
