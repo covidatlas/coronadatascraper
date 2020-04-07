@@ -5,7 +5,7 @@ import * as fetch from './lib/fetch.js';
 
 import { getSource } from './lib/templates.js';
 import { getRatio, getPercent } from './lib/math.js';
-import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
+import { getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
@@ -47,41 +47,25 @@ function initData() {
 function generateCountyFeatures() {
   const countyFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      return isCounty(data.locations[feature.properties.locationId]);
-    })
+    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'county')
   };
   return countyFeatures;
 }
 
-function generateStateFeatures(showSubregion = true) {
+function generateStateFeatures() {
   const stateFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (showSubregion) {
-        if (location && !location.county && location.aggregate === 'county') {
-          return false;
-        }
-      }
-      return isState(location);
-    })
+    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'state')
   };
   return stateFeatures;
 }
 
-function generateCountryFeatures(showSubregion = true) {
+function generateCountryFeatures() {
   const countryFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(function(feature) {
-      const location = data.locations[feature.properties.locationId];
-      if (showSubregion) {
-        if (location && location.country && !location.state && location.aggregate === 'state') {
-          return false;
-        }
-      }
-      return isCountry(location);
-    })
+    features: data.features.features.filter(
+      feature => data.locations[feature.properties.locationId].level === 'country'
+    )
   };
   return countryFeatures;
 }
@@ -309,17 +293,22 @@ function populateMap() {
   // Date selector
   class DateSelector {
     onAdd() {
-      const max = Object.keys(data.timeseries).length - 1;
+      const dates = Object.keys(data.timeseries);
+      const firstDate = dates[0];
+      const lastDate = dates[dates.length - 1];
 
       this._container = document.createElement('div');
       this._container.className = 'mapboxgl-ctrl cds-MapControl';
       this._container.innerHTML = `
-        <input type="range" min="0" max="${max}" value="${max}" step="1" class="cds-Map-dateSlider" aria-label="Day number">
+        <input type="date" min="${firstDate}" max="${lastDate}" value="${lastDate}" class="cds-Map-datePicker" aria-label="Date">
       `;
 
       this._container.addEventListener('input', evt => {
         const { target } = evt;
-        updateMap(Object.keys(data.timeseries)[target.value]);
+        const date = target.value;
+        if (dates.includes(date)) {
+          updateMap(date);
+        }
       });
 
       return this._container;
