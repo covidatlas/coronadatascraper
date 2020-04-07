@@ -163,7 +163,7 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       location.population = population;
       populationFound++;
       if (location.area) {
-        location.populationDensity = population / (location.area / 1000);
+        location.populationDensity = population / (location.area / 1000000);
       }
     } else {
       log.error('  ❌ %s: ?', geography.getName(location));
