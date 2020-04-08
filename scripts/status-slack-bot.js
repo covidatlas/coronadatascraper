@@ -7,7 +7,7 @@ const fs = imports('../src/shared/lib/fs.js');
 const datetime = imports('../src/shared/lib/datetime/index.js').default;
 
 const { argv } = yargs
-  .scriptName('node ./scripts/statusSlackBot.js')
+  .scriptName('node ./scripts/status-slack-bot.js')
   .usage('$0 <cmd> [args]')
   .command('send [hook]', 'sends report.json to provided Slack Hook', yargs => {
     yargs.positional('hook', {

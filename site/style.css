@@ -362,6 +362,41 @@ div.spectrum-SideNav-itemLink:hover {
 #graph {
   background-color: #fff;
   border-radius: 1em;
+
+.cds-Map-content {
+  position: relative;
+}
+
+.cds-Map-controls {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2px 10px;
+}
+
+.cds-Map-dateSlider {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cds-MapControl {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--spectrum-global-color-gray-50);
+  border-radius: 4px;
+  padding: 4px;
+
+  &,
+  input {
+    font-family: Helvetica;
+    font-size: 16px;
+  }
+
 }
 
 /* Reports */

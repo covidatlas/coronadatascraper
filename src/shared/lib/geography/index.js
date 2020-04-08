@@ -74,7 +74,7 @@ export function generateMultiCountyFeature(counties, properties) {
   const polygons = [];
   const features = [];
   for (const countyFeature of countyGeoJSON.features) {
-    if (counties.indexOf(countyFeature.properties.name) !== -1) {
+    if (counties.includes(countyFeature.properties.name)) {
       features.push(countyFeature.properties.name);
       polygons.push(turf.feature(countyFeature.geometry));
     }

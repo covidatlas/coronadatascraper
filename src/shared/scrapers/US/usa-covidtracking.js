@@ -35,6 +35,10 @@ const scraper = {
       if (stateData.total !== null) {
         stateObj.tested = parse.number(stateData.total);
       }
+      if (stateData.state === 'Washington, D.C.') {
+        stateObj.county = 'District of Columbia';
+      }
+
       // Assume zero if none provided
       stateObj.cases = parse.number(stateData.positive || 0);
       regions.push(stateObj);

@@ -35,7 +35,7 @@ const scraper = {
 
       let $table = $('td:contains("City or Area")').closest('table');
       let data = $table.parsetable(false, false, true);
-      if (data[1][0].indexOf('Confirmed Cases') === -1) {
+      if (!data[1][0].includes('Confirmed Cases')) {
         throw new Error('Unknown headers in html table');
       }
       let lastRow = data[0].length - 1;
@@ -46,7 +46,7 @@ const scraper = {
 
       $table = $('td:contains("Testing Status")').closest('table');
       data = $table.parsetable(false, false, true);
-      if (data[1][0].indexOf('Total') === -1) {
+      if (!data[1][0].includes('Total')) {
         throw new Error('Unknown headers in html table');
       }
       lastRow = data[0].length - 1;
