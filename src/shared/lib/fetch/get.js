@@ -2,7 +2,8 @@
 
 import needle from 'needle';
 import * as caching from './caching.js';
-import * as datetime from '../datetime.js';
+import datetime from '../datetime/index.js';
+import log from '../log.js';
 
 const CHROME_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36';
@@ -30,24 +31,30 @@ needle.defaults({
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - toString: returns data as a string instead of buffer, defaults to true
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
+ *  - method: 'get' or 'post'
+ *  - args: key/value pairs to send with a POST
  */
-export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.getYYYYMD(), options = {}) => {
-  const { alwaysRun, disableSSL, toString, encoding, cookies } = {
+export const get = async (url, type, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
+  const { alwaysRun, disableSSL, toString, encoding, cookies, headers, method, args } = {
     alwaysRun: false,
     disableSSL: false,
     toString: true,
     encoding: 'utf8',
     cookies: undefined,
+    headers: undefined,
+    method: 'get',
+    args: undefined,
     ...options
   };
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
+  if (process.env.ONLY_USE_CACHE) return cachedBody;
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    console.log('  🚦  Loading data for %s from server', url);
+    log('  🚦  Loading data for %s from server', url);
 
     if (disableSSL) {
-      console.log('  ⚠️  SSL disabled for this resource');
+      log('  ⚠️  SSL disabled for this resource');
       process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
     }
 
@@ -57,14 +64,14 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       tries++;
       if (tries > 1) {
         // sleep a moment before retrying
-        console.log(`  ⚠️  Retrying (${tries})...`);
+        log(`  ⚠️  Retrying (${tries})...`);
         await new Promise(r => setTimeout(r, 2000));
       }
 
       // TODO @AWS: if AWS infra get from endpoint instead of needle
 
       let errorMsg = '';
-      const response = await needle('get', url, { cookies }).catch(err => {
+      const response = await needle(method, url, args, { cookies, headers }).catch(err => {
         // Errors we get here have the tendency of crashing the whole crawler
         // with no ability for us to catch them. Let's hear what these errors have to say,
         // and throw an error later down that won't bring the whole process down.
@@ -77,18 +84,18 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
 
       // try again if we got an error
       if (errorMsg) {
-        console.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
+        log.error(`  ❌ Got ${errorMsg} trying to fetch ${url}`);
         continue;
       }
       // try again if we got an error code which might be recoverable
       if (response.statusCode >= 500) {
-        console.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+        log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
         continue;
       }
 
       const contentLength = parseInt(response.headers['content-length'], 10);
       if (!Number.isNaN(contentLength) && contentLength !== response.bytes) {
-        console.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
+        log.error(`  ❌ Got ${response.bytes} but expecting ${contentLength} fetching ${url}`);
         continue;
       }
 
@@ -100,11 +107,11 @@ export const get = async (url, type, date = process.env.SCRAPE_DATE || datetime.
       }
 
       // 400-499 means "not found" and a retry probably won't help -- return null
-      console.log(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
+      log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
       return null;
     }
 
-    console.log(`  ❌ Failed to fetch ${url} after ${tries} tries`);
+    log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
     return null;
   }
 

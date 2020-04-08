@@ -1,3 +1,23 @@
+const replacements = {
+  'Cabinet for Health and Family Services': 'HFS',
+  'Department of Health & Human Resources': 'DHHR',
+  'Department of Health and Human Services': 'HHS',
+  'Emergency and Preparedness Information': 'E&P',
+  'Health and Human Services': 'HHS',
+  'Department of Health': 'DoH',
+  'Public Health Department': 'DPH',
+  'Department of Public Health': 'DoH',
+  Department: 'Dept.',
+  Information: 'Info.'
+};
+function shortenName(name) {
+  for (const [search, replace] of Object.entries(replacements)) {
+    name = name.split(' - ').shift();
+    name = name.replace(search, replace);
+  }
+  return name;
+}
+
 export const getURLFromContributor = function(curator) {
   if (!curator) {
     return '';
@@ -19,19 +39,28 @@ export const getURLFromContributor = function(curator) {
 /**
  * @param {{name: string, country: string?, flag: string?}[]} contributors
  */
-export const getContributors = function(contributors) {
+export const getContributors = function(contributors, options = { link: true, shortNames: false }) {
   let html = '';
 
   if (contributors) {
     for (const [index, contributor] of Object.entries(contributors)) {
+      // Only show first source
+      if (options.shortNames && index > 0) {
+        break;
+      }
+
       if (index !== '0') {
         html += ', ';
       }
-      const contributorURL = getURLFromContributor(contributor);
+      const contributorURL = options.link && getURLFromContributor(contributor);
       if (contributorURL) {
-        html += `<a href="${getURLFromContributor(contributor)}" class="spectrum-Link">`;
+        html += `<a href="${contributorURL}" class="spectrum-Link">`;
       }
-      html += contributor.name;
+      if (options.shortNames) {
+        html += shortenName(contributor.name);
+      } else {
+        html += contributor.name;
+      }
       if (contributorURL) {
         html += `</a>`;
       }
@@ -42,5 +71,25 @@ export const getContributors = function(contributors) {
     }
   }
 
+  return html;
+};
+
+/**
+ * @param {{name: string, country: string?, flag: string?}[]} contributors
+ */
+export const getSource = function(location, options = { link: true, shortNames: false }) {
+  const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+  let html = '';
+  if (location.curators || location.sources) {
+    html += getContributors(location.curators || location.sources, options);
+  } else {
+    if (options.link) {
+      html += `<a class="spectrum-Link" target="_blank" href="${location.url}">`;
+    }
+    html += sourceURLShort;
+    if (options.link) {
+      html += `</a>`;
+    }
+  }
   return html;
 };

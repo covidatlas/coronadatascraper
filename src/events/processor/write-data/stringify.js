@@ -5,6 +5,8 @@
 export const csvForDay = function(data) {
   // Start with the columns we want first
   let columns = [
+    'name',
+    'level',
     'city',
     'county',
     'state',
@@ -15,6 +17,7 @@ export const csvForDay = function(data) {
     'tested',
     'active',
     'population',
+    'populationDensity',
     'lat',
     'long',
     'url'

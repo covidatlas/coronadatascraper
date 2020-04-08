@@ -1,7 +1,9 @@
 import { join, resolve } from 'path';
-import * as fs from '../../../shared/lib/fs.js';
-import * as geography from '../../../shared/lib/geography/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
+import * as fs from '../../../shared/lib/fs.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import * as geography from '../../../shared/lib/geography/index.js';
+import log from '../../../shared/lib/log.js';
 
 const dataPath = join(__dirname, '..', 'vendor', 'population');
 
@@ -66,60 +68,65 @@ async function readPopulationData(featureCollection) {
 }
 
 const generatePopulations = async ({ locations, featureCollection, report, options, sourceRatings }) => {
-  console.log('⏳ Getting population data...');
+  log('⏳ Getting population data...');
 
   const populations = await readPopulationData(featureCollection);
 
-  function getPopulation(location) {
+  async function getPopulation(location) {
     let population = null;
 
-    if (location.city) {
+    const city = location.city && location.city.split(':').pop();
+    const county = location.county && location.county.split(':').pop();
+    const state = location.state && location.state.split(':').pop();
+    const country = location.country && location.country.split(':').pop();
+
+    if (city) {
       // Use either city by country or city by state
-      let populationSource = populations.byCity[location.country];
-      if (populationSource && populationSource[location.state]) {
-        populationSource = populationSource[location.state];
+      let populationSource = populations.byCity[country];
+      if (populationSource && populationSource[state]) {
+        populationSource = populationSource[state];
       }
-      if (populationSource && populationSource[location.state]) {
-        population = populationSource[location.city];
+      if (populationSource && populationSource[state]) {
+        population = populationSource[city];
       }
-    } else if (location.county) {
-      if (populations.byCounty[location.country]) {
+    } else if (county) {
+      if (populations.byCounty[country]) {
         // Try counties
-        const populationSource = populations.byCounty[location.country];
-        const countyNameReplaced = location.county.replace('Parish', 'County');
-        const countyNameJoined = `${location.county}, ${location.state}`;
-        const countyNameReplacedJoined = `${countyNameReplaced}, ${location.state}`;
+        const populationSource = populations.byCounty[country];
+        const countyNameReplaced = county.replace('Parish', 'County');
+        const countyNameJoined = `${county}, ${state}`;
+        const countyNameReplacedJoined = `${countyNameReplaced}, ${state}`;
 
         population =
-          populationSource[location.county] ||
+          populationSource[county] ||
           populationSource[countyNameReplaced] ||
           populationSource[countyNameJoined] ||
           populationSource[countyNameReplacedJoined];
       }
-    } else if (location.state) {
-      if (populations.byState[location.country] && populations.byState[location.country][location.state]) {
+    } else if (state) {
+      if (populations.byState[country] && populations.byState[country][state]) {
         // Try states
-        population = populations.byState[location.country][location.state];
+        population = populations.byState[country][state];
       }
     } else {
       // Try countries
-      population = populations.byCountry[location.country];
+      population = populations.byCountry[country];
     }
 
     if (!population) {
-      population = populations.supplemental[location.city];
+      population = populations.supplemental[city];
     }
 
     if (!population) {
-      population = populations.supplemental[location.county];
+      population = populations.supplemental[county];
     }
 
     if (!population) {
-      population = populations.supplemental[location.state];
+      population = populations.supplemental[state];
     }
 
     if (!population) {
-      population = populations.supplemental[location.country];
+      population = populations.supplemental[country];
     }
 
     if (!population) {
@@ -127,21 +134,6 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
         const feature = featureCollection.features[location.featureId];
         if (feature.properties.pop_est) {
           population = feature.properties.pop_est;
-        } else if (feature._aggregatedLocations) {
-          population = 0;
-          const featuresToCheck = feature._aggregatedLocations.slice();
-          while (featuresToCheck.length) {
-            const aggregatedLocation = featuresToCheck.pop();
-            const pop = getPopulation(aggregatedLocation);
-            if (pop) {
-              population += pop;
-            } else {
-              console.error(
-                '❌ Failed to find population for aggregated location %s',
-                geography.getName(aggregatedLocation)
-              );
-            }
-          }
         }
       }
     }
@@ -157,18 +149,29 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
       continue;
     }
 
-    const population = getPopulation(location);
+    let population;
+
+    // get data from id if present
+    const clId = countryLevels.getIdFromLocation(location);
+    if (clId) {
+      population = await countryLevels.getPopulation(clId);
+    } else {
+      population = await getPopulation(location);
+    }
 
     if (population) {
       location.population = population;
       populationFound++;
+      if (location.area) {
+        location.populationDensity = population / (location.area / 1000000);
+      }
     } else {
-      console.error('  ❌ %s: ?', geography.getName(location));
+      log.error('  ❌ %s: ?', geography.getName(location));
       errors.push(geography.getName(location));
       reporter.logError('population', 'missing population', '', 'low', location);
     }
   }
-  console.log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
+  log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
 
   report.findPopulation = {
     numLocationsWithPopulation: populationFound,

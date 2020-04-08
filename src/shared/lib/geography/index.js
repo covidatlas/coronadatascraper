@@ -1,9 +1,13 @@
-import * as turf from './turf.js';
-import usStates from '../../vendor/usa-states.json';
-
+import assert from 'assert';
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
+import usStates from '../../vendor/usa-states.json';
+import iso3to2 from '../../vendor/iso3to2.json';
+// eslint-disable-next-line
+import iso1Codes from 'country-levels/iso1.json';
+import log from '../log.js';
+import * as turf from './turf.js';
 
 export { usStates };
 
@@ -24,13 +28,13 @@ const countryMap = {
   Brunei: 'Brunei Darussalam',
   Reunion: 'Réunion',
   Curacao: 'Curaçao',
-  'United Kingdom': 'GBR',
+  'United Kingdom': 'iso1:GB',
   'occupied Palestinian territory': 'PSE',
   'Congo (Brazzaville)': 'COG',
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB',
-  US: 'USA',
+  US: 'iso1:US',
   'Bahamas, The': 'BHS',
   'Cape Verde': 'CPV',
   'East Timor': 'TLS',
@@ -42,6 +46,27 @@ const countryMap = {
 };
 
 /*
+  Given a list of features, return the combined polygono
+*/
+export function combineFeatures(features, properties = {}) {
+  // Collect a list of features and polygons matching the list of counties
+  const polygons = [];
+  for (const countyFeature of features) {
+    polygons.push(turf.feature(countyFeature.geometry));
+  }
+
+  // Generate a combined feature from all of the polygons
+  let combinedPolygon = polygons.pop();
+  while (polygons.length) {
+    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
+  }
+  const combinedFeature = combinedPolygon;
+  combinedFeature.properties = properties;
+
+  return combinedFeature;
+}
+
+/*
   Given a list of counties and a set of properties, combine the GeoJSON for the counties and slap the properties on it
 */
 export function generateMultiCountyFeature(counties, properties) {
@@ -49,14 +74,14 @@ export function generateMultiCountyFeature(counties, properties) {
   const polygons = [];
   const features = [];
   for (const countyFeature of countyGeoJSON.features) {
-    if (counties.indexOf(countyFeature.properties.name) !== -1) {
+    if (counties.includes(countyFeature.properties.name)) {
       features.push(countyFeature.properties.name);
       polygons.push(turf.feature(countyFeature.geometry));
     }
   }
 
   if (features.length !== counties.length) {
-    console.warn(
+    log.warn(
       '⚠️  ',
       counties.length,
       'counties provided to generateMultiCountyFeature, only',
@@ -72,16 +97,6 @@ export function generateMultiCountyFeature(counties, properties) {
   }
   const combinedFeature = combinedPolygon;
   combinedFeature.properties = properties;
-
-  // Store each of the locations so we can reference them later and get populatin data
-  combinedFeature._aggregatedLocations = features.map(f => {
-    const [county, state] = f.split(', ');
-    return {
-      county,
-      state,
-      ...properties
-    };
-  });
 
   return combinedFeature;
 }
@@ -100,6 +115,12 @@ export const isCounty = function(location) {
 
 export const isCity = function(location) {
   return location && location.city;
+};
+
+export const getSmallestLocationStr = function(location) {
+  const smallestStr = location.city || location.county || location.state || location.country;
+  assert(smallestStr, `Illegal location: ${JSON.stringify(location)}`);
+  return smallestStr;
 };
 
 export const getLocationGranularityName = function(location) {
@@ -121,8 +142,9 @@ export const getLocationGranularityName = function(location) {
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
  */
-export const getName = location =>
-  [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+export const getName = function(location) {
+  return location.name || [location.city, location.county, location.state, location.country].filter(Boolean).join(', ');
+};
 
 /*
   Get the priority of a location
@@ -139,7 +161,40 @@ export const toUSStateAbbreviation = function(string) {
 };
 
 /*
-  Normalize the state as a 2-letter string
+  Normalize the country as a 2-letter string
+*/
+export const toISO3166Alpha2 = function(country) {
+  if (iso1Codes[country]) {
+    return country;
+  }
+  if (iso3to2[country]) {
+    return iso3to2[country];
+  }
+
+  for (const [iso2, properties] of Object.entries(iso1Codes)) {
+    if (properties.name === country) {
+      return iso2;
+    }
+  }
+
+  log.warn('⚠️  Could not find ISO-3166 alpha 2 country code for', country);
+  return country;
+};
+
+/*
+  Normalize any country-like string to the full name
+*/
+export const toHumanReadableCountryName = function(country) {
+  const isoAlpha2 = toISO3166Alpha2(country);
+  if (isoAlpha2) {
+    return iso1Codes[isoAlpha2].name;
+  }
+  log.warn('⚠️  Could not find country name for', country);
+  return country;
+};
+
+/*
+  Normalize the country as a 3-letter string
 */
 export const toISO3166Alpha3 = function(string) {
   let localString = string;
@@ -156,17 +211,17 @@ export const toISO3166Alpha3 = function(string) {
       return country['alpha-3'];
     }
   }
-  console.warn('⚠️  Could not find country code for', localString);
+  log.warn('⚠️  Could not find ISO-3166 alpha 3 country code for', localString);
   return localString;
 };
 
 /*
   Append ' County' to the end of a string, if not already present
 */
-export const addCounty = function(string) {
+export const addCounty = function(string, suffix = 'County') {
   let localString = string;
-  if (!localString.match(/ County$/)) {
-    localString += ' County';
+  if (localString.substr(-1 * suffix.length) !== suffix) {
+    localString += ` ${suffix}`;
   }
   return localString;
 };
@@ -177,6 +232,15 @@ export const addCounty = function(string) {
 export const addEmptyRegions = function(regionDataArray, regionNameArray, regionGranularity) {
   if (regionDataArray.length === 0) {
     throw new Error(`Attempted to addEmptyRegions with without providing any ${regionGranularity} records`);
+  }
+  let cases = 0;
+  for (const entry of regionDataArray) {
+    if (entry.cases !== undefined) {
+      cases += entry.cases;
+    }
+  }
+  if (cases === 0) {
+    throw new Error(`Attempted to addEmptyRegions with without providing any actual cases`);
   }
 
   // Get an object of all the tracked regions
@@ -216,7 +280,7 @@ export const stripCountyName = function(county) {
     .trim()
     .toLowerCase()
     .replace(/[^A-Za-z,]*/g, '')
-    .replace(/(parish|county)/, '');
+    .replace(/(parish|county|municipality|borough)/, '');
 };
 
 /*
@@ -232,6 +296,9 @@ export const getState = function(state) {
 export const getCounty = function(county, state) {
   state = getState(state);
 
+  // Drop suffix so we get it right
+  county = county.replace(' County', '').replace(' Parish', '');
+
   if (county.match(/city$/)) {
     // These need to be handled on a case-by-case basis
     return county;
@@ -243,7 +310,10 @@ export const getCounty = function(county, state) {
   }
 
   // Compare
-  const foundCounty = strippedCountyMap[stripCountyName(`${county},${state}`)];
+  const foundCounty =
+    strippedCountyMap[stripCountyName(`${county},${state}`)] ||
+    strippedCountyMap[stripCountyName(`${addCounty(county)},${state}`)] ||
+    strippedCountyMap[stripCountyName(`${addCounty(county, 'Parish')},${state}`)];
   if (foundCounty) {
     return foundCounty.replace(/, .*$/, '');
   }

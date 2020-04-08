@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import * as datetime from './datetime.js';
+import datetime from './datetime/index.js';
 
 /*
   Remove "private" object properties
@@ -52,7 +52,7 @@ export const transposeTimeseries = function(timeseriesByLocation) {
   let allDates = [];
   for (const [locationName, location] of Object.entries(timeseriesByLocation)) {
     for (const [date] of Object.entries(location.dates)) {
-      if (allDates.indexOf(date) === -1) {
+      if (!allDates.includes(date)) {
         allDates.push(date);
       }
     }

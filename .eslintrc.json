@@ -1,5 +1,11 @@
 {
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "unicorn"
+  ],
   "ignorePatterns": [
     "node_modules/",
     "dist/",
@@ -16,19 +22,31 @@
   "rules": {
     "consistent-return": "off",
     "func-names": "off",
-    "import/extensions": ["error", "ignorePackages"],
-    "import/no-named-as-default": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages"
+    ],
+    "guard-for-in": "off",
     "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off",
+    "max-classes-per-file": "off",
     "no-async-promise-executor": "off",
     "no-await-in-loop": "off",
     "no-console": "off",
     "no-continue": "off",
     "no-labels": "off",
+    "no-loop-func": "off",
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-restricted-syntax": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
-    "no-loop-func": "off"
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "unicorn/prefer-includes": "error"
   }
 }

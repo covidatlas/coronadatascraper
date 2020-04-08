@@ -16,6 +16,16 @@ const { argv } = yargs
     description: 'Scrape only the location provided by full name, i.e City, County, State, Country',
     type: 'string'
   })
+  .option('country', {
+    alias: 'c',
+    description: 'Scrape only the country provided, like AUS',
+    type: 'string'
+  })
+  .option('id', {
+    alias: 'i',
+    description: 'Scrape only the location provided by id',
+    type: 'string'
+  })
   .option('skip', {
     alias: 's',
     description: 'Skip the location provided by full name, i.e City, County, State, Country',
@@ -26,12 +36,45 @@ const { argv } = yargs
     description: 'The suffix to add to output files, i.e. passing TEST will produce data-TEST.json etc',
     type: 'string'
   })
-  .option('verbose', {
-    alias: 'v',
-    description: 'Dump out everything',
-    type: 'string'
+  .option('quiet', {
+    alias: 'q',
+    description: 'Suppress logs',
+    type: 'boolean'
+  })
+  .option('findFeatures', {
+    description: 'Include feature information in output data',
+    type: 'boolean'
+  })
+  .options('findPopulations', {
+    description: 'Include population information in output data',
+    type: 'boolean'
+  })
+  .options('writeData', {
+    description: 'Write to dist folder',
+    type: 'boolean'
+  })
+  .option('onlyUseCache', {
+    alias: 'x',
+    description: 'Only use cache (no http calls)',
+    type: 'boolean'
   })
   .help()
   .alias('help', 'h');
+
+if (argv.date) {
+  process.env.SCRAPE_DATE = argv.date;
+} else {
+  delete process.env.SCRAPE_DATE;
+}
+
+if (argv.quiet) {
+  process.env.LOG_LEVEL = 'off';
+}
+
+if (argv.onlyUseCache) {
+  process.env.ONLY_USE_CACHE = true;
+} else {
+  delete process.env.ONLY_USE_CACHE;
+}
 
 export default argv;

@@ -8,7 +8,7 @@ import './style.css';
 import showMap from './map.js';
 import showFile from './file.js';
 import showSources from './sources.js';
-import showCrossCheckReport from './crossCheckReport.js';
+import showCrossCheckReport from './cross-check-report.js';
 
 const pages = {
   '#home': '.cds-Home',
