@@ -54,7 +54,7 @@ const iso2ref = {
 };
 
 const scraper = {
-  country: 'UKR',
+  country: 'iso1:UA',
   sources: [
     {
       url: 'https://www.rnbo.gov.ua/en/',
