@@ -1,19 +1,16 @@
 import * as fetch from '../../lib/fetch/index.js';
 import datetime from '../../lib/datetime/index.js';
 import maintainers from '../../lib/maintainers.js';
-// import { NotImplemented } from '../../lib/errors.js';
 import log from '../../lib/log.js';
 import * as geography from '../../lib/geography/index.js';
 import * as parse from '../../lib/parse.js';
 
 const scraper = {
-  certValidation: false,
   country: 'UKR',
   sources: [
     {
-      url: 'put url here for government agency',
-      name: 'name of agency',
-      description: 'some sort of description'
+      url: 'https://www.rnbo.gov.ua/en/',
+      name: 'National Security and Defense Council of Ukraine\n'
     }
   ],
   // Ukraine's URL needs to have the date on it. So this will actually be
@@ -27,34 +24,20 @@ const scraper = {
       const regions = [];
       let date = process.env.SCRAPE_DATE;
       date = datetime.getYYYYMMDD(date);
-      // Let's see what we've done so far?
-      // Note the angled single quote, which allows easy formatting:
-      // always use log and not console.log.
-      //
-      // These types of messages are for development only; you'd go remove them
-      // all after.
-      log(`The date is ${date}`);
       this.url += date;
-      // Use functions from the fetch module, which does all the caching for you.
-      log(`Gonna fetch from ${this.url}`);
       const data = await fetch.json(this.url, false, { disableSSL: true });
-      // I personally like to check that this isn't empty, otherwise the console
-      // may have a cryptic error message like "$ is not a function"
-      // (you'll see that one often);
       if (data === null) {
-        // I personally prepend log messages I will keep in the final version and
-        // error messages with the location of the scraper.
         throw new Error(`UKR: failed to fetch data from ${this.url}.`);
       }
-      // Here's where you'd parse the data and return what it needs to have.
-      // But we won't do anything.
-      // throw new NotImplemented(`UKR scraper is cache-only for this date.`);
-      for (const field of data.ukraine) {
+      for (const region of data.ukraine) {
         regions.push({
-          county: geography.addCounty(field.label.en, 'region'),
-          cases: parse.number(field.confirmed),
-          deaths: parse.number(field.deaths),
-          recovered: parse.number(field.recovered)
+          county:
+            region.label.en === 'Kyiv'
+              ? geography.addCounty(region.label.en, 'city')
+              : geography.addCounty(region.label.en, 'region'),
+          cases: parse.number(region.confirmed),
+          deaths: parse.number(region.deaths),
+          recovered: parse.number(region.recovered)
         });
       }
       log(regions);
