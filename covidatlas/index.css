@@ -201,6 +201,16 @@ sp-dropdown[emphasized] {
   }
 }
 
+sp-tab-list {
+  margin-top: -4px;
+  margin-bottom: -9px;
+}
+
+sp-tab {
+  font-family: var(--ca-FontBody);
+}
+
+
 hr {
   --hr-width: 150px;
   --bubble-size: 16px;
@@ -336,5 +346,33 @@ hr {
   .spectrum-Heading.ca-LocationTitle {
     /* margin-top: 2em; */
     font-size: var(--spectrum-heading-xl-text-size, var(--spectrum-alias-heading-xl-text-size));
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .ca-SiteHeader sp-tab-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spectrum-Site-sideBar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    z-index: 100;
+    transform: translateX(0);
+    transition: transform var(--spectrum-global-animation-duration-200, 160ms) ease-in-out;
+  }
+  .spectrum-Site-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .js-toggleMenu {
+    display: none;
+  }
+  .ca-SiteHeader .ca-Logo {
+    margin: 0 8px;
   }
 }

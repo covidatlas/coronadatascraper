@@ -164,7 +164,7 @@ exports.handler = async function http() {
   const body = template(
     'Sources',
     `
-${header()}
+${header('sources')}
 <div class="spectrum-Site-content">
   ${sidebar('sources')}
   <div class="spectrum-Site-mainContainer spectrum-Typography">

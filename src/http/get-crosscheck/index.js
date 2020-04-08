@@ -144,7 +144,7 @@ exports.handler = async function http() {
   const body = template(
     'Cross-check Reports',
     `
-${header()}
+${header('crosscheck')}
 <div class="spectrum-Site-content">
   ${sidebar('crosscheck')}
   <div class="spectrum-Site-mainContainer spectrum-Typography">

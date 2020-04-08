@@ -47,7 +47,7 @@ exports.handler = async function http() {
     body: template(
       'Map',
       `
-${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
+${header('map' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
 <div class="spectrum-Site-content">
   ${sidebar('map')}

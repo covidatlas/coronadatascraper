@@ -20,7 +20,7 @@ exports.handler = async function http() {
     body: template(
       'About',
       `
-${header()}
+${header('about')}
 
 <div class="spectrum-Site-content">
   ${sidebar('about')}

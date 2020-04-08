@@ -20,7 +20,7 @@ exports.handler = async function http() {
     body: template(
       'Datasets',
       `
-${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
+${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
 <div class="spectrum-Site-content">
   ${sidebar('data')}

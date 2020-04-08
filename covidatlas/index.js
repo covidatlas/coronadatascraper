@@ -6,6 +6,8 @@ import '@spectrum-web-components/menu';
 import '@spectrum-web-components/dropdown';
 import '@spectrum-web-components/icons';
 import '@spectrum-web-components/icon';
+import '@spectrum-web-components/tab';
+import '@spectrum-web-components/tab-list';
 
 import './index.css';
 

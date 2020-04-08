@@ -482,6 +482,14 @@
     focus-visible "^5.0.2"
     tslib "^1.10.0"
 
+"@spectrum-web-components/shared@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/shared/-/shared-0.4.4.tgz#9d220e81b48309aa0ca21f2db01e1339ea565121"
+  integrity sha512-8lRmxqycTVNXrZ983triO53wVSm4z7jIxqm5kZ6GOi1UIpdoVkS5+bkVJ6lg44pPCLzj9YEHM5ie9hRbZLCsHw==
+  dependencies:
+    focus-visible "^5.0.2"
+    tslib "^1.10.0"
+
 "@spectrum-web-components/sidenav@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/sidenav/-/sidenav-0.3.4.tgz#8843ae8d450965321a46c0a0546d392e71d620f8"
@@ -494,6 +502,23 @@
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.5.0.tgz#94fa5280d2f774e4cc72e47b6c0b38f7ec73dcf3"
   integrity sha512-Xq4YvOFYGOuzI3qgYF7eF17g049fQVUIntA+NcKSuU1ZfvMS41+cz67fkWydtorMguCbUgIr//g+xFygF4mrtQ==
+
+"@spectrum-web-components/tab-list@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tab-list/-/tab-list-0.3.6.tgz#db89f692bbc8b37eacec5ba8ffd45b9ba87d4801"
+  integrity sha512-ybe3eXKbog4rDnUeMCdsYW2vLt5GImx7oNJYJYk2ERX8iqX4TJihrB0PLL8wubnMp/zGxVfVf/vX8F6FhWN/gQ==
+  dependencies:
+    "@spectrum-web-components/shared" "^0.4.4"
+    "@spectrum-web-components/tab" "^0.3.6"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/tab@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tab/-/tab-0.3.6.tgz#d80c17ef523d3cc7d5fa155f86bd4d4a7d7b5b2a"
+  integrity sha512-IksAjq5YBWCB0fh/KHYGT1Q73CaaSE8819hlqrQeMI3aQvfGLyrfae0OBrP+owgyPbqnc1Yak9SEECkb2uB46w==
+  dependencies:
+    "@spectrum-web-components/shared" "^0.4.4"
+    tslib "^1.10.0"
 
 "@spectrum-web-components/textfield@^0.3.4":
   version "0.3.4"
