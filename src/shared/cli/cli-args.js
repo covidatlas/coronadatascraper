@@ -54,6 +54,7 @@ const { argv } = yargs
     type: 'boolean'
   })
   .option('onlyUseCache', {
+    alias: 'x',
     description: 'Only use cache (no http calls)',
     type: 'boolean'
   })
