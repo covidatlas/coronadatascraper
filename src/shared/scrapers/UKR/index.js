@@ -15,14 +15,27 @@ const iso2ref = {
   'Ivano-Frankivsk region': 'iso2:UA-26',
   'Kharkiv region': 'iso2:UA-63',
   'Kherson region': 'iso2:UA-65',
+
   'Khmelnytskyi region': 'iso2:UA-68',
+  'Khmelnytsky region': 'iso2:UA-68',
+
   'Kirovohrad region': 'iso2:UA-35',
+  'Kirovograd region': 'iso2:UA-35',
+
   Kyiv: 'iso2:UA-30',
+
   'Kyiv region': 'iso2:UA-32',
+  'Kiev region': 'iso2:UA-32',
+
   'Luhansk region': 'iso2:UA-09',
+  'Lugansk region': 'iso2:UA-09',
+
   'Lviv region': 'iso2:UA-46',
   'Mykolaiv region': 'iso2:UA-48',
+
   'Odesa region': 'iso2:UA-51',
+  'Odessa region': 'iso2:UA-51',
+
   'Poltava region': 'iso2:UA-53',
   'Rivne region': 'iso2:UA-56',
   Sevastopol: 'iso2:UA-40',
@@ -30,10 +43,13 @@ const iso2ref = {
   'Ternopil region': 'iso2:UA-61',
   'Vinnytsia region': 'iso2:UA-05',
   'Volyn region': 'iso2:UA-07',
-  //   'Zakarpattia == Transcarpathian
+
   'Zakarpattia region': 'iso2:UA-21',
   'Transcarpathian region': 'iso2:UA-21',
+
   'Zaporizhia region': 'iso2:UA-23',
+  'Zaporozhye region': 'iso2:UA-23',
+
   'Zhytomyr region': 'iso2:UA-18'
 };
 
@@ -64,11 +80,11 @@ const scraper = {
       for (const region of data.ukraine) {
         const name =
           region.label.en === 'Kyiv'
-            ? geography.addCounty(region.label.en, 'city')
+            ? geography.addCounty(region.label.en, 'city') // TODO suffix issue
             : geography.addCounty(region.label.en, 'region');
         regions.push({
           // county: name,
-          debug: name,
+          debug: `${region.country} : ${name} - ${region.label.uk}`,
           cases: parse.number(region.confirmed),
           deaths: parse.number(region.deaths),
           recovered: parse.number(region.recovered),
