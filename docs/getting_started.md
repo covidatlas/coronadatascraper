@@ -70,9 +70,9 @@ To run the scrapers for today:
 yarn start
 ```
 
-### Run scrapers for only one location
+### Run selected scrapers
 
-To scrape just one location, use `--location`/`-l`
+To use a subset of scrapers, use `--location`/`-l`
 
 ```
 yarn start --location "US/PA"
