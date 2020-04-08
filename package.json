@@ -15,7 +15,7 @@
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
-    "deploySite": "npm run buildSite && gh-pages -a -d dist/ -e .",
+    "deploySite": "zip -r dist/timeseries-tidy.csv.zip dist/timeseries-tidy.csv && rm dist/timeseries-tidy.csv && npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "start": "node src/shared/cli/index.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
