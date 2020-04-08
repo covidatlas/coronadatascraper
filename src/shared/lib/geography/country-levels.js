@@ -6,7 +6,7 @@ import * as geography from './index.js';
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
 const levelCache = {};
-const countryLevelsDir = path.dirname(require.resolve('country-levels/license.md'));
+const countryLevelsDir = path.dirname(require.resolve('country-levels/package.json'));
 
 export function isId(str) {
   if (Array.isArray(str)) {
