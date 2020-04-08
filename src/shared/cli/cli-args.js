@@ -13,12 +13,7 @@ const { argv } = yargs
   })
   .option('location', {
     alias: 'l',
-    description: 'Scrape only the location provided by full name, i.e City, County, State, Country',
-    type: 'string'
-  })
-  .option('country', {
-    alias: 'c',
-    description: 'Scrape only the country provided, like AUS',
+    description: 'Scrape only the location provided by src/shared/scraper path name',
     type: 'string'
   })
   .option('id', {
@@ -28,7 +23,7 @@ const { argv } = yargs
   })
   .option('skip', {
     alias: 's',
-    description: 'Skip the location provided by full name, i.e City, County, State, Country',
+    description: 'Skip the location provided by src/shared/scraper path name',
     type: 'string'
   })
   .option('outputSuffix', {
