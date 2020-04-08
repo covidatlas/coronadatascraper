@@ -23,6 +23,7 @@ const iso2ref = {
   'Kirovograd region': 'iso2:UA-35',
 
   Kyiv: 'iso2:UA-30',
+  'Kyiv city': 'iso2:UA-30',
 
   'Kyiv region': 'iso2:UA-32',
   'Kiev region': 'iso2:UA-32',
