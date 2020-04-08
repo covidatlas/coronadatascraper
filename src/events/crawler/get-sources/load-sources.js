@@ -1,7 +1,7 @@
 import fastGlob from 'fast-glob';
 import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
-import * as countryLevels from  '../../../shared/lib/geography/country-levels.js';
+import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 
 /** Check location inclusion, based on command-line options.
  * (*) location - the location
@@ -32,8 +32,7 @@ export default async args => {
   filePaths = filePaths.filter(file => file.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi));
 
   // eslint-disable-next-line
-  const sources = await Promise.all(
-    filePaths.map(filePath => require(filePath)))
+  const sources = await Promise.all(filePaths.map(filePath => require(filePath)))
         .then(modules => [
     ...modules.map((module, index) => ({ _path: filePaths[index], ...module.default }))
   ]);
