@@ -7,6 +7,8 @@ const template = require('@architect/views/template');
 // eslint-disable-next-line
 const header = require('@architect/views/header');
 // eslint-disable-next-line
+const footer = require('@architect/views/footer');
+// eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
 const locations = require('./dist/location-map.json');
@@ -63,9 +65,9 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <h1 class="spectrum-Heading spectrum-Heading--L">Data available for download</h1>
       <sp-button href="/data">Download</sp-button>
     </section>
+    ${footer()}
 
   </div>
-
 </div>
 
 <script>

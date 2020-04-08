@@ -126,6 +126,16 @@ sp-dropdown[emphasized] {
   font-family: var(--spectrum-sociallinks-text-font-family);
 }
 
+.ca-SiteFooter {
+  background-color: var(--BackgroundColor);
+  color: var(--spectrum-body-text-color);
+  padding: var(--spectrum-global-dimension-size-300);
+}
+
+.ca-SiteFooter-Disclaimer {
+  margin-top: var(--spectrum-alias-grid-margin-large);
+}
+
 .ca-Hero {
   display: none;
 }
@@ -292,7 +302,7 @@ hr {
 .ca-LocationMeta + .ca-LocationMeta {
   margin-top: calc(var(--spectrum-body-xs-margin-bottom, var(--spectrum-global-dimension-size-115)) * -1);
 }
-.ca-LocationTitle {
+.spectrum-Heading.ca-LocationTitle {
   font-size: var(--spectrum-heading-m-text-size, var(--spectrum-alias-heading-m-text-size));
 }
 
@@ -316,13 +326,15 @@ hr {
 }
 
 @media screen and (min-width: 640px) {
-  .ca-LocationTitle {
+  .spectrum-Heading.ca-LocationTitle {
+    /* margin-top: 2em; */
     font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size));
   }
 }
 
 @media screen and (min-width: 800px) {
-  .ca-LocationTitle {
+  .spectrum-Heading.ca-LocationTitle {
+    /* margin-top: 2em; */
     font-size: var(--spectrum-heading-xl-text-size, var(--spectrum-alias-heading-xl-text-size));
   }
 }

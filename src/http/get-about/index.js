@@ -7,6 +7,8 @@ const template = require('@architect/views/template');
 // eslint-disable-next-line
 const header = require('@architect/views/header');
 // eslint-disable-next-line
+const footer = require('@architect/views/footer');
+// eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
 exports.handler = async function http() {
@@ -25,13 +27,13 @@ ${header()}
 
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-    <div class="spectrum-Site-page">
       <div class="ca-Hero">
         <div class="ca-Logo">
           <img src="${arc.static('logo-banner-light.svg')}" alt="${constants.name}">
         </div>
       </div>
 
+    <section class="ca-Section">
       <h1 class="spectrum-Heading spectrum-Heading--XL">About the project</h1>
       <p class="spectrum-Body spectrum-Body--L">${
         constants.name
@@ -56,9 +58,9 @@ ${header()}
         <a class="spectrum-Link" href="https://instagram.com/covidatlas" target="_blank">Instagram</a>
       </nav>
     </footer>
-  </div>
-
+  ${footer()}
 </div>
+
 `
     )
   };

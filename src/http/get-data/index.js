@@ -5,6 +5,8 @@ const template = require('@architect/views/template');
 // eslint-disable-next-line
 const header = require('@architect/views/header');
 // eslint-disable-next-line
+const footer = require('@architect/views/footer');
+// eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
 exports.handler = async function http() {
@@ -65,8 +67,8 @@ ${header('' /* 'ca-SiteHeader--dark spectrum--dark' */)}
         <sp-button variant="primary" quiet href="/map">View map</sp-button> <sp-button emphasized href="${baseURL}features.json" target="_blank" download>Download</sp-button>
       </section>
     </div>
+    ${footer()}
   </div>
-
 </div>
 `,
       'ca-Datasets'

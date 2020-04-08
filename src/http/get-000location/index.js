@@ -6,6 +6,8 @@ const template = require('@architect/views/template');
 // eslint-disable-next-line
 const header = require('@architect/views/header');
 // eslint-disable-next-line
+const footer = require('@architect/views/footer');
+// eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
@@ -155,8 +157,7 @@ function locationDetail(location, lastDate, caseInfo) {
       <h1 class="spectrum-Heading spectrum-Heading--M">Global resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
-  </div>
-</div>`;
+  </div>`;
 
   return html;
 }
@@ -181,6 +182,7 @@ ${header()}
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     ${locationDetail(location, lastDate, caseInfo)}
+    ${footer()}
   </div>
 </div>
 `,

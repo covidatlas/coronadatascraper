@@ -5,6 +5,8 @@ const template = require('@architect/views/template');
 // eslint-disable-next-line
 const header = require('@architect/views/header');
 // eslint-disable-next-line
+const footer = require('@architect/views/footer');
+// eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
@@ -112,7 +114,8 @@ exports.handler = async function http() {
   }
 
   function generateCrossCheckPage(report, date) {
-    let html = `<h1 class="spectrum-Heading spectrum-Heading--L">Cross-check reports</h1>`;
+    let html = `<section class="ca-Section">
+      <h1 class="spectrum-Heading spectrum-Heading--L">Cross-check reports</h1>`;
 
     const totalReports = Object.keys(report).length;
 
@@ -124,11 +127,13 @@ exports.handler = async function http() {
         html += `<p class="spectrum-Body spectrum-Body--L">${identicalReports.toLocaleString()} cross-checks resulted in no discrepancies and are not shown below.</p>`;
       }
 
+      html += `</section>`;
       html += `<ol class="cds-CrossCheckReports-list">
         ${generateCrossCheckReport(report, date)}
       </ol>`;
     } else {
       html += '<strong>No cross-check reports were generated.</strong>';
+      html += `</section>`;
     }
 
     return html;
@@ -145,6 +150,8 @@ ${header()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     ${reportHTML}
   </div>
+  ${footer()}
+
 </div>
 `,
     'ca-Reports'
