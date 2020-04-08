@@ -5,7 +5,11 @@ import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-ne
 import getKey from '../../../utils/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [{ cases: 'confirmed case' }, { testedNegative: 'tested and excluded' }];
+const labelFragmentsByKey = [
+  { deaths: 'deaths' },
+  { cases: 'confirmed case' },
+  { testedNegative: 'tested and excluded' }
+];
 
 const getDeathsFromParagraph = $currentArticlePage => {
   const paragraph = $currentArticlePage('p:contains("deaths")').text();
@@ -47,7 +51,7 @@ const scraper = {
       data[key] = parse.number($tr.find('td:last-child').text());
     });
     assert(data.cases > 0, 'Cases is not reasonable');
-    data.deaths = getDeathsFromParagraph($currentArticlePage);
+    data.deaths = data.deaths || getDeathsFromParagraph($currentArticlePage);
     return getDataWithTestedNegativeApplied(data);
   }
 };
