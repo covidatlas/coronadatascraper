@@ -57,7 +57,8 @@ const scraper = {
       const cases = parse.number($tr.find('> *:nth-child(2)').text());
       const recovered = parse.number(parse.string($tr.find('> *:nth-child(3)').text()));
       let deaths;
-      if (datetime.scrapeDateIsBefore('2020-04-02')) {
+
+      if (datetime.scrapeDateIsBefore('2020-03-30')) {
         deaths = parse.number(parse.string($tr.find('> *:nth-child(4)').text()));
       } else {
         deaths = parse.number(parse.string($tr.find('> *:nth-child(5)').text()));
