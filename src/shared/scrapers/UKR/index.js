@@ -37,7 +37,8 @@ const scraper = {
               : geography.addCounty(region.label.en, 'region'),
           cases: parse.number(region.confirmed),
           deaths: parse.number(region.deaths),
-          recovered: parse.number(region.recovered)
+          recovered: parse.number(region.recovered),
+          coordinates: [region.lng, region.lat]
         });
       }
       log(regions);
