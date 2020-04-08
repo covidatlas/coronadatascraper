@@ -6,7 +6,7 @@ import * as geography from './index.js';
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
 const levelCache = {};
-const countryLevelsDir = path.dirname(require.resolve('country-levels/license.md'));
+const countryLevelsDir = path.dirname(require.resolve('country-levels/package.json'));
 
 export function isId(str) {
   if (Array.isArray(str)) {
@@ -42,7 +42,7 @@ const getLevelData = async level => {
 
 export const getLocationData = async id => {
   // Return an array of aggregated features
-  if (id.indexOf('+') !== -1) {
+  if (id.includes('+')) {
     const parts = id.split('+');
     const data = await Promise.all(parts.map(getLocationData));
     return data;

@@ -1,10 +1,14 @@
 import path from 'path';
+import { isId } from '../../../shared/lib/geography/country-levels.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 // eslint-disable-next-line
 import fipsCodes from 'country-levels/fips.json';
 // eslint-disable-next-line
 import iso2Codes from 'country-levels/iso2.json';
+// eslint-disable-next-line
+import countryCodes from '../../../shared/vendor/country-codes.json';
+
 import log from '../../../shared/lib/log.js';
 
 const UNASSIGNED = '(unassigned)';
@@ -19,23 +23,24 @@ function findCountryLevelID(location) {
 }
 
 const normalizeLocations = args => {
+  log('⏳ Normalizing locations...');
+
   const { locations } = args;
 
   // Normalize data
   for (const location of locations) {
+    // make sure location.country is always in country-level id form
+    if (!isId(location.country)) {
+      log.error(`  ❌ location.country not in country-level id: ${location.country}, ${location._path}`);
+    }
+
     if (!countryLevels.getIdFromLocation(location)) {
-      // Normalize countries
-      location.country = geography.toISO3166Alpha3(location.country);
-
-      if (location.country === 'USA') {
-        // Set country FIPS
-        location.country = 'iso1:US';
-
+      if (location.country === 'iso1:US') {
         // Normalize states
         location.state = geography.toUSStateAbbreviation(location.state);
 
         if (location.county && location.county !== UNASSIGNED) {
-          // Find county ID
+          // Find county FIPS ID
           if (Array.isArray(location.county)) {
             const aggregatedCounty = [];
             let fipsFound = true;
@@ -51,7 +56,7 @@ const normalizeLocations = args => {
               } else {
                 fipsFound = false;
                 log.error(
-                  '❌ Failed to find FIPS code for subset of combined region %s, %s',
+                  '  ❌ Failed to find FIPS code for subset of combined region %s, %s',
                   subLocation.county,
                   subLocation.state
                 );
@@ -68,7 +73,7 @@ const normalizeLocations = args => {
               location.county = countryLevelId;
             }
             if (!fipsFound) {
-              log.error('❌ Failed to find FIPS code for %s, %s', location.county, location.state);
+              log.error('  ❌ Failed to find FIPS code for %s, %s', location.county, location.state);
             }
           }
         }
@@ -78,7 +83,7 @@ const normalizeLocations = args => {
           if (iso2Codes[`US-${location.state}`]) {
             location.state = iso2Codes[`US-${location.state}`].countrylevel_id;
           } else {
-            log.error('❌ Failed to find FIPS code for state %s', location.state);
+            log.error('  ❌ Failed to find FIPS code for state %s', location.state);
           }
         }
       }

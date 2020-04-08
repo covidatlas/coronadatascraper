@@ -102,6 +102,19 @@ export const tsv = async (url, date, options = {}) => {
 };
 
 /**
+ * Load the given URL and return a raw response
+ * @param {*} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {*} options customizable options:
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ */
+export const raw = async (url, date, options = {}) => {
+  const body = await get(url, 'raw', date, options);
+  return body;
+};
+
+/**
  * Load and parse PDF from the given URL
  *
  * @param {*} url URL of the resource
@@ -193,6 +206,10 @@ export const headless = async (url, date = datetime.old.scrapeDate() || datetime
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
   const cachedBody = await caching.getCachedFile(url, 'html', date);
+  if (process.env.ONLY_USE_CACHE) {
+    const $ = await cheerio.load(cachedBody);
+    return $;
+  }
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
     const fetchedBody = await fetchHeadless(url);

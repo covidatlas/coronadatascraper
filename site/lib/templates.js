@@ -73,3 +73,23 @@ export const getContributors = function(contributors, options = { link: true, sh
 
   return html;
 };
+
+/**
+ * @param {{name: string, country: string?, flag: string?}[]} contributors
+ */
+export const getSource = function(location, options = { link: true, shortNames: false }) {
+  const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+  let html = '';
+  if (location.curators || location.sources) {
+    html += getContributors(location.curators || location.sources, options);
+  } else {
+    if (options.link) {
+      html += `<a class="spectrum-Link" target="_blank" href="${location.url}">`;
+    }
+    html += sourceURLShort;
+    if (options.link) {
+      html += `</a>`;
+    }
+  }
+  return html;
+};
