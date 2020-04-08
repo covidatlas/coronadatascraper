@@ -57,6 +57,15 @@ const maintainers = {
     state: 'VA',
     city: 'Richmond',
     flag: '🇺🇸'
+  },
+  ciscorucinski: {
+    name: 'Christopher Rucinski',
+    email: 'ciscorucinski@gmail.com',
+    github: 'ciscorucinski',
+    country: 'KOR',
+    state: 'Seoul',
+    city: 'Gwanak-gu',
+    flag: '🇰🇷'
   }
 };
 

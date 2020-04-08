@@ -18,7 +18,7 @@ const scraper = {
   url: 'https://api-covid19.rnbo.gov.ua/data?to=', // append this with YYYY-MM-DD
   type: 'json',
   aggregate: 'state',
-  maintainers: [maintainers.you], // create an entry in maintainers.js
+  maintainers: [maintainers.ciscorucinski], // create an entry in maintainers.js
   scraper: {
     '0': async function() {
       const regions = [];
