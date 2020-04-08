@@ -3,6 +3,7 @@
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import * as fetch from './lib/fetch.js';
 
+import { getSource } from './lib/templates.js';
 import { getRatio, getPercent } from './lib/math.js';
 import { isCounty, isState, isCountry, getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
@@ -112,17 +113,6 @@ function populateMap() {
     let htmlString = `<div class="cds-Popup">`;
     htmlString += `<h6 class="spectrum-Heading spectrum-Heading--XXS">${location.name}</h6>`;
     htmlString += `<table class="cds-Popup-table spectrum-Body spectrum-Body--XS"><tbody>`;
-    if (location.population !== undefined) {
-      htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
-    } else {
-      htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
-    }
-    if (location.population && locationData.cases) {
-      htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)}</td></tr>`;
-    }
-    if (location.population && locationData.cases) {
-      htmlString += `<tr><th>Infected %:</th><td>${getPercent(locationData.cases, location.population)}</td></tr>`;
-    }
     if (locationData.cases !== undefined) {
       htmlString += `<tr><th>Cases:</th><td>${locationData.cases.toLocaleString()}</td></tr>`;
     }
@@ -135,6 +125,27 @@ function populateMap() {
     if (locationData.active && locationData.active !== locationData.cases) {
       htmlString += `<tr><th>Active:</th><td>${locationData.active.toLocaleString()}</td></tr>`;
     }
+    if (location.population && locationData.cases) {
+      htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)} (${getPercent(
+        locationData.cases,
+        location.population
+      )})</td></tr>`;
+    }
+    if (location.population !== undefined) {
+      htmlString += `<tr><th>Population:</th><td>${location.population.toLocaleString()}</td></tr>`;
+      if (location.populationDensity !== undefined) {
+        let density = location.populationDensity / 0.621371;
+        if (density < 1) {
+          density = (location.populationDensity / 0.621371).toFixed(2);
+        } else {
+          density = Math.floor(density);
+        }
+        htmlString += `<tr><th>Density:</th><td>${density.toLocaleString()} persons / sq. mi</td></tr>`;
+      }
+    } else {
+      htmlString += `<tr><th colspan="2">NO POPULATION DATA</th></tr>`;
+    }
+    htmlString += `<tr><th>Source:</th><td>${getSource(location, { link: false, shortNames: true })}</td></tr>`;
     htmlString += `</tbody></table>`;
     htmlString += `</div>`;
     return htmlString;

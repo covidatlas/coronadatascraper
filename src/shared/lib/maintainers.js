@@ -4,7 +4,7 @@ const maintainers = {
     email: 'lazdnet@gmail.com',
     twitter: 'lazdnet',
     github: 'lazd',
-    country: 'USA',
+    country: 'iso1:US',
     state: 'CA',
     county: 'San Francisco',
     city: 'San Francisco',
@@ -13,7 +13,7 @@ const maintainers = {
   jbencina: {
     name: 'John Bencina',
     github: 'jbencina',
-    country: 'USA',
+    country: 'iso1:US',
     state: 'CA',
     flag: '🇺🇸'
   },
@@ -22,7 +22,7 @@ const maintainers = {
     email: 'paul.boal@amitechsolutions.com',
     twitter: 'paulboal',
     github: 'paulboal',
-    country: 'USA',
+    country: 'iso1:US',
     state: 'MO',
     county: 'St. Louis County',
     city: 'St. Louis',
@@ -32,14 +32,14 @@ const maintainers = {
     name: 'Albert III',
     github: 'aed3',
     url: 'https://aed3.github.io',
-    county: 'USA',
+    county: 'iso1:US',
     flag: '🇺🇸'
   },
   camjc: {
     name: 'Cameron Chamberlain',
     email: 'corona@camjc.com',
     github: 'camjc',
-    country: 'AUS',
+    country: 'iso1:AU',
     state: 'Victoria',
     city: 'Melbourne',
     flag: '🇦🇺'
@@ -48,6 +48,15 @@ const maintainers = {
     name: 'Quentin Golsteyn',
     github: 'qgolsteyn',
     flag: '🇨🇦'
+  },
+  slezakbs: {
+    name: 'Brendan Slezak',
+    email: 'brendan.slezak@geospark.io',
+    github: 'slezakbs',
+    country: 'US',
+    state: 'VA',
+    city: 'Richmond',
+    flag: '🇺🇸'
   }
 };
 

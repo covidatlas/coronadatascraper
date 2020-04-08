@@ -207,7 +207,7 @@ async function generateTimeseries(options = {}) {
     curDate = new Date(options.date);
   }
   while (curDate <= endDate) {
-    dates.push(datetime.getYYYYMD(curDate));
+    dates.push(datetime.getYYYYMMDD(curDate));
     curDate.setDate(curDate.getDate() + 1);
   }
 
@@ -217,11 +217,11 @@ async function generateTimeseries(options = {}) {
   let featureCollection;
   for (const date of dates) {
     const data = await runCrawler({
+      ...options,
       date: date === today ? undefined : date,
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
-      writeData: false,
-      ...options
+      writeData: false
     });
 
     if (date === lastDate) {
@@ -231,16 +231,20 @@ async function generateTimeseries(options = {}) {
     for (const location of data.locations) {
       const name = geography.getName(location);
 
-      timeseriesByLocation[name] = { dates: {}, ...timeseriesByLocation[name], ...stripCases(location) };
+      const existingDates = timeseriesByLocation[name] && timeseriesByLocation[name].dates;
+      timeseriesByLocation[name] = { dates: existingDates || {}, ...stripCases(location) };
 
       const strippedLocation = stripInfo(location);
 
       // Add growth factor
       if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
-        strippedLocation.growthFactor = getGrowthfactor(
+        const growthFactor = getGrowthfactor(
           strippedLocation.cases,
           timeseriesByLocation[name].dates[previousDate].cases
         );
+        if (growthFactor === null) {
+          strippedLocation.growthFactor = growthFactor;
+        }
       }
 
       timeseriesByLocation[name].dates[date] = strippedLocation;

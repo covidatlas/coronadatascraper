@@ -375,6 +375,14 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@turf/area@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/area/-/area-6.0.1.tgz#50ed63c70ef2bdb72952384f1594319d94f3b051"
+  integrity sha512-Zv+3N1ep9P5JvR0YOYagLANyapGWQBh8atdeR3bKpWcigVXFsEKNUw03U/5xnh+cKzm7yozHD6MFJkqQv55y0g==
+  dependencies:
+    "@turf/helpers" "6.x"
+    "@turf/meta" "6.x"
+
 "@turf/bbox@^6.2.0-alpha.1":
   version "6.2.0-alpha.1"
   resolved "https://registry.yarnpkg.com/@turf/bbox/-/bbox-6.2.0-alpha.1.tgz#a917802edfa4f0a1e04387804b3c26a1113b2eae"
@@ -430,6 +438,13 @@
   integrity sha512-jfF0CubozlqpwhyQ7SYbuKx/JtaxADrWCNG9MtoN3GY7R8laZzcLa3TU9J2XaOr34TCDaLLi5wMYyusgyERBbQ==
   dependencies:
     "@turf/helpers" "^6.2.0-alpha.1"
+
+"@turf/meta@6.x":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-6.0.2.tgz#eb92951126d24a613ac1b7b99d733fcc20fd30cf"
+  integrity sha512-VA7HJkx7qF1l3+GNGkDVn2oXy4+QoLP6LktXAaZKjuT1JI0YESat7quUkbCMy4zP9lAUuvS4YMslLyTtr919FA==
+  dependencies:
+    "@turf/helpers" "6.x"
 
 "@turf/meta@^6.2.0-alpha.1":
   version "6.2.0-alpha.1"
@@ -1404,9 +1419,9 @@ cosmiconfig@^6.0.0:
     path-type "^4.0.0"
     yaml "^1.7.2"
 
-"country-levels@https://github.com/hyperknot/country-levels/releases/download/v1.1.1/export_q7.tgz":
-  version "0.0.0"
-  resolved "https://github.com/hyperknot/country-levels/releases/download/v1.1.1/export_q7.tgz#5c273c07abfcbdd1af94be3656295c458da48122"
+"country-levels@https://github.com/hyperknot/country-levels-releases/releases/download/v.1.4.0/export_q7.tgz":
+  version "1.0.0"
+  resolved "https://github.com/hyperknot/country-levels-releases/releases/download/v.1.4.0/export_q7.tgz#fe9e153c827e671b39f9f722fbdaab46d98be80d"
 
 cpr@~3.0.1:
   version "3.0.1"
