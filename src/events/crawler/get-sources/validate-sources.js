@@ -21,7 +21,9 @@ const validateSources = async args => {
   if (errors.length) {
     log.error(`❌ Found ${errors.length} invalid scrapers`);
   } else {
-    log(`✅ All scrapers are valid!`);
+    if (sources.length !== 0) {
+      log(`✅ All scrapers are valid!`);
+    }
   }
 
   report.sources = {
