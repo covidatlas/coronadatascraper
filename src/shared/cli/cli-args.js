@@ -16,11 +16,6 @@ const { argv } = yargs
     description: 'Scrape only the location provided by src/shared/scraper path name',
     type: 'string'
   })
-  .option('id', {
-    alias: 'i',
-    description: 'Scrape only the location provided by id',
-    type: 'string'
-  })
   .option('skip', {
     alias: 's',
     description: 'Skip the location provided by src/shared/scraper path name',

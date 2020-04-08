@@ -1,7 +1,6 @@
 import fastGlob from 'fast-glob';
 import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
-import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 
 /** Check location inclusion, based on command-line options.
  * (*) location - the location
@@ -13,10 +12,6 @@ function includeLocation(location, opts) {
   if (opts.skip && relpath.startsWith(opts.skip)) return false;
 
   if (opts.location && !relpath.startsWith(opts.location)) return false;
-
-  // select location based on country level id
-  // for example "yarn start -i id3:AU-VIC"
-  if (opts.id && opts.id !== countryLevels.getIdFromLocation(location)) return false;
 
   return true;
 }
