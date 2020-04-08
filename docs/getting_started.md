@@ -82,9 +82,11 @@ The `location` value should match a path under `src/shared/scrapers/`.
 
 Examples:
 
-* `US`: run all U.S. scrapers
-* `US/CA`: run all California scrapers
-* `US/CA/alameda-county.js`: run this single scraper
+* `yarn start --location "US"`: run all scrapers in `src/shared/scrapers/US` and child folders
+* `yarn start --location "US/CA"`: run all scrapers in `src/shared/scrapers/US/CA` and child folders
+* `yarn start --location "US/CA/alameda-county.js"`: run this single scraper
+* `yarn start --location "AU"`: run all scrapers in `src/shared/scrapers/AU` and child folders
+* `yarn start --location "AU/index.js"`: run this single scraper
 
 
 ### Skipping a scraper
