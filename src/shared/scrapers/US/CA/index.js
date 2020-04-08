@@ -12,8 +12,6 @@ const scraper = {
   priority: 1,
   type: 'csv',
   aggregate: 'county',
-  url:
-    'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master',
   curators: [
     {
       name: 'The Mercury News',
@@ -22,8 +20,7 @@ const scraper = {
       github: 'HarrietRowan'
     }
   ],
-  async scraper() {
-    const data = await fetch.csv(this.url);
+  _processData(data) {
     const counties = [];
     for (const stateData of data) {
       const stateObj = { county: geography.addCounty(stateData.county) };
@@ -43,6 +40,26 @@ const scraper = {
     }
     counties.push(transform.sumData(counties));
     return counties;
+  },
+  async _fetchLatest() {
+    this.url =
+      'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master';
+    const data = await fetch.csv(this.url);
+    return this._processData(data);
+  },
+  scraper: {
+    '0': async function() {
+      return this._fetchLatest();
+    },
+    '2020-04-06': async function() {
+      this.url =
+        'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=2020-04-06';
+      const data = await fetch.csv(this.url, false);
+      return this._processData(data);
+    },
+    '2020-04-07': async function() {
+      return this._fetchLatest();
+    }
   }
 };
 
