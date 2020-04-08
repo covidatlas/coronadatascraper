@@ -4,7 +4,7 @@ let chart;
 
 const changeSizes = opts => {
   if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
-    opts.title.text = opts.title.text.split(',');
+    opts.title.text = opts.title.text.split(/, */);
   } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
     opts.title.text = opts.title.text.join(', ');
   }
