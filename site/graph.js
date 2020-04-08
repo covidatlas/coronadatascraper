@@ -2,11 +2,18 @@
 
 let chart;
 
-const changeTitleSize = opts => {
+const changeSizes = opts => {
   if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
     opts.title.text = opts.title.text.split(',');
   } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
     opts.title.text = opts.title.text.join(', ');
+  }
+
+  const y = opts.scales.yAxes[0];
+  if (document.body.offsetHeight <= 425) {
+    [y.scaleLabel.labelString] = y.types;
+  } else {
+    y.scaleLabel.labelString = `${y.types[0]} (click graph for ${y.types[1]})`;
   }
 };
 
@@ -45,6 +52,7 @@ const options = {
           enabled: true,
           fontStyle: 'bold'
         },
+        types: ['Linear', 'Logarithmic'],
         scaleLabel: {
           display: true,
           labelString: 'Linear (click graph for logarithmic)'
@@ -97,19 +105,16 @@ const options = {
   },
   events: ['mousemove', 'mouseout', 'click'],
   onClick() {
-    const { type } = this.options.scales.yAxes[0];
-    if (type === 'linear') {
-      this.options.scales.yAxes[0].type = 'logarithmic';
-      this.options.scales.yAxes[0].scaleLabel.labelString = 'Logarithmic (click graph for linear)';
-    } else {
-      this.options.scales.yAxes[0].type = 'linear';
-      this.options.scales.yAxes[0].scaleLabel.labelString = 'Linear (click graph for logarithmic)';
-    }
+    const y = this.options.scales.yAxes[0];
+    const types = y.types.reverse();
+    y.type = types[0].toLowerCase();
+
+    changeSizes(this.options);
     this.update();
     this.render();
   },
   onResize(_chart) {
-    changeTitleSize(_chart.options);
+    changeSizes(_chart.options);
   }
 };
 
@@ -190,7 +195,7 @@ const showGraph = (location, locationData) => {
 
   options.scales.xAxes[0].ticks.max = casesData[casesData.length - 1].t;
   options.title.text = location.name;
-  changeTitleSize(options);
+  changeSizes(options);
 
   if (chart) {
     chart.options = options;

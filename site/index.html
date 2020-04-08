@@ -198,15 +198,15 @@
           </div>
 
         <div class="cds-Editor-content cds-Map-content">
+          <div id="graph-elements">
+            <div id="graph-container">
+              <canvas id="graph"></canvas>
+            </div>
+            <span onclick="document.getElementById('graph-elements').style.visibility='hidden'" id="graph-close">×</span>
+          </div>
           <div class="cds-Map-controls">
           </div>
-            <div id="graph-elements">
-              <span onclick="document.getElementById('graph-elements').style.visibility='hidden'" id="graph-close">×</span>
-              <div id="graph-container">
-                <canvas id="graph"></canvas>
-              </div>
-            <div id="map"></div>
-          </div>
+          <div id="map"></div>
         </div>
 
         <div class="cds-Editor cds-FileEditor" hidden>

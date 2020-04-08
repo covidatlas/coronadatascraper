@@ -324,7 +324,6 @@ div.spectrum-SideNav-itemLink:hover {
 #graph-elements {
   z-index: 3;
   display: block;
-  padding-top: 100px;
   position: fixed;
   width: calc(100% - 235px);
   height: 100%;
@@ -338,6 +337,7 @@ div.spectrum-SideNav-itemLink:hover {
   position: relative;
   display: block;
   animation: animatetop 0.4s;
+  top: 5%;
   width: 80%;
   height: 80%;
   margin: auto;
@@ -348,7 +348,7 @@ div.spectrum-SideNav-itemLink:hover {
 #graph-close {
   font-size: 50px;
   position: absolute;
-  right: 5%;
+  right: 2%;
   top: 5%;
   background-color: #FFFFFF;
   border-radius: 61px;
@@ -362,6 +362,7 @@ div.spectrum-SideNav-itemLink:hover {
 #graph {
   background-color: #fff;
   border-radius: 1em;
+}
 
 .cds-Map-content {
   position: relative;
