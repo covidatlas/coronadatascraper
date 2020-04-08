@@ -1,3 +1,4 @@
+# coding: utf-8
 # Given cacheCalls.txt in this directory, compare the output against the data.
 
 
@@ -48,8 +49,31 @@ cache_hits = files_returned & all_files
 unused_files = all_files - files_returned
 
 puts "The following #{unused_files.size} files were NOT INCLUDED in cacheCalls.txt"
+puts unused_files.map { |f| f.gsub(/coronadatascraper-cache\./, '') }
+puts "End #{unused_files.size} files not included in cacheCalls.txt"
+
 puts
-puts unused_files
+puts "Same file name occurring more than once in unused files:"
+fnames = unused_files.map { |f| f.split('/')[-1] }
+counts = Hash.new(0)
+fnames.each { |f| counts[f] += 1 }
+counts = counts.to_a.select { |f, c| c > 1 }.sort { |a, b| a[1] <=> b[1] }.reverse
+counts.each { |f, c| puts "#{'%02d' % c}: #{'% 38s' % f} (e.g. #{unused_files.map { |f| f.gsub(/coronadatascraper-cache\//, '') }.select{ |s| s =~ /#{f}/ }[0] })" }
+puts
+
+puts
+puts "Russian files (should be discarded?)"
+russian_chars = "населением"
+russian_files =
+  files.
+    map { |f| File.join(cachedir, f) }.
+    select { |f| f =~ /json$/ }.
+    select { |f| File.read(f) =~ /[#{russian_chars}]/ }.
+    map { |f| f.gsub(/.*coronadatascraper-cache\//, '') }
+puts russian_files
+puts "#{russian_files.size} Russian files (should be discarded?)"
+puts
+
 
 report = [
   "total files in cache:                           #{files.size}",
