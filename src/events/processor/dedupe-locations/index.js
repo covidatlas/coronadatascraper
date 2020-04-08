@@ -65,9 +65,9 @@ function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, 
   const discrepancies = [];
   const agreements = [];
   for (const prop of numericalValues) {
-    if (report.discrepancies.indexOf(prop) > -1 || crosscheckResult[0].indexOf(prop) > -1) {
+    if (report.discrepancies.includes(prop) || crosscheckResult[0].includes(prop)) {
       discrepancies.push(prop);
-    } else if (report.agreements.indexOf(prop) > -1 || crosscheckResult[1].indexOf(prop) > -1) {
+    } else if (report.agreements.includes(prop) || crosscheckResult[1].includes(prop)) {
       agreements.push(prop);
     }
   }

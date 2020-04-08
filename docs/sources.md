@@ -404,7 +404,7 @@ To add test coverage for a scraper, you only need to provide test assets; no new
   - File name: raw_githubusercontent_com_opencovid19_fr_data_master_dist_chiffres_cles.csv
 
 - Add a file named `expected.json` containing the array of values that the scraper is expected to
-  return. (Leave out any geojson `features` properties.)
+  return. (Leave out any GeoJSON `features` properties.)
 
 For sources that have a time series, the `expected.json` file represents the latest result in the
 sample response provided. You can additionally test the return value for a specific date by adding

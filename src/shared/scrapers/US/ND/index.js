@@ -112,7 +112,7 @@ const scraper = {
         continue;
       }
       county = geography.addCounty(county);
-      if (this._counties.indexOf(county) === -1) {
+      if (!this._counties.includes(county)) {
         console.log(`  ⚠️  Unknown county in table: "${county}"`);
         continue;
       }

@@ -131,7 +131,7 @@ const scraper = {
       const heading = 'CONFIRMED CASES PER COUNTY:';
       for (const sec of sections) {
         for (const vc of sec.visualContainers) {
-          if (vc.config.indexOf(heading) !== -1) {
+          if (vc.config.includes(heading)) {
             const config = JSON.parse(vc.config);
             let { textRuns } = config.singleVisual.objects.general[0].properties.paragraphs[0];
             textRuns = textRuns.map(tr => parse.string(tr.value));

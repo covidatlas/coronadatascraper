@@ -68,7 +68,7 @@ const props = [
 ];
 
 const locationTransforms = {
-  // 🇭🇰
+  // ��
   'Hong Kong': location => {
     location.country = 'HKG';
     delete location.state;
@@ -311,7 +311,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
             // Match alternate names
             // No known location, but might be useful in the future
-            if (feature.properties.alt && feature.properties.alt.split('|').indexOf(state) !== -1) {
+            if (feature.properties.alt && feature.properties.alt.split('|').includes(state)) {
               found = true;
               storeFeature(feature, location);
               break;

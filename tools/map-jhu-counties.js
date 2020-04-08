@@ -13,7 +13,7 @@ async function findNameMapping() {
 
   // eslint-disable-next-line no-labels
   locationLoop: for (const location of jhuData) {
-    if (!location[STATE] || location[STATE].indexOf(',') === -1) {
+    if (!location[STATE] || !location[STATE].includes(',')) {
       continue;
     }
 
