@@ -33,7 +33,7 @@ const countryLevelMap = {
   Rajasthan: 'iso2:IN-RJ',
   'Tamil Nadu': 'iso2:IN-TN',
   Telengana: 'iso2:IN-TG',
-  Uttarakhand: '-', //'iso2:IN-UT',
+  Uttarakhand: 'iso2:IN-UT',
   'Uttar Pradesh': 'iso2:IN-UP',
   'West Bengal': 'iso2:IN-WB',
   Tripura: 'iso2:IN-TR'
@@ -73,9 +73,6 @@ const scraper = {
         stateMapped,
         `${state} not found in countryLevelMap, look up on https://github.com/hyperknot/country-levels/blob/master/docs/iso2_list/IN.md`
       );
-      if (stateMapped === '-') {
-        return;
-      }
 
       const data = {
         state: stateMapped,
@@ -87,7 +84,6 @@ const scraper = {
       regions.push(data);
     });
 
-    console.log(regions);
     return regions;
   }
 };
