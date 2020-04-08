@@ -100,7 +100,7 @@ function showSources() {
     for (let i = 0; i < ratings.length; i++) {
       list.insertAdjacentHTML('beforeend', ratingTemplate(ratings[i], i));
     }
-    if (window.location.hash.indexOf(':') !== -1) {
+    if (window.location.hash.includes(':')) {
       document.getElementById(window.location.hash.substr(1)).scrollIntoView({
         behavior: 'smooth',
         block: 'start'

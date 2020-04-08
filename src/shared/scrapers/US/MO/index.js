@@ -158,7 +158,7 @@ const scraper = {
   _getCountyName(countyName) {
     countyName = this._countyMap[countyName] || countyName;
 
-    if (countyName.toUpperCase().indexOf(' CITY') === -1) {
+    if (!countyName.toUpperCase().includes(' CITY')) {
       countyName = geography.addCounty(countyName);
     }
 

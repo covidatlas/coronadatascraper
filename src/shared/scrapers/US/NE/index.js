@@ -128,7 +128,7 @@ const scraper = {
         county = 'Douglas County';
       }
 
-      if (this._counties.indexOf(county) !== -1) {
+      if (this._counties.includes(county)) {
         counties.push({
           county,
           cases

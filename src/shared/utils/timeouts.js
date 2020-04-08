@@ -1,7 +1,7 @@
 /**
- * Some libraries in this project have gone rogue and decided to include timeouts,
- * (looking at you, geo-tz) meaning Node will not exit after the scraper has finished running. This file
- * allows us to clear all timeouts on exit.
+ * Some libraries in this project include timeouts, meaning Node will not exit
+ * after the scraper has finished running. This file allows us to clear all
+ * timeouts on exit.
  */
 
 const globalObject = global;

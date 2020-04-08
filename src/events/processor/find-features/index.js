@@ -10,6 +10,10 @@ import espGeoJson from '../vendor/esp.json';
 
 const DEBUG = false;
 
+// sets the caching strategy of the geo-tz library to store data in memory
+// without an expiring timeout
+geoTz.setCache({ expires: 0 });
+
 function cleanProps(obj) {
   if (obj.wikipedia === -99) {
     delete obj.wikipedia;
@@ -64,7 +68,7 @@ const props = [
 ];
 
 const locationTransforms = {
-  // 🇭🇰
+  // ��
   'Hong Kong': location => {
     location.country = 'HKG';
     delete location.state;
@@ -139,9 +143,10 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       }
     }
 
-    // Store coordinates on location
+    // Store coordinates and area on location
     if (feature.geometry) {
       location.coordinates = turf.center(feature).geometry.coordinates;
+      location.area = turf.area(feature.geometry);
     }
 
     if (DEBUG) {
@@ -306,7 +311,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
 
             // Match alternate names
             // No known location, but might be useful in the future
-            if (feature.properties.alt && feature.properties.alt.split('|').indexOf(state) !== -1) {
+            if (feature.properties.alt && feature.properties.alt.split('|').includes(state)) {
               found = true;
               storeFeature(feature, location);
               break;

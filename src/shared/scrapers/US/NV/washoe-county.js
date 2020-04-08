@@ -51,6 +51,21 @@ const scraper = {
           active: parse.number(row.active)
         };
       }
+    },
+    '2020-04-06': async function() {
+      // Couldn't figure out the CSV, so just grabbed the JSON
+      this.url =
+        'https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_wdemographic_current/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
+      this.type = 'json';
+
+      const response = await fetch.json(this.url);
+      const data = response.features[0].attributes;
+      return {
+        cases: parse.number(data.confirmed),
+        deaths: parse.number(data.deaths),
+        recovered: parse.number(data.recovered),
+        active: parse.number(data.active)
+      };
     }
   }
 };

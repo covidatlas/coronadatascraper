@@ -3,7 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
 import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
-import getKey from '../_shared/get-key.js';
+import getKey from '../../../utils/get-key.js';
 
 const labelFragmentsByKey = [
   { cases: 'cases (positive)' },
