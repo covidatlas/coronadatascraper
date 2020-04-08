@@ -41,6 +41,12 @@
     "no-restricted-syntax": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
     "unicorn/prefer-includes": "error"
   }
 }
