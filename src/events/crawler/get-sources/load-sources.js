@@ -1,8 +1,7 @@
 import fastGlob from 'fast-glob';
-import path from 'path';
 import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
-import * as geography from '../../../shared/lib/geography/index.js';
+import * as countryLevels from  '../../../shared/lib/geography/country-levels.js';
 
 /** Check location inclusion, based on command-line options.
  * (*) location - the location
@@ -11,20 +10,16 @@ import * as geography from '../../../shared/lib/geography/index.js';
 function includeLocation(location, opts) {
   const relpath = location._path.replace(/.*?src.shared.scrapers./, '');
 
-  if (opts.skip && relpath.startsWith(opts.skip))
-    return false;
+  if (opts.skip && relpath.startsWith(opts.skip)) return false;
 
-  if (opts.location && !relpath.startsWith(opts.location))
-    return false;
+  if (opts.location && !relpath.startsWith(opts.location)) return false;
 
   // select location based on country level id
   // for example "yarn start -i id3:AU-VIC"
-  if (opts.id && opts.id !== countryLevels.getIdFromLocation(location))
-    return false;
+  if (opts.id && opts.id !== countryLevels.getIdFromLocation(location)) return false;
 
   return true;
 }
-
 
 export default async args => {
   log(`⏳ Fetching scrapers...`);
@@ -40,7 +35,8 @@ export default async args => {
   const sources = await Promise.all(
     filePaths.map(filePath => require(filePath)))
         .then(modules => [
-          ...modules.map((module, index) => ({ _path: filePaths[index], ...module.default }))]);
+    ...modules.map((module, index) => ({ _path: filePaths[index], ...module.default }))
+  ]);
   const filteredSources = sources.filter(m => includeLocation(m, args.options));
 
   if (filteredSources.length === 0) {
@@ -50,8 +46,6 @@ export default async args => {
   } else {
     log(`✅ Fetched ${sources.length} scrapers.`);
   }
-  
-
 
   return { ...args, sources: filteredSources };
 };
