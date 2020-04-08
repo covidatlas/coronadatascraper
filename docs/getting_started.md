@@ -43,7 +43,7 @@ If you get an error message saying you have an incompatible version of
 node versions: [install](https://www.npmjs.com/package/n) it and run
 `n lts`.
 
-### 3. Run the scraper
+### 3. Run the scrapers
 
 ```
 yarn start
@@ -70,26 +70,29 @@ To run the scrapers for today:
 yarn start
 ```
 
-### Run only one scraper
+### Run scrapers for only one location
 
 To scrape just one location, use `--location`/`-l`
 
 ```
-yarn start --location "Ventura County, CA, USA"
+yarn start --location "US/PA"
 ```
 
-Alternatively, you can pass a filename (without extension or directory name) to `--location`:
+The `location` value should match a path under `src/shared/scrapers/`.
 
-```
-yarn start --location "JHU"
-```
+Examples:
+
+* `US`: run all U.S. scrapers
+* `US/CA`: run all California scrapers
+* `US/CA/alameda-county.js`: run this single scraper
+
 
 ### Skipping a scraper
 
 To skip a scraper, use `--skip`/`-s`
 
 ```
-yarn start --skip "Ventura County, CA, USA"
+yarn start --skip "US/CA/alameda-county.js"
 ```
 
 ### Re-generating old data
