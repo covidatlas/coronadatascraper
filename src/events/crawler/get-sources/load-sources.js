@@ -4,28 +4,25 @@ import join from '../../../shared/lib/join.js';
 import log from '../../../shared/lib/log.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
-/** Check location inclusion, based on args. */
-function includeLocation(location, options) {
+/** Check location inclusion, based on command-line options.
+ * (*) location - the location
+ * (*) opts - options
+ */
+function includeLocation(location, opts) {
+  const relpath = location._path.replace(/.*?src.shared.scrapers./, '');
 
-  if (options.skip && geography.getName(location) === options.skip)
+  if (opts.skip && relpath.startsWith(opts.skip))
     return false;
 
-    if (
-      options.location &&
-        path.basename(location._path, '.js') !== options.location &&
-        geography.getName(location) !== options.location
-    )
-      return false;
+  if (opts.location && !relpath.startsWith(opts.location))
+    return false;
 
-    if (options.country && ![options.country, `iso1:${options.country}`].includes(location.country))
-      return false;
+  // select location based on country level id
+  // for example "yarn start -i id3:AU-VIC"
+  if (opts.id && opts.id !== countryLevels.getIdFromLocation(location))
+    return false;
 
-    // select location based on country level id
-    // for example "yarn start -i id3:AU-VIC"
-    if (options.id && options.id !== countryLevels.getIdFromLocation(location))
-      return false;
-
-    return true;
+  return true;
 }
 
 
