@@ -130,6 +130,7 @@ sp-dropdown[emphasized] {
   background-color: var(--BackgroundColor);
   color: var(--spectrum-body-text-color);
   padding: var(--spectrum-global-dimension-size-300);
+  margin: 0 calc(var(--spectrum-alias-grid-margin-small) * -1);
 }
 
 .ca-SiteFooter-Disclaimer {
@@ -162,6 +163,12 @@ sp-dropdown[emphasized] {
   padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
   margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
   margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
+
+  .ca-Landing-search {
+    sp-search#searchField {
+      -spectrum-textfield-border-color: red;
+    }
+  }
 }
 
 .ca-Section {
