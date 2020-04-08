@@ -266,7 +266,7 @@ const scraper = {
           rec.deaths = deaths;
         }
 
-        if (this._counties.indexOf(county) === -1) {
+        if (!this._counties.includes(county)) {
           unassignedCounty.cases += cases;
           unassignedCounty.tested += tested;
           if (hasDeaths) {

@@ -42,7 +42,7 @@ const getLevelData = async level => {
 
 export const getLocationData = async id => {
   // Return an array of aggregated features
-  if (id.indexOf('+') !== -1) {
+  if (id.includes('+')) {
     const parts = id.split('+');
     const data = await Promise.all(parts.map(getLocationData));
     return data;
