@@ -11,8 +11,6 @@ const footer = require('@architect/views/footer');
 // eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
 
-const locations = require('./dist/location-map.json');
-
 exports.handler = async function http() {
   return {
     headers: {
@@ -35,10 +33,13 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </div>
 
       <div class="ca-Landing-search">
-        <div class="spectrum-ComboField spectrum--large">
+        <label class="spectrum-ComboField spectrum--large">
+          <div class="spectrum-ComboField-label">
+            Search by county, state, or country name
+          </div>
           <sp-search id="searchField"></sp-search>
           <sp-button id="searchButton">Go</sp-button>
-        </div>
+        </label>
       </div>
     </div>
 
@@ -70,26 +71,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
   </div>
 </div>
 
-<script>
-  var locations = ${JSON.stringify(locations)};
-  function handleSearch(input) {
-    let searchQuery = searchField.value.toLowerCase();
-    for (let [shortName, location] of Object.entries(locations)) {
-      if (location.name.toLowerCase().match(searchQuery)) {
-        window.location = '/'+shortName;
-        break;
-      }
-    }
-  }
-  searchField.addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    handleSearch();
-  });
-  searchButton.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    handleSearch();
-  });
-</script>
+<script src="${arc.static('home.js')}"></script>
 `,
       'ca-Home'
     )

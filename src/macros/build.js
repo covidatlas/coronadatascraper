@@ -1,9 +1,41 @@
 const imports = require('esm')(module);
 
+const lunr = imports('lunr');
 const fs = imports('../shared/lib/fs.js');
 
 function getShortName(location) {
   return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
+}
+
+async function buildIndex(locations) {
+  const skinnyLocations = {};
+
+  const index = lunr(function() {
+    this.ref('slug');
+    this.field('name');
+
+    locations.forEach(function(location) {
+      const slug = getShortName(location);
+      const skinnyLocation = {
+        name: location.name
+        // city: location.city,
+        // county: location.county,
+        // state: location.state,
+        // country: location.country
+      };
+
+      skinnyLocations[slug] = skinnyLocation;
+
+      this.add({
+        slug,
+        ...skinnyLocation
+      });
+    }, this);
+  });
+
+  await fs.ensureDir('src/http/get-api-locations/dist/');
+  await fs.writeJSON('src/http/get-api-locations/dist/search.json', index);
+  await fs.writeJSON('src/http/get-api-locations/dist/skinnyLocations.json', skinnyLocations);
 }
 
 async function build(arc, cloudformation) {
@@ -45,6 +77,8 @@ async function build(arc, cloudformation) {
 
   await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap);
   await fs.writeJSON('src/http/get-index/dist/location-map.json', locationMap);
+
+  await buildIndex(locations);
 
   return cloudformation;
 }

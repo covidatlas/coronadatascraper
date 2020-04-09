@@ -18,6 +18,7 @@ get /map
 get /crosscheck
 get /sources
 get /data
+get /api/locations
 get /:location # normalized lowercased space -> dash: King County, WA, USA -> king-county-wa-usa
 # generate map of slugs for each location from locations.json
 
