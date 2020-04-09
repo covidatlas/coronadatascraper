@@ -41,44 +41,43 @@ const scraper = {
   sources: [
     {
       url: 'https://www.rnbo.gov.ua/en/',
-      name: 'National Security and Defense Council of Ukraine\n'
+      name: 'National Security and Defense Council of Ukraine'
     }
   ],
-  url: 'https://api-covid19.rnbo.gov.ua/data?to=', // append YYYY-MM-DD
+  _baseURL: 'https://api-covid19.rnbo.gov.ua/data?to=', // append YYYY-MM-DD
   type: 'json',
   aggregate: 'state',
   maintainers: [maintainers.ciscorucinski],
-  scraper: {
-    '0': async function() {
-      const regions = [];
-      let date = process.env.SCRAPE_DATE;
-      date = datetime.getYYYYMMDD(date);
-      this.url += date;
+  async scraper() {
+    const regions = [];
+    let date = process.env.SCRAPE_DATE;
+    date = datetime.getYYYYMMDD(date);
 
-      const data = await fetch.json(this.url, false, { disableSSL: true });
+    this.url = this._baseURL + date;
+    const data = await fetch.json(this.url, false, { disableSSL: true });
 
-      if (data === null) {
-        throw new Error(`UA: failed to fetch data from ${this.url}.`);
-      }
-
-      for (const region of data.ukraine) {
-        const name = region.label.en;
-        const clId = clIdMap[name];
-
-        if (!clId) {
-          console.error(`New region added to UA: ${name}, please add to clIdMap.`);
-          continue;
-        }
-
-        regions.push({
-          county: clId,
-          cases: parse.number(region.confirmed),
-          deaths: parse.number(region.deaths),
-          recovered: parse.number(region.recovered)
-        });
-      }
-      return regions;
+    if (data === null) {
+      throw new Error(`UA: failed to fetch data from ${this.url}.`);
     }
+
+    for (const region of data.ukraine) {
+      const name = region.label.en;
+      const clId = clIdMap[name];
+
+      if (!clId) {
+        console.error(`New region added to UA: ${name}, please add to clIdMap.`);
+        continue;
+      }
+
+      regions.push({
+        county: clId,
+        cases: parse.number(region.confirmed),
+        deaths: parse.number(region.deaths),
+        recovered: parse.number(region.recovered)
+      });
+    }
+    return regions;
   }
 };
+
 export default scraper;
