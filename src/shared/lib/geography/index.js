@@ -3,6 +3,9 @@ import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 import usStates from '../../vendor/usa-states.json';
+import iso3to2 from '../../vendor/iso3to2.json';
+// eslint-disable-next-line
+import iso1Codes from 'country-levels/iso1.json';
 import log from '../log.js';
 import * as turf from './turf.js';
 
@@ -25,13 +28,13 @@ const countryMap = {
   Brunei: 'Brunei Darussalam',
   Reunion: 'Réunion',
   Curacao: 'Curaçao',
-  'United Kingdom': 'GBR',
+  'United Kingdom': 'iso1:GB',
   'occupied Palestinian territory': 'PSE',
   'Congo (Brazzaville)': 'COG',
   Tanzania: 'TZA',
   'The Bahamas': 'BHS',
   'Gambia, The': 'GMB',
-  US: 'USA',
+  US: 'iso1:US',
   'Bahamas, The': 'BHS',
   'Cape Verde': 'CPV',
   'East Timor': 'TLS',
@@ -71,7 +74,7 @@ export function generateMultiCountyFeature(counties, properties) {
   const polygons = [];
   const features = [];
   for (const countyFeature of countyGeoJSON.features) {
-    if (counties.indexOf(countyFeature.properties.name) !== -1) {
+    if (counties.includes(countyFeature.properties.name)) {
       features.push(countyFeature.properties.name);
       polygons.push(turf.feature(countyFeature.geometry));
     }
@@ -158,7 +161,40 @@ export const toUSStateAbbreviation = function(string) {
 };
 
 /*
-  Normalize the state as a 2-letter string
+  Normalize the country as a 2-letter string
+*/
+export const toISO3166Alpha2 = function(country) {
+  if (iso1Codes[country]) {
+    return country;
+  }
+  if (iso3to2[country]) {
+    return iso3to2[country];
+  }
+
+  for (const [iso2, properties] of Object.entries(iso1Codes)) {
+    if (properties.name === country) {
+      return iso2;
+    }
+  }
+
+  log.warn('⚠️  Could not find ISO-3166 alpha 2 country code for', country);
+  return country;
+};
+
+/*
+  Normalize any country-like string to the full name
+*/
+export const toHumanReadableCountryName = function(country) {
+  const isoAlpha2 = toISO3166Alpha2(country);
+  if (isoAlpha2) {
+    return iso1Codes[isoAlpha2].name;
+  }
+  log.warn('⚠️  Could not find country name for', country);
+  return country;
+};
+
+/*
+  Normalize the country as a 3-letter string
 */
 export const toISO3166Alpha3 = function(string) {
   let localString = string;
@@ -175,7 +211,7 @@ export const toISO3166Alpha3 = function(string) {
       return country['alpha-3'];
     }
   }
-  log.warn('⚠️  Could not find country code for', localString);
+  log.warn('⚠️  Could not find ISO-3166 alpha 3 country code for', localString);
   return localString;
 };
 

@@ -9,6 +9,7 @@
     },
     "maintainers": { "type": "array" },
     "sources": { "type": "array" },
+    "scraperTz": { "type": "string" },
     "curators": { "type": "array" },
     "country": {
       "type": "string"

@@ -75,53 +75,58 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
   async function getPopulation(location) {
     let population = null;
 
-    if (location.city) {
+    const city = location.city && location.city.split(':').pop();
+    const county = location.county && location.county.split(':').pop();
+    const state = location.state && location.state.split(':').pop();
+    const country = location.country && location.country.split(':').pop();
+
+    if (city) {
       // Use either city by country or city by state
-      let populationSource = populations.byCity[location.country];
-      if (populationSource && populationSource[location.state]) {
-        populationSource = populationSource[location.state];
+      let populationSource = populations.byCity[country];
+      if (populationSource && populationSource[state]) {
+        populationSource = populationSource[state];
       }
-      if (populationSource && populationSource[location.state]) {
-        population = populationSource[location.city];
+      if (populationSource && populationSource[state]) {
+        population = populationSource[city];
       }
-    } else if (location.county) {
-      if (populations.byCounty[location.country]) {
+    } else if (county) {
+      if (populations.byCounty[country]) {
         // Try counties
-        const populationSource = populations.byCounty[location.country];
-        const countyNameReplaced = location.county.replace('Parish', 'County');
-        const countyNameJoined = `${location.county}, ${location.state}`;
-        const countyNameReplacedJoined = `${countyNameReplaced}, ${location.state}`;
+        const populationSource = populations.byCounty[country];
+        const countyNameReplaced = county.replace('Parish', 'County');
+        const countyNameJoined = `${county}, ${state}`;
+        const countyNameReplacedJoined = `${countyNameReplaced}, ${state}`;
 
         population =
-          populationSource[location.county] ||
+          populationSource[county] ||
           populationSource[countyNameReplaced] ||
           populationSource[countyNameJoined] ||
           populationSource[countyNameReplacedJoined];
       }
-    } else if (location.state) {
-      if (populations.byState[location.country] && populations.byState[location.country][location.state]) {
+    } else if (state) {
+      if (populations.byState[country] && populations.byState[country][state]) {
         // Try states
-        population = populations.byState[location.country][location.state];
+        population = populations.byState[country][state];
       }
     } else {
       // Try countries
-      population = populations.byCountry[location.country];
+      population = populations.byCountry[country];
     }
 
     if (!population) {
-      population = populations.supplemental[location.city];
+      population = populations.supplemental[city];
     }
 
     if (!population) {
-      population = populations.supplemental[location.county];
+      population = populations.supplemental[county];
     }
 
     if (!population) {
-      population = populations.supplemental[location.state];
+      population = populations.supplemental[state];
     }
 
     if (!population) {
-      population = populations.supplemental[location.country];
+      population = populations.supplemental[country];
     }
 
     if (!population) {
@@ -157,6 +162,9 @@ const generatePopulations = async ({ locations, featureCollection, report, optio
     if (population) {
       location.population = population;
       populationFound++;
+      if (location.area) {
+        location.populationDensity = population / (location.area / 1000000);
+      }
     } else {
       log.error('  ❌ %s: ?', geography.getName(location));
       errors.push(geography.getName(location));
