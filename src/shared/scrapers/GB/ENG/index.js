@@ -8,7 +8,7 @@ import { gssCodeMap } from '../_shared.js';
 
 const scraper = {
   country: 'iso1:GB',
-  state: 'England',
+  state: 'iso2:GB-ENG',
   url: 'https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data',
   aggregate: 'county',
   type: 'csv',
