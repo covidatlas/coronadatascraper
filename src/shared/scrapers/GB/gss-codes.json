@@ -330,6 +330,625 @@
     "gss": "W06000015"
   },
   {
+    "county": "http://www.wikidata.org/entity/Q730706",
+    "countyLabel": "London Borough of Southwark",
+    "isoCode": "GB-SWK",
+    "gss": "E09000028"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q817971",
+    "countyLabel": "Conwy County Borough",
+    "isoCode": "GB-CWY",
+    "gss": "W06000003"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q894077",
+    "countyLabel": "Bedford",
+    "isoCode": "GB-BDF",
+    "gss": "E06000055"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q894094",
+    "countyLabel": "Stockton-on-Tees",
+    "isoCode": "GB-STT",
+    "gss": "E06000004"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1228523",
+    "countyLabel": "Knowsley",
+    "isoCode": "GB-KWL",
+    "gss": "E08000011"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q22",
+    "countyLabel": "Scotland",
+    "isoCode": "GB-SCT",
+    "gss": "S92000003"
+  },
+  { "county": "http://www.wikidata.org/entity/Q25", "countyLabel": "Wales", "isoCode": "GB-WLS", "gss": "W92000004" },
+  {
+    "county": "http://www.wikidata.org/entity/Q26",
+    "countyLabel": "Northern Ireland",
+    "isoCode": "GB-NIR",
+    "gss": "N92000002"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q4093",
+    "countyLabel": "Glasgow",
+    "isoCode": "GB-GLG",
+    "gss": "S19000510"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q11294004",
+    "countyLabel": "City and County of Newport",
+    "isoCode": "GB-NWP",
+    "gss": "W06000022"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21272736",
+    "countyLabel": "Nottinghamshire",
+    "isoCode": "GB-NTT",
+    "gss": "E10000024"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21694653",
+    "countyLabel": "Hampshire",
+    "isoCode": "GB-HAM",
+    "gss": "E10000014"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q23287",
+    "countyLabel": "West Sussex",
+    "isoCode": "GB-WSX",
+    "gss": "E10000032"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q36405",
+    "countyLabel": "Aberdeen",
+    "isoCode": "GB-ABE",
+    "gss": "S20000478"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q36405",
+    "countyLabel": "Aberdeen",
+    "isoCode": "GB-ABE",
+    "gss": "S19000600"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21694636",
+    "countyLabel": "Buckinghamshire",
+    "isoCode": "GB-BKM",
+    "gss": "E10000002"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21885980",
+    "countyLabel": "City of Derby",
+    "isoCode": "GB-DER",
+    "gss": "E06000015"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q178196",
+    "countyLabel": "North Somerset",
+    "isoCode": "GB-NSM",
+    "gss": "E06000024"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q208201",
+    "countyLabel": "London Borough of Bromley",
+    "isoCode": "GB-BRY",
+    "gss": "E09000006"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q2357511",
+    "countyLabel": "Dundee City",
+    "isoCode": "GB-DND",
+    "gss": "S12000042"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q205679",
+    "countyLabel": "London Borough of Hackney",
+    "isoCode": "GB-HCK",
+    "gss": "E09000012"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q211925",
+    "countyLabel": "East Renfrewshire",
+    "isoCode": "GB-ERW",
+    "gss": "S12000011"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q217829",
+    "countyLabel": "Ceredigion",
+    "isoCode": "GB-CGN",
+    "gss": "W06000008"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q684307",
+    "countyLabel": "Wigan",
+    "isoCode": "GB-WGN",
+    "gss": "E08000010"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q843868",
+    "countyLabel": "Wrexham County Borough",
+    "isoCode": "GB-WRX",
+    "gss": "W06000006"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q894090",
+    "countyLabel": "Milton Keynes",
+    "isoCode": "GB-MIK",
+    "gss": "E06000042"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1171024",
+    "countyLabel": "Darlington",
+    "isoCode": "GB-DAL",
+    "gss": "E06000005"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1364541",
+    "countyLabel": "Bolton",
+    "isoCode": "GB-BOL",
+    "gss": "E08000001"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1425298",
+    "countyLabel": "Telford and Wrekin",
+    "isoCode": "GB-TFW",
+    "gss": "E06000020"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1473780",
+    "countyLabel": "West Berkshire",
+    "isoCode": "GB-WBK",
+    "gss": "E06000037"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1892596",
+    "countyLabel": "Rochdale",
+    "isoCode": "GB-RCH",
+    "gss": "E08000005"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q3306663",
+    "countyLabel": "Merthyr Tydfil County Borough",
+    "isoCode": "GB-MTY",
+    "gss": "W06000024"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q4777347",
+    "countyLabel": "Antrim and Newtownabbey",
+    "isoCode": "GB-ANN",
+    "gss": "N09000001"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21683233",
+    "countyLabel": "City of Portsmouth",
+    "isoCode": "GB-POR",
+    "gss": "E06000044"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21683242",
+    "countyLabel": "City of Leicester",
+    "isoCode": "GB-LCE",
+    "gss": "E06000016"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q22338583",
+    "countyLabel": "Cornwall",
+    "isoCode": "GB-CON",
+    "gss": "E06000052"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q23066",
+    "countyLabel": "Cumbria",
+    "isoCode": "GB-CMA",
+    "gss": "E10000006"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q23169",
+    "countyLabel": "Oxfordshire",
+    "isoCode": "GB-OXF",
+    "gss": "E10000025"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q80967",
+    "countyLabel": "Outer Hebrides",
+    "isoCode": "GB-ELS",
+    "gss": "S12000013"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q126514",
+    "countyLabel": "Dumfries and Galloway",
+    "isoCode": "GB-DGY",
+    "gss": "S12000006"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21241814",
+    "countyLabel": "North Yorkshire",
+    "isoCode": "GB-NYK",
+    "gss": "E10000023"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21269047",
+    "countyLabel": "Lincolnshire",
+    "isoCode": "GB-LIN",
+    "gss": "E10000019"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21272241",
+    "countyLabel": "Essex",
+    "isoCode": "GB-ESS",
+    "gss": "E10000012"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q201149",
+    "countyLabel": "Fife",
+    "isoCode": "GB-FIF",
+    "gss": "S12000047"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q202174",
+    "countyLabel": "Argyll and Bute",
+    "isoCode": "GB-AGB",
+    "gss": "S12000035"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q202177",
+    "countyLabel": "Angus",
+    "isoCode": "GB-ANS",
+    "gss": "S12000041"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q205358",
+    "countyLabel": "London Borough of Barking and Dagenham",
+    "isoCode": "GB-BDG",
+    "gss": "E09000002"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q208152",
+    "countyLabel": "London Borough of Tower Hamlets",
+    "isoCode": "GB-TWH",
+    "gss": "E09000030"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q208271",
+    "countyLabel": "Inverclyde",
+    "isoCode": "GB-IVC",
+    "gss": "S12000018"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q208955",
+    "countyLabel": "London Borough of Redbridge",
+    "isoCode": "GB-RDB",
+    "gss": "E09000026"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q217838",
+    "countyLabel": "Stirling",
+    "isoCode": "GB-STG",
+    "gss": "S12000030"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21487155",
+    "countyLabel": "Southend-on-Sea",
+    "isoCode": "GB-SOS",
+    "gss": "E06000033"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q596885",
+    "countyLabel": "Blaenau Gwent County Borough",
+    "isoCode": "GB-BGW",
+    "gss": "W06000019"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q810793",
+    "countyLabel": "Bath and North East Somerset",
+    "isoCode": "GB-BAS",
+    "gss": "E06000022"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q880782",
+    "countyLabel": "Blackburn with Darwen",
+    "isoCode": "GB-BBD",
+    "gss": "E06000008"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q23109",
+    "countyLabel": "Norfolk",
+    "isoCode": "GB-NFK",
+    "gss": "E10000020"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q23666",
+    "countyLabel": "Great Britain",
+    "isoCode": "GB-GBN",
+    "gss": "K03000001"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q32515",
+    "countyLabel": "London Borough of Richmond upon Thames",
+    "isoCode": "GB-RIC",
+    "gss": "E09000027"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q11775003",
+    "countyLabel": "Derbyshire",
+    "isoCode": "GB-DBY",
+    "gss": "E10000007"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q109128",
+    "countyLabel": "Gwynedd",
+    "isoCode": "GB-GWN",
+    "gss": "W06000002"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q156150",
+    "countyLabel": "Powys",
+    "isoCode": "GB-POW",
+    "gss": "W06000023"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q2673020",
+    "countyLabel": "Middlesbrough",
+    "isoCode": "GB-MDB",
+    "gss": "E06000002"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21496716",
+    "countyLabel": "Reading",
+    "isoCode": "GB-RDG",
+    "gss": "E06000038"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q188801",
+    "countyLabel": "Royal Borough of Kensington and Chelsea",
+    "isoCode": "GB-KEC",
+    "gss": "E09000020"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q204940",
+    "countyLabel": "West Lothian",
+    "isoCode": "GB-WLN",
+    "gss": "S12000040"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q207111",
+    "countyLabel": "North Lanarkshire",
+    "isoCode": "GB-NLK",
+    "gss": "S12000044"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q207268",
+    "countyLabel": "Clackmannanshire",
+    "isoCode": "GB-CLK",
+    "gss": "S12000005"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q208139",
+    "countyLabel": "London Borough of Newham",
+    "isoCode": "GB-NWM",
+    "gss": "E09000025"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q210563",
+    "countyLabel": "London Borough of Wandsworth",
+    "isoCode": "GB-WND",
+    "gss": "E09000032"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q213361",
+    "countyLabel": "Pembrokeshire",
+    "isoCode": "GB-PEM",
+    "gss": "W06000009"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q216802",
+    "countyLabel": "Falkirk",
+    "isoCode": "GB-FAL",
+    "gss": "S12000014"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q693450",
+    "countyLabel": "Royal Borough of Greenwich",
+    "isoCode": "GB-GRE",
+    "gss": "E09000011"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q763171",
+    "countyLabel": "Wakefield",
+    "isoCode": "GB-WKF",
+    "gss": "E08000036"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1026448",
+    "countyLabel": "Calderdale",
+    "isoCode": "GB-CLD",
+    "gss": "E08000033"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1053723",
+    "countyLabel": "Central Bedfordshire",
+    "isoCode": "GB-CBF",
+    "gss": "E06000056"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q100166",
+    "countyLabel": "Orkney Islands",
+    "isoCode": "GB-ORK",
+    "gss": "S12000023"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q175945",
+    "countyLabel": "North Lincolnshire",
+    "isoCode": "GB-NLN",
+    "gss": "E06000013"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q179351",
+    "countyLabel": "City of Westminster",
+    "isoCode": "GB-WSM",
+    "gss": "E09000033"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21683230",
+    "countyLabel": "City of Southampton",
+    "isoCode": "GB-STH",
+    "gss": "E06000045"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q189912",
+    "countyLabel": "Aberdeenshire",
+    "isoCode": "GB-ABD",
+    "gss": "S12000034"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q202059",
+    "countyLabel": "London Borough of Lambeth",
+    "isoCode": "GB-LBH",
+    "gss": "E09000022"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q207218",
+    "countyLabel": "London Borough of Ealing",
+    "isoCode": "GB-EAL",
+    "gss": "E09000009"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q211091",
+    "countyLabel": "Renfrewshire",
+    "isoCode": "GB-RFW",
+    "gss": "S12000038"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q214162",
+    "countyLabel": "London Borough of Hounslow",
+    "isoCode": "GB-HNS",
+    "gss": "E09000018"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q215030",
+    "countyLabel": "London Borough of Lewisham",
+    "isoCode": "GB-LEW",
+    "gss": "E09000023"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q217840",
+    "countyLabel": "Carmarthenshire",
+    "isoCode": "GB-CMN",
+    "gss": "W06000010"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q643919",
+    "countyLabel": "Torfaen",
+    "isoCode": "GB-TOF",
+    "gss": "W06000020"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q774015",
+    "countyLabel": "Leeds",
+    "isoCode": "GB-LDS",
+    "gss": "E08000035"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q797782",
+    "countyLabel": "Medway",
+    "isoCode": "GB-MDW",
+    "gss": "E06000035"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q844784",
+    "countyLabel": "Vale of Glamorgan",
+    "isoCode": "GB-VGL",
+    "gss": "W06000014"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q915954",
+    "countyLabel": "Trafford",
+    "isoCode": "GB-TRF",
+    "gss": "E08000009"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1140130",
+    "countyLabel": "Belfast district",
+    "isoCode": "GB-BFS",
+    "gss": "N09000003"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1278608",
+    "countyLabel": "Oldham",
+    "isoCode": "GB-OLD",
+    "gss": "E08000004"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1280897",
+    "countyLabel": "City of Sunderland",
+    "isoCode": "GB-SND",
+    "gss": "E08000024"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1368496",
+    "countyLabel": "Windsor and Maidenhead",
+    "isoCode": "GB-WNM",
+    "gss": "E06000040"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1541228",
+    "countyLabel": "South Tyneside",
+    "isoCode": "GB-STY",
+    "gss": "E08000023"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1617704",
+    "countyLabel": "Dudley",
+    "isoCode": "GB-DUD",
+    "gss": "E08000027"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1878732",
+    "countyLabel": "Rotherham",
+    "isoCode": "GB-ROT",
+    "gss": "E08000018"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q5444365",
+    "countyLabel": "Fermanagh and Omagh",
+    "isoCode": "GB-FMO",
+    "gss": "N09000006"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q6840825",
+    "countyLabel": "Mid Ulster",
+    "isoCode": "GB-MUL",
+    "gss": "N09000009"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q20989106",
+    "countyLabel": "Blackpool",
+    "isoCode": "GB-BPL",
+    "gss": "E06000009"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21694674",
+    "countyLabel": "Kent",
+    "isoCode": "GB-KEN",
+    "gss": "E10000016"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21694746",
+    "countyLabel": "Wiltshire",
+    "isoCode": "GB-WIL",
+    "gss": "E06000054"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21694786",
+    "countyLabel": "Staffordshire",
+    "isoCode": "GB-STS",
+    "gss": "E10000028"
+  },
+  {
     "county": "http://www.wikidata.org/entity/Q1549155",
     "countyLabel": "Thurrock",
     "isoCode": "GB-THR",
@@ -566,691 +1185,6 @@
     "gss": "S12000020"
   },
   {
-    "county": "http://www.wikidata.org/entity/Q201149",
-    "countyLabel": "Fife",
-    "isoCode": "GB-FIF",
-    "gss": "S12000047"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q202174",
-    "countyLabel": "Argyll and Bute",
-    "isoCode": "GB-AGB",
-    "gss": "S12000035"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q202177",
-    "countyLabel": "Angus",
-    "isoCode": "GB-ANS",
-    "gss": "S12000041"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q205358",
-    "countyLabel": "London Borough of Barking and Dagenham",
-    "isoCode": "GB-BDG",
-    "gss": "E09000002"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q208152",
-    "countyLabel": "London Borough of Tower Hamlets",
-    "isoCode": "GB-TWH",
-    "gss": "E09000030"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q208271",
-    "countyLabel": "Inverclyde",
-    "isoCode": "GB-IVC",
-    "gss": "S12000018"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q208955",
-    "countyLabel": "London Borough of Redbridge",
-    "isoCode": "GB-RDB",
-    "gss": "E09000026"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q217838",
-    "countyLabel": "Stirling",
-    "isoCode": "GB-STG",
-    "gss": "S12000030"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21487155",
-    "countyLabel": "Southend-on-Sea",
-    "isoCode": "GB-SOS",
-    "gss": "E06000033"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q23066",
-    "countyLabel": "Cumbria",
-    "isoCode": "GB-CMA",
-    "gss": "E10000006"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q23169",
-    "countyLabel": "Oxfordshire",
-    "isoCode": "GB-OXF",
-    "gss": "E10000025"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q80967",
-    "countyLabel": "Outer Hebrides",
-    "isoCode": "GB-ELS",
-    "gss": "S12000013"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q126514",
-    "countyLabel": "Dumfries and Galloway",
-    "isoCode": "GB-DGY",
-    "gss": "S12000006"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21241814",
-    "countyLabel": "North Yorkshire",
-    "isoCode": "GB-NYK",
-    "gss": "E10000023"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21269047",
-    "countyLabel": "Lincolnshire",
-    "isoCode": "GB-LIN",
-    "gss": "E10000019"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21272241",
-    "countyLabel": "Essex",
-    "isoCode": "GB-ESS",
-    "gss": "E10000012"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q596885",
-    "countyLabel": "Blaenau Gwent County Borough",
-    "isoCode": "GB-BGW",
-    "gss": "W06000019"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q810793",
-    "countyLabel": "Bath and North East Somerset",
-    "isoCode": "GB-BAS",
-    "gss": "E06000022"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q880782",
-    "countyLabel": "Blackburn with Darwen",
-    "isoCode": "GB-BBD",
-    "gss": "E06000008"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q109128",
-    "countyLabel": "Gwynedd",
-    "isoCode": "GB-GWN",
-    "gss": "W06000002"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q156150",
-    "countyLabel": "Powys",
-    "isoCode": "GB-POW",
-    "gss": "W06000023"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q2673020",
-    "countyLabel": "Middlesbrough",
-    "isoCode": "GB-MDB",
-    "gss": "E06000002"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21496716",
-    "countyLabel": "Reading",
-    "isoCode": "GB-RDG",
-    "gss": "E06000038"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1026448",
-    "countyLabel": "Calderdale",
-    "isoCode": "GB-CLD",
-    "gss": "E08000033"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1053723",
-    "countyLabel": "Central Bedfordshire",
-    "isoCode": "GB-CBF",
-    "gss": "E06000056"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q188801",
-    "countyLabel": "Royal Borough of Kensington and Chelsea",
-    "isoCode": "GB-KEC",
-    "gss": "E09000020"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q204940",
-    "countyLabel": "West Lothian",
-    "isoCode": "GB-WLN",
-    "gss": "S12000040"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q207111",
-    "countyLabel": "North Lanarkshire",
-    "isoCode": "GB-NLK",
-    "gss": "S12000044"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q207268",
-    "countyLabel": "Clackmannanshire",
-    "isoCode": "GB-CLK",
-    "gss": "S12000005"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q208139",
-    "countyLabel": "London Borough of Newham",
-    "isoCode": "GB-NWM",
-    "gss": "E09000025"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q210563",
-    "countyLabel": "London Borough of Wandsworth",
-    "isoCode": "GB-WND",
-    "gss": "E09000032"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q213361",
-    "countyLabel": "Pembrokeshire",
-    "isoCode": "GB-PEM",
-    "gss": "W06000009"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q216802",
-    "countyLabel": "Falkirk",
-    "isoCode": "GB-FAL",
-    "gss": "S12000014"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q693450",
-    "countyLabel": "Royal Borough of Greenwich",
-    "isoCode": "GB-GRE",
-    "gss": "E09000011"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q763171",
-    "countyLabel": "Wakefield",
-    "isoCode": "GB-WKF",
-    "gss": "E08000036"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q730706",
-    "countyLabel": "London Borough of Southwark",
-    "isoCode": "GB-SWK",
-    "gss": "E09000028"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q817971",
-    "countyLabel": "Conwy County Borough",
-    "isoCode": "GB-CWY",
-    "gss": "W06000003"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q894077",
-    "countyLabel": "Bedford",
-    "isoCode": "GB-BDF",
-    "gss": "E06000055"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q894094",
-    "countyLabel": "Stockton-on-Tees",
-    "isoCode": "GB-STT",
-    "gss": "E06000004"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1228523",
-    "countyLabel": "Knowsley",
-    "isoCode": "GB-KWL",
-    "gss": "E08000011"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q22",
-    "countyLabel": "Scotland",
-    "isoCode": "GB-SCT",
-    "gss": "S92000003"
-  },
-  { "county": "http://www.wikidata.org/entity/Q25", "countyLabel": "Wales", "isoCode": "GB-WLS", "gss": "W92000004" },
-  {
-    "county": "http://www.wikidata.org/entity/Q26",
-    "countyLabel": "Northern Ireland",
-    "isoCode": "GB-NIR",
-    "gss": "N92000002"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q4093",
-    "countyLabel": "Glasgow",
-    "isoCode": "GB-GLG",
-    "gss": "S19000510"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q11294004",
-    "countyLabel": "City and County of Newport",
-    "isoCode": "GB-NWP",
-    "gss": "W06000022"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21272736",
-    "countyLabel": "Nottinghamshire",
-    "isoCode": "GB-NTT",
-    "gss": "E10000024"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21694653",
-    "countyLabel": "Hampshire",
-    "isoCode": "GB-HAM",
-    "gss": "E10000014"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q100166",
-    "countyLabel": "Orkney Islands",
-    "isoCode": "GB-ORK",
-    "gss": "S12000023"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q175945",
-    "countyLabel": "North Lincolnshire",
-    "isoCode": "GB-NLN",
-    "gss": "E06000013"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q179351",
-    "countyLabel": "City of Westminster",
-    "isoCode": "GB-WSM",
-    "gss": "E09000033"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21683230",
-    "countyLabel": "City of Southampton",
-    "isoCode": "GB-STH",
-    "gss": "E06000045"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q189912",
-    "countyLabel": "Aberdeenshire",
-    "isoCode": "GB-ABD",
-    "gss": "S12000034"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q202059",
-    "countyLabel": "London Borough of Lambeth",
-    "isoCode": "GB-LBH",
-    "gss": "E09000022"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q207218",
-    "countyLabel": "London Borough of Ealing",
-    "isoCode": "GB-EAL",
-    "gss": "E09000009"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q211091",
-    "countyLabel": "Renfrewshire",
-    "isoCode": "GB-RFW",
-    "gss": "S12000038"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q214162",
-    "countyLabel": "London Borough of Hounslow",
-    "isoCode": "GB-HNS",
-    "gss": "E09000018"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q215030",
-    "countyLabel": "London Borough of Lewisham",
-    "isoCode": "GB-LEW",
-    "gss": "E09000023"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q217840",
-    "countyLabel": "Carmarthenshire",
-    "isoCode": "GB-CMN",
-    "gss": "W06000010"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q643919",
-    "countyLabel": "Torfaen",
-    "isoCode": "GB-TOF",
-    "gss": "W06000020"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q774015",
-    "countyLabel": "Leeds",
-    "isoCode": "GB-LDS",
-    "gss": "E08000035"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q797782",
-    "countyLabel": "Medway",
-    "isoCode": "GB-MDW",
-    "gss": "E06000035"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q844784",
-    "countyLabel": "Vale of Glamorgan",
-    "isoCode": "GB-VGL",
-    "gss": "W06000014"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q915954",
-    "countyLabel": "Trafford",
-    "isoCode": "GB-TRF",
-    "gss": "E08000009"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1140130",
-    "countyLabel": "Belfast district",
-    "isoCode": "GB-BFS",
-    "gss": "N09000003"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1278608",
-    "countyLabel": "Oldham",
-    "isoCode": "GB-OLD",
-    "gss": "E08000004"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1280897",
-    "countyLabel": "City of Sunderland",
-    "isoCode": "GB-SND",
-    "gss": "E08000024"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1368496",
-    "countyLabel": "Windsor and Maidenhead",
-    "isoCode": "GB-WNM",
-    "gss": "E06000040"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1541228",
-    "countyLabel": "South Tyneside",
-    "isoCode": "GB-STY",
-    "gss": "E08000023"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1617704",
-    "countyLabel": "Dudley",
-    "isoCode": "GB-DUD",
-    "gss": "E08000027"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1878732",
-    "countyLabel": "Rotherham",
-    "isoCode": "GB-ROT",
-    "gss": "E08000018"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q5444365",
-    "countyLabel": "Fermanagh and Omagh",
-    "isoCode": "GB-FMO",
-    "gss": "N09000006"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q6840825",
-    "countyLabel": "Mid Ulster",
-    "isoCode": "GB-MUL",
-    "gss": "N09000009"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q20989106",
-    "countyLabel": "Blackpool",
-    "isoCode": "GB-BPL",
-    "gss": "E06000009"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21694674",
-    "countyLabel": "Kent",
-    "isoCode": "GB-KEN",
-    "gss": "E10000016"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21694746",
-    "countyLabel": "Wiltshire",
-    "isoCode": "GB-WIL",
-    "gss": "E06000054"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21694786",
-    "countyLabel": "Staffordshire",
-    "isoCode": "GB-STS",
-    "gss": "E10000028"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q23109",
-    "countyLabel": "Norfolk",
-    "isoCode": "GB-NFK",
-    "gss": "E10000020"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q23666",
-    "countyLabel": "Great Britain",
-    "isoCode": "GB-GBN",
-    "gss": "K03000001"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q32515",
-    "countyLabel": "London Borough of Richmond upon Thames",
-    "isoCode": "GB-RIC",
-    "gss": "E09000027"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q11775003",
-    "countyLabel": "Derbyshire",
-    "isoCode": "GB-DBY",
-    "gss": "E10000007"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q918975",
-    "countyLabel": "Kirklees",
-    "isoCode": "GB-KIR",
-    "gss": "E08000034"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1137286",
-    "countyLabel": "County Durham",
-    "isoCode": "GB-DUR",
-    "gss": "E06000047"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1156248",
-    "countyLabel": "England and Wales",
-    "isoCode": "GB-EAW",
-    "gss": "K04000001"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1758432",
-    "countyLabel": "Wokingham",
-    "isoCode": "GB-WOK",
-    "gss": "E06000041"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q2594690",
-    "countyLabel": "Hartlepool",
-    "isoCode": "GB-HPL",
-    "gss": "E06000001"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q5054638",
-    "countyLabel": "Causeway Coast and Glens",
-    "isoCode": "GB-CCG",
-    "gss": "N09000004"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q10996863",
-    "countyLabel": "City and County of Swansea",
-    "isoCode": "GB-SWA",
-    "gss": "W06000011"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q12956644",
-    "countyLabel": "Sheffield",
-    "isoCode": "GB-SHF",
-    "gss": "E08000019"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q20989094",
-    "countyLabel": "Bournemouth",
-    "isoCode": "GB-BMH",
-    "gss": "E06000028"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21163036",
-    "countyLabel": "Slough",
-    "isoCode": "GB-SLG",
-    "gss": "E06000039"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21525592",
-    "countyLabel": "Manchester",
-    "isoCode": "GB-MAN",
-    "gss": "E08000003"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q23287",
-    "countyLabel": "West Sussex",
-    "isoCode": "GB-WSX",
-    "gss": "E10000032"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q36405",
-    "countyLabel": "Aberdeen",
-    "isoCode": "GB-ABE",
-    "gss": "S20000478"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q36405",
-    "countyLabel": "Aberdeen",
-    "isoCode": "GB-ABE",
-    "gss": "S19000600"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21694636",
-    "countyLabel": "Buckinghamshire",
-    "isoCode": "GB-BKM",
-    "gss": "E10000002"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21885980",
-    "countyLabel": "City of Derby",
-    "isoCode": "GB-DER",
-    "gss": "E06000015"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q178196",
-    "countyLabel": "North Somerset",
-    "isoCode": "GB-NSM",
-    "gss": "E06000024"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q208201",
-    "countyLabel": "London Borough of Bromley",
-    "isoCode": "GB-BRY",
-    "gss": "E09000006"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q2357511",
-    "countyLabel": "Dundee City",
-    "isoCode": "GB-DND",
-    "gss": "S12000042"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q205679",
-    "countyLabel": "London Borough of Hackney",
-    "isoCode": "GB-HCK",
-    "gss": "E09000012"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q211925",
-    "countyLabel": "East Renfrewshire",
-    "isoCode": "GB-ERW",
-    "gss": "S12000011"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q217829",
-    "countyLabel": "Ceredigion",
-    "isoCode": "GB-CGN",
-    "gss": "W06000008"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q684307",
-    "countyLabel": "Wigan",
-    "isoCode": "GB-WGN",
-    "gss": "E08000010"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q843868",
-    "countyLabel": "Wrexham County Borough",
-    "isoCode": "GB-WRX",
-    "gss": "W06000006"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q894090",
-    "countyLabel": "Milton Keynes",
-    "isoCode": "GB-MIK",
-    "gss": "E06000042"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1171024",
-    "countyLabel": "Darlington",
-    "isoCode": "GB-DAL",
-    "gss": "E06000005"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1364541",
-    "countyLabel": "Bolton",
-    "isoCode": "GB-BOL",
-    "gss": "E08000001"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1425298",
-    "countyLabel": "Telford and Wrekin",
-    "isoCode": "GB-TFW",
-    "gss": "E06000020"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1473780",
-    "countyLabel": "West Berkshire",
-    "isoCode": "GB-WBK",
-    "gss": "E06000037"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q1892596",
-    "countyLabel": "Rochdale",
-    "isoCode": "GB-RCH",
-    "gss": "E08000005"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q3306663",
-    "countyLabel": "Merthyr Tydfil County Borough",
-    "isoCode": "GB-MTY",
-    "gss": "W06000024"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q4777347",
-    "countyLabel": "Antrim and Newtownabbey",
-    "isoCode": "GB-ANN",
-    "gss": "N09000001"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21683233",
-    "countyLabel": "City of Portsmouth",
-    "isoCode": "GB-POR",
-    "gss": "E06000044"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q21683242",
-    "countyLabel": "City of Leicester",
-    "isoCode": "GB-LCE",
-    "gss": "E06000016"
-  },
-  {
-    "county": "http://www.wikidata.org/entity/Q22338583",
-    "countyLabel": "Cornwall",
-    "isoCode": "GB-CON",
-    "gss": "E06000052"
-  },
-  {
     "county": "http://www.wikidata.org/entity/Q23436",
     "countyLabel": "Edinburgh",
     "isoCode": "GB-EDH",
@@ -1333,5 +1267,71 @@
     "countyLabel": "Neath Port Talbot County Borough",
     "isoCode": "GB-NTL",
     "gss": "W06000012"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q918975",
+    "countyLabel": "Kirklees",
+    "isoCode": "GB-KIR",
+    "gss": "E08000034"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1137286",
+    "countyLabel": "County Durham",
+    "isoCode": "GB-DUR",
+    "gss": "E06000047"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1156248",
+    "countyLabel": "England and Wales",
+    "isoCode": "GB-EAW",
+    "gss": "K04000001"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q1758432",
+    "countyLabel": "Wokingham",
+    "isoCode": "GB-WOK",
+    "gss": "E06000041"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q2594690",
+    "countyLabel": "Hartlepool",
+    "isoCode": "GB-HPL",
+    "gss": "E06000001"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q5054638",
+    "countyLabel": "Causeway Coast and Glens",
+    "isoCode": "GB-CCG",
+    "gss": "N09000004"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q10996863",
+    "countyLabel": "City and County of Swansea",
+    "isoCode": "GB-SWA",
+    "gss": "W06000011"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q12956644",
+    "countyLabel": "Sheffield",
+    "isoCode": "GB-SHF",
+    "gss": "E08000019"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q20989094",
+    "countyLabel": "Bournemouth",
+    "isoCode": "GB-BMH",
+    "gss": "E06000028"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21163036",
+    "countyLabel": "Slough",
+    "isoCode": "GB-SLG",
+    "gss": "E06000039"
+  },
+  {
+    "county": "http://www.wikidata.org/entity/Q21525592",
+    "countyLabel": "Manchester",
+    "isoCode": "GB-MAN",
+    "gss": "E08000003"
   }
 ]
