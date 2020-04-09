@@ -131,6 +131,18 @@ This can be combined with `-l` to test a single scraper:
 yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
 ```
 
+### Command-line options
+
+Run `yarn options` to see the command line options.  e.g.,
+
+```
+Options:
+  --version           Show version number                              [boolean]
+  --date, -d          Generate data for or start the timeseries at the provided
+                      date in YYYY-M-D format                           [string]
+...
+```
+
 ## Tests
 
 We use [Tape](https://github.com/substack/tape).
