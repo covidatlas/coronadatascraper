@@ -133,10 +133,9 @@ const scraper = {
       const county = geography.getCounty(parse.string($tr.find('> *:first-child').text()), 'MI');
 
       // Remember these to add them to Wayne County instead
-      if (county === 'Detroit City County') {
+      if (county === 'Detroit City') {
         detroitCases = cases;
         detroitDeaths = deaths;
-        return;
       }
       if (county === 'Wayne County') {
         cases += detroitCases;
