@@ -7,7 +7,16 @@ function getShortName(location) {
 }
 
 async function build(arc, cloudformation) {
-  console.log('🤹‍♀️ Preparing...');
+  console.log('🤹‍♀️ Preparing Lambdae...');
+
+  // Destroy proxy at root so we can take that over in `get /:location`
+  if (cloudformation) {
+    try {
+      delete cloudformation.Resources.CovidAtlas.Properties.DefinitionBody.paths['/{proxy+}'];
+    } catch (err) {
+      console.log('Could not destroy root proxy config, deployment may fail');
+    }
+  }
 
   await Promise.all([
     fs.ensureDir('src/http/get-sources/dist/'),
