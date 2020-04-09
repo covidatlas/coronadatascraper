@@ -18,8 +18,10 @@ const { getContributors } = require('@architect/views/lib/contributors');
 const { getClassNames } = require('@architect/views/lib/dom');
 
 const locations = require('./dist/location-map.json');
+
+const locationArray = Object.values(locations);
 const timeseries = require('./dist/timeseries.json');
-// const features = require('./dist/features.json');
+const featureCollection = require('./dist/features.json');
 
 // /:location
 async function handle404(req) {
@@ -35,6 +37,41 @@ async function handle404(req) {
 
   return {
     statusCode: 404
+  };
+}
+
+function findFeature(id) {
+  return featureCollection.features.find(feature => feature.properties.id === id);
+}
+
+const levelOrder = ['city', 'county', 'state', 'country', 'world'];
+
+function getParentLevel(level) {
+  return levelOrder[Math.min(levelOrder.indexOf(level) + 1, levelOrder.length - 1)];
+}
+
+function getSiblingLocations(location) {
+  const { level } = location;
+  const parentLevel = getParentLevel(level);
+
+  if (parentLevel === 'world') {
+    console.log('Will not look for siblings of %s', location.name);
+    // Ideally, we find adjacent countries
+    // Since this is not yet handled, just return the location
+    return [location];
+  }
+
+  console.log(location[parentLevel]);
+
+  return locationArray.filter(ohterLocation => {
+    return ohterLocation.level === level && ohterLocation[parentLevel] === location[parentLevel];
+  });
+}
+
+function getFeatureCollectionForLocations(subLocations) {
+  return {
+    type: 'FeatureCollection',
+    features: subLocations.map(location => findFeature(location.featureId))
   };
 }
 
@@ -105,7 +142,7 @@ function locationDetail(location, lastDate, caseInfo) {
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <h2 class="spectrum-Heading spectrum-Heading--M">Map view</h1>
-      <div class="ca-Placeholder"></div>
+      <div class="ca-Map"></div>
     </div>
   </div>
 
@@ -168,6 +205,10 @@ async function route(req) {
   const lastDate = Object.keys(timeseries).pop();
   const caseInfo = timeseries[lastDate][location.id];
 
+  // Create a subset feature collection to display on the map
+  const siblingLocations = getSiblingLocations(location);
+  const subFeatureCollection = getFeatureCollectionForLocations(siblingLocations);
+
   // Display the information for the location
   return {
     headers: {
@@ -181,7 +222,7 @@ ${header()}
 <div class="spectrum-Site-content">
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
-    ${locationDetail(location, lastDate, caseInfo)}
+    ${locationDetail(location, lastDate, caseInfo, siblingLocations, subFeatureCollection)}
     ${footer()}
   </div>
 </div>
