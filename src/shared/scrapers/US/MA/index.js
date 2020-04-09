@@ -129,38 +129,40 @@ const scraper = {
       const data = await fetch.json(this.url);
 
       let onlySumDeaths = true;
+      let onlySumTested = true;
       let sumDeaths = 0;
+      let sumTested = 0;
 
       data.features.forEach(item => {
-        if (item.attributes.County && item.attributes.County.toLowerCase() === 'totals') {
+        const countyLC = item.attributes.County.toLowerCase();
+        if (item.attributes.County && countyLC.includes('total')) {
+          sumDeaths = item.attributes.DEATHS;
+          sumTested = item.attributes.TESTED;
           return;
         }
 
-        const cases = item.attributes.CASES;
-        const county = geography.addCounty(
-          item.attributes.County.charAt(0) + item.attributes.County.slice(1).toLowerCase()
-        );
-
-        const editDate = new Date(item.attributes.EditDate);
-        if (datetime.scrapeDateIsBefore(editDate)) {
-          throw new Error(`Data only available until ${editDate.toLocaleString()}`);
-        }
+        const cases = item.attributes.CASES || 0;
+        const deaths = item.attributes.DEATHS || 0;
+        const tested = item.attributes.TESTED || 0;
+        const county = geography.addCounty(item.attributes.County.charAt(0) + countyLC.slice(1));
 
         const countyObj = {
           county,
-          cases
+          cases,
+          deaths,
+          tested
         };
 
-        if (county.toLowerCase().includes('nantucket') && county.toLowerCase().includes('dukes')) {
+        if (countyLC.includes('nantucket') && countyLC.includes('dukes')) {
           countyObj.county = ['Dukes County', 'Nantucket County'];
         }
 
         if (county.includes('Unknown')) {
           countyObj.county = UNASSIGNED;
-          sumDeaths = item.attributes.DEATHS;
-        } else {
-          onlySumDeaths = onlySumDeaths && !item.attributes.DEATHS;
         }
+
+        onlySumDeaths = onlySumDeaths && !item.attributes.DEATHS;
+        onlySumTested = onlySumTested && !item.attributes.TESTED;
 
         counties.push(countyObj);
       });
@@ -168,6 +170,9 @@ const scraper = {
       const summedData = transform.sumData(counties);
       if (onlySumDeaths) {
         summedData.deaths = sumDeaths;
+      }
+      if (onlySumTested) {
+        summedData.tested = sumTested;
       }
       counties.push(summedData);
       return geography.addEmptyRegions(counties, this._counties, 'county');
