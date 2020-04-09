@@ -33,6 +33,9 @@ needle.defaults({
  *  - encoding: encoding to use when retrieving files from cache, defaults to utf8
  *  - method: 'get' or 'post'
  *  - args: key/value pairs to send with a POST
+ *
+ * Returns: { body: body, cookies: cookies }.  If the request failed,
+ * both body and cookies are null.
  */
 export const get = async (url, type, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
   const { alwaysRun, disableSSL, toString, encoding, cookies, headers, method, args } = {
@@ -48,7 +51,7 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
   };
 
   const cachedBody = await caching.getCachedFile(url, type, date, encoding);
-  if (process.env.ONLY_USE_CACHE) return cachedBody;
+  if (process.env.ONLY_USE_CACHE) return { body: cachedBody, cookies: null };
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
     log('  🚦  Loading data for %s from server', url);
@@ -103,17 +106,17 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
       if (response.statusCode < 400) {
         const fetchedBody = toString ? response.body.toString() : response.body;
         await caching.saveFileToCache(url, type, date, fetchedBody);
-        return fetchedBody;
+        return { body: fetchedBody, cookies: response.cookies };
       }
 
       // 400-499 means "not found" and a retry probably won't help -- return null
       log.error(`  ❌ Got error ${response.statusCode} trying to fetch ${url}`);
-      return null;
+      return { body: null, cookies: null };
     }
 
     log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
-    return null;
+    return { body: null, cookies: null };
   }
 
-  return cachedBody;
+  return { body: cachedBody, cookies: null };
 };

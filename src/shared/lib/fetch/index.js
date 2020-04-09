@@ -28,12 +28,12 @@ const READ_TIMEOUT = 30000;
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const page = async (url, date, options = {}) => {
-  const body = await get(url, 'html', date, options);
+  const resp = await get(url, 'html', date, options);
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
-  return cheerio.load(body);
+  return cheerio.load(resp.body);
 };
 
 /**
@@ -46,12 +46,12 @@ export const page = async (url, date, options = {}) => {
  */
 export const json = async (url, date, options = {}) => {
   log(url);
-  const body = await get(url, 'json', date, options);
+  const resp = await get(url, 'json', date, options);
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
-  return JSON.parse(body);
+  return JSON.parse(resp.body);
 };
 
 /**
@@ -65,13 +65,13 @@ export const json = async (url, date, options = {}) => {
  */
 export const csv = async (url, date, options = {}) => {
   return new Promise(async (resolve, reject) => {
-    const body = await get(url, 'csv', date, options);
+    const resp = await get(url, 'csv', date, options);
 
-    if (!body) {
+    if (!resp.body) {
       resolve(null);
     } else {
       csvParse(
-        body,
+        resp.body,
         {
           delimiter: options.delimiter,
           columns: true
@@ -110,8 +110,8 @@ export const tsv = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const raw = async (url, date, options = {}) => {
-  const body = await get(url, 'raw', date, options);
-  return body;
+  const resp = await get(url, 'raw', date, options);
+  return resp.body;
 };
 
 /**
@@ -124,13 +124,13 @@ export const raw = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const pdf = async (url, date, options) => {
-  const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
+  const resp = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
 
-  const data = await pdfParser(body);
+  const data = await pdfParser(resp.body);
 
   return data;
 };
