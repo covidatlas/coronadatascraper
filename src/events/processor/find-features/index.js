@@ -202,7 +202,7 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
         locationTransforms[state](location);
       }
 
-      // If the location already comes with its own feature, store it98
+      // If the location already comes with its own feature, store it
       if (location.feature) {
         found = true;
         if (Array.isArray(location.feature)) {
