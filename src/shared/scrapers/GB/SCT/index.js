@@ -7,7 +7,7 @@ import * as transform from '../../../lib/transform.js';
 
 const scraper = {
   country: 'iso1:GB',
-  state: 'Scotland',
+  state: 'iso2:GB-SCT',
   url: 'https://www.gov.scot/coronavirus-covid-19/',
   aggregate: 'county',
   type: 'table',
