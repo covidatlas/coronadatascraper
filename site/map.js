@@ -62,7 +62,14 @@ function generateCountyFeatures() {
 function generateStateFeatures() {
   const stateFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'state')
+    features: data.features.features.filter(feature => {
+      const location = data.locations[feature.properties.locationId];
+      if (!location) {
+        console.log(feature.properties);
+        return false;
+      }
+      return location.level === 'state';
+    })
   };
   return stateFeatures;
 }
@@ -70,9 +77,14 @@ function generateStateFeatures() {
 function generateCountryFeatures() {
   const countryFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(
-      feature => data.locations[feature.properties.locationId].level === 'country'
-    )
+    features: data.features.features.filter(feature => {
+      const location = data.locations[feature.properties.locationId];
+      if (!location) {
+        console.log(feature.properties);
+        return false;
+      }
+      return location.level === 'country';
+    })
   };
   return countryFeatures;
 }
