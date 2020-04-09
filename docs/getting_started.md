@@ -43,7 +43,7 @@ If you get an error message saying you have an incompatible version of
 node versions: [install](https://www.npmjs.com/package/n) it and run
 `n lts`.
 
-### 3. Run the scraper
+### 3. Run the scrapers
 
 ```
 yarn start
@@ -70,26 +70,31 @@ To run the scrapers for today:
 yarn start
 ```
 
-### Run only one scraper
+### Run selected scrapers
 
-To scrape just one location, use `--location`/`-l`
-
-```
-yarn start --location "Ventura County, CA, USA"
-```
-
-Alternatively, you can pass a filename (without extension or directory name) to `--location`:
+To use a subset of scrapers, use `--location`/`-l`
 
 ```
-yarn start --location "JHU"
+yarn start --location "US/PA"
 ```
+
+The `location` value should match a path under `src/shared/scrapers/`.
+
+Examples:
+
+* `yarn start --location "US"`: run all scrapers in `src/shared/scrapers/US` and child folders
+* `yarn start --location "US/CA"`: run all scrapers in `src/shared/scrapers/US/CA` and child folders
+* `yarn start --location "US/CA/alameda-county.js"`: run this single scraper
+* `yarn start --location "AU"`: run all scrapers in `src/shared/scrapers/AU` and child folders
+* `yarn start --location "AU/index.js"`: run this single scraper
+
 
 ### Skipping a scraper
 
 To skip a scraper, use `--skip`/`-s`
 
 ```
-yarn start --skip "Ventura County, CA, USA"
+yarn start --skip "US/CA/alameda-county.js"
 ```
 
 ### Re-generating old data
@@ -124,6 +129,18 @@ This can be combined with `-l` to test a single scraper:
 
 ```
 yarn timeseries -d 2020-3-15 -e 2020-3-18 -l 'WA, USA'
+```
+
+### Command-line options
+
+Run `yarn options` to see the command line options.  e.g.,
+
+```
+Options:
+  --version           Show version number                              [boolean]
+  --date, -d          Generate data for or start the timeseries at the provided
+                      date in YYYY-M-D format                           [string]
+...
 ```
 
 ## Tests
