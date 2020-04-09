@@ -24,9 +24,14 @@ async function generate(date, options = {}) {
     date: date || datetime.getYYYYMD()
   };
 
+  const srcs = await fetchSources({ date, report, options });
+  if (srcs.sources.length === 0) {
+    console.log('No sources, quitting.');
+    return;
+  }
+
   // Crawler
-  const output = await fetchSources({ date, report, options })
-    .then(scrapeData)
+  const output = scrapeData(srcs)
     // processor
     .then(rateSources)
     .then(dedupeLocations)
