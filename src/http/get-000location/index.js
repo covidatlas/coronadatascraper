@@ -224,6 +224,9 @@ async function route(req) {
 
   const graphData = [];
   for (const date in timeseries) {
+    if (timeseries[date][location.id].cases === 0) {
+      continue;
+    }
     const obj = {
       ...timeseries[date][location.id],
       date
