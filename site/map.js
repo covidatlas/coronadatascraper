@@ -47,7 +47,14 @@ function initData() {
 function generateCountyFeatures() {
   const countyFeatures = {
     type: 'FeatureCollection',
-    features: data.features.features.filter(feature => data.locations[feature.properties.locationId].level === 'county')
+    features: data.features.features.filter(feature => {
+      const location = data.locations[feature.properties.locationId];
+      if (!location) {
+        console.log(feature.properties);
+        return false;
+      }
+      return location.level === 'county';
+    })
   };
   return countyFeatures;
 }
