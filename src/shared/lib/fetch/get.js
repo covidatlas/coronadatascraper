@@ -23,10 +23,10 @@ needle.defaults({
 
 /**
  * Fetch whatever is at the provided URL. Use cached version if available.
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} type type of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - toString: returns data as a string instead of buffer, defaults to true
