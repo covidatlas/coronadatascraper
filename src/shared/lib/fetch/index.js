@@ -55,6 +55,27 @@ export const json = async (url, date, options = {}) => {
 };
 
 /**
+ * Load and parse JSON from the given URL, and return cookies as well.
+ * @param {*} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {*} options customizable options:
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ */
+export const jsonAndCookies = async (url, date, options = {}) => {
+  log(url);
+  const resp = await get(url, 'json', date, options);
+
+  if (!resp.body) {
+    return null;
+  }
+  return {
+    body: JSON.parse(resp.body),
+    cookies: resp.cookies
+  };
+};
+
+/**
  * Load and parse CSV from the given URL
  * @param {*} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
