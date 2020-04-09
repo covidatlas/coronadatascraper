@@ -38,6 +38,8 @@
     "@js-joda/core": "^2.0.0",
     "@js-joda/timezone": "^2.2.0",
     "@lorenzofox3/for-await": "^0.2.1",
+    "@spectrum-web-components/overlay": "^0.3.3",
+    "@spectrum-web-components/popover": "^0.3.5",
     "@spectrum-web-components/tab": "^0.3.6",
     "@turf/area": "^6.0.1",
     "@turf/boolean-point-in-polygon": "^6.2.0-alpha.1",

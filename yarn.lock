@@ -455,12 +455,29 @@
     "@spectrum-web-components/theme" "^0.3.1"
     tslib "^1.10.0"
 
+"@spectrum-web-components/overlay@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.3.3.tgz#24974ac48ca96cb9a2be3e8b985e90fc88c3f96f"
+  integrity sha512-eO6B3lDsfl4rySnAk6xvUiQZ+LDP14R/DCAfx0EuROXtZU7pc/FNuaiDPuKPP1RJNfE8B9j8B/Zwz88frHkEXA==
+  dependencies:
+    "@popperjs/core" "^2.0.4"
+    "@spectrum-web-components/theme" "^0.3.2"
+    tslib "^1.10.0"
+
 "@spectrum-web-components/popover@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.3.4.tgz#c33d258d6819860055e9873f49bb9e09b4405a2c"
   integrity sha512-hdQn0Bx5UZ6c//Vg6dnCvt7/CedUGZGa8lcgXAQzig4xEjh0D3pF0QZgklWzR55HytVJleKlyavA3XyDrdH+sg==
   dependencies:
     "@spectrum-web-components/overlay" "^0.3.2"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/popover@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.3.5.tgz#8e7e1837174664aa967d22647fc72e26826e33c5"
+  integrity sha512-gB9djT+rNrzvZKHIHFJtNhqRlktuQ+TCVD5SrMkHf28Xa3ACOqOydSskno/DQD2lRxcRelivwKRuZ4vtzflZGg==
+  dependencies:
+    "@spectrum-web-components/overlay" "^0.3.3"
     tslib "^1.10.0"
 
 "@spectrum-web-components/search@^0.2.10":
@@ -503,6 +520,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.5.0.tgz#94fa5280d2f774e4cc72e47b6c0b38f7ec73dcf3"
   integrity sha512-Xq4YvOFYGOuzI3qgYF7eF17g049fQVUIntA+NcKSuU1ZfvMS41+cz67fkWydtorMguCbUgIr//g+xFygF4mrtQ==
 
+"@spectrum-web-components/styles@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.5.1.tgz#db6f498fdb775642ad877222fa00f8bee35b7589"
+  integrity sha512-37YKvjNBeSLYbtH5DK7McRjj+2AVZSKpjpWo1ANM/lPPLTrkZ6rPak1B/uIyrndqWiRQEA3bqYcZy/InNqc1ig==
+
 "@spectrum-web-components/tab-list@^0.3.6":
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/tab-list/-/tab-list-0.3.6.tgz#db89f692bbc8b37eacec5ba8ffd45b9ba87d4801"
@@ -536,6 +558,14 @@
   integrity sha512-gHdJ2U6vror6J1gf2n7uQevn6rP6Z9NmdYwDAdteP3ulj1JkocwrmKSOerWH713b2cJo133OlOBJFeI9y1zvNw==
   dependencies:
     "@spectrum-web-components/styles" "^0.5.0"
+    tslib "^1.10.0"
+
+"@spectrum-web-components/theme@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.3.2.tgz#50b9a636040da6f2a010c9f063aa7a339b038ad9"
+  integrity sha512-cKnq++Y9ex/GEB7LDNosw5b2mivorEyn2kbwRyCHP7TH51Ejxs7omYnS6gEDMstxXD45guX64nrwWIDxldrfFg==
+  dependencies:
+    "@spectrum-web-components/styles" "^0.5.1"
     tslib "^1.10.0"
 
 "@szmarczak/http-timer@^1.1.2":

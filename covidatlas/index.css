@@ -160,12 +160,25 @@ sp-dropdown[emphasized] {
   padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
   margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
   margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
-
-  .ca-Landing-search {
-    sp-search#searchField {
-      -spectrum-textfield-border-color: red;
-    }
+}
+.spectrum-ComboField {
+  display: block;
+}
+.ca-Landing-search {
+  /*
+  sp-search#searchField {
+    --spectrum-textfield-border-color: red;
   }
+  */
+}
+.sp-Landing-searchResults {
+  max-width: 340px;
+  max-height: 300px;
+}
+
+.ca-Landing-search #searchPopover {
+  /* hide the popover until the overlay shows it */
+  display: none;
 }
 
 .ca-Section {
@@ -330,6 +343,11 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.spectrum-ComboField-label {
+  color: var(--spectrum-global-color-gray-300);
+  margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
 }
 
 @media only screen and (min-width: 48em){
