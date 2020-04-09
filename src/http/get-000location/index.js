@@ -61,8 +61,6 @@ function getSiblingLocations(location) {
     return [location];
   }
 
-  console.log(location[parentLevel]);
-
   return locationArray.filter(ohterLocation => {
     return ohterLocation.level === level && ohterLocation[parentLevel] === location[parentLevel];
   });
@@ -142,7 +140,7 @@ function locationDetail(location, lastDate, caseInfo) {
   <div class="row">
     <div class="col-xs-12 col-md-12">
       <h2 class="spectrum-Heading spectrum-Heading--M">Map view</h1>
-      <div class="ca-Map"></div>
+      <div id="map" class="ca-Map"></div>
     </div>
   </div>
 
@@ -199,6 +197,20 @@ function locationDetail(location, lastDate, caseInfo) {
   return html;
 }
 
+function filterTimeseries(timeseries, locations) {
+  const subTimeseries = {};
+
+  for (const date in timeseries) {
+    const dateEntry = {};
+    for (const location of locations) {
+      dateEntry[location.id] = timeseries[date][location.id];
+    }
+    subTimeseries[date] = dateEntry;
+  }
+
+  return subTimeseries;
+}
+
 async function route(req) {
   // Get latest information from timeseries
   const { location } = req;
@@ -208,6 +220,7 @@ async function route(req) {
   // Create a subset feature collection to display on the map
   const siblingLocations = getSiblingLocations(location);
   const subFeatureCollection = getFeatureCollectionForLocations(siblingLocations);
+  const siblingTimeseries = filterTimeseries(timeseries, siblingLocations);
 
   // Display the information for the location
   return {
@@ -223,6 +236,16 @@ ${header()}
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     ${locationDetail(location, lastDate, caseInfo, siblingLocations, subFeatureCollection)}
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <script src="${arc.static('location-map.js')}"></script>
+    <script>
+      window.showMap({
+        locations: ${JSON.stringify(siblingLocations)},
+        features: ${JSON.stringify(subFeatureCollection)},
+        timeseries: ${JSON.stringify(siblingTimeseries)}
+      });
+    </script>
     ${footer()}
   </div>
 </div>

@@ -1,7 +1,8 @@
-/* globals document */
+/* globals document, window */
 
 let sidebar;
 let overlay;
+let tabList;
 
 export function open() {
   sidebar.classList.add('is-open');
@@ -16,6 +17,10 @@ export function close() {
 document.addEventListener('DOMContentLoaded', function() {
   sidebar = document.querySelector('.spectrum-Site-sideBar');
   overlay = document.querySelector('.spectrum-Site-overlay');
+  tabList = document.querySelector('#tabNav');
+  tabList.addEventListener('change', function() {
+    window.location = `/${tabList.selected === 'home' ? '' : tabList.selected}`;
+  });
 });
 
 document.addEventListener('click', function(evt) {

@@ -113,10 +113,6 @@ sp-dropdown[emphasized] {
   }
 }
 
-.spectrum-Link--silent {
-  text-decoration: none;
-}
-
 .ca-SocialLinks {
   text-transform: uppercase;
   display: inline-flex;
@@ -134,7 +130,7 @@ sp-dropdown[emphasized] {
 }
 
 .ca-SiteFooter-Disclaimer {
-  margin-top: var(--spectrum-alias-grid-margin-large);
+  /*margin-top: var(--spectrum-alias-grid-margin-large);*/
 }
 
 .ca-Hero {
@@ -321,6 +317,18 @@ hr {
 }
 .spectrum-Heading.ca-LocationTitle {
   font-size: var(--spectrum-heading-m-text-size, var(--spectrum-alias-heading-m-text-size));
+}
+
+.spectrum-Site-content {
+  /* Leave room for header */
+  max-height: calc(100% - var(--spectrum-global-dimension-size-600));
+}
+
+.spectrum-Site-mainContainer {
+  /* Slam footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media only screen and (min-width: 48em){

@@ -193,8 +193,8 @@ ${header('sources')}
       </p>
     </section>
     ${ratingHTML}
+    ${footer()}
   </div>
-  ${footer()}
 </div>
 `,
     'ca-Sources'

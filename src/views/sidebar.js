@@ -17,11 +17,11 @@ module.exports = function body(selectedPage = 'home', className = '') {
           label="Home"
           href="/"
       ></sp-sidenav-item>
-      <sp-sidenav-item
+      <!--<sp-sidenav-item
           value="map"
           label="Map"
           href="/map"
-      ></sp-sidenav-item>
+      ></sp-sidenav-item>-->
       <sp-sidenav-item
           value="data"
           label="Datasets"
@@ -32,11 +32,11 @@ module.exports = function body(selectedPage = 'home', className = '') {
           label="Sources"
           href="/sources"
       ></sp-sidenav-item>
-      <sp-sidenav-item
+      <!--<sp-sidenav-item
           value="crosscheck"
           label="Reports"
           href="/crosscheck"
-      ></sp-sidenav-item>
+      ></sp-sidenav-item>-->
       <sp-sidenav-item
           value="about"
           label="About"

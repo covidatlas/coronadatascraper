@@ -44,3 +44,7 @@
   border-radius: 4px;
   overflow: hidden;
 }
+
+#map.ca-Map {
+  height: 512px;
+}
