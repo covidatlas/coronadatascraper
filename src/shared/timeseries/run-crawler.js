@@ -30,9 +30,6 @@ export default options =>
     if (options.location) {
       args = args.concat(['-l', options.location]);
     }
-    if (options.country) {
-      args = args.concat(['-c', options.country]);
-    }
 
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),

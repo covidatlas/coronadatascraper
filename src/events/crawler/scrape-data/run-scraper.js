@@ -1,7 +1,5 @@
-import path from 'path';
 import datetime from '../../../shared/lib/datetime/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
-import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import log from '../../../shared/lib/log.js';
 
@@ -116,33 +114,11 @@ export async function runScraper(location) {
 }
 
 const runScrapers = async args => {
-  const { sources, options } = args;
+  const { sources } = args;
 
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.skip && geography.getName(location) === options.skip) {
-      continue;
-    }
-
-    if (
-      options.location &&
-      path.basename(location._path, '.js') !== options.location &&
-      geography.getName(location) !== options.location
-    ) {
-      continue;
-    }
-
-    if (options.country && ![options.country, `iso1:${options.country}`].includes(location.country)) {
-      continue;
-    }
-
-    if (options.id && options.id !== countryLevels.getIdFromLocation(location)) {
-      // select location based on country level id
-      // for example "yarn start -i id3:AU-VIC"
-      continue;
-    }
-
     if (location.scraper) {
       try {
         addData(locations, location, await runScraper(location));

@@ -426,7 +426,11 @@ a file with the name `expected.YYYY-MM-DD.json`; for example, `expected.2020-03-
 
 ### Manual testing
 
-You should run your source with the crawler by running `yarn start -l "<name of your source>"`. Your source name will be as follow "<county name>, <state name>, <country name>" (eg., the scraper for Montana, USA is "MN, USA").
+You should run your source with the crawler by running `yarn start -l "<path to scraper>"`.
+
+The path to scraper should be the relative path under
+`src/shared/scrapers`; e.g., the scraper for Montana, USA would be
+"US/MO").
 
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output located in the `dist` directory. `data.json` contains all the information
