@@ -30,3 +30,4 @@ get /:location # normalized lowercased space -> dash: King County, WA, USA -> ki
 
 @macros
 architect/macro-node-prune
+build
