@@ -1,0 +1,10 @@
+.ca-Graph {
+  height: 250px;
+  width: 100%;
+}
+
+.ca-Graph-line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}

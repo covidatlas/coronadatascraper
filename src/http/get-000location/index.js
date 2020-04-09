@@ -134,7 +134,7 @@ function locationDetail(location, lastDate, caseInfo) {
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
-      <div class="ca-Placeholder"></div>
+      <div id="graph" class="ca-Graph"></div>
     </div>
   </div>
   <div class="row">
@@ -222,6 +222,15 @@ async function route(req) {
   const subFeatureCollection = getFeatureCollectionForLocations(siblingLocations);
   const siblingTimeseries = filterTimeseries(timeseries, siblingLocations);
 
+  const graphData = [];
+  for (const date in timeseries) {
+    const obj = {
+      ...timeseries[date][location.id],
+      date
+    };
+    graphData.push(obj);
+  }
+
   // Display the information for the location
   return {
     headers: {
@@ -238,8 +247,14 @@ ${header()}
     ${locationDetail(location, lastDate, caseInfo, siblingLocations, subFeatureCollection)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="${arc.static('location-graph.js')}"></script>
     <script src="${arc.static('location-map.js')}"></script>
     <script>
+      window.showGraph({
+        data: ${JSON.stringify(graphData)}
+      });
+
       window.showMap({
         locations: ${JSON.stringify(siblingLocations)},
         features: ${JSON.stringify(subFeatureCollection)},
