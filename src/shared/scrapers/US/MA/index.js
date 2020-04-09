@@ -144,9 +144,7 @@ const scraper = {
         const cases = item.attributes.CASES || 0;
         const deaths = item.attributes.DEATHS || 0;
         const tested = item.attributes.TESTED || 0;
-        const county = geography.addCounty(
-          item.attributes.County.charAt(0) + countyLC.slice(1)
-        );
+        const county = geography.addCounty(item.attributes.County.charAt(0) + countyLC.slice(1));
 
         const countyObj = {
           county,
