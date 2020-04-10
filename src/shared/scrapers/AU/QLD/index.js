@@ -31,13 +31,14 @@ const scraper = {
     }
   ],
   state: 'iso2:AU-QLD',
-  type: 'paragraph',
+  type: 'table',
   url: 'https://www.health.qld.gov.au/news-events/doh-media-releases',
   scraper: {
     '0': async function() {
       const $ = await getCurrentArticlePage(this.url);
       const paragraph = $('#content h2:first-of-type + p').text();
       const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
+      this.type = 'paragraph';
       return {
         cases: parse.number(casesString)
       };
