@@ -1,6 +1,9 @@
+import assert from 'assert';
+
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
+import maintainers from '../../lib/maintainers.js';
 import datetime from '../../lib/datetime/index.js';
 
 // import { features } from './features.json';
@@ -11,6 +14,14 @@ const scraper = {
   country: 'iso1:FR',
   timeseries: true,
   url: 'https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv',
+  sources: [
+    {
+      description: 'Santé publique France is the French national agency of public health.',
+      name: 'Santé publique France',
+      url: 'https://www.santepubliquefrance.fr/'
+    }
+  ],
+  maintainers: [maintainers.qgolsteyn],
   priority: 1,
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
@@ -83,7 +94,7 @@ const scraper = {
       }
     }
 
-    const data = [];
+    const overseas = [];
     const regions = {};
     const departements = [];
 
@@ -91,7 +102,7 @@ const scraper = {
       if (departementsToCountry[dep]) {
         // Overseas territories have their own country code
         // We treat them as country to follow standard set by Johns Hopkins dataset
-        data.push({
+        overseas.push({
           country: departementsToCountry[dep],
           tested: testedByDepartements[dep],
           ...hospitalizedByDepartments[dep]
@@ -114,6 +125,14 @@ const scraper = {
         departements.push(item);
       }
     }
+
+    assert(departements.length === 96, 'Invalid number of départements');
+    assert(Object.keys(regions).length === 13, 'Invalid number of metropolitan régions');
+    assert(overseas.length === 5, 'Invalid number of overseas territories');
+
+    const data = [];
+
+    data.push(...overseas);
 
     data.push(...departements);
 
