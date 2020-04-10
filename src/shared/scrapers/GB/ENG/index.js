@@ -23,7 +23,7 @@ const scraper = {
       const gss = row.GSS_CD;
       const iso = codeMap[gss];
       if (!iso) {
-        console.error(`GB, ENG: ${row.GSS_CD} not found in GSS codes`);
+        console.error(`GB/ENG: ${row.GSS_CD} not found in GSS codes`);
         continue;
       }
 
