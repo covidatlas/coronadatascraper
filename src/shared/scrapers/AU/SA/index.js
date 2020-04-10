@@ -23,7 +23,7 @@ const scraper = {
     }
   ],
   state: 'iso2:AU-SA',
-  type: 'paragraph',
+  type: 'table',
   url:
     'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia',
   scraper: {
@@ -31,6 +31,7 @@ const scraper = {
       const $ = await fetch.page(this.url);
       const paragraph = $('.middle-column p:first-of-type').text();
       const { casesString } = paragraph.match(/been (?<casesString>\d+) confirmed cases/).groups;
+      this.type = 'paragraph';
       return {
         cases: parse.number(casesString)
       };
