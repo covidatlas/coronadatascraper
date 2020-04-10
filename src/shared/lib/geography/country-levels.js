@@ -22,6 +22,9 @@ export function getIdFromLocation(location) {
   return isId(smallestLocationStr) ? smallestLocationStr : null;
 }
 
+/**
+ * @param {string} id
+ */
 export function splitId(id) {
   assert(isId(id), `Wrong id: ${id}`);
   const [level, code] = id.split(':');
@@ -47,7 +50,7 @@ export const getLocationData = async id => {
     const data = await Promise.all(parts.map(getLocationData));
     return data;
   }
-  const { level, code } = splitId(id, true);
+  const { level, code } = splitId(id);
   const levelData = await getLevelData(level);
   const locationData = levelData[code];
 
