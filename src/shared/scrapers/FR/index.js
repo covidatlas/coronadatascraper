@@ -6,7 +6,6 @@ import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
 import datetime from '../../lib/datetime/index.js';
 
-// import { features } from './features.json';
 import departementsToCountry from './departements-to-country.json';
 import departementsToRegion from './departements-to-region.json';
 
@@ -111,7 +110,7 @@ const scraper = {
         // Other departements are in Metropolitan France
         const item = {
           country: 'iso1:FX', // ISO1 code for Metropolitan France
-          county: `iso2:FR-${dep}`,
+          county: dep === '10' ? `FR-${dep}` : `iso2:FR-${dep}`, // TODO: FR-10 is not recognized as an iso code
           state: departementsToRegion[dep],
           tested: testedByDepartements[dep],
           ...hospitalizedByDepartments[dep]

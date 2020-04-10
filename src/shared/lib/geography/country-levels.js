@@ -78,6 +78,7 @@ export const getPopulation = async id => {
       return a;
     }, 0);
   }
+
   return locationData.population;
 };
 
