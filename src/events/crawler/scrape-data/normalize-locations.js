@@ -1,13 +1,11 @@
 import path from 'path';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import fipsCodes from 'country-levels/fips.json';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import iso2Codes from 'country-levels/iso2.json';
 import { isId } from '../../../shared/lib/geography/country-levels.js';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
-// eslint-disable-next-line
-import fipsCodes from 'country-levels/fips.json';
-// eslint-disable-next-line
-import iso2Codes from 'country-levels/iso2.json';
-// eslint-disable-next-line
-import countryCodes from '../../../shared/vendor/country-codes.json';
 
 import log from '../../../shared/lib/log.js';
 
@@ -94,7 +92,7 @@ const normalizeLocations = args => {
     }
 
     // Auto-detect type if not provided
-    if (!location.type && location.url && path.extname(location.url).substr(1)) {
+    if (!location.type && path.extname(location.url).substr(1)) {
       location.type = path.extname(location.url).substr(1);
     }
   }

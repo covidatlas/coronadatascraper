@@ -40,7 +40,6 @@ function takeOnlyProps(obj, props) {
 
 function normalizeProps(obj) {
   const newObj = {};
-  // eslint-disable-next-line guard-for-in
   for (const prop in obj) {
     newObj[prop.toLowerCase()] = obj[prop];
   }
@@ -218,10 +217,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       const clId = countryLevels.getIdFromLocation(location);
       if (clId) {
         const feature = await countryLevels.getFeature(clId);
-        if (feature) {
-          storeFeature(feature, location);
-          continue;
-        }
+        storeFeature(feature, location);
+        continue;
       }
 
       let point;
