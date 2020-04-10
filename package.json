@@ -44,7 +44,7 @@
     "ajv": "^6.12.0",
     "cheerio": "^1.0.0-rc.3",
     "cheerio-tableparser": "^1.0.1",
-    "country-levels": "https://github.com/hyperknot/country-levels/releases/download/v1.5.2/export_q7.tgz",
+    "country-levels": "https://github.com/hyperknot/country-levels/releases/download/v1.5.4/export_q7.tgz",
     "csv-parse": "^4.8.8",
     "csv-stringify": "^5.3.6",
     "d3-color": "^1.4.0",
