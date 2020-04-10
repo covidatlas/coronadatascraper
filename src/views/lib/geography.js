@@ -35,3 +35,50 @@ module.exports.getLocationGranularityName = function(location) {
   }
   return 'none';
 };
+
+const childLevelOrder = ['country', 'state', 'county', 'city'];
+module.exports.getChildLocations = function(location, locations) {
+  const subLocations = [];
+
+  // Find all its children
+  const { level } = location;
+  const index = childLevelOrder.indexOf(level);
+
+  const mustMatch = childLevelOrder.slice(0, index + 1);
+
+  for (const otherLocation of locations) {
+    let matches = true;
+    for (const field of mustMatch) {
+      if (otherLocation[field] !== location[field]) {
+        matches = false;
+        break;
+      }
+    }
+    if (matches) {
+      subLocations.push(otherLocation);
+    }
+  }
+
+  return subLocations;
+};
+
+const parentLevelOrder = ['city', 'county', 'state', 'country', 'world'];
+const getParentLevel = (module.exports.getParentLevel = function(level) {
+  return parentLevelOrder[Math.min(parentLevelOrder.indexOf(level) + 1, parentLevelOrder.length - 1)];
+});
+
+module.exports.getSiblingLocations = function(location, locations) {
+  const { level } = location;
+  const parentLevel = getParentLevel(level);
+
+  if (parentLevel === 'world') {
+    console.log('Will not look for siblings of %s', location.name);
+    // Ideally, we find adjacent countries
+    // Since this is not yet handled, just return the location
+    return [location];
+  }
+
+  return Object.values(locations).filter(otherLocation => {
+    return otherLocation.level === level && otherLocation[parentLevel] === location[parentLevel];
+  });
+};

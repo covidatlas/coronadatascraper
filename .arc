@@ -18,7 +18,10 @@ get /map
 get /crosscheck
 get /sources
 get /data
-get /api/locations
+get /api/search
+get /api/locations/:location
+get /api/features/:location
+get /api/timeseries/:location
 get /:location # normalized lowercased space -> dash: King County, WA, USA -> king-county-wa-usa
 # generate map of slugs for each location from locations.json
 

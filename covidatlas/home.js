@@ -14,7 +14,7 @@ let closeOverlay;
 
 function search(query, callback) {
   const searchQuery = query || searchField.value.toLowerCase();
-  fetch.json(`/api/locations?q=${encodeURIComponent(searchQuery)}`, searchResults => {
+  fetch.json(`/api/search?q=${encodeURIComponent(searchQuery)}`, searchResults => {
     if (typeof callback === 'function') {
       callback(searchResults);
     }

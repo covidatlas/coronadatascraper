@@ -13,82 +13,21 @@ const sidebar = require('@architect/views/sidebar');
 // eslint-disable-next-line
 const { getName } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
-const { getContributors } = require('@architect/views/lib/contributors');
+const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
 const { getClassNames } = require('@architect/views/lib/dom');
+// eslint-disable-next-line
+const { handle404 } = require('@architect/views/lib/middleware');
+// eslint-disable-next-line
+const { getSiblingLocations } = require('@architect/views/lib/geography');
+// eslint-disable-next-line
+const { filterTimeseriesByLocations } = require('@architect/views/lib/timeseries');
+// eslint-disable-next-line
+const { filterFeatureCollectionByLocations } = require('@architect/views/lib/features');
 
-const locations = require('./dist/location-map.json');
-
-const locationArray = Object.values(locations);
+const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
 const featureCollection = require('./dist/features.json');
-
-// /:location
-async function handle404(req) {
-  // Read in the map
-  // See if the slug matches
-  const { pathParameters } = req;
-  const locationString = pathParameters.location.toLowerCase();
-  const foundLocation = locations[locationString];
-  if (foundLocation) {
-    req.location = foundLocation;
-    return req;
-  }
-
-  return {
-    statusCode: 404
-  };
-}
-
-function findFeature(id) {
-  return featureCollection.features.find(feature => feature.properties.id === id);
-}
-
-const levelOrder = ['city', 'county', 'state', 'country', 'world'];
-
-function getParentLevel(level) {
-  return levelOrder[Math.min(levelOrder.indexOf(level) + 1, levelOrder.length - 1)];
-}
-
-function getSiblingLocations(location) {
-  const { level } = location;
-  const parentLevel = getParentLevel(level);
-
-  if (parentLevel === 'world') {
-    console.log('Will not look for siblings of %s', location.name);
-    // Ideally, we find adjacent countries
-    // Since this is not yet handled, just return the location
-    return [location];
-  }
-
-  return locationArray.filter(ohterLocation => {
-    return ohterLocation.level === level && ohterLocation[parentLevel] === location[parentLevel];
-  });
-}
-
-function getFeatureCollectionForLocations(subLocations) {
-  return {
-    type: 'FeatureCollection',
-    features: subLocations.map(location => findFeature(location.featureId))
-  };
-}
-
-function getSingleContributorLink(location) {
-  const curators = getContributors(location.curators, { shortNames: true, link: false });
-  const sources = getContributors(location.sources, { shortNames: true, link: false });
-  const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
-  let html = '';
-  html += `<a class="spectrum-Link" target="_blank" href="${location.url}">`;
-  if (location.curators) {
-    html += `<strong>${curators}</strong>`;
-  } else if (location.sources) {
-    html += `<strong>${sources}</strong>`;
-  } else {
-    html += `<strong>${sourceURLShort}</strong>`;
-  }
-  html += '</a>';
-  return html;
-}
 
 function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
@@ -197,20 +136,6 @@ function locationDetail(location, lastDate, caseInfo) {
   return html;
 }
 
-function filterTimeseries(timeseries, locations) {
-  const subTimeseries = {};
-
-  for (const date in timeseries) {
-    const dateEntry = {};
-    for (const location of locations) {
-      dateEntry[location.id] = timeseries[date][location.id];
-    }
-    subTimeseries[date] = dateEntry;
-  }
-
-  return subTimeseries;
-}
-
 async function route(req) {
   // Get latest information from timeseries
   const { location } = req;
@@ -218,9 +143,9 @@ async function route(req) {
   const caseInfo = timeseries[lastDate][location.id];
 
   // Create a subset feature collection to display on the map
-  const siblingLocations = getSiblingLocations(location);
-  const subFeatureCollection = getFeatureCollectionForLocations(siblingLocations);
-  const siblingTimeseries = filterTimeseries(timeseries, siblingLocations);
+  const siblingLocations = getSiblingLocations(location, locationMap);
+  const subFeatureCollection = filterFeatureCollectionByLocations(featureCollection, siblingLocations);
+  const siblingTimeseries = filterTimeseriesByLocations(timeseries, siblingLocations);
 
   const graphData = [];
   for (const date in timeseries) {
@@ -273,4 +198,4 @@ ${header()}
   };
 }
 
-exports.handler = arc.http.async(handle404, route);
+exports.handler = arc.http.async(handle404(locationMap), route);

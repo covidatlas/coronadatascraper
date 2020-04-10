@@ -40,7 +40,10 @@ const getURLFromContributor = (module.exports.getURLFromContributor = function(c
 /**
  * @param {{name: string, country: string?, flag: string?}[]} contributors
  */
-module.exports.getContributors = function(contributors, options = { link: true, shortNames: false }) {
+const getContributors = (module.exports.getContributors = function(
+  contributors,
+  options = { link: true, shortNames: false }
+) {
   let html = '';
 
   if (contributors) {
@@ -72,5 +75,22 @@ module.exports.getContributors = function(contributors, options = { link: true, 
     }
   }
 
+  return html;
+});
+
+module.exports.getSingleContributorLink = function(location) {
+  const curators = getContributors(location.curators, { shortNames: true, link: false });
+  const sources = getContributors(location.sources, { shortNames: true, link: false });
+  const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+  let html = '';
+  html += `<a class="spectrum-Link" target="_blank" href="${location.url}">`;
+  if (location.curators) {
+    html += `<strong>${curators}</strong>`;
+  } else if (location.sources) {
+    html += `<strong>${sources}</strong>`;
+  } else {
+    html += `<strong>${sourceURLShort}</strong>`;
+  }
+  html += '</a>';
   return html;
 };
