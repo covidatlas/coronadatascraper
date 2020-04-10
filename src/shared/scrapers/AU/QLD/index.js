@@ -56,9 +56,8 @@ const scraper = {
     '2020-04-09': async function() {
       const $ = await getCurrentArticlePage(this.url);
       const $table = $('#content table');
-      console.log({ $table });
 
-      const $headings = $table.find('tbody:first-child tr th');
+      const $headings = $table.find('tbody:first-child tr th, thead:first-child tr th');
       const $totals = $table.find('tbody:last-child tr th');
       assert.equal($headings.length, $headings.length, 'headings and totals are misaligned');
 
