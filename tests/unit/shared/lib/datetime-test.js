@@ -113,7 +113,7 @@ test('today.at', t => {
 
 test('now.utc', t => {
   mockDate('2020-03-16T23:45Z');
-  t.equal(now.utc(), '2020-03-16T23:45', 'returns the time in UTC');
+  t.equal(now.utc(), '2020-03-16T23:45Z', 'returns the time in UTC');
   mockDate.reset();
   t.end();
 });
