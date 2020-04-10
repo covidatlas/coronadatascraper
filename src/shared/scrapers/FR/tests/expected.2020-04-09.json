@@ -6,7 +6,7 @@
   { "country": "iso1:YT", "tested": 2, "todayHospitalized": 16, "hospitalized": 44, "deaths": 2, "discharged": 26 },
   {
     "country": "iso1:FX",
-    "county": "iso2:FR-10",
+    "county": "FR-10",
     "state": "iso2:FR-GES",
     "tested": 800,
     "todayHospitalized": 202,
