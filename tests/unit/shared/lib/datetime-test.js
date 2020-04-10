@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
