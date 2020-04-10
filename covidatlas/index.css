@@ -359,7 +359,7 @@ hr {
     padding-left: var(--spectrum-alias-grid-margin-small);
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
   .ca-Hero {
     display: initial;
   }
@@ -383,7 +383,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
   .ca-SiteHeader sp-tab-list {
     display: none;
   }
