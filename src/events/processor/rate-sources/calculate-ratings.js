@@ -61,7 +61,7 @@ const rateLocation = location => {
   rating += scoresheet.easeOfRead[location.type];
 
   // Add points if using SSL
-  if (location.url.substr(0, 5) === 'https' && location.certValidation !== false) {
+  if (location.url && location.url.substr(0, 5) === 'https' && location.certValidation !== false) {
     location.ssl = true;
     rating += scoresheet.sslWorth;
   } else {

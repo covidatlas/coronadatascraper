@@ -91,7 +91,7 @@ export const transposeTimeseries = function(timeseriesByLocation) {
   return { timeseriesByDate, locations };
 };
 
-const caseFields = ['cases', 'recovered', 'active', 'deaths', 'tested'];
+const caseFields = ['cases', 'recovered', 'active', 'deaths', 'tested', 'hospitalized', 'discharged'];
 
 /*
   Sum the passed array of data into a single object with the properties of the optional, second argument

@@ -1,0 +1,1065 @@
+﻿[
+  { "country": "iso1:GP", "tested": 23, "todayHospitalized": 33, "hospitalized": 92, "deaths": 10, "discharged": 49 },
+  { "country": "iso1:MQ", "tested": 10, "todayHospitalized": 47, "hospitalized": 96, "deaths": 5, "discharged": 45 },
+  { "country": "iso1:GF", "tested": 16, "todayHospitalized": 9, "hospitalized": 21, "deaths": 0, "discharged": 12 },
+  { "country": "iso1:RE", "tested": 3, "todayHospitalized": 36, "hospitalized": 94, "deaths": 0, "discharged": 58 },
+  { "country": "iso1:YT", "tested": 2, "todayHospitalized": 16, "hospitalized": 44, "deaths": 2, "discharged": 26 },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-10",
+    "state": "iso2:FR-GES",
+    "tested": 800,
+    "todayHospitalized": 202,
+    "hospitalized": 407,
+    "deaths": 58,
+    "discharged": 147
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-11",
+    "state": "iso2:FR-OCC",
+    "tested": 524,
+    "todayHospitalized": 69,
+    "hospitalized": 177,
+    "deaths": 36,
+    "discharged": 84
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-12",
+    "state": "iso2:FR-OCC",
+    "tested": 17,
+    "todayHospitalized": 52,
+    "hospitalized": 116,
+    "deaths": 15,
+    "discharged": 50
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-13",
+    "state": "iso2:FR-PAC",
+    "tested": 8916,
+    "todayHospitalized": 1045,
+    "hospitalized": 2244,
+    "deaths": 154,
+    "discharged": 1108
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-14",
+    "state": "iso2:FR-NOR",
+    "tested": 720,
+    "todayHospitalized": 157,
+    "hospitalized": 259,
+    "deaths": 31,
+    "discharged": 71
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-15",
+    "state": "iso2:FR-ARA",
+    "tested": 35,
+    "todayHospitalized": 27,
+    "hospitalized": 36,
+    "deaths": 0,
+    "discharged": 9
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-16",
+    "state": "iso2:FR-NAQ",
+    "tested": 125,
+    "todayHospitalized": 11,
+    "hospitalized": 47,
+    "deaths": 8,
+    "discharged": 28
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-17",
+    "state": "iso2:FR-NAQ",
+    "tested": 855,
+    "todayHospitalized": 80,
+    "hospitalized": 153,
+    "deaths": 21,
+    "discharged": 54
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-18",
+    "state": "iso2:FR-CVL",
+    "tested": 456,
+    "todayHospitalized": 60,
+    "hospitalized": 112,
+    "deaths": 26,
+    "discharged": 26
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-19",
+    "state": "iso2:FR-NAQ",
+    "tested": 96,
+    "todayHospitalized": 44,
+    "hospitalized": 85,
+    "deaths": 12,
+    "discharged": 29
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-21",
+    "state": "iso2:FR-BFC",
+    "tested": 306,
+    "todayHospitalized": 290,
+    "hospitalized": 745,
+    "deaths": 95,
+    "discharged": 364
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-22",
+    "state": "iso2:FR-BRE",
+    "tested": 25,
+    "todayHospitalized": 64,
+    "hospitalized": 126,
+    "deaths": 16,
+    "discharged": 49
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-23",
+    "state": "iso2:FR-NAQ",
+    "tested": 8,
+    "todayHospitalized": 29,
+    "hospitalized": 39,
+    "deaths": 4,
+    "discharged": 6
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-24",
+    "state": "iso2:FR-NAQ",
+    "tested": 291,
+    "todayHospitalized": 22,
+    "hospitalized": 47,
+    "deaths": 1,
+    "discharged": 25
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-25",
+    "state": "iso2:FR-BFC",
+    "tested": 399,
+    "todayHospitalized": 199,
+    "hospitalized": 469,
+    "deaths": 60,
+    "discharged": 219
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-26",
+    "state": "iso2:FR-ARA",
+    "tested": 447,
+    "todayHospitalized": 241,
+    "hospitalized": 494,
+    "deaths": 71,
+    "discharged": 182
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-27",
+    "state": "iso2:FR-NOR",
+    "tested": 995,
+    "todayHospitalized": 67,
+    "hospitalized": 142,
+    "deaths": 31,
+    "discharged": 44
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-28",
+    "state": "iso2:FR-CVL",
+    "tested": 947,
+    "todayHospitalized": 186,
+    "hospitalized": 354,
+    "deaths": 37,
+    "discharged": 132
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-29",
+    "state": "iso2:FR-BRE",
+    "tested": 18,
+    "todayHospitalized": 109,
+    "hospitalized": 186,
+    "deaths": 11,
+    "discharged": 69
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-30",
+    "state": "iso2:FR-OCC",
+    "tested": 83,
+    "todayHospitalized": 106,
+    "hospitalized": 193,
+    "deaths": 21,
+    "discharged": 72
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-31",
+    "state": "iso2:FR-OCC",
+    "tested": 41,
+    "todayHospitalized": 247,
+    "hospitalized": 472,
+    "deaths": 23,
+    "discharged": 213
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-32",
+    "state": "iso2:FR-OCC",
+    "tested": 404,
+    "todayHospitalized": 28,
+    "hospitalized": 52,
+    "deaths": 8,
+    "discharged": 16
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-33",
+    "state": "iso2:FR-NAQ",
+    "tested": 2611,
+    "todayHospitalized": 282,
+    "hospitalized": 763,
+    "deaths": 62,
+    "discharged": 423
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-34",
+    "state": "iso2:FR-OCC",
+    "tested": 305,
+    "todayHospitalized": 224,
+    "hospitalized": 590,
+    "deaths": 62,
+    "discharged": 324
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-35",
+    "state": "iso2:FR-BRE",
+    "tested": 50,
+    "todayHospitalized": 173,
+    "hospitalized": 317,
+    "deaths": 27,
+    "discharged": 117
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-36",
+    "state": "iso2:FR-CVL",
+    "tested": 523,
+    "todayHospitalized": 66,
+    "hospitalized": 110,
+    "deaths": 25,
+    "discharged": 19
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-37",
+    "state": "iso2:FR-CVL",
+    "tested": 477,
+    "todayHospitalized": 193,
+    "hospitalized": 310,
+    "deaths": 28,
+    "discharged": 89
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-38",
+    "state": "iso2:FR-ARA",
+    "tested": 1125,
+    "todayHospitalized": 236,
+    "hospitalized": 463,
+    "deaths": 38,
+    "discharged": 190
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-39",
+    "state": "iso2:FR-BFC",
+    "tested": 184,
+    "todayHospitalized": 105,
+    "hospitalized": 185,
+    "deaths": 23,
+    "discharged": 58
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-40",
+    "state": "iso2:FR-NAQ",
+    "tested": 236,
+    "todayHospitalized": 30,
+    "hospitalized": 67,
+    "deaths": 8,
+    "discharged": 29
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-41",
+    "state": "iso2:FR-CVL",
+    "tested": 161,
+    "todayHospitalized": 103,
+    "hospitalized": 167,
+    "deaths": 16,
+    "discharged": 48
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-42",
+    "state": "iso2:FR-ARA",
+    "tested": 65,
+    "todayHospitalized": 472,
+    "hospitalized": 829,
+    "deaths": 95,
+    "discharged": 266
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-43",
+    "state": "iso2:FR-ARA",
+    "tested": 113,
+    "todayHospitalized": 24,
+    "hospitalized": 65,
+    "deaths": 4,
+    "discharged": 42
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-44",
+    "state": "iso2:FR-PDL",
+    "tested": 290,
+    "todayHospitalized": 274,
+    "hospitalized": 520,
+    "deaths": 57,
+    "discharged": 197
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-45",
+    "state": "iso2:FR-CVL",
+    "tested": 1372,
+    "todayHospitalized": 256,
+    "hospitalized": 448,
+    "deaths": 32,
+    "discharged": 160
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-46",
+    "state": "iso2:FR-OCC",
+    "tested": 56,
+    "todayHospitalized": 20,
+    "hospitalized": 63,
+    "deaths": 1,
+    "discharged": 43
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-47",
+    "state": "iso2:FR-NAQ",
+    "tested": 211,
+    "todayHospitalized": 29,
+    "hospitalized": 48,
+    "deaths": 4,
+    "discharged": 16
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-48",
+    "state": "iso2:FR-OCC",
+    "tested": 1,
+    "todayHospitalized": 6,
+    "hospitalized": 17,
+    "deaths": 0,
+    "discharged": 11
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-49",
+    "state": "iso2:FR-PDL",
+    "tested": 53,
+    "todayHospitalized": 191,
+    "hospitalized": 430,
+    "deaths": 47,
+    "discharged": 218
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-50",
+    "state": "iso2:FR-NOR",
+    "tested": 541,
+    "todayHospitalized": 71,
+    "hospitalized": 133,
+    "deaths": 19,
+    "discharged": 44
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-51",
+    "state": "iso2:FR-GES",
+    "tested": 774,
+    "todayHospitalized": 386,
+    "hospitalized": 852,
+    "deaths": 108,
+    "discharged": 365
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-52",
+    "state": "iso2:FR-GES",
+    "tested": 86,
+    "todayHospitalized": 97,
+    "hospitalized": 193,
+    "deaths": 36,
+    "discharged": 61
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-53",
+    "state": "iso2:FR-PDL",
+    "tested": 10,
+    "todayHospitalized": 75,
+    "hospitalized": 115,
+    "deaths": 14,
+    "discharged": 28
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-54",
+    "state": "iso2:FR-GES",
+    "tested": 642,
+    "todayHospitalized": 470,
+    "hospitalized": 967,
+    "deaths": 141,
+    "discharged": 362
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-55",
+    "state": "iso2:FR-GES",
+    "tested": 123,
+    "todayHospitalized": 158,
+    "hospitalized": 360,
+    "deaths": 41,
+    "discharged": 161
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-56",
+    "state": "iso2:FR-BRE",
+    "tested": 16,
+    "todayHospitalized": 147,
+    "hospitalized": 294,
+    "deaths": 55,
+    "discharged": 162
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-57",
+    "state": "iso2:FR-GES",
+    "tested": 1025,
+    "todayHospitalized": 1022,
+    "hospitalized": 2161,
+    "deaths": 429,
+    "discharged": 737
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-58",
+    "state": "iso2:FR-BFC",
+    "tested": 419,
+    "todayHospitalized": 37,
+    "hospitalized": 55,
+    "deaths": 7,
+    "discharged": 11
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-59",
+    "state": "iso2:FR-HDF",
+    "tested": 809,
+    "todayHospitalized": 912,
+    "hospitalized": 1682,
+    "deaths": 213,
+    "discharged": 576
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-60",
+    "state": "iso2:FR-HDF",
+    "tested": 1713,
+    "todayHospitalized": 424,
+    "hospitalized": 972,
+    "deaths": 189,
+    "discharged": 383
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-61",
+    "state": "iso2:FR-NOR",
+    "tested": 377,
+    "todayHospitalized": 72,
+    "hospitalized": 163,
+    "deaths": 14,
+    "discharged": 79
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-62",
+    "state": "iso2:FR-HDF",
+    "tested": 733,
+    "todayHospitalized": 457,
+    "hospitalized": 807,
+    "deaths": 81,
+    "discharged": 285
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-63",
+    "state": "iso2:FR-ARA",
+    "tested": 17,
+    "todayHospitalized": 73,
+    "hospitalized": 155,
+    "deaths": 15,
+    "discharged": 70
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-64",
+    "state": "iso2:FR-NAQ",
+    "tested": 385,
+    "todayHospitalized": 96,
+    "hospitalized": 189,
+    "deaths": 14,
+    "discharged": 79
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-65",
+    "state": "iso2:FR-OCC",
+    "tested": 174,
+    "todayHospitalized": 64,
+    "hospitalized": 108,
+    "deaths": 7,
+    "discharged": 37
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-66",
+    "state": "iso2:FR-OCC",
+    "tested": 46,
+    "todayHospitalized": 87,
+    "hospitalized": 274,
+    "deaths": 19,
+    "discharged": 169
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-67",
+    "state": "iso2:FR-GES",
+    "tested": 974,
+    "todayHospitalized": 1090,
+    "hospitalized": 2258,
+    "deaths": 332,
+    "discharged": 855
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-68",
+    "state": "iso2:FR-GES",
+    "tested": 1815,
+    "todayHospitalized": 1012,
+    "hospitalized": 2553,
+    "deaths": 561,
+    "discharged": 1170
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-69",
+    "state": "iso2:FR-ARA",
+    "tested": 786,
+    "todayHospitalized": 1197,
+    "hospitalized": 2365,
+    "deaths": 282,
+    "discharged": 896
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-70",
+    "state": "iso2:FR-BFC",
+    "tested": 522,
+    "todayHospitalized": 91,
+    "hospitalized": 225,
+    "deaths": 45,
+    "discharged": 91
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-71",
+    "state": "iso2:FR-BFC",
+    "tested": 842,
+    "todayHospitalized": 188,
+    "hospitalized": 482,
+    "deaths": 81,
+    "discharged": 222
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-72",
+    "state": "iso2:FR-PDL",
+    "tested": 9,
+    "todayHospitalized": 130,
+    "hospitalized": 267,
+    "deaths": 23,
+    "discharged": 115
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-73",
+    "state": "iso2:FR-ARA",
+    "tested": 152,
+    "todayHospitalized": 121,
+    "hospitalized": 306,
+    "deaths": 20,
+    "discharged": 168
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-74",
+    "state": "iso2:FR-ARA",
+    "tested": 1414,
+    "todayHospitalized": 282,
+    "hospitalized": 652,
+    "deaths": 77,
+    "discharged": 341
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-75",
+    "state": "iso2:FR-IDF",
+    "tested": 6836,
+    "todayHospitalized": 3155,
+    "hospitalized": 5695,
+    "deaths": 770,
+    "discharged": 1824
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-76",
+    "state": "iso2:FR-NOR",
+    "tested": 1096,
+    "todayHospitalized": 330,
+    "hospitalized": 648,
+    "deaths": 84,
+    "discharged": 240
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-77",
+    "state": "iso2:FR-IDF",
+    "tested": 2038,
+    "todayHospitalized": 752,
+    "hospitalized": 1661,
+    "deaths": 197,
+    "discharged": 722
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-78",
+    "state": "iso2:FR-IDF",
+    "tested": 1702,
+    "todayHospitalized": 1035,
+    "hospitalized": 1907,
+    "deaths": 235,
+    "discharged": 647
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-79",
+    "state": "iso2:FR-NAQ",
+    "tested": 15,
+    "todayHospitalized": 36,
+    "hospitalized": 61,
+    "deaths": 9,
+    "discharged": 18
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-80",
+    "state": "iso2:FR-HDF",
+    "tested": 683,
+    "todayHospitalized": 366,
+    "hospitalized": 670,
+    "deaths": 104,
+    "discharged": 210
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-81",
+    "state": "iso2:FR-OCC",
+    "tested": 161,
+    "todayHospitalized": 51,
+    "hospitalized": 99,
+    "deaths": 7,
+    "discharged": 43
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-82",
+    "state": "iso2:FR-OCC",
+    "tested": 69,
+    "todayHospitalized": 20,
+    "hospitalized": 30,
+    "deaths": 3,
+    "discharged": 8
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-83",
+    "state": "iso2:FR-PAC",
+    "tested": 1681,
+    "todayHospitalized": 268,
+    "hospitalized": 532,
+    "deaths": 46,
+    "discharged": 296
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-84",
+    "state": "iso2:FR-PAC",
+    "tested": 916,
+    "todayHospitalized": 86,
+    "hospitalized": 196,
+    "deaths": 19,
+    "discharged": 99
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-85",
+    "state": "iso2:FR-PDL",
+    "tested": 74,
+    "todayHospitalized": 71,
+    "hospitalized": 145,
+    "deaths": 17,
+    "discharged": 57
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-86",
+    "state": "iso2:FR-NAQ",
+    "tested": 67,
+    "todayHospitalized": 59,
+    "hospitalized": 122,
+    "deaths": 19,
+    "discharged": 45
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-87",
+    "state": "iso2:FR-NAQ",
+    "tested": 8,
+    "todayHospitalized": 74,
+    "hospitalized": 120,
+    "deaths": 11,
+    "discharged": 37
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-88",
+    "state": "iso2:FR-GES",
+    "tested": 760,
+    "todayHospitalized": 254,
+    "hospitalized": 636,
+    "deaths": 139,
+    "discharged": 258
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-89",
+    "state": "iso2:FR-BFC",
+    "tested": 160,
+    "todayHospitalized": 91,
+    "hospitalized": 170,
+    "deaths": 18,
+    "discharged": 62
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-90",
+    "state": "iso2:FR-BFC",
+    "tested": 312,
+    "todayHospitalized": 210,
+    "hospitalized": 518,
+    "deaths": 98,
+    "discharged": 210
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-91",
+    "state": "iso2:FR-IDF",
+    "tested": 2382,
+    "todayHospitalized": 1134,
+    "hospitalized": 1775,
+    "deaths": 176,
+    "discharged": 466
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-92",
+    "state": "iso2:FR-IDF",
+    "tested": 4539,
+    "todayHospitalized": 1968,
+    "hospitalized": 3670,
+    "deaths": 419,
+    "discharged": 1309
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-93",
+    "state": "iso2:FR-IDF",
+    "tested": 3113,
+    "todayHospitalized": 1575,
+    "hospitalized": 2830,
+    "deaths": 446,
+    "discharged": 829
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-94",
+    "state": "iso2:FR-IDF",
+    "tested": 2469,
+    "todayHospitalized": 2116,
+    "hospitalized": 3517,
+    "deaths": 474,
+    "discharged": 948
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-95",
+    "state": "iso2:FR-IDF",
+    "tested": 3060,
+    "todayHospitalized": 946,
+    "hospitalized": 2121,
+    "deaths": 323,
+    "discharged": 875
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-01",
+    "state": "iso2:FR-ARA",
+    "tested": 1023,
+    "todayHospitalized": 125,
+    "hospitalized": 271,
+    "deaths": 35,
+    "discharged": 112
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-02",
+    "state": "iso2:FR-HDF",
+    "tested": 681,
+    "todayHospitalized": 270,
+    "hospitalized": 618,
+    "deaths": 128,
+    "discharged": 249
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-03",
+    "state": "iso2:FR-ARA",
+    "tested": 50,
+    "todayHospitalized": 57,
+    "hospitalized": 132,
+    "deaths": 10,
+    "discharged": 66
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-04",
+    "state": "iso2:FR-PAC",
+    "tested": 358,
+    "todayHospitalized": 31,
+    "hospitalized": 91,
+    "deaths": 4,
+    "discharged": 58
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-05",
+    "state": "iso2:FR-PAC",
+    "tested": 65,
+    "todayHospitalized": 54,
+    "hospitalized": 108,
+    "deaths": 2,
+    "discharged": 61
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-06",
+    "state": "iso2:FR-PAC",
+    "tested": 2358,
+    "todayHospitalized": 264,
+    "hospitalized": 495,
+    "deaths": 61,
+    "discharged": 219
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-07",
+    "state": "iso2:FR-ARA",
+    "tested": 351,
+    "todayHospitalized": 107,
+    "hospitalized": 311,
+    "deaths": 38,
+    "discharged": 166
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-08",
+    "state": "iso2:FR-GES",
+    "tested": 258,
+    "todayHospitalized": 78,
+    "hospitalized": 130,
+    "deaths": 9,
+    "discharged": 44
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-09",
+    "state": "iso2:FR-OCC",
+    "tested": 81,
+    "todayHospitalized": 18,
+    "hospitalized": 28,
+    "deaths": 1,
+    "discharged": 11
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-2A",
+    "state": "iso2:FR-COR",
+    "tested": 0,
+    "todayHospitalized": 78,
+    "hospitalized": 156,
+    "deaths": 31,
+    "discharged": 47
+  },
+  {
+    "country": "iso1:FX",
+    "county": "iso2:FR-2B",
+    "state": "iso2:FR-COR",
+    "tested": 0,
+    "todayHospitalized": 10,
+    "hospitalized": 78,
+    "deaths": 3,
+    "discharged": 65
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-GES",
+    "deaths": 1854,
+    "tested": 7257,
+    "hospitalized": 10517,
+    "discharged": 4160
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-OCC",
+    "deaths": 203,
+    "tested": 1962,
+    "hospitalized": 2219,
+    "discharged": 1081
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-PAC",
+    "deaths": 286,
+    "tested": 14294,
+    "hospitalized": 3666,
+    "discharged": 1841
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-NOR",
+    "deaths": 179,
+    "tested": 3729,
+    "hospitalized": 1345,
+    "discharged": 478
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-ARA",
+    "tested": 5578,
+    "hospitalized": 6079,
+    "discharged": 2508,
+    "deaths": 685
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-NAQ",
+    "deaths": 173,
+    "tested": 4908,
+    "hospitalized": 1741,
+    "discharged": 789
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-CVL",
+    "deaths": 164,
+    "tested": 3936,
+    "hospitalized": 1501,
+    "discharged": 474
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-BFC",
+    "deaths": 427,
+    "tested": 3144,
+    "hospitalized": 2849,
+    "discharged": 1237
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-BRE",
+    "deaths": 109,
+    "tested": 109,
+    "hospitalized": 923,
+    "discharged": 397
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-PDL",
+    "deaths": 158,
+    "tested": 436,
+    "hospitalized": 1477,
+    "discharged": 615
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-HDF",
+    "deaths": 715,
+    "tested": 4619,
+    "hospitalized": 4749,
+    "discharged": 1703
+  },
+  {
+    "country": "iso1:FX",
+    "state": "iso2:FR-IDF",
+    "deaths": 3040,
+    "tested": 26139,
+    "hospitalized": 23176,
+    "discharged": 7620
+  },
+  { "country": "iso1:FX", "state": "iso2:FR-COR", "deaths": 34, "hospitalized": 234, "discharged": 112 },
+  { "country": "iso1:FX", "deaths": 8027, "tested": 76111, "hospitalized": 60476, "discharged": 23015 }
+]

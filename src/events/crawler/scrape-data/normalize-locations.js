@@ -94,7 +94,7 @@ const normalizeLocations = args => {
     }
 
     // Auto-detect type if not provided
-    if (!location.type && path.extname(location.url).substr(1)) {
+    if (!location.type && location.url && path.extname(location.url).substr(1)) {
       location.type = path.extname(location.url).substr(1);
     }
   }

@@ -51,43 +51,50 @@ export const getLocationData = async id => {
   const levelData = await getLevelData(level);
   const locationData = levelData[code];
 
-  assert(locationData, `Country Level data missing for: ${id}`);
+  if (!locationData) {
+    console.error(`Country Level data missing for: ${id}`);
+  }
 
   return locationData;
 };
 
 export const getFeature = async id => {
   const locationData = await getLocationData(id);
-  if (Array.isArray(locationData)) {
-    const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
-    return geography.combineFeatures(features);
+  if (locationData) {
+    if (Array.isArray(locationData)) {
+      const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
+      return geography.combineFeatures(features);
+    }
+    if (locationData.geojson_path) {
+      const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+      const feature = await readJSON(geojsonPath);
+      return feature;
+    }
   }
-  if (locationData.geojson_path) {
-    const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
-    const feature = await readJSON(geojsonPath);
-    return feature;
-  }
-  return null;
+  return undefined;
 };
 
 export const getPopulation = async id => {
   const locationData = await getLocationData(id);
-  if (Array.isArray(locationData)) {
-    return locationData.reduce((a, l) => {
-      a += l.population;
-      return a;
-    }, 0);
+  if (locationData) {
+    if (Array.isArray(locationData)) {
+      return locationData.reduce((a, l) => {
+        a += l.population;
+        return a;
+      }, 0);
+    }
+    return locationData.population;
   }
-
-  return locationData.population;
 };
 
 export const getName = async id => {
   const locationData = await getLocationData(id);
-  if (Array.isArray(locationData)) {
-    return locationData.map(l => l.name).join(', ');
+  if (locationData) {
+    if (Array.isArray(locationData)) {
+      return locationData.map(l => l.name).join(', ');
+    }
+    return locationData.name;
   }
-  return locationData.name;
 };
 
 // this function transforms ids to Id columns and replaces names
