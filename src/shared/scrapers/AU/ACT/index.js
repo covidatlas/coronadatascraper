@@ -75,7 +75,7 @@ const scraper = {
       assert(data.cases > 0, 'Cases is not reasonable');
       return getDataWithTestedNegativeApplied(data);
     },
-    '2020-04-10': async function() {
+    '2020-04-09': async function() {
       const $ = await fetch.page(this.url);
       const $tables = $('.spf-article-card--tabular table');
 
