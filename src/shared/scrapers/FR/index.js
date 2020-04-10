@@ -2,68 +2,72 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import datetime from '../../lib/datetime/index.js';
 
-import { features } from './features.json';
+// import { features } from './features.json';
 
 const scraper = {
   country: 'iso1:FR',
-  url: 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv',
   timeseries: true,
   priority: 1,
-  // aggregate: 'state', // doesn't seem to be aggregating properly
-  _populations: {
-    Mayotte: 270372,
-    Martinique: 376480
-  },
   async scraper() {
-    const data = await fetch.csv(this.url, false);
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const latestDate = data
-      .map(d => d.date)
-      .sort()
-      .pop();
-    const processDate = process.env.SCRAPE_DATE ? datetime.getYYYYMMDD(new Date(process.env.SCRAPE_DATE)) : undefined;
-    const reportDate = processDate || latestDate;
+    const datasets = await fetch.csv(
+      'https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv',
+      false,
+      { delimiter: ';' }
+    );
 
-    const states = {};
+    const hopitalizedDataset = datasets.find(entry => entry.title.match(/donnees-hospitalieres-covid19-.*.csv/));
+    const testedDataset = datasets.find(entry => entry.title.match(/donnees-tests-covid19-labo-quotidien-.*.csv/));
 
-    for (const row of data) {
-      const data = {};
+    let hopitalizedData = await fetch.csv(hopitalizedDataset.url, false, { delimiter: ';' });
+    hopitalizedData = hopitalizedData.filter(item => item.sexe === '0');
 
-      const granularity = row.granularite;
-      const rowDate = row.date;
+    let testedData = await fetch.csv(testedDataset.url, false, { delimiter: ';' });
+    testedData = testedData.filter(item => item.clage_covid === '0');
 
-      data.url = row.source_url ? row.source_url : this.url;
+    const testedByDepartements = {};
 
-      if (row.cas_confirmes !== undefined && row.cas_confirmes !== '') {
-        data.cases = parse.number(row.cas_confirmes);
-      }
+    for (const item of testedData) {
+      if (datetime.dateIsBeforeOrEqualTo(item.jour, date))
+        testedByDepartements[item.dep] = parse.number(item.nb_test) + (testedByDepartements[item.dep] || 0);
+    }
 
-      if (row.deces !== undefined && row.deces !== '') {
-        data.deaths = parse.number(row.deces);
-      }
+    const hospitalizedByDepartments = {};
 
-      if (row.gueris !== undefined && row.gueris !== '') {
-        data.recovered = parse.number(row.gueris);
-      }
+    for (const item of hopitalizedData) {
+      const prev = hospitalizedByDepartments[item.dep];
+      if (prev) {
+        const deltaDeaths = parse.number(item.dc) - prev.deaths;
+        const deltaDischarged = parse.number(item.rad) - prev.discharged;
+        const newHospitalized = parse.number(item.hosp) - prev.todayHospitalized + deltaDeaths + deltaDischarged;
 
-      if ((granularity === 'region' || granularity === 'collectivite-outremer') && rowDate === reportDate) {
-        data.state = row.maille_nom;
-
-        const regionCode = row.maille_code.slice(4);
-        data.feature = features.find(item => item.properties.code === regionCode);
-        data.population = this._populations[data.state];
-        if (!data.population) {
-          data.population = data.feature ? data.feature.properties.population : undefined;
-        }
-
-        if (data.state !== '') {
-          states[regionCode] = { ...(states[regionCode] || {}), ...data };
-        }
-      } else if (granularity === 'pays' && rowDate === reportDate) {
-        states.FRA = { ...(states.FRA || {}), ...data };
+        hospitalizedByDepartments[item.dep] = {
+          todayHospitalized: parse.number(item.hosp),
+          hospitalized: prev.hospitalized + newHospitalized,
+          deaths: parse.number(item.dc),
+          discharged: parse.number(item.rad)
+        };
+      } else {
+        hospitalizedByDepartments[item.dep] = {
+          todayHospitalized: parse.number(item.hosp),
+          hospitalized: parse.number(item.hosp),
+          deaths: parse.number(item.dc),
+          discharged: parse.number(item.rad)
+        };
       }
     }
-    return Object.values(states);
+
+    const departements = [];
+    for (const dep of Object.keys(testedByDepartements)) {
+      departements.push({
+        county: dep,
+        tested: testedByDepartements[dep],
+        ...hospitalizedByDepartments[dep]
+      });
+    }
+
+    return departements;
   }
 };
 
