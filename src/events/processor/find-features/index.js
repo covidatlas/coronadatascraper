@@ -218,10 +218,8 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       const clId = countryLevels.getIdFromLocation(location);
       if (clId) {
         const feature = await countryLevels.getFeature(clId);
-        if (feature) {
-          storeFeature(feature, location);
-          continue;
-        }
+        storeFeature(feature, location);
+        continue;
       }
 
       let point;
