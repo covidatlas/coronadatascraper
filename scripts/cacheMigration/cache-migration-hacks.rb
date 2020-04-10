@@ -34,7 +34,7 @@ AUS/_shared/get-key.js
 
 
 LOCATION_RE = /(\s*)(city|county|state|country):/
-METHODS = 'page|raw|json|csv|tsv|pdf|headless|getArcGISCSVURLFromOrgId|getArcGISCSVURL'
+METHODS = 'page|raw|json|jsonAndCookies|csv|tsv|pdf|headless|getArcGISCSVURLFromOrgId|getArcGISCSVURL'
 
 # The fancy RE below splits a line like "await fetch.csv(this.url)"
 # into ["await fetch.csv(this.url)", "await fetch.csv(", "this.url)"]
