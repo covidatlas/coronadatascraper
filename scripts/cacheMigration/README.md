@@ -48,7 +48,11 @@ coronadatascraper-cache/2020-4-5/febbf477f754042ac1e4ce6deb1f0831.html
 
 # Running everything automatically
 
-In the project root, checkout branch `prep-cache-call-logging`, and run:
+* In the project root, checkout branch `prep-cache-call-logging`.
+* Merge or rebase off of latest `upstream/master`
+* Ensure the `coronadatascraper-cache/` is clean and latest!
+
+Then run:
 
 `./scripts/cacheMigration/master.sh <your-migration-branch-name>`
 

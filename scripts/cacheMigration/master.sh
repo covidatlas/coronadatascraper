@@ -3,6 +3,8 @@
 # MASTER SCRIPT: Run this in the root directory.
 #
 # NOTE: You should currently be on the prep-cache-call-logging branch.
+# NOTE: that branch should be recently rebased off of master
+# NOTE: the coronadatascraper-cache/ should be as at master.
 #
 # Usage: ./scripts/cacheMigration/master.sh <migration-branch-name>
 # eg
@@ -10,7 +12,6 @@
 
 # Prep migration branch
 git checkout -b $1
-git pull upstream master --recurse-submodules
 
 # Auto-migrate code and save it
 pushd ./scripts/cacheMigration
