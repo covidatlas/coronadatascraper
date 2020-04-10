@@ -1,5 +1,8 @@
 import assert from 'assert';
 
+import iso1Codes from 'country-levels/iso1.json';
+import iso2Codes from 'country-levels/iso2.json';
+
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
@@ -110,7 +113,7 @@ const scraper = {
         // Other departements are in Metropolitan France
         const item = {
           country: 'iso1:FX', // ISO1 code for Metropolitan France
-          county: dep === '10' ? `FR-${dep}` : `iso2:FR-${dep}`, // TODO: FR-10 is not recognized as an iso code
+          county: `iso2:FR-${dep}`,
           state: departementsToRegion[dep],
           tested: testedByDepartements[dep],
           ...hospitalizedByDepartments[dep]
@@ -147,6 +150,16 @@ const scraper = {
 
     // And for all of Metropolitan France
     data.push(transform.sumData(departements, { country: 'iso1:FX' }));
+
+    // Make sure all ISO codes exist
+    for (const item of data) {
+      assert(iso1Codes[item.country.replace('iso1:', '')], `Missing iso1 code for country ${item.country}`);
+      assert(!item.state || iso2Codes[item.state.replace('iso2:', '')], `Missing iso2 code for région ${item.state}`);
+      assert(
+        !item.county || iso2Codes[item.county.replace('iso2:', '')],
+        `Missing iso2 code for département ${item.county}`
+      );
+    }
 
     return data;
   }
