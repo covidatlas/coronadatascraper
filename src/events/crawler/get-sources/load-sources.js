@@ -26,9 +26,8 @@ export default async args => {
   // Ignore any directory or file that starts with `_`
   filePaths = filePaths.filter(file => file.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi));
 
-  // eslint-disable-next-line
-  const sources = await Promise.all(filePaths.map(filePath => require(filePath)))
-        .then(modules => [
+  // eslint-disable-next-line global-require, import/no-dynamic-require
+  const sources = await Promise.all(filePaths.map(filePath => require(filePath))).then(modules => [
     ...modules.map((module, index) => ({ _path: filePaths[index], ...module.default }))
   ]);
   const filteredSources = sources.filter(m => includeLocation(m, args.options));
