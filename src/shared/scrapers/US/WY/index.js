@@ -54,7 +54,7 @@ const scraper = {
 
       return counties;
     },
-    '2020-04-10': async function() {
+    '2020-04-8': async function() {
       const counties = [];
       const $ = await fetch.page(this.url);
       const $p = $('strong:contains("Albany")').parent();
