@@ -49,7 +49,7 @@ const scraper = {
             dataByProvince[col] = {
               ...dataByProvince[col],
               state: `iso2:ZA-${col}`,
-              cases: parse.number(item[col]),
+              cases: parse.number(item[col]) || (dataByProvince[col] ? dataByProvince[col].cases : undefined),
               deaths: 0
             };
           } else if (col === 'total') {
@@ -63,7 +63,7 @@ const scraper = {
 
     for (const item of testedData) {
       if (datetime.dateIsBeforeOrEqualTo(addDateSeparators(item.YYYYMMDD), date)) {
-        nationalData.tested = parse.number(item.cumulative_tests);
+        nationalData.tested = parse.number(item.cumulative_tests) || nationalData.tested;
       }
     }
 
