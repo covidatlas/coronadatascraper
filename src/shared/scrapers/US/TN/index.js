@@ -283,6 +283,43 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
+    },
+    '2020-4-11': async function() {
+      this.url =
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
+      this.type = 'json';
+
+      const data = await fetch.json(this.url);
+      const counties = [];
+
+      data.features.forEach(item => {
+        const cases = item.attributes.INFECT_NUM;
+        const deaths = item.attributes.DEATH_NUM;
+        const county = geography.addCounty(item.attributes.NAME);
+        const tested = item.attributes.INFECT_NUM + item.attributes.NegativeTests;
+        const recovered = item.attributes.Recovered;
+
+        counties.push({
+          county,
+          cases,
+          deaths,
+          tested,
+          recovered
+        });
+      });
+
+      const totalsData = (
+        await fetch.json(
+          'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson'
+        )
+      ).features.pop().attributes;
+
+      const totals = transform.sumData(counties);
+      totals.cases = totalsData.Total_Infections;
+      totals.deaths = totalsData.Total_Deaths;
+
+      counties.push(totals);
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };
