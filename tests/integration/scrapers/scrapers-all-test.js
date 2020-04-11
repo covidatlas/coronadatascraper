@@ -68,13 +68,10 @@ test('Scraper tests', async t => {
     process.env.OVERRIDE_CACHE_PATH = testDir;
 
     // dynamically import the scraper
-    // eslint-disable-next-line
     const scraperObj = imports(join(testDir, '..', 'index.js'));
 
     if (scraperObj.state === 'AL' && scraperObj.country === 'iso1:US') {
-      // Honestly these linter rules are absurd
-      // eslint-disable-next-line
-      scraperObj.scraper = scraperObj.scraper[0];
+      [scraperObj.scraper] = scraperObj.scraper;
     }
 
     const datedResults = glob(join(testDir, 'expected.*.json'));

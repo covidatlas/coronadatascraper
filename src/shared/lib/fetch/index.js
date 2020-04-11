@@ -21,9 +21,9 @@ const READ_TIMEOUT = 30000;
 
 /**
  * Load the webpage at the given URL and return a Cheerio object
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object=} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -38,9 +38,9 @@ export const page = async (url, date, options = {}) => {
 
 /**
  * Load and parse JSON from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -56,9 +56,9 @@ export const json = async (url, date, options = {}) => {
 
 /**
  * Load and parse JSON from the given URL, and return cookies as well.
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -77,9 +77,9 @@ export const jsonAndCookies = async (url, date, options = {}) => {
 
 /**
  * Load and parse CSV from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - delimiter: the delimiter to use (default is ,)
@@ -111,9 +111,9 @@ export const csv = async (url, date, options = {}) => {
 
 /**
  * Load and parse TSV from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -124,9 +124,9 @@ export const tsv = async (url, date, options = {}) => {
 
 /**
  * Load the given URL and return a raw response
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -138,9 +138,9 @@ export const raw = async (url, date, options = {}) => {
 /**
  * Load and parse PDF from the given URL
  *
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -219,7 +219,7 @@ const fetchHeadless = async url => {
 
 /**
  * Fetch whatever is at the provided URL in headless mode with Pupeteer. Use cached version if available.
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */

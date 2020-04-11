@@ -52,7 +52,6 @@ test('validate: throws error if a bad rule is used', t => {
     headings: { 0: {} }
   };
   t.throws(() => {
-    // eslint-disable-next-line no-new
     htmlTableValidator.validate($table, rules);
   });
   t.end();
@@ -64,7 +63,6 @@ test('validate: throws error if an invalid rule is passed', t => {
     badHeading: 'this should throw'
   };
   t.throws(() => {
-    // eslint-disable-next-line no-new
     htmlTableValidator.validate($table, rules);
   });
   t.end();
