@@ -19,7 +19,7 @@ const scraper = {
     {
       description:
         'Sciensano is a public belgian scientific institution focused on public and animal health assignments.',
-      name: 'Santé publique France',
+      name: 'Sciensano',
       url: 'https://www.sciensano.be/en'
     }
   ],
@@ -88,7 +88,7 @@ const scraper = {
 
     const data = [];
 
-    for (const reg of Object.keys(dataByRegion)) {
+    for (const reg of Object.keys(dataByProvince)) {
       let regionData = {
         state: mappings[reg],
         ...dataByRegion[reg]
@@ -106,7 +106,18 @@ const scraper = {
 
         regionData = transform.sumData(provinceData, regionData);
         data.push(...provinceData);
-      } else if (reg === 'Brussels' || reg === 'NA') {
+      } else if (reg === 'Brussels') {
+        regionData = {
+          ...dataByProvince[reg][reg],
+          ...regionData
+        };
+
+        // Brussels is both a region and a province. Add to both
+        data.push({
+          ...regionData,
+          county: mappings[reg]
+        });
+      } else if (reg === 'NA') {
         regionData = {
           ...dataByProvince[reg][reg],
           ...regionData
