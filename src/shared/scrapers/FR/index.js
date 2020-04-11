@@ -25,6 +25,10 @@ const scraper = {
   ],
   maintainers: [maintainers.qgolsteyn],
   priority: 1,
+  /*
+   * NOTE: No cases data is available for France at the regional level. This scraper instead focuses
+   * on capturing hospitalized, deaths, and testing data regionally.
+   */
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
