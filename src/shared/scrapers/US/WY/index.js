@@ -21,37 +21,71 @@ const scraper = {
   url: 'https://health.wyo.gov/publichealth/infectious-disease-epidemiology-unit/disease/novel-coronavirus/',
   type: 'paragraph',
   maintainers: [maintainers.lazd],
-  async scraper() {
-    const counties = [];
-    const $ = await fetch.page(this.url);
-    const $p = $('strong:contains("Cases by County")').parent();
+  scraper: {
+    '0': async function() {
+      const counties = [];
+      const $ = await fetch.page(this.url);
+      const $p = $('strong:contains("Cases by County")').parent();
 
-    const items = $p.html().split('<br>');
+      const items = $p.html().split('<br>');
 
-    for (const item of items) {
-      const $item = cheerio.load(item);
+      for (const item of items) {
+        const $item = cheerio.load(item);
 
-      const pieces = $item.text().split(':');
-      const county = pieces[0];
-      let count = pieces[1];
+        const pieces = $item.text().split(':');
+        const county = pieces[0];
+        let count = pieces[1];
 
-      if (county === 'Cases by County') {
-        continue;
+        if (county === 'Cases by County') {
+          continue;
+        }
+        if (count === undefined) {
+          count = 0;
+        } else {
+          count = parse.number(parse.string(count) || 0);
+        }
+        counties.push({
+          county: geography.addCounty(parse.string(county)),
+          cases: count
+        });
       }
-      if (count === undefined) {
-        count = 0;
-      } else {
-        count = parse.number(parse.string(count) || 0);
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-04-10': async function() {
+      const counties = [];
+      const $ = await fetch.page(this.url);
+      const $p = $('strong:contains("Albany")').parent();
+
+      const items = $p.html().split('<br>');
+
+      for (const item of items) {
+        const $item = cheerio.load(item);
+
+        const pieces = $item.text().split(':');
+        const county = pieces[0];
+        let count = pieces[1];
+
+        if (county === 'Cases by County') {
+          continue;
+        }
+        if (count === undefined) {
+          count = 0;
+        } else {
+          count = parse.number(parse.string(count) || 0);
+        }
+        counties.push({
+          county: geography.addCounty(parse.string(county)),
+          cases: count
+        });
       }
-      counties.push({
-        county: geography.addCounty(parse.string(county)),
-        cases: count
-      });
+
+      counties.push(transform.sumData(counties));
+
+      return counties;
     }
-
-    counties.push(transform.sumData(counties));
-
-    return counties;
   }
 };
 
