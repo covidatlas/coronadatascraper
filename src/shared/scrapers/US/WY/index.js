@@ -66,15 +66,22 @@ const scraper = {
 
         const pieces = $item.text().split(':');
         const county = pieces[0];
-        let count = pieces[1];
+
+        let count = 0;
+        if (pieces[1]) {
+          const [, confirmed, probable] = pieces[1].match(/(\d+)\s*\(*(\d+)*\)*/);
+          count = parse.number(confirmed);
+
+          if (probable !== undefined) {
+            count += parse.number(probable);
+          }
+        }
 
         if (county === 'Cases by County') {
           continue;
         }
         if (count === undefined) {
           count = 0;
-        } else {
-          count = parse.number(parse.string(count) || 0);
         }
         counties.push({
           county: geography.addCounty(parse.string(county)),
