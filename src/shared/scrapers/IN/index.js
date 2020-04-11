@@ -1,9 +1,16 @@
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
+import * as transform from '../../lib/transform.js';
+import getKey from '../../utils/get-key.js';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+const labelFragmentsByKey = [
+  { state: 'name of state' },
+  { deaths: 'death' },
+  { cases: 'total confirmed cases' },
+  { recovered: 'cured' },
+  { discard: 's. no.' }
+];
 
 const countryLevelMap = {
   'Andhra Pradesh': 'iso2:IN-AP',
@@ -39,52 +46,65 @@ const countryLevelMap = {
   Tripura: 'iso2:IN-TR'
 };
 
+const getValue = (key, text) => {
+  if (key === 'state') {
+    const state = parse.string(text);
+    const mappedState = countryLevelMap[state];
+    assert(
+      mappedState,
+      `${state} not found in countryLevelMap, look up on https://github.com/hyperknot/country-levels-export/blob/master/docs/iso2_list/IN.md`
+    );
+    return mappedState;
+  }
+  return parse.number(text);
+};
+
 const scraper = {
   country: 'iso1:IN',
-  url: 'https://www.mohfw.gov.in/', // dashaputra.com/goi
+  url: 'https://www.mohfw.gov.in/',
   type: 'table',
   aggregate: 'state',
-
-  // Scrape MOHFW.GOV.IN for State, Cases, Deaths, Recovered
   async scraper() {
-    this.url = 'https://www.mohfw.gov.in/';
     const $ = await fetch.page(this.url);
-
     const $table = $('#state-data');
     const $trs = $table.find('tbody > tr');
-    const regions = [];
+    const states = [];
 
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
+    const $headings = $table.find('thead tr th');
+    const dataKeysByColumnIndex = [];
 
-      if (
-        $tr
-          .find('td')
-          .first()
-          .attr('colspan')
-      ) {
-        // Ignore summary rows
-        return;
-      }
-
-      const state = parse.string($tr.find('td:nth-child(2)').text());
-      const stateMapped = countryLevelMap[state];
-      assert(
-        stateMapped,
-        `${state} not found in countryLevelMap, look up on https://github.com/hyperknot/country-levels/blob/master/docs/iso2_list/IN.md`
-      );
-
-      const data = {
-        state: stateMapped,
-        cases: parse.number($tr.find('td:nth-child(3)').text()),
-        deaths: parse.number($tr.find('td:nth-child(6)').text()),
-        recovered: parse.number($tr.find('td:nth-child(5)').text())
-      };
-
-      regions.push(data);
+    $headings.each((index, heading) => {
+      const $heading = $(heading);
+      dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
     });
 
-    return regions;
+    $trs
+      .filter(
+        // Remove summary rows
+        (_rowIndex, tr) =>
+          !$(tr)
+            .find('td')
+            .first()
+            .attr('colspan')
+      )
+      .each((_rowIndex, tr) => {
+        const $tds = $(tr).find('td');
+        const data = {};
+
+        $tds.each((columnIndex, td) => {
+          const $td = $(td);
+
+          const key = dataKeysByColumnIndex[columnIndex];
+          data[key] = getValue(key, $td.text());
+        });
+        states.push(data);
+      });
+
+    const summedData = transform.sumData(states);
+    states.push(summedData);
+    assert(summedData.cases > 0, 'Cases is not reasonable');
+
+    return states;
   }
 };
 
