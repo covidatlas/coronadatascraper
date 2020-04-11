@@ -10,7 +10,7 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 exports.handler = async function http() {
-  const baseURL = constants.prod ? 'https://coronadatascraper.com/' : '_static/';
+  const baseURL = 'https://coronadatascraper.com/';
 
   return {
     headers: {
