@@ -39,41 +39,32 @@ const scraper = {
       false
     );
 
-    const todayCasesData = casesData.find(
-      item => datetime.parse(addDateSeparators(item.YYYYMMDD)) === datetime.parse(date)
-    );
-
-    const todayTestedData = testedData.find(
-      item => datetime.parse(addDateSeparators(item.YYYYMMDD)) === datetime.parse(date)
-    );
-
     const dataByProvince = {};
-    let nationalData = {};
+    const nationalData = { tested: 0, deaths: 0, cases: 0 };
 
-    if (todayCasesData) {
-      for (const col of Object.keys(todayCasesData)) {
-        if (this._province.findIndex(item => item === col) !== -1) {
-          dataByProvince[col] = {
-            state: `iso2:ZA-${col}`,
-            cases: parse.number(todayCasesData[col]),
-            deaths: 0
-          };
-        } else if (col === 'total') {
-          nationalData = {
-            cases: parse.number(todayCasesData[col]),
-            deaths: 0
-          };
+    for (const item of casesData) {
+      if (datetime.dateIsBeforeOrEqualTo(addDateSeparators(item.YYYYMMDD), date)) {
+        for (const col of Object.keys(item)) {
+          if (this._province.findIndex(prov => prov === col) !== -1) {
+            dataByProvince[col] = {
+              ...dataByProvince[col],
+              state: `iso2:ZA-${col}`,
+              cases: parse.number(item[col]),
+              deaths: 0
+            };
+          } else if (col === 'total') {
+            nationalData.cases = parse.number(item[col]);
+          }
         }
       }
     }
 
     assert(Object.keys(dataByProvince).length === 9, 'Missing province data');
 
-    if (todayTestedData) {
-      nationalData = {
-        tested: parse.number(todayTestedData.cumulative_tests),
-        ...nationalData
-      };
+    for (const item of testedData) {
+      if (datetime.dateIsBeforeOrEqualTo(addDateSeparators(item.YYYYMMDD), date)) {
+        nationalData.tested = parse.number(item.cumulative_tests);
+      }
     }
 
     for (const item of deathsData) {
