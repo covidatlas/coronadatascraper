@@ -38,7 +38,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
             Search by county, state, or country name
           </div>
           <sp-search id="searchField" autocomplete="off"></sp-search>
-          <sp-button id="searchButton">Go</sp-button>
+          <sp-button id="searchButton" type="submit" hidden>Go</sp-button>
         </label>
         <sp-popover class="sp-Landing-searchResults" id="searchPopover" placement="bottom" open>
           <sp-menu id="searchResults">

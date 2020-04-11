@@ -161,9 +161,17 @@ sp-dropdown[emphasized] {
   margin-left: calc(var(--spectrum-alias-grid-margin-small) * -1);
   margin-right: calc(var(--spectrum-alias-grid-margin-small) * -1);
 }
+
 .spectrum-ComboField {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.spectrum-ComboField-label {
+  color: var(--spectrum-global-color-gray-300);
+  margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
+}
+
 .ca-Landing-search {
   /*
   sp-search#searchField {
@@ -343,11 +351,14 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.spectrum-ComboField-label {
-  color: var(--spectrum-global-color-gray-300);
-  margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
+  > *:not(.ca-Footer) {
+    flex: 1 0 auto;
+  }
+
+  > .ca-Footer {
+    flex-shrink: 0;
+  }
 }
 
 @media only screen and (min-width: 48em){

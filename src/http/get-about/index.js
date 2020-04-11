@@ -49,15 +49,13 @@ ${header('about')}
 
       <p class="spectrum-Body spectrum-Body--L">Please check back for updates!</p>
 
-    </section>
-
-    <footer class="ca-Footer">
       <nav class="ca-SocialLinks spectrum-Body spectrum-Body--L">
         <a class="spectrum-Link" href="https://twitter.com/covidatlas" target="_blank">Twitter</a>
         <a class="spectrum-Link" href="https://facebook.com/covidatlas" target="_blank">Facebook</a>
         <a class="spectrum-Link" href="https://instagram.com/covidatlas" target="_blank">Instagram</a>
       </nav>
-    </footer>
+    </section>
+
   ${footer()}
 </div>
 
