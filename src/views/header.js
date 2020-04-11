@@ -1,8 +1,7 @@
-// eslint-disable-next-line
-const constants = require('@architect/views/constants');
+const arc = require('@architect/functions');
 
 // eslint-disable-next-line
-const arc = require('@architect/functions');
+const constants = require('@architect/views/constants');
 
 module.exports = function body(selectedPage = 'home', className = '') {
   return /* html */ `

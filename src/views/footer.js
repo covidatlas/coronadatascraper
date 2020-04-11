@@ -1,9 +1,6 @@
 // eslint-disable-next-line
 const constants = require('@architect/views/constants');
 
-// eslint-disable-next-line
-const arc = require('@architect/functions');
-
 module.exports = function body(content = '', className = '') {
   return /* html */ `
 <footer class="spectrum--dark ca-SiteFooter ${className}">

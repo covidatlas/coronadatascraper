@@ -1,5 +1,5 @@
-// eslint-disable-next-line
 const arc = require('@architect/functions');
+
 // eslint-disable-next-line
 const constants = require('@architect/views/constants');
 
