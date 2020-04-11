@@ -106,6 +106,7 @@ const scraper = {
 
         regionData = transform.sumData(provinceData, regionData);
         data.push(...provinceData);
+        data.push(regionData);
       } else if (reg === 'Brussels') {
         regionData = {
           ...dataByProvince[reg][reg],
@@ -117,15 +118,15 @@ const scraper = {
           ...regionData,
           county: mappings[reg]
         });
+        data.push(regionData);
       } else if (reg === 'NA') {
+        // Simply add this to the country total
         regionData = {
           ...dataByProvince[reg][reg],
           ...regionData
         };
       }
-
       nationalData = transform.sumData([regionData], nationalData);
-      data.push(regionData);
     }
 
     data.push(nationalData);
