@@ -41,7 +41,7 @@ const countryLevelMap = {
 
 const scraper = {
   country: 'iso1:IN',
-  url: 'https://www.mohfw.gov.in/', // dashaputra.com/goi
+  url: 'https://www.mohfw.gov.in/',
   type: 'table',
   aggregate: 'state',
 
@@ -77,8 +77,8 @@ const scraper = {
       const data = {
         state: stateMapped,
         cases: parse.number($tr.find('td:nth-child(3)').text()),
-        deaths: parse.number($tr.find('td:nth-child(6)').text()),
-        recovered: parse.number($tr.find('td:nth-child(5)').text())
+        recovered: parse.number($tr.find('td:nth-child(4)').text()),
+        deaths: parse.number($tr.find('td:nth-child(5)').text())
       };
 
       regions.push(data);
