@@ -92,12 +92,12 @@ function crossCheckReportTemplate(report) {
   return html;
 }
 
-function generateCrossCheckReport(reports, date) {
+function generateCrossCheckReport(reports) {
   let html = '';
   for (const [, crosscheckReport] of Object.entries(reports)) {
     // Only show reports where we disgaree
     if (crosscheckReport.discrepancies.length !== 0) {
-      html += crossCheckReportTemplate(crosscheckReport, date);
+      html += crossCheckReportTemplate(crosscheckReport);
     }
   }
   return html;
@@ -117,7 +117,7 @@ export function generateCrossCheckPage(report, date) {
     }
 
     html += `<ol class="cds-CrossCheckReports-list">
-      ${generateCrossCheckReport(report, date)}
+      ${generateCrossCheckReport(report)}
     </ol>`;
   } else {
     html += '<strong>No cross-check reports were generated.</strong>';

@@ -40,7 +40,6 @@ function takeOnlyProps(obj, props) {
 
 function normalizeProps(obj) {
   const newObj = {};
-  // eslint-disable-next-line guard-for-in
   for (const prop in obj) {
     newObj[prop.toLowerCase()] = obj[prop];
   }

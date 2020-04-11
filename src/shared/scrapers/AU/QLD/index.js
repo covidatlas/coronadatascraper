@@ -1,7 +1,16 @@
 import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
+import getKey from '../../../utils/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
+
+const labelFragmentsByKey = [
+  { deaths: 'deaths' },
+  { cases: 'cases to date' },
+  { recovered: 'recovered cases' },
+  { discard: 'hhs' },
+  { discard: 'active' } // Active will be calculated.
+];
 
 async function getCurrentArticlePage(listUrl) {
   const $ = await fetch.page(listUrl);
@@ -22,13 +31,14 @@ const scraper = {
     }
   ],
   state: 'iso2:AU-QLD',
-  type: 'paragraph',
+  type: 'table',
   url: 'https://www.health.qld.gov.au/news-events/doh-media-releases',
   scraper: {
     '0': async function() {
       const $ = await getCurrentArticlePage(this.url);
       const paragraph = $('#content h2:first-of-type + p').text();
       const { casesString } = paragraph.match(/state total to (?<casesString>\d+)./).groups;
+      this.type = 'paragraph';
       return {
         cases: parse.number(casesString)
       };
@@ -40,6 +50,24 @@ const scraper = {
       const data = {
         cases: parse.number($totalRow.find('td:last-child').text())
       };
+      assert(data.cases > 0, 'Cases is not reasonable');
+      return data;
+    },
+    '2020-04-09': async function() {
+      const $ = await getCurrentArticlePage(this.url);
+      const $table = $('#content table');
+
+      const $headings = $table.find('tbody:first-child tr th, thead:first-child tr th');
+      const $totals = $table.find('tbody:last-child tr th');
+      assert.equal($headings.length, $headings.length, 'headings and totals are misaligned');
+
+      const data = {};
+      $headings.each((index, heading) => {
+        const $heading = $(heading);
+        const $total = $($totals[index]);
+        const key = getKey({ label: $heading.text(), labelFragmentsByKey });
+        data[key] = parse.number($total.text());
+      });
       assert(data.cases > 0, 'Cases is not reasonable');
       return data;
     }
