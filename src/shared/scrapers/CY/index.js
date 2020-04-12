@@ -12,23 +12,32 @@ const scraper = {
   priority: 1,
   type: 'csv',
   maintainers: [maintainers.qgolsteyn],
+  sources: [
+    {
+      description: 'Official website for Cyprus Open Data',
+      url: 'https://data.gov.cy/',
+      name: 'data.gov.cy'
+    }
+  ],
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = await fetch.csv(this.url, false);
+    const casesData = (await fetch.csv(this.url, false)).filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
 
-    const data = {};
+    if (casesData.length > 0) {
+      const data = {};
 
-    for (const item of casesData) {
-      if (datetime.dateIsBeforeOrEqualTo(reformatDate(item.date), date)) {
-        data.cases = parse.number(item['total cases']);
-        data.tested = parse.number(item['total tests']);
-        data.recovered = parse.number(item['total recovered']);
-        data.deaths = parse.number(item['total deaths']);
+      for (const item of casesData) {
+        if (datetime.dateIsBeforeOrEqualTo(reformatDate(item.date), date)) {
+          data.cases = parse.number(item['total cases']);
+          data.tested = parse.number(item['total tests']);
+          data.recovered = parse.number(item['total recovered']);
+          data.deaths = parse.number(item['total deaths']);
+        }
       }
-    }
 
-    return data;
+      return data;
+    }
   }
 };
 
