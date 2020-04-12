@@ -1,0 +1,12 @@
+[
+  { "tested": 75053, "deaths": 25, "cases": 2028 },
+  { "state": "iso2:ZA-EC", "cases": 69, "deaths": 0 },
+  { "state": "iso2:ZA-FS", "cases": 94, "deaths": 3 },
+  { "state": "iso2:ZA-GP", "cases": 813, "deaths": 3 },
+  { "state": "iso2:ZA-KZN", "cases": 418, "deaths": 12 },
+  { "state": "iso2:ZA-LP", "cases": 23, "deaths": 0 },
+  { "state": "iso2:ZA-MP", "cases": 20, "deaths": 0 },
+  { "state": "iso2:ZA-NC", "cases": 16, "deaths": 0 },
+  { "state": "iso2:ZA-NW", "cases": 19, "deaths": 0 },
+  { "state": "iso2:ZA-WC", "cases": 546, "deaths": 7 }
+]
