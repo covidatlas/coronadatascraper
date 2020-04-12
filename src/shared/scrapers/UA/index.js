@@ -70,7 +70,7 @@ const scraper = {
       }
 
       regions.push({
-        county: clId,
+        state: clId,
         cases: parse.number(region.confirmed),
         deaths: parse.number(region.deaths),
         recovered: parse.number(region.recovered)
