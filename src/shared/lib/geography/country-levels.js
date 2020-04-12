@@ -4,7 +4,6 @@ import assert from 'assert';
 import path from 'path';
 import { readJSON } from '../fs.js';
 import * as geography from './index.js';
-import log from '../log.js';
 
 const LEVELS = ['iso1', 'iso2', 'fips'];
 
@@ -131,17 +130,19 @@ export const combineFeatureGeometry = features => {
   const newGeometry = { type: 'MultiPolygon', coordinates: [] };
 
   for (const feature of features) {
-    const theName = feature.properties.name;
-    const theId = feature.properties.countrylevel_id;
-    const theType = feature.geometry.type;
     if (feature.geometry.type === 'Polygon') {
-      log.warn(`Feature geometry for ${theName} (${theId}) is ${theType}, wrapping in array.`);
       // Wrap the coords in an array so that it looks like a MultiPolygon.
       newGeometry.coordinates = newGeometry.coordinates.concat([feature.geometry.coordinates]);
     } else if (feature.geometry.type === 'MultiPolygon') {
       newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
     } else {
-      log.error(`Feature geometry for ${theName} (${theId}) is ${theType}, it will not be included.`);
+      const theName = feature.properties.name;
+      const theId = feature.properties.countrylevel_id;
+      const theType = feature.geometry.type;
+      assert(
+        !(theType === 'Polygon' || theType === 'MultiPolygon'),
+        `Feature geometry for ${theName} (${theId}) is ${theType}, it will not be included.`
+      );
     }
   }
   return newGeometry;
