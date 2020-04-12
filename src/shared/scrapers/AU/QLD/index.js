@@ -6,7 +6,8 @@ import maintainers from '../../../lib/maintainers.js';
 
 const labelFragmentsByKey = [
   { deaths: 'deaths' },
-  { cases: 'cases to date' },
+  { cases: 'total confirmed cases' },
+  { cases: 'cases to date' }, // Cases had this label between 2020-04-09 and 2020-04-11
   { recovered: 'recovered cases' },
   { discard: 'hhs' },
   { discard: 'active' } // Active will be calculated.
