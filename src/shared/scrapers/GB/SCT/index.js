@@ -1,4 +1,3 @@
-import cli from 'editorconfig/src/cli.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
@@ -9,26 +8,19 @@ import * as transform from '../../../lib/transform.js';
 // region definitions are found on https://en.wikipedia.org/wiki/NHS_Scotland
 
 const countryLevelMap = {
-  'Ayrshire and Arran': ['iso2:GB-NAY', 'iso2:GB-EAY', 'iso2:GB-SAY'],
+  'Ayrshire and Arran': 'iso2:GB-NAY+iso2:GB-EAY+iso2:GB-SAY',
   Borders: 'iso2:GB-SCB',
   'Dumfries and Galloway': 'iso2:GB-DGY',
   Fife: 'iso2:GB-FIF',
-  'Forth Valley': ['iso2:GB-CLK', 'iso2:GB-FAL', 'iso2:GB-STG'],
-  Grampian: ['iso2:GB-ABD', 'iso2:GB-ABE', 'iso2:GB-MRY'],
-  'Greater Glasgow and Clyde': [
-    'iso2:GB-GLG',
-    'iso2:GB-EDU',
-    'iso2:GB-ERW',
-    'iso2:GB-IVC',
-    'iso2:GB-RFW',
-    'iso2:GB-WDU'
-  ],
-  Highland: ['iso2:GB-HLD', 'iso2:GB-AGB'],
-  Lanarkshire: ['iso2:GB-NLK', 'iso2:GB-SLK'],
-  Lothian: ['iso2:GB-EDH', 'iso2:GB-ELN', 'iso2:GB-MLN', 'iso2:GB-WLN'],
+  'Forth Valley': 'iso2:GB-CLK+iso2:GB-FAL+iso2:GB-STG',
+  Grampian: 'iso2:GB-ABD+iso2:GB-ABE+iso2:GB-MRY',
+  'Greater Glasgow and Clyde': 'iso2:GB-GLG+iso2:GB-EDU+iso2:GB-ERW+iso2:GB-IVC+iso2:GB-RFW+iso2:GB-WDU',
+  Highland: 'iso2:GB-HLD+iso2:GB-AGB',
+  Lanarkshire: 'iso2:GB-NLK+iso2:GB-SLK',
+  Lothian: 'iso2:GB-EDH+iso2:GB-ELN+iso2:GB-MLN+iso2:GB-WLN',
   Orkney: 'iso2:GB-ORK',
   Shetland: 'iso2:GB-ZET',
-  Tayside: ['iso2:GB-ANS', 'iso2:GB-DND', 'iso2:GB-PKN'],
+  Tayside: 'iso2:GB-ANS+iso2:GB-DND+iso2:GB-PKN',
   'Eileanan Siar (Western Isles)': 'iso2:GB-ELS'
 };
 
