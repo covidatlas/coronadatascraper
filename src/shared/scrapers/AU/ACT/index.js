@@ -4,6 +4,7 @@ import * as parse from '../../../lib/parse.js';
 import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
 import getKey from '../../../utils/get-key.js';
 import maintainers from '../../../lib/maintainers.js';
+import pivotTheTable from '../../../utils/pivot-the-table.js';
 
 const labelFragmentsByKey = [
   { cases: 'confirmed case' },
@@ -50,22 +51,7 @@ const scraper = {
       const $table = $('h2:contains("Cases") + table');
       const $trs = $table.find('tr');
 
-      const pivotTheTable = ($trs, $) => {
-        const dataPairs = [];
-        $trs.each((trIndex, tr) => {
-          const $tr = $(tr);
-          const $tds = $tr.find('td, th');
-          $tds.each((tdIndex, td) => {
-            const $td = $(td);
-            dataPairs[tdIndex] = dataPairs[tdIndex] || [];
-            dataPairs[tdIndex][trIndex] = $td.text();
-          });
-        });
-        return dataPairs;
-      };
-
       const dataPairs = pivotTheTable($trs, $);
-
       const data = {};
       dataPairs.forEach(([label, value]) => {
         const key = getKey({ label, labelFragmentsByKey });
