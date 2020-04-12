@@ -14,7 +14,7 @@ const labelFragmentsByKey = [
 
 const scraper = {
   country: 'iso1:NZ',
-  maintainer: [maintainers.camjc],
+  maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
     {
