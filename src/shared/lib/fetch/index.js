@@ -21,57 +21,78 @@ const READ_TIMEOUT = 30000;
 
 /**
  * Load the webpage at the given URL and return a Cheerio object
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object=} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const page = async (url, date, options = {}) => {
-  const body = await get(url, 'html', date, options);
+  const resp = await get(url, 'html', date, options);
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
-  return cheerio.load(body);
+  return cheerio.load(resp.body);
 };
 
 /**
  * Load and parse JSON from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const json = async (url, date, options = {}) => {
   log(url);
-  const body = await get(url, 'json', date, options);
+  const resp = await get(url, 'json', date, options);
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
-  return JSON.parse(body);
+  return JSON.parse(resp.body);
+};
+
+/**
+ * Load and parse JSON from the given URL, and return cookies as well.
+ * @param {string} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {object} options customizable options:
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ */
+export const jsonAndCookies = async (url, date, options = {}) => {
+  log(url);
+  const resp = await get(url, 'json', date, options);
+
+  if (!resp.body) {
+    return null;
+  }
+  return {
+    body: JSON.parse(resp.body),
+    cookies: resp.cookies
+  };
 };
 
 /**
  * Load and parse CSV from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - delimiter: the delimiter to use (default is ,)
  */
 export const csv = async (url, date, options = {}) => {
   return new Promise(async (resolve, reject) => {
-    const body = await get(url, 'csv', date, options);
+    const resp = await get(url, 'csv', date, options);
 
-    if (!body) {
+    if (!resp.body) {
       resolve(null);
     } else {
       csvParse(
-        body,
+        resp.body,
         {
           delimiter: options.delimiter,
           columns: true
@@ -90,9 +111,9 @@ export const csv = async (url, date, options = {}) => {
 
 /**
  * Load and parse TSV from the given URL
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
@@ -103,34 +124,34 @@ export const tsv = async (url, date, options = {}) => {
 
 /**
  * Load the given URL and return a raw response
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const raw = async (url, date, options = {}) => {
-  const body = await get(url, 'raw', date, options);
-  return body;
+  const resp = await get(url, 'raw', date, options);
+  return resp.body;
 };
 
 /**
  * Load and parse PDF from the given URL
  *
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
- * @param {*} options customizable options:
+ * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const pdf = async (url, date, options) => {
-  const body = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
+  const resp = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
 
-  if (!body) {
+  if (!resp.body) {
     return null;
   }
 
-  const data = await pdfParser(body);
+  const data = await pdfParser(resp.body);
 
   return data;
 };
@@ -198,7 +219,7 @@ const fetchHeadless = async url => {
 
 /**
  * Fetch whatever is at the provided URL in headless mode with Pupeteer. Use cached version if available.
- * @param {*} url URL of the resource
+ * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */

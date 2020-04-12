@@ -1,4 +1,3 @@
-import needle from 'needle';
 import { DeprecatedError } from '../../lib/errors.js';
 import * as fetch from '../../lib/fetch/index.js';
 
@@ -38,7 +37,7 @@ const scraper = {
       throw new DeprecatedError('RUS scraper did not exist for this date');
     },
     '2020-03-26': async function() {
-      const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
+      const csrfRequestResponse = await fetch.jsonAndCookies(this.url);
       const csrfCookies = csrfRequestResponse.cookies;
       const { csrfToken } = csrfRequestResponse.body;
 

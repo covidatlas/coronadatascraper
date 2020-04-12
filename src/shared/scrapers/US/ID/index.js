@@ -185,6 +185,25 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-4-11': async function() {
+      this.url =
+        'https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query?f=json&where=1=1&returnGeometry=false&outFields=*';
+      this.type = 'json';
+
+      const data = await fetch.json(this.url);
+
+      const counties = data.features.map(item => {
+        return {
+          county: geography.addCounty(item.attributes.f1),
+          cases: item.attributes.f3 || 0,
+          deaths: item.attributes.f4 || 0,
+          recoverd: item.attributes.f5 || 0
+        };
+      });
+
+      counties.push(transform.sumData(counties));
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };

@@ -79,7 +79,6 @@ export async function runScraper(location) {
   }
 
   // scraperTz will be used by the cache PR
-  // eslint-disable-next-line no-unused-vars
   // const scraperTz = await calculateScraperTz(location);
 
   if (typeof location.scraper === 'function') {

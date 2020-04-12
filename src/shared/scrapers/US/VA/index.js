@@ -167,7 +167,7 @@ const scraper = {
     'Covington',
     'Danville',
     'Emporia',
-    'Fairfax',
+    // 'Fairfax',
     'Falls Church',
     'Franklin',
     'Fredericksburg',
@@ -267,31 +267,33 @@ const scraper = {
           'Roanoke County'
         ];
 
+        const cases = parse.number(location['Total Cases']);
+
         if (fullNameCounties.includes(location.Locality)) {
           const name = location.Locality;
           counties.push({
             county: name,
-            cases: parse.number(location['Total Cases'])
+            cases
           });
         } else if (this._citiesAScounties.includes(location.Locality)) {
           location.Locality += ' City';
           const name = parse.string(location.Locality);
           counties.push({
             county: name,
-            cases: parse.number(location['Total Cases'])
+            cases
           });
         } else if (this._citiesAScounties.includes(location.Locality.replace(' city', ''))) {
           location.Locality.replace(' city', ' City');
           const name = parse.string(location.Locality);
           counties.push({
             county: name,
-            cases: parse.number(location['Total Cases'])
+            cases
           });
         } else {
           const name = parse.string(geography.addCounty(location.Locality));
           counties.push({
             county: name,
-            cases: parse.number(location['Total Cases'])
+            cases
           });
         }
       });

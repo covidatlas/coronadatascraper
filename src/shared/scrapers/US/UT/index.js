@@ -139,7 +139,36 @@ const scraper = {
       counties.push({
         tested: parse.number($('#reported-people-tested .value-output').text()),
         cases: parse.number($('#covid-19-cases .value-output').text()),
-        deaths: parse.number($('#covid-19-deaths .value-output').text())
+        deaths: parse.number($('#covid-19-deaths .value-output').text()),
+        hospitalized: parse.number($('#ccovid-19-hospitalizations .value-output').text())
+      });
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      // We don't sum data because we already have totals from above
+      // counties.push(transform.sumData(counties));
+
+      return counties;
+    },
+    '2020-04-08': async function() {
+      this.url = 'https://coronavirus-dashboard.utah.gov/';
+      this.type = 'table';
+      const $ = await fetch.page(this.url);
+      let counties = [];
+
+      const script = $('script[type="application/json"]').html();
+      const { data } = JSON.parse(script).x;
+
+      for (const [index, county] of Object.entries(data[0])) {
+        this._pushCounty(counties, county, parse.number(data[1][index]) + parse.number(data[2][index]));
+      }
+
+      // Totals come from here
+      counties.push({
+        tested: parse.number($('#total-reported-people-tested .value-output').text()),
+        cases: parse.number($('#total-covid-19-cases .value-output').text()),
+        deaths: parse.number($('#total-covid-19-deaths .value-output').text()),
+        hospitalized: parse.number($('#total-covid-19-hospitalizations .value-output').text())
       });
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');

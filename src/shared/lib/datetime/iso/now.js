@@ -7,7 +7,7 @@ import { currentZdt } from './utils.js';
 export const now = {
   /** @returns {string} The current date and time (UTC) in ISO format. Example: `2020-03-16T23:45` */
   utc: () => {
-    return now.at('UTC');
+    return `${now.at('UTC')}Z`;
   },
 
   /**

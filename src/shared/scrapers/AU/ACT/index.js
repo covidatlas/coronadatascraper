@@ -12,20 +12,6 @@ const labelFragmentsByKey = [
   { deaths: 'lives lost' }
 ];
 
-const pivotTheTable = ($trs, $) => {
-  const dataPairs = [];
-  $trs.each((trIndex, tr) => {
-    const $tr = $(tr);
-    const $tds = $tr.find('td, th');
-    $tds.each((tdIndex, td) => {
-      const $td = $(td);
-      dataPairs[tdIndex] = dataPairs[tdIndex] || [];
-      dataPairs[tdIndex][trIndex] = $td.text();
-    });
-  });
-  return dataPairs;
-};
-
 const scraper = {
   country: 'iso1:AU',
   maintainers: [maintainers.camjc],
@@ -39,7 +25,7 @@ const scraper = {
   ],
   state: 'iso2:AU-ACT',
   type: 'table',
-  url: 'https://www.covid19.act.gov.au/updates/confirmed-case-information',
+  url: 'https://www.covid19.act.gov.au',
   scraper: {
     '0': async function() {
       const $ = await fetch.page('https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19');
@@ -60,14 +46,44 @@ const scraper = {
       return getDataWithTestedNegativeApplied(data);
     },
     '2020-03-29': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page('https://www.covid19.act.gov.au/updates/confirmed-case-information');
       const $table = $('h2:contains("Cases") + table');
       const $trs = $table.find('tr');
+
+      const pivotTheTable = ($trs, $) => {
+        const dataPairs = [];
+        $trs.each((trIndex, tr) => {
+          const $tr = $(tr);
+          const $tds = $tr.find('td, th');
+          $tds.each((tdIndex, td) => {
+            const $td = $(td);
+            dataPairs[tdIndex] = dataPairs[tdIndex] || [];
+            dataPairs[tdIndex][trIndex] = $td.text();
+          });
+        });
+        return dataPairs;
+      };
 
       const dataPairs = pivotTheTable($trs, $);
 
       const data = {};
       dataPairs.forEach(([label, value]) => {
+        const key = getKey({ label, labelFragmentsByKey });
+        data[key] = parse.number(value);
+      });
+
+      assert(data.cases > 0, 'Cases is not reasonable');
+      return getDataWithTestedNegativeApplied(data);
+    },
+    '2020-04-09': async function() {
+      const $ = await fetch.page(this.url);
+      const $tables = $('.spf-article-card--tabular table');
+
+      const data = {};
+      $tables.each((index, table) => {
+        const $tr = $(table).find('tr');
+        const label = $tr.find('td:first-child').text();
+        const value = $tr.find('td:last-child').text();
         const key = getKey({ label, labelFragmentsByKey });
         data[key] = parse.number(value);
       });
