@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 import assert from 'assert';
 import path from 'path';
 import { readJSON } from '../fs.js';
@@ -63,11 +65,25 @@ export const getFeature = async id => {
   const locationData = await getLocationData(id);
   if (Array.isArray(locationData)) {
     const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
-    return geography.combineFeatures(features);
+    const newGeometry = combineFeatureGeometry(features);
+    const newFeature = {
+      type: 'Feature',
+      properties: {
+        name: await getName(id),
+        countrylevel_id: id
+      },
+      geometry: newGeometry
+    };
+    return newFeature;
   }
   if (locationData.geojson_path) {
     const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
     const feature = await readJSON(geojsonPath);
+    const cleanProps = {
+      name: feature.properties.name,
+      countrylevel_id: feature.properties.countrylevel_id
+    };
+    feature.properties = cleanProps;
     return feature;
   }
   return null;
@@ -104,4 +120,14 @@ export const transformLocationIds = async location => {
       location[loc] = await getName(locId);
     }
   }
+};
+
+export const combineFeatureGeometry = features => {
+  const newGeometry = { type: 'MultiPolygon', coordinates: [] };
+
+  for (const feature of features) {
+    assert(feature.geometry.type === 'MultiPolygon', `feature not a MultiPolygon ${feature.properties}`);
+    newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
+  }
+  return newGeometry;
 };
