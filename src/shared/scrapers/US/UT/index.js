@@ -176,8 +176,6 @@ const scraper = {
       // We don't sum data because we already have totals from above
       // counties.push(transform.sumData(counties));
 
-      console.log(counties);
-
       return counties;
     }
   }
