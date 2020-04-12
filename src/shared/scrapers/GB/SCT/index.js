@@ -46,10 +46,14 @@ const scraper = {
         const county = findText(columns[0]);
         const confirmedCases = findText(columns[1]);
 
-        console.log(county);
+        const clId = countryLevelMap[county];
+        if (!clId) {
+          console.error(`GB, SCT: ${county} not found in countryLevelMap`);
+          return;
+        }
 
         counties.push({
-          county,
+          county: clId,
           cases: parse.number(confirmedCases)
         });
       });
