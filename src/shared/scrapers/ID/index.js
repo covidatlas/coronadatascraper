@@ -8,7 +8,7 @@ const labelFragmentsByKey = [{ recovered: 'sembuh' }, { deaths: 'meninggal' }, {
 
 const scraper = {
   country: 'iso1:ID',
-  maintainer: [maintainers.camjc],
+  maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
     {
