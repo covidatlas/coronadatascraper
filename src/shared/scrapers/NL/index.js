@@ -8,18 +8,37 @@ import mapping from './mapping.json';
 
 const scraper = {
   country: 'iso1:NL',
-  url: 'https://onemocneni-aktualne.mzcr.cz/',
+  url: 'https://github.com/J535D165/CoronaWatchNL',
   timeseries: true,
   priority: 1,
   type: 'csv',
+  sources: [
+    {
+      description: 'RIVM reported numbers on the Coronavirus outbreak in The Netherlands',
+      url: 'https://github.com/J535D165/CoronaWatchNL',
+      name: 'CoronaWatchNL'
+    }
+  ],
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesURL =
-      'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_province.csv';
+    const casesData = (
+      await fetch.csv(
+        'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_province.csv',
+        false
+      )
+    ).filter(item => datetime.scrapeDateIs(item.Datum));
 
-    const casesData = await fetch.csv(casesURL, false);
+    const nationalData = await fetch.csv(
+      'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_national.csv',
+      false
+    );
+
+    const hospitalized = nationalData.find(
+      item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Ziekenhuisopname'
+    );
+    const deaths = nationalData.find(item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Overleden');
 
     const casesByProvince = {};
 
@@ -38,7 +57,13 @@ const scraper = {
       });
     }
 
-    data.push(transform.sumData(data));
+    if (hospitalized || deaths || data.length > 0)
+      data.push(
+        transform.sumData(data, {
+          hospitalized: hospitalized ? parse.number(hospitalized.Aantal) : undefined,
+          deaths: deaths ? parse.number(deaths.Aantal) : undefined
+        })
+      );
 
     return data;
   }
