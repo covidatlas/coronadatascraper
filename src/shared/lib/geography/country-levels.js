@@ -125,19 +125,14 @@ export const combineFeatureGeometry = features => {
   const newGeometry = { type: 'MultiPolygon', coordinates: [] };
 
   for (const feature of features) {
-    if (feature.geometry.type === 'Polygon') {
+    const geomType = feature.geometry.type;
+    if (geomType === 'Polygon') {
       // Wrap the coords in an array so that it looks like a MultiPolygon.
       newGeometry.coordinates = newGeometry.coordinates.concat([feature.geometry.coordinates]);
-    } else if (feature.geometry.type === 'MultiPolygon') {
+    } else if (geomType === 'MultiPolygon') {
       newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
     } else {
-      const theName = feature.properties.name;
-      const theId = feature.properties.countrylevel_id;
-      const theType = feature.geometry.type;
-      assert(
-        !(theType === 'Polygon' || theType === 'MultiPolygon'),
-        `Feature geometry for ${theName} (${theId}) is ${theType}, it will not be included.`
-      );
+      throw new Error(`Invalid geometry type ${feature.properties.countrylevel_id} ${geomType}`);
     }
   }
   return newGeometry;
