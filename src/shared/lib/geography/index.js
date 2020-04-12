@@ -51,7 +51,6 @@ export function combineFeatures(features, properties = {}) {
   // Collect a list of features and polygons matching the list of counties
   const polygons = [];
   for (const countyFeature of features) {
-    console.log(countyFeature.geometry.type);
     polygons.push(turf.feature(countyFeature.geometry));
   }
 
