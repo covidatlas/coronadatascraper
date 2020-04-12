@@ -79,11 +79,16 @@ test('Scraper tests', async t => {
     for (const expectedPath of datedResults) {
       const date = getDateFromPath(expectedPath);
       process.env.SCRAPE_DATE = date;
-      let result = await runScraper(scraperObj);
-      result = result.map(strip);
-      const expected = await readJSON(expectedPath);
-      t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
-      delete process.env.SCRAPE_DATE;
+      try {
+        let result = await runScraper(scraperObj);
+        result = result.map(strip);
+        const expected = await readJSON(expectedPath);
+        t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
+      } catch (err) {
+        t.fail(`Failure for ${scraperName}: ${err}`);
+      } finally {
+        delete process.env.SCRAPE_DATE;
+      }
     }
     delete process.env.OVERRIDE_CACHE_PATH;
   }
