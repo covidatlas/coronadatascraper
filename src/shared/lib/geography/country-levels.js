@@ -74,10 +74,6 @@ export const getFeature = async id => {
       },
       geometry: newGeometry
     };
-    if (newGeometry.coordinates.length === 0) {
-      console.error(`Combined geometry for ${newFeature.properties.name} (${id}) does not contain any coordinates!`);
-      return null;
-    }
     return newFeature;
   }
   if (locationData.geojson_path) {
@@ -90,7 +86,6 @@ export const getFeature = async id => {
     feature.properties = cleanProps;
     return feature;
   }
-  return null;
 };
 
 export const getPopulation = async id => {
