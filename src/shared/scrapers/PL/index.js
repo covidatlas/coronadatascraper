@@ -2,13 +2,13 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import datetime from '../../lib/datetime/index.js';
 import maintainers from '../../lib/maintainers.js';
-// import * as transform from '../../lib/transform.js';
+import * as transform from '../../lib/transform.js';
 
 import mapping from './mapping.json';
 
 const scraper = {
-  country: 'iso1:NO',
-  url: 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-no.csv',
+  country: 'iso1:PL',
+  url: 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-pl.csv',
   timeseries: true,
   priority: 1,
   type: 'csv',
@@ -26,17 +26,18 @@ const scraper = {
     const casesData = await fetch.csv(this.url, false);
 
     const casesByRegion = {};
+    const deathsByRegion = {};
 
     for (const item of casesData) {
-      if (datetime.dateIsBeforeOrEqualTo(item.datetime, date) && item.nuts_3) {
-        if (!item.nuts_3.includes('Unknown') && !item.nuts_3.includes('Outside')) {
-          casesByRegion[item.nuts_3] = parse.number(item.cases);
-        }
+      if (datetime.dateIsBeforeOrEqualTo(item.datetime, date) && item.nuts_2) {
+        casesByRegion[item.nuts_2] = parse.number(item.cases);
+        deathsByRegion[item.nuts_2] = parse.number(item.deaths);
       }
     }
 
     const data = [];
 
+    // FIXME: missing some ISO codes. Pushing the name we receive in the meantime
     for (const region of Object.keys(casesByRegion)) {
       data.push({
         state: mapping[region] || region,
@@ -44,8 +45,7 @@ const scraper = {
       });
     }
 
-    // Count is slightly off compared to JHU. Trust JHU but keep regional data.
-    // if (data.length > 0) data.push(transform.sumData(data));
+    if (data.length > 0) data.push(transform.sumData(data));
 
     return data;
   }

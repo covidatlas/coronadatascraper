@@ -1,0 +1,13 @@
+[
+  { "state": "iso2:NO-18", "cases": 91 },
+  { "state": "iso2:NO-15", "cases": 116 },
+  { "state": "Troms og Finnmark", "cases": 190 },
+  { "state": "Vestfold og Telemark", "cases": 241 },
+  { "state": "Agder", "cases": 261 },
+  { "state": "iso2:NO-50", "cases": 400 },
+  { "state": "Innlandet", "cases": 395 },
+  { "state": "Vestland", "cases": 670 },
+  { "state": "iso2:NO-11", "cases": 380 },
+  { "state": "iso2:NO-03", "cases": 1893 },
+  { "state": "Viken", "cases": 1771 }
+]

@@ -8,7 +8,7 @@ import mapping from './mapping.json';
 
 const scraper = {
   country: 'iso1:IE',
-  url: 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-at.csv',
+  url: 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-ie.csv',
   timeseries: true,
   priority: 1,
   type: 'csv',
@@ -23,9 +23,7 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesURL = 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-ie.csv';
-
-    const casesData = await fetch.csv(casesURL, false);
+    const casesData = await fetch.csv(this.url, false);
 
     const casesByRegion = {};
 
