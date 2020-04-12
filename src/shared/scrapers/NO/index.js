@@ -4,8 +4,6 @@ import datetime from '../../lib/datetime/index.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
 
-import mapping from './mapping.json';
-
 const scraper = {
   country: 'iso1:NO',
   url: 'https://onemocneni-aktualne.mzcr.cz/',
@@ -34,7 +32,6 @@ const scraper = {
 
     for (const region of Object.keys(casesByRegion)) {
       data.push({
-        state: mapping[region],
         cases: casesByRegion[region],
         hospitalized: hospitalizedByRegion[region]
       });
