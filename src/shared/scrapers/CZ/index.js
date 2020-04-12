@@ -10,12 +10,17 @@ const scraper = {
   timeseries: true,
   priority: 1,
   type: 'csv',
+  sources: [
+    {
+      url: 'https://onemocneni-aktualne.mzcr.cz/',
+      name: 'Ministry of Health of the Czech Republic'
+    }
+  ],
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
     const casesURL = 'https://onemocneni-aktualne.mzcr.cz/api/v1/covid-19/osoby.csv';
-
     const testedURL = 'https://onemocneni-aktualne.mzcr.cz/api/v1/covid-19/testy.csv';
 
     const casesData = await fetch.csv(casesURL, false);
@@ -24,13 +29,15 @@ const scraper = {
     const casesByRegion = {};
 
     for (const item of casesData) {
+      // Yes, there is a weird character here, it is intentional
       if (datetime.dateIsBeforeOrEqualTo(item['﻿datum_hlaseni'], date)) {
         casesByRegion[item.kraj] = 1 + (casesByRegion[item.kraj] || 0);
       }
     }
 
-    let numTests = 0;
+    let numTests;
     for (const item of testedData) {
+      // Yes, there is a weird character here, it is intentional
       if (datetime.dateIsBeforeOrEqualTo(item['﻿datum'], date)) {
         numTests = parse.number(item.testy_celkem);
       }
@@ -45,7 +52,7 @@ const scraper = {
       });
     }
 
-    data.push(transform.sumData(data, { tested: numTests }));
+    if (numTests || data.length > 0) data.push(transform.sumData(data, { tested: numTests }));
 
     return data;
   }

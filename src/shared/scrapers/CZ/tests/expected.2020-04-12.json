@@ -1,0 +1,17 @@
+[
+  { "state": "iso2:CZ-10", "cases": 1415 },
+  { "state": "iso2:CZ-52", "cases": 167 },
+  { "state": "iso2:CZ-20", "cases": 684 },
+  { "state": "iso2:CZ-31", "cases": 149 },
+  { "state": "iso2:CZ-32", "cases": 428 },
+  { "state": "iso2:CZ-41", "cases": 196 },
+  { "state": "iso2:CZ-42", "cases": 380 },
+  { "state": "iso2:CZ-51", "cases": 177 },
+  { "state": "iso2:CZ-53", "cases": 219 },
+  { "state": "iso2:CZ-63", "cases": 145 },
+  { "state": "iso2:CZ-64", "cases": 342 },
+  { "state": "iso2:CZ-71", "cases": 580 },
+  { "state": "iso2:CZ-80", "cases": 647 },
+  { "state": "iso2:CZ-72", "cases": 258 },
+  { "tested": 125126, "cases": 5787 }
+]
