@@ -76,16 +76,17 @@ export const getFeature = async id => {
     };
     return newFeature;
   }
-  if (locationData.geojson_path) {
-    const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
-    const feature = await readJSON(geojsonPath);
-    const cleanProps = {
-      name: feature.properties.name,
-      countrylevel_id: feature.properties.countrylevel_id
-    };
-    feature.properties = cleanProps;
-    return feature;
-  }
+
+  assert(locationData.geojson_path, `Missing geojson_path for ${id}`);
+
+  const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+  const feature = await readJSON(geojsonPath);
+  const cleanProps = {
+    name: feature.properties.name,
+    countrylevel_id: feature.properties.countrylevel_id
+  };
+  feature.properties = cleanProps;
+  return feature;
 };
 
 export const getPopulation = async id => {
