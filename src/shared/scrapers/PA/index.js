@@ -35,23 +35,8 @@ const patientLocation = {
   UNKNOWN: 'unknown'
 };
 
-// Maybe this serves as a prototype for the schema we need to develop.
-const templateDataEntry = {
-  // country: null, // taken from scraper object.
-  state: null,
-  // fail src/events/crawler/scrape-data/run-scraper.js:16:13
-  // county: null,
-  // city: null,
-  cases: 0,
-  deaths: 0,
-  quarantine: 0,
-  hospitalized: 0,
-  icu: 0,
-  recovered: 0
-};
-
 function getCountsFromLocation(location) {
-  const o = JSON.parse(JSON.stringify(templateDataEntry)); // "deep copy". Fuck.
+  const o = {};
   if (location === patientLocation.UNKNOWN) {
     log.warn(`Patient location is "UNKNOWN", it will not be counted.`);
     return o;
@@ -61,39 +46,37 @@ function getCountsFromLocation(location) {
   return o;
 }
 
-function updateData(data, o) {
+function updateData(data, row) {
   let entryToUpdate = null;
   for (const entry of data) {
-    if (entry.state !== o.state) {
-      continue;
-    }
-    if (entry.county !== o.county) {
-      continue;
-    }
+    if (!(entry.state === row.state && entry.county === row.county)) continue;
     // Here we would continue to check for city and corregimiento, if we got to that point.
     entryToUpdate = entry;
     break;
   }
 
-  const newEntry = getCountsFromLocation(o.patientLocation);
+  const newEntry = getCountsFromLocation(row.patientLocation);
   if (entryToUpdate === null) {
-    newEntry.state = o.state;
-    newEntry.county = o.county;
+    newEntry.state = row.state;
+    newEntry.county = row.county;
     data.push(newEntry);
   } else {
-    entryToUpdate.cases += newEntry.cases;
-    entryToUpdate.deaths += newEntry.deaths;
-    entryToUpdate.quarantine += newEntry.quarantine;
-    entryToUpdate.hospitalized += newEntry.hospitalized;
-    entryToUpdate.icu += newEntry.icu;
-    entryToUpdate.recovered += newEntry.recovered;
+    // None of these terms are clearly standardized anywhere.
+    // The code upstream rejects key == null or key == NaN so that will need to change
+    // to enforce a schema.
+    if (newEntry.cases) entryToUpdate.cases += newEntry.cases;
+    if (newEntry.deaths) entryToUpdate.deaths += newEntry.deaths;
+    if (newEntry.quarantine) entryToUpdate.quarantine += newEntry.quarantine;
+    if (newEntry.hospitalized) entryToUpdate.hospitalized += newEntry.hospitalized;
+    if (newEntry.icu) entryToUpdate.icu += newEntry.icu;
+    if (newEntry.recovered) entryToUpdate.recovered += newEntry.recovered;
   }
 }
 
 function addEmptyStates(data) {
   // Instead of this, we could actually design the system to do this:
   // 1. Obtain a list of administrative levels entities at whatever granularity the disease data exist
-  // 2. Create a template data result with all zeros
+  // 2. Create a template data result with all nulls
   // 3. Traverse through data and populate.
   for (const province in provinceToIso2) {
     let found = false;
@@ -105,9 +88,7 @@ function addEmptyStates(data) {
     }
     if (!found) {
       log(`Adding ${province} with zero cases.`);
-      const o = JSON.parse(JSON.stringify(templateDataEntry));
-      o.state = provinceToIso2[province];
-      data.push(o);
+      data.push({ state: provinceToIso2[province] });
     }
   }
 }
@@ -122,7 +103,7 @@ function getProvinceIso2(provinceName) {
   if (provinceName === 'Ngäbe-Buglé' || provinceName === 'Comarca Ngäbe Buglé') return provinceToIso2['Ngöbe-Buglé'];
   const iso2 = provinceToIso2[provinceName];
   if (!iso2) {
-    log.warn(`Cannot obtain ISO2 code for "${provinceName}".`);
+    throw new Error(`Cannot obtain ISO2 code for "${provinceName}".`);
   }
   return iso2;
 }
@@ -263,7 +244,7 @@ const scraper = {
     for (const c of caseList) {
       const status = patientStatus[c.ESTADO_DEL_PACIENTE];
       const location = patientLocation[c.UBICACIÓN_DEL_PACIENTE];
-      const o = {
+      const row = {
         state: getProvinceIso2(c.PROVINCIA),
         // To do this by county, we need:
         // 1. Population of counties.
@@ -283,11 +264,11 @@ const scraper = {
         patientStatus: status || patientStatus.UNKNOWN,
         patientLocation: location || patientLocation.UNKNOWN
       };
-      updateData(data, o);
+      updateData(data, row);
     }
 
     addEmptyStates(data);
-    // log(data);
+    log(data);
     log(`Data contains ${data.length} items.`);
 
     return data;
