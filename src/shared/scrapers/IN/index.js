@@ -67,17 +67,17 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $table = $('#state-data');
-    const $trs = $table.find('tbody > tr');
-    const states = [];
+    assert.equal($table.length, 'The table can not be found');
 
     const $headings = $table.find('thead tr th');
     const dataKeysByColumnIndex = [];
-
     $headings.each((index, heading) => {
       const $heading = $(heading);
       dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
     });
 
+    const states = [];
+    const $trs = $table.find('tbody > tr');
     $trs
       .filter(
         // Remove summary rows
