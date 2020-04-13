@@ -2,6 +2,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
+import datetime from '../../lib/datetime/index.js';
 
 import mapping from './mapping.json';
 
@@ -14,6 +15,8 @@ const scraper = {
   type: 'csv',
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+
     const dataset = (await fetch.csv(this.url, false))
       .filter(item => item.region !== 'Total')
       .map(item => ({ ...item, region: mapping[item.region] }));
@@ -25,30 +28,36 @@ const scraper = {
     const dataByRegion = {};
 
     for (const item of casesData) {
-      const dataObj = {
-        cases: 0,
-        ...dataByRegion[item.region]
-      };
-      dataObj.cases += parse.number(item.cases);
-      dataByRegion[item.region] = dataObj;
+      if (datetime.dateIsBeforeOrEqualTo(item.date, date)) {
+        const dataObj = {
+          cases: 0,
+          ...dataByRegion[item.region]
+        };
+        dataObj.cases += parse.number(item.cases);
+        dataByRegion[item.region] = dataObj;
+      }
     }
 
     for (const item of deathsData) {
-      const dataObj = {
-        deaths: 0,
-        ...dataByRegion[item.region]
-      };
-      dataObj.deaths += parse.number(item.cases);
-      dataByRegion[item.region] = dataObj;
+      if (datetime.dateIsBeforeOrEqualTo(item.date, date)) {
+        const dataObj = {
+          deaths: 0,
+          ...dataByRegion[item.region]
+        };
+        dataObj.deaths += parse.number(item.cases);
+        dataByRegion[item.region] = dataObj;
+      }
     }
 
     for (const item of recoveredData) {
-      const dataObj = {
-        recovered: 0,
-        ...dataByRegion[item.region]
-      };
-      dataObj.recovered += parse.number(item.cases);
-      dataByRegion[item.region] = dataObj;
+      if (datetime.dateIsBeforeOrEqualTo(item.date, date)) {
+        const dataObj = {
+          recovered: 0,
+          ...dataByRegion[item.region]
+        };
+        dataObj.recovered += parse.number(item.cases);
+        dataByRegion[item.region] = dataObj;
+      }
     }
 
     const data = [];
@@ -59,7 +68,7 @@ const scraper = {
       });
     }
 
-    data.push(transform.sumData(data));
+    if (data.length > 0) data.push(transform.sumData(data));
 
     return data;
   }

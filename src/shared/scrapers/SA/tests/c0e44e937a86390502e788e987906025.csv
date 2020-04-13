@@ -6,6 +6,7 @@ Daily,Cases,2020-03-02,First case of COVID-19,Qassim,Al Badai,0
 Daily,Cases,2020-03-02,First case of COVID-19,Makkah,Makkah,0
 Daily,Cases,2020-03-02,First case of COVID-19,Makkah,Taif,0
 Daily,Cases,2020-03-02,First case of COVID-19,Qassim,Ar Ras,0
+Daily,Cases,2020-03-02,First case of COVID-19,Jazan,Sabia,0
 Daily,Cases,2020-03-02,First case of COVID-19,Eastern Region,Dammam,0
 Daily,Cases,2020-03-02,First case of COVID-19,Medina,Medina,0
 Daily,Cases,2020-03-02,First case of COVID-19,Qassim,Buraidah,0
@@ -46,6 +47,7 @@ Daily,Cases,2020-03-06,,Eastern Region,Alkhafji,0
 Daily,Cases,2020-03-06,,Jazan,Jazan,0
 Daily,Cases,2020-03-06,,Eastern Region,Hufof,0
 Daily,Cases,2020-03-06,,Northern Borders,Arar,0
+Daily,Cases,2020-03-06,,Jazan,Sabia,0
 Daily,Cases,2020-03-06,,Eastern Region,Dammam,0
 Daily,Cases,2020-03-06,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-06,,Eastern Region,Dahran,0
@@ -104,6 +106,7 @@ Daily,Cases,2020-03-11,,Riyadh,Al Majma'ah,0
 Daily,Cases,2020-03-12,,Eastern Region,Alkhafji,0
 Daily,Cases,2020-03-12,,Asir,Bishah,0
 Daily,Cases,2020-03-12,,Riyadh,Al Kharj,0
+Daily,Cases,2020-03-12,,Jazan,Sabia,0
 Daily,Cases,2020-03-12,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-12,,Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-12,,Hail,Ash Shamly,0
@@ -168,6 +171,7 @@ Daily,Cases,2020-03-19,,Asir,Khamis Mushait,0
 Daily,Cases,2020-03-19,,Riyadh,Al Kharj,0
 Daily,Cases,2020-03-19,,Makkah,Jeddah,1
 Daily,Cases,2020-03-19,,Makkah,Taif,0
+Daily,Cases,2020-03-19,,Jazan,Sabia,0
 Daily,Cases,2020-03-19,,Medina,Medina,0
 Daily,Cases,2020-03-19,,Qassim,Buraidah,0
 Daily,Cases,2020-03-19,,Riyadh,Dawadmi,0
@@ -211,6 +215,7 @@ Daily,Cases,2020-03-22,,Makkah,Messan,0
 Daily,Cases,2020-03-22,,Tabuk,Tabuk,0
 Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Eastern Region,Hafr Albaten,0
 Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Northern Borders,Arar,0
+Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Jazan,Sabia,0
 Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Eastern Region,Nairyah,0
 Daily,Cases,2020-03-23,Curfew started for 21 days (6am -7 pm),Tabuk,Duba,0
@@ -270,11 +275,13 @@ Daily,Cases,2020-03-28,,Makkah,Messan,0
 Daily,Cases,2020-03-28,,Qassim,Riyadh Al Khobra,0
 Daily,Cases,2020-03-29,Jeddah lockdown,Asir,Abha,0
 Daily,Cases,2020-03-29,Jeddah lockdown,Qassim,Al Badai,0
+Daily,Cases,2020-03-29,Jeddah lockdown,Jazan,Sabia,0
 Daily,Cases,2020-03-29,Jeddah lockdown,Qassim,Al Henakiyah,0
 Daily,Cases,2020-03-29,Jeddah lockdown,Asir,Muhayil Aseer,0
 Daily,Cases,2020-03-30,Makkah lockdown,Asir,Bishah,0
 Daily,Cases,2020-03-30,Makkah lockdown,Asir,Abha,0
 Daily,Cases,2020-03-30,Makkah lockdown,Eastern Region,Hufof,6
+Daily,Cases,2020-03-30,Makkah lockdown,Jazan,Sabia,0
 Daily,Cases,2020-03-30,Makkah lockdown,Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-30,Makkah lockdown,Qassim,Unaizah,0
 Daily,Cases,2020-03-30,Makkah lockdown,Qassim,Riyadh Al Khobra,0
@@ -388,6 +395,19 @@ Daily,Cases,2020-04-10,,Riyadh,Al Kharj,0
 Daily,Cases,2020-04-10,,Asie,Sabt Al Alayah,3
 Daily,Cases,2020-04-10,,Makkah,Khlais,0
 Daily,Cases,2020-04-10,,Al Baha,Al Baha,0
+Daily,Cases,2020-04-11,,Asir,Bishah,0
+Daily,Cases,2020-04-11,,Jazan,Jazan,0
+Daily,Cases,2020-04-11,,Eastern Region,Hufof,0
+Daily,Cases,2020-04-11,,Madina,Al Ula,0
+Daily,Cases,2020-04-11,,Makkah,Taif,2
+Daily,Cases,2020-04-11,,Qassim,Ar Ras,0
+Daily,Cases,2020-04-11,,Jazan,Sabia,2
+Daily,Cases,2020-04-11,,Eastern Region,Dammam,10
+Daily,Cases,2020-04-11,,Eastern Region,Nairyah,0
+Daily,Cases,2020-04-11,,Qassim,Al Henakiyah,0
+Daily,Cases,2020-04-11,,Jazan,Samtah,4
+Daily,Cases,2020-04-11,,Qassim,Unaizah,0
+Daily,Cases,2020-04-11,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Asir,Abha,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Madina,Al Ula,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Asir,Ahad Rafeedah,0
@@ -518,6 +538,7 @@ Daily,Recoveries,2020-03-14,,Najran,Najran,0
 Daily,Recoveries,2020-03-14,,Madina,Al Ula,0
 Daily,Recoveries,2020-03-14,,Riyadh,Al Kharj,0
 Daily,Recoveries,2020-03-14,,Makkah,Jeddah,0
+Daily,Recoveries,2020-03-14,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-14,,Eastern Region,Dammam,0
 Daily,Recoveries,2020-03-14,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-14,,Asir,Muhayil Aseer,0
@@ -567,6 +588,7 @@ Daily,Recoveries,2020-03-19,,Total,Total,0
 Daily,Recoveries,2020-03-19,,Medina,Yanbu,0
 Daily,Recoveries,2020-03-19,,Makkah,Jeddah,0
 Daily,Recoveries,2020-03-19,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-19,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-19,,Medina,Medina,0
 Daily,Recoveries,2020-03-19,,Eastern Region,Nairyah,0
 Daily,Recoveries,2020-03-19,,Eastern Region,Ras Tanura,0
@@ -614,6 +636,7 @@ Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Madina,Al Ula
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Makkah,Jeddah,0
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Qassim,Ar Ras,0
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Northern Borders,Arar,0
+Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Jazan,Sabia,0
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Eastern Region,Dammam,0
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Najran,Sharorah,0
 Daily,Recoveries,2020-03-23,Curfew started for 21 days (6am -7 pm),Riyadh,Dawadmi,0
@@ -638,6 +661,7 @@ Daily,Recoveries,2020-03-25,,Asir,Khamis Mushait,0
 Daily,Recoveries,2020-03-25,,Eastern Region,Hufof,0
 Daily,Recoveries,2020-03-25,,Madina,Al Ula,0
 Daily,Recoveries,2020-03-25,,Riyadh,Al Kharj,0
+Daily,Recoveries,2020-03-25,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-25,,Eastern Region,Dammam,0
 Daily,Recoveries,2020-03-25,,Jazan,Al Ardha,0
 Daily,Recoveries,2020-03-25,,Eastern Region,Al Mubarraz,0
@@ -651,6 +675,7 @@ Daily,Recoveries,2020-03-27,,Eastern Region,Hufof,0
 Daily,Recoveries,2020-03-27,,Riyadh,Al Kharj,0
 Daily,Recoveries,2020-03-27,,Makkah,Jeddah,0
 Daily,Recoveries,2020-03-27,,Northern Borders,Arar,0
+Daily,Recoveries,2020-03-27,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-27,,Asir,Ahad Rafeedah,0
 Daily,Recoveries,2020-03-27,,Medina,Medina,0
 Daily,Recoveries,2020-03-27,,Eastern Region,Nairyah,0
@@ -667,6 +692,7 @@ Daily,Recoveries,2020-03-28,,Eastern Region,Jubail,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Riyadh,Riyadh,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Eastern Region,Qatif,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Riyadh,Al Kharj,0
+Daily,Recoveries,2020-03-29,Jeddah lockdown,Jazan,Sabia,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Qassim,Al Henakiyah,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Tabuk,Alwajh,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Tabuk,Duba,0
@@ -674,6 +700,7 @@ Daily,Recoveries,2020-03-29,Jeddah lockdown,Tabuk,Tabuk,0
 Daily,Recoveries,2020-03-29,Jeddah lockdown,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-03-30,Makkah lockdown,Eastern Region,Saihat,0
 Daily,Recoveries,2020-03-30,Makkah lockdown,Qassim,Al Badai,0
+Daily,Recoveries,2020-03-30,Makkah lockdown,Jazan,Sabia,0
 Daily,Recoveries,2020-03-30,Makkah lockdown,Medina,Medina,0
 Daily,Recoveries,2020-03-30,Makkah lockdown,Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-03-30,Makkah lockdown,Riyadh,Diryah,0
@@ -763,6 +790,7 @@ Daily,Recoveries,2020-04-07,,Qassim,Al Badai,0
 Daily,Recoveries,2020-04-07,,Makkah,Makkah,0
 Daily,Recoveries,2020-04-07,,Makkah,Taif,0
 Daily,Recoveries,2020-04-07,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-04-07,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-07,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-07,,Eastern Region,Al Mubarraz,0
 Daily,Recoveries,2020-04-07,,Qassim,Buraidah,0
@@ -802,6 +830,12 @@ Daily,Recoveries,2020-04-10,,Qassim,Unaizah,0
 Daily,Recoveries,2020-04-10,,Qassim,Riyadh Al Khobra,0
 Daily,Recoveries,2020-04-10,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-04-10,,Riyadh,Al Majma'ah,0
+Daily,Recoveries,2020-04-11,,Jazan,Sabia,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Jubail,0
+Daily,Recoveries,2020-04-11,,Hail,Ash Shamly,0
+Daily,Recoveries,2020-04-11,,Tabuk,Duba,0
+Daily,Recoveries,2020-04-11,,Makkah,Khlais,0
+Daily,Recoveries,2020-04-11,,Riyadh,Al Majma'ah,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Makkah,Makkah,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Makkah,Jeddah,0
@@ -935,6 +969,7 @@ Daily,Mortalities,2020-03-13,,Madina,Al Ula,0
 Daily,Mortalities,2020-03-13,,Makkah,Makkah,0
 Daily,Mortalities,2020-03-13,,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-03-13,,Makkah,Jeddah,0
+Daily,Mortalities,2020-03-13,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-13,,Medina,Medina,0
 Daily,Mortalities,2020-03-13,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-13,,Qassim,Al Henakiyah,0
@@ -966,6 +1001,7 @@ Daily,Mortalities,2020-03-16,Gov / private suspension,Jazan,Jazan,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Asir,Abha,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Makkah,Jeddah,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Northern Borders,Arar,0
+Daily,Mortalities,2020-03-16,Gov / private suspension,Jazan,Sabia,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Medina,Medina,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Eastern Region,Nairyah,0
@@ -1017,6 +1053,7 @@ Daily,Mortalities,2020-03-20,,Qassim,Unaizah,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Asir,Khamis Mushait,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Asir,Abha,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Makkah,Taif,0
+Daily,Mortalities,2020-03-21,Domestic flights suspension,Jazan,Sabia,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Qassim,Buraidah,0
 Daily,Mortalities,2020-03-21,Domestic flights suspension,Riyadh,Dawadmi,0
@@ -1044,6 +1081,7 @@ Daily,Mortalities,2020-03-24,,Eastern Region,Qatif,0
 Daily,Mortalities,2020-03-24,,Jazan,Jazan,0
 Daily,Mortalities,2020-03-24,,Medina,Yanbu,0
 Daily,Mortalities,2020-03-24,,Madina,Al Ula,0
+Daily,Mortalities,2020-03-24,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-24,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-24,,Tabuk,Tabuk,0
 Daily,Mortalities,2020-03-24,,Qassim,Unaizah,0
@@ -1058,6 +1096,7 @@ Daily,Mortalities,2020-03-25,,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-03-25,,Tabuk,Tabuk,0
 Daily,Mortalities,2020-03-25,,Qassim,Unaizah,0
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Makkah,Al Qunfuthah,0
+Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Jazan,Sabia,0
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Eastern Region,Ras Tanura,0
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Qassim,Al Henakiyah,0
@@ -1080,6 +1119,7 @@ Daily,Mortalities,2020-03-28,,Asir,Abha,0
 Daily,Mortalities,2020-03-28,,Qassim,Al Badai,0
 Daily,Mortalities,2020-03-28,,Qassim,Ar Ras,0
 Daily,Mortalities,2020-03-28,,Northern Borders,Arar,0
+Daily,Mortalities,2020-03-28,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-28,,Medina,Medina,0
 Daily,Mortalities,2020-03-28,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-28,,Eastern Region,Jubail,0
@@ -1090,6 +1130,7 @@ Daily,Mortalities,2020-03-29,Jeddah lockdown,Eastern Region,Hufof,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Qassim,Al Badai,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Makkah,Jeddah,1
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Qassim,Ar Ras,0
+Daily,Mortalities,2020-03-29,Jeddah lockdown,Jazan,Sabia,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Qassim,Buraidah,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Tabuk,Tabuk,0
@@ -1119,6 +1160,7 @@ Daily,Mortalities,2020-04-01,,Asir,Khamis Mushait,0
 Daily,Mortalities,2020-04-01,,Jazan,Jazan,0
 Daily,Mortalities,2020-04-01,,Makkah,Jeddah,0
 Daily,Mortalities,2020-04-01,,Northern Borders,Arar,0
+Daily,Mortalities,2020-04-01,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-01,,Asir,Ahad Rafeedah,0
 Daily,Mortalities,2020-04-01,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-04-01,,Riyadh,Dawadmi,0
@@ -1213,6 +1255,15 @@ Daily,Mortalities,2020-04-10,,Northern Borders,Arar,0
 Daily,Mortalities,2020-04-10,,Qassim,Al Henakiyah,0
 Daily,Mortalities,2020-04-10,,Riyadh,Diryah,0
 Daily,Mortalities,2020-04-10,,Qassim,Riyadh Al Khobra,0
+Daily,Mortalities,2020-04-11,,Najran,Najran,0
+Daily,Mortalities,2020-04-11,,Riyadh,Riyadh,0
+Daily,Mortalities,2020-04-11,,Asir,Bishah,0
+Daily,Mortalities,2020-04-11,,Medina,Medina,2
+Daily,Mortalities,2020-04-11,,Najran,Sharorah,0
+Daily,Mortalities,2020-04-11,,Qassim,Buraidah,0
+Daily,Mortalities,2020-04-11,,Riyadh,Dawadmi,0
+Daily,Mortalities,2020-04-11,,Asir,Muhayil Aseer,0
+Daily,Mortalities,2020-04-11,,Al Baha,Al Baha,0
 Daily,Cases,2020-03-02,First case of COVID-19,Makkah,Al Qunfuthah,0
 Daily,Cases,2020-03-02,First case of COVID-19,Asir,Abha,0
 Daily,Cases,2020-03-02,First case of COVID-19,Madina,Al Ula,0
@@ -1244,6 +1295,7 @@ Daily,Cases,2020-03-05,,Riyadh,Riyadh,0
 Daily,Cases,2020-03-05,,Asir,Bishah,0
 Daily,Cases,2020-03-05,,Medina,Yanbu,0
 Daily,Cases,2020-03-05,,Makkah,Taif,0
+Daily,Cases,2020-03-05,,Jazan,Sabia,0
 Daily,Cases,2020-03-05,,Qassim,Buraidah,0
 Daily,Cases,2020-03-05,,Eastern Region,Ras Tanura,0
 Daily,Cases,2020-03-05,,Qassim,Al Henakiyah,0
@@ -1320,6 +1372,7 @@ Daily,Cases,2020-03-13,,Total,Total,41
 Daily,Cases,2020-03-13,,Riyadh,Al Kharj,0
 Daily,Cases,2020-03-13,,Makkah,Taif,0
 Daily,Cases,2020-03-13,,Northern Borders,Arar,0
+Daily,Cases,2020-03-13,,Jazan,Sabia,0
 Daily,Cases,2020-03-13,,Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-13,,Qassim,Buraidah,0
 Daily,Cases,2020-03-13,,Riyadh,Diryah,0
@@ -1361,6 +1414,7 @@ Daily,Cases,2020-03-17,,Jazan,Jazan,0
 Daily,Cases,2020-03-17,,Medina,Yanbu,0
 Daily,Cases,2020-03-17,,Madina,Al Ula,0
 Daily,Cases,2020-03-17,,Makkah,Taif,0
+Daily,Cases,2020-03-17,,Jazan,Sabia,0
 Daily,Cases,2020-03-17,,Eastern Region,Khobar,0
 Daily,Cases,2020-03-17,,Najran,Sharorah,0
 Daily,Cases,2020-03-17,,Eastern Region,Nairyah,0
@@ -1372,6 +1426,7 @@ Daily,Cases,2020-03-18,,Madina,Al Ula,0
 Daily,Cases,2020-03-18,,Makkah,Makkah,11
 Daily,Cases,2020-03-18,,Makkah,Jeddah,13
 Daily,Cases,2020-03-18,,Northern Borders,Arar,0
+Daily,Cases,2020-03-18,,Jazan,Sabia,0
 Daily,Cases,2020-03-18,,Medina,Medina,0
 Daily,Cases,2020-03-18,,Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-18,,Tabuk,Tabuk,0
@@ -1412,6 +1467,7 @@ Daily,Cases,2020-03-21,Domestic flights suspension,Tabuk,Tabuk,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Asie,Sabt Al Alayah,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Qassim,Riyadh Al Khobra,0
 Daily,Cases,2020-03-22,,Northern Borders,Arar,0
+Daily,Cases,2020-03-22,,Jazan,Sabia,0
 Daily,Cases,2020-03-22,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-22,,Medina,Medina,0
 Daily,Cases,2020-03-22,,Eastern Region,Ras Tanura,0
@@ -1464,6 +1520,7 @@ Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Asir,Abha,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Riyadh,Al Kharj,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Qassim,Ar Ras,0
+Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Jazan,Sabia,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Eastern Region,Jubail,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Makkah,Messan,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Qassim,Unaizah,0
@@ -1630,6 +1687,14 @@ Daily,Cases,2020-04-10,,Qassim,Al Henakiyah,0
 Daily,Cases,2020-04-10,,Riyadh,Diryah,0
 Daily,Cases,2020-04-10,,Qassim,Unaizah,0
 Daily,Cases,2020-04-10,,Qassim,Riyadh Al Khobra,0
+Daily,Cases,2020-04-11,,Makkah,Al Qunfuthah,0
+Daily,Cases,2020-04-11,,Asir,Khamis Mushait,5
+Daily,Cases,2020-04-11,,Makkah,Jeddah,19
+Daily,Cases,2020-04-11,,Eastern Region,Dahran,0
+Daily,Cases,2020-04-11,,Medina,Medina,73
+Daily,Cases,2020-04-11,,Eastern Region,Ras Tanura,0
+Daily,Cases,2020-04-11,,Eastern Region,Jubail,0
+Daily,Cases,2020-04-11,,Tabuk,Tabuk,3
 Daily,Recoveries,2020-03-02,First case of COVID-19,Eastern Region,Alkhafji,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Makkah,Al Qunfuthah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Riyadh,Riyadh,0
@@ -1644,6 +1709,7 @@ Daily,Recoveries,2020-03-02,First case of COVID-19,Qassim,Unaizah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-03-03,,Asir,Khamis Mushait,0
 Daily,Recoveries,2020-03-03,,Makkah,Taif,0
+Daily,Recoveries,2020-03-03,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-03,,Asir,Ahad Rafeedah,0
 Daily,Recoveries,2020-03-03,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-03-03,,Eastern Region,Nairyah,0
@@ -1683,6 +1749,7 @@ Daily,Recoveries,2020-03-05,,Riyadh,Diryah,0
 Daily,Recoveries,2020-03-05,,Qassim,Riyadh Al Khobra,0
 Daily,Recoveries,2020-03-05,,Makkah,Khlais,0
 Daily,Recoveries,2020-03-06,,Najran,Najran,0
+Daily,Recoveries,2020-03-06,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-06,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-03-06,,Jazan,Al Ardha,0
 Daily,Recoveries,2020-03-06,,Riyadh,Dawadmi,0
@@ -1701,6 +1768,7 @@ Daily,Recoveries,2020-03-07,,Qassim,Unaizah,0
 Daily,Recoveries,2020-03-08,,Eastern Region,Saihat,0
 Daily,Recoveries,2020-03-08,,Qassim,Al Badai,0
 Daily,Recoveries,2020-03-08,,Northern Borders,Arar,0
+Daily,Recoveries,2020-03-08,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-08,,Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-03-08,,Riyadh,Dawadmi,0
 Daily,Recoveries,2020-03-08,,Riyadh,Diryah,0
@@ -1726,6 +1794,7 @@ Daily,Recoveries,2020-03-11,,Jazan,Jazan,0
 Daily,Recoveries,2020-03-11,,Eastern Region,Hafr Albaten,0
 Daily,Recoveries,2020-03-11,,Asir,Abha,0
 Daily,Recoveries,2020-03-11,,Eastern Region,Hufof,0
+Daily,Recoveries,2020-03-11,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-11,,Medina,Medina,0
 Daily,Recoveries,2020-03-11,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-11,,Hail,Ash Shamly,0
@@ -1735,6 +1804,7 @@ Daily,Recoveries,2020-03-12,,Makkah,Al Qunfuthah,0
 Daily,Recoveries,2020-03-12,,Eastern Region,Hafr Albaten,0
 Daily,Recoveries,2020-03-12,,Madina,Al Ula,0
 Daily,Recoveries,2020-03-12,,Northern Borders,Arar,0
+Daily,Recoveries,2020-03-12,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-12,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-12,,Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-03-12,,Riyadh,Dawadmi,0
@@ -1767,6 +1837,7 @@ Daily,Recoveries,2020-03-14,,Tabuk,Tabuk,0
 Daily,Recoveries,2020-03-15,International flights suspension for 14 days,Eastern Region,Saihat,0
 Daily,Recoveries,2020-03-15,International flights suspension for 14 days,Medina,Yanbu,0
 Daily,Recoveries,2020-03-15,International flights suspension for 14 days,Makkah,Makkah,0
+Daily,Recoveries,2020-03-15,International flights suspension for 14 days,Jazan,Sabia,0
 Daily,Recoveries,2020-03-15,International flights suspension for 14 days,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Jazan,Jazan,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Total,Total,3
@@ -1780,6 +1851,7 @@ Daily,Recoveries,2020-03-17,,Total,Total,0
 Daily,Recoveries,2020-03-17,,Medina,Yanbu,0
 Daily,Recoveries,2020-03-17,,Makkah,Jeddah,0
 Daily,Recoveries,2020-03-17,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-17,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-17,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-17,,Tabuk,Alwajh,0
 Daily,Recoveries,2020-03-17,,Hail,Ash Shamly,0
@@ -1791,6 +1863,7 @@ Daily,Recoveries,2020-03-18,,Medina,Yanbu,0
 Daily,Recoveries,2020-03-18,,Eastern Region,Hufof,0
 Daily,Recoveries,2020-03-18,,Makkah,Makkah,0
 Daily,Recoveries,2020-03-18,,Makkah,Jeddah,0
+Daily,Recoveries,2020-03-18,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-18,,Jazan,Samtah,0
 Daily,Recoveries,2020-03-18,,Qassim,Unaizah,0
 Daily,Recoveries,2020-03-18,,Makkah,Khlais,0
@@ -1867,6 +1940,7 @@ Daily,Recoveries,2020-03-24,,Asir,Bishah,0
 Daily,Recoveries,2020-03-24,,Eastern Region,Qatif,0
 Daily,Recoveries,2020-03-24,,Eastern Region,Hafr Albaten,0
 Daily,Recoveries,2020-03-24,,Makkah,Taif,0
+Daily,Recoveries,2020-03-24,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-24,,Eastern Region,Dahran,0
 Daily,Recoveries,2020-03-24,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-24,,Qassim,Buraidah,0
@@ -1909,6 +1983,7 @@ Daily,Recoveries,2020-03-28,,Total,Total,2
 Daily,Recoveries,2020-03-28,,Qassim,Al Badai,0
 Daily,Recoveries,2020-03-28,,Makkah,Taif,0
 Daily,Recoveries,2020-03-28,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-28,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-28,,Medina,Medina,0
 Daily,Recoveries,2020-03-28,,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-03-28,,Hail,Ash Shamly,0
@@ -1939,6 +2014,7 @@ Daily,Recoveries,2020-03-30,Makkah lockdown,Tabuk,Tabuk,0
 Daily,Recoveries,2020-03-31,,Riyadh,Riyadh,7
 Daily,Recoveries,2020-03-31,,Asir,Khamis Mushait,0
 Daily,Recoveries,2020-03-31,,Makkah,Taif,0
+Daily,Recoveries,2020-03-31,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-31,,Medina,Medina,0
 Daily,Recoveries,2020-03-31,,Eastern Region,Al Mubarraz,0
 Daily,Recoveries,2020-03-31,,Qassim,Buraidah,0
@@ -1947,6 +2023,7 @@ Daily,Recoveries,2020-03-31,,Qassim,Al Henakiyah,0
 Daily,Recoveries,2020-03-31,,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-03-31,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-04-01,,Najran,Najran,1
+Daily,Recoveries,2020-04-01,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-01,,Jazan,Al Ardha,0
 Daily,Recoveries,2020-04-01,,Najran,Sharorah,0
 Daily,Recoveries,2020-04-01,,Qassim,Riyadh Al Khobra,0
@@ -1983,6 +2060,7 @@ Daily,Recoveries,2020-04-05,,Makkah,Al Qunfuthah,0
 Daily,Recoveries,2020-04-05,,Eastern Region,Saihat,0
 Daily,Recoveries,2020-04-05,,Total,Total,68
 Daily,Recoveries,2020-04-05,,Madina,Al Ula,0
+Daily,Recoveries,2020-04-05,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-05,,Eastern Region,Dammam,2
 Daily,Recoveries,2020-04-05,,Tabuk,Alwajh,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Najran,Najran,1
@@ -2031,11 +2109,26 @@ Daily,Recoveries,2020-04-10,,Qassim,Buraidah,0
 Daily,Recoveries,2020-04-10,,Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-04-10,,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-04-10,,Asie,Sabt Al Alayah,0
+Daily,Recoveries,2020-04-11,,Asir,Bishah,0
+Daily,Recoveries,2020-04-11,,Jazan,Jazan,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Hafr Albaten,0
+Daily,Recoveries,2020-04-11,,Riyadh,Al Kharj,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Khobar,4
+Daily,Recoveries,2020-04-11,,Jazan,Al Ardha,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Dahran,2
+Daily,Recoveries,2020-04-11,,Medina,Medina,0
+Daily,Recoveries,2020-04-11,,Najran,Sharorah,0
+Daily,Recoveries,2020-04-11,,Qassim,Buraidah,0
+Daily,Recoveries,2020-04-11,,Qassim,Al Henakiyah,0
+Daily,Recoveries,2020-04-11,,Makkah,Messan,0
+Daily,Recoveries,2020-04-11,,Tabuk,Tabuk,0
+Daily,Recoveries,2020-04-11,,Qassim,Unaizah,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Eastern Region,Hafr Albaten,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Asir,Abha,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Madina,Al Ula,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Qassim,Al Badai,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Riyadh,Al Kharj,0
+Daily,Mortalities,2020-03-02,First case of COVID-19,Jazan,Sabia,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Asir,Ahad Rafeedah,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Medina,Medina,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Eastern Region,Ras Tanura,0
@@ -2058,6 +2151,7 @@ Daily,Mortalities,2020-03-04,Umrah suspension,Total,Total,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Medina,Yanbu,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Makkah,Jeddah,0
+Daily,Mortalities,2020-03-04,Umrah suspension,Jazan,Sabia,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Eastern Region,Dammam,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-04,Umrah suspension,Jazan,Al Ardha,0
@@ -2077,6 +2171,7 @@ Daily,Mortalities,2020-03-05,,Al Baha,Al Baha,0
 Daily,Mortalities,2020-03-06,,Najran,Najran,0
 Daily,Mortalities,2020-03-06,,Total,Total,0
 Daily,Mortalities,2020-03-06,,Northern Borders,Arar,0
+Daily,Mortalities,2020-03-06,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-06,,Asir,Ahad Rafeedah,0
 Daily,Mortalities,2020-03-06,,Qassim,Al Henakiyah,0
 Daily,Mortalities,2020-03-06,,Jazan,Samtah,0
@@ -2102,6 +2197,7 @@ Daily,Mortalities,2020-03-09,flights suspended to number of countries,Jazan,Jaza
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Medina,Yanbu,0
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Eastern Region,Hufof,0
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Makkah,Makkah,0
+Daily,Mortalities,2020-03-09,flights suspended to number of countries,Jazan,Sabia,0
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Jazan,Al Ardha,0
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Eastern Region,Dahran,0
 Daily,Mortalities,2020-03-09,flights suspended to number of countries,Asir,Muhayil Aseer,0
@@ -2144,6 +2240,7 @@ Daily,Mortalities,2020-03-14,,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-03-14,,Makkah,Jeddah,0
 Daily,Mortalities,2020-03-14,,Qassim,Ar Ras,0
 Daily,Mortalities,2020-03-14,,Northern Borders,Arar,0
+Daily,Mortalities,2020-03-14,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-14,,Makkah,Khlais,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Najran,Najran,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Jazan,Jazan,0
@@ -2252,6 +2349,7 @@ Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Total,Total,
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Medina,Yanbu,0
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Makkah,Jeddah,0
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Northern Borders,Arar,0
+Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Jazan,Sabia,0
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Medina,Medina,0
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Riyadh,Diryah,0
 Daily,Mortalities,2020-03-23,Curfew started for 21 days (6am -7 pm),Qassim,Unaizah,0
@@ -2289,6 +2387,7 @@ Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am 
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Qassim,Riyadh Al Khobra,0
 Daily,Mortalities,2020-03-27,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-27,,Makkah,Taif,0
+Daily,Mortalities,2020-03-27,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-27,,Eastern Region,Dammam,0
 Daily,Mortalities,2020-03-27,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-27,,Eastern Region,Al Mubarraz,0
@@ -2376,6 +2475,7 @@ Daily,Mortalities,2020-04-05,,Makkah,Al Qunfuthah,0
 Daily,Mortalities,2020-04-05,,Asir,Bishah,0
 Daily,Mortalities,2020-04-05,,Total,Total,5
 Daily,Mortalities,2020-04-05,,Madina,Al Ula,0
+Daily,Mortalities,2020-04-05,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-05,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-04-05,,Najran,Sharorah,0
 Daily,Mortalities,2020-04-05,,Tabuk,Alwajh,0
@@ -2386,6 +2486,7 @@ Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Ta
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Asir,Abha,0
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Qassim,Al Badai,1
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Makkah,Taif,0
+Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Jazan,Sabia,0
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Eastern Region,Khobar,1
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Medina,Medina,0
 Daily,Mortalities,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Eastern Region,Nairyah,0
@@ -2397,6 +2498,7 @@ Daily,Mortalities,2020-04-07,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-04-07,,Qassim,Al Badai,0
 Daily,Mortalities,2020-04-07,,Makkah,Taif,0
 Daily,Mortalities,2020-04-07,,Northern Borders,Arar,0
+Daily,Mortalities,2020-04-07,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-07,,Medina,Medina,0
 Daily,Mortalities,2020-04-07,,Qassim,Al Henakiyah,0
 Daily,Mortalities,2020-04-07,,Riyadh,Diryah,0
@@ -2416,6 +2518,7 @@ Daily,Mortalities,2020-04-09,,Makkah,Al Qunfuthah,0
 Daily,Mortalities,2020-04-09,,Asir,Abha,0
 Daily,Mortalities,2020-04-09,,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-04-09,,Makkah,Jeddah,0
+Daily,Mortalities,2020-04-09,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-09,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-04-10,,Eastern Region,Qatif,0
 Daily,Mortalities,2020-04-10,,Eastern Region,Hufof,0
@@ -2424,6 +2527,19 @@ Daily,Mortalities,2020-04-10,,Eastern Region,Nairyah,0
 Daily,Mortalities,2020-04-10,,Hail,Ash Shamly,0
 Daily,Mortalities,2020-04-10,,Makkah,Messan,0
 Daily,Mortalities,2020-04-10,,Qassim,Unaizah,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Qatif,0
+Daily,Mortalities,2020-04-11,,Asir,Khamis Mushait,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Saihat,0
+Daily,Mortalities,2020-04-11,,Qassim,Ar Ras,0
+Daily,Mortalities,2020-04-11,,Jazan,Sabia,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Al Mubarraz,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Nairyah,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Ras Tanura,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Jubail,0
+Daily,Mortalities,2020-04-11,,Hail,Ash Shamly,0
+Daily,Mortalities,2020-04-11,,Tabuk,Duba,0
+Daily,Mortalities,2020-04-11,,Makkah,Messan,0
+Daily,Mortalities,2020-04-11,,Qassim,Unaizah,0
 Daily,Cases,2020-03-02,First case of COVID-19,Eastern Region,Alkhafji,0
 Daily,Cases,2020-03-02,First case of COVID-19,Jazan,Jazan,0
 Daily,Cases,2020-03-02,First case of COVID-19,Total,Total,1
@@ -2443,6 +2559,7 @@ Daily,Cases,2020-03-03,,Riyadh,Al Majma'ah,0
 Daily,Cases,2020-03-04,Umrah suspension,Makkah,Al Qunfuthah,0
 Daily,Cases,2020-03-04,Umrah suspension,Asir,Khamis Mushait,0
 Daily,Cases,2020-03-04,Umrah suspension,Madina,Al Ula,0
+Daily,Cases,2020-03-04,Umrah suspension,Jazan,Sabia,0
 Daily,Cases,2020-03-04,Umrah suspension,Eastern Region,Al Mubarraz,0
 Daily,Cases,2020-03-04,Umrah suspension,Eastern Region,Nairyah,0
 Daily,Cases,2020-03-04,Umrah suspension,Qassim,Buraidah,0
@@ -2490,6 +2607,7 @@ Daily,Cases,2020-03-08,,Tabuk,Duba,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Asir,Bishah,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Asir,Khamis Mushait,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Eastern Region,Saihat,0
+Daily,Cases,2020-03-09,flights suspended to number of countries,Jazan,Sabia,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Eastern Region,Nairyah,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Riyadh,Diryah,0
 Daily,Cases,2020-03-09,flights suspended to number of countries,Tabuk,Tabuk,0
@@ -2500,6 +2618,7 @@ Daily,Cases,2020-03-10,,Total,Total,5
 Daily,Cases,2020-03-10,,Eastern Region,Hafr Albaten,0
 Daily,Cases,2020-03-10,,Medina,Yanbu,0
 Daily,Cases,2020-03-10,,Makkah,Jeddah,0
+Daily,Cases,2020-03-10,,Jazan,Sabia,0
 Daily,Cases,2020-03-10,,Tabuk,Duba,0
 Daily,Cases,2020-03-10,,Al Baha,Al Baha,0
 Daily,Cases,2020-03-11,,Makkah,Al Qunfuthah,0
@@ -2536,6 +2655,7 @@ Daily,Cases,2020-03-14,,Eastern Region,Saihat,0
 Daily,Cases,2020-03-14,,Makkah,Makkah,0
 Daily,Cases,2020-03-14,,Riyadh,Al Kharj,0
 Daily,Cases,2020-03-14,,Qassim,Ar Ras,0
+Daily,Cases,2020-03-14,,Jazan,Sabia,0
 Daily,Cases,2020-03-14,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-03-14,,Eastern Region,Khobar,0
 Daily,Cases,2020-03-14,,Eastern Region,Al Mubarraz,0
@@ -2595,6 +2715,7 @@ Daily,Cases,2020-03-20,,Jazan,Jazan,0
 Daily,Cases,2020-03-20,,Qassim,Al Badai,0
 Daily,Cases,2020-03-20,,Makkah,Jeddah,11
 Daily,Cases,2020-03-20,,Qassim,Ar Ras,0
+Daily,Cases,2020-03-20,,Jazan,Sabia,0
 Daily,Cases,2020-03-20,,Medina,Medina,1
 Daily,Cases,2020-03-20,,Asie,Sabt Al Alayah,0
 Daily,Cases,2020-03-20,,Riyadh,Al Majma'ah,0
@@ -2632,6 +2753,7 @@ Daily,Cases,2020-03-24,,Eastern Region,Qatif,6
 Daily,Cases,2020-03-24,,Asir,Khamis Mushait,0
 Daily,Cases,2020-03-24,,Riyadh,Al Kharj,0
 Daily,Cases,2020-03-24,,Northern Borders,Arar,0
+Daily,Cases,2020-03-24,,Jazan,Sabia,0
 Daily,Cases,2020-03-24,,Eastern Region,Khobar,2
 Daily,Cases,2020-03-24,,Najran,Sharorah,0
 Daily,Cases,2020-03-24,,Eastern Region,Nairyah,0
@@ -2657,8 +2779,10 @@ Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Riyadh,Diryah,0
 Daily,Cases,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Asir,Muhayil Aseer,0
 Daily,Cases,2020-03-27,,Madina,Al Ula,0
+Daily,Cases,2020-03-27,,Jazan,Sabia,0
 Daily,Cases,2020-03-27,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-28,,Eastern Region,Qatif,12
+Daily,Cases,2020-03-28,,Jazan,Sabia,0
 Daily,Cases,2020-03-28,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-03-28,,Riyadh,Dawadmi,0
 Daily,Cases,2020-03-28,,Tabuk,Tabuk,3
@@ -2687,6 +2811,7 @@ Daily,Cases,2020-03-30,Makkah lockdown,Makkah,Messan,0
 Daily,Cases,2020-03-31,,Eastern Region,Saihat,0
 Daily,Cases,2020-03-31,,Total,Total,110
 Daily,Cases,2020-03-31,,Asir,Abha,1
+Daily,Cases,2020-03-31,,Jazan,Sabia,0
 Daily,Cases,2020-03-31,,Eastern Region,Nairyah,0
 Daily,Cases,2020-03-31,,Riyadh,Dawadmi,0
 Daily,Cases,2020-03-31,,Asir,Muhayil Aseer,0
@@ -2699,6 +2824,7 @@ Daily,Cases,2020-04-01,,Asir,Abha,0
 Daily,Cases,2020-04-01,,Qassim,Al Badai,0
 Daily,Cases,2020-04-01,,Makkah,Makkah,55
 Daily,Cases,2020-04-01,,Qassim,Ar Ras,0
+Daily,Cases,2020-04-01,,Jazan,Sabia,0
 Daily,Cases,2020-04-01,,Jazan,Al Ardha,0
 Daily,Cases,2020-04-01,,Eastern Region,Al Mubarraz,2
 Daily,Cases,2020-04-01,,Qassim,Buraidah,0
@@ -2731,6 +2857,7 @@ Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Ras Ta
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Tabuk,Duba,0
 Daily,Cases,2020-04-05,,Eastern Region,Hafr Albaten,0
 Daily,Cases,2020-04-05,,Eastern Region,Hufof,2
+Daily,Cases,2020-04-05,,Jazan,Sabia,0
 Daily,Cases,2020-04-05,,Eastern Region,Dammam,7
 Daily,Cases,2020-04-05,,Eastern Region,Dahran,6
 Daily,Cases,2020-04-05,,Jazan,Samtah,0
@@ -2739,6 +2866,7 @@ Daily,Cases,2020-04-05,,Riyadh,Al Majma'ah,0
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Najran,Najran,3
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Jazan,Jazan,7
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Total,Total,203
+Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Jazan,Sabia,0
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Eastern Region,Nairyah,0
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Eastern Region,Jubail,2
 Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Tabuk,Alwajh,0
@@ -2747,6 +2875,7 @@ Daily,Cases,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qa
 Daily,Cases,2020-04-07,,Najran,Najran,4
 Daily,Cases,2020-04-07,,Asir,Abha,0
 Daily,Cases,2020-04-07,,Qassim,Al Badai,1
+Daily,Cases,2020-04-07,,Jazan,Sabia,0
 Daily,Cases,2020-04-07,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-04-07,,Eastern Region,Dammam,10
 Daily,Cases,2020-04-07,,Eastern Region,Khobar,2
@@ -2783,6 +2912,12 @@ Daily,Cases,2020-04-10,,Jazan,Samtah,0
 Daily,Cases,2020-04-10,,Asir,Muhayil Aseer,0
 Daily,Cases,2020-04-10,,Hail,Ash Shamly,1
 Daily,Cases,2020-04-10,,Tabuk,Tabuk,0
+Daily,Cases,2020-04-11,,Eastern Region,Alkhafji,0
+Daily,Cases,2020-04-11,,Asir,Abha,0
+Daily,Cases,2020-04-11,,Qassim,Al Badai,0
+Daily,Cases,2020-04-11,,Riyadh,Al Kharj,0
+Daily,Cases,2020-04-11,,Northern Borders,Arar,0
+Daily,Cases,2020-04-11,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Najran,Najran,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Asir,Khamis Mushait,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Total,Total,0
@@ -2791,6 +2926,7 @@ Daily,Recoveries,2020-03-02,First case of COVID-19,Eastern Region,Hufof,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Makkah,Makkah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Makkah,Jeddah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-02,First case of COVID-19,Jazan,Sabia,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Makkah,Messan,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Qassim,Riyadh Al Khobra,0
@@ -2854,6 +2990,7 @@ Daily,Recoveries,2020-03-10,,Riyadh,Riyadh,0
 Daily,Recoveries,2020-03-10,,Asir,Bishah,0
 Daily,Recoveries,2020-03-10,,Makkah,Jeddah,0
 Daily,Recoveries,2020-03-10,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-10,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-10,,Jazan,Al Ardha,0
 Daily,Recoveries,2020-03-10,,Eastern Region,Dahran,0
 Daily,Recoveries,2020-03-10,,Medina,Medina,0
@@ -2884,6 +3021,7 @@ Daily,Recoveries,2020-03-12,,Asir,Ahad Rafeedah,0
 Daily,Recoveries,2020-03-12,,Qassim,Buraidah,0
 Daily,Recoveries,2020-03-13,,Makkah,Al Qunfuthah,0
 Daily,Recoveries,2020-03-13,,Makkah,Makkah,0
+Daily,Recoveries,2020-03-13,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-13,,Eastern Region,Dahran,0
 Daily,Recoveries,2020-03-13,,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-03-13,,Makkah,Messan,0
@@ -2956,6 +3094,7 @@ Daily,Recoveries,2020-03-19,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-03-20,,Najran,Najran,0
 Daily,Recoveries,2020-03-20,,Medina,Yanbu,0
 Daily,Recoveries,2020-03-20,,Makkah,Taif,0
+Daily,Recoveries,2020-03-20,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-20,,Najran,Sharorah,0
 Daily,Recoveries,2020-03-20,,Eastern Region,Al Mubarraz,0
 Daily,Recoveries,2020-03-20,,Qassim,Buraidah,0
@@ -3112,6 +3251,7 @@ Daily,Recoveries,2020-04-05,,Jazan,Samtah,0
 Daily,Recoveries,2020-04-05,,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Riyadh,Al Kharj,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Qassim,Ar Ras,0
+Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Jazan,Sabia,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Tabuk,Duba,0
 Daily,Recoveries,2020-04-06,"Riyadh, Dammam , Tabuk , Dahran, Hafuf, Jeddah, Taif, Qatif , Khobar24h curfew",Asie,Sabt Al Alayah,0
@@ -3133,6 +3273,7 @@ Daily,Recoveries,2020-04-08,,Asir,Muhayil Aseer,0
 Daily,Recoveries,2020-04-09,,Asir,Bishah,0
 Daily,Recoveries,2020-04-09,,Makkah,Makkah,0
 Daily,Recoveries,2020-04-09,,Makkah,Taif,0
+Daily,Recoveries,2020-04-09,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-09,,Makkah,Messan,0
 Daily,Recoveries,2020-04-09,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-04-10,,Eastern Region,Qatif,2
@@ -3141,6 +3282,7 @@ Daily,Recoveries,2020-04-10,,Eastern Region,Hufof,1
 Daily,Recoveries,2020-04-10,,Makkah,Makkah,1
 Daily,Recoveries,2020-04-10,,Riyadh,Al Kharj,0
 Daily,Recoveries,2020-04-10,,Makkah,Taif,0
+Daily,Recoveries,2020-04-10,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-10,,Eastern Region,Dammam,4
 Daily,Recoveries,2020-04-10,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-10,,Eastern Region,Jubail,0
@@ -3148,6 +3290,19 @@ Daily,Recoveries,2020-04-10,,Riyadh,Diryah,0
 Daily,Recoveries,2020-04-10,,Hail,Ash Shamly,0
 Daily,Recoveries,2020-04-10,,Tabuk,Tabuk,0
 Daily,Recoveries,2020-04-10,,Makkah,Khlais,0
+Daily,Recoveries,2020-04-11,,Total,Total,41
+Daily,Recoveries,2020-04-11,,Asir,Abha,0
+Daily,Recoveries,2020-04-11,,Medina,Yanbu,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Hufof,0
+Daily,Recoveries,2020-04-11,,Qassim,Al Badai,0
+Daily,Recoveries,2020-04-11,,Makkah,Taif,2
+Daily,Recoveries,2020-04-11,,Northern Borders,Arar,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Dammam,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Ras Tanura,0
+Daily,Recoveries,2020-04-11,,Riyadh,Dawadmi,0
+Daily,Recoveries,2020-04-11,,Tabuk,Alwajh,0
+Daily,Recoveries,2020-04-11,,Jazan,Samtah,0
+Daily,Recoveries,2020-04-11,,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Eastern Region,Alkhafji,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Riyadh,Riyadh,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Asir,Bishah,0
@@ -3164,6 +3319,7 @@ Daily,Mortalities,2020-03-03,,Eastern Region,Qatif,0
 Daily,Mortalities,2020-03-03,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-03,,Asir,Abha,0
 Daily,Mortalities,2020-03-03,,Eastern Region,Hufof,0
+Daily,Mortalities,2020-03-03,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-03,,Jazan,Al Ardha,0
 Daily,Mortalities,2020-03-03,,Eastern Region,Ras Tanura,0
 Daily,Mortalities,2020-03-03,,Qassim,Al Henakiyah,0
@@ -3186,6 +3342,7 @@ Daily,Mortalities,2020-03-05,,Asir,Abha,0
 Daily,Mortalities,2020-03-05,,Medina,Yanbu,0
 Daily,Mortalities,2020-03-05,,Eastern Region,Hufof,0
 Daily,Mortalities,2020-03-05,,Madina,Al Ula,0
+Daily,Mortalities,2020-03-05,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-05,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-05,,Qassim,Al Henakiyah,0
 Daily,Mortalities,2020-03-05,,Asie,Sabt Al Alayah,0
@@ -3202,12 +3359,14 @@ Daily,Mortalities,2020-03-07,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-07,,Qassim,Al Badai,0
 Daily,Mortalities,2020-03-07,,Makkah,Jeddah,0
 Daily,Mortalities,2020-03-07,,Qassim,Ar Ras,0
+Daily,Mortalities,2020-03-07,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-07,,Medina,Medina,0
 Daily,Mortalities,2020-03-07,,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-03-07,,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-03-08,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-08,,Medina,Yanbu,0
 Daily,Mortalities,2020-03-08,,Eastern Region,Hufof,0
+Daily,Mortalities,2020-03-08,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-08,,Jazan,Al Ardha,0
 Daily,Mortalities,2020-03-08,,Qassim,Al Henakiyah,0
 Daily,Mortalities,2020-03-08,,Riyadh,Diryah,0
@@ -3316,6 +3475,7 @@ Daily,Mortalities,2020-03-18,,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-03-18,,Hail,Ash Shamly,0
 Daily,Mortalities,2020-03-18,,Riyadh,Al Majma'ah,0
 Daily,Mortalities,2020-03-19,,Total,Total,0
+Daily,Mortalities,2020-03-19,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-19,,Asir,Ahad Rafeedah,0
 Daily,Mortalities,2020-03-19,,Qassim,Buraidah,0
 Daily,Mortalities,2020-03-19,,Riyadh,Dawadmi,0
@@ -3444,6 +3604,7 @@ Daily,Mortalities,2020-03-31,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-31,,Eastern Region,Hafr Albaten,0
 Daily,Mortalities,2020-03-31,,Madina,Al Ula,0
 Daily,Mortalities,2020-03-31,,Makkah,Jeddah,0
+Daily,Mortalities,2020-03-31,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-31,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-31,,Eastern Region,Jubail,0
 Daily,Mortalities,2020-03-31,,Asie,Sabt Al Alayah,0
@@ -3466,6 +3627,7 @@ Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Makkah,Al Qunfut
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Hafr Albaten,0
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Makkah,Taif,0
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Northern Borders,Arar,0
+Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Jazan,Sabia,0
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Dahran,0
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Riyadh,Diryah,0
 Daily,Mortalities,2020-04-02,"Makkah , Madinah 24 hours curfew",Asir,Muhayil Aseer,0
@@ -3558,6 +3720,19 @@ Daily,Mortalities,2020-04-10,,Tabuk,Alwajh,0
 Daily,Mortalities,2020-04-10,,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-04-10,,Tabuk,Duba,0
 Daily,Mortalities,2020-04-10,,Asie,Sabt Al Alayah,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Alkhafji,0
+Daily,Mortalities,2020-04-11,,Makkah,Al Qunfuthah,0
+Daily,Mortalities,2020-04-11,,Total,Total,7
+Daily,Mortalities,2020-04-11,,Eastern Region,Hafr Albaten,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Hufof,1
+Daily,Mortalities,2020-04-11,,Qassim,Al Badai,0
+Daily,Mortalities,2020-04-11,,Makkah,Jeddah,1
+Daily,Mortalities,2020-04-11,,Makkah,Taif,0
+Daily,Mortalities,2020-04-11,,Asir,Ahad Rafeedah,0
+Daily,Mortalities,2020-04-11,,Qassim,Al Henakiyah,0
+Daily,Mortalities,2020-04-11,,Tabuk,Alwajh,0
+Daily,Mortalities,2020-04-11,,Jazan,Samtah,0
+Daily,Mortalities,2020-04-11,,Makkah,Khlais,0
 Daily,Cases,2020-03-02,First case of COVID-19,Najran,Najran,0
 Daily,Cases,2020-03-02,First case of COVID-19,Asir,Bishah,0
 Daily,Cases,2020-03-02,First case of COVID-19,Northern Borders,Arar,0
@@ -3608,6 +3783,7 @@ Daily,Cases,2020-03-07,,Eastern Region,Saihat,0
 Daily,Cases,2020-03-07,,Jazan,Jazan,0
 Daily,Cases,2020-03-07,,Eastern Region,Hufof,0
 Daily,Cases,2020-03-07,,Madina,Al Ula,0
+Daily,Cases,2020-03-07,,Jazan,Sabia,0
 Daily,Cases,2020-03-07,,Eastern Region,Dammam,0
 Daily,Cases,2020-03-07,,Eastern Region,Khobar,0
 Daily,Cases,2020-03-07,,Eastern Region,Dahran,0
@@ -3651,6 +3827,7 @@ Daily,Cases,2020-03-10,,Asie,Sabt Al Alayah,0
 Daily,Cases,2020-03-10,,Makkah,Khlais,0
 Daily,Cases,2020-03-11,,Qassim,Al Badai,0
 Daily,Cases,2020-03-11,,Makkah,Jeddah,1
+Daily,Cases,2020-03-11,,Jazan,Sabia,0
 Daily,Cases,2020-03-11,,Eastern Region,Dammam,0
 Daily,Cases,2020-03-11,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-11,,Eastern Region,Al Mubarraz,0
@@ -3714,6 +3891,7 @@ Daily,Cases,2020-03-16,Gov / private suspension,Riyadh,Al Kharj,0
 Daily,Cases,2020-03-16,Gov / private suspension,Makkah,Jeddah,5
 Daily,Cases,2020-03-16,Gov / private suspension,Makkah,Taif,0
 Daily,Cases,2020-03-16,Gov / private suspension,Qassim,Ar Ras,0
+Daily,Cases,2020-03-16,Gov / private suspension,Jazan,Sabia,0
 Daily,Cases,2020-03-16,Gov / private suspension,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-03-16,Gov / private suspension,Jazan,Al Ardha,0
 Daily,Cases,2020-03-16,Gov / private suspension,Eastern Region,Al Mubarraz,0
@@ -3799,6 +3977,7 @@ Daily,Cases,2020-03-25,,Jazan,Jazan,0
 Daily,Cases,2020-03-25,,Asir,Abha,2
 Daily,Cases,2020-03-25,,Eastern Region,Hufof,0
 Daily,Cases,2020-03-25,,Makkah,Makkah,0
+Daily,Cases,2020-03-25,,Jazan,Sabia,0
 Daily,Cases,2020-03-25,,Medina,Medina,6
 Daily,Cases,2020-03-25,,Riyadh,Dawadmi,0
 Daily,Cases,2020-03-25,,Tabuk,Tabuk,0
@@ -3965,6 +4144,7 @@ Daily,Cases,2020-04-09,,Makkah,Al Qunfuthah,2
 Daily,Cases,2020-04-09,,Makkah,Makkah,90
 Daily,Cases,2020-04-09,,Makkah,Taif,4
 Daily,Cases,2020-04-09,,Qassim,Ar Ras,0
+Daily,Cases,2020-04-09,,Jazan,Sabia,0
 Daily,Cases,2020-04-09,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-04-09,,Eastern Region,Dammam,6
 Daily,Cases,2020-04-09,,Eastern Region,Nairyah,0
@@ -3973,6 +4153,7 @@ Daily,Cases,2020-04-09,,Jazan,Samtah,0
 Daily,Cases,2020-04-09,,Asir,Muhayil Aseer,0
 Daily,Cases,2020-04-09,,Makkah,Messan,0
 Daily,Cases,2020-04-10,,Qassim,Ar Ras,0
+Daily,Cases,2020-04-10,,Jazan,Sabia,0
 Daily,Cases,2020-04-10,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-04-10,,Eastern Region,Dammam,15
 Daily,Cases,2020-04-10,,Eastern Region,Al Mubarraz,0
@@ -3980,6 +4161,17 @@ Daily,Cases,2020-04-10,,Eastern Region,Nairyah,0
 Daily,Cases,2020-04-10,,Eastern Region,Ras Tanura,0
 Daily,Cases,2020-04-10,,Tabuk,Alwajh,0
 Daily,Cases,2020-04-10,,Makkah,Messan,1
+Daily,Cases,2020-04-11,,Najran,Najran,0
+Daily,Cases,2020-04-11,,Total,Total,429
+Daily,Cases,2020-04-11,,Eastern Region,Hafr Albaten,0
+Daily,Cases,2020-04-11,,Medina,Yanbu,7
+Daily,Cases,2020-04-11,,Eastern Region,Khobar,0
+Daily,Cases,2020-04-11,,Jazan,Al Ardha,0
+Daily,Cases,2020-04-11,,Riyadh,Dawadmi,0
+Daily,Cases,2020-04-11,,Makkah,Messan,0
+Daily,Cases,2020-04-11,,Qassim,Riyadh Al Khobra,0
+Daily,Cases,2020-04-11,,Makkah,Khlais,0
+Daily,Cases,2020-04-11,,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Asir,Bishah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Eastern Region,Qatif,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Eastern Region,Saihat,0
@@ -3997,6 +4189,7 @@ Daily,Recoveries,2020-03-03,,Al Baha,Al Baha,0
 Daily,Recoveries,2020-03-03,,Riyadh,Al Majma'ah,0
 Daily,Recoveries,2020-03-04,Umrah suspension,Asir,Bishah,0
 Daily,Recoveries,2020-03-04,Umrah suspension,Northern Borders,Arar,0
+Daily,Recoveries,2020-03-04,Umrah suspension,Jazan,Sabia,0
 Daily,Recoveries,2020-03-04,Umrah suspension,Eastern Region,Dammam,0
 Daily,Recoveries,2020-03-04,Umrah suspension,Jazan,Al Ardha,0
 Daily,Recoveries,2020-03-04,Umrah suspension,Medina,Medina,0
@@ -4009,6 +4202,7 @@ Daily,Recoveries,2020-03-05,,Eastern Region,Saihat,0
 Daily,Recoveries,2020-03-05,,Riyadh,Al Kharj,0
 Daily,Recoveries,2020-03-05,,Qassim,Ar Ras,0
 Daily,Recoveries,2020-03-05,,Northern Borders,Arar,0
+Daily,Recoveries,2020-03-05,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-05,,Eastern Region,Nairyah,0
 Daily,Recoveries,2020-03-05,,Riyadh,Dawadmi,0
 Daily,Recoveries,2020-03-05,,Tabuk,Alwajh,0
@@ -4126,6 +4320,7 @@ Daily,Recoveries,2020-03-16,Gov / private suspension,Najran,Najran,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Eastern Region,Hafr Albaten,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Qassim,Al Badai,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Qassim,Ar Ras,0
+Daily,Recoveries,2020-03-16,Gov / private suspension,Jazan,Sabia,0
 Daily,Recoveries,2020-03-16,Gov / private suspension,Eastern Region,Jubail,0
 Daily,Recoveries,2020-03-17,,Eastern Region,Alkhafji,0
 Daily,Recoveries,2020-03-17,,Asir,Bishah,0
@@ -4167,6 +4362,7 @@ Daily,Recoveries,2020-03-20,,Hail,Ash Shamly,0
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Riyadh,Riyadh,8
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Asir,Bishah,0
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Riyadh,Al Kharj,0
+Daily,Recoveries,2020-03-21,Domestic flights suspension,Jazan,Sabia,0
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Hail,Ash Shamly,0
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Qassim,Unaizah,0
 Daily,Recoveries,2020-03-21,Domestic flights suspension,Riyadh,Al Majma'ah,0
@@ -4276,6 +4472,7 @@ Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Ha
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Madina,Al Ula,0
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Riyadh,Al Kharj,0
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Qassim,Ar Ras,0
+Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Jazan,Sabia,0
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Qassim,Buraidah,0
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Hail,Ash Shamly,0
@@ -4283,6 +4480,7 @@ Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Asie,Sabt Al Alay
 Daily,Recoveries,2020-04-02,"Makkah , Madinah 24 hours curfew",Qassim,Riyadh Al Khobra,0
 Daily,Recoveries,2020-04-03,,Eastern Region,Hafr Albaten,0
 Daily,Recoveries,2020-04-03,,Qassim,Al Badai,0
+Daily,Recoveries,2020-04-03,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-03,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-03,,Eastern Region,Nairyah,1
 Daily,Recoveries,2020-04-03,,Riyadh,Dawadmi,0
@@ -4296,6 +4494,7 @@ Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Najran,Najran,1
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Asir,Khamis Mushait,0
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Saihat,0
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Makkah,Makkah,8
+Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Jazan,Sabia,0
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Medina,Medina,0
 Daily,Recoveries,2020-04-04,Jeddah areas lockdown - 24 h curfew,Najran,Sharorah,0
@@ -4372,6 +4571,15 @@ Daily,Recoveries,2020-04-10,,Medina,Medina,0
 Daily,Recoveries,2020-04-10,,Eastern Region,Nairyah,0
 Daily,Recoveries,2020-04-10,,Tabuk,Alwajh,0
 Daily,Recoveries,2020-04-10,,Makkah,Messan,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Alkhafji,0
+Daily,Recoveries,2020-04-11,,Najran,Najran,0
+Daily,Recoveries,2020-04-11,,Makkah,Al Qunfuthah,0
+Daily,Recoveries,2020-04-11,,Asir,Khamis Mushait,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Saihat,0
+Daily,Recoveries,2020-04-11,,Madina,Al Ula,0
+Daily,Recoveries,2020-04-11,,Qassim,Ar Ras,0
+Daily,Recoveries,2020-04-11,,Asie,Sabt Al Alayah,0
+Daily,Recoveries,2020-04-11,,Qassim,Riyadh Al Khobra,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Najran,Najran,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Makkah,Al Qunfuthah,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Eastern Region,Qatif,0
@@ -4455,11 +4663,13 @@ Daily,Mortalities,2020-03-10,,Madina,Al Ula,0
 Daily,Mortalities,2020-03-10,,Qassim,Al Badai,0
 Daily,Mortalities,2020-03-10,,Makkah,Jeddah,0
 Daily,Mortalities,2020-03-10,,Makkah,Taif,0
+Daily,Mortalities,2020-03-10,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-10,,Eastern Region,Nairyah,0
 Daily,Mortalities,2020-03-10,,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-03-10,,Jazan,Samtah,0
 Daily,Mortalities,2020-03-11,,Makkah,Al Qunfuthah,0
 Daily,Mortalities,2020-03-11,,Makkah,Makkah,0
+Daily,Mortalities,2020-03-11,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-11,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-11,,Najran,Sharorah,0
 Daily,Mortalities,2020-03-11,,Riyadh,Diryah,0
@@ -4554,6 +4764,7 @@ Daily,Mortalities,2020-03-19,,Makkah,Messan,0
 Daily,Mortalities,2020-03-19,,Al Baha,Al Baha,0
 Daily,Mortalities,2020-03-20,,Najran,Najran,0
 Daily,Mortalities,2020-03-20,,Riyadh,Riyadh,0
+Daily,Mortalities,2020-03-20,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-20,,Medina,Medina,0
 Daily,Mortalities,2020-03-20,,Qassim,Buraidah,0
 Daily,Mortalities,2020-03-20,,Qassim,Al Henakiyah,0
@@ -4654,6 +4865,7 @@ Daily,Mortalities,2020-03-29,Jeddah lockdown,Riyadh,Diryah,0
 Daily,Mortalities,2020-03-29,Jeddah lockdown,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-03-30,Makkah lockdown,Eastern Region,Qatif,0
 Daily,Mortalities,2020-03-30,Makkah lockdown,Riyadh,Al Kharj,0
+Daily,Mortalities,2020-03-30,Makkah lockdown,Jazan,Sabia,0
 Daily,Mortalities,2020-03-30,Makkah lockdown,Jazan,Al Ardha,0
 Daily,Mortalities,2020-03-30,Makkah lockdown,Eastern Region,Dahran,0
 Daily,Mortalities,2020-03-30,Makkah lockdown,Medina,Medina,0
@@ -4698,6 +4910,7 @@ Daily,Mortalities,2020-04-03,,Riyadh,Riyadh,0
 Daily,Mortalities,2020-04-03,,Eastern Region,Hafr Albaten,0
 Daily,Mortalities,2020-04-03,,Eastern Region,Hufof,0
 Daily,Mortalities,2020-04-03,,Madina,Al Ula,0
+Daily,Mortalities,2020-04-03,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-03,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-04-03,,Eastern Region,Ras Tanura,0
 Daily,Mortalities,2020-04-03,,Eastern Region,Jubail,0
@@ -4705,6 +4918,7 @@ Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Qatif,0
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Hufof,0
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Makkah,Makkah,1
+Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Jazan,Sabia,0
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Tabuk,Tabuk,0
 Daily,Mortalities,2020-04-04,Jeddah areas lockdown - 24 h curfew,Riyadh,Al Majma'ah,0
@@ -4734,6 +4948,7 @@ Daily,Mortalities,2020-04-08,,Makkah,Makkah,1
 Daily,Mortalities,2020-04-08,,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-04-08,,Makkah,Taif,0
 Daily,Mortalities,2020-04-08,,Qassim,Ar Ras,0
+Daily,Mortalities,2020-04-08,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-08,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-04-08,,Eastern Region,Dahran,0
 Daily,Mortalities,2020-04-08,,Medina,Medina,0
@@ -4754,6 +4969,7 @@ Daily,Mortalities,2020-04-10,,Qassim,Al Badai,0
 Daily,Mortalities,2020-04-10,,Riyadh,Al Kharj,0
 Daily,Mortalities,2020-04-10,,Makkah,Jeddah,3
 Daily,Mortalities,2020-04-10,,Makkah,Taif,0
+Daily,Mortalities,2020-04-10,,Jazan,Sabia,0
 Daily,Mortalities,2020-04-10,,Eastern Region,Dammam,0
 Daily,Mortalities,2020-04-10,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-04-10,,Medina,Medina,1
@@ -4763,6 +4979,13 @@ Daily,Mortalities,2020-04-10,,Eastern Region,Ras Tanura,0
 Daily,Mortalities,2020-04-10,,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-04-10,,Jazan,Samtah,0
 Daily,Mortalities,2020-04-10,,Al Baha,Al Baha,0
+Daily,Mortalities,2020-04-11,,Jazan,Jazan,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Khobar,0
+Daily,Mortalities,2020-04-11,,Jazan,Al Ardha,0
+Daily,Mortalities,2020-04-11,,Tabuk,Tabuk,0
+Daily,Mortalities,2020-04-11,,Asie,Sabt Al Alayah,0
+Daily,Mortalities,2020-04-11,,Qassim,Riyadh Al Khobra,0
+Daily,Mortalities,2020-04-11,,Riyadh,Al Majma'ah,0
 Daily,Cases,2020-03-02,First case of COVID-19,Eastern Region,Qatif,1
 Daily,Cases,2020-03-02,First case of COVID-19,Asir,Khamis Mushait,0
 Daily,Cases,2020-03-02,First case of COVID-19,Eastern Region,Saihat,0
@@ -4774,6 +4997,7 @@ Daily,Cases,2020-03-03,,Najran,Najran,0
 Daily,Cases,2020-03-03,,Eastern Region,Qatif,0
 Daily,Cases,2020-03-03,,Madina,Al Ula,0
 Daily,Cases,2020-03-03,,Makkah,Makkah,0
+Daily,Cases,2020-03-03,,Jazan,Sabia,0
 Daily,Cases,2020-03-03,,Jazan,Al Ardha,0
 Daily,Cases,2020-03-03,,Eastern Region,Dahran,0
 Daily,Cases,2020-03-03,,Eastern Region,Al Mubarraz,0
@@ -4840,6 +5064,7 @@ Daily,Cases,2020-03-08,,Makkah,Al Qunfuthah,0
 Daily,Cases,2020-03-08,,Total,Total,4
 Daily,Cases,2020-03-08,,Eastern Region,Hafr Albaten,0
 Daily,Cases,2020-03-08,,Makkah,Taif,0
+Daily,Cases,2020-03-08,,Jazan,Sabia,0
 Daily,Cases,2020-03-08,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-03-08,,Riyadh,Dawadmi,0
 Daily,Cases,2020-03-08,,Riyadh,Diryah,0
@@ -4912,6 +5137,7 @@ Daily,Cases,2020-03-15,International flights suspension for 14 days,Eastern Regi
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Jazan,Jazan,0
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Makkah,Makkah,0
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Makkah,Jeddah,2
+Daily,Cases,2020-03-15,International flights suspension for 14 days,Jazan,Sabia,0
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Asir,Muhayil Aseer,0
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Al Baha,Al Baha,0
 Daily,Cases,2020-03-15,International flights suspension for 14 days,Riyadh,Al Majma'ah,0
@@ -4975,6 +5201,7 @@ Daily,Cases,2020-03-21,Domestic flights suspension,Asir,Bishah,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Eastern Region,Saihat,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Makkah,Makkah,2
 Daily,Cases,2020-03-21,Domestic flights suspension,Makkah,Jeddah,5
+Daily,Cases,2020-03-21,Domestic flights suspension,Jazan,Sabia,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Najran,Sharorah,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Riyadh,Dawadmi,0
 Daily,Cases,2020-03-21,Domestic flights suspension,Hail,Ash Shamly,0
@@ -5091,6 +5318,7 @@ Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Total,Total,165
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Hafr Albaten,0
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Makkah,Makkah,48
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Northern Borders,Arar,0
+Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Jazan,Sabia,0
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Eastern Region,Nairyah,0
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Riyadh,Diryah,0
 Daily,Cases,2020-04-02,"Makkah , Madinah 24 hours curfew",Jazan,Samtah,0
@@ -5100,6 +5328,7 @@ Daily,Cases,2020-04-03,,Asir,Abha,0
 Daily,Cases,2020-04-03,,Medina,Yanbu,0
 Daily,Cases,2020-04-03,,Eastern Region,Hufof,4
 Daily,Cases,2020-04-03,,Madina,Al Ula,0
+Daily,Cases,2020-04-03,,Jazan,Sabia,0
 Daily,Cases,2020-04-03,,Asir,Ahad Rafeedah,0
 Daily,Cases,2020-04-03,,Medina,Medina,34
 Daily,Cases,2020-04-03,,Riyadh,Dawadmi,0
@@ -5108,6 +5337,7 @@ Daily,Cases,2020-04-03,,Jazan,Samtah,0
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Asir,Abha,1
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Madina,Al Ula,0
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Northern Borders,Arar,0
+Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Jazan,Sabia,0
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Eastern Region,Khobar,4
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Najran,Sharorah,0
 Daily,Cases,2020-04-04,Jeddah areas lockdown - 24 h curfew,Tabuk,Alwajh,0
@@ -5150,6 +5380,7 @@ Daily,Cases,2020-04-07,,Riyadh,Dawadmi,0
 Daily,Cases,2020-04-07,,Tabuk,Tabuk,3
 Daily,Cases,2020-04-08,,Asir,Khamis Mushait,1
 Daily,Cases,2020-04-08,,Qassim,Ar Ras,0
+Daily,Cases,2020-04-08,,Jazan,Sabia,0
 Daily,Cases,2020-04-08,,Asir,Ahad Rafeedah,1
 Daily,Cases,2020-04-08,,Eastern Region,Dahran,0
 Daily,Cases,2020-04-08,,Riyadh,Dawadmi,0
@@ -5176,6 +5407,19 @@ Daily,Cases,2020-04-10,,Eastern Region,Dahran,0
 Daily,Cases,2020-04-10,,Eastern Region,Jubail,0
 Daily,Cases,2020-04-10,,Tabuk,Duba,0
 Daily,Cases,2020-04-10,,Riyadh,Al Majma'ah,0
+Daily,Cases,2020-04-11,,Riyadh,Riyadh,198
+Daily,Cases,2020-04-11,,Eastern Region,Qatif,3
+Daily,Cases,2020-04-11,,Eastern Region,Saihat,0
+Daily,Cases,2020-04-11,,Makkah,Makkah,103
+Daily,Cases,2020-04-11,,Asir,Ahad Rafeedah,0
+Daily,Cases,2020-04-11,,Eastern Region,Al Mubarraz,0
+Daily,Cases,2020-04-11,,Qassim,Buraidah,0
+Daily,Cases,2020-04-11,,Tabuk,Alwajh,0
+Daily,Cases,2020-04-11,,Riyadh,Diryah,0
+Daily,Cases,2020-04-11,,Asir,Muhayil Aseer,0
+Daily,Cases,2020-04-11,,Hail,Ash Shamly,0
+Daily,Cases,2020-04-11,,Tabuk,Duba,0
+Daily,Cases,2020-04-11,,Asie,Sabt Al Alayah,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Medina,Yanbu,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Makkah,Taif,0
 Daily,Recoveries,2020-03-02,First case of COVID-19,Eastern Region,Dahran,0
@@ -5228,6 +5472,7 @@ Daily,Recoveries,2020-03-07,,Asir,Bishah,0
 Daily,Recoveries,2020-03-07,,Jazan,Jazan,0
 Daily,Recoveries,2020-03-07,,Eastern Region,Hufof,0
 Daily,Recoveries,2020-03-07,,Makkah,Makkah,0
+Daily,Recoveries,2020-03-07,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-07,,Eastern Region,Ras Tanura,0
 Daily,Recoveries,2020-03-07,,Riyadh,Dawadmi,0
 Daily,Recoveries,2020-03-07,,Qassim,Al Henakiyah,0
@@ -5253,6 +5498,7 @@ Daily,Recoveries,2020-03-08,,Makkah,Messan,0
 Daily,Recoveries,2020-03-08,,Makkah,Khlais,0
 Daily,Recoveries,2020-03-09,flights suspended to number of countries,Makkah,Al Qunfuthah,0
 Daily,Recoveries,2020-03-09,flights suspended to number of countries,Makkah,Jeddah,0
+Daily,Recoveries,2020-03-09,flights suspended to number of countries,Jazan,Sabia,0
 Daily,Recoveries,2020-03-09,flights suspended to number of countries,Eastern Region,Dammam,0
 Daily,Recoveries,2020-03-09,flights suspended to number of countries,Eastern Region,Nairyah,0
 Daily,Recoveries,2020-03-09,flights suspended to number of countries,Eastern Region,Ras Tanura,0
@@ -5388,6 +5634,7 @@ Daily,Recoveries,2020-03-22,,Eastern Region,Alkhafji,0
 Daily,Recoveries,2020-03-22,,Najran,Najran,0
 Daily,Recoveries,2020-03-22,,Medina,Yanbu,0
 Daily,Recoveries,2020-03-22,,Makkah,Taif,0
+Daily,Recoveries,2020-03-22,,Jazan,Sabia,0
 Daily,Recoveries,2020-03-22,,Eastern Region,Dahran,0
 Daily,Recoveries,2020-03-22,,Medina,Medina,0
 Daily,Recoveries,2020-03-22,,Eastern Region,Nairyah,0
@@ -5429,6 +5676,7 @@ Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am -
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Medina,Yanbu,0
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Madina,Al Ula,0
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Northern Borders,Arar,0
+Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Jazan,Sabia,0
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Eastern Region,Dammam,1
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Jazan,Al Ardha,0
 Daily,Recoveries,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Medina,Medina,0
@@ -5578,6 +5826,7 @@ Daily,Recoveries,2020-04-08,,Eastern Region,Saihat,0
 Daily,Recoveries,2020-04-08,,Medina,Yanbu,0
 Daily,Recoveries,2020-04-08,,Eastern Region,Hufof,2
 Daily,Recoveries,2020-04-08,,Northern Borders,Arar,0
+Daily,Recoveries,2020-04-08,,Jazan,Sabia,0
 Daily,Recoveries,2020-04-08,,Eastern Region,Khobar,0
 Daily,Recoveries,2020-04-08,,Jazan,Al Ardha,0
 Daily,Recoveries,2020-04-08,,Qassim,Riyadh Al Khobra,0
@@ -5604,6 +5853,15 @@ Daily,Recoveries,2020-04-10,,Eastern Region,Dahran,0
 Daily,Recoveries,2020-04-10,,Riyadh,Dawadmi,0
 Daily,Recoveries,2020-04-10,,Jazan,Samtah,0
 Daily,Recoveries,2020-04-10,,Tabuk,Duba,0
+Daily,Recoveries,2020-04-11,,Riyadh,Riyadh,19
+Daily,Recoveries,2020-04-11,,Eastern Region,Qatif,10
+Daily,Recoveries,2020-04-11,,Makkah,Makkah,1
+Daily,Recoveries,2020-04-11,,Makkah,Jeddah,3
+Daily,Recoveries,2020-04-11,,Asir,Ahad Rafeedah,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Al Mubarraz,0
+Daily,Recoveries,2020-04-11,,Eastern Region,Nairyah,0
+Daily,Recoveries,2020-04-11,,Riyadh,Diryah,0
+Daily,Recoveries,2020-04-11,,Al Baha,Al Baha,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Jazan,Jazan,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Qassim,Ar Ras,0
 Daily,Mortalities,2020-03-02,First case of COVID-19,Najran,Sharorah,0
@@ -5707,6 +5965,7 @@ Daily,Mortalities,2020-03-12,,Asir,Abha,0
 Daily,Mortalities,2020-03-12,,Medina,Yanbu,0
 Daily,Mortalities,2020-03-12,,Makkah,Jeddah,0
 Daily,Mortalities,2020-03-12,,Makkah,Taif,0
+Daily,Mortalities,2020-03-12,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-12,,Eastern Region,Dammam,0
 Daily,Mortalities,2020-03-12,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-12,,Asir,Muhayil Aseer,0
@@ -5735,6 +5994,7 @@ Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Makkah
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Asir,Bishah,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Eastern Region,Hufof,0
+Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Jazan,Sabia,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Medina,Medina,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Qassim,Buraidah,0
 Daily,Mortalities,2020-03-15,International flights suspension for 14 days,Riyadh,Dawadmi,0
@@ -5751,6 +6011,7 @@ Daily,Mortalities,2020-03-16,Gov / private suspension,Makkah,Makkah,0
 Daily,Mortalities,2020-03-16,Gov / private suspension,Tabuk,Tabuk,0
 Daily,Mortalities,2020-03-17,,Riyadh,Riyadh,0
 Daily,Mortalities,2020-03-17,,Medina,Yanbu,0
+Daily,Mortalities,2020-03-17,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-17,,Riyadh,Dawadmi,0
 Daily,Mortalities,2020-03-17,,Asir,Muhayil Aseer,0
 Daily,Mortalities,2020-03-17,,Makkah,Messan,0
@@ -5761,6 +6022,7 @@ Daily,Mortalities,2020-03-18,,Eastern Region,Qatif,0
 Daily,Mortalities,2020-03-18,,Jazan,Jazan,0
 Daily,Mortalities,2020-03-18,,Eastern Region,Hufof,0
 Daily,Mortalities,2020-03-18,,Riyadh,Al Kharj,0
+Daily,Mortalities,2020-03-18,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-18,,Eastern Region,Dammam,0
 Daily,Mortalities,2020-03-18,,Jazan,Al Ardha,0
 Daily,Mortalities,2020-03-18,,Najran,Sharorah,0
@@ -5796,6 +6058,7 @@ Daily,Mortalities,2020-03-22,,Asir,Bishah,0
 Daily,Mortalities,2020-03-22,,Asir,Khamis Mushait,0
 Daily,Mortalities,2020-03-22,,Eastern Region,Saihat,0
 Daily,Mortalities,2020-03-22,,Makkah,Jeddah,0
+Daily,Mortalities,2020-03-22,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-22,,Eastern Region,Dammam,0
 Daily,Mortalities,2020-03-22,,Eastern Region,Khobar,0
 Daily,Mortalities,2020-03-22,,Jazan,Al Ardha,0
@@ -5827,6 +6090,7 @@ Daily,Mortalities,2020-03-25,,Eastern Region,Hafr Albaten,0
 Daily,Mortalities,2020-03-25,,Medina,Yanbu,0
 Daily,Mortalities,2020-03-25,,Makkah,Makkah,1
 Daily,Mortalities,2020-03-25,,Makkah,Jeddah,0
+Daily,Mortalities,2020-03-25,,Jazan,Sabia,0
 Daily,Mortalities,2020-03-25,,Eastern Region,Al Mubarraz,0
 Daily,Mortalities,2020-03-25,,Al Baha,Al Baha,0
 Daily,Mortalities,2020-03-26,"Riyadh, Makkah and Madinah lockdown - curfew (6am - 3pm)",Asir,Khamis Mushait,0
@@ -5999,3 +6263,12 @@ Daily,Mortalities,2020-04-10,,Eastern Region,Jubail,0
 Daily,Mortalities,2020-04-10,,Tabuk,Tabuk,0
 Daily,Mortalities,2020-04-10,,Makkah,Khlais,0
 Daily,Mortalities,2020-04-10,,Riyadh,Al Majma'ah,0
+Daily,Mortalities,2020-04-11,,Asir,Abha,0
+Daily,Mortalities,2020-04-11,,Medina,Yanbu,0
+Daily,Mortalities,2020-04-11,,Madina,Al Ula,0
+Daily,Mortalities,2020-04-11,,Makkah,Makkah,3
+Daily,Mortalities,2020-04-11,,Riyadh,Al Kharj,0
+Daily,Mortalities,2020-04-11,,Northern Borders,Arar,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Dammam,0
+Daily,Mortalities,2020-04-11,,Eastern Region,Dahran,0
+Daily,Mortalities,2020-04-11,,Riyadh,Diryah,0
