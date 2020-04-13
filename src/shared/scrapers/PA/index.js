@@ -1,27 +1,16 @@
-// import datetime from '../../lib/datetime/index.js';
+import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import maintainers from '../../lib/maintainers.js';
-// import * as parse from '../../lib/parse.js';
 import log from '../../lib/log.js';
 import provinceToIso2 from './province-to-iso2.json';
+import * as transform from '../../lib/transform.js';
 
-/**
- * @param {string} inputString
- * @returns {string}
- */
-const titleCase = inputString =>
-  inputString
-    .split(' ')
-    .map(([firstLetter, ...otherLetters]) => firstLetter.toUpperCase() + otherLetters.join('').toLowerCase())
-    .join(' ')
-    .replace('Del', 'del');
-
-const patientStatus = {
-  FALLECIDO: 'deaths',
-  ACTIVO: 'active',
-  RECUPERADO: 'recovered',
-  UNKNOWN: 'unknown'
-};
+// const patientStatus = {
+//   FALLECIDO: 'deaths',
+//   ACTIVO: 'active',
+//   RECUPERADO: 'recovered',
+//   UNKNOWN: 'unknown'
+// };
 
 //   'UBICACIÓN_DEL_PACIENTE': 'FALLECIDO', - location of patient
 //          Can be FALLECIDO (deceased), AISLAMIENTO DOMICILIARIO (Home quarantine),
@@ -36,41 +25,14 @@ const patientLocation = {
 };
 
 function getCountsFromLocation(location) {
-  const o = {};
+  const counts = {};
   if (location === patientLocation.UNKNOWN) {
-    log.warn(`Patient location is "UNKNOWN", it will not be counted.`);
-    return o;
+    log.warn(`Patient location is "${patientLocation.UNKNOWN}", it will not be counted.`);
+    return counts;
   }
-  o.cases = 1;
-  o[location] = 1;
-  return o;
-}
-
-function updateData(data, row) {
-  let entryToUpdate = null;
-  for (const entry of data) {
-    if (!(entry.state === row.state && entry.county === row.county)) continue;
-    // Here we would continue to check for city and corregimiento, if we got to that point.
-    entryToUpdate = entry;
-    break;
-  }
-
-  const newEntry = getCountsFromLocation(row.patientLocation);
-  if (entryToUpdate === null) {
-    newEntry.state = row.state;
-    newEntry.county = row.county;
-    data.push(newEntry);
-  } else {
-    // None of these terms are clearly standardized anywhere.
-    // The code upstream rejects key == null or key == NaN so that will need to change
-    // to enforce a schema.
-    if (newEntry.cases) entryToUpdate.cases += newEntry.cases;
-    if (newEntry.deaths) entryToUpdate.deaths += newEntry.deaths;
-    if (newEntry.quarantine) entryToUpdate.quarantine += newEntry.quarantine;
-    if (newEntry.hospitalized) entryToUpdate.hospitalized += newEntry.hospitalized;
-    if (newEntry.icu) entryToUpdate.icu += newEntry.icu;
-    if (newEntry.recovered) entryToUpdate.recovered += newEntry.recovered;
-  }
+  counts.cases = 1;
+  counts[location] = 1;
+  return counts;
 }
 
 function addEmptyStates(data) {
@@ -96,7 +58,8 @@ function addEmptyStates(data) {
 function getProvinceIso2(provinceName) {
   // source: https://en.wikipedia.org/wiki/ISO_3166-2:PA
   // This is where we check for potentially different spellings.
-  provinceName = titleCase(provinceName);
+  provinceName = transform.toTitleCase(provinceName);
+  if (provinceName === 'Bocas Del Toro') return provinceToIso2['Bocas del Toro'];
   if (provinceName === 'Kuna Yala' || provinceName === 'Comarca Guna Yala') return provinceToIso2['Guna Yala'];
   if (provinceName === 'Darien') return provinceToIso2['Darién'];
   if (provinceName === 'Embera Wounaan') return provinceToIso2['Emberá'];
@@ -106,6 +69,86 @@ function getProvinceIso2(provinceName) {
     throw new Error(`Cannot obtain ISO2 code for "${provinceName}".`);
   }
   return iso2;
+}
+
+function areKeyValuesEqual(object1, object2, keyList) {
+  for (const key of keyList) {
+    if (object1[key] !== object2[key]) return false;
+  }
+  return true;
+}
+
+// I don't understand transform.sumData, and I don't like that it chooses which fields to add.
+function aggregateItems(dataArray, keysToKnockOut) {
+  // We have data with e.g. state, county, city, burrough.
+  // We want to "knock out" burrough to have sums at city-level granularity.
+  // Likewise, we want to knock out city AND burrough to get county-level.
+  // First, copy the objects with those keys knocked out.
+  const reducedData = [];
+  for (const entry of dataArray) {
+    const newEntry = { ...entry };
+    for (const key of Object.keys(entry)) {
+      if (keysToKnockOut.includes(key)) delete newEntry[key];
+    }
+    reducedData.push(newEntry);
+  }
+
+  // Now find all non-numeric keys that these items have in common.
+  const nonNumeric = [];
+  for (const entry of reducedData) {
+    for (const key of Object.keys(entry)) {
+      if (typeof entry[key] === 'number') continue;
+      if (nonNumeric.includes(key)) continue;
+      nonNumeric.push(key);
+    }
+  }
+
+  // Now add up all numeric values for objects that have all non-numeric keys equal
+  const aggregationLists = [];
+  for (const entry of reducedData) {
+    if (aggregationLists.length === 0) {
+      aggregationLists.push([entry]);
+      continue;
+    }
+    let entryFits = false;
+    for (const list of aggregationLists) {
+      const [itemTemplate] = list; // first item in the list is our reference.
+      if (areKeyValuesEqual(itemTemplate, entry, nonNumeric)) {
+        entryFits = true;
+        list.push(entry);
+        break; // next entry.
+      }
+    }
+    if (!entryFits) aggregationLists.push([entry]);
+  }
+  // Now add up everything in each list.
+  const result = [];
+  for (const list of aggregationLists) {
+    if (list.length === 0) continue;
+    const [templateItem] = list;
+    const aggregatedItem = { ...templateItem };
+    for (let i = 1; i < list.length; i++) {
+      const item = list[i];
+      for (const key of Object.keys(item)) {
+        const value = item[key];
+        if (typeof value !== 'number') continue;
+        if (aggregatedItem[key]) {
+          aggregatedItem[key] += item[key];
+        } else {
+          aggregatedItem[key] = item[key];
+        }
+      }
+    }
+    result.push(aggregatedItem);
+  }
+
+  return result;
+}
+
+function sum(dataArray, key) {
+  let result = 0;
+  for (const entry of dataArray) if (entry[key]) result += entry[key];
+  return result;
 }
 
 const scraper = {
@@ -239,39 +282,108 @@ const scraper = {
     // }
 
     const data = [];
-    log(`Panama has ${caseList.length} cumulative cases.`);
+    // log(`Panama has ${caseList.length} cumulative cases.`);
     this.url = this._caseListUrl; // required for source rating.
-    for (const c of caseList) {
-      const status = patientStatus[c.ESTADO_DEL_PACIENTE];
-      const location = patientLocation[c.UBICACIÓN_DEL_PACIENTE];
-      const row = {
-        state: getProvinceIso2(c.PROVINCIA),
-        // To do this by county, we need:
-        // 1. Population of counties.
-        //    e.g. https://github.com/EricLuceroGonzalez/Panama-Political-Division
-        //    or https://www.citypopulation.de/en/panama/admin/ (neither of which is specifically vetted).
-        // 2. Polygons for the map, e.g. https://stridata-si.opendata.arcgis.com/datasets/distritos-census-2010-feature-layer
-        // 3. List of counties (would come from either of the ones above) since we need to specifically add
-        //    those that don't have cases.
-        // county: titleCase(c.DSITRITO),
-        //
-        // city: null, // We need to make a list of corregimientos per city; all I can find is scattered Wiki articles.
-        // corregimiento: titleCase(c.CORREGIMIENTO),
+    for (const patient of caseList) {
+      const location = patientLocation[patient.UBICACIÓN_DEL_PACIENTE];
+      if (location === patientLocation.UNKNOWN) {
+        log.warn(`Patient location "${location}" is unparsable; this patient will not be counted.`);
+        continue;
+      }
+      const counts = getCountsFromLocation(location);
+      const state = getProvinceIso2(patient.PROVINCIA);
+      // To do this by county, we need:
+      // 1. Population of counties.
+      //    e.g. https://github.com/EricLuceroGonzalez/Panama-Political-Division
+      //    or https://www.citypopulation.de/en/panama/admin/ (neither of which is specifically vetted).
+      // 2. Polygons for the map, e.g. https://stridata-si.opendata.arcgis.com/datasets/distritos-census-2010-feature-layer
+      // 3. List of counties (would come from either of the ones above) since we need to specifically add
+      //    those that don't have cases.
+      const county = transform.toTitleCase(patient.DSITRITO);
+      // We will most likely not support corregimientos.
+      // Regardless of that, our current system will not interpret data correctly if I include it.
+      // It will think there are duplicate entries at county level.
+      const corregimiento = transform.toTitleCase(patient.CORREGIMIENTO);
 
-        age: c.EDAD,
-        sex: c.SEXO,
-        lastUpdateDate: c.FECHA_de_CONFIRMACION,
-        patientStatus: status || patientStatus.UNKNOWN,
-        patientLocation: location || patientLocation.UNKNOWN
-      };
-      updateData(data, row);
+      let found = false;
+      for (const item of data) {
+        if (item.state !== state) continue;
+        if (item.county !== county) continue;
+        if (item.corregimiento !== corregimiento) continue;
+        found = true;
+        for (const key of Object.keys(counts)) {
+          if (Object.keys(item).includes(key)) {
+            item[key] += counts[key];
+          } else {
+            item[key] = counts[key];
+          }
+        }
+      }
+      if (!found) {
+        data.push({
+          state,
+          county,
+          corregimiento,
+          ...counts
+        });
+      }
     }
 
-    addEmptyStates(data);
-    log(data);
-    log(`Data contains ${data.length} items.`);
+    // tests, can be moved, changed to asserts, etc.
+    let data2 = [...data];
+    log(
+      `With corregimientos: ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data.length} items.`
+    );
 
-    return data;
+    data2 = aggregateItems(data, ['corregimiento']); // our system won't accept this.
+    log(
+      `With counties      : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data2.length} items.`
+    );
+    // See https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_Panam%C3%A1
+    assert(data2.length <= 81); // Panama has 81 districts (counties)
+
+    data2 = aggregateItems(data2, ['county']); // our system won't accept this.
+    log(
+      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data2.length} items.`
+    );
+    data2 = aggregateItems(data, ['county', 'corregimiento']); // our system won't accept this.
+    log(
+      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data2.length} items.`
+    );
+    assert(data2.length <= 10 + 3); // Panama has 10 provinces and 3 provincial comarcas
+    data2 = aggregateItems(data2, ['state']); // our system won't accept this.
+    log(
+      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data2.length} items.`
+    );
+    data2 = aggregateItems(data2, ['state', 'county', 'corregimiento']); // our system won't accept this.
+    log(
+      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
+        data2,
+        'recovered'
+      )} recovered, with ${data2.length} items.`
+    );
+    // end tests.
+
+    const countyLevel = aggregateItems(data, ['corregimiento']);
+    const provinceLevel = aggregateItems(countyLevel, ['county']);
+    addEmptyStates(provinceLevel);
+    assert(provinceLevel.length === 13); // Panama has 10 provinces and 3 provincial comarcas
+    return [...provinceLevel, ...countyLevel];
   }
 };
 
