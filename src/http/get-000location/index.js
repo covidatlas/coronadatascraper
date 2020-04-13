@@ -138,6 +138,10 @@ async function route(req) {
   // Get parent location
   const parentLocation = getParentLocation(location, locationMap) || location;
 
+  // Add slugs
+  location.slug = slug;
+  parentLocation.slug = getSlug(parentLocation);
+
   // Display the information for the location
   return {
     headers: {
@@ -159,9 +163,7 @@ ${header()}
     <script>
       window.showLocation({
         location: ${JSON.stringify(location)},
-        slug: '${slug}',
-        parentSlug: '${getSlug(parentLocation)}',
-        center: ${JSON.stringify(parentLocation.coordinates)}
+        parentLocation: ${location === parentLocation ? null : JSON.stringify(parentLocation)}
       });
     </script>
     ${footer()}

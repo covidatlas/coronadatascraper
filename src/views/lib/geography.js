@@ -1,6 +1,6 @@
-module.exports.getSlug = function(location) {
+const getSlug = (module.exports.getSlug = function(location) {
   return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
-};
+});
 
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
@@ -64,6 +64,8 @@ module.exports.getChildLocations = function(location, locations, matchLevel) {
       }
     }
     if (matches) {
+      // Ensure slug is present
+      otherLocation.slug = getSlug(otherLocation);
       subLocations.push(otherLocation);
     }
   }
@@ -81,7 +83,7 @@ module.exports.getParentLocation = function(location, locations) {
   const index = parentLevelOrder.indexOf(parentLevel);
   const mustMatch = parentLevelOrder.slice(index, -1);
 
-  return Object.values(locations).find(otherLocation => {
+  const parentLocation = Object.values(locations).find(otherLocation => {
     if (otherLocation.level !== parentLevel) {
       return false;
     }
@@ -95,6 +97,13 @@ module.exports.getParentLocation = function(location, locations) {
     }
     return matches;
   });
+
+  // Ensure slug is present
+  if (parentLocation) {
+    parentLocation.slug = getSlug(parentLocation);
+  }
+
+  return parentLocation;
 };
 
 module.exports.getSiblingLocations = function(location, locations) {
@@ -108,7 +117,12 @@ module.exports.getSiblingLocations = function(location, locations) {
     return [location];
   }
 
-  return Object.values(locations).filter(otherLocation => {
-    return otherLocation.level === level && otherLocation[parentLevel] === location[parentLevel];
-  });
+  return Object.values(locations)
+    .filter(otherLocation => {
+      return otherLocation.level === level && otherLocation[parentLevel] === location[parentLevel];
+    })
+    .map(matchingLocation => {
+      matchingLocation.slug = getSlug(matchingLocation);
+      return matchingLocation;
+    });
 };

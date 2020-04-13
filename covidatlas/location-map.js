@@ -1,4 +1,4 @@
-/* globals mapboxgl, document */
+/* globals mapboxgl, document, window */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import { getSource } from './lib/templates.js';
@@ -14,6 +14,10 @@ let map;
 let currentType = 'cases';
 let currentDate;
 let currentData;
+
+function navigate(slug) {
+  window.location = `/${slug}`;
+}
 
 /**
  * @param {{ name: string; population: string?; }} location
@@ -194,6 +198,18 @@ function populateMap() {
 
   let hoveredFeatureId = null;
 
+  function getFeatureFromEvent(e) {
+    if (e.features.length > 0) {
+      const feature = e.features[0];
+
+      const { locationId } = feature.properties || {};
+      const location = findLocation(locationId) || {};
+      const locationData = currentData[locationId] || {};
+      return { locationId, location, feature, locationData };
+    }
+    return null;
+  }
+
   function handleMouseLeave() {
     map.getCanvas().style.cursor = '';
     popup.remove();
@@ -205,11 +221,7 @@ function populateMap() {
   function handleMouseMove(e) {
     if (e.features.length > 0) {
       e.preventDefault();
-      const feature = e.features[0];
-
-      const { locationId } = feature.properties || {};
-      const location = findLocation(locationId) || {};
-      const locationData = currentData[locationId] || {};
+      const { feature, location, locationData } = getFeatureFromEvent(e);
 
       if (hoveredFeatureId) {
         map.setFeatureState({ source: `CDS-features`, id: hoveredFeatureId }, { hover: false });
@@ -233,6 +245,15 @@ function populateMap() {
     }
   }
 
+  function handleClick(e) {
+    if (e.features.length > 0) {
+      e.preventDefault();
+      const { location } = getFeatureFromEvent(e);
+
+      navigate(location.slug);
+    }
+  }
+
   // When the user moves their mouse over the state-fill layer, we'll update the
   // feature state for the feature under the mouse.
   map.on('mousemove', 'CDS-features', handleMouseMove);
@@ -240,6 +261,8 @@ function populateMap() {
   // When the mouse leaves the state-fill layer, update the feature state of the
   // previously hovered feature.
   map.on('mouseleave', 'CDS-features', handleMouseLeave);
+
+  map.on('click', 'CDS-features', handleClick);
 
   initData();
   updateMap();
