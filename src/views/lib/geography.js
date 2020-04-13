@@ -1,3 +1,7 @@
+module.exports.getSlug = function(location) {
+  return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
+};
+
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
  */
@@ -46,7 +50,7 @@ module.exports.getChildLocations = function(location, locations, matchLevel) {
 
   const mustMatch = childLevelOrder.slice(0, index + 1);
 
-  for (const otherLocation of locations) {
+  for (const otherLocation of Object.values(locations)) {
     let matches = true;
     if (matchLevel) {
       if (otherLocation.level !== matchLevel) {
@@ -71,6 +75,27 @@ const parentLevelOrder = ['city', 'county', 'state', 'country', 'world'];
 const getParentLevel = (module.exports.getParentLevel = function(level) {
   return parentLevelOrder[Math.min(parentLevelOrder.indexOf(level) + 1, parentLevelOrder.length - 1)];
 });
+
+module.exports.getParentLocation = function(location, locations) {
+  const parentLevel = getParentLevel(location.level);
+  const index = parentLevelOrder.indexOf(parentLevel);
+  const mustMatch = parentLevelOrder.slice(index, -1);
+
+  return Object.values(locations).find(otherLocation => {
+    if (otherLocation.level !== parentLevel) {
+      return false;
+    }
+
+    let matches = true;
+    for (const field of mustMatch) {
+      if (otherLocation[field] !== location[field]) {
+        matches = false;
+        break;
+      }
+    }
+    return matches;
+  });
+};
 
 module.exports.getSiblingLocations = function(location, locations) {
   const { level } = location;
