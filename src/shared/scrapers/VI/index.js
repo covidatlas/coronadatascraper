@@ -1,13 +1,26 @@
+import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
+import getKey from '../../utils/get-key.js';
+import maintainers from '../../lib/maintainers.js';
+import getDataWithTestedNegativeApplied from '../../utils/get-data-with-tested-negative-applied.js';
+
+const labelFragmentsByKey = [
+  { discard: 'update' },
+  { discard: 'pending' },
+  { deaths: 'death' },
+  { testedNegative: 'negative' },
+  { cases: 'positive' },
+  { recovered: 'recovered' }
+];
 
 const scraper = {
   country: 'iso1:VI',
-  type: 'table',
+  type: 'paragraph',
   url: 'https://doh.vi.gov/covid19usvi',
   sources: [
     {
-      url: 'https://doh.vi.gov/covid19usvi',
+      url: 'https://doh.vi.gov',
       name: 'United States Virgin Islands Department of Health'
     }
   ],
@@ -15,57 +28,32 @@ const scraper = {
     {
       name: 'Jacob McGowan',
       github: 'jacobmcgowan'
-    }
+    },
+    maintainers.camjc
   ],
   async scraper() {
-    const results = {
-      cases: 0,
-      tested: 0,
-      deaths: 0
-    };
-
-    try {
-      const $ = await fetch.page(this.url);
-      const $widget = $('div.widget:has(div.title-box:has(h1:contains(COVID-19 Cases)))');
-      const $paragraphs = $widget.find('div.block-content > p');
-
-      $paragraphs.each((index, paragraph) => {
+    const $ = await fetch.page(this.url);
+    const $paragraphs = $('.block-content p');
+    const data = {};
+    $paragraphs
+      .filter((_index, paragraph) =>
+        $(paragraph)
+          .text()
+          .includes(':')
+      )
+      .each((_index, paragraph) => {
         const text = $(paragraph)
           .text()
           .toLowerCase();
-        const separatorIndex = text.indexOf(':');
-        const heading = text.substring(0, separatorIndex);
-        const value = text.substring(separatorIndex + 1);
-
-        switch (heading) {
-          case 'positive':
-            results.cases = parse.number(value);
-            results.tested += results.cases;
-            break;
-          case 'negative':
-            results.tested += parse.number(value);
-            break;
-          // There have been no deaths at the time of writing so different word
-          // choices are being used to better prepare to scrape these numbers.
-          case 'deaths':
-            results.deaths = parse.number(value);
-            break;
-          case 'dead':
-            results.deaths = parse.number(value);
-            break;
-          default:
-            break;
-        }
+        const [label, valueIncludingParenthetical] = text.split(':');
+        const key = getKey({ label, labelFragmentsByKey });
+        const [valueWithSlash] = valueIncludingParenthetical.split('(');
+        const [value] = valueWithSlash.split('/');
+        data[key] = parse.number(value);
       });
-    } catch (error) {
-      throw new Error('Error parsing COVID-19 cases.');
-    }
 
-    if (results.tested === 0 || results.cases === 0) {
-      throw new Error('Unexpected results; there was likely an error parsing COVID-19 cases');
-    }
-
-    return results;
+    assert(data.cases > 0, 'Cases is not reasonable');
+    return getDataWithTestedNegativeApplied(data);
   }
 };
 
