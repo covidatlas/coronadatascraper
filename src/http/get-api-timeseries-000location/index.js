@@ -3,9 +3,7 @@ const arc = require('@architect/functions');
 // eslint-disable-next-line
 const timeseries = require('./dist/timeseries.json');
 // eslint-disable-next-line
-const locationMap = require('./dist/location-map.json');
-// eslint-disable-next-line
-const skinnyLocations = require('./dist/skinnyLocations.json');
+const locations = require('./dist/location-map-skinny.json');
 
 // eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
@@ -17,7 +15,7 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 async function route(req) {
   const { location } = req;
   const level = req.queryStringParameters.level || location.level;
-  const childLocations = getChildLocations(location, Object.values(skinnyLocations), level);
+  const childLocations = getChildLocations(location, Object.values(locations), level);
   const subTimeseries = filterTimeseriesByLocations(timeseries, childLocations);
 
   return {
@@ -29,4 +27,4 @@ async function route(req) {
   };
 }
 
-exports.handler = arc.http.async(handle404(locationMap), route);
+exports.handler = arc.http.async(handle404(locations), route);

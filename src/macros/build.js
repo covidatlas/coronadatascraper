@@ -20,17 +20,17 @@ function getBarebonesLocation(location) {
   };
 }
 
-function buildBarebonesLocations(locations) {
-  const barebonesLocations = {};
+function buildBarebonesLocationMap(locations) {
+  const locationMap = {};
 
   for (const [id, location] of Object.entries(locations)) {
-    barebonesLocations[geography.getSlug(location)] = {
+    locationMap[geography.getSlug(location)] = {
       id,
       ...getBarebonesLocation(location)
     };
   }
 
-  return barebonesLocations;
+  return locationMap;
 }
 
 function getSkinnyLocation(location) {
@@ -45,17 +45,17 @@ function getSkinnyLocation(location) {
   };
 }
 
-function buildSkinnyLocations(locations) {
-  const skinnyLocations = {};
+function buildSkinnyLocationMap(locations) {
+  const locationMap = {};
 
   for (const [id, location] of Object.entries(locations)) {
-    skinnyLocations[geography.getSlug(location)] = {
+    locationMap[geography.getSlug(location)] = {
       id,
       ...getSkinnyLocation(location)
     };
   }
 
-  return skinnyLocations;
+  return locationMap;
 }
 
 async function buildIndex(locations) {
@@ -97,30 +97,38 @@ async function build(arc, cloudformation) {
 
   await Promise.all([
     fs.copyFile('dist/timeseries.json', 'src/http/get-api-timeseries-000location/dist/timeseries.json'),
+    fs.copyFile('dist/timeseries.json', 'src/http/get-000location/dist/timeseries.json'),
     fs.copyFile('dist/features.json', 'src/http/get-api-features-000location/dist/features.json'),
 
     fs.copyFile('dist/ratings.json', 'src/http/get-sources/dist/ratings.json'),
-    fs.copyFile('dist/report.json', 'src/http/get-crosscheck/dist/report.json'),
-    fs.copyFile('dist/timeseries.json', 'src/http/get-000location/dist/timeseries.json')
+    fs.copyFile('dist/report.json', 'src/http/get-crosscheck/dist/report.json')
   ]);
 
-  // Generate location map
   const locations = await fs.readJSON('dist/locations.json');
+
+  // Generate full location map
   const locationMap = buildLocationMap(locations);
+  await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap, { space: 0 });
+  await fs.writeJSON('src/http/get-api-locations-000location/dist/location-map.json', locationMap, { space: 0 });
 
-  // Store location map for so many places
-  await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap);
-  await fs.writeJSON('src/http/get-index/dist/location-map.json', locationMap);
-  await fs.writeJSON('src/http/get-api-locations-000location/dist/location-map.json', locationMap);
-  await fs.writeJSON('src/http/get-api-timeseries-000location/dist/location-map.json', locationMap);
-  await fs.writeJSON('src/http/get-api-features-000location/dist/location-map.json', locationMap);
+  // Generate barebones map
+  const locationMapBarebones = buildBarebonesLocationMap(locations);
+  await fs.writeJSON('src/http/get-api-search/dist/location-map-barebones.json', locationMapBarebones, { space: 0 });
 
-  // Generate barebones/skinny locations
-  const barebonesLocations = buildBarebonesLocations(locations);
-  await fs.writeJSON('src/http/get-api-search/dist/barebonesLocations.json', barebonesLocations);
-  const skinnyLocations = buildSkinnyLocations(locations);
-  await fs.writeJSON('src/http/get-api-timeseries-000location/dist/skinnyLocations.json', skinnyLocations);
-  await fs.writeJSON('src/http/get-api-features-000location/dist/skinnyLocations.json', skinnyLocations);
+  // Generate skinny map
+  const locationMapSkinny = buildSkinnyLocationMap(locations);
+  await fs.writeJSON('src/http/get-api-timeseries-000location/dist/location-map-skinny.json', locationMapSkinny, {
+    space: 0
+  });
+  await fs.writeJSON('src/http/get-api-features-000location/dist/location-map-skinny.json', locationMapSkinny, {
+    space: 0
+  });
+  await fs.writeJSON('src/http/get-api-timeseries-000location/dist/location-map-skinny.json', locationMapSkinny, {
+    space: 0
+  });
+  await fs.writeJSON('src/http/get-api-features-000location/dist/location-map-skinny.json', locationMapSkinny, {
+    space: 0
+  });
 
   // Generate search index
   await buildIndex(locations);

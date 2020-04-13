@@ -1,6 +1,6 @@
 const lunr = require('lunr');
 const index = lunr.Index.load(require('./dist/search.json'));
-const barebonesLocations = require('./dist/barebonesLocations.json');
+const locationMap = require('./dist/location-map-barebones.json');
 
 exports.handler = async function http(req) {
   let items = [];
@@ -28,7 +28,7 @@ exports.handler = async function http(req) {
     return {
       slug: result.ref,
       score: result.score,
-      ...barebonesLocations[result.ref]
+      ...locationMap[result.ref]
     };
   });
 
