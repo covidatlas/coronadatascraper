@@ -24,7 +24,7 @@ exports.handler = async function http(req) {
   }
 
   // Add in the juicy deets
-  items = items.map(result => {
+  items = items.slice(0, 25).map(result => {
     return {
       slug: result.ref,
       score: result.score,
