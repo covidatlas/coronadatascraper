@@ -1,4 +1,4 @@
-import { dateIsBefore, dateIsBeforeOrEqualTo } from './compare.js';
+import { dateIsEqualTo, dateIsBefore, dateIsBeforeOrEqualTo } from './compare.js';
 import { getYYYYMD, getYYYYMMDD, getDDMMYYYY, getMDYY, getMDYYYY, getMonthDYYYY } from './format.js';
 import { scrapeDate, scrapeDateIsBefore, scrapeDateIsAfter, scrapeDateIs } from './scrape-date.js';
 import { getDate, today } from './today.js';
@@ -7,6 +7,7 @@ import { parse } from './parse.js';
 import { looksLike } from './looks-like.js';
 
 export default {
+  dateIsEqualTo,
   dateIsBefore,
   dateIsBeforeOrEqualTo,
   getDate,
