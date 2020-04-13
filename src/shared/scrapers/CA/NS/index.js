@@ -66,7 +66,7 @@ const scraper = {
     '2020-04-12': async function() {
       this.url = 'https://novascotia.ca/coronavirus/data/COVID-19-data.csv';
       await fetch.csv(this.url);
-      return new Error('Someone needs to scrape this new data properly');
+      throw new Error('Someone needs to scrape this new data properly');
     }
   }
 };

@@ -110,7 +110,7 @@ const scraper = {
     '2020-04-12': async function() {
       this.url = 'https://www.mohfw.gov.in/dashboard/index.php';
       await fetch.page(this.url);
-      return new Error('Someone needs to scrape this new page properly');
+      throw new Error('Someone needs to scrape this new page properly');
     }
   }
 };
