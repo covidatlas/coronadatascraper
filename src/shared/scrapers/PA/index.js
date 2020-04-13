@@ -94,7 +94,7 @@ function updateData(data, o) {
 
 function addEmptyStates(data) {
   // Instead of this, we could actually design the system to do this:
-  // 1. Obtain a list of administrative levels entities at whatever granularity the disesase data exist
+  // 1. Obtain a list of administrative levels entities at whatever granularity the disease data exist
   // 2. Crate a template data result with all zeros
   // 3. Traverse through data and populate.
   for (const province in provinceToIso2) {
