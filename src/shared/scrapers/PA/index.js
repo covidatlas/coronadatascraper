@@ -180,7 +180,7 @@ const scraper = {
   // https://opendata.arcgis.com/datasets/91325f0051a84c72a704725a962a8bc7_0.csv
 
   type: 'csv',
-  aggregate: 'state',
+  aggregate: 'county',
   maintainers: [maintainers.shaperilio],
 
   async scraper() {
