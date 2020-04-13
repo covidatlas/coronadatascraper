@@ -76,17 +76,17 @@ export const getFeature = async id => {
     };
     return newFeature;
   }
-  if (locationData.geojson_path) {
-    const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
-    const feature = await readJSON(geojsonPath);
-    const cleanProps = {
-      name: feature.properties.name,
-      countrylevel_id: feature.properties.countrylevel_id
-    };
-    feature.properties = cleanProps;
-    return feature;
-  }
-  return null;
+
+  assert(locationData.geojson_path, `Missing geojson_path for ${id}`);
+
+  const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+  const feature = await readJSON(geojsonPath);
+  const cleanProps = {
+    name: feature.properties.name,
+    countrylevel_id: feature.properties.countrylevel_id
+  };
+  feature.properties = cleanProps;
+  return feature;
 };
 
 export const getPopulation = async id => {
@@ -126,8 +126,15 @@ export const combineFeatureGeometry = features => {
   const newGeometry = { type: 'MultiPolygon', coordinates: [] };
 
   for (const feature of features) {
-    assert(feature.geometry.type === 'MultiPolygon', `feature not a MultiPolygon ${feature.properties}`);
-    newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
+    const geomType = feature.geometry.type;
+    if (geomType === 'Polygon') {
+      // Wrap the coords in an array so that it looks like a MultiPolygon.
+      newGeometry.coordinates = newGeometry.coordinates.concat([feature.geometry.coordinates]);
+    } else if (geomType === 'MultiPolygon') {
+      newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
+    } else {
+      throw new Error(`Invalid geometry type ${feature.properties.countrylevel_id} ${geomType}`);
+    }
   }
   return newGeometry;
 };

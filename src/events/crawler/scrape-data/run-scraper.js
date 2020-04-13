@@ -120,7 +120,9 @@ const runScrapers = async args => {
   for (const location of sources) {
     if (location.scraper) {
       try {
+        log(`\n\n\nBegin scraper for ${geography.getName(location)}`);
         addData(locations, location, await runScraper(location));
+        log(`Finished scraper for ${geography.getName(location)}\n\n\n`);
       } catch (err) {
         log.error('  ❌ Error processing %s: ', geography.getName(location), err);
 
