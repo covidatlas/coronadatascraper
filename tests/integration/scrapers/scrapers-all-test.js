@@ -79,9 +79,14 @@ test('Scraper tests', async t => {
     for (const expectedPath of datedResults) {
       const date = getDateFromPath(expectedPath);
       process.env.SCRAPE_DATE = date;
+
       try {
         let result = await runScraper(scraperObj);
-        result = result.map(strip);
+        if (Array.isArray(result)) {
+          result = result.map(strip);
+        } else {
+          result = strip(result);
+        }
         const expected = await readJSON(expectedPath);
         t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
       } catch (err) {
