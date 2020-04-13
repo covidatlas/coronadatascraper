@@ -37,17 +37,22 @@ module.exports.getLocationGranularityName = function(location) {
 };
 
 const childLevelOrder = ['country', 'state', 'county', 'city'];
-module.exports.getChildLocations = function(location, locations) {
+module.exports.getChildLocations = function(location, locations, matchLevel) {
   const subLocations = [];
 
   // Find all its children
-  const { level } = location;
-  const index = childLevelOrder.indexOf(level);
+  const locationLevel = location.level;
+  const index = childLevelOrder.indexOf(locationLevel);
 
   const mustMatch = childLevelOrder.slice(0, index + 1);
 
   for (const otherLocation of locations) {
     let matches = true;
+    if (matchLevel) {
+      if (otherLocation.level !== matchLevel) {
+        continue;
+      }
+    }
     for (const field of mustMatch) {
       if (otherLocation[field] !== location[field]) {
         matches = false;

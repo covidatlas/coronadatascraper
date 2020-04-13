@@ -3,39 +3,76 @@ const imports = require('esm')(module);
 const lunr = imports('lunr');
 const fs = imports('../shared/lib/fs.js');
 
-function getShortName(location) {
+function getSlug(location) {
   return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
 }
 
-async function buildIndex(locations) {
+function buildLocationMap(locations) {
+  const locationMap = {};
+  for (const [index, location] of Object.entries(locations)) {
+    const shortName = getSlug(location);
+    location.id = index;
+    locationMap[shortName] = location;
+  }
+  return locationMap;
+}
+
+function getBarebonesLocation(location) {
+  return {
+    name: location.name
+  };
+}
+
+function getSkinnyLocation(location) {
+  return {
+    name: location.name,
+    level: location.level,
+    city: location.city,
+    county: location.county,
+    state: location.state,
+    country: location.country,
+    featureId: location.featureId,
+    id: location.id
+  };
+}
+
+function buildSkinnyLocations(locations) {
   const skinnyLocations = {};
 
+  for (const location of locations) {
+    skinnyLocations[getSlug(location)] = getSkinnyLocation(location);
+  }
+
+  return skinnyLocations;
+}
+
+function buildBarebonesLocations(locations) {
+  const barebonesLocations = {};
+
+  for (const location of locations) {
+    barebonesLocations[getSlug(location)] = getBarebonesLocation(location);
+  }
+
+  return barebonesLocations;
+}
+
+async function buildIndex(locations) {
   const index = lunr(function() {
     this.ref('slug');
     this.field('name');
 
     locations.forEach(function(location) {
-      const slug = getShortName(location);
-      const skinnyLocation = {
-        name: location.name
-        // city: location.city,
-        // county: location.county,
-        // state: location.state,
-        // country: location.country
-      };
-
-      skinnyLocations[slug] = skinnyLocation;
+      const slug = getSlug(location);
 
       this.add({
         slug,
-        ...skinnyLocation
+        ...getSkinnyLocation(location)
       });
     }, this);
   });
 
-  await fs.ensureDir('src/http/get-api-locations/dist/');
-  await fs.writeJSON('src/http/get-api-locations/dist/search.json', index);
-  await fs.writeJSON('src/http/get-api-locations/dist/skinnyLocations.json', skinnyLocations);
+  await fs.ensureDir('src/http/get-api-search/dist/');
+  await fs.writeJSON('src/http/get-api-search/dist/search.json', index);
 }
 
 async function build(arc, cloudformation) {
@@ -69,12 +106,7 @@ async function build(arc, cloudformation) {
 
   // Generate location map
   const locations = await fs.readJSON('dist/locations.json');
-  const locationMap = {};
-  for (const [index, location] of Object.entries(locations)) {
-    const shortName = getShortName(location);
-    location.id = index;
-    locationMap[shortName] = location;
-  }
+  const locationMap = buildLocationMap(locations);
 
   // Store location map for so many places
   await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap);
@@ -83,6 +115,14 @@ async function build(arc, cloudformation) {
   await fs.writeJSON('src/http/get-api-timeseries-000location/dist/location-map.json', locationMap);
   await fs.writeJSON('src/http/get-api-features-000location/dist/location-map.json', locationMap);
 
+  // Generate barebones/skinny locations
+  const barebonesLocations = buildBarebonesLocations(locations);
+  await fs.writeJSON('src/http/get-api-search/dist/barebonesLocations.json', barebonesLocations);
+  const skinnyLocations = buildSkinnyLocations(locations);
+  await fs.writeJSON('src/http/get-api-timeseries-000location/dist/skinnyLocations.json', skinnyLocations);
+  await fs.writeJSON('src/http/get-api-features-000location/dist/skinnyLocations.json', skinnyLocations);
+
+  // Generate search index
   await buildIndex(locations);
 
   return cloudformation;

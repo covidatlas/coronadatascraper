@@ -12,7 +12,8 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 
 async function route(req) {
   const { location } = req;
-  const childLocations = getChildLocations(location, locations);
+  const level = req.queryStringParameters.level || location.level;
+  const childLocations = getChildLocations(location, locations, level);
 
   return {
     headers: {

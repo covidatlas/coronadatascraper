@@ -4,15 +4,21 @@ const arc = require('@architect/functions');
 const timeseries = require('./dist/timeseries.json');
 // eslint-disable-next-line
 const locationMap = require('./dist/location-map.json');
+// eslint-disable-next-line
+const skinnyLocations = require('./dist/skinnyLocations.json');
 
 // eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
 // eslint-disable-next-line
 const { filterTimeseriesByLocations } = require('@architect/views/lib/timeseries');
+// eslint-disable-next-line
+const { getChildLocations } = require('@architect/views/lib/geography');
 
 async function route(req) {
   const { location } = req;
-  const subTimeseries = filterTimeseriesByLocations(timeseries, location);
+  const level = req.queryStringParameters.level || location.level;
+  const childLocations = getChildLocations(location, Object.values(skinnyLocations), level);
+  const subTimeseries = filterTimeseriesByLocations(timeseries, childLocations);
 
   return {
     headers: {
