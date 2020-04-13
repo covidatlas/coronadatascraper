@@ -18,7 +18,8 @@ needle.defaults({
   user_agent: CHROME_AGENT,
   open_timeout: OPEN_TIMEOUT, // Maximum time to wait to establish a connection
   response_timeout: RESPONSE_TIMEOUT, // Maximum time to wait for a response
-  read_timeout: READ_TIMEOUT // Maximum time to wait for data to transfer
+  read_timeout: READ_TIMEOUT, // Maximum time to wait for data to transfer
+  follow_max: 5 // follow up to five redirects
 });
 
 /**
