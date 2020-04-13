@@ -11,17 +11,22 @@ const writeData = async ({ locations, featureCollection, report, options, source
     suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
-  await fs.writeFile(path.join('dist', `data${suffix}.json`), JSON.stringify(locations, null, 2));
+  const d = options.writeTo;
+  await fs.ensureDir(d);
 
-  await fs.writeCSV(path.join('dist', `data${suffix}.csv`), stringify.csvForDay(locations));
+  const { join } = path;
 
-  await fs.writeJSON(path.join('dist', `features${suffix}.json`), featureCollection, { space: 0 });
+  await fs.writeFile(join(d, `data${suffix}.json`), JSON.stringify(locations, null, 2));
 
-  await fs.writeJSON('dist/report.json', report, { space: 2 });
+  await fs.writeCSV(join(d, `data${suffix}.csv`), stringify.csvForDay(locations));
 
-  await fs.writeJSON('dist/ratings.json', sourceRatings, { space: 2 });
+  await fs.writeJSON(join(d, `features${suffix}.json`), featureCollection, { space: 0 });
 
-  await fs.writeCSV('dist/reports/crawler-report.csv', reporter.getCSV());
+  await fs.writeJSON(join(d, 'report.json'), report, { space: 2 });
+
+  await fs.writeJSON(join(d, 'ratings.json'), sourceRatings, { space: 2 });
+
+  await fs.writeCSV(join(d, 'reports', 'crawler-report.csv'), reporter.getCSV());
 
   return { locations, featureCollection, report, options };
 };
