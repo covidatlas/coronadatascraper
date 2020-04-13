@@ -2,16 +2,13 @@ const imports = require('esm')(module);
 
 const lunr = imports('lunr');
 const fs = imports('../shared/lib/fs.js');
-
-function getSlug(location) {
-  return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
-}
+const geography = imports('../views/lib/geography.js');
 
 function buildLocationMap(locations) {
   const locationMap = {};
-  for (const [index, location] of Object.entries(locations)) {
-    const shortName = getSlug(location);
-    location.id = index;
+  for (const [id, location] of Object.entries(locations)) {
+    const shortName = geography.getSlug(location);
+    location.id = id;
     locationMap[shortName] = location;
   }
   return locationMap;
@@ -23,6 +20,19 @@ function getBarebonesLocation(location) {
   };
 }
 
+function buildBarebonesLocations(locations) {
+  const barebonesLocations = {};
+
+  for (const [id, location] of Object.entries(locations)) {
+    barebonesLocations[geography.getSlug(location)] = {
+      id,
+      ...getBarebonesLocation(location)
+    };
+  }
+
+  return barebonesLocations;
+}
+
 function getSkinnyLocation(location) {
   return {
     name: location.name,
@@ -31,29 +41,21 @@ function getSkinnyLocation(location) {
     county: location.county,
     state: location.state,
     country: location.country,
-    featureId: location.featureId,
-    id: location.id
+    featureId: location.featureId
   };
 }
 
 function buildSkinnyLocations(locations) {
   const skinnyLocations = {};
 
-  for (const location of locations) {
-    skinnyLocations[getSlug(location)] = getSkinnyLocation(location);
+  for (const [id, location] of Object.entries(locations)) {
+    skinnyLocations[geography.getSlug(location)] = {
+      id,
+      ...getSkinnyLocation(location)
+    };
   }
 
   return skinnyLocations;
-}
-
-function buildBarebonesLocations(locations) {
-  const barebonesLocations = {};
-
-  for (const location of locations) {
-    barebonesLocations[getSlug(location)] = getBarebonesLocation(location);
-  }
-
-  return barebonesLocations;
 }
 
 async function buildIndex(locations) {
@@ -62,7 +64,7 @@ async function buildIndex(locations) {
     this.field('name');
 
     locations.forEach(function(location) {
-      const slug = getSlug(location);
+      const slug = geography.getSlug(location);
 
       this.add({
         slug,
