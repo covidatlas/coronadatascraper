@@ -64,54 +64,47 @@ const scraper = {
   url: 'https://www.mohfw.gov.in/',
   type: 'table',
   aggregate: 'state',
-  scraper: {
-    '0': async function() {
-      const $ = await fetch.page(this.url);
-      const $table = $('#state-data');
-      assert.equal($table.length, 1, 'The table can not be found');
+  async scraper() {
+    const $ = await fetch.page(this.url);
+    const $table = $('#state-data');
+    assert.equal($table.length, 1, 'The table can not be found');
 
-      const $headings = $table.find('thead tr th');
-      const dataKeysByColumnIndex = [];
-      $headings.each((index, heading) => {
-        const $heading = $(heading);
-        dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
+    const $headings = $table.find('thead tr th');
+    const dataKeysByColumnIndex = [];
+    $headings.each((index, heading) => {
+      const $heading = $(heading);
+      dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
+    });
+
+    const states = [];
+    const $trs = $table.find('tbody > tr');
+    $trs
+      .filter(
+        // Remove summary rows
+        (_rowIndex, tr) =>
+          !$(tr)
+            .find('td')
+            .first()
+            .attr('colspan')
+      )
+      .each((_rowIndex, tr) => {
+        const $tds = $(tr).find('td');
+        const data = {};
+
+        $tds.each((columnIndex, td) => {
+          const $td = $(td);
+
+          const key = dataKeysByColumnIndex[columnIndex];
+          data[key] = getValue(key, $td.text());
+        });
+        states.push(data);
       });
 
-      const states = [];
-      const $trs = $table.find('tbody > tr');
-      $trs
-        .filter(
-          // Remove summary rows
-          (_rowIndex, tr) =>
-            !$(tr)
-              .find('td')
-              .first()
-              .attr('colspan')
-        )
-        .each((_rowIndex, tr) => {
-          const $tds = $(tr).find('td');
-          const data = {};
+    const summedData = transform.sumData(states);
+    states.push(summedData);
+    assert(summedData.cases > 0, 'Cases is not reasonable');
 
-          $tds.each((columnIndex, td) => {
-            const $td = $(td);
-
-            const key = dataKeysByColumnIndex[columnIndex];
-            data[key] = getValue(key, $td.text());
-          });
-          states.push(data);
-        });
-
-      const summedData = transform.sumData(states);
-      states.push(summedData);
-      assert(summedData.cases > 0, 'Cases is not reasonable');
-
-      return states;
-    },
-    '2020-04-12': async function() {
-      this.url = 'https://www.mohfw.gov.in/dashboard/index.php';
-      await fetch.page(this.url);
-      throw new Error('Someone needs to scrape this new page properly');
-    }
+    return states;
   }
 };
 
