@@ -7,7 +7,7 @@ module.exports = function body(selectedPage = 'home', className = '') {
   return /* html */ `
 <div class="ca-Sidebar spectrum-Site-sideBar ${className}">
   <a class="spectrum-Site-sideBarHeader" href="/">
-    <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo--small" alt="${constants.name} logo">
+    <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo--S" alt="${constants.name} logo">
   </a>
 
   <div class="u-scrollable spectrum-Site-nav">

@@ -36,29 +36,37 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
     <hr>
 
     <div class="row">
-    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+      <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
         <h1 class="spectrum-Heading spectrum-Heading--M">Global timeseries</h1>
         <p class="spectrum-Body spectrum-Body--M">Worldwide COVID-19 data in a time-series format since the start of the pandemic.</p>
         <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button>
-        <sp-dropdown emphasized class="ca-DownloadDropdown" label="Download">
-          <sp-menu>
-            <sp-menu-item download target="_blank" href="${baseURL}timeseries.csv">CSV</sp-menu-item>
-            <sp-menu-item download target="_blank" href="${baseURL}timeseries.json">JSON</sp-menu-item>
-            <sp-menu-item download target="_blank" href="${baseURL}timeseries-byLocation.json">JSON (by location)</sp-menu-item>
-          </sp-menu>
-        </sp-dropdown>
+
+        <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
+          <sp-button variant="primary" slot="trigger">Download</sp-button>
+          <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
+            <sp-menu>
+              <sp-menu-item download target="_blank" href="${baseURL}timeseries.csv">CSV</sp-menu-item>
+              <sp-menu-item download target="_blank" href="${baseURL}timeseries.json">JSON</sp-menu-item>
+              <sp-menu-item download target="_blank" href="${baseURL}timeseries-byLocation.json">JSON (by location)</sp-menu-item>
+            </sp-menu>
+          </sp-popover>
+        </overlay-trigger>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
         <h1 class="spectrum-Heading spectrum-Heading--M">Global daily</h1>
         <p class="spectrum-Body spectrum-Body--M">The latest worldwide COVID-19 data.</p>
         <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button>
-        <sp-dropdown emphasized class="ca-DownloadDropdown" label="Download">
+        </sp-dropdown>
+        <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
+          <sp-button variant="primary" slot="trigger">Download</sp-button>
+          <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
           <sp-menu>
             <sp-menu-item download target="_blank" href="${baseURL}data.csv">CSV</sp-menu-item>
             <sp-menu-item download target="_blank" href="${baseURL}data.json">JSON</sp-menu-item>
           </sp-menu>
-        </sp-dropdown>
+          </sp-popover>
+        </overlay-trigger>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-6 col-md-4">

@@ -156,18 +156,14 @@ exports.handler = async function http() {
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>
-        <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${
-        constants.name
-      } logo">
+        <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo ca-Logo--XS" alt="${constants.name} logo">
       </div>
       <br/>
       <div class="spectrum--dark ca-SiteHeader spectrum-Site-header">
         <sp-action-button quiet class="js-toggleMenu" tabindex="0" data-js-focus-visible="">
           <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
         </sp-action-button>
-        <img src="${arc.static('logo-banner-dark.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${
-        constants.name
-      } logo">
+        <img src="${arc.static('logo-banner-dark.svg')}" class="ca-Logo ca-Logo--XS" alt="${constants.name} logo">
       </div>
     </div>
   </div>

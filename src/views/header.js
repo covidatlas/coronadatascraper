@@ -9,7 +9,9 @@ module.exports = function body(selectedPage = 'home', className = '') {
   <sp-action-button quiet class="js-toggleMenu">
     <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
   </sp-action-button>
-  <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${constants.name} logo">
+  <a href="/" class="ca-HeaderLogo"><img src="${arc.static(
+    'logo-banner-light.svg'
+  )}" class="ca-Logo ca-Logo--XS" alt="${constants.name} logo"></a>
   <sp-tab-list selected="${selectedPage}" id="tabNav">
     <sp-tab label="Home" value="home"></sp-tab>
     <!--<sp-tab label="Map" value="map"></sp-tab>-->

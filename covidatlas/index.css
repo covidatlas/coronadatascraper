@@ -29,11 +29,15 @@ p.spectrum-Body {
   margin: var(--spectrum-alias-grid-margin-medium) auto;
 }
 
-.ca-Logo--small {
+.ca-HeaderLogo {
+  margin: 0 auto;
+}
+
+.ca-Logo--S {
   max-width: 100%;
 }
 
-.ca-Logo--extrasmall {
+.ca-Logo--XS {
   width: 158px;
 }
 
@@ -359,6 +363,15 @@ hr {
   > .ca-Footer {
     flex-shrink: 0;
   }
+}
+
+.ca-DownloadTrigger {
+  display: inline-block;
+}
+
+.ca-DownloadPopover {
+  min-width: auto;
+  padding: 0;
 }
 
 @media only screen and (min-width: 48em){
