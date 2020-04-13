@@ -139,7 +139,7 @@ const scraper = {
       note: 'Distritos were mapped into counties in this data set; data exists at corregimiento level.'
     }
   ],
-  // URLs were obtained by snopping. See
+  // URLs were obtained by snooping. See
   // https://docs.google.com/document/d/1__rE8LbiB0pK4qqG3vIbjbgnT8SrTx86A_KI7Xakgjk/edit#
 
   // List of "corregimientos", which we will consider counties.
