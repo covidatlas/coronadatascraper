@@ -5,18 +5,16 @@ import maintainers from '../../lib/maintainers.js';
 import log from '../../lib/log.js';
 import provinceToIso2 from './province-to-iso2.json';
 
-function titleCase(string) {
-  let result = '';
-  for (let i = 0; i < string.length; i++) {
-    if (i === 0 || string.charAt(i - 1) === ' ') {
-      result += string.charAt(i).toUpperCase();
-    } else {
-      result += string.charAt(i).toLowerCase();
-    }
-  }
-  result = result.replace('Del', 'del'); // ugh.
-  return result;
-}
+/**
+ * @param {string} inputString
+ * @returns {string}
+ */
+const titleCase = inputString =>
+  inputString
+    .split(' ')
+    .map(([firstLetter, ...otherLetters]) => firstLetter.toUpperCase() + otherLetters.join('').toLowerCase())
+    .join(' ')
+    .replace('Del', 'del');
 
 const patientStatus = {
   FALLECIDO: 'deaths',
