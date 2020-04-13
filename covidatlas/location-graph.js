@@ -32,7 +32,7 @@ const fields = [
 function generateGraphData({ timeseries, location }) {
   const graphData = [];
   for (const date in timeseries) {
-    if (!timeseries[date][location.id].cases) {
+    if (!timeseries[date][location.id] || !timeseries[date][location.id].cases) {
       continue;
     }
     const obj = {

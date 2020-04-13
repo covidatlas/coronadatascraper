@@ -136,7 +136,7 @@ async function route(req) {
   const caseInfo = timeseries[lastDate][location.id];
 
   // Get parent location
-  const parentLocation = getParentLocation(location, locationMap);
+  const parentLocation = getParentLocation(location, locationMap) || location;
 
   // Display the information for the location
   return {
