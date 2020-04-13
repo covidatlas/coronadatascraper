@@ -1,14 +1,26 @@
+import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
+import getKey from '../../utils/get-key.js';
+import maintainers from '../../lib/maintainers.js';
+import pivotTheTable from '../../utils/pivot-the-table.js';
+
+const labelFragmentsByKey = [
+  { deaths: 'muertes​' },
+  { tested: 'realizadas' },
+  { cases: 'confirmados' },
+  { discard: 'en proceso' },
+  { discard: 'negativos' }
+];
 
 const scraper = {
   country: 'iso1:PR',
   type: 'table',
   timeseries: false,
-  url: 'http://salud.gov.pr/Pages/coronavirus.aspx',
+  url: 'http://www.salud.gov.pr/Pages/coronavirus.aspx',
   sources: [
     {
-      url: 'http://salud.gov.pr/',
+      url: 'http://www.salud.gov.pr/',
       name: 'Gobierno de Puerto Rico Departamento de Salud'
     }
   ],
@@ -16,21 +28,23 @@ const scraper = {
     {
       name: 'Jacob McGowan',
       github: 'jacobmcgowan'
-    }
+    },
+    maintainers.camjc
   ],
   async scraper() {
     const $ = await fetch.page(this.url);
     const $table = $('th:contains("CONFIRMADOS")').closest('table');
-    if ($table.length === 0) {
-      throw new Error('Table not found');
-    }
-    const $dataRow = $table.find('tbody > tr:nth-child(2)');
+    const $trs = $table.find('tbody > tr');
+    const dataPairs = pivotTheTable($trs, $);
 
-    return {
-      tested: parse.number($dataRow.find('td:first-child h2').text()),
-      cases: parse.number($dataRow.find('td:nth-child(2) h2').text()),
-      deaths: parse.number($dataRow.find('td:nth-child(5) h2').text())
-    };
+    const data = {};
+    dataPairs.forEach(([label, value]) => {
+      const key = getKey({ label, labelFragmentsByKey });
+      data[key] = parse.number(value);
+    });
+
+    assert(data.cases > 0, 'Cases is not reasonable');
+    return data;
   }
 };
 
