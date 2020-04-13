@@ -1,8 +1,6 @@
 const arc = require('@architect/functions');
 
 // eslint-disable-next-line
-const locations = require('./dist/locations.json');
-// eslint-disable-next-line
 const locationMap = require('./dist/location-map.json');
 
 // eslint-disable-next-line
@@ -13,7 +11,7 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 async function route(req) {
   const { location } = req;
   const level = req.queryStringParameters.level || location.level;
-  const childLocations = getChildLocations(location, locations, level);
+  const childLocations = getChildLocations(location, locationMap, level);
 
   return {
     headers: {

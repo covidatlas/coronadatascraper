@@ -6,6 +6,7 @@ module.exports.handle404 = function(locationMap) {
     const foundLocation = locationMap[locationString];
     if (foundLocation) {
       req.location = foundLocation;
+      req.slug = locationString;
       return req;
     }
 

@@ -11,23 +11,17 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { getName } = require('@architect/views/lib/geography');
+const { getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
 const { getClassNames } = require('@architect/views/lib/dom');
 // eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
-// eslint-disable-next-line
-const { getSiblingLocations } = require('@architect/views/lib/geography');
-// eslint-disable-next-line
-const { filterTimeseriesByLocations } = require('@architect/views/lib/timeseries');
-// eslint-disable-next-line
-const { filterFeatureCollectionByLocations } = require('@architect/views/lib/features');
 
 const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
-const featureCollection = require('./dist/features.json');
+// const featureCollection = require('./dist/features.json');
 
 function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
@@ -138,26 +132,12 @@ function locationDetail(location, lastDate, caseInfo) {
 
 async function route(req) {
   // Get latest information from timeseries
-  const { location } = req;
+  const { location, slug } = req;
   const lastDate = Object.keys(timeseries).pop();
   const caseInfo = timeseries[lastDate][location.id];
 
-  // Create a subset feature collection to display on the map
-  const siblingLocations = getSiblingLocations(location, locationMap);
-  const subFeatureCollection = filterFeatureCollectionByLocations(featureCollection, siblingLocations);
-  const siblingTimeseries = filterTimeseriesByLocations(timeseries, siblingLocations);
-
-  const graphData = [];
-  for (const date in timeseries) {
-    if (timeseries[date][location.id].cases === 0) {
-      continue;
-    }
-    const obj = {
-      ...timeseries[date][location.id],
-      date
-    };
-    graphData.push(obj);
-  }
+  // Get parent location
+  const parentLocation = getParentLocation(location, locationMap);
 
   // Display the information for the location
   return {
@@ -172,21 +152,17 @@ ${header()}
 <div class="spectrum-Site-content">
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
-    ${locationDetail(location, lastDate, caseInfo, siblingLocations, subFeatureCollection)}
+    ${locationDetail(location, lastDate, caseInfo)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="${arc.static('location-graph.js')}"></script>
-    <script src="${arc.static('location-map.js')}"></script>
+    <script src="${arc.static('location.js')}"></script>
     <script>
-      window.showGraph({
-        data: ${JSON.stringify(graphData)}
-      });
-
-      window.showMap({
-        locations: ${JSON.stringify(siblingLocations)},
-        features: ${JSON.stringify(subFeatureCollection)},
-        timeseries: ${JSON.stringify(siblingTimeseries)}
+      window.showLocation({
+        location: ${JSON.stringify(location)},
+        slug: '${slug}',
+        parentSlug: '${getSlug(parentLocation)}',
+        center: ${JSON.stringify(parentLocation.coordinates)}
       });
     </script>
     ${footer()}

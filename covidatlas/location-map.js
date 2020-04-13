@@ -1,4 +1,4 @@
-/* globals mapboxgl, document, window */
+/* globals mapboxgl, document */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import { getSource } from './lib/templates.js';
@@ -272,4 +272,4 @@ function showMap({ features, locations, timeseries, center = [-121.403732, 40.49
   }
 }
 
-window.showMap = showMap;
+export default showMap;

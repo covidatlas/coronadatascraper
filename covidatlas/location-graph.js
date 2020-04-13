@@ -1,4 +1,4 @@
-/* globals d3, document, window */
+/* globals d3, document */
 
 const fields = [
   {
@@ -29,7 +29,25 @@ const fields = [
   ]
 */
 
-function showGraph({ data }) {
+function generateGraphData({ timeseries, location }) {
+  const graphData = [];
+  for (const date in timeseries) {
+    if (timeseries[date][location.id].cases === 0) {
+      continue;
+    }
+    const obj = {
+      ...timeseries[date][location.id],
+      date
+    };
+    graphData.push(obj);
+  }
+
+  return graphData;
+}
+
+function showGraph({ timeseries, location }) {
+  const data = generateGraphData({ timeseries, location });
+
   const el = document.querySelector('#graph');
   // set the dimensions and margins of the graph
   const margin = { top: 20, right: 20, bottom: 30, left: 50 };
@@ -106,4 +124,4 @@ function showGraph({ data }) {
   svg.append('g').call(d3.axisLeft(y));
 }
 
-window.showGraph = showGraph;
+export default showGraph;
