@@ -6,7 +6,7 @@ import maintainers from '../../lib/maintainers.js';
 import getDataWithTestedNegativeApplied from '../../utils/get-data-with-tested-negative-applied.js';
 
 const labelFragmentsByKey = [
-  { discard: 'pui update' },
+  { discard: 'update' },
   { discard: 'pending' },
   { deaths: 'death' },
   { testedNegative: 'negative' },
