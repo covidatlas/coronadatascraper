@@ -86,26 +86,65 @@ export const jsonAndCookies = async (url, date, options = {}) => {
  */
 export const csv = async (url, date, options = {}) => {
   return new Promise(async (resolve, reject) => {
-    const resp = await get(url, 'csv', date, options);
+    // Get the source URL, and retry here only if it's an arcGIS response that the CSV isn't ready.
+    let arcGISTries = 0;
+    let resp = null;
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      if (arcGISTries >= 5) {
+        log(`  ❌ Failed to obtain CSV for "${url}" after ${arcGISTries} ArcGIS progress responses.`);
+        resolve(null);
+        return;
+      }
 
-    if (!resp.body) {
-      resolve(null);
-    } else {
-      csvParse(
-        resp.body,
-        {
-          delimiter: options.delimiter,
-          columns: true
-        },
-        (err, output) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(output);
-          }
-        }
+      resp = await get(url, 'csv', date, options);
+
+      if (!resp.body) {
+        resolve(null);
+        return; // give up; get already retries.
+      }
+
+      // ArcGIS CSV generators may respond with a JSON structure. Check for that.
+      let arcGISresponse;
+      try {
+        arcGISresponse = JSON.parse(resp.body);
+      } catch (err) {
+        break; // response is not JSON, assume it's CSV.
+      }
+
+      log(`  ⚠️  Expected a CSV, got JSON for "${url}`);
+      if (arcGISresponse.status !== 'Processing') {
+        log(`  ❌ Unknown JSON response for "${url}": ${arcGISresponse}`);
+        resolve(null);
+        return; // give up we don't know what this is.
+      }
+
+      const tryAgainMsec = 2000;
+      log(
+        `  ⚠️  ArcGIS is processing...${arcGISresponse.processingTime}; waiting ${tryAgainMsec /
+          1000} seconds (retry ${arcGISTries}).`
       );
+      await new Promise(r => setTimeout(r, tryAgainMsec));
+      // Force to go back to the server and get it again.
+      options.alwaysRun = true;
+      arcGISTries++;
     }
+    csvParse(
+      resp.body,
+      {
+        delimiter: options.delimiter,
+        // Consider enabling ltrim, e.g. Panama's data came in with an invisible white space in the first key.
+        // ltrim: true,
+        columns: true
+      },
+      (err, output) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(output);
+        }
+      }
+    );
   });
 };
 
