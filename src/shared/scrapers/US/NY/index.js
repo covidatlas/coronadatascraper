@@ -84,13 +84,16 @@ const scraper = {
   async scraper() {
     this.url = 'https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD';
     this.type = 'csv';
-    const data = await fetch.csv(this.url, false);
+    const data = await fetch.csv(this.url, false, { alwaysRun: true });
 
     const dateField = 'Test Date';
 
     // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
+    const fallback = new Date(
+      process.env.USE_ISO_DATETIME ? datetime.today.at('America/New_York') : datetime.getDate()
+    );
     let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
+    scrapeDate.setDate(scrapeDate.getDate() - 1);
     let scrapeDateString = datetime.getYYYYMD(scrapeDate);
     const firstDateInTimeseries = new Date(`${data[data.length - 1][dateField]} 12:00:00`);
     const lastDateInTimeseries = new Date(`${data[0][dateField]} 12:00:00`);
