@@ -12,13 +12,12 @@ const searchButton = document.querySelector('#searchButton');
 // Returned by calls to Overlay.open
 let closeOverlay;
 
-function search(query, callback) {
+async function search(query, callback) {
   const searchQuery = query || searchField.value.toLowerCase();
-  fetch.json(`/api/search?q=${encodeURIComponent(searchQuery)}`, searchResults => {
-    if (typeof callback === 'function') {
-      callback(searchResults);
-    }
-  });
+  const results = await fetch.json(`/api/search?q=${encodeURIComponent(searchQuery)}`);
+  if (typeof callback === 'function') {
+    callback(results);
+  }
 }
 
 function showResults(results) {
