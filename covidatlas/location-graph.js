@@ -32,7 +32,7 @@ const fields = [
 function generateGraphData({ timeseries, location }) {
   const graphData = [];
   for (const date in timeseries) {
-    if (timeseries[date][location.id].cases === 0) {
+    if (!timeseries[date][location.id].cases) {
       continue;
     }
     const obj = {
@@ -67,7 +67,8 @@ function showGraph({ timeseries, location }) {
 
   function getField(field) {
     return function(d) {
-      return y(d[field]);
+      // show 0 if there is no data
+      return y(d[field] || 0);
     };
   }
 
