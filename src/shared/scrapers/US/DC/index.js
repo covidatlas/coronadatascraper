@@ -12,7 +12,7 @@ const scraper = {
   state: 'DC',
   country: 'iso1:US',
   county: 'District of Columbia',
-  maintainer: [maintainers.aed3],
+  maintainers: [maintainers.aed3],
   timeseries: true,
   sources: [
     {

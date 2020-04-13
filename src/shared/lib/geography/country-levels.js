@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 import assert from 'assert';
 import path from 'path';
 import { readJSON } from '../fs.js';
@@ -63,14 +65,28 @@ export const getFeature = async id => {
   const locationData = await getLocationData(id);
   if (Array.isArray(locationData)) {
     const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
-    return geography.combineFeatures(features);
+    const newGeometry = combineFeatureGeometry(features);
+    const newFeature = {
+      type: 'Feature',
+      properties: {
+        name: await getName(id),
+        countrylevel_id: id
+      },
+      geometry: newGeometry
+    };
+    return newFeature;
   }
-  if (locationData.geojson_path) {
-    const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
-    const feature = await readJSON(geojsonPath);
-    return feature;
-  }
-  return null;
+
+  assert(locationData.geojson_path, `Missing geojson_path for ${id}`);
+
+  const geojsonPath = path.join(countryLevelsDir, 'geojson', locationData.geojson_path);
+  const feature = await readJSON(geojsonPath);
+  const cleanProps = {
+    name: feature.properties.name,
+    countrylevel_id: feature.properties.countrylevel_id
+  };
+  feature.properties = cleanProps;
+  return feature;
 };
 
 export const getPopulation = async id => {
@@ -104,4 +120,21 @@ export const transformLocationIds = async location => {
       location[loc] = await getName(locId);
     }
   }
+};
+
+export const combineFeatureGeometry = features => {
+  const newGeometry = { type: 'MultiPolygon', coordinates: [] };
+
+  for (const feature of features) {
+    const geomType = feature.geometry.type;
+    if (geomType === 'Polygon') {
+      // Wrap the coords in an array so that it looks like a MultiPolygon.
+      newGeometry.coordinates = newGeometry.coordinates.concat([feature.geometry.coordinates]);
+    } else if (geomType === 'MultiPolygon') {
+      newGeometry.coordinates = newGeometry.coordinates.concat(feature.geometry.coordinates);
+    } else {
+      throw new Error(`Invalid geometry type ${feature.properties.countrylevel_id} ${geomType}`);
+    }
+  }
+  return newGeometry;
 };
