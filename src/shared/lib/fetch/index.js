@@ -112,6 +112,13 @@ export const csv = async (url, date, options = {}) => {
         break; // response is not JSON, assume it's CSV.
       }
 
+      // We retry, but only if we're not trying to get a file from a previous day.
+      if (date && datetime.dateIsBefore(date, datetime.old.getDate())) {
+        log(`  ❌ Cached file for "${url}" is not a CSV, and we can't go back in time to ${date}.`);
+        resolve(null);
+        return;
+      }
+
       log(`  ⚠️  Expected a CSV, got JSON for "${url}`);
       if (arcGISresponse.status !== 'Processing') {
         log(`  ❌ Unknown JSON response for "${url}": ${arcGISresponse}`);
