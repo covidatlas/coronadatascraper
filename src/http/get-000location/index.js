@@ -21,7 +21,6 @@ const { handle404 } = require('@architect/views/lib/middleware');
 
 const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
-// const featureCollection = require('./dist/features.json');
 
 function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
