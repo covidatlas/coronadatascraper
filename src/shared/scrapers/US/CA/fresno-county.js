@@ -12,7 +12,7 @@ const scraper = {
   url: 'https://www.co.fresno.ca.us/departments/public-health/covid-19',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url);
     return {
       cases: parse.number(
         $('li:contains("Total cases")')

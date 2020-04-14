@@ -17,7 +17,7 @@ const scraper = {
     }
   ],
   async scraper() {
-    const casesRaw = await fetch.json(this.url);
+    const casesRaw = await fetch.json(this, this.url);
     const casesData = casesRaw.features.map(({ attributes }) => attributes);
 
     const data = [];

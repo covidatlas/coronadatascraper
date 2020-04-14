@@ -12,7 +12,7 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   url: 'https://www.sccgov.org/sites/phd/DiseaseInformation/novel-coronavirus/Pages/home.aspx',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url);
     const scriptData = $('script:contains("Total_Confirmed_Cases")')[0].children[0].data;
     const regExp = /\[.*\]/;
     const data = JSON.parse(regExp.exec(scriptData))[0];

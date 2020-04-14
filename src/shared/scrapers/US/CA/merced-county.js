@@ -14,7 +14,7 @@ const scraper = {
   url: 'https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url);
       const $table = $('h3:contains("Merced County COVID-19 Statistics")')
         .parent()
         .next('table');
@@ -45,7 +45,7 @@ const scraper = {
     '2020-03-16': async function() {
       this.type = 'table';
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url);
       cheerioTableparser($);
 
       const $table = $('td:contains("Cases")').closest('table');

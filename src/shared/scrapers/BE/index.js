@@ -27,10 +27,10 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = await fetch.csv('https://epistat.sciensano.be/Data/COVID19BE_CASES_AGESEX.csv', false);
-    const deathsData = await fetch.csv('https://epistat.sciensano.be/Data/COVID19BE_MORT.csv', false);
-    const hospitalizedData = await fetch.csv('https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv', false);
-    const testsData = await fetch.csv('https://epistat.sciensano.be/Data/COVID19BE_tests.csv', false);
+    const casesData = await fetch.csv(this, 'https://epistat.sciensano.be/Data/COVID19BE_CASES_AGESEX.csv', false);
+    const deathsData = await fetch.csv(this, 'https://epistat.sciensano.be/Data/COVID19BE_MORT.csv', false);
+    const hospitalizedData = await fetch.csv(this, 'https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv', false);
+    const testsData = await fetch.csv(this, 'https://epistat.sciensano.be/Data/COVID19BE_tests.csv', false);
 
     const dataByRegion = {};
     const dataByProvince = {};

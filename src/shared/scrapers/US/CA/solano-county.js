@@ -13,13 +13,13 @@ const scraper = {
   url: 'http://www.solanocounty.com/depts/ph/coronavirus.asp',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url);
       const $el = $('*:contains("Number of Positive Cases")').first();
       const matches = $el.text().match(/Number of Positive Cases in Solano County: (\d+)/);
       return { cases: parse.number(matches[1]) };
     },
     '2020-03-23': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url);
 
       const lines = $('font:contains("Confirmed COVID-19")')
         .html()

@@ -12,7 +12,7 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   url: 'http://wp.sbcounty.gov/dph/coronavirus/',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url);
     const cases = parse.number(
       $('h3:contains("COVID-19 CASES")')
         .parent()

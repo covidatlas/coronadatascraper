@@ -83,7 +83,7 @@ const scraper = {
   async scraper() {
     const rawData = {};
     for (const { name, url } of this._endpoints) {
-      rawData[name] = await fetch.csv(url, false);
+      rawData[name] = await fetch.csv(this, url, false);
     }
 
     // `rawData` looks like this:

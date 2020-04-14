@@ -33,7 +33,7 @@ export const sharedSchema = {
 };
 
 async function defaultScraperDEU() {
-  const data = await fetch.csv(this.url, false);
+  const data = await fetch.csv(this, this.url, false);
 
   // Rely on dataset to be sorted by time, in direction past -> future.
   const [lastRow] = data.slice(-1);
