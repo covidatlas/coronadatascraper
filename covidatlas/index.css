@@ -249,6 +249,7 @@ hr {
   display: block;
   width: var(--hr-width);
   height: var(--bubble-size);
+  max-height: var(--bubble-size);
   border: none;
   background: none;
   position: relative;
