@@ -241,6 +241,7 @@ const scraper = {
       counties.push(unassigned);
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties = counties.filter(c => c.county !== UNASSIGNED);
       return counties;
     }
   }
