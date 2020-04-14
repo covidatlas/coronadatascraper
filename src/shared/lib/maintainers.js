@@ -66,6 +66,16 @@ const maintainers = {
     state: 'Seoul',
     city: 'Gwanak-gu',
     flag: '🇰🇷'
+  },
+  shaperilio: {
+    name: 'Emilio Graff',
+    email: '1@emil.io',
+    github: 'shaperilio',
+    country: 'USA',
+    state: 'CA',
+    county: 'Alameda County',
+    city: 'Oakland',
+    flag: '🇺🇸'
   }
 };
 
