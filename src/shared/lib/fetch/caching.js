@@ -62,12 +62,13 @@ export const getCachedFilePath = (url, type, date = false) => {
   If we are able to fetch this URL (because it is a timeseries or we are requesting today's data), the function
   returns `CACHE_MISS`.
 
+  * @param {*} scraper the scraper requesting the file
   * @param {string} url URL of the cached resource
   * @param {string} type type of the cached resource
   * @param {*} date the date associated with this resource, or false if a timeseries data
   * @param {string} encoding for the resource to access, default to utf-8
 */
-export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
+export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
 
   if (await fs.exists(filePath)) {
@@ -78,7 +79,8 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  log('  🐢  Cache miss for %s at %s', url, filePath);
+  const shortName = scraper._path.replace(/^.*scrapers/, '');
+  log('  🐢  Cache miss for scraper: %s; url: %s; filepath: %s', shortName, url, filePath);
   return CACHE_MISS;
 };
 

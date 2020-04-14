@@ -21,15 +21,15 @@ const READ_TIMEOUT = 60000;
 
 /**
  * Load the webpage at the given URL and return a Cheerio object
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object=} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const page = async (url, date, options = {}) => {
-  const resp = await get(url, 'html', date, options);
-
+export const page = async (scraper, url, date, options = {}) => {
+  const resp = await get(scraper, url, 'html', date, options);
   if (!resp.body) {
     return null;
   }
@@ -38,16 +38,16 @@ export const page = async (url, date, options = {}) => {
 
 /**
  * Load and parse JSON from the given URL
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const json = async (url, date, options = {}) => {
+export const json = async (scraper, url, date, options = {}) => {
   log(url);
-  const resp = await get(url, 'json', date, options);
-
+  const resp = await get(scraper, url, 'json', date, options);
   if (!resp.body) {
     return null;
   }
@@ -62,10 +62,9 @@ export const json = async (url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const jsonAndCookies = async (url, date, options = {}) => {
+export const jsonAndCookies = async (scraper, url, date, options = {}) => {
   log(url);
-  const resp = await get(url, 'json', date, options);
-
+  const resp = await get(scraper, url, 'json', date, options);
   if (!resp.body) {
     return null;
   }
@@ -77,6 +76,7 @@ export const jsonAndCookies = async (url, date, options = {}) => {
 
 /**
  * Load and parse CSV from the given URL
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
@@ -84,9 +84,9 @@ export const jsonAndCookies = async (url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - delimiter: the delimiter to use (default is ,)
  */
-export const csv = async (url, date, options = {}) => {
+export const csv = async (scraper, url, date, options = {}) => {
   return new Promise(async (resolve, reject) => {
-    const resp = await get(url, 'csv', date, options);
+    const resp = await get(scraper, url, 'csv', date, options);
 
     if (!resp.body) {
       resolve(null);
@@ -111,41 +111,43 @@ export const csv = async (url, date, options = {}) => {
 
 /**
  * Load and parse TSV from the given URL
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const tsv = async (url, date, options = {}) => {
+export const tsv = async (scraper, url, date, options = {}) => {
   options.delimiter = '\t';
-  return csv(url, date, options);
+  return csv(scraper, url, date, options);
 };
 
 /**
  * Load the given URL and return a raw response
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const raw = async (url, date, options = {}) => {
-  const resp = await get(url, 'raw', date, options);
+export const raw = async (scraper, url, date, options = {}) => {
+  const resp = await get(scraper, url, 'raw', date, options);
   return resp.body;
 };
 
 /**
  * Load and parse PDF from the given URL
- *
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const pdf = async (url, date, options) => {
-  const resp = await get(url, 'pdf', date, { ...options, toString: false, encoding: null });
+export const pdf = async (scraper, url, date, options) => {
+  const resp = await get(scraper, url, 'pdf', date, { ...options, toString: false, encoding: null });
 
   if (!resp.body) {
     return null;
@@ -219,14 +221,20 @@ const fetchHeadless = async url => {
 
 /**
  * Fetch whatever is at the provided URL in headless mode with Pupeteer. Use cached version if available.
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} alwaysRun fetches from URL even if resource is in cache, defaults to false
  */
-export const headless = async (url, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
+export const headless = async (
+  scraper,
+  url,
+  date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(),
+  options = {}
+) => {
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
-  const cachedBody = await caching.getCachedFile(url, 'html', date);
+  const cachedBody = await caching.getCachedFile(scraper, url, 'html', date);
   if (process.env.ONLY_USE_CACHE) {
     const $ = await cheerio.load(cachedBody);
     return $;
@@ -253,8 +261,9 @@ export const headless = async (url, date = datetime.old.scrapeDate() || datetime
  * orgId is 4RQmZZ0yaZkGR1zy
  * layerName is COVID19_testsites_READ_ONLY
  */
-export const getArcGISCSVURLFromOrgId = async function(serverNumber, orgId, layerName) {
+export const getArcGISCSVURLFromOrgId = async function(scraper, serverNumber, orgId, layerName) {
   const layerMetadata = await json(
+    scraper,
     `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`
   );
   const { serviceItemId } = layerMetadata;
@@ -263,12 +272,16 @@ export const getArcGISCSVURLFromOrgId = async function(serverNumber, orgId, laye
 
 /**
  * Get the URL for the CSV data from an ArcGIS dashboard
+ * @param {*} scraper the scraper object
  * @param {*} serverNumber the servern number, find this by looking at requests (i.e. https://services1.arcgis.com/ is serverNumber = 1)
  * @param {*} dashboardId the ID of the dashboard, as passed to the iframe that renders it (i.e. https://maps.arcgis.com/apps/opsdashboard/index.html#/ec4bffd48f7e495182226eee7962b422 is dashboardId = ec4bffd48f7e495182226eee7962b422)
  * @param {*} layerName the name of the layer to fetch data for, find this by examining requests
  */
-export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerName) {
-  const dashboardManifest = await json(`https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`);
+export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId, layerName) {
+  const dashboardManifest = await json(
+    scraper,
+    `https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`
+  );
   const { orgId } = dashboardManifest;
-  return getArcGISCSVURLFromOrgId(serverNumber, orgId, layerName);
+  return getArcGISCSVURLFromOrgId(scraper, serverNumber, orgId, layerName);
 };
