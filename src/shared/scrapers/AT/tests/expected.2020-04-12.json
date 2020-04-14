@@ -1,0 +1,12 @@
+[
+  { "state": "iso2:AT-1", "cases": 266 },
+  { "state": "iso2:AT-2", "cases": 385 },
+  { "state": "iso2:AT-8", "cases": 831 },
+  { "state": "iso2:AT-5", "cases": 1169 },
+  { "state": "iso2:AT-6", "cases": 1553 },
+  { "state": "iso2:AT-9", "cases": 2011 },
+  { "state": "iso2:AT-4", "cases": 2122 },
+  { "state": "iso2:AT-3", "cases": 2342 },
+  { "state": "iso2:AT-7", "cases": 3283 },
+  { "cases": 13962 }
+]
