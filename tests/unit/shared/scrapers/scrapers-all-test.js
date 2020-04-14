@@ -45,7 +45,18 @@ const scraperCodeFiles = allJs.map(f => {
 function validateCodingConventions(t, lin) {
   // Having the fetch all one line helps with code instrumentation
   // (regex search-and-replace).
-  t.ok(lin.trim().endsWith(');'), `"${lin}" ends with ');'`);
+  t.ok(lin.endsWith(');'), `"${lin}" ends with ');'`);
+
+  // Some places have fetch() within a larger expression, e.g.:
+  // const casesData = (await fetch.csv(this.url, false)).filter(...);
+  // Can't have that!
+  const fetchCheck = lin.match(/fetch.*?\(.*?\)(.*?);/);
+  if (fetchCheck) {
+    const afterParens = fetchCheck[1];
+    t.equal('', afterParens.trim(), 'Should be nothing after the first closing parens');
+  } else {
+    t.fail(`Doesn't follow convention`);
+  }
 
   /*
   // DISABLING THESE CHECKS FOR NOW, WILL RE-ENABLE LATER.
