@@ -21,10 +21,8 @@ const scraper = {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
     const casesData = await fetch.csv(this.url, false);
-    const regionData = await fetch.csv(
-      'https://raw.githubusercontent.com/slo-covid-19/data/master/csv/regions.csv',
-      false
-    );
+    const regionUrl = 'https://raw.githubusercontent.com/slo-covid-19/data/master/csv/regions.csv';
+    const regionData = await fetch.csv(regionUrl, false);
 
     let nationalData = {};
 

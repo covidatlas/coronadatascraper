@@ -16,7 +16,8 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = (await fetch.json(this.url, false)).features.map(({ attributes }) => attributes);
+    const casesRaw = await fetch.json(this.url, false);
+    const casesData = casesRaw.features.map(({ attributes }) => attributes);
 
     const casesByRegion = {};
 

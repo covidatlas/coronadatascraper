@@ -210,7 +210,8 @@ const scraper = {
       return counties;
     },
     '2020-03-27': async function() {
-      const pageHTML = (await fetch.page(this.url)).html();
+      const tmp = await fetch.page(this.url);
+      const pageHTML = tmp.html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
 
       const $ = await fetch.page(this.url);

@@ -296,9 +296,8 @@ const scraper = {
         cases: parse.number(caseNum)
       });
 
-      const deathData = await fetch.pdf(
-        'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no'
-      );
+      const pdfUrl = 'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no';
+      const deathData = await fetch.pdf(pdfUrl);
       let totalDeaths = '';
       deathData.forEach(item => {
         if (item && item.text.match(/[0-9]/)) {
