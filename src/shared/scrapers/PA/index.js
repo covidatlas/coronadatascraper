@@ -381,10 +381,12 @@ const scraper = {
 
     const countyLevel = aggregateItems(data, ['corregimiento']);
     const provinceLevel = aggregateItems(countyLevel, ['county']);
+    const nationLevel = aggregateItems(provinceLevel, ['state']);
+    assert(nationLevel.length === 1);
     addEmptyStates(provinceLevel);
     assert(provinceLevel.length === 13); // Panama has 10 provinces and 3 provincial comarcas
     // return [...provinceLevel, ...countyLevel]; // Uncomment this to reproduce #798
-    return provinceLevel;
+    return [...nationLevel, ...provinceLevel];
   }
 };
 
