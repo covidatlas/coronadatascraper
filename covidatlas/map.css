@@ -46,5 +46,11 @@
 }
 
 #map.ca-Map {
-  height: 480px;
+  height: 320px;
+}
+
+@media screen and (min-width: 640px) {
+  #map.ca-Map{
+    height: 480px;
+  }
 }

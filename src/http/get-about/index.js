@@ -40,16 +40,16 @@ ${header('about')}
       } provides easy to understand local-level data – including local charts, maps, and insights – related to the COVID-19 pandemic.</p>
       <p class="spectrum-Body spectrum-Body--L">Our data is sourced exclusively from official public health channels, and verified sources.</p>
 
-      <h1 class="spectrum-Heading spectrum-Heading--XL">Built by a global community</h1>
-      <p class="spectrum-Body spectrum-Body--L">This project is <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">community-developed, open source</a>, and publishes all data, research, and related findings in the public domain.</p>
-      <p class="spectrum-Body spectrum-Body--L">We're working around the clock to release ${
+      <h1 class="spectrum-Heading spectrum-Heading--L">Built by a global community</h1>
+      <p class="spectrum-Body spectrum-Body--M">This project is <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">community-developed, open source</a>, and publishes all data, research, and related findings in the public domain.</p>
+      <p class="spectrum-Body spectrum-Body--M">We're working around the clock to release ${
         constants.name
       }; in the mean time, if you're a developer or researcher, you can <a class="spectrum-Link" href="https://coronadatascraper.com/data.csv"></a>download our raw local-level dataset</a> or <a class="spectrum-Link" href="https://coronadatascraper.com/features.json">view it displayed on a world map</a>.</p>
-      <p class="spectrum-Body spectrum-Body--L">If you'd like to contribute, please <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">send us a PR</a> and join us on <a class="spectrum-Link" href="https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ">Slack</a>.</p>
+      <p class="spectrum-Body spectrum-Body--M">If you'd like to contribute, please <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">send us a PR</a> and join us on <a class="spectrum-Link" href="https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ">Slack</a>.</p>
 
-      <p class="spectrum-Body spectrum-Body--L">Please check back for updates!</p>
+      <p class="spectrum-Body spectrum-Body--M">Please check back for updates!</p>
 
-      <nav class="ca-SocialLinks spectrum-Body spectrum-Body--L">
+      <nav class="ca-SocialLinks spectrum-Body spectrum-Body--M">
         <a class="spectrum-Link" href="https://twitter.com/covidatlas" target="_blank">Twitter</a>
         <a class="spectrum-Link" href="https://facebook.com/covidatlas" target="_blank">Facebook</a>
         <a class="spectrum-Link" href="https://instagram.com/covidatlas" target="_blank">Instagram</a>

@@ -10,7 +10,7 @@ module.exports = function body(selectedPage = 'home', className = '') {
     <sp-icon slot="icon" size="s" name="ui:TripleGripper"></sp-icon>
   </sp-action-button>
   <img src="${arc.static('logo-banner-light.svg')}" class="ca-Logo ca-Logo--extrasmall" alt="${constants.name} logo">
-  <sp-tab-list selected="${selectedPage}" id="tabNav">
+  <sp-tab-list selected="${selectedPage}" id="tabNav" quiet>
     <sp-tab label="Home" value="home"></sp-tab>
     <!--<sp-tab label="Map" value="map"></sp-tab>-->
     <sp-tab label="Datasets" value="data"></sp-tab>

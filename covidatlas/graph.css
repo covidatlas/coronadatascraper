@@ -1,6 +1,7 @@
 .ca-Graph {
   height: 250px;
   width: 100%;
+  overflow: auto;
 }
 
 .ca-Graph-line {

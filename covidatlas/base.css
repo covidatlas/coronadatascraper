@@ -7,6 +7,7 @@
   --spectrum-alias-focus-ring-size: var(--spectrum-alias-border-size-thick);
   --HeadingWeight: 700;
   --BodyWeight: 300;
+  --ca-PageMargin: 24px;
 
   /* Base vars */
   --ca-FontBody: "Merriweather", Georgia, serif;
@@ -72,6 +73,8 @@
 
   /* Aliases and Semantics */
   --BackgroundColor-dark: var(--Blue700);
+
+  --SemanticNegativeTextColor: #c12121;
 
   --spectrum-alias-text-color-disabled: var(--Gray300);
   --spectrum-alias-placeholder-text-color: var(--Gray400);
@@ -255,4 +258,23 @@ body {
 
 [hidden] {
   display: none !important;
+}
+
+@media screen and (min-width: 640px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 32px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 64px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 10vw;
+  }
 }
