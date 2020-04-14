@@ -69,6 +69,8 @@ export const getCachedFilePath = (url, type, date = false) => {
   * @param {string} encoding for the resource to access, default to utf-8
 */
 export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8') => {
+  if (scraper === undefined || scraper === null) throw new Error(`Undefined scraper, trying to hit ${url}`);
+
   const filePath = getCachedFilePath(url, type, date);
 
   if (await fs.exists(filePath)) {
@@ -79,7 +81,7 @@ export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8')
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  const shortName = scraper._path.replace(/^.*scrapers/, '');
+  const shortName = (scraper._path || 'unknown').replace(/^.*scrapers/, '');
   log('  🐢  Cache miss for scraper: %s; url: %s; filepath: %s', shortName, url, filePath);
   return CACHE_MISS;
 };

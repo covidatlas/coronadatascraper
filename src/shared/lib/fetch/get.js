@@ -58,6 +58,8 @@ export const get = async (
     ...options
   };
 
+  if (scraper === null || typeof scraper !== 'object') throw new Error(`null or invalid scraper, getting ${url}`);
+
   const cachedBody = await caching.getCachedFile(scraper, url, type, date, encoding);
   if (process.env.ONLY_USE_CACHE) return { body: cachedBody, cookies: null };
 
