@@ -7,7 +7,7 @@ import * as transform from '../../lib/transform.js';
 
 const scraper = {
   country: 'iso1:US',
-  url: 'https://covidtracking.com/api/states',
+  url: 'https://covidtracking.com/api/v1/states/current.json',
   type: 'json',
   curators: [
     {
@@ -22,21 +22,19 @@ const scraper = {
   priority: -0.5,
   async scraper() {
     const data = await fetch.json(this.url);
+    console.log(data);
 
     const regions = [];
 
     for (const stateData of data) {
       const stateObj = {
-        state: stateData.state
+        state: `iso2:US-${stateData.state}`
       };
       if (stateData.death !== null) {
         stateObj.deaths = parse.number(stateData.death);
       }
       if (stateData.total !== null) {
         stateObj.tested = parse.number(stateData.total);
-      }
-      if (stateData.state === 'Washington, D.C.') {
-        stateObj.county = 'District of Columbia';
       }
 
       // Assume zero if none provided
