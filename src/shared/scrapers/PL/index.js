@@ -12,15 +12,15 @@ const scraper = {
   timeseries: true,
   priority: 1,
   maintainers: [maintainers.qgolsteyn],
-  sources: [
-    {
-      description: 'COVID-19/SARS-COV-2 Cases in EU by Country, State/Province/Local Authorities, and Date',
-      url: 'https://github.com/covid19-eu-zh/covid19-eu-data',
-      name: 'covid19-eu-data'
-    }
-  ],
   scraper: {
     '0': async function() {
+      this.sources = [
+        {
+          description: 'COVID-19/SARS-COV-2 Cases in EU by Country, State/Province/Local Authorities, and Date',
+          url: 'https://github.com/covid19-eu-zh/covid19-eu-data',
+          name: 'covid19-eu-data'
+        }
+      ];
       this.url = 'https://raw.githubusercontent.com/covid19-eu-zh/covid19-eu-data/master/dataset/covid-19-pl.csv';
 
       const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
@@ -52,6 +52,12 @@ const scraper = {
     },
     '2020-04-13': async function() {
       this.url = 'https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2';
+      this.sources = [
+        {
+          url: 'https://info.gesundheitsministerium.at',
+          name: 'Republic of Poland'
+        }
+      ];
 
       const $ = await fetch.page(this.url);
 
