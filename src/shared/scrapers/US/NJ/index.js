@@ -7,7 +7,7 @@ import * as transform from '../../../lib/transform.js';
 
 const scraper = {
   country: 'iso1:US',
-  state: 'NJ',
+  state: 'iso2:US-NJ',
   aggregate: 'county',
   type: 'csv',
   source: {

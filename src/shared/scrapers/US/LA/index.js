@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'LA',
+  state: 'iso2:US-LA',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [
@@ -36,7 +36,7 @@ const scraper = {
         }
         const cases = parse.number($tr.find('td:last-child').text());
         counties.push({
-          county: geography.getCounty(county, 'LA'),
+          county: geography.getCounty(county, 'iso2:US-LA'),
           cases
         });
       });
@@ -66,7 +66,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });
@@ -98,7 +98,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });
@@ -133,7 +133,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.Parish)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });

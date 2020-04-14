@@ -57,6 +57,35 @@ const maintainers = {
     state: 'VA',
     city: 'Richmond',
     flag: '🇺🇸'
+  },
+  ciscorucinski: {
+    name: 'Christopher Rucinski',
+    email: 'ciscorucinski@gmail.com',
+    github: 'ciscorucinski',
+    country: 'KOR',
+    state: 'Seoul',
+    city: 'Gwanak-gu',
+    flag: '🇰🇷'
+  },
+  shaperilio: {
+    name: 'Emilio Graff',
+    email: '1@emil.io',
+    github: 'shaperilio',
+    country: 'USA',
+    state: 'CA',
+    county: 'Alameda County',
+    city: 'Oakland',
+    flag: '🇺🇸'
+  },
+  tyleraustin: {
+    name: 'Tyler Austin',
+    email: 'thenobledog@gmail.com',
+    github: 'webguyty',
+    country: 'USA',
+    state: 'CA',
+    county: 'Ventura County',
+    city: 'Ventura',
+    flag: '🇺🇸'
   }
 };
 

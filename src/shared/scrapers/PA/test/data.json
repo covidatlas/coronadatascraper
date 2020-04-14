@@ -1,0 +1,605 @@
+[
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "cases": 3472,
+    "hospitalized": 229,
+    "deaths": 94,
+    "recovered": 61,
+    "active": 3317,
+    "rating": 0.45098039215686275,
+    "coordinates": [
+      -80.105,
+      8.4245
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso1:PA",
+    "population": 4098587,
+    "populationDensity": 54.29674317595432,
+    "countryId": "iso1:PA",
+    "name": "Panama",
+    "level": "country"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Panamá",
+    "cases": 2169,
+    "hospitalized": 146,
+    "deaths": 55,
+    "recovered": 47,
+    "active": 2067,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.878,
+      8.8375
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-8",
+    "population": 1249032,
+    "populationDensity": 150.03516815668607,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-8",
+    "name": "Panamá, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Panamá Oeste",
+    "cases": 823,
+    "hospitalized": 61,
+    "recovered": 10,
+    "deaths": 25,
+    "active": 788,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -79.8715,
+      8.7965
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-10",
+    "population": 464038,
+    "populationDensity": 154.81898887253107,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-10",
+    "name": "Panamá Oeste, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Comarca Guna Yala",
+    "cases": 20,
+    "hospitalized": 1,
+    "deaths": 1,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -78.3215,
+      9.074000000000002
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-KY",
+    "population": 33109,
+    "populationDensity": 11.308704079165006,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-KY",
+    "name": "Comarca Guna Yala, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Veraguas",
+    "cases": 146,
+    "deaths": 3,
+    "hospitalized": 4,
+    "recovered": 1,
+    "active": 142,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -81.2515,
+      8.0455
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-9",
+    "population": 226991,
+    "populationDensity": 21.080705341499616,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-9",
+    "name": "Veraguas, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Darién",
+    "cases": 69,
+    "hospitalized": 2,
+    "deaths": 1,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -77.83000000000001,
+      8.1525
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-5",
+    "population": 48378,
+    "populationDensity": 3.9739384390194274,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-5",
+    "name": "Darién, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Colón",
+    "cases": 81,
+    "hospitalized": 6,
+    "deaths": 1,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -79.977,
+      9.1345
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-3",
+    "population": 241928,
+    "populationDensity": 48.21805035058122,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-3",
+    "name": "Colón, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Chiriquí",
+    "cases": 81,
+    "hospitalized": 2,
+    "deaths": 4,
+    "recovered": 2,
+    "active": 75,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -82.2815,
+      8.193000000000001
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-4",
+    "population": 416873,
+    "populationDensity": 61.469708181886475,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-4",
+    "name": "Chiriquí, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Coclé",
+    "cases": 56,
+    "hospitalized": 6,
+    "deaths": 3,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -80.4395,
+      8.573
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-2",
+    "population": 233708,
+    "populationDensity": 47.150114493598004,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-2",
+    "name": "Coclé, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Comarca Emberá-Wounaan",
+    "cases": 5,
+    "rating": 0.3333333333333333,
+    "coordinates": [
+      -77.7995,
+      8.1785
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-EM",
+    "population": 10001,
+    "populationDensity": 2.5185087568340974,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-EM",
+    "name": "Comarca Emberá-Wounaan, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Los Santos",
+    "cases": 3,
+    "rating": 0.3333333333333333,
+    "coordinates": [
+      -80.36449999999999,
+      7.617
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-7",
+    "population": 89592,
+    "populationDensity": 23.21637902147762,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-7",
+    "name": "Los Santos, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Herrera",
+    "cases": 12,
+    "deaths": 1,
+    "hospitalized": 1,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -80.67349999999999,
+      7.84
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-6",
+    "population": 109955,
+    "populationDensity": 46.75239783301364,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-6",
+    "name": "Herrera, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Bocas del Toro",
+    "cases": 6,
+    "recovered": 1,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -82.236,
+      9.218499999999999
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-1",
+    "population": 125461,
+    "populationDensity": 27.158135638806957,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-1",
+    "name": "Bocas del Toro, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Panama",
+    "sources": [
+      {
+        "url": "http://minsa.gob.pa/coronavirus-covid19",
+        "name": "Ministerio de Salud de la República de Panamá",
+        "note": "Distritos were mapped into counties in this data set; data exists at corregimiento level."
+      }
+    ],
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Emilio Graff",
+        "email": "1@emil.io",
+        "github": "shaperilio",
+        "country": "USA",
+        "state": "CA",
+        "county": "Alameda County",
+        "city": "Oakland",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv",
+    "state": "Comarca Ngäbe Buglé",
+    "cases": 1,
+    "rating": 0.3333333333333333,
+    "coordinates": [
+      -81.785,
+      8.732
+    ],
+    "tz": [
+      "America/Panama"
+    ],
+    "featureId": "iso2:PA-NB",
+    "population": 156747,
+    "populationDensity": 23.33616663309766,
+    "countryId": "iso1:PA",
+    "stateId": "iso2:PA-NB",
+    "name": "Comarca Ngäbe Buglé, Panama",
+    "level": "state"
+  }
+]

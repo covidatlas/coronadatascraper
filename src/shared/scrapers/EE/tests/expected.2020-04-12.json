@@ -1,0 +1,18 @@
+[
+  { "state": "iso2:EE-78", "tested": 2678, "cases": 81 },
+  { "state": "iso2:EE-37", "tested": 12786, "cases": 418 },
+  { "state": "iso2:EE-84", "tested": 927, "cases": 19 },
+  { "state": "iso2:EE-82", "tested": 568, "cases": 7 },
+  { "state": "iso2:EE-86", "tested": 1350, "cases": 74 },
+  { "state": "iso2:EE-67", "tested": 2133, "cases": 72 },
+  { "state": "iso2:EE-49", "tested": 592, "cases": 6 },
+  { "state": "iso2:EE-57", "tested": 357, "cases": 4 },
+  { "state": "iso2:EE-74", "tested": 2727, "cases": 479 },
+  { "state": "iso2:EE-59", "tested": 892, "cases": 16 },
+  { "state": "iso2:EE-65", "tested": 475, "cases": 6 },
+  { "state": "iso2:EE-44", "tested": 2651, "cases": 77 },
+  { "state": "iso2:EE-70", "tested": 787, "cases": 18 },
+  { "state": "iso2:EE-39", "tested": 285, "cases": 8 },
+  { "state": "iso2:EE-51", "tested": 773, "cases": 10 },
+  { "tested": 30349, "cases": 1309 }
+]

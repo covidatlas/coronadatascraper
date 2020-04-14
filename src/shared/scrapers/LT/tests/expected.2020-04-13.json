@@ -1,0 +1,12 @@
+[
+  { "state": "iso2:LT-SA", "cases": 54, "recovered": 1, "deaths": 1 },
+  { "state": "iso2:LT-AL", "cases": 23 },
+  { "state": "iso2:LT-UT", "cases": 11 },
+  { "state": "iso2:LT-KU", "cases": 93, "recovered": 1, "deaths": 1 },
+  { "state": "iso2:LT-PN", "cases": 15, "deaths": 1 },
+  { "state": "iso2:LT-VL", "cases": 542, "deaths": 8 },
+  { "state": "iso2:LT-TA", "cases": 11 },
+  { "state": "iso2:LT-MR", "cases": 31, "deaths": 2 },
+  { "state": "iso2:LT-KL", "cases": 151, "recovered": 6, "deaths": 4 },
+  { "state": "iso2:LT-TE", "cases": 18 }
+]

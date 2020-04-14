@@ -3,13 +3,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
-
-/**
- * Sometimes the AUS government doesn't sum numbers properly, so give them 10% slack.
- * @param {number} computed
- * @param {number} scraped
- */
-const areNumbersInTheBallpark = (computed, scraped) => computed * 0.9 < scraped && computed * 1.1 > scraped;
+import areNumbersClose from './_shared/are-numbers-close.js';
 
 const countryLevelMap = {
   'Australian Capital Territory': 'iso2:AU-ACT',
@@ -25,7 +19,7 @@ const countryLevelMap = {
 const scraper = {
   aggregate: 'state',
   country: 'iso1:AU',
-  maintainer: [maintainers.camjc],
+  maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
     {
@@ -62,7 +56,7 @@ const scraper = {
 
     assert(casesFromTotalRow > 0, 'Total row is not reasonable');
     assert(
-      areNumbersInTheBallpark(summedData.cases, casesFromTotalRow),
+      areNumbersClose(summedData.cases, casesFromTotalRow),
       'Summed total is not anywhere close to number in total row'
     );
     return states;

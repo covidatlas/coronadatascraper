@@ -9,7 +9,7 @@ import * as rules from '../../../lib/rules.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'IL',
+  state: 'iso2:US-IL',
   country: 'iso1:US',
   priority: 1,
   aggregate: 'county',

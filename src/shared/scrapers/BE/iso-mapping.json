@@ -1,0 +1,15 @@
+{
+  "Brussels": "iso2:BE-BRU",
+  "Flanders": "iso2:BE-VLG",
+  "Wallonia": "iso2:BE-WAL",
+  "Antwerpen": "iso2:BE-VAN",
+  "Limburg": "iso2:BE-VLI",
+  "OostVlaanderen": "iso2:BE-VOV",
+  "VlaamsBrabant": "iso2:BE-VBR",
+  "WestVlaanderen": "iso2:BE-VWV",
+  "BrabantWallon": "iso2:BE-WBR",
+  "Hainaut": "iso2:BE-WHT",
+  "Li�ge": "iso2:BE-WLG",
+  "Luxembourg": "iso2:BE-WLX",
+  "Namur": "iso2:BE-WNA"
+}

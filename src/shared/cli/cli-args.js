@@ -13,22 +13,12 @@ const { argv } = yargs
   })
   .option('location', {
     alias: 'l',
-    description: 'Scrape only the location provided by full name, i.e City, County, State, Country',
-    type: 'string'
-  })
-  .option('country', {
-    alias: 'c',
-    description: 'Scrape only the country provided, like AUS',
-    type: 'string'
-  })
-  .option('id', {
-    alias: 'i',
-    description: 'Scrape only the location provided by id',
+    description: 'Scrape only the location provided by src/shared/scraper path name',
     type: 'string'
   })
   .option('skip', {
     alias: 's',
-    description: 'Skip the location provided by full name, i.e City, County, State, Country',
+    description: 'Skip the location provided by src/shared/scraper path name',
     type: 'string'
   })
   .option('outputSuffix', {
@@ -52,6 +42,11 @@ const { argv } = yargs
   .options('writeData', {
     description: 'Write to dist folder',
     type: 'boolean'
+  })
+  .options('writeTo', {
+    description: 'Folder to write to',
+    default: 'dist',
+    type: 'string'
   })
   .option('onlyUseCache', {
     alias: 'x',

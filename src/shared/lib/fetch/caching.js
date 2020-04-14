@@ -29,8 +29,8 @@ const hash = str => {
 
 /**
  * Get the filename of the cache for the given URL
- * @param {*} url URL of the cached resource
- * @param {*} type type of the cached resource
+ * @param {string} url URL of the cached resource
+ * @param {string} type type of the cached resource
  */
 export const getCachedFileName = (url, type) => {
   const urlHash = hash(url);
@@ -40,8 +40,8 @@ export const getCachedFileName = (url, type) => {
 
 /**
  * Get the path of cache for the given URL at the given date
- * @param {*} url URL of the cached resource
- * @param {*} type type of the cached resource
+ * @param {string} url URL of the cached resource
+ * @param {string} type type of the cached resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
 export const getCachedFilePath = (url, type, date = false) => {
@@ -62,10 +62,10 @@ export const getCachedFilePath = (url, type, date = false) => {
   If we are able to fetch this URL (because it is a timeseries or we are requesting today's data), the function
   returns `CACHE_MISS`.
 
-  * @param {*} url URL of the cached resource
-  * @param {*} type type of the cached resource
+  * @param {string} url URL of the cached resource
+  * @param {string} type type of the cached resource
   * @param {*} date the date associated with this resource, or false if a timeseries data
-  * @param {*} encoding for the resource to access, default to utf-8
+  * @param {string} encoding for the resource to access, default to utf-8
 */
 export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
   const filePath = getCachedFilePath(url, type, date);
@@ -85,8 +85,8 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
 /**
  * Saves a file to cache, at the provided date
  *
- * @param {*} url URL of the cached resource
- * @param {*} type type of the cached resource
+ * @param {string} url URL of the cached resource
+ * @param {string} type type of the cached resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} data file data to be saved
  */

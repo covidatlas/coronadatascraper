@@ -1,0 +1,15 @@
+[
+  { "state": "iso2:NL-DR", "cases": 310 },
+  { "state": "iso2:NL-FL", "cases": 381 },
+  { "state": "iso2:NL-FR", "cases": 360 },
+  { "state": "iso2:NL-GE", "cases": 3015 },
+  { "state": "iso2:NL-GR", "cases": 274 },
+  { "state": "iso2:NL-LI", "cases": 2651 },
+  { "state": "iso2:NL-NB", "cases": 5721 },
+  { "state": "iso2:NL-NH", "cases": 3906 },
+  { "state": "iso2:NL-OV", "cases": 1784 },
+  { "state": "iso2:NL-UT", "cases": 1852 },
+  { "state": "iso2:NL-ZE", "cases": 427 },
+  { "state": "iso2:NL-ZH", "cases": 4906 },
+  { "hospitalized": 8582, "deaths": 2737, "cases": 25587 }
+]

@@ -6,7 +6,7 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'Monterey County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   url:
     'https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19',

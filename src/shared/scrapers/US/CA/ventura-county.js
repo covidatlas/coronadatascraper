@@ -7,10 +7,10 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Ventura County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   type: 'paragraph',
-  maintainers: [maintainers.jbencina],
+  maintainers: [maintainers.jbencina, maintainers.tyleraustin],
   scraper: {
     '0': async function() {
       this.url = 'https://www.ventura.org/covid19/';
@@ -150,6 +150,50 @@ const scraper = {
       const deaths = parse.number(positiveCases.next().text());
 
       return { cases, deaths };
+    },
+
+    '2020-03-30': async function() {
+      this.url = 'https://www.vcemergency.com';
+      const $ = await fetch.page(this.url);
+      const cases = parse.number(
+        $('td:contains("TOTAL CASES")')
+          .first()
+          .next()
+          .text()
+      );
+      const deaths = parse.number(
+        $('td:contains("DEATHS")')
+          .first()
+          .next()
+          .text()
+      );
+      const recovered = parse.number(
+        $('td:contains("Recovered Cases")')
+          .first()
+          .next()
+          .text()
+      );
+      const tested = parse.number(
+        $('td:contains("People Tested")')
+          .first()
+          .next()
+          .text()
+      );
+
+      const hospitalized = parse.number(
+        $('td:contains("Hospitalized")')
+          .first()
+          .next()
+          .text()
+      );
+
+      return {
+        cases,
+        deaths,
+        recovered,
+        tested,
+        hospitalized
+      };
     }
   }
 };

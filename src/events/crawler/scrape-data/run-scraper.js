@@ -1,7 +1,5 @@
-import path from 'path';
 import datetime from '../../../shared/lib/datetime/index.js';
 import reporter from '../../../shared/lib/error-reporter.js';
-import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 import log from '../../../shared/lib/log.js';
 
@@ -75,22 +73,19 @@ function addData(cases, location, result) {
 */
 export async function runScraper(location) {
   const rejectUnauthorized = location.certValidation === false;
+
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
 
   // scraperTz will be used by the cache PR
-  // eslint-disable-next-line no-unused-vars
   // const scraperTz = await calculateScraperTz(location);
 
+  let scraperOutput;
   if (typeof location.scraper === 'function') {
-    return location.scraper();
-  }
-  if (rejectUnauthorized) {
-    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
-  }
-  if (typeof location.scraper === 'object') {
+    scraperOutput = location.scraper();
+  } else if (typeof location.scraper === 'object') {
     // Find the closest date
     let env;
     if (process.env.SCRAPE_DATE) env = datetime.parse(process.env.SCRAPE_DATE);
@@ -109,43 +104,33 @@ export async function runScraper(location) {
         }, only have: ${Object.keys(location.scraper).join(', ')}`
       );
     }
-    return scraperToUse.call(location);
+    scraperOutput = scraperToUse.call(location);
+  } else {
+    if (rejectUnauthorized) {
+      delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
+    }
+
+    throw new Error('Why on earth is the scraper for %s a %s?', geography.getName(location), typeof scraper);
   }
 
-  throw new Error('Why on earth is the scraper for %s a %s?', geography.getName(location), typeof scraper);
+  if (rejectUnauthorized) {
+    delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;
+  }
+
+  return scraperOutput;
 }
 
 const runScrapers = async args => {
-  const { sources, options } = args;
+  const { sources } = args;
 
   const locations = [];
   const errors = [];
   for (const location of sources) {
-    if (options.skip && geography.getName(location) === options.skip) {
-      continue;
-    }
-
-    if (
-      options.location &&
-      path.basename(location._path, '.js') !== options.location &&
-      geography.getName(location) !== options.location
-    ) {
-      continue;
-    }
-
-    if (options.country && ![options.country, `iso1:${options.country}`].includes(location.country)) {
-      continue;
-    }
-
-    if (options.id && options.id !== countryLevels.getIdFromLocation(location)) {
-      // select location based on country level id
-      // for example "yarn start -i id3:AU-VIC"
-      continue;
-    }
-
     if (location.scraper) {
       try {
+        log(`\n\n\nBegin scraper for ${geography.getName(location)}`);
         addData(locations, location, await runScraper(location));
+        log(`Finished scraper for ${geography.getName(location)}\n\n\n`);
       } catch (err) {
         log.error('  ❌ Error processing %s: ', geography.getName(location), err);
 

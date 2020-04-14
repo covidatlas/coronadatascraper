@@ -6,7 +6,7 @@ import { DeprecatedError } from '../../../lib/errors.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'GU',
+  state: 'iso2:US-GU',
   country: 'iso1:US',
   url: 'http://dphss.guam.gov/2019-novel-coronavirus-2019-n-cov/',
   sources: [

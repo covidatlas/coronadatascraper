@@ -8,7 +8,7 @@ const labelFragmentsByKey = [{ recovered: 'sembuh' }, { deaths: 'meninggal' }, {
 
 const scraper = {
   country: 'iso1:ID',
-  maintainer: [maintainers.camjc],
+  maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
     {
@@ -23,6 +23,8 @@ const scraper = {
     const data = {};
     const $ = await fetch.page(this.url);
     const $table = $('.covid-case-container table');
+    assert.equal($table.length, 1, 'The table can not be found, the page may not have loaded correctly');
+
     const $trs = $table.find('tbody tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);

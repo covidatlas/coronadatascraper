@@ -1,0 +1,24 @@
+[
+  {
+    "cases": 2991,
+    "hospitalized": 1576,
+    "discharged": 1011,
+    "state": "iso2:BE-BRU",
+    "deaths": 538,
+    "county": "iso2:BE-BRU"
+  },
+  { "cases": 2991, "hospitalized": 1576, "discharged": 1011, "state": "iso2:BE-BRU", "deaths": 538 },
+  { "state": "iso2:BE-WAL", "county": "iso2:BE-WLG", "cases": 3125, "hospitalized": 1135, "discharged": 608 },
+  { "state": "iso2:BE-WAL", "county": "iso2:BE-WBR", "cases": 702, "hospitalized": 162, "discharged": 76 },
+  { "state": "iso2:BE-WAL", "county": "iso2:BE-WHT", "cases": 2892, "hospitalized": 1262, "discharged": 637 },
+  { "state": "iso2:BE-WAL", "county": "iso2:BE-WNA", "cases": 916, "hospitalized": 335, "discharged": 113 },
+  { "state": "iso2:BE-WAL", "county": "iso2:BE-WLX", "cases": 833, "hospitalized": 264, "discharged": 133 },
+  { "state": "iso2:BE-WAL", "deaths": 1178, "cases": 8468, "hospitalized": 3158, "discharged": 1567 },
+  { "state": "iso2:BE-VLG", "county": "iso2:BE-VLI", "cases": 3470, "hospitalized": 1268, "discharged": 647 },
+  { "state": "iso2:BE-VLG", "county": "iso2:BE-VOV", "cases": 3242, "hospitalized": 1261, "discharged": 732 },
+  { "state": "iso2:BE-VLG", "county": "iso2:BE-VBR", "cases": 2882, "hospitalized": 633, "discharged": 358 },
+  { "state": "iso2:BE-VLG", "county": "iso2:BE-VAN", "cases": 3557, "hospitalized": 1637, "discharged": 1033 },
+  { "state": "iso2:BE-VLG", "county": "iso2:BE-VWV", "cases": 2989, "hospitalized": 1244, "discharged": 638 },
+  { "state": "iso2:BE-VLG", "deaths": 1630, "cases": 16140, "hospitalized": 6043, "discharged": 3408 },
+  { "tested": 102151, "cases": 28018, "deaths": 3346, "hospitalized": 10777, "discharged": 5986 }
+]

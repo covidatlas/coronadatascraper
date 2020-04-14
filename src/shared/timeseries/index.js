@@ -12,7 +12,16 @@ const runCrawler = imports('./run-crawler.js').default;
 const clearAllTimeouts = imports('../utils/timeouts.js').default;
 
 // The props to keep on a date object
-const caseDataProps = ['cases', 'deaths', 'recovered', 'active', 'tested', 'growthFactor'];
+const caseDataProps = [
+  'cases',
+  'deaths',
+  'recovered',
+  'active',
+  'tested',
+  'hospitalized',
+  'discharged',
+  'growthFactor'
+];
 
 let dates;
 

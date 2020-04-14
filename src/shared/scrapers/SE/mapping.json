@@ -1,0 +1,23 @@
+{
+  "Blekinge": "iso2:SE-K",
+  "Dalarna": "iso2:SE-W",
+  "Gotland": "iso2:SE-I",
+  "Gävleborg": "iso2:SE-X",
+  "Halland": "iso2:SE-N",
+  "Jämtland": "iso2:SE-Z",
+  "Jönköping": "iso2:SE-F",
+  "Kalmar": "iso2:SE-H",
+  "Kronoberg": "iso2:SE-G",
+  "Norrbotten": "iso2:SE-BD",
+  "Skåne": "iso2:SE-M",
+  "Stockholm": "iso2:SE-AB",
+  "Södermanland": "iso2:SE-D",
+  "Uppsala": "iso2:SE-C",
+  "Värmland": "iso2:SE-S",
+  "Västerbotten": "iso2:SE-AC",
+  "Västernorrland": "iso2:SE-Y",
+  "Västmanland": "iso2:SE-U",
+  "Västra_Götaland": "iso2:SE-O",
+  "Örebro": "iso2:SE-T",
+  "Östergötland": "iso2:SE-E"
+}
