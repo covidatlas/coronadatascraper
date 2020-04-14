@@ -176,10 +176,13 @@ sp-dropdown[emphasized] {
 
   sp-search#searchField {
     --spectrum-textfield-border-color: transparent;
+    --spectrum-textfield-min-width: var(--ca-landing-search-width);
+    --spectrum-global-dimension-size-600: var(--ca-landing-search-width);
   }
 }
+
 .sp-Landing-searchResults {
-  max-width: 340px;
+  width: var(--ca-landing-search-width);
   max-height: 300px;
 }
 
@@ -400,18 +403,14 @@ hr {
   }
 }
 
-
-
 @media screen and (min-width: 640px) {
+  :root {
+    --ca-landing-search-width: 400px;
+  }
+
   .spectrum-Heading.ca-LocationTitle {
     /* margin-top: 2em; */
     font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size));
-  }
-  .ca-Landing-search {
-    sp-search#searchField {
-      --spectrum-textfield-min-width: 400px;
-      --spectrum-global-dimension-size-600: 400px;
-    }
   }
 }
 

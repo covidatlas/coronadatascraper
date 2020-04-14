@@ -1,3 +1,8 @@
+:root {
+  /* Default search with, will be overridden by media queries */
+  --ca-landing-search-width: 400px;
+}
+
 /* DIMENSIONS AND NON-COLOR RELATED VARIABLES */
 .spectrum--medium,
 .spectrum--large {
