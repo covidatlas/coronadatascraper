@@ -11,7 +11,7 @@ import { DeprecatedError } from '../../../lib/errors.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'NH',
+  state: 'iso2:US-NH',
   country: 'iso1:US',
   sources: [
     {

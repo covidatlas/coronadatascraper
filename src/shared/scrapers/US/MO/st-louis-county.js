@@ -5,7 +5,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   county: 'St. Louis County',
-  state: 'MO',
+  state: 'iso2:US-MO',
   country: 'iso1:US',
   aggregate: 'county',
   priority: 1,

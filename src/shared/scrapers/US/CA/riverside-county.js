@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Riverside County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.rivcoph.org/coronavirus',

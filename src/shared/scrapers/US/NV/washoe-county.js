@@ -6,7 +6,7 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'Washoe County',
-  state: 'NV',
+  state: 'iso2:US-NV',
   country: 'iso1:US',
   url:
     'https://www.washoecounty.us/health/programs-and-services/communicable-diseases-and-epidemiology/educational_materials/COVID-19.php',

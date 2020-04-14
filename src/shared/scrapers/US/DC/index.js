@@ -9,7 +9,7 @@ import * as parse from '../../../lib/parse.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'DC',
+  state: 'iso2:US-DC',
   country: 'iso1:US',
   county: 'District of Columbia',
   maintainers: [maintainers.aed3],

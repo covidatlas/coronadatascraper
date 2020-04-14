@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Solano County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'http://www.solanocounty.com/depts/ph/coronavirus.asp',

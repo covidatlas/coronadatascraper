@@ -7,7 +7,7 @@ import * as transform from '../../../lib/transform.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'GA',
+  state: 'iso2:US-GA',
   country: 'iso1:US',
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',

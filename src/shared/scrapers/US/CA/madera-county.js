@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Madera County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',

@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'San Francisco County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.sfdph.org/dph/alerts/coronavirus.asp',

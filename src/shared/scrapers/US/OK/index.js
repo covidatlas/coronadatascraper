@@ -10,7 +10,7 @@ import * as rules from '../../../lib/rules.js';
 // updated to include deaths in timeseries
 
 const scraper = {
-  state: 'OK',
+  state: 'iso2:US-OK',
   country: 'iso1:US',
   type: 'table',
   aggregate: 'county',

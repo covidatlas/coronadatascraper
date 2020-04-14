@@ -12,7 +12,7 @@ import * as pdfUtils from '../../../lib/pdf.js';
 // Based on the MO scraper, which was based on NY
 
 const scraper = {
-  state: 'KS',
+  state: 'iso2:US-KS',
   country: 'iso1:US',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',

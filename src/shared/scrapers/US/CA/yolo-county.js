@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Yolo County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url:

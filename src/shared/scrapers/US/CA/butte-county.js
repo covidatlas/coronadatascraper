@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Butte County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   sources: [
     {

@@ -6,7 +6,7 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'Kern County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   url: 'https://kernpublichealth.com/2019-novel-coronavirus/',
   type: 'table',

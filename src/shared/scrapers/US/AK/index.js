@@ -3,7 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 
 const scraper = {
-  state: 'AK',
+  state: 'iso2:US-AK',
   country: 'iso1:US',
   sources: [
     {
