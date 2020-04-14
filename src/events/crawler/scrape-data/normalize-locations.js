@@ -1,10 +1,8 @@
-import path from 'path';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import fipsCodes from 'country-levels/fips.json';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import iso2Codes from 'country-levels/iso2.json';
-import { isId } from '../../../shared/lib/geography/country-levels.js';
+import path from 'path';
 import * as countryLevels from '../../../shared/lib/geography/country-levels.js';
+import { isId } from '../../../shared/lib/geography/country-levels.js';
 import * as geography from '../../../shared/lib/geography/index.js';
 
 import log from '../../../shared/lib/log.js';
@@ -13,7 +11,7 @@ const UNASSIGNED = '(unassigned)';
 
 function findCountryLevelID(location) {
   for (const [, properties] of Object.entries(fipsCodes)) {
-    if (properties.state_code_postal === location.state && properties.name === location.county) {
+    if (`iso2:${properties.state_code_iso}` === location.state && properties.name === location.county) {
       return properties.countrylevel_id;
     }
   }
@@ -24,20 +22,28 @@ const normalizeLocations = args => {
   log('⏳ Normalizing locations...');
 
   const { locations } = args;
+  const filteredLocations = [];
 
   // Normalize data
   for (const location of locations) {
-    // make sure location.country is always in country-level id form
+    // make sure location.country and state is always in country-level id form
     if (!isId(location.country)) {
-      log.error(`  ❌ location.country not in country-level id: ${location.country}, ${location._path}`);
+      log.error(`  ❌ location.country is not a country-level id: ${location.country}, ${location._path}`);
+      continue;
+    }
+
+    if (location.state && !isId(location.state)) {
+      log.error(`  ❌ location.state is not a country-level id: ${location.state}, ${location._path}`);
+      continue;
     }
 
     if (!countryLevels.getIdFromLocation(location)) {
       if (location.country === 'iso1:US') {
-        // Normalize states
-        location.state = geography.toUSStateAbbreviation(location.state);
+        if (location.county === UNASSIGNED) {
+          continue;
+        }
 
-        if (location.county && location.county !== UNASSIGNED) {
+        if (location.county) {
           // Find county FIPS ID
           if (Array.isArray(location.county)) {
             const aggregatedCounty = [];
@@ -45,8 +51,7 @@ const normalizeLocations = args => {
             for (const subCounty of location.county) {
               const subLocation = {
                 county: subCounty,
-                state: location.state,
-                country: location.country
+                state: location.state
               };
               const countryLevelId = findCountryLevelID(subLocation);
               if (countryLevelId) {
@@ -62,6 +67,8 @@ const normalizeLocations = args => {
             }
             if (fipsFound) {
               location.county = aggregatedCounty.join('+');
+            } else {
+              continue;
             }
           } else {
             let fipsFound = false;
@@ -72,18 +79,13 @@ const normalizeLocations = args => {
             }
             if (!fipsFound) {
               log.error('  ❌ Failed to find FIPS code for %s, %s', location.county, location.state);
+              continue;
             }
           }
         }
-
-        // Find state ID
-        if (location.state) {
-          if (iso2Codes[`US-${location.state}`]) {
-            location.state = iso2Codes[`US-${location.state}`].countrylevel_id;
-          } else {
-            log.error('  ❌ Failed to find FIPS code for state %s', location.state);
-          }
-        }
+      } else {
+        log.error(`  ❌ location.county is not a country-level id: ${location.state}, ${location._path}`);
+        continue;
       }
     }
 
@@ -95,9 +97,11 @@ const normalizeLocations = args => {
     if (!location.type && path.extname(location.url).substr(1)) {
       location.type = path.extname(location.url).substr(1);
     }
+
+    filteredLocations.push(location);
   }
 
-  return { ...args, locations };
+  return { ...args, locations: filteredLocations };
 };
 
 export default normalizeLocations;
