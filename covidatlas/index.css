@@ -437,7 +437,7 @@ hr {
     padding-left: calc(var(--ca-PageMargin) - 8px);
     padding-right: calc(var(--ca-PageMargin) - 8px);
   }
-  .ca-SiteHeader .ca-Logo {
+  .ca-SiteHeader .ca-HeaderLogo {
     margin: 0 8px;
   }
 }
