@@ -54,8 +54,8 @@ const scraper = {
       this.url = 'https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2';
       this.sources = [
         {
-          url: 'https://info.gesundheitsministerium.at',
-          name: 'Republic of Poland'
+          url: 'http://www.mz.gov.pl/',
+          name: 'Ministry of Health of the Republic of Poland'
         }
       ];
 
