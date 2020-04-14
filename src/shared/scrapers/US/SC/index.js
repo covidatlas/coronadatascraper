@@ -96,9 +96,10 @@ const scraper = {
       return counties;
     },
     '2020-03-25': async function() {
+      const serverNumber = 2;
       const dashboardId = '3732035614af4246877e20c3a496e397';
       const layerName = 'Covid19_Cases_Centroid_SharingView';
-      this.url = await fetch.getArcGISCSVURL(2, dashboardId, layerName);
+      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
       const data = await fetch.csv(this.url);
       let counties = [];
       for (const county of data) {
@@ -116,9 +117,10 @@ const scraper = {
       return counties;
     },
     '2020-03-28': async function() {
+      const serverNumber = 2;
       const dashboardId = '3732035614af4246877e20c3a496e397';
       const layerName = 'COVID19_County_Polygon_SharingView2'; // they started updating this view
-      this.url = await fetch.getArcGISCSVURL(2, dashboardId, layerName);
+      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
       const data = await fetch.csv(this.url);
       let counties = [];
       for (const county of data) {
