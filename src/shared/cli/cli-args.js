@@ -43,6 +43,11 @@ const { argv } = yargs
     description: 'Write to dist folder',
     type: 'boolean'
   })
+  .options('writeTo', {
+    description: 'Folder to write to',
+    default: 'dist',
+    type: 'string'
+  })
   .option('onlyUseCache', {
     alias: 'x',
     description: 'Only use cache (no http calls)',
