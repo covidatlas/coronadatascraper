@@ -76,6 +76,16 @@ const maintainers = {
     county: 'Alameda County',
     city: 'Oakland',
     flag: '🇺🇸'
+  },
+  tyleraustin: {
+    name: 'Tyler Austin',
+    email: 'thenobledog@gmail.com',
+    github: 'webguyty',
+    country: 'USA',
+    state: 'CA',
+    county: 'Ventura County',
+    city: 'Ventura',
+    flag: '🇺🇸'
   }
 };
 
