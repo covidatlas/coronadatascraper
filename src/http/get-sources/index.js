@@ -183,10 +183,18 @@ ${header('sources')}
         <div class="col-xs-12 col-sm-6">
           <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">What does a good source look like?</h2>
           <p class="spectrum-Body spectrum-Body--M">
-            First, please have a look at our <a href="example.csv" download class="spectrum-Link">example format</a>.<br/>
+            First, please have a look at our <a href="example.csv" download class="spectrum-Link">example format</a>.
+          </p>
+          <p class="spectrum-Body spectrum-Body--M">
             As the data itself is most important, please publish <em>cumulative</em> counts for cases, deaths, hospitalized, discharged, recovered, and total tests administered.
-            If you cannot publish in JSON or CSV, at a minimum, please include a HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have.<br/>
-            Have a column for the name of this locality, and a column for each additional data point.<br/>
+          </p>
+          <p class="spectrum-Body spectrum-Body--M">
+            If you cannot publish in JSON or CSV, at a minimum, please include a HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have.
+          </p>
+          <p class="spectrum-Body spectrum-Body--M">
+            Have a column for the name of this locality, and a column for each additional data point.
+          </p>
+          <p class="spectrum-Body spectrum-Body--M">
             The best published sources include timestamps, allowing citizens and researchers alike better understand the data you have, over time, within your specific geographic region(s).
           </p>
         </div>
