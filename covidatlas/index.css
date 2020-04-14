@@ -143,7 +143,7 @@ sp-dropdown[emphasized] {
 }
 
 .ca-Landing {
-  background-color: var(--BackgroundColor-dark);
+  background-color: var(--BackgroundColor);
   background-image: url('logo-outlined.svg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -164,19 +164,19 @@ sp-dropdown[emphasized] {
 .spectrum-ComboField {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .spectrum-ComboField-label {
-  color: var(--spectrum-global-color-gray-300);
+  color: var(--spectrum-global-color-gray-800);
   margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
 }
 
 .ca-Landing-search {
-  /*
+  margin: 24px 0 32px;
+
   sp-search#searchField {
-    --spectrum-textfield-border-color: red;
+    --spectrum-textfield-border-color: transparent;
   }
-  */
 }
 .sp-Landing-searchResults {
   max-width: 340px;
@@ -364,6 +364,11 @@ hr {
   > .ca-Footer {
     flex-shrink: 0;
   }
+
+  > .ca-Section:first-of-type {
+    margin-top: calc(var(--spectrum-alias-grid-margin-large) / 4);
+    /* margin-top: 0; */
+  }
 }
 
 .ca-DownloadTrigger {
@@ -400,6 +405,12 @@ hr {
   .spectrum-Heading.ca-LocationTitle {
     /* margin-top: 2em; */
     font-size: var(--spectrum-heading-l-text-size, var(--spectrum-alias-heading-l-text-size));
+  }
+  .ca-Landing-search {
+    sp-search#searchField {
+      --spectrum-textfield-min-width: 400px;
+      --spectrum-global-dimension-size-600: 400px;
+    }
   }
 }
 

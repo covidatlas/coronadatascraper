@@ -27,18 +27,17 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-    <div class="ca-Landing">
-      <div class="ca-Logo ca-Landing-logo">
-        <img src="${arc.static('logo-banner-dark.svg')}" alt="${constants.name}">
-      </div>
-
+    <div class="ca-Landing spectrum--dark">
+      <h1 class="spectrum-Heading spectrum-Heading--XL">Find your local COVID-19 data</h1>
       <div class="ca-Landing-search" id="searchContainer">
         <label class="spectrum-ComboField spectrum--large">
           <div class="spectrum-ComboField-label">
             Search by county, state, or country name
           </div>
-          <sp-search id="searchField" autocomplete="off"></sp-search>
-          <sp-button id="searchButton" type="submit" hidden>Go</sp-button>
+          <div class="spectrum--light">
+            <sp-search id="searchField" autocomplete="off"></sp-search>
+            <sp-button id="searchButton" type="submit" hidden>Go</sp-button>
+          </div>
         </label>
         <sp-popover class="sp-Landing-searchResults" id="searchPopover" placement="bottom" open>
           <sp-menu id="searchResults">
@@ -49,26 +48,26 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
     <div class="row">
       <section class="ca-Section col-xs-12 col-sm-4">
-        <h1 class="spectrum-Heading spectrum-Heading--L">Local official COVID-19 resources</h1>
-        <p class="spectrum-Body spectrum-Body--L">COVID Atlas scrapes public data from local resources.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Local official COVID-19 resources</h1>
+        <p class="spectrum-Body spectrum-Body--M">COVID Atlas scrapes public data from local resources.</p>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-4">
-        <h1 class="spectrum-Heading spectrum-Heading--L">Updated daily</h1>
-        <p class="spectrum-Body spectrum-Body--L">Our data updates daily at 9PM PST so you can access the most recent data available.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Updated daily</h1>
+        <p class="spectrum-Body spectrum-Body--M">Our data updates daily at 9PM PST so you can access the most recent data available.</p>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-4">
-        <h1 class="spectrum-Heading spectrum-Heading--L">Built by a community</h1>
-        <p class="spectrum-Body spectrum-Body--L">COVID Atlas is entirely open-source, built by a community of people concerned with all the same things you are.</p>
-        <p class="spectrum-Body spectrum-Body--L">We're all in this together.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Built by a community</h1>
+        <p class="spectrum-Body spectrum-Body--M">COVID Atlas is entirely open-source, built by a community of people concerned with all the same things you are.</p>
+        <p class="spectrum-Body spectrum-Body--M">We're all in this together.</p>
       </section>
     </div>
     <hr>
 
     <section class="ca-Section ca-Download">
       <h1 class="spectrum-Heading spectrum-Heading--L">Data available for download</h1>
-      <sp-button href="/data">Download</sp-button>
+      <sp-button href="/data">View datasets</sp-button>
     </section>
     ${footer()}
 
