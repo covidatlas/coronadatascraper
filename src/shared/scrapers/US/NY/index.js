@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'NY',
+  state: 'iso2:US-NY',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [
@@ -177,7 +177,7 @@ export default scraper;
           countyObj.feature = geography.generateMultiCountyFeature(
             ['Bronx County, NY', 'Kings County, NY', 'New York County, NY', 'Queens County, NY', 'Richmond County, NY'],
             {
-              state: 'NY',
+              state: 'iso2:US-NY',
               country: 'iso1:US'
             }
           );

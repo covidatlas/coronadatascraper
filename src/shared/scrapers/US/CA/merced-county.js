@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Merced County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019',

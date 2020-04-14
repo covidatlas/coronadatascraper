@@ -13,7 +13,7 @@ const scraper = {
       url: 'http://www.publichealth.lacounty.gov'
     }
   ],
-  state: 'CA',
+  state: 'iso2:US-CA',
   type: 'table',
   url: 'http://www.publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js',
   scraper: {

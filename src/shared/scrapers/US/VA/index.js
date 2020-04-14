@@ -9,7 +9,7 @@ import maintainers from '../../../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'VA',
+  state: 'iso2:US-VA',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [

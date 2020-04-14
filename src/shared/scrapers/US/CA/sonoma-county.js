@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Sonoma County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://socoemergency.org/emergency/novel-coronavirus/novel-coronavirus-in-sonoma-county/',

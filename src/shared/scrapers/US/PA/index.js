@@ -8,7 +8,7 @@ import * as htmlTableValidation from '../../../lib/html/table-validation.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'PA',
+  state: 'iso2:US-PA',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [
@@ -101,7 +101,7 @@ const scraper = {
           .text()
           .match(/([A-Za-z]+) \((\d+\))/);
         if (matches) {
-          const county = geography.getCounty(geography.addCounty(parse.string(matches[1])), 'PA');
+          const county = geography.getCounty(geography.addCounty(parse.string(matches[1])), 'iso2:US-PA');
           const cases = parse.number(matches[2]);
           counties.push({
             county,
@@ -123,7 +123,10 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -142,7 +145,10 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         const data = {
-          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
           cases: parse.number($tr.find('td:last-child').text())
         };
         counties.push(data);
@@ -161,7 +167,10 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });
@@ -201,7 +210,10 @@ const scraper = {
       $trs.each((index, tr) => {
         const $tr = $(tr);
         counties.push({
-          county: geography.getCounty(geography.addCounty(parse.string($tr.find('td:first-child').text())), 'PA'),
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
           cases: parse.number($tr.find('td:nth-child(2)').text()),
           deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
         });

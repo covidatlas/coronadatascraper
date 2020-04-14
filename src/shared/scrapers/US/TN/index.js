@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'TN',
+  state: 'iso2:US-TN',
   country: 'iso1:US',
   sources: [
     {

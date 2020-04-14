@@ -70,7 +70,7 @@ test('Scraper tests', async t => {
     // dynamically import the scraper
     const scraperObj = imports(join(testDir, '..', 'index.js'));
 
-    if (scraperObj.state === 'AL' && scraperObj.country === 'iso1:US') {
+    if (scraperObj.state === 'iso2:US-AL' && scraperObj.country === 'iso1:US') {
       [scraperObj.scraper] = scraperObj.scraper;
     }
 

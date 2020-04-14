@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'FL',
+  state: 'iso2:US-FL',
   country: 'iso1:US',
   priority: 1,
   aggregate: 'county',
@@ -241,6 +241,7 @@ const scraper = {
       counties.push(unassigned);
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties = counties.filter(c => c.county !== UNASSIGNED);
       return counties;
     }
   }

@@ -1,8 +1,8 @@
+import fipsCodes from 'country-levels/fips.json';
+import datetime from '../../lib/datetime/index.js';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
-import * as geography from '../../lib/geography/index.js';
-import datetime from '../../lib/datetime/index.js';
 
 const scraper = {
   url: 'https://github.com/nytimes/covid-19-data',
@@ -50,24 +50,27 @@ const scraper = {
     const locationsByState = {};
     for (const row of data) {
       if (datetime.getYYYYMD(`${row.date} 12:00:00`) === scrapeDateString) {
+        const { fips } = row;
+
+        // skip everything without fips, unassigned, etc.
+        if (!fips) {
+          continue;
+        }
+
+        // Only include places we have data for
+        const countryLevelIDInfo = fipsCodes[fips];
+        if (!countryLevelIDInfo) {
+          console.warn(`  ⚠️  US/NYT FIPS not found: ${fips}`);
+          continue;
+        }
+
         const locationObj = {
-          state: geography.getState(row.state),
+          county: `fips:${fips}`,
+          state: `iso2:${countryLevelIDInfo.state_code_iso}`,
           cases: parse.number(row.cases),
           deaths: parse.number(row.deaths)
         };
         locationsByState[locationObj.state] = locationsByState[locationObj.state] || [];
-        if (row.county.toLowerCase().match(/city$/)) {
-          // Data is not for a county
-          // Todo: Check our citycounty to county map
-          locationObj.city = row.county;
-        } else {
-          locationObj.county = geography.getCounty(row.county, row.state);
-
-          if (locationObj.county === '(unassigned)') {
-            // Skip unassigned locations from NYT, otherwise they mess up rollup totals
-            continue;
-          }
-        }
         locationsByState[locationObj.state].push(locationObj);
         locations.push(locationObj);
       }

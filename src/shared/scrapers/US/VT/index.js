@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'VT',
+  state: 'iso2:US-VT',
   country: 'iso1:US',
   sources: [
     {
