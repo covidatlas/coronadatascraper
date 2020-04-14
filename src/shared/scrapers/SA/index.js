@@ -17,7 +17,8 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const dataset = (await fetch.csv(this.url, false))
+    const raw = await fetch.csv(this.url, false);
+    const dataset = raw
       .filter(item => item.region !== 'Total')
       .map(item => ({ ...item, region: mapping[item.region] }));
 

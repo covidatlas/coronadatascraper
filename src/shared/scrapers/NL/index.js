@@ -23,17 +23,14 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = (
-      await fetch.csv(
-        'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_province.csv',
-        false
-      )
-    ).filter(item => datetime.scrapeDateIs(item.Datum));
+    const casesUrl =
+      'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_province.csv';
+    const casesRaw = await fetch.csv(casesUrl, false);
+    const casesData = casesRaw.filter(item => datetime.scrapeDateIs(item.Datum));
 
-    const nationalData = await fetch.csv(
-      'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_national.csv',
-      false
-    );
+    const nationalUrl =
+      'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_national.csv';
+    const nationalData = await fetch.csv(nationalUrl, false);
 
     const hospitalized = nationalData.find(
       item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Ziekenhuisopname'
