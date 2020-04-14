@@ -71,7 +71,7 @@ function getContributorsHeading(contributors, byString) {
   let html = '';
 
   if (contributors) {
-    html += `<h3 class="spectrum-Body spectrum-Body--XL cds-ReportCard-contributorName">${byString} `;
+    html += `<h3 class="spectrum-Body spectrum-Body--S cds-ReportCard-contributorName">${byString} `;
     html += getContributors(contributors);
     html += `</h3>`;
   }
@@ -121,12 +121,12 @@ function ratingTemplate(source, index) {
       ''
     )}">${getGrade(source.rating).replace(/([+-])/, '<span class="cds-ReportCard-plusMinus">$1</span>')}</div>
     <div class="cds-ReportCard-content">
-      <h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index +
+      <h2 class="spectrum-Heading spectrum-Heading--M"><a href="#${slug}" target="_blank" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${index +
     1}. ${getName(source)}</a></h2>
       ${sources}
       ${curators}
       ${maintainers}
-      <h4 class="spectrum-Body spectrum-Body--XL cds-ReportCard-sourceURL">Data from <a href="${
+      <h4 class="spectrum-Body spectrum-Body--S cds-ReportCard-sourceURL">Data from <a href="${
         source.url
       }" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
       <div class="cds-ReportCard-criteria">
