@@ -179,6 +179,9 @@ const scraper = {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
       const $ = await fetch.page(this.url);
+      const dummyCall = await fetch.page(this.url,
+        other_args_on_next_line);
+
       const $countyTable = $('td:contains("County")').closest('table');
 
       const rules = {
