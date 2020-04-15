@@ -22,7 +22,8 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const dataset = (await fetch.json(this.url, false)).result[0].resources.find(item => item.format === 'csv');
+    const datasetRaw = await fetch.json(this.url, false);
+    const dataset = datasetRaw.result[0].resources.find(item => item.format === 'csv');
 
     const casesRaw = await fetch.csv(dataset.url, false);
     const casesData = casesRaw.filter(item => datetime.scrapeDateIs(reformatDate(item.date)));

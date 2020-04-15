@@ -13,7 +13,7 @@ const parseDate = date => `${date.substring(0, 4)}-${date.substring(4, 6)}-${dat
 
 const scraper = {
   country: 'iso1:GB',
-  url: 'https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=lis',
+  url: 'https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list',
   aggregate: 'county',
   type: 'json',
   sources: [
