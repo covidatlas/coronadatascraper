@@ -20,6 +20,9 @@ module.exports = function body(selectedPage = 'home', className = '') {
     <!--<sp-tab label="Reports" value="crosscheck"></sp-tab>-->
     <sp-tab label="About" value="about"></sp-tab>
   </sp-tab-list>
+  <div class="ca-SiteHeader-search">
+    <sp-search id="searchField" autocomplete="off"></sp-search>
+  </div>
 </div>
 `;
 };

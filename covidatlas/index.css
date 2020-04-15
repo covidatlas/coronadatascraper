@@ -151,14 +151,20 @@ sp-dropdown[emphasized] {
   background-position-y: 120%;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   flex-direction: column;
 
-  padding: calc(var(--spectrum-alias-grid-margin-large) * 2) var(--spectrum-alias-grid-margin-large);
+  padding: var(--ca-PageMargin) var(--ca-PageMargin);
   margin-left: calc(var(--ca-PageMargin) * -1);
   margin-right: calc(var(--ca-PageMargin) * -1);
+
+  .spectrum-Heading--XXL {
+    max-width: 26ch;
+    margin-top: 0;
+    margin-bottom: var(--spectrum-heading-xxl-margin-top, var(--spectrum-alias-heading-xxl-margin-top));
+  }
 }
 
 .spectrum-ComboField {
@@ -172,7 +178,7 @@ sp-dropdown[emphasized] {
 }
 
 .ca-Landing-search {
-  margin: 24px 0 32px;
+  /* margin: 24px 0 32px; */
 
   sp-search#searchField {
     --spectrum-textfield-border-color: transparent;

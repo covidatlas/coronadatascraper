@@ -28,11 +28,11 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
     <div class="ca-Landing spectrum--dark">
-      <h1 class="spectrum-Heading spectrum-Heading--XL">Find your local COVID-19 data</h1>
+      <h1 class="spectrum-Heading spectrum-Heading--XXL">COVID Atlas collects local data from around the world into one resource.</h1>
       <div class="ca-Landing-search" id="searchContainer">
         <label class="spectrum-ComboField spectrum--large">
           <div class="spectrum-ComboField-label">
-            Search by county, state, or country name
+            Search data by county, state, or country name
           </div>
           <div class="spectrum--light">
             <sp-search id="searchField" autocomplete="off"></sp-search>
@@ -67,6 +67,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
     <section class="ca-Section ca-Download">
       <h1 class="spectrum-Heading spectrum-Heading--L">Data available for download</h1>
+      <p class="spectrum-Body spectrum-Body--M">Use our local worldwide COVID-19 data for yourself.</p>
       <sp-button href="/data">View datasets</sp-button>
     </section>
     ${footer()}
