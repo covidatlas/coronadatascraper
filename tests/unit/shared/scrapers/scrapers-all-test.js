@@ -58,35 +58,35 @@ function validateCodingConventions(t, lin) {
     t.fail(`Doesn't follow convention`);
   }
 
-  /*
-  // DISABLING THESE CHECKS FOR NOW, WILL RE-ENABLE LATER.
-
   // Each call should have the scraper object, the URL, and the
   // "cache key".
   // console.log(lin);
   const fetchArgs = lin
-        .trim()
-        .replace(/.*\(/, '')
-        .replace(/\);$/, '')
-        .split(',')
-        .map(s => s.trim());
-  const lenMsg = `Expected >=3 args to fetch (scraper, url, cacheKey), got ${fetchArgs.length}`;
-  t.ok(fetchArgs.length >= 3, lenMsg);
+    .trim()
+    .replace(/.*\(/, '')
+    .replace(/\);$/, '')
+    .split(',')
+    .map(s => s.trim());
+  const n = fetchArgs.length;
+  if (n < 3) {
+    t.fail(`Expected >=3 args to fetch (scraper, url, cacheKey), got ${n}`);
+    return;
+  }
 
-  if (fetchArgs.length >= 3) {
-    const first = fetchArgs[0];
-    const third = fetchArgs[2];
+  const first = fetchArgs[0];
+  const third = fetchArgs[2];
 
-    // First arg: Most scrapers can pass 'this', but some scrapers
-    // use helper functions, and so must pass 'obj'.
-    t.ok(first == 'this' || first == 'obj', 'first arg is this or obj');
+  // First arg: Most scrapers can pass 'this', but some scrapers
+  // use helper functions, and so must pass 'obj'.
+  t.ok(first === 'this' || first === 'obj', 'first arg is this or obj');
 
-    // Third arg: Must be cache key.
-    const apos = "'";
-    const ckmsg = `third arg (${third}) is cache key, must be string`;
+  // Third arg: If not ArcGIS, third arg must be be cache key.
+  // ArcGIS calls don't have a "cache key", as they're intermediate steps only.
+  const apos = "'";
+  const ckmsg = `third arg (${third}) is cache key, must be string`;
+  if (!lin.match(/getArcGIS/)) {
     t.ok(third.startsWith(apos) && third.endsWith(apos), ckmsg);
   }
-  */
 }
 
 const checkFiles = scraperCodeFiles.filter(scf => scf.importsFetch);
