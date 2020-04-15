@@ -227,7 +227,7 @@ const scraper = {
           endURL = endURL.slice(0, name.lastIndexOf(' '));
         }
         const pdfUrl = pdfBaseURL + endURL;
-        const pdfScrape = await fetch.pdf(this, pdfUrl, 'default');
+        const pdfScrape = await fetch.pdf(this, pdfUrl, endURL);
 
         if (pdfScrape) {
           let pdfText = '';

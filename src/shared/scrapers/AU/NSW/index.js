@@ -37,7 +37,7 @@ const scraper = {
   url:
     'https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx',
   async scraper() {
-    const $ = await fetch.page(this, this.url, 'default');
+    const $ = await fetch.page(this, this.url, 'tmpindex');
     const $anchors = $('channel > item:contains("statistics") > link');
     const currentArticleUrl = $anchors[0].next.data;
     const $currentArticlePage = await fetch.page(this, currentArticleUrl, 'default');

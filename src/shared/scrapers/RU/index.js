@@ -31,7 +31,7 @@ const scraper = {
       throw new DeprecatedError('RUS scraper did not exist for this date');
     },
     '2020-03-26': async function() {
-      const csrfRequestResponse = await fetch.jsonAndCookies(this, this.url, 'default');
+      const csrfRequestResponse = await fetch.jsonAndCookies(this, this.url, 'tmpcsrf');
       const csrfCookies = csrfRequestResponse.cookies;
       const { csrfToken } = csrfRequestResponse.body;
 

@@ -259,7 +259,7 @@ const scraper = {
     '2020-04-02': async function() {
       this.type = 'pdf';
       this.url = 'https://public.tableau.com/views/COVID-19Data_15851817634470/CountyCounts.pdf?:showVizHome=no';
-      const pdfScrape = await fetch.pdf(this, this.url, 'default');
+      const pdfScrape = await fetch.pdf(this, this.url, 'cases');
 
       const data = pdfScrape
         .filter(item => item && item.y > 6 && item.y < 46)
@@ -297,7 +297,7 @@ const scraper = {
       });
 
       const pdfUrl = 'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no';
-      const deathData = await fetch.pdf(this, pdfUrl, 'default');
+      const deathData = await fetch.pdf(this, pdfUrl, 'deaths');
       let totalDeaths = '';
       deathData.forEach(item => {
         if (item && item.text.match(/[0-9]/)) {

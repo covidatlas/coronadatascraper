@@ -21,7 +21,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       // Get the Tableau chart
-      const $ = await fetch.headless(this, this.url, 'default');
+      const $ = await fetch.headless(this, this.url, 'tmpindex');
 
       // Pull out our session id from the json stuffed inside the textarea
       const textArea = $('textarea#tsConfigContainer').text();

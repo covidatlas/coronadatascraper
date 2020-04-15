@@ -310,7 +310,7 @@ const scraper = {
 
       const totalsUrl =
         'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
-      const tmp = await fetch.json(this, totalsUrl, 'default');
+      const tmp = await fetch.json(this, totalsUrl, 'totals');
       const totalsData = tmp.features.pop().attributes;
 
       const totals = transform.sumData(counties);

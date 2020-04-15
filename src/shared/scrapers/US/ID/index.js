@@ -116,7 +116,7 @@ const scraper = {
         'https://public.tableau.com/views/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y&%3AbootstrapWhenNotified=true';
 
       // Get the Tableau chart
-      const $ = await fetch.page(this, this.url, 'default');
+      const $ = await fetch.page(this, this.url, 'tmpindex');
 
       // Pull out our session id from the json stuffed inside the textarea
       const textArea = $('textarea#tsConfigContainer').text();
