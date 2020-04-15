@@ -9,7 +9,8 @@ const labelFragmentsByKey = [
   { discard: 'probable case' },
   { hospitalized: 'cases in hospital' },
   { recovered: 'recovered cases' },
-  { deaths: 'deaths' }
+  { deaths: 'deaths' },
+  { discard: 'currently in hospital' }
 ];
 
 const scraper = {
