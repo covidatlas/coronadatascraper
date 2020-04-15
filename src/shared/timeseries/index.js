@@ -265,9 +265,8 @@ async function generateTimeseries(options = {}) {
   await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
   await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
 
-  const { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
-  const LocationsAndDates = { locations, timeseriesByDate };
-  await fs.writeFile(path.join('dist', 'timeseries-locations.json'), JSON.stringify(LocationsAndDates, { space: 2 }));
+  const combinedTimeseries = transform.transposeTimeseries(timeseriesByLocation);
+  await fs.writeFile(path.join('dist', 'timeseries.json'), JSON.stringify(combinedTimeseries, { space: 0 }));
 
   await generateCSV(timeseriesByLocation);
 

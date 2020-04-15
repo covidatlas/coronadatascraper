@@ -73,22 +73,22 @@ export const transposeTimeseries = function(timeseriesByLocation) {
     return 1;
   });
 
-  const timeseriesByDate = {};
+  const timeseries = {};
   // Iterate over all dates, add data
   for (const date of allDates) {
-    timeseriesByDate[date] = {};
+    timeseries[date] = {};
 
     let index = 0;
     for (const location of locations) {
       const locationData = timeseriesByLocation[location.name];
       if (locationData.dates[date]) {
-        timeseriesByDate[date][index] = locationData.dates[date];
+        timeseries[date][index] = locationData.dates[date];
       }
       index++;
     }
   }
 
-  return { timeseriesByDate, locations };
+  return { timeseries, locations };
 };
 
 const caseFields = ['cases', 'recovered', 'active', 'deaths', 'tested', 'hospitalized', 'discharged'];
