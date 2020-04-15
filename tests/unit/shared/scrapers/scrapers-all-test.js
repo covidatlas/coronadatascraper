@@ -74,7 +74,6 @@ function validateCodingConventions(t, lin) {
   }
 
   const first = fetchArgs[0];
-  const third = fetchArgs[2];
 
   // First arg: Most scrapers can pass 'this', but some scrapers
   // use helper functions, and so must pass 'obj'.
@@ -82,11 +81,15 @@ function validateCodingConventions(t, lin) {
 
   // Third arg: If not ArcGIS, third arg must be be cache key.
   // ArcGIS calls don't have a "cache key", as they're intermediate steps only.
-  const apos = "'";
-  const ckmsg = `third arg (${third}) is cache key, must be string`;
-  if (!lin.match(/getArcGIS/)) {
-    t.ok(third.startsWith(apos) && third.endsWith(apos), ckmsg);
-  }
+  // const third = fetchArgs[2];
+  //
+  // DISABLED THIS CHECK.
+  // NOTE: can't check this, b/c some scrapers use variables as the cache key
+  // (e.g. when fetching multiple times for counties, see US/VA/index.js).
+  // const apos = "'";
+  // const ckmsg = `third arg (${third}) is cache key, must be string`;
+  // if (!lin.match(/getArcGIS/)) {
+  //   t.ok(third.startsWith(apos) && third.endsWith(apos), ckmsg);
 }
 
 const checkFiles = scraperCodeFiles.filter(scf => scf.importsFetch);
