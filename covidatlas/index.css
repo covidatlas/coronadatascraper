@@ -203,6 +203,11 @@ sp-dropdown[emphasized] {
   max-width: 500px;
 }
 
+.ca-Section-Image {
+  width: 100px;
+  margin: 0 auto;
+}
+
 .ca-Download {
   display: flex;
   flex-direction: column;
