@@ -92,7 +92,10 @@ export const csv = async (url, date, options = {}) => {
       resolve(null);
     } else {
       csvParse(
-        resp.body,
+        resp.body
+          // Remove blank lines at the end of the document, this break CSV parsing
+          // regex from https://stackoverflow.com/a/16369725/2034508
+          .replace(/^\s*$(?:\r\n?|\n)/gm, ''),
         {
           delimiter: options.delimiter,
           columns: true
