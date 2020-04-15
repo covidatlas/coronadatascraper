@@ -151,7 +151,7 @@ async function route(req) {
     body: template(
       `${location.name}`,
       `
-${header()}
+${header({ selectedPage: '' })}
 <div class="spectrum-Site-content">
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">

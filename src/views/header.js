@@ -2,6 +2,8 @@ const arc = require('@architect/functions');
 
 // eslint-disable-next-line
 const constants = require('@architect/views/constants');
+// eslint-disable-next-line
+const search = require('@architect/views/search');
 
 module.exports = function body(selectedPage = 'home', className = '') {
   return /* html */ `
@@ -20,9 +22,15 @@ module.exports = function body(selectedPage = 'home', className = '') {
     <!--<sp-tab label="Reports" value="crosscheck"></sp-tab>-->
     <sp-tab label="About" value="about"></sp-tab>
   </sp-tab-list>
-  <div class="ca-SiteHeader-search">
-    <sp-search id="searchField" autocomplete="off"></sp-search>
-  </div>
+  ${
+    selectedPage !== 'home'
+      ? `
+    <div class="ca-SiteHeader-search">
+      ${search({ label: '' })}
+    </div>
+  `
+      : ''
+  }
 </div>
 `;
 };

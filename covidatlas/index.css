@@ -177,26 +177,6 @@ sp-dropdown[emphasized] {
   margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
 }
 
-.ca-Landing-search {
-  /* margin: 24px 0 32px; */
-
-  sp-search#searchField {
-    --spectrum-textfield-border-color: transparent;
-    --spectrum-textfield-min-width: var(--ca-landing-search-width);
-    --spectrum-global-dimension-size-600: var(--ca-landing-search-width);
-  }
-}
-
-.sp-Landing-searchResults {
-  width: var(--ca-landing-search-width);
-  max-height: 300px;
-}
-
-.ca-Landing-search #searchPopover {
-  /* hide the popover until the overlay shows it */
-  display: none;
-}
-
 .ca-Section {
   margin: calc(var(--spectrum-alias-grid-margin-large) * 2) 0;
 }
@@ -231,7 +211,7 @@ sp-dropdown[emphasized] {
 .ca-SiteHeader {
   background-color: var(--BackgroundColor);
   border-bottom-color: transparent;
-  padding-right: 40px; /* offset logo until search button is added */
+  padding-right: var(--spectrum-global-dimension-size-125);
 
   .ca-Logo {
     margin: 0 auto;
@@ -390,6 +370,31 @@ hr {
   padding: 0;
 }
 
+/* Search */
+
+sp-search#searchField {
+  --spectrum-textfield-border-color: transparent;
+  --spectrum-textfield-min-width: var(--ca-landing-search-width);
+  --spectrum-global-dimension-size-600: var(--ca-landing-search-width);
+}
+
+.sp-SearchResults {
+  width: var(--ca-landing-search-width);
+  max-height: 300px;
+}
+
+#searchContainer #searchPopover {
+  /* hide the popover until the overlay shows it */
+  display: none;
+}
+
+.ca-SiteHeader-search {
+  sp-search#searchField {
+    --spectrum-textfield-min-width: 0;
+  }
+}
+
+
 @media only screen and (min-width: 48em){
   .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-offset-0, .col-sm-offset-1, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9,
   .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-offset-0, .col-md-offset-1, .col-md-offset-10, .col-md-offset-11, .col-md-offset-12, .col-md-offset-2, .col-md-offset-3, .col-md-offset-4, .col-md-offset-5, .col-md-offset-6, .col-md-offset-7, .col-md-offset-8, .col-md-offset-9,
@@ -452,7 +457,6 @@ hr {
   }
   .ca-SiteHeader {
     padding-left: calc(var(--ca-PageMargin) - 8px);
-    padding-right: calc(var(--ca-PageMargin) - 8px);
   }
   .ca-SiteHeader .ca-HeaderLogo {
     margin: 0 8px;

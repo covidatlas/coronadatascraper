@@ -10,6 +10,8 @@ const header = require('@architect/views/header');
 const footer = require('@architect/views/footer');
 // eslint-disable-next-line
 const sidebar = require('@architect/views/sidebar');
+// eslint-disable-next-line
+const search = require('@architect/views/search');
 
 exports.handler = async function http() {
   return {
@@ -29,20 +31,8 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
     <div class="ca-Landing spectrum--dark">
       <h1 class="spectrum-Heading spectrum-Heading--XXL">COVID Atlas collects local data from around the world into one resource.</h1>
-      <div class="ca-Landing-search" id="searchContainer">
-        <label class="spectrum-ComboField spectrum--large">
-          <div class="spectrum-ComboField-label">
-            Search data by county, state, or country name
-          </div>
-          <div class="spectrum--light">
-            <sp-search id="searchField" autocomplete="off"></sp-search>
-            <sp-button id="searchButton" type="submit" hidden>Go</sp-button>
-          </div>
-        </label>
-        <sp-popover class="sp-Landing-searchResults" id="searchPopover" placement="bottom" open>
-          <sp-menu id="searchResults">
-          </sp-menu>
-        </sp-popover>
+      <div class="ca-Landing-search spectrum--large">
+        ${search()}
       </div>
     </div>
 

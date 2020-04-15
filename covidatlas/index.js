@@ -14,3 +14,4 @@ import '@spectrum-web-components/tab-list';
 import './index.css';
 
 import './components/sidebar.js';
+import './components/search.js';
