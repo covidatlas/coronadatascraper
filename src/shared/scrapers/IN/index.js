@@ -55,7 +55,7 @@ const countryLevelMap = {
 
 const getValue = (key, text) => {
   if (key === 'state') {
-    const state = parse.string(text);
+    const state = parse.string(text).replace(/#/, '');
     const mappedState = countryLevelMap[state];
     assert(
       mappedState,
