@@ -154,7 +154,13 @@ function compareReportFolders(left, right) {
     {
       regex: /features(.*).json/,
       formatters: {}
-    }
+    },
+
+    { regex: /timeseries-byLocation.json/, formatters: {} },
+    { regex: /timeseries-jhu.csv/, formatters: {} },
+    { regex: /timeseries-tidy.csv/, formatters: {} },
+    { regex: /timeseries.csv/, formatters: {} },
+    { regex: /timeseries.json/, formatters: {} }
   ];
 
   jsonReports.forEach(hsh => {
