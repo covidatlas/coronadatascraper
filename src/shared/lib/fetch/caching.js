@@ -11,6 +11,7 @@ import fsBuiltIn from 'fs';
 
 import join from '../join.js';
 import datetime from '../datetime/index.js';
+import * as datetimeFormatting from '../datetime/iso/format.js';
 import * as fs from '../fs.js';
 import log from '../log.js';
 
@@ -86,7 +87,7 @@ function migrateFile(url, filePath, encoding, scraper, date, cacheKey, type) {
   const content = fsBuiltIn.readFileSync(filePath, encoding);
   const sha = hashContent(content, 5);
   const topdir = newTopFolder(scraper._path);
-  const dt = datetime.old.getYYYYMMDD(date);
+  const dt = datetimeFormatting.getYYYYMMDD(date);
   const tm = `${dt}t21_00_00.000z`;
   const destdir = join(process.cwd(), process.env.MIGRATE_CACHE_DIR, topdir, dt);
   const fname = `${tm}-${cacheKey}-${sha}.${type}`;
@@ -189,8 +190,8 @@ export const getCachedFile = async (scraper, url, cacheKey, type, date, encoding
 
   // If we're doing a cache migration, write the file (with
   // appropriate filename) to the other location.
-  // Final format is:
-  if (process.env.MIGRATE_CACHE_DIR && cacheExists) {
+  // NOTE: We're not migrating the timeseries cache!
+  if (process.env.MIGRATE_CACHE_DIR && cacheExists && date !== false) {
     migrateFile(url, filePath, encoding, scraper, date, cacheKey, type);
   }
 
