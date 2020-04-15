@@ -157,7 +157,7 @@ files.each do |f|
   fpath = File.join(scraper_dir, f)
   src = File.read(fpath)
 
-  add_cacheKey_to_fetch_calls(src)
+  src = add_cacheKey_to_fetch_calls(src)
   
   # post_migration_check(src)
   puts
