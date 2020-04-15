@@ -28,8 +28,8 @@ const READ_TIMEOUT = 60000;
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const page = async (scraper, url, date, options = {}) => {
-  const resp = await get(scraper, url, 'html', date, options);
+export const page = async (scraper, url, cacheKey = 'default', date, options = {}) => {
+  const resp = await get(scraper, url, cacheKey, 'html', date, options);
   if (!resp.body) {
     return null;
   }
@@ -45,9 +45,9 @@ export const page = async (scraper, url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const json = async (scraper, url, date, options = {}) => {
+export const json = async (scraper, url, cacheKey = 'default', date, options = {}) => {
   log(url);
-  const resp = await get(scraper, url, 'json', date, options);
+  const resp = await get(scraper, url, cacheKey, 'json', date, options);
   if (!resp.body) {
     return null;
   }
@@ -62,9 +62,9 @@ export const json = async (scraper, url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const jsonAndCookies = async (scraper, url, date, options = {}) => {
+export const jsonAndCookies = async (scraper, url, cacheKey = 'default', date, options = {}) => {
   log(url);
-  const resp = await get(scraper, url, 'json', date, options);
+  const resp = await get(scraper, url, cacheKey, 'json', date, options);
   if (!resp.body) {
     return null;
   }
@@ -84,9 +84,9 @@ export const jsonAndCookies = async (scraper, url, date, options = {}) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  *  - delimiter: the delimiter to use (default is ,)
  */
-export const csv = async (scraper, url, date, options = {}) => {
+export const csv = async (scraper, url, cacheKey = 'default', date, options = {}) => {
   return new Promise(async (resolve, reject) => {
-    const resp = await get(scraper, url, 'csv', date, options);
+    const resp = await get(scraper, url, cacheKey, 'csv', date, options);
 
     if (!resp.body) {
       resolve(null);
@@ -118,9 +118,9 @@ export const csv = async (scraper, url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const tsv = async (scraper, url, date, options = {}) => {
+export const tsv = async (scraper, url, cacheKey = 'default', date, options = {}) => {
   options.delimiter = '\t';
-  return csv(scraper, url, date, options);
+  return csv(scraper, url, cacheKey, date, options);
 };
 
 /**
@@ -132,8 +132,8 @@ export const tsv = async (scraper, url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const raw = async (scraper, url, date, options = {}) => {
-  const resp = await get(scraper, url, 'raw', date, options);
+export const raw = async (scraper, url, cacheKey = 'default', date, options = {}) => {
+  const resp = await get(scraper, url, cacheKey, 'raw', date, options);
   return resp.body;
 };
 
@@ -146,8 +146,8 @@ export const raw = async (scraper, url, date, options = {}) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const pdf = async (scraper, url, date, options) => {
-  const resp = await get(scraper, url, 'pdf', date, { ...options, toString: false, encoding: null });
+export const pdf = async (scraper, url, cacheKey = 'default', date, options) => {
+  const resp = await get(scraper, url, cacheKey, 'pdf', date, { ...options, toString: false, encoding: null });
 
   if (!resp.body) {
     return null;
@@ -229,12 +229,14 @@ const fetchHeadless = async url => {
 export const headless = async (
   scraper,
   url,
+  cacheKey = 'default',
   date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(),
   options = {}
 ) => {
   const { alwaysRun } = { alwaysRun: false, disableSSL: false, ...options };
 
-  const cachedBody = await caching.getCachedFile(scraper, url, 'html', date);
+  const cachedBody = await caching.getCachedFile(scraper, url, cacheKey, 'html', date);
+
   if (process.env.ONLY_USE_CACHE) {
     const $ = await cheerio.load(cachedBody);
     return $;
@@ -242,7 +244,7 @@ export const headless = async (
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
     const fetchedBody = await fetchHeadless(url);
-    await caching.saveFileToCache(url, 'html', date, fetchedBody);
+    await caching.saveFileToCache(scraper, url, 'html', date, fetchedBody);
 
     const $ = await cheerio.load(fetchedBody);
     return $;
@@ -264,7 +266,8 @@ export const headless = async (
 export const getArcGISCSVURLFromOrgId = async function(scraper, serverNumber, orgId, layerName) {
   const layerMetadata = await json(
     scraper,
-    `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`
+    `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`,
+    'ArcOrgID'
   );
   const { serviceItemId } = layerMetadata;
   return `https://opendata.arcgis.com/datasets/${serviceItemId}_0.csv`;
@@ -280,7 +283,8 @@ export const getArcGISCSVURLFromOrgId = async function(scraper, serverNumber, or
 export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId, layerName) {
   const dashboardManifest = await json(
     scraper,
-    `https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`
+    `https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`,
+    'ArcGIS'
   );
   const { orgId } = dashboardManifest;
   return getArcGISCSVURLFromOrgId(scraper, serverNumber, orgId, layerName);

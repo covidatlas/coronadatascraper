@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 /**
  * This file contains the caching implementation. We provide caching to reduce strain on official data sources
  * and to store changes to each source on a day to day basis.
@@ -44,7 +46,7 @@ export const getCachedFileName = (url, type) => {
  * @param {string} type type of the cached resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
-export const getCachedFilePath = (url, type, date = false) => {
+export const getCachedFilePath = (scraper, url, type, date = false) => {
   // FIXME when we roll out new TZ support!
   if (date) date = datetime.old.getYYYYMD(date);
   let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
@@ -68,10 +70,10 @@ export const getCachedFilePath = (url, type, date = false) => {
   * @param {*} date the date associated with this resource, or false if a timeseries data
   * @param {string} encoding for the resource to access, default to utf-8
 */
-export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8') => {
+export const getCachedFile = async (scraper, url, cacheKey = 'default', type, date, encoding = 'utf8') => {
   if (scraper === undefined || scraper === null) throw new Error(`Undefined scraper, trying to hit ${url}`);
 
-  const filePath = getCachedFilePath(url, type, date);
+  const filePath = getCachedFilePath(scraper, url, type, date);
 
   if (await fs.exists(filePath)) {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
@@ -94,7 +96,7 @@ export const getCachedFile = async (scraper, url, type, date, encoding = 'utf8')
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} data file data to be saved
  */
-export const saveFileToCache = async (url, type, date, data) => {
-  const filePath = getCachedFilePath(url, type, date);
+export const saveFileToCache = async (scraper, url, type, date, data) => {
+  const filePath = getCachedFilePath(scraper, url, type, date);
   return fs.writeFile(filePath, data, { silent: true });
 };

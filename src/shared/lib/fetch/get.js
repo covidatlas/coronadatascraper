@@ -42,6 +42,7 @@ needle.defaults({
 export const get = async (
   scraper,
   url,
+  cacheKey,
   type,
   date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(),
   options = {}
@@ -60,7 +61,7 @@ export const get = async (
 
   if (scraper === null || typeof scraper !== 'object') throw new Error(`null or invalid scraper, getting ${url}`);
 
-  const cachedBody = await caching.getCachedFile(scraper, url, type, date, encoding);
+  const cachedBody = await caching.getCachedFile(scraper, url, cacheKey, type, date, encoding);
   if (process.env.ONLY_USE_CACHE) return { body: cachedBody, cookies: null };
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
@@ -115,7 +116,7 @@ export const get = async (
       // any sort of success code -- return good data
       if (response.statusCode < 400) {
         const fetchedBody = toString ? response.body.toString() : response.body;
-        await caching.saveFileToCache(url, type, date, fetchedBody);
+        await caching.saveFileToCache(scraper, url, cacheKey, type, date, fetchedBody);
         return { body: fetchedBody, cookies: response.cookies };
       }
 
