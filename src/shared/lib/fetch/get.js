@@ -116,7 +116,7 @@ export const get = async (
       // any sort of success code -- return good data
       if (response.statusCode < 400) {
         const fetchedBody = toString ? response.body.toString() : response.body;
-        await caching.saveFileToCache(scraper, url, cacheKey, type, date, fetchedBody);
+        await caching.saveFileToCache(scraper, url, type, date, fetchedBody);
         return { body: fetchedBody, cookies: response.cookies };
       }
 
