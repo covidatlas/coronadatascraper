@@ -12,7 +12,7 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',
   async scraper() {
-    const $ = await fetch.page(this, this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $el = $('*:contains("Confirmed cases")').first();
     const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
     return { cases: parse.number(matches[1]) };

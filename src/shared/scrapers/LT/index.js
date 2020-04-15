@@ -18,7 +18,7 @@ const scraper = {
   ],
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
-    const casesRaw = await fetch.json(this, this.url, false);
+    const casesRaw = await fetch.json(this, this.url, 'default', false);
     const casesData = casesRaw.features.map(({ attributes }) => attributes);
 
     const casesByRegion = {};

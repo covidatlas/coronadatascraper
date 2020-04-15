@@ -23,8 +23,8 @@ const scraper = {
     const casesURL = 'https://onemocneni-aktualne.mzcr.cz/api/v1/covid-19/osoby.csv';
     const testedURL = 'https://onemocneni-aktualne.mzcr.cz/api/v1/covid-19/testy.csv';
 
-    const casesData = await fetch.csv(this, casesURL, false);
-    const testedData = await fetch.csv(this, testedURL, false);
+    const casesData = await fetch.csv(this, casesURL, 'default', false);
+    const testedData = await fetch.csv(this, testedURL, 'default', false);
 
     const casesByRegion = {};
 

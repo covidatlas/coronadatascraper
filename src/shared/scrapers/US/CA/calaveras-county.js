@@ -12,7 +12,7 @@ const scraper = {
   url: 'https://covid19.calaverasgov.us/',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    const $ = await fetch.page(this, this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const cases = parse.number(
       $('h2:contains("in Calaveras County:")')
         .first()

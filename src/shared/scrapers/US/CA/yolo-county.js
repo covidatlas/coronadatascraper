@@ -14,7 +14,7 @@ const scraper = {
   url:
     'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
   async scraper() {
-    const $ = await fetch.page(this, this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     if (datetime.scrapeDateIsBefore('2020-03-17')) {
       const $h3 = $('h3:contains("confirmed case")');
       const matches = $h3.text().match(/there are (\d+) confirmed cases? in Yolo/);

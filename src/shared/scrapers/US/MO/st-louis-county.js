@@ -21,7 +21,7 @@ const scraper = {
   maintainers: [maintainers.slezakbs],
   async scraper() {
     this.url = await fetch.getArcGISCSVURLFromOrgId(this, 2, 'w657bnjzrjguNyOy', 'StLouisCounty_Bdy_Geo');
-    const rows = await fetch.csv(this, this.url);
+    const rows = await fetch.csv(this, this.url, 'default');
     const data = rows[0];
     return {
       county: geography.addCounty(this.county),

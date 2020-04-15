@@ -37,7 +37,7 @@ const scraper = {
         }
       ];
 
-      const casesRaw = await fetch.csv(this, this.url, false);
+      const casesRaw = await fetch.csv(this, this.url, 'default', false);
       const casesData = casesRaw.filter(item => datetime.scrapeDateIs(item.datetime));
 
       if (casesData.length > 0) {
@@ -73,7 +73,7 @@ const scraper = {
       const data = [];
 
       const casesUrl = 'https://info.gesundheitsministerium.at/data/Bundesland.js';
-      const casesRaw = await fetch.fetch(this, casesUrl, 'txt');
+      const casesRaw = await fetch.fetch(this, casesUrl, 'default', 'txt');
       const casesRegionData = JSON.parse(casesRaw.body.match(/\[.*\]/g));
 
       const casesByRegion = {};
