@@ -8,6 +8,7 @@
 import path from 'path';
 import crypto from 'crypto';
 import fsBuiltIn from 'fs';
+import zlib from 'zlib';
 
 import join from '../join.js';
 import datetime from '../datetime/index.js';
@@ -83,28 +84,27 @@ function checkCacheKeyCollision(cacheKey, destdir) {
 // New format:
 // crawler-cache/us-ca-xx-county/2020-04-12/2020-04-12t00_47_14.145z-default-344b7.html
 function migrateFile(url, filePath, encoding, scraper, date, cacheKey, type) {
-  console.log(`Migrating ${filePath}`);
-  const content = fsBuiltIn.readFileSync(filePath, encoding);
-  const sha = hashContent(content, 5);
+  console.log(`MIGRATING ${filePath}`);
   const topdir = newTopFolder(scraper._path);
   const dt = datetimeFormatting.getYYYYMMDD(date);
-  const tm = `${dt}t21_00_00.000z`;
   const destdir = join(process.cwd(), process.env.MIGRATE_CACHE_DIR, topdir, dt);
-  const fname = `${tm}-${cacheKey}-${sha}.${type}`;
-
   fsBuiltIn.mkdirSync(destdir, { recursive: true });
 
-  const destfile = join(destdir, fname);
   checkCacheKeyCollision(cacheKey, destdir);
+
+  const tm = `${dt}t21_00_00.000z`; // Default all migrated files to 9 pm.
+  const content = fsBuiltIn.readFileSync(filePath, encoding);
+  const sha = hashContent(content, 5);
+  const fname = `${tm}-${cacheKey}-${sha}.${type}.gz`;
+  const destfile = join(destdir, fname);
   if (fsBuiltIn.existsSync(destfile)) {
     const msg = `${topdir}/${dt}/${fname} ALREADY EXISTS (called for ${url})`;
     throw new Error(msg);
   }
 
-  console.log(`Migrating ${filePath} to ${destfile.replace(process.cwd(), '')}`);
-  fsBuiltIn.copyFileSync(filePath, destfile);
-
-  // TODO ZIP THE FILE.
+  const compressed = zlib.gzipSync(content);
+  fsBuiltIn.writeFileSync(destfile, compressed);
+  console.log(`  Migrated to: ${destfile.replace(process.cwd(), '')}`);
 }
 
 /* End cache migration helpers */
