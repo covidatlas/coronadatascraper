@@ -286,6 +286,11 @@ export const stripCountyName = function(county) {
   Get a proper state name
 */
 export const getState = function(state) {
+  // drop ISO code if passed
+  state = state
+    .split(':')
+    .pop()
+    .replace(/US-/, '');
   return usStates[state] || state;
 };
 
