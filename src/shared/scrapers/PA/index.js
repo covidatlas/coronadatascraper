@@ -185,7 +185,7 @@ const scraper = {
 
   async scraper() {
     // We probably don't need to cache this every day; fetch could be commented out.
-    /* const corregimientos = */ await fetch.csv(this, this._corregimientosListUrl, 'default');
+    /* const corregimientos = */ await fetch.csv(this, this._corregimientosListUrl, 'corregimientos');
     // Note: The first field names have funny characters in the name, and lint rules will prevent
     // me from including them in the comments (and they may be invisible). Use e.g.
     //     log(corregimientos[0]);
@@ -225,7 +225,7 @@ const scraper = {
     // }
 
     // Cache this.
-    /* const tests = */ await fetch.csv(this, this._testsUrl, 'default');
+    /* const tests = */ await fetch.csv(this, this._testsUrl, 'tests');
     // Simple test counts (country level):
     // [
     //   {
@@ -241,7 +241,7 @@ const scraper = {
     // TODO: How do we deal with multiple source for the same country?
     // i.e If I wanted to make a Panama nation-level timeseries scraper, how would I do it
     // and still keep this one which has greater granularity?
-    /* const timeseries = */ await fetch.csv(this, this._timeSeriesUrl, 'default');
+    /* const timeseries = */ await fetch.csv(this, this._timeSeriesUrl, 'timeseries');
     // Array of:
     // {
     //   'Fecha': '2020-03-10T00:00:00.000Z', - date
@@ -257,7 +257,7 @@ const scraper = {
     // }
 
     // This is the one we actually get the data from.
-    const caseList = await fetch.csv(this, this._caseListUrl, 'default');
+    const caseList = await fetch.csv(this, this._caseListUrl, 'cases');
     // Array of:
     // {
     //   'numero_CASO': '201', - case number
