@@ -24,6 +24,8 @@ const scraper = {
   ],
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+
     // The UK coronavirus website provides an XML description file that outlines the available
     // timeseries files. We get this file to get the latest source we can use.
     const $ = await fetch.page(this.url, false);
@@ -31,7 +33,7 @@ const scraper = {
     const $blobs = $('Blob');
 
     let url;
-    let date;
+    let lastModifiedDate;
 
     // Go through each blob, find the ones that start with `data_` and look for the latest one
     $blobs.each((index, blob) => {
@@ -41,9 +43,12 @@ const scraper = {
         .find('name')
         .text()
         .match(/data_(?<date>\d+)\.json/);
-      if (match !== null && (!date || datetime.dateIsBeforeOrEqualTo(date, parseDate(match[1])))) {
+      if (
+        match !== null &&
+        (!lastModifiedDate || datetime.dateIsBeforeOrEqualTo(lastModifiedDate, parseDate(match[1])))
+      ) {
         [url] = match;
-        date = parseDate(match[1]);
+        lastModifiedDate = parseDate(match[1]);
       }
     });
 
@@ -63,13 +68,24 @@ const scraper = {
       const location = regionsData[key];
 
       if (location) {
-        // Grab the last data available
-        const latestCases = location.dailyTotalConfirmedCases
-          ? location.dailyTotalConfirmedCases[location.dailyTotalConfirmedCases.length - 1]
-          : undefined;
-        const latestDeaths = location.dailyTotalDeaths
-          ? location.dailyTotalDeaths[location.dailyTotalDeaths.length - 1]
-          : undefined;
+        let latestCases;
+        if (location.dailyTotalConfirmedCases) {
+          const dailyTotalConfirmedCases = location.dailyTotalConfirmedCases.filter(item =>
+            datetime.dateIsBeforeOrEqualTo(item.date, date)
+          );
+          latestCases =
+            dailyTotalConfirmedCases.length > 0
+              ? dailyTotalConfirmedCases[dailyTotalConfirmedCases.length - 1]
+              : undefined;
+        }
+
+        let latestDeaths;
+        if (location.dailyTotalDeaths) {
+          const dailyTotalDeaths = location.dailyTotalDeaths.filter(item =>
+            datetime.dateIsBeforeOrEqualTo(item.date, date)
+          );
+          latestDeaths = dailyTotalDeaths.length > 0 ? dailyTotalDeaths[dailyTotalDeaths.length - 1] : undefined;
+        }
 
         if (latestCases || latestDeaths) {
           data.push({
