@@ -1,5 +1,5 @@
-# coronadatascraper
-> A crawler that scrapes COVID-19 Coronavirus data from government and curated data sources.
+# COVID Atlas
+> COVID Atlas collects local data from around the world into one resource.
 
 This project exists to scrape, de-duplicate, and cross-check county-level data on the COVID-19 coronavirus pandemic.
 
@@ -11,7 +11,7 @@ https://coronadatascraper.com/
 
 ## How often is it updated?
 
-We upload fresh data every day at around 9PM PST.
+We upload fresh data every day at around 10PM PST.
 
 ## How do I use this data?
 
@@ -22,6 +22,8 @@ Read the [Data Fields](./docs/data_fields.md) documentation for details on exact
 Check out our [Getting Started](./docs/getting_started.md) guide to help get our project running on your local machine.
 
 ## Contributing
+
+All contributions are welcome! Make sure to read through our Contributing guide before you get started!
 
 You can contribute to this project in two big ways:
 

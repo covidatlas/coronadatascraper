@@ -5,52 +5,66 @@ _Last updated: 2020-03-26_
 **Table of content**
 
 - [Sources and Scrapers](#sources-and-scrapers)
-  - [Criteria for sources](#criteria-for-sources)
-      - [1. Sources must be government or health organizations](#1-sources-must-be-government-or-health-organizations)
+  - [Guidelines regarding the sources included in this project](#guidelines-regarding-the-sources-included-in-this-project)
+      - [1. Sources must be government or health organizations; or community projects that gather data from these sources](#1-sources-must-be-government-or-health-organizations-or-community-projects-that-gather-data-from-these-sources)
       - [2. Sources must provide the number of cases at a bare minimum](#2-sources-must-provide-the-number-of-cases-at-a-bare-minimum)
       - [3. Presumptive cases are considered confirmed](#3-presumptive-cases-are-considered-confirmed)
+    - [Scope of data](#scope-of-data)
+    - [Scope of regionality](#scope-of-regionality)
   - [Writing a source](#writing-a-source)
   - [Source rating](#source-rating)
+  - [Regionality](#regionality)
   - [Scraping](#scraping)
     - [Fetching different types of documents](#fetching-different-types-of-documents)
     - [Library functions](#library-functions)
     - [Making sure your scraper doesn't break](#making-sure-your-scraper-doesnt-break)
     - [Validate HTML tables](#validate-html-tables)
-    - [Sample scraper](#sample-scraper)
-    - [Generating data retroactively](#generating-data-retroactively)
-    - [What to do if a scraper breaks?](#what-to-do-if-a-scraper-breaks)
-  - [Features and population data](#features-and-population-data)
-    - [Features](#features)
-    - [Population](#population)
-  - [Testing sources](#testing-sources)
-    - [Test coverage](#test-coverage)
-    - [Manual testing](#manual-testing)
-    - [Manual regression testing](#manual-regression-testing)
 
 This guide provides information on the criterias we use to determine whether a source should be added to the project, and offer technical details
 regarding how a source can be implemented.
 
-## Criteria for sources
+## Guidelines regarding the sources included in this project
 
 Any source added to the scraper must meet the following criteria:
 
-#### 1. Sources must be government or health organizations
+#### 1. Sources must be government or health organizations; or community projects that gather data from these sources
 
-No news articles, no aggregated sources, no Wikipedia.
+No news articles, no Wikipedia. Community projects will be considered if scraping government websites is significantly challenging.
 
 #### 2. Sources must provide the number of cases at a bare minimum
 
-Additional data is welcome.
+Additional data is welcome. See below.
 
 #### 3. Presumptive cases are considered confirmed
 
 In keeping with other datasets, presumptive cases should be considered part of the case total.
 
-_If you have found a source that matches the criterias above, read on!_
+### Scope of data
+
+We strive to aggregate current and historical data on the COVID-19 pandemic at the national and regional level across the world. Currently, we are tracking the following data, for a particular location:
+
+* `cases` - The cumulative number of confirmed or presumed confirmed cases
+* `deaths` - The cumulative number of deaths attributed to COVID-19
+* `recovered` - The cumulative number of recoveries
+* `tested` - The cumulative number of tests from which results have been obtained (does not include pending tests)
+* `hospitalized` - The cumulative number of patients hospitalized for COVID-19
+* `discharged` - The cumulative number of patients discharged after hospitalization for COVID-19
+
+We are currently not interested in expanding the scope of our data collection beyond the items above. We are also not in the capacity to include prediction data or other forms of derived data in this project.
+
+### Scope of regionality
+
+We only include a country or region if it has an associated [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2) or [FIPS County code](https://en.wikipedia.org/wiki/List_of_United_States_FIPS_codes_by_county).
+
+If a particular country provides data at a regionality level that is not supported by the ISO or FIPS systems, please fill an issue and we will consider the addition of this source on a case-by-case basis.
+
+You can view the full list of FIPS, ISO 3166-1 and ISO 3166-2 codes at this link: https://github.com/hyperknot/country-levels-export/tree/master/docs
 
 ## Writing a source
 
 Sources can pull JSON, CSV, or good ol' HTML down and are written in a sort of modular way, with a handful of helpers available to clean up the data. Sources can pull in data for anything -- cities, counties, states, countries, or collections thereof. See the existing scrapers for ideas on how to deal with different ways of data being presented.
+
+We have a scraping guide which include our best known approaches to scrape different types of online resources. Make sure to give it a quick read before you begin on your scraping adventure!
 
 Start by going to `src/shared/scrapers/` and creating a new file in the country, region, and region directory (`src/shared/scrapers/USA/CA/mycounty-name.js`)
 
@@ -63,8 +77,8 @@ Your source should export an object containing at a minimum the following proper
 
 Add the following directly to the scraper object if the data you're pulling in is specific to a given location:
 
-- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3)
-- `state` - The state, province, or region
+- `country` - [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+- `state` - [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2)
 - `county` - The county or parish
 - `city` - The city name
 
@@ -97,8 +111,12 @@ Sources are rated based on:
 1. **How hard is it to read?** - `csv` and `json` give best scores, with `table` right behind it, with `list` and `paragraph` worse. `pdf` gets no points, and `image` gets negative points.
 2. **Timeseries?** - Sources score points if they provide a timeseries.
 3. **Completeness** - Sources get points for having `cases`, `tested`, `deaths`, `hospitalized`, `discharged`, `recovered`, `country`, `state`, `county`, and `city`.
-4. **SSL** - Sources get points for serving over ssl
+4. **SSL** - Sources get points for serving over SSL
 5. **Headless?** - Sources get docked points if they require a headless scraper
+
+## Regionality
+
+Each source will output an object or array of data associated to one or more locations. 
 
 ## Scraping
 
@@ -109,20 +127,16 @@ Your scraper should return an object, an array of objects, or `null` in case the
 
 The object may contain the following attributes:
 
-- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) [required]
-- `state` - The state, province, or region (not required if defined on scraper object)
+- `country` - [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) [required]
+- `state` - [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2) (not required if defined on scraper object)
 - `county` - The county or parish (not required if defined on scraper object)
 - `city` - The city name (not required if defined on scraper object)
-- `cases` - Total number of cases
-- `deaths` - Total number of deaths
-- `hospitalized` - Total number of hospitalized
-- `discharged` - Total number of discharged
-- `recovered` - Total number recovered
-- `tested` - Total number tested
-- `feature` - GeoJSON feature associated with the location (See [Features and population data](#features-and-population-data))
-- `featureId` - Additional identifiers to aid with feature matching (See [Features and population data](#features-and-population-data))
-- `population` - The estimated population of the location (See [Features and population data](#features-and-population-data))
-- `coordinates` - Array of coordinates as `[longitude, latitude]` (See [Features and population data](#features-and-population-data))
+* `cases` - The cumulative number of confirmed or presumed confirmed cases
+* `deaths` - The cumulative number of deaths attributed to COVID-19
+* `recovered` - The cumulative number of recoveries
+* `tested` - The cumulative number of tests from which results have been obtained (does not include pending tests)
+* `hospitalized` - The cumulative number of patients hospitalized for COVID-19
+* `discharged` - The cumulative number of patients discharged after hospitalization for COVID-19
 
 Returning an array of objects is useful for aggregate sources, sources that provide information for more than one geographical area. For example, [Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html?topic=tilelink)
 provides information for all provinces of the country. If the scraper returns an array, each object in the array will have the attributes specified
@@ -151,12 +165,12 @@ See [library functions](../../coronadatascraper/site/lib) for API of the availab
 
 Key highlights:
 
-- [`lib/geography.js`](../src/events/crawler/lib/geography.js) provides helper functions related location geography. Make sure to look at `addEmptyRegions` and `addCounty` as
+- [`lib/geography.js`](../src/shared/lib/geography.js) provides helper functions related location geography. Make sure to look at `addEmptyRegions` and `addCounty` as
   they are often used.
-- [`lib/parse.js`](../src/events/crawler/lib/parse.js) provides helper functions to parse numbers, floats, and strings.
-- [`lib/transform.js`](../src/events/crawler/lib/transform.js) provides helper functions to perform common data manipulation operations. Make sure to look at
+- [`lib/parse.js`](../src/shared/lib/parse.js) provides helper functions to parse numbers, floats, and strings.
+- [`lib/transform.js`](../src/shared/lib/transform.js) provides helper functions to perform common data manipulation operations. Make sure to look at
   `sumData` as it is often used.
-- [`lib/datetime/index.js`](../src/events/crawler/lib/datetime/index.js) provides helper functions to perform date related manipulations.
+- [`lib/datetime/index.js`](../src/shared/lib/datetime/index.js) provides helper functions to perform date related manipulations.
 
 Of course, if something is missing, `yarn add` it as a dependency and `import` it!
 
@@ -164,6 +178,8 @@ Of course, if something is missing, `yarn add` it as a dependency and `import` i
 
 It's a tough challenge to write scrapers that will work when websites are inevitably updated. Here are some tips:
 
+- We include the `assert` library to allow you to assert the validity of the data in the scraper. Make us of it. Good candidates for assertions include
+verifying the number of regions scraped, making sure that all regions have an ISO code, or performing a sanity check on the values scraped.
 - If your source is an HTML table, validate its structure
 - If data for a field is not present (eg. no recovered information), **do not put 0 for that field**. Make sure to leave the field undefined so the scraper knows there is no information for that particular field.
 - Write your scraper so it handles aggregate data with a single scraper entry (i.e. find a table, process the table)
@@ -350,42 +366,6 @@ if (datetime.scrapeDateIsBefore('2020-03-16')) {
 
 You can also use `datetime.scrapeDateIsAfter()` for more complex customization.
 
-## Features and population data
-
-We strive to provide a GeoJSON feature and population number for every location in our dataset. When adding
-a source for a country, we may already have this information and can populate it automatically. For smaller regional entities,
-this information may not be available and has to be added manually.
-
-### Features
-
-Features can be specified in three ways: through the `country`, `state` and `county` field, by matching the `longitude` and `latitude` to a particular feature,
-through the `featureId` field, or through the `feature` field.
-
-While the first two methods works most of the time, sometimes you will have to rely on `featureId` to help the crawler make the correct guess.
-`featureId` is an object that specifies one or more of the attributes below:
-
-- `name`
-- `adm1_code`
-- `iso_a2`
-- `iso_3166_2`
-- `code_hasc`
-- `postal`
-
-We compare the value you specify with the data stored in [world-states-provinces.json](./../coronavirus-data-sources/geojson/world-states-provinces.json)
-(Careful, big file!). If we find a match across all the fields you specify, we select the feature. There are way way more attributes to use in that
-file, so make sure to give it a quick glance.
-
-In case we do not have any geographical information for the location you are trying to scrape, you can provide a GeoJSON feature directly in the `feature` attribute
-you can return with the scraper.
-
-If we have a feature for the location, we will calculate a `longitude` and `latitude`. You may also specify a custom longitude and latitude by specifying a value in
-the `coordinates` attribute.
-
-### Population
-
-Population can usually be guessed automatically, but if that is not the case, you can provide a population number by returning a value for the `population` field
-in the returned object of the scraper.
-
 ## Testing sources
 
 You should test your source first by running `yarn test`. This will perform some basic tests to make sure nothing crashes and the source object is in the correct form.
@@ -465,28 +445,28 @@ and "right" folders.  Each report is listed with the differences:
 $ node tools/compare-report-dirs.js --left zz_before --right zz_after
 
 data-2020-04-06.json
---------------------
+
 * [3, Storey County, Nevada, United States]/deaths value: 0 != 41
 * [5, Washoe County, Nevada, United States]/deaths value: 4 != -1
 
 report.json
------------
+
 * /scrape/numCities value: 0 != 7
 
 ratings.json
-------------
+
   equal
 
 features-2020-04-06.json
-------------------------
+
 * /features[5]/properties/name value: Washoe County != Washoe
 
 crawler-report.csv
-------------------
+
   equal
 
 data-2020-04-06.csv
--------------------
+
 * Line 3, col 79: "4" != "-"
 ```
 
