@@ -26,13 +26,12 @@ if (files) {
   if (scrapers.length > 0) {
     test('Test updated scrapers', async t => {
       // We run up to two tests per scraper
-      t.plan(scrapers.length * 2);
+      t.plan(scrapers.length);
       for (const scraperPath of scrapers) {
         if (await fs.exists(scraperPath)) {
           const scraper = imports(join(process.cwd(), scraperPath));
           try {
             await runScraper(scraper);
-            t.pass(`${scraperPath} ran`);
           } catch (err) {
             t.fail(`${scraperPath} failed with error: ${err}`);
           }
