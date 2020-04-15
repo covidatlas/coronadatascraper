@@ -7,6 +7,7 @@
 
 import path from 'path';
 import crypto from 'crypto';
+import fsBuiltIn from 'fs';
 
 import join from '../join.js';
 import datetime from '../datetime/index.js';
@@ -74,6 +75,25 @@ export const getCachedFile = async (scraper, url, cacheKey = 'default', type, da
   if (scraper === undefined || scraper === null) throw new Error(`Undefined scraper, trying to hit ${url}`);
 
   const filePath = getCachedFilePath(scraper, url, type, date);
+
+  // Logging cache calls if LOG_CACHE_CALLS is set.
+  if (process.env.LOG_CACHE_CALLS) {
+    const cacheExists = await fs.exists(filePath);
+    const cacheCheck = {
+      scraperPath: scraper._path,
+      date,
+      requestedUrl: url,
+      cacheFilePath: filePath,
+      cacheFileExists: cacheExists,
+      type
+    };
+
+    // Write data to aid in cache migration.
+    const newData = `${JSON.stringify(cacheCheck, null, 2)},\n`;
+    fsBuiltIn.appendFile(join(process.cwd(), 'log_cacheCalls.txt'), newData, err => {
+      if (err) throw err;
+    });
+  }
 
   if (await fs.exists(filePath)) {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
