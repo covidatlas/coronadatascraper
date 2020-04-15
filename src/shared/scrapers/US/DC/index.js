@@ -35,7 +35,7 @@ const scraper = {
 
       const formUrl =
         'https://microstrategy.dc.gov/MicroStrategy/servlet/mstrWeb?evt=3067&src=mstrWeb.3067&reportID=DA2251A711EA6FB482660080EFA55B20&reportViewMode=1';
-      const form = await fetch.page(this, formUrl, 'default', false, getOptions);
+      const form = await fetch.page(this, formUrl, 'form', false, getOptions);
 
       const rb = form('form input[name="rb"]').val();
 

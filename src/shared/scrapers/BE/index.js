@@ -28,13 +28,13 @@ const scraper = {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
     const casesUrl = 'https://epistat.sciensano.be/Data/COVID19BE_CASES_AGESEX.csv';
-    const casesData = await fetch.csv(this, casesUrl, 'default', false);
+    const casesData = await fetch.csv(this, casesUrl, 'cases', false);
     const deathsUrl = 'https://epistat.sciensano.be/Data/COVID19BE_MORT.csv';
-    const deathsData = await fetch.csv(this, deathsUrl, 'default', false);
+    const deathsData = await fetch.csv(this, deathsUrl, 'deaths', false);
     const hospUrl = 'https://epistat.sciensano.be/Data/COVID19BE_HOSP.csv';
-    const hospitalizedData = await fetch.csv(this, hospUrl, 'default', false);
+    const hospitalizedData = await fetch.csv(this, hospUrl, 'hospitalized', false);
     const testsUrl = 'https://epistat.sciensano.be/Data/COVID19BE_tests.csv';
-    const testsData = await fetch.csv(this, testsUrl, 'default', false);
+    const testsData = await fetch.csv(this, testsUrl, 'tests', false);
 
     const dataByRegion = {};
     const dataByProvince = {};

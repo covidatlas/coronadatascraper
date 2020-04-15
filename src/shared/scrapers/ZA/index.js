@@ -28,13 +28,13 @@ const scraper = {
 
     const casesUrl =
       'https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_provincial_cumulative_timeline_confirmed.csv';
-    const casesData = await fetch.csv(this, casesUrl, 'default', false);
+    const casesData = await fetch.csv(this, casesUrl, 'cases', false);
 
     const deathsUrl = 'https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_timeline_deaths.csv';
-    const deathsData = await fetch.csv(this, deathsUrl, 'default', false);
+    const deathsData = await fetch.csv(this, deathsUrl, 'deaths', false);
 
     const testedUrl = 'https://raw.githubusercontent.com/dsfsi/covid19za/master/data/covid19za_timeline_testing.csv';
-    const testedData = await fetch.csv(this, testedUrl, 'default', false);
+    const testedData = await fetch.csv(this, testedUrl, 'tested', false);
 
     const dataByProvince = {};
     const nationalData = { tested: 0, deaths: 0, cases: 0 };

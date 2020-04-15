@@ -108,10 +108,10 @@ const scraper = {
   scraper: {
     '0': async function() {
       const urls = this._urls;
-      const cases = await fetch.csv(this, urls.cases, 'default', false);
-      const deaths = await fetch.csv(this, urls.deaths, 'default', false);
-      const recovered = await fetch.csv(this, urls.recovered, 'default', false);
-      const isoMapCsv = await fetch.csv(this, urls.isoMap, 'default', false);
+      const cases = await fetch.csv(this, urls.cases, 'cases', false);
+      const deaths = await fetch.csv(this, urls.deaths, 'deaths', false);
+      const recovered = await fetch.csv(this, urls.recovered, 'recovered', false);
+      const isoMapCsv = await fetch.csv(this, urls.isoMap, 'isomap', false);
 
       const isoMap = this._createIsoMap(isoMapCsv);
 
