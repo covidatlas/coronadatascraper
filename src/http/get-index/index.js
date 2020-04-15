@@ -29,7 +29,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-    <div class="ca-Landing spectrum--dark">
+    <div class="ca-Landing spectrum--dark" style="background-image: url('${arc.static('logo-outlined.svg')}');">
       <h1 class="spectrum-Heading spectrum-Heading--XXL">COVID Atlas collects local data from around the world into one resource.</h1>
       <div class="ca-Landing-search spectrum--large">
         ${search()}
