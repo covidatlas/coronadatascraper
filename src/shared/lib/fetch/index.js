@@ -303,7 +303,7 @@ export const arcGISJSON = async (featureLayerURL, date, options = {}) => {
   let response = await json(`${url}&resultOffset=${n}&resultRecordCount=${n + k}`, date, options);
 
   while (response && response.features.length > 0) {
-    n += k;
+    n += response.features.length;
     output.push(...response.features.map(({ attributes }) => attributes));
 
     response = await json(`${url}&resultOffset=${n}&resultRecordCount=${n + k}`, date, options);
