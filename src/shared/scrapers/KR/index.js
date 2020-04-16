@@ -62,7 +62,7 @@ const scraper = {
     const $ = await fetch.page(this.url);
     const $table = $('table.num');
 
-    const states = [];
+    let states = [];
     const $headings = $table.find('thead tr:last-child th');
     const headingOffset = $table.find('thead tr:first-child th[rowspan="2"]').length - 1; // -1 for the th in each province row.
 
@@ -100,6 +100,8 @@ const scraper = {
 
     const summedData = transform.sumData(states);
     states.push(summedData);
+
+    states = states.filter(s => s.state !== UNASSIGNED);
     assert(summedData.cases > 0, 'Cases is not reasonable');
 
     return states;

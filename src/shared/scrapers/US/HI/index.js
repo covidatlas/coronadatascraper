@@ -5,7 +5,7 @@ import * as transform from '../../../lib/transform.js';
 
 const scraper = {
   country: 'iso1:US',
-  state: 'HI',
+  state: 'iso2:US-HI',
   priority: 1,
   sources: [
     {

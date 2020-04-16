@@ -8,7 +8,7 @@ import datetime from '../../../lib/datetime/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'WI',
+  state: 'iso2:US-WI',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [

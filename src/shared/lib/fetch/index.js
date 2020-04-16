@@ -17,7 +17,7 @@ const CHROME_AGENT =
 const DEFAULT_VIEWPORT = { width: 1280, height: 800, isMobile: false };
 
 const RESPONSE_TIMEOUT = 5000;
-const READ_TIMEOUT = 30000;
+const READ_TIMEOUT = 60000;
 
 /**
  * Load the webpage at the given URL and return a Cheerio object

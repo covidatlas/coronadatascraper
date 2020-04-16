@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'MI',
+  state: 'iso2:US-MI',
   country: 'iso1:US',
   sources: [
     {
@@ -130,7 +130,7 @@ const scraper = {
 
       let cases = parse.number(parse.string($tr.find('> *:nth-child(2)').text()) || 0);
       let deaths = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
-      const county = geography.getCounty(parse.string($tr.find('> *:first-child').text()), 'MI');
+      const county = geography.getCounty(parse.string($tr.find('> *:first-child').text()), 'iso2:US-MI');
 
       // Remember these to add them to Wayne County instead
       if (county === 'Detroit City') {

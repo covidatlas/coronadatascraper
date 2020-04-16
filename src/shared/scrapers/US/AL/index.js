@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'AL',
+  state: 'iso2:US-AL',
   country: 'iso1:US',
   url: 'http://www.alabamapublichealth.gov/infectiousdiseases/2019-coronavirus.html',
   type: 'table',

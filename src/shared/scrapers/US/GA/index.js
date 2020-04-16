@@ -7,7 +7,7 @@ import * as transform from '../../../lib/transform.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'GA',
+  state: 'iso2:US-GA',
   country: 'iso1:US',
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
@@ -210,7 +210,8 @@ const scraper = {
       return counties;
     },
     '2020-03-27': async function() {
-      const pageHTML = (await fetch.page(this.url)).html();
+      const tmp = await fetch.page(this.url);
+      const pageHTML = tmp.html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
 
       const $ = await fetch.page(this.url);

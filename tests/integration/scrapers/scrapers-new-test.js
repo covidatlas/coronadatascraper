@@ -25,18 +25,20 @@ if (files) {
 
   if (scrapers.length > 0) {
     test('Test updated scrapers', async t => {
-      t.plan(scrapers.length * 2);
+      // We run up to two tests per scraper
+      t.plan(scrapers.length);
       for (const scraperPath of scrapers) {
         if (await fs.exists(scraperPath)) {
           const scraper = imports(join(process.cwd(), scraperPath));
           try {
             await runScraper(scraper);
-            t.pass('Scraper ran');
           } catch (err) {
-            t.fail(`Scraper failed with error: ${err}`);
+            t.fail(`${scraperPath} failed with error: ${err}`);
           }
           const hasErrors = schema.schemaHasErrors(scraper.default, schema.schemas.scraperSchema);
           t.notOk(hasErrors, 'Scraper had no errors');
+        } else {
+          t.pass(`${scraperPath} was deleted`);
         }
       }
     });

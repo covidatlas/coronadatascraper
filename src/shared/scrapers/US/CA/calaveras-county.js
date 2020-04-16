@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Calaveras County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   url: 'https://covid19.calaverasgov.us/',
   maintainers: [maintainers.jbencina],

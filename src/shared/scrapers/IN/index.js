@@ -13,13 +13,15 @@ const labelFragmentsByKey = [
 ];
 
 const countryLevelMap = {
-  'Andhra Pradesh': 'iso2:IN-AP',
   'Andaman and Nicobar Islands': 'iso2:IN-AN',
+  'Andhra Pradesh': 'iso2:IN-AP',
   'Arunachal Pradesh': 'iso2:IN-AR',
   Assam: 'iso2:IN-AS',
   Bihar: 'iso2:IN-BR',
   Chandigarh: 'iso2:IN-CH',
   Chhattisgarh: 'iso2:IN-CT',
+  'Dadra and Nagar Haveli': 'iso2:IN-DN',
+  'Daman and Diu': 'iso2:IN-DD',
   Delhi: 'iso2:IN-DL',
   Goa: 'iso2:IN-GA',
   Gujarat: 'iso2:IN-GJ',
@@ -30,25 +32,30 @@ const countryLevelMap = {
   Karnataka: 'iso2:IN-KA',
   Kerala: 'iso2:IN-KL',
   Ladakh: 'iso2:IN-LA',
+  Lakshadweep: 'iso2:IN-LD',
   'Madhya Pradesh': 'iso2:IN-MP',
   Maharashtra: 'iso2:IN-MH',
   Manipur: 'iso2:IN-MN',
+  Meghalaya: 'iso2:IN-ML',
   Mizoram: 'iso2:IN-MZ',
+  Nagaland: 'iso2:IN-NL',
   Odisha: 'iso2:IN-OR',
   Puducherry: 'iso2:IN-PY',
   Punjab: 'iso2:IN-PB',
   Rajasthan: 'iso2:IN-RJ',
+  Sikkim: 'iso2:IN-SK',
   'Tamil Nadu': 'iso2:IN-TN',
-  Telengana: 'iso2:IN-TG',
-  Uttarakhand: 'iso2:IN-UT',
+  Telengana: 'iso2:IN-TG', // The site is using this spelling
+  Telangana: 'iso2:IN-TG', // country-levels-export uses this spelling
+  Tripura: 'iso2:IN-TR',
   'Uttar Pradesh': 'iso2:IN-UP',
-  'West Bengal': 'iso2:IN-WB',
-  Tripura: 'iso2:IN-TR'
+  Uttarakhand: 'iso2:IN-UT',
+  'West Bengal': 'iso2:IN-WB'
 };
 
 const getValue = (key, text) => {
   if (key === 'state') {
-    const state = parse.string(text);
+    const state = parse.string(text).replace(/#/, '');
     const mappedState = countryLevelMap[state];
     assert(
       mappedState,
@@ -67,17 +74,17 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this.url);
     const $table = $('#state-data');
-    const $trs = $table.find('tbody > tr');
-    const states = [];
+    assert.equal($table.length, 1, 'The table can not be found');
 
     const $headings = $table.find('thead tr th');
     const dataKeysByColumnIndex = [];
-
     $headings.each((index, heading) => {
       const $heading = $(heading);
       dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
     });
 
+    const states = [];
+    const $trs = $table.find('tbody > tr');
     $trs
       .filter(
         // Remove summary rows

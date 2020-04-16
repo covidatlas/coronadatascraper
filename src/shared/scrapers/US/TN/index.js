@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'TN',
+  state: 'iso2:US-TN',
   country: 'iso1:US',
   sources: [
     {
@@ -308,11 +308,10 @@ const scraper = {
         });
       });
 
-      const totalsData = (
-        await fetch.json(
-          'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson'
-        )
-      ).features.pop().attributes;
+      const totalsUrl =
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
+      const tmp = await fetch.json(totalsUrl);
+      const totalsData = tmp.features.pop().attributes;
 
       const totals = transform.sumData(counties);
       totals.cases = totalsData.Total_Infections;

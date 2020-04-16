@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'NE',
+  state: 'iso2:US-NE',
   country: 'iso1:US',
   url: 'https://www.lincoln.ne.gov/city/covid19/',
   type: 'list',

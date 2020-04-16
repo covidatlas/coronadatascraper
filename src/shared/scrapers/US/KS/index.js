@@ -12,7 +12,7 @@ import * as pdfUtils from '../../../lib/pdf.js';
 // Based on the MO scraper, which was based on NY
 
 const scraper = {
-  state: 'KS',
+  state: 'iso2:US-KS',
   country: 'iso1:US',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
@@ -296,9 +296,8 @@ const scraper = {
         cases: parse.number(caseNum)
       });
 
-      const deathData = await fetch.pdf(
-        'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no'
-      );
+      const pdfUrl = 'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no';
+      const deathData = await fetch.pdf(pdfUrl);
       let totalDeaths = '';
       deathData.forEach(item => {
         if (item && item.text.match(/[0-9]/)) {

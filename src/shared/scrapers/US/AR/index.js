@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'AR',
+  state: 'iso2:US-AR',
   country: 'iso1:US',
   url:
     'https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*',
@@ -120,6 +120,7 @@ const scraper = {
 
     counties.push(transform.sumData(counties));
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
+    counties = counties.filter(c => c.county !== UNASSIGNED);
     return counties;
   }
 };

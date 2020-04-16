@@ -6,7 +6,7 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'Clark County',
-  state: 'NV',
+  state: 'iso2:US-NV',
   country: 'iso1:US',
   url: 'https://www.southernnevadahealthdistrict.org/coronavirus',
   sources: [
