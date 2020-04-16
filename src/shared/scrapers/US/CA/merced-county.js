@@ -72,7 +72,7 @@ const scraper = {
       };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county level scrapers');
     }
   }
