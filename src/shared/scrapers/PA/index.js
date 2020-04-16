@@ -152,7 +152,7 @@ function sum(dataArray, key) {
   return result;
 }
 
-async function TEMPfetchArcGISJSON(featureURL, date) {
+async function TEMPfetchArcGISJSON(theThis, featureURL, date) {
   // temporary handling of pagination here until Quentin's pull request is brought in
   let offset = 0;
   const recordCount = 50000;
@@ -161,7 +161,8 @@ async function TEMPfetchArcGISJSON(featureURL, date) {
   while (true) {
     const query = `where=0%3D0&outFields=*&resultOffset=${offset}&resultRecordCount=${recordCount}&f=json`;
     const theURL = `${featureURL}query?${query}`;
-    const response = await fetch.json(theURL, date);
+    const cacheKey = `arcGISJSON_cases_${offset}`;
+    const response = await fetch.json(theThis, theURL, cacheKey, date);
     if (!response) throw new Error(`Response was null for "${theURL}`);
     if (response.features && response.features.length === 0) break;
     const n = response.features.length;
@@ -286,10 +287,10 @@ const scraper = {
     // use datetime.old here, just like the caching system does.
     if (datetime.dateIsBefore(scrapeDate, datetime.old.getDate())) {
       // treat the data as a timeseries, so don't cache it.
-      caseList = await TEMPfetchArcGISJSON(this._caseListFeatureURL, false);
+      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL, false);
     } else {
       // fetch it the normal way so it gets cached.
-      caseList = await TEMPfetchArcGISJSON(this._caseListFeatureURL);
+      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL);
     }
     // Array of:
     // {
@@ -368,7 +369,7 @@ const scraper = {
       }
     }
 
-    log(`Making a time series ${scrapeDate}: ${rejectedByDate} out of ${caseList.length} rejected by date.`);
+    log(`Counting up to ${scrapeDate}: ${rejectedByDate} out of ${caseList.length} rejected by date.`);
 
     if (data.length === 0) return data;
 
