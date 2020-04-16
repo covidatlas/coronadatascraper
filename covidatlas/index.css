@@ -118,6 +118,18 @@ sp-dropdown[emphasized] {
   }
 }
 
+.spectrum-Link--silent {
+  text-decoration: none;
+
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+  }
+}
+
 .ca-SocialLinks {
   text-transform: uppercase;
   display: inline-flex;
