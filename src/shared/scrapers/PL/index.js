@@ -25,7 +25,7 @@ const scraper = {
 
       const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-      const casesData = await fetch.csv(this.url, false);
+      const casesData = await fetch.csv(this, this.url, 'default', false);
 
       const casesByRegion = {};
       const deathsByRegion = {};
@@ -59,7 +59,7 @@ const scraper = {
         }
       ];
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       // The website stores all data as a string in an element with id #registerData
       const $pre = $('#registerData');

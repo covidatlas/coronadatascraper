@@ -13,7 +13,7 @@ const scraper = {
   url: 'https://monocovid19-monomammoth.hub.arcgis.com/',
   scraper: {
     '0': async function() {
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const cases = parse.number(
         $('h4:contains("POSITIVE")')
           .first()
@@ -24,7 +24,7 @@ const scraper = {
       return { cases };
     },
     '2020-03-19': async function() {
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const cases = parse.number(
         $('h4:contains("POSITIVECASES")')
           .first()

@@ -21,7 +21,7 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const testedData = await fetch.csv(this.url, false);
+    const testedData = await fetch.csv(this, this.url, 'default', false);
 
     const testedByCounty = {};
     const casesByCounty = {};

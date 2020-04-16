@@ -28,7 +28,7 @@ const scraper = {
 
     // The UK coronavirus website provides an XML description file that outlines the available
     // timeseries files. We get this file to get the latest source we can use.
-    const $ = await fetch.page(this.url, false);
+    const $ = await fetch.page(this, this.url, 'tmpindex', false);
 
     const $blobs = $('Blob');
 
@@ -53,7 +53,7 @@ const scraper = {
     });
 
     // Grab the json timeseries at the URL we found earlier
-    const casesData = await fetch.json(`https://c19pub.azureedge.net/${url}`, false);
+    const casesData = await fetch.json(this, `https://c19pub.azureedge.net/${url}`, 'cases', false);
 
     // Countries contains data for the four GB countries (Scotland, England, etc.)
     // and utlas contains data for the counties of England

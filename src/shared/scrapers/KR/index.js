@@ -59,7 +59,7 @@ const scraper = {
     maintainers.camjc
   ],
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('table.num');
 
     let states = [];

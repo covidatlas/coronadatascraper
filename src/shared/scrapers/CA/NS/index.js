@@ -20,7 +20,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
 
       const headers = Object.keys(data[0]);
       if (headers[0] !== 'Date' || headers[1] !== 'Positive' || headers[2] !== 'Negative') {
@@ -65,7 +65,7 @@ const scraper = {
     },
     '2020-04-12': async function() {
       this.url = 'https://novascotia.ca/coronavirus/data/COVID-19-data.csv';
-      await fetch.csv(this.url);
+      await fetch.csv(this, this.url, 'default');
       throw new Error('Someone needs to scrape this new data properly');
     }
   }

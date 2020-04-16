@@ -54,10 +54,10 @@ const scraper = {
     const releasedURL =
       'https://raw.githubusercontent.com/daenuprobst/covid19-cases-switzerland/master/covid19_released_switzerland_openzh.csv';
 
-    const casesData = await fetch.csv(casesURL, false);
-    const deathsData = await fetch.csv(deathsURL, false);
-    const hospitalizedData = await fetch.csv(hospitalizedURL, false);
-    const releasedData = await fetch.csv(releasedURL, false);
+    const casesData = await fetch.csv(this, casesURL, 'cases', false);
+    const deathsData = await fetch.csv(this, deathsURL, 'deaths', false);
+    const hospitalizedData = await fetch.csv(this, hospitalizedURL, 'hospitalized', false);
+    const releasedData = await fetch.csv(this, releasedURL, 'released', false);
 
     const dataByCanton = {};
 

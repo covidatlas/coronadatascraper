@@ -28,7 +28,7 @@ const scraper = {
     'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const paragraph = $('.middle-column p:first-of-type').text();
       const { casesString } = paragraph.match(/been (?<casesString>\d+) confirmed cases/).groups;
       this.type = 'paragraph';
@@ -38,7 +38,7 @@ const scraper = {
     },
     '2020-03-27': async function() {
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table:first-of-type');
       const $trs = $table.find('tbody > tr');
       const data = {};

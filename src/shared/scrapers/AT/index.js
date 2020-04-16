@@ -27,7 +27,7 @@ const scraper = {
         }
       ];
 
-      const casesRaw = await fetch.csv(this.url, false);
+      const casesRaw = await fetch.csv(this, this.url, 'default', false);
       const casesData = casesRaw.filter(item => datetime.scrapeDateIs(item.datetime));
 
       if (casesData.length > 0) {
@@ -84,11 +84,11 @@ const scraper = {
       const data = [];
 
       const recoveredDeathsUrl = 'https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js';
-      const recoveredDeathsRaw = await fetch.fetch(recoveredDeathsUrl, 'txt');
+      const recoveredDeathsRaw = await fetch.fetch(this, recoveredDeathsUrl, 'recovereddeaths', 'txt');
       const recoveredDeathsData = JSON.parse(recoveredDeathsRaw.body.match(/\[.*\]/g));
 
       const casesUrl = 'https://info.gesundheitsministerium.at/data/Bezirke.js';
-      const casesRaw = await fetch.fetch(casesUrl, 'txt');
+      const casesRaw = await fetch.fetch(this, casesUrl, 'cases', 'txt');
       const casesRegionData = JSON.parse(casesRaw.body.match(/\[.*\]/g));
 
       const casesByRegion = {};

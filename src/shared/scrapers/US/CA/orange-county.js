@@ -14,7 +14,7 @@ const scraper = {
   url: 'http://www.ochealthinfo.com/phs/about/epidasmt/epi/dip/prevention/novel_coronavirus',
   scraper: {
     '0': async function scraper() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       return {
         cases: parse.number(
           $('td:contains("Cases")')
@@ -30,7 +30,7 @@ const scraper = {
     },
     '2020-03-18': async function scraper() {
       this.url = 'https://occovid19.ochealthinfo.com/coronavirus-in-oc';
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Need to scrape new page');
     }
   }

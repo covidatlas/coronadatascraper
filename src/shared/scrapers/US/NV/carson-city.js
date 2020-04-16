@@ -20,7 +20,7 @@ const scraper = {
   type: 'table',
   async scraper() {
     const counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('table');
     const $trs = $table.find('tbody > tr:not(:first-child)');
 

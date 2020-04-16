@@ -31,8 +31,8 @@ const scraper = {
   scraper: {
     '0': async function() {
       const urls = this._urls;
-      const cases = await fetch.csv(urls.cases, false);
-      const deaths = await fetch.csv(urls.deaths, false);
+      const cases = await fetch.csv(this, urls.cases, 'cases', false);
+      const deaths = await fetch.csv(this, urls.deaths, 'deaths', false);
 
       let regions = [];
 

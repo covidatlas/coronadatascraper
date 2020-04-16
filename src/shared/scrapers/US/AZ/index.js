@@ -21,7 +21,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       // Get the Tableau chart
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'tmpindex');
 
       // Pull out our session id from the json stuffed inside the textarea
       const textArea = $('textarea#tsConfigContainer').text();
@@ -32,7 +32,7 @@ const scraper = {
       const url = `https://tableau.azdhs.gov/vizql/w/COVID-19Dashboard/v/COVID-19table/vud/sessions/${sessionId}/views/8275719771277684273_9753144220671897612?csv=true&summary=true`;
 
       // Parse the tab separated values file that comes back
-      const data = await fetch.tsv(url);
+      const data = await fetch.tsv(this, url, 'default');
       const counties = [];
 
       for (const row of data) {
@@ -50,7 +50,7 @@ const scraper = {
     },
     '2020-03-30': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/5b34cf1637434c7bb6793580c40d1685_0.csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
 
       for (const county of data) {

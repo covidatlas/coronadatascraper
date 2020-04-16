@@ -171,7 +171,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       let counties = {};
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table').first();
 
       const $trs = $table.find('tr');
@@ -207,7 +207,7 @@ const scraper = {
     },
     '2020-02-22': async function() {
       let counties = {};
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table').first();
 
       const $trs = $table.find('tr');
@@ -263,8 +263,8 @@ const scraper = {
 
     '2020-03-30': async function() {
       const counties = {};
-      this.url = await fetch.getArcGISCSVURL(6, '6f2a47a25872470a815bcd95f52c2872', 'lpha_boundry');
-      const data = await fetch.csv(this.url);
+      this.url = await fetch.getArcGISCSVURL(this, 6, '6f2a47a25872470a815bcd95f52c2872', 'lpha_boundry');
+      const data = await fetch.csv(this, this.url, 'default');
 
       const unassigned = {
         county: UNASSIGNED,

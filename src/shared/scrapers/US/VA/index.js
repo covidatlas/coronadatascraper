@@ -227,7 +227,7 @@ const scraper = {
           endURL = endURL.slice(0, name.lastIndexOf(' '));
         }
         const pdfUrl = pdfBaseURL + endURL;
-        const pdfScrape = await fetch.pdf(pdfUrl);
+        const pdfScrape = await fetch.pdf(this, pdfUrl, endURL);
 
         if (pdfScrape) {
           let pdfText = '';
@@ -251,7 +251,7 @@ const scraper = {
         }
       }
     } else {
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       this.type = 'csv';
 
       data.forEach(location => {

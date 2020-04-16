@@ -26,7 +26,7 @@ const scraper = {
     }
   ],
   async scraper() {
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.headless(this, this.url, 'default');
 
     const counties = [];
 

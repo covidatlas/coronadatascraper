@@ -98,7 +98,7 @@ const scraper = {
     'Yell County'
   ],
   async scraper() {
-    const data = await fetch.json(this.url);
+    const data = await fetch.json(this, this.url, 'default');
     let counties = [];
 
     for (const countyData of data.features) {

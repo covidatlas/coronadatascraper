@@ -12,7 +12,7 @@ const scraper = {
     'https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19',
   type: 'table',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     let cases = 0;
 
     cases += parse.number(

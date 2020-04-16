@@ -14,7 +14,7 @@ const scraper = {
   url: 'https://hhsa.cosb.us/publichealth/communicable-disease/coronavirus/',
   scraper: {
     '0': async function scraper() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('h1:contains("San Benito County COVID-19 Case Count")')
         .nextAll('table')
         .first();

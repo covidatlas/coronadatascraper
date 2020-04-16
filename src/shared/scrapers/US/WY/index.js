@@ -24,7 +24,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $p = $('strong:contains("Cases by County")').parent();
 
       const items = $p.html().split('<br>');
@@ -56,7 +56,7 @@ const scraper = {
     },
     '2020-04-8': async function() {
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $p = $('strong:contains("Albany")').parent();
 
       const items = $p.html().split('<br>');

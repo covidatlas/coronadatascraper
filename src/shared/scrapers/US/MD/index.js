@@ -22,7 +22,7 @@ const scraper = {
       this.url = 'https://coronavirus.maryland.gov/';
       this.type = 'paragraph';
       const counties = [];
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const paragraph = $('p:contains("Number of Confirmed Cases:")')
         .next('p')
         .text();
@@ -44,7 +44,7 @@ const scraper = {
     '2020-03-17': async function() {
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/3d9ca88970dd4689a701354d7fa6830b_0.csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
       for (const county of data) {
         let countyName;
@@ -69,9 +69,9 @@ const scraper = {
       const serverNumber = '';
       const dashboardId = 'c34e541dd8b742d993159dbebb094d8b';
       const layerName = 'MD_COVID19_Case_Counts_by_County';
-      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
+      this.url = await fetch.getArcGISCSVURL(this, serverNumber, dashboardId, layerName);
 
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
       for (const county of data) {
         let countyName;

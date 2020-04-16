@@ -27,7 +27,7 @@ const scraper = {
     '0': async function() {
       this.type = 'list';
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $lis = $('span:contains("Latest COVID-19 Testing Data in Connecticut")')
         .nextAll('ul')
         .first()
@@ -49,7 +49,7 @@ const scraper = {
     '2020-03-18': async function() {
       this.type = 'paragraph';
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const p = $(':contains("Fairfield County:")')
         .last()
         .text();
@@ -68,7 +68,7 @@ const scraper = {
     '2020-03-19': async function() {
       this.type = 'table';
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const $table = $('td:contains("Fairfield County")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
@@ -94,7 +94,7 @@ const scraper = {
 
       let body;
       try {
-        body = await fetch.pdf(this.url);
+        body = await fetch.pdf(this, this.url, 'default');
       } catch (err) {
         // The CT website does a 302 to a 404.html page if the PDF isn't yet available
         // This manifests as a PDF parsing error
@@ -147,7 +147,7 @@ const scraper = {
         'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
       this.type = 'json';
 
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const counties = [];
 
       data.features.forEach(item => {

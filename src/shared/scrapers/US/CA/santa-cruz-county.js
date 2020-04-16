@@ -14,7 +14,7 @@ const scraper = {
   url: 'http://www.santacruzhealth.org/HSAHome/HSADivisions/PublicHealth/CommunicableDiseaseControl/Coronavirus.aspx',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $h2 = $('p:contains("Total Confirmed Cases")').nextAll('h2');
       if ($h2.html() === null) {
         throw new Error('H2 not found');
@@ -23,7 +23,7 @@ const scraper = {
       return { cases };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Moved to Tableau');
     }
   }

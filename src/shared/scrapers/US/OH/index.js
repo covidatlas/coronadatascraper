@@ -112,7 +112,7 @@ const scraper = {
       let arrayOfCounties = [];
       this.url = 'https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/Novel-Coronavirus/welcome/';
       this.type = 'paragraph';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const regExp = /\(([^)]+)\)/;
       const parsed = regExp.exec($paragraph);
@@ -138,7 +138,7 @@ const scraper = {
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
       this.type = 'paragraph';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph.replace(/([()])/g, '').replace('* Number of counties with cases: ', '');
       arrayOfCounties = parsed.split(',');
@@ -162,7 +162,7 @@ const scraper = {
 
       this.url = 'https://coronavirus.ohio.gov/wps/portal/gov/covid-19/';
       this.type = 'paragraph';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $paragraph = $('p:contains("Number of counties with cases:")').text();
       const parsed = $paragraph
         .replace(/([()])/g, '')
@@ -186,13 +186,13 @@ const scraper = {
     '2020-03-26': async function() {
       this.url =
         'https://public.tableau.com/views/OverviewDashboard_15852499073250/DashboardOverview_1?:embed=y&:showVizHome=no&:host_url=https%3A%2F%2Fpublic.tableau.com%2F&:embed_code_version=3&:tabs=no&:toolbar=no&:showAppBanner=false&iframeSizedToWindow=true&:loadOrderID=0';
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new Error('Ohio has an impossible to access tablaeu dashboard');
     },
     '2020-03-28': async function() {
       this.url = 'https://coronavirus.ohio.gov/static/COVIDSummaryData.csv';
       this.type = 'csv';
-      const rows = await fetch.csv(this.url);
+      const rows = await fetch.csv(this, this.url, 'default');
 
       // The CSV is coming in with the BOM bytes mangled onto the front.
       // So the header of the first column is 'ï»¿County'

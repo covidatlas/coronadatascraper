@@ -35,12 +35,12 @@ const scraper = {
 
       const formUrl =
         'https://microstrategy.dc.gov/MicroStrategy/servlet/mstrWeb?evt=3067&src=mstrWeb.3067&reportID=DA2251A711EA6FB482660080EFA55B20&reportViewMode=1';
-      const form = await fetch.page(formUrl, false, getOptions);
+      const form = await fetch.page(this, formUrl, 'form', false, getOptions);
 
       const rb = form('form input[name="rb"]').val();
 
       const rawUrl = `https://microstrategy.dc.gov/MicroStrategy/export/Health_Statistics.csv?evt=3012&src=mstrWeb.3012&exportSection=1&exportFormatGrids=csvIServer&exportPlaintextDelimiter=1&exportMetricValuesAsText=0&exportHeadersAsText=0&exportFilterDetails=0&exportOverlapGridTitles=3&SaveReportProperties=*-1.*-1.0.0.0&rb=${rb}`;
-      const data = await fetch.raw(rawUrl, false, getOptions);
+      const data = await fetch.raw(this, rawUrl, 'default', false, getOptions);
 
       const json = await new Promise((resolve, reject) => {
         csvParse(data.slice(data.indexOf('"')).replace(/\0|\*/g, ''), (err, output) => {

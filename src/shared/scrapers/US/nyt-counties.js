@@ -22,7 +22,7 @@ const scraper = {
   ],
   async scraper() {
     this.url = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv';
-    const data = await fetch.csv(this.url, false);
+    const data = await fetch.csv(this, this.url, 'default', false);
 
     // FIXME when we roll out new TZ support!
     let scrapeDate = process.env.SCRAPE_DATE

@@ -111,7 +111,7 @@ const scraper = {
     let detroitCases = 0;
     let detroitDeaths = 0;
 
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
 
     const $cap = $('caption:contains("Overall Confirmed COVID-19 Cases by County")');
     const $table = $cap.closest('table');

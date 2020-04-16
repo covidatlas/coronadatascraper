@@ -42,7 +42,7 @@ const scraper = {
 
   async scraper() {
     let counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $th = $('th:contains("Case Counts by County")');
     const $table = $th.closest('table');
 

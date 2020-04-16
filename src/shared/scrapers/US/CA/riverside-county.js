@@ -14,13 +14,13 @@ const scraper = {
   url: 'https://www.rivcoph.org/coronavirus',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $el = $('p:contains("Confirmed cases:")').first();
       const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
       return { cases: parse.number(matches[1]) };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county scraper');
     }
   }
