@@ -152,7 +152,7 @@ function sum(dataArray, key) {
   return result;
 }
 
-async function TEMPfetchArcGISJSON(theThis, featureURL, date) {
+async function TEMPfetchArcGISJSON(obj, featureURL, date) {
   // temporary handling of pagination here until Quentin's pull request is brought in
   let offset = 0;
   const recordCount = 50000;
@@ -162,7 +162,7 @@ async function TEMPfetchArcGISJSON(theThis, featureURL, date) {
     const query = `where=0%3D0&outFields=*&resultOffset=${offset}&resultRecordCount=${recordCount}&f=json`;
     const theURL = `${featureURL}query?${query}`;
     const cacheKey = `arcGISJSON_cases_${offset}`;
-    const response = await fetch.json(theThis, theURL, cacheKey, date);
+    const response = await fetch.json(obj, theURL, cacheKey, date);
     if (!response) throw new Error(`Response was null for "${theURL}`);
     if (response.features && response.features.length === 0) break;
     const n = response.features.length;
