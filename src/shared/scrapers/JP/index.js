@@ -19,8 +19,8 @@ const groupBy = (array, func) => {
   }, {});
 };
 
-const country = 'iso1:JP';
-const japanIso2Values = Object.values(iso2).filter(item => item.countrylevel_id.startsWith(country));
+const countryIso1 = 'JP';
+const japanIso2Values = Object.values(iso2).filter(item => item.iso2.startsWith(countryIso1));
 
 const prefectureSpecialCases = {
   Hokkaido: 'Hokkaidō'
@@ -29,11 +29,12 @@ const prefectureSpecialCases = {
 const getIsoFromPrefectureName = prefectureName => {
   const modifiedName = prefectureSpecialCases[prefectureName] || prefectureName;
   const foundItem = japanIso2Values.find(({ name }) => name.startsWith(modifiedName));
+  assert(foundItem, `no item found for ${prefectureName}`);
   return foundItem.countrylevel_id;
 };
 
 const scraper = {
-  country,
+  country: `iso1:${countryIso1}`,
   maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
