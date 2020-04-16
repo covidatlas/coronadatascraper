@@ -30,7 +30,7 @@ const scraper = {
       $('span:contains("Glenn County COVID-19 Cases")')
         .first()
         .text()
-        .match(/Cases: (\d+)/)[1]
+        .match(/Cases:.*(\d+)/)[1]
     );
     return { cases };
   }
