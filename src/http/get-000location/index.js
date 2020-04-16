@@ -73,7 +73,12 @@ function locationDetail(location, lastDate, caseInfo) {
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
-      <div id="graph" class="ca-Graph"></div>
+      <!-- <div id="graph" class="ca-Graph"></div> -->
+      <div id="graph-elements">
+        <div id="graph-container">
+          <canvas id="graph"></canvas>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -167,7 +172,8 @@ ${header({ selectedPage: '' })}
     ${locationDetail(location, lastDate, caseInfo)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script src="${arc.static('location.js')}"></script>
     <script>
       window.showLocation({

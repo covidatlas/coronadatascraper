@@ -1,128 +1,223 @@
-/* globals d3, document */
+/* globals Chart, document */
 
-const fields = [
-  {
-    name: 'cases',
-    color: 'orange'
+let chart;
+
+const changeSizes = opts => {
+  if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
+    opts.title.text = opts.title.text.split(/, */);
+  } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
+    opts.title.text = opts.title.text.join(', ');
+  }
+
+  const y = opts.scales.yAxes[0];
+  if (document.body.offsetHeight <= 425) {
+    [y.scaleLabel.labelString] = y.types;
+  } else {
+    y.scaleLabel.labelString = `${y.types[0]}`;
+  }
+};
+
+const options = {
+  maintainAspectRatio: false,
+  title: {
+    display: true,
+    fontSize: 20
   },
-  {
-    name: 'deaths',
-    color: 'red'
-  }
-  // todo: what to do about tested?
-  // {
-  //   name: 'recovered',
-  //   color: 'green'
-  // },
-  // {
-  //   name: 'hospitalized',
-  //   color: 'red'
-  // },
-  // {
-  //   name: 'discharged',
-  //   color: 'red'
-  // }
-];
-/*
-  [
-    date: 'YYYY-MM-DD'
-  ]
-*/
+  scales: {
+    xAxes: [
+      {
+        type: 'time',
+        distribution: 'linear',
+        time: {
+          minUnit: 'day'
+        },
+        ticks: {
+          major: {
+            enabled: true,
+            fontStyle: 'bold'
+          },
+          autoSkip: true,
+          source: 'data',
+          sampleSize: 100
+        }
+      }
+    ],
+    yAxes: [
+      {
+        type: 'linear',
+        gridLines: {
+          drawBorder: false
+        },
+        major: {
+          enabled: true,
+          fontStyle: 'bold'
+        },
+        types: ['Linear', 'Logarithmic'],
+        scaleLabel: {
+          display: true,
+          labelString: 'Linear'
+        },
+        ticks: {
+          autoSkip: true,
 
-function generateGraphData({ timeseries, location }) {
-  const graphData = [];
-  for (const date in timeseries) {
-    if (!timeseries[date][location.id] || !timeseries[date][location.id].cases) {
-      continue;
+          userCallback(label) {
+            if (this.options.type === 'linear') {
+              return label;
+            }
+            const remain = label / 10 ** Math.floor(Chart.helpers.log10(label));
+            if (remain === 1 || remain === 2 || remain === 5) {
+              return label;
+            }
+          }
+        }
+      }
+    ]
+  },
+  legend: {
+    labels: {
+      usePointStyle: true,
+      filter(labelItem, data) {
+        const curr = data.datasets.find(d => d.label === labelItem.text);
+        if (curr.data.length) {
+          return labelItem;
+        }
+      }
     }
-    const obj = {
-      ...timeseries[date][location.id],
-      date
+  },
+  tooltips: {
+    intersect: false,
+    mode: 'nearest',
+    position: 'nearest',
+    axis: 'x',
+    callbacks: {
+      title(tooltipItem) {
+        return new Date(tooltipItem[0].label).toLocaleDateString();
+      },
+      label(tooltipItem, data) {
+        let label = data.datasets[tooltipItem.datasetIndex].label || '';
+        if (label) {
+          label += ': ';
+        }
+        label += parseInt(tooltipItem.value, 10);
+        return label;
+      }
+    }
+  },
+  events: ['mousemove', 'mouseout', 'click'],
+  onClick() {
+    const y = this.options.scales.yAxes[0];
+    const types = y.types.reverse();
+    y.type = types[0].toLowerCase();
+
+    changeSizes(this.options);
+    this.update();
+    this.render();
+  },
+  onResize(_chart) {
+    changeSizes(_chart.options);
+  }
+};
+
+const showGraph = ({ timeseries, location }) => {
+  const casesData = [];
+  const activeData = [];
+  const deathsData = [];
+  const recoveredData = [];
+
+  const locationData = Object.keys(timeseries).map(date => {
+    return {
+      date,
+      ...timeseries[date][location.id]
     };
-    graphData.push(obj);
-  }
-
-  return graphData;
-}
-
-function showGraph({ timeseries, location }) {
-  const data = generateGraphData({ timeseries, location });
-
-  const el = document.querySelector('#graph');
-  // set the dimensions and margins of the graph
-  const margin = { top: 20, right: 20, bottom: 30, left: 50 };
-  const width = el.offsetWidth - margin.left - margin.right;
-  const height = el.offsetHeight - margin.top - margin.bottom;
-
-  // parse the date / time
-  const parseTime = d3.timeParse('%Y-%m-%d');
-
-  // set the ranges
-  const x = d3.scaleTime().range([0, width]);
-  const y = d3.scaleLinear().range([height, 0]);
-
-  function getDate(d) {
-    return x(d.date);
-  }
-
-  function getField(field) {
-    return function(d) {
-      // show 0 if there is no data
-      return y(d[field] || 0);
-    };
-  }
-
-  // append the svg obgect to the body of the page
-  // appends a 'group' element to 'svg'
-  // moves the 'group' element to the top left margin
-  const svg = d3
-    .select('#graph')
-    .append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', `translate(${margin.left},${margin.top})`);
-
-  // format the data
-  data.forEach(function(d) {
-    d.date = parseTime(d.date);
   });
 
-  // Scale the range of the data
-  x.domain(
-    d3.extent(data, function(d) {
-      return d.date;
-    })
-  );
-  y.domain([
-    0,
-    d3.max(data, function(d) {
-      return Math.max(...fields.map(f => d[f.name]).filter(f => typeof f === 'number'));
-    })
-  ]);
+  locationData.forEach(day => {
+    const date = new Date(day.date);
 
-  for (const field of fields) {
-    const line = d3
-      .line()
-      .x(getDate)
-      .y(getField(field.name));
+    if (day.cases)
+      casesData.push({
+        y: day.cases,
+        t: date
+      });
 
-    svg
-      .append('path')
-      .data([data])
-      .attr('class', 'ca-Graph-line')
-      .style('stroke', field.color)
-      .attr('d', line);
+    if (day.active)
+      activeData.push({
+        y: day.active,
+        t: date
+      });
+
+    if (day.deaths)
+      deathsData.push({
+        y: day.deaths,
+        t: date
+      });
+
+    if (day.recovered)
+      recoveredData.push({
+        y: day.recovered,
+        t: date
+      });
+  });
+
+  const lineSettings = {
+    type: 'line',
+    lineTension: 0.1,
+    borderWidth: 1.5,
+    spanGaps: true,
+    fill: false
+  };
+
+  const data = {
+    datasets: [
+      {
+        label: 'Total Cases',
+        borderColor: 'orange',
+        backgroundColor: 'orange',
+        data: casesData,
+        ...lineSettings
+      },
+      // {
+      //   label: 'Active Cases',
+      //   borderColor: '#FF0000',
+      //   backgroundColor: 'white',
+      //   data: activeData,
+      //   ...lineSettings
+      // },
+      {
+        label: 'Deaths',
+        borderColor: 'red',
+        backgroundColor: 'red',
+        data: deathsData,
+        ...lineSettings
+      },
+      {
+        label: 'Recovered',
+        borderColor: 'rgb(0, 160, 0)',
+        backgroundColor: 'rgb(0, 160, 0)',
+        data: recoveredData,
+        ...lineSettings
+      }
+    ]
+  };
+
+  options.scales.xAxes[0].ticks.max = casesData[casesData.length - 1].t;
+  options.title.text = location.name;
+  changeSizes(options);
+
+  if (chart) {
+    chart.options = options;
+    chart.data = data;
+    chart.update();
+    chart.render();
+  } else {
+    Chart.defaults.global.defaultFontFamily = 'aglet-slab, sans-serif';
+    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defultFontColor = '#334E62';
+
+    chart = new Chart('graph', { data, options });
   }
 
-  // Add the X Axis
-  svg
-    .append('g')
-    .attr('transform', `translate(0,${height})`)
-    .call(d3.axisBottom(x));
-
-  // Add the Y Axis
-  svg.append('g').call(d3.axisLeft(y));
-}
+  document.getElementById('graph-elements').style.visibility = 'visible';
+};
 
 export default showGraph;
