@@ -152,6 +152,26 @@ function sum(dataArray, key) {
   return result;
 }
 
+async function TEMPfetchArcGISJSON(featureURL, date) {
+  // temporary handling of pagination here until Quentin's pull request is brought in
+  let offset = 0;
+  const recordCount = 50000;
+  const result = [];
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const query = `where=0%3D0&outFields=*&resultOffset=${offset}&resultRecordCount=${recordCount}&f=json`;
+    const theURL = `${featureURL}query?${query}`;
+    const response = await fetch.json(theURL, date);
+    if (!response) throw new Error(`Response was null for "${theURL}`);
+    if (response.features && response.features.length === 0) break;
+    const n = response.features.length;
+    log(`${n} records from "${theURL}`);
+    offset += n;
+    result.push(...response.features.map(({ attributes }) => attributes));
+  }
+  return result;
+}
+
 const scraper = {
   priority: 1,
   country: 'iso1:PA',
@@ -172,7 +192,8 @@ const scraper = {
   _testsUrl: 'https://opendata.arcgis.com/datasets/f966620f339241e9833f111969da8e83_0.csv',
 
   // List of cases, this has most of the data that we want.
-  _caseListUrl: 'https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv',
+  _caseListFeatureURL:
+    'https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/',
 
   // Time series at national level.
   _timeSeriesUrl: 'https://opendata.arcgis.com/datasets/6b7f17658fd845058f7516d6fc591530_0.csv',
@@ -260,16 +281,16 @@ const scraper = {
     // }
 
     // This is the source we actually get the data from.
-    this.url = this._caseListUrl; // required for source rating.
+    this.url = this._caseListFeatureURL;
     const scrapeDate = datetime.getYYYYMMDD(datetime.scrapeDate());
     let caseList;
     // use datetime.old here, just like the caching system does.
     if (datetime.dateIsBefore(scrapeDate, datetime.old.getDate())) {
       // treat the data as a timeseries, so don't cache it.
-      caseList = await fetch.csv(this._caseListUrl, false);
+      caseList = await TEMPfetchArcGISJSON(this._caseListFeatureURL, false);
     } else {
       // fetch it the normal way so it gets cached.
-      caseList = await fetch.csv(this._caseListUrl);
+      caseList = await TEMPfetchArcGISJSON(this._caseListFeatureURL);
     }
     // Array of:
     // {
