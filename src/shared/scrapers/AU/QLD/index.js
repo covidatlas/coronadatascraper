@@ -59,7 +59,7 @@ const scraper = {
       const $table = $('#content table');
 
       const $headings = $table.find('tbody:first-child tr th, thead:first-child tr th');
-      const $totals = $table.find('tbody:last-child tr th');
+      const $totals = $table.find('tbody:last-child tr:last-of-type > *');
       assert.equal($headings.length, $headings.length, 'headings and totals are misaligned');
 
       const data = {};
