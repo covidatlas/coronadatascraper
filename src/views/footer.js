@@ -14,13 +14,13 @@ module.exports = function body(content = '', className = '') {
           </p>
         </div>
         <div class="col-xs-12 col-md">
-          <h6 class="spectrum-Heading spectrum-Heading--XS">Datasets</h6>
+          <h6 class="spectrum-Heading spectrum-Heading--XS"><a class="spectrum-Link spectrum-Link--silent" href="/data">Datasets</a></h6>
         </div>
         <div class="col-xs-12 col-md">
-          <h6 class="spectrum-Heading spectrum-Heading--XS">Sources</h6>
+          <h6 class="spectrum-Heading spectrum-Heading--XS"><a class="spectrum-Link spectrum-Link--silent" href="/sources">Sources</a></h6>
         </div>
         <div class="col-xs-12 col-md">
-          <h6 class="spectrum-Heading spectrum-Heading--XS">About</h6>
+          <h6 class="spectrum-Heading spectrum-Heading--XS"><a class="spectrum-Link spectrum-Link--silent" href="/about">About</a></h6>
         </div>
       </div>
     </div>
