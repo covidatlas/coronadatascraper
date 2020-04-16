@@ -4,6 +4,7 @@ import maintainers from '../../lib/maintainers.js';
 import log from '../../lib/log.js';
 import provinceToIso2 from './province-to-iso2.json';
 import * as transform from '../../lib/transform.js';
+import datetime from '../../lib/datetime/index.js';
 
 // const patientStatus = {
 //   FALLECIDO: 'deaths',
@@ -239,6 +240,8 @@ const scraper = {
 
     // Cache this.
     // TODO: How do we deal with multiple source for the same country?
+    //       Just create a second .js with a lower priority, but we will get a timeseries from the patient list.
+    //       Here we could double-check with this data, but I'm not going to do that now.
     // i.e If I wanted to make a Panama nation-level timeseries scraper, how would I do it
     // and still keep this one which has greater granularity?
     /* const timeseries = */ await fetch.csv(this, this._timeSeriesUrl, 'timeseries');
@@ -256,8 +259,18 @@ const scraper = {
     //   FID: '1'
     // }
 
-    // This is the one we actually get the data from.
-    const caseList = await fetch.csv(this, this._caseListUrl, 'cases');
+    // This is the source we actually get the data from.
+    this.url = this._caseListUrl; // required for source rating.
+    const scrapeDate = datetime.getYYYYMMDD(datetime.scrapeDate());
+    let caseList;
+    // use datetime.old here, just like the caching system does.
+    if (datetime.dateIsBefore(scrapeDate, datetime.old.getDate())) {
+      // treat the data as a timeseries, so don't cache it.
+      caseList = await fetch.csv(this._caseListUrl, false);
+    } else {
+      // fetch it the normal way so it gets cached.
+      caseList = await fetch.csv(this._caseListUrl);
+    }
     // Array of:
     // {
     //   'numero_CASO': '201', - case number
@@ -283,8 +296,14 @@ const scraper = {
 
     const data = [];
     // log(`Panama has ${caseList.length} cumulative cases.`);
-    this.url = this._caseListUrl; // required for source rating.
+    let rejectedByDate = 0;
     for (const patient of caseList) {
+      const confirmedDate = datetime.getYYYYMMDD(patient.FECHA_de_CONFIRMACION);
+      if (!datetime.dateIsBeforeOrEqualTo(confirmedDate, scrapeDate)) {
+        rejectedByDate++;
+        continue;
+      } // this turns this scraper into a timeseries.
+
       const location = patientLocation[patient.UBICACIÓN_DEL_PACIENTE];
       if (location === patientLocation.UNKNOWN) {
         log.warn(`Patient location "${location}" is unparsable; this patient will not be counted.`);
@@ -329,6 +348,9 @@ const scraper = {
       }
     }
 
+    log(`${rejectedByDate} out of ${caseList.length} rejected by date.`);
+
+    if (data.length === 0) return data;
     // tests, can be moved, changed to asserts, etc.
     let data2 = [...data];
     log(
@@ -385,7 +407,9 @@ const scraper = {
     assert(nationLevel.length === 1);
     addEmptyStates(provinceLevel);
     assert(provinceLevel.length === 13); // Panama has 10 provinces and 3 provincial comarcas
-    // return [...provinceLevel, ...countyLevel]; // Uncomment this to reproduce #798
+    // As of 2020-04-16, counties are just rejected by the system:
+    // ❌ location.county is not a country-level id: iso2:PA-8, /Users/barf/coronadatascraper/src/shared/scrapers/PA/index.js
+    // return [...nationLevel, ...provinceLevel, ...countyLevel]; // Uncomment this to reproduce #798
     return [...nationLevel, ...provinceLevel];
   }
 };
