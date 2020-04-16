@@ -2,8 +2,8 @@
   /* Default search with, will be overridden by media queries */
   --ca-landing-search-width: 400px;
 
-  --ca-header-search-width: 300px;
-  --ca-header-search-popover-min-width: 320px;
+  --ca-header-search-width: 320px;
+  --ca-header-search-popover-min-width: var(--ca-header-search-width);
   --ca-header-logo-padding: 12px;
 }
 
