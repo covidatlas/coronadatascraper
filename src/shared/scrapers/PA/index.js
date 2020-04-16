@@ -371,60 +371,68 @@ const scraper = {
     log(`Making a time series ${scrapeDate}: ${rejectedByDate} out of ${caseList.length} rejected by date.`);
 
     if (data.length === 0) return data;
-    // tests, can be moved, changed to asserts, etc.
+
+    // TODO: move these to a test.
     let data2 = [...data];
-    log(
-      `With corregimientos: ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data.length} items.`
-    );
+    const corrC = sum(data2, 'cases');
+    const corrD = sum(data2, 'deaths');
+    const corrR = sum(data2, 'recovered');
+    log(`With corregimientos: ${corrC} cases, ${corrD} deaths, ${corrR} recovered, with ${data2.length} items.`);
 
     data2 = aggregateItems(data, ['corregimiento']); // our system won't accept this.
-    log(
-      `With counties      : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    const distC = sum(data2, 'cases');
+    const distD = sum(data2, 'deaths');
+    const distR = sum(data2, 'recovered');
+    log(`With counties      : ${distC} cases, ${distD} deaths, ${distR} recovered, with ${data2.length} items.`);
     // See https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_Panam%C3%A1
     assert(data2.length <= 81); // Panama has 81 districts (counties)
+    assert(corrC === distC);
+    assert(corrD === distD);
+    assert(corrR === distR);
 
-    data2 = aggregateItems(data2, ['county']); // our system won't accept this.
-    log(
-      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
-    data2 = aggregateItems(data, ['county', 'corregimiento']); // our system won't accept this.
-    log(
-      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    data2 = aggregateItems(data2, ['county']);
+    const provC = sum(data2, 'cases');
+    const provD = sum(data2, 'deaths');
+    const provR = sum(data2, 'recovered');
+    log(`With states        : ${provC} cases, ${provD} deaths, ${provR} recovered, with ${data2.length} items.`);
+    assert(provC === distC);
+    assert(provD === distD);
+    assert(provR === distR);
+
+    data2 = aggregateItems(data, ['county', 'corregimiento']);
+    const provC2 = sum(data2, 'cases');
+    const provD2 = sum(data2, 'deaths');
+    const provR2 = sum(data2, 'recovered');
+    log(`With states        : ${provC2} cases, ${provD2} deaths, ${provR2} recovered, with ${data2.length} items.`);
     assert(data2.length <= 10 + 3); // Panama has 10 provinces and 3 provincial comarcas
-    data2 = aggregateItems(data2, ['state']); // our system won't accept this.
-    log(
-      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    assert(provC === provC2);
+    assert(provD === provD2);
+    assert(provR === provR2);
+
+    data2 = aggregateItems(data2, ['state']);
+    const natC = sum(data2, 'cases');
+    const natD = sum(data2, 'deaths');
+    const natR = sum(data2, 'recovered');
+    log(`With nothing       : ${natC} cases, ${natD} deaths, ${natR} recovered, with ${data2.length} items.`);
+    assert(data2.length === 1);
+    assert(natC === provC2);
+    assert(natD === provD2);
+    assert(natR === provR2);
+
     data2 = aggregateItems(data2, ['state', 'county', 'corregimiento']); // our system won't accept this.
-    log(
-      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    const natC2 = sum(data2, 'cases');
+    const natD2 = sum(data2, 'deaths');
+    const natR2 = sum(data2, 'recovered');
+    log(`With nothing       : ${natC2} cases, ${natD2} deaths, ${natR2} recovered, with ${data2.length} items.`);
+    assert(data2.length === 1);
+    assert(natC === natC2);
+    assert(natD === natD2);
+    assert(natR === natR2);
     // end tests.
 
     const countyLevel = aggregateItems(data, ['corregimiento']);
     const provinceLevel = aggregateItems(countyLevel, ['county']);
     const nationLevel = aggregateItems(provinceLevel, ['state']);
-    assert(nationLevel.length === 1);
     addEmptyStates(provinceLevel);
     assert(provinceLevel.length === 13); // Panama has 10 provinces and 3 provincial comarcas
     // As of 2020-04-16, counties are just rejected by the system:
