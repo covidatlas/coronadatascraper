@@ -185,7 +185,7 @@ const scraper = {
   // URLs were obtained by snooping. See
   // https://docs.google.com/document/d/1__rE8LbiB0pK4qqG3vIbjbgnT8SrTx86A_KI7Xakgjk/edit#
 
-  // List of "corregimientos", which we will consider counties.
+  // List of "corregimientos" (smaller than a county)
   _corregimientosListUrl: 'https://opendata.arcgis.com/datasets/61980f00977b4dcdad46eda02268ab48_0.csv',
 
   // List of tests per day
@@ -201,7 +201,7 @@ const scraper = {
   // Road blocks (disease related?)
   // https://opendata.arcgis.com/datasets/91325f0051a84c72a704725a962a8bc7_0.csv
 
-  type: 'csv',
+  type: 'json',
   aggregate: 'county',
   maintainers: [maintainers.shaperilio],
 
@@ -259,7 +259,6 @@ const scraper = {
     //   }
     // ]
 
-    // Cache this.
     // TODO: How do we deal with multiple source for the same country?
     //       Just create a second .js with a lower priority, but we will get a timeseries from the patient list.
     //       Here we could double-check with this data, but I'm not going to do that now.
@@ -369,7 +368,7 @@ const scraper = {
       }
     }
 
-    log(`${rejectedByDate} out of ${caseList.length} rejected by date.`);
+    log(`Making a time series ${scrapeDate}: ${rejectedByDate} out of ${caseList.length} rejected by date.`);
 
     if (data.length === 0) return data;
     // tests, can be moved, changed to asserts, etc.
