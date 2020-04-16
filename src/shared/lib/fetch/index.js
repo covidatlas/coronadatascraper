@@ -288,7 +288,7 @@ export const getArcGISCSVURL = async (serverNumber, dashboardId, layerName) => {
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
-export const arcGISjson = async (featureLayerURL, date, options = {}) => {
+export const arcGISJSON = async (featureLayerURL, date, options = {}) => {
   const { k, additionalParams } = {
     k: 500,
     additionalParams: 'where=0%3D0&outFields=*&returnGeometry=false',
