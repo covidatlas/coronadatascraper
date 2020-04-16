@@ -40,8 +40,15 @@ function locationDetail(location, lastDate, caseInfo) {
   )}</p>`;
   html += `</div>
     <div class="col-xs-12 col-sm-6 end-sm">
-      <sp-button quiet variant="secondary">Download</sp-button>
-      <sp-button quiet variant="secondary">Share</sp-button>
+      <sp-button quiet variant="secondary" href="/data">Download</sp-button>
+      <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
+        <!-- <sp-button quiet variant="secondary" slot="trigger">Share</sp-button> -->
+        <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
+          <div class="ca-SocialButtons">
+
+          </div>
+        </sp-popover>
+      </overlay-trigger>
     </div>
   </div>`;
   html += `<div class="row">`;
@@ -75,14 +82,8 @@ function locationDetail(location, lastDate, caseInfo) {
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
-
-  <div class="ca-Callout--Disclaimer">
-    <p class="spectrum-Body spectrum-Body--M">
-      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
-    </p>
-  </div>
-
   <div class="ca-Section">
+    <!--
     <div class="row">
       <div class="col-xs-12">
         <h2 class="spectrum-Heading spectrum-Heading--M">Sources</h1>
@@ -94,6 +95,7 @@ function locationDetail(location, lastDate, caseInfo) {
         <a href="/sources" class="spectrum-Link">Learn more about COVID Atlas sources</a>
       </div>
     </div>
+    -->
     <div class="row">
       <section class="col-xs-12 col-sm-6 col-md-4">
         <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
@@ -107,10 +109,16 @@ function locationDetail(location, lastDate, caseInfo) {
     </div>
   </div>
 
-  <hr>
+  <div class="ca-Callout--Disclaimer">
+    <p class="spectrum-Body spectrum-Body--M">
+      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
+    </p>
+  </div>
 
+  <!--
+  <hr>
   <div class="row">
-  <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
       <h1 class="spectrum-Heading spectrum-Heading--M">Local resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
@@ -124,7 +132,8 @@ function locationDetail(location, lastDate, caseInfo) {
       <h1 class="spectrum-Heading spectrum-Heading--M">Global resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
-  </div>`;
+  </div>
+  -->`;
 
   return html;
 }
