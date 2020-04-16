@@ -279,7 +279,7 @@ export const getArcGISCSVURL = async (serverNumber, dashboardId, layerName) => {
 /**
  * Retrieves data from an ArcGIS REST API. By default, it will retrieve all items at the provided linked with geometry turned off.
  * You can control pagination size through the `k` parameter in `options`
- * @param {string} url URL of the resource
+ * @param {string} featureLayerURL URL of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - k: number of features we want to receive for each request. A smaller number means more request to grab the complete dataset,
