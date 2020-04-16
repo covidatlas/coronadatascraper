@@ -1,6 +1,10 @@
 :root {
   /* Default search with, will be overridden by media queries */
   --ca-landing-search-width: 400px;
+
+  --ca-header-search-width: 300px;
+  --ca-header-search-popover-min-width: 320px;
+  --ca-header-logo-padding: 12px;
 }
 
 /* DIMENSIONS AND NON-COLOR RELATED VARIABLES */

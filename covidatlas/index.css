@@ -175,6 +175,9 @@ sp-dropdown[emphasized] {
   color: var(--spectrum-global-color-gray-800);
   margin: 0 0 var(--spectrum-global-dimension-size-50) 0;
 }
+.spectrum-ComboField-field {
+  width: 100%;
+}
 
 .ca-Section {
   margin: calc(var(--spectrum-alias-grid-margin-large) * 2) 0;
@@ -198,6 +201,10 @@ sp-dropdown[emphasized] {
 .ca-Landing-logo {
   width: 100%;
   max-width: 500px;
+}
+.ca-Landing-search {
+  width: var(--ca-landing-search-width);
+  max-width: 100%;
 }
 
 .ca-Download {
@@ -372,14 +379,21 @@ hr {
 /* Search */
 
 sp-search#searchField {
-  --spectrum-textfield-border-color: transparent;
-  --spectrum-textfield-min-width: var(--ca-landing-search-width);
-  --spectrum-global-dimension-size-600: var(--ca-landing-search-width);
+  width: 100%;
+  --spectrum-textfield-min-width: 0;
+  --spectrum-alias-single-line-width: 100%;
 }
 
 .sp-SearchResults {
-  width: var(--ca-landing-search-width);
   max-height: 300px;
+}
+
+#searchContainer {
+  width: 100%;
+}
+
+#searchPopover {
+  min-width: var(--ca-header-search-popover-min-width);
 }
 
 #searchContainer #searchPopover {
@@ -387,12 +401,14 @@ sp-search#searchField {
   display: none;
 }
 
-.ca-SiteHeader-search {
-  sp-search#searchField {
-    --spectrum-textfield-min-width: 0;
-  }
+.ca-HeaderLogo {
+  padding: 0 var(--ca-header-logo-padding);
 }
 
+.ca-SiteHeader-search {
+  width: var(--ca-header-search-width);
+  flex-shrink: 1;
+}
 
 @media only screen and (min-width: 48em){
   .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-offset-0, .col-sm-offset-1, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9,
@@ -456,6 +472,7 @@ sp-search#searchField {
   }
   .ca-SiteHeader {
     padding-left: calc(var(--ca-PageMargin) - 8px);
+    padding-right: calc(var(--ca-PageMargin) - 8px);
   }
   .ca-SiteHeader .ca-HeaderLogo {
     margin: 0 8px;
