@@ -76,6 +76,7 @@ export async function runScraper(location) {
 
   if (rejectUnauthorized) {
     // Important: this prevents SSL from failing
+    log('  ⚠️  SSL disabled for this resource');
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   }
 
@@ -84,7 +85,7 @@ export async function runScraper(location) {
 
   let scraperOutput;
   if (typeof location.scraper === 'function') {
-    scraperOutput = location.scraper();
+    scraperOutput = await location.scraper();
   } else if (typeof location.scraper === 'object') {
     // Find the closest date
     let env;
@@ -104,7 +105,7 @@ export async function runScraper(location) {
         }, only have: ${Object.keys(location.scraper).join(', ')}`
       );
     }
-    scraperOutput = scraperToUse.call(location);
+    scraperOutput = await scraperToUse.call(location);
   } else {
     if (rejectUnauthorized) {
       delete process.env.NODE_TLS_REJECT_UNAUTHORIZED;

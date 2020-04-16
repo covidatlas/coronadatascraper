@@ -1,0 +1,12 @@
+[
+  { "state": "iso2:AT-3", "cases": 2417, "recovered": 1315, "deaths": 43 },
+  { "state": "iso2:AT-8", "cases": 851, "recovered": 646, "deaths": 7 },
+  { "state": "iso2:AT-4", "cases": 2166, "recovered": 1633, "deaths": 32 },
+  { "state": "iso2:AT-6", "cases": 1603, "recovered": 617, "deaths": 83 },
+  { "state": "iso2:AT-1", "cases": 278, "recovered": 148, "deaths": 4 },
+  { "state": "iso2:AT-2", "cases": 388, "recovered": 255, "deaths": 9 },
+  { "state": "iso2:AT-5", "cases": 1182, "recovered": 778, "deaths": 22 },
+  { "state": "iso2:AT-7", "cases": 3360, "recovered": 2134, "deaths": 78 },
+  { "state": "iso2:AT-9", "cases": 2105, "recovered": 572, "deaths": 69 },
+  { "cases": 14350, "recovered": 8098, "deaths": 347 }
+]
