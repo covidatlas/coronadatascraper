@@ -7,8 +7,7 @@ import mapping from './mapping.json';
 
 const scraper = {
   country: 'iso1:SE',
-  url:
-    'https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false',
+  url: 'https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query',
   priority: 1,
   type: 'csv',
   maintainers: [maintainers.qgolsteyn],
@@ -16,8 +15,7 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesRaw = await fetch.json(this.url, false);
-    const casesData = casesRaw.features.map(({ attributes }) => attributes);
+    const casesData = await fetch.arcGISjson(this.url, false);
 
     const casesByRegion = {};
 

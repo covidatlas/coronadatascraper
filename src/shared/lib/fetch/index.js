@@ -256,7 +256,7 @@ export const headless = async (url, date = datetime.old.scrapeDate() || datetime
  * orgId is 4RQmZZ0yaZkGR1zy
  * layerName is COVID19_testsites_READ_ONLY
  */
-export const getArcGISCSVURLFromOrgId = async function(serverNumber, orgId, layerName) {
+export const getArcGISCSVURLFromOrgId = async (serverNumber, orgId, layerName) => {
   const layerMetadata = await json(
     `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`
   );
@@ -270,8 +270,44 @@ export const getArcGISCSVURLFromOrgId = async function(serverNumber, orgId, laye
  * @param {*} dashboardId the ID of the dashboard, as passed to the iframe that renders it (i.e. https://maps.arcgis.com/apps/opsdashboard/index.html#/ec4bffd48f7e495182226eee7962b422 is dashboardId = ec4bffd48f7e495182226eee7962b422)
  * @param {*} layerName the name of the layer to fetch data for, find this by examining requests
  */
-export const getArcGISCSVURL = async function(serverNumber, dashboardId, layerName) {
+export const getArcGISCSVURL = async (serverNumber, dashboardId, layerName) => {
   const dashboardManifest = await json(`https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`);
   const { orgId } = dashboardManifest;
   return getArcGISCSVURLFromOrgId(serverNumber, orgId, layerName);
+};
+
+/**
+ * Retrieves data from an ArcGIS REST API. By default, it will retrieve all items at the provided linked with geometry turned off.
+ * You can control pagination size through the `k` parameter in `options`
+ * @param {string} url URL of the resource
+ * @param {*} date the date associated with this resource, or false if a timeseries data
+ * @param {object} options customizable options:
+ *  - k: number of features we want to receive for each request. A smaller number means more request to grab the complete dataset,
+ *  a larger number may result in a partial dataset if we request more than `Max Record Count`. Defaults to 500.
+ *  - additionalParams: additional parameters for this request. Defaults to `where=0%3D0&outFields=*&returnGeometry=false`.
+ *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
+ *  - disableSSL: disables SSL verification for this resource, should be avoided
+ */
+export const arcGISjson = async (featureLayerURL, date, options = {}) => {
+  const { k, additionalParams } = {
+    k: 500,
+    additionalParams: 'where=0%3D0&outFields=*&returnGeometry=false',
+    ...options
+  };
+
+  const url = `${featureLayerURL.replace(/\?.*$/, '')}?f=json${additionalParams ? `&${additionalParams}` : ''}`;
+
+  const output = [];
+
+  let n = 0;
+  let response = await json(`${url}&resultOffset=${n}&resultRecordCount=${n + k}`, date, options);
+
+  while (response && response.features.length > 0) {
+    n += k;
+    output.push(...response.features.map(({ attributes }) => attributes));
+
+    response = await json(`${url}&resultOffset=${n}&resultRecordCount=${n + k}`, date, options);
+  }
+
+  return output;
 };
