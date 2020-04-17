@@ -3,11 +3,11 @@
 let chart;
 
 const changeSizes = opts => {
-  if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
-    opts.title.text = opts.title.text.split(/, */);
-  } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
-    opts.title.text = opts.title.text.join(', ');
-  }
+  // if (document.body.offsetWidth <= 960 && typeof opts.title.text === 'string') {
+  //   opts.title.text = opts.title.text.split(/, */);
+  // } else if (document.body.offsetWidth > 960 && typeof opts.title.text !== 'string') {
+  //   opts.title.text = opts.title.text.join(', ');
+  // }
 
   const y = opts.scales.yAxes[0];
   if (document.body.offsetHeight <= 425) {
@@ -19,10 +19,10 @@ const changeSizes = opts => {
 
 const options = {
   maintainAspectRatio: false,
-  title: {
-    display: true,
-    fontSize: 20
-  },
+  // title: {
+  //   display: true,
+  //   fontSize: 20
+  // },
   scales: {
     xAxes: [
       {
@@ -171,8 +171,8 @@ const showGraph = ({ timeseries, location }) => {
     datasets: [
       {
         label: 'Total Cases',
-        borderColor: 'orange',
-        backgroundColor: 'orange',
+        borderColor: '#E68C00',
+        backgroundColor: '#E68C00',
         data: casesData,
         ...lineSettings
       },
@@ -185,15 +185,15 @@ const showGraph = ({ timeseries, location }) => {
       // },
       {
         label: 'Deaths',
-        borderColor: 'red',
-        backgroundColor: 'red',
+        borderColor: '#B43464',
+        backgroundColor: '#B43464',
         data: deathsData,
         ...lineSettings
       },
       {
         label: 'Recovered',
-        borderColor: 'rgb(0, 160, 0)',
-        backgroundColor: 'rgb(0, 160, 0)',
+        borderColor: '#288CC8',
+        backgroundColor: '#288CC8',
         data: recoveredData,
         ...lineSettings
       }
@@ -201,7 +201,7 @@ const showGraph = ({ timeseries, location }) => {
   };
 
   options.scales.xAxes[0].ticks.max = casesData[casesData.length - 1].t;
-  options.title.text = location.name;
+  // options.title.text = location.name;
   changeSizes(options);
 
   if (chart) {
