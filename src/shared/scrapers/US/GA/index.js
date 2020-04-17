@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as geography from '../../../lib/geography/index.js';
@@ -216,9 +217,10 @@ const scraper = {
 
       const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
-      const $trs = $('.tcell:contains("COVID-19 Confirmed Cases By County")')
+      const $trs = $('*[class^="tcell"]:contains("COVID-19 Confirmed Cases By County")')
         .closest('tbody')
         .find('tr:not(:first-child,:last-child)');
+      assert($trs.length > 0, 'no rows found');
 
       $trs.each((index, tr) => {
         const $tr = $(tr);
@@ -228,7 +230,7 @@ const scraper = {
 
         const cases = parse.number($tr.find('td:nth-child(2)').text());
 
-        if (county === 'Unknown County') {
+        if (['Unknown County', 'Non-Georgia Resident County'].includes(county)) {
           county = UNASSIGNED;
         }
 
