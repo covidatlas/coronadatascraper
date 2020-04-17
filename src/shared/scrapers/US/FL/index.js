@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
@@ -5,6 +6,11 @@ import * as geography from '../../../lib/geography/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
+
+/**
+ * @param {{ Deaths: string?; FLResDeaths: string?; }} county
+ */
+const getDeaths = county => county.Deaths || county.FLResDeaths;
 
 const scraper = {
   state: 'iso2:US-FL',
@@ -213,6 +219,7 @@ const scraper = {
       this.type = 'csv';
       this.url = 'https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv';
       const data = await fetch.csv(this, this.url, 'default');
+      assert(data, 'fetch unsuccessful');
       let counties = [];
 
       const unassigned = {
@@ -227,21 +234,21 @@ const scraper = {
         if (countyName === 'Unknown') {
           unassigned.cases += parse.number(county.CasesAll);
           unassigned.tested += parse.number(county.T_total);
-          unassigned.deaths += parse.number(county.FLResDeaths);
+          unassigned.deaths += parse.number(getDeaths(county));
         } else {
           countyName = geography.addCounty(parse.string(countyName));
           counties.push({
             county: countyName,
             cases: parse.number(county.CasesAll),
             tested: parse.number(county.T_total),
-            deaths: parse.number(county.FLResDeaths)
+            deaths: parse.number(getDeaths(county))
           });
         }
       }
       counties.push(unassigned);
       counties.push(transform.sumData(counties));
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
-      counties = counties.filter(c => c.county !== UNASSIGNED);
+      counties = counties.filter(({ county }) => county !== UNASSIGNED);
       return counties;
     }
   }
