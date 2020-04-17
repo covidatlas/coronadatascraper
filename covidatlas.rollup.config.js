@@ -13,6 +13,7 @@ export default [
     },
     output: {
       dir: 'public/',
+      chunkFileNames: '[name].js',
       sourcemap: true
     },
     plugins: [
