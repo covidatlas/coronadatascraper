@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -109,18 +110,28 @@ const scraper = {
     },
     '2020-03-19': async function() {
       this.url =
-        'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true';
+        'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query';
       this.type = 'json';
 
-      const data = await fetch.json(this, this.url, 'default');
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
+
       const unassigned = {
         county: UNASSIGNED,
         cases: 0,
         deaths: 0
       };
       const counties = [];
-      for (const feature of data.features) {
-        const county = feature.attributes;
+      for (const county of countyAttributes) {
         if (
           county.Parish === 'Out of State Resident' ||
           county.Parish === 'Out of State' ||

@@ -143,17 +143,26 @@ const scraper = {
       return counties;
     },
     '2020-03-30': async function() {
-      this.url =
-        'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+      this.url = 'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query';
       this.type = 'json';
 
-      const data = await fetch.json(this, this.url, 'default');
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://maps.ct.gov/arcgis/rest/services/CT_DPH_COVID_19_PROD_Layers/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
       const counties = [];
 
-      data.features.forEach(item => {
-        const cases = item.attributes.ConfirmedCases;
-        const deaths = item.attributes.Deaths;
-        const county = geography.addCounty(item.attributes.COUNTY);
+      countyAttributes.forEach(item => {
+        const cases = item.ConfirmedCases;
+        const deaths = item.Deaths;
+        const county = geography.addCounty(item.COUNTY);
 
         // On 3/31 these case counts were clearly updated, and agreed with the
         // state published PDF for 3/31. Yet this DateLastUpdated field still

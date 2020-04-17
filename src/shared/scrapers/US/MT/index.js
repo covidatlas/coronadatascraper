@@ -1,6 +1,7 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -9,7 +10,7 @@ const scraper = {
   state: 'iso2:US-MT',
   country: 'iso1:US',
   url:
-    'https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query?f=json&where=Total%20%3C%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAMELABEL%20asc&resultOffset=0&resultRecordCount=56&cacheHint=true',
+    'https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query',
   type: 'json',
   aggregate: 'county',
 
@@ -73,12 +74,21 @@ const scraper = {
   ],
 
   async scraper() {
-    const data = await fetch.json(this, this.url, 'default');
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+    let countyAttributes;
+    if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+      // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+      this.url =
+        'https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query?f=json&where=Total%20%3C%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAMELABEL%20asc&resultOffset=0&resultRecordCount=56&cacheHint=true';
+      const data = await fetch.json(this, this.url, 'default');
+      countyAttributes = data.features.map(({ attributes }) => attributes);
+    } else {
+      countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+    }
+
     let counties = [];
 
-    for (const record of data.features) {
-      const rec = record.attributes;
-
+    for (const rec of countyAttributes) {
       const county = geography.addCounty(rec.NAMELABEL);
       const cases = rec.Total;
 

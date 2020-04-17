@@ -3,6 +3,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -286,18 +287,29 @@ const scraper = {
     },
     '2020-4-11': async function() {
       this.url =
-        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query';
       this.type = 'json';
 
-      const data = await fetch.json(this, this.url, 'default');
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
+
       const counties = [];
 
-      data.features.forEach(item => {
-        const cases = item.attributes.INFECT_NUM;
-        const deaths = item.attributes.DEATH_NUM;
-        const county = geography.addCounty(item.attributes.NAME);
-        const tested = item.attributes.INFECT_NUM + item.attributes.NegativeTests;
-        const recovered = item.attributes.Recovered;
+      countyAttributes.forEach(item => {
+        const cases = item.INFECT_NUM;
+        const deaths = item.DEATH_NUM;
+        const county = geography.addCounty(item.NAME);
+        const tested = item.INFECT_NUM + item.NegativeTests;
+        const recovered = item.Recovered;
 
         counties.push({
           county,
@@ -308,10 +320,19 @@ const scraper = {
         });
       });
 
-      const totalsUrl =
-        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
-      const tmp = await fetch.json(this, totalsUrl, 'totals');
-      const totalsData = tmp.features.pop().attributes;
+      let totalsUrl =
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query';
+
+      let totalsData;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        totalsUrl =
+          'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
+        const data = await fetch.json(this, totalsUrl, 'totals');
+        [totalsData] = data.features.map(({ attributes }) => attributes);
+      } else {
+        [totalsData] = await fetch.arcGISJSON(this, totalsUrl, 'totals', false);
+      }
 
       const totals = transform.sumData(counties);
       totals.cases = totalsData.Total_Infections;

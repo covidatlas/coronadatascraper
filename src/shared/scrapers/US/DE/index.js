@@ -74,22 +74,34 @@ const scraper = {
     },
     '2020-03-29': async function() {
       this.url =
-        'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
+        'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query';
       this.type = 'json';
-      const data = await fetch.json(this, this.url, 'default');
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
       const counties = [];
 
-      for (const countyData of data.features) {
-        if (typeof countyData.attributes.Presumptive_Positive !== 'undefined') {
-          if (countyData.attributes.Presumptive_Positive === null) countyData.attributes.Presumptive_Positive = 0;
-          if (countyData.attributes.Total_Death === null) countyData.attributes.Total_Death = 0;
-          if (countyData.attributes.Recovered === null) countyData.attributes.Recovered = 0;
+      for (const countyData of countyAttributes) {
+        if (typeof countyData.Presumptive_Positive !== 'undefined') {
+          // TODO: Should we really be setting these to zero?
+          //       See https://github.com/covidatlas/coronadatascraper/issues/807
+          if (countyData.Presumptive_Positive === null) countyData.Presumptive_Positive = 0;
+          if (countyData.Total_Death === null) countyData.Total_Death = 0;
+          if (countyData.Recovered === null) countyData.Recovered = 0;
 
           const countyObj = {
-            county: geography.addCounty(parse.string(countyData.attributes.NAME)),
-            cases: parse.number(countyData.attributes.Presumptive_Positive),
-            deaths: parse.number(countyData.attributes.Total_Death),
-            recovered: parse.number(countyData.attributes.Recovered)
+            county: geography.addCounty(parse.string(countyData.NAME)),
+            cases: parse.number(countyData.Presumptive_Positive),
+            deaths: parse.number(countyData.Total_Death),
+            recovered: parse.number(countyData.Recovered)
           };
           if (rules.isAcceptable(countyObj, null, this._reject)) {
             counties.push(countyObj);

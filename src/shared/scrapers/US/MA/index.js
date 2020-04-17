@@ -124,27 +124,40 @@ const scraper = {
     '2020-03-30': async function() {
       this.type = 'json';
       this.url =
-        'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+        'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query';
       const counties = [];
-      const data = await fetch.json(this, this.url, 'default');
+
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
 
       let onlySumDeaths = true;
       let onlySumTested = true;
       let sumDeaths = 0;
       let sumTested = 0;
 
-      data.features.forEach(item => {
-        const countyLC = item.attributes.County.toLowerCase();
-        if (item.attributes.County && countyLC.includes('total')) {
-          sumDeaths = item.attributes.DEATHS;
-          sumTested = item.attributes.TESTED;
+      countyAttributes.forEach(item => {
+        const countyLC = item.County.toLowerCase();
+        if (item.County && countyLC.includes('total')) {
+          sumDeaths = item.DEATHS;
+          sumTested = item.TESTED;
           return;
         }
 
-        const cases = item.attributes.CASES || 0;
-        const deaths = item.attributes.DEATHS || 0;
-        const tested = item.attributes.TESTED || 0;
-        const county = geography.addCounty(item.attributes.County.charAt(0) + countyLC.slice(1));
+        // TODO: Should we really be setting these to zero?
+        //       See https://github.com/covidatlas/coronadatascraper/issues/807
+        const cases = item.CASES || 0;
+        const deaths = item.DEATHS || 0;
+        const tested = item.TESTED || 0;
+        const county = geography.addCounty(item.County.charAt(0) + countyLC.slice(1));
 
         const countyObj = {
           county,
@@ -161,8 +174,8 @@ const scraper = {
           countyObj.county = UNASSIGNED;
         }
 
-        onlySumDeaths = onlySumDeaths && !item.attributes.DEATHS;
-        onlySumTested = onlySumTested && !item.attributes.TESTED;
+        onlySumDeaths = onlySumDeaths && !item.DEATHS;
+        onlySumTested = onlySumTested && !item.TESTED;
 
         counties.push(countyObj);
       });

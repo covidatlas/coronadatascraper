@@ -152,27 +152,6 @@ function sum(dataArray, key) {
   return result;
 }
 
-async function TEMPfetchArcGISJSON(obj, featureURL, date) {
-  // temporary handling of pagination here until Quentin's pull request is brought in
-  let offset = 0;
-  const recordCount = 50000;
-  const result = [];
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const query = `where=0%3D0&outFields=*&resultOffset=${offset}&resultRecordCount=${recordCount}&f=json`;
-    const theURL = `${featureURL}query?${query}`;
-    const cacheKey = `arcGISJSON_cases_${offset}`;
-    const response = await fetch.json(obj, theURL, cacheKey, date);
-    if (!response) throw new Error(`Response was null for "${theURL}`);
-    if (response.features && response.features.length === 0) break;
-    const n = response.features.length;
-    log(`${n} records from "${theURL}`);
-    offset += n;
-    result.push(...response.features.map(({ attributes }) => attributes));
-  }
-  return result;
-}
-
 const scraper = {
   priority: 1,
   country: 'iso1:PA',
@@ -194,7 +173,7 @@ const scraper = {
 
   // List of cases, this has most of the data that we want.
   _caseListFeatureURL:
-    'https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/',
+    'https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/query',
 
   // Time series at national level.
   _timeSeriesUrl: 'https://opendata.arcgis.com/datasets/6b7f17658fd845058f7516d6fc591530_0.csv',
@@ -287,10 +266,10 @@ const scraper = {
     // use datetime.old here, just like the caching system does.
     if (datetime.dateIsBefore(scrapeDate, datetime.old.getDate())) {
       // treat the data as a timeseries, so don't cache it.
-      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL, false);
+      caseList = await fetch.arcGISJSON(this, this._caseListFeatureURL, 'default', false);
     } else {
       // fetch it the normal way so it gets cached.
-      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL);
+      caseList = await fetch.arcGISJSON(this, this._caseListFeatureURL, 'default', false);
     }
     // Array of:
     // {

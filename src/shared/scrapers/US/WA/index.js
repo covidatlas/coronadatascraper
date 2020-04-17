@@ -158,18 +158,28 @@ const scraper = {
     },
     '2020-03-30': async function() {
       const counties = [];
-      this.url =
-        'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';
+      this.url = 'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query';
       this.type = 'json';
       this.headless = false;
-      const data = await fetch.json(this, this.url, 'default');
 
-      data.features.forEach(item => {
-        const cases = item.attributes.CV_PositiveCases;
-        const deaths = item.attributes.CV_Deaths;
-        const county = geography.addCounty(item.attributes.CNTY_NAME);
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
 
-        const updated = new Date(item.attributes.CV_Updated);
+      countyAttributes.forEach(item => {
+        const cases = item.CV_PositiveCases;
+        const deaths = item.CV_Deaths;
+        const county = geography.addCounty(item.CNTY_NAME);
+
+        const updated = new Date(item.CV_Updated);
         if (datetime.scrapeDateIsBefore(updated)) {
           throw new Error(`Data only available until ${updated.toLocaleString()}`);
         }
@@ -182,8 +192,8 @@ const scraper = {
       });
 
       const totals = {
-        cases: data.features[0].attributes.CV_State_Cases,
-        deaths: data.features[0].attributes.CV_State_Deaths
+        cases: countyAttributes[0].CV_State_Cases,
+        deaths: countyAttributes[0].CV_State_Deaths
       };
       counties.push(totals);
       return geography.addEmptyRegions(counties, this._counties, 'county');

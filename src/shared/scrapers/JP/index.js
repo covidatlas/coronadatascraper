@@ -3,6 +3,7 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
 import maintainers from '../../lib/maintainers.js';
+import datetime from '../../lib/datetime/index.js';
 
 /**
  * Hand rolled version of _.groupBy
@@ -45,13 +46,24 @@ const scraper = {
     }
   ],
   type: 'json',
-  url:
-    'https://services8.arcgis.com/JdxivnCyd1rvJTrY/arcgis/rest/services/v2_covid19_list_csv/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson',
+  url: 'https://services8.arcgis.com/JdxivnCyd1rvJTrY/arcgis/rest/services/v2_covid19_list_csv/FeatureServer/0/query',
   async scraper() {
-    const data = await fetch.json(this, this.url, 'default');
-    assert(data, 'No data fetched');
-    assert(data.features.length > 1, 'features are unreasonable');
-    const attributes = data.features.map(({ attributes }) => attributes);
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+    let attributes;
+    if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+      // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+      this.url =
+        'https://services8.arcgis.com/JdxivnCyd1rvJTrY/arcgis/rest/services/v2_covid19_list_csv/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson';
+      const data = await fetch.json(this, this.url, 'default');
+      assert(data, 'No data fetched');
+      assert(data.features.length > 1, 'features are unreasonable');
+      attributes = data.features.map(({ attributes }) => attributes);
+    } else {
+      const features = await fetch.arcGISJSON(this, this.url, 'default', false);
+      assert(features, 'No data fetched');
+      assert(features.length > 1, 'features are unreasonable');
+      attributes = features;
+    }
     assert(attributes.length > 1, 'data fetch failed, no attributes');
 
     const groupedByPrefecture = groupBy(attributes, attribute => attribute.Prefecture);

@@ -1,6 +1,7 @@
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import maintainers from '../../lib/maintainers.js';
+import datetime from '../../lib/datetime/index.js';
 
 const scraper = {
   country: 'iso1:TH',
@@ -14,13 +15,24 @@ const scraper = {
     }
   ],
   type: 'json',
-  url:
-    'https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson',
+  url: 'https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query',
   async scraper() {
-    const data = await fetch.json(this, this.url, 'default');
-    assert(data, 'No data fetched');
-    assert.equal(data.features.length, 1, 'more features added, we may be scraping the wrong thing');
-    const { attributes } = data.features[0];
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+    let attributes;
+    if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+      // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+      this.url =
+        'https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson';
+      const data = await fetch.json(this, this.url, 'default');
+      assert(data, 'No data fetched');
+      assert.equal(data.features.length, 1, 'more features added, we may be scraping the wrong thing');
+      [attributes] = data.features.map(({ attributes }) => attributes);
+    } else {
+      const features = await fetch.arcGISJSON(this, this.url, 'default', false);
+      assert(features, 'No data fetched');
+      assert.equal(features.length, 1, 'more features added, we may be scraping the wrong thing');
+      [attributes] = features;
+    }
     assert(attributes, 'data fetch failed, no attributes');
     const output = {
       cases: attributes.Confirmed,
