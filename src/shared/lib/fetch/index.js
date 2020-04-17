@@ -289,8 +289,8 @@ export const getArcGISCSVURL = async (serverNumber, dashboardId, layerName) => {
  *  - disableSSL: disables SSL verification for this resource, should be avoided
  */
 export const arcGISJSON = async (featureLayerURL, date, options = {}) => {
-  const { k, additionalParams } = {
-    k: 500,
+  const { featuresToFetch, additionalParams } = {
+    featuresToFetch: 500,
     additionalParams: 'where=0%3D0&outFields=*&returnGeometry=false',
     ...options
   };
@@ -300,13 +300,13 @@ export const arcGISJSON = async (featureLayerURL, date, options = {}) => {
   const output = [];
 
   let n = 0;
-  let response = await json(`${url}&resultOffset=${n}&resultRecordCount=${k}`, date, options);
+  let response = await json(`${url}&resultOffset=${n}&resultRecordCount=${featuresToFetch}`, date, options);
 
   while (response && response.features && response.features.length > 0) {
     n += response.features.length;
     output.push(...response.features.map(({ attributes }) => attributes));
 
-    response = await json(`${url}&resultOffset=${n}&resultRecordCount=${k}`, date, options);
+    response = await json(`${url}&resultOffset=${n}&resultRecordCount=${featuresToFetch}`, date, options);
   }
 
   return output;
