@@ -55,24 +55,5 @@ export default [
     watch: {
       exclude: ['node_modules']
     }
-  },
-  {
-    input: 'covidatlas/home.js',
-    output: {
-      dir: 'public/',
-      sourcemap: true
-    },
-    plugins: [
-      resolve(),
-      json(),
-      replace({
-        values: {
-          'process.env.NODE_ENV': '"production"'
-        }
-      })
-    ],
-    watch: {
-      exclude: ['node_modules']
-    }
   }
 ];

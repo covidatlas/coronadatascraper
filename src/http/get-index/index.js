@@ -64,8 +64,6 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
   </div>
 </div>
-
-<script src="${arc.static('home.js')}" type="module"></script>
 `,
       'ca-Home'
     )
