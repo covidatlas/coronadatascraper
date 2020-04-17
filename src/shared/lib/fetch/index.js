@@ -295,12 +295,13 @@ export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId
 
 /**
  * Retrieves data from an ArcGIS REST API. By default, it will retrieve all items at the provided linked with geometry turned off.
- * You can control pagination size through the `k` parameter in `options`
+ * You can control pagination size through the `featuresToFetch` parameter in `options`
  * @param {*} scraper the scraper object
- * @param {string} featureLayerURL URL of the resource
+ * @param {string} featureLayerURL URL of the resource, up to and including the feature layer number and `query`, e.g.
+ * https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
- *  - k: number of features we want to receive for each request. A smaller number means more request to grab the complete dataset,
+ *  - featuresToFetch: number of features we want to receive for each request. A smaller number means more request to grab the complete dataset,
  *  a larger number may result in a partial dataset if we request more than `Max Record Count`. Defaults to 500.
  *  - additionalParams: additional parameters for this request. Defaults to `where=0%3D0&outFields=*&returnGeometry=false`.
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
@@ -313,8 +314,17 @@ export const arcGISJSON = async (scraper, featureLayerURL, cacheKey = 'default',
     ...options
   };
 
-  const url = `${featureLayerURL.replace(/\?.*$/, '')}?f=json${additionalParams ? `&${additionalParams}` : ''}`;
+  if (featureLayerURL.search(/\/query$/) === -1) {
+    throw new Error(`Invalid URL: "${featureLayerURL}" does not end with "query"`);
+  }
 
+  let url = `${featureLayerURL.replace(/\?.*$/, '')}?f=json${additionalParams ? `&${additionalParams}` : ''}`;
+
+  // Won't get anything back without these.
+  if (url.search('where=') === -1) url += '&where=0%3D0';
+  if (url.search('outFields=') === -1) url += '&outFields=*';
+
+  // Note also that if any query parameters are in there twice, you get a 400 back.
   const output = [];
 
   let n = 0;
