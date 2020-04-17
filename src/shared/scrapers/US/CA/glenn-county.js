@@ -16,7 +16,7 @@ const scraper = {
       ? 'https://www.countyofglenn.net/dept/health-human-services/public-health/welcome'
       : 'https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19';
 
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     if (datetime.scrapeDateIsBefore('2020-03-17')) {
       const cases = parse.number(
         $('font:contains("Glenn County COVID-19 Cases")')

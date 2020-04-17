@@ -14,7 +14,7 @@ const scraper = {
   async scraper() {
     let deaths;
     let cases;
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $th = $('th:contains("COVID-19 Case Count")');
     const $table = $th.closest('table');
     {

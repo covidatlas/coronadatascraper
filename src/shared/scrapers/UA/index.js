@@ -54,7 +54,7 @@ const scraper = {
     date = datetime.getYYYYMMDD(date);
 
     this.url = this._baseURL + date;
-    const data = await fetch.json(this.url, false, { disableSSL: true });
+    const data = await fetch.json(this, this.url, 'default', false, { disableSSL: true });
 
     if (data === null) {
       throw new Error(`UA: failed to fetch data from ${this.url}.`);

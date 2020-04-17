@@ -22,13 +22,13 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   scraper: {
     '0': async function() {
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const $el = $('p:contains("Positive Cases")');
       const matches = $el.html().match(/Positive Cases:.*?(\d+).*/);
       return { cases: parse.number(matches[1]) };
     },
     '2020-04-15': async function() {
-      await fetch.headless(this.url);
+      await fetch.headless(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county level scrapers');
     }
   }

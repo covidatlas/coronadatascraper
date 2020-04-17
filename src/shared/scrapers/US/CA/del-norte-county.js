@@ -14,7 +14,7 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('font:contains("Number of Confirmed Cases")')
           .first()
@@ -46,7 +46,7 @@ const scraper = {
       };
     },
     '2020-03-18': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('font:contains("Number of Positive")')
           .first()
@@ -65,7 +65,7 @@ const scraper = {
       };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county level scraper');
     }
   }

@@ -38,7 +38,7 @@ const scraper = {
       this.url = 'http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json';
     }
 
-    const data = await fetch.json(this.url);
+    const data = await fetch.json(this, this.url, 'default');
     const counties = [];
     const cookCounty = { county: 'Cook County', cases: 0, deaths: 0, tested: 0 };
     for (const county of data.characteristics_by_county.values) {

@@ -12,7 +12,7 @@ const scraper = {
   state: 'iso2:US-NC',
   aggregate: 'county',
   async scraper() {
-    const data = await fetch.csv(this.url);
+    const data = await fetch.csv(this, this.url, 'default');
     const counties = [];
     for (const county of data) {
       counties.push({

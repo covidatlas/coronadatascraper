@@ -13,7 +13,7 @@ const scraper = {
   url:
     'https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const cases = parse.number(
       $('h3:contains("Confirmed Cases")')
         .text()

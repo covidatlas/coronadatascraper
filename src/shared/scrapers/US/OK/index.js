@@ -117,7 +117,7 @@ const scraper = {
   ],
   async scraper() {
     let counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $("table[summary='COVID-19 Cases by County']").first();
 
     const $trs = $table.find('tbody').find('tr');

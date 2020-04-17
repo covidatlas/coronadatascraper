@@ -14,7 +14,7 @@ const scraper = {
   url: 'https://www.saccounty.net/COVID-19/Pages/default.aspx',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('th:contains("Confirmed")').closest('table');
       const $tds = $table.find('tr:nth-child(2) > td');
       return {
@@ -23,7 +23,7 @@ const scraper = {
       };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county scraper');
     }
   }

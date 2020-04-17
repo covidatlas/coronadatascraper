@@ -33,13 +33,13 @@ const scraper = {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
     // The latest datasets are posted in this CSV, which is updated daily
-    const datasets = await fetch.csv(this.url, false, { delimiter: ';' });
+    const datasets = await fetch.csv(this, this.url, 'index', false, { delimiter: ';' });
 
     // We grab the latest relevant dataset URLs
     const hopitalizedDataset = datasets.find(entry => entry.title.match(/donnees-hospitalieres-covid19-.*.csv/));
     const testedDataset = datasets.find(entry => entry.title.match(/donnees-tests-covid19-labo-quotidien-.*.csv/));
 
-    let hopitalizedData = await fetch.csv(hopitalizedDataset.url, false, { delimiter: ';' });
+    let hopitalizedData = await fetch.csv(this, hopitalizedDataset.url, 'hospitalized', false, { delimiter: ';' });
 
     // Hospitalized data is broken down by gender, we are only interested in all genders
     hopitalizedData = hopitalizedData.filter(item => item.sexe === '0');
@@ -47,7 +47,7 @@ const scraper = {
     // Sort by date to ensure accurate cummulative count
     hopitalizedData = hopitalizedData.sort((a, b) => a.jour - b.jour);
 
-    let testedData = await fetch.csv(testedDataset.url, false, { delimiter: ';' });
+    let testedData = await fetch.csv(this, testedDataset.url, 'tested', false, { delimiter: ';' });
 
     // Testing data is broken down by age group, we are only interested in all age groups
     testedData = testedData.filter(item => item.clage_covid === '0');

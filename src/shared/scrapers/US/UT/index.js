@@ -103,7 +103,7 @@ const scraper = {
     '0': async function() {
       this.url = 'https://coronavirus.utah.gov/latest/';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
       const $table = $('th:contains("District")').closest('table');
       const $trs = $table.find('tbody > tr');
@@ -125,7 +125,7 @@ const scraper = {
     '2020-03-19': async function() {
       this.url = 'https://coronavirus-dashboard.utah.gov/';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
 
       const script = $('script[type="application/json"]').html();
@@ -153,7 +153,7 @@ const scraper = {
     '2020-04-08': async function() {
       this.url = 'https://coronavirus-dashboard.utah.gov/';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
 
       const script = $('script[type="application/json"]').html();

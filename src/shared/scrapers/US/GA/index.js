@@ -186,7 +186,7 @@ const scraper = {
   },
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
       const $trs = $('table:contains(County):contains(Cases) tbody > tr');
       $trs.each((index, tr) => {
@@ -210,11 +210,11 @@ const scraper = {
       return counties;
     },
     '2020-03-27': async function() {
-      const tmp = await fetch.page(this.url);
+      const tmp = await fetch.page(this, this.url, 'tmpindex');
       const pageHTML = tmp.html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
       const $trs = $('.tcell:contains("COVID-19 Confirmed Cases By County")')
         .closest('tbody')

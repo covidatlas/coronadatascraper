@@ -24,10 +24,10 @@ const scraper = {
   type: 'paragraph',
   url: 'https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'tmpindex');
     const $anchor = $('.content ul li a:contains("Department of Health and Human Services media release - ")');
     const currentArticleUrl = $anchor.attr('href');
-    const $currentArticlePage = await fetch.page(`https://www.dhhs.vic.gov.au${currentArticleUrl}`);
+    const $currentArticlePage = await fetch.page(this, `https://www.dhhs.vic.gov.au${currentArticleUrl}`, 'default');
     const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
     const matches = paragraph.match(/cases in Victoria \w* (?<casesString>[\d,]+)/) || {};
     const { casesString } = matches.groups || {};

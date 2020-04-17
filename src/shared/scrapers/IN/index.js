@@ -72,7 +72,7 @@ const scraper = {
   type: 'table',
   aggregate: 'state',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('#state-data');
     assert.equal($table.length, 1, 'The table can not be found');
 

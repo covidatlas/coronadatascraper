@@ -4,6 +4,7 @@ import maintainers from '../../lib/maintainers.js';
 import log from '../../lib/log.js';
 import provinceToIso2 from './province-to-iso2.json';
 import * as transform from '../../lib/transform.js';
+import datetime from '../../lib/datetime/index.js';
 
 // const patientStatus = {
 //   FALLECIDO: 'deaths',
@@ -151,6 +152,27 @@ function sum(dataArray, key) {
   return result;
 }
 
+async function TEMPfetchArcGISJSON(obj, featureURL, date) {
+  // temporary handling of pagination here until Quentin's pull request is brought in
+  let offset = 0;
+  const recordCount = 50000;
+  const result = [];
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const query = `where=0%3D0&outFields=*&resultOffset=${offset}&resultRecordCount=${recordCount}&f=json`;
+    const theURL = `${featureURL}query?${query}`;
+    const cacheKey = `arcGISJSON_cases_${offset}`;
+    const response = await fetch.json(obj, theURL, cacheKey, date);
+    if (!response) throw new Error(`Response was null for "${theURL}`);
+    if (response.features && response.features.length === 0) break;
+    const n = response.features.length;
+    log(`${n} records from "${theURL}`);
+    offset += n;
+    result.push(...response.features.map(({ attributes }) => attributes));
+  }
+  return result;
+}
+
 const scraper = {
   priority: 1,
   country: 'iso1:PA',
@@ -164,14 +186,15 @@ const scraper = {
   // URLs were obtained by snooping. See
   // https://docs.google.com/document/d/1__rE8LbiB0pK4qqG3vIbjbgnT8SrTx86A_KI7Xakgjk/edit#
 
-  // List of "corregimientos", which we will consider counties.
+  // List of "corregimientos" (smaller than a county)
   _corregimientosListUrl: 'https://opendata.arcgis.com/datasets/61980f00977b4dcdad46eda02268ab48_0.csv',
 
   // List of tests per day
   _testsUrl: 'https://opendata.arcgis.com/datasets/f966620f339241e9833f111969da8e83_0.csv',
 
   // List of cases, this has most of the data that we want.
-  _caseListUrl: 'https://opendata.arcgis.com/datasets/898c63fc068745d98fea01b9bf4f05ea_0.csv',
+  _caseListFeatureURL:
+    'https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/',
 
   // Time series at national level.
   _timeSeriesUrl: 'https://opendata.arcgis.com/datasets/6b7f17658fd845058f7516d6fc591530_0.csv',
@@ -179,13 +202,13 @@ const scraper = {
   // Road blocks (disease related?)
   // https://opendata.arcgis.com/datasets/91325f0051a84c72a704725a962a8bc7_0.csv
 
-  type: 'csv',
+  type: 'json',
   aggregate: 'county',
   maintainers: [maintainers.shaperilio],
 
   async scraper() {
     // We probably don't need to cache this every day; fetch could be commented out.
-    /* const corregimientos = */ await fetch.csv(this._corregimientosListUrl);
+    /* const corregimientos = */ await fetch.csv(this, this._corregimientosListUrl, 'corregimientos');
     // Note: The first field names have funny characters in the name, and lint rules will prevent
     // me from including them in the comments (and they may be invisible). Use e.g.
     //     log(corregimientos[0]);
@@ -225,7 +248,7 @@ const scraper = {
     // }
 
     // Cache this.
-    /* const tests = */ await fetch.csv(this._testsUrl);
+    /* const tests = */ await fetch.csv(this, this._testsUrl, 'tests');
     // Simple test counts (country level):
     // [
     //   {
@@ -237,11 +260,12 @@ const scraper = {
     //   }
     // ]
 
-    // Cache this.
     // TODO: How do we deal with multiple source for the same country?
+    //       Just create a second .js with a lower priority, but we will get a timeseries from the patient list.
+    //       Here we could double-check with this data, but I'm not going to do that now.
     // i.e If I wanted to make a Panama nation-level timeseries scraper, how would I do it
     // and still keep this one which has greater granularity?
-    /* const timeseries = */ await fetch.csv(this._timeSeriesUrl);
+    /* const timeseries = */ await fetch.csv(this, this._timeSeriesUrl, 'timeseries');
     // Array of:
     // {
     //   'Fecha': '2020-03-10T00:00:00.000Z', - date
@@ -256,8 +280,18 @@ const scraper = {
     //   FID: '1'
     // }
 
-    // This is the one we actually get the data from.
-    const caseList = await fetch.csv(this._caseListUrl);
+    // This is the source we actually get the data from.
+    this.url = this._caseListFeatureURL;
+    const scrapeDate = datetime.getYYYYMMDD(datetime.scrapeDate());
+    let caseList;
+    // use datetime.old here, just like the caching system does.
+    if (datetime.dateIsBefore(scrapeDate, datetime.old.getDate())) {
+      // treat the data as a timeseries, so don't cache it.
+      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL, false);
+    } else {
+      // fetch it the normal way so it gets cached.
+      caseList = await TEMPfetchArcGISJSON(this, this._caseListFeatureURL);
+    }
     // Array of:
     // {
     //   'numero_CASO': '201', - case number
@@ -283,8 +317,14 @@ const scraper = {
 
     const data = [];
     // log(`Panama has ${caseList.length} cumulative cases.`);
-    this.url = this._caseListUrl; // required for source rating.
+    let rejectedByDate = 0;
     for (const patient of caseList) {
+      const confirmedDate = datetime.getYYYYMMDD(patient.FECHA_de_CONFIRMACION);
+      if (!datetime.dateIsBeforeOrEqualTo(confirmedDate, scrapeDate)) {
+        rejectedByDate++;
+        continue;
+      } // this turns this scraper into a timeseries.
+
       const location = patientLocation[patient.UBICACIÓN_DEL_PACIENTE];
       if (location === patientLocation.UNKNOWN) {
         log.warn(`Patient location "${location}" is unparsable; this patient will not be counted.`);
@@ -329,63 +369,76 @@ const scraper = {
       }
     }
 
-    // tests, can be moved, changed to asserts, etc.
+    log(`Counting up to ${scrapeDate}: ${rejectedByDate} out of ${caseList.length} rejected by date.`);
+
+    if (data.length === 0) return data;
+
+    // TODO: move these to a test.
     let data2 = [...data];
-    log(
-      `With corregimientos: ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data.length} items.`
-    );
+    const corrC = sum(data2, 'cases');
+    const corrD = sum(data2, 'deaths');
+    const corrR = sum(data2, 'recovered');
+    log(`With corregimientos: ${corrC} cases, ${corrD} deaths, ${corrR} recovered, with ${data2.length} items.`);
 
     data2 = aggregateItems(data, ['corregimiento']); // our system won't accept this.
-    log(
-      `With counties      : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    const distC = sum(data2, 'cases');
+    const distD = sum(data2, 'deaths');
+    const distR = sum(data2, 'recovered');
+    log(`With counties      : ${distC} cases, ${distD} deaths, ${distR} recovered, with ${data2.length} items.`);
     // See https://es.wikipedia.org/wiki/Organizaci%C3%B3n_territorial_de_Panam%C3%A1
     assert(data2.length <= 81); // Panama has 81 districts (counties)
+    assert(corrC === distC);
+    assert(corrD === distD);
+    assert(corrR === distR);
 
-    data2 = aggregateItems(data2, ['county']); // our system won't accept this.
-    log(
-      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
-    data2 = aggregateItems(data, ['county', 'corregimiento']); // our system won't accept this.
-    log(
-      `With states        : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    data2 = aggregateItems(data2, ['county']);
+    const provC = sum(data2, 'cases');
+    const provD = sum(data2, 'deaths');
+    const provR = sum(data2, 'recovered');
+    log(`With states        : ${provC} cases, ${provD} deaths, ${provR} recovered, with ${data2.length} items.`);
+    assert(provC === distC);
+    assert(provD === distD);
+    assert(provR === distR);
+
+    data2 = aggregateItems(data, ['county', 'corregimiento']);
+    const provC2 = sum(data2, 'cases');
+    const provD2 = sum(data2, 'deaths');
+    const provR2 = sum(data2, 'recovered');
+    log(`With states        : ${provC2} cases, ${provD2} deaths, ${provR2} recovered, with ${data2.length} items.`);
     assert(data2.length <= 10 + 3); // Panama has 10 provinces and 3 provincial comarcas
-    data2 = aggregateItems(data2, ['state']); // our system won't accept this.
-    log(
-      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    assert(provC === provC2);
+    assert(provD === provD2);
+    assert(provR === provR2);
+
+    data2 = aggregateItems(data2, ['state']);
+    const natC = sum(data2, 'cases');
+    const natD = sum(data2, 'deaths');
+    const natR = sum(data2, 'recovered');
+    log(`With nothing       : ${natC} cases, ${natD} deaths, ${natR} recovered, with ${data2.length} items.`);
+    assert(data2.length === 1);
+    assert(natC === provC2);
+    assert(natD === provD2);
+    assert(natR === provR2);
+
     data2 = aggregateItems(data2, ['state', 'county', 'corregimiento']); // our system won't accept this.
-    log(
-      `With nothing       : ${sum(data2, 'cases')} cases, ${sum(data2, 'deaths')} deaths, ${sum(
-        data2,
-        'recovered'
-      )} recovered, with ${data2.length} items.`
-    );
+    const natC2 = sum(data2, 'cases');
+    const natD2 = sum(data2, 'deaths');
+    const natR2 = sum(data2, 'recovered');
+    log(`With nothing       : ${natC2} cases, ${natD2} deaths, ${natR2} recovered, with ${data2.length} items.`);
+    assert(data2.length === 1);
+    assert(natC === natC2);
+    assert(natD === natD2);
+    assert(natR === natR2);
     // end tests.
 
     const countyLevel = aggregateItems(data, ['corregimiento']);
     const provinceLevel = aggregateItems(countyLevel, ['county']);
     const nationLevel = aggregateItems(provinceLevel, ['state']);
-    assert(nationLevel.length === 1);
     addEmptyStates(provinceLevel);
     assert(provinceLevel.length === 13); // Panama has 10 provinces and 3 provincial comarcas
-    // return [...provinceLevel, ...countyLevel]; // Uncomment this to reproduce #798
+    // As of 2020-04-16, counties are just rejected by the system:
+    // ❌ location.county is not a country-level id: iso2:PA-8, /Users/barf/coronadatascraper/src/shared/scrapers/PA/index.js
+    // return [...nationLevel, ...provinceLevel, ...countyLevel]; // Uncomment this to reproduce #798
     return [...nationLevel, ...provinceLevel];
   }
 };

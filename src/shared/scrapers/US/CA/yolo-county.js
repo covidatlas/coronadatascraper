@@ -16,7 +16,7 @@ const scraper = {
     'https://www.yolocounty.org/health-human-services/adults/communicable-disease-investigation-and-control/novel-coronavirus-2019',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       if (datetime.scrapeDateIsBefore('2020-03-17')) {
         const $h3 = $('h3:contains("confirmed case")');
         const matches = $h3.text().match(/there are (\d+) confirmed cases? in Yolo/);
@@ -27,7 +27,7 @@ const scraper = {
       return { cases: parse.number(matches[1]) };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county scraper');
     }
   }

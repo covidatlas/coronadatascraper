@@ -21,7 +21,7 @@ const scraper = {
   aggregate: 'state',
   priority: -0.5,
   async scraper() {
-    const data = await fetch.json(this.url);
+    const data = await fetch.json(this, this.url, 'default');
 
     const regions = [];
 

@@ -18,7 +18,7 @@ const scraper = {
   url: 'http://www.publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page('http://www.publichealth.lacounty.gov/media/Coronavirus/');
+      const $ = await fetch.page(this, 'http://www.publichealth.lacounty.gov/media/Coronavirus/', 'default');
       return {
         cases: parse.number(
           $('.counter')
@@ -33,7 +33,7 @@ const scraper = {
       };
     },
     '2020-03-27': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const { content } = JSON.parse($.text().match(/data = (?<json>[\S\s]+?);/).groups.json);
       return {
         cases: parse.number(content.count),

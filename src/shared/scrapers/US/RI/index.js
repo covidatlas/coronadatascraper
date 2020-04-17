@@ -78,7 +78,7 @@ const scraper = {
 
   scraper: {
     '0': async function() {
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
       for (const row of data) {
         const caseHdr = 'Number of  COVID-19 positive (including presumptive positive) cases';
@@ -106,7 +106,7 @@ const scraper = {
 
       this.headless = true;
       this.url = 'https://health.ri.gov/data/covid-19/';
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       cheerioTableparser($);
 
       // Need to pull this out explicitly because their html table includes

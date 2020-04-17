@@ -14,7 +14,7 @@ const scraper = {
   url: 'https://www.mendocinocounty.org/community/novel-coronavirus',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('strong:contains("current cases of COVID-19")')
           .text()
@@ -23,20 +23,20 @@ const scraper = {
       return { cases };
     },
     '2020-03-18': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $strong = $('strong:contains("current case")');
       const cases = parse.number($strong.text().match(/(\d+) current/)[1]);
       return { cases };
     },
     '2020-03-23': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $outerLI = $('li:contains("Testing Numbers")');
       const $li = $outerLI.find('li:contains("Total Positives")');
       const cases = parse.number($li.text().split(':')[1]);
       return { cases };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county level scrapers');
     }
   }

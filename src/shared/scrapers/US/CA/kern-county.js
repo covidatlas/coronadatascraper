@@ -13,14 +13,14 @@ const scraper = {
   type: 'table',
   scraper: {
     '0': async function() {
-      let $ = await fetch.headless(this.url);
+      let $ = await fetch.headless(this, this.url, 'default');
       let cases = 0;
       let tested = 0;
 
       // Pull out and fetch the embedded iframe
       const frameURL = $('iframe').attr('src');
 
-      $ = await fetch.headless(frameURL);
+      $ = await fetch.headless(this, frameURL, 'default');
 
       const getVal = function(title) {
         const val = parse.number(

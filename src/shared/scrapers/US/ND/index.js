@@ -90,7 +90,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
       let $table = $('td:contains("Positive")').closest('table');
       if ($table.length === 0) {
@@ -134,7 +134,7 @@ const scraper = {
       this.url = 'https://static.dwcdn.net/data/yuhr0.csv';
       this.type = 'csv';
 
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
 
       const counties = data.map(location => {
         return {

@@ -24,6 +24,7 @@ needle.defaults({
 
 /**
  * Fetch whatever is at the provided URL. Use cached version if available.
+ * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
  * @param {*} type type of the resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
@@ -38,7 +39,14 @@ needle.defaults({
  * Returns: { body: body, cookies: cookies }.  If the request failed,
  * both body and cookies are null.
  */
-export const get = async (url, type, date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(), options = {}) => {
+export const get = async (
+  scraper,
+  url,
+  cacheKey,
+  type,
+  date = datetime.old.scrapeDate() || datetime.old.getYYYYMD(),
+  options = {}
+) => {
   const { alwaysRun, disableSSL, toString, encoding, cookies, headers, method, args } = {
     alwaysRun: false,
     disableSSL: false,
@@ -51,7 +59,9 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
     ...options
   };
 
-  const cachedBody = await caching.getCachedFile(url, type, date, encoding);
+  if (scraper === null || typeof scraper !== 'object') throw new Error(`null or invalid scraper, getting ${url}`);
+
+  const cachedBody = await caching.getCachedFile(scraper, url, cacheKey, type, date, encoding);
   if (process.env.ONLY_USE_CACHE) return { body: cachedBody, cookies: null };
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
@@ -106,7 +116,7 @@ export const get = async (url, type, date = datetime.old.scrapeDate() || datetim
       // any sort of success code -- return good data
       if (response.statusCode < 400) {
         const fetchedBody = toString ? response.body.toString() : response.body;
-        await caching.saveFileToCache(url, type, date, fetchedBody);
+        await caching.saveFileToCache(scraper, url, type, date, fetchedBody);
         return { body: fetchedBody, cookies: response.cookies };
       }
 

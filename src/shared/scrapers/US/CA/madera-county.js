@@ -14,7 +14,7 @@ const scraper = {
   url: 'https://www.maderacounty.com/government/public-health/health-updates/corona-virus',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $el = $('*:contains("Confirmed cases")').first();
       const matches = $el.text().match(/Confirmed cases:.*?(\d+)/);
       return { cases: parse.number(matches[1]) };

@@ -13,7 +13,7 @@ const scraper = {
   url: 'https://www.placer.ca.gov/6448/Cases-in-Placer',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('p:contains("Confirmed COVID-19 Cases in Placer County")')
         .nextAll('table')
         .first();
@@ -35,7 +35,7 @@ const scraper = {
       };
     },
     '3/28/2020': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       return {
         cases: parse.number(
           $('td:contains("Cases")')

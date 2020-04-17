@@ -71,7 +71,7 @@ const scraper = {
 
   scraper: {
     '0': async function() {
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       let counties = [];
 
       for (const record of data.features) {
@@ -99,8 +99,8 @@ const scraper = {
       const serverNumber = 2;
       const dashboardId = '3732035614af4246877e20c3a496e397';
       const layerName = 'Covid19_Cases_Centroid_SharingView';
-      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
-      const data = await fetch.csv(this.url);
+      this.url = await fetch.getArcGISCSVURL(this, serverNumber, dashboardId, layerName);
+      const data = await fetch.csv(this, this.url, 'default');
       let counties = [];
       for (const county of data) {
         counties.push({
@@ -120,8 +120,8 @@ const scraper = {
       const serverNumber = 2;
       const dashboardId = '3732035614af4246877e20c3a496e397';
       const layerName = 'COVID19_County_Polygon_SharingView2'; // they started updating this view
-      this.url = await fetch.getArcGISCSVURL(serverNumber, dashboardId, layerName);
-      const data = await fetch.csv(this.url);
+      this.url = await fetch.getArcGISCSVURL(this, serverNumber, dashboardId, layerName);
+      const data = await fetch.csv(this, this.url, 'default');
       let counties = [];
       for (const county of data) {
         if (datetime.scrapeDateIsBefore(county.Date_)) {

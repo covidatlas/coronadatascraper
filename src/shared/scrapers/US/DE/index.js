@@ -38,7 +38,7 @@ const scraper = {
       if (datetime.scrapeDateIsBefore('2020-03-16')) {
         this.url = 'https://www.dhss.delaware.gov/dhss/dph/epi/2019novelcoronavirus.html';
         this.type = 'table';
-        const $ = await fetch.page(this.url);
+        const $ = await fetch.page(this, this.url, 'default');
         const $td = $('*:contains("County breakdown")')
           .closest('tr')
           .find('td:last-child');
@@ -57,7 +57,7 @@ const scraper = {
       }
       this.url = 'http://opendata.arcgis.com/datasets/c8d4efa2a6bd48a1a7ae074a8166c6fa_0.csv';
       this.type = 'csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
       for (const county of data) {
         const countyObj = {
@@ -76,7 +76,7 @@ const scraper = {
       this.url =
         'https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
       this.type = 'json';
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const counties = [];
 
       for (const countyData of data.features) {

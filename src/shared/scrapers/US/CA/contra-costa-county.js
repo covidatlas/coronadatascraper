@@ -12,7 +12,7 @@ const scraper = {
   url: 'https://www.coronavirus.cchealth.org/',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.headless(this, this.url, 'default');
     const cases = parse.number(
       $('h1:contains("TOTAL")')
         .parent()

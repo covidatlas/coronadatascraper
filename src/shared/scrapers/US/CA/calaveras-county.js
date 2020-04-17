@@ -14,7 +14,7 @@ const scraper = {
   maintainers: [maintainers.jbencina],
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('h2:contains("in Calaveras County:")')
           .first()
@@ -24,7 +24,7 @@ const scraper = {
       return { cases };
     },
     '2020-04-15': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError('Sunsetting county level scrapers');
     }
   }

@@ -15,7 +15,7 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = await fetch.arcGISJSON(this.url, false);
+    const casesData = await fetch.arcGISJSON(this, this.url, 'default', false);
 
     const casesByRegion = {};
 

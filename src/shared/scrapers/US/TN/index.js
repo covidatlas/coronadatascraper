@@ -144,7 +144,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('th:contains("Case Count")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
 
@@ -193,7 +193,7 @@ const scraper = {
     },
     '2020-03-21': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('th:contains("Count")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)'); // skip grand total
 
@@ -235,7 +235,7 @@ const scraper = {
     },
     '2020-3-31': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
       const $table = $('td:contains("Blount")').closest('table');
       const data = $table.parsetable(false, false, true);
@@ -289,7 +289,7 @@ const scraper = {
         'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
       this.type = 'json';
 
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const counties = [];
 
       data.features.forEach(item => {
@@ -310,7 +310,7 @@ const scraper = {
 
       const totalsUrl =
         'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
-      const tmp = await fetch.json(totalsUrl);
+      const tmp = await fetch.json(this, totalsUrl, 'totals');
       const totalsData = tmp.features.pop().attributes;
 
       const totals = transform.sumData(counties);
