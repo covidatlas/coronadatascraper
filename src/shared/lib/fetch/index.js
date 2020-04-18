@@ -295,7 +295,8 @@ export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId
 
 /**
  * Retrieves data from an ArcGIS REST API. By default, it will retrieve all items at the provided linked with geometry turned off.
- * You can control pagination size through the `featuresToFetch` parameter in `options`
+ * You can control pagination size through the `featuresToFetch` parameter in `options`, but this should not be necessary -
+ * by default, this will make the largest request allowed by the source.
  * @param {*} scraper the scraper object
  * @param {string} featureLayerURL URL of the resource, up to and including the feature layer number and `query`, e.g.
  * https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query
@@ -309,7 +310,7 @@ export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId
  */
 export const arcGISJSON = async (scraper, featureLayerURL, cacheKey = 'default', date, options = {}) => {
   const { featuresToFetch, additionalParams } = {
-    featuresToFetch: 500,
+    featuresToFetch: undefined,
     additionalParams: 'where=0%3D0&outFields=*&returnGeometry=false',
     ...options
   };
@@ -328,25 +329,18 @@ export const arcGISJSON = async (scraper, featureLayerURL, cacheKey = 'default',
   const output = [];
 
   let n = 0;
-  let response = await json(
-    scraper,
-    `${url}&resultOffset=${n}&resultRecordCount=${featuresToFetch}`,
-    cacheKey,
-    date,
-    options
-  );
+  let fetchURL = `${url}&resultOffset=${n}`;
+  if (featuresToFetch) fetchURL += `&resultRecordCount=${featuresToFetch}`;
+  let response = await json(scraper, fetchURL, cacheKey, date, options);
 
   while (response && response.features && response.features.length > 0) {
     n += response.features.length;
     output.push(...response.features.map(({ attributes }) => attributes));
 
-    response = await json(
-      scraper,
-      `${url}&resultOffset=${n}&resultRecordCount=${featuresToFetch}`,
-      cacheKey,
-      date,
-      options
-    );
+    fetchURL = `${url}&resultOffset=${n}`;
+    if (featuresToFetch) fetchURL += `&resultRecordCount=${featuresToFetch}`;
+
+    response = await json(scraper, fetchURL, cacheKey, date, options);
   }
 
   return output;
