@@ -1431,9 +1431,9 @@ cosmiconfig@^6.0.0:
     path-type "^4.0.0"
     yaml "^1.7.2"
 
-"country-levels@https://github.com/hyperknot/country-levels/releases/download/v1.8.0/export_q7.tgz":
+"country-levels@https://github.com/hyperknot/country-levels/releases/download/v2.0.0/export_medium.tgz":
   version "1.0.0"
-  resolved "https://github.com/hyperknot/country-levels/releases/download/v1.8.0/export_q7.tgz#ab3b2ddd890d74c6a7e2cc273319bee1fe58c6c3"
+  resolved "https://github.com/hyperknot/country-levels/releases/download/v2.0.0/export_medium.tgz#ed8cb4972043634a720a540a56a6c8687b9ceebb"
 
 cpr@~3.0.1:
   version "3.0.1"
