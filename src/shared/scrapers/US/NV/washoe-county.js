@@ -1,5 +1,6 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -55,11 +56,21 @@ const scraper = {
     '2020-04-06': async function() {
       // Couldn't figure out the CSV, so just grabbed the JSON
       this.url =
-        'https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_wdemographic_current/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
+        'https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_wdemographic_current/FeatureServer/0/query';
       this.type = 'json';
 
-      const response = await fetch.json(this, this.url, 'default');
-      const data = response.features[0].attributes;
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let data;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_wdemographic_current/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true';
+        const response = await fetch.json(this, this.url, 'default');
+        [data] = response.features.map(({ attributes }) => attributes);
+      } else {
+        [data] = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
+
       return {
         cases: parse.number(data.confirmed),
         deaths: parse.number(data.deaths),

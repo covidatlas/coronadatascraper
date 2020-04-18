@@ -227,14 +227,14 @@ const scraper = {
         if (countyName === 'Unknown') {
           unassigned.cases += parse.number(county.CasesAll);
           unassigned.tested += parse.number(county.T_total);
-          unassigned.deaths += parse.number(county.FLResDeaths);
+          unassigned.deaths += parse.number(county.FLResDeaths || county.Deaths);
         } else {
           countyName = geography.addCounty(parse.string(countyName));
           counties.push({
             county: countyName,
             cases: parse.number(county.CasesAll),
             tested: parse.number(county.T_total),
-            deaths: parse.number(county.FLResDeaths)
+            deaths: parse.number(county.FLResDeaths || county.Deaths)
           });
         }
       }

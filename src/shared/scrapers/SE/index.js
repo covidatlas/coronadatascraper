@@ -15,7 +15,16 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = await fetch.arcGISJSON(this, this.url, 'default', false);
+    let casesData;
+    if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+      // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+      this.url =
+        'https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false';
+      const casesRaw = await fetch.json(this, this.url, 'default', false);
+      casesData = casesRaw.features.map(({ attributes }) => attributes);
+    } else {
+      casesData = await fetch.arcGISJSON(this, this.url, 'default', false);
+    }
 
     const casesByRegion = {};
 

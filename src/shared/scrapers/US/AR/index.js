@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import maintainers from '../../../lib/maintainers.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -10,7 +11,7 @@ const scraper = {
   state: 'iso2:US-AR',
   country: 'iso1:US',
   url:
-    'https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*',
+    'https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query',
   type: 'json',
   sources: [
     {
@@ -98,11 +99,21 @@ const scraper = {
     'Yell County'
   ],
   async scraper() {
-    const data = await fetch.json(this, this.url, 'default');
+    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+
+    let countyAttributes;
+    if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+      // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+      this.url =
+        'https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*';
+      const data = await fetch.json(this, this.url, 'default');
+      countyAttributes = data.features.map(({ attributes }) => attributes);
+    } else {
+      countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+    }
     let counties = [];
 
-    for (const countyData of data.features) {
-      const attr = countyData.attributes;
+    for (const attr of countyAttributes) {
       if (attr.county_nam === 'Missing County Info') {
         attr.county_nam = UNASSIGNED;
       } else {

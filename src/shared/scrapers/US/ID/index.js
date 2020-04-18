@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import datetime from '../../../lib/datetime/index.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -187,18 +188,29 @@ const scraper = {
       return counties;
     },
     '2020-4-11': async function() {
-      this.url =
-        'https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query?f=json&where=1=1&returnGeometry=false&outFields=*';
+      this.url = 'https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query';
       this.type = 'json';
 
-      const data = await fetch.json(this, this.url, 'default');
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      let countyAttributes;
+      if (datetime.dateIsBefore(date, datetime.ARCGIS_PAGINATION_DEPLOY_DATE)) {
+        // FIXME: ugly hack to not get cache misses. We should be able to remove this in li.
+        this.url =
+          'https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query?f=json&where=1=1&returnGeometry=false&outFields=*';
+        const data = await fetch.json(this, this.url, 'default');
+        countyAttributes = data.features.map(({ attributes }) => attributes);
+      } else {
+        countyAttributes = await fetch.arcGISJSON(this, this.url, 'default', false);
+      }
 
-      const counties = data.features.map(item => {
+      const counties = countyAttributes.map(item => {
         return {
-          county: geography.addCounty(item.attributes.f1),
-          cases: item.attributes.f3 || 0,
-          deaths: item.attributes.f4 || 0,
-          recoverd: item.attributes.f5 || 0
+          county: geography.addCounty(item.f1),
+          // TODO: Should we really be setting these to zero?
+          //       See https://github.com/covidatlas/coronadatascraper/issues/807
+          cases: item.f3 || 0,
+          deaths: item.f4 || 0,
+          recoverd: item.f5 || 0
         };
       });
 
