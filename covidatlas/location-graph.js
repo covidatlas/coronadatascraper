@@ -91,7 +91,9 @@ const options = {
     axis: 'x',
     callbacks: {
       title(tooltipItem) {
-        return new Date(tooltipItem[0].label).toLocaleDateString();
+        // lol Safari hates zero padded dates and we can't access moment, so hooray for jank
+        const [year, month, day] = tooltipItem[0].label.split('-').map(n => parseInt(n, 10));
+        return new Date(year, month - 1, day).toLocaleDateString();
       },
       label(tooltipItem, data) {
         let label = data.datasets[tooltipItem.datasetIndex].label || '';
@@ -132,7 +134,7 @@ const showGraph = ({ timeseries, location }) => {
   });
 
   locationData.forEach(day => {
-    const date = new Date(`${day.date} 12:00:00Z`);
+    const date = `${day.date} 12:00:00Z`;
 
     if (day.cases)
       casesData.push({
