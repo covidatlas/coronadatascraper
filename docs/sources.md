@@ -25,6 +25,7 @@ _Last updated: 2020-03-26_
   - [Testing sources](#testing-sources)
     - [Test coverage](#test-coverage)
     - [Manual testing](#manual-testing)
+    - [Manual regression testing](#manual-regression-testing)
 
 This guide provides information on the criterias we use to determine whether a source should be added to the project, and offer technical details
 regarding how a source can be implemented.
@@ -230,7 +231,7 @@ Here's the scraper for Indiana that gets data from a CSV:
   {
     url: 'https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv',
     country: 'iso1:US',
-    state: 'IN',
+    state: 'iso2:US-IN',
     scraper: async function() {
       let data = await fetch.csv(this.url);
 
@@ -258,7 +259,7 @@ Here's the scraper for Oregon that pulls data from a HTML table:
 
 ```javascript
   {
-    state: 'OR',
+    state: 'iso2:US-OR',
     country: 'iso1:US',
     url: 'https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx',
     scraper: async function() {
@@ -297,7 +298,7 @@ Scrapers need to be able to operate correctly on old data, so updates to scraper
 
 ```javascript
 {
-  state: 'LA',
+  state: 'iso2:US-LA',
   country: 'iso1:US',
   aggregate: 'county',
   _countyMap: { 'La Salle Parish': 'LaSalle Parish' },
@@ -435,3 +436,118 @@ The path to scraper should be the relative path under
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output located in the `dist` directory. `data.json` contains all the information
 the crawler could get from your source. `report.json` provides a report on crawling process. `ratings.json` provides a rating for your source.
+
+### Manual regression testing
+
+By using the `--writeTo` and `--onlyUseCache` options, and the script
+`tools/compare-report-dirs.js`, you can do some quick regression
+testing of any changes you make to scrapers or libraries.
+
+For example, before starting work on some US/NV scrapers, you can
+generate all of the reports using only cached data, and save it to an
+arbitrary folder:
+
+```
+yarn start --date 2020-04-06 --onlyUseCache --location US/NV --writeTo zz_before
+```
+
+After doing your work, you regenerate to a different folder using the
+same cached data:
+
+```
+yarn start --date 2020-04-06 --onlyUseCache --location US/NV --writeTo zz_after
+```
+
+You can then run `tools/compare-report-dirs.js`, comparing the "left"
+and "right" folders.  Each report is listed with the differences:
+
+```
+$ node tools/compare-report-dirs.js --left zz_before --right zz_after
+
+data-2020-04-06.json
+--------------------
+* [3, Storey County, Nevada, United States]/deaths value: 0 != 41
+* [5, Washoe County, Nevada, United States]/deaths value: 4 != -1
+
+report.json
+-----------
+* /scrape/numCities value: 0 != 7
+
+ratings.json
+------------
+  equal
+
+features-2020-04-06.json
+------------------------
+* /features[5]/properties/name value: Washoe County != Washoe
+
+crawler-report.csv
+------------------
+  equal
+
+data-2020-04-06.csv
+-------------------
+* Line 3, col 79: "4" != "-"
+```
+
+#### Interpreting the json diff results
+
+For the above example, `zz_after/data-2020-04-06.json` has the
+following content:
+
+```
+[
+  { "county": ... },
+  ...
+  {
+    "county": "Washoe County",
+    "state": "Nevada",
+    "country": "United States",
+    ...
+    "cases": 281,
+    "deaths": -1,
+    "recovered": 30,
+  },
+]
+```
+
+and the diff in the report was:
+
+```
+* [5, Washoe County, Nevada, United States]/deaths value: 4 != -1
+```
+
+In the JSON diff:
+
+* `[#]` indicates an array index
+
+* Sometimes, extra annotations are added to an array index to help you
+  find it in the source JSON.  `[5, Washoe County, ...]` says that the
+  fifth element has some associated text `Washoe County` in one of its
+  elements.
+
+* `/` represents a child under a parent (or the root element if the
+  root is a hash)
+
+The diff line `[5, Washoe County, ...]/deaths value: 4 != -1`
+therefore says that the fifth element under the root, which has
+`Washoe County` in it, has a child element `deaths`, which is
+different between the two files.
+
+`4 != -1` is this difference.
+
+
+Another example from a different run:
+
+`[2703, Roberts County, South Dakota]/sources[0]/url value: X != https://doh.org`
+
+The above line says:
+
+* the root array element 2703 (Roberts County, SD) ...
+
+* has a 'sources' array, of which element 0 ...
+
+* has a 'url' property which is different:
+
+* The `--left` file contains `X`, the `--right` file contains
+  `https://doh.org`

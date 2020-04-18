@@ -4,6 +4,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 
 import maintainers from '../../../lib/maintainers.js';
+import areNumbersClose from '../_shared/are-numbers-close.js';
 
 // WA Health has Death counts for the whole country by state,
 // even though the federal government doesn't in an accessible format.
@@ -36,7 +37,7 @@ const scraper = {
   url: 'https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics',
   async scraper() {
     const states = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('h2:contains("in Australia") + table');
     const $ths = $table.find('th');
 
@@ -68,7 +69,10 @@ const scraper = {
     const casesFromTotalRow = parse.number(totalRow);
 
     assert(casesFromTotalRow > 0, `Total row is not reasonable ${casesFromTotalRow}`);
-    assert.equal(summedData.cases, casesFromTotalRow, 'Summed total is not equal to number in total row');
+    assert(
+      areNumbersClose(summedData.cases, casesFromTotalRow),
+      'Summed total is not anywhere close to number in total row'
+    );
     return states;
   }
 };

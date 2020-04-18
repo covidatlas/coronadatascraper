@@ -1,0 +1,15 @@
+[
+  { "state": "iso2:SA-01", "recovered": 310, "deaths": 4, "cases": 1318 },
+  { "state": "iso2:SA-04", "recovered": 106, "deaths": 6, "cases": 554 },
+  { "state": "iso2:SA-05", "recovered": 3, "deaths": 2, "cases": 39 },
+  { "state": "iso2:SA-02", "recovered": 275, "deaths": 24, "cases": 1613 },
+  { "state": "iso2:SA-09", "recovered": 13, "deaths": 0, "cases": 27 },
+  { "state": "iso2:SA-03", "recovered": 4, "deaths": 22, "cases": 688 },
+  { "state": "iso2:SA-07", "recovered": 4, "deaths": 0, "cases": 89 },
+  { "state": "iso2:SA-11", "recovered": 4, "deaths": 0, "cases": 15 },
+  { "state": "iso2:SA-14", "recovered": 24, "deaths": 1, "cases": 85 },
+  { "state": "iso2:SA-10", "recovered": 16, "deaths": 0, "cases": 30 },
+  { "state": "iso2:SA-08", "recovered": 2, "deaths": 0, "cases": 3 },
+  { "state": "iso2:SA-06", "recovered": 0, "deaths": 0, "cases": 1 },
+  { "cases": 4462, "recovered": 761, "deaths": 59 }
+]

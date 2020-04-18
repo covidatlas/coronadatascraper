@@ -13,7 +13,7 @@ const { argv } = yargs
   })
   .option('location', {
     alias: 'l',
-    description: 'Scrape only the location provided by src/shared/scraper path name',
+    description: 'Scrape only the location(s) matching src/shared/scraper path name (e.g, "--location US/PA,US/DE")',
     type: 'string'
   })
   .option('skip', {
@@ -42,6 +42,11 @@ const { argv } = yargs
   .options('writeData', {
     description: 'Write to dist folder',
     type: 'boolean'
+  })
+  .options('writeTo', {
+    description: 'Folder to write to',
+    default: 'dist',
+    type: 'string'
   })
   .option('onlyUseCache', {
     alias: 'x',

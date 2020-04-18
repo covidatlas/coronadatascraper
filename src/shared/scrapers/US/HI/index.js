@@ -5,7 +5,7 @@ import * as transform from '../../../lib/transform.js';
 
 const scraper = {
   country: 'iso1:US',
-  state: 'HI',
+  state: 'iso2:US-HI',
   priority: 1,
   sources: [
     {
@@ -29,7 +29,7 @@ const scraper = {
       this.url = 'https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/';
       this.type = 'table';
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('*:contains("Novel Coronavirus in Hawaii")').closest('table');
       const $trs = $table.find('tr');
 
@@ -80,7 +80,7 @@ const scraper = {
       this.type = 'list';
       let counties = [];
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $list = $('dd:contains("Honolulu County")')
         .parent()
         .find('dd');

@@ -1,15 +1,8 @@
-import needle from 'needle';
 import { DeprecatedError } from '../../lib/errors.js';
 import * as fetch from '../../lib/fetch/index.js';
+import * as transform from '../../lib/transform.js';
 
-import populations from './populations.json';
-
-// Remap some of the mismatching or ambiguous names
-const POPULATION_REMAP = {
-  'Архангельская область': 'Архангельская область без Ненецкого автономного округа',
-  'Тюменская область': 'Тюменская область без автономных округов',
-  'Ханты-Мансийский АО': 'Ханты-Мансийский автономный округ-Югра'
-};
+import mapping from './mapping.json';
 
 const scraper = {
   country: 'iso1:RU',
@@ -38,30 +31,28 @@ const scraper = {
       throw new DeprecatedError('RUS scraper did not exist for this date');
     },
     '2020-03-26': async function() {
-      const csrfRequestResponse = await needle('get', this.url, {}, { parse_response: true });
+      const csrfRequestResponse = await fetch.jsonAndCookies(this, this.url, 'tmpcsrf');
       const csrfCookies = csrfRequestResponse.cookies;
       const { csrfToken } = csrfRequestResponse.body;
 
-      const { data } = await fetch.json(`${this.url}${csrfToken}`, undefined, { cookies: csrfCookies });
+      const finalUrl = `${this.url}${csrfToken}`;
+      const opts = { cookies: csrfCookies };
+      const { data } = await fetch.json(this, finalUrl, 'default', undefined, opts);
 
       const ruEntries = data.items.filter(({ ru }) => ru);
-      return ruEntries
-        .map(({ name, cases, cured: recovered, deaths, coordinates }) => ({
-          // The list contains data at federal subject level, which is the top-level political
-          // divisions (including cities of Moscow and St Petersburg)
-          state: name,
-          cases,
-          recovered,
-          deaths,
-          coordinates
-        }))
-        .map(entry => {
-          const { state } = entry;
-          const populationKey = state in POPULATION_REMAP ? POPULATION_REMAP[state] : state;
-          const populationObject = populations.find(({ state: key }) => key === populationKey);
 
-          return populationObject ? { ...entry, population: populationObject.population } : entry;
-        });
+      const out = ruEntries.map(({ name, cases, cured: recovered, deaths }) => ({
+        // The list contains data at federal subject level, which is the top-level political
+        // divisions (including cities of Moscow and St Petersburg)
+        state: mapping[name],
+        cases,
+        recovered,
+        deaths
+      }));
+
+      if (out.length > 0) out.push(transform.sumData(out));
+
+      return out;
     }
   }
 };

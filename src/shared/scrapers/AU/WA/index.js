@@ -2,7 +2,7 @@ import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
-import getDataWithTestedNegativeApplied from '../_shared/get-data-with-tested-negative-applied.js';
+import getDataWithTestedNegativeApplied from '../../../utils/get-data-with-tested-negative-applied.js';
 import getKey from '../../../utils/get-key.js';
 
 const labelFragmentsByKey = [
@@ -28,7 +28,7 @@ const scraper = {
   type: 'table',
   url: 'https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('table:first-of-type');
     const $trs = $table.find('tbody > tr:not(:first-child)');
     const data = {};

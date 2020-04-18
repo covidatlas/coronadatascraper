@@ -68,13 +68,10 @@ test('Scraper tests', async t => {
     process.env.OVERRIDE_CACHE_PATH = testDir;
 
     // dynamically import the scraper
-    // eslint-disable-next-line
     const scraperObj = imports(join(testDir, '..', 'index.js'));
 
-    if (scraperObj.state === 'AL' && scraperObj.country === 'iso1:US') {
-      // Honestly these linter rules are absurd
-      // eslint-disable-next-line
-      scraperObj.scraper = scraperObj.scraper[0];
+    if (scraperObj.state === 'iso2:US-AL' && scraperObj.country === 'iso1:US') {
+      [scraperObj.scraper] = scraperObj.scraper;
     }
 
     const datedResults = glob(join(testDir, 'expected.*.json'));
@@ -82,11 +79,21 @@ test('Scraper tests', async t => {
     for (const expectedPath of datedResults) {
       const date = getDateFromPath(expectedPath);
       process.env.SCRAPE_DATE = date;
-      let result = await runScraper(scraperObj);
-      result = result.map(strip);
-      const expected = await readJSON(expectedPath);
-      t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
-      delete process.env.SCRAPE_DATE;
+
+      try {
+        let result = await runScraper(scraperObj);
+        if (Array.isArray(result)) {
+          result = result.map(strip);
+        } else {
+          result = strip(result);
+        }
+        const expected = await readJSON(expectedPath);
+        t.deepEqual(result, expected, `Got correct result back from ${scraperName}`);
+      } catch (err) {
+        t.fail(`Failure for ${scraperName}: ${err}`);
+      } finally {
+        delete process.env.SCRAPE_DATE;
+      }
     }
     delete process.env.OVERRIDE_CACHE_PATH;
   }

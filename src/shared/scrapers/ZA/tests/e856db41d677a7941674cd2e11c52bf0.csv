@@ -1,0 +1,26 @@
+report_id,date,YYYYMMDD,province, geo, gender, age, confirmed_date,transmission_type, notes_comorbidity, source
+1,27-03-2020,20200327,WC,ZA-WC, female,48,,,Had prior Pulmonary Embolism, https://www.westerncape.gov.za/news/statement-premier-alan-winde-first-coronavirus-deaths
+2,28-03-2020,20200328,KZN,ZA-KZN, male,74,27-03-2020, travelled to Kruger National Park, underlying skin cancer condition (melanoma) which had already complicated. He presented with the following symptoms: respiratory distress shortness of breath cardiac failure decreased saturation and his temperature was above 38 degrees., https://www.gov.za/speeches/minister-zweli-mkhize-confirms2nd-death-and-total-1280-cases-coronavirus-covid-19-29-mar
+3,30-03-2020,20200330,FS,ZA-FS,male,86,,,,
+4,31-03-2020,20200331,GP,ZA-GP,male,79,,,presented with respiratory distress,https://sacoronavirus.co.za/2020/03/31/update-of-covid-19-31st-march-2020/
+5,31-03-2020,20200331,KZN,ZA-KZN,female,46,,,had an underlying condition of hypertension chronic asthma and at the time of admission presented with an acute asthmatic attack,https://sacoronavirus.co.za/2020/03/31/update-of-covid-19-31st-march-2020/
+6,03-04-2020,20200403,KZN,ZA-KZN,female,63,,,,https://www.gov.za/speeches/minister-zweli-mkhize-confirms-1585-cases
+7,03-04-2020,20200403,KZN,ZA-KZN,female,81,,,local transmissionm no travel history,https://www.gov.za/speeches/minister-zweli-mkhize-confirmsminister-zweli-mkhize-confirms-7-deaths-and-total-1505cases-3
+8,03-04-2020,20200403,KZN,ZA-KZN,female,80,,,,https://www.gov.za/speeches/minister-zweli-mkhize-confirms-1585-cases
+9,03-04-2020,20200403,KZN,ZA-KZN,male,80,,,local transmissionm no travel history,https://www.gov.za/speeches/minister-zweli-mkhize-confirmsminister-zweli-mkhize-confirms-7-deaths-and-total-1505cases-3
+10,05-04-2020,20200405,WC,ZA-WC,female,82,,,She had presented with fever;short breath; body pains; dry cough and sore throat. She also had comorbidities that included  hypertension; diabetes and cholesterol.,https://sacoronavirus.co.za/2020/04/05/update-of-covid-19-05th-april-2020/
+11,05-04-2020,20200405,KZN,ZA-KZN,male,86,,,diagnosis of bronchopneumonia and respiratory distress. He had an underlying condition of chronic obstructive airway disease (COAD),https://sacoronavirus.co.za/2020/04/05/update-of-covid-19-05th-april-2020/
+12,06-04-2020,20200406,WC,ZA-WC,male,57,,,He had co-morbidities that included diabetes and ischaemic heart disease.,
+13,07-04-2020,20200407,KZN,ZA-KZN,male,60,,,,
+14,08-04-2020,20200408,FS,ZA-FS,male,55,,,,
+15,08-04-2020,20200408,FS,ZA-FS,male,77,,,,
+16,08-04-2020,20200408,GP,ZA-GP,male,49,,,,
+17,08-04-2020,20200408,GP,ZA-GP,male,52,,,,
+18,08-04-2020,20200408,KZN,ZA-KZN,male,70,,,,
+19,10-04-2020,20200410,KZN,ZA-KZN,,,,,,
+20,10-04-2020,20200410,KZN,ZA-KZN,,,,,,
+21,10-04-2020,20200410,KZN,ZA-KZN,,,,,,
+22,10-04-2020,20200410,WC,ZA-WC,,,,,,
+23,10-04-2020,20200410,WC,ZA-WC,,,,,,
+24,10-04-2020,20200410,WC,ZA-WC,,,,,,
+25,11-04-2020,20200411,WC,ZA-WC,,,,,,

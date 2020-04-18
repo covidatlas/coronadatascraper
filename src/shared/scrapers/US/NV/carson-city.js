@@ -4,7 +4,7 @@ import * as parse from '../../../lib/parse.js';
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 const scraper = {
-  state: 'NV',
+  state: 'iso2:US-NV',
   country: 'iso1:US',
   aggregate: 'county',
   url: 'https://gethealthycarsoncity.org/novel-coronavirus-2019/',
@@ -20,7 +20,7 @@ const scraper = {
   type: 'table',
   async scraper() {
     const counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('table');
     const $trs = $table.find('tbody > tr:not(:first-child)');
 

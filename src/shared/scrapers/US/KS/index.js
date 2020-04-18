@@ -12,7 +12,7 @@ import * as pdfUtils from '../../../lib/pdf.js';
 // Based on the MO scraper, which was based on NY
 
 const scraper = {
-  state: 'KS',
+  state: 'iso2:US-KS',
   country: 'iso1:US',
   aggregate: 'county',
   _baseUrl: 'https://khap2.kdhe.state.ks.us/NewsRelease/COVID19/',
@@ -142,7 +142,7 @@ const scraper = {
       this.url = `${this._baseUrl}COVID-19_${datePart}_.pdf`;
       this.type = 'pdf';
 
-      const body = await fetch.pdf(this.url);
+      const body = await fetch.pdf(this, this.url, 'default');
 
       if (body === null) {
         throw new Error(`No data for ${date}`);
@@ -191,7 +191,7 @@ const scraper = {
       this.type = 'json';
       this.url =
         'https://services9.arcgis.com/Q6wTdPdCh608iNrJ/arcgis/rest/services/COVID19_CountyStatus_KDHE/FeatureServer/0/query?f=json&where=Covid_Case%3D%27Yes%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=COUNTY%20asc&resultOffset=0&resultRecordCount=105&cacheHint=true';
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const counties = [];
 
       data.features.forEach(item => {
@@ -259,7 +259,7 @@ const scraper = {
     '2020-04-02': async function() {
       this.type = 'pdf';
       this.url = 'https://public.tableau.com/views/COVID-19Data_15851817634470/CountyCounts.pdf?:showVizHome=no';
-      const pdfScrape = await fetch.pdf(this.url);
+      const pdfScrape = await fetch.pdf(this, this.url, 'cases');
 
       const data = pdfScrape
         .filter(item => item && item.y > 6 && item.y < 46)
@@ -296,9 +296,8 @@ const scraper = {
         cases: parse.number(caseNum)
       });
 
-      const deathData = await fetch.pdf(
-        'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no'
-      );
+      const pdfUrl = 'https://public.tableau.com/views/COVID-19Data_15851817634470/Mortality.pdf?:showVizHome=no';
+      const deathData = await fetch.pdf(this, pdfUrl, 'deaths');
       let totalDeaths = '';
       deathData.forEach(item => {
         if (item && item.text.match(/[0-9]/)) {

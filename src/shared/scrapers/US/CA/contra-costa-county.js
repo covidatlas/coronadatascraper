@@ -7,12 +7,12 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Contra Costa County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   url: 'https://www.coronavirus.cchealth.org/',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.headless(this, this.url, 'default');
     const cases = parse.number(
       $('h1:contains("TOTAL")')
         .parent()

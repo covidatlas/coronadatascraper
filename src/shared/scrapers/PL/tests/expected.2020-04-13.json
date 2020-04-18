@@ -1,0 +1,19 @@
+[
+  { "cases": 6934, "deaths": 245 },
+  { "state": "iso2:PL-02", "cases": 709, "deaths": 24 },
+  { "state": "iso2:PL-04", "cases": 345, "deaths": 7 },
+  { "state": "iso2:PL-06", "cases": 240, "deaths": 10 },
+  { "state": "iso2:PL-08", "cases": 78, "deaths": 0 },
+  { "state": "iso2:PL-10", "cases": 551, "deaths": 7 },
+  { "state": "iso2:PL-12", "cases": 519, "deaths": 12 },
+  { "state": "iso2:PL-14", "cases": 1688, "deaths": 70 },
+  { "state": "iso2:PL-16", "cases": 171, "deaths": 7 },
+  { "state": "iso2:PL-18", "cases": 225, "deaths": 13 },
+  { "state": "iso2:PL-20", "cases": 238, "deaths": 2 },
+  { "state": "iso2:PL-22", "cases": 175, "deaths": 1 },
+  { "state": "iso2:PL-24", "cases": 879, "deaths": 47 },
+  { "state": "iso2:PL-26", "cases": 141, "deaths": 2 },
+  { "state": "iso2:PL-28", "cases": 122, "deaths": 1 },
+  { "state": "iso2:PL-30", "cases": 650, "deaths": 40 },
+  { "state": "iso2:PL-32", "cases": 203, "deaths": 2 }
+]

@@ -6,7 +6,7 @@ import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
   country: 'iso1:US',
-  state: 'KY',
+  state: 'iso2:US-KY',
   priority: 1,
   aggregate: 'county',
   url: 'https://datawrapper.dwcdn.net/BbowM/23/',
@@ -26,7 +26,7 @@ const scraper = {
     }
   ],
   async scraper() {
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.headless(this, this.url, 'default');
 
     const counties = [];
 

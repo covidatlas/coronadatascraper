@@ -1,4 +1,3 @@
-// /* eslint-disable */
 const imports = require('esm')(module);
 const { join } = require('path');
 const mockFs = require('mock-fs');

@@ -7,7 +7,7 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'San Francisco County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'https://www.sfdph.org/dph/alerts/coronavirus.asp',
@@ -15,7 +15,7 @@ const scraper = {
   async scraper() {
     let deaths;
     let cases;
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $h2 = $('h2:contains("Cases in San Francisco")');
     {
       const $p = $h2.nextAll('*:contains("Cases:")');

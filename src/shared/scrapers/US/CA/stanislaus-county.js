@@ -7,13 +7,13 @@ import maintainers from '../../../lib/maintainers.js';
 
 const scraper = {
   county: 'Stanislaus County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   maintainers: [maintainers.jbencina],
   url: 'http://www.schsa.org/PublicHealth/pages/corona-virus/',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       return {
         cases: parse.number(
           $('.counter')
@@ -23,7 +23,7 @@ const scraper = {
       };
     },
     '2020-03-25': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       return {
         cases: parse.number(
           $('p:contains("Positive Cases")')

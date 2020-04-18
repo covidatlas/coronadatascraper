@@ -1,3 +1,4 @@
+import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as geography from '../../../lib/geography/index.js';
@@ -7,7 +8,7 @@ import * as transform from '../../../lib/transform.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'GA',
+  state: 'iso2:US-GA',
   country: 'iso1:US',
   url: 'https://dph.georgia.gov/covid-19-daily-status-report',
   type: 'table',
@@ -186,7 +187,7 @@ const scraper = {
   },
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
       const $trs = $('table:contains(County):contains(Cases) tbody > tr');
       $trs.each((index, tr) => {
@@ -210,14 +211,16 @@ const scraper = {
       return counties;
     },
     '2020-03-27': async function() {
-      const pageHTML = (await fetch.page(this.url)).html();
+      const tmp = await fetch.page(this, this.url, 'tmpindex');
+      const pageHTML = tmp.html();
       [this.url] = pageHTML.match(/https:\/\/(.*)\.cloudfront\.net/);
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
-      const $trs = $('.tcell:contains("COVID-19 Confirmed Cases By County")')
+      const $trs = $('*[class^="tcell"]:contains("COVID-19 Confirmed Cases By County")')
         .closest('tbody')
         .find('tr:not(:first-child,:last-child)');
+      assert($trs.length > 0, 'no rows found');
 
       $trs.each((index, tr) => {
         const $tr = $(tr);
@@ -227,7 +230,7 @@ const scraper = {
 
         const cases = parse.number($tr.find('td:nth-child(2)').text());
 
-        if (county === 'Unknown County') {
+        if (['Unknown County', 'Non-Georgia Resident County'].includes(county)) {
           county = UNASSIGNED;
         }
 
