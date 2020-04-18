@@ -132,7 +132,7 @@ const showGraph = ({ timeseries, location }) => {
   });
 
   locationData.forEach(day => {
-    const date = new Date(day.date);
+    const date = new Date(`${day.date} 12:00:00Z`);
 
     if (day.cases)
       casesData.push({
