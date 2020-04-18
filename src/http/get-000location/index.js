@@ -11,7 +11,7 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
+const { levels, getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
@@ -22,6 +22,18 @@ const { handle404 } = require('@architect/views/lib/middleware');
 const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
 
+function renderBreadcrumbs(location) {
+  const htmlBits = [];
+  const obj = {};
+  for (const level of levels.slice().reverse()) {
+    if (location[level]) {
+      obj[level] = location[level];
+      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${getSlug(obj)}">${location[level]}</a>`);
+    }
+  }
+  return htmlBits.reverse().join(', ');
+}
+
 function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
 }
@@ -29,7 +41,7 @@ function renderCaseInfo(label, count, labelClass) {
 function locationDetail(location, lastDate, caseInfo) {
   // <p class="spectrum-Body spectrum-Body--L">Latest confirmed COVID-19 data</p>
   let html = `
-<h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${location.name}</h1>
+<h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${renderBreadcrumbs(location)}</h1>
 `;
 
   html += `<div class="row">
