@@ -14,7 +14,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       this.url = 'https://www.ventura.org/covid19/';
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       let cases = 0;
       let tested = 0;
 
@@ -41,7 +41,7 @@ const scraper = {
 
     '2020-03-16': async function() {
       this.url = 'https://www.ventura.org/covid19/';
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       let cases = 0;
       let tested = 0;
 
@@ -72,7 +72,7 @@ const scraper = {
 
     '2020-03-18': async function() {
       this.url = 'https://www.ventura.org/covid19/';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const cases = parse.number(
         $('td:contains("COVID-19 Cases")')
@@ -87,7 +87,7 @@ const scraper = {
 
     '2020-03-19': async function() {
       this.url = 'https://www.vcemergency.com';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const cases = parse.number(
         $('td:contains("COVID-19 Cases")')
@@ -109,7 +109,7 @@ const scraper = {
 
     '2020-03-25': async function() {
       this.url = 'https://www.vcemergency.com';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const cases = parse.number(
         $('td:contains("Positive Cases")')
@@ -131,7 +131,7 @@ const scraper = {
 
     '2020-03-26': async function() {
       this.url = 'https://www.vcemergency.com';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const positiveCases = $('td:contains("Positive Cases")').closest('tr');
       if (positiveCases.text() !== 'Positive Cases') {
@@ -154,7 +154,7 @@ const scraper = {
 
     '2020-03-30': async function() {
       this.url = 'https://www.vcemergency.com';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('td:contains("TOTAL CASES")')
           .first()

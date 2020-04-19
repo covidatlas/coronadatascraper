@@ -38,7 +38,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const counties = [];
 
       data.features.forEach(item => {
@@ -59,7 +59,7 @@ const scraper = {
 
       const totalsurl =
         'https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/county_summary/FeatureServer/0/query?where=1%3D1&outFields=*&f=pjson';
-      const totalsData = await fetch.json(totalsurl);
+      const totalsData = await fetch.json(this, totalsurl, 'totals');
       const totals = transform.sumData(counties);
       totals.tested = totalsData.features.pop().attributes.total_tests;
 

@@ -73,7 +73,7 @@ const scraper = {
   ],
 
   async scraper() {
-    const data = await fetch.json(this.url);
+    const data = await fetch.json(this, this.url, 'default');
     let counties = [];
 
     for (const record of data.features) {

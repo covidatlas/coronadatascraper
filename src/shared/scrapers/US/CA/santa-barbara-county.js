@@ -2,6 +2,7 @@ import cheerioTableparser from 'cheerio-tableparser';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import maintainers from '../../../lib/maintainers.js';
+import { DeprecatedError } from '../../../lib/errors.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -15,7 +16,7 @@ const scraper = {
   type: 'paragraph',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let cases = 0;
 
       cases += parse.number(
@@ -30,7 +31,7 @@ const scraper = {
     '2020-03-26': async function() {
       this.type = 'table';
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
 
       let $table = $('td:contains("City or Area")').closest('table');
@@ -56,6 +57,10 @@ const scraper = {
       const tested = parse.number(data[1][lastRow]);
 
       return { cases, tested };
+    },
+    '2020-04-15': async function() {
+      await fetch.page(this, this.url, 'default');
+      throw new DeprecatedError('Sunsetting county scraper');
     }
   }
 };

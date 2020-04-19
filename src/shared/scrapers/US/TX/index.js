@@ -283,7 +283,7 @@ const scraper = {
       let counties = [];
       this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let $table;
       if (datetime.scrapeDateIsBefore('2020-03-16')) {
         $table = $('table[summary="Texas COVID-19 Cases"]');
@@ -313,7 +313,7 @@ const scraper = {
       let counties = [];
       this.url = 'https://www.dshs.state.tx.us/news/updates.shtm';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table[summary="COVID-19 Cases in Texas Counties"]');
       const $trs = $table.find('tbody > tr:not(:last-child)');
       $trs.each((index, tr) => {
@@ -345,7 +345,7 @@ const scraper = {
       let counties = [];
       this.url = 'https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv';
       this.type = 'csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       for (const row of data) {
         let county = geography.addCounty(parse.string(row.County));
         county = this._countyMap[county] || county;

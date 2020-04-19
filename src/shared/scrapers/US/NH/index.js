@@ -37,7 +37,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      const body = await fetch.pdf(this.url);
+      const body = await fetch.pdf(this, this.url, 'default');
       const rows = pdfUtils.asWords(body, 0, 1000).map(row => row[0]);
 
       const counties = [];
@@ -78,14 +78,14 @@ const scraper = {
       return counties;
     },
     '2020-3-31': async function() {
-      await fetch.pdf(this.url);
+      await fetch.pdf(this, this.url, 'default');
       throw new DeprecatedError('New Hampshire stopped reporting county-level data as of 2020/3/31');
     },
     '2020-4-12': async function() {
       this.url = 'https://www.nh.gov/covid19/';
       this.type = 'table';
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
 
       const $countyTable = $('.county-table');

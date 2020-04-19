@@ -13,7 +13,7 @@ const scraper = {
   url: 'https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html',
   scraper: {
     '0': async function scraper() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let cases = 0;
       $('td:contains("Positive (confirmed cases)")')
         .nextAll('td')
@@ -35,7 +35,7 @@ const scraper = {
       };
     },
     '2020-03-15': async function scraper() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const cases = parse.number(
         $('td:contains("Total Positives")')
           .next()

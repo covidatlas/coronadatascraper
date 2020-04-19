@@ -2,11 +2,11 @@ const imports = require('esm')(module);
 const { join } = require('path');
 const test = require('tape');
 const exec = require('child_process').execSync;
+const fs = require('fs');
 
 const shared = join(process.cwd(), 'src', 'shared');
 const lib = join(shared, 'lib');
 
-const fs = imports(join(lib, 'fs.js'));
 const schema = imports(join(lib, 'schema.js'));
 const runScraper = imports('./run-scraper.js').default;
 
@@ -21,26 +21,23 @@ if (files) {
       // Ignore any files or subdirectory in scrapers that starts with _
       filePath.match(/scrapers(?![^/])(?!.*\/_).*\.js$/gi)
     )
-    .filter(filePath => !filePath.startsWith('tests/'));
+    .filter(filePath => !filePath.startsWith('tests/'))
+    .filter(filePath => fs.existsSync(join(process.cwd(), filePath)));
 
   if (scrapers.length > 0) {
-    test('Test updated scrapers', async t => {
-      // We run up to two tests per scraper
-      t.plan(scrapers.length);
-      for (const scraperPath of scrapers) {
-        if (await fs.exists(scraperPath)) {
+    for (const scraperPath of scrapers) {
+      test(`Updated scraper ${scraperPath}`, async t => {
+        try {
           const scraper = imports(join(process.cwd(), scraperPath));
-          try {
-            await runScraper(scraper);
-          } catch (err) {
-            t.fail(`${scraperPath} failed with error: ${err}`);
-          }
+          await runScraper(scraper);
+          t.pass('Scraper ran');
           const hasErrors = schema.schemaHasErrors(scraper.default, schema.schemas.scraperSchema);
           t.notOk(hasErrors, 'Scraper had no errors');
-        } else {
-          t.pass(`${scraperPath} was deleted`);
+        } catch (err) {
+          t.fail(`Scraper failed with error: ${err}`);
         }
-      }
-    });
+        t.end();
+      });
+    }
   }
 }

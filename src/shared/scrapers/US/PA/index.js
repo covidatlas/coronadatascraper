@@ -90,7 +90,7 @@ const scraper = {
     '0': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'list';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       let counties = [];
       const $lis = $('li:contains("Counties impacted to date include")')
         .nextAll('ul')
@@ -116,7 +116,7 @@ const scraper = {
     '2020-03-16': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table.ms-rteTable-default').first();
       const $trs = $table.find('tbody > tr');
       let counties = [];
@@ -138,7 +138,7 @@ const scraper = {
     '2020-03-17': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/Pages/Coronavirus.aspx';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table.ms-rteTable-default').eq(1);
       const $trs = $table.find('tbody > tr');
       let counties = [];
@@ -160,7 +160,7 @@ const scraper = {
     '2020-03-18': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $countyTable = $('th:contains("County")').closest('table');
       const $trs = $countyTable.find('tbody > tr:not(:first-child)');
       let counties = [];
@@ -187,7 +187,7 @@ const scraper = {
     '2020-03-26': async function scraper() {
       this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
       this.type = 'table';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $countyTable = $('td:contains("County")').closest('table');
 
       const rules = {

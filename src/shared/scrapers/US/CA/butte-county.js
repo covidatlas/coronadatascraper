@@ -19,7 +19,7 @@ const scraper = {
   url: 'https://www.buttecounty.net/publichealth',
   maintainers: [maintainers.jbencina],
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const cases = parse.number(
       $('td:contains("Positive COVID-19 Tests")')
         .next()

@@ -11,7 +11,11 @@ function includeLocation(location, opts) {
 
   if (opts.skip && relpath.startsWith(opts.skip)) return false;
 
-  if (opts.location && !relpath.startsWith(opts.location)) return false;
+  if (opts.location) {
+    const locs = opts.location.split(',').map(s => s.trim());
+    const matches = locs.filter(loc => relpath.startsWith(loc));
+    return matches.length > 0;
+  }
 
   return true;
 }

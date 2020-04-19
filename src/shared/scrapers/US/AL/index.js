@@ -90,7 +90,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('td:contains("(COVID-19) in Alabama")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
       $trs.each((index, tr) => {
@@ -115,9 +115,9 @@ const scraper = {
     },
     '2020-03-26': async function() {
       let counties = [];
-      this.url = await fetch.getArcGISCSVURLFromOrgId(7, '4RQmZZ0yaZkGR1zy', 'COV19_Public_Dashboard_ReadOnly');
+      this.url = await fetch.getArcGISCSVURLFromOrgId(this, 7, '4RQmZZ0yaZkGR1zy', 'COV19_Public_Dashboard_ReadOnly');
       this.type = 'csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       for (const row of data) {
         const county = geography.addCounty(row.CNTYNAME);
         const cases = parse.number(row.CONFIRMED);

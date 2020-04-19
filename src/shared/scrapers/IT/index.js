@@ -39,7 +39,7 @@ const scraper = {
   aggregate: 'state',
   priority: 1,
   async scraper() {
-    const data = await fetch.csv(this.url, false);
+    const data = await fetch.csv(this, this.url, 'default', false);
     // FIXME when we roll out new TZ support!
     const fallback = process.env.USE_ISO_DATETIME ? datetime.now.at('Europe/Rome') : datetime.getDate();
     const scrapeDate = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : fallback;

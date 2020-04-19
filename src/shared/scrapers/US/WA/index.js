@@ -66,7 +66,7 @@ const scraper = {
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
       this.headless = true;
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const $th = $('th:contains("(COVID-19) in Washington")');
       const $table = $th.closest('table');
       const $trs = $table.find('tbody > tr');
@@ -96,7 +96,7 @@ const scraper = {
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
       this.headless = true;
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const $table = $('caption:contains("Number of Individuals Tested")')
         .first()
         .closest('table');
@@ -128,7 +128,7 @@ const scraper = {
       this.url = 'https://www.doh.wa.gov/Emergencies/Coronavirus';
       this.type = 'table';
       this.headless = true;
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const $table = $('caption:contains("Confirmed Cases")')
         .first()
         .closest('table');
@@ -162,7 +162,7 @@ const scraper = {
         'https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc';
       this.type = 'json';
       this.headless = false;
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
 
       data.features.forEach(item => {
         const cases = item.attributes.CV_PositiveCases;

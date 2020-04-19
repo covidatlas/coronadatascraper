@@ -23,7 +23,7 @@ const scraper = {
       this.url = 'https://idph.iowa.gov/emerging-health-issues/novel-coronavirus';
       this.type = 'table';
       const counties = [];
-      const $ = await fetch.headless(this.url);
+      const $ = await fetch.headless(this, this.url, 'default');
       const $table = $('caption:contains("Reported Cases in Iowa by County")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
       $trs.each((index, tr) => {
@@ -49,7 +49,7 @@ const scraper = {
     '2020-03-20': async function() {
       this.url = 'https://opendata.arcgis.com/datasets/6a84756c2e444a87828bb7ce699fdac6_0.csv';
       this.type = 'csv';
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const counties = [];
       for (const county of data) {
         let countyName = county.Name;

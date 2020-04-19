@@ -60,7 +60,7 @@ const scraper = {
   async scraper() {
     const response = [];
     const ufs = this._ufs;
-    const $ = await fetch.headless(this.url);
+    const $ = await fetch.headless(this, this.url, 'default');
 
     $.root()
       .find('.list-itens .teste')

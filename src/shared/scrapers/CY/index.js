@@ -22,10 +22,10 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const datasetRaw = await fetch.json(this.url, false);
+    const datasetRaw = await fetch.json(this, this.url, 'tmpindex', false);
     const dataset = datasetRaw.result[0].resources.find(item => item.format === 'csv');
 
-    const casesRaw = await fetch.csv(dataset.url, false);
+    const casesRaw = await fetch.csv(this, dataset.url, 'default', false);
     const casesData = casesRaw.filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
 
     if (casesData.length > 0) {

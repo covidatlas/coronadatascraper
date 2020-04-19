@@ -37,7 +37,7 @@ const scraper = {
   url: 'https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics',
   async scraper() {
     const states = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('h2:contains("in Australia") + table');
     const $ths = $table.find('th');
 

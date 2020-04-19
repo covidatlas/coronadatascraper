@@ -104,7 +104,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('h3:contains("Mississippi Cases")')
         .nextAll('table')
         .first();
@@ -128,7 +128,7 @@ const scraper = {
       return counties;
     },
     '2020-03-15': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('h4:contains("All Mississippi cases to date")')
         .nextAll('table')
         .first();
@@ -150,7 +150,7 @@ const scraper = {
       return counties;
     },
     '2020-03-20': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       // Pick the last one, because older pages had a table of "new cases"
       // before the table of "total cases"

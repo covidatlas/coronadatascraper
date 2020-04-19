@@ -79,7 +79,7 @@ const scraper = {
 
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const $p = $('p:contains("Counties with positive cases")');
 
@@ -122,7 +122,7 @@ const scraper = {
       const options = {
         headers: { 'X-PowerBI-ResourceKey': '187b4de8-78ef-40be-9510-7fa9a1ef89f2' }
       };
-      const data = await fetch.json(this.url, undefined, options);
+      const data = await fetch.json(this, this.url, 'default', undefined, options);
       const { sections } = data.exploration;
 
       let counties = [];

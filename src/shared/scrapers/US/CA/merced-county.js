@@ -2,6 +2,7 @@ import cheerioTableparser from 'cheerio-tableparser';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import maintainers from '../../../lib/maintainers.js';
+import { DeprecatedError } from '../../../lib/errors.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -14,7 +15,7 @@ const scraper = {
   url: 'https://www.co.merced.ca.us/3350/Coronavirus-Disease-2019',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('h3:contains("Merced County COVID-19 Statistics")')
         .parent()
         .next('table');
@@ -45,7 +46,7 @@ const scraper = {
     '2020-03-16': async function() {
       this.type = 'table';
 
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
 
       const $table = $('td:contains("Cases")').closest('table');
@@ -69,6 +70,10 @@ const scraper = {
         deaths: parse.number(data[1][3]),
         recoveries: parse.number(data[1][4])
       };
+    },
+    '2020-04-15': async function() {
+      await fetch.page(this, this.url, 'default');
+      throw new DeprecatedError('Sunsetting county level scrapers');
     }
   }
 };

@@ -19,7 +19,7 @@ const scraper = {
   type: 'table',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $divCases = $('.et_pb_cta_2')
         .find('div:contains("Confirmed Positives")')
         .find('p:nth-child(3)');
@@ -34,7 +34,7 @@ const scraper = {
       };
     },
     '2020-03-27': async function() {
-      await fetch.page(this.url);
+      await fetch.page(this, this.url, 'default');
       throw new DeprecatedError(`Guam stopped offering totals on their website, but there's a sweet coloring book`);
     }
   }

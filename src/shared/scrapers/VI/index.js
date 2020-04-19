@@ -32,7 +32,7 @@ const scraper = {
     maintainers.camjc
   ],
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $paragraphs = $('.block-content p');
     const data = {};
     $paragraphs

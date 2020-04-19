@@ -44,7 +44,7 @@ const scraper = {
   async _fetchLatest() {
     this.url =
       'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=master';
-    const data = await fetch.csv(this.url);
+    const data = await fetch.csv(this, this.url, 'default');
     return this._processData(data);
   },
   scraper: {
@@ -54,7 +54,7 @@ const scraper = {
     '2020-04-06': async function() {
       this.url =
         'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=2020-04-06';
-      const data = await fetch.csv(this.url, false);
+      const data = await fetch.csv(this, this.url, 'default', false);
       return this._processData(data);
     },
     '2020-04-07': async function() {
