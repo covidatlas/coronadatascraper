@@ -156,8 +156,6 @@ sp-dropdown[emphasized] {
 
 .ca-Landing {
   background-color: var(--BackgroundColor);
-  background-image: url('logo-outlined.svg');
-  background-image: url('logo-outlined.svg'), linear-gradient(123deg, rgba(49,53,113,1) 0%, rgba(30,10,67,1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: 136%;
