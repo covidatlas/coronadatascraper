@@ -51,7 +51,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
       <section class="ca-Section col-xs-12 col-sm-4">
       <img class="ca-Section-Image" src="${arc.static('icons/COVID_Atlas_Icons_Community.svg')}"/>
-          <h1 class="spectrum-Heading spectrum-Heading--M">Built by a community</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Built by a community</h1>
         <p class="spectrum-Body spectrum-Body--M">COVID Atlas is entirely open-source, built by a community of people concerned with all the same things you are.</p>
         <p class="spectrum-Body spectrum-Body--M">We're all in this together.</p>
       </section>
