@@ -109,7 +109,7 @@ Your scraper should return an object, an array of objects, or `null` in case the
 
 The object may contain the following attributes:
 
-- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) [required]
+- `country` - [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) (not required if defined on scraper object)
 - `state` - The state, province, or region (not required if defined on scraper object)
 - `county` - The county or parish (not required if defined on scraper object)
 - `city` - The city name (not required if defined on scraper object)

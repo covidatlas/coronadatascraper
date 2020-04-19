@@ -3,8 +3,6 @@ import datetime from '../../lib/datetime/index.js';
 import * as geography from '../../lib/geography/index.js';
 import * as parse from '../../lib/parse.js';
 
-const country = 'iso1:DE';
-
 const states = [
   'iso2:DE-BB',
   'iso2:DE-BE',
@@ -27,7 +25,6 @@ const states = [
 function rowToResult(row) {
   return states.map(state => {
     return {
-      country,
       state,
       cases: parse.number(row[`${state.slice(5)}_cases`]),
       deaths: parse.number(row[`${state.slice(5)}_deaths`])
@@ -63,7 +60,7 @@ const scraper = {
       github: 'jgehrcke'
     }
   ],
-  country,
+  country: 'iso1:DE',
   async scraper() {
     const data = await fetch.csv(this, this.url, 'default', false);
 
