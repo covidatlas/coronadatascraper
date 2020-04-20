@@ -173,8 +173,8 @@ const showGraph = ({ timeseries, location }) => {
     datasets: [
       {
         label: 'Total Cases',
-        borderColor: '#E68C00',
-        backgroundColor: '#E68C00',
+        borderColor: '#d47700',
+        backgroundColor: '#d47700',
         data: casesData,
         ...lineSettings
       },
@@ -187,15 +187,15 @@ const showGraph = ({ timeseries, location }) => {
       // },
       {
         label: 'Deaths',
-        borderColor: '#B43464',
-        backgroundColor: '#B43464',
+        borderColor: '#c12121',
+        backgroundColor: '#c12121',
         data: deathsData,
         ...lineSettings
       },
       {
         label: 'Recovered',
-        borderColor: '#288CC8',
-        backgroundColor: '#288CC8',
+        borderColor: '#4c9e0f',
+        backgroundColor: '#4c9e0f',
         data: recoveredData,
         ...lineSettings
       }

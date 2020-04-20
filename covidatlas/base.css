@@ -84,8 +84,8 @@
   --BackgroundColor-dark: var(--Blue700);
 
   --SemanticNegativeTextColor: #c12121;
-  --SemanticWarningTextColor: #d28b1f;
-  --SemanticOKTextColor: #879800; 
+  --SemanticWarningTextColor: #d47700;
+  --SemanticOKTextColor: #879800;
   --SemanticPositiveTextColor: #4c9e0f;
 
   --spectrum-alias-text-color-disabled: var(--Gray300);

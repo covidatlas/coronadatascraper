@@ -345,17 +345,17 @@ hr {
 
 /* .ca-Active {
   color: green;
-}
-.ca-Total {
-  color: blue;
 } */
+.ca-Total {
+  color: var(--SemanticWarningTextColor);
+}
 .ca-Deaths {
   color: var(--SemanticNegativeTextColor);
 }
-/* .ca-Recovered {
-  color: yellow;
+.ca-Recovered {
+  color: var(--SemanticPositiveTextColor);
 }
-.ca-Hospitalized {
+/* .ca-Hospitalized {
   color: orange;
 } */
 
