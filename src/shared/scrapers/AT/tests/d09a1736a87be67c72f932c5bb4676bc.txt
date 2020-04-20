@@ -1,0 +1,2 @@
+var dpBundesland = [{"label":"W","y":2028},{"label":"Vbg","y":832},{"label":"T","y":3301},{"label":"Stmk","y":1572},{"label":"Sbg","y":1174},{"label":"OÖ","y":2134},{"label":"NÖ","y":2347},{"label":"Ktn","y":386},{"label":"Bgld","y":269}];
+var BundeslandVersion = "14.04.2020 04:00:00 V 1.1.0.0"

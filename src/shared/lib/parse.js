@@ -23,7 +23,8 @@ export const number = function(string) {
   if (typeof string === 'number') return string;
   if (string === '') return 0;
   if (string === undefined) throw new Error('Cannot parse undefined as number.');
-  return parseInt(string.replace(/[^\d-]/g, ''), 10);
+
+  return parseInt(string.replace(/[^\d.-]/g, ''), 10);
 };
 
 /*

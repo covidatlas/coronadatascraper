@@ -17,7 +17,7 @@ const scraper = {
   type: 'table',
   url: 'https://coronavirus.nt.gov.au/',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $rowWithCases = $('.header-widget p:first-of-type');
     assert($rowWithCases.text().includes('confirmed cases'));
     const data = {

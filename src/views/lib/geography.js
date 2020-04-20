@@ -1,5 +1,12 @@
+const levelOrder = (module.exports.levels = ['city', 'county', 'state', 'country']);
+
 const getSlug = (module.exports.getSlug = function(location) {
-  return location.name.replace(/(\s|,)+/g, '-').toLowerCase();
+  return levelOrder
+    .map(level => location[level])
+    .filter(Boolean)
+    .join(' ')
+    .replace(/(\s|,)+/g, '-')
+    .toLowerCase();
 });
 
 /** Get the full name of a location
@@ -40,7 +47,7 @@ module.exports.getLocationGranularityName = function(location) {
   return 'none';
 };
 
-const childLevelOrder = ['country', 'state', 'county', 'city'];
+const childLevelOrder = levelOrder.slice().reverse();
 module.exports.getChildLocations = function(location, locations, matchLevel) {
   const subLocations = [];
 
@@ -73,7 +80,7 @@ module.exports.getChildLocations = function(location, locations, matchLevel) {
   return subLocations;
 };
 
-const parentLevelOrder = ['city', 'county', 'state', 'country', 'world'];
+const parentLevelOrder = levelOrder.concat(['world']);
 const getParentLevel = (module.exports.getParentLevel = function(level) {
   return parentLevelOrder[Math.min(parentLevelOrder.indexOf(level) + 1, parentLevelOrder.length - 1)];
 });

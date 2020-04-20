@@ -6,7 +6,7 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'Clark County',
-  state: 'NV',
+  state: 'iso2:US-NV',
   country: 'iso1:US',
   url: 'https://www.southernnevadahealthdistrict.org/coronavirus',
   sources: [
@@ -19,7 +19,7 @@ const scraper = {
   type: 'table',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $h1 = $('h1:contains("Total Cases:")');
       const regexCases = /Total Cases: (\d+)/;
       const cases = parse.number(regexCases.exec($h1[0].children[0].data)[1]);
@@ -31,7 +31,7 @@ const scraper = {
       };
     },
     '2020-03-25': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const casesText = $('*:contains("Total Cases:")').text();
       const regexCases = /Total Cases: (\d+)/;

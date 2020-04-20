@@ -11,7 +11,7 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
+const { levels, getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
@@ -22,6 +22,18 @@ const { handle404 } = require('@architect/views/lib/middleware');
 const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
 
+function renderBreadcrumbs(location) {
+  const htmlBits = [];
+  const obj = {};
+  for (const level of levels.slice().reverse()) {
+    if (location[level]) {
+      obj[level] = location[level];
+      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${getSlug(obj)}">${location[level]}</a>`);
+    }
+  }
+  return htmlBits.reverse().join(', ');
+}
+
 function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
 }
@@ -29,7 +41,7 @@ function renderCaseInfo(label, count, labelClass) {
 function locationDetail(location, lastDate, caseInfo) {
   // <p class="spectrum-Body spectrum-Body--L">Latest confirmed COVID-19 data</p>
   let html = `
-<h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${location.name}</h1>
+<h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${renderBreadcrumbs(location)}</h1>
 `;
 
   html += `<div class="row">
@@ -40,8 +52,15 @@ function locationDetail(location, lastDate, caseInfo) {
   )}</p>`;
   html += `</div>
     <div class="col-xs-12 col-sm-6 end-sm">
-      <sp-button quiet variant="secondary">Download</sp-button>
-      <sp-button quiet variant="secondary">Share</sp-button>
+      <sp-button quiet variant="secondary" href="/data">Download</sp-button>
+      <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
+        <!-- <sp-button quiet variant="secondary" slot="trigger">Share</sp-button> -->
+        <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
+          <div class="ca-SocialButtons">
+
+          </div>
+        </sp-popover>
+      </overlay-trigger>
     </div>
   </div>`;
   html += `<div class="row">`;
@@ -66,7 +85,12 @@ function locationDetail(location, lastDate, caseInfo) {
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
-      <div id="graph" class="ca-Graph"></div>
+      <!-- <div id="graph" class="ca-Graph"></div> -->
+      <div id="graph-elements">
+        <div id="graph-container">
+          <canvas id="graph"></canvas>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -75,14 +99,8 @@ function locationDetail(location, lastDate, caseInfo) {
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
-
-  <div class="ca-Callout--Disclaimer">
-    <p class="spectrum-Body spectrum-Body--M">
-      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
-    </p>
-  </div>
-
   <div class="ca-Section">
+    <!--
     <div class="row">
       <div class="col-xs-12">
         <h2 class="spectrum-Heading spectrum-Heading--M">Sources</h1>
@@ -94,6 +112,7 @@ function locationDetail(location, lastDate, caseInfo) {
         <a href="/sources" class="spectrum-Link">Learn more about COVID Atlas sources</a>
       </div>
     </div>
+    -->
     <div class="row">
       <section class="col-xs-12 col-sm-6 col-md-4">
         <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
@@ -107,10 +126,16 @@ function locationDetail(location, lastDate, caseInfo) {
     </div>
   </div>
 
-  <hr>
+  <div class="ca-Callout--Disclaimer">
+    <p class="spectrum-Body spectrum-Body--M">
+      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
+    </p>
+  </div>
 
+  <!--
+  <hr>
   <div class="row">
-  <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
       <h1 class="spectrum-Heading spectrum-Heading--M">Local resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
@@ -124,7 +149,8 @@ function locationDetail(location, lastDate, caseInfo) {
       <h1 class="spectrum-Heading spectrum-Heading--M">Global resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
-  </div>`;
+  </div>
+  -->`;
 
   return html;
 }
@@ -158,7 +184,8 @@ ${header({ selectedPage: '' })}
     ${locationDetail(location, lastDate, caseInfo)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script src="${arc.static('location.js')}"></script>
     <script>
       window.showLocation({

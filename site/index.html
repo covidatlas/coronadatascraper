@@ -45,6 +45,8 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
   <script src="index.js"></script>
 </head>
 <body class="spectrum spectrum--light spectrum--medium">
@@ -194,7 +196,14 @@
               </a>
             </div>
           </div>
+
           <div class="cds-Editor-content cds-Map-content">
+            <div id="graph-elements">
+              <div id="graph-container">
+                <canvas id="graph"></canvas>
+              </div>
+              <span onclick="document.getElementById('graph-elements').style.visibility='hidden'" id="graph-close">×</span>
+            </div>
             <div class="cds-Map-controls">
             </div>
             <div id="map"></div>

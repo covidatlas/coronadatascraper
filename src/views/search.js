@@ -10,7 +10,7 @@ module.exports = function(data = { label: 'Search data by county, state, or coun
         </div>`;
   }
   html += `
-    <div class="spectrum--light">
+    <div class="spectrum--light spectrum-ComboField-field">
       <sp-search id="searchField" autocomplete="off"></sp-search>
       <sp-button id="searchButton" type="submit" hidden>Go</sp-button>
     </div>

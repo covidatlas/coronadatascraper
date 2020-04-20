@@ -27,6 +27,8 @@ function showResults(results) {
     searchResults.innerHTML = `<sp-menu-item disabled>No results found.</sp-menu-item>`;
   }
 
+  searchPopover.style.width = `${searchField.offsetWidth}px`;
+
   closeOverlay = Overlay.open(searchField, 'click', searchPopover, {
     placement: 'bottom-start'
   });

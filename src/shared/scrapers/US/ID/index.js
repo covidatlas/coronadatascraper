@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'ID',
+  state: 'iso2:US-ID',
   country: 'iso1:US',
   sources: [
     {
@@ -68,7 +68,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       this.url = 'https://coronavirus.idaho.gov';
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
 
       const $th = $('th:contains("Public Health District")');
       const $table = $th.closest('table');
@@ -116,7 +116,7 @@ const scraper = {
         'https://public.tableau.com/views/DPHIdahoCOVID-19Dashboard_V2/DPHCOVID19Dashboard2?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y&%3AbootstrapWhenNotified=true';
 
       // Get the Tableau chart
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'tmpindex');
 
       // Pull out our session id from the json stuffed inside the textarea
       const textArea = $('textarea#tsConfigContainer').text();
@@ -130,7 +130,7 @@ const scraper = {
 
       // POST
       const options = { method: 'post', args: { sheet_id: sheet } };
-      let data = await fetch.raw(url, undefined, options);
+      let data = await fetch.raw(this, url, 'default', undefined, options);
 
       // Now regex out the chunk of json we need
       const re = /^\d+;({.*})\d+;({.*})$/;
@@ -185,6 +185,25 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-4-11': async function() {
+      this.url =
+        'https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query?f=json&where=1=1&returnGeometry=false&outFields=*';
+      this.type = 'json';
+
+      const data = await fetch.json(this, this.url, 'default');
+
+      const counties = data.features.map(item => {
+        return {
+          county: geography.addCounty(item.attributes.f1),
+          cases: item.attributes.f3 || 0,
+          deaths: item.attributes.f4 || 0,
+          recoverd: item.attributes.f5 || 0
+        };
+      });
+
+      counties.push(transform.sumData(counties));
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };

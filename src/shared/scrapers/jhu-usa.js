@@ -9,10 +9,6 @@ import maintainers from '../lib/maintainers.js';
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
 
-function findCountryLevelID(fips) {
-  return fipsCodes[fips];
-}
-
 const scraper = {
   maintainers: [maintainers.lazd],
   url: 'https://github.com/CSSEGISandData/COVID-19',
@@ -35,8 +31,8 @@ const scraper = {
   scraper: {
     '0': async function() {
       const urls = this._urls;
-      const cases = await fetch.csv(urls.cases, false);
-      const deaths = await fetch.csv(urls.deaths, false);
+      const cases = await fetch.csv(this, urls.cases, 'cases', false);
+      const deaths = await fetch.csv(this, urls.deaths, 'deaths', false);
 
       let regions = [];
 
@@ -98,7 +94,7 @@ const scraper = {
         }
 
         // Only include places we have data for
-        const countryLevelIDInfo = findCountryLevelID(fips);
+        const countryLevelIDInfo = fipsCodes[fips];
         if (!countryLevelIDInfo) {
           console.warn('  ⚠️  Skipping %s at (FIPS %s)', caseInfo.Combined_Key, fips);
           continue;

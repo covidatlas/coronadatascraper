@@ -8,7 +8,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'TN',
+  state: 'iso2:US-TN',
   country: 'iso1:US',
   sources: [
     {
@@ -144,7 +144,7 @@ const scraper = {
   scraper: {
     '0': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('th:contains("Case Count")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
 
@@ -193,7 +193,7 @@ const scraper = {
     },
     '2020-03-21': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('th:contains("Count")').closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)'); // skip grand total
 
@@ -235,7 +235,7 @@ const scraper = {
     },
     '2020-3-31': async function() {
       let counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       cheerioTableparser($);
       const $table = $('td:contains("Blount")').closest('table');
       const data = $table.parsetable(false, false, true);
@@ -283,6 +283,42 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
 
       return counties;
+    },
+    '2020-4-11': async function() {
+      this.url =
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
+      this.type = 'json';
+
+      const data = await fetch.json(this, this.url, 'default');
+      const counties = [];
+
+      data.features.forEach(item => {
+        const cases = item.attributes.INFECT_NUM;
+        const deaths = item.attributes.DEATH_NUM;
+        const county = geography.addCounty(item.attributes.NAME);
+        const tested = item.attributes.INFECT_NUM + item.attributes.NegativeTests;
+        const recovered = item.attributes.Recovered;
+
+        counties.push({
+          county,
+          cases,
+          deaths,
+          tested,
+          recovered
+        });
+      });
+
+      const totalsUrl =
+        'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/ArcGIS/rest/services/TN_Covid_Total/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=pjson';
+      const tmp = await fetch.json(this, totalsUrl, 'totals');
+      const totalsData = tmp.features.pop().attributes;
+
+      const totals = transform.sumData(counties);
+      totals.cases = totalsData.Total_Infections;
+      totals.deaths = totalsData.Total_Deaths;
+
+      counties.push(totals);
+      return geography.addEmptyRegions(counties, this._counties, 'county');
     }
   }
 };

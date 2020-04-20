@@ -29,7 +29,9 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
-    <div class="ca-Landing spectrum--dark">
+    <div class="ca-Landing spectrum--dark" style="background-image: url('${arc.static(
+      'logo-outlined.svg'
+    )}'), linear-gradient(123deg, rgba(49,53,113,1) 0%, rgba(30,10,67,1) 100%)">
       <h1 class="spectrum-Heading spectrum-Heading--XXL">COVID Atlas collects local data from around the world into one resource.</h1>
       <div class="ca-Landing-search spectrum--large">
         ${search()}
@@ -38,16 +40,19 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
     <div class="row">
       <section class="ca-Section col-xs-12 col-sm-4">
+        <img class="ca-Section-Image" src="${arc.static('icons/COVID_Atlas_Icons_Location.svg')}"/>
         <h1 class="spectrum-Heading spectrum-Heading--M">Local official COVID-19 resources</h1>
         <p class="spectrum-Body spectrum-Body--M">COVID Atlas scrapes public data from local resources.</p>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-4">
+        <img class="ca-Section-Image" src="${arc.static('icons/COVID_Atlas_Icons_Calendar.svg')}"/>
         <h1 class="spectrum-Heading spectrum-Heading--M">Updated daily</h1>
         <p class="spectrum-Body spectrum-Body--M">Our data updates daily at 9PM PST so you can access the most recent data available.</p>
       </section>
 
       <section class="ca-Section col-xs-12 col-sm-4">
+      <img class="ca-Section-Image" src="${arc.static('icons/COVID_Atlas_Icons_Community.svg')}"/>
         <h1 class="spectrum-Heading spectrum-Heading--M">Built by a community</h1>
         <p class="spectrum-Body spectrum-Body--M">COVID Atlas is entirely open-source, built by a community of people concerned with all the same things you are.</p>
         <p class="spectrum-Body spectrum-Body--M">We're all in this together.</p>
@@ -64,8 +69,6 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
   </div>
 </div>
-
-<script src="${arc.static('home.js')}" type="module"></script>
 `,
       'ca-Home'
     )

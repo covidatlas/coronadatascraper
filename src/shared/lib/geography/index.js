@@ -1,11 +1,10 @@
 import assert from 'assert';
+import iso1Codes from 'country-levels/iso1.json';
 import countryCodes from '../../vendor/country-codes.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 import usStates from '../../vendor/usa-states.json';
 import iso3to2 from '../../vendor/iso3to2.json';
-// eslint-disable-next-line
-import iso1Codes from 'country-levels/iso1.json';
 import log from '../log.js';
 import * as turf from './turf.js';
 
@@ -287,6 +286,11 @@ export const stripCountyName = function(county) {
   Get a proper state name
 */
 export const getState = function(state) {
+  // drop ISO code if passed
+  state = state
+    .split(':')
+    .pop()
+    .replace(/US-/, '');
   return usStates[state] || state;
 };
 

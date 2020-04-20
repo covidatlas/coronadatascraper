@@ -13,6 +13,7 @@ export default [
     },
     output: {
       dir: 'public/',
+      chunkFileNames: '[name].js',
       sourcemap: true
     },
     plugins: [
@@ -51,25 +52,6 @@ export default [
       sourcemap: true
     },
     plugins: [resolve(), json()],
-    watch: {
-      exclude: ['node_modules']
-    }
-  },
-  {
-    input: 'covidatlas/home.js',
-    output: {
-      dir: 'public/',
-      sourcemap: true
-    },
-    plugins: [
-      resolve(),
-      json(),
-      replace({
-        values: {
-          'process.env.NODE_ENV': '"production"'
-        }
-      })
-    ],
     watch: {
       exclude: ['node_modules']
     }

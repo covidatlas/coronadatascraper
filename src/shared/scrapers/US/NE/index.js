@@ -8,7 +8,7 @@ import maintainers from '../../../lib/maintainers.js';
 // const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'NE',
+  state: 'iso2:US-NE',
   country: 'iso1:US',
   url: 'https://www.lincoln.ne.gov/city/covid19/',
   type: 'list',
@@ -115,7 +115,7 @@ const scraper = {
   ],
   async scraper() {
     let counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
 
     const listItems = $('ul:contains("Lab-confirmed cases in Nebraska")').find('li');
 
