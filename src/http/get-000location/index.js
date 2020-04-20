@@ -99,31 +99,17 @@ function locationDetail(location, lastDate, caseInfo) {
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
-  <div class="ca-Section">
-    <!--
-    <div class="row">
-      <div class="col-xs-12">
-        <h2 class="spectrum-Heading spectrum-Heading--M">Sources</h1>
-        <p class="spectrum-Body spectrum-Body--S">
-          COVID Atlas pulls information from a variety of openly available world government data sources and curated datasets.
-          <strong>Ratings have nothing to do with the accuracy of the data.</strong>
-          The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.
-        </p>
-        <a href="/sources" class="spectrum-Link">Learn more about COVID Atlas sources</a>
-      </div>
-    </div>
-    -->
-    <div class="row">
-      <section class="col-xs-12 col-sm-6 col-md-4">
-        <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
-        <p class="spectrum-Body spectrum-Body--S"> Report card</p>
-      </section>
 
-      <section class="col-xs-12 col-sm-6 col-md-8">
-        <h4 class="spectrum-Heading spectrum-Heading--S">[Location cross-check]</h4>
-        <p class="spectrum-Body spectrum-Body--S"> Cross-Check report for this locations's sources</p>
-      </section>
-    </div>
+  <div class="row">
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
+      <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
+      <p class="spectrum-Body spectrum-Body--S"> Report card</p>
+    </section>
+
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
+      <h4 class="spectrum-Heading spectrum-Heading--S">[Location cross-check]</h4>
+      <p class="spectrum-Body spectrum-Body--S"> Cross-Check report for this locations's sources</p>
+    </section>
   </div>
 
   <div class="ca-Callout--Disclaimer">
@@ -135,17 +121,17 @@ function locationDetail(location, lastDate, caseInfo) {
   <!--
   <hr>
   <div class="row">
-    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h1 class="spectrum-Heading spectrum-Heading--M">Local resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
 
-    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h1 class="spectrum-Heading spectrum-Heading--M">National resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
 
-    <section class="ca-Section col-xs-12 col-sm-6 col-md-4">
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h1 class="spectrum-Heading spectrum-Heading--M">Global resources</h1>
       <p class="spectrum-Body spectrum-Body--M">List of links</p>
     </section>
