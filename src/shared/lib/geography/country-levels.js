@@ -1,13 +1,21 @@
 /* eslint-disable no-use-before-define */
 
 import assert from 'assert';
+
+import fips from 'country-levels/fips.json';
+import iso1 from 'country-levels/iso1.json';
+import iso2 from 'country-levels/iso2.json';
+
 import path from 'path';
 import { readJSON } from '../fs.js';
 import * as geography from './index.js';
 
-const LEVELS = ['iso1', 'iso2', 'fips'];
+const levels = {
+  iso1,
+  iso2,
+  fips
+};
 
-const levelCache = {};
 const countryLevelsDir = path.dirname(require.resolve('country-levels/package.json'));
 
 export function isId(str) {
@@ -16,7 +24,7 @@ export function isId(str) {
   }
   if (!str) return false;
   const [level, code] = str.split(':');
-  return LEVELS.includes(level) && Boolean(code);
+  return level in levels && Boolean(code);
 }
 
 export function getIdFromLocation(location) {
@@ -24,36 +32,26 @@ export function getIdFromLocation(location) {
   return isId(smallestLocationStr) ? smallestLocationStr : null;
 }
 
-/**
- * @param {string} id
- */
 export function splitId(id) {
   assert(isId(id), `Wrong id: ${id}`);
   const [level, code] = id.split(':');
   return { level, code };
 }
 
-const getLevelData = async level => {
-  assert(LEVELS.includes(level), `Country Level ID: not supported ${level}`);
-
-  if (levelCache[level]) {
-    return levelCache[level];
-  }
-
-  const levelData = await readJSON(path.join(countryLevelsDir, `${level}.json`));
-  levelCache[level] = levelData;
-  return levelCache[level];
+const getLevelData = level => {
+  assert(level in levels, `Country Level ID: not supported ${level}`);
+  return levels[level];
 };
 
-export const getLocationData = async id => {
+export const getLocationData = id => {
   // Return an array of aggregated features
   if (id.includes('+')) {
     const parts = id.split('+');
-    const data = await Promise.all(parts.map(getLocationData));
+    const data = parts.map(getLocationData);
     return data;
   }
   const { level, code } = splitId(id);
-  const levelData = await getLevelData(level);
+  const levelData = getLevelData(level);
   const locationData = levelData[code];
 
   assert(locationData, `Country Level data missing for: ${id}`);
@@ -62,14 +60,14 @@ export const getLocationData = async id => {
 };
 
 export const getFeature = async id => {
-  const locationData = await getLocationData(id);
+  const locationData = getLocationData(id);
   if (Array.isArray(locationData)) {
     const features = await Promise.all(locationData.map(l => getFeature(l.countrylevel_id)));
     const newGeometry = combineFeatureGeometry(features);
     const newFeature = {
       type: 'Feature',
       properties: {
-        name: await getName(id),
+        name: getName(id),
         countrylevel_id: id
       },
       geometry: newGeometry
@@ -89,8 +87,8 @@ export const getFeature = async id => {
   return feature;
 };
 
-export const getPopulation = async id => {
-  const locationData = await getLocationData(id);
+export const getPopulation = id => {
+  const locationData = getLocationData(id);
   if (Array.isArray(locationData)) {
     return locationData.reduce((a, l) => {
       a += l.population;
@@ -101,23 +99,31 @@ export const getPopulation = async id => {
   return locationData.population;
 };
 
-export const getName = async id => {
-  const locationData = await getLocationData(id);
+export const getName = id => {
+  const locationData = getLocationData(id);
   if (Array.isArray(locationData)) {
     return locationData.map(l => l.name).join(', ');
   }
   return locationData.name;
 };
 
+export const getTimezone = id => {
+  const locationData = getLocationData(id);
+  if (Array.isArray(locationData)) {
+    return locationData[0].timezone || 'UTC';
+  }
+  return locationData.timezone || 'UTC';
+};
+
 // this function transforms ids to Id columns and replaces names
 // with human readable version
 // it mutates the object
-export const transformLocationIds = async location => {
+export const transformLocationIds = location => {
   for (const loc of ['country', 'state', 'county', 'city']) {
     const locId = location[loc];
     if (isId(locId)) {
       location[`${loc}Id`] = locId;
-      location[loc] = await getName(locId);
+      location[loc] = getName(locId);
     }
   }
 };
