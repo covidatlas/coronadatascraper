@@ -9,6 +9,13 @@ import maintainers from '../../../lib/maintainers.js';
 // We've emailed them on 2020-03-28 to try to get a more usable format.
 // For now lets fall back to the AUS index scraper when we can't scrape successfully.
 
+const makeAbsoluteUrl = currentArticleHref => {
+  if (currentArticleHref.startsWith('/')) {
+    return `https://www.dhhs.vic.gov.au${currentArticleHref}`;
+  }
+  return currentArticleHref;
+};
+
 const scraper = {
   country: 'iso1:AU',
   maintainers: [maintainers.camjc],
@@ -26,8 +33,9 @@ const scraper = {
   async scraper() {
     const $ = await fetch.page(this, this.url, 'tmpindex');
     const $anchor = $('.content ul li a:contains("Department of Health and Human Services media release - ")');
-    const currentArticleUrl = $anchor.attr('href');
-    const $currentArticlePage = await fetch.page(this, `https://www.dhhs.vic.gov.au${currentArticleUrl}`, 'default');
+    const currentArticleHref = $anchor.attr('href');
+    const url = makeAbsoluteUrl(currentArticleHref);
+    const $currentArticlePage = await fetch.page(this, url, 'default');
     const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
     const matches = paragraph.match(/cases in Victoria \w* (?<casesString>[\d,]+)/) || {};
     const { casesString } = matches.groups || {};
