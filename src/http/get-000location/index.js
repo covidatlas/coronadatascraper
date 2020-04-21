@@ -72,25 +72,24 @@ function locationDetail(location, lastDate, caseInfo) {
   if (caseInfo.deaths !== undefined) {
     html += renderCaseInfo('Deaths', caseInfo.deaths, 'ca-Deaths');
   }
-  if (caseInfo.hospitalized !== undefined) {
-    html += renderCaseInfo('Hospitalized', caseInfo.hospitalized, 'ca-Hospitalized');
-  }
-  if (caseInfo.discharged !== undefined) {
-    html += renderCaseInfo('Discharged', caseInfo.discharged, 'ca-Discharged');
-  }
-  // if (caseInfo.hospitalized !== undefined && caseInfo.discharged !== undefined) {
-  //   html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
-  // }
   if (caseInfo.recovered !== undefined) {
     html += renderCaseInfo('Recovered', caseInfo.recovered, 'ca-Recovered');
   }
   if (caseInfo.active !== undefined) {
     html += renderCaseInfo('Active cases', caseInfo.active, 'ca-Active');
   }
+  if (caseInfo.hospitalized !== undefined) {
+    html += renderCaseInfo('Hospitalized', caseInfo.hospitalized, 'ca-Hospitalized');
+  }
+  if (caseInfo.discharged !== undefined) {
+    html += renderCaseInfo('Discharged', caseInfo.discharged, 'ca-Discharged');
+  }
   if (caseInfo.tested !== undefined) {
     html += renderCaseInfo('Tested', caseInfo.tested, 'ca-Tested');
   }
-
+  // if (caseInfo.hospitalized !== undefined && caseInfo.discharged !== undefined) {
+  //   html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
+  // }
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
