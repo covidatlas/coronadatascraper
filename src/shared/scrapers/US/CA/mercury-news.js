@@ -24,10 +24,30 @@ const scraper = {
     }
   ],
   _processData(data) {
-    const scrapeDateString = datetime.getYYYYMMDD(
-      process.env.SCRAPE_DATE && new Date(`${process.env.SCRAPE_DATE} 12:00:00`)
-    );
-    console.log(scrapeDateString);
+    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+    let scrapeDateString = datetime.getYYYYMMDD(scrapeDate);
+
+    const lastDateInTimeseries = new Date(`${data[0].Date} 12:00:00`);
+    const firstDateInTimeseries = new Date(`${data[data.length - 1].Date} 12:00:00`);
+
+    if (scrapeDate > lastDateInTimeseries) {
+      console.error(
+        `  🚨 timeseries for Mercury News (CA): SCRAPE_DATE ${datetime.getYYYYMD(
+          scrapeDate
+        )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
+      );
+      scrapeDate = lastDateInTimeseries;
+      scrapeDateString = datetime.getYYYYMMDD(scrapeDate);
+    }
+
+    if (scrapeDate < firstDateInTimeseries) {
+      throw new Error(
+        `Timeseries starts at ${datetime.getYYYYMD(firstDateInTimeseries)}, but SCRAPE_DATE is ${datetime.getYYYYMD(
+          scrapeDate
+        )}`
+      );
+    }
+
     const counties = [];
     for (const stateData of data) {
       if (stateData.Date === scrapeDateString) {
@@ -50,6 +70,11 @@ const scraper = {
         counties.push(stateObj);
       }
     }
+
+    if (counties.length === 0) {
+      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${datetime.getYYYYMD(scrapeDate)}`);
+    }
+
     counties.push(transform.sumData(counties));
     return counties;
   },
