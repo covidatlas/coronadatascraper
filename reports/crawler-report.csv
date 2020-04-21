@@ -1,6 +1,6 @@
 date,country,state,county,city,type,description,severity,category
 2020-04-20,iso1:AU,iso2:AU-VIC,,,scraper failed,TypeError: $currentArticlePage is not a function,critical,scraper failure
-2020-04-20,iso1:CA,iso2:CA-NS,,,scraper failed,Error: Someone needs to scrape this new data properly,critical,scraper failure
+2020-04-20,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
 2020-04-20,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
 2020-04-20,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
 2020-04-20,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 1 on line 2002",critical,scraper failure
