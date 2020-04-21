@@ -124,6 +124,7 @@ const showGraph = ({ timeseries, location }) => {
   const casesData = [];
   const activeData = [];
   const deathsData = [];
+  const testedData = [];
   const recoveredData = [];
 
   const locationData = Object.keys(timeseries).map(date => {
@@ -139,6 +140,12 @@ const showGraph = ({ timeseries, location }) => {
     if (day.cases)
       casesData.push({
         y: day.cases,
+        t: date
+      });
+
+    if (day.tested)
+      testedData.push({
+        y: day.tested,
         t: date
       });
 
@@ -183,6 +190,13 @@ const showGraph = ({ timeseries, location }) => {
       //   borderColor: '#FF0000',
       //   backgroundColor: 'white',
       //   data: activeData,
+      //   ...lineSettings
+      // },
+      // {
+      //   label: 'Tested',
+      //   borderColor: 'orange',
+      //   backgroundColor: 'orange',
+      //   data: testedData,
       //   ...lineSettings
       // },
       {

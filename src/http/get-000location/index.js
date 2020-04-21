@@ -66,20 +66,29 @@ function locationDetail(location, lastDate, caseInfo) {
   html += `<div class="row">`;
   html += `<div class="col-xs-12 col-md-5 col-lg-4">`;
 
-  if (caseInfo.active !== undefined) {
-    html += renderCaseInfo('Active Cases', caseInfo.active, 'ca-Active');
-  }
   if (caseInfo.cases !== undefined) {
-    html += renderCaseInfo('Total cases', caseInfo.cases, 'ca-Total');
+    html += renderCaseInfo('Cases', caseInfo.cases, 'ca-Total');
   }
   if (caseInfo.deaths !== undefined) {
     html += renderCaseInfo('Deaths', caseInfo.deaths, 'ca-Deaths');
   }
+  if (caseInfo.hospitalized !== undefined) {
+    html += renderCaseInfo('Hospitalized', caseInfo.hospitalized, 'ca-Hospitalized');
+  }
+  if (caseInfo.discharged !== undefined) {
+    html += renderCaseInfo('Discharged', caseInfo.discharged, 'ca-Discharged');
+  }
+  // if (caseInfo.hospitalized !== undefined && caseInfo.discharged !== undefined) {
+  //   html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
+  // }
   if (caseInfo.recovered !== undefined) {
     html += renderCaseInfo('Recovered', caseInfo.recovered, 'ca-Recovered');
   }
-  if (caseInfo.hospitalized !== undefined && caseInfo.discharged !== undefined) {
-    html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
+  if (caseInfo.active !== undefined) {
+    html += renderCaseInfo('Active cases', caseInfo.active, 'ca-Active');
+  }
+  if (caseInfo.tested !== undefined) {
+    html += renderCaseInfo('Tested', caseInfo.tested, 'ca-Tested');
   }
 
   html += `</div>
