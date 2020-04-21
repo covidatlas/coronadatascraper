@@ -33,3 +33,6 @@ window.showLocation = async function({ location, parentLocation }) {
     center
   });
 };
+
+window.showMap = showMap;
+window.showGraph = showGraph;

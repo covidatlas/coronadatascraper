@@ -19,6 +19,7 @@ get /crosscheck
 get /sources
 get /data
 get /api/search
+get /embed/:location
 get /api/locations/:location
 get /api/features/:location
 get /api/timeseries/:location

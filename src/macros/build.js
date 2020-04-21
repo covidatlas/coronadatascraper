@@ -98,6 +98,7 @@ async function build(arc, cloudformation) {
   await Promise.all([
     fs.copyFile('dist/timeseries.json', 'src/http/get-api-timeseries-000location/dist/timeseries.json'),
     fs.copyFile('dist/timeseries.json', 'src/http/get-000location/dist/timeseries.json'),
+    fs.copyFile('dist/timeseries.json', 'src/http/get-embed-000location/dist/timeseries.json'),
     fs.copyFile('dist/features.json', 'src/http/get-api-features-000location/dist/features.json'),
 
     fs.copyFile('dist/ratings.json', 'src/http/get-sources/dist/ratings.json'),
@@ -108,6 +109,7 @@ async function build(arc, cloudformation) {
 
   // Generate full location map
   const locationMap = buildLocationMap(locations);
+  await fs.writeJSON('src/http/get-embed-000location/dist/location-map.json', locationMap, { space: 0 });
   await fs.writeJSON('src/http/get-000location/dist/location-map.json', locationMap, { space: 0 });
   await fs.writeJSON('src/http/get-api-locations-000location/dist/location-map.json', locationMap, { space: 0 });
 
