@@ -1,0 +1,254 @@
+date,country,state,county,city,type,description,severity,category
+2020-04-20,iso1:AU,iso2:AU-VIC,,,scraper failed,TypeError: $currentArticlePage is not a function,critical,scraper failure
+2020-04-20,iso1:CA,iso2:CA-NS,,,scraper failed,Error: Someone needs to scrape this new data properly,critical,scraper failure
+2020-04-20,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
+2020-04-20,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-04-20,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 1 on line 2002",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Orange County,,scraper failed,DeprecatedError: Need to scrape new page,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,San Benito County,,scraper failed,DeprecatedError: Need to scrape new arcgis,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,"DeprecatedError: Sunsetting county scraper, its PowerBI now",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-MI,,,scraper failed,Error: There is an unexpected label: alcona,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-MS,,,scraper failed,Error: Unexpected table headers,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-NE,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-NJ,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-OK,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any county records,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-PA,,,scraper failed,"Error: 3 validation errors..  Sample: heading 1 ""Positives"" does not match /number of cases/i;heading 2 ""Negatives "" does not match /deaths/i;""Number of Facilities"" in column 1 does not match /^[0-9]+$/.",critical,scraper failure
+2020-04-20,iso1:US,iso2:US-RI,,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
+2020-04-20,iso1:US,iso2:US-WV,,,scraper failed,TypeError: Cannot read property 'exploration' of null,critical,scraper failure
+2020-04-20,iso1:KR,iso2:KR-41,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-42,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-43,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-44,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-45,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-46,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-48,,,missing population,,low,population
+2020-04-20,iso1:KR,iso2:KR-49,,,missing population,,low,population
+2020-04-20,iso1:PL,iso2:PL-26,,,missing population,,low,population
+2020-04-20,iso1:PL,iso2:PL-30,,,missing population,,low,population
+2020-04-20,iso1:RU,iso2:RU-SEV,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-011,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-154,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-155,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-051,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-062,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-079,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-083,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-107,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-184,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-133,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-137,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-139,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-110,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-003,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-207,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-041,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-052,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-082,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-095,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-102,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-008,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-020,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-032,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-162,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-037,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-043,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-164,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-061,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-064,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-068,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-071,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-186,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-138,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-140,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-148,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-153,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-026,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-159,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-055,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-058,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-070,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-168,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-171,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-089,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-096,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-002,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-047,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-056,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-063,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-097,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-006,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-014,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-036,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-128,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-073,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-212,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-104,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-130,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-013,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-091,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-094,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-025,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-093,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-175,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-034,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-060,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-129,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-092,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-106,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-114,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-120,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-124,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-126,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-190,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-149,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-009,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-099,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-035,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-040,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-090,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-111,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-012,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-053,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-131,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-117,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-122,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-146,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-192,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-021,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-022,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-023,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-039,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-208,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-072,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-077,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-134,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-123,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-194,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-160,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-045,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-167,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-069,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-169,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-087,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-098,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-108,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-178,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-113,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-115,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-181,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-118,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-191,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-156,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-166,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-059,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-080,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-116,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-010,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-132,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-188,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-015,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-033,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-001,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-084,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-183,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-157,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-048,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-199,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-085,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-109,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-017,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-211,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-206,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-193,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-038,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-074,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-101,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-103,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-177,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-112,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-016,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-142,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-213,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-195,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-150,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-004,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-005,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-151,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-007,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-152,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-196,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-018,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-019,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-024,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-027,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-028,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-029,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-030,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-031,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-158,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-161,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-163,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-042,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-044,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-046,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-049,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-197,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-165,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-054,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-065,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-066,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-067,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-198,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-075,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-170,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-076,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-078,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-081,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-088,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-172,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-200,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-173,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-100,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-176,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-209,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-201,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-105,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-179,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-180,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-202,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-203,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-204,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-182,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-210,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-205,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-119,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-121,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-125,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-127,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-185,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-187,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-135,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-136,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-189,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-141,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-143,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-144,,,missing population,,low,population
+2020-04-20,iso1:SI,iso2:SI-147,,,missing population,,low,population
