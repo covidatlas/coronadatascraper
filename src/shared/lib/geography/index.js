@@ -1,48 +1,15 @@
 import assert from 'assert';
 import iso1Codes from 'country-levels/iso1.json';
-import countryCodes from '../../vendor/country-codes.json';
+import iso3to2 from '../../vendor/iso3to2.json';
 import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 import usStates from '../../vendor/usa-states.json';
-import iso3to2 from '../../vendor/iso3to2.json';
 import log from '../log.js';
 import * as turf from './turf.js';
 
 export { usStates };
 
 const UNASSIGNED = '(unassigned)';
-
-/*
-  Override some incorrect country names
-*/
-const countryMap = {
-  Kosovo: 'XKX',
-  'Congo (Kinshasa)': 'Congo, Democratic Republic of the',
-  "Cote d'Ivoire": "Côte d'Ivoire",
-  Russia: 'Russian Federation',
-  Vietnam: 'Viet Nam',
-  'Korea, South': 'Korea, Republic of',
-  'South Korea': 'Korea, Republic of',
-  'North Korea': "Korea (Democratic People's Republic of)",
-  Brunei: 'Brunei Darussalam',
-  Reunion: 'Réunion',
-  Curacao: 'Curaçao',
-  'United Kingdom': 'iso1:GB',
-  'occupied Palestinian territory': 'PSE',
-  'Congo (Brazzaville)': 'COG',
-  Tanzania: 'TZA',
-  'The Bahamas': 'BHS',
-  'Gambia, The': 'GMB',
-  US: 'iso1:US',
-  'Bahamas, The': 'BHS',
-  'Cape Verde': 'CPV',
-  'East Timor': 'TLS',
-  'The Gambia': 'GMB',
-  'Republic of the Congo': 'COG',
-  Syria: 'SYR',
-  Laos: 'LAO',
-  Burma: 'MMR'
-};
 
 /*
   Given a list of features, return the combined polygono
@@ -190,28 +157,6 @@ export const toHumanReadableCountryName = function(country) {
   }
   log.warn('⚠️  Could not find country name for', country);
   return country;
-};
-
-/*
-  Normalize the country as a 3-letter string
-*/
-export const toISO3166Alpha3 = function(string) {
-  let localString = string;
-  localString = countryMap[localString] || localString;
-  for (const country of countryCodes) {
-    if (
-      country['alpha-3'] === localString ||
-      country['alpha-2'] === localString ||
-      country.name === localString ||
-      country.name.replace(/\s*\(.*?\)/, '') === localString ||
-      country.name.replace(/, Province of .*$/, '') === localString ||
-      country.name.replace(/, Republic of$/, '') === localString
-    ) {
-      return country['alpha-3'];
-    }
-  }
-  log.warn('⚠️  Could not find ISO-3166 alpha 3 country code for', localString);
-  return localString;
 };
 
 /*
