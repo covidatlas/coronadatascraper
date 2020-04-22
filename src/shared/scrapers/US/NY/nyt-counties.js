@@ -1,5 +1,3 @@
-// Fork of US/nyt-counties.js, filtered on US-NY.
-
 import template from '../nyt-counties.js';
 
 const scraper = {
