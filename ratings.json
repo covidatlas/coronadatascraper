@@ -298,6 +298,28 @@
     "rating": 0.5686274509803921
   },
   {
+    "state": "iso2:US-NE",
+    "country": "iso1:US",
+    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
+    "type": "json",
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "priority": 1,
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5686274509803921
+  },
+  {
     "country": "iso1:CY",
     "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
     "timeseries": true,
@@ -430,6 +452,25 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
+    "ssl": true,
+    "rating": 0.5490196078431373
+  },
+  {
+    "state": "iso2:US-PA",
+    "country": "iso1:US",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx",
+    "type": "table",
     "ssl": true,
     "rating": 0.5490196078431373
   },
@@ -578,6 +619,42 @@
     "rating": 0.5098039215686274
   },
   {
+    "country": "iso1:SA",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274
+  },
+  {
+    "state": "iso2:US-MI",
+    "country": "iso1:US",
+    "sources": [
+      {
+        "name": "Michigan Department of Health & Human Services"
+      }
+    ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "type": "table",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.5098039215686274
+  },
+  {
     "county": "St. Louis County",
     "state": "iso2:US-MO",
     "country": "iso1:US",
@@ -666,7 +743,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-20",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-21",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -2946,6 +3023,36 @@
     "type": "list",
     "ssl": false,
     "rating": 0.23529411764705882
+  },
+  {
+    "country": "iso1:AU",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "iso2:AU-VIC",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393
   },
   {
     "country": "iso1:JP",
