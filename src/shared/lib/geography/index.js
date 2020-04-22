@@ -1,71 +1,13 @@
 import assert from 'assert';
 import iso1Codes from 'country-levels/iso1.json';
 import iso3to2 from '../../vendor/iso3to2.json';
-import countyGeoJSON from '../../vendor/usa-counties.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 import usStates from '../../vendor/usa-states.json';
 import log from '../log.js';
-import * as turf from './turf.js';
 
 export { usStates };
 
 const UNASSIGNED = '(unassigned)';
-
-/*
-  Given a list of features, return the combined polygono
-*/
-export function combineFeatures(features, properties = {}) {
-  // Collect a list of features and polygons matching the list of counties
-  const polygons = [];
-  for (const countyFeature of features) {
-    polygons.push(turf.feature(countyFeature.geometry));
-  }
-
-  // Generate a combined feature from all of the polygons
-  let combinedPolygon = polygons.pop();
-  while (polygons.length) {
-    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
-  }
-  const combinedFeature = combinedPolygon;
-  combinedFeature.properties = properties;
-
-  return combinedFeature;
-}
-
-/*
-  Given a list of counties and a set of properties, combine the GeoJSON for the counties and slap the properties on it
-*/
-export function generateMultiCountyFeature(counties, properties) {
-  // Collect a list of features and polygons matching the list of counties
-  const polygons = [];
-  const features = [];
-  for (const countyFeature of countyGeoJSON.features) {
-    if (counties.includes(countyFeature.properties.name)) {
-      features.push(countyFeature.properties.name);
-      polygons.push(turf.feature(countyFeature.geometry));
-    }
-  }
-
-  if (features.length !== counties.length) {
-    log.warn(
-      '⚠️  ',
-      counties.length,
-      'counties provided to generateMultiCountyFeature, only',
-      features.length,
-      'features matched'
-    );
-  }
-
-  // Generate a combined feature from all of the polygons
-  let combinedPolygon = polygons.pop();
-  while (polygons.length) {
-    combinedPolygon = turf.union(combinedPolygon, polygons.pop());
-  }
-  const combinedFeature = combinedPolygon;
-  combinedFeature.properties = properties;
-
-  return combinedFeature;
-}
 
 export const isCountry = function(location) {
   return location && location.country && !location.state && !location.county && !location.city;
@@ -120,13 +62,6 @@ export const getPriority = function(location) {
 };
 
 /*
-  Normalize the state as a 2-letter string
-*/
-export const toUSStateAbbreviation = function(string) {
-  return usStates[string] || string;
-};
-
-/*
   Normalize the country as a 2-letter string
 */
 export const toISO3166Alpha2 = function(country) {
@@ -144,18 +79,6 @@ export const toISO3166Alpha2 = function(country) {
   }
 
   log.warn('⚠️  Could not find ISO-3166 alpha 2 country code for', country);
-  return country;
-};
-
-/*
-  Normalize any country-like string to the full name
-*/
-export const toHumanReadableCountryName = function(country) {
-  const isoAlpha2 = toISO3166Alpha2(country);
-  if (isoAlpha2) {
-    return iso1Codes[isoAlpha2].name;
-  }
-  log.warn('⚠️  Could not find country name for', country);
   return country;
 };
 
