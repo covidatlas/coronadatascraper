@@ -17,6 +17,9 @@
  * # Just one date in coronadatascraper-cache:
  * node ${this_file} --dest zz-migration  --date 2020-4-13
  *
+ * # Just all dates, just one location:
+ * node ${this_file} --dest zz-migration  --location US/WA
+ *
  *
  * If you get an error "Error:   KEY COLLISION", this means that a migration
  * has attempted to write the same "source name"/"cache key" for a given date
@@ -52,6 +55,11 @@ const { argv } = yargs
     description: 'Destination folder',
     type: 'string'
   })
+  .option('location', {
+    alias: 'l',
+    description: 'Single location to migrate',
+    type: 'string'
+  })
   .option('date', {
     alias: 'f',
     description: 'Single date in coronadatascraper-cache to migrate',
@@ -76,8 +84,13 @@ if (dirs.length === 0) {
 console.log(`Migrating ${dirs.length} directories.`);
 dirs.forEach(d => {
   console.log('\n\n========================================');
-  console.log(`Migrating ${d}`);
-  const cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
+  let msg = `Migrating ${d}`;
+  let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
+  if (argv.location) {
+    msg = `${msg} for location ${argv.location}`;
+    cmd = `${cmd} --location ${argv.location}`;
+  }
+  console.log(msg);
   console.log(`# Command: ${cmd}`);
   runCommand(cmd);
 });
