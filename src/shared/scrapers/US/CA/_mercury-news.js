@@ -59,6 +59,24 @@ const scraper = {
     },
     '2020-04-07': async function() {
       return this._fetchLatest();
+    },
+    '2020-04-11': async function() {
+      this.url =
+        'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=2020-04-11';
+      const data = await fetch.csv(this, this.url, 'default', false);
+      return this._processData(data);
+    },
+    '2020-04-12': async function() {
+      return this._fetchLatest();
+    },
+    '2020-04-19': async function() {
+      this.url =
+        'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=2020-04-19';
+      const data = await fetch.csv(this, this.url, 'default', false);
+      return this._processData(data);
+    },
+    '2020-04-20': async function() {
+      return this._fetchLatest();
     }
   }
 };
