@@ -1,10 +1,11 @@
 import fipsCodes from 'country-levels/fips.json';
-import * as fetch from '../lib/fetch/index.js';
-import * as parse from '../lib/parse.js';
-import * as geography from '../lib/geography/index.js';
-import * as transform from '../lib/transform.js';
 import datetime from '../lib/datetime/index.js';
+import * as fetch from '../lib/fetch/index.js';
 import maintainers from '../lib/maintainers.js';
+import * as parse from '../lib/parse.js';
+import * as transform from '../lib/transform.js';
+
+import usStates from '../vendor/usa-states.json';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
@@ -84,7 +85,7 @@ const scraper = {
         }
 
         if (caseInfo.Admin2 === 'Unassigned') {
-          const stateCode = geography.usStates[parse.string(caseInfo.Province_State)];
+          const stateCode = usStates[parse.string(caseInfo.Province_State)];
           const stateClid = `iso2:US-${stateCode}`;
           location.state = stateClid;
           location.county = UNASSIGNED;

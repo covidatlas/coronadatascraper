@@ -1,11 +1,6 @@
 import assert from 'assert';
-import iso1Codes from 'country-levels/iso1.json';
-import iso3to2 from '../../vendor/iso3to2.json';
 import strippedCountyMap from '../../vendor/usa-countymap-stripped.json';
 import usStates from '../../vendor/usa-states.json';
-import log from '../log.js';
-
-export { usStates };
 
 const UNASSIGNED = '(unassigned)';
 
@@ -59,27 +54,6 @@ export const getName = function(location) {
 */
 export const getPriority = function(location) {
   return location.priority !== undefined ? location.priority : 0;
-};
-
-/*
-  Normalize the country as a 2-letter string
-*/
-export const toISO3166Alpha2 = function(country) {
-  if (iso1Codes[country]) {
-    return country;
-  }
-  if (iso3to2[country]) {
-    return iso3to2[country];
-  }
-
-  for (const [iso2, properties] of Object.entries(iso1Codes)) {
-    if (properties.name === country) {
-      return iso2;
-    }
-  }
-
-  log.warn('⚠️  Could not find ISO-3166 alpha 2 country code for', country);
-  return country;
 };
 
 /*
