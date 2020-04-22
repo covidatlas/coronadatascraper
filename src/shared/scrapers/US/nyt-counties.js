@@ -70,6 +70,12 @@ const scraper = {
           cases: parse.number(row.cases),
           deaths: parse.number(row.deaths)
         };
+
+        // Only keep the state, if specified.
+        if (this.state !== undefined && locationObj.state !== this.state) {
+          continue;
+        }
+
         locationsByState[locationObj.state] = locationsByState[locationObj.state] || [];
         locationsByState[locationObj.state].push(locationObj);
         locations.push(locationObj);
