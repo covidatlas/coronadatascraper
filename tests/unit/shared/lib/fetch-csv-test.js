@@ -47,8 +47,8 @@ test('Write fake cache files', t => {
 
 test('Simulate cache hit of JSON arcGIS response', async t => {
   t.plan(2);
-  const oldFile = await fetch.csv(testURL, pastDate);
+  const oldFile = await fetch.csv(Object(), testURL, 'default', pastDate);
   t.ok(oldFile === null, `Successfully gave up trying to recover from an arcGIS response in the past.`);
-  const nowFile = await fetch.csv(testURL, nowDate);
+  const nowFile = await fetch.csv(Object(), testURL, 'default', nowDate);
   t.ok(nowFile !== null, `Successfully recovered from an arcGIS response.`);
 });
