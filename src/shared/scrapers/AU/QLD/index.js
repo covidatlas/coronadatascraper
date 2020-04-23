@@ -15,7 +15,7 @@ const labelFragmentsByKey = [
 
 async function getCurrentArticlePage(obj) {
   const $ = await fetch.page(obj, obj.url, 'tempindex');
-  const anchors = $('#content h3:first-of-type > a');
+  const anchors = $('#content h3:contains("update") > a');
   const currentArticleUrl = anchors[0].attribs.href;
   return fetch.page(obj, currentArticleUrl, 'default');
 }

@@ -25,9 +25,9 @@ const scraper = {
         deaths
       };
     },
-    '2020-05-15': async function() {
+    '2020-04-15': async function() {
       await fetch.page(this, this.url, 'default');
-      throw new DeprecatedError('Sunsetting county scraper');
+      throw new DeprecatedError('Sunsetting county scraper, its PowerBI now');
     }
   }
 };

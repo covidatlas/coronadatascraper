@@ -23,6 +23,7 @@ const READ_TIMEOUT = 60000;
  * Load the webpage at the given URL and return a Cheerio object
  * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
+ * @param {string?} cacheKey
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object=} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false

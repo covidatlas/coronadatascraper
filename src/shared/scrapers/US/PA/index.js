@@ -226,6 +226,71 @@ const scraper = {
       counties.push(stateData);
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
+    },
+    '2020-04-15': async function scraper() {
+      this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
+      this.type = 'table';
+      const $ = await fetch.page(this, this.url, 'default');
+      const $countyTable = $('td:contains("County")')
+        .closest('table')
+        .first();
+
+      const $trs = $countyTable.find('tbody > tr:not(:first-child)');
+      let counties = [];
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        counties.push({
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
+        });
+      });
+
+      const $stateTable = $('table.ms-rteTable-default').eq(0);
+      const stateData = transform.sumData(counties);
+      stateData.tested =
+        parse.number($stateTable.find('tr:last-child td:first-child').text()) +
+        parse.number($stateTable.find('tr:last-child td:nth-child(2)').text());
+      counties.push(stateData);
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
+    },
+    '2020-04-16': async function scraper() {
+      this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
+      this.type = 'table';
+      const $ = await fetch.page(this, this.url, 'default');
+      const $countyTable = $('td:contains("County")')
+        .closest('table')
+        .first();
+
+      const $trs = $countyTable.find('tbody > tr:not(:first-child)');
+      let counties = [];
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        counties.push({
+          county: geography.getCounty(
+            geography.addCounty(parse.string($tr.find('td:first-child').text())),
+            'iso2:US-PA'
+          ),
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          tested: parse.number($tr.find('td:nth-child(2)').text()) + parse.number($tr.find('td:nth-child(3)').text()),
+          deaths: parse.number(parse.string($tr.find('td:last-child').text()) || 0)
+        });
+      });
+
+      const $stateTable = $('table.ms-rteTable-default').eq(0);
+      const stateData = transform.sumData(counties);
+      stateData.tested =
+        parse.number($stateTable.find('tr:last-child td:first-child').text()) +
+        parse.number($stateTable.find('tr:last-child td:nth-child(2)').text());
+      counties.push(stateData);
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
     }
   }
 };

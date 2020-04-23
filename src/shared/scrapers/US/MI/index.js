@@ -1,10 +1,32 @@
+import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import getKey from '../../../utils/get-key.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
+const DetroitCity = 'Detroit City';
+const WayneCounty = 'Wayne County';
+
+const labelFragmentsByKey = [
+  { deaths: 'deaths' },
+  { cases: 'confirmed cases' },
+  { discard: 'rate' },
+  { county: 'county' }
+];
+
+const getValue = (key, text) => {
+  if (key === 'county') {
+    return geography.getCounty(text, 'iso2:US-MI');
+  }
+  // Empty cells means 0 for deaths. Ugh.
+  if (key === 'deaths' && Number.isNaN(parse.number(text))) {
+    return 0;
+  }
+  return parse.number(text);
+};
 
 const scraper = {
   state: 'iso2:US-MI',
@@ -113,9 +135,16 @@ const scraper = {
 
     const $ = await fetch.page(this, this.url, 'default');
 
-    const $cap = $('caption:contains("Overall Confirmed COVID-19 Cases by County")');
+    const $cap = $('caption:contains("Confirmed COVID-19 Cases")');
     const $table = $cap.closest('table');
-    const $trs = $table.find('tbody > tr');
+
+    const $headings = $table.find('thead > tr > th');
+    assert($headings.length, 'no headings found');
+    const dataKeysByColumnIndex = [];
+    $headings.each((index, heading) => {
+      const $heading = $(heading);
+      dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
+    });
 
     let counties = [];
 
@@ -125,47 +154,55 @@ const scraper = {
       cases: 0
     };
 
+    const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
+      const rowData = {};
 
-      let cases = parse.number(parse.string($tr.find('> *:nth-child(2)').text()) || 0);
-      let deaths = parse.number(parse.string($tr.find('> *:last-child').text()) || 0);
-      const county = geography.getCounty(parse.string($tr.find('> *:first-child').text()), 'iso2:US-MI');
+      $tr.find('td').each((columnIndex, td) => {
+        const $td = $(td);
+
+        const key = dataKeysByColumnIndex[columnIndex];
+        rowData[key] = getValue(key, $td.text());
+      });
 
       // Remember these to add them to Wayne County instead
-      if (county === 'Detroit City') {
-        detroitCases = cases;
-        detroitDeaths = deaths;
-      }
-      if (county === 'Wayne County') {
-        cases += detroitCases;
-        deaths += detroitDeaths;
+      // TODO: Handling of Detroit seems brittle.
+      if (rowData.county === DetroitCity) {
+        detroitCases = rowData.cases;
+        detroitDeaths = rowData.deaths;
       }
 
-      if (county === 'Out of State' || county === 'Other' || county === 'Not Reported' || county === 'Unknown') {
-        unassignedObj.cases += cases;
-        unassignedObj.deaths += deaths;
+      if (rowData.county === WayneCounty) {
+        rowData.cases += detroitCases;
+        rowData.deaths += detroitDeaths;
+      }
+
+      if (['Out of State', 'Other', 'Not Reported', 'Unknown'].includes(rowData.county)) {
+        unassignedObj.cases += rowData.cases;
+        unassignedObj.deaths += rowData.deaths;
         return;
       }
 
+      // TODO: What is this doing and is it legitimate?
       if (index < 1 || index > $trs.get().length - 2) {
         return;
       }
 
-      if (county === 'Detroit City') {
+      if (rowData.county === DetroitCity) {
         counties.push({
-          city: county,
-          county: 'Wayne County',
-          cases,
-          deaths
+          city: rowData.county,
+          county: WayneCounty,
+          cases: rowData.cases,
+          deaths: rowData.deaths
         });
         return;
       }
 
       counties.push({
-        county,
-        cases,
-        deaths
+        county: rowData.county,
+        cases: rowData.cases,
+        deaths: rowData.deaths
       });
     });
 
@@ -173,7 +210,6 @@ const scraper = {
 
     counties = geography.addEmptyRegions(counties, this._counties, 'county');
     counties.push(transform.sumData(counties));
-
     return counties;
   }
 };

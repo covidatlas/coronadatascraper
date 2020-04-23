@@ -9,6 +9,20 @@ import maintainers from '../../../lib/maintainers.js';
 // We've emailed them on 2020-03-28 to try to get a more usable format.
 // For now lets fall back to the AUS index scraper when we can't scrape successfully.
 
+const makeAbsoluteUrl = currentArticleHref => {
+  if (currentArticleHref.startsWith('/')) {
+    return `https://www.dhhs.vic.gov.au${currentArticleHref}`;
+  }
+  return currentArticleHref;
+};
+
+const buildParagraphMatcher = ({ $ }) => ({ selector, regex }) => {
+  const paragraph = $(selector).text();
+  const matches = paragraph.match(regex) || {};
+  const { dataPoint } = matches.groups || {};
+  return dataPoint ? parse.number(dataPoint) : undefined;
+};
+
 const scraper = {
   country: 'iso1:AU',
   maintainers: [maintainers.camjc],
@@ -24,15 +38,26 @@ const scraper = {
   type: 'paragraph',
   url: 'https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19',
   async scraper() {
-    const $ = await fetch.page(this, this.url, 'tmpindex');
-    const $anchor = $('.content ul li a:contains("Department of Health and Human Services media release - ")');
-    const currentArticleUrl = $anchor.attr('href');
-    const $currentArticlePage = await fetch.page(this, `https://www.dhhs.vic.gov.au${currentArticleUrl}`, 'default');
-    const paragraph = $currentArticlePage('.page-content p:first-of-type').text();
-    const matches = paragraph.match(/cases in Victoria \w* (?<casesString>[\d,]+)/) || {};
-    const { casesString } = matches.groups || {};
+    const $listPage = await fetch.page(this, this.url, 'tmpindex');
+    const $anchor = $listPage('.content ul li a:contains("Department of Health and Human Services media release - ")');
+    const currentArticleHref = $anchor.attr('href');
+    const url = makeAbsoluteUrl(currentArticleHref);
+    const $ = await fetch.page(this, url, 'default');
+
+    const paragraphMatcher = buildParagraphMatcher({ $ });
     const data = {
-      cases: parse.number(casesString)
+      cases: paragraphMatcher({
+        selector: `.page-content p:contains("cases in Victoria")`,
+        regex: /cases in Victoria \w* (?<dataPoint>[\d,]+)/
+      }),
+      deaths: paragraphMatcher({
+        selector: `.page-content p:contains("people have died")`,
+        regex: /To date, (?<dataPoint>[\d,]+) people have died/
+      }),
+      recovered: paragraphMatcher({
+        selector: `.page-content p:contains("people have recovered")`,
+        regex: /(?<dataPoint>[\d,]+) people have recovered/
+      })
     };
 
     assert(data.cases > 0, 'Cases is not reasonable');
