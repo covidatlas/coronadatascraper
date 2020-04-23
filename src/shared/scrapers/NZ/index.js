@@ -7,9 +7,10 @@ import getKey from '../../utils/get-key.js';
 const labelFragmentsByKey = [
   { cases: 'confirmed case' },
   { discard: 'probable case' },
-  { hospitalized: 'cases in hospital' },
   { recovered: 'recovered cases' },
-  { deaths: 'deaths' }
+  { deaths: 'deaths' },
+  { discard: 'cases in hospital' },
+  { discard: 'currently in hospital' }
 ];
 
 const scraper = {
@@ -28,7 +29,7 @@ const scraper = {
     'https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-situation/covid-19-current-cases',
   async scraper() {
     const data = {};
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('h2:contains("Summary") + table');
     const $trs = $table.find('tbody tr');
     $trs.each((index, tr) => {

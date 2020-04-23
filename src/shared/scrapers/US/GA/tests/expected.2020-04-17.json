@@ -1,0 +1,809 @@
+[
+  {
+    "county": "Fulton County",
+    "cases": 1945,
+    "deaths": 66
+  },
+  {
+    "county": "Dougherty County",
+    "cases": 1358,
+    "deaths": 88
+  },
+  {
+    "county": "DeKalb County",
+    "cases": 1260,
+    "deaths": 21
+  },
+  {
+    "county": "Cobb County",
+    "cases": 1014,
+    "deaths": 49
+  },
+  {
+    "county": "Gwinnett County",
+    "cases": 917,
+    "deaths": 32
+  },
+  {
+    "county": "Hall County",
+    "cases": 526,
+    "deaths": 5
+  },
+  {
+    "county": "Clayton County",
+    "cases": 473,
+    "deaths": 13
+  },
+  {
+    "county": "Henry County",
+    "cases": 330,
+    "deaths": 5
+  },
+  {
+    "county": "Sumter County",
+    "cases": 292,
+    "deaths": 14
+  },
+  {
+    "county": "Lee County",
+    "cases": 267,
+    "deaths": 15
+  },
+  {
+    "county": "Carroll County",
+    "cases": 258,
+    "deaths": 7
+  },
+  {
+    "county": "Cherokee County",
+    "cases": 245,
+    "deaths": 8
+  },
+  {
+    "county": "Bartow County",
+    "cases": 240,
+    "deaths": 22
+  },
+  {
+    "county": "Richmond County",
+    "cases": 231,
+    "deaths": 9
+  },
+  {
+    "county": "Douglas County",
+    "cases": 209,
+    "deaths": 6
+  },
+  {
+    "county": "Muscogee County",
+    "cases": 200,
+    "deaths": 4
+  },
+  {
+    "county": "Mitchell County",
+    "cases": 193,
+    "deaths": 22
+  },
+  {
+    "county": "Bibb County",
+    "cases": 179,
+    "deaths": 1
+  },
+  {
+    "county": "Chatham County",
+    "cases": 170,
+    "deaths": 5
+  },
+  {
+    "county": "Forsyth County",
+    "cases": 169,
+    "deaths": 5
+  },
+  {
+    "county": "Houston County",
+    "cases": 158,
+    "deaths": 9
+  },
+  {
+    "county": "Early County",
+    "cases": 148,
+    "deaths": 8
+  },
+  {
+    "county": "Upson County",
+    "cases": 143,
+    "deaths": 6
+  },
+  {
+    "county": "Coweta County",
+    "cases": 142,
+    "deaths": 3
+  },
+  {
+    "county": "Terrell County",
+    "cases": 137,
+    "deaths": 12
+  },
+  {
+    "county": "Randolph County",
+    "cases": 135,
+    "deaths": 11
+  },
+  {
+    "county": "Fayette County",
+    "cases": 126,
+    "deaths": 5
+  },
+  {
+    "county": "Paulding County",
+    "cases": 123,
+    "deaths": 5
+  },
+  {
+    "county": "Floyd County",
+    "cases": 122,
+    "deaths": 6
+  },
+  {
+    "county": "Spalding County",
+    "cases": 122,
+    "deaths": 5
+  },
+  {
+    "county": "Newton County",
+    "cases": 115,
+    "deaths": 3
+  },
+  {
+    "county": "Worth County",
+    "cases": 114,
+    "deaths": 4
+  },
+  {
+    "county": "Thomas County",
+    "cases": 112,
+    "deaths": 14
+  },
+  {
+    "county": "Rockdale County",
+    "cases": 111,
+    "deaths": 6
+  },
+  {
+    "county": "Colquitt County",
+    "cases": 105,
+    "deaths": 5
+  },
+  {
+    "county": "Crisp County",
+    "cases": 104,
+    "deaths": 1
+  },
+  {
+    "county": "Clarke County",
+    "cases": 102,
+    "deaths": 12
+  },
+  {
+    "county": "Baldwin County",
+    "cases": 100,
+    "deaths": 2
+  },
+  {
+    "county": "Columbia County",
+    "cases": 87,
+    "deaths": 0
+  },
+  {
+    "county": "Barrow County",
+    "cases": 81,
+    "deaths": 3
+  },
+  {
+    "county": "Lowndes County",
+    "cases": 79,
+    "deaths": 3
+  },
+  {
+    "county": "Tift County",
+    "cases": 79,
+    "deaths": 4
+  },
+  {
+    "county": "Troup County",
+    "cases": 77,
+    "deaths": 4
+  },
+  {
+    "county": "Ware County",
+    "cases": 76,
+    "deaths": 5
+  },
+  {
+    "county": "Coffee County",
+    "cases": 72,
+    "deaths": 3
+  },
+  {
+    "county": "Dooly County",
+    "cases": 64,
+    "deaths": 4
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 59,
+    "deaths": 2
+  },
+  {
+    "county": "Habersham County",
+    "cases": 57,
+    "deaths": 2
+  },
+  {
+    "county": "Walton County",
+    "cases": 56,
+    "deaths": 3
+  },
+  {
+    "county": "Decatur County",
+    "cases": 55,
+    "deaths": 0
+  },
+  {
+    "county": "Gordon County",
+    "cases": 50,
+    "deaths": 5
+  },
+  {
+    "county": "Pierce County",
+    "cases": 49,
+    "deaths": 2
+  },
+  {
+    "county": "Turner County",
+    "cases": 49,
+    "deaths": 1
+  },
+  {
+    "county": "Glynn County",
+    "cases": 45,
+    "deaths": 0
+  },
+  {
+    "county": "Oconee County",
+    "cases": 45,
+    "deaths": 0
+  },
+  {
+    "county": "Jackson County",
+    "cases": 43,
+    "deaths": 1
+  },
+  {
+    "county": "Macon County",
+    "cases": 42,
+    "deaths": 0
+  },
+  {
+    "county": "Greene County",
+    "cases": 40,
+    "deaths": 1
+  },
+  {
+    "county": "Dawson County",
+    "cases": 39,
+    "deaths": 2
+  },
+  {
+    "county": "Butts County",
+    "cases": 38,
+    "deaths": 0
+  },
+  {
+    "county": "Laurens County",
+    "cases": 38,
+    "deaths": 1
+  },
+  {
+    "county": "Burke County",
+    "cases": 35,
+    "deaths": 2
+  },
+  {
+    "county": "McDuffie County",
+    "cases": 35,
+    "deaths": 2
+  },
+  {
+    "county": "Meriwether County",
+    "cases": 35,
+    "deaths": 0
+  },
+  {
+    "county": "Harris County",
+    "cases": 34,
+    "deaths": 1
+  },
+  {
+    "county": "Whitfield County",
+    "cases": 34,
+    "deaths": 3
+  },
+  {
+    "county": "Wilcox County",
+    "cases": 34,
+    "deaths": 0
+  },
+  {
+    "county": "Johnson County",
+    "cases": 33,
+    "deaths": 1
+  },
+  {
+    "county": "Oglethorpe County",
+    "cases": 32,
+    "deaths": 1
+  },
+  {
+    "county": "Bryan County",
+    "cases": 30,
+    "deaths": 2
+  },
+  {
+    "county": "Peach County",
+    "cases": 30,
+    "deaths": 2
+  },
+  {
+    "county": "Pike County",
+    "cases": 28,
+    "deaths": 1
+  },
+  {
+    "county": "Polk County",
+    "cases": 28,
+    "deaths": 0
+  },
+  {
+    "county": "Stephens County",
+    "cases": 28,
+    "deaths": 0
+  },
+  {
+    "county": "Camden County",
+    "cases": 26,
+    "deaths": 0
+  },
+  {
+    "county": "Grady County",
+    "cases": 26,
+    "deaths": 1
+  },
+  {
+    "county": "Liberty County",
+    "cases": 26,
+    "deaths": 0
+  },
+  {
+    "county": "Effingham County",
+    "cases": 24,
+    "deaths": 1
+  },
+  {
+    "county": "Bulloch County",
+    "cases": 23,
+    "deaths": 1
+  },
+  {
+    "county": "Washington County",
+    "cases": 23,
+    "deaths": 0
+  },
+  {
+    "county": "Brooks County",
+    "cases": 22,
+    "deaths": 2
+  },
+  {
+    "county": "Lamar County",
+    "cases": 21,
+    "deaths": 0
+  },
+  {
+    "county": "Seminole County",
+    "cases": 21,
+    "deaths": 1
+  },
+  {
+    "county": "Marion County",
+    "cases": 20,
+    "deaths": 0
+  },
+  {
+    "county": "Miller County",
+    "cases": 20,
+    "deaths": 0
+  },
+  {
+    "county": "White County",
+    "cases": 20,
+    "deaths": 0
+  },
+  {
+    "county": "Clay County",
+    "cases": 19,
+    "deaths": 2
+  },
+  {
+    "county": "Dodge County",
+    "cases": 19,
+    "deaths": 0
+  },
+  {
+    "county": "Haralson County",
+    "cases": 19,
+    "deaths": 1
+  },
+  {
+    "county": "Lumpkin County",
+    "cases": 19,
+    "deaths": 0
+  },
+  {
+    "county": "Morgan County",
+    "cases": 19,
+    "deaths": 0
+  },
+  {
+    "county": "Baker County",
+    "cases": 18,
+    "deaths": 2
+  },
+  {
+    "county": "Catoosa County",
+    "cases": 18,
+    "deaths": 0
+  },
+  {
+    "county": "Wilkinson County",
+    "cases": 18,
+    "deaths": 1
+  },
+  {
+    "county": "Appling County",
+    "cases": 17,
+    "deaths": 0
+  },
+  {
+    "county": "Bacon County",
+    "cases": 17,
+    "deaths": 1
+  },
+  {
+    "county": "Murray County",
+    "cases": 17,
+    "deaths": 0
+  },
+  {
+    "county": "Toombs County",
+    "cases": 17,
+    "deaths": 2
+  },
+  {
+    "county": "Brantley County",
+    "cases": 16,
+    "deaths": 1
+  },
+  {
+    "county": "Pulaski County",
+    "cases": 16,
+    "deaths": 1
+  },
+  {
+    "county": "Jones County",
+    "cases": 15,
+    "deaths": 0
+  },
+  {
+    "county": "Monroe County",
+    "cases": 15,
+    "deaths": 1
+  },
+  {
+    "county": "Pickens County",
+    "cases": 15,
+    "deaths": 2
+  },
+  {
+    "county": "Talbot County",
+    "cases": 15,
+    "deaths": 1
+  },
+  {
+    "county": "Fannin County",
+    "cases": 14,
+    "deaths": 0
+  },
+  {
+    "county": "Madison County",
+    "cases": 14,
+    "deaths": 1
+  },
+  {
+    "county": "Putnam County",
+    "cases": 14,
+    "deaths": 0
+  },
+  {
+    "county": "Schley County",
+    "cases": 14,
+    "deaths": 1
+  },
+  {
+    "county": "Banks County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Irwin County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Telfair County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Walker County",
+    "cases": 13,
+    "deaths": 0
+  },
+  {
+    "county": "Crawford County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Emanuel County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Jenkins County",
+    "cases": 12,
+    "deaths": 1
+  },
+  {
+    "county": "Stewart County",
+    "cases": 12,
+    "deaths": 0
+  },
+  {
+    "county": "Cook County",
+    "cases": 11,
+    "deaths": 1
+  },
+  {
+    "county": "Jefferson County",
+    "cases": 11,
+    "deaths": 1
+  },
+  {
+    "county": "Screven County",
+    "cases": 11,
+    "deaths": 1
+  },
+  {
+    "county": "Taylor County",
+    "cases": 11,
+    "deaths": 3
+  },
+  {
+    "county": "Wilkes County",
+    "cases": 11,
+    "deaths": 0
+  },
+  {
+    "county": "Ben Hill County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Berrien County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Franklin County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Jasper County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Towns County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Warren County",
+    "cases": 10,
+    "deaths": 0
+  },
+  {
+    "county": "Chattooga County",
+    "cases": 9,
+    "deaths": 1
+  },
+  {
+    "county": "Lincoln County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Gilmer County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Union County",
+    "cases": 8,
+    "deaths": 1
+  },
+  {
+    "county": "Clinch County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Dade County",
+    "cases": 7,
+    "deaths": 1
+  },
+  {
+    "county": "Elbert County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Rabun County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Wayne County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Chattahoochee County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Hancock County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Lanier County",
+    "cases": 6,
+    "deaths": 1
+  },
+  {
+    "county": "Charlton County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Hart County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Heard County",
+    "cases": 5,
+    "deaths": 1
+  },
+  {
+    "county": "Tattnall County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Atkinson County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Candler County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "McIntosh County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Twiggs County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Webster County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Bleckley County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Echols County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Jeff Davis County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Quitman County",
+    "cases": 3,
+    "deaths": 1
+  },
+  {
+    "county": "Wheeler County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Evans County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Long County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Montgomery County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Treutlen County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 212,
+    "deaths": 0
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 724,
+    "deaths": 6
+  },
+  {
+    "cases": 16368,
+    "deaths": 617
+  },
+  {
+    "county": "Glascock County",
+    "cases": 0
+  },
+  {
+    "county": "Taliaferro County",
+    "cases": 0
+  }
+]

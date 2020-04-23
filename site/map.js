@@ -8,6 +8,8 @@ import { getRatio, getPercent } from './lib/math.js';
 import { getLocationGranularityName } from './lib/geography.js';
 import * as color from './lib/color.js';
 
+import graph from './graph.js';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoibGF6ZCIsImEiOiJjazd3a3VoOG4wM2RhM29rYnF1MDJ2NnZrIn0.uPYVImW8AVA71unqE8D8Nw';
 
 const data = {};
@@ -349,6 +351,24 @@ function populateMap() {
     }
   }
 
+  function handleMouseClick(e) {
+    if (e.features.length > 0) {
+      e.preventDefault();
+      const feature = e.features[0];
+
+      const { locationId } = feature.properties || {};
+      const location = data.locations[locationId] || {};
+      const locationData = Object.keys(data.timeseries).map(date => {
+        return {
+          date,
+          ...data.timeseries[date][locationId]
+        };
+      });
+
+      graph(location, locationData);
+    }
+  }
+
   function handleMouseMove(e) {
     if (e.features.length > 0) {
       e.preventDefault();
@@ -393,6 +413,10 @@ function populateMap() {
   map.on('mouseleave', 'CDS-state', handleMouseLeave);
   map.on('mouseleave', 'CDS-county', handleMouseLeave);
 
+  // When the user clicks, open a timeseries graph
+  map.on('click', 'CDS-country', handleMouseClick);
+  map.on('click', 'CDS-state', handleMouseClick);
+  map.on('click', 'CDS-county', handleMouseClick);
   updateMap();
 }
 

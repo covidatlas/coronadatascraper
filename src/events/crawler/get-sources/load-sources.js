@@ -11,7 +11,11 @@ function includeLocation(location, opts) {
 
   if (opts.skip && relpath.startsWith(opts.skip)) return false;
 
-  if (opts.location && !relpath.startsWith(opts.location)) return false;
+  if (opts.location) {
+    const locs = opts.location.split(',').map(s => s.trim());
+    const matches = locs.filter(loc => relpath.startsWith(loc));
+    return matches.length > 0;
+  }
 
   return true;
 }
@@ -30,7 +34,15 @@ export default async args => {
   const sources = await Promise.all(filePaths.map(filePath => require(filePath))).then(modules => [
     ...modules.map((module, index) => ({ _path: filePaths[index], ...module.default }))
   ]);
-  const filteredSources = sources.filter(m => includeLocation(m, args.options));
+
+  // Sorting sources by path for generated report file determinism.
+  const sortSources = (a, b) => {
+    if (a._path > b._path) return 1;
+    if (b._path > a._path) return -1;
+    return 0;
+  };
+
+  const filteredSources = sources.filter(m => includeLocation(m, args.options)).sort(sortSources);
 
   if (filteredSources.length === 0) {
     log(`location filter returned 0 scrapers.  Please check docs/getting_started.`);

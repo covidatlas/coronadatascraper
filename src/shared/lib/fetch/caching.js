@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 /**
  * This file contains the caching implementation. We provide caching to reduce strain on official data sources
  * and to store changes to each source on a day to day basis.
@@ -5,10 +7,13 @@
 
 import path from 'path';
 import crypto from 'crypto';
+import fsBuiltIn from 'fs';
 
 import join from '../join.js';
 import datetime from '../datetime/index.js';
+import * as datetimeFormatting from '../datetime/iso/format.js';
 import * as fs from '../fs.js';
+import * as cacheMigration from './cache-migration.js';
 import log from '../log.js';
 
 const DEFAULT_CACHE_PATH = 'coronadatascraper-cache';
@@ -44,7 +49,7 @@ export const getCachedFileName = (url, type) => {
  * @param {string} type type of the cached resource
  * @param {*} date the date associated with this resource, or false if a timeseries data
  */
-export const getCachedFilePath = (url, type, date = false) => {
+export const getCachedFilePath = (scraper, url, type, date = false) => {
   // FIXME when we roll out new TZ support!
   if (date) date = datetime.old.getYYYYMD(date);
   let cachePath = date === false ? TIMESERIES_CACHE_PATH : join(DEFAULT_CACHE_PATH, date);
@@ -62,23 +67,41 @@ export const getCachedFilePath = (url, type, date = false) => {
   If we are able to fetch this URL (because it is a timeseries or we are requesting today's data), the function
   returns `CACHE_MISS`.
 
+  * @param {*} scraper the scraper requesting the file
   * @param {string} url URL of the cached resource
   * @param {string} type type of the cached resource
   * @param {*} date the date associated with this resource, or false if a timeseries data
   * @param {string} encoding for the resource to access, default to utf-8
 */
-export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
-  const filePath = getCachedFilePath(url, type, date);
+export const getCachedFile = async (scraper, url, cacheKey, type, date, encoding = 'utf8') => {
+  if (scraper === undefined || scraper === null) throw new Error(`Undefined scraper, trying to hit ${url}`);
 
-  if (await fs.exists(filePath)) {
+  const filePath = getCachedFilePath(scraper, url, type, date);
+
+  const cacheExists = await fs.exists(filePath);
+  if (cacheExists) {
     log('  ⚡️ Cache hit for %s from %s', url, filePath);
+  }
+
+  if (process.env.LOG_CACHE_CALLS) {
+    cacheMigration.logCacheCall(scraper, date, url, filePath, cacheExists, type);
+  }
+
+  if (process.env.MIGRATE_CACHE_DIR && cacheExists && date !== false) {
+    // Write file with new v1.0 filename to other location.
+    // NOTE: We're not migrating the timeseries cache!
+    cacheMigration.migrateFile(url, filePath, encoding, scraper, date, cacheKey, type);
+  }
+
+  if (cacheExists) {
     return fs.readFile(filePath, encoding);
   }
   if (date && datetime.dateIsBefore(date, datetime.old.getDate())) {
     log('  ⚠️ Cannot go back in time to get %s, no cache present', url, filePath);
     return RESOURCE_UNAVAILABLE;
   }
-  log('  🐢  Cache miss for %s at %s', url, filePath);
+  const shortName = (scraper._path || 'unknown').replace(/^.*scrapers/, '');
+  log('  🐢  Cache miss for scraper: %s; url: %s; filepath: %s', shortName, url, filePath);
   return CACHE_MISS;
 };
 
@@ -90,7 +113,7 @@ export const getCachedFile = async (url, type, date, encoding = 'utf8') => {
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {*} data file data to be saved
  */
-export const saveFileToCache = async (url, type, date, data) => {
-  const filePath = getCachedFilePath(url, type, date);
+export const saveFileToCache = async (scraper, url, type, date, data) => {
+  const filePath = getCachedFilePath(scraper, url, type, date);
   return fs.writeFile(filePath, data, { silent: true });
 };

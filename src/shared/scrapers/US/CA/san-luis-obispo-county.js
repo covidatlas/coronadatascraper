@@ -6,12 +6,12 @@ import * as parse from '../../../lib/parse.js';
 
 const scraper = {
   county: 'San Luis Obispo County',
-  state: 'CA',
+  state: 'iso2:US-CA',
   country: 'iso1:US',
   url: 'https://www.emergencyslo.org/en/covid19.aspx',
   type: 'paragraph',
   async scraper() {
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
 
     let cases = $('td:contains("San Luis Obispo County")')
       .next()

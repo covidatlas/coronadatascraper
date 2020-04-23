@@ -1,10 +1,10 @@
+import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
+import { DeprecatedError } from '../../../lib/errors.js';
 
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
 const scraper = {
-  state: 'NV',
+  state: 'iso2:US-NV',
   country: 'iso1:US',
   aggregate: 'county',
   url: 'https://gethealthycarsoncity.org/novel-coronavirus-2019/',
@@ -18,28 +18,36 @@ const scraper = {
   ],
   certValidation: false,
   type: 'table',
-  async scraper() {
-    const counties = [];
-    const $ = await fetch.page(this.url);
-    const $table = $('table');
-    const $trs = $table.find('tbody > tr:not(:first-child)');
+  scraper: {
+    '0': async function() {
+      const $ = await fetch.page(this, this.url, 'default');
+      const $table = $('table');
+      assert.equal($table.length, 1, 'Table not found');
+      const $trs = $table.find('tbody > tr:not(:first-child)');
 
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      const name = parse.string($tr.find('td:first-child').text());
-      if (name === 'TOTAL') {
-        return;
-      }
-      counties.push({
-        county: name,
-        cases: parse.number($tr.find('td:nth-child(2)').text()),
-        active: parse.number($tr.find('td:nth-child(3)').text()),
-        recovered: parse.number($tr.find('td:nth-child(4)').text()),
-        deaths: parse.number($tr.find('td:last-child').text())
+      const counties = [];
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const name = parse.string($tr.find('td:first-child').text());
+        if (name === 'TOTAL') {
+          return;
+        }
+        counties.push({
+          county: name,
+          cases: parse.number($tr.find('td:nth-child(2)').text()),
+          active: parse.number($tr.find('td:nth-child(3)').text()),
+          recovered: parse.number($tr.find('td:nth-child(4)').text()),
+          deaths: parse.number($tr.find('td:last-child').text())
+        });
       });
-    });
 
-    return counties;
+      return counties;
+    },
+    '2020-04-19': async function() {
+      return new DeprecatedError(
+        'County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/'
+      );
+    }
   }
 };
 

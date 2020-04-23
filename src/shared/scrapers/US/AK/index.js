@@ -3,7 +3,7 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 
 const scraper = {
-  state: 'AK',
+  state: 'iso2:US-AK',
   country: 'iso1:US',
   sources: [
     {
@@ -52,7 +52,7 @@ const scraper = {
 
   async scraper() {
     const counties = [];
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('td:contains("Seward")').closest('table');
     const $trs = $table.find('tbody > tr');
     $trs.each((index, tr) => {

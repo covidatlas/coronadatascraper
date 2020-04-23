@@ -21,7 +21,7 @@ const scraper = {
   url: 'https://www.kemkes.go.id/',
   async scraper() {
     const data = {};
-    const $ = await fetch.page(this.url);
+    const $ = await fetch.page(this, this.url, 'default');
     const $table = $('.covid-case-container table');
     assert.equal($table.length, 1, 'The table can not be found, the page may not have loaded correctly');
 

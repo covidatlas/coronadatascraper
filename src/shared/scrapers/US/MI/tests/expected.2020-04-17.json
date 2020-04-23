@@ -1,0 +1,440 @@
+[
+  {
+    "county": "Allegan County",
+    "cases": 25,
+    "deaths": 0
+  },
+  {
+    "county": "Alpena County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Antrim County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Arenac County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Baraga County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Barry County",
+    "cases": 20,
+    "deaths": 1
+  },
+  {
+    "county": "Bay County",
+    "cases": 67,
+    "deaths": 2
+  },
+  {
+    "county": "Berrien County",
+    "cases": 133,
+    "deaths": 7
+  },
+  {
+    "county": "Branch County",
+    "cases": 31,
+    "deaths": 2
+  },
+  {
+    "county": "Calhoun County",
+    "cases": 119,
+    "deaths": 4
+  },
+  {
+    "county": "Cass County",
+    "cases": 19,
+    "deaths": 1
+  },
+  {
+    "county": "Charlevoix County",
+    "cases": 11,
+    "deaths": 1
+  },
+  {
+    "county": "Cheboygan County",
+    "cases": 12,
+    "deaths": 1
+  },
+  {
+    "county": "Clare County",
+    "cases": 7,
+    "deaths": 1
+  },
+  {
+    "county": "Clinton County",
+    "cases": 102,
+    "deaths": 6
+  },
+  {
+    "county": "Crawford County",
+    "cases": 18,
+    "deaths": 1
+  },
+  {
+    "county": "Delta County",
+    "cases": 10,
+    "deaths": 1
+  },
+  {
+    "city": "Detroit City",
+    "county": "Wayne County",
+    "cases": 7383,
+    "deaths": 546
+  },
+  {
+    "county": "Dickinson County",
+    "cases": 3,
+    "deaths": 2
+  },
+  {
+    "county": "Eaton County",
+    "cases": 84,
+    "deaths": 5
+  },
+  {
+    "county": "Emmet County",
+    "cases": 21,
+    "deaths": 2
+  },
+  {
+    "county": "Genesee County",
+    "cases": 1147,
+    "deaths": 99
+  },
+  {
+    "county": "Gladwin County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Gogebic County",
+    "cases": 4,
+    "deaths": 1
+  },
+  {
+    "county": "Grand Traverse County",
+    "cases": 17,
+    "deaths": 3
+  },
+  {
+    "county": "Gratiot County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Hillsdale County",
+    "cases": 84,
+    "deaths": 9
+  },
+  {
+    "county": "Houghton County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Huron County",
+    "cases": 8,
+    "deaths": 0
+  },
+  {
+    "county": "Ingham County",
+    "cases": 278,
+    "deaths": 6
+  },
+  {
+    "county": "Ionia County",
+    "cases": 20,
+    "deaths": 2
+  },
+  {
+    "county": "Iosco County",
+    "cases": 6,
+    "deaths": 1
+  },
+  {
+    "county": "Isabella County",
+    "cases": 45,
+    "deaths": 5
+  },
+  {
+    "county": "Jackson County",
+    "cases": 209,
+    "deaths": 8
+  },
+  {
+    "county": "Kalamazoo County",
+    "cases": 118,
+    "deaths": 8
+  },
+  {
+    "county": "Kalkaska County",
+    "cases": 17,
+    "deaths": 2
+  },
+  {
+    "county": "Kent County",
+    "cases": 385,
+    "deaths": 17
+  },
+  {
+    "county": "Lake County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Lapeer County",
+    "cases": 131,
+    "deaths": 13
+  },
+  {
+    "county": "Leelanau County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Lenawee County",
+    "cases": 59,
+    "deaths": 0
+  },
+  {
+    "county": "Livingston County",
+    "cases": 263,
+    "deaths": 9
+  },
+  {
+    "county": "Luce County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Mackinac County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Macomb County",
+    "cases": 3992,
+    "deaths": 354
+  },
+  {
+    "county": "Manistee County",
+    "cases": 11,
+    "deaths": 0
+  },
+  {
+    "county": "Marquette County",
+    "cases": 27,
+    "deaths": 5
+  },
+  {
+    "county": "Mason County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Mecosta County",
+    "cases": 11,
+    "deaths": 1
+  },
+  {
+    "county": "Menominee County",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "county": "Midland County",
+    "cases": 41,
+    "deaths": 1
+  },
+  {
+    "county": "Missaukee County",
+    "cases": 3,
+    "deaths": 1
+  },
+  {
+    "county": "Monroe County",
+    "cases": 217,
+    "deaths": 10
+  },
+  {
+    "county": "Montcalm County",
+    "cases": 23,
+    "deaths": 1
+  },
+  {
+    "county": "Montmorency County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Muskegon County",
+    "cases": 110,
+    "deaths": 5
+  },
+  {
+    "county": "Newaygo County",
+    "cases": 7,
+    "deaths": 0
+  },
+  {
+    "county": "Oakland County",
+    "cases": 5778,
+    "deaths": 420
+  },
+  {
+    "county": "Oceana County",
+    "cases": 3,
+    "deaths": 1
+  },
+  {
+    "county": "Ogemaw County",
+    "cases": 5,
+    "deaths": 0
+  },
+  {
+    "county": "Osceola County",
+    "cases": 6,
+    "deaths": 0
+  },
+  {
+    "county": "Oscoda County",
+    "cases": 4,
+    "deaths": 0
+  },
+  {
+    "county": "Otsego County",
+    "cases": 44,
+    "deaths": 2
+  },
+  {
+    "county": "Ottawa County",
+    "cases": 82,
+    "deaths": 2
+  },
+  {
+    "county": "Presque Isle County",
+    "cases": 2,
+    "deaths": 0
+  },
+  {
+    "county": "Roscommon County",
+    "cases": 9,
+    "deaths": 0
+  },
+  {
+    "county": "Saginaw County",
+    "cases": 349,
+    "deaths": 20
+  },
+  {
+    "county": "Sanilac County",
+    "cases": 25,
+    "deaths": 2
+  },
+  {
+    "county": "Schoolcraft County",
+    "cases": 3,
+    "deaths": 0
+  },
+  {
+    "county": "Shiawassee County",
+    "cases": 70,
+    "deaths": 2
+  },
+  {
+    "county": "St. Clair County",
+    "cases": 232,
+    "deaths": 8
+  },
+  {
+    "county": "St. Joseph County",
+    "cases": 23,
+    "deaths": 1
+  },
+  {
+    "county": "Tuscola County",
+    "cases": 50,
+    "deaths": 10
+  },
+  {
+    "county": "Van Buren County",
+    "cases": 26,
+    "deaths": 2
+  },
+  {
+    "county": "Washtenaw County",
+    "cases": 826,
+    "deaths": 25
+  },
+  {
+    "county": "Wayne County",
+    "cases": 13002,
+    "deaths": 981
+  },
+  {
+    "county": "Wexford County",
+    "cases": 7,
+    "deaths": 1
+  },
+  {
+    "county": "MDOC*",
+    "cases": 486,
+    "deaths": 12
+  },
+  {
+    "county": "FCI**",
+    "cases": 39,
+    "deaths": 0
+  },
+  {
+    "county": "(unassigned)",
+    "cases": 76,
+    "deaths": 4
+  },
+  {
+    "county": "(unassigned)",
+    "deaths": 2,
+    "cases": 144
+  },
+  {
+    "county": "Alcona County",
+    "cases": 0
+  },
+  {
+    "county": "Alger County",
+    "cases": 0
+  },
+  {
+    "county": "Benzie County",
+    "cases": 0
+  },
+  {
+    "county": "Chippewa County",
+    "cases": 0
+  },
+  {
+    "county": "Iron County",
+    "cases": 0
+  },
+  {
+    "county": "Keweenaw County",
+    "cases": 0
+  },
+  {
+    "county": "Ontonagon County",
+    "cases": 0
+  },
+  {
+    "cases": 36645,
+    "deaths": 2639
+  }
+]

@@ -7,7 +7,7 @@ import * as geography from '../../../lib/geography/index.js';
 const UNASSIGNED = '(unassigned)';
 
 const scraper = {
-  state: 'LA',
+  state: 'iso2:US-LA',
   country: 'iso1:US',
   aggregate: 'county',
   sources: [
@@ -21,7 +21,7 @@ const scraper = {
       this.url = 'http://ldh.la.gov/Coronavirus/';
       this.type = 'table';
       const counties = [];
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $table = $('p:contains("Louisiana Cases")').nextAll('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
       $trs.each((index, tr) => {
@@ -36,7 +36,7 @@ const scraper = {
         }
         const cases = parse.number($tr.find('td:last-child').text());
         counties.push({
-          county: geography.getCounty(county, 'LA'),
+          county: geography.getCounty(county, 'iso2:US-LA'),
           cases
         });
       });
@@ -47,7 +47,7 @@ const scraper = {
       this.url = 'https://opendata.arcgis.com/datasets/cba425c2e5b8421c88827dc0ec8c663b_0.csv';
       this.type = 'csv';
       const counties = [];
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const unassigned = {
         county: UNASSIGNED,
         cases: 0,
@@ -66,7 +66,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });
@@ -79,7 +79,7 @@ const scraper = {
       this.url = 'https://opendata.arcgis.com/datasets/79e1165ecb95496589d39faa25a83ad4_0.csv';
       this.type = 'csv';
       const counties = [];
-      const data = await fetch.csv(this.url);
+      const data = await fetch.csv(this, this.url, 'default');
       const unassigned = {
         county: UNASSIGNED,
         cases: 0,
@@ -98,7 +98,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.PARISH)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });
@@ -112,7 +112,7 @@ const scraper = {
         'https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true';
       this.type = 'json';
 
-      const data = await fetch.json(this.url);
+      const data = await fetch.json(this, this.url, 'default');
       const unassigned = {
         county: UNASSIGNED,
         cases: 0,
@@ -133,7 +133,7 @@ const scraper = {
         }
         const countyName = `${parse.string(county.Parish)} Parish`;
         counties.push({
-          county: geography.getCounty(countyName, 'LA'),
+          county: geography.getCounty(countyName, 'iso2:US-LA'),
           cases: parse.number(county.Cases),
           deaths: parse.number(county.Deaths)
         });

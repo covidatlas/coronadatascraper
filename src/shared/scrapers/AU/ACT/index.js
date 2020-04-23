@@ -29,7 +29,8 @@ const scraper = {
   url: 'https://www.covid19.act.gov.au',
   scraper: {
     '0': async function() {
-      const $ = await fetch.page('https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19');
+      const healthUrl = 'https://www.health.act.gov.au/about-our-health-system/novel-coronavirus-covid-19';
+      const $ = await fetch.page(this, healthUrl, 'default');
       const $table = $('.statuscontent');
       const $trs = $table.find('div');
       const data = {
@@ -47,7 +48,7 @@ const scraper = {
       return getDataWithTestedNegativeApplied(data);
     },
     '2020-03-29': async function() {
-      const $ = await fetch.page('https://www.covid19.act.gov.au/updates/confirmed-case-information');
+      const $ = await fetch.page(this, 'https://www.covid19.act.gov.au/updates/confirmed-case-information', 'default');
       const $table = $('h2:contains("Cases") + table');
       const $trs = $table.find('tr');
 
@@ -62,7 +63,7 @@ const scraper = {
       return getDataWithTestedNegativeApplied(data);
     },
     '2020-04-09': async function() {
-      const $ = await fetch.page(this.url);
+      const $ = await fetch.page(this, this.url, 'default');
       const $tables = $('.spf-article-card--tabular table');
 
       const data = {};

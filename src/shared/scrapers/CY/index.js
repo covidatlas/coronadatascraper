@@ -7,7 +7,7 @@ const reformatDate = date => `20${date.substring(6, 8)}-${date.substring(3, 5)}-
 
 const scraper = {
   country: 'iso1:CY',
-  url: 'https://www.data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_6.csv',
+  url: 'https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f',
   timeseries: true,
   priority: 1,
   type: 'csv',
@@ -22,7 +22,11 @@ const scraper = {
   async scraper() {
     const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
 
-    const casesData = (await fetch.csv(this.url, false)).filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
+    const datasetRaw = await fetch.json(this, this.url, 'tmpindex', false);
+    const dataset = datasetRaw.result[0].resources.find(item => item.format === 'csv');
+
+    const casesRaw = await fetch.csv(this, dataset.url, 'default', false);
+    const casesData = casesRaw.filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
 
     if (casesData.length > 0) {
       const data = {};
