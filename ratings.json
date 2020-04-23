@@ -436,26 +436,6 @@
     "rating": 0.5490196078431373
   },
   {
-    "state": "iso2:US-OR",
-    "country": "iso1:US",
-    "sources": [
-      {
-        "url": "https://www.oregon.gov/oha/PH",
-        "name": "Oregon Health Authority",
-        "description": "Public Health Division"
-      }
-    ],
-    "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5490196078431373
-  },
-  {
     "state": "iso2:US-PA",
     "country": "iso1:US",
     "aggregate": "county",
@@ -591,52 +571,6 @@
     "rating": 0.5098039215686274
   },
   {
-    "country": "iso1:BR",
-    "type": "list",
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Secretaria de Vigilância em Saúde do Ministério da Saúde",
-        "name": "SVS-MS",
-        "url": "https://covid.saude.gov.br/"
-      }
-    ],
-    "url": "https://covid.saude.gov.br/",
-    "timeseries": true,
-    "maintainers": [
-      {
-        "name": "Felipe Roberto",
-        "email": "contato@feliperoberto.com.br",
-        "url": "http://feliperoberto.com.br",
-        "github": "feliperoberto",
-        "country": "iso1:BR",
-        "flag": "🇧🇷"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5098039215686274
-  },
-  {
-    "country": "iso1:SA",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5098039215686274
-  },
-  {
     "state": "iso2:US-MI",
     "country": "iso1:US",
     "sources": [
@@ -743,7 +677,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-21",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-22",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -1006,7 +940,7 @@
       }
     ],
     "aggregate": "state",
-    "priority": -0.5,
+    "priority": 100,
     "timeseries": false,
     "headless": false,
     "certValidation": true,
@@ -2298,30 +2232,28 @@
     "rating": 0.35294117647058826
   },
   {
-    "country": "iso1:AU",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
+    "country": "iso1:BR",
+    "type": "list",
+    "priority": 1,
     "sources": [
       {
-        "description": "SA Government Health Department",
-        "name": "SA Health",
-        "url": "https://www.sahealth.sa.gov.au"
+        "description": "Secretaria de Vigilância em Saúde do Ministério da Saúde",
+        "name": "SVS-MS",
+        "url": "https://covid.saude.gov.br/"
       }
     ],
-    "state": "iso2:AU-SA",
-    "type": "table",
-    "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia",
-    "timeseries": false,
+    "url": "https://covid.saude.gov.br/",
+    "timeseries": true,
+    "maintainers": [
+      {
+        "name": "Felipe Roberto",
+        "email": "contato@feliperoberto.com.br",
+        "url": "http://feliperoberto.com.br",
+        "github": "feliperoberto",
+        "country": "iso1:BR",
+        "flag": "🇧🇷"
+      }
+    ],
     "headless": false,
     "certValidation": true,
     "ssl": true,
@@ -2640,35 +2572,6 @@
     ],
     "type": "table",
     "url": "https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3137254901960784
-  },
-  {
-    "country": "iso1:ID",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Ministry of Health Republic of Indonesia",
-        "name": "Ministry of Health Republic of Indonesia",
-        "url": "https://www.kemkes.go.id/"
-      }
-    ],
-    "type": "table",
-    "url": "https://www.kemkes.go.id/",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
