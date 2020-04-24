@@ -436,6 +436,26 @@
     "rating": 0.5490196078431373
   },
   {
+    "state": "iso2:US-OR",
+    "country": "iso1:US",
+    "sources": [
+      {
+        "url": "https://www.oregon.gov/oha/PH",
+        "name": "Oregon Health Authority",
+        "description": "Public Health Division"
+      }
+    ],
+    "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx",
+    "type": "table",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.5490196078431373
+  },
+  {
     "state": "iso2:US-PA",
     "country": "iso1:US",
     "aggregate": "county",
@@ -571,6 +591,34 @@
     "rating": 0.5098039215686274
   },
   {
+    "country": "iso1:BR",
+    "type": "list",
+    "priority": 1,
+    "sources": [
+      {
+        "description": "Secretaria de Vigilância em Saúde do Ministério da Saúde",
+        "name": "SVS-MS",
+        "url": "https://covid.saude.gov.br/"
+      }
+    ],
+    "url": "https://covid.saude.gov.br/",
+    "timeseries": true,
+    "maintainers": [
+      {
+        "name": "Felipe Roberto",
+        "email": "contato@feliperoberto.com.br",
+        "url": "http://feliperoberto.com.br",
+        "github": "feliperoberto",
+        "country": "iso1:BR",
+        "flag": "🇧🇷"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274
+  },
+  {
     "state": "iso2:US-MI",
     "country": "iso1:US",
     "sources": [
@@ -677,7 +725,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-22",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-23",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -2232,34 +2280,6 @@
     "rating": 0.35294117647058826
   },
   {
-    "country": "iso1:BR",
-    "type": "list",
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Secretaria de Vigilância em Saúde do Ministério da Saúde",
-        "name": "SVS-MS",
-        "url": "https://covid.saude.gov.br/"
-      }
-    ],
-    "url": "https://covid.saude.gov.br/",
-    "timeseries": true,
-    "maintainers": [
-      {
-        "name": "Felipe Roberto",
-        "email": "contato@feliperoberto.com.br",
-        "url": "http://feliperoberto.com.br",
-        "github": "feliperoberto",
-        "country": "iso1:BR",
-        "flag": "🇧🇷"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826
-  },
-  {
     "county": "Clark County",
     "state": "iso2:US-NV",
     "country": "iso1:US",
@@ -2872,60 +2892,6 @@
     "priority": 0,
     "ssl": true,
     "rating": 0.2549019607843137
-  },
-  {
-    "country": "iso1:VI",
-    "type": "paragraph",
-    "url": "https://doh.vi.gov/covid19usvi",
-    "sources": [
-      {
-        "url": "https://doh.vi.gov",
-        "name": "United States Virgin Islands Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.2549019607843137
-  },
-  {
-    "county": "Colusa County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
-    "url": "http://www.countyofcolusa.org/99/Public-Health",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "list",
-    "ssl": false,
-    "rating": 0.23529411764705882
   },
   {
     "country": "iso1:AU",
