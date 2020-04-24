@@ -81,11 +81,21 @@ function checkCacheKeyCollision(cacheKey, destdir) {
   throw new Error(msg);
 }
 
+function checkCacheKey(s) {
+  const check = /^[a-z]+$/;
+  if (check.test(s) !== true) {
+    throw new Error(`Bad cache key ${s}`);
+  }
+}
+
 // Migrate the file to a temp folder.
 // New format:
 // crawler-cache/us-ca-xx-county/2020-04-12/2020-04-12t00_47_14.145z-default-344b7.html
 export function migrateFile(url, filePath, encoding, scraper, date, cacheKey, type) {
   console.log(`MIGRATING ${filePath}`);
+
+  checkCacheKey(cacheKey);
+
   const topdir = newTopFolder(scraper._path);
   const formattedDate = datetimeFormatting.getYYYYMMDD(date);
   const dt = spacetime(formattedDate)

@@ -221,13 +221,23 @@ const scraper = {
       ];
       this.type = 'pdf';
 
+      const makeCacheKey = s => {
+        const ret = s.toLowerCase().replace(/ /g, '');
+        const check = /^[a-z]+$/;
+        if (check.test(ret) !== true) {
+          throw new Error(`Bad cache key ${ret}`);
+        }
+        return ret;
+      };
+
       for (const name of this._counties) {
         let endURL = name;
         if (!fullNameCounties.includes(name)) {
           endURL = endURL.slice(0, name.lastIndexOf(' '));
         }
         const pdfUrl = pdfBaseURL + endURL;
-        const pdfScrape = await fetch.pdf(this, pdfUrl, endURL);
+        const ck = makeCacheKey(endURL);
+        const pdfScrape = await fetch.pdf(this, pdfUrl, ck);
 
         if (pdfScrape) {
           let pdfText = '';
