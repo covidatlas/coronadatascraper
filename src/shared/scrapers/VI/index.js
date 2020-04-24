@@ -7,6 +7,7 @@ import getDataWithTestedNegativeApplied from '../../utils/get-data-with-tested-n
 
 const labelFragmentsByKey = [
   { discard: 'update' },
+  { discard: 'attention deficit' },
   { discard: 'pending' },
   { deaths: 'death' },
   { testedNegative: 'negative' },
