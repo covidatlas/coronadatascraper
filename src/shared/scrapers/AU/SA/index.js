@@ -14,12 +14,14 @@ const labelFragmentsByKey = [
 
 const firstUrl =
   'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia';
+const secondUrl =
+  'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/infectious+diseases/covid+2019/latest+updates/covid-19+cases+in+south+australia';
 
-// They changed their URL without a redirect on 2020-04-23.
+// They changed their URL without a redirect on 2020-04-22.
 const getUrl = () => {
   const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
-  const isBeforeOrEqual = datetime.dateIsBeforeOrEqualTo(date, '2020-04-22');
-  return isBeforeOrEqual ? firstUrl : this.url;
+  const isBeforeOrEqual = datetime.dateIsBeforeOrEqualTo(date, '2020-04-21');
+  return isBeforeOrEqual ? firstUrl : secondUrl;
 };
 
 const scraper = {
@@ -35,8 +37,7 @@ const scraper = {
   ],
   state: 'iso2:AU-SA',
   type: 'table',
-  url:
-    'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/infectious+diseases/covid+2019/latest+updates/covid-19+cases+in+south+australia',
+  url: secondUrl,
   scraper: {
     '0': async function() {
       this.url = firstUrl;
@@ -52,9 +53,10 @@ const scraper = {
       this.url = getUrl();
       const $ = await fetch.page(this, this.url, 'default');
       const $table = $('table:first-of-type');
+      assert($table, 'no table found');
+
       const $trs = $table.find('tbody > tr');
       const data = {};
-
       $trs
         .filter((_index, tr) => Boolean($(tr).find('td').length)) // Had `th` inside `tbody`, now they are inside `thead`. This suits both.
         .each((_index, tr) => {
