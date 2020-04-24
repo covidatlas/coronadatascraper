@@ -4,7 +4,13 @@ import * as parse from '../../lib/parse.js';
 import maintainers from '../../lib/maintainers.js';
 import getKey from '../../utils/get-key.js';
 
-const labelFragmentsByKey = [{ recovered: 'sembuh' }, { deaths: 'meninggal' }, { cases: 'positif covid-19' }];
+const labelFragmentsByKey = [
+  { recovered: 'sembuh' },
+  { deaths: 'meninggal' },
+  { discard: 'jumlah pdp' }, // pasien dalam pengawasan: "People in monitoring"
+  { discard: 'jumlah odp' }, // orang dalam pemantauan: "Patients under supervision"
+  { cases: 'positif covid-19' }
+];
 
 const scraper = {
   country: 'iso1:ID',
