@@ -6466,6 +6466,11 @@ source-map@^0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+spacetime@^6.4.3:
+  version "6.4.3"
+  resolved "https://registry.yarnpkg.com/spacetime/-/spacetime-6.4.3.tgz#2cfc120d0bee04ef3e6e40258e2b7b63825b882f"
+  integrity sha512-UFxbLPEyH5sERljIj/NCTtfAJhLTGSroR8nOguWAPVRaIWjWCOfQ7t/kcu/BebQieY8Zl365WSXuciTyUDYDug==
+
 spdx-correct@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.0.tgz#fb83e504445268f154b074e218c87c003cd31df4"

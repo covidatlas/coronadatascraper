@@ -3,6 +3,7 @@ import fsBuiltIn from 'fs';
 import path from 'path';
 import zlib from 'zlib';
 
+import spacetime from 'spacetime';
 import * as datetimeFormatting from '../datetime/iso/format.js';
 
 /** Cache migration helpers. *******************************
@@ -86,13 +87,16 @@ function checkCacheKeyCollision(cacheKey, destdir) {
 export function migrateFile(url, filePath, encoding, scraper, date, cacheKey, type) {
   console.log(`MIGRATING ${filePath}`);
   const topdir = newTopFolder(scraper._path);
-  const dt = datetimeFormatting.getYYYYMMDD(date);
+  const formattedDate = datetimeFormatting.getYYYYMMDD(date);
+  const dt = spacetime(formattedDate)
+    .add(1, 'day')
+    .format('iso-short');
   const destdir = path.join(process.cwd(), process.env.MIGRATE_CACHE_DIR, topdir, dt);
   fsBuiltIn.mkdirSync(destdir, { recursive: true });
 
   checkCacheKeyCollision(cacheKey, destdir);
 
-  const tm = `${dt}t21_00_00.000z`; // Default all migrated files to 9 pm.
+  const tm = `${dt}t04_00_00.000z`; // Default all migrated files to 9 pm PT (4a UTC)
   const content = fsBuiltIn.readFileSync(filePath, encoding);
   const sha = hashContent(content, 5);
   const fname = `${tm}-${cacheKey}-${sha}.${type}.gz`;
