@@ -1,46 +1,47 @@
 date,country,state,county,city,type,description,severity,category
-2020-04-23,iso1:AU,iso2:AU-SA,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-04-23,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
-2020-04-23,iso1:ID,,,,scraper failed,Error: There is an unexpected label: jumlah odp,critical,scraper failure
-2020-04-23,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
-2020-04-23,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
-2020-04-23,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 1 on line 9599",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Orange County,,scraper failed,DeprecatedError: Need to scrape new page,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,San Benito County,,scraper failed,DeprecatedError: Need to scrape new arcgis,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,"DeprecatedError: Sunsetting county scraper, its PowerBI now",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
-2020-04-23,iso1:US,iso2:US-MS,,,scraper failed,Error: Unexpected table headers,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-NJ,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-OK,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any county records,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-RI,,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-WV,,,scraper failed,TypeError: Cannot read property 'exploration' of null,critical,scraper failure
-2020-04-23,iso1:VI,,,,scraper failed,Error: There is an unexpected label: children & adults with attention deficit/hyperactivity disorder resource center (chadd)1-800-233-4050national center for learning disabilities1-888-575-7373i'm alive - instant text resourcehttps,critical,scraper failure
-2020-04-23,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing location,,low,locations
-2020-04-23,iso1:KR,iso2:KR-41,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-42,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-43,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-44,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-45,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-46,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-48,,,missing population,,low,population
-2020-04-23,iso1:KR,iso2:KR-49,,,missing population,,low,population
-2020-04-23,iso1:RU,iso2:RU-SEV,,,missing population,,low,population
-2020-04-23,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing population,,low,population
+2020-04-24,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
+2020-04-24,iso1:ID,,,,scraper failed,Error: There is an unexpected label: jumlah odp,critical,scraper failure
+2020-04-24,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
+2020-04-24,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-04-24,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 2 on line 2607",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Glenn County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Orange County,,scraper failed,DeprecatedError: Need to scrape new page,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,San Benito County,,scraper failed,DeprecatedError: Need to scrape new arcgis,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,"DeprecatedError: Sunsetting county scraper, its PowerBI now",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
+2020-04-24,iso1:US,iso2:US-MS,,,scraper failed,Error: Unexpected table headers,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-NJ,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-NV,Washoe County,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-OK,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any county records,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-RI,,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-WV,,,scraper failed,TypeError: Cannot read property 'exploration' of null,critical,scraper failure
+2020-04-24,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing location,,low,locations
+2020-04-24,iso1:KR,iso2:KR-41,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-42,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-43,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-44,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-45,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-46,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-48,,,missing population,,low,population
+2020-04-24,iso1:KR,iso2:KR-49,,,missing population,,low,population
+2020-04-24,iso1:RU,iso2:RU-SEV,,,missing population,,low,population
+2020-04-24,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing population,,low,population
+2020-04-24,New Zealand,,,,invalid location object,New Zealand .recovered should be <= 1117,low,location validation

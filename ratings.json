@@ -725,7 +725,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-23",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-24",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -1149,26 +1149,6 @@
     "certValidation": true,
     "priority": 0,
     "ssl": false,
-    "rating": 0.45098039215686275
-  },
-  {
-    "county": "Washoe County",
-    "state": "iso2:US-NV",
-    "country": "iso1:US",
-    "url": "https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/Cases_wdemographic_current/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true",
-    "sources": [
-      {
-        "name": "Washoe County Health District",
-        "url": "https://www.washoecounty.us/health/",
-        "description": "Washoe County, Nevada health department"
-      }
-    ],
-    "type": "json",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
     "rating": 0.45098039215686275
   },
   {
@@ -2280,6 +2260,36 @@
     "rating": 0.35294117647058826
   },
   {
+    "country": "iso1:AU",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "SA Government Health Department",
+        "name": "SA Health",
+        "url": "https://www.sahealth.sa.gov.au"
+      }
+    ],
+    "state": "iso2:AU-SA",
+    "type": "table",
+    "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/infectious+diseases/covid+2019/latest+updates/covid-19+cases+in+south+australia",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826
+  },
+  {
     "county": "Clark County",
     "state": "iso2:US-NV",
     "country": "iso1:US",
@@ -2819,28 +2829,6 @@
     "rating": 0.2549019607843137
   },
   {
-    "county": "Glenn County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.countyofglenn.net/dept/health-human-services/public-health/covid-19",
-    "type": "list",
-    "ssl": true,
-    "rating": 0.2549019607843137
-  },
-  {
     "state": "iso2:US-NV",
     "country": "iso1:US",
     "aggregate": "county",
@@ -2884,6 +2872,38 @@
         "county": "San Francisco",
         "city": "San Francisco",
         "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.2549019607843137
+  },
+  {
+    "country": "iso1:VI",
+    "type": "paragraph",
+    "url": "https://doh.vi.gov/covid19usvi",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
     "timeseries": false,
