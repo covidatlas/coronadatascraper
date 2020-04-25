@@ -30,7 +30,9 @@
 const imports = require('esm')(module);
 const path = require('path');
 const glob = require('fast-glob').sync;
+const spacetime = require('spacetime');
 
+const datetime = imports('../src/shared/lib/datetime').default;
 const yargs = imports('yargs');
 
 const { execSync } = imports('child_process');
@@ -73,6 +75,14 @@ const allFolders = getFolders();
 
 let dirs = allFolders;
 if (argv.date) {
+  if (argv.date === 'latest') {
+    let latest = datetime.today.at('America/Los_Angeles');
+    latest = spacetime(latest)
+      .subtract(1, 'day')
+      .format('iso-short');
+    latest = datetime.getYYYYMD(latest);
+    argv.date = latest;
+  }
   dirs = dirs.filter(d => d === argv.date);
 }
 
