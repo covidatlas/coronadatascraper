@@ -8,7 +8,8 @@ import maintainers from '../../../lib/maintainers.js';
 const labelFragmentsByKey = [
   { deaths: 'deaths' },
   { cases: 'confirmed case' },
-  { testedNegative: 'tested and excluded' }
+  { testedNegative: 'tested and excluded' },
+  { recovered: 'recovered' }
 ];
 
 const getDeathsFromParagraph = $currentArticlePage => {
