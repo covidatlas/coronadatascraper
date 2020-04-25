@@ -36,7 +36,7 @@ const scraper = {
       const $tr = $(tr);
       const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
       const value = $tr.find('td:last-child').text();
-      data[key] = parse.number(value);
+      data[key] = parse.number(value.replace('.', '')); // This thousands-separator replace may be better handled in the number parser.
     });
     assert(data.cases > 0, 'Cases is not reasonable');
     return data;
