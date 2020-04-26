@@ -48,7 +48,7 @@ const scraper = {
     const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
+      const key = getKey({ label: $tr.find('*:first-child').text(), labelFragmentsByKey });
       data[key] = parse.number($tr.find('td:last-child').text());
     });
     assert(data.cases > 0, 'Cases is not reasonable');
