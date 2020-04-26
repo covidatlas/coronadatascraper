@@ -725,7 +725,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-24",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -1150,6 +1150,36 @@
     "priority": 0,
     "ssl": false,
     "rating": 0.45098039215686275
+  },
+  {
+    "country": "iso1:AU",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
+      }
+    ],
+    "state": "iso2:AU-NSW",
+    "type": "table",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786
   },
   {
     "country": "iso1:AU",
@@ -1847,37 +1877,6 @@
     "rating": 0.4117647058823529
   },
   {
-    "county": "Kings County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "url": "https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "list",
-    "ssl": true,
-    "rating": 0.4117647058823529
-  },
-  {
     "state": "iso2:US-CO",
     "country": "iso1:US",
     "aggregate": "county",
@@ -2193,36 +2192,6 @@
     "state": "iso2:AU-ACT",
     "type": "table",
     "url": "https://www.covid19.act.gov.au",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826
-  },
-  {
-    "country": "iso1:AU",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
-      }
-    ],
-    "state": "iso2:AU-NSW",
-    "type": "table",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
@@ -2609,6 +2578,35 @@
     "rating": 0.3137254901960784
   },
   {
+    "country": "iso1:ID",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 1,
+    "sources": [
+      {
+        "description": "Ministry of Health Republic of Indonesia",
+        "name": "Ministry of Health Republic of Indonesia",
+        "url": "https://www.kemkes.go.id/"
+      }
+    ],
+    "type": "table",
+    "url": "https://www.kemkes.go.id/",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.3137254901960784
+  },
+  {
     "country": "iso1:NZ",
     "maintainers": [
       {
@@ -2658,6 +2656,38 @@
     "type": "list",
     "ssl": false,
     "rating": 0.3137254901960784
+  },
+  {
+    "country": "iso1:PR",
+    "type": "table",
+    "timeseries": false,
+    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
+    "sources": [
+      {
+        "url": "http://www.salud.gov.pr/",
+        "name": "Gobierno de Puerto Rico Departamento de Salud"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.29411764705882354
   },
   {
     "country": "iso1:AU",
@@ -2820,6 +2850,37 @@
         "flag": "🇺🇸"
       }
     ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "list",
+    "ssl": true,
+    "rating": 0.2549019607843137
+  },
+  {
+    "county": "Kings County",
+    "state": "iso2:US-CA",
+    "country": "iso1:US",
+    "maintainers": [
+      {
+        "name": "John Bencina",
+        "github": "jbencina",
+        "country": "iso1:US",
+        "state": "CA",
+        "flag": "🇺🇸"
+      },
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "url": "https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
