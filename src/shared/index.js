@@ -33,7 +33,7 @@ async function generate(date, options = {}) {
 
   // Crawler
   const output = scrapeData(srcs)
-    .then(options.dumpRaw !== false && writeRawRegression)
+    .then(writeRawRegression)
     // processor
     .then(rateSources)
     .then(dedupeLocations)

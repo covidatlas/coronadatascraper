@@ -2,6 +2,8 @@ import path from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 
 const writeRawRegression = async args => {
+  if (!args.options.dumpRaw) return args;
+
   let suffix = '';
   if (args.options.outputSuffix !== undefined) {
     suffix = args.options.outputSuffix;
