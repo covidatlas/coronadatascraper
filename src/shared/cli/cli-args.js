@@ -26,6 +26,11 @@ const { argv } = yargs
     description: 'The suffix to add to output files, i.e. passing TEST will produce data-TEST.json etc',
     type: 'string'
   })
+  .option('dumpRaw', {
+    alias: 'r',
+    description: 'Dump raw scrape response data to dist for regression testing',
+    type: 'boolean'
+  })
   .option('quiet', {
     alias: 'q',
     description: 'Suppress logs',
