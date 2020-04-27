@@ -1,6 +1,7 @@
 // Crawler operations
 import fetchSources from '../events/crawler/get-sources/index.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
+import writeRawRegression from '../events/processor/write-data/dump-regression-raw.js';
 
 // Metadata + geo processing operations
 import rateSources from '../events/processor/rate-sources/index.js';
@@ -32,6 +33,7 @@ async function generate(date, options = {}) {
 
   // Crawler
   const output = scrapeData(srcs)
+    .then(writeRawRegression)
     // processor
     .then(rateSources)
     .then(dedupeLocations)

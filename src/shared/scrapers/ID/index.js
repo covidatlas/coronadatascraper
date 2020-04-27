@@ -4,7 +4,13 @@ import * as parse from '../../lib/parse.js';
 import maintainers from '../../lib/maintainers.js';
 import getKey from '../../utils/get-key.js';
 
-const labelFragmentsByKey = [{ recovered: 'sembuh' }, { deaths: 'meninggal' }, { cases: 'positif covid-19' }];
+const labelFragmentsByKey = [
+  { recovered: 'sembuh' },
+  { deaths: 'meninggal' },
+  { discard: 'jumlah pdp' }, // pasien dalam pengawasan: "People in monitoring"
+  { discard: 'jumlah odp' }, // orang dalam pemantauan: "Patients under supervision"
+  { cases: 'positif covid-19' }
+];
 
 const scraper = {
   country: 'iso1:ID',
@@ -30,7 +36,7 @@ const scraper = {
       const $tr = $(tr);
       const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
       const value = $tr.find('td:last-child').text();
-      data[key] = parse.number(value);
+      data[key] = parse.number(value.replace('.', '')); // This thousands-separator replace may be better handled in the number parser.
     });
     assert(data.cases > 0, 'Cases is not reasonable');
     return data;

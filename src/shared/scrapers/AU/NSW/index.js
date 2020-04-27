@@ -8,7 +8,8 @@ import maintainers from '../../../lib/maintainers.js';
 const labelFragmentsByKey = [
   { deaths: 'deaths' },
   { cases: 'confirmed case' },
-  { testedNegative: 'tested and excluded' }
+  { testedNegative: 'tested and excluded' },
+  { recovered: 'recovered' }
 ];
 
 const getDeathsFromParagraph = $currentArticlePage => {
@@ -47,7 +48,7 @@ const scraper = {
     const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
+      const key = getKey({ label: $tr.find('*:first-child').text(), labelFragmentsByKey });
       data[key] = parse.number($tr.find('td:last-child').text());
     });
     assert(data.cases > 0, 'Cases is not reasonable');
