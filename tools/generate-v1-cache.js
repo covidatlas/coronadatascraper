@@ -108,3 +108,50 @@ dirs.forEach(d => {
 const migrated = glob(path.join(argv.dest, '**', '*.*'), { onlyFiles: true });
 console.log('\n\nMigration complete.');
 console.log(`${migrated.length} files written to ${argv.dest}`);
+
+// If a cache folder has multiple files, none of them should have
+// cache key 'default'.  If it has one file, it must have cache key
+// 'default'.
+function checkDefaultCacheKeySpecs(destdir) {
+  const fulldest = path.join(process.cwd(), destdir);
+  console.log(`Checking default key specs in ${fulldest}`);
+  const pattern = path.join(fulldest, '**').replace(/\\/, '/');
+
+  const allfiles = glob(pattern);
+  const folders = allfiles
+    .map(f => f.replace(fulldest + path.sep, ''))
+    .map(f => f.split(path.sep))
+    .map(a => path.join(a[0], a[1]))
+    .filter((f, index, self) => {
+      return self.indexOf(f) === index;
+    }); // uniques
+
+  folders.forEach(d => {
+    // Files in the folder
+    const files = allfiles
+      .filter(f => f.includes(d))
+      .map(f => f.split(d))
+      .map(a => a[a.length - 1]);
+
+    // Files that contain "default"
+    const matches = files.filter(f => f.includes('default'));
+
+    if (files.length === 0) {
+      throw new Error(`No files in ${d} ??`);
+    }
+
+    if (files.length === 1) {
+      if (matches.length !== 1) {
+        const msg = `  DEFAULT CACHE KEY, single file should have key 'default' in ${d}`;
+        throw new Error(msg);
+      }
+    } else if (matches.length > 0) {
+      const msg = `  DEFAULT CACHE KEY, no file in multifile cache dir should have key 'default' in ${d}`;
+      throw new Error(msg);
+    }
+
+    console.log(`   ${d} keys ok.`);
+  });
+}
+
+checkDefaultCacheKeySpecs(argv.dest);
