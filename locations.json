@@ -8974,501 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Vinnytsia Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      28.695999999999998,
-      48.9815
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-05",
-    "population": 1575808,
-    "populationDensity": 59.48703752956654,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-05",
-    "name": "Vinnytsia Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Volyn Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      24.856,
-      51.128
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-07",
-    "population": 1038457,
-    "populationDensity": 51.57293976078698,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-07",
-    "name": "Volyn Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Dnipropetrovsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      34.949,
-      48.324
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-12",
-    "population": 3231140,
-    "populationDensity": 101.33719517989377,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-12",
-    "name": "Dnipropetrovsk Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Donetsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      37.816500000000005,
-      48.058
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-14",
-    "population": 4200461,
-    "populationDensity": 158.44351397605595,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-14",
-    "name": "Donetsk Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Zhytomyr Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      28.4625,
-      50.6345
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-18",
-    "population": 1231239,
-    "populationDensity": 41.29653729774291,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-18",
-    "name": "Zhytomyr Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Zakarpattia Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      23.3825,
-      48.5
-    ],
-    "tz": [
-      "Europe/Uzhgorod"
-    ],
-    "featureId": "iso2:UA-21",
-    "population": 1258155,
-    "populationDensity": 98.68124317425388,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-21",
-    "name": "Zakarpattia Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Zaporizhia Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      35.692,
-      47.205
-    ],
-    "tz": [
-      "Europe/Zaporozhye"
-    ],
-    "featureId": "iso2:UA-23",
-    "population": 1723171,
-    "populationDensity": 63.73120660099257,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-23",
-    "name": "Zaporizhia Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Ivano-Frankivsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      24.6,
-      48.634
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-26",
-    "population": 1377496,
-    "populationDensity": 98.89575951784943,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-26",
-    "name": "Ivano-Frankivsk Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Kyiv Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      30.715,
-      50.3605
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-32",
-    "population": 1754284,
-    "populationDensity": 62.46362889287491,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-32",
-    "name": "Kyiv Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Kirovohrad Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      31.826999999999998,
-      48.4975
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-35",
-    "population": 956250,
-    "populationDensity": 38.925928607247,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-35",
-    "name": "Kirovohrad Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Luhansk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      39.036500000000004,
-      48.956500000000005
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-09",
-    "population": 2167802,
-    "populationDensity": 81.36426101740496,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-09",
-    "name": "Luhansk Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Lviv Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      24.0265,
-      49.684
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-46",
-    "population": 2529608,
-    "populationDensity": 116.0684827561806,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-46",
-    "name": "Lviv Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Mykolaiv Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      31.701,
-      47.347
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-48",
-    "population": 1141324,
-    "populationDensity": 48.04018867070279,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-48",
-    "name": "Mykolaiv Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-26",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -9484,424 +8990,6 @@
     "countryId": "iso1:UA",
     "stateId": "iso2:UA-30",
     "name": "Kyiv, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Odesa Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      29.7595,
-      46.717
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-51",
-    "population": 2383075,
-    "populationDensity": 71.43503059314891,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-51",
-    "name": "Odesa Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Poltava Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      33.788,
-      49.647000000000006
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-53",
-    "population": 1413829,
-    "populationDensity": 49.31611342185252,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-53",
-    "name": "Poltava Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Rivne Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      26.4185,
-      50.9685
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-56",
-    "population": 1160647,
-    "populationDensity": 58.01282054054858,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-56",
-    "name": "Rivne Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Sumy Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      34.312,
-      51.239
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-59",
-    "population": 1094284,
-    "populationDensity": 45.986035416301114,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-59",
-    "name": "Sumy Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Ternopil Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      25.582,
-      49.3855
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-61",
-    "population": 1052312,
-    "populationDensity": 76.21966078117009,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-61",
-    "name": "Ternopil Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Kharkiv Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      36.475,
-      49.494
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-63",
-    "population": 2694007,
-    "populationDensity": 85.81207713216205,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-63",
-    "name": "Kharkiv Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Kherson Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      33.5205,
-      46.679500000000004
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-65",
-    "population": 1055600,
-    "populationDensity": 41.6097321215304,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-65",
-    "name": "Kherson Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Khmelnytskyi Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      27.0155,
-      49.522
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-68",
-    "population": 1274409,
-    "populationDensity": 61.85466913036683,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-68",
-    "name": "Khmelnytskyi Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Cherkasy Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      31.258499999999998,
-      49.34
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-71",
-    "population": 1220363,
-    "populationDensity": 58.239322054239715,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-71",
-    "name": "Cherkasy Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Chernivtsi Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      26.2215,
-      48.2
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-77",
-    "population": 906701,
-    "populationDensity": 111.98432258868587,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-77",
-    "name": "Chernivtsi Oblast, Ukraine",
-    "level": "state"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-25",
-    "state": "Chernihiv Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      31.991,
-      51.361
-    ],
-    "tz": [
-      "Europe/Kiev"
-    ],
-    "featureId": "iso2:UA-74",
-    "population": 985216,
-    "populationDensity": 30.941934946358874,
-    "countryId": "iso1:UA",
-    "stateId": "iso2:UA-74",
-    "name": "Chernihiv Oblast, Ukraine",
     "level": "state"
   },
   {
@@ -9941,28 +9029,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Accomack County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.6445,
       37.7385
@@ -9980,28 +9060,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Albemarle County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.524,
       38.0015
@@ -10019,28 +9091,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Alexandria City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.09,
       38.815
@@ -10058,28 +9122,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Alleghany County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.951,
       37.778
@@ -10097,28 +9153,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Amelia County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.943,
       37.3455
@@ -10136,28 +9184,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Amherst County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.15299999999999,
       37.6
@@ -10175,28 +9215,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Appomattox County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.80799999999999,
       37.3775
@@ -10214,28 +9246,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Arlington County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.102,
       38.8805
@@ -10253,28 +9277,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Augusta County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.138,
       38.18
@@ -10292,28 +9308,31 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Bath County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -79.7465,
       38.055
@@ -10331,28 +9350,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Bedford County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.522,
       37.311499999999995
@@ -10370,28 +9381,31 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Bland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -81.1585,
       37.126999999999995
@@ -10409,28 +9423,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Botetourt County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.78649999999999,
       37.555
@@ -10448,28 +9454,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Bristol City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.1745,
       36.6365
@@ -10487,28 +9485,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Brunswick County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.851,
       36.783500000000004
@@ -10526,28 +9516,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Buchanan County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.0265,
       37.288
@@ -10565,28 +9547,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Buckingham County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.535,
       37.5635
@@ -10604,28 +9578,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Buena Vista City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.354,
       37.729
@@ -10643,28 +9609,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Campbell County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.1335,
       37.227999999999994
@@ -10682,28 +9640,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Caroline County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.3565,
       38.015
@@ -10721,28 +9671,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Carroll County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.74799999999999,
       36.745000000000005
@@ -10760,28 +9702,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Charles City County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.0715,
       37.3625
@@ -10799,28 +9733,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Charlotte County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.6745,
       36.9735
@@ -10838,28 +9764,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Charlottesville City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.48599999999999,
       38.040000000000006
@@ -10877,28 +9795,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Chesapeake City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.27850000000001,
       36.7085
@@ -10916,28 +9826,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Chesterfield County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.561,
       37.3905
@@ -10955,28 +9857,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Clarke County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.99000000000001,
       39.122
@@ -10994,28 +9888,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Colonial Heights City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.39699999999999,
       37.266
@@ -11033,28 +9919,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Covington City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.9875,
       37.781
@@ -11072,28 +9950,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Craig County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.221,
       37.488
@@ -11111,28 +9981,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Culpeper County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.9255,
       38.5025
@@ -11150,28 +10012,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Cumberland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2685,
       37.5255
@@ -11189,28 +10043,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Danville City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.412,
       36.5925
@@ -11228,28 +10074,31 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Dickenson County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -82.3455,
       37.131
@@ -11267,28 +10116,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Dinwiddie County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.64750000000001,
       37.072500000000005
@@ -11306,28 +10147,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Emporia City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.533,
       36.696
@@ -11345,28 +10178,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Essex County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.926,
       37.945499999999996
@@ -11384,28 +10209,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Fairfax City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.3025,
       38.8535
@@ -11423,28 +10240,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Fairfax County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.28800000000001,
       38.8375
@@ -11462,28 +10271,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Falls Church City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.1725,
       38.885999999999996
@@ -11501,28 +10302,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Fauquier County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.831,
       38.712
@@ -11540,28 +10333,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Floyd County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.37100000000001,
       36.916
@@ -11579,28 +10364,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Fluvanna County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2765,
       37.848
@@ -11618,28 +10395,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Franklin City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.939,
       36.6785
@@ -11657,28 +10426,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Franklin County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.914,
       37.007
@@ -11696,28 +10457,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Frederick County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2885,
       39.237
@@ -11735,28 +10488,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Fredericksburg City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.489,
       38.298
@@ -11774,28 +10519,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Galax City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.913,
       36.6595
@@ -11813,28 +10550,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Giles County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.7225,
       37.314499999999995
@@ -11852,28 +10581,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Gloucester County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.5305,
       37.422
@@ -11891,28 +10612,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Goochland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.8875,
       37.7345
@@ -11930,28 +10643,31 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Grayson County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -81.258,
       36.6825
@@ -11969,28 +10685,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Greene County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.476,
       38.33
@@ -12008,28 +10716,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Greensville County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.532,
       36.721000000000004
@@ -12047,28 +10747,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Halifax County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.8835,
       36.801
@@ -12086,28 +10778,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Hampton City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.36099999999999,
       37.0535
@@ -12125,28 +10809,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Hanover County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.453,
       37.772999999999996
@@ -12164,28 +10840,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Harrisonburg City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.87100000000001,
       38.439499999999995
@@ -12203,28 +10871,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Henrico County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.416,
       37.531
@@ -12242,28 +10902,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Henry County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.8675,
       36.699
@@ -12281,28 +10933,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Highland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.559,
       38.385999999999996
@@ -12320,28 +10964,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Hopewell City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.294,
       37.288
@@ -12359,28 +10995,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Isle of Wight County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.707,
       36.893
@@ -12398,28 +11026,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "James City County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.744,
       37.317
@@ -12437,28 +11057,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "King and Queen County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.91650000000001,
       37.701499999999996
@@ -12476,28 +11088,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "King George County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.17150000000001,
       38.271
@@ -12515,28 +11119,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "King William County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.0615,
       37.714
@@ -12554,28 +11150,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Lancaster County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4605,
       37.7245
@@ -12593,28 +11181,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Lee County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -83.2235,
       36.7435
@@ -12632,28 +11212,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Lexington City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.4385,
       37.7805
@@ -12671,28 +11243,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Loudoun County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.64500000000001,
       39.085499999999996
@@ -12710,28 +11274,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Louisa County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.997,
       37.941
@@ -12749,28 +11305,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Lunenburg County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2485,
       36.948499999999996
@@ -12788,28 +11336,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Lynchburg City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.1765,
       37.400999999999996
@@ -12827,28 +11367,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Madison County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.27199999999999,
       38.4285
@@ -12866,28 +11398,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Manassas City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.4875,
       38.7435
@@ -12905,28 +11429,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Manassas Park City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.453,
       38.771
@@ -12944,28 +11460,31 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Martinsville City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -79.865,
       36.679500000000004
@@ -12983,28 +11502,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Mathews County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.3485,
       37.423
@@ -13022,28 +11533,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Mecklenburg County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.3825,
       36.715999999999994
@@ -13061,28 +11564,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Middlesex County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.5245,
       37.64
@@ -13100,28 +11595,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Montgomery County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.395,
       37.177
@@ -13139,28 +11626,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Nelson County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.9065,
       37.792
@@ -13178,28 +11657,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "New Kent County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.9915,
       37.5025
@@ -13217,28 +11688,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Newport News City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.5065,
       37.092
@@ -13256,28 +11719,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Norfolk City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.2575,
       36.894999999999996
@@ -13295,28 +11750,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Northampton County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.842,
       37.3205
@@ -13334,28 +11781,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Northumberland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.43549999999999,
       37.858
@@ -13373,28 +11812,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Norton City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.6255,
       36.929
@@ -13412,28 +11843,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Nottoway County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.01750000000001,
       37.14
@@ -13451,28 +11874,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Orange County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.036,
       38.256
@@ -13490,28 +11905,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Page County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.488,
       38.6225
@@ -13529,28 +11936,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Patrick County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.332,
       36.707499999999996
@@ -13568,28 +11967,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Petersburg City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.393,
       37.2055
@@ -13607,28 +11998,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Pittsylvania County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.40350000000001,
       36.839
@@ -13646,28 +12029,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Poquoson City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.35,
       37.134
@@ -13685,28 +12060,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Portsmouth City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.355,
       36.8545
@@ -13724,28 +12091,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Powhatan County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.8935,
       37.554
@@ -13763,28 +12122,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Prince Edward County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.4615,
       37.2385
@@ -13802,28 +12153,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Prince George County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.18549999999999,
       37.157
@@ -13841,28 +12184,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Prince William County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.4685,
       38.721999999999994
@@ -13880,28 +12215,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Pulaski County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.723,
       37.062
@@ -13919,28 +12246,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Radford City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.55199999999999,
       37.119
@@ -13958,28 +12277,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Rappahannock County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.1365,
       38.693
@@ -13997,28 +12308,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Richmond City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.4915,
       37.525000000000006
@@ -14036,28 +12339,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Richmond County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.7225,
       37.958
@@ -14075,28 +12370,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Roanoke City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.9605,
       37.2735
@@ -14114,28 +12401,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Roanoke County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.051,
       37.2655
@@ -14153,28 +12432,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Rockbridge County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.4165,
       37.8095
@@ -14192,28 +12463,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Rockingham County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.855,
       38.5285
@@ -14231,28 +12494,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Russell County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.094,
       36.926
@@ -14270,28 +12525,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Salem City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.06700000000001,
       37.288
@@ -14309,28 +12556,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Scott County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.6395,
       36.739000000000004
@@ -14348,28 +12587,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Shenandoah County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.58449999999999,
       38.8535
@@ -14387,28 +12618,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Smyth County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -81.5495,
       36.826
@@ -14426,28 +12649,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Southampton County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.1595,
       36.769999999999996
@@ -14465,28 +12680,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Spotsylvania County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.662,
       38.1845
@@ -14504,28 +12711,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Stafford County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.46100000000001,
       38.418499999999995
@@ -14543,28 +12742,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Staunton City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.0625,
       38.1605
@@ -14582,28 +12773,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Suffolk City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.66749999999999,
       36.7395
@@ -14621,28 +12804,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Surry County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.90950000000001,
       37.096500000000006
@@ -14660,28 +12835,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Sussex County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.28649999999999,
       36.91
@@ -14699,28 +12866,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Tazewell County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -81.56299999999999,
       37.1355
@@ -14738,28 +12897,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Virginia Beach City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.0475,
       36.7415
@@ -14777,28 +12928,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Warren County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.1995,
       38.897
@@ -14816,28 +12959,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Washington County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -81.969,
       36.7615
@@ -14855,28 +12990,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Waynesboro City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.90299999999999,
       38.0655
@@ -14894,28 +13021,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Westmoreland County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.792,
       38.1225
@@ -14933,28 +13052,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Williamsburg City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.70150000000001,
       37.278
@@ -14972,28 +13083,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Winchester City",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.167,
       39.168
@@ -15011,28 +13114,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Wise County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -82.589,
       37.0015
@@ -15050,28 +13145,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "Wythe County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -81.0595,
       36.9155
@@ -15089,28 +13176,20 @@
     "level": "county"
   },
   {
-    "state": "Virginia",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
     "county": "York County",
-    "rating": 0.39215686274509803,
+    "state": "Virginia",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.572,
       37.236000000000004
@@ -15329,30 +13408,29 @@
     "level": "country"
   },
   {
-    "country": "Puerto Rico",
-    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
-    "sources": [
-      {
-        "url": "http://www.salud.gov.pr/",
-        "name": "Gobierno de Puerto Rico Departamento de Salud"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.29411764705882354,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
     "coordinates": [
       -66.594,
       18.223
@@ -63129,7 +61207,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-04-25T18:30:07.443Z",
+    "publishedDate": "2020-04-26T18:36:47.029Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -63519,7 +61597,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-04-24T18:52:19.332Z",
+    "publishedDate": "2020-04-26T18:31:35.414Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -63558,7 +61636,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-04-24T18:52:23.400Z",
+    "publishedDate": "2020-04-26T18:31:41.477Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -63714,7 +61792,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-04-24T18:52:33.977Z",
+    "publishedDate": "2020-04-26T18:31:57.285Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -64026,7 +62104,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-04-25T18:25:21.019Z",
+    "publishedDate": "2020-04-26T18:32:09.160Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -64455,7 +62533,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-04-22T18:48:27.700Z",
+    "publishedDate": "2020-04-26T18:32:26.586Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -64728,7 +62806,7 @@
       }
     ],
     "county": "Henry County",
-    "publishedDate": "2020-04-16T18:41:08.858Z",
+    "publishedDate": "2020-04-26T18:32:37.977Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.793,
@@ -64962,7 +63040,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-04-25T18:25:56.832Z",
+    "publishedDate": "2020-04-26T18:32:48.115Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -65040,7 +63118,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-04-24T18:54:37.669Z",
+    "publishedDate": "2020-04-26T18:32:55.009Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -65196,7 +63274,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-04-25T18:26:07.871Z",
+    "publishedDate": "2020-04-26T18:33:04.272Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -65586,7 +63664,7 @@
       }
     ],
     "county": "Marion County",
-    "publishedDate": "2020-04-22T18:49:31.357Z",
+    "publishedDate": "2020-04-26T18:33:26.880Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.577,
@@ -65742,7 +63820,7 @@
       }
     ],
     "county": "Moniteau County",
-    "publishedDate": "2020-04-25T18:26:34.651Z",
+    "publishedDate": "2020-04-26T18:33:34.976Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6115,
@@ -66171,7 +64249,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-04-24T18:55:45.824Z",
+    "publishedDate": "2020-04-26T18:33:49.348Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -66210,7 +64288,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-04-24T18:55:48.787Z",
+    "publishedDate": "2020-04-26T18:33:52.522Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -66249,7 +64327,7 @@
       }
     ],
     "county": "Phelps County",
-    "publishedDate": "2020-04-14T18:25:11.207Z",
+    "publishedDate": "2020-04-26T18:33:55.639Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.777,
@@ -66288,7 +64366,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-04-25T18:27:09.964Z",
+    "publishedDate": "2020-04-26T18:33:58.372Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -66561,7 +64639,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-04-23T18:37:56.663Z",
+    "publishedDate": "2020-04-26T18:34:13.098Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -66678,7 +64756,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-04-25T18:27:38.162Z",
+    "publishedDate": "2020-04-26T18:37:19.812Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -66795,7 +64873,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-04-25T18:27:42.787Z",
+    "publishedDate": "2020-04-26T18:34:31.286Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -66836,7 +64914,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-04-25T14:45:00.000Z",
+    "publishedDate": "2020-04-26T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -66875,7 +64953,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-04-25T18:27:26.611Z",
+    "publishedDate": "2020-04-26T18:34:18.094Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -66992,7 +65070,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-04-25T18:27:32.371Z",
+    "publishedDate": "2020-04-26T18:34:24.399Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -67577,7 +65655,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-04-25T18:31:59.367Z",
+    "publishedDate": "2020-04-26T18:34:44.173Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -74456,31 +72534,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Union County",
     "state": "New Mexico",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.5055,
       36.3695
@@ -85087,20 +83154,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Washita County",
     "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.991,
       35.281000000000006
@@ -90958,31 +89036,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "McPherson County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.221,
       45.766000000000005
@@ -105124,31 +103191,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Gilmer County",
     "state": "West Virginia",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.8315,
       38.9135
@@ -111430,6 +109486,7 @@
     "level": "state"
   },
   {
+    "aggregate": "state",
     "country": "Australia",
     "maintainers": [
       {
@@ -111444,14 +109501,14 @@
     ],
     "sources": [
       {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
+        "description": "Australian Government Department of Health",
+        "name": "Australian Government Department of Health",
+        "url": "https://www.health.gov.au/"
       }
     ],
+    "url": "https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers",
     "state": "New South Wales",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "rating": 0.43137254901960786,
+    "rating": 0.3137254901960784,
     "coordinates": [
       147.3115,
       -32.831
@@ -146388,7 +144445,7 @@
       }
     ],
     "state": "Alytus County",
-    "rating": 0.29411764705882354,
+    "rating": 0.37254901960784315,
     "coordinates": [
       24.166,
       54.2265
@@ -146652,7 +144709,7 @@
       }
     ],
     "state": "Telsiai County",
-    "rating": 0.29411764705882354,
+    "rating": 0.21568627450980393,
     "coordinates": [
       22.125,
       56.0145
