@@ -141,7 +141,7 @@ function checkDefaultCacheKeySpecs(destdir) {
     let keys = files.map(f => f.split('-')).map(a => a[a.length - 2]);
 
     // Ignore the 'intermediary files'
-    const intermediaries = ['tmpindex', 'tempindex', 'tmpcsrf', 'ArcOrgID', 'ArcGIS'];
+    const intermediaries = ['tmpindex', 'tempindex', 'tmpcsrf', 'arcorgid', 'arcgis'];
     keys = keys.filter(s => !intermediaries.includes(s));
 
     if (keys.length === 0) {
