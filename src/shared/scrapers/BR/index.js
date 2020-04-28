@@ -122,9 +122,12 @@ const scraper = {
       entries.each(function() {
         const entry = $(this);
         const name = findOne(entry, '.lb-nome.nome').text();
-        const titles = findOne(entry, '.header-list.tp-aux');
-        if (titles.text().trim() !== 'ConfirmadosÓbitosIncidênciaLetalidade')
-          throw new Error('Text did not match expected titles');
+        const titles = findOne(entry, '.header-list.tp-aux')
+          .text()
+          .trim();
+        const expectedTitles = 'ConfirmadosÓbitosIncidênciaLetalidade';
+        if (titles !== expectedTitles)
+          throw new Error(`Title text (${titles}) did not match expected ${expectedTitles}`);
         const ufsEntry = ufs[name];
         if (!ufsEntry) throw new Error(`Unknown name ${name}, not in this._ufs`);
         const iso = ufsEntry[0];
