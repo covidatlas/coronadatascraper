@@ -125,9 +125,9 @@ const scraper = {
         const titles = findOne(entry, '.header-list.tp-aux')
           .text()
           .trim();
-        const expectedTitles = 'ConfirmadosÓbitosIncidênciaLetalidade';
-        if (titles !== expectedTitles)
-          throw new Error(`Title text (${titles}) did not match expected ${expectedTitles}`);
+        const expectedTitles = new RegExp('CasosÓbitos.*');
+        if (!expectedTitles.test(titles))
+          throw new Error(`Title text (${titles}) did not match expected regex ${expectedTitles}`);
         const ufsEntry = ufs[name];
         if (!ufsEntry) throw new Error(`Unknown name ${name}, not in this._ufs`);
         const iso = ufsEntry[0];
