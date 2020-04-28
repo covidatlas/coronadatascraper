@@ -320,31 +320,6 @@
     "rating": 0.5686274509803921
   },
   {
-    "country": "iso1:CY",
-    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5490196078431373
-  },
-  {
     "country": "iso1:FR",
     "timeseries": true,
     "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
@@ -725,7 +700,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-26",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-27",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -1008,25 +983,6 @@
     "rating": 0.47058823529411764
   },
   {
-    "state": "iso2:US-GA",
-    "country": "iso1:US",
-    "url": "https://d20s4vd27d0hk0.cloudfront.net",
-    "type": "table",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://dph.georgia.gov",
-        "name": "Georgia Department of Public Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.47058823529411764
-  },
-  {
     "state": "iso2:US-MO",
     "country": "iso1:US",
     "type": "table",
@@ -1150,6 +1106,36 @@
     "priority": 0,
     "ssl": false,
     "rating": 0.45098039215686275
+  },
+  {
+    "country": "iso1:AU",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
+      }
+    ],
+    "state": "iso2:AU-NSW",
+    "type": "table",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786
   },
   {
     "country": "iso1:AU",
@@ -2987,49 +2973,6 @@
     "priority": 0,
     "ssl": true,
     "rating": 0.21568627450980393
-  },
-  {
-    "state": "iso2:US-KS",
-    "country": "iso1:US",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "pdf",
-    "url": "https://public.tableau.com/views/COVID-19Data_15851817634470/CountyCounts.pdf?:showVizHome=no",
-    "ssl": true,
-    "rating": 0.17647058823529413
   },
   {
     "county": "San Luis Obispo County",
