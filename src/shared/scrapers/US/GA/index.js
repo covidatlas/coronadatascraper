@@ -244,7 +244,6 @@ const scraper = {
       return counties;
     },
     '2020-04-28': async function() {
-
       // Find entries, throws if doesn't find at least one.
       const findMany = (el, selector) => {
         const ret = el.find(selector);
