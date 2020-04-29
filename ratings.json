@@ -40,27 +40,6 @@
     "rating": 0.6470588235294118
   },
   {
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
-    "priority": 1,
-    "type": "csv",
-    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The Mercury News",
-        "email": "hattierowan@gmail.com",
-        "twitter": "@hattierowan",
-        "github": "HarrietRowan"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.6470588235294118
-  },
-  {
     "state": "iso2:US-TN",
     "country": "iso1:US",
     "sources": [
@@ -202,25 +181,6 @@
     "rating": 0.5882352941176471
   },
   {
-    "country": "iso1:US",
-    "state": "iso2:US-CA",
-    "url": "https://opendata.arcgis.com/datasets/06fcfe6147574a75afea97a1f7565dc7_0.csv",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Sonoma County Emergency and Preparedness Information",
-        "url": "https://socoemergency.org/"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.5686274509803921
-  },
-  {
     "state": "iso2:US-DE",
     "country": "iso1:US",
     "aggregate": "county",
@@ -318,6 +278,31 @@
     "certValidation": true,
     "ssl": true,
     "rating": 0.5686274509803921
+  },
+  {
+    "country": "iso1:CY",
+    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5490196078431373
   },
   {
     "country": "iso1:FR",
@@ -700,7 +685,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-27",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-28",
     "ssl": true,
     "rating": 0.49019607843137253
   },
@@ -891,19 +876,6 @@
     "rating": 0.49019607843137253
   },
   {
-    "state": "iso2:US-SC",
-    "country": "iso1:US",
-    "url": "https://opendata.arcgis.com/datasets/6847b70e6f0343138aa54d9cb6038028_0.csv",
-    "type": "json",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.49019607843137253
-  },
-  {
     "state": "iso2:US-VT",
     "country": "iso1:US",
     "sources": [
@@ -975,6 +947,25 @@
     "url": "https://www.mohfw.gov.in/",
     "type": "table",
     "aggregate": "state",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.47058823529411764
+  },
+  {
+    "state": "iso2:US-GA",
+    "country": "iso1:US",
+    "url": "https://ga-covid19.ondemand.sas.com/",
+    "type": "table",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://dph.georgia.gov",
+        "name": "Georgia Department of Public Health"
+      }
+    ],
     "timeseries": false,
     "headless": false,
     "certValidation": true,
@@ -1833,19 +1824,6 @@
     "rating": 0.4117647058823529
   },
   {
-    "state": "iso2:US-CO",
-    "country": "iso1:US",
-    "aggregate": "county",
-    "priority": 1,
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "url": "https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv",
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.4117647058823529
-  },
-  {
     "state": "iso2:US-MN",
     "country": "iso1:US",
     "sources": [
@@ -2206,30 +2184,6 @@
     "rating": 0.35294117647058826
   },
   {
-    "country": "iso1:IE",
-    "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://data.gov.ie/",
-        "name": "Ireland Open Data Portal"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": false,
-    "rating": 0.3333333333333333
-  },
-  {
     "country": "iso1:SI",
     "url": "https://raw.githubusercontent.com/slo-covid-19/data/master/csv/stats.csv",
     "priority": 1,
@@ -2583,35 +2537,6 @@
     "type": "list",
     "ssl": false,
     "rating": 0.3137254901960784
-  },
-  {
-    "country": "iso1:AU",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "name": "Northern Territory Government - Coronavirus site",
-        "url": "https://coronavirus.nt.gov.au"
-      }
-    ],
-    "state": "iso2:AU-NT",
-    "type": "table",
-    "url": "https://coronavirus.nt.gov.au/",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.27450980392156865
   },
   {
     "country": "iso1:GB",
