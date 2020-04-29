@@ -251,10 +251,10 @@ const scraper = {
         return ret;
       };
 
-      const sasurl = 'https://ga-covid19.ondemand.sas.com/';
+      this.url = 'https://ga-covid19.ondemand.sas.com/';
       // The site uses React/Material UI, so have to use a headless
       // browser to get everything.
-      const $ = await fetch.headless(this, sasurl, 'default');
+      const $ = await fetch.headless(this, this.url, 'default');
 
       // Find the table with the headings we want.
       const desiredHeadings = 'County, Confirmed Cases, Cases per 100K, Total Deaths, Hospitalizations';
