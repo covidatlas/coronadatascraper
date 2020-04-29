@@ -25,7 +25,7 @@ const scraper = {
   url: 'https://coronavirus.nt.gov.au/',
   async scraper() {
     const $ = await fetch.page(this, this.url, 'default');
-    const $trs = $('.header-widget span, .header-widget p');
+    const $trs = $('.header-widget div span, .header-widget p');
     const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);

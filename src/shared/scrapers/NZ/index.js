@@ -5,8 +5,8 @@ import maintainers from '../../lib/maintainers.js';
 import getKey from '../../utils/get-key.js';
 
 const labelFragmentsByKey = [
-  { cases: 'confirmed case' },
-  { discard: 'probable case' },
+  { discard: 'confirmed case' },
+  { cases: 'probable case' }, // Recovered is often higher than confirmed, so use probable number.
   { recovered: 'recovered cases' },
   { deaths: 'deaths' },
   { discard: 'cases in hospital' },
