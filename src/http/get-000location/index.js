@@ -52,15 +52,17 @@ function locationDetail(location, lastDate, caseInfo) {
   )}</p>`;
   html += `</div>
     <div class="col-xs-12 col-sm-6 end-sm">
+      <!-- todo: make this responsive, dropdown menu on mobile -->
       <sp-button quiet variant="secondary" href="/data">Download</sp-button>
+      <!-- 
       <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
-        <!-- <sp-button quiet variant="secondary" slot="trigger">Share</sp-button> -->
+        <sp-button quiet variant="secondary" slot="trigger">Share</sp-button>
         <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
           <div class="ca-SocialButtons">
-
           </div>
         </sp-popover>
       </overlay-trigger>
+      -->
     </div>
   </div>`;
   html += `<div class="row">`;
@@ -92,7 +94,7 @@ function locationDetail(location, lastDate, caseInfo) {
   // }
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
+      <h2 class="spectrum-Heading spectrum-Heading--M">Trends</h1>
       <!-- <div id="graph" class="ca-Graph"></div> -->
       <div id="graph-elements">
         <div id="graph-container">
@@ -103,7 +105,7 @@ function locationDetail(location, lastDate, caseInfo) {
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Map view</h1>
+      <h2 class="spectrum-Heading spectrum-Heading--M">Nearby locations</h1>
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
