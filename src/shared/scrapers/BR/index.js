@@ -57,44 +57,114 @@ const scraper = {
     'São Paulo': ['iso2:BR-SP', 45919049, [-23.5505, -46.6333]],
     Tocantins: ['iso2:BR-TO', 1572866, [-10.1753, -48.2982]]
   },
-  async scraper() {
-    const response = [];
-    const ufs = this._ufs;
-    const $ = await fetch.headless(this, this.url, 'default');
+  scraper: {
+    '0': async function scraper() {
+      const response = [];
+      const ufs = this._ufs;
+      const $ = await fetch.headless(this, this.url, 'default');
 
-    $.root()
-      .find('.list-itens .teste')
-      .each(function() {
-        const uf = $(this)
-          .prev()
-          .text();
+      $.root()
+        .find('.list-itens .teste')
+        .each(function() {
+          const uf = $(this)
+            .prev()
+            .text();
+
+          response.push({
+            state: ufs[uf][0],
+            cases: parseInt(
+              $(this)
+                .find('.lb-nome')
+                .eq(0)
+                .text(),
+              10
+            ),
+            deaths: parseInt(
+              $(this)
+                .find('.lb-nome')
+                .eq(1)
+                .text(),
+              10
+            ),
+            population: ufs[uf][1],
+            coordinates: [ufs[uf][2][1], ufs[uf][2][0]],
+            aggregate: 'state'
+          });
+        });
+
+      response.push(transform.sumData(response, { aggregate: 'state' }));
+
+      return response;
+    },
+
+    // TODO: things actually started busting before this point .. adjust this date as we figure out where it actually works.
+    '2020-04-28': async function scraper() {
+      const $ = await fetch.headless(this, this.url, 'default');
+      const ufs = this._ufs;
+
+      // Find entries, throws if doesn't find at least one.
+      const findMany = (el, selector) => {
+        const ret = el.find(selector);
+        if (ret.length === 0) throw new Error(`No match for ${selector}`);
+        return ret;
+      };
+
+      // Find entry, throws if not exactly one.
+      const findOne = (el, selector) => {
+        const ret = findMany(el, selector);
+        if (ret.length !== 1) throw new Error(`Should have 1 match for ${selector}, got ${ret.length}`);
+        return ret;
+      };
+
+      const response = [];
+
+      const entries = findMany($.root(), '.item-line');
+      entries.each(function() {
+        const entry = $(this);
+        const name = findOne(entry, '.lb-nome.nome').text();
+        const titles = findOne(entry, '.header-list.tp-aux')
+          .text()
+          .trim();
+        const expectedTitles = new RegExp('CasosÓbitos.*');
+        if (!expectedTitles.test(titles))
+          throw new Error(`Title text (${titles}) did not match expected regex ${expectedTitles}`);
+        const ufsEntry = ufs[name];
+        if (!ufsEntry) throw new Error(`Unknown name ${name}, not in this._ufs`);
+        const iso = ufsEntry[0];
+        const population = ufsEntry[1];
+        const coordinates = [ufsEntry[2][1], ufsEntry[2][0]];
+
+        const values = findMany(entry, '.lb-nome.lb-value');
+        const d = [];
+        values.each(function() {
+          const v = parseInt(
+            $(this)
+              .text()
+              .trim(),
+            10
+          );
+          d.push(v);
+        });
+        // The headings (translated) are: Confirmed, Deaths, Incidence, Letality.
+        // I'm not sure what the last two are, so will only include Confirmed and Deaths.
+        const cases = d[0];
+        const deaths = d[1];
 
         response.push({
-          state: ufs[uf][0],
-          cases: parseInt(
-            $(this)
-              .find('.lb-nome')
-              .eq(0)
-              .text(),
-            10
-          ),
-          deaths: parseInt(
-            $(this)
-              .find('.lb-nome')
-              .eq(1)
-              .text(),
-            10
-          ),
-          population: ufs[uf][1],
-          coordinates: [ufs[uf][2][1], ufs[uf][2][0]],
+          state: iso,
+          cases,
+          deaths,
+          population,
+          coordinates,
           aggregate: 'state'
         });
       });
 
-    response.push(transform.sumData(response, { aggregate: 'state' }));
+      response.push(transform.sumData(response, { aggregate: 'state' }));
 
-    return response;
-  }
+      return response;
+    } // end 2020-04-28
+  } // end scraper
 };
 
 export default scraper;
