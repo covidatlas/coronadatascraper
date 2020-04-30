@@ -115,27 +115,29 @@ const scraper = {
     'Woods County',
     'Woodward County'
   ],
-  async scraper() {
-    let counties = [];
-    const $ = await fetch.page(this, this.url, 'default');
-    const $table = $("table[summary='COVID-19 Cases by County']").first();
+  scraper: {
+    '0': async function() {
+      let counties = [];
+      const $ = await fetch.page(this, this.url, 'default');
+      const $table = $("table[summary='COVID-19 Cases by County']").first();
 
-    const $trs = $table.find('tbody').find('tr');
-    $trs.each((index, tr) => {
-      const $tr = $(tr);
-      const countyName = parse.string($tr.find('td:nth-child(1)').text());
-      const countyObj = {
-        county: geography.addCounty(parse.string(countyName)),
-        cases: parse.number($tr.find('td:nth-child(2)').text() || 0),
-        deaths: parse.number($tr.find('td:nth-child(3)').text() || 0)
-      };
-      if (rules.isAcceptable(countyObj, null, this._reject)) {
-        counties.push(countyObj);
-      }
-    });
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
-    return counties;
+      const $trs = $table.find('tbody').find('tr');
+      $trs.each((index, tr) => {
+        const $tr = $(tr);
+        const countyName = parse.string($tr.find('td:nth-child(1)').text());
+        const countyObj = {
+          county: geography.addCounty(parse.string(countyName)),
+          cases: parse.number($tr.find('td:nth-child(2)').text() || 0),
+          deaths: parse.number($tr.find('td:nth-child(3)').text() || 0)
+        };
+        if (rules.isAcceptable(countyObj, null, this._reject)) {
+          counties.push(countyObj);
+        }
+      });
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
+    }
   }
 };
 
