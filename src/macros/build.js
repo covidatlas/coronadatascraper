@@ -101,6 +101,9 @@ async function build(arc, cloudformation) {
     fs.copyFile('dist/timeseries.json', 'src/http/get-embed-000location/dist/timeseries.json'),
     fs.copyFile('dist/features.json', 'src/http/get-api-features-000location/dist/features.json'),
 
+    fs.copyFile('dist/ratings.json', 'src/http/get-000location/dist/ratings.json'),
+    fs.copyFile('dist/report.json', 'src/http/get-000location/dist/report.json'),
+
     fs.copyFile('dist/ratings.json', 'src/http/get-sources/dist/ratings.json'),
     fs.copyFile('dist/report.json', 'src/http/get-crosscheck/dist/report.json')
   ]);

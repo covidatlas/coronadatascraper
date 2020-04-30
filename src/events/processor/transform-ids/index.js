@@ -2,6 +2,13 @@ import * as countryLevels from '../../../shared/lib/geography/country-levels.js'
 import * as geography from '../../../shared/lib/geography/index.js';
 import log from '../../../shared/lib/log.js';
 
+function compare(a, b) {
+  if (a) {
+    return a.localeCompare(b);
+  }
+  return 0;
+}
+
 const transformIds = async ({ locations, featureCollection, report, options, sourceRatings }) => {
   log('⏳ Transforming IDs...');
 
@@ -24,6 +31,29 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
     location.level = geography.getLocationGranularityName(location);
   }
   log('✅ Found direct matches for %d out of %d locations', idsFound, Object.keys(locations).length);
+
+  // Transform ratings
+  for (const rating of sourceRatings) {
+    // Transform no matter what
+    await countryLevels.transformLocationIds(rating);
+  }
+
+  // Transform crosscheck reports
+  const crosscheckReports = [];
+
+  for (const [, crosscheckReport] of Object.entries(report.scrape.crosscheckReports)) {
+    // Transform no matter what
+    await countryLevels.transformLocationIds(crosscheckReport.location);
+    crosscheckReports.push(crosscheckReport);
+  }
+
+  report.scrape.crosscheckReports = crosscheckReports.sort((a, b) => {
+    return (
+      compare(a.location.country, b.location.country) ||
+      compare(a.location.state, b.location.state) ||
+      compare(a.location.county, b.location.county)
+    );
+  });
 
   report.transformIds = {
     idsResolved: idsFound

@@ -10,11 +10,13 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { getName } = require('@architect/views/lib/geography');
-// eslint-disable-next-line
 const { getContributors } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
 const { getClassNames } = require('@architect/views/lib/dom');
+// eslint-disable-next-line
+const { crosscheckTemplate } = require('@architect/views/lib/report');
+// eslint-disable-next-line
+const { getName, getSlug } = require('@architect/views/lib/geography');
 
 const report = require('./dist/report.json');
 
@@ -25,89 +27,21 @@ exports.handler = async function http() {
   // make HTML
   // profit
 
-  function crossCheckReportTemplate(report) {
-    const locationName = getName(report.location);
-    const slug = `crosscheck:${locationName.replace(/,/g, '-').replace(/\s/g, '')}`;
-
-    let html = `<li class="cds-CrossCheckReport" id="${slug}">`;
-    html += `<h2 class="spectrum-Heading spectrum-Heading--L"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${locationName}</a></h2>`;
-
-    html += `<div class="cds-SourceComparison">`;
-
-    const metrics = ['cases', 'deaths', 'tested', 'recovered'];
-
-    html += `
-        <table>
-          <thead>
-            <td></td>
-    `;
-
-    for (const metric of metrics) {
-      const classNames = {
-        'cds-SourceComparison-metric': true,
-        'cds-SourceComparison-discrepancyMetric': report.discrepancies.includes(metric),
-        'cds-SourceComparison-agreedMetric': report.agreements.includes(metric)
-      };
-
-      html += `<th class="${getClassNames(classNames)}">${metric}</td>`;
-    }
-
-    html += `
-          </thead>
-          <tbody>
-    `;
-
-    report.sources.forEach((source, index) => {
-      html += `
-              <tr>
-      `;
-      const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
-      const curators = getContributors(source.curators, { shortNames: true, link: false });
-      const sources = getContributors(source.sources, { shortNames: true, link: false });
-      html += `<th class="cds-SourceComparison-source">`;
-      if (index === report.used) {
-        html += '✅ ';
-      }
-      html += `<a class="spectrum-Link" target="_blank" href="${source.url}">`;
-      if (source.curators) {
-        html += `<strong>${curators}</strong>`;
-      } else if (source.sources) {
-        html += `<strong>${sources}</strong>`;
-      } else {
-        html += `<strong>${sourceURLShort}</strong>`;
-      }
-      html += `</a>`;
-      html += `</th>`;
-
-      for (const metric of metrics) {
-        html += `<td class="cds-SourceComparison-value${
-          report.discrepancies.includes(metric) ? ' cds-SourceComparison-discrepancyValue' : ''
-        }">${source[metric] === undefined ? '-' : source[metric]}</td>`;
-      }
-
-      html += `
-              </tr>
-      `;
-    });
-
-    html += `
-          </tbody>
-        </table>
-    `;
-
-    html += `</div>`;
-
-    html += `</li>`;
-
-    return html;
-  }
-
   function generateCrossCheckReport(reports, date) {
     let html = '';
     for (const [, crosscheckReport] of Object.entries(reports)) {
       // Only show reports where we disgaree
       if (crosscheckReport.discrepancies.length !== 0) {
-        html += crossCheckReportTemplate(crosscheckReport, date);
+        const slug = getSlug(crosscheckReport.location);
+
+        html += `<div>`;
+        html += `<h2 class="spectrum-Heading spectrum-Heading--L" id="${slug}"><a href="#${slug}" class="spectrum-Link spectrum-Link--quiet spectrum-Link--silent">${getName(
+          crosscheckReport.location
+        )}</a></h2>`;
+
+        html += crosscheckTemplate(crosscheckReport, date);
+
+        html += '</div>';
       }
     }
     return html;
@@ -149,9 +83,8 @@ ${header('crosscheck')}
   ${sidebar('crosscheck')}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
     ${reportHTML}
+    ${footer()}
   </div>
-  ${footer()}
-
 </div>
 `,
     'ca-Reports'

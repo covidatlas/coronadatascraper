@@ -17,10 +17,14 @@ const { getContributors, getSingleContributorLink } = require('@architect/views/
 // eslint-disable-next-line
 const { getClassNames } = require('@architect/views/lib/dom');
 // eslint-disable-next-line
+const { crosscheckTemplate, ratingTemplate } = require('@architect/views/lib/report');
+// eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
 
 const locationMap = require('./dist/location-map.json');
 const timeseries = require('./dist/timeseries.json');
+const ratings = require('./dist/ratings.json');
+const report = require('./dist/report.json');
 
 function renderBreadcrumbs(location) {
   const htmlBits = [];
@@ -38,7 +42,7 @@ function renderCaseInfo(label, count, labelClass) {
   return `<h2 class="spectrum-Heading spectrum-Heading--XS ca-LocalData">${label}: <span class="spectrum-Heading--L ca-LocalCount ${labelClass}"> ${count.toLocaleString()}</span></h2>`;
 }
 
-function locationDetail(location, lastDate, caseInfo) {
+function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) {
   // <p class="spectrum-Body spectrum-Body--L">Latest confirmed COVID-19 data</p>
   let html = `
 <h1 class="spectrum-Heading spectrum-Heading--L ca-LocationTitle">${renderBreadcrumbs(location)}</h1>
@@ -109,17 +113,30 @@ function locationDetail(location, lastDate, caseInfo) {
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
-
   <div class="row">
-    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
-      <h4 class="spectrum-Heading spectrum-Heading--S">[Data source]</h4>
-      <p class="spectrum-Body spectrum-Body--S"> Report card</p>
-    </section>
+`;
 
-    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
-      <h4 class="spectrum-Heading spectrum-Heading--S">[Location cross-check]</h4>
-      <p class="spectrum-Body spectrum-Body--S"> Cross-Check report for this locations's sources</p>
+  html += `
+    <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
+      <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
+      <p class="spectrum-Body spectrum-Body--S">We assign a data transparency rating to each source based on the technical complexity of pulling their data.</p>
+      ${ratingTemplate(rating)}
     </section>
+`;
+
+  if (crosscheckReport) {
+    html += `
+      <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
+        <h4 class="spectrum-Heading spectrum-Heading--S">Location cross-check</h4>
+        <p class="spectrum-Body spectrum-Body--S">The ${
+          constants.name
+        } crawler checks multiple sources for the same data and reports on inconsistencies.</p>
+        ${crosscheckTemplate(crosscheckReport)}
+      </section>
+  `;
+  }
+
+  html += `
   </div>
 
   <div class="ca-Callout--Disclaimer">
@@ -151,6 +168,10 @@ function locationDetail(location, lastDate, caseInfo) {
   return html;
 }
 
+function locationMatches(a, b) {
+  return a.country === b.country && a.state === b.state && a.county === b.county && a.city === b.city;
+}
+
 async function route(req) {
   // Get latest information from timeseries
   const { location, slug } = req;
@@ -163,6 +184,9 @@ async function route(req) {
   // Add slugs
   location.slug = slug;
   parentLocation.slug = getSlug(parentLocation);
+
+  const rating = ratings.find(rating => location.url === rating.url);
+  const crosscheckReport = report.scrape.crosscheckReports.find(report => locationMatches(location, report.location));
 
   // Display the information for the location
   return {
@@ -177,7 +201,7 @@ ${header({ selectedPage: '' })}
 <div class="spectrum-Site-content">
   ${sidebar()}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
-    ${locationDetail(location, lastDate, caseInfo)}
+    ${locationDetail(location, lastDate, caseInfo, rating, crosscheckReport)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
     <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
