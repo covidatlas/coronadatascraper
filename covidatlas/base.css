@@ -1,0 +1,292 @@
+:root {
+  /* Default search with, will be overridden by media queries */
+  --ca-landing-search-width: 400px;
+
+  --ca-header-search-width: 320px;
+  --ca-header-search-popover-min-width: var(--ca-header-search-width);
+  --ca-header-logo-padding: 12px;
+}
+
+/* DIMENSIONS AND NON-COLOR RELATED VARIABLES */
+.spectrum--medium,
+.spectrum--large {
+  /* Owr own invented values */
+  --ButtonBorderSize: var(--spectrum-alias-border-size-thin);
+  --ButtonBorderRadius: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-focus-ring-size: var(--spectrum-alias-border-size-thick);
+  --HeadingWeight: 700;
+  --BodyWeight: 300;
+  --ca-PageMargin: 24px;
+
+  /* Base vars */
+  --ca-FontBody: "Merriweather", Georgia, serif;
+  --spectrum-body-text-font-family: var(--ca-FontBody);
+  --spectrum-component-text-font-family: "Open Sans", Helvetica, sans-serif;
+  --spectrum-heading-text-font-family: "Open Sans", Helvetica, sans-serif;
+  --spectrum-sociallinks-text-font-family: var(--spectrum-heading-text-font-family);
+
+
+  /* Aliases */
+  --spectrum-alias-body-text-font-family: var(--ca-FontBody);
+
+  /* Typography overrides */
+  --spectrum-alias-body-text-font-family: var(--spectrum-component-text-font-family);
+  --spectrum-alias-body-text-font-weight: var(--BodyWeight);
+  --spectrum-body-xl-text-font-family: var(--spectrum-body-text-font-family);
+  --spectrum-heading-ml-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-l-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-xl-text-font-family: var(--spectrum-heading-text-font-family);
+  --spectrum-heading-l-text-font-weight: var(--HeadingWeight);
+  --spectrum-heading-xl-text-font-weight: var(--HeadingWeight);
+
+  /* Button overrides */
+  --spectrum-button-primary-text-font-family: var(--spectrum-body-text-font-family);
+  --spectrum-button-primary-border-size: var(--ButtonBorderSize);
+  --spectrum-button-primary-border-radius: var(--ButtonBorderRadius);
+  --spectrum-button-primary-text-font-weight: var(--spectrum-global-font-weight-normal, 400);
+  --spectrum-button-primary-padding-x: var(--spectrum-global-dimension-size-150);
+  --spectrum-button-primary-min-width: var(--spectrum-alias-single-line-height);
+
+  /* Inputs and Field Buttons */
+  --spectrum-textfield-border-radius: var(--ButtonBorderRadius);
+  --spectrum-fieldbutton-border-radius: var(--ButtonBorderRadius);
+  --spectrum-sidenav-item-text-size: 16px;
+
+  --page-max-width: 1200px;
+  --hero-max-width: 800px;
+  --responsive-breakpoint-mobile: 960px;
+}
+  /* COLOR-RELATED VARIABLES */
+.spectrum--darkest,
+.spectrum--dark,
+.spectrum--light,
+.spectrum--lightest {
+  --BlueTranslucent: rgba(56, 141, 224, 0.1);  /* blue100 at 10% */
+  /* Reassign spectrum color variables with our own generated colors */
+  --spectrum-global-color-gray-50: var(--Gray100);
+  --spectrum-global-color-gray-75: var(--Gray100);
+  --spectrum-global-color-gray-100: var(--Gray100);
+  --spectrum-global-color-gray-200: var(--Gray200);
+  --spectrum-global-color-gray-300: var(--Gray300);
+  --spectrum-global-color-gray-400: var(--Gray400);
+  --spectrum-global-color-gray-500: var(--Gray500);
+  --spectrum-global-color-gray-600: var(--Gray600);
+  --spectrum-global-color-gray-700: var(--Gray700);
+  --spectrum-global-color-gray-800: var(--Gray800);
+  --spectrum-global-color-gray-900: var(--Gray900);
+
+  --spectrum-global-color-blue-400: var(--Blue200);
+  --spectrum-global-color-blue-500: var(--Blue300);
+  --spectrum-global-color-blue-600: var(--Blue400);
+  --spectrum-global-color-blue-700: var(--Blue500);
+
+  /* Aliases and Semantics */
+  --BackgroundColor-dark: var(--Blue700);
+
+  --SemanticNegativeTextColor: #c12121;
+  --SemanticWarningTextColor: #d47700;
+  --SemanticOKTextColor: #879800;
+  --SemanticPositiveTextColor: #4c9e0f;
+
+  --spectrum-alias-text-color-disabled: var(--Gray300);
+  --spectrum-alias-placeholder-text-color: var(--Gray400);
+  --spectrum-alias-placeholder-text-color-hover: var(--Gray400);
+
+  --spectrum-alias-background-color-default: var(--BackgroundColor);
+  --spectrum-alias-border-color-focus: var(--Blue200);
+
+  --spectrum-semantic-cta-color-background-default: var(--staticBlue200);
+  --spectrum-semantic-cta-color-background-hover: var(--staticBlue300);
+  --spectrum-semantic-cta-color-background-down: var(--staticBlue400);
+  --spectrum-semantic-cta-color-background-key-focus: var(--staticBlue300);
+  --spectrum-semantic-cta-text-color: var(--Blue300);
+  --spectrum-semantic-cta-text-color-hover: var(--Blue400);
+  --spectrum-semantic-cta-text-color-key-focus: var(--Blue400);
+  --spectrum-semantic-cta-text-color-down: var(--Blue500);
+
+  --spectrum-alias-background-color-hover-overlay: rgba(29, 10, 68, 0.06); /* Gray800 at 15% */
+  --spectrum-alias-highlight-hover: var(--spectrum-alias-background-color-hover-overlay);
+  --spectrum-alias-highlight-selected: var(--BlueTranslucent);
+  --spectrum-alias-text-highlight-color: var(--BlueTranslucent);
+
+  /* Focus ring */
+  --spectrum-alias-focus-ring-color: var(--spectrum-alias-border-color-focus);
+
+  /* Typography overrides */
+  --spectrum-body-text-color: var(--Gray700);
+  --spectrum-alias-body-text-color: var(--Gray700);
+  --spectrum-alias-heading-text-color: var(--Blue600);
+  --spectrum-heading-s-text-color: var(--Blue600);
+  --spectrum-heading-m-text-color: var(--Blue600);
+  --spectrum-heading-l-text-color: var(--Blue600);
+  --spectrum-heading-xl-text-color: var(--Blue600);
+  --spectrum-heading-xxl-text-color: var(--Blue600);
+
+  /* Link overrides */
+  --spectrum-link-text-color: var(--spectrum-semantic-cta-text-color);
+  --spectrum-link-text-color-hover: var(--spectrum-semantic-cta-text-color-hover);
+  --spectrum-link-text-color-key-focus: var(--spectrum-semantic-cta-text-color-key-focus);
+  --spectrum-link-text-color-down: var(--spectrum-semantic-cta-text-color-down);
+
+  /* Button overrides */
+  --spectrum-button-primary-focus-ring-size-key-focus: var(--spectrum-alias-focus-ring-size);
+  --spectrum-button-primary-focus-ring-color-key-focus: var(--spectrum-alias-focus-ring-color);
+
+  /* Primary Button */
+  --spectrum-button-primary-border-color: var(--spectrum-semantic-cta-color-background-default);
+  --spectrum-button-primary-background-color: var(--spectrum-semantic-cta-color-background-default);
+  --spectrum-button-primary-text-color: var(--staticGray100);
+
+  --spectrum-button-primary-border-color-hover: var(--spectrum-semantic-cta-color-background-hover);
+  --spectrum-button-primary-background-color-hover: var(--spectrum-semantic-cta-color-background-hover);
+  --spectrum-button-primary-text-color-hover: var(--staticGray100);
+
+  --spectrum-button-primary-border-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
+  --spectrum-button-primary-background-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
+  --spectrum-button-primary-text-color-key-focus: var(--staticGray100);
+
+  --spectrum-button-primary-border-color-down: var(--spectrum-semantic-cta-color-background-down);
+  --spectrum-button-primary-background-color-down: var(--spectrum-semantic-cta-color-background-down);
+  --spectrum-button-primary-text-color-down: var(--staticGray100);
+
+  --spectrum-button-primary-border-color-disabled: var(--Gray300);
+  --spectrum-button-primary-background-color-disabled: var(--Gray300);
+  --spectrum-button-primary-text-color-disabled: var(--Gray200);
+
+  /* Quiet Primary Button */
+  --spectrum-button-quiet-primary-border-color: var(--spectrum-semantic-cta-color-background-default);
+  --spectrum-button-quiet-primary-background-color: rgba(0, 0, 0, 0);
+  --spectrum-button-quiet-primary-text-color: var(--spectrum-semantic-cta-text-color);
+
+  --spectrum-button-quiet-primary-border-color-hover: var(--spectrum-semantic-cta-color-background-hover);
+  --spectrum-button-quiet-primary-background-color-hover: var(--spectrum-semantic-cta-color-background-hover);
+  --spectrum-button-quiet-primary-text-color-hover: var(--staticGray100);
+
+  --spectrum-button-quiet-primary-border-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
+  --spectrum-button-quiet-primary-background-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
+  --spectrum-button-quiet-primary-text-color-key-focus: var(--staticGray100);
+
+  --spectrum-button-quiet-primary-border-color-down: var(--spectrum-semantic-cta-color-background-down);
+  --spectrum-button-quiet-primary-background-color-down: var(--spectrum-semantic-cta-color-background-down);
+  --spectrum-button-quiet-primary-text-color-down: var(--staticGray100);
+
+  --spectrum-button-quiet-primary-border-color-disabled: var(--Gray300);
+  --spectrum-button-quiet-primary-background-color-disabled: var(--Gray300);
+  --spectrum-button-quiet-primary-text-color-disabled: var(--Gray200);
+
+  /* Secondary Button */
+  --spectrum-button-secondary-border-color: var(--Gray500);
+  --spectrum-button-secondary-background-color: var(--Gray500);
+  --spectrum-button-secondary-text-color: var(--Gray100);
+
+  --spectrum-button-secondary-border-color-hover: var(--Gray600);
+  --spectrum-button-secondary-background-color-hover: var(--Gray600);
+  --spectrum-button-secondary-text-color-hover: var(--Gray100);
+
+  --spectrum-button-secondary-border-color-key-focus: var(--Gray600);
+  --spectrum-button-secondary-background-color-key-focus: var(--Gray600);
+  --spectrum-button-secondary-text-color-key-focus: var(--Gray100);
+
+  --spectrum-button-secondary-border-color-down: var(--Gray700);
+  --spectrum-button-secondary-background-color-down: var(--Gray700);
+  --spectrum-button-secondary-text-color-down: var(--Gray100);
+
+  --spectrum-button-secondary-border-color-disabled: var(--Gray300);
+  --spectrum-button-secondary-background-color-disabled: var(--Gray300);
+  --spectrum-button-secondary-text-color-disabled: var(--Gray200);
+
+  /* Quiet Secondary Button */
+  --spectrum-button-quiet-secondary-border-color: var(--Gray500);
+  --spectrum-button-quiet-secondary-background-color: rgba(0, 0, 0, 0);
+  --spectrum-button-quiet-secondary-text-color: var(--Gray600);
+
+  --spectrum-button-quiet-secondary-border-color-hover: var(--Gray600);
+  --spectrum-button-quiet-secondary-background-color-hover: var(--Gray600);
+  --spectrum-button-quiet-secondary-text-color-hover: var(--Gray100);
+
+  --spectrum-button-quiet-secondary-border-color-key-focus: var(--Gray600);
+  --spectrum-button-quiet-secondary-background-color-key-focus: var(--Gray600);
+  --spectrum-button-quiet-secondary-text-color-key-focus: var(--Gray100);
+
+  --spectrum-button-quiet-secondary-border-color-down: var(--Gray700);
+  --spectrum-button-quiet-secondary-background-color-down: var(--Gray700);
+  --spectrum-button-quiet-secondary-text-color-down: var(--Gray100);
+
+  --spectrum-button-quiet-secondary-border-color-disabled: var(--Gray300);
+  --spectrum-button-quiet-secondary-background-color-disabled: var(--Gray300);
+  --spectrum-button-quiet-secondary-text-color-disabled: var(--Gray200);
+
+  /* CTA Button */
+  --spectrum-button-cta-background-color: var(--spectrum-semantic-cta-color-background-default);
+  --spectrum-button-cta-background-color-hover: var(--spectrum-semantic-cta-color-background-hover);
+  --spectrum-button-cta-background-color-key-focus: var(--spectrum-semantic-cta-color-background-key-focus);
+  --spectrum-button-cta-background-color-down: var(--spectrum-semantic-cta-color-background-down);
+
+  --spectrum-button-cta-border-color-disabled: var(--Gray300);
+  --spectrum-button-cta-background-color-disabled: var(--Gray300);
+  --spectrum-button-cta-text-color-disabled: var(--Gray200);
+
+  /* Input Fields */
+  --spectrum-textfield-border-color: var(--Gray400);
+  --spectrum-textfield-border-color-hover: var(--Gray500);
+  --spectrum-textfield-border-color-down: var(--Blue500);
+  --spectrum-textfield-border-color-key-focus: var(--Blue200);
+  --spectrum-textfield-background-color: var(--BackgroundColor);
+
+  --spectrum-fieldbutton-background-color: var(--BackgroundColor);
+  --spectrum-fieldbutton-border-color: var(--Gray400);
+  --spectrum-fieldbutton-border-color-hover: var(--Gray500);
+  --spectrum-fieldbutton-border-color-down: var(--Blue500);
+  --spectrum-fieldbutton-border-color-key-focus: var(--Blue200);
+  --spectrum-fieldbutton-background-color: var(--BackgroundColor);
+
+
+  /* Select Lists */
+  --spectrum-selectlist-option-background-color-hover: var(--spectrum-alias-background-color-hover-overlay);
+  --spectrum-selectlist-option-background-color-key-focus: var(--spectrum-alias-background-color-hover-overlay);
+
+  /* Side Nav */
+  --spectrum-sidenav-item-background-color-hover: var(--spectrum-alias-highlight-hover);
+  --spectrum-sidenav-item-background-color-selected: var(--Blue200);
+  --spectrum-sidenav-item-text-color-selected: var(--staticGray100);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media screen and (min-width: 640px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 32px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 64px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .spectrum--medium,
+  .spectrum--large {
+    --ca-PageMargin: 10vw;
+  }
+}

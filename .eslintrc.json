@@ -9,6 +9,7 @@
   "ignorePatterns": [
     "node_modules/",
     "dist/",
+    "public/",
     "src/shared/scrapers/**/tests/",
     "vendor/"
   ],
@@ -22,10 +23,9 @@
   "rules": {
     "consistent-return": "off",
     "func-names": "off",
-    "import/extensions": [
-      "error",
-      "ignorePackages"
-    ],
+    "import/extensions": ["error", "ignorePackages"],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["!*.rollup.js  "]}],
+    "import/no-named-as-default": "off",
     "guard-for-in": "off",
     "import/no-named-as-default-member": "off",
     "import/no-named-as-default": "off",
@@ -41,6 +41,7 @@
     "no-restricted-syntax": "off",
     "no-shadow": "off",
     "no-underscore-dangle": "off",
+    "no-multi-assign": "off",
     "unicorn/filename-case": [
       "error",
       {

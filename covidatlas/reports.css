@@ -1,0 +1,31 @@
+/* Reports */
+.cds-CrossCheckReports-list {
+  list-style: none;
+}
+
+.cds-SourceComparison {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.cds-SourceComparison-metric {
+  padding: 0 4px;
+}
+.cds-SourceComparison-source {
+  padding-right: 12px;
+  text-align: right;
+}
+.cds-SourceComparison-value {
+  text-align: center;
+}
+
+.cds-SourceComparison-discrepancyMetric {
+  color: var(--spectrum-global-color-static-white);
+  background: var(--spectrum-global-color-red-400);
+}
+
+.cds-SourceComparison-agreedMetric {
+  color: var(--spectrum-global-color-static-white);
+  background: var(--spectrum-global-color-green-400);
+}

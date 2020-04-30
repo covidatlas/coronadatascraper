@@ -1,10 +1,13 @@
 .DS_Store
 .vscode
 cache/*
+public/*.css
+public/*.js
+public/*.js.map
 coronavirus-data-sources/
 dist/
 node_modules
-public/static.json
+public/*.json
 sam.json
 sam.yaml
 
