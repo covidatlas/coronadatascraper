@@ -43898,28 +43898,129 @@
     "level": "county"
   },
   {
-    "county": "Butte County",
     "state": "California",
     "country": "United States",
-    "sources": [
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.buttecounty.net/publichealth",
-        "name": "BCPHD",
-        "description": "Butte County Public Health Department"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "url": "https://www.buttecounty.net/publichealth",
-    "maintainers": [
+    "county": "Alameda County",
+    "cases": 1568,
+    "deaths": 57,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -121.9025,
+      37.68
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06001",
+    "population": 1671329,
+    "populationDensity": 856.9966385814763,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06001",
+    "name": "Alameda County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "cases": 0,
-    "rating": 0.2549019607843137,
+    "county": "Alpine County",
+    "cases": 1,
+    "tested": 13,
+    "recovered": 1,
+    "deaths": 0,
+    "active": 0,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -119.8075,
+      38.629999999999995
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06003",
+    "population": 1129,
+    "populationDensity": 0.5861633695391408,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06003",
+    "name": "Alpine County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Amador County",
+    "cases": 8,
+    "tested": 442,
+    "recovered": 7,
+    "deaths": 0,
+    "hospitalized": 2,
+    "active": 1,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -120.55000000000001,
+      38.4645
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06005",
+    "population": 39752,
+    "populationDensity": 25.257070022729092,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06005",
+    "name": "Amador County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Butte County",
+    "cases": 16,
+    "tested": 1328,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -121.57300000000001,
       39.724000000000004
@@ -43937,22 +44038,92 @@
     "level": "county"
   },
   {
-    "county": "Contra Costa County",
     "state": "California",
     "country": "United States",
-    "url": "https://www.coronavirus.cchealth.org/",
-    "maintainers": [
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "cases": 0,
+    "county": "Calaveras County",
+    "cases": 13,
+    "tested": 402,
+    "recovered": 13,
     "deaths": 0,
-    "rating": 0.3333333333333333,
+    "active": 0,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -120.5075,
+      38.171
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06009",
+    "population": 45905,
+    "populationDensity": 17.0546833687783,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06009",
+    "name": "Calaveras County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Colusa County",
+    "cases": 3,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -122.28999999999999,
+      39.169
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06011",
+    "population": 21547,
+    "populationDensity": 7.149269243514991,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06011",
+    "name": "Colusa County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Contra Costa County",
+    "cases": 862,
+    "tested": 12784,
+    "deaths": 25,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -121.982,
       37.91
@@ -43970,22 +44141,98 @@
     "level": "county"
   },
   {
-    "county": "Fresno County",
     "state": "California",
     "country": "United States",
-    "url": "https://www.co.fresno.ca.us/departments/public-health/covid-19",
-    "maintainers": [
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "cases": 0,
+    "county": "Del Norte County",
+    "cases": 3,
+    "tested": 345,
+    "recovered": 2,
     "deaths": 0,
-    "rating": 0.3333333333333333,
+    "active": 1,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -123.887,
+      41.691
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06015",
+    "population": 27812,
+    "populationDensity": 10.589165939348229,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06015",
+    "name": "Del Norte County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "El Dorado County",
+    "cases": 44,
+    "tested": 2050,
+    "recovered": 40,
+    "deaths": 0,
+    "active": 4,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -120.509,
+      38.785
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06017",
+    "population": 192843,
+    "populationDensity": 41.639117012380844,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06017",
+    "name": "El Dorado County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Fresno County",
+    "cases": 538,
+    "tested": 6981,
+    "recovered": 202,
+    "deaths": 7,
+    "hospitalized": 97,
+    "active": 329,
+    "rating": 0.7843137254901961,
     "coordinates": [
       -119.64,
       36.7465
@@ -44003,30 +44250,205 @@
     "level": "county"
   },
   {
-    "county": "Kings County",
     "state": "California",
     "country": "United States",
-    "maintainers": [
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "url": "https://www.countyofkings.com/departments/health-welfare/public-health/coronavirus-disease-2019-covid-19/-fsiteid-1",
-    "cases": 96,
-    "rating": 0.2549019607843137,
+    "county": "Glenn County",
+    "cases": 5,
+    "tested": 101,
+    "recovered": 4,
+    "deaths": 0,
+    "active": 1,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -122.39750000000001,
+      39.591499999999996
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06021",
+    "population": 28393,
+    "populationDensity": 8.281925376057828,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06021",
+    "name": "Glenn County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Humboldt County",
+    "cases": 54,
+    "tested": 2159,
+    "recovered": 52,
+    "deaths": 0,
+    "hospitalized": 4,
+    "active": 2,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -123.90899999999999,
+      40.7335
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06023",
+    "population": 135558,
+    "populationDensity": 14.47134596966685,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06023",
+    "name": "Humboldt County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Imperial County",
+    "cases": 319,
+    "tested": 2018,
+    "recovered": 100,
+    "deaths": 8,
+    "active": 211,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -115.2845,
+      33.0265
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06025",
+    "population": 181215,
+    "populationDensity": 15.582313628221113,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06025",
+    "name": "Imperial County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Inyo County",
+    "cases": 19,
+    "tested": 247,
+    "recovered": 13,
+    "deaths": 1,
+    "active": 5,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -117.2165,
+      36.626000000000005
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06027",
+    "population": 18039,
+    "populationDensity": 0.6796601827947788,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06027",
+    "name": "Inyo County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Kern County",
+    "cases": 866,
+    "recovered": 484,
+    "deaths": 6,
+    "active": 376,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -118.905,
+      35.2945
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06029",
+    "population": 900202,
+    "populationDensity": 42.48350771508031,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06029",
+    "name": "Kern County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Kings County",
+    "cases": 79,
+    "tested": 1293,
+    "recovered": 15,
+    "deaths": 1,
+    "active": 63,
+    "rating": 0.7843137254901961,
     "coordinates": [
       -119.8945,
       36.138999999999996
@@ -44044,38 +44466,93 @@
     "level": "county"
   },
   {
-    "country": "United States",
-    "county": "Los Angeles County",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "sources": [
-      {
-        "description": "County of Los Angeles Public Health",
-        "name": "County of Los Angeles Public Health",
-        "url": "http://www.publichealth.lacounty.gov"
-      }
-    ],
     "state": "California",
-    "url": "http://www.publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Lake County",
+    "cases": 6,
+    "recovered": 6,
+    "deaths": 0,
+    "active": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -122.7165,
+      39.1245
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06033",
+    "population": 64386,
+    "populationDensity": 18.698493009937465,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06033",
+    "name": "Lake County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Lassen County",
+    "cases": 0,
+    "tested": 101,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.66399999999999,
+      40.446
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06035",
+    "population": 30573,
+    "populationDensity": 2.498195741426973,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06035",
+    "name": "Lassen County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Los Angeles County",
     "cases": 22485,
+    "tested": 139000,
     "deaths": 1056,
-    "rating": 0.3333333333333333,
+    "hospitalized": 4715,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -118.2955,
       33.812
@@ -44090,6 +44567,532 @@
     "stateId": "iso2:US-CA",
     "countyId": "fips:06037",
     "name": "Los Angeles County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Madera County",
+    "cases": 46,
+    "tested": 1010,
+    "recovered": 28,
+    "deaths": 2,
+    "active": 16,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -119.784,
+      37.2705
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06039",
+    "population": 157327,
+    "populationDensity": 28.183268453497384,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06039",
+    "name": "Madera County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Marin County",
+    "cases": 235,
+    "tested": 3394,
+    "recovered": 171,
+    "deaths": 12,
+    "hospitalized": 43,
+    "active": 52,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -122.721,
+      38.07
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06041",
+    "population": 258826,
+    "populationDensity": 183.23301816223417,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06041",
+    "name": "Marin County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Mariposa County",
+    "cases": 1,
+    "tested": 119,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -119.8515,
+      37.542
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06043",
+    "population": 17203,
+    "populationDensity": 4.528868849191132,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06043",
+    "name": "Mariposa County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Mendocino County",
+    "cases": 12,
+    "tested": 1019,
+    "recovered": 4,
+    "deaths": 0,
+    "active": 8,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -123.423,
+      39.3805
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06045",
+    "population": 86749,
+    "populationDensity": 9.519718771529728,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06045",
+    "name": "Mendocino County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Merced County",
+    "cases": 118,
+    "recovered": 74,
+    "deaths": 3,
+    "active": 41,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.649,
+      37.1865
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06047",
+    "population": 277680,
+    "populationDensity": 54.12972486395023,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06047",
+    "name": "Merced County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Modoc County",
+    "cases": 0,
+    "tested": 77,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.72749999999999,
+      41.5905
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06049",
+    "population": 8841,
+    "populationDensity": 0.8108299944329249,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06049",
+    "name": "Modoc County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Mono County",
+    "cases": 26,
+    "tested": 234,
+    "deaths": 1,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -118.741,
+      38.088
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06051",
+    "population": 14444,
+    "populationDensity": 1.7789397782127907,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06051",
+    "name": "Mono County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Monterey County",
+    "cases": 206,
+    "tested": 3239,
+    "recovered": 43,
+    "deaths": 5,
+    "hospitalized": 32,
+    "active": 158,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -121.09649999999999,
+      36.3545
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06053",
+    "population": 434061,
+    "populationDensity": 50.44697744978848,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06053",
+    "name": "Monterey County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Napa County",
+    "cases": 67,
+    "tested": 1305,
+    "recovered": 30,
+    "deaths": 2,
+    "hospitalized": 9,
+    "active": 35,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -122.3535,
+      38.5095
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06055",
+    "population": 137744,
+    "populationDensity": 67.29197077324257,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06055",
+    "name": "Napa County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Nevada County",
+    "cases": 41,
+    "tested": 1190,
+    "deaths": 1,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.64150000000001,
+      39.266000000000005
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06057",
+    "population": 99755,
+    "populationDensity": 39.438255419753034,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06057",
+    "name": "Nevada County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Orange County",
+    "cases": 2252,
+    "tested": 29940,
+    "deaths": 44,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -117.7645,
+      33.667500000000004
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06059",
+    "population": 3175692,
+    "populationDensity": 1529.6321491557933,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06059",
+    "name": "Orange County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Placer County",
+    "cases": 145,
+    "deaths": 8,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -120.743,
+      39.014
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06061",
+    "population": 398329,
+    "populationDensity": 102.22165983559846,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06061",
+    "name": "Placer County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Plumas County",
+    "cases": 4,
+    "tested": 448,
+    "recovered": 4,
+    "deaths": 0,
+    "active": 0,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -120.799,
+      40.0235
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06063",
+    "population": 18807,
+    "populationDensity": 2.774680554012003,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06063",
+    "name": "Plumas County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Riverside County",
+    "cases": 3942,
+    "tested": 48531,
+    "recovered": 1346,
+    "deaths": 143,
+    "active": 2453,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -116.0555,
+      33.753
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06065",
+    "population": 2470546,
+    "populationDensity": 130.20291804949287,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06065",
+    "name": "Riverside County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Sacramento County",
+    "cases": 1068,
+    "deaths": 42,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -121.4445,
+      38.376999999999995
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06067",
+    "population": 1552058,
+    "populationDensity": 600.3182095054837,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06067",
+    "name": "Sacramento County, California, United States",
     "level": "county"
   },
   {
@@ -44932,95 +45935,6 @@
     "stateId": "iso2:US-CA",
     "countyId": "fips:06115",
     "name": "Yuba County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Mono County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://monocovid19-monomammoth.hub.arcgis.com/",
-    "cases": 0,
-    "tested": 0,
-    "rating": 0.3333333333333333,
-    "coordinates": [
-      -118.741,
-      38.088
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06051",
-    "population": 14444,
-    "populationDensity": 1.7789397782127907,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06051",
-    "name": "Mono County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Monterey County",
-    "state": "California",
-    "country": "United States",
-    "url": "https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19",
-    "cases": 0,
-    "rating": 0.27450980392156865,
-    "coordinates": [
-      -121.09649999999999,
-      36.3545
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06053",
-    "population": 434061,
-    "populationDensity": 50.44697744978848,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06053",
-    "name": "Monterey County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Placer County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.placer.ca.gov/6448/Cases-in-Placer",
-    "cases": 0,
-    "deaths": 0,
-    "rating": 0.3333333333333333,
-    "coordinates": [
-      -120.743,
-      39.014
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06061",
-    "population": 398329,
-    "populationDensity": 102.22165983559846,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06061",
-    "name": "Placer County, California, United States",
     "level": "county"
   },
   {
@@ -122449,798 +123363,6 @@
         "github": "nytimes"
       }
     ],
-    "county": "Alameda County",
-    "state": "California",
-    "cases": 1589,
-    "deaths": 59,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.9025,
-      37.68
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06001",
-    "population": 1671329,
-    "populationDensity": 856.9966385814763,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06001",
-    "name": "Alameda County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Alpine County",
-    "state": "California",
-    "cases": 1,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -119.8075,
-      38.629999999999995
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06003",
-    "population": 1129,
-    "populationDensity": 0.5861633695391408,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06003",
-    "name": "Alpine County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Amador County",
-    "state": "California",
-    "cases": 7,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.55000000000001,
-      38.4645
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06005",
-    "population": 39752,
-    "populationDensity": 25.257070022729092,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06005",
-    "name": "Amador County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Calaveras County",
-    "state": "California",
-    "cases": 13,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.5075,
-      38.171
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06009",
-    "population": 45905,
-    "populationDensity": 17.0546833687783,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06009",
-    "name": "Calaveras County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Colusa County",
-    "state": "California",
-    "cases": 3,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.28999999999999,
-      39.169
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06011",
-    "population": 21547,
-    "populationDensity": 7.149269243514991,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06011",
-    "name": "Colusa County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Del Norte County",
-    "state": "California",
-    "cases": 3,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -123.887,
-      41.691
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06015",
-    "population": 27812,
-    "populationDensity": 10.589165939348229,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06015",
-    "name": "Del Norte County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "El Dorado County",
-    "state": "California",
-    "cases": 44,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.509,
-      38.785
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06017",
-    "population": 192843,
-    "populationDensity": 41.639117012380844,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06017",
-    "name": "El Dorado County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Glenn County",
-    "state": "California",
-    "cases": 5,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.39750000000001,
-      39.591499999999996
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06021",
-    "population": 28393,
-    "populationDensity": 8.281925376057828,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06021",
-    "name": "Glenn County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Humboldt County",
-    "state": "California",
-    "cases": 54,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -123.90899999999999,
-      40.7335
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06023",
-    "population": 135558,
-    "populationDensity": 14.47134596966685,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06023",
-    "name": "Humboldt County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Imperial County",
-    "state": "California",
-    "cases": 319,
-    "deaths": 8,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -115.2845,
-      33.0265
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06025",
-    "population": 181215,
-    "populationDensity": 15.582313628221113,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06025",
-    "name": "Imperial County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Inyo County",
-    "state": "California",
-    "cases": 20,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -117.2165,
-      36.626000000000005
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06027",
-    "population": 18039,
-    "populationDensity": 0.6796601827947788,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06027",
-    "name": "Inyo County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Kern County",
-    "state": "California",
-    "cases": 882,
-    "deaths": 6,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -118.905,
-      35.2945
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06029",
-    "population": 900202,
-    "populationDensity": 42.48350771508031,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06029",
-    "name": "Kern County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lake County",
-    "state": "California",
-    "cases": 6,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.7165,
-      39.1245
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06033",
-    "population": 64386,
-    "populationDensity": 18.698493009937465,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06033",
-    "name": "Lake County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Madera County",
-    "state": "California",
-    "cases": 46,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -119.784,
-      37.2705
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06039",
-    "population": 157327,
-    "populationDensity": 28.183268453497384,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06039",
-    "name": "Madera County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Marin County",
-    "state": "California",
-    "cases": 235,
-    "deaths": 13,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.721,
-      38.07
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06041",
-    "population": 258826,
-    "populationDensity": 183.23301816223417,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06041",
-    "name": "Marin County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Mariposa County",
-    "state": "California",
-    "cases": 1,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -119.8515,
-      37.542
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06043",
-    "population": 17203,
-    "populationDensity": 4.528868849191132,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06043",
-    "name": "Mariposa County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Mendocino County",
-    "state": "California",
-    "cases": 12,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -123.423,
-      39.3805
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06045",
-    "population": 86749,
-    "populationDensity": 9.519718771529728,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06045",
-    "name": "Mendocino County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Merced County",
-    "state": "California",
-    "cases": 118,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.649,
-      37.1865
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06047",
-    "population": 277680,
-    "populationDensity": 54.12972486395023,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06047",
-    "name": "Merced County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Napa County",
-    "state": "California",
-    "cases": 67,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.3535,
-      38.5095
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06055",
-    "population": 137744,
-    "populationDensity": 67.29197077324257,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06055",
-    "name": "Napa County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Nevada County",
-    "state": "California",
-    "cases": 41,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.64150000000001,
-      39.266000000000005
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06057",
-    "population": 99755,
-    "populationDensity": 39.438255419753034,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06057",
-    "name": "Nevada County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Orange County",
-    "state": "California",
-    "cases": 2324,
-    "deaths": 44,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -117.7645,
-      33.667500000000004
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06059",
-    "population": 3175692,
-    "populationDensity": 1529.6321491557933,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06059",
-    "name": "Orange County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Plumas County",
-    "state": "California",
-    "cases": 4,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -120.799,
-      40.0235
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06063",
-    "population": 18807,
-    "populationDensity": 2.774680554012003,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06063",
-    "name": "Plumas County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Riverside County",
-    "state": "California",
-    "cases": 3942,
-    "deaths": 143,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -116.0555,
-      33.753
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06065",
-    "population": 2470546,
-    "populationDensity": 130.20291804949287,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06065",
-    "name": "Riverside County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sacramento County",
-    "state": "California",
-    "cases": 1068,
-    "deaths": 42,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.4445,
-      38.376999999999995
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06067",
-    "population": 1552058,
-    "populationDensity": 600.3182095054837,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06067",
-    "name": "Sacramento County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
     "county": "Adams County",
     "state": "Colorado",
     "cases": 1490,
@@ -142725,94 +142847,6 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02282",
     "name": "Yakutat City and Borough, Alaska, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Lassen County",
-    "state": "California",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -120.66399999999999,
-      40.446
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06035",
-    "population": 30573,
-    "populationDensity": 2.498195741426973,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06035",
-    "name": "Lassen County, California, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Modoc County",
-    "state": "California",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -120.72749999999999,
-      41.5905
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06049",
-    "population": 8841,
-    "populationDensity": 0.8108299944329249,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06049",
-    "name": "Modoc County, California, United States",
     "level": "county"
   },
   {
