@@ -211,10 +211,13 @@ const scraper = {
       const $ = await fetch.page(this, this.url, 'default');
       const $table = $('#msdhTotalCovid-19Cases');
 
-      // Validate headings.
+      // Validate the headings we care about.
       const $ths = $table.find('thead > tr > td');
-      const headers = $ths.toArray().map(th => $(th).text());
-      const expectedHeaders = ['County', 'Total Cases', 'Total Deaths', 'LTCs with Outbreaks'];
+      const headers = $ths
+        .toArray()
+        .slice(0, 3)
+        .map(th => $(th).text());
+      const expectedHeaders = ['County', 'Total Cases', 'Total Deaths'];
       assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
 
       const getCellTextArray = tr => {
@@ -229,7 +232,6 @@ const scraper = {
           .map(c => (c === '' ? '0' : c));
       };
       const getReportData = row => {
-        assert.equal(row.length, 4, 'cell count');
         let county = geography.addCounty(parse.string(row[0]));
         county = this._fixCountyTypos(county);
         return { county, cases: parse.number(row[1]), deaths: parse.number(row[2]) };
