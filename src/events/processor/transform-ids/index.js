@@ -45,15 +45,6 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
     await countryLevels.transformLocationIds(rating);
   }
 
-  sourceRatings = sourceRatings.sort((a, b) => {
-    return (
-      compare(a.city, b.city) ||
-      compare(a.county, b.county) ||
-      compare(a.state, b.state) ||
-      compare(a.country, b.country)
-    );
-  });
-
   // Transform crosscheck reports
   const crosscheckReports = [];
 
