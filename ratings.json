@@ -1,5 +1,28 @@
 [
   {
+    "state": "California",
+    "country": "United States",
+    "priority": 1,
+    "type": "csv",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "timeseries": true,
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.7843137254901961,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
+  },
+  {
     "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "timeseries": true,
@@ -1102,6 +1125,27 @@
     "rating": 0.47058823529411764,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MO"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "type": "table",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS"
   },
   {
     "state": "Texas",

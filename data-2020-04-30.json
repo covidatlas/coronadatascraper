@@ -3145,7 +3145,7 @@
     "state": "Jura",
     "cases": 197,
     "deaths": 7,
-    "hospitalized": 8,
+    "hospitalized": 9,
     "rating": 0.43137254901960786,
     "coordinates": [
       7.2055,
@@ -3630,7 +3630,7 @@
     ],
     "cases": 29194,
     "deaths": 1729,
-    "hospitalized": 1081,
+    "hospitalized": 1082,
     "discharged": 4741,
     "rating": 0.39215686274509803,
     "coordinates": [
@@ -44093,6 +44093,848 @@
     "level": "county"
   },
   {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Benito County",
+    "cases": 50,
+    "tested": 908,
+    "recovered": 43,
+    "deaths": 2,
+    "active": 5,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -121.12049999999999,
+      36.593
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06069",
+    "population": 62808,
+    "populationDensity": 17.384907754152366,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06069",
+    "name": "San Benito County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Bernardino County",
+    "cases": 1928,
+    "tested": 19449,
+    "deaths": 89,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -115.9685,
+      34.840500000000006
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06071",
+    "population": 2180085,
+    "populationDensity": 41.759928092091464,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06071",
+    "name": "San Bernardino County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Diego County",
+    "cases": 3432,
+    "tested": 50271,
+    "deaths": 120,
+    "hospitalized": 761,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -116.83850000000001,
+      33.0195
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06073",
+    "population": 3338330,
+    "populationDensity": 302.0489019322038,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06073",
+    "name": "San Diego County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Francisco County",
+    "cases": 1490,
+    "tested": 17718,
+    "deaths": 23,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -122.4215,
+      37.769999999999996
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06075",
+    "population": 881549,
+    "populationDensity": 7013.128762314776,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06075",
+    "name": "San Francisco County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Joaquin County",
+    "cases": 540,
+    "recovered": 351,
+    "deaths": 25,
+    "hospitalized": 132,
+    "active": 164,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -121.2525,
+      37.891
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06077",
+    "population": 762148,
+    "populationDensity": 205.85795614812807,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06077",
+    "name": "San Joaquin County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Luis Obispo County",
+    "cases": 181,
+    "tested": 1214,
+    "recovered": 135,
+    "deaths": 1,
+    "active": 45,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -120.40950000000001,
+      35.346000000000004
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06079",
+    "population": 283111,
+    "populationDensity": 32.836909349931034,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06079",
+    "name": "San Luis Obispo County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "San Mateo County",
+    "cases": 1136,
+    "tested": 12483,
+    "deaths": 48,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -122.3145,
+      37.4075
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06081",
+    "population": 766573,
+    "populationDensity": 645.7740508840907,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06081",
+    "name": "San Mateo County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Santa Barbara County",
+    "cases": 485,
+    "tested": 4374,
+    "recovered": 360,
+    "deaths": 8,
+    "active": 117,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -119.846,
+      34.2855
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06083",
+    "population": 446499,
+    "populationDensity": 62.46350421853447,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06083",
+    "name": "Santa Barbara County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Santa Clara County",
+    "cases": 2134,
+    "tested": 27502,
+    "deaths": 107,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -121.705,
+      37.189
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06085",
+    "population": 1927852,
+    "populationDensity": 570.665200230684,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06085",
+    "name": "Santa Clara County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Santa Cruz County",
+    "cases": 127,
+    "recovered": 83,
+    "deaths": 2,
+    "hospitalized": 18,
+    "active": 42,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -121.9495,
+      37.0685
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06087",
+    "population": 273213,
+    "populationDensity": 235.31678121364428,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06087",
+    "name": "Santa Cruz County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Shasta County",
+    "cases": 31,
+    "tested": 1373,
+    "deaths": 4,
+    "hospitalized": 8,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -122.19399999999999,
+      40.735
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06089",
+    "population": 180080,
+    "populationDensity": 18.05544567221093,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06089",
+    "name": "Shasta County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Sierra County",
+    "cases": 0,
+    "tested": 15,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.52950000000001,
+      39.584
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06091",
+    "population": 3005,
+    "populationDensity": 1.2059701916007832,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06091",
+    "name": "Sierra County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Siskiyou County",
+    "cases": 5,
+    "tested": 269,
+    "recovered": 5,
+    "deaths": 0,
+    "active": 0,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -122.5825,
+      41.5015
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06093",
+    "population": 43539,
+    "populationDensity": 2.646916458130334,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06093",
+    "name": "Siskiyou County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Solano County",
+    "cases": 254,
+    "tested": 3676,
+    "deaths": 5,
+    "hospitalized": 51,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -122,
+      38.2855
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06095",
+    "population": 447643,
+    "populationDensity": 194.1043156866582,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06095",
+    "name": "Solano County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Sonoma County",
+    "cases": 228,
+    "tested": 5649,
+    "recovered": 105,
+    "deaths": 2,
+    "active": 121,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -122.94200000000001,
+      38.480999999999995
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06097",
+    "population": 494336,
+    "populationDensity": 120.02594925198116,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06097",
+    "name": "Sonoma County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Stanislaus County",
+    "cases": 339,
+    "recovered": 230,
+    "deaths": 11,
+    "active": 98,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -120.9375,
+      37.605999999999995
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06099",
+    "population": 550660,
+    "populationDensity": 140.3299517049166,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06099",
+    "name": "Stanislaus County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Sutter County",
+    "cases": 30,
+    "tested": 751,
+    "recovered": 22,
+    "deaths": 2,
+    "hospitalized": 5,
+    "active": 6,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -121.681,
+      39.0205
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06101",
+    "population": 96971,
+    "populationDensity": 61.220904853507484,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06101",
+    "name": "Sutter County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Tehama County",
+    "cases": 1,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -122.20349999999999,
+      40.125
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06103",
+    "population": 65084,
+    "populationDensity": 8.454563962019728,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06103",
+    "name": "Tehama County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Trinity County",
+    "cases": 0,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -123.035,
+      40.671
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06105",
+    "population": 12285,
+    "populationDensity": 1.4776863693130606,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06105",
+    "name": "Trinity County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Tulare County",
+    "cases": 626,
+    "recovered": 97,
+    "deaths": 36,
+    "active": 493,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -118.77699999999999,
+      36.266999999999996
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06107",
+    "population": 466195,
+    "populationDensity": 37.14504832842958,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06107",
+    "name": "Tulare County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Tuolumne County",
+    "cases": 4,
+    "tested": 567,
+    "deaths": 0,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -119.9265,
+      38.034
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06109",
+    "population": 54478,
+    "populationDensity": 9.232262584078281,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06109",
+    "name": "Tuolumne County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Ventura County",
+    "cases": 517,
+    "tested": 9784,
+    "recovered": 366,
+    "deaths": 17,
+    "active": 134,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -119.106,
+      34.05800000000001
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06111",
+    "population": 846006,
+    "populationDensity": 174.74265885918712,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06111",
+    "name": "Ventura County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Yolo County",
+    "cases": 163,
+    "tested": 1990,
+    "deaths": 16,
+    "hospitalized": 32,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -121.9635,
+      38.619
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06113",
+    "population": 220500,
+    "populationDensity": 83.33463580119341,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06113",
+    "name": "Yolo County, California, United States",
+    "level": "county"
+  },
+  {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "county": "Yuba County",
+    "cases": 17,
+    "tested": 747,
+    "recovered": 14,
+    "deaths": 1,
+    "hospitalized": 3,
+    "active": 2,
+    "rating": 0.7843137254901961,
+    "coordinates": [
+      -121.32249999999999,
+      39.2785
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "fips:06115",
+    "population": 78668,
+    "populationDensity": 47.33917253530988,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "countyId": "fips:06115",
+    "name": "Yuba County, California, United States",
+    "level": "county"
+  },
+  {
     "county": "Mono County",
     "state": "California",
     "country": "United States",
@@ -44179,273 +45021,6 @@
     "stateId": "iso2:US-CA",
     "countyId": "fips:06061",
     "name": "Placer County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "San Diego County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.sandiegocounty.gov/content/sdc/hhsa/programs/phs/community_epidemiology/dc/2019-nCoV/status.html",
-    "cases": 3432,
-    "deaths": 120,
-    "rating": 0.3333333333333333,
-    "coordinates": [
-      -116.83850000000001,
-      33.0195
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06073",
-    "population": 3338330,
-    "populationDensity": 302.0489019322038,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06073",
-    "name": "San Diego County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "San Francisco County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.sfdph.org/dph/alerts/coronavirus.asp",
-    "cases": 1490,
-    "deaths": 23,
-    "rating": 0.21568627450980393,
-    "coordinates": [
-      -122.4215,
-      37.769999999999996
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06075",
-    "population": 881549,
-    "populationDensity": 7013.128762314776,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06075",
-    "name": "San Francisco County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "San Joaquin County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.sjcphs.org/coronavirus.aspx#res",
-    "cases": 0,
-    "deaths": 0,
-    "rating": 0.3333333333333333,
-    "coordinates": [
-      -121.2525,
-      37.891
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06077",
-    "population": 762148,
-    "populationDensity": 205.85795614812807,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06077",
-    "name": "San Joaquin County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "San Luis Obispo County",
-    "state": "California",
-    "country": "United States",
-    "url": "https://www.emergencyslo.org/en/covid19.aspx",
-    "cases": 181,
-    "rating": 0.13725490196078433,
-    "coordinates": [
-      -120.40950000000001,
-      35.346000000000004
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06079",
-    "population": 283111,
-    "populationDensity": 32.836909349931034,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06079",
-    "name": "San Luis Obispo County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "San Mateo County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.smchealth.org/coronavirus",
-    "cases": 0,
-    "deaths": 0,
-    "rating": 0.3333333333333333,
-    "coordinates": [
-      -122.3145,
-      37.4075
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06081",
-    "population": 766573,
-    "populationDensity": 645.7740508840907,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06081",
-    "name": "San Mateo County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Shasta County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.co.shasta.ca.us/covid-19/overview",
-    "cases": 310,
-    "rating": 0.27450980392156865,
-    "coordinates": [
-      -122.19399999999999,
-      40.735
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06089",
-    "population": 180080,
-    "populationDensity": 18.05544567221093,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06089",
-    "name": "Shasta County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Stanislaus County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.schsa.org/PublicHealth/pages/corona-virus/",
-    "cases": 339,
-    "deaths": 11,
-    "rating": 0.3137254901960784,
-    "coordinates": [
-      -120.9375,
-      37.605999999999995
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06099",
-    "population": 550660,
-    "populationDensity": 140.3299517049166,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06099",
-    "name": "Stanislaus County, California, United States",
-    "level": "county"
-  },
-  {
-    "county": "Ventura County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Tyler Austin",
-        "email": "thenobledog@gmail.com",
-        "github": "webguyty",
-        "country": "USA",
-        "state": "CA",
-        "county": "Ventura County",
-        "city": "Ventura",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.vcemergency.com",
-    "cases": 517,
-    "deaths": 17,
-    "recovered": 366,
-    "tested": 9784,
-    "hospitalized": 0,
-    "active": 134,
-    "rating": 0.37254901960784315,
-    "coordinates": [
-      -119.106,
-      34.05800000000001
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06111",
-    "population": 846006,
-    "populationDensity": 174.74265885918712,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06111",
-    "name": "Ventura County, California, United States",
     "level": "county"
   },
   {
@@ -81930,6 +82505,2548 @@
     "stateId": "iso2:US-MO",
     "countyId": "fips:29189",
     "name": "St. Louis County, Missouri, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Adams County",
+    "cases": 129,
+    "deaths": 8,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -91.4045,
+      31.468
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28001",
+    "population": 30693,
+    "populationDensity": 24.29935120535122,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28001",
+    "name": "Adams County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Alcorn County",
+    "cases": 10,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.5935,
+      34.876000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28003",
+    "population": 36953,
+    "populationDensity": 35.53478696769773,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28003",
+    "name": "Alcorn County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Amite County",
+    "cases": 26,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.8215,
+      31.174500000000002
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28005",
+    "population": 12297,
+    "populationDensity": 6.4721496457692105,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28005",
+    "name": "Amite County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Attala County",
+    "cases": 94,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.64099999999999,
+      33.083
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28007",
+    "population": 18174,
+    "populationDensity": 9.533548287688415,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28007",
+    "name": "Attala County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Benton County",
+    "cases": 9,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.185,
+      34.789
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28009",
+    "population": 8259,
+    "populationDensity": 7.777855890421298,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28009",
+    "name": "Benton County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Bolivar County",
+    "cases": 101,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.945,
+      33.825
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28011",
+    "population": 30628,
+    "populationDensity": 13.0067931946667,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28011",
+    "name": "Bolivar County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Calhoun County",
+    "cases": 51,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.32400000000001,
+      33.942
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28013",
+    "population": 14361,
+    "populationDensity": 9.42861046440828,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28013",
+    "name": "Calhoun County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Carroll County",
+    "cases": 25,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.91,
+      33.445499999999996
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28015",
+    "population": 9947,
+    "populationDensity": 6.0394605550976275,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28015",
+    "name": "Carroll County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Chickasaw County",
+    "cases": 68,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.9555,
+      33.907
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28017",
+    "population": 17103,
+    "populationDensity": 13.055959127834466,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28017",
+    "name": "Chickasaw County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Choctaw County",
+    "cases": 13,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.27099999999999,
+      33.321
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28019",
+    "population": 8210,
+    "populationDensity": 7.537892414390313,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28019",
+    "name": "Choctaw County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Claiborne County",
+    "cases": 20,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.981,
+      32.005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28021",
+    "population": 8988,
+    "populationDensity": 6.890833260022234,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28021",
+    "name": "Claiborne County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Clarke County",
+    "cases": 53,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.6725,
+      32.0275
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28023",
+    "population": 15541,
+    "populationDensity": 8.631600737377703,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28023",
+    "name": "Clarke County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Clay County",
+    "cases": 34,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.75399999999999,
+      33.659
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28025",
+    "population": 19316,
+    "populationDensity": 17.90275224891332,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28025",
+    "name": "Clay County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Coahoma County",
+    "cases": 61,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.6785,
+      34.2555
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28027",
+    "population": 22124,
+    "populationDensity": 14.643120901659524,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28027",
+    "name": "Coahoma County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Copiah County",
+    "cases": 88,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.422,
+      31.8675
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28029",
+    "population": 28065,
+    "populationDensity": 13.891123848879568,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28029",
+    "name": "Copiah County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Covington County",
+    "cases": 55,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.5775,
+      31.6155
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28031",
+    "population": 18636,
+    "populationDensity": 17.252232293672115,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28031",
+    "name": "Covington County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "DeSoto County",
+    "cases": 277,
+    "deaths": 4,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.018,
+      34.852500000000006
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28033",
+    "population": 184945,
+    "populationDensity": 143.55548346831378,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28033",
+    "name": "DeSoto County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Forrest County",
+    "cases": 198,
+    "deaths": 10,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.295,
+      31.172
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28035",
+    "population": 74897,
+    "populationDensity": 61.36674350352366,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28035",
+    "name": "Forrest County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Franklin County",
+    "cases": 16,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.8955,
+      31.466
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28037",
+    "population": 7713,
+    "populationDensity": 5.222742270376854,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28037",
+    "name": "Franklin County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "George County",
+    "cases": 13,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.64850000000001,
+      30.866
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28039",
+    "population": 24500,
+    "populationDensity": 19.50810858900671,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28039",
+    "name": "George County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Greene County",
+    "cases": 5,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.634,
+      31.217
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28041",
+    "population": 13586,
+    "populationDensity": 7.274936416816324,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28041",
+    "name": "Greene County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Grenada County",
+    "cases": 28,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.822,
+      33.7875
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28043",
+    "population": 20758,
+    "populationDensity": 17.838879893649025,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28043",
+    "name": "Grenada County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Hancock County",
+    "cases": 61,
+    "deaths": 5,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.506,
+      30.411
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28045",
+    "population": 47632,
+    "populationDensity": 37.72120504381903,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28045",
+    "name": "Hancock County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Harrison County",
+    "cases": 171,
+    "deaths": 6,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.078,
+      30.439
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28047",
+    "population": 208080,
+    "populationDensity": 131.46551970597716,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28047",
+    "name": "Harrison County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Hinds County",
+    "cases": 450,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.39750000000001,
+      32.311
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28049",
+    "population": 231840,
+    "populationDensity": 101.84972140978978,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28049",
+    "name": "Hinds County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Holmes County",
+    "cases": 129,
+    "deaths": 5,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.09049999999999,
+      33.1275
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28051",
+    "population": 17010,
+    "populationDensity": 8.558845859371226,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28051",
+    "name": "Holmes County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Humphreys County",
+    "cases": 22,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.5315,
+      33.126000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28053",
+    "population": 8064,
+    "populationDensity": 7.206899505684362,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28053",
+    "name": "Humphreys County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Issaquena County",
+    "cases": 0,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.9525,
+      32.711
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28055",
+    "population": 1327,
+    "populationDensity": 1.1555696504305395,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28055",
+    "name": "Issaquena County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Itawamba County",
+    "cases": 51,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.35050000000001,
+      34.276
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28057",
+    "population": 23390,
+    "populationDensity": 16.69266073996314,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28057",
+    "name": "Itawamba County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Jackson County",
+    "cases": 255,
+    "deaths": 6,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.6395,
+      30.4625
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28059",
+    "population": 143617,
+    "populationDensity": 71.8101589779356,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28059",
+    "name": "Jackson County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Jasper County",
+    "cases": 34,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.1165,
+      32.013
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28061",
+    "population": 16383,
+    "populationDensity": 9.317056640472577,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28061",
+    "name": "Jasper County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Jefferson County",
+    "cases": 23,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -91.0505,
+      31.740000000000002
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28063",
+    "population": 6990,
+    "populationDensity": 5.118263415353442,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28063",
+    "name": "Jefferson County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Jefferson Davis County",
+    "cases": 31,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.7815,
+      31.5825
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28065",
+    "population": 11128,
+    "populationDensity": 10.45994613713146,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28065",
+    "name": "Jefferson Davis County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Jones County",
+    "cases": 136,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.172,
+      31.628999999999998
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28067",
+    "population": 68098,
+    "populationDensity": 37.47723687354737,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28067",
+    "name": "Jones County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Kemper County",
+    "cases": 56,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.6315,
+      32.753
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28069",
+    "population": 9742,
+    "populationDensity": 4.893080972614442,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28069",
+    "name": "Kemper County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lafayette County",
+    "cases": 88,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.483,
+      34.3575
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28071",
+    "population": 54019,
+    "populationDensity": 30.671062672510654,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28071",
+    "name": "Lafayette County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lamar County",
+    "cases": 102,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.501,
+      31.208
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28073",
+    "population": 63343,
+    "populationDensity": 48.73311156069478,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28073",
+    "name": "Lamar County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lauderdale County",
+    "cases": 334,
+    "deaths": 19,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.652,
+      32.400999999999996
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28075",
+    "population": 74125,
+    "populationDensity": 39.88387635713124,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28075",
+    "name": "Lauderdale County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lawrence County",
+    "cases": 42,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.102,
+      31.5455
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28077",
+    "population": 12586,
+    "populationDensity": 11.11196002400608,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28077",
+    "name": "Lawrence County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Leake County",
+    "cases": 190,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.524,
+      32.754000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28079",
+    "population": 22786,
+    "populationDensity": 14.97600125931332,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28079",
+    "name": "Leake County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lee County",
+    "cases": 70,
+    "deaths": 4,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.684,
+      34.292
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28081",
+    "population": 85436,
+    "populationDensity": 72.59978369004651,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28081",
+    "name": "Lee County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Leflore County",
+    "cases": 145,
+    "deaths": 16,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.2775,
+      33.522999999999996
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28083",
+    "population": 28183,
+    "populationDensity": 17.826156975203535,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28083",
+    "name": "Leflore County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lincoln County",
+    "cases": 141,
+    "deaths": 9,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.4905,
+      31.5335
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28085",
+    "population": 34153,
+    "populationDensity": 22.379918371559896,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28085",
+    "name": "Lincoln County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Lowndes County",
+    "cases": 49,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.46000000000001,
+      33.5165
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28087",
+    "population": 58595,
+    "populationDensity": 43.574436984706,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28087",
+    "name": "Lowndes County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Madison County",
+    "cases": 224,
+    "deaths": 8,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.09,
+      32.641999999999996
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28089",
+    "population": 106272,
+    "populationDensity": 55.044421505500424,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28089",
+    "name": "Madison County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Marion County",
+    "cases": 69,
+    "deaths": 5,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.84700000000001,
+      31.217
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28091",
+    "population": 24573,
+    "populationDensity": 17.2483612178198,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28091",
+    "name": "Marion County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Marshall County",
+    "cases": 42,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.485,
+      34.7455
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28093",
+    "population": 35294,
+    "populationDensity": 19.15308271319751,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28093",
+    "name": "Marshall County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Monroe County",
+    "cases": 157,
+    "deaths": 13,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.46199999999999,
+      33.8695
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28095",
+    "population": 35252,
+    "populationDensity": 17.57710631524296,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28095",
+    "name": "Monroe County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Montgomery County",
+    "cases": 20,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.584,
+      33.482
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28097",
+    "population": 9775,
+    "populationDensity": 9.23780901507611,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28097",
+    "name": "Montgomery County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Neshoba County",
+    "cases": 174,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.1165,
+      32.754000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28099",
+    "population": 29118,
+    "populationDensity": 19.558618384852178,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28099",
+    "name": "Neshoba County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Newton County",
+    "cases": 78,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.1185,
+      32.4
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28101",
+    "population": 21018,
+    "populationDensity": 13.945434004017724,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28101",
+    "name": "Newton County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Noxubee County",
+    "cases": 61,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.559,
+      33.107
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28103",
+    "population": 10417,
+    "populationDensity": 5.728432734822221,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28103",
+    "name": "Noxubee County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Oktibbeha County",
+    "cases": 49,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.87899999999999,
+      33.4255
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28105",
+    "population": 49587,
+    "populationDensity": 41.32876661477627,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28105",
+    "name": "Oktibbeha County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Panola County",
+    "cases": 38,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.959,
+      34.357
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28107",
+    "population": 34192,
+    "populationDensity": 18.68685395220247,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28107",
+    "name": "Panola County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Pearl River County",
+    "cases": 157,
+    "deaths": 18,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.59649999999999,
+      30.737499999999997
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28109",
+    "population": 55535,
+    "populationDensity": 26.12052713994325,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28109",
+    "name": "Pearl River County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Perry County",
+    "cases": 26,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.99000000000001,
+      31.172
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28111",
+    "population": 11973,
+    "populationDensity": 7.084466514600572,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28111",
+    "name": "Perry County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Pike County",
+    "cases": 143,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.404,
+      31.175
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28113",
+    "population": 39288,
+    "populationDensity": 36.8315290073707,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28113",
+    "name": "Pike County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Pontotoc County",
+    "cases": 18,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.035,
+      34.227000000000004
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28115",
+    "population": 32174,
+    "populationDensity": 24.753948347163046,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28115",
+    "name": "Pontotoc County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Prentiss County",
+    "cases": 32,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.5325,
+      34.6105
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28117",
+    "population": 25126,
+    "populationDensity": 23.113351258508914,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28117",
+    "name": "Prentiss County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Quitman County",
+    "cases": 14,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.293,
+      34.292
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28119",
+    "population": 6792,
+    "populationDensity": 6.415929789999036,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28119",
+    "name": "Quitman County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Rankin County",
+    "cases": 182,
+    "deaths": 5,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.989,
+      32.32
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28121",
+    "population": 155271,
+    "populationDensity": 74.22293223710071,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28121",
+    "name": "Rankin County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Scott County",
+    "cases": 296,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.5535,
+      32.428
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28123",
+    "population": 28124,
+    "populationDensity": 17.766278092427346,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28123",
+    "name": "Scott County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Sharkey County",
+    "cases": 5,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.811,
+      32.879999999999995
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28125",
+    "population": 4321,
+    "populationDensity": 3.844430984099695,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28125",
+    "name": "Sharkey County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Simpson County",
+    "cases": 45,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.9505,
+      31.9015
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28127",
+    "population": 26658,
+    "populationDensity": 17.345826172764642,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28127",
+    "name": "Simpson County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Smith County",
+    "cases": 73,
+    "deaths": 4,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.524,
+      32.0025
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28129",
+    "population": 15916,
+    "populationDensity": 9.608188846565337,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28129",
+    "name": "Smith County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Stone County",
+    "cases": 22,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.113,
+      30.779
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28131",
+    "population": 18336,
+    "populationDensity": 15.76377086961566,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28131",
+    "name": "Stone County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Sunflower County",
+    "cases": 53,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.60749999999999,
+      33.629000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28133",
+    "population": 25110,
+    "populationDensity": 13.641282081286985,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28133",
+    "name": "Sunflower County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Tallahatchie County",
+    "cases": 11,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.1885,
+      33.9305
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28135",
+    "population": 13809,
+    "populationDensity": 8.148201569835852,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28135",
+    "name": "Tallahatchie County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Tate County",
+    "cases": 41,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.956,
+      34.6635
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28137",
+    "population": 28321,
+    "populationDensity": 26.422718460707035,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28137",
+    "name": "Tate County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Tippah County",
+    "cases": 53,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.90299999999999,
+      34.796
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28139",
+    "population": 22015,
+    "populationDensity": 18.435474192105037,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28139",
+    "name": "Tippah County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Tishomingo County",
+    "cases": 7,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.232,
+      34.7295
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28141",
+    "population": 19383,
+    "populationDensity": 16.783102176092186,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28141",
+    "name": "Tishomingo County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Tunica County",
+    "cases": 35,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.394,
+      34.658
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28143",
+    "population": 9632,
+    "populationDensity": 7.743673301793572,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28143",
+    "name": "Tunica County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Union County",
+    "cases": 16,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.9905,
+      34.4815
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28145",
+    "population": 28815,
+    "populationDensity": 26.598966375152592,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28145",
+    "name": "Union County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Walthall County",
+    "cases": 30,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.04849999999999,
+      31.176000000000002
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28147",
+    "population": 14286,
+    "populationDensity": 13.594180944562368,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28147",
+    "name": "Walthall County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Warren County",
+    "cases": 65,
+    "deaths": 2,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.86449999999999,
+      32.3485
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28149",
+    "population": 45381,
+    "populationDensity": 28.314407467096483,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28149",
+    "name": "Warren County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Washington County",
+    "cases": 77,
+    "deaths": 3,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.958,
+      33.269000000000005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28151",
+    "population": 43909,
+    "populationDensity": 22.27247609356029,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28151",
+    "name": "Washington County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Wayne County",
+    "cases": 20,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -88.6965,
+      31.6635
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28153",
+    "population": 20183,
+    "populationDensity": 9.546780694855796,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28153",
+    "name": "Wayne County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Webster County",
+    "cases": 17,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.263,
+      33.5995
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28155",
+    "population": 9689,
+    "populationDensity": 8.80401062238108,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28155",
+    "name": "Webster County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Wilkinson County",
+    "cases": 69,
+    "deaths": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -91.348,
+      31.186
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28157",
+    "population": 8630,
+    "populationDensity": 4.840419062689631,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28157",
+    "name": "Wilkinson County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Winston County",
+    "cases": 43,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.066,
+      33.1025
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28159",
+    "population": 17955,
+    "populationDensity": 11.363065901895604,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28159",
+    "name": "Winston County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Yalobusha County",
+    "cases": 19,
+    "deaths": 0,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -89.719,
+      34.03
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28161",
+    "population": 12108,
+    "populationDensity": 9.405594431797613,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28161",
+    "name": "Yalobusha County, Mississippi, United States",
+    "level": "county"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Yazoo County",
+    "cases": 134,
+    "deaths": 1,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -90.363,
+      32.7625
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:28163",
+    "population": 29690,
+    "populationDensity": 12.202858272988886,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS",
+    "countyId": "fips:28163",
+    "name": "Yazoo County, Mississippi, United States",
     "level": "county"
   },
   {
@@ -120124,468 +123241,6 @@
         "github": "nytimes"
       }
     ],
-    "county": "San Benito County",
-    "state": "California",
-    "cases": 50,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.12049999999999,
-      36.593
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06069",
-    "population": 62808,
-    "populationDensity": 17.384907754152366,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06069",
-    "name": "San Benito County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "San Bernardino County",
-    "state": "California",
-    "cases": 1928,
-    "deaths": 89,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -115.9685,
-      34.840500000000006
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06071",
-    "population": 2180085,
-    "populationDensity": 41.759928092091464,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06071",
-    "name": "San Bernardino County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Santa Barbara County",
-    "state": "California",
-    "cases": 485,
-    "deaths": 8,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -119.846,
-      34.2855
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06083",
-    "population": 446499,
-    "populationDensity": 62.46350421853447,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06083",
-    "name": "Santa Barbara County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Santa Clara County",
-    "state": "California",
-    "cases": 2134,
-    "deaths": 108,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.705,
-      37.189
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06085",
-    "population": 1927852,
-    "populationDensity": 570.665200230684,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06085",
-    "name": "Santa Clara County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Santa Cruz County",
-    "state": "California",
-    "cases": 127,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.9495,
-      37.0685
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06087",
-    "population": 273213,
-    "populationDensity": 235.31678121364428,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06087",
-    "name": "Santa Cruz County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Siskiyou County",
-    "state": "California",
-    "cases": 5,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.5825,
-      41.5015
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06093",
-    "population": 43539,
-    "populationDensity": 2.646916458130334,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06093",
-    "name": "Siskiyou County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Solano County",
-    "state": "California",
-    "cases": 254,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122,
-      38.2855
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06095",
-    "population": 447643,
-    "populationDensity": 194.1043156866582,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06095",
-    "name": "Solano County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sonoma County",
-    "state": "California",
-    "cases": 232,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.94200000000001,
-      38.480999999999995
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06097",
-    "population": 494336,
-    "populationDensity": 120.02594925198116,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06097",
-    "name": "Sonoma County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sutter County",
-    "state": "California",
-    "cases": 30,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.681,
-      39.0205
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06101",
-    "population": 96971,
-    "populationDensity": 61.220904853507484,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06101",
-    "name": "Sutter County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tehama County",
-    "state": "California",
-    "cases": 1,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -122.20349999999999,
-      40.125
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06103",
-    "population": 65084,
-    "populationDensity": 8.454563962019728,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06103",
-    "name": "Tehama County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tulare County",
-    "state": "California",
-    "cases": 626,
-    "deaths": 36,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -118.77699999999999,
-      36.266999999999996
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06107",
-    "population": 466195,
-    "populationDensity": 37.14504832842958,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06107",
-    "name": "Tulare County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tuolumne County",
-    "state": "California",
-    "cases": 4,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -119.9265,
-      38.034
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06109",
-    "population": 54478,
-    "populationDensity": 9.232262584078281,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06109",
-    "name": "Tuolumne County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Yolo County",
-    "state": "California",
-    "cases": 163,
-    "deaths": 16,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.9635,
-      38.619
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06113",
-    "population": 220500,
-    "populationDensity": 83.33463580119341,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06113",
-    "name": "Yolo County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Yuba County",
-    "state": "California",
-    "cases": 17,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -121.32249999999999,
-      39.2785
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06115",
-    "population": 78668,
-    "populationDensity": 47.33917253530988,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06115",
-    "name": "Yuba County, California, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
     "county": "Adams County",
     "state": "Colorado",
     "cases": 1490,
@@ -125027,2679 +127682,6 @@
     "stateId": "iso2:US-KS",
     "countyId": "fips:20209",
     "name": "Wyandotte County, Kansas, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Adams County",
-    "state": "Mississippi",
-    "cases": 129,
-    "deaths": 8,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -91.4045,
-      31.468
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28001",
-    "population": 30693,
-    "populationDensity": 24.29935120535122,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28001",
-    "name": "Adams County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Alcorn County",
-    "state": "Mississippi",
-    "cases": 10,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.5935,
-      34.876000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28003",
-    "population": 36953,
-    "populationDensity": 35.53478696769773,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28003",
-    "name": "Alcorn County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Amite County",
-    "state": "Mississippi",
-    "cases": 26,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.8215,
-      31.174500000000002
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28005",
-    "population": 12297,
-    "populationDensity": 6.4721496457692105,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28005",
-    "name": "Amite County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Attala County",
-    "state": "Mississippi",
-    "cases": 94,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.64099999999999,
-      33.083
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28007",
-    "population": 18174,
-    "populationDensity": 9.533548287688415,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28007",
-    "name": "Attala County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Benton County",
-    "state": "Mississippi",
-    "cases": 9,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.185,
-      34.789
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28009",
-    "population": 8259,
-    "populationDensity": 7.777855890421298,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28009",
-    "name": "Benton County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Bolivar County",
-    "state": "Mississippi",
-    "cases": 101,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.945,
-      33.825
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28011",
-    "population": 30628,
-    "populationDensity": 13.0067931946667,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28011",
-    "name": "Bolivar County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Calhoun County",
-    "state": "Mississippi",
-    "cases": 51,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.32400000000001,
-      33.942
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28013",
-    "population": 14361,
-    "populationDensity": 9.42861046440828,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28013",
-    "name": "Calhoun County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Carroll County",
-    "state": "Mississippi",
-    "cases": 25,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.91,
-      33.445499999999996
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28015",
-    "population": 9947,
-    "populationDensity": 6.0394605550976275,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28015",
-    "name": "Carroll County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Chickasaw County",
-    "state": "Mississippi",
-    "cases": 68,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.9555,
-      33.907
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28017",
-    "population": 17103,
-    "populationDensity": 13.055959127834466,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28017",
-    "name": "Chickasaw County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Choctaw County",
-    "state": "Mississippi",
-    "cases": 13,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.27099999999999,
-      33.321
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28019",
-    "population": 8210,
-    "populationDensity": 7.537892414390313,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28019",
-    "name": "Choctaw County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Claiborne County",
-    "state": "Mississippi",
-    "cases": 20,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.981,
-      32.005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28021",
-    "population": 8988,
-    "populationDensity": 6.890833260022234,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28021",
-    "name": "Claiborne County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Clarke County",
-    "state": "Mississippi",
-    "cases": 53,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.6725,
-      32.0275
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28023",
-    "population": 15541,
-    "populationDensity": 8.631600737377703,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28023",
-    "name": "Clarke County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Clay County",
-    "state": "Mississippi",
-    "cases": 34,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.75399999999999,
-      33.659
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28025",
-    "population": 19316,
-    "populationDensity": 17.90275224891332,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28025",
-    "name": "Clay County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Coahoma County",
-    "state": "Mississippi",
-    "cases": 61,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.6785,
-      34.2555
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28027",
-    "population": 22124,
-    "populationDensity": 14.643120901659524,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28027",
-    "name": "Coahoma County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Copiah County",
-    "state": "Mississippi",
-    "cases": 88,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.422,
-      31.8675
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28029",
-    "population": 28065,
-    "populationDensity": 13.891123848879568,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28029",
-    "name": "Copiah County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Covington County",
-    "state": "Mississippi",
-    "cases": 55,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.5775,
-      31.6155
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28031",
-    "population": 18636,
-    "populationDensity": 17.252232293672115,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28031",
-    "name": "Covington County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "DeSoto County",
-    "state": "Mississippi",
-    "cases": 277,
-    "deaths": 4,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.018,
-      34.852500000000006
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28033",
-    "population": 184945,
-    "populationDensity": 143.55548346831378,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28033",
-    "name": "DeSoto County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Forrest County",
-    "state": "Mississippi",
-    "cases": 198,
-    "deaths": 10,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.295,
-      31.172
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28035",
-    "population": 74897,
-    "populationDensity": 61.36674350352366,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28035",
-    "name": "Forrest County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Franklin County",
-    "state": "Mississippi",
-    "cases": 16,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.8955,
-      31.466
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28037",
-    "population": 7713,
-    "populationDensity": 5.222742270376854,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28037",
-    "name": "Franklin County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "George County",
-    "state": "Mississippi",
-    "cases": 13,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.64850000000001,
-      30.866
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28039",
-    "population": 24500,
-    "populationDensity": 19.50810858900671,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28039",
-    "name": "George County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Greene County",
-    "state": "Mississippi",
-    "cases": 5,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.634,
-      31.217
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28041",
-    "population": 13586,
-    "populationDensity": 7.274936416816324,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28041",
-    "name": "Greene County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Grenada County",
-    "state": "Mississippi",
-    "cases": 28,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.822,
-      33.7875
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28043",
-    "population": 20758,
-    "populationDensity": 17.838879893649025,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28043",
-    "name": "Grenada County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Hancock County",
-    "state": "Mississippi",
-    "cases": 61,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.506,
-      30.411
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28045",
-    "population": 47632,
-    "populationDensity": 37.72120504381903,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28045",
-    "name": "Hancock County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Harrison County",
-    "state": "Mississippi",
-    "cases": 171,
-    "deaths": 6,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.078,
-      30.439
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28047",
-    "population": 208080,
-    "populationDensity": 131.46551970597716,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28047",
-    "name": "Harrison County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Hinds County",
-    "state": "Mississippi",
-    "cases": 450,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.39750000000001,
-      32.311
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28049",
-    "population": 231840,
-    "populationDensity": 101.84972140978978,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28049",
-    "name": "Hinds County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Holmes County",
-    "state": "Mississippi",
-    "cases": 129,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.09049999999999,
-      33.1275
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28051",
-    "population": 17010,
-    "populationDensity": 8.558845859371226,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28051",
-    "name": "Holmes County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Humphreys County",
-    "state": "Mississippi",
-    "cases": 22,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.5315,
-      33.126000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28053",
-    "population": 8064,
-    "populationDensity": 7.206899505684362,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28053",
-    "name": "Humphreys County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Itawamba County",
-    "state": "Mississippi",
-    "cases": 51,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.35050000000001,
-      34.276
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28057",
-    "population": 23390,
-    "populationDensity": 16.69266073996314,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28057",
-    "name": "Itawamba County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jackson County",
-    "state": "Mississippi",
-    "cases": 255,
-    "deaths": 6,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.6395,
-      30.4625
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28059",
-    "population": 143617,
-    "populationDensity": 71.8101589779356,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28059",
-    "name": "Jackson County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jasper County",
-    "state": "Mississippi",
-    "cases": 34,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.1165,
-      32.013
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28061",
-    "population": 16383,
-    "populationDensity": 9.317056640472577,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28061",
-    "name": "Jasper County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jefferson County",
-    "state": "Mississippi",
-    "cases": 23,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -91.0505,
-      31.740000000000002
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28063",
-    "population": 6990,
-    "populationDensity": 5.118263415353442,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28063",
-    "name": "Jefferson County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jefferson Davis County",
-    "state": "Mississippi",
-    "cases": 31,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.7815,
-      31.5825
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28065",
-    "population": 11128,
-    "populationDensity": 10.45994613713146,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28065",
-    "name": "Jefferson Davis County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jones County",
-    "state": "Mississippi",
-    "cases": 136,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.172,
-      31.628999999999998
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28067",
-    "population": 68098,
-    "populationDensity": 37.47723687354737,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28067",
-    "name": "Jones County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Kemper County",
-    "state": "Mississippi",
-    "cases": 56,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.6315,
-      32.753
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28069",
-    "population": 9742,
-    "populationDensity": 4.893080972614442,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28069",
-    "name": "Kemper County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lafayette County",
-    "state": "Mississippi",
-    "cases": 88,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.483,
-      34.3575
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28071",
-    "population": 54019,
-    "populationDensity": 30.671062672510654,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28071",
-    "name": "Lafayette County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lamar County",
-    "state": "Mississippi",
-    "cases": 102,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.501,
-      31.208
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28073",
-    "population": 63343,
-    "populationDensity": 48.73311156069478,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28073",
-    "name": "Lamar County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lauderdale County",
-    "state": "Mississippi",
-    "cases": 334,
-    "deaths": 19,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.652,
-      32.400999999999996
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28075",
-    "population": 74125,
-    "populationDensity": 39.88387635713124,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28075",
-    "name": "Lauderdale County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lawrence County",
-    "state": "Mississippi",
-    "cases": 42,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.102,
-      31.5455
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28077",
-    "population": 12586,
-    "populationDensity": 11.11196002400608,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28077",
-    "name": "Lawrence County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Leake County",
-    "state": "Mississippi",
-    "cases": 190,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.524,
-      32.754000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28079",
-    "population": 22786,
-    "populationDensity": 14.97600125931332,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28079",
-    "name": "Leake County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lee County",
-    "state": "Mississippi",
-    "cases": 70,
-    "deaths": 4,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.684,
-      34.292
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28081",
-    "population": 85436,
-    "populationDensity": 72.59978369004651,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28081",
-    "name": "Lee County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Leflore County",
-    "state": "Mississippi",
-    "cases": 145,
-    "deaths": 16,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.2775,
-      33.522999999999996
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28083",
-    "population": 28183,
-    "populationDensity": 17.826156975203535,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28083",
-    "name": "Leflore County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lincoln County",
-    "state": "Mississippi",
-    "cases": 141,
-    "deaths": 9,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.4905,
-      31.5335
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28085",
-    "population": 34153,
-    "populationDensity": 22.379918371559896,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28085",
-    "name": "Lincoln County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lowndes County",
-    "state": "Mississippi",
-    "cases": 49,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.46000000000001,
-      33.5165
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28087",
-    "population": 58595,
-    "populationDensity": 43.574436984706,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28087",
-    "name": "Lowndes County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Madison County",
-    "state": "Mississippi",
-    "cases": 224,
-    "deaths": 8,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.09,
-      32.641999999999996
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28089",
-    "population": 106272,
-    "populationDensity": 55.044421505500424,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28089",
-    "name": "Madison County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Marion County",
-    "state": "Mississippi",
-    "cases": 69,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.84700000000001,
-      31.217
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28091",
-    "population": 24573,
-    "populationDensity": 17.2483612178198,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28091",
-    "name": "Marion County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Marshall County",
-    "state": "Mississippi",
-    "cases": 42,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.485,
-      34.7455
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28093",
-    "population": 35294,
-    "populationDensity": 19.15308271319751,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28093",
-    "name": "Marshall County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Monroe County",
-    "state": "Mississippi",
-    "cases": 157,
-    "deaths": 13,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.46199999999999,
-      33.8695
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28095",
-    "population": 35252,
-    "populationDensity": 17.57710631524296,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28095",
-    "name": "Monroe County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Montgomery County",
-    "state": "Mississippi",
-    "cases": 20,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.584,
-      33.482
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28097",
-    "population": 9775,
-    "populationDensity": 9.23780901507611,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28097",
-    "name": "Montgomery County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Neshoba County",
-    "state": "Mississippi",
-    "cases": 174,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.1165,
-      32.754000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28099",
-    "population": 29118,
-    "populationDensity": 19.558618384852178,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28099",
-    "name": "Neshoba County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Newton County",
-    "state": "Mississippi",
-    "cases": 78,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.1185,
-      32.4
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28101",
-    "population": 21018,
-    "populationDensity": 13.945434004017724,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28101",
-    "name": "Newton County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Noxubee County",
-    "state": "Mississippi",
-    "cases": 61,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.559,
-      33.107
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28103",
-    "population": 10417,
-    "populationDensity": 5.728432734822221,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28103",
-    "name": "Noxubee County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Oktibbeha County",
-    "state": "Mississippi",
-    "cases": 49,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.87899999999999,
-      33.4255
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28105",
-    "population": 49587,
-    "populationDensity": 41.32876661477627,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28105",
-    "name": "Oktibbeha County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Panola County",
-    "state": "Mississippi",
-    "cases": 38,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.959,
-      34.357
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28107",
-    "population": 34192,
-    "populationDensity": 18.68685395220247,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28107",
-    "name": "Panola County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Pearl River County",
-    "state": "Mississippi",
-    "cases": 157,
-    "deaths": 18,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.59649999999999,
-      30.737499999999997
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28109",
-    "population": 55535,
-    "populationDensity": 26.12052713994325,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28109",
-    "name": "Pearl River County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Perry County",
-    "state": "Mississippi",
-    "cases": 26,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.99000000000001,
-      31.172
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28111",
-    "population": 11973,
-    "populationDensity": 7.084466514600572,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28111",
-    "name": "Perry County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Pike County",
-    "state": "Mississippi",
-    "cases": 143,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.404,
-      31.175
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28113",
-    "population": 39288,
-    "populationDensity": 36.8315290073707,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28113",
-    "name": "Pike County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Pontotoc County",
-    "state": "Mississippi",
-    "cases": 18,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.035,
-      34.227000000000004
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28115",
-    "population": 32174,
-    "populationDensity": 24.753948347163046,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28115",
-    "name": "Pontotoc County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Prentiss County",
-    "state": "Mississippi",
-    "cases": 32,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.5325,
-      34.6105
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28117",
-    "population": 25126,
-    "populationDensity": 23.113351258508914,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28117",
-    "name": "Prentiss County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Quitman County",
-    "state": "Mississippi",
-    "cases": 14,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.293,
-      34.292
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28119",
-    "population": 6792,
-    "populationDensity": 6.415929789999036,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28119",
-    "name": "Quitman County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Rankin County",
-    "state": "Mississippi",
-    "cases": 182,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.989,
-      32.32
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28121",
-    "population": 155271,
-    "populationDensity": 74.22293223710071,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28121",
-    "name": "Rankin County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Scott County",
-    "state": "Mississippi",
-    "cases": 296,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.5535,
-      32.428
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28123",
-    "population": 28124,
-    "populationDensity": 17.766278092427346,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28123",
-    "name": "Scott County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sharkey County",
-    "state": "Mississippi",
-    "cases": 5,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.811,
-      32.879999999999995
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28125",
-    "population": 4321,
-    "populationDensity": 3.844430984099695,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28125",
-    "name": "Sharkey County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Simpson County",
-    "state": "Mississippi",
-    "cases": 45,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.9505,
-      31.9015
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28127",
-    "population": 26658,
-    "populationDensity": 17.345826172764642,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28127",
-    "name": "Simpson County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Smith County",
-    "state": "Mississippi",
-    "cases": 73,
-    "deaths": 4,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.524,
-      32.0025
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28129",
-    "population": 15916,
-    "populationDensity": 9.608188846565337,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28129",
-    "name": "Smith County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Stone County",
-    "state": "Mississippi",
-    "cases": 22,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.113,
-      30.779
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28131",
-    "population": 18336,
-    "populationDensity": 15.76377086961566,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28131",
-    "name": "Stone County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sunflower County",
-    "state": "Mississippi",
-    "cases": 53,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.60749999999999,
-      33.629000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28133",
-    "population": 25110,
-    "populationDensity": 13.641282081286985,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28133",
-    "name": "Sunflower County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tallahatchie County",
-    "state": "Mississippi",
-    "cases": 11,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.1885,
-      33.9305
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28135",
-    "population": 13809,
-    "populationDensity": 8.148201569835852,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28135",
-    "name": "Tallahatchie County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tate County",
-    "state": "Mississippi",
-    "cases": 41,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.956,
-      34.6635
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28137",
-    "population": 28321,
-    "populationDensity": 26.422718460707035,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28137",
-    "name": "Tate County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tippah County",
-    "state": "Mississippi",
-    "cases": 53,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.90299999999999,
-      34.796
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28139",
-    "population": 22015,
-    "populationDensity": 18.435474192105037,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28139",
-    "name": "Tippah County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tishomingo County",
-    "state": "Mississippi",
-    "cases": 7,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.232,
-      34.7295
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28141",
-    "population": 19383,
-    "populationDensity": 16.783102176092186,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28141",
-    "name": "Tishomingo County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tunica County",
-    "state": "Mississippi",
-    "cases": 35,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.394,
-      34.658
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28143",
-    "population": 9632,
-    "populationDensity": 7.743673301793572,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28143",
-    "name": "Tunica County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Union County",
-    "state": "Mississippi",
-    "cases": 16,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.9905,
-      34.4815
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28145",
-    "population": 28815,
-    "populationDensity": 26.598966375152592,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28145",
-    "name": "Union County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Walthall County",
-    "state": "Mississippi",
-    "cases": 30,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.04849999999999,
-      31.176000000000002
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28147",
-    "population": 14286,
-    "populationDensity": 13.594180944562368,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28147",
-    "name": "Walthall County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Warren County",
-    "state": "Mississippi",
-    "cases": 65,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.86449999999999,
-      32.3485
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28149",
-    "population": 45381,
-    "populationDensity": 28.314407467096483,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28149",
-    "name": "Warren County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Washington County",
-    "state": "Mississippi",
-    "cases": 77,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.958,
-      33.269000000000005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28151",
-    "population": 43909,
-    "populationDensity": 22.27247609356029,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28151",
-    "name": "Washington County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Wayne County",
-    "state": "Mississippi",
-    "cases": 20,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -88.6965,
-      31.6635
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28153",
-    "population": 20183,
-    "populationDensity": 9.546780694855796,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28153",
-    "name": "Wayne County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Webster County",
-    "state": "Mississippi",
-    "cases": 17,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.263,
-      33.5995
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28155",
-    "population": 9689,
-    "populationDensity": 8.80401062238108,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28155",
-    "name": "Webster County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Wilkinson County",
-    "state": "Mississippi",
-    "cases": 69,
-    "deaths": 7,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -91.348,
-      31.186
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28157",
-    "population": 8630,
-    "populationDensity": 4.840419062689631,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28157",
-    "name": "Wilkinson County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Winston County",
-    "state": "Mississippi",
-    "cases": 43,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.066,
-      33.1025
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28159",
-    "population": 17955,
-    "populationDensity": 11.363065901895604,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28159",
-    "name": "Winston County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Yalobusha County",
-    "state": "Mississippi",
-    "cases": 19,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -89.719,
-      34.03
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28161",
-    "population": 12108,
-    "populationDensity": 9.405594431797613,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28161",
-    "name": "Yalobusha County, Mississippi, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Yazoo County",
-    "state": "Mississippi",
-    "cases": 134,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -90.363,
-      32.7625
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28163",
-    "population": 29690,
-    "populationDensity": 12.202858272988886,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28163",
-    "name": "Yazoo County, Mississippi, United States",
     "level": "county"
   },
   {
@@ -142858,94 +142840,6 @@
     ],
     "cases": 0,
     "deaths": 0,
-    "county": "Sierra County",
-    "state": "California",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -120.52950000000001,
-      39.584
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06091",
-    "population": 3005,
-    "populationDensity": 1.2059701916007832,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06091",
-    "name": "Sierra County, California, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Trinity County",
-    "state": "California",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -123.035,
-      40.671
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "fips:06105",
-    "population": 12285,
-    "populationDensity": 1.4776863693130606,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "countyId": "fips:06105",
-    "name": "Trinity County, California, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
     "county": "Bent County",
     "state": "Colorado",
     "rating": 0.5882352941176471,
@@ -144415,50 +144309,6 @@
     "stateId": "iso2:US-KS",
     "countyId": "fips:20203",
     "name": "Wichita County, Kansas, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Issaquena County",
-    "state": "Mississippi",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -90.9525,
-      32.711
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:28055",
-    "population": 1327,
-    "populationDensity": 1.1555696504305395,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS",
-    "countyId": "fips:28055",
-    "name": "Issaquena County, Mississippi, United States",
     "level": "county"
   },
   {
