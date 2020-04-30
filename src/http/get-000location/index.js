@@ -21,9 +21,13 @@ const { crosscheckTemplate, ratingTemplate } = require('@architect/views/lib/rep
 // eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
 
+// eslint-disable-next-line
 const locationMap = require('./dist/location-map.json');
+// eslint-disable-next-line
 const timeseries = require('./dist/timeseries.json');
+// eslint-disable-next-line
 const ratings = require('./dist/ratings.json');
+// eslint-disable-next-line
 const report = require('./dist/report.json');
 
 function renderBreadcrumbs(location) {

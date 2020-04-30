@@ -16,6 +16,7 @@ const { getName } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { ratingTemplate } = require('@architect/views/lib/report');
 
+// eslint-disable-next-line
 const ratings = require('./dist/ratings.json');
 
 exports.handler = async function http() {
