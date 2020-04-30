@@ -18,6 +18,7 @@ const { crosscheckTemplate } = require('@architect/views/lib/report');
 // eslint-disable-next-line
 const { getName, getSlug } = require('@architect/views/lib/geography');
 
+// eslint-disable-next-line
 const report = require('./dist/report.json');
 
 exports.handler = async function http() {

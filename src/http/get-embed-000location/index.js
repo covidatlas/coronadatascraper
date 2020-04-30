@@ -19,7 +19,9 @@ const { getClassNames } = require('@architect/views/lib/dom');
 // eslint-disable-next-line
 const { handle404 } = require('@architect/views/lib/middleware');
 
+// eslint-disable-next-line
 const locationMap = require('./dist/location-map.json');
+// eslint-disable-next-line
 const timeseries = require('./dist/timeseries.json');
 
 function renderCaseInfo(label, count, labelClass) {

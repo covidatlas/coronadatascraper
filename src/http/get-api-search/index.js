@@ -1,5 +1,7 @@
 const lunr = require('lunr');
+// eslint-disable-next-line
 const index = lunr.Index.load(require('./dist/search.json'));
+// eslint-disable-next-line
 const locationMap = require('./dist/location-map-barebones.json');
 
 exports.handler = async function http(req) {
