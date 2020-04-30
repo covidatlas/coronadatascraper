@@ -15,6 +15,7 @@ const scraper = {
   url:
     'https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries',
   aggregate: 'county',
+  timeseries: true,
   curators: [
     {
       name: 'The Mercury News',
