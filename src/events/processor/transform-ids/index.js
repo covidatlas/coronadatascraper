@@ -3,10 +3,17 @@ import * as geography from '../../../shared/lib/geography/index.js';
 import log from '../../../shared/lib/log.js';
 
 function compare(a, b) {
-  if (a) {
-    return a.localeCompare(b);
+  if (!a && !b) {
+    return 0;
   }
-  return 0;
+  if (!a) {
+    return -1;
+  }
+  if (!b) {
+    return 1;
+  }
+
+  return a.localeCompare(b);
 }
 
 const transformIds = async ({ locations, featureCollection, report, options, sourceRatings }) => {
@@ -38,6 +45,15 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
     await countryLevels.transformLocationIds(rating);
   }
 
+  sourceRatings = sourceRatings.sort((a, b) => {
+    return (
+      compare(a.city, b.city) ||
+      compare(a.county, b.county) ||
+      compare(a.state, b.state) ||
+      compare(a.country, b.country)
+    );
+  });
+
   // Transform crosscheck reports
   const crosscheckReports = [];
 
@@ -49,9 +65,10 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
 
   report.scrape.crosscheckReports = crosscheckReports.sort((a, b) => {
     return (
-      compare(a.location.country, b.location.country) ||
+      compare(a.location.city, b.location.city) ||
+      compare(a.location.county, b.location.county) ||
       compare(a.location.state, b.location.state) ||
-      compare(a.location.county, b.location.county)
+      compare(a.location.country, b.location.country)
     );
   });
 
