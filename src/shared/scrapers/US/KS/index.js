@@ -1,4 +1,3 @@
-const assert = require('assert');
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as log from '../../../lib/log.js';
@@ -7,6 +6,8 @@ import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as pdfUtils from '../../../lib/pdf.js';
+
+const assert = require('assert');
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -150,24 +151,22 @@ const scraper = {
    *   ... etc.
    * ]
    */
-  _extractPdfSentences: function (data) {
+  _extractPdfSentences(data) {
     const items = [];
     // Remove nulls.
     for (const item of data) {
-      if (item)
-        items.push(item);
+      if (item) items.push(item);
     }
 
     const textitems = items.filter(i => {
-      return i.page && i.x && i.y && i.text
+      return i.page && i.x && i.y && i.text;
     });
     // console.log(textitems);
 
     const pageYs = {};
     textitems.forEach(i => {
       const key = `${i.page}/${i.y}`;
-      if (!pageYs[key])
-        pageYs[key] = [];
+      if (!pageYs[key]) pageYs[key] = [];
       pageYs[key].push(i);
     });
     // console.log(pageYs);
@@ -181,9 +180,9 @@ const scraper = {
       let line = itemsOrderByX.reduce((s, i) => {
         // console.log(i);
         // eyeballing spaces from the data!
-        const xdiff = (i.x - lastX);
+        const xdiff = i.x - lastX;
         // console.log(`xdiff: ${xdiff}`);
-        let separator = (xdiff < 1) ? '' : ' ';
+        const separator = xdiff < 1 ? '' : ' ';
         lastX = i.x;
 
         return s + separator + i.text;
@@ -193,11 +192,17 @@ const scraper = {
       line = line.replace(/%2C/g, ',');
 
       // PDF xdiff seems to be off when separating numbers from text.
-      line = line.replace(/(\d)([a-zA-Z])/g, function(m, a, b) { return `${a} ${b}`; });
-      line = line.replace(/([a-zA-Z])(\d)/g, function(m, a, b) { return `${a} ${b}`; });
+      line = line.replace(/(\d)([a-zA-Z])/g, function(m, a, b) {
+        return `${a} ${b}`;
+      });
+      line = line.replace(/([a-zA-Z])(\d)/g, function(m, a, b) {
+        return `${a} ${b}`;
+      });
 
       // Remove comma separator between numbers.
-      line = line.replace(/(\d),(\d)/g, function(m, a, b) { return `${a}${b}`; });
+      line = line.replace(/(\d),(\d)/g, function(m, a, b) {
+        return `${a}${b}`;
+      });
 
       return line;
     }
@@ -382,15 +387,17 @@ const scraper = {
       return geography.addEmptyRegions(counties, this._counties, 'county');
     },
     '2020-04-30': async function() {
-
       // The main page has an href that downloads a PDF.  Link:
       // <a href="/DocumentCenter/View/984/4-29-20-update-numbers" ...>
       const entryUrl = 'https://www.coronavirus.kdheks.gov/';
-      let $ = await fetch.page(this, entryUrl, 'tmpindex');
+      const $ = await fetch.page(this, entryUrl, 'tmpindex');
       const linkRE = /DocumentCenter.*update-numbers/;
-      const href = $('a').toArray().
-        map(h => $(h)).
-        filter(h => { return linkRE.test(h.attr('href')) });
+      const href = $('a')
+        .toArray()
+        .map(h => $(h))
+        .filter(h => {
+          return linkRE.test(h.attr('href'));
+        });
       assert.equal(1, href.length, `Single link to DocumentCenter matching ${linkRE}`);
 
       this.type = 'pdf';
@@ -415,26 +422,28 @@ const scraper = {
 
       const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
         const re = stateDataREs[key];
-        const text = sentences.filter(s => { return re.test(s); });
-        if (text.length === 0)
-          log.warning(`No match for ${key} re ${re}`);
-        if (text.length > 1)
-          log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
-        let m = text[0].match(re);
+        const text = sentences.filter(s => {
+          return re.test(s);
+        });
+        if (text.length === 0) log.warning(`No match for ${key} re ${re}`);
+        if (text.length > 1) log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
+        const m = text[0].match(re);
 
         return {
           ...hsh,
           [key]: parse.number(m[1])
         };
-      }, {})
+      }, {});
 
       rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
       delete rawStateData.testedNeg;
-      
-      let data = [];
+
+      const data = [];
 
       const countyRE = /^(.*) County (\d+)$/;
-      const countyData = sentences.filter(s => { return countyRE.test(s); });
+      const countyData = sentences.filter(s => {
+        return countyRE.test(s);
+      });
       countyData.forEach(lin => {
         const cm = lin.trim().match(countyRE);
         // console.log(cm);
@@ -457,7 +466,7 @@ const scraper = {
       const result = geography.addEmptyRegions(data, this._counties, 'county');
       // no sum because we explicitly add it above
 
-      return data;
+      return result;
     }
   }
 };
