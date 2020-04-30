@@ -3,6 +3,8 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 
+const assert = require('assert');
+
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
@@ -102,6 +104,17 @@ const scraper = {
     'Yalobusha County',
     'Yazoo County'
   ],
+  // The publisher is making typos in their html table!
+  _fixCountyTypos(county) {
+    let fixed = county;
+    if (county === 'De Soto County' || county === 'Desoto County') {
+      fixed = 'DeSoto County';
+    }
+    if (county === 'Leeflore County') {
+      fixed = 'Leflore County';
+    }
+    return fixed;
+  },
   scraper: {
     '0': async function() {
       const $ = await fetch.page(this, this.url, 'default');
@@ -156,16 +169,17 @@ const scraper = {
       // before the table of "total cases"
       const $td = $('td:contains("County")').last();
 
-      if (
-        $td.text() !== 'County' ||
-        $td.next().text() !== 'Cases' ||
+      const headers = [];
+      headers.push($td.text());
+      headers.push($td.next().text());
+      headers.push(
         $td
           .next()
           .next()
-          .text() !== 'Deaths'
-      ) {
-        throw new Error('Unexpected table headers');
-      }
+          .text()
+      );
+      const expectedHeaders = ['County', 'Cases', 'Deaths'];
+      assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
 
       const $table = $td.closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
@@ -178,14 +192,7 @@ const scraper = {
         }
 
         let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
-
-        // The publisher is making typos in their html table!
-        if (county === 'De Soto County' || county === 'Desoto County') {
-          county = 'DeSoto County';
-        }
-        if (county === 'Leeflore County') {
-          county = 'Leflore County';
-        }
+        county = this._fixCountyTypos(county);
 
         counties.push({
           county,
@@ -199,6 +206,46 @@ const scraper = {
       counties.push(transform.sumData(counties));
 
       return counties;
+    },
+    '2020-04-17': async function() {
+      const $ = await fetch.page(this, this.url, 'default');
+      const $table = $('#msdhTotalCovid-19Cases');
+
+      // Validate the headings we care about.
+      const $ths = $table.find('thead > tr > td');
+      const headers = $ths
+        .toArray()
+        .slice(0, 3)
+        .map(th => $(th).text());
+      const expectedHeaders = ['County', 'Total Cases', 'Total Deaths'];
+      assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
+
+      const getCellTextArray = tr => {
+        return $(tr)
+          .find('td')
+          .toArray()
+          .map(c =>
+            $(c)
+              .text()
+              .trim()
+          )
+          .map(c => (c === '' ? '0' : c));
+      };
+      const getReportData = row => {
+        let county = geography.addCounty(parse.string(row[0]));
+        county = this._fixCountyTypos(county);
+        return { county, cases: parse.number(row[1]), deaths: parse.number(row[2]) };
+      };
+
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      const counties = $trs
+        .toArray()
+        .map(getCellTextArray)
+        .map(getReportData);
+
+      const result = geography.addEmptyRegions(counties, this._counties, 'county');
+      result.push(transform.sumData(counties));
+      return result;
     }
   }
 };
