@@ -26,9 +26,13 @@ const { argv } = yargs
     description: 'The suffix to add to output files, i.e. passing TEST will produce data-TEST.json etc',
     type: 'string'
   })
+  .option('onlyScrape', {
+    description: 'Only scrape (for debugging, use with --dumpRaw)',
+    type: 'boolean'
+  })
   .option('dumpRaw', {
     alias: 'r',
-    description: 'Dump raw scrape response data to dist for regression testing',
+    description: 'Dump raw scrape response data to dist',
     type: 'boolean'
   })
   .option('quiet', {

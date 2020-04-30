@@ -32,10 +32,15 @@ async function generate(date, options = {}) {
   }
 
   // Crawler
-  const output = scrapeData(srcs)
-    .then(writeRawRegression)
-    // processor
-    .then(rateSources)
+  const output = await scrapeData(srcs).then(writeRawRegression);
+
+  if (options.onlyScrape) {
+    console.log('Exiting after scrape');
+    return output;
+  }
+
+  // processor
+  rateSources(output)
     .then(dedupeLocations)
     .then(reportScrape)
     .then(options.findFeatures !== false && findFeatures)
