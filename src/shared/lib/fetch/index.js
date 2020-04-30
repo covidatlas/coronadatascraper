@@ -271,7 +271,7 @@ export const getArcGISCSVURLFromOrgId = async function(scraper, serverNumber, or
   const layerMetadata = await json(
     scraper,
     `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0?f=json`,
-    'ArcOrgID'
+    'arcorgid'
   );
   const { serviceItemId } = layerMetadata;
   return `https://opendata.arcgis.com/datasets/${serviceItemId}_0.csv`;
@@ -288,7 +288,7 @@ export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId
   const dashboardManifest = await json(
     scraper,
     `https://maps.arcgis.com/sharing/rest/content/items/${dashboardId}?f=json`,
-    'ArcGIS'
+    'arcgis'
   );
   const { orgId } = dashboardManifest;
   return getArcGISCSVURLFromOrgId(scraper, serverNumber, orgId, layerName);

@@ -91,20 +91,94 @@ if (dirs.length === 0) {
   process.exit();
 }
 
-console.log(`Migrating ${dirs.length} directories.`);
-dirs.forEach(d => {
-  console.log('\n\n========================================');
-  let msg = `Migrating ${d}`;
-  let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
-  if (argv.location) {
-    msg = `${msg} for location ${argv.location}`;
-    cmd = `${cmd} --location ${argv.location}`;
-  }
-  console.log(msg);
-  console.log(`# Command: ${cmd}`);
-  runCommand(cmd);
-});
+function migrateDirs(dirs, argv) {
+  console.log(`Migrating ${dirs.length} directories.`);
+  dirs.forEach(d => {
+    console.log('\n\n========================================');
+    let msg = `Migrating ${d}`;
+    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
+    if (argv.location) {
+      msg = `${msg} for location ${argv.location}`;
+      cmd = `${cmd} --location ${argv.location}`;
+    }
+    console.log(msg);
+    console.log(`# Command: ${cmd}`);
+    runCommand(cmd);
+  });
 
-const migrated = glob(path.join(argv.dest, '**', '*.*'), { onlyFiles: true });
-console.log('\n\nMigration complete.');
-console.log(`${migrated.length} files written to ${argv.dest}`);
+  const migrated = glob(path.join(argv.dest, '**', '*.*'), { onlyFiles: true });
+  console.log('\n\nMigration complete.');
+  console.log(`${migrated.length} files written to ${argv.dest}`);
+}
+
+// If a cache folder has multiple files, none of them should have
+// cache key 'default'.  If it has one file, it must have cache key
+// 'default'.
+function checkDefaultCacheKeySpecs(destdir) {
+  const fulldest = path.join(process.cwd(), destdir);
+  console.log(`Checking default key specs in ${fulldest}`);
+  const pattern = path.join(fulldest, '**').replace(/\\/, '/');
+
+  const allfiles = glob(pattern);
+  const folders = allfiles
+    .map(f => f.replace(fulldest + path.sep, ''))
+    .map(f => f.split(path.sep))
+    .map(a => path.join(a[0], a[1]))
+    .filter((f, index, self) => {
+      return self.indexOf(f) === index;
+    }); // uniques
+
+  const errors = [];
+
+  folders.forEach(d => {
+    // Files in the folder
+    const files = allfiles
+      .filter(f => f.includes(d))
+      .map(f => f.split(d))
+      .map(a => a[a.length - 1]);
+
+    // The keys for the files (format: 'lotsofstuff-{cachekey}-{sha}.extension')
+    let keys = files.map(f => f.split('-')).map(a => a[a.length - 2]);
+
+    // Ignore the 'intermediary files'
+    const intermediaries = ['tmpindex', 'tempindex', 'tmpcsrf', 'arcorgid', 'arcgis'];
+    keys = keys.filter(s => !intermediaries.includes(s));
+
+    if (keys.length === 0) {
+      errors.push(`${d}: No files??`);
+    }
+
+    const defaults = keys.filter(k => k === 'default');
+    if (keys.length === 1) {
+      if (defaults.length !== 1) {
+        const msg = `${d}: DEFAULT CACHE KEY, single file should have key 'default', got ${keys}`;
+        errors.push(msg);
+      }
+    } else if (defaults.length > 0) {
+      const msg = `${d}: DEFAULT CACHE KEY, no file in multifile cache dir should have key 'default', got ${keys.join(
+        ', '
+      )}`;
+      errors.push(msg);
+    }
+
+    console.log(`   ${d} keys ok.`);
+  });
+
+  if (errors.length > 0) {
+    console.log('==================================================================');
+    console.log('RAW ERRORS:');
+    errors.forEach(e => console.log(e));
+
+    console.log('==================================================================');
+    const badScrapers = errors
+      .map(s => s.split(path.sep)[0])
+      .filter((f, index, self) => {
+        return self.indexOf(f) === index;
+      }); // uniques
+    console.log('FIX SCRAPERS:');
+    badScrapers.forEach(s => console.log(s));
+  }
+}
+
+migrateDirs(dirs, argv);
+checkDefaultCacheKeySpecs(argv.dest);

@@ -289,7 +289,7 @@ const scraper = {
         'https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true';
       this.type = 'json';
 
-      const data = await fetch.json(this, this.url, 'default');
+      const data = await fetch.json(this, this.url, 'data');
       const counties = [];
 
       data.features.forEach(item => {

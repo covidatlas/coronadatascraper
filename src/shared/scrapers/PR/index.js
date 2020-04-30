@@ -7,7 +7,9 @@ import pivotTheTable from '../../utils/pivot-the-table.js';
 
 const labelFragmentsByKey = [
   { deaths: 'muertes​' },
+  { tested: 'prueba' },
   { tested: 'realizadas' },
+  { cases: '​casos postivos' },
   { cases: 'confirmados' },
   { discard: 'en proceso' },
   { discard: 'negativos' }
@@ -33,7 +35,7 @@ const scraper = {
   ],
   async scraper() {
     const $ = await fetch.page(this, this.url, 'default');
-    const $table = $('th:contains("CONFIRMADOS")').closest('table');
+    const $table = $('th:contains("MUERTES")').closest('table');
     const $trs = $table.find('tbody > tr');
     const dataPairs = pivotTheTable($trs, $);
 
