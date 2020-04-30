@@ -1,8 +1,9 @@
-const assert = require('assert');
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+
+const assert = require('assert');
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -103,6 +104,17 @@ const scraper = {
     'Yalobusha County',
     'Yazoo County'
   ],
+  // The publisher is making typos in their html table!
+  _fixCountyTypos(county) {
+    let fixed = county;
+    if (county === 'De Soto County' || county === 'Desoto County') {
+      fixed = 'DeSoto County';
+    }
+    if (county === 'Leeflore County') {
+      fixed = 'Leflore County';
+    }
+    return fixed;
+  },
   scraper: {
     '0': async function() {
       const $ = await fetch.page(this, this.url, 'default');
@@ -160,8 +172,13 @@ const scraper = {
       const headers = [];
       headers.push($td.text());
       headers.push($td.next().text());
-      headers.push($td.next().next().text());
-      const expectedHeaders = [ 'County', 'Cases', 'Deaths' ];
+      headers.push(
+        $td
+          .next()
+          .next()
+          .text()
+      );
+      const expectedHeaders = ['County', 'Cases', 'Deaths'];
       assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
 
       const $table = $td.closest('table');
@@ -175,14 +192,7 @@ const scraper = {
         }
 
         let county = geography.addCounty(parse.string($tr.find('td:first-child').text()));
-
-        // The publisher is making typos in their html table!
-        if (county === 'De Soto County' || county === 'Desoto County') {
-          county = 'DeSoto County';
-        }
-        if (county === 'Leeflore County') {
-          county = 'Leflore County';
-        }
+        county = this._fixCountyTypos(county);
 
         counties.push({
           county,
