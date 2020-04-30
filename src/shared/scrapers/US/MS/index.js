@@ -206,6 +206,44 @@ const scraper = {
       counties.push(transform.sumData(counties));
 
       return counties;
+    },
+    '2020-04-17': async function() {
+      const $ = await fetch.page(this, this.url, 'default');
+      const $table = $('#msdhTotalCovid-19Cases');
+
+      // Validate headings.
+      const $ths = $table.find('thead > tr > td');
+      const headers = $ths.toArray().map(th => $(th).text());
+      const expectedHeaders = ['County', 'Total Cases', 'Total Deaths', 'LTCs with Outbreaks'];
+      assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
+
+      const getCellTextArray = tr => {
+        return $(tr)
+          .find('td')
+          .toArray()
+          .map(c =>
+            $(c)
+              .text()
+              .trim()
+          )
+          .map(c => (c === '' ? '0' : c));
+      };
+      const getReportData = row => {
+        assert.equal(row.length, 4, 'cell count');
+        let county = geography.addCounty(parse.string(row[0]));
+        county = this._fixCountyTypos(county);
+        return { county, cases: parse.number(row[1]), deaths: parse.number(row[2]) };
+      };
+
+      const $trs = $table.find('tbody > tr:not(:last-child)');
+      const counties = $trs
+        .toArray()
+        .map(getCellTextArray)
+        .map(getReportData);
+
+      const result = geography.addEmptyRegions(counties, this._counties, 'county');
+      result.push(transform.sumData(counties));
+      return result;
     }
   }
 };
