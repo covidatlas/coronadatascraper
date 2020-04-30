@@ -755,11 +755,11 @@
         "flag": "🇨🇦"
       }
     ],
-    "cases": 4907,
-    "hospitalized": 2216,
-    "discharged": 1807,
+    "cases": 4975,
+    "hospitalized": 2242,
+    "discharged": 1835,
     "state": "Brussels-Capital",
-    "deaths": 1149,
+    "deaths": 1158,
     "county": "Brussels-Capital",
     "rating": 0.5098039215686274,
     "coordinates": [
@@ -795,11 +795,11 @@
         "flag": "🇨🇦"
       }
     ],
-    "cases": 4907,
-    "hospitalized": 2216,
-    "discharged": 1807,
+    "cases": 4975,
+    "hospitalized": 2242,
+    "discharged": 1835,
     "state": "Brussels-Capital",
-    "deaths": 1149,
+    "deaths": 1158,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.3625,
@@ -835,9 +835,9 @@
     ],
     "state": "Wallonia",
     "county": "Liège",
-    "cases": 5939,
-    "hospitalized": 1514,
-    "discharged": 1170,
+    "cases": 5992,
+    "hospitalized": 1528,
+    "discharged": 1198,
     "rating": 0.43137254901960786,
     "coordinates": [
       5.694,
@@ -874,9 +874,9 @@
     ],
     "state": "Wallonia",
     "county": "Walloon Brabant",
-    "cases": 1223,
-    "hospitalized": 201,
-    "discharged": 135,
+    "cases": 1234,
+    "hospitalized": 203,
+    "discharged": 139,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.5555,
@@ -913,9 +913,9 @@
     ],
     "state": "Wallonia",
     "county": "Hainaut",
-    "cases": 5502,
-    "hospitalized": 1952,
-    "discharged": 1342,
+    "cases": 5560,
+    "hospitalized": 1981,
+    "discharged": 1384,
     "rating": 0.43137254901960786,
     "coordinates": [
       3.7270000000000003,
@@ -952,9 +952,9 @@
     ],
     "state": "Wallonia",
     "county": "Namur",
-    "cases": 1784,
-    "hospitalized": 508,
-    "discharged": 269,
+    "cases": 1825,
+    "hospitalized": 514,
+    "discharged": 280,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.840999999999999,
@@ -991,9 +991,9 @@
     ],
     "state": "Wallonia",
     "county": "Luxembourg",
-    "cases": 1243,
-    "hospitalized": 348,
-    "discharged": 244,
+    "cases": 1253,
+    "hospitalized": 354,
+    "discharged": 247,
     "rating": 0.43137254901960786,
     "coordinates": [
       5.501,
@@ -1029,10 +1029,10 @@
       }
     ],
     "state": "Wallonia",
-    "deaths": 2641,
-    "cases": 15691,
-    "hospitalized": 4523,
-    "discharged": 3160,
+    "deaths": 2665,
+    "cases": 15864,
+    "hospitalized": 4580,
+    "discharged": 3248,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.625,
@@ -1068,9 +1068,9 @@
     ],
     "state": "Flanders",
     "county": "Limburg",
-    "cases": 5276,
-    "hospitalized": 1705,
-    "discharged": 1134,
+    "cases": 5327,
+    "hospitalized": 1731,
+    "discharged": 1164,
     "rating": 0.43137254901960786,
     "coordinates": [
       5.4465,
@@ -1107,9 +1107,9 @@
     ],
     "state": "Flanders",
     "county": "East Flanders",
-    "cases": 5504,
-    "hospitalized": 1763,
-    "discharged": 1382,
+    "cases": 5577,
+    "hospitalized": 1784,
+    "discharged": 1429,
     "rating": 0.43137254901960786,
     "coordinates": [
       3.8305,
@@ -1146,9 +1146,9 @@
     ],
     "state": "Flanders",
     "county": "Flemish Brabant",
-    "cases": 4566,
-    "hospitalized": 872,
-    "discharged": 624,
+    "cases": 4634,
+    "hospitalized": 882,
+    "discharged": 638,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.5375,
@@ -1185,9 +1185,9 @@
     ],
     "state": "Flanders",
     "county": "Antwerp",
-    "cases": 5851,
-    "hospitalized": 2238,
-    "discharged": 1938,
+    "cases": 6002,
+    "hospitalized": 2256,
+    "discharged": 1985,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.717499999999999,
@@ -1224,9 +1224,9 @@
     ],
     "state": "Flanders",
     "county": "West Flanders",
-    "cases": 5097,
-    "hospitalized": 1744,
-    "discharged": 1238,
+    "cases": 5160,
+    "hospitalized": 1764,
+    "discharged": 1277,
     "rating": 0.43137254901960786,
     "coordinates": [
       3.034,
@@ -1262,10 +1262,10 @@
       }
     ],
     "state": "Flanders",
-    "deaths": 3711,
-    "cases": 26294,
-    "hospitalized": 8322,
-    "discharged": 6316,
+    "deaths": 3771,
+    "cases": 26700,
+    "hospitalized": 8417,
+    "discharged": 6493,
     "rating": 0.43137254901960786,
     "coordinates": [
       4.228,
@@ -1299,11 +1299,11 @@
         "flag": "🇨🇦"
       }
     ],
-    "tested": 226724,
-    "cases": 47859,
-    "deaths": 7501,
-    "hospitalized": 15061,
-    "discharged": 11283,
+    "tested": 233688,
+    "cases": 48519,
+    "deaths": 7594,
+    "hospitalized": 15239,
+    "discharged": 11576,
     "rating": 0.47058823529411764,
     "coordinates": [
       4.475,
@@ -3021,10 +3021,10 @@
       }
     ],
     "state": "Fribourg",
-    "cases": 1044,
+    "cases": 1057,
     "deaths": 78,
-    "hospitalized": 49,
-    "discharged": 121,
+    "hospitalized": 48,
+    "discharged": 123,
     "rating": 0.43137254901960786,
     "coordinates": [
       7.0595,
@@ -3113,9 +3113,9 @@
       }
     ],
     "state": "Grisons",
-    "cases": 809,
+    "cases": 811,
     "deaths": 45,
-    "hospitalized": 27,
+    "hospitalized": 23,
     "rating": 0.43137254901960786,
     "coordinates": [
       9.571,
@@ -3203,7 +3203,7 @@
       }
     ],
     "state": "Neuchâtel",
-    "cases": 676,
+    "cases": 677,
     "deaths": 74,
     "hospitalized": 26,
     "rating": 0.43137254901960786,
@@ -3507,9 +3507,9 @@
       }
     ],
     "state": "Vaud",
-    "cases": 5227,
-    "deaths": 364,
-    "hospitalized": 188,
+    "cases": 5274,
+    "deaths": 375,
+    "hospitalized": 156,
     "rating": 0.43137254901960786,
     "coordinates": [
       6.656499999999999,
@@ -3600,7 +3600,7 @@
     ],
     "state": "Zurich",
     "cases": 3462,
-    "deaths": 119,
+    "deaths": 121,
     "hospitalized": 82,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -3628,10 +3628,10 @@
         "flag": "🇨🇦"
       }
     ],
-    "cases": 29131,
-    "deaths": 1716,
-    "hospitalized": 1118,
-    "discharged": 4739,
+    "cases": 29194,
+    "deaths": 1729,
+    "hospitalized": 1081,
+    "discharged": 4741,
     "rating": 0.39215686274509803,
     "coordinates": [
       8.2235,
@@ -3645,6 +3645,43 @@
     "populationDensity": 207.80437141267768,
     "countryId": "iso1:CH",
     "name": "Switzerland",
+    "level": "country"
+  },
+  {
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "cases": 843,
+    "tested": 55555,
+    "recovered": 95,
+    "deaths": 15,
+    "active": 733,
+    "rating": 0.5490196078431373,
+    "coordinates": [
+      33.423500000000004,
+      35.1655
+    ],
+    "tz": [
+      "Europe/Nicosia"
+    ],
+    "featureId": "iso1:CY",
+    "population": 1141166,
+    "populationDensity": 126.68557056559139,
+    "countryId": "iso1:CY",
+    "name": "Cyprus",
     "level": "country"
   },
   {
@@ -3664,7 +3701,7 @@
       }
     ],
     "state": "Hlavní město Praha",
-    "cases": 1707,
+    "cases": 1708,
     "rating": 0.35294117647058826,
     "coordinates": [
       14.476500000000001,
@@ -4072,7 +4109,7 @@
       }
     ],
     "state": "Moravskoslezský kraj",
-    "cases": 989,
+    "cases": 998,
     "rating": 0.35294117647058826,
     "coordinates": [
       18.003,
@@ -4139,8 +4176,8 @@
         "flag": "🇨🇦"
       }
     ],
-    "tested": 234985,
-    "cases": 7444,
+    "tested": 242088,
+    "cases": 7454,
     "rating": 0.39215686274509803,
     "coordinates": [
       15.475000000000001,
@@ -4893,8 +4930,8 @@
       }
     ],
     "state": "Tartu maakond",
-    "tested": 4997,
-    "cases": 100,
+    "tested": 5127,
+    "cases": 103,
     "rating": 0.43137254901960786,
     "coordinates": [
       26.8035,
@@ -4928,8 +4965,8 @@
       }
     ],
     "state": "Harju maakond",
-    "tested": 21224,
-    "cases": 585,
+    "tested": 21815,
+    "cases": 588,
     "rating": 0.43137254901960786,
     "coordinates": [
       24.837,
@@ -4963,7 +5000,7 @@
       }
     ],
     "state": "Viljandi maakond",
-    "tested": 2014,
+    "tested": 2022,
     "cases": 23,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -4998,7 +5035,7 @@
       }
     ],
     "state": "Valga maakond",
-    "tested": 1112,
+    "tested": 1137,
     "cases": 9,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5033,7 +5070,7 @@
       }
     ],
     "state": "Võru maakond",
-    "tested": 1862,
+    "tested": 1877,
     "cases": 82,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5068,8 +5105,8 @@
       }
     ],
     "state": "Pärnu maakond",
-    "tested": 3255,
-    "cases": 100,
+    "tested": 3427,
+    "cases": 116,
     "rating": 0.43137254901960786,
     "coordinates": [
       24.402,
@@ -5103,7 +5140,7 @@
       }
     ],
     "state": "Jõgeva maakond",
-    "tested": 1234,
+    "tested": 1279,
     "cases": 6,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5138,7 +5175,7 @@
       }
     ],
     "state": "Lääne maakond",
-    "tested": 787,
+    "tested": 848,
     "cases": 4,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5173,7 +5210,7 @@
       }
     ],
     "state": "Saare maakond",
-    "tested": 3393,
+    "tested": 3442,
     "cases": 542,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5208,7 +5245,7 @@
       }
     ],
     "state": "Lääne-Viru maakond",
-    "tested": 1699,
+    "tested": 1791,
     "cases": 17,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5243,7 +5280,7 @@
       }
     ],
     "state": "Põlva maakond",
-    "tested": 1002,
+    "tested": 1028,
     "cases": 7,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5278,7 +5315,7 @@
       }
     ],
     "state": "Ida-Viru maakond",
-    "tested": 4824,
+    "tested": 4954,
     "cases": 122,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5313,7 +5350,7 @@
       }
     ],
     "state": "Rapla maakond",
-    "tested": 1364,
+    "tested": 1408,
     "cases": 23,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5348,7 +5385,7 @@
       }
     ],
     "state": "Hiiu maakond",
-    "tested": 484,
+    "tested": 512,
     "cases": 12,
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -5383,8 +5420,8 @@
       }
     ],
     "state": "Järva maakond",
-    "tested": 1286,
-    "cases": 12,
+    "tested": 1412,
+    "cases": 13,
     "rating": 0.43137254901960786,
     "coordinates": [
       25.607,
@@ -5417,8 +5454,8 @@
         "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
       }
     ],
-    "tested": 51185,
-    "cases": 1666,
+    "tested": 52741,
+    "cases": 1689,
     "rating": 0.39215686274509803,
     "coordinates": [
       25.027,
@@ -6509,7 +6546,7 @@
         "flag": "🇨🇦"
       }
     ],
-    "tested": 35,
+    "tested": 36,
     "hospitalized": 107,
     "deaths": 14,
     "discharged": 72,
@@ -6545,7 +6582,7 @@
         "flag": "🇨🇦"
       }
     ],
-    "tested": 21,
+    "tested": 22,
     "hospitalized": 109,
     "deaths": 14,
     "discharged": 64,
@@ -6617,7 +6654,7 @@
         "flag": "🇨🇦"
       }
     ],
-    "tested": 8,
+    "tested": 9,
     "hospitalized": 113,
     "deaths": 0,
     "discharged": 109,
@@ -6691,7 +6728,7 @@
     ],
     "county": "Aube",
     "state": "Grand Est",
-    "tested": 1985,
+    "tested": 2061,
     "hospitalized": 731,
     "deaths": 109,
     "discharged": 396,
@@ -6731,7 +6768,7 @@
     ],
     "county": "Aude",
     "state": "Occitania",
-    "tested": 1016,
+    "tested": 1042,
     "hospitalized": 248,
     "deaths": 50,
     "discharged": 159,
@@ -6811,7 +6848,7 @@
     ],
     "county": "Bouches-du-Rhône",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 20919,
+    "tested": 21413,
     "hospitalized": 3536,
     "deaths": 399,
     "discharged": 2236,
@@ -6851,7 +6888,7 @@
     ],
     "county": "Calvados",
     "state": "Normandy",
-    "tested": 1353,
+    "tested": 1380,
     "hospitalized": 378,
     "deaths": 59,
     "discharged": 170,
@@ -6931,7 +6968,7 @@
     ],
     "county": "Charente",
     "state": "New Aquitaine",
-    "tested": 407,
+    "tested": 463,
     "hospitalized": 56,
     "deaths": 11,
     "discharged": 37,
@@ -6971,7 +7008,7 @@
     ],
     "county": "Charente-Maritime",
     "state": "New Aquitaine",
-    "tested": 4361,
+    "tested": 4839,
     "hospitalized": 194,
     "deaths": 41,
     "discharged": 87,
@@ -7011,7 +7048,7 @@
     ],
     "county": "Cher",
     "state": "Centre-Loire Valley",
-    "tested": 1128,
+    "tested": 1223,
     "hospitalized": 228,
     "deaths": 60,
     "discharged": 76,
@@ -7051,7 +7088,7 @@
     ],
     "county": "Corrèze",
     "state": "New Aquitaine",
-    "tested": 130,
+    "tested": 131,
     "hospitalized": 166,
     "deaths": 26,
     "discharged": 64,
@@ -7091,7 +7128,7 @@
     ],
     "county": "Côte-d'Or",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 608,
+    "tested": 630,
     "hospitalized": 1133,
     "deaths": 217,
     "discharged": 635,
@@ -7131,7 +7168,7 @@
     ],
     "county": "Côtes-d'Armor",
     "state": "Brittany",
-    "tested": 53,
+    "tested": 57,
     "hospitalized": 198,
     "deaths": 25,
     "discharged": 128,
@@ -7251,7 +7288,7 @@
     ],
     "county": "Doubs",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 1122,
+    "tested": 1182,
     "hospitalized": 692,
     "deaths": 116,
     "discharged": 417,
@@ -7291,7 +7328,7 @@
     ],
     "county": "Drôme",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 748,
+    "tested": 781,
     "hospitalized": 627,
     "deaths": 118,
     "discharged": 386,
@@ -7331,7 +7368,7 @@
     ],
     "county": "Eure",
     "state": "Normandy",
-    "tested": 3065,
+    "tested": 3195,
     "hospitalized": 266,
     "deaths": 64,
     "discharged": 89,
@@ -7371,7 +7408,7 @@
     ],
     "county": "Eure-et-Loir",
     "state": "Centre-Loire Valley",
-    "tested": 2352,
+    "tested": 2439,
     "hospitalized": 627,
     "deaths": 86,
     "discharged": 319,
@@ -7411,7 +7448,7 @@
     ],
     "county": "Finistère",
     "state": "Brittany",
-    "tested": 27,
+    "tested": 29,
     "hospitalized": 226,
     "deaths": 37,
     "discharged": 128,
@@ -7451,7 +7488,7 @@
     ],
     "county": "Gard",
     "state": "Occitania",
-    "tested": 167,
+    "tested": 169,
     "hospitalized": 365,
     "deaths": 57,
     "discharged": 184,
@@ -7491,7 +7528,7 @@
     ],
     "county": "Haute-Garonne",
     "state": "Occitania",
-    "tested": 566,
+    "tested": 623,
     "hospitalized": 634,
     "deaths": 48,
     "discharged": 466,
@@ -7531,7 +7568,7 @@
     ],
     "county": "Gers",
     "state": "Occitania",
-    "tested": 824,
+    "tested": 916,
     "hospitalized": 101,
     "deaths": 18,
     "discharged": 48,
@@ -7571,7 +7608,7 @@
     ],
     "county": "Gironde",
     "state": "New Aquitaine",
-    "tested": 4677,
+    "tested": 4832,
     "hospitalized": 986,
     "deaths": 112,
     "discharged": 644,
@@ -7611,7 +7648,7 @@
     ],
     "county": "Hérault",
     "state": "Occitania",
-    "tested": 614,
+    "tested": 621,
     "hospitalized": 733,
     "deaths": 103,
     "discharged": 540,
@@ -7651,7 +7688,7 @@
     ],
     "county": "Ille-et-Vilaine",
     "state": "Brittany",
-    "tested": 220,
+    "tested": 233,
     "hospitalized": 494,
     "deaths": 70,
     "discharged": 274,
@@ -7691,7 +7728,7 @@
     ],
     "county": "Indre",
     "state": "Centre-Loire Valley",
-    "tested": 1631,
+    "tested": 1761,
     "hospitalized": 245,
     "deaths": 64,
     "discharged": 61,
@@ -7731,7 +7768,7 @@
     ],
     "county": "Indre-et-Loire",
     "state": "Centre-Loire Valley",
-    "tested": 1415,
+    "tested": 1858,
     "hospitalized": 424,
     "deaths": 58,
     "discharged": 204,
@@ -7771,7 +7808,7 @@
     ],
     "county": "Isère",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 1471,
+    "tested": 1475,
     "hospitalized": 712,
     "deaths": 103,
     "discharged": 419,
@@ -7811,7 +7848,7 @@
     ],
     "county": "Jura",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 695,
+    "tested": 729,
     "hospitalized": 298,
     "deaths": 44,
     "discharged": 162,
@@ -7851,7 +7888,7 @@
     ],
     "county": "Landes",
     "state": "New Aquitaine",
-    "tested": 328,
+    "tested": 335,
     "hospitalized": 79,
     "deaths": 10,
     "discharged": 50,
@@ -7891,7 +7928,7 @@
     ],
     "county": "Loir-et-Cher",
     "state": "Centre-Loire Valley",
-    "tested": 284,
+    "tested": 295,
     "hospitalized": 292,
     "deaths": 43,
     "discharged": 122,
@@ -7931,7 +7968,7 @@
     ],
     "county": "Loire",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 148,
+    "tested": 175,
     "hospitalized": 1174,
     "deaths": 186,
     "discharged": 594,
@@ -7971,7 +8008,7 @@
     ],
     "county": "Haute-Loire",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 135,
+    "tested": 136,
     "hospitalized": 107,
     "deaths": 10,
     "discharged": 71,
@@ -8011,7 +8048,7 @@
     ],
     "county": "Loire-Atlantique",
     "state": "Pays de la Loire",
-    "tested": 372,
+    "tested": 389,
     "hospitalized": 744,
     "deaths": 123,
     "discharged": 400,
@@ -8051,7 +8088,7 @@
     ],
     "county": "Loiret",
     "state": "Centre-Loire Valley",
-    "tested": 2016,
+    "tested": 2114,
     "hospitalized": 697,
     "deaths": 72,
     "discharged": 388,
@@ -8131,7 +8168,7 @@
     ],
     "county": "Lot-et-Garonne",
     "state": "New Aquitaine",
-    "tested": 401,
+    "tested": 427,
     "hospitalized": 78,
     "deaths": 5,
     "discharged": 42,
@@ -8211,7 +8248,7 @@
     ],
     "county": "Maine-et-Loire",
     "state": "Pays de la Loire",
-    "tested": 92,
+    "tested": 102,
     "hospitalized": 621,
     "deaths": 98,
     "discharged": 383,
@@ -8251,7 +8288,7 @@
     ],
     "county": "Manche",
     "state": "Normandy",
-    "tested": 1284,
+    "tested": 1354,
     "hospitalized": 187,
     "deaths": 40,
     "discharged": 97,
@@ -8291,7 +8328,7 @@
     ],
     "county": "Marne",
     "state": "Grand Est",
-    "tested": 1650,
+    "tested": 1658,
     "hospitalized": 1215,
     "deaths": 211,
     "discharged": 684,
@@ -8331,7 +8368,7 @@
     ],
     "county": "Haute-Marne",
     "state": "Grand Est",
-    "tested": 141,
+    "tested": 148,
     "hospitalized": 264,
     "deaths": 58,
     "discharged": 130,
@@ -8371,7 +8408,7 @@
     ],
     "county": "Mayenne",
     "state": "Pays de la Loire",
-    "tested": 225,
+    "tested": 272,
     "hospitalized": 193,
     "deaths": 29,
     "discharged": 81,
@@ -8411,7 +8448,7 @@
     ],
     "county": "Meurthe-et-Moselle",
     "state": "Grand Est",
-    "tested": 1979,
+    "tested": 1989,
     "hospitalized": 1378,
     "deaths": 280,
     "discharged": 729,
@@ -8451,7 +8488,7 @@
     ],
     "county": "Meuse",
     "state": "Grand Est",
-    "tested": 564,
+    "tested": 676,
     "hospitalized": 486,
     "deaths": 85,
     "discharged": 274,
@@ -8491,7 +8528,7 @@
     ],
     "county": "Morbihan",
     "state": "Brittany",
-    "tested": 33,
+    "tested": 39,
     "hospitalized": 417,
     "deaths": 78,
     "discharged": 279,
@@ -8531,7 +8568,7 @@
     ],
     "county": "Moselle",
     "state": "Grand Est",
-    "tested": 3451,
+    "tested": 3458,
     "hospitalized": 3009,
     "deaths": 652,
     "discharged": 1561,
@@ -8571,7 +8608,7 @@
     ],
     "county": "Nièvre",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 1206,
+    "tested": 1236,
     "hospitalized": 120,
     "deaths": 22,
     "discharged": 47,
@@ -8611,7 +8648,7 @@
     ],
     "county": "Nord",
     "state": "Hauts-de-France",
-    "tested": 2113,
+    "tested": 2309,
     "hospitalized": 2565,
     "deaths": 428,
     "discharged": 1301,
@@ -8651,7 +8688,7 @@
     ],
     "county": "Oise",
     "state": "Hauts-de-France",
-    "tested": 3914,
+    "tested": 4234,
     "hospitalized": 1481,
     "deaths": 325,
     "discharged": 739,
@@ -8691,7 +8728,7 @@
     ],
     "county": "Orne",
     "state": "Normandy",
-    "tested": 741,
+    "tested": 779,
     "hospitalized": 241,
     "deaths": 28,
     "discharged": 150,
@@ -8731,7 +8768,7 @@
     ],
     "county": "Pas-de-Calais",
     "state": "Hauts-de-France",
-    "tested": 2444,
+    "tested": 2637,
     "hospitalized": 1429,
     "deaths": 219,
     "discharged": 803,
@@ -8771,7 +8808,7 @@
     ],
     "county": "Puy-de-Dôme",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 27,
+    "tested": 28,
     "hospitalized": 198,
     "deaths": 33,
     "discharged": 124,
@@ -8811,7 +8848,7 @@
     ],
     "county": "Pyrénées-Atlantiques",
     "state": "New Aquitaine",
-    "tested": 544,
+    "tested": 551,
     "hospitalized": 240,
     "deaths": 25,
     "discharged": 165,
@@ -8851,7 +8888,7 @@
     ],
     "county": "Hautespyrenees",
     "state": "Occitania",
-    "tested": 424,
+    "tested": 426,
     "hospitalized": 180,
     "deaths": 20,
     "discharged": 89,
@@ -8891,7 +8928,7 @@
     ],
     "county": "Pyrénées-Orientales",
     "state": "Occitania",
-    "tested": 78,
+    "tested": 81,
     "hospitalized": 306,
     "deaths": 31,
     "discharged": 257,
@@ -8931,7 +8968,7 @@
     ],
     "county": "Bas-Rhin",
     "state": "Grand Est",
-    "tested": 1898,
+    "tested": 1941,
     "hospitalized": 3038,
     "deaths": 512,
     "discharged": 1658,
@@ -8971,7 +9008,7 @@
     ],
     "county": "Haut-Rhin",
     "state": "Grand Est",
-    "tested": 3217,
+    "tested": 3247,
     "hospitalized": 3214,
     "deaths": 680,
     "discharged": 1857,
@@ -9011,7 +9048,7 @@
     ],
     "county": "Rhône",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 1882,
+    "tested": 2003,
     "hospitalized": 3379,
     "deaths": 502,
     "discharged": 1796,
@@ -9051,7 +9088,7 @@
     ],
     "county": "Haute-Saône",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 1174,
+    "tested": 1270,
     "hospitalized": 337,
     "deaths": 69,
     "discharged": 173,
@@ -9091,7 +9128,7 @@
     ],
     "county": "Saône-et-Loire",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 2245,
+    "tested": 2279,
     "hospitalized": 812,
     "deaths": 158,
     "discharged": 420,
@@ -9131,7 +9168,7 @@
     ],
     "county": "Sarthe",
     "state": "Pays de la Loire",
-    "tested": 30,
+    "tested": 35,
     "hospitalized": 402,
     "deaths": 55,
     "discharged": 222,
@@ -9171,7 +9208,7 @@
     ],
     "county": "Savoy",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 295,
+    "tested": 303,
     "hospitalized": 431,
     "deaths": 41,
     "discharged": 317,
@@ -9211,7 +9248,7 @@
     ],
     "county": "Upper Savoy",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 2650,
+    "tested": 2789,
     "hospitalized": 931,
     "deaths": 141,
     "discharged": 631,
@@ -9251,7 +9288,7 @@
     ],
     "county": "Paris",
     "state": "Ile-de-France",
-    "tested": 12407,
+    "tested": 12705,
     "hospitalized": 7712,
     "deaths": 1446,
     "discharged": 3972,
@@ -9291,7 +9328,7 @@
     ],
     "county": "Seine-Maritime",
     "state": "Normandy",
-    "tested": 2655,
+    "tested": 2787,
     "hospitalized": 898,
     "deaths": 152,
     "discharged": 548,
@@ -9331,7 +9368,7 @@
     ],
     "county": "Seine-et-Marne",
     "state": "Ile-de-France",
-    "tested": 6311,
+    "tested": 6603,
     "hospitalized": 2826,
     "deaths": 486,
     "discharged": 1685,
@@ -9371,7 +9408,7 @@
     ],
     "county": "Yvelines",
     "state": "Ile-de-France",
-    "tested": 3948,
+    "tested": 4400,
     "hospitalized": 2630,
     "deaths": 425,
     "discharged": 1389,
@@ -9451,7 +9488,7 @@
     ],
     "county": "Somme",
     "state": "Hauts-de-France",
-    "tested": 2030,
+    "tested": 2166,
     "hospitalized": 942,
     "deaths": 175,
     "discharged": 502,
@@ -9491,7 +9528,7 @@
     ],
     "county": "Tarn",
     "state": "Occitania",
-    "tested": 612,
+    "tested": 644,
     "hospitalized": 128,
     "deaths": 19,
     "discharged": 70,
@@ -9531,7 +9568,7 @@
     ],
     "county": "Tarn-et-Garonne",
     "state": "Occitania",
-    "tested": 152,
+    "tested": 154,
     "hospitalized": 47,
     "deaths": 4,
     "discharged": 32,
@@ -9571,7 +9608,7 @@
     ],
     "county": "Var",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 5744,
+    "tested": 5833,
     "hospitalized": 929,
     "deaths": 112,
     "discharged": 652,
@@ -9611,7 +9648,7 @@
     ],
     "county": "Vaucluse",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 3349,
+    "tested": 3400,
     "hospitalized": 262,
     "deaths": 27,
     "discharged": 164,
@@ -9651,7 +9688,7 @@
     ],
     "county": "Vendée",
     "state": "Pays de la Loire",
-    "tested": 125,
+    "tested": 135,
     "hospitalized": 216,
     "deaths": 31,
     "discharged": 141,
@@ -9691,7 +9728,7 @@
     ],
     "county": "Vienne",
     "state": "New Aquitaine",
-    "tested": 130,
+    "tested": 154,
     "hospitalized": 163,
     "deaths": 31,
     "discharged": 86,
@@ -9731,7 +9768,7 @@
     ],
     "county": "Haute-Vienne",
     "state": "New Aquitaine",
-    "tested": 17,
+    "tested": 19,
     "hospitalized": 150,
     "deaths": 22,
     "discharged": 90,
@@ -9811,7 +9848,7 @@
     ],
     "county": "Yonne",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 382,
+    "tested": 388,
     "hospitalized": 328,
     "deaths": 59,
     "discharged": 160,
@@ -9851,7 +9888,7 @@
     ],
     "county": "Territoire-de-Belfort",
     "state": "Bourgogne-Franche-Comté",
-    "tested": 514,
+    "tested": 528,
     "hospitalized": 647,
     "deaths": 147,
     "discharged": 361,
@@ -9891,7 +9928,7 @@
     ],
     "county": "Essonne",
     "state": "Ile-de-France",
-    "tested": 7555,
+    "tested": 7943,
     "hospitalized": 2763,
     "deaths": 406,
     "discharged": 1186,
@@ -9931,7 +9968,7 @@
     ],
     "county": "Hauts-de-Seine",
     "state": "Ile-de-France",
-    "tested": 7980,
+    "tested": 8203,
     "hospitalized": 5359,
     "deaths": 859,
     "discharged": 2734,
@@ -9971,7 +10008,7 @@
     ],
     "county": "Seine-Saint-Denis",
     "state": "Ile-de-France",
-    "tested": 6380,
+    "tested": 6503,
     "hospitalized": 4467,
     "deaths": 830,
     "discharged": 2187,
@@ -10011,7 +10048,7 @@
     ],
     "county": "Val-de-Marne",
     "state": "Ile-de-France",
-    "tested": 5587,
+    "tested": 5897,
     "hospitalized": 5113,
     "deaths": 920,
     "discharged": 2333,
@@ -10051,7 +10088,7 @@
     ],
     "county": "Val-d'Oise",
     "state": "Ile-de-France",
-    "tested": 4989,
+    "tested": 5171,
     "hospitalized": 3128,
     "deaths": 566,
     "discharged": 1654,
@@ -10091,7 +10128,7 @@
     ],
     "county": "Ain",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 2603,
+    "tested": 2674,
     "hospitalized": 490,
     "deaths": 79,
     "discharged": 251,
@@ -10131,7 +10168,7 @@
     ],
     "county": "Aisne",
     "state": "Hauts-de-France",
-    "tested": 1590,
+    "tested": 1772,
     "hospitalized": 1074,
     "deaths": 208,
     "discharged": 610,
@@ -10171,7 +10208,7 @@
     ],
     "county": "Allier",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 136,
+    "tested": 137,
     "hospitalized": 193,
     "deaths": 26,
     "discharged": 123,
@@ -10211,7 +10248,7 @@
     ],
     "county": "Alpes-de-Haute-Provence",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 855,
+    "tested": 909,
     "hospitalized": 136,
     "deaths": 7,
     "discharged": 105,
@@ -10251,7 +10288,7 @@
     ],
     "county": "Hautes-Alpes",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 283,
+    "tested": 298,
     "hospitalized": 131,
     "deaths": 8,
     "discharged": 99,
@@ -10291,7 +10328,7 @@
     ],
     "county": "Maritime Alps",
     "state": "Provence-Alpes-Côte d'Azur",
-    "tested": 4799,
+    "tested": 4810,
     "hospitalized": 765,
     "deaths": 129,
     "discharged": 430,
@@ -10331,7 +10368,7 @@
     ],
     "county": "Ardèche",
     "state": "Auvergne-Rhône-Alpes",
-    "tested": 601,
+    "tested": 620,
     "hospitalized": 379,
     "deaths": 67,
     "discharged": 169,
@@ -10371,7 +10408,7 @@
     ],
     "county": "Ardennes",
     "state": "Grand Est",
-    "tested": 843,
+    "tested": 874,
     "hospitalized": 204,
     "deaths": 42,
     "discharged": 117,
@@ -10411,7 +10448,7 @@
     ],
     "county": "Ariège",
     "state": "Occitania",
-    "tested": 265,
+    "tested": 268,
     "hospitalized": 36,
     "deaths": 2,
     "discharged": 26,
@@ -10531,7 +10568,7 @@
     ],
     "state": "Grand Est",
     "deaths": 2863,
-    "tested": 16899,
+    "tested": 17223,
     "hospitalized": 14428,
     "discharged": 7844,
     "rating": 0.47058823529411764,
@@ -10569,7 +10606,7 @@
     ],
     "state": "Occitania",
     "deaths": 390,
-    "tested": 4811,
+    "tested": 5037,
     "hospitalized": 3120,
     "discharged": 2122,
     "rating": 0.47058823529411764,
@@ -10607,7 +10644,7 @@
     ],
     "state": "Provence-Alpes-Côte d'Azur",
     "deaths": 682,
-    "tested": 35949,
+    "tested": 36663,
     "hospitalized": 5759,
     "discharged": 3686,
     "rating": 0.47058823529411764,
@@ -10645,7 +10682,7 @@
     ],
     "state": "Normandy",
     "deaths": 343,
-    "tested": 9098,
+    "tested": 9495,
     "hospitalized": 1970,
     "discharged": 1054,
     "rating": 0.47058823529411764,
@@ -10683,7 +10720,7 @@
     ],
     "state": "Auvergne-Rhône-Alpes",
     "deaths": 1311,
-    "tested": 10733,
+    "tested": 11158,
     "hospitalized": 8681,
     "discharged": 4909,
     "rating": 0.47058823529411764,
@@ -10721,7 +10758,7 @@
     ],
     "state": "New Aquitaine",
     "deaths": 313,
-    "tested": 11545,
+    "tested": 12301,
     "hospitalized": 2348,
     "discharged": 1385,
     "rating": 0.47058823529411764,
@@ -10759,7 +10796,7 @@
     ],
     "state": "Centre-Loire Valley",
     "deaths": 383,
-    "tested": 8826,
+    "tested": 9690,
     "hospitalized": 2513,
     "discharged": 1170,
     "rating": 0.47058823529411764,
@@ -10797,7 +10834,7 @@
     ],
     "state": "Bourgogne-Franche-Comté",
     "deaths": 832,
-    "tested": 7946,
+    "tested": 8242,
     "hospitalized": 4367,
     "discharged": 2375,
     "rating": 0.47058823529411764,
@@ -10835,7 +10872,7 @@
     ],
     "state": "Brittany",
     "deaths": 210,
-    "tested": 333,
+    "tested": 358,
     "hospitalized": 1335,
     "discharged": 809,
     "rating": 0.47058823529411764,
@@ -10873,7 +10910,7 @@
     ],
     "state": "Pays de la Loire",
     "deaths": 336,
-    "tested": 844,
+    "tested": 933,
     "hospitalized": 2176,
     "discharged": 1227,
     "rating": 0.47058823529411764,
@@ -10911,7 +10948,7 @@
     ],
     "state": "Hauts-de-France",
     "deaths": 1355,
-    "tested": 12091,
+    "tested": 13118,
     "hospitalized": 7491,
     "discharged": 3955,
     "rating": 0.47058823529411764,
@@ -10949,7 +10986,7 @@
     ],
     "state": "Ile-de-France",
     "deaths": 5938,
-    "tested": 55157,
+    "tested": 57425,
     "hospitalized": 33998,
     "discharged": 17140,
     "rating": 0.47058823529411764,
@@ -11023,7 +11060,7 @@
       }
     ],
     "deaths": 15006,
-    "tested": 174232,
+    "tested": 181643,
     "hospitalized": 88478,
     "discharged": 47862,
     "rating": 0.43137254901960786,
@@ -11060,7 +11097,7 @@
     ],
     "state": "England",
     "county": "Cheshire East",
-    "cases": 813,
+    "cases": 851,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.363,
@@ -11097,7 +11134,7 @@
     ],
     "state": "England",
     "county": "Cheshire West and Chester",
-    "cases": 746,
+    "cases": 777,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.7275,
@@ -11134,7 +11171,7 @@
     ],
     "state": "England",
     "county": "Salford",
-    "cases": 583,
+    "cases": 595,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.3680000000000003,
@@ -11171,7 +11208,7 @@
     ],
     "state": "England",
     "county": "Sefton",
-    "cases": 770,
+    "cases": 789,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.991,
@@ -11208,7 +11245,7 @@
     ],
     "state": "England",
     "county": "Solihull",
-    "cases": 544,
+    "cases": 556,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.7335,
@@ -11245,7 +11282,7 @@
     ],
     "state": "England",
     "county": "Bradford",
-    "cases": 796,
+    "cases": 849,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.851,
@@ -11282,7 +11319,7 @@
     ],
     "state": "England",
     "county": "Wirral",
-    "cases": 971,
+    "cases": 990,
     "rating": 0.4117647058823529,
     "coordinates": [
       -3.0645,
@@ -11319,7 +11356,7 @@
     ],
     "state": "England",
     "county": "City of Peterborough",
-    "cases": 223,
+    "cases": 224,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.254,
@@ -11356,7 +11393,7 @@
     ],
     "state": "England",
     "county": "Suffolk",
-    "cases": 999,
+    "cases": 1027,
     "rating": 0.4117647058823529,
     "coordinates": [
       1.051,
@@ -11393,7 +11430,7 @@
     ],
     "state": "England",
     "county": "Surrey",
-    "cases": 2498,
+    "cases": 2530,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.39549999999999996,
@@ -11467,7 +11504,7 @@
     ],
     "state": "England",
     "county": "London Borough of Merton",
-    "cases": 637,
+    "cases": 641,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.1895,
@@ -11504,7 +11541,7 @@
     ],
     "state": "England",
     "county": "London Borough of Barnet",
-    "cases": 1176,
+    "cases": 1184,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.2165,
@@ -11541,7 +11578,7 @@
     ],
     "state": "England",
     "county": "Kingston upon Hull",
-    "cases": 422,
+    "cases": 428,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.3305,
@@ -11578,7 +11615,7 @@
     ],
     "state": "England",
     "county": "London Borough of Bexley",
-    "cases": 597,
+    "cases": 608,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.1495,
@@ -11615,7 +11652,7 @@
     ],
     "state": "England",
     "county": "London Borough of Harrow",
-    "cases": 886,
+    "cases": 903,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.3355,
@@ -11652,7 +11689,7 @@
     ],
     "state": "England",
     "county": "London Borough of Haringey",
-    "cases": 539,
+    "cases": 543,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.10600000000000001,
@@ -11689,7 +11726,7 @@
     ],
     "state": "England",
     "county": "London Borough of Sutton",
-    "cases": 656,
+    "cases": 662,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.181,
@@ -11726,7 +11763,7 @@
     ],
     "state": "England",
     "county": "Halton",
-    "cases": 309,
+    "cases": 312,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.7135,
@@ -11763,7 +11800,7 @@
     ],
     "state": "England",
     "county": "Gateshead",
-    "cases": 752,
+    "cases": 800,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.682,
@@ -11800,7 +11837,7 @@
     ],
     "state": "England",
     "county": "North East Lincolnshire",
-    "cases": 130,
+    "cases": 134,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.13749999999999998,
@@ -11837,7 +11874,7 @@
     ],
     "state": "England",
     "county": "South Gloucestershire",
-    "cases": 339,
+    "cases": 341,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.465,
@@ -11874,7 +11911,7 @@
     ],
     "state": "England",
     "county": "Tameside",
-    "cases": 444,
+    "cases": 451,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.0629999999999997,
@@ -11911,7 +11948,7 @@
     ],
     "state": "England",
     "county": "Redcar and Cleveland",
-    "cases": 297,
+    "cases": 311,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.994,
@@ -11948,7 +11985,7 @@
     ],
     "state": "England",
     "county": "Doncaster",
-    "cases": 426,
+    "cases": 440,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.107,
@@ -12018,7 +12055,7 @@
     ],
     "state": "England",
     "county": "Hertfordshire",
-    "cases": 2202,
+    "cases": 2243,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.27549999999999997,
@@ -12055,7 +12092,7 @@
     ],
     "state": "England",
     "county": "Coventry",
-    "cases": 649,
+    "cases": 654,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.5190000000000001,
@@ -12092,7 +12129,7 @@
     ],
     "state": "England",
     "county": "York",
-    "cases": 258,
+    "cases": 271,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.0725,
@@ -12129,7 +12166,7 @@
     ],
     "state": "England",
     "county": "Birmingham",
-    "cases": 2782,
+    "cases": 2801,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.8785,
@@ -12166,7 +12203,7 @@
     ],
     "state": "England",
     "county": "Plymouth",
-    "cases": 273,
+    "cases": 278,
     "rating": 0.4117647058823529,
     "coordinates": [
       -4.1259999999999994,
@@ -12203,7 +12240,7 @@
     ],
     "state": "England",
     "county": "Luton",
-    "cases": 575,
+    "cases": 595,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.4305,
@@ -12240,7 +12277,7 @@
     ],
     "state": "England",
     "county": "Somerset",
-    "cases": 464,
+    "cases": 482,
     "rating": 0.4117647058823529,
     "coordinates": [
       -3.0425,
@@ -12277,7 +12314,7 @@
     ],
     "state": "England",
     "county": "Shropshire",
-    "cases": 464,
+    "cases": 479,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.733,
@@ -12314,7 +12351,7 @@
     ],
     "state": "England",
     "county": "East Riding of Yorkshire",
-    "cases": 539,
+    "cases": 567,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.48100000000000004,
@@ -12351,7 +12388,7 @@
     ],
     "state": "England",
     "county": "Wolverhampton",
-    "cases": 777,
+    "cases": 797,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.121,
@@ -12388,7 +12425,7 @@
     ],
     "state": "England",
     "county": "Northumberland",
-    "cases": 732,
+    "cases": 748,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.076,
@@ -12425,7 +12462,7 @@
     ],
     "state": "England",
     "county": "Northamptonshire",
-    "cases": 1013,
+    "cases": 1019,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.8370000000000001,
@@ -12462,7 +12499,7 @@
     ],
     "state": "England",
     "county": "Herefordshire",
-    "cases": 282,
+    "cases": 298,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.74,
@@ -12499,7 +12536,7 @@
     ],
     "state": "England",
     "county": "London Borough of Croydon",
-    "cases": 1336,
+    "cases": 1358,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.0775,
@@ -12536,7 +12573,7 @@
     ],
     "state": "England",
     "county": "Lancashire",
-    "cases": 2695,
+    "cases": 2736,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.5515,
@@ -12573,7 +12610,7 @@
     ],
     "state": "England",
     "county": "Gloucestershire",
-    "cases": 1152,
+    "cases": 1181,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.1515,
@@ -12610,7 +12647,7 @@
     ],
     "state": "England",
     "county": "London Borough of Southwark",
-    "cases": 1167,
+    "cases": 1179,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.0695,
@@ -12647,7 +12684,7 @@
     ],
     "state": "England",
     "county": "Bedford",
-    "cases": 424,
+    "cases": 436,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.459,
@@ -12684,7 +12721,7 @@
     ],
     "state": "England",
     "county": "Stockton-on-Tees",
-    "cases": 334,
+    "cases": 343,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.3035,
@@ -12721,7 +12758,7 @@
     ],
     "state": "England",
     "county": "Knowsley",
-    "cases": 516,
+    "cases": 532,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.834,
@@ -12863,7 +12900,7 @@
     ],
     "state": "England",
     "county": "Nottinghamshire",
-    "cases": 1030,
+    "cases": 1089,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.006,
@@ -12900,7 +12937,7 @@
     ],
     "state": "England",
     "county": "Hampshire",
-    "cases": 2689,
+    "cases": 2734,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.343,
@@ -12937,7 +12974,7 @@
     ],
     "state": "England",
     "county": "West Sussex",
-    "cases": 1083,
+    "cases": 1100,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.46449999999999997,
@@ -12974,7 +13011,7 @@
     ],
     "state": "England",
     "county": "Buckinghamshire",
-    "cases": 789,
+    "cases": 801,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.7995000000000001,
@@ -13011,7 +13048,7 @@
     ],
     "state": "England",
     "county": "Derby",
-    "cases": 466,
+    "cases": 476,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.47,
@@ -13048,7 +13085,7 @@
     ],
     "state": "England",
     "county": "North Somerset",
-    "cases": 218,
+    "cases": 231,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.7915,
@@ -13085,7 +13122,7 @@
     ],
     "state": "England",
     "county": "London Borough of Bromley",
-    "cases": 1027,
+    "cases": 1036,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.041,
@@ -13122,7 +13159,7 @@
     ],
     "state": "England",
     "county": "London Borough of Hackney",
-    "cases": 597,
+    "cases": 600,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.0605,
@@ -13159,7 +13196,7 @@
     ],
     "state": "England",
     "county": "Wigan",
-    "cases": 615,
+    "cases": 642,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.573,
@@ -13196,7 +13233,7 @@
     ],
     "state": "England",
     "county": "Milton Keynes",
-    "cases": 443,
+    "cases": 448,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.7355,
@@ -13233,7 +13270,7 @@
     ],
     "state": "England",
     "county": "Darlington",
-    "cases": 253,
+    "cases": 269,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.558,
@@ -13270,7 +13307,7 @@
     ],
     "state": "England",
     "county": "Bolton",
-    "cases": 732,
+    "cases": 739,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.482,
@@ -13307,7 +13344,7 @@
     ],
     "state": "England",
     "county": "Telford and Wrekin",
-    "cases": 244,
+    "cases": 254,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.4894999999999996,
@@ -13344,7 +13381,7 @@
     ],
     "state": "England",
     "county": "West Berkshire",
-    "cases": 312,
+    "cases": 315,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.2835,
@@ -13381,7 +13418,7 @@
     ],
     "state": "England",
     "county": "Rochdale",
-    "cases": 417,
+    "cases": 434,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.1494999999999997,
@@ -13418,7 +13455,7 @@
     ],
     "state": "England",
     "county": "Portsmouth",
-    "cases": 281,
+    "cases": 284,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.0955,
@@ -13455,7 +13492,7 @@
     ],
     "state": "England",
     "county": "City of Leicester",
-    "cases": 630,
+    "cases": 648,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.1324999999999998,
@@ -13492,7 +13529,7 @@
     ],
     "state": "England",
     "county": "Cornwall",
-    "cases": 482,
+    "cases": 485,
     "rating": 0.4117647058823529,
     "coordinates": [
       -4.952999999999999,
@@ -13529,7 +13566,7 @@
     ],
     "state": "England",
     "county": "Cumbria",
-    "cases": 1793,
+    "cases": 1819,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.899,
@@ -13566,7 +13603,7 @@
     ],
     "state": "England",
     "county": "Oxfordshire",
-    "cases": 1515,
+    "cases": 1540,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.2865,
@@ -13603,7 +13640,7 @@
     ],
     "state": "England",
     "county": "North Yorkshire",
-    "cases": 872,
+    "cases": 908,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.3880000000000001,
@@ -13640,7 +13677,7 @@
     ],
     "state": "England",
     "county": "Lincolnshire",
-    "cases": 804,
+    "cases": 828,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.23149999999999998,
@@ -13677,7 +13714,7 @@
     ],
     "state": "England",
     "county": "Essex",
-    "cases": 2451,
+    "cases": 2506,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.636,
@@ -13714,7 +13751,7 @@
     ],
     "state": "England",
     "county": "London Borough of Barking and Dagenham",
-    "cases": 448,
+    "cases": 450,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.129,
@@ -13751,7 +13788,7 @@
     ],
     "state": "England",
     "county": "London Borough of Tower Hamlets",
-    "cases": 593,
+    "cases": 597,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.036000000000000004,
@@ -13788,7 +13825,7 @@
     ],
     "state": "England",
     "county": "London Borough of Redbridge",
-    "cases": 658,
+    "cases": 667,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.0805,
@@ -13825,7 +13862,7 @@
     ],
     "state": "England",
     "county": "Southend-on-Sea",
-    "cases": 290,
+    "cases": 294,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.7224999999999999,
@@ -13862,7 +13899,7 @@
     ],
     "state": "England",
     "county": "Bath and North East Somerset",
-    "cases": 203,
+    "cases": 206,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.4935,
@@ -13899,7 +13936,7 @@
     ],
     "state": "England",
     "county": "Blackburn with Darwen",
-    "cases": 301,
+    "cases": 306,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.4675000000000002,
@@ -13936,7 +13973,7 @@
     ],
     "state": "England",
     "county": "Norfolk",
-    "cases": 1427,
+    "cases": 1481,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.949,
@@ -13973,7 +14010,7 @@
     ],
     "state": "England",
     "county": "London Borough of Richmond upon Thames",
-    "cases": 358,
+    "cases": 361,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.3065,
@@ -14010,7 +14047,7 @@
     ],
     "state": "England",
     "county": "Derbyshire",
-    "cases": 1195,
+    "cases": 1243,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.5985,
@@ -14047,7 +14084,7 @@
     ],
     "state": "England",
     "county": "Middlesbrough",
-    "cases": 509,
+    "cases": 541,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.2155,
@@ -14084,7 +14121,7 @@
     ],
     "state": "England",
     "county": "Reading",
-    "cases": 454,
+    "cases": 460,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.9984999999999999,
@@ -14121,7 +14158,7 @@
     ],
     "state": "England",
     "county": "Royal Borough of Kensington and Chelsea",
-    "cases": 456,
+    "cases": 459,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.1895,
@@ -14158,7 +14195,7 @@
     ],
     "state": "England",
     "county": "London Borough of Newham",
-    "cases": 938,
+    "cases": 943,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.0415,
@@ -14195,7 +14232,7 @@
     ],
     "state": "England",
     "county": "London Borough of Wandsworth",
-    "cases": 904,
+    "cases": 909,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.194,
@@ -14232,7 +14269,7 @@
     ],
     "state": "England",
     "county": "Royal Borough of Greenwich",
-    "cases": 620,
+    "cases": 623,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.0495,
@@ -14269,7 +14306,7 @@
     ],
     "state": "England",
     "county": "Wakefield",
-    "cases": 494,
+    "cases": 512,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.429,
@@ -14306,7 +14343,7 @@
     ],
     "state": "England",
     "county": "Calderdale",
-    "cases": 231,
+    "cases": 238,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.955,
@@ -14343,7 +14380,7 @@
     ],
     "state": "England",
     "county": "Central Bedfordshire",
-    "cases": 457,
+    "cases": 471,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.423,
@@ -14380,7 +14417,7 @@
     ],
     "state": "England",
     "county": "North Lincolnshire",
-    "cases": 329,
+    "cases": 350,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.5725,
@@ -14417,7 +14454,7 @@
     ],
     "state": "England",
     "county": "City of Westminster",
-    "cases": 588,
+    "cases": 592,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.1635,
@@ -14454,7 +14491,7 @@
     ],
     "state": "England",
     "county": "Southampton",
-    "cases": 444,
+    "cases": 454,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.3995000000000002,
@@ -14491,7 +14528,7 @@
     ],
     "state": "England",
     "county": "London Borough of Lambeth",
-    "cases": 1117,
+    "cases": 1124,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.11449999999999999,
@@ -14528,7 +14565,7 @@
     ],
     "state": "England",
     "county": "London Borough of Ealing",
-    "cases": 1030,
+    "cases": 1044,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.3265,
@@ -14565,7 +14602,7 @@
     ],
     "state": "England",
     "county": "London Borough of Hounslow",
-    "cases": 635,
+    "cases": 637,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.351,
@@ -14602,7 +14639,7 @@
     ],
     "state": "England",
     "county": "London Borough of Lewisham",
-    "cases": 898,
+    "cases": 904,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.0225,
@@ -14639,7 +14676,7 @@
     ],
     "state": "England",
     "county": "Leeds",
-    "cases": 1322,
+    "cases": 1367,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.548,
@@ -14676,7 +14713,7 @@
     ],
     "state": "England",
     "county": "Medway",
-    "cases": 592,
+    "cases": 610,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.563,
@@ -14713,7 +14750,7 @@
     ],
     "state": "England",
     "county": "Trafford",
-    "cases": 574,
+    "cases": 584,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.364,
@@ -14750,7 +14787,7 @@
     ],
     "state": "England",
     "county": "Oldham",
-    "cases": 582,
+    "cases": 594,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.048,
@@ -14787,7 +14824,7 @@
     ],
     "state": "England",
     "county": "Sunderland",
-    "cases": 1098,
+    "cases": 1138,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.4529999999999998,
@@ -14824,7 +14861,7 @@
     ],
     "state": "England",
     "county": "Windsor and Maidenhead",
-    "cases": 240,
+    "cases": 245,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.687,
@@ -14861,7 +14898,7 @@
     ],
     "state": "England",
     "county": "South Tyneside",
-    "cases": 501,
+    "cases": 538,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.449,
@@ -14898,7 +14935,7 @@
     ],
     "state": "England",
     "county": "Dudley",
-    "cases": 720,
+    "cases": 734,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.099,
@@ -14935,7 +14972,7 @@
     ],
     "state": "England",
     "county": "Rotherham",
-    "cases": 666,
+    "cases": 680,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.2855,
@@ -14972,7 +15009,7 @@
     ],
     "state": "England",
     "county": "Blackpool",
-    "cases": 413,
+    "cases": 427,
     "rating": 0.4117647058823529,
     "coordinates": [
       -3.02,
@@ -15009,7 +15046,7 @@
     ],
     "state": "England",
     "county": "Kent",
-    "cases": 3272,
+    "cases": 3331,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.738,
@@ -15046,7 +15083,7 @@
     ],
     "state": "England",
     "county": "Wiltshire",
-    "cases": 405,
+    "cases": 415,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.9255,
@@ -15083,7 +15120,7 @@
     ],
     "state": "England",
     "county": "Staffordshire",
-    "cases": 1650,
+    "cases": 1697,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.0255,
@@ -15120,7 +15157,7 @@
     ],
     "state": "England",
     "county": "Thurrock",
-    "cases": 269,
+    "cases": 275,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.366,
@@ -15157,7 +15194,7 @@
     ],
     "state": "England",
     "county": "Stockport",
-    "cases": 796,
+    "cases": 808,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.1205,
@@ -15194,7 +15231,7 @@
     ],
     "state": "England",
     "county": "Barnsley",
-    "cases": 608,
+    "cases": 622,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.5495,
@@ -15231,7 +15268,7 @@
     ],
     "state": "England",
     "county": "Newcastle upon Tyne",
-    "cases": 852,
+    "cases": 884,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.6495,
@@ -15268,7 +15305,7 @@
     ],
     "state": "England",
     "county": "Cambridgeshire",
-    "cases": 718,
+    "cases": 722,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.007500000000000007,
@@ -15305,7 +15342,7 @@
     ],
     "state": "England",
     "county": "Liverpool",
-    "cases": 1363,
+    "cases": 1392,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.9139999999999997,
@@ -15342,7 +15379,7 @@
     ],
     "state": "England",
     "county": "City of Bristol",
-    "cases": 593,
+    "cases": 601,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.6135,
@@ -15379,7 +15416,7 @@
     ],
     "state": "England",
     "county": "East Sussex",
-    "cases": 552,
+    "cases": 570,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.3665,
@@ -15416,7 +15453,7 @@
     ],
     "state": "England",
     "county": "Stoke-on-Trent",
-    "cases": 424,
+    "cases": 459,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.16,
@@ -15453,7 +15490,7 @@
     ],
     "state": "England",
     "county": "Dorset",
-    "cases": 301,
+    "cases": 304,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.379,
@@ -15490,7 +15527,7 @@
     ],
     "state": "England",
     "county": "Worcestershire",
-    "cases": 1081,
+    "cases": 1107,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.214,
@@ -15527,7 +15564,7 @@
     ],
     "state": "England",
     "county": "Walsall",
-    "cases": 920,
+    "cases": 934,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.9620000000000002,
@@ -15564,7 +15601,7 @@
     ],
     "state": "England",
     "county": "St Helens",
-    "cases": 614,
+    "cases": 634,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.701,
@@ -15601,7 +15638,7 @@
     ],
     "state": "England",
     "county": "London Borough of Hillingdon",
-    "cases": 711,
+    "cases": 717,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.443,
@@ -15638,7 +15675,7 @@
     ],
     "state": "England",
     "county": "London Borough of Brent",
-    "cases": 1330,
+    "cases": 1338,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.2635,
@@ -15675,7 +15712,7 @@
     ],
     "state": "England",
     "county": "Sandwell",
-    "cases": 940,
+    "cases": 957,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.9985,
@@ -15712,7 +15749,7 @@
     ],
     "state": "England",
     "county": "Swindon",
-    "cases": 350,
+    "cases": 361,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.733,
@@ -15749,7 +15786,7 @@
     ],
     "state": "England",
     "county": "Warrington",
-    "cases": 578,
+    "cases": 594,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.5620000000000003,
@@ -15786,7 +15823,7 @@
     ],
     "state": "England",
     "county": "Bracknell Forest",
-    "cases": 205,
+    "cases": 209,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.747,
@@ -15823,7 +15860,7 @@
     ],
     "state": "England",
     "county": "Brighton and Hove",
-    "cases": 354,
+    "cases": 355,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.1285,
@@ -15860,7 +15897,7 @@
     ],
     "state": "England",
     "county": "North Tyneside",
-    "cases": 450,
+    "cases": 460,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.528,
@@ -15897,7 +15934,7 @@
     ],
     "state": "England",
     "county": "Torbay",
-    "cases": 200,
+    "cases": 202,
     "rating": 0.4117647058823529,
     "coordinates": [
       -3.5595,
@@ -15933,7 +15970,7 @@
       }
     ],
     "state": "England",
-    "cases": 115859,
+    "cases": 118343,
     "deaths": 23550,
     "rating": 0.4117647058823529,
     "coordinates": [
@@ -15970,7 +16007,7 @@
     ],
     "state": "England",
     "county": "Isle of Wight",
-    "cases": 104,
+    "cases": 107,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.3085,
@@ -16007,7 +16044,7 @@
     ],
     "state": "England",
     "county": "Devon",
-    "cases": 676,
+    "cases": 686,
     "rating": 0.4117647058823529,
     "coordinates": [
       -3.7954999999999997,
@@ -16081,7 +16118,7 @@
     ],
     "state": "England",
     "county": "Warwickshire",
-    "cases": 1116,
+    "cases": 1141,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.556,
@@ -16118,7 +16155,7 @@
     ],
     "state": "England",
     "county": "London Borough of Waltham Forest",
-    "cases": 712,
+    "cases": 718,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.0195,
@@ -16155,7 +16192,7 @@
     ],
     "state": "England",
     "county": "Leicestershire",
-    "cases": 884,
+    "cases": 906,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.131,
@@ -16192,7 +16229,7 @@
     ],
     "state": "England",
     "county": "City of Nottingham",
-    "cases": 488,
+    "cases": 518,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.1665,
@@ -16229,7 +16266,7 @@
     ],
     "state": "England",
     "county": "London Borough of Camden",
-    "cases": 567,
+    "cases": 569,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.1595,
@@ -16266,7 +16303,7 @@
     ],
     "state": "England",
     "county": "London Borough of Enfield",
-    "cases": 824,
+    "cases": 827,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.097,
@@ -16303,7 +16340,7 @@
     ],
     "state": "England",
     "county": "Royal Borough of Kingston upon Thames",
-    "cases": 435,
+    "cases": 443,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.2855,
@@ -16377,7 +16414,7 @@
     ],
     "state": "England",
     "county": "London Borough of Islington",
-    "cases": 406,
+    "cases": 409,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.11099999999999999,
@@ -16414,7 +16451,7 @@
     ],
     "state": "England",
     "county": "London Borough of Havering",
-    "cases": 623,
+    "cases": 631,
     "rating": 0.4117647058823529,
     "coordinates": [
       0.23450000000000001,
@@ -16451,7 +16488,7 @@
     ],
     "state": "England",
     "county": "Bury",
-    "cases": 434,
+    "cases": 457,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.308,
@@ -16488,7 +16525,7 @@
     ],
     "state": "England",
     "county": "Kirklees",
-    "cases": 533,
+    "cases": 551,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.79,
@@ -16525,7 +16562,7 @@
     ],
     "state": "England",
     "county": "County Durham",
-    "cases": 1279,
+    "cases": 1340,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.797,
@@ -16599,7 +16636,7 @@
     ],
     "state": "England",
     "county": "Hartlepool",
-    "cases": 167,
+    "cases": 180,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.2725,
@@ -16636,7 +16673,7 @@
     ],
     "state": "England",
     "county": "Sheffield",
-    "cases": 2039,
+    "cases": 2093,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.563,
@@ -16673,7 +16710,7 @@
     ],
     "state": "England",
     "county": "Slough",
-    "cases": 370,
+    "cases": 376,
     "rating": 0.4117647058823529,
     "coordinates": [
       -0.575,
@@ -16710,7 +16747,7 @@
     ],
     "state": "England",
     "county": "Manchester",
-    "cases": 1047,
+    "cases": 1060,
     "rating": 0.4117647058823529,
     "coordinates": [
       -2.239,
@@ -16747,7 +16784,7 @@
     ],
     "state": "England",
     "county": "Bournemouth, Christchurch and Poole",
-    "cases": 400,
+    "cases": 404,
     "rating": 0.4117647058823529,
     "coordinates": [
       -1.86,
@@ -30109,7 +30146,7 @@
       }
     ],
     "state": "Blekinge County",
-    "cases": 67,
+    "cases": 73,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.223,
@@ -30143,7 +30180,7 @@
       }
     ],
     "state": "Dalecarlia",
-    "cases": 732,
+    "cases": 784,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.421499999999998,
@@ -30177,7 +30214,7 @@
       }
     ],
     "state": "Gotland County",
-    "cases": 39,
+    "cases": 45,
     "rating": 0.21568627450980393,
     "coordinates": [
       18.7205,
@@ -30211,7 +30248,7 @@
       }
     ],
     "state": "Gävleborg County",
-    "cases": 547,
+    "cases": 568,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.982,
@@ -30245,7 +30282,7 @@
       }
     ],
     "state": "Halland County",
-    "cases": 349,
+    "cases": 363,
     "rating": 0.21568627450980393,
     "coordinates": [
       12.7985,
@@ -30279,7 +30316,7 @@
       }
     ],
     "state": "Jämtland County",
-    "cases": 294,
+    "cases": 311,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.486999999999998,
@@ -30313,7 +30350,7 @@
       }
     ],
     "state": "Jönköping County",
-    "cases": 729,
+    "cases": 769,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.367999999999999,
@@ -30347,7 +30384,7 @@
       }
     ],
     "state": "Kalmar County",
-    "cases": 155,
+    "cases": 165,
     "rating": 0.21568627450980393,
     "coordinates": [
       16.243000000000002,
@@ -30381,7 +30418,7 @@
       }
     ],
     "state": "Kronoberg County",
-    "cases": 291,
+    "cases": 305,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.565999999999999,
@@ -30415,7 +30452,7 @@
       }
     ],
     "state": "Norrbotten County",
-    "cases": 245,
+    "cases": 251,
     "rating": 0.21568627450980393,
     "coordinates": [
       19.765,
@@ -30449,7 +30486,7 @@
       }
     ],
     "state": "Skåne County",
-    "cases": 746,
+    "cases": 783,
     "rating": 0.21568627450980393,
     "coordinates": [
       13.535,
@@ -30483,7 +30520,7 @@
       }
     ],
     "state": "Stockholm County",
-    "cases": 7835,
+    "cases": 7978,
     "rating": 0.21568627450980393,
     "coordinates": [
       18.1665,
@@ -30517,7 +30554,7 @@
       }
     ],
     "state": "Södermanland County",
-    "cases": 1176,
+    "cases": 1199,
     "rating": 0.21568627450980393,
     "coordinates": [
       16.6185,
@@ -30551,7 +30588,7 @@
       }
     ],
     "state": "Uppsala County",
-    "cases": 966,
+    "cases": 988,
     "rating": 0.21568627450980393,
     "coordinates": [
       17.661,
@@ -30585,7 +30622,7 @@
       }
     ],
     "state": "Värmland County",
-    "cases": 168,
+    "cases": 176,
     "rating": 0.21568627450980393,
     "coordinates": [
       13.0835,
@@ -30619,7 +30656,7 @@
       }
     ],
     "state": "Västerbotten County",
-    "cases": 303,
+    "cases": 320,
     "rating": 0.21568627450980393,
     "coordinates": [
       17.971,
@@ -30653,7 +30690,7 @@
       }
     ],
     "state": "Västernorrland County",
-    "cases": 228,
+    "cases": 233,
     "rating": 0.21568627450980393,
     "coordinates": [
       17.034,
@@ -30687,7 +30724,7 @@
       }
     ],
     "state": "Västmanland County",
-    "cases": 744,
+    "cases": 754,
     "rating": 0.21568627450980393,
     "coordinates": [
       16.194000000000003,
@@ -30721,7 +30758,7 @@
       }
     ],
     "state": "Västra Götaland County",
-    "cases": 2291,
+    "cases": 2418,
     "rating": 0.21568627450980393,
     "coordinates": [
       12.948,
@@ -30755,7 +30792,7 @@
       }
     ],
     "state": "Örebro County",
-    "cases": 974,
+    "cases": 996,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.042,
@@ -30789,7 +30826,7 @@
       }
     ],
     "state": "Östergötland County",
-    "cases": 1423,
+    "cases": 1427,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.677,
@@ -30822,9 +30859,9 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "deaths": 2449,
-    "cases": 20302,
-    "hospitalized": 1435,
+    "deaths": 2567,
+    "cases": 20906,
+    "hospitalized": 1472,
     "rating": 0.2549019607843137,
     "coordinates": [
       17.634999999999998,
@@ -31809,7 +31846,7 @@
       }
     ],
     "state": "Ljubljana",
-    "cases": 248,
+    "cases": 249,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.582,
@@ -32251,7 +32288,7 @@
       }
     ],
     "state": "Maribor",
-    "cases": 32,
+    "cases": 34,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.6365,
@@ -32523,7 +32560,7 @@
       }
     ],
     "state": "Ljutomer",
-    "cases": 122,
+    "cases": 124,
     "rating": 0.21568627450980393,
     "coordinates": [
       16.14,
@@ -32761,7 +32798,7 @@
       }
     ],
     "state": "Metlika",
-    "cases": 70,
+    "cases": 71,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.3015,
@@ -33135,7 +33172,7 @@
       }
     ],
     "state": "Litija",
-    "cases": 16,
+    "cases": 17,
     "rating": 0.21568627450980393,
     "coordinates": [
       14.9055,
@@ -33373,7 +33410,7 @@
       }
     ],
     "state": "Šmarje pri Jelšah",
-    "cases": 172,
+    "cases": 173,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.52,
@@ -34733,7 +34770,7 @@
       }
     ],
     "state": "Šentilj",
-    "cases": 10,
+    "cases": 11,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.7145,
@@ -34903,7 +34940,7 @@
       }
     ],
     "state": "Murska Sobota",
-    "cases": 7,
+    "cases": 8,
     "rating": 0.21568627450980393,
     "coordinates": [
       16.169,
@@ -37939,7 +37976,7 @@
       }
     ],
     "state": "Zreče",
-    "cases": 1,
+    "cases": 2,
     "rating": 0.21568627450980393,
     "coordinates": [
       15.3675,
@@ -38005,12 +38042,12 @@
         "name": "COVID-19 Sledilnik"
       }
     ],
-    "cases": 1418,
-    "hospitalized": 348,
-    "discharged": 236,
+    "cases": 1429,
+    "hospitalized": 352,
+    "discharged": 243,
     "deaths": 89,
     "recovered": 38,
-    "active": 1291,
+    "active": 1302,
     "rating": 0.3333333333333333,
     "coordinates": [
       14.9945,
@@ -44742,7 +44779,12 @@
       }
     ],
     "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "rating": 0.39215686274509803,
+    "tested": 20079,
+    "cases": 4323,
+    "recovered": 660,
+    "deaths": 224,
+    "active": 3439,
+    "rating": 0.6666666666666666,
     "coordinates": [
       -77.0145,
       38.894000000000005
@@ -91166,8 +91208,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Albany County",
-    "cases": 1067,
-    "tested": 9871,
+    "cases": 1165,
+    "tested": 10310,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.971,
@@ -91198,7 +91240,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Allegany County",
     "cases": 35,
-    "tested": 525,
+    "tested": 543,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.01599999999999,
@@ -91228,8 +91270,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Bronx County",
-    "cases": 36600,
-    "tested": 87254,
+    "cases": 37244,
+    "tested": 90231,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.849,
@@ -91259,8 +91301,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Broome County",
-    "cases": 273,
-    "tested": 2247,
+    "cases": 284,
+    "tested": 2361,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.76599999999999,
@@ -91291,7 +91333,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cattaraugus County",
     "cases": 47,
-    "tested": 824,
+    "tested": 909,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.68450000000001,
@@ -91322,7 +91364,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cayuga County",
     "cases": 48,
-    "tested": 932,
+    "tested": 957,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.503,
@@ -91352,8 +91394,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chautauqua County",
-    "cases": 31,
-    "tested": 1121,
+    "cases": 33,
+    "tested": 1160,
     "rating": 0.49019607843137253,
     "coordinates": [
       -79.4115,
@@ -91383,8 +91425,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chemung County",
-    "cases": 119,
-    "tested": 1479,
+    "cases": 122,
+    "tested": 1563,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.751,
@@ -91414,8 +91456,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chenango County",
-    "cases": 96,
-    "tested": 764,
+    "cases": 98,
+    "tested": 789,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.593,
@@ -91446,7 +91488,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Clinton County",
     "cases": 59,
-    "tested": 708,
+    "tested": 748,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.68,
@@ -91476,8 +91518,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Columbia County",
-    "cases": 165,
-    "tested": 1241,
+    "cases": 170,
+    "tested": 1302,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.64150000000001,
@@ -91508,7 +91550,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cortland County",
     "cases": 28,
-    "tested": 1086,
+    "tested": 1112,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.0695,
@@ -91538,8 +91580,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Delaware County",
-    "cases": 60,
-    "tested": 705,
+    "cases": 61,
+    "tested": 729,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.925,
@@ -91569,8 +91611,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Dutchess County",
-    "cases": 2881,
-    "tested": 14215,
+    "cases": 2954,
+    "tested": 14642,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.7435,
@@ -91600,8 +91642,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Erie County",
-    "cases": 3196,
-    "tested": 15219,
+    "cases": 3319,
+    "tested": 16104,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.8,
@@ -91631,8 +91673,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Essex County",
-    "cases": 27,
-    "tested": 341,
+    "cases": 28,
+    "tested": 363,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.8155,
@@ -91663,7 +91705,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Franklin County",
     "cases": 15,
-    "tested": 360,
+    "tested": 374,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.318,
@@ -91693,8 +91735,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Fulton County",
-    "cases": 67,
-    "tested": 764,
+    "cases": 71,
+    "tested": 791,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.43549999999999,
@@ -91724,8 +91766,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Genesee County",
-    "cases": 152,
-    "tested": 974,
+    "cases": 153,
+    "tested": 1006,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.185,
@@ -91755,8 +91797,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Greene County",
-    "cases": 114,
-    "tested": 1065,
+    "cases": 131,
+    "tested": 1124,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.1565,
@@ -91818,7 +91860,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Herkimer County",
     "cases": 58,
-    "tested": 764,
+    "tested": 792,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.9575,
@@ -91848,8 +91890,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Jefferson County",
-    "cases": 60,
-    "tested": 1482,
+    "cases": 61,
+    "tested": 1518,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.94999999999999,
@@ -91879,8 +91921,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Kings County",
-    "cases": 44236,
-    "tested": 107546,
+    "cases": 44872,
+    "tested": 111490,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.9375,
@@ -91911,7 +91953,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Lewis County",
     "cases": 9,
-    "tested": 300,
+    "tested": 314,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.4805,
@@ -91941,8 +91983,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Livingston County",
-    "cases": 67,
-    "tested": 991,
+    "cases": 69,
+    "tested": 1025,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.774,
@@ -91972,8 +92014,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Madison County",
-    "cases": 126,
-    "tested": 1203,
+    "cases": 131,
+    "tested": 1215,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.6165,
@@ -92003,8 +92045,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Monroe County",
-    "cases": 1404,
-    "tested": 13546,
+    "cases": 1441,
+    "tested": 14015,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.684,
@@ -92034,8 +92076,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Montgomery County",
-    "cases": 51,
-    "tested": 684,
+    "cases": 53,
+    "tested": 698,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.424,
@@ -92065,8 +92107,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Nassau County",
-    "cases": 35505,
-    "tested": 92776,
+    "cases": 35854,
+    "tested": 95200,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.5965,
@@ -92096,8 +92138,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "New York County",
-    "cases": 21604,
-    "tested": 64303,
+    "cases": 21920,
+    "tested": 66602,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.977,
@@ -92127,8 +92169,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Niagara County",
-    "cases": 401,
-    "tested": 2390,
+    "cases": 420,
+    "tested": 2544,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.7675,
@@ -92158,8 +92200,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Oneida County",
-    "cases": 422,
-    "tested": 3281,
+    "cases": 439,
+    "tested": 3426,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.47800000000001,
@@ -92189,8 +92231,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Onondaga County",
-    "cases": 782,
-    "tested": 10324,
+    "cases": 832,
+    "tested": 10667,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.197,
@@ -92221,7 +92263,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Ontario County",
     "cases": 90,
-    "tested": 1533,
+    "tested": 1611,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.2875,
@@ -92251,8 +92293,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Orange County",
-    "cases": 8488,
-    "tested": 26342,
+    "cases": 8650,
+    "tested": 27222,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.3545,
@@ -92282,8 +92324,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Orleans County",
-    "cases": 85,
-    "tested": 593,
+    "cases": 89,
+    "tested": 628,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.231,
@@ -92314,7 +92356,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Oswego County",
     "cases": 63,
-    "tested": 1547,
+    "tested": 1592,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.1865,
@@ -92344,8 +92386,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Otsego County",
-    "cases": 66,
-    "tested": 1201,
+    "cases": 67,
+    "tested": 1246,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.023,
@@ -92375,8 +92417,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Putnam County",
-    "cases": 946,
-    "tested": 3919,
+    "cases": 970,
+    "tested": 4170,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.7565,
@@ -92406,8 +92448,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Queens County",
-    "cases": 50741,
-    "tested": 116488,
+    "cases": 51631,
+    "tested": 120689,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.831,
@@ -92437,8 +92479,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Rensselaer County",
-    "cases": 262,
-    "tested": 3166,
+    "cases": 287,
+    "tested": 3308,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.5255,
@@ -92468,8 +92510,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Richmond County",
-    "cases": 11660,
-    "tested": 32645,
+    "cases": 11811,
+    "tested": 33486,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.157,
@@ -92499,8 +92541,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Rockland County",
-    "cases": 11586,
-    "tested": 29902,
+    "cases": 11708,
+    "tested": 30593,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.061,
@@ -92530,8 +92572,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Saratoga County",
-    "cases": 346,
-    "tested": 4844,
+    "cases": 354,
+    "tested": 5039,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.868,
@@ -92561,8 +92603,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schenectady County",
-    "cases": 479,
-    "tested": 3928,
+    "cases": 501,
+    "tested": 4174,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.057,
@@ -92592,8 +92634,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schoharie County",
-    "cases": 39,
-    "tested": 592,
+    "cases": 42,
+    "tested": 609,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.4385,
@@ -92624,7 +92666,7 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schuyler County",
     "cases": 7,
-    "tested": 405,
+    "tested": 412,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.863,
@@ -92654,8 +92696,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Seneca County",
-    "cases": 38,
-    "tested": 451,
+    "cases": 39,
+    "tested": 475,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.7835,
@@ -92685,8 +92727,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "St. Lawrence County",
-    "cases": 170,
-    "tested": 1549,
+    "cases": 173,
+    "tested": 1826,
     "rating": 0.49019607843137253,
     "coordinates": [
       -75.193,
@@ -92716,8 +92758,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Steuben County",
-    "cases": 214,
-    "tested": 1974,
+    "cases": 216,
+    "tested": 2037,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.3575,
@@ -92747,8 +92789,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Suffolk County",
-    "cases": 33265,
-    "tested": 89168,
+    "cases": 33664,
+    "tested": 91361,
     "rating": 0.49019607843137253,
     "coordinates": [
       -72.6765,
@@ -92778,8 +92820,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Sullivan County",
-    "cases": 811,
-    "tested": 3641,
+    "cases": 838,
+    "tested": 3743,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.755,
@@ -92809,8 +92851,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Tioga County",
-    "cases": 84,
-    "tested": 815,
+    "cases": 88,
+    "tested": 884,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.322,
@@ -92840,8 +92882,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Tompkins County",
-    "cases": 127,
-    "tested": 3492,
+    "cases": 128,
+    "tested": 3511,
     "rating": 0.49019607843137253,
     "coordinates": [
       -76.4675,
@@ -92871,8 +92913,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Ulster County",
-    "cases": 1252,
-    "tested": 7773,
+    "cases": 1279,
+    "tested": 8082,
     "rating": 0.49019607843137253,
     "coordinates": [
       -74.346,
@@ -92902,8 +92944,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Warren County",
-    "cases": 152,
-    "tested": 1268,
+    "cases": 176,
+    "tested": 1373,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.82650000000001,
@@ -92933,8 +92975,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Washington County",
-    "cases": 134,
-    "tested": 947,
+    "cases": 148,
+    "tested": 1005,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.439,
@@ -92964,8 +93006,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Wayne County",
-    "cases": 70,
-    "tested": 1185,
+    "cases": 71,
+    "tested": 1239,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.039,
@@ -92995,8 +93037,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Westchester County",
-    "cases": 28626,
-    "tested": 90987,
+    "cases": 28970,
+    "tested": 92829,
     "rating": 0.49019607843137253,
     "coordinates": [
       -73.733,
@@ -93026,8 +93068,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Wyoming County",
-    "cases": 65,
-    "tested": 551,
+    "cases": 67,
+    "tested": 568,
     "rating": 0.49019607843137253,
     "coordinates": [
       -78.22149999999999,
@@ -93057,8 +93099,8 @@
     ],
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Yates County",
-    "cases": 17,
-    "tested": 252,
+    "cases": 18,
+    "tested": 262,
     "rating": 0.49019607843137253,
     "coordinates": [
       -77.1285,
@@ -118830,7 +118872,7 @@
     ],
     "county": "Anchorage Municipality",
     "state": "Alaska",
-    "cases": 175,
+    "cases": 179,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119292,7 +119334,7 @@
     ],
     "county": "Alameda County",
     "state": "California",
-    "cases": 1554,
+    "cases": 1589,
     "deaths": 59,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119556,7 +119598,7 @@
     ],
     "county": "Humboldt County",
     "state": "California",
-    "cases": 53,
+    "cases": 54,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119589,7 +119631,7 @@
     ],
     "county": "Imperial County",
     "state": "California",
-    "cases": 304,
+    "cases": 319,
     "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119655,8 +119697,8 @@
     ],
     "county": "Kern County",
     "state": "California",
-    "cases": 865,
-    "deaths": 5,
+    "cases": 882,
+    "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
       -118.905,
@@ -119721,7 +119763,7 @@
     ],
     "county": "Madera County",
     "state": "California",
-    "cases": 45,
+    "cases": 46,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119754,8 +119796,8 @@
     ],
     "county": "Marin County",
     "state": "California",
-    "cases": 227,
-    "deaths": 12,
+    "cases": 235,
+    "deaths": 13,
     "rating": 0.6274509803921569,
     "coordinates": [
       -122.721,
@@ -119820,7 +119862,7 @@
     ],
     "county": "Mendocino County",
     "state": "California",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119853,7 +119895,7 @@
     ],
     "county": "Merced County",
     "state": "California",
-    "cases": 116,
+    "cases": 118,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -119952,8 +119994,8 @@
     ],
     "county": "Orange County",
     "state": "California",
-    "cases": 2198,
-    "deaths": 42,
+    "cases": 2324,
+    "deaths": 44,
     "rating": 0.6274509803921569,
     "coordinates": [
       -117.7645,
@@ -120018,8 +120060,8 @@
     ],
     "county": "Riverside County",
     "state": "California",
-    "cases": 3735,
-    "deaths": 141,
+    "cases": 3942,
+    "deaths": 143,
     "rating": 0.6274509803921569,
     "coordinates": [
       -116.0555,
@@ -120051,8 +120093,8 @@
     ],
     "county": "Sacramento County",
     "state": "California",
-    "cases": 1053,
-    "deaths": 41,
+    "cases": 1068,
+    "deaths": 42,
     "rating": 0.6274509803921569,
     "coordinates": [
       -121.4445,
@@ -120117,8 +120159,8 @@
     ],
     "county": "San Bernardino County",
     "state": "California",
-    "cases": 1827,
-    "deaths": 85,
+    "cases": 1928,
+    "deaths": 89,
     "rating": 0.6274509803921569,
     "coordinates": [
       -115.9685,
@@ -120150,8 +120192,8 @@
     ],
     "county": "Santa Barbara County",
     "state": "California",
-    "cases": 477,
-    "deaths": 7,
+    "cases": 485,
+    "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
       -119.846,
@@ -120183,8 +120225,8 @@
     ],
     "county": "Santa Clara County",
     "state": "California",
-    "cases": 2122,
-    "deaths": 107,
+    "cases": 2134,
+    "deaths": 108,
     "rating": 0.6274509803921569,
     "coordinates": [
       -121.705,
@@ -120216,7 +120258,7 @@
     ],
     "county": "Santa Cruz County",
     "state": "California",
-    "cases": 125,
+    "cases": 127,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120283,7 +120325,7 @@
     "county": "Solano County",
     "state": "California",
     "cases": 254,
-    "deaths": 4,
+    "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
       -122,
@@ -120315,7 +120357,7 @@
     ],
     "county": "Sonoma County",
     "state": "California",
-    "cases": 228,
+    "cases": 232,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120348,7 +120390,7 @@
     ],
     "county": "Sutter County",
     "state": "California",
-    "cases": 29,
+    "cases": 30,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120414,8 +120456,8 @@
     ],
     "county": "Tulare County",
     "state": "California",
-    "cases": 578,
-    "deaths": 35,
+    "cases": 626,
+    "deaths": 36,
     "rating": 0.6274509803921569,
     "coordinates": [
       -118.77699999999999,
@@ -120480,7 +120522,7 @@
     ],
     "county": "Yolo County",
     "state": "California",
-    "cases": 162,
+    "cases": 163,
     "deaths": 16,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120546,8 +120588,8 @@
     ],
     "county": "Adams County",
     "state": "Colorado",
-    "cases": 1430,
-    "deaths": 61,
+    "cases": 1490,
+    "deaths": 62,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.37950000000001,
@@ -120612,8 +120654,8 @@
     ],
     "county": "Arapahoe County",
     "state": "Colorado",
-    "cases": 2312,
-    "deaths": 136,
+    "cases": 2389,
+    "deaths": 140,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.3805,
@@ -120711,8 +120753,8 @@
     ],
     "county": "Boulder County",
     "state": "Colorado",
-    "cases": 543,
-    "deaths": 33,
+    "cases": 565,
+    "deaths": 39,
     "rating": 0.6274509803921569,
     "coordinates": [
       -105.37299999999999,
@@ -120744,7 +120786,7 @@
     ],
     "county": "Broomfield County",
     "state": "Colorado",
-    "cases": 145,
+    "cases": 147,
     "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120778,7 +120820,7 @@
     "county": "Chaffee County",
     "state": "Colorado",
     "cases": 66,
-    "deaths": 13,
+    "deaths": 15,
     "rating": 0.6274509803921569,
     "coordinates": [
       -106.2385,
@@ -120942,7 +120984,7 @@
     ],
     "county": "Delta County",
     "state": "Colorado",
-    "cases": 34,
+    "cases": 43,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -120975,8 +121017,8 @@
     ],
     "county": "Denver County",
     "state": "Colorado",
-    "cases": 2791,
-    "deaths": 145,
+    "cases": 2890,
+    "deaths": 150,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.85499999999999,
@@ -121008,8 +121050,8 @@
     ],
     "county": "Douglas County",
     "state": "Colorado",
-    "cases": 453,
-    "deaths": 21,
+    "cases": 468,
+    "deaths": 22,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.995,
@@ -121041,7 +121083,7 @@
     ],
     "county": "Eagle County",
     "state": "Colorado",
-    "cases": 540,
+    "cases": 546,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121074,7 +121116,7 @@
     ],
     "county": "El Paso County",
     "state": "Colorado",
-    "cases": 884,
+    "cases": 907,
     "deaths": 69,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121107,7 +121149,7 @@
     ],
     "county": "Elbert County",
     "state": "Colorado",
-    "cases": 27,
+    "cases": 28,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121173,7 +121215,7 @@
     ],
     "county": "Garfield County",
     "state": "Colorado",
-    "cases": 89,
+    "cases": 91,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121371,8 +121413,8 @@
     ],
     "county": "Jefferson County",
     "state": "Colorado",
-    "cases": 1298,
-    "deaths": 68,
+    "cases": 1314,
+    "deaths": 73,
     "rating": 0.6274509803921569,
     "coordinates": [
       -105.224,
@@ -121437,7 +121479,7 @@
     ],
     "county": "La Plata County",
     "state": "Colorado",
-    "cases": 59,
+    "cases": 62,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121503,7 +121545,7 @@
     ],
     "county": "Larimer County",
     "state": "Colorado",
-    "cases": 334,
+    "cases": 348,
     "deaths": 19,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121602,7 +121644,7 @@
     ],
     "county": "Logan County",
     "state": "Colorado",
-    "cases": 266,
+    "cases": 270,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121635,7 +121677,7 @@
     ],
     "county": "Mesa County",
     "state": "Colorado",
-    "cases": 42,
+    "cases": 44,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121734,7 +121776,7 @@
     ],
     "county": "Montezuma County",
     "state": "Colorado",
-    "cases": 15,
+    "cases": 16,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121767,7 +121809,7 @@
     ],
     "county": "Montrose County",
     "state": "Colorado",
-    "cases": 94,
+    "cases": 96,
     "deaths": 11,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121800,7 +121842,7 @@
     ],
     "county": "Morgan County",
     "state": "Colorado",
-    "cases": 344,
+    "cases": 358,
     "deaths": 16,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -121965,7 +122007,7 @@
     ],
     "county": "Pitkin County",
     "state": "Colorado",
-    "cases": 61,
+    "cases": 62,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122032,7 +122074,7 @@
     "county": "Pueblo County",
     "state": "Colorado",
     "cases": 136,
-    "deaths": 9,
+    "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.55250000000001,
@@ -122130,7 +122172,7 @@
     ],
     "county": "Routt County",
     "state": "Colorado",
-    "cases": 55,
+    "cases": 54,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122163,7 +122205,7 @@
     ],
     "county": "Saguache County",
     "state": "Colorado",
-    "cases": 3,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122229,7 +122271,7 @@
     ],
     "county": "Summit County",
     "state": "Colorado",
-    "cases": 119,
+    "cases": 121,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122328,8 +122370,8 @@
     ],
     "county": "Weld County",
     "state": "Colorado",
-    "cases": 1618,
-    "deaths": 88,
+    "cases": 1704,
+    "deaths": 93,
     "rating": 0.6274509803921569,
     "coordinates": [
       -104.3155,
@@ -122361,7 +122403,7 @@
     ],
     "county": "Yuma County",
     "state": "Colorado",
-    "cases": 7,
+    "cases": 8,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122526,7 +122568,7 @@
     ],
     "county": "Butler County",
     "state": "Kansas",
-    "cases": 15,
+    "cases": 16,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122625,7 +122667,7 @@
     ],
     "county": "Cherokee County",
     "state": "Kansas",
-    "cases": 7,
+    "cases": 8,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122642,6 +122684,39 @@
     "stateId": "iso2:US-KS",
     "countyId": "fips:20021",
     "name": "Cherokee County, Kansas, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Cheyenne County",
+    "state": "Kansas",
+    "cases": 1,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -101.73150000000001,
+      39.7855
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:20023",
+    "population": 2657,
+    "populationDensity": 1.0046139662900302,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KS",
+    "countyId": "fips:20023",
+    "name": "Cheyenne County, Kansas, United States",
     "level": "county"
   },
   {
@@ -122691,7 +122766,7 @@
     ],
     "county": "Clay County",
     "state": "Kansas",
-    "cases": 5,
+    "cases": 4,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122724,7 +122799,7 @@
     ],
     "county": "Cloud County",
     "state": "Kansas",
-    "cases": 3,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122823,7 +122898,7 @@
     ],
     "county": "Crawford County",
     "state": "Kansas",
-    "cases": 7,
+    "cases": 5,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122955,7 +123030,7 @@
     ],
     "county": "Edwards County",
     "state": "Kansas",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -122972,6 +123047,39 @@
     "stateId": "iso2:US-KS",
     "countyId": "fips:20047",
     "name": "Edwards County, Kansas, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Elk County",
+    "state": "Kansas",
+    "cases": 1,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -96.2435,
+      37.453
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:20049",
+    "population": 2530,
+    "populationDensity": 1.499001219669328,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KS",
+    "countyId": "fips:20049",
+    "name": "Elk County, Kansas, United States",
     "level": "county"
   },
   {
@@ -123021,7 +123129,7 @@
     ],
     "county": "Finney County",
     "state": "Kansas",
-    "cases": 248,
+    "cases": 270,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123054,7 +123162,7 @@
     ],
     "county": "Ford County",
     "state": "Kansas",
-    "cases": 544,
+    "cases": 601,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123120,7 +123228,7 @@
     ],
     "county": "Geary County",
     "state": "Kansas",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123186,7 +123294,7 @@
     ],
     "county": "Grant County",
     "state": "Kansas",
-    "cases": 1,
+    "cases": 2,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123417,7 +123525,7 @@
     ],
     "county": "Jefferson County",
     "state": "Kansas",
-    "cases": 8,
+    "cases": 9,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123483,7 +123591,7 @@
     ],
     "county": "Johnson County",
     "state": "Kansas",
-    "cases": 446,
+    "cases": 454,
     "deaths": 40,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123516,7 +123624,7 @@
     ],
     "county": "Kearny County",
     "state": "Kansas",
-    "cases": 12,
+    "cases": 13,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123582,7 +123690,7 @@
     ],
     "county": "Labette County",
     "state": "Kansas",
-    "cases": 21,
+    "cases": 22,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123615,7 +123723,7 @@
     ],
     "county": "Leavenworth County",
     "state": "Kansas",
-    "cases": 187,
+    "cases": 196,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123681,7 +123789,7 @@
     ],
     "county": "Lyon County",
     "state": "Kansas",
-    "cases": 177,
+    "cases": 184,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123780,7 +123888,7 @@
     ],
     "county": "Meade County",
     "state": "Kansas",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -123846,7 +123954,7 @@
     ],
     "county": "Mitchell County",
     "state": "Kansas",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124011,7 +124119,7 @@
     ],
     "county": "Neosho County",
     "state": "Kansas",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124110,7 +124218,7 @@
     ],
     "county": "Ottawa County",
     "state": "Kansas",
-    "cases": 3,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124242,7 +124350,7 @@
     ],
     "county": "Reno County",
     "state": "Kansas",
-    "cases": 27,
+    "cases": 32,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124473,8 +124581,8 @@
     ],
     "county": "Sedgwick County",
     "state": "Kansas",
-    "cases": 354,
-    "deaths": 6,
+    "cases": 366,
+    "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
       -97.48,
@@ -124506,7 +124614,7 @@
     ],
     "county": "Seward County",
     "state": "Kansas",
-    "cases": 422,
+    "cases": 460,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124539,7 +124647,7 @@
     ],
     "county": "Shawnee County",
     "state": "Kansas",
-    "cases": 108,
+    "cases": 112,
     "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124704,7 +124812,7 @@
     ],
     "county": "Stanton County",
     "state": "Kansas",
-    "cases": 4,
+    "cases": 5,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124803,7 +124911,7 @@
     ],
     "county": "Wabaunsee County",
     "state": "Kansas",
-    "cases": 15,
+    "cases": 18,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124902,8 +125010,8 @@
     ],
     "county": "Wyandotte County",
     "state": "Kansas",
-    "cases": 585,
-    "deaths": 53,
+    "cases": 619,
+    "deaths": 55,
     "rating": 0.6274509803921569,
     "coordinates": [
       -94.74950000000001,
@@ -124935,7 +125043,7 @@
     ],
     "county": "Adams County",
     "state": "Mississippi",
-    "cases": 123,
+    "cases": 129,
     "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -124969,7 +125077,7 @@
     "county": "Alcorn County",
     "state": "Mississippi",
     "cases": 10,
-    "deaths": 0,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -88.5935,
@@ -125034,7 +125142,7 @@
     ],
     "county": "Attala County",
     "state": "Mississippi",
-    "cases": 89,
+    "cases": 94,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125133,7 +125241,7 @@
     ],
     "county": "Calhoun County",
     "state": "Mississippi",
-    "cases": 50,
+    "cases": 51,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125166,7 +125274,7 @@
     ],
     "county": "Carroll County",
     "state": "Mississippi",
-    "cases": 22,
+    "cases": 25,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125199,8 +125307,8 @@
     ],
     "county": "Chickasaw County",
     "state": "Mississippi",
-    "cases": 67,
-    "deaths": 6,
+    "cases": 68,
+    "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
       -88.9555,
@@ -125265,7 +125373,7 @@
     ],
     "county": "Claiborne County",
     "state": "Mississippi",
-    "cases": 19,
+    "cases": 20,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125298,7 +125406,7 @@
     ],
     "county": "Clarke County",
     "state": "Mississippi",
-    "cases": 49,
+    "cases": 53,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125331,7 +125439,7 @@
     ],
     "county": "Clay County",
     "state": "Mississippi",
-    "cases": 33,
+    "cases": 34,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125364,7 +125472,7 @@
     ],
     "county": "Coahoma County",
     "state": "Mississippi",
-    "cases": 60,
+    "cases": 61,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125397,7 +125505,7 @@
     ],
     "county": "Copiah County",
     "state": "Mississippi",
-    "cases": 83,
+    "cases": 88,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125430,7 +125538,7 @@
     ],
     "county": "Covington County",
     "state": "Mississippi",
-    "cases": 54,
+    "cases": 55,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125463,7 +125571,7 @@
     ],
     "county": "DeSoto County",
     "state": "Mississippi",
-    "cases": 272,
+    "cases": 277,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125496,8 +125604,8 @@
     ],
     "county": "Forrest County",
     "state": "Mississippi",
-    "cases": 196,
-    "deaths": 8,
+    "cases": 198,
+    "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
       -89.295,
@@ -125562,7 +125670,7 @@
     ],
     "county": "George County",
     "state": "Mississippi",
-    "cases": 12,
+    "cases": 13,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125694,7 +125802,7 @@
     ],
     "county": "Harrison County",
     "state": "Mississippi",
-    "cases": 166,
+    "cases": 171,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125727,7 +125835,7 @@
     ],
     "county": "Hinds County",
     "state": "Mississippi",
-    "cases": 435,
+    "cases": 450,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125760,7 +125868,7 @@
     ],
     "county": "Holmes County",
     "state": "Mississippi",
-    "cases": 121,
+    "cases": 129,
     "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125793,7 +125901,7 @@
     ],
     "county": "Humphreys County",
     "state": "Mississippi",
-    "cases": 18,
+    "cases": 22,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125859,7 +125967,7 @@
     ],
     "county": "Jackson County",
     "state": "Mississippi",
-    "cases": 252,
+    "cases": 255,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125892,7 +126000,7 @@
     ],
     "county": "Jasper County",
     "state": "Mississippi",
-    "cases": 33,
+    "cases": 34,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125925,7 +126033,7 @@
     ],
     "county": "Jefferson County",
     "state": "Mississippi",
-    "cases": 16,
+    "cases": 23,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125958,7 +126066,7 @@
     ],
     "county": "Jefferson Davis County",
     "state": "Mississippi",
-    "cases": 29,
+    "cases": 31,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -125991,7 +126099,7 @@
     ],
     "county": "Jones County",
     "state": "Mississippi",
-    "cases": 132,
+    "cases": 136,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126024,7 +126132,7 @@
     ],
     "county": "Kemper County",
     "state": "Mississippi",
-    "cases": 50,
+    "cases": 56,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126090,7 +126198,7 @@
     ],
     "county": "Lamar County",
     "state": "Mississippi",
-    "cases": 94,
+    "cases": 102,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126123,7 +126231,7 @@
     ],
     "county": "Lauderdale County",
     "state": "Mississippi",
-    "cases": 318,
+    "cases": 334,
     "deaths": 19,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126156,7 +126264,7 @@
     ],
     "county": "Lawrence County",
     "state": "Mississippi",
-    "cases": 38,
+    "cases": 42,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126189,8 +126297,8 @@
     ],
     "county": "Leake County",
     "state": "Mississippi",
-    "cases": 179,
-    "deaths": 1,
+    "cases": 190,
+    "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
       -89.524,
@@ -126222,7 +126330,7 @@
     ],
     "county": "Lee County",
     "state": "Mississippi",
-    "cases": 71,
+    "cases": 70,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126255,8 +126363,8 @@
     ],
     "county": "Leflore County",
     "state": "Mississippi",
-    "cases": 141,
-    "deaths": 15,
+    "cases": 145,
+    "deaths": 16,
     "rating": 0.6274509803921569,
     "coordinates": [
       -90.2775,
@@ -126288,7 +126396,7 @@
     ],
     "county": "Lincoln County",
     "state": "Mississippi",
-    "cases": 136,
+    "cases": 141,
     "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126354,8 +126462,8 @@
     ],
     "county": "Madison County",
     "state": "Mississippi",
-    "cases": 212,
-    "deaths": 7,
+    "cases": 224,
+    "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
       -90.09,
@@ -126387,7 +126495,7 @@
     ],
     "county": "Marion County",
     "state": "Mississippi",
-    "cases": 66,
+    "cases": 69,
     "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126453,8 +126561,8 @@
     ],
     "county": "Monroe County",
     "state": "Mississippi",
-    "cases": 153,
-    "deaths": 12,
+    "cases": 157,
+    "deaths": 13,
     "rating": 0.6274509803921569,
     "coordinates": [
       -88.46199999999999,
@@ -126486,7 +126594,7 @@
     ],
     "county": "Montgomery County",
     "state": "Mississippi",
-    "cases": 19,
+    "cases": 20,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126519,7 +126627,7 @@
     ],
     "county": "Neshoba County",
     "state": "Mississippi",
-    "cases": 169,
+    "cases": 174,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126552,7 +126660,7 @@
     ],
     "county": "Newton County",
     "state": "Mississippi",
-    "cases": 73,
+    "cases": 78,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126585,7 +126693,7 @@
     ],
     "county": "Noxubee County",
     "state": "Mississippi",
-    "cases": 55,
+    "cases": 61,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126618,7 +126726,7 @@
     ],
     "county": "Oktibbeha County",
     "state": "Mississippi",
-    "cases": 48,
+    "cases": 49,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126684,8 +126792,8 @@
     ],
     "county": "Pearl River County",
     "state": "Mississippi",
-    "cases": 154,
-    "deaths": 15,
+    "cases": 157,
+    "deaths": 18,
     "rating": 0.6274509803921569,
     "coordinates": [
       -89.59649999999999,
@@ -126750,7 +126858,7 @@
     ],
     "county": "Pike County",
     "state": "Mississippi",
-    "cases": 142,
+    "cases": 143,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126816,7 +126924,7 @@
     ],
     "county": "Prentiss County",
     "state": "Mississippi",
-    "cases": 31,
+    "cases": 32,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126882,7 +126990,7 @@
     ],
     "county": "Rankin County",
     "state": "Mississippi",
-    "cases": 179,
+    "cases": 182,
     "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126915,7 +127023,7 @@
     ],
     "county": "Scott County",
     "state": "Mississippi",
-    "cases": 281,
+    "cases": 296,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -126981,7 +127089,7 @@
     ],
     "county": "Simpson County",
     "state": "Mississippi",
-    "cases": 43,
+    "cases": 45,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127014,7 +127122,7 @@
     ],
     "county": "Smith County",
     "state": "Mississippi",
-    "cases": 66,
+    "cases": 73,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127080,7 +127188,7 @@
     ],
     "county": "Sunflower County",
     "state": "Mississippi",
-    "cases": 52,
+    "cases": 53,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127146,7 +127254,7 @@
     ],
     "county": "Tate County",
     "state": "Mississippi",
-    "cases": 39,
+    "cases": 41,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127344,7 +127452,7 @@
     ],
     "county": "Warren County",
     "state": "Mississippi",
-    "cases": 58,
+    "cases": 65,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127410,7 +127518,7 @@
     ],
     "county": "Wayne County",
     "state": "Mississippi",
-    "cases": 19,
+    "cases": 20,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127476,7 +127584,7 @@
     ],
     "county": "Wilkinson County",
     "state": "Mississippi",
-    "cases": 68,
+    "cases": 69,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127509,7 +127617,7 @@
     ],
     "county": "Winston County",
     "state": "Mississippi",
-    "cases": 41,
+    "cases": 43,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127575,7 +127683,7 @@
     ],
     "county": "Yazoo County",
     "state": "Mississippi",
-    "cases": 129,
+    "cases": 134,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127740,7 +127848,7 @@
     ],
     "county": "Humboldt County",
     "state": "Nevada",
-    "cases": 37,
+    "cases": 38,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127773,7 +127881,7 @@
     ],
     "county": "Lander County",
     "state": "Nevada",
-    "cases": 1,
+    "cases": 7,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127839,7 +127947,7 @@
     ],
     "county": "Mineral County",
     "state": "Nevada",
-    "cases": 1,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -127905,8 +128013,8 @@
     ],
     "county": "Washoe County",
     "state": "Nevada",
-    "cases": 834,
-    "deaths": 29,
+    "cases": 848,
+    "deaths": 30,
     "rating": 0.6274509803921569,
     "coordinates": [
       -119.58850000000001,
@@ -127971,8 +128079,8 @@
     ],
     "county": "Atlantic County",
     "state": "New Jersey",
-    "cases": 868,
-    "deaths": 35,
+    "cases": 908,
+    "deaths": 37,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.6435,
@@ -128004,8 +128112,8 @@
     ],
     "county": "Bergen County",
     "state": "New Jersey",
-    "cases": 15251,
-    "deaths": 1002,
+    "cases": 15446,
+    "deaths": 1057,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.08250000000001,
@@ -128037,8 +128145,8 @@
     ],
     "county": "Burlington County",
     "state": "New Jersey",
-    "cases": 2543,
-    "deaths": 106,
+    "cases": 2606,
+    "deaths": 117,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.725,
@@ -128070,8 +128178,8 @@
     ],
     "county": "Camden County",
     "state": "New Jersey",
-    "cases": 3285,
-    "deaths": 124,
+    "cases": 3385,
+    "deaths": 136,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.938,
@@ -128103,8 +128211,8 @@
     ],
     "county": "Cape May County",
     "state": "New Jersey",
-    "cases": 299,
-    "deaths": 20,
+    "cases": 305,
+    "deaths": 21,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.75649999999999,
@@ -128136,7 +128244,7 @@
     ],
     "county": "Cumberland County",
     "state": "New Jersey",
-    "cases": 659,
+    "cases": 687,
     "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -128169,8 +128277,8 @@
     ],
     "county": "Essex County",
     "state": "New Jersey",
-    "cases": 13190,
-    "deaths": 1090,
+    "cases": 13445,
+    "deaths": 1139,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.2445,
@@ -128202,8 +128310,8 @@
     ],
     "county": "Gloucester County",
     "state": "New Jersey",
-    "cases": 1179,
-    "deaths": 38,
+    "cases": 1208,
+    "deaths": 40,
     "rating": 0.6274509803921569,
     "coordinates": [
       -75.146,
@@ -128235,8 +128343,8 @@
     ],
     "county": "Hudson County",
     "state": "New Jersey",
-    "cases": 14309,
-    "deaths": 722,
+    "cases": 14596,
+    "deaths": 758,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.07499999999999,
@@ -128268,8 +128376,8 @@
     ],
     "county": "Hunterdon County",
     "state": "New Jersey",
-    "cases": 573,
-    "deaths": 24,
+    "cases": 583,
+    "deaths": 23,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.949,
@@ -128301,8 +128409,8 @@
     ],
     "county": "Mercer County",
     "state": "New Jersey",
-    "cases": 3605,
-    "deaths": 212,
+    "cases": 3725,
+    "deaths": 220,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.71199999999999,
@@ -128334,8 +128442,8 @@
     ],
     "county": "Middlesex County",
     "state": "New Jersey",
-    "cases": 11102,
-    "deaths": 515,
+    "cases": 11436,
+    "deaths": 531,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.417,
@@ -128367,8 +128475,8 @@
     ],
     "county": "Monmouth County",
     "state": "New Jersey",
-    "cases": 5826,
-    "deaths": 305,
+    "cases": 5907,
+    "deaths": 317,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.293,
@@ -128400,8 +128508,8 @@
     ],
     "county": "Morris County",
     "state": "New Jersey",
-    "cases": 5128,
-    "deaths": 377,
+    "cases": 5213,
+    "deaths": 387,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.57849999999999,
@@ -128433,8 +128541,8 @@
     ],
     "county": "Ocean County",
     "state": "New Jersey",
-    "cases": 6151,
-    "deaths": 342,
+    "cases": 6253,
+    "deaths": 367,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.292,
@@ -128466,8 +128574,8 @@
     ],
     "county": "Passaic County",
     "state": "New Jersey",
-    "cases": 11755,
-    "deaths": 475,
+    "cases": 12185,
+    "deaths": 516,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.305,
@@ -128499,8 +128607,8 @@
     ],
     "county": "Salem County",
     "state": "New Jersey",
-    "cases": 219,
-    "deaths": 8,
+    "cases": 227,
+    "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
       -75.311,
@@ -128532,8 +128640,8 @@
     ],
     "county": "Somerset County",
     "state": "New Jersey",
-    "cases": 3278,
-    "deaths": 242,
+    "cases": 3372,
+    "deaths": 252,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.60050000000001,
@@ -128565,8 +128673,8 @@
     ],
     "county": "Sussex County",
     "state": "New Jersey",
-    "cases": 882,
-    "deaths": 97,
+    "cases": 900,
+    "deaths": 99,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.6795,
@@ -128598,8 +128706,8 @@
     ],
     "county": "Union County",
     "state": "New Jersey",
-    "cases": 12188,
-    "deaths": 627,
+    "cases": 12380,
+    "deaths": 653,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.3,
@@ -128631,8 +128739,8 @@
     ],
     "county": "Warren County",
     "state": "New Jersey",
-    "cases": 848,
-    "deaths": 71,
+    "cases": 880,
+    "deaths": 81,
     "rating": 0.6274509803921569,
     "coordinates": [
       -74.9865,
@@ -128664,7 +128772,7 @@
     ],
     "county": "Bernalillo County",
     "state": "New Mexico",
-    "cases": 738,
+    "cases": 765,
     "deaths": 35,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -128763,8 +128871,8 @@
     ],
     "county": "Cibola County",
     "state": "New Mexico",
-    "cases": 46,
-    "deaths": 2,
+    "cases": 47,
+    "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
       -108.0565,
@@ -128862,7 +128970,7 @@
     ],
     "county": "Doña Ana County",
     "state": "New Mexico",
-    "cases": 129,
+    "cases": 130,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -128961,7 +129069,7 @@
     ],
     "county": "Guadalupe County",
     "state": "New Mexico",
-    "cases": 13,
+    "cases": 14,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -129126,7 +129234,7 @@
     ],
     "county": "Luna County",
     "state": "New Mexico",
-    "cases": 3,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -129159,8 +129267,8 @@
     ],
     "county": "McKinley County",
     "state": "New Mexico",
-    "cases": 820,
-    "deaths": 15,
+    "cases": 953,
+    "deaths": 16,
     "rating": 0.6274509803921569,
     "coordinates": [
       -108.1765,
@@ -129324,8 +129432,8 @@
     ],
     "county": "San Juan County",
     "state": "New Mexico",
-    "cases": 508,
-    "deaths": 36,
+    "cases": 576,
+    "deaths": 38,
     "rating": 0.6274509803921569,
     "coordinates": [
       -108.2335,
@@ -129390,8 +129498,8 @@
     ],
     "county": "Sandoval County",
     "state": "New Mexico",
-    "cases": 383,
-    "deaths": 11,
+    "cases": 385,
+    "deaths": 13,
     "rating": 0.6274509803921569,
     "coordinates": [
       -106.93549999999999,
@@ -129454,10 +129562,43 @@
         "github": "nytimes"
       }
     ],
+    "county": "Sierra County",
+    "state": "New Mexico",
+    "cases": 1,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -107.17099999999999,
+      33.0425
+    ],
+    "tz": [
+      "America/Denver"
+    ],
+    "featureId": "fips:35051",
+    "population": 10791,
+    "populationDensity": 0.979632128466614,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NM",
+    "countyId": "fips:35051",
+    "name": "Sierra County, New Mexico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Socorro County",
     "state": "New Mexico",
-    "cases": 41,
-    "deaths": 1,
+    "cases": 42,
+    "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
       -106.8255,
@@ -129588,7 +129729,7 @@
     ],
     "county": "Valencia County",
     "state": "New Mexico",
-    "cases": 42,
+    "cases": 44,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -129852,7 +129993,7 @@
     ],
     "county": "Canadian County",
     "state": "Oklahoma",
-    "cases": 96,
+    "cases": 97,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -129918,7 +130059,7 @@
     ],
     "county": "Cherokee County",
     "state": "Oklahoma",
-    "cases": 26,
+    "cases": 27,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -130017,7 +130158,7 @@
     ],
     "county": "Cleveland County",
     "state": "Oklahoma",
-    "cases": 410,
+    "cases": 417,
     "deaths": 28,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -130149,7 +130290,7 @@
     ],
     "county": "Creek County",
     "state": "Oklahoma",
-    "cases": 76,
+    "cases": 77,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -130315,7 +130456,7 @@
     "county": "Garvin County",
     "state": "Oklahoma",
     "cases": 13,
-    "deaths": 0,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -97.30000000000001,
@@ -130479,7 +130620,7 @@
     ],
     "county": "Haskell County",
     "state": "Oklahoma",
-    "cases": 5,
+    "cases": 4,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -130612,7 +130753,7 @@
     "county": "Kay County",
     "state": "Oklahoma",
     "cases": 47,
-    "deaths": 6,
+    "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
       -97.106,
@@ -130776,7 +130917,7 @@
     ],
     "county": "Lincoln County",
     "state": "Oklahoma",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -130809,8 +130950,8 @@
     ],
     "county": "Logan County",
     "state": "Oklahoma",
-    "cases": 13,
-    "deaths": 0,
+    "cases": 14,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -97.4085,
@@ -131107,7 +131248,7 @@
     "county": "Muskogee County",
     "state": "Oklahoma",
     "cases": 26,
-    "deaths": 4,
+    "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
       -95.408,
@@ -131172,7 +131313,7 @@
     ],
     "county": "Nowata County",
     "state": "Oklahoma",
-    "cases": 20,
+    "cases": 21,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131238,8 +131379,8 @@
     ],
     "county": "Oklahoma County",
     "state": "Oklahoma",
-    "cases": 729,
-    "deaths": 29,
+    "cases": 743,
+    "deaths": 30,
     "rating": 0.6274509803921569,
     "coordinates": [
       -97.4075,
@@ -131304,7 +131445,7 @@
     ],
     "county": "Osage County",
     "state": "Oklahoma",
-    "cases": 72,
+    "cases": 73,
     "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131337,7 +131478,7 @@
     ],
     "county": "Ottawa County",
     "state": "Oklahoma",
-    "cases": 32,
+    "cases": 31,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131436,7 +131577,7 @@
     ],
     "county": "Pittsburg County",
     "state": "Oklahoma",
-    "cases": 27,
+    "cases": 28,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131568,7 +131709,7 @@
     ],
     "county": "Rogers County",
     "state": "Oklahoma",
-    "cases": 50,
+    "cases": 52,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131700,7 +131841,7 @@
     ],
     "county": "Texas County",
     "state": "Oklahoma",
-    "cases": 107,
+    "cases": 119,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131766,8 +131907,8 @@
     ],
     "county": "Tulsa County",
     "state": "Oklahoma",
-    "cases": 506,
-    "deaths": 32,
+    "cases": 522,
+    "deaths": 33,
     "rating": 0.6274509803921569,
     "coordinates": [
       -96.03,
@@ -131799,7 +131940,7 @@
     ],
     "county": "Wagoner County",
     "state": "Oklahoma",
-    "cases": 116,
+    "cases": 118,
     "deaths": 14,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -131832,8 +131973,8 @@
     ],
     "county": "Washington County",
     "state": "Oklahoma",
-    "cases": 244,
-    "deaths": 18,
+    "cases": 248,
+    "deaths": 19,
     "rating": 0.6274509803921569,
     "coordinates": [
       -95.894,
@@ -131964,7 +132105,7 @@
     ],
     "county": "Aiken County",
     "state": "South Carolina",
-    "cases": 94,
+    "cases": 97,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132030,7 +132171,7 @@
     ],
     "county": "Anderson County",
     "state": "South Carolina",
-    "cases": 152,
+    "cases": 157,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132129,8 +132270,8 @@
     ],
     "county": "Beaufort County",
     "state": "South Carolina",
-    "cases": 259,
-    "deaths": 10,
+    "cases": 262,
+    "deaths": 11,
     "rating": 0.6274509803921569,
     "coordinates": [
       -80.7205,
@@ -132163,7 +132304,7 @@
     "county": "Berkeley County",
     "state": "South Carolina",
     "cases": 174,
-    "deaths": 9,
+    "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
       -79.9045,
@@ -132228,7 +132369,7 @@
     ],
     "county": "Charleston County",
     "state": "South Carolina",
-    "cases": 438,
+    "cases": 441,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132327,7 +132468,7 @@
     ],
     "county": "Chesterfield County",
     "state": "South Carolina",
-    "cases": 47,
+    "cases": 48,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132360,8 +132501,8 @@
     ],
     "county": "Clarendon County",
     "state": "South Carolina",
-    "cases": 194,
-    "deaths": 14,
+    "cases": 201,
+    "deaths": 17,
     "rating": 0.6274509803921569,
     "coordinates": [
       -80.2085,
@@ -132426,7 +132567,7 @@
     ],
     "county": "Darlington County",
     "state": "South Carolina",
-    "cases": 110,
+    "cases": 114,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132459,7 +132600,7 @@
     ],
     "county": "Dillon County",
     "state": "South Carolina",
-    "cases": 44,
+    "cases": 47,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132492,8 +132633,8 @@
     ],
     "county": "Dorchester County",
     "state": "South Carolina",
-    "cases": 91,
-    "deaths": 2,
+    "cases": 94,
+    "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
       -80.4345,
@@ -132525,7 +132666,7 @@
     ],
     "county": "Edgefield County",
     "state": "South Carolina",
-    "cases": 26,
+    "cases": 29,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132558,7 +132699,7 @@
     ],
     "county": "Fairfield County",
     "state": "South Carolina",
-    "cases": 33,
+    "cases": 34,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132591,8 +132732,8 @@
     ],
     "county": "Florence County",
     "state": "South Carolina",
-    "cases": 273,
-    "deaths": 10,
+    "cases": 288,
+    "deaths": 13,
     "rating": 0.6274509803921569,
     "coordinates": [
       -79.6925,
@@ -132625,7 +132766,7 @@
     "county": "Georgetown County",
     "state": "South Carolina",
     "cases": 40,
-    "deaths": 2,
+    "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
       -79.3415,
@@ -132657,8 +132798,8 @@
     ],
     "county": "Greenville County",
     "state": "South Carolina",
-    "cases": 661,
-    "deaths": 22,
+    "cases": 689,
+    "deaths": 34,
     "rating": 0.6274509803921569,
     "coordinates": [
       -82.4555,
@@ -132723,7 +132864,7 @@
     ],
     "county": "Hampton County",
     "state": "South Carolina",
-    "cases": 22,
+    "cases": 23,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132822,7 +132963,7 @@
     ],
     "county": "Kershaw County",
     "state": "South Carolina",
-    "cases": 229,
+    "cases": 234,
     "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132855,7 +132996,7 @@
     ],
     "county": "Lancaster County",
     "state": "South Carolina",
-    "cases": 90,
+    "cases": 93,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -132954,8 +133095,8 @@
     ],
     "county": "Lexington County",
     "state": "South Carolina",
-    "cases": 347,
-    "deaths": 12,
+    "cases": 358,
+    "deaths": 14,
     "rating": 0.6274509803921569,
     "coordinates": [
       -81.24799999999999,
@@ -132988,7 +133129,7 @@
     "county": "Marion County",
     "state": "South Carolina",
     "cases": 32,
-    "deaths": 1,
+    "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
       -79.35,
@@ -133020,7 +133161,7 @@
     ],
     "county": "Marlboro County",
     "state": "South Carolina",
-    "cases": 42,
+    "cases": 43,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133086,7 +133227,7 @@
     ],
     "county": "Newberry County",
     "state": "South Carolina",
-    "cases": 23,
+    "cases": 24,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133152,7 +133293,7 @@
     ],
     "county": "Orangeburg County",
     "state": "South Carolina",
-    "cases": 63,
+    "cases": 68,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133185,8 +133326,8 @@
     ],
     "county": "Pickens County",
     "state": "South Carolina",
-    "cases": 54,
-    "deaths": 0,
+    "cases": 53,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -82.712,
@@ -133218,8 +133359,8 @@
     ],
     "county": "Richland County",
     "state": "South Carolina",
-    "cases": 864,
-    "deaths": 21,
+    "cases": 884,
+    "deaths": 30,
     "rating": 0.6274509803921569,
     "coordinates": [
       -80.9705,
@@ -133284,8 +133425,8 @@
     ],
     "county": "Spartanburg County",
     "state": "South Carolina",
-    "cases": 258,
-    "deaths": 8,
+    "cases": 262,
+    "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
       -81.96950000000001,
@@ -133317,8 +133458,8 @@
     ],
     "county": "Sumter County",
     "state": "South Carolina",
-    "cases": 220,
-    "deaths": 7,
+    "cases": 223,
+    "deaths": 11,
     "rating": 0.6274509803921569,
     "coordinates": [
       -80.27000000000001,
@@ -133383,7 +133524,7 @@
     ],
     "county": "Williamsburg County",
     "state": "South Carolina",
-    "cases": 60,
+    "cases": 65,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133416,7 +133557,7 @@
     ],
     "county": "York County",
     "state": "South Carolina",
-    "cases": 188,
+    "cases": 197,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133581,7 +133722,7 @@
     ],
     "county": "Brown County",
     "state": "South Dakota",
-    "cases": 30,
+    "cases": 32,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133647,7 +133788,7 @@
     ],
     "county": "Charles Mix County",
     "state": "South Dakota",
-    "cases": 4,
+    "cases": 5,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133713,7 +133854,7 @@
     ],
     "county": "Clay County",
     "state": "South Dakota",
-    "cases": 5,
+    "cases": 6,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -133829,6 +133970,39 @@
     "stateId": "iso2:US-SD",
     "countyId": "fips:46035",
     "name": "Davison County, South Dakota, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Day County",
+    "state": "South Dakota",
+    "cases": 1,
+    "deaths": 0,
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -97.604,
+      45.3695
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "fips:46037",
+    "population": 5424,
+    "populationDensity": 1.9193578314261959,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-SD",
+    "countyId": "fips:46037",
+    "name": "Day County, South Dakota, United States",
     "level": "county"
   },
   {
@@ -134241,7 +134415,7 @@
     ],
     "county": "Lincoln County",
     "state": "South Dakota",
-    "cases": 133,
+    "cases": 138,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -134274,7 +134448,7 @@
     ],
     "county": "Lyman County",
     "state": "South Dakota",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -134472,8 +134646,8 @@
     ],
     "county": "Minnehaha County",
     "state": "South Dakota",
-    "cases": 1939,
-    "deaths": 6,
+    "cases": 1984,
+    "deaths": 8,
     "rating": 0.6274509803921569,
     "coordinates": [
       -96.791,
@@ -134505,7 +134679,7 @@
     ],
     "county": "Moody County",
     "state": "South Dakota",
-    "cases": 3,
+    "cases": 5,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -134835,7 +135009,7 @@
     ],
     "county": "Union County",
     "state": "South Dakota",
-    "cases": 14,
+    "cases": 17,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135165,7 +135339,7 @@
     ],
     "county": "Iron County",
     "state": "Utah",
-    "cases": 21,
+    "cases": 22,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135429,7 +135603,7 @@
     ],
     "county": "Washington County",
     "state": "Utah",
-    "cases": 62,
+    "cases": 65,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135462,7 +135636,7 @@
     ],
     "county": "Weber County",
     "state": "Utah",
-    "cases": 139,
+    "cases": 145,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135495,7 +135669,7 @@
     ],
     "county": "Accomack County",
     "state": "Virginia",
-    "cases": 223,
+    "cases": 229,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135528,7 +135702,7 @@
     ],
     "county": "Albemarle County",
     "state": "Virginia",
-    "cases": 80,
+    "cases": 81,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135561,8 +135735,8 @@
     ],
     "county": "Alexandria City",
     "state": "Virginia",
-    "cases": 653,
-    "deaths": 20,
+    "cases": 700,
+    "deaths": 21,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.09,
@@ -135594,7 +135768,7 @@
     ],
     "county": "Alleghany County",
     "state": "Virginia",
-    "cases": 5,
+    "cases": 6,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135660,7 +135834,7 @@
     ],
     "county": "Amherst County",
     "state": "Virginia",
-    "cases": 9,
+    "cases": 11,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135693,7 +135867,7 @@
     ],
     "county": "Appomattox County",
     "state": "Virginia",
-    "cases": 17,
+    "cases": 18,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135726,7 +135900,7 @@
     ],
     "county": "Arlington County",
     "state": "Virginia",
-    "cases": 865,
+    "cases": 912,
     "deaths": 32,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135759,7 +135933,7 @@
     ],
     "county": "Augusta County",
     "state": "Virginia",
-    "cases": 39,
+    "cases": 41,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135792,7 +135966,7 @@
     ],
     "county": "Bedford County",
     "state": "Virginia",
-    "cases": 25,
+    "cases": 27,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135825,7 +135999,7 @@
     ],
     "county": "Botetourt County",
     "state": "Virginia",
-    "cases": 27,
+    "cases": 28,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -135891,7 +136065,7 @@
     ],
     "county": "Brunswick County",
     "state": "Virginia",
-    "cases": 13,
+    "cases": 14,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136023,7 +136197,7 @@
     ],
     "county": "Campbell County",
     "state": "Virginia",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136056,7 +136230,7 @@
     ],
     "county": "Caroline County",
     "state": "Virginia",
-    "cases": 22,
+    "cases": 25,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136089,7 +136263,7 @@
     ],
     "county": "Carroll County",
     "state": "Virginia",
-    "cases": 4,
+    "cases": 9,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136188,7 +136362,7 @@
     ],
     "county": "Charlottesville City",
     "state": "Virginia",
-    "cases": 51,
+    "cases": 52,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136221,7 +136395,7 @@
     ],
     "county": "Chesapeake City",
     "state": "Virginia",
-    "cases": 220,
+    "cases": 232,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136254,7 +136428,7 @@
     ],
     "county": "Chesterfield County",
     "state": "Virginia",
-    "cases": 488,
+    "cases": 501,
     "deaths": 19,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136287,7 +136461,7 @@
     ],
     "county": "Clarke County",
     "state": "Virginia",
-    "cases": 7,
+    "cases": 8,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136320,7 +136494,7 @@
     ],
     "county": "Colonial Heights City",
     "state": "Virginia",
-    "cases": 47,
+    "cases": 49,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136337,39 +136511,6 @@
     "stateId": "iso2:US-VA",
     "countyId": "fips:51570",
     "name": "Colonial Heights City, Virginia, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Covington City",
-    "state": "Virginia",
-    "cases": 1,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -79.9875,
-      37.781
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:51580",
-    "population": 5538,
-    "populationDensity": 389.94130234131427,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-VA",
-    "countyId": "fips:51580",
-    "name": "Covington City, Virginia, United States",
     "level": "county"
   },
   {
@@ -136419,8 +136560,8 @@
     ],
     "county": "Culpeper County",
     "state": "Virginia",
-    "cases": 126,
-    "deaths": 2,
+    "cases": 129,
+    "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.9255,
@@ -136485,7 +136626,7 @@
     ],
     "county": "Danville City",
     "state": "Virginia",
-    "cases": 33,
+    "cases": 34,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136551,7 +136692,7 @@
     ],
     "county": "Emporia City",
     "state": "Virginia",
-    "cases": 20,
+    "cases": 22,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136617,8 +136758,8 @@
     ],
     "county": "Fairfax County",
     "state": "Virginia",
-    "cases": 3278,
-    "deaths": 114,
+    "cases": 3448,
+    "deaths": 124,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.28800000000001,
@@ -136716,7 +136857,7 @@
     ],
     "county": "Fauquier County",
     "state": "Virginia",
-    "cases": 105,
+    "cases": 109,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136749,7 +136890,7 @@
     ],
     "county": "Floyd County",
     "state": "Virginia",
-    "cases": 1,
+    "cases": 2,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136815,7 +136956,7 @@
     ],
     "county": "Franklin County",
     "state": "Virginia",
-    "cases": 20,
+    "cases": 21,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136848,7 +136989,7 @@
     ],
     "county": "Franklin City",
     "state": "Virginia",
-    "cases": 18,
+    "cases": 19,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136881,7 +137022,7 @@
     ],
     "county": "Frederick County",
     "state": "Virginia",
-    "cases": 97,
+    "cases": 101,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -136914,7 +137055,7 @@
     ],
     "county": "Fredericksburg City",
     "state": "Virginia",
-    "cases": 27,
+    "cases": 28,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137013,7 +137154,7 @@
     ],
     "county": "Gloucester County",
     "state": "Virginia",
-    "cases": 22,
+    "cases": 23,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137047,7 +137188,7 @@
     "county": "Goochland County",
     "state": "Virginia",
     "cases": 74,
-    "deaths": 3,
+    "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.8875,
@@ -137112,7 +137253,7 @@
     ],
     "county": "Greene County",
     "state": "Virginia",
-    "cases": 9,
+    "cases": 10,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137145,7 +137286,7 @@
     ],
     "county": "Greensville County",
     "state": "Virginia",
-    "cases": 36,
+    "cases": 38,
     "deaths": 6,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137211,7 +137352,7 @@
     ],
     "county": "Hampton City",
     "state": "Virginia",
-    "cases": 108,
+    "cases": 109,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137244,7 +137385,7 @@
     ],
     "county": "Hanover County",
     "state": "Virginia",
-    "cases": 109,
+    "cases": 113,
     "deaths": 9,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137277,8 +137418,8 @@
     ],
     "county": "Harrisonburg City",
     "state": "Virginia",
-    "cases": 406,
-    "deaths": 9,
+    "cases": 411,
+    "deaths": 11,
     "rating": 0.6274509803921569,
     "coordinates": [
       -78.87100000000001,
@@ -137310,8 +137451,8 @@
     ],
     "county": "Henrico County",
     "state": "Virginia",
-    "cases": 835,
-    "deaths": 95,
+    "cases": 846,
+    "deaths": 98,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.416,
@@ -137542,7 +137683,7 @@
     "county": "King William County",
     "state": "Virginia",
     "cases": 5,
-    "deaths": 0,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.0615,
@@ -137706,8 +137847,8 @@
     ],
     "county": "Loudoun County",
     "state": "Virginia",
-    "cases": 688,
-    "deaths": 12,
+    "cases": 727,
+    "deaths": 14,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.64500000000001,
@@ -137805,7 +137946,7 @@
     ],
     "county": "Lynchburg City",
     "state": "Virginia",
-    "cases": 51,
+    "cases": 52,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137871,7 +138012,7 @@
     ],
     "county": "Manassas Park City",
     "state": "Virginia",
-    "cases": 53,
+    "cases": 60,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -137904,8 +138045,8 @@
     ],
     "county": "Manassas City",
     "state": "Virginia",
-    "cases": 175,
-    "deaths": 2,
+    "cases": 196,
+    "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.4875,
@@ -137971,7 +138112,7 @@
     "county": "Mecklenburg County",
     "state": "Virginia",
     "cases": 100,
-    "deaths": 9,
+    "deaths": 10,
     "rating": 0.6274509803921569,
     "coordinates": [
       -78.3825,
@@ -138036,7 +138177,7 @@
     ],
     "county": "Montgomery County",
     "state": "Virginia",
-    "cases": 54,
+    "cases": 55,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138102,7 +138243,7 @@
     ],
     "county": "New Kent County",
     "state": "Virginia",
-    "cases": 21,
+    "cases": 23,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138135,7 +138276,7 @@
     ],
     "county": "Newport News City",
     "state": "Virginia",
-    "cases": 112,
+    "cases": 114,
     "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138168,7 +138309,7 @@
     ],
     "county": "Norfolk City",
     "state": "Virginia",
-    "cases": 188,
+    "cases": 192,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138201,7 +138342,7 @@
     ],
     "county": "Northampton County",
     "state": "Virginia",
-    "cases": 35,
+    "cases": 36,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138300,7 +138441,7 @@
     ],
     "county": "Nottoway County",
     "state": "Virginia",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138366,8 +138507,8 @@
     ],
     "county": "Page County",
     "state": "Virginia",
-    "cases": 89,
-    "deaths": 0,
+    "cases": 91,
+    "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
       -78.488,
@@ -138432,7 +138573,7 @@
     ],
     "county": "Petersburg City",
     "state": "Virginia",
-    "cases": 30,
+    "cases": 31,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138465,7 +138606,7 @@
     ],
     "county": "Pittsylvania County",
     "state": "Virginia",
-    "cases": 11,
+    "cases": 12,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138531,7 +138672,7 @@
     ],
     "county": "Portsmouth City",
     "state": "Virginia",
-    "cases": 149,
+    "cases": 150,
     "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138564,7 +138705,7 @@
     ],
     "county": "Powhatan County",
     "state": "Virginia",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138597,7 +138738,7 @@
     ],
     "county": "Prince Edward County",
     "state": "Virginia",
-    "cases": 41,
+    "cases": 46,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138630,7 +138771,7 @@
     ],
     "county": "Prince George County",
     "state": "Virginia",
-    "cases": 31,
+    "cases": 33,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138663,8 +138804,8 @@
     ],
     "county": "Prince William County",
     "state": "Virginia",
-    "cases": 1449,
-    "deaths": 20,
+    "cases": 1527,
+    "deaths": 22,
     "rating": 0.6274509803921569,
     "coordinates": [
       -77.4685,
@@ -138795,7 +138936,7 @@
     ],
     "county": "Richmond County",
     "state": "Virginia",
-    "cases": 141,
+    "cases": 143,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138828,7 +138969,7 @@
     ],
     "county": "Richmond City",
     "state": "Virginia",
-    "cases": 312,
+    "cases": 323,
     "deaths": 14,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138861,7 +139002,7 @@
     ],
     "county": "Roanoke County",
     "state": "Virginia",
-    "cases": 41,
+    "cases": 47,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138894,7 +139035,7 @@
     ],
     "county": "Roanoke City",
     "state": "Virginia",
-    "cases": 35,
+    "cases": 57,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -138960,7 +139101,7 @@
     ],
     "county": "Rockingham County",
     "state": "Virginia",
-    "cases": 216,
+    "cases": 220,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139026,7 +139167,7 @@
     ],
     "county": "Salem City",
     "state": "Virginia",
-    "cases": 12,
+    "cases": 16,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139092,7 +139233,7 @@
     ],
     "county": "Shenandoah County",
     "state": "Virginia",
-    "cases": 79,
+    "cases": 95,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139191,7 +139332,7 @@
     ],
     "county": "Spotsylvania County",
     "state": "Virginia",
-    "cases": 126,
+    "cases": 131,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139224,7 +139365,7 @@
     ],
     "county": "Stafford County",
     "state": "Virginia",
-    "cases": 221,
+    "cases": 225,
     "deaths": 2,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139257,7 +139398,7 @@
     ],
     "county": "Staunton City",
     "state": "Virginia",
-    "cases": 11,
+    "cases": 12,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139290,8 +139431,8 @@
     ],
     "county": "Suffolk City",
     "state": "Virginia",
-    "cases": 152,
-    "deaths": 8,
+    "cases": 154,
+    "deaths": 12,
     "rating": 0.6274509803921569,
     "coordinates": [
       -76.66749999999999,
@@ -139389,7 +139530,7 @@
     ],
     "county": "Tazewell County",
     "state": "Virginia",
-    "cases": 5,
+    "cases": 6,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139422,7 +139563,7 @@
     ],
     "county": "Virginia Beach City",
     "state": "Virginia",
-    "cases": 359,
+    "cases": 365,
     "deaths": 12,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139455,7 +139596,7 @@
     ],
     "county": "Warren County",
     "state": "Virginia",
-    "cases": 47,
+    "cases": 51,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139488,7 +139629,7 @@
     ],
     "county": "Washington County",
     "state": "Virginia",
-    "cases": 34,
+    "cases": 36,
     "deaths": 3,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139554,7 +139695,7 @@
     ],
     "county": "Westmoreland County",
     "state": "Virginia",
-    "cases": 21,
+    "cases": 22,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139785,7 +139926,7 @@
     ],
     "county": "Berkeley County",
     "state": "West Virginia",
-    "cases": 141,
+    "cases": 143,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139818,7 +139959,7 @@
     ],
     "county": "Boone County",
     "state": "West Virginia",
-    "cases": 2,
+    "cases": 3,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -139917,7 +140058,7 @@
     ],
     "county": "Cabell County",
     "state": "West Virginia",
-    "cases": 41,
+    "cases": 42,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140148,7 +140289,7 @@
     ],
     "county": "Hancock County",
     "state": "West Virginia",
-    "cases": 8,
+    "cases": 9,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140181,7 +140322,7 @@
     ],
     "county": "Hardy County",
     "state": "West Virginia",
-    "cases": 4,
+    "cases": 5,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140314,7 +140455,7 @@
     "county": "Kanawha County",
     "state": "West Virginia",
     "cases": 157,
-    "deaths": 4,
+    "deaths": 5,
     "rating": 0.6274509803921569,
     "coordinates": [
       -81.5545,
@@ -140577,7 +140718,7 @@
     ],
     "county": "Mercer County",
     "state": "West Virginia",
-    "cases": 9,
+    "cases": 10,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140676,7 +140817,7 @@
     ],
     "county": "Monongalia County",
     "state": "West Virginia",
-    "cases": 103,
+    "cases": 102,
     "deaths": 4,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140742,7 +140883,7 @@
     ],
     "county": "Morgan County",
     "state": "West Virginia",
-    "cases": 9,
+    "cases": 10,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140808,7 +140949,7 @@
     ],
     "county": "Ohio County",
     "state": "West Virginia",
-    "cases": 26,
+    "cases": 27,
     "deaths": 1,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -140973,7 +141114,7 @@
     ],
     "county": "Putnam County",
     "state": "West Virginia",
-    "cases": 22,
+    "cases": 25,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -141072,7 +141213,7 @@
     ],
     "county": "Roane County",
     "state": "West Virginia",
-    "cases": 4,
+    "cases": 6,
     "deaths": 0,
     "rating": 0.6274509803921569,
     "coordinates": [
@@ -141270,8 +141411,8 @@
     ],
     "county": "Wayne County",
     "state": "West Virginia",
-    "cases": 84,
-    "deaths": 6,
+    "cases": 85,
+    "deaths": 7,
     "rating": 0.6274509803921569,
     "coordinates": [
       -82.4185,
@@ -141483,7 +141624,7 @@
       }
     ],
     "tested": 197127,
-    "deaths": 90,
+    "deaths": 103,
     "cases": 5350,
     "rating": 0.47058823529411764,
     "coordinates": [
@@ -141591,7 +141732,7 @@
     ],
     "state": "Gauteng",
     "cases": 1408,
-    "deaths": 6,
+    "deaths": 9,
     "rating": 0.43137254901960786,
     "coordinates": [
       28.125,
@@ -141627,7 +141768,7 @@
     ],
     "state": "KwaZulu-Natal",
     "cases": 956,
-    "deaths": 28,
+    "deaths": 32,
     "rating": 0.43137254901960786,
     "coordinates": [
       30.8825,
@@ -141807,7 +141948,7 @@
     ],
     "state": "Western Cape",
     "cases": 2135,
-    "deaths": 36,
+    "deaths": 43,
     "rating": 0.43137254901960786,
     "coordinates": [
       20.990000000000002,
@@ -143287,50 +143428,6 @@
         "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
-    "cases": 2,
-    "deaths": 0,
-    "county": "Cheyenne County",
-    "state": "Kansas",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -101.73150000000001,
-      39.7855
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:20023",
-    "population": 2657,
-    "populationDensity": 1.0046139662900302,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-KS",
-    "countyId": "fips:20023",
-    "name": "Cheyenne County, Kansas, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "cases": 0,
     "deaths": 0,
     "county": "Comanche County",
@@ -143394,50 +143491,6 @@
     "stateId": "iso2:US-KS",
     "countyId": "fips:20039",
     "name": "Decatur County, Kansas, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 1,
-    "deaths": 0,
-    "county": "Elk County",
-    "state": "Kansas",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -96.2435,
-      37.453
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:20049",
-    "population": 2530,
-    "populationDensity": 1.499001219669328,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-KS",
-    "countyId": "fips:20049",
-    "name": "Elk County, Kansas, United States",
     "level": "county"
   },
   {
@@ -144783,50 +144836,6 @@
         "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
-    "cases": 1,
-    "deaths": 0,
-    "county": "Sierra County",
-    "state": "New Mexico",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -107.17099999999999,
-      33.0425
-    ],
-    "tz": [
-      "America/Denver"
-    ],
-    "featureId": "fips:35051",
-    "population": 10791,
-    "populationDensity": 0.979632128466614,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NM",
-    "countyId": "fips:35051",
-    "name": "Sierra County, New Mexico, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "cases": 0,
     "deaths": 0,
     "county": "Blaine County",
@@ -145330,50 +145339,6 @@
     "stateId": "iso2:US-SD",
     "countyId": "fips:46033",
     "name": "Custer County, South Dakota, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 1,
-    "deaths": 0,
-    "county": "Day County",
-    "state": "South Dakota",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -97.604,
-      45.3695
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "fips:46037",
-    "population": 5424,
-    "populationDensity": 1.9193578314261959,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-SD",
-    "countyId": "fips:46037",
-    "name": "Day County, South Dakota, United States",
     "level": "county"
   },
   {
@@ -146386,6 +146351,50 @@
     "stateId": "iso2:US-VA",
     "countyId": "fips:51051",
     "name": "Dickenson County, Virginia, United States",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "cases": 1,
+    "deaths": 0,
+    "county": "Covington City",
+    "state": "Virginia",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -79.9875,
+      37.781
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:51580",
+    "population": 5538,
+    "populationDensity": 389.94130234131427,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-VA",
+    "countyId": "fips:51580",
+    "name": "Covington City, Virginia, United States",
     "level": "county"
   },
   {
@@ -149482,48 +149491,6 @@
     "populationDensity": 104.35792889430743,
     "countryId": "iso1:CU",
     "name": "Cuba",
-    "level": "country"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Cyprus",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 843,
-    "deaths": 15,
-    "recovered": 148,
-    "aggregate": "country",
-    "active": 680,
-    "rating": 0.5490196078431373,
-    "coordinates": [
-      33.423500000000004,
-      35.1655
-    ],
-    "tz": [
-      "Europe/Nicosia"
-    ],
-    "featureId": "iso1:CY",
-    "population": 1141166,
-    "populationDensity": 126.68557056559139,
-    "countryId": "iso1:CY",
-    "name": "Cyprus",
     "level": "country"
   },
   {

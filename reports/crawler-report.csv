@@ -1,9 +1,8 @@
 date,country,state,county,city,type,description,severity,category
 2020-04-29,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
-2020-04-29,iso1:CY,,,,scraper failed,TypeError: Cannot convert undefined or null to object,critical,scraper failure
 2020-04-29,iso1:IE,,,,scraper failed,Error: datetime.parse: Could not parse '1582761600000' as a date,critical,scraper failure
 2020-04-29,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
-2020-04-29,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 2 on line 7786",critical,scraper failure
+2020-04-29,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 2 on line 5556",critical,scraper failure
 2020-04-29,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
 2020-04-29,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
 2020-04-29,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure

@@ -1,6 +1,6 @@
 [
   {
-    "country": "iso1:IT",
+    "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "timeseries": true,
     "aggregate": "state",
@@ -9,11 +9,41 @@
     "certValidation": true,
     "type": "csv",
     "ssl": true,
-    "rating": 0.7058823529411765
+    "rating": 0.7058823529411765,
+    "countryId": "iso1:IT"
   },
   {
-    "state": "iso2:US-AR",
-    "country": "iso1:US",
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": true,
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "type": "csv",
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.6666666666666666,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC"
+  },
+  {
+    "state": "Arkansas",
+    "country": "United States",
     "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
     "type": "json",
     "sources": [
@@ -37,11 +67,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.6470588235294118
+    "rating": 0.6470588235294118,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AR"
   },
   {
-    "state": "iso2:US-TN",
-    "country": "iso1:US",
+    "state": "Tennessee",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.tn.gov/health/cedep",
@@ -57,10 +89,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.6470588235294118
+    "rating": 0.6470588235294118,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-TN"
   },
   {
-    "country": "iso1:ES",
+    "country": "Spain",
     "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "priority": 1,
     "timeseries": true,
@@ -97,12 +131,13 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.6274509803921569
+    "rating": 0.6274509803921569,
+    "countryId": "iso1:ES"
   },
   {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
-    "country": "iso1:US",
+    "country": "United States",
     "timeseries": true,
     "aggregate": "county",
     "priority": -1,
@@ -117,7 +152,8 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.6274509803921569
+    "rating": 0.6274509803921569,
+    "countryId": "iso1:US"
   },
   {
     "maintainers": [
@@ -136,7 +172,7 @@
     "url": "https://github.com/CSSEGISandData/COVID-19",
     "timeseries": true,
     "priority": -1,
-    "country": "iso1:US",
+    "country": "United States",
     "aggregate": "county",
     "curators": [
       {
@@ -148,7 +184,8 @@
     "certValidation": true,
     "type": "list",
     "ssl": true,
-    "rating": 0.5882352941176471
+    "rating": 0.5882352941176471,
+    "countryId": "iso1:US"
   },
   {
     "maintainers": [
@@ -181,8 +218,8 @@
     "rating": 0.5882352941176471
   },
   {
-    "state": "iso2:US-DE",
-    "country": "iso1:US",
+    "state": "Delaware",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -198,11 +235,13 @@
     "url": "https://services1.arcgis.com/PlCPCPzGOwulHUHo/arcgis/rest/services/DEMA_COVID_County_Boundary_Time_VIEW/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&resultOffset=0&resultRecordCount=50&cacheHint=true",
     "type": "json",
     "ssl": true,
-    "rating": 0.5686274509803921
+    "rating": 0.5686274509803921,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DE"
   },
   {
-    "state": "iso2:US-FL",
-    "country": "iso1:US",
+    "state": "Florida",
+    "country": "United States",
     "priority": 1,
     "aggregate": "county",
     "sources": [
@@ -217,11 +256,13 @@
     "type": "csv",
     "url": "https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv",
     "ssl": true,
-    "rating": 0.5686274509803921
+    "rating": 0.5686274509803921,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-FL"
   },
   {
-    "state": "iso2:US-MA",
-    "country": "iso1:US",
+    "state": "Massachusetts",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -255,11 +296,13 @@
     "type": "json",
     "url": "https://services1.arcgis.com/TXaY625xGc0yvAuQ/arcgis/rest/services/COVID_CASES_MA/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "ssl": true,
-    "rating": 0.5686274509803921
+    "rating": 0.5686274509803921,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MA"
   },
   {
-    "state": "iso2:US-NE",
-    "country": "iso1:US",
+    "state": "Nebraska",
+    "country": "United States",
     "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "type": "json",
     "aggregate": "county",
@@ -277,10 +320,38 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.5686274509803921
+    "rating": 0.5686274509803921,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NE"
   },
   {
-    "country": "iso1:FR",
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:CY"
+  },
+  {
+    "country": "France",
     "timeseries": true,
     "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
     "sources": [
@@ -302,11 +373,12 @@
     "certValidation": true,
     "type": "csv",
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:FR"
   },
   {
-    "state": "iso2:US-IL",
-    "country": "iso1:US",
+    "state": "Illinois",
+    "country": "United States",
     "priority": 1,
     "aggregate": "county",
     "sources": [
@@ -322,11 +394,13 @@
     "url": "http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json",
     "type": "json",
     "ssl": false,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-IL"
   },
   {
-    "state": "iso2:US-ME",
-    "country": "iso1:US",
+    "state": "Maine",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.maine.gov/dhhs/mecdc",
@@ -342,11 +416,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-ME"
   },
   {
-    "state": "iso2:US-NH",
-    "country": "iso1:US",
+    "state": "New Hampshire",
+    "country": "United States",
     "sources": [
       {
         "name": "New Hampshire Department of Health and Human Services",
@@ -368,11 +444,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NH"
   },
   {
-    "state": "iso2:US-OR",
-    "country": "iso1:US",
+    "state": "Oregon",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.oregon.gov/oha/PH",
@@ -388,11 +466,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-OR"
   },
   {
-    "state": "iso2:US-PA",
-    "country": "iso1:US",
+    "state": "Pennsylvania",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -407,11 +487,13 @@
     "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx",
     "type": "table",
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PA"
   },
   {
-    "state": "iso2:US-WI",
-    "country": "iso1:US",
+    "state": "Wisconsin",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -426,11 +508,13 @@
     "url": "https://www.dhs.wisconsin.gov/covid-19/county.htm",
     "type": "table",
     "ssl": true,
-    "rating": 0.5490196078431373
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-WI"
   },
   {
-    "state": "iso2:US-IA",
-    "country": "iso1:US",
+    "state": "Iowa",
+    "country": "United States",
     "aggregate": "county",
     "headless": true,
     "sources": [
@@ -446,11 +530,13 @@
     "url": "https://opendata.arcgis.com/datasets/6a84756c2e444a87828bb7ce699fdac6_0.csv",
     "type": "csv",
     "ssl": true,
-    "rating": 0.5294117647058824
+    "rating": 0.5294117647058824,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-IA"
   },
   {
-    "country": "iso1:US",
-    "state": "iso2:US-KY",
+    "country": "United States",
+    "state": "Kentucky",
     "priority": 1,
     "aggregate": "county",
     "url": "https://datawrapper.dwcdn.net/BbowM/23/",
@@ -474,10 +560,12 @@
     "certValidation": true,
     "type": "list",
     "ssl": true,
-    "rating": 0.5294117647058824
+    "rating": 0.5294117647058824,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KY"
   },
   {
-    "country": "iso1:AT",
+    "country": "Austria",
     "url": "https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js",
     "timeseries": true,
     "priority": 1,
@@ -498,10 +586,11 @@
       }
     ],
     "ssl": true,
-    "rating": 0.5098039215686274
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:AT"
   },
   {
-    "country": "iso1:BE",
+    "country": "Belgium",
     "url": "https://epistat.wiv-isp.be/",
     "timeseries": true,
     "priority": 1,
@@ -523,10 +612,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.5098039215686274
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:BE"
   },
   {
-    "country": "iso1:BR",
+    "country": "Brazil",
     "type": "list",
     "priority": 1,
     "sources": [
@@ -551,11 +641,12 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.5098039215686274
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:BR"
   },
   {
-    "state": "iso2:US-MI",
-    "country": "iso1:US",
+    "state": "Michigan",
+    "country": "United States",
     "sources": [
       {
         "name": "Michigan Department of Health & Human Services"
@@ -569,12 +660,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.5098039215686274
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MI"
   },
   {
     "county": "St. Louis County",
-    "state": "iso2:US-MO",
-    "country": "iso1:US",
+    "state": "Missouri",
+    "country": "United States",
     "aggregate": "county",
     "priority": 1,
     "sources": [
@@ -600,10 +693,12 @@
     "timeseries": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.5098039215686274
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MO"
   },
   {
-    "country": "iso1:RU",
+    "country": "Russia",
     "aggregate": "state",
     "url": "https://yandex.ru/maps/api/covid?csrfToken=",
     "type": "json",
@@ -633,10 +728,11 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:RU"
   },
   {
-    "country": "iso1:UA",
+    "country": "Ukraine",
     "sources": [
       {
         "url": "https://www.rnbo.gov.ua/en/",
@@ -662,11 +758,12 @@
     "priority": 0,
     "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-29",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:UA"
   },
   {
-    "state": "iso2:US-AL",
-    "country": "iso1:US",
+    "state": "Alabama",
+    "country": "United States",
     "url": "https://opendata.arcgis.com/datasets/ff8de7707f6a422a8af6b155facc6327_0.csv",
     "type": "csv",
     "aggregate": "county",
@@ -681,11 +778,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AL"
   },
   {
-    "state": "iso2:US-CT",
-    "country": "iso1:US",
+    "state": "Connecticut",
+    "country": "United States",
     "sources": [
       {
         "url": "https://portal.ct.gov/dph",
@@ -708,11 +807,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CT"
   },
   {
-    "state": "iso2:US-ID",
-    "country": "iso1:US",
+    "state": "Idaho",
+    "country": "United States",
     "sources": [
       {
         "name": "IDHW",
@@ -727,11 +828,13 @@
     "priority": 0,
     "url": "https://services1.arcgis.com/CNPdEkvnGl65jCX8/arcgis/rest/services/iyptX/FeatureServer/0/query?f=json&where=1=1&returnGeometry=false&outFields=*",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-ID"
   },
   {
-    "country": "iso1:US",
-    "state": "iso2:US-IN",
+    "country": "United States",
+    "state": "Indiana",
     "priority": 1,
     "url": "https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv",
     "aggregate": "county",
@@ -740,11 +843,13 @@
     "certValidation": true,
     "type": "csv",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-IN"
   },
   {
-    "state": "iso2:US-LA",
-    "country": "iso1:US",
+    "state": "Louisiana",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -759,11 +864,13 @@
     "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "type": "json",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-LA"
   },
   {
-    "state": "iso2:US-MD",
-    "country": "iso1:US",
+    "state": "Maryland",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -778,12 +885,14 @@
     "type": "csv",
     "url": "https://opendata.arcgis.com/datasets/fd5f93bf49cf4b35b330d6f500c1e8e6_0.csv",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MD"
   },
   {
     "url": "https://opendata.arcgis.com/datasets/969678bce431494a8f64d7faade6e5b8_0.csv",
-    "country": "iso1:US",
-    "state": "iso2:US-NC",
+    "country": "United States",
+    "state": "North Carolina",
     "aggregate": "county",
     "timeseries": false,
     "headless": false,
@@ -791,11 +900,13 @@
     "priority": 0,
     "type": "csv",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NC"
   },
   {
-    "state": "iso2:US-ND",
-    "country": "iso1:US",
+    "state": "North Dakota",
+    "country": "United States",
     "url": "https://static.dwcdn.net/data/yuhr0.csv",
     "type": "csv",
     "aggregate": "county",
@@ -810,11 +921,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-ND"
   },
   {
-    "state": "iso2:US-NY",
-    "country": "iso1:US",
+    "state": "New York",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -829,11 +942,13 @@
     "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "type": "csv",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY"
   },
   {
-    "state": "iso2:US-OH",
-    "country": "iso1:US",
+    "state": "Ohio",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -848,11 +963,13 @@
     "url": "https://coronavirus.ohio.gov/static/COVIDSummaryData.csv",
     "type": "csv",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-OH"
   },
   {
-    "state": "iso2:US-VT",
-    "country": "iso1:US",
+    "state": "Vermont",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
@@ -876,11 +993,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-VT"
   },
   {
-    "state": "iso2:US-WA",
-    "country": "iso1:US",
+    "state": "Washington",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.doh.wa.gov/",
@@ -895,10 +1014,12 @@
     "url": "https://services8.arcgis.com/rGGrs6HCnw87OFOT/arcgis/rest/services/CountyCases/FeatureServer/0/query?f=json&where=(CV_State_Cases%3E0)&returnGeometry=false&outFields=*&orderByFields=CNTY_NAME%20asc",
     "type": "json",
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-WA"
   },
   {
-    "country": "iso1:US",
+    "country": "United States",
     "url": "https://covidtracking.com/api/v1/states/current.json",
     "type": "json",
     "curators": [
@@ -915,10 +1036,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.49019607843137253
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US"
   },
   {
-    "country": "iso1:IN",
+    "country": "India",
     "url": "https://www.mohfw.gov.in/",
     "type": "table",
     "aggregate": "state",
@@ -927,11 +1049,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:IN"
   },
   {
-    "state": "iso2:US-GA",
-    "country": "iso1:US",
+    "state": "Georgia",
+    "country": "United States",
     "url": "https://ga-covid19.ondemand.sas.com/",
     "type": "table",
     "aggregate": "county",
@@ -946,11 +1069,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GA"
   },
   {
-    "state": "iso2:US-MO",
-    "country": "iso1:US",
+    "state": "Missouri",
+    "country": "United States",
     "type": "table",
     "aggregate": "county",
     "url": "https://opendata.arcgis.com/datasets/6f2a47a25872470a815bcd95f52c2872_0.csv",
@@ -974,11 +1099,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MO"
   },
   {
-    "state": "iso2:US-TX",
-    "country": "iso1:US",
+    "state": "Texas",
+    "country": "United States",
     "aggregate": "county",
     "certValidation": false,
     "sources": [
@@ -994,11 +1121,13 @@
     "url": "https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv",
     "type": "csv",
     "ssl": false,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-TX"
   },
   {
-    "state": "iso2:US-UT",
-    "country": "iso1:US",
+    "state": "Utah",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -1013,10 +1142,12 @@
     "url": "https://coronavirus-dashboard.utah.gov/",
     "type": "table",
     "ssl": true,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-UT"
   },
   {
-    "country": "iso1:ZA",
+    "country": "South Africa",
     "url": "https://github.com/dsfsi/covid19za",
     "timeseries": true,
     "priority": 1,
@@ -1038,10 +1169,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.47058823529411764
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:ZA"
   },
   {
-    "country": "iso1:KR",
+    "country": "South Korea",
     "aggregate": "state",
     "type": "table",
     "url": "http://ncov.mohw.go.kr/en/bdBoardList.do?brdId=16&brdGubun=162&dataGubun=&ncvContSeq=&contSeq=&board_id=",
@@ -1071,11 +1203,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": false,
-    "rating": 0.45098039215686275
+    "rating": 0.45098039215686275,
+    "countryId": "iso1:KR"
   },
   {
-    "state": "iso2:US-RI",
-    "country": "iso1:US",
+    "state": "Rhode Island",
+    "country": "United States",
     "priority": 1,
     "type": "csv",
     "sources": [
@@ -1089,10 +1222,12 @@
     "headless": true,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.45098039215686275
+    "rating": 0.45098039215686275,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-RI"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -1112,17 +1247,19 @@
         "url": "https://www.health.nsw.gov.au"
       }
     ],
-    "state": "iso2:AU-NSW",
+    "state": "New South Wales",
     "type": "table",
     "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NSW"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -1142,17 +1279,19 @@
         "url": "https://ww2.health.wa.gov.au"
       }
     ],
-    "state": "iso2:AU-WA",
+    "state": "Western Australia",
     "type": "table",
     "url": "https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-WA"
   },
   {
-    "country": "iso1:CH",
+    "country": "Switzerland",
     "url": "https://github.com/daenuprobst/covid19-cases-switzerland/",
     "timeseries": true,
     "priority": 1,
@@ -1167,7 +1306,8 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:CH"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1196,13 +1336,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-BB",
+    "country": "Germany",
+    "state": "Brandenburg",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-BB"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1231,13 +1373,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-BE",
+    "country": "Germany",
+    "state": "Berlin",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-BE"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1266,13 +1410,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-BW",
+    "country": "Germany",
+    "state": "Baden-Württemberg",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-BW"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1301,13 +1447,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-BY",
+    "country": "Germany",
+    "state": "Bavaria",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-BY"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1336,13 +1484,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-HB",
+    "country": "Germany",
+    "state": "Bremen",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-HB"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1371,13 +1521,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-HE",
+    "country": "Germany",
+    "state": "Hesse",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-HE"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1406,13 +1558,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-HH",
+    "country": "Germany",
+    "state": "Hamburg",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-HH"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1441,13 +1595,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-MV",
+    "country": "Germany",
+    "state": "Mecklenburg-Vorpommern",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-MV"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1476,13 +1632,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-NI",
+    "country": "Germany",
+    "state": "Lower Saxony",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-NI"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1511,13 +1669,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-NW",
+    "country": "Germany",
+    "state": "North Rhine-Westphalia",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-NW"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1546,13 +1706,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-RP",
+    "country": "Germany",
+    "state": "Rhineland-Palatinate",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-RP"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1581,13 +1743,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-SH",
+    "country": "Germany",
+    "state": "Schleswig-Holstein",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-SH"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1616,13 +1780,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-SL",
+    "country": "Germany",
+    "state": "Saarland",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-SL"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1651,13 +1817,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-SN",
+    "country": "Germany",
+    "state": "Saxony",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-SN"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1686,13 +1854,15 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-ST",
+    "country": "Germany",
+    "state": "Saxony-Anhalt",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-ST"
   },
   {
     "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
@@ -1721,16 +1891,18 @@
         "github": "jgehrcke"
       }
     ],
-    "country": "iso1:DE",
-    "state": "iso2:DE-TH",
+    "country": "Germany",
+    "state": "Thuringia",
     "headless": false,
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:DE",
+    "stateId": "iso2:DE-TH"
   },
   {
-    "country": "iso1:EE",
+    "country": "Estonia",
     "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "timeseries": true,
     "priority": 1,
@@ -1751,10 +1923,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.43137254901960786
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:EE"
   },
   {
-    "country": "iso1:CA",
+    "country": "Canada",
     "sources": [
       {
         "description": "Health Promotion and Chronic Disease Prevention Branch",
@@ -1770,10 +1943,11 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.4117647058823529
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:CA"
   },
   {
-    "country": "iso1:GB",
+    "country": "United Kingdom",
     "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
     "aggregate": "county",
     "type": "json",
@@ -1795,11 +1969,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.4117647058823529
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:GB"
   },
   {
-    "state": "iso2:US-AZ",
-    "country": "iso1:US",
+    "state": "Arizona",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.azdhs.gov/",
@@ -1814,11 +1989,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.4117647058823529
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AZ"
   },
   {
-    "state": "iso2:US-MN",
-    "country": "iso1:US",
+    "state": "Minnesota",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.health.state.mn.us/",
@@ -1837,11 +2014,13 @@
     "url": "https://services1.arcgis.com/RQG3sksSXcoDoIfj/arcgis/rest/services/MN_COVID19_County_Tracking_Public_View/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "type": "json",
     "ssl": true,
-    "rating": 0.4117647058823529
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MN"
   },
   {
-    "state": "iso2:US-MT",
-    "country": "iso1:US",
+    "state": "Montana",
+    "country": "United States",
     "url": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query?f=json&where=Total%20%3C%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAMELABEL%20asc&resultOffset=0&resultRecordCount=56&cacheHint=true",
     "type": "json",
     "aggregate": "county",
@@ -1850,11 +2029,13 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.4117647058823529
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MT"
   },
   {
     "aggregate": "state",
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -1880,10 +2061,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.39215686274509803
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:AU"
   },
   {
-    "country": "iso1:CZ",
+    "country": "Czechia",
     "url": "https://onemocneni-aktualne.mzcr.cz/",
     "timeseries": true,
     "priority": 1,
@@ -1904,10 +2086,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.39215686274509803
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:CZ"
   },
   {
-    "country": "iso1:NL",
+    "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "timeseries": true,
     "priority": 1,
@@ -1929,10 +2112,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.39215686274509803
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:NL"
   },
   {
-    "country": "iso1:PL",
+    "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "timeseries": true,
     "priority": 1,
@@ -1953,37 +2137,11 @@
     ],
     "type": "list",
     "ssl": true,
-    "rating": 0.39215686274509803
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:PL"
   },
   {
-    "state": "iso2:US-DC",
-    "country": "iso1:US",
-    "county": "District of Columbia",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "DC Public Health Laboratory"
-      }
-    ],
-    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "type": "csv",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.39215686274509803
-  },
-  {
-    "country": "iso1:LT",
+    "country": "Lithuania",
     "url": "https://services.arcgis.com/XdDVrnFqA9CT3JgB/arcgis/rest/services/covid_locations/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
     "priority": 1,
     "type": "csv",
@@ -2004,12 +2162,13 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.37254901960784315
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:LT"
   },
   {
     "county": "Ventura County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "type": "paragraph",
     "maintainers": [
       {
@@ -2036,11 +2195,13 @@
     "priority": 0,
     "url": "https://www.vcemergency.com",
     "ssl": true,
-    "rating": 0.37254901960784315
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
-    "country": "iso1:US",
-    "state": "iso2:US-HI",
+    "country": "United States",
+    "state": "Hawaii",
     "priority": 1,
     "sources": [
       {
@@ -2064,10 +2225,12 @@
     "url": "https://health.hawaii.gov/coronavirusdisease2019/",
     "type": "list",
     "ssl": true,
-    "rating": 0.37254901960784315
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-HI"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2087,17 +2250,19 @@
         "url": "https://www.health.act.gov.au"
       }
     ],
-    "state": "iso2:AU-ACT",
+    "state": "Australian Capital Territory",
     "type": "table",
     "url": "https://www.covid19.act.gov.au",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.35294117647058826
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-ACT"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2117,17 +2282,19 @@
         "url": "https://www.health.qld.gov.au"
       }
     ],
-    "state": "iso2:AU-QLD",
+    "state": "Queensland",
     "type": "table",
     "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.35294117647058826
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-QLD"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2147,19 +2314,21 @@
         "url": "https://www.sahealth.sa.gov.au"
       }
     ],
-    "state": "iso2:AU-SA",
+    "state": "South Australia",
     "type": "table",
     "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/infectious+diseases/covid+2019/latest+updates/covid-19+cases+in+south+australia",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.35294117647058826
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-SA"
   },
   {
     "county": "Clark County",
-    "state": "iso2:US-NV",
-    "country": "iso1:US",
+    "state": "Nevada",
+    "country": "United States",
     "url": "https://www.southernnevadahealthdistrict.org/coronavirus",
     "sources": [
       {
@@ -2174,10 +2343,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.35294117647058826
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NV"
   },
   {
-    "country": "iso1:SI",
+    "country": "Slovenia",
     "url": "https://raw.githubusercontent.com/slo-covid-19/data/master/csv/stats.csv",
     "priority": 1,
     "type": "csv",
@@ -2198,10 +2369,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:SI"
   },
   {
-    "country": "iso1:TH",
+    "country": "Thailand",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2227,12 +2399,13 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:TH"
   },
   {
     "county": "Contra Costa County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "url": "https://www.coronavirus.cchealth.org/",
     "maintainers": [
       {
@@ -2249,12 +2422,14 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "Fresno County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "url": "https://www.co.fresno.ca.us/departments/public-health/covid-19",
     "maintainers": [
       {
@@ -2271,10 +2446,12 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
-    "country": "iso1:US",
+    "country": "United States",
     "county": "Los Angeles County",
     "maintainers": [
       {
@@ -2301,7 +2478,7 @@
         "url": "http://www.publichealth.lacounty.gov"
       }
     ],
-    "state": "iso2:US-CA",
+    "state": "California",
     "type": "table",
     "url": "http://www.publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js",
     "timeseries": false,
@@ -2309,12 +2486,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": false,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "Mono County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2331,12 +2510,14 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "Placer County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2353,12 +2534,14 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "San Diego County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2375,12 +2558,14 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "San Joaquin County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2397,12 +2582,14 @@
     "priority": 0,
     "type": "table",
     "ssl": false,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "San Mateo County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2419,11 +2606,13 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "aggregate": "state",
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2449,10 +2638,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.3137254901960784
+    "rating": 0.3137254901960784,
+    "countryId": "iso1:AU"
   },
   {
-    "country": "iso1:ID",
+    "country": "Indonesia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2478,10 +2668,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.3137254901960784
+    "rating": 0.3137254901960784,
+    "countryId": "iso1:ID"
   },
   {
-    "country": "iso1:NZ",
+    "country": "New Zealand",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2507,12 +2698,13 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.3137254901960784
+    "rating": 0.3137254901960784,
+    "countryId": "iso1:NZ"
   },
   {
     "county": "Stanislaus County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2529,10 +2721,12 @@
     "priority": 0,
     "type": "list",
     "ssl": false,
-    "rating": 0.3137254901960784
+    "rating": 0.3137254901960784,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
-    "country": "iso1:PR",
+    "country": "Puerto Rico",
     "type": "table",
     "timeseries": false,
     "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
@@ -2561,10 +2755,11 @@
     "certValidation": true,
     "priority": 0,
     "ssl": false,
-    "rating": 0.29411764705882354
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:PR"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2583,18 +2778,20 @@
         "url": "https://coronavirus.nt.gov.au"
       }
     ],
-    "state": "iso2:AU-NT",
+    "state": "Northern Territory",
     "type": "table",
     "url": "https://coronavirus.nt.gov.au/",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.27450980392156865
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NT"
   },
   {
-    "country": "iso1:GB",
-    "state": "iso2:GB-SCT",
+    "country": "United Kingdom",
+    "state": "Scotland",
     "url": "https://www.gov.scot/coronavirus-covid-19/",
     "aggregate": "county",
     "type": "table",
@@ -2603,12 +2800,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.27450980392156865
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:GB",
+    "stateId": "iso2:GB-SCT"
   },
   {
     "county": "Monterey County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "url": "https://www.co.monterey.ca.us/government/departments-a-h/administrative-office/office-of-emergency-services/response/covid-19",
     "type": "table",
     "timeseries": false,
@@ -2616,12 +2815,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.27450980392156865
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "Shasta County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2638,11 +2839,13 @@
     "url": "https://www.co.shasta.ca.us/covid-19/overview",
     "type": "table",
     "ssl": true,
-    "rating": 0.27450980392156865
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
-    "state": "iso2:US-NM",
-    "country": "iso1:US",
+    "state": "New Mexico",
+    "country": "United States",
     "sources": [
       {
         "url": "https://cv.nmhealth.org",
@@ -2657,10 +2860,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.27450980392156865
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NM"
   },
   {
-    "country": "iso1:SE",
+    "country": "Sweden",
     "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
     "priority": 1,
     "type": "csv",
@@ -2681,11 +2886,12 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:SE"
   },
   {
-    "state": "iso2:US-AK",
-    "country": "iso1:US",
+    "state": "Alaska",
+    "country": "United States",
     "sources": [
       {
         "url": "http://dhss.alaska.gov/dph",
@@ -2701,12 +2907,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": false,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK"
   },
   {
     "county": "Butte County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "sources": [
       {
         "url": "https://www.buttecounty.net/publichealth",
@@ -2730,12 +2938,14 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "Kings County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2761,11 +2971,13 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
-    "state": "iso2:US-NV",
-    "country": "iso1:US",
+    "state": "Nevada",
+    "country": "United States",
     "aggregate": "county",
     "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/",
     "sources": [
@@ -2781,11 +2993,13 @@
     "headless": false,
     "priority": 0,
     "ssl": false,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NV"
   },
   {
-    "state": "iso2:US-WY",
-    "country": "iso1:US",
+    "state": "Wyoming",
+    "country": "United States",
     "aggregate": "county",
     "sources": [
       {
@@ -2814,10 +3028,12 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-WY"
   },
   {
-    "country": "iso1:VI",
+    "country": "United States Virgin Islands",
     "type": "paragraph",
     "url": "https://doh.vi.gov/covid19usvi",
     "sources": [
@@ -2846,10 +3062,11 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.2549019607843137
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:VI"
   },
   {
-    "country": "iso1:AU",
+    "country": "Australia",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2869,17 +3086,19 @@
         "url": "https://www.dhhs.vic.gov.au"
       }
     ],
-    "state": "iso2:AU-VIC",
+    "state": "Victoria",
     "type": "paragraph",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.21568627450980393
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
   },
   {
-    "country": "iso1:JP",
+    "country": "Japan",
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -2905,10 +3124,11 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.21568627450980393
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:JP"
   },
   {
-    "country": "iso1:LV",
+    "country": "Latvia",
     "url": "https://services7.arcgis.com/g8j6ESLxQjUogx9p/arcgis/rest/services/Latvia_covid_novadi/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
     "priority": 1,
     "type": "csv",
@@ -2929,12 +3149,13 @@
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.21568627450980393
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:LV"
   },
   {
     "county": "San Francisco County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "maintainers": [
       {
         "name": "John Bencina",
@@ -2951,12 +3172,14 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.21568627450980393
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "county": "San Luis Obispo County",
-    "state": "iso2:US-CA",
-    "country": "iso1:US",
+    "state": "California",
+    "country": "United States",
     "url": "https://www.emergencyslo.org/en/covid19.aspx",
     "type": "paragraph",
     "timeseries": false,
@@ -2964,6 +3187,8 @@
     "certValidation": true,
     "priority": 0,
     "ssl": true,
-    "rating": 0.13725490196078433
+    "rating": 0.13725490196078433,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   }
 ]
