@@ -1,3 +1,4 @@
+const assert = require('assert');
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
@@ -156,16 +157,12 @@ const scraper = {
       // before the table of "total cases"
       const $td = $('td:contains("County")').last();
 
-      if (
-        $td.text() !== 'County' ||
-        $td.next().text() !== 'Cases' ||
-        $td
-          .next()
-          .next()
-          .text() !== 'Deaths'
-      ) {
-        throw new Error('Unexpected table headers');
-      }
+      const headers = [];
+      headers.push($td.text());
+      headers.push($td.next().text());
+      headers.push($td.next().next().text());
+      const expectedHeaders = [ 'County', 'Cases', 'Deaths' ];
+      assert.equal(headers.join(','), expectedHeaders.join(','), 'expected table headers');
 
       const $table = $td.closest('table');
       const $trs = $table.find('tbody > tr:not(:last-child)');
