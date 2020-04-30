@@ -8115,7 +8115,7 @@
       }
     ],
     "state": "Razkrižje",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       16.2785,
       46.5195
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-28",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-29",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -10643,31 +10643,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Grayson County",
     "state": "Virginia",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -81.258,
       36.6825
@@ -13408,29 +13397,30 @@
     "level": "country"
   },
   {
+    "country": "Puerto Rico",
+    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
+    "sources": [
+      {
+        "url": "http://www.salud.gov.pr/",
+        "name": "Gobierno de Puerto Rico Departamento de Salud"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Puerto Rico",
-    "aggregate": "county",
-    "curators": [
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "rating": 0.47058823529411764,
+    "rating": 0.29411764705882354,
     "coordinates": [
       -66.594,
       18.223
@@ -20471,31 +20461,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Mariposa County",
     "state": "California",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -119.8515,
       37.542
@@ -27835,7 +27814,7 @@
       }
     ],
     "county": "Glascock County",
-    "rating": 0.47058823529411764,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -82.594,
       33.2235
@@ -40320,20 +40299,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Anderson County",
     "state": "Kansas",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -95.292,
       38.214
@@ -42469,31 +42459,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Nemaha County",
     "state": "Kansas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.014,
       39.783500000000004
@@ -59873,7 +59852,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "1588100274075",
+    "publishedDate": "1588187327369",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -60263,7 +60242,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "1588099972255",
+    "publishedDate": "1588187063820",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -60302,7 +60281,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "1587925901477",
+    "publishedDate": "1588187068913",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -60380,7 +60359,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "1588099976115",
+    "publishedDate": "1588187074240",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -60458,7 +60437,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "1588011111078",
+    "publishedDate": "1588187082500",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61355,7 +61334,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "1588100017494",
+    "publishedDate": "1588187124043",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -61706,7 +61685,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "1588011181704",
+    "publishedDate": "1588187363203",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -61784,7 +61763,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "1588100033680",
+    "publishedDate": "1588187368072",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -61940,7 +61919,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "1588100043992",
+    "publishedDate": "1588187147515",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -62876,7 +62855,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "1588100078552",
+    "publishedDate": "1588187179447",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -62915,7 +62894,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "1587926029348",
+    "publishedDate": "1588187188227",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -62954,7 +62933,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "1588100096205",
+    "publishedDate": "1588187192363",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -63032,7 +63011,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "1588011258597",
+    "publishedDate": "1588187198266",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -63071,7 +63050,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "1588011271358",
+    "publishedDate": "1588187211762",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -63149,7 +63128,7 @@
       }
     ],
     "county": "Pulaski County",
-    "publishedDate": "1587754555199",
+    "publishedDate": "1588187214021",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.2175,
@@ -63305,7 +63284,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "1588100106198",
+    "publishedDate": "1588187221297",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -63422,7 +63401,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "1588100237585",
+    "publishedDate": "1588187239714",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -63580,7 +63559,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "1588080600000",
+    "publishedDate": "1588167000000",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -63619,7 +63598,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "1588100113149",
+    "publishedDate": "1588187225551",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -63736,7 +63715,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "1588100388285",
+    "publishedDate": "1588187233362",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -64204,7 +64183,7 @@
       }
     ],
     "county": "Webster County",
-    "publishedDate": "1587581472968",
+    "publishedDate": "1588187264939",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.878,
@@ -64282,7 +64261,7 @@
       }
     ],
     "county": "Wright County",
-    "publishedDate": "1586889644864",
+    "publishedDate": "1588187270826",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4695,
@@ -64321,7 +64300,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "1588100224610",
+    "publishedDate": "1588187388472",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -84936,20 +84915,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Rhode Island",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
+    "url": "https://health.ri.gov/data/covid-19/",
     "county": "Bristol County",
-    "state": "Rhode Island",
-    "rating": 0.6274509803921569,
+    "aggregate": "city",
+    "rating": 0.37254901960784315,
     "coordinates": [
       -71.2935,
       41.706500000000005
@@ -84967,20 +84944,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Rhode Island",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
+    "url": "https://health.ri.gov/data/covid-19/",
     "county": "Kent County",
-    "state": "Rhode Island",
-    "rating": 0.6274509803921569,
+    "aggregate": "city",
+    "rating": 0.37254901960784315,
     "coordinates": [
       -71.577,
       41.682500000000005
@@ -84998,20 +84973,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Rhode Island",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
+    "url": "https://health.ri.gov/data/covid-19/",
     "county": "Newport County",
-    "state": "Rhode Island",
-    "rating": 0.6274509803921569,
+    "aggregate": "city",
+    "rating": 0.37254901960784315,
     "coordinates": [
       -71.261,
       41.562
@@ -85029,20 +85002,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Rhode Island",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
+    "url": "https://health.ri.gov/data/covid-19/",
     "county": "Providence County",
-    "state": "Rhode Island",
-    "rating": 0.6274509803921569,
+    "aggregate": "city",
+    "rating": 0.37254901960784315,
     "coordinates": [
       -71.55850000000001,
       41.872
@@ -85060,20 +85031,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Rhode Island",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
+    "url": "https://health.ri.gov/data/covid-19/",
     "county": "Washington County",
-    "state": "Rhode Island",
-    "rating": 0.6274509803921569,
+    "aggregate": "city",
+    "rating": 0.37254901960784315,
     "coordinates": [
       -71.6335,
       41.400000000000006
@@ -86756,31 +86725,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Buffalo County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.2515,
       44.065
@@ -108503,7 +108461,6 @@
     "level": "state"
   },
   {
-    "aggregate": "state",
     "country": "Australia",
     "maintainers": [
       {
@@ -108518,14 +108475,13 @@
     ],
     "sources": [
       {
-        "description": "Australian Government Department of Health",
-        "name": "Australian Government Department of Health",
-        "url": "https://www.health.gov.au/"
+        "name": "Northern Territory Government - Coronavirus site",
+        "url": "https://coronavirus.nt.gov.au"
       }
     ],
-    "url": "https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers",
     "state": "Northern Territory",
-    "rating": 0.3137254901960784,
+    "url": "https://coronavirus.nt.gov.au/",
+    "rating": 0.27450980392156865,
     "coordinates": [
       133.4995,
       -18.485
@@ -111384,22 +111340,28 @@
     "level": "country"
   },
   {
-    "country": "Cyprus",
-    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
     "maintainers": [
       {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Cyprus",
+    "curators": [
       {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "country",
     "rating": 0.5490196078431373,
     "coordinates": [
       33.423500000000004,
@@ -126268,2485 +126230,6 @@
     "level": "state"
   },
   {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Anchorage Economic Region, AK, USA",
-    "county": "Anchorage Municipality",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02020",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Gulf Coast Economic Region, AK, USA",
-    "county": "Valdez-Cordova Census Area, Kodiak Island Borough, Kenai Peninsula Borough",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02261+fips:02150+fips:02122",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Interior Economic Region, AK, USA",
-    "county": "Denali Borough, Yukon-Koyukuk Census Area, Southeast Fairbanks Census Area, Fairbanks North Star Borough",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02068+fips:02290+fips:02240+fips:02090",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Mat-Su Economic Region, AK, USA",
-    "county": "Matanuska-Susitna Borough",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02170",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Northern Economic Region, AK, USA",
-    "county": "Northwest Arctic Borough, Nome Census Area, North Slope Borough",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02188+fips:02180+fips:02185",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Southeast Economic Region, AK, USA",
-    "county": "Yakutat City and Borough, Skagway Municipality, Hoonah-Angoon Census Area, Wrangell City and Borough, Haines Borough, Petersburg Borough, Prince of Wales-Hyder Census Area, Sitka City and Borough, Ketchikan Gateway Borough, Juneau City and Borough",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02282+fips:02230+fips:02105+fips:02275+fips:02100+fips:02195+fips:02198+fips:02220+fips:02130+fips:02110",
-    "level": "county"
-  },
-  {
-    "state": "Alaska",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "http://dhss.alaska.gov/dph",
-        "name": "Alaska Department of Health and Social Services",
-        "description": "Division of Public Health"
-      }
-    ],
-    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
-    "aggregate": "county",
-    "name": "Southwest Economic Region, AK, USA",
-    "county": "Bristol Bay Borough, Lake and Peninsula Borough, Aleutians East Borough, Dillingham Census Area, Aleutians West Census Area, Kusilvak Census Area, Bethel Census Area",
-    "rating": 0.37254901960784315,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-AK",
-    "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
-    "level": "county"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
-    "state": "Guam",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      144.7975,
-      13.45
-    ],
-    "tz": [
-      "Pacific/Guam"
-    ],
-    "featureId": "iso2:US-GU",
-    "population": 167772,
-    "populationDensity": 304.33770446431873,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-GU",
-    "name": "Guam, United States",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Moscow",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      37.3835,
-      55.581500000000005
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-MOW",
-    "population": 12692466,
-    "populationDensity": 4998.30551512286,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-MOW",
-    "name": "Moscow, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Moscow Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      37.675,
-      55.608000000000004
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-MOS",
-    "population": 7503385,
-    "populationDensity": 169.18373427813142,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-MOS",
-    "name": "Moscow Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Saint Petersburg",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      30.1065,
-      59.9405
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-SPE",
-    "population": 5351935,
-    "populationDensity": 3781.5500160184083,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-SPE",
-    "name": "Saint Petersburg, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Samara Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      50.2515,
-      53.2205
-    ],
-    "tz": [
-      "Europe/Samara"
-    ],
-    "featureId": "iso2:RU-SAM",
-    "population": 3193514,
-    "populationDensity": 59.726715804486766,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-SAM",
-    "name": "Samara Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Sakha Republic",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      134.18349999999998,
-      66.116
-    ],
-    "tz": [
-      "Asia/Yakutsk"
-    ],
-    "featureId": "iso2:RU-SA",
-    "population": 970105,
-    "populationDensity": 0.31756281853453944,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-SA",
-    "name": "Sakha Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Sverdlovsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      61.706,
-      59
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-SVE",
-    "population": 4325256,
-    "populationDensity": 22.338835176107835,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-SVE",
-    "name": "Sverdlovsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kaliningrad",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      21.258,
-      54.809
-    ],
-    "tz": [
-      "Europe/Kaliningrad"
-    ],
-    "featureId": "iso2:RU-KGD",
-    "population": 994599,
-    "populationDensity": 73.96818192582731,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KGD",
-    "name": "Kaliningrad, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kirov Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      50.095,
-      58.568
-    ],
-    "tz": [
-      "GMT+3"
-    ],
-    "featureId": "iso2:RU-KIR",
-    "population": 1283238,
-    "populationDensity": 10.673749849833074,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KIR",
-    "name": "Kirov Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Novosibirsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      80.102,
-      55.2645
-    ],
-    "tz": [
-      "Asia/Novosibirsk"
-    ],
-    "featureId": "iso2:RU-NVS",
-    "population": 2788849,
-    "populationDensity": 15.71661217105251,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-NVS",
-    "name": "Novosibirsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Krasnoyarsk Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      95.01050000000001,
-      66.523
-    ],
-    "tz": [
-      "Asia/Krasnoyarsk"
-    ],
-    "featureId": "iso2:RU-KYA",
-    "population": 2876497,
-    "populationDensity": 1.239831958152673,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KYA",
-    "name": "Krasnoyarsk Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tambov Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      41.588499999999996,
-      52.704
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-TAM",
-    "population": 1033552,
-    "populationDensity": 30.067213532398124,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TAM",
-    "name": "Tambov Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Lipetsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      39.2515,
-      52.7355
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-LIP",
-    "population": 1150201,
-    "populationDensity": 47.80733485819498,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-LIP",
-    "name": "Lipetsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tver Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      34.539,
-      57.2495
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-TVE",
-    "population": 1283873,
-    "populationDensity": 15.240524580083145,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TVE",
-    "name": "Tver Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Khabarovsk Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      138.804,
-      54.5835
-    ],
-    "tz": [
-      "Asia/Vladivostok"
-    ],
-    "featureId": "iso2:RU-KHA",
-    "population": 1328302,
-    "populationDensity": 1.6951479909889837,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KHA",
-    "name": "Khabarovsk Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tyumen Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      70.013,
-      57.569
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-TYU",
-    "population": 3692400,
-    "populationDensity": 23.17147344247112,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TYU",
-    "name": "Tyumen Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tula Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      37.4255,
-      53.897999999999996
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-TUL",
-    "population": 1491855,
-    "populationDensity": 58.10311153840707,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TUL",
-    "name": "Tula Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Perm Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      55.626999999999995,
-      58.884
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-PER",
-    "population": 2599301,
-    "populationDensity": 16.197380728599104,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-PER",
-    "name": "Perm Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Nizhny Novgorod Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      44.778,
-      56.277
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-NIZ",
-    "population": 3234752,
-    "populationDensity": 42.11526278924673,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-NIZ",
-    "name": "Nizhny Novgorod Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Krasnodar Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      39.171,
-      45.133
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-KDA",
-    "population": 5603420,
-    "populationDensity": 74.51650522285708,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KDA",
-    "name": "Krasnodar Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Voronezh Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      40.542500000000004,
-      50.8305
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-VOR",
-    "population": 2333768,
-    "populationDensity": 44.75379066172304,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-VOR",
-    "name": "Voronezh Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kemerovo Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      86.9245,
-      54.4985
-    ],
-    "tz": [
-      "Asia/Novokuznetsk"
-    ],
-    "featureId": "iso2:RU-KEM",
-    "population": 2657758,
-    "populationDensity": 27.80846250544159,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KEM",
-    "name": "Kemerovo Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Republic of Khakassia",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      89.9075,
-      53.3615
-    ],
-    "tz": [
-      "Asia/Krasnoyarsk"
-    ],
-    "featureId": "iso2:RU-KK",
-    "population": 537513,
-    "populationDensity": 8.736264556625866,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KK",
-    "name": "Republic of Khakassia, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Murmansk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      34.904,
-      68.0055
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-MUR",
-    "population": 753557,
-    "populationDensity": 5.275517113793156,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-MUR",
-    "name": "Murmansk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Komi Republic",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      55.8255,
-      63.81
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-KO",
-    "population": 840873,
-    "populationDensity": 2.0246732394032216,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KO",
-    "name": "Komi Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kaluga Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      35.3575,
-      54.3085
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-KLU",
-    "population": 1000070,
-    "populationDensity": 33.61986090060312,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KLU",
-    "name": "Kaluga Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Ivanovo Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      41.349500000000006,
-      57.052499999999995
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-IVA",
-    "population": 1014646,
-    "populationDensity": 47.022404708546595,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-IVA",
-    "name": "Ivanovo Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Zabaykalsky Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      114.94,
-      53.797
-    ],
-    "tz": [
-      "Asia/Chita"
-    ],
-    "featureId": "iso2:RU-ZAB",
-    "population": 1072806,
-    "populationDensity": 2.4874827507466972,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ZAB",
-    "name": "Zabaykalsky Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tomsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      82.218,
-      58.326
-    ],
-    "tz": [
-      "Asia/Tomsk"
-    ],
-    "featureId": "iso2:RU-TOM",
-    "population": 1078280,
-    "populationDensity": 3.438698931197205,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TOM",
-    "name": "Tomsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Arkhangelsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      52.26650000000001,
-      71.246
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-ARK",
-    "population": 1155028,
-    "populationDensity": 2.8691475890223606,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ARK",
-    "name": "Arkhangelsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Ryazan Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      40.667,
-      54.338
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-RYA",
-    "population": 1121474,
-    "populationDensity": 28.297758881018616,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-RYA",
-    "name": "Ryazan Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Ulyanovsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      48.019499999999994,
-      53.718500000000006
-    ],
-    "tz": [
-      "Europe/Ulyanovsk"
-    ],
-    "featureId": "iso2:RU-ULY",
-    "population": 1246618,
-    "populationDensity": 33.56656646282382,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ULY",
-    "name": "Ulyanovsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Yaroslavl Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      39.275999999999996,
-      57.745000000000005
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-YAR",
-    "population": 1265684,
-    "populationDensity": 35.1025616538711,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-YAR",
-    "name": "Yaroslavl Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Penza Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      44.5265,
-      53.159
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-PNZ",
-    "population": 1331655,
-    "populationDensity": 30.732387365819037,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-PNZ",
-    "name": "Penza Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Belgorod Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      37.3035,
-      50.6135
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-BEL",
-    "population": 1549876,
-    "populationDensity": 57.13353311144602,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-BEL",
-    "name": "Belgorod Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Khanty-Mansiysk Autonomous Okrug – Ugra",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      72.59100000000001,
-      62.149
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-KHM",
-    "population": 1625501,
-    "populationDensity": 3.050513914489653,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KHM",
-    "name": "Khanty-Mansiysk Autonomous Okrug – Ugra, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Leningrad oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      31.320999999999998,
-      59.8765
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-LEN",
-    "population": 1813816,
-    "populationDensity": 21.574051313204684,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-LEN",
-    "name": "Leningrad oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Orenburg Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      56.229,
-      52.43
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-ORE",
-    "population": 1977720,
-    "populationDensity": 15.939082455042003,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ORE",
-    "name": "Orenburg Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Saratov Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      46.658500000000004,
-      51.308499999999995
-    ],
-    "tz": [
-      "Europe/Volgograd"
-    ],
-    "featureId": "iso2:RU-SAR",
-    "population": 2462950,
-    "populationDensity": 24.374238037909265,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-SAR",
-    "name": "Saratov Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Tatarstan",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      50.7665,
-      55.3245
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-TA",
-    "population": 3902642,
-    "populationDensity": 57.49233516812253,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-TA",
-    "name": "Tatarstan, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kurgan Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      65.338,
-      55.513000000000005
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-KGN",
-    "population": 845537,
-    "populationDensity": 11.832629692382236,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KGN",
-    "name": "Kurgan Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Kabardino-Balkaria",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      43.436,
-      43.455
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-KB",
-    "population": 868174,
-    "populationDensity": 69.67538208667044,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-KB",
-    "name": "Kabardino-Balkaria, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Chelyabinsk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      60.241,
-      54.173500000000004
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-CHE",
-    "population": 3493036,
-    "populationDensity": 39.49255441945405,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-CHE",
-    "name": "Chelyabinsk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Stavropol Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      43.281,
-      44.947
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-STA",
-    "population": 2795243,
-    "populationDensity": 42.24062741636442,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-STA",
-    "name": "Stavropol Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Bryansk Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      33.268,
-      52.9365
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-BRY",
-    "population": 1210982,
-    "populationDensity": 34.77687797330858,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-BRY",
-    "name": "Bryansk Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Udmurtia",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      52.78,
-      57.2005
-    ],
-    "tz": [
-      "GMT+4"
-    ],
-    "featureId": "iso2:RU-UD",
-    "population": 1513044,
-    "populationDensity": 35.985913875321785,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-UD",
-    "name": "Udmurtia, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Novgorod Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      32.926,
-      58.1695
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-NGR",
-    "population": 606476,
-    "populationDensity": 11.044319951790763,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-NGR",
-    "name": "Novgorod Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Republic of Crimea",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      34.563,
-      45.308
-    ],
-    "tz": [
-      "Europe/Simferopol"
-    ],
-    "featureId": "iso2:RU-CR",
-    "population": 1913731,
-    "populationDensity": 76.44143594718771,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-CR",
-    "name": "Republic of Crimea, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Bashkortostan",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      56.58,
-      54.052499999999995
-    ],
-    "tz": [
-      "Asia/Yekaterinburg"
-    ],
-    "featureId": "iso2:RU-BA",
-    "population": 4063293,
-    "populationDensity": 28.471473767675988,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-BA",
-    "name": "Bashkortostan, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Chechen Republic",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      45.741,
-      43.2435
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-CE",
-    "population": 1478726,
-    "populationDensity": 91.44756203991346,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-CE",
-    "name": "Chechen Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Primorsky Krai",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      134.71949999999998,
-      45.3785
-    ],
-    "tz": [
-      "Asia/Vladivostok"
-    ],
-    "featureId": "iso2:RU-PRI",
-    "population": 1913037,
-    "populationDensity": 11.839611078415189,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-PRI",
-    "name": "Primorsky Krai, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Volgograd Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      44.3005,
-      49.3475
-    ],
-    "tz": [
-      "Europe/Volgograd"
-    ],
-    "featureId": "iso2:RU-VGG",
-    "population": 2521276,
-    "populationDensity": 22.358950840590754,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-VGG",
-    "name": "Volgograd Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Oryol Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      36.444,
-      52.793000000000006
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-ORL",
-    "population": 747247,
-    "populationDensity": 30.34874882061883,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ORL",
-    "name": "Oryol Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Pskov Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      29.424,
-      57.306
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-PSK",
-    "population": 636546,
-    "populationDensity": 11.554365420776241,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-PSK",
-    "name": "Pskov Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Rostov Oblast",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      41.272499999999994,
-      48.0805
-    ],
-    "tz": [
-      "Europe/Moscow"
-    ],
-    "featureId": "iso2:RU-ROS",
-    "population": 4202320,
-    "populationDensity": 41.625099059208175,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-ROS",
-    "name": "Rostov Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "state": "Buryatia",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      107.775,
-      53.61
-    ],
-    "tz": [
-      "Asia/Irkutsk"
-    ],
-    "featureId": "iso2:RU-BU",
-    "population": 984511,
-    "populationDensity": 2.803935027606201,
-    "countryId": "iso1:RU",
-    "stateId": "iso2:RU-BU",
-    "name": "Buryatia, Russia",
-    "level": "state"
-  },
-  {
     "country": "United Kingdom",
     "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
     "aggregate": "county",
@@ -134247,6 +131730,2485 @@
     "countyId": "iso2:GB-XBCP",
     "name": "Bournemouth, Christchurch and Poole, England, United Kingdom",
     "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Anchorage Economic Region, AK, USA",
+    "county": "Anchorage Municipality",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02020",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Gulf Coast Economic Region, AK, USA",
+    "county": "Valdez-Cordova Census Area, Kodiak Island Borough, Kenai Peninsula Borough",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02261+fips:02150+fips:02122",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Interior Economic Region, AK, USA",
+    "county": "Denali Borough, Yukon-Koyukuk Census Area, Southeast Fairbanks Census Area, Fairbanks North Star Borough",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02068+fips:02290+fips:02240+fips:02090",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Mat-Su Economic Region, AK, USA",
+    "county": "Matanuska-Susitna Borough",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02170",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Northern Economic Region, AK, USA",
+    "county": "Northwest Arctic Borough, Nome Census Area, North Slope Borough",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02188+fips:02180+fips:02185",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Southeast Economic Region, AK, USA",
+    "county": "Yakutat City and Borough, Skagway Municipality, Hoonah-Angoon Census Area, Wrangell City and Borough, Haines Borough, Petersburg Borough, Prince of Wales-Hyder Census Area, Sitka City and Borough, Ketchikan Gateway Borough, Juneau City and Borough",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02282+fips:02230+fips:02105+fips:02275+fips:02100+fips:02195+fips:02198+fips:02220+fips:02130+fips:02110",
+    "level": "county"
+  },
+  {
+    "state": "Alaska",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "http://dhss.alaska.gov/dph",
+        "name": "Alaska Department of Health and Social Services",
+        "description": "Division of Public Health"
+      }
+    ],
+    "url": "http://dhss.alaska.gov/dph/Epi/id/Pages/COVID-19/monitoring.aspx",
+    "aggregate": "county",
+    "name": "Southwest Economic Region, AK, USA",
+    "county": "Bristol Bay Borough, Lake and Peninsula Borough, Aleutians East Borough, Dillingham Census Area, Aleutians West Census Area, Kusilvak Census Area, Bethel Census Area",
+    "rating": 0.37254901960784315,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-AK",
+    "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
+    "level": "county"
+  },
+  {
+    "country": "United States",
+    "url": "https://covidtracking.com/api/v1/states/current.json",
+    "curators": [
+      {
+        "name": "The COVID Tracking Project",
+        "url": "https://covidtracking.com/",
+        "twitter": "@COVID19Tracking",
+        "github": "COVID19Tracking"
+      }
+    ],
+    "aggregate": "state",
+    "state": "Guam",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      144.7975,
+      13.45
+    ],
+    "tz": [
+      "Pacific/Guam"
+    ],
+    "featureId": "iso2:US-GU",
+    "population": 167772,
+    "populationDensity": 304.33770446431873,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GU",
+    "name": "Guam, United States",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Moscow",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      37.3835,
+      55.581500000000005
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-MOW",
+    "population": 12692466,
+    "populationDensity": 4998.30551512286,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-MOW",
+    "name": "Moscow, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Moscow Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      37.675,
+      55.608000000000004
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-MOS",
+    "population": 7503385,
+    "populationDensity": 169.18373427813142,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-MOS",
+    "name": "Moscow Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Saint Petersburg",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      30.1065,
+      59.9405
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-SPE",
+    "population": 5351935,
+    "populationDensity": 3781.5500160184083,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-SPE",
+    "name": "Saint Petersburg, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Samara Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      50.2515,
+      53.2205
+    ],
+    "tz": [
+      "Europe/Samara"
+    ],
+    "featureId": "iso2:RU-SAM",
+    "population": 3193514,
+    "populationDensity": 59.726715804486766,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-SAM",
+    "name": "Samara Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Sakha Republic",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      134.18349999999998,
+      66.116
+    ],
+    "tz": [
+      "Asia/Yakutsk"
+    ],
+    "featureId": "iso2:RU-SA",
+    "population": 970105,
+    "populationDensity": 0.31756281853453944,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-SA",
+    "name": "Sakha Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Sverdlovsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      61.706,
+      59
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-SVE",
+    "population": 4325256,
+    "populationDensity": 22.338835176107835,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-SVE",
+    "name": "Sverdlovsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kaliningrad",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      21.258,
+      54.809
+    ],
+    "tz": [
+      "Europe/Kaliningrad"
+    ],
+    "featureId": "iso2:RU-KGD",
+    "population": 994599,
+    "populationDensity": 73.96818192582731,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KGD",
+    "name": "Kaliningrad, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kirov Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      50.095,
+      58.568
+    ],
+    "tz": [
+      "GMT+3"
+    ],
+    "featureId": "iso2:RU-KIR",
+    "population": 1283238,
+    "populationDensity": 10.673749849833074,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KIR",
+    "name": "Kirov Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Novosibirsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      80.102,
+      55.2645
+    ],
+    "tz": [
+      "Asia/Novosibirsk"
+    ],
+    "featureId": "iso2:RU-NVS",
+    "population": 2788849,
+    "populationDensity": 15.71661217105251,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-NVS",
+    "name": "Novosibirsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Krasnoyarsk Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      95.01050000000001,
+      66.523
+    ],
+    "tz": [
+      "Asia/Krasnoyarsk"
+    ],
+    "featureId": "iso2:RU-KYA",
+    "population": 2876497,
+    "populationDensity": 1.239831958152673,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KYA",
+    "name": "Krasnoyarsk Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tambov Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      41.588499999999996,
+      52.704
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-TAM",
+    "population": 1033552,
+    "populationDensity": 30.067213532398124,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TAM",
+    "name": "Tambov Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Lipetsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      39.2515,
+      52.7355
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-LIP",
+    "population": 1150201,
+    "populationDensity": 47.80733485819498,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-LIP",
+    "name": "Lipetsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tver Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      34.539,
+      57.2495
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-TVE",
+    "population": 1283873,
+    "populationDensity": 15.240524580083145,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TVE",
+    "name": "Tver Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Khabarovsk Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      138.804,
+      54.5835
+    ],
+    "tz": [
+      "Asia/Vladivostok"
+    ],
+    "featureId": "iso2:RU-KHA",
+    "population": 1328302,
+    "populationDensity": 1.6951479909889837,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KHA",
+    "name": "Khabarovsk Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tyumen Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      70.013,
+      57.569
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-TYU",
+    "population": 3692400,
+    "populationDensity": 23.17147344247112,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TYU",
+    "name": "Tyumen Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tula Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      37.4255,
+      53.897999999999996
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-TUL",
+    "population": 1491855,
+    "populationDensity": 58.10311153840707,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TUL",
+    "name": "Tula Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Perm Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      55.626999999999995,
+      58.884
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-PER",
+    "population": 2599301,
+    "populationDensity": 16.197380728599104,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-PER",
+    "name": "Perm Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Nizhny Novgorod Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      44.778,
+      56.277
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-NIZ",
+    "population": 3234752,
+    "populationDensity": 42.11526278924673,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-NIZ",
+    "name": "Nizhny Novgorod Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Krasnodar Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      39.171,
+      45.133
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-KDA",
+    "population": 5603420,
+    "populationDensity": 74.51650522285708,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KDA",
+    "name": "Krasnodar Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Voronezh Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      40.542500000000004,
+      50.8305
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-VOR",
+    "population": 2333768,
+    "populationDensity": 44.75379066172304,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-VOR",
+    "name": "Voronezh Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kemerovo Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      86.9245,
+      54.4985
+    ],
+    "tz": [
+      "Asia/Novokuznetsk"
+    ],
+    "featureId": "iso2:RU-KEM",
+    "population": 2657758,
+    "populationDensity": 27.80846250544159,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KEM",
+    "name": "Kemerovo Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Republic of Khakassia",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      89.9075,
+      53.3615
+    ],
+    "tz": [
+      "Asia/Krasnoyarsk"
+    ],
+    "featureId": "iso2:RU-KK",
+    "population": 537513,
+    "populationDensity": 8.736264556625866,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KK",
+    "name": "Republic of Khakassia, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Murmansk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      34.904,
+      68.0055
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-MUR",
+    "population": 753557,
+    "populationDensity": 5.275517113793156,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-MUR",
+    "name": "Murmansk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Komi Republic",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      55.8255,
+      63.81
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-KO",
+    "population": 840873,
+    "populationDensity": 2.0246732394032216,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KO",
+    "name": "Komi Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kaluga Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      35.3575,
+      54.3085
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-KLU",
+    "population": 1000070,
+    "populationDensity": 33.61986090060312,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KLU",
+    "name": "Kaluga Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Ivanovo Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      41.349500000000006,
+      57.052499999999995
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-IVA",
+    "population": 1014646,
+    "populationDensity": 47.022404708546595,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-IVA",
+    "name": "Ivanovo Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Zabaykalsky Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      114.94,
+      53.797
+    ],
+    "tz": [
+      "Asia/Chita"
+    ],
+    "featureId": "iso2:RU-ZAB",
+    "population": 1072806,
+    "populationDensity": 2.4874827507466972,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ZAB",
+    "name": "Zabaykalsky Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tomsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      82.218,
+      58.326
+    ],
+    "tz": [
+      "Asia/Tomsk"
+    ],
+    "featureId": "iso2:RU-TOM",
+    "population": 1078280,
+    "populationDensity": 3.438698931197205,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TOM",
+    "name": "Tomsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Arkhangelsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      52.26650000000001,
+      71.246
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-ARK",
+    "population": 1155028,
+    "populationDensity": 2.8691475890223606,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ARK",
+    "name": "Arkhangelsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Ryazan Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      40.667,
+      54.338
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-RYA",
+    "population": 1121474,
+    "populationDensity": 28.297758881018616,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-RYA",
+    "name": "Ryazan Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Ulyanovsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      48.019499999999994,
+      53.718500000000006
+    ],
+    "tz": [
+      "Europe/Ulyanovsk"
+    ],
+    "featureId": "iso2:RU-ULY",
+    "population": 1246618,
+    "populationDensity": 33.56656646282382,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ULY",
+    "name": "Ulyanovsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Yaroslavl Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      39.275999999999996,
+      57.745000000000005
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-YAR",
+    "population": 1265684,
+    "populationDensity": 35.1025616538711,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-YAR",
+    "name": "Yaroslavl Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Penza Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      44.5265,
+      53.159
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-PNZ",
+    "population": 1331655,
+    "populationDensity": 30.732387365819037,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-PNZ",
+    "name": "Penza Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Belgorod Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      37.3035,
+      50.6135
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-BEL",
+    "population": 1549876,
+    "populationDensity": 57.13353311144602,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-BEL",
+    "name": "Belgorod Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Khanty-Mansiysk Autonomous Okrug – Ugra",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      72.59100000000001,
+      62.149
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-KHM",
+    "population": 1625501,
+    "populationDensity": 3.050513914489653,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KHM",
+    "name": "Khanty-Mansiysk Autonomous Okrug – Ugra, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Leningrad oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      31.320999999999998,
+      59.8765
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-LEN",
+    "population": 1813816,
+    "populationDensity": 21.574051313204684,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-LEN",
+    "name": "Leningrad oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Orenburg Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      56.229,
+      52.43
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-ORE",
+    "population": 1977720,
+    "populationDensity": 15.939082455042003,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ORE",
+    "name": "Orenburg Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Saratov Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      46.658500000000004,
+      51.308499999999995
+    ],
+    "tz": [
+      "Europe/Volgograd"
+    ],
+    "featureId": "iso2:RU-SAR",
+    "population": 2462950,
+    "populationDensity": 24.374238037909265,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-SAR",
+    "name": "Saratov Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Tatarstan",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      50.7665,
+      55.3245
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-TA",
+    "population": 3902642,
+    "populationDensity": 57.49233516812253,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-TA",
+    "name": "Tatarstan, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kurgan Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      65.338,
+      55.513000000000005
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-KGN",
+    "population": 845537,
+    "populationDensity": 11.832629692382236,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KGN",
+    "name": "Kurgan Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Kabardino-Balkaria",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      43.436,
+      43.455
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-KB",
+    "population": 868174,
+    "populationDensity": 69.67538208667044,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-KB",
+    "name": "Kabardino-Balkaria, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Chelyabinsk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      60.241,
+      54.173500000000004
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-CHE",
+    "population": 3493036,
+    "populationDensity": 39.49255441945405,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-CHE",
+    "name": "Chelyabinsk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Stavropol Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      43.281,
+      44.947
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-STA",
+    "population": 2795243,
+    "populationDensity": 42.24062741636442,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-STA",
+    "name": "Stavropol Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Bryansk Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      33.268,
+      52.9365
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-BRY",
+    "population": 1210982,
+    "populationDensity": 34.77687797330858,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-BRY",
+    "name": "Bryansk Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Udmurtia",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      52.78,
+      57.2005
+    ],
+    "tz": [
+      "GMT+4"
+    ],
+    "featureId": "iso2:RU-UD",
+    "population": 1513044,
+    "populationDensity": 35.985913875321785,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-UD",
+    "name": "Udmurtia, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Novgorod Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      32.926,
+      58.1695
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-NGR",
+    "population": 606476,
+    "populationDensity": 11.044319951790763,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-NGR",
+    "name": "Novgorod Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Republic of Crimea",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      34.563,
+      45.308
+    ],
+    "tz": [
+      "Europe/Simferopol"
+    ],
+    "featureId": "iso2:RU-CR",
+    "population": 1913731,
+    "populationDensity": 76.44143594718771,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-CR",
+    "name": "Republic of Crimea, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Bashkortostan",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      56.58,
+      54.052499999999995
+    ],
+    "tz": [
+      "Asia/Yekaterinburg"
+    ],
+    "featureId": "iso2:RU-BA",
+    "population": 4063293,
+    "populationDensity": 28.471473767675988,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-BA",
+    "name": "Bashkortostan, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Chechen Republic",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      45.741,
+      43.2435
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-CE",
+    "population": 1478726,
+    "populationDensity": 91.44756203991346,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-CE",
+    "name": "Chechen Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Primorsky Krai",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      134.71949999999998,
+      45.3785
+    ],
+    "tz": [
+      "Asia/Vladivostok"
+    ],
+    "featureId": "iso2:RU-PRI",
+    "population": 1913037,
+    "populationDensity": 11.839611078415189,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-PRI",
+    "name": "Primorsky Krai, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Volgograd Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      44.3005,
+      49.3475
+    ],
+    "tz": [
+      "Europe/Volgograd"
+    ],
+    "featureId": "iso2:RU-VGG",
+    "population": 2521276,
+    "populationDensity": 22.358950840590754,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-VGG",
+    "name": "Volgograd Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Oryol Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      36.444,
+      52.793000000000006
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-ORL",
+    "population": 747247,
+    "populationDensity": 30.34874882061883,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ORL",
+    "name": "Oryol Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Pskov Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      29.424,
+      57.306
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-PSK",
+    "population": 636546,
+    "populationDensity": 11.554365420776241,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-PSK",
+    "name": "Pskov Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Rostov Oblast",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      41.272499999999994,
+      48.0805
+    ],
+    "tz": [
+      "Europe/Moscow"
+    ],
+    "featureId": "iso2:RU-ROS",
+    "population": 4202320,
+    "populationDensity": 41.625099059208175,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-ROS",
+    "name": "Rostov Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Russia",
+    "aggregate": "state",
+    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
+    "curators": [
+      {
+        "name": "Yandex",
+        "url": "https://yandex.ru"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
+        "name": "Rospotrebnadzor",
+        "url": "https://www.rospotrebnadzor.ru/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Arseniy Ivanov",
+        "twitter": "@freeatnet",
+        "github": "freeatnet",
+        "email": "arseniy+coronadatascraper@freeatnet.com"
+      }
+    ],
+    "state": "Buryatia",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      107.775,
+      53.61
+    ],
+    "tz": [
+      "Asia/Irkutsk"
+    ],
+    "featureId": "iso2:RU-BU",
+    "population": 984511,
+    "populationDensity": 2.803935027606201,
+    "countryId": "iso1:RU",
+    "stateId": "iso2:RU-BU",
+    "name": "Buryatia, Russia",
+    "level": "state"
   },
   {
     "country": "Russia",
