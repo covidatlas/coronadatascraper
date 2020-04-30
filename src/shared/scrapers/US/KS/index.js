@@ -1,5 +1,7 @@
+const assert = require('assert');
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
+import * as log from '../../../lib/log.js';
 import maintainers from '../../../lib/maintainers.js';
 import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
@@ -135,6 +137,74 @@ const scraper = {
     'Woodson County',
     'Wyandotte County'
   ],
+  /** Returns 2D array of sentences from PDF data.
+   *
+   * The y-axis values of each element must be _identical_.
+   * Spaces per xdiff of elements was determined by trial-and-error.
+   *
+   * Sample output from a KS PDF:
+   * [
+   *   '• There were 3738 cases from 78 counties with 125 deaths reported as of 9 a.m.',
+   *   '• There have been 515 of 2877 cases that have been hospitalized.',
+   *   '• There have been 25720 negative tests conducted at KDHE and private labs.',
+   *   ... etc.
+   * ]
+   */
+  _extractPdfSentences: function (data) {
+    const items = [];
+    // Remove nulls.
+    for (const item of data) {
+      if (item)
+        items.push(item);
+    }
+
+    const textitems = items.filter(i => {
+      return i.page && i.x && i.y && i.text
+    });
+    // console.log(textitems);
+
+    const pageYs = {};
+    textitems.forEach(i => {
+      const key = `${i.page}/${i.y}`;
+      if (!pageYs[key])
+        pageYs[key] = [];
+      pageYs[key].push(i);
+    });
+    // console.log(pageYs);
+
+    /** Join text in order of x, joining things with spaces or not
+     * depending on the xdiff. */
+    function joinLineGroup(items) {
+      const itemsOrderByX = items.sort((a, b) => (a.x < b.x ? -1 : 1));
+      // console.log(itemsOrderByX);
+      let lastX = 0;
+      let line = itemsOrderByX.reduce((s, i) => {
+        // console.log(i);
+        // eyeballing spaces from the data!
+        const xdiff = (i.x - lastX);
+        // console.log(`xdiff: ${xdiff}`);
+        let separator = (xdiff < 1) ? '' : ' ';
+        lastX = i.x;
+
+        return s + separator + i.text;
+      }, '');
+
+      // Comma separator.
+      line = line.replace(/%2C/g, ',');
+
+      // PDF xdiff seems to be off when separating numbers from text.
+      line = line.replace(/(\d)([a-zA-Z])/g, function(m, a, b) { return `${a} ${b}`; });
+      line = line.replace(/([a-zA-Z])(\d)/g, function(m, a, b) { return `${a} ${b}`; });
+
+      // Remove comma separator between numbers.
+      line = line.replace(/(\d),(\d)/g, function(m, a, b) { return `${a}${b}`; });
+
+      return line;
+    }
+
+    const lineGroups = Object.values(pageYs);
+    return lineGroups.map(joinLineGroup);
+  },
   scraper: {
     '0': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
@@ -310,6 +380,84 @@ const scraper = {
 
       counties.push(totalRow);
       return geography.addEmptyRegions(counties, this._counties, 'county');
+    },
+    '2020-04-30': async function() {
+
+      // The main page has an href that downloads a PDF.  Link:
+      // <a href="/DocumentCenter/View/984/4-29-20-update-numbers" ...>
+      const entryUrl = 'https://www.coronavirus.kdheks.gov/';
+      let $ = await fetch.page(this, entryUrl, 'tmpindex');
+      const linkRE = /DocumentCenter.*update-numbers/;
+      const href = $('a').toArray().
+        map(h => $(h)).
+        filter(h => { return linkRE.test(h.attr('href')) });
+      assert.equal(1, href.length, `Single link to DocumentCenter matching ${linkRE}`);
+
+      this.type = 'pdf';
+      this.url = entryUrl + href[0].attr('href');
+      console.log(`Fetching pdf from ${this.url}`);
+      const body = await fetch.pdf(this, this.url, 'default');
+
+      if (body === null) {
+        throw new Error(`No pdf at ${this.url}`);
+      }
+
+      const sentences = this._extractPdfSentences(body);
+      // console.log(sentences);
+
+      // Regex the items we want from the sentences.
+      const stateDataREs = {
+        cases: /were (\d+) cases/,
+        deaths: /with (\d+) deaths/,
+        hospitalized: /been (\d+) of .* cases that have been hospitalized/,
+        testedNeg: /(\d+) negative tests/
+      };
+
+      const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
+        const re = stateDataREs[key];
+        const text = sentences.filter(s => { return re.test(s); });
+        if (text.length === 0)
+          log.warning(`No match for ${key} re ${re}`);
+        if (text.length > 1)
+          log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
+        let m = text[0].match(re);
+
+        return {
+          ...hsh,
+          [key]: parse.number(m[1])
+        };
+      }, {})
+
+      rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
+      delete rawStateData.testedNeg;
+      
+      let data = [];
+
+      const countyRE = /^(.*) County (\d+)$/;
+      const countyData = sentences.filter(s => { return countyRE.test(s); });
+      countyData.forEach(lin => {
+        const cm = lin.trim().match(countyRE);
+        // console.log(cm);
+        const rawName = `${cm[1]} County`;
+        const countyName = geography.addCounty(rawName);
+        const cases = cm[2];
+        if (this._counties.includes(countyName)) {
+          data.push({
+            county: countyName,
+            cases: parse.number(cases)
+          });
+        }
+      });
+
+      const summedData = transform.sumData(data);
+      data.push(summedData);
+
+      data.push({ ...rawStateData, aggregate: 'county' });
+
+      const result = geography.addEmptyRegions(data, this._counties, 'county');
+      // no sum because we explicitly add it above
+
+      return data;
     }
   }
 };
