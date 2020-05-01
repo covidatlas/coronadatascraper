@@ -141,6 +141,44 @@ const scraper = {
       counties.push(stateData);
       return counties;
     },
+    '2020-04-23': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv';
+      this.type = 'csv';
+      let data = await fetch.csv(this, this.url, 'default');
+      assert(data, `Have csv from ${this.url}`);
+
+      const requiredKeys = [
+        'FULL_',
+        'County_Pos_Cases',
+        'County_Population',
+        'State_Number_Hospitalizations',
+        'State_Deaths',
+        'State_Number_Tested'
+      ];
+      const actualKeys = Object.keys(data[0]);
+      const missing = requiredKeys.filter(k => !actualKeys.includes(k));
+      const msg = `Missing required key(s): ${missing.join(', ')}`;
+      assert.equal(missing.length, 0, msg);
+
+      console.log(`Pre-filter, data.length: ${data.length}`);
+      data = data.filter(d => {
+        return d.FULL_ !== '';
+      });
+      console.log(`Post-filter, data.length: ${data.length}`);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.County_Pos_Cases),
+          population: parse.number(county.County_Population)
+        });
+      }
+      const stateData = transform.sumData(counties);
+      stateData.deaths = parse.number(data[0].State_Deaths);
+      stateData.tested = parse.number(data[0].State_Number_Tested);
+      counties.push(stateData);
+      return counties;
+    },
     '2020-05-01': async function() {
       // The page https://covid19.colorado.gov/covid-19-data has
       // tables of HTML data, but
