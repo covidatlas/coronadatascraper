@@ -28,6 +28,7 @@ date,country,state,county,city,type,description,severity,category
 2020-04-30,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
 2020-04-30,iso1:US,iso2:US-CO,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
 2020-04-30,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
+2020-04-30,iso1:US,iso2:US-NV,,,scraper failed,DeprecatedError: County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/,critical,scraper failure
 2020-04-30,iso1:US,iso2:US-NV,Washoe County,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
 2020-04-30,iso1:US,iso2:US-SC,,,scraper failed,Error: datetime.parse: Could not parse '1588261506000' as a date,critical,scraper failure
 2020-04-30,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure

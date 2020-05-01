@@ -45935,6 +45935,41 @@
     "level": "county"
   },
   {
+    "state": "California",
+    "country": "United States",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
+      }
+    ],
+    "cases": 50261,
+    "deaths": 2032,
+    "recovered": 4750,
+    "tested": 436582,
+    "hospitalized": 6028,
+    "active": 43479,
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      -119.27250000000001,
+      37.2715
+    ],
+    "tz": [
+      "America/Los_Angeles"
+    ],
+    "featureId": "iso2:US-CA",
+    "population": 39512223,
+    "populationDensity": 96.34709364702643,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA",
+    "name": "California, United States",
+    "level": "state"
+  },
+  {
     "state": "Connecticut",
     "country": "United States",
     "sources": [
@@ -48527,6 +48562,36 @@
     "countyId": "fips:12109",
     "name": "St. Johns County, Florida, United States",
     "level": "county"
+  },
+  {
+    "state": "Florida",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "http://www.floridahealth.gov",
+        "name": "Florida Health"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv",
+    "cases": 33690,
+    "tested": 384153,
+    "deaths": 1268,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -83.83850000000001,
+      27.8185
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "iso2:US-FL",
+    "population": 21477737,
+    "populationDensity": 147.95935473081667,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-FL",
+    "name": "Florida, United States",
+    "level": "state"
   },
   {
     "state": "Georgia",
@@ -53769,6 +53834,43 @@
     "countyId": "fips:15009",
     "name": "Maui County, Hawaii, United States",
     "level": "county"
+  },
+  {
+    "country": "United States",
+    "state": "Hawaii",
+    "sources": [
+      {
+        "name": "Hawaii Department of Health - Disease Outbreak Control Division",
+        "url": "https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jordan Holt",
+        "email": "jordholt@gmail.com",
+        "github": "Jord-Holt",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "aggregate": "county",
+    "url": "https://health.hawaii.gov/coronavirusdisease2019/",
+    "cases": 609,
+    "rating": 0.29411764705882354,
+    "coordinates": [
+      -157.527,
+      20.570500000000003
+    ],
+    "tz": [
+      "Pacific/Honolulu"
+    ],
+    "featureId": "iso2:US-HI",
+    "population": 1415872,
+    "populationDensity": 84.7270466414085,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-HI",
+    "name": "Hawaii, United States",
+    "level": "state"
   },
   {
     "country": "United States",
@@ -61906,6 +62008,36 @@
     "level": "county"
   },
   {
+    "state": "Illinois",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "http://www.dph.illinois.gov",
+        "name": "IDPH",
+        "description": "Illinois Department of Public Health"
+      }
+    ],
+    "url": "http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json",
+    "cases": 52918,
+    "deaths": 2355,
+    "rating": 0.39215686274509803,
+    "coordinates": [
+      -89.505,
+      39.739000000000004
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "iso2:US-IL",
+    "population": 12671821,
+    "populationDensity": 86.73492205149884,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-IL",
+    "name": "Illinois, United States",
+    "level": "state"
+  },
+  {
     "country": "United States",
     "state": "Indiana",
     "url": "https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv",
@@ -64204,6 +64336,29 @@
     "countyId": "fips:18079",
     "name": "Jennings County, Indiana, United States",
     "level": "county"
+  },
+  {
+    "country": "United States",
+    "state": "Indiana",
+    "url": "https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv",
+    "aggregate": "county",
+    "cases": 12438,
+    "deaths": 661,
+    "rating": 0.4117647058823529,
+    "coordinates": [
+      -86.439,
+      39.767
+    ],
+    "tz": [
+      "America/Indiana/Indianapolis"
+    ],
+    "featureId": "iso2:US-IN",
+    "population": 6732219,
+    "populationDensity": 71.73556604355329,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-IN",
+    "name": "Indiana, United States",
+    "level": "state"
   },
   {
     "state": "Kansas",
@@ -74914,6 +75069,46 @@
     "countyId": "fips:21239",
     "name": "Woodford County, Kentucky, United States",
     "level": "county"
+  },
+  {
+    "country": "United States",
+    "state": "Kentucky",
+    "aggregate": "county",
+    "url": "https://datawrapper.dwcdn.net/BbowM/23/",
+    "sources": [
+      {
+        "name": "Kentucky Cabinet for Health and Family Services",
+        "url": "https://www.kentucky.com/news/coronavirus/article241309406.html"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jordan Holt",
+        "email": "jordholt@gmail.com",
+        "github": "Jord-Holt",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "cases": 4679,
+    "recovered": 1491,
+    "deaths": 243,
+    "active": 2945,
+    "rating": 0.45098039215686275,
+    "coordinates": [
+      -85.7695,
+      37.8215
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "iso2:US-KY",
+    "population": 4467673,
+    "populationDensity": 42.63017550799423,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KY",
+    "name": "Kentucky, United States",
+    "level": "state"
   },
   {
     "state": "Louisiana",
@@ -100460,6 +100655,40 @@
     "level": "county"
   },
   {
+    "state": "Nebraska",
+    "country": "United States",
+    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
+    "aggregate": "county",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "cases": 4233,
+    "deaths": 74,
+    "tested": 25938,
+    "hospitalized": 411,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -99.68100000000001,
+      41.5005
+    ],
+    "tz": [
+      "America/Chicago"
+    ],
+    "featureId": "iso2:US-NE",
+    "population": 1934408,
+    "populationDensity": 9.647791841931294,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NE",
+    "name": "Nebraska, United States",
+    "level": "state"
+  },
+  {
     "state": "New Hampshire",
     "country": "United States",
     "sources": [
@@ -101353,34 +101582,6 @@
     "countyId": "fips:34023",
     "name": "Middlesex County, New Jersey, United States",
     "level": "county"
-  },
-  {
-    "state": "Nevada",
-    "country": "United States",
-    "aggregate": "county",
-    "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/",
-    "sources": [
-      {
-        "name": "Carson City Health and Human Services",
-        "url": "https://gethealthycarsoncity.org/",
-        "description": "Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties."
-      }
-    ],
-    "name": "DeprecatedError",
-    "rating": 0.2549019607843137,
-    "coordinates": [
-      -117.023,
-      38.502
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "iso2:US-NV",
-    "population": 3080156,
-    "populationDensity": 10.741958336673978,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV",
-    "level": "state"
   },
   {
     "county": "Clark County",
@@ -112598,6 +112799,38 @@
     "countyId": "fips:42133",
     "name": "York County, Pennsylvania, United States",
     "level": "county"
+  },
+  {
+    "state": "Rhode Island",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
+      }
+    ],
+    "url": "https://health.ri.gov/data/covid-19/",
+    "tested": 63710,
+    "cases": 8621,
+    "deaths": 266,
+    "hospitalized": 339,
+    "discharged": 54,
+    "aggregate": "county",
+    "rating": 0.45098039215686275,
+    "coordinates": [
+      -71.5075,
+      41.584
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "iso2:US-RI",
+    "population": 1059361,
+    "populationDensity": 379.1426847252138,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-RI",
+    "name": "Rhode Island, United States",
+    "level": "state"
   },
   {
     "state": "Rhode Island",
@@ -136183,38 +136416,6 @@
       }
     ],
     "aggregate": "state",
-    "state": "California",
-    "deaths": 1982,
-    "tested": 625337,
-    "cases": 48917,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -119.27250000000001,
-      37.2715
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "iso2:US-CA",
-    "population": 39512223,
-    "populationDensity": 96.34709364702643,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA",
-    "name": "California, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "Colorado",
     "deaths": 766,
     "tested": 71059,
@@ -136343,38 +136544,6 @@
       }
     ],
     "aggregate": "state",
-    "state": "Florida",
-    "deaths": 1290,
-    "tested": 383592,
-    "cases": 33690,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -83.83850000000001,
-      27.8185
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "iso2:US-FL",
-    "population": 21477737,
-    "populationDensity": 147.95935473081667,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-FL",
-    "name": "Florida, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "Georgia",
     "deaths": 1120,
     "tested": 149044,
@@ -136393,38 +136562,6 @@
     "countryId": "iso1:US",
     "stateId": "iso2:US-GA",
     "name": "Georgia, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
-    "state": "Hawaii",
-    "deaths": 16,
-    "tested": 30640,
-    "cases": 613,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -157.527,
-      20.570500000000003
-    ],
-    "tz": [
-      "Pacific/Honolulu"
-    ],
-    "featureId": "iso2:US-HI",
-    "population": 1415872,
-    "populationDensity": 84.7270466414085,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-HI",
-    "name": "Hawaii, United States",
     "level": "state"
   },
   {
@@ -136503,70 +136640,6 @@
       }
     ],
     "aggregate": "state",
-    "state": "Illinois",
-    "deaths": 2355,
-    "tested": 269867,
-    "cases": 52918,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -89.505,
-      39.739000000000004
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "iso2:US-IL",
-    "population": 12671821,
-    "populationDensity": 86.73492205149884,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-IL",
-    "name": "Illinois, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
-    "state": "Indiana",
-    "deaths": 1114,
-    "tested": 94998,
-    "cases": 17835,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -86.439,
-      39.767
-    ],
-    "tz": [
-      "America/Indiana/Indianapolis"
-    ],
-    "featureId": "iso2:US-IN",
-    "population": 6732219,
-    "populationDensity": 71.73556604355329,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-IN",
-    "name": "Indiana, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "Kansas",
     "deaths": 129,
     "tested": 31626,
@@ -136585,38 +136658,6 @@
     "countryId": "iso1:US",
     "stateId": "iso2:US-KS",
     "name": "Kansas, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
-    "state": "Kentucky",
-    "deaths": 235,
-    "tested": 54101,
-    "cases": 4539,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -85.7695,
-      37.8215
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "iso2:US-KY",
-    "population": 4467673,
-    "populationDensity": 42.63017550799423,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-KY",
-    "name": "Kentucky, United States",
     "level": "state"
   },
   {
@@ -136983,38 +137024,6 @@
       }
     ],
     "aggregate": "state",
-    "state": "Nebraska",
-    "deaths": 68,
-    "tested": 25321,
-    "cases": 3784,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -99.68100000000001,
-      41.5005
-    ],
-    "tz": [
-      "America/Chicago"
-    ],
-    "featureId": "iso2:US-NE",
-    "population": 1934408,
-    "populationDensity": 9.647791841931294,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NE",
-    "name": "Nebraska, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "New Hampshire",
     "deaths": 66,
     "tested": 22193,
@@ -137289,38 +137298,6 @@
     "countryId": "iso1:US",
     "stateId": "iso2:US-PA",
     "name": "Pennsylvania, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
-    "state": "Rhode Island",
-    "deaths": 266,
-    "tested": 63710,
-    "cases": 8621,
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -71.5075,
-      41.584
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "iso2:US-RI",
-    "population": 1059361,
-    "populationDensity": 379.1426847252138,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-RI",
-    "name": "Rhode Island, United States",
     "level": "state"
   },
   {

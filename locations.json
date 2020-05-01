@@ -109826,19 +109826,19 @@
     "level": "state"
   },
   {
+    "state": "California",
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
+    "url": "https://docs.google.com/spreadsheets/d/1CwZA4RPNf_hUrwzNLyGGNHRlh1cwl8vDHwIoae51Hac/gviz/tq?tqx=out:csv&sheet=timeseries",
+    "aggregate": "county",
     "curators": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "name": "The Mercury News",
+        "email": "hattierowan@gmail.com",
+        "twitter": "@hattierowan",
+        "github": "HarrietRowan"
       }
     ],
-    "aggregate": "state",
-    "state": "California",
-    "rating": 0.49019607843137253,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -119.27250000000001,
       37.2715
@@ -109971,18 +109971,16 @@
     "level": "state"
   },
   {
+    "state": "Florida",
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "aggregate": "county",
+    "sources": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "url": "http://www.floridahealth.gov",
+        "name": "Florida Health"
       }
     ],
-    "aggregate": "state",
-    "state": "Florida",
+    "url": "https://opendata.arcgis.com/datasets/a7887f1940b34bf5a02c6f7f27a5cb2c_0.csv",
     "rating": 0.49019607843137253,
     "coordinates": [
       -83.83850000000001,
@@ -110030,18 +110028,25 @@
   },
   {
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "state": "Hawaii",
+    "sources": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "name": "Hawaii Department of Health - Disease Outbreak Control Division",
+        "url": "https://health.hawaii.gov/docd/advisories/novel-coronavirus-2019/"
       }
     ],
-    "aggregate": "state",
-    "state": "Hawaii",
-    "rating": 0.49019607843137253,
+    "maintainers": [
+      {
+        "name": "Jordan Holt",
+        "email": "jordholt@gmail.com",
+        "github": "Jord-Holt",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "aggregate": "county",
+    "url": "https://health.hawaii.gov/coronavirusdisease2019/",
+    "rating": 0.29411764705882354,
     "coordinates": [
       -157.527,
       20.570500000000003
@@ -110087,19 +110092,18 @@
     "level": "state"
   },
   {
+    "state": "Illinois",
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "aggregate": "county",
+    "sources": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "url": "http://www.dph.illinois.gov",
+        "name": "IDPH",
+        "description": "Illinois Department of Public Health"
       }
     ],
-    "aggregate": "state",
-    "state": "Illinois",
-    "rating": 0.49019607843137253,
+    "url": "http://www.dph.illinois.gov/sitefiles/COVIDTestResults.json",
+    "rating": 0.39215686274509803,
     "coordinates": [
       -89.505,
       39.739000000000004
@@ -110117,18 +110121,10 @@
   },
   {
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "Indiana",
-    "rating": 0.49019607843137253,
+    "url": "https://opendata.arcgis.com/datasets/d14de7e28b0448ab82eb36d6f25b1ea1_0.csv",
+    "aggregate": "county",
+    "rating": 0.4117647058823529,
     "coordinates": [
       -86.439,
       39.767
@@ -110204,18 +110200,25 @@
   },
   {
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "state": "Kentucky",
+    "aggregate": "county",
+    "url": "https://datawrapper.dwcdn.net/BbowM/23/",
+    "sources": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "name": "Kentucky Cabinet for Health and Family Services",
+        "url": "https://www.kentucky.com/news/coronavirus/article241309406.html"
       }
     ],
-    "aggregate": "state",
-    "state": "Kentucky",
-    "rating": 0.49019607843137253,
+    "maintainers": [
+      {
+        "name": "Jordan Holt",
+        "email": "jordholt@gmail.com",
+        "github": "Jord-Holt",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "rating": 0.45098039215686275,
     "coordinates": [
       -85.7695,
       37.8215
@@ -110493,18 +110496,19 @@
     "level": "state"
   },
   {
+    "state": "Nebraska",
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
+    "aggregate": "county",
+    "maintainers": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
-    "aggregate": "state",
-    "state": "Nebraska",
     "rating": 0.49019607843137253,
     "coordinates": [
       -99.68100000000001,
@@ -110841,19 +110845,17 @@
     "level": "state"
   },
   {
+    "state": "Rhode Island",
     "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
+    "sources": [
       {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
+        "url": "https://health.ri.gov/data/covid-19/",
+        "name": "State of Rhode Island Department of Health"
       }
     ],
-    "aggregate": "state",
-    "state": "Rhode Island",
-    "rating": 0.49019607843137253,
+    "url": "https://health.ri.gov/data/covid-19/",
+    "aggregate": "county",
+    "rating": 0.45098039215686275,
     "coordinates": [
       -71.5075,
       41.584
@@ -147696,33 +147698,5 @@
     "countyId": "fips:26163",
     "name": "Detroit City, Wayne County, Michigan, United States",
     "level": "city"
-  },
-  {
-    "state": "Nevada",
-    "country": "United States",
-    "aggregate": "county",
-    "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/",
-    "sources": [
-      {
-        "name": "Carson City Health and Human Services",
-        "url": "https://gethealthycarsoncity.org/",
-        "description": "Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties."
-      }
-    ],
-    "name": "DeprecatedError",
-    "rating": 0.2549019607843137,
-    "coordinates": [
-      -117.023,
-      38.502
-    ],
-    "tz": [
-      "America/Los_Angeles"
-    ],
-    "featureId": "iso2:US-NV",
-    "population": 3080156,
-    "populationDensity": 10.741958336673978,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV",
-    "level": "state"
   }
 ]

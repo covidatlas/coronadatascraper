@@ -1101,7 +1101,7 @@
       }
     ],
     "aggregate": "state",
-    "priority": 100,
+    "priority": 0.5,
     "timeseries": false,
     "headless": false,
     "certValidation": true,
@@ -3107,28 +3107,6 @@
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
     "stateId": "iso2:US-KS"
-  },
-  {
-    "state": "Nevada",
-    "country": "United States",
-    "aggregate": "county",
-    "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/",
-    "sources": [
-      {
-        "name": "Carson City Health and Human Services",
-        "url": "https://gethealthycarsoncity.org/",
-        "description": "Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties."
-      }
-    ],
-    "certValidation": false,
-    "type": "table",
-    "timeseries": false,
-    "headless": false,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV"
   },
   {
     "state": "Wyoming",
