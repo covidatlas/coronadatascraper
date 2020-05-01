@@ -79,17 +79,16 @@ const getContributors = (module.exports.getContributors = function(
 });
 
 module.exports.getSingleContributorLink = function(location) {
-  const curators = getContributors(location.curators, { shortNames: true, link: false });
-  const sources = getContributors(location.sources, { shortNames: true, link: false });
-  const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
   let html = '';
-  html += `<a class="spectrum-Link" target="_blank" href="${location.url}">`;
   if (location.curators) {
+    const curators = getContributors(location.curators, { shortNames: true, link: true });
     html += `<strong>${curators}</strong>`;
   } else if (location.sources) {
+    const sources = getContributors(location.sources, { shortNames: true, link: true });
     html += `<strong>${sources}</strong>`;
   } else {
-    html += `<strong>${sourceURLShort}</strong>`;
+    const sourceURLShort = location.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
+    html += `<strong><a class="spectrum-Link" target="_blank" href="${location.url}">${sourceURLShort}</a></strong>`;
   }
   html += '</a>';
   return html;

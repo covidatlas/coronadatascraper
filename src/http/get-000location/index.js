@@ -123,7 +123,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
-      <p class="spectrum-Body spectrum-Body--S">We assign a data transparency rating to each source based on the technical complexity of pulling their data.</p>
+      <p class="spectrum-Body spectrum-Body--S">We assign a <a class="spectrum-Link" href="/sources">data transparency rating</a> to each source based on the ease of acquisition and completeness of the data.</p>
       ${ratingTemplate(rating)}
     </section>
 `;
@@ -134,7 +134,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
         <h4 class="spectrum-Heading spectrum-Heading--S">Location cross-check</h4>
         <p class="spectrum-Body spectrum-Body--S">The ${
           constants.name
-        } crawler checks multiple sources for the same data and reports on inconsistencies.</p>
+        } crawler checks multiple sources for the same data and reports inconsistencies.</p>
         ${crosscheckTemplate(crosscheckReport)}
       </section>
   `;
