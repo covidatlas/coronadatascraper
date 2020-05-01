@@ -3645,6 +3645,43 @@
     "level": "country"
   },
   {
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "cases": 850,
+    "tested": 58009,
+    "recovered": 96,
+    "deaths": 15,
+    "active": 739,
+    "rating": 0.5490196078431373,
+    "coordinates": [
+      33.423500000000004,
+      35.1655
+    ],
+    "tz": [
+      "Europe/Nicosia"
+    ],
+    "featureId": "iso1:CY",
+    "population": 1141166,
+    "populationDensity": 126.68557056559139,
+    "countryId": "iso1:CY",
+    "name": "Cyprus",
+    "level": "country"
+  },
+  {
     "country": "Czechia",
     "url": "https://onemocneni-aktualne.mzcr.cz/",
     "sources": [
@@ -25146,6 +25183,461 @@
     "level": "state"
   },
   {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Drenthe",
+    "cases": 473,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      6.6065000000000005,
+      52.9105
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-DR",
+    "population": 491792,
+    "populationDensity": 184.34964867856465,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-DR",
+    "name": "Drenthe, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Flevoland",
+    "cases": 722,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.529999999999999,
+      52.545
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Friesland",
+    "cases": 526,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.6455,
+      53.1405
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-FR",
+    "population": 646317,
+    "populationDensity": 163.28013649230112,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-FR",
+    "name": "Friesland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Gelderland",
+    "cases": 5056,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.9145,
+      52.126000000000005
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-GE",
+    "population": 2019692,
+    "populationDensity": 393.68393658244315,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-GE",
+    "name": "Gelderland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Groningen",
+    "cases": 338,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      6.693,
+      53.177
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-GR",
+    "population": 582728,
+    "populationDensity": 243.53375513882372,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-GR",
+    "name": "Groningen, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Limburg",
+    "cases": 4098,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.896,
+      51.2645
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-LI",
+    "population": 1120006,
+    "populationDensity": 507.79806543154643,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-LI",
+    "name": "Limburg, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "North Brabant",
+    "cases": 8162,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.119,
+      51.525999999999996
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-NB",
+    "population": 2256848,
+    "populationDensity": 444.2149831807058,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-NB",
+    "name": "North Brabant, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "North Holland",
+    "cases": 5734,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      4.935499999999999,
+      52.6755
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-NH",
+    "population": 2813466,
+    "populationDensity": 827.9149066031525,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-NH",
+    "name": "North Holland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Overijssel",
+    "cases": 2706,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      6.425,
+      52.486000000000004
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Utrecht",
+    "cases": 2806,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      5.2095,
+      52.0805
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-UT",
+    "population": 1253672,
+    "populationDensity": 801.6821954407629,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-UT",
+    "name": "Utrecht, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Zeeland",
+    "cases": 580,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      3.8175,
+      51.487
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-ZE",
+    "population": 380726,
+    "populationDensity": 166.56233165423757,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-ZE",
+    "name": "Zeeland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "South Holland",
+    "cases": 8115,
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      4.432,
+      51.986000000000004
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-ZH",
+    "population": 3577032,
+    "populationDensity": 1143.6685140297313,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-ZH",
+    "name": "South Holland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "hospitalized": 10769,
+    "deaths": 4795,
+    "cases": 39316,
+    "rating": 0.39215686274509803,
+    "coordinates": [
+      -31.422999999999995,
+      32.7705
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso1:NL",
+    "population": 17100715,
+    "populationDensity": 443.1740036917352,
+    "countryId": "iso1:NL",
+    "name": "Netherlands",
+    "level": "country"
+  },
+  {
     "country": "New Zealand",
     "maintainers": [
       {
@@ -30364,8 +30856,10 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
+    "deaths": 2576,
     "cases": 21092,
-    "rating": 0.17647058823529413,
+    "hospitalized": 1476,
+    "rating": 0.2549019607843137,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -37626,7 +38120,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-30",
     "state": "Kyiv",
     "cases": 1401,
     "deaths": 25,
@@ -48046,7 +48540,7 @@
       }
     ],
     "county": "Fulton County",
-    "cases": 2816,
+    "cases": 2819,
     "deaths": 118,
     "hospitalized": 537,
     "rating": 0.47058823529411764,
@@ -48110,7 +48604,7 @@
       }
     ],
     "county": "Gwinnett County",
-    "cases": 1787,
+    "cases": 1792,
     "deaths": 57,
     "hospitalized": 355,
     "rating": 0.47058823529411764,
@@ -48142,7 +48636,7 @@
       }
     ],
     "county": "Cobb County",
-    "cases": 1617,
+    "cases": 1619,
     "deaths": 94,
     "hospitalized": 473,
     "rating": 0.47058823529411764,
@@ -48238,9 +48732,9 @@
       }
     ],
     "county": "Clayton County",
-    "cases": 714,
-    "deaths": 28,
-    "hospitalized": 135,
+    "cases": 715,
+    "deaths": 29,
+    "hospitalized": 136,
     "rating": 0.47058823529411764,
     "coordinates": [
       -84.3515,
@@ -48589,6 +49083,38 @@
         "name": "Georgia Department of Public Health"
       }
     ],
+    "county": "Habersham County",
+    "cases": 304,
+    "deaths": 8,
+    "hospitalized": 49,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -83.51050000000001,
+      34.6295
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:13137",
+    "population": 45328,
+    "populationDensity": 62.61047145676638,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GA",
+    "countyId": "fips:13137",
+    "name": "Habersham County, Georgia, United States",
+    "level": "county"
+  },
+  {
+    "state": "Georgia",
+    "country": "United States",
+    "url": "https://ga-covid19.ondemand.sas.com/",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://dph.georgia.gov",
+        "name": "Georgia Department of Public Health"
+      }
+    ],
     "county": "Muscogee County",
     "cases": 303,
     "deaths": 7,
@@ -48640,38 +49166,6 @@
     "stateId": "iso2:US-GA",
     "countyId": "fips:13117",
     "name": "Forsyth County, Georgia, United States",
-    "level": "county"
-  },
-  {
-    "state": "Georgia",
-    "country": "United States",
-    "url": "https://ga-covid19.ondemand.sas.com/",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://dph.georgia.gov",
-        "name": "Georgia Department of Public Health"
-      }
-    ],
-    "county": "Habersham County",
-    "cases": 263,
-    "deaths": 8,
-    "hospitalized": 49,
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -83.51050000000001,
-      34.6295
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:13137",
-    "population": 45328,
-    "populationDensity": 62.61047145676638,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-GA",
-    "countyId": "fips:13137",
-    "name": "Habersham County, Georgia, United States",
     "level": "county"
   },
   {
@@ -48784,7 +49278,7 @@
     "county": "Baldwin County",
     "cases": 215,
     "deaths": 8,
-    "hospitalized": 41,
+    "hospitalized": 40,
     "rating": 0.47058823529411764,
     "coordinates": [
       -83.237,
@@ -49357,6 +49851,38 @@
         "name": "Georgia Department of Public Health"
       }
     ],
+    "county": "Butts County",
+    "cases": 145,
+    "deaths": 11,
+    "hospitalized": 15,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -83.96549999999999,
+      33.312
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:13035",
+    "population": 24936,
+    "populationDensity": 51.13715825507977,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GA",
+    "countyId": "fips:13035",
+    "name": "Butts County, Georgia, United States",
+    "level": "county"
+  },
+  {
+    "state": "Georgia",
+    "country": "United States",
+    "url": "https://ga-covid19.ondemand.sas.com/",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://dph.georgia.gov",
+        "name": "Georgia Department of Public Health"
+      }
+    ],
     "county": "Floyd County",
     "cases": 144,
     "deaths": 11,
@@ -49376,38 +49902,6 @@
     "stateId": "iso2:US-GA",
     "countyId": "fips:13115",
     "name": "Floyd County, Georgia, United States",
-    "level": "county"
-  },
-  {
-    "state": "Georgia",
-    "country": "United States",
-    "url": "https://ga-covid19.ondemand.sas.com/",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://dph.georgia.gov",
-        "name": "Georgia Department of Public Health"
-      }
-    ],
-    "county": "Butts County",
-    "cases": 141,
-    "deaths": 11,
-    "hospitalized": 15,
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -83.96549999999999,
-      33.312
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:13035",
-    "population": 24936,
-    "populationDensity": 51.13715825507977,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-GA",
-    "countyId": "fips:13035",
-    "name": "Butts County, Georgia, United States",
     "level": "county"
   },
   {
@@ -49613,6 +50107,38 @@
         "name": "Georgia Department of Public Health"
       }
     ],
+    "county": "Calhoun County",
+    "cases": 106,
+    "deaths": 4,
+    "hospitalized": 7,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -84.6165,
+      31.536
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:13037",
+    "population": 6189,
+    "populationDensity": 8.40845245896507,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GA",
+    "countyId": "fips:13037",
+    "name": "Calhoun County, Georgia, United States",
+    "level": "county"
+  },
+  {
+    "state": "Georgia",
+    "country": "United States",
+    "url": "https://ga-covid19.ondemand.sas.com/",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://dph.georgia.gov",
+        "name": "Georgia Department of Public Health"
+      }
+    ],
     "county": "Whitfield County",
     "cases": 105,
     "deaths": 4,
@@ -49645,40 +50171,8 @@
         "name": "Georgia Department of Public Health"
       }
     ],
-    "county": "Calhoun County",
-    "cases": 99,
-    "deaths": 4,
-    "hospitalized": 7,
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -84.6165,
-      31.536
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:13037",
-    "population": 6189,
-    "populationDensity": 8.40845245896507,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-GA",
-    "countyId": "fips:13037",
-    "name": "Calhoun County, Georgia, United States",
-    "level": "county"
-  },
-  {
-    "state": "Georgia",
-    "country": "United States",
-    "url": "https://ga-covid19.ondemand.sas.com/",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://dph.georgia.gov",
-        "name": "Georgia Department of Public Health"
-      }
-    ],
     "county": "Jackson County",
-    "cases": 93,
+    "cases": 94,
     "deaths": 2,
     "hospitalized": 16,
     "rating": 0.47058823529411764,
@@ -49870,7 +50364,7 @@
       }
     ],
     "county": "Stephens County",
-    "cases": 78,
+    "cases": 79,
     "deaths": 1,
     "hospitalized": 21,
     "rating": 0.47058823529411764,
@@ -50222,7 +50716,7 @@
       }
     ],
     "county": "Brooks County",
-    "cases": 58,
+    "cases": 59,
     "deaths": 6,
     "hospitalized": 4,
     "rating": 0.47058823529411764,
@@ -50541,6 +51035,38 @@
         "name": "Georgia Department of Public Health"
       }
     ],
+    "county": "Hancock County",
+    "cases": 47,
+    "deaths": 2,
+    "hospitalized": 5,
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -83.00999999999999,
+      33.2595
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:13141",
+    "population": 8457,
+    "populationDensity": 6.8285448030137665,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-GA",
+    "countyId": "fips:13141",
+    "name": "Hancock County, Georgia, United States",
+    "level": "county"
+  },
+  {
+    "state": "Georgia",
+    "country": "United States",
+    "url": "https://ga-covid19.ondemand.sas.com/",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://dph.georgia.gov",
+        "name": "Georgia Department of Public Health"
+      }
+    ],
     "county": "Peach County",
     "cases": 46,
     "deaths": 2,
@@ -50573,25 +51099,25 @@
         "name": "Georgia Department of Public Health"
       }
     ],
-    "county": "Hancock County",
+    "county": "Lumpkin County",
     "cases": 45,
     "deaths": 2,
-    "hospitalized": 4,
+    "hospitalized": 10,
     "rating": 0.47058823529411764,
     "coordinates": [
-      -83.00999999999999,
-      33.2595
+      -84.012,
+      34.579499999999996
     ],
     "tz": [
       "America/New_York"
     ],
-    "featureId": "fips:13141",
-    "population": 8457,
-    "populationDensity": 6.8285448030137665,
+    "featureId": "fips:13187",
+    "population": 33610,
+    "populationDensity": 45.696919413334435,
     "countryId": "iso1:US",
     "stateId": "iso2:US-GA",
-    "countyId": "fips:13141",
-    "name": "Hancock County, Georgia, United States",
+    "countyId": "fips:13187",
+    "name": "Lumpkin County, Georgia, United States",
     "level": "county"
   },
   {
@@ -50624,38 +51150,6 @@
     "stateId": "iso2:US-GA",
     "countyId": "fips:13189",
     "name": "McDuffie County, Georgia, United States",
-    "level": "county"
-  },
-  {
-    "state": "Georgia",
-    "country": "United States",
-    "url": "https://ga-covid19.ondemand.sas.com/",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://dph.georgia.gov",
-        "name": "Georgia Department of Public Health"
-      }
-    ],
-    "county": "Lumpkin County",
-    "cases": 44,
-    "deaths": 2,
-    "hospitalized": 10,
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -84.012,
-      34.579499999999996
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:13187",
-    "population": 33610,
-    "populationDensity": 45.696919413334435,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-GA",
-    "countyId": "fips:13187",
-    "name": "Lumpkin County, Georgia, United States",
     "level": "county"
   },
   {
@@ -100920,6 +101414,1928 @@
     "level": "county"
   },
   {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Albany County",
+    "cases": 1165,
+    "tested": 10310,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.971,
+      42.614
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36001",
+    "population": 305506,
+    "populationDensity": 220.57996805127894,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36001",
+    "name": "Albany County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Allegany County",
+    "cases": 35,
+    "tested": 543,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.01599999999999,
+      42.2605
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36003",
+    "population": 46091,
+    "populationDensity": 17.22793192332426,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36003",
+    "name": "Allegany County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Bronx County",
+    "cases": 37244,
+    "tested": 90231,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.849,
+      40.8525
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36005",
+    "population": 1418207,
+    "populationDensity": 10764.779516441715,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36005",
+    "name": "Bronx County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Broome County",
+    "cases": 284,
+    "tested": 2361,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.76599999999999,
+      42.206999999999994
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36007",
+    "population": 190488,
+    "populationDensity": 102.96908804119454,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36007",
+    "name": "Broome County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Cattaraugus County",
+    "cases": 47,
+    "tested": 909,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.68450000000001,
+      42.2705
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36009",
+    "population": 76117,
+    "populationDensity": 22.18060822566756,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36009",
+    "name": "Cattaraugus County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Cayuga County",
+    "cases": 48,
+    "tested": 957,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.503,
+      43.019
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36011",
+    "population": 76576,
+    "populationDensity": 40.121490304653506,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36011",
+    "name": "Cayuga County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Chautauqua County",
+    "cases": 33,
+    "tested": 1160,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -79.4115,
+      42.284
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36013",
+    "population": 126903,
+    "populationDensity": 45.18313529151627,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36013",
+    "name": "Chautauqua County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Chemung County",
+    "cases": 122,
+    "tested": 1563,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.751,
+      42.147
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36015",
+    "population": 83456,
+    "populationDensity": 78.38404327010153,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36015",
+    "name": "Chemung County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Chenango County",
+    "cases": 98,
+    "tested": 789,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.593,
+      42.47
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36017",
+    "population": 47207,
+    "populationDensity": 20.27229596889498,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36017",
+    "name": "Chenango County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Clinton County",
+    "cases": 59,
+    "tested": 748,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.68,
+      44.7205
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36019",
+    "population": 80485,
+    "populationDensity": 27.807796654107708,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36019",
+    "name": "Clinton County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Columbia County",
+    "cases": 170,
+    "tested": 1302,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.64150000000001,
+      42.244
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36021",
+    "population": 59461,
+    "populationDensity": 35.331431481724785,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36021",
+    "name": "Columbia County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Cortland County",
+    "cases": 28,
+    "tested": 1112,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.0695,
+      42.5995
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36023",
+    "population": 47581,
+    "populationDensity": 36.57587695204271,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36023",
+    "name": "Cortland County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Delaware County",
+    "cases": 61,
+    "tested": 729,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.925,
+      42.183
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36025",
+    "population": 44135,
+    "populationDensity": 11.568554139160673,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36025",
+    "name": "Delaware County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Dutchess County",
+    "cases": 2954,
+    "tested": 14642,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.7435,
+      41.7595
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36027",
+    "population": 294218,
+    "populationDensity": 137.47746221984798,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36027",
+    "name": "Dutchess County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Erie County",
+    "cases": 3319,
+    "tested": 16104,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.8,
+      42.768
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36029",
+    "population": 918702,
+    "populationDensity": 336.596879603583,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36029",
+    "name": "Erie County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Essex County",
+    "cases": 28,
+    "tested": 363,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.8155,
+      44.146
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36031",
+    "population": 36885,
+    "populationDensity": 7.432662881226934,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36031",
+    "name": "Essex County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Franklin County",
+    "cases": 15,
+    "tested": 374,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.318,
+      44.551
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36033",
+    "population": 50022,
+    "populationDensity": 11.371407676575602,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36033",
+    "name": "Franklin County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Fulton County",
+    "cases": 71,
+    "tested": 791,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.43549999999999,
+      43.1345
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36035",
+    "population": 53383,
+    "populationDensity": 38.72249653316655,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36035",
+    "name": "Fulton County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Genesee County",
+    "cases": 153,
+    "tested": 1006,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.185,
+      42.9985
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36037",
+    "population": 57280,
+    "populationDensity": 44.4995336098648,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36037",
+    "name": "Genesee County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Greene County",
+    "cases": 131,
+    "tested": 1124,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.1565,
+      42.2805
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36039",
+    "population": 47188,
+    "populationDensity": 27.76149712966158,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36039",
+    "name": "Greene County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Hamilton County",
+    "cases": 3,
+    "tested": 38,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.4575,
+      43.668000000000006
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36041",
+    "population": 4416,
+    "populationDensity": 0.9419270535473098,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36041",
+    "name": "Hamilton County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Herkimer County",
+    "cases": 58,
+    "tested": 792,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.9575,
+      43.461
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36043",
+    "population": 61319,
+    "populationDensity": 16.246504372722484,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36043",
+    "name": "Herkimer County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Jefferson County",
+    "cases": 61,
+    "tested": 1518,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.94999999999999,
+      44.0355
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36045",
+    "population": 109834,
+    "populationDensity": 30.425906390844933,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36045",
+    "name": "Jefferson County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Kings County",
+    "cases": 44872,
+    "tested": 111490,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.9375,
+      40.653999999999996
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36047",
+    "population": 2559903,
+    "populationDensity": 11951.345617033212,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36047",
+    "name": "Kings County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Lewis County",
+    "cases": 9,
+    "tested": 314,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.4805,
+      43.819
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36049",
+    "population": 26296,
+    "populationDensity": 7.861695321351082,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36049",
+    "name": "Lewis County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Livingston County",
+    "cases": 69,
+    "tested": 1025,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.774,
+      42.7295
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36051",
+    "population": 62914,
+    "populationDensity": 37.90911607704711,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36051",
+    "name": "Livingston County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Madison County",
+    "cases": 131,
+    "tested": 1215,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.6165,
+      42.954499999999996
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36053",
+    "population": 70941,
+    "populationDensity": 41.278065278115044,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36053",
+    "name": "Madison County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Monroe County",
+    "cases": 1441,
+    "tested": 14015,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.684,
+      43.1545
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36055",
+    "population": 741770,
+    "populationDensity": 428.9268838070199,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36055",
+    "name": "Monroe County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Montgomery County",
+    "cases": 53,
+    "tested": 698,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.424,
+      42.91
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36057",
+    "population": 49221,
+    "populationDensity": 46.25591974309038,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36057",
+    "name": "Montgomery County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Nassau County",
+    "cases": 35854,
+    "tested": 95200,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.5965,
+      40.7525
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36059",
+    "population": 1356924,
+    "populationDensity": 1607.4345993538823,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36059",
+    "name": "Nassau County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "New York County",
+    "cases": 21920,
+    "tested": 66602,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.977,
+      40.781
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36061",
+    "population": 1628706,
+    "populationDensity": 18173.738965346274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36061",
+    "name": "New York County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Niagara County",
+    "cases": 420,
+    "tested": 2544,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.7675,
+      43.197
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36063",
+    "population": 209281,
+    "populationDensity": 151.32769351743065,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36063",
+    "name": "Niagara County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Oneida County",
+    "cases": 439,
+    "tested": 3426,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.47800000000001,
+      43.239000000000004
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36065",
+    "population": 228671,
+    "populationDensity": 70.18456942434973,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36065",
+    "name": "Oneida County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Onondaga County",
+    "cases": 832,
+    "tested": 10667,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.197,
+      43.0215
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36067",
+    "population": 460528,
+    "populationDensity": 220.48078734789385,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36067",
+    "name": "Onondaga County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Ontario County",
+    "cases": 90,
+    "tested": 1611,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.2875,
+      42.808
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36069",
+    "population": 109777,
+    "populationDensity": 64.01695756554616,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36069",
+    "name": "Ontario County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Orange County",
+    "cases": 8650,
+    "tested": 27222,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.3545,
+      41.388000000000005
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36071",
+    "population": 384940,
+    "populationDensity": 177.1172494814029,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36071",
+    "name": "Orange County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Orleans County",
+    "cases": 89,
+    "tested": 628,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.231,
+      43.253
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36073",
+    "population": 40352,
+    "populationDensity": 39.671212672755296,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36073",
+    "name": "Orleans County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Oswego County",
+    "cases": 63,
+    "tested": 1592,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.1865,
+      43.4315
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36075",
+    "population": 117124,
+    "populationDensity": 44.44107131954328,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36075",
+    "name": "Oswego County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Otsego County",
+    "cases": 67,
+    "tested": 1246,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.023,
+      42.611000000000004
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36077",
+    "population": 59493,
+    "populationDensity": 22.68744298390639,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36077",
+    "name": "Otsego County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Putnam County",
+    "cases": 970,
+    "tested": 4170,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.7565,
+      41.4245
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36079",
+    "population": 98320,
+    "populationDensity": 154.33998464910556,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36079",
+    "name": "Putnam County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Queens County",
+    "cases": 51631,
+    "tested": 120689,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.831,
+      40.674
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36081",
+    "population": 2253858,
+    "populationDensity": 6886.70608880225,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36081",
+    "name": "Queens County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Rensselaer County",
+    "cases": 287,
+    "tested": 3308,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.5255,
+      42.711
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36083",
+    "population": 158714,
+    "populationDensity": 92.12667254306231,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36083",
+    "name": "Rensselaer County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Richmond County",
+    "cases": 11811,
+    "tested": 33486,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.157,
+      40.574
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36085",
+    "population": 476143,
+    "populationDensity": 2956.4781473945527,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36085",
+    "name": "Richmond County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Rockland County",
+    "cases": 11708,
+    "tested": 30593,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.061,
+      41.161
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36087",
+    "population": 325789,
+    "populationDensity": 630.2894215900249,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36087",
+    "name": "Rockland County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Saratoga County",
+    "cases": 354,
+    "tested": 5039,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.868,
+      43.0865
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36091",
+    "population": 229863,
+    "populationDensity": 105.05358451656703,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36091",
+    "name": "Saratoga County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Schenectady County",
+    "cases": 501,
+    "tested": 4174,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.057,
+      42.834
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36093",
+    "population": 155299,
+    "populationDensity": 287.9516737299475,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36093",
+    "name": "Schenectady County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Schoharie County",
+    "cases": 42,
+    "tested": 609,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.4385,
+      42.5925
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36095",
+    "population": 30999,
+    "populationDensity": 19.076682562325843,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36095",
+    "name": "Schoharie County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Schuyler County",
+    "cases": 7,
+    "tested": 412,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.863,
+      42.3905
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36097",
+    "population": 17807,
+    "populationDensity": 20.107402602314977,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36097",
+    "name": "Schuyler County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Seneca County",
+    "cases": 39,
+    "tested": 475,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.7835,
+      42.783
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36099",
+    "population": 34016,
+    "populationDensity": 33.67125149537959,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36099",
+    "name": "Seneca County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "St. Lawrence County",
+    "cases": 173,
+    "tested": 1826,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -75.193,
+      44.533
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36089",
+    "population": 107740,
+    "populationDensity": 14.749293227415425,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36089",
+    "name": "St. Lawrence County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Steuben County",
+    "cases": 216,
+    "tested": 2037,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.3575,
+      42.289500000000004
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36101",
+    "population": 95379,
+    "populationDensity": 26.197095218247895,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36101",
+    "name": "Steuben County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Suffolk County",
+    "cases": 33664,
+    "tested": 91361,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -72.6765,
+      40.95
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36103",
+    "population": 1476601,
+    "populationDensity": 489.5746907018265,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36103",
+    "name": "Suffolk County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Sullivan County",
+    "cases": 838,
+    "tested": 3743,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.755,
+      41.718999999999994
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36105",
+    "population": 75432,
+    "populationDensity": 29.217629744089145,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36105",
+    "name": "Sullivan County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Tioga County",
+    "cases": 88,
+    "tested": 884,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.322,
+      42.20399999999999
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36107",
+    "population": 48203,
+    "populationDensity": 35.57368944745211,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36107",
+    "name": "Tioga County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Tompkins County",
+    "cases": 128,
+    "tested": 3511,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -76.4675,
+      42.445
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36109",
+    "population": 102180,
+    "populationDensity": 80.18882208268465,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36109",
+    "name": "Tompkins County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Ulster County",
+    "cases": 1279,
+    "tested": 8082,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -74.346,
+      41.879000000000005
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36111",
+    "population": 177573,
+    "populationDensity": 58.98039976444965,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36111",
+    "name": "Ulster County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Warren County",
+    "cases": 176,
+    "tested": 1373,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.82650000000001,
+      43.513000000000005
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36113",
+    "population": 63944,
+    "populationDensity": 26.470311547201234,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36113",
+    "name": "Warren County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Washington County",
+    "cases": 148,
+    "tested": 1005,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.439,
+      43.3745
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36115",
+    "population": 61204,
+    "populationDensity": 27.942636384936133,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36115",
+    "name": "Washington County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Wayne County",
+    "cases": 71,
+    "tested": 1239,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.039,
+      43.178
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36117",
+    "population": 89918,
+    "populationDensity": 56.71539515778241,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36117",
+    "name": "Wayne County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Westchester County",
+    "cases": 28970,
+    "tested": 92829,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -73.733,
+      41.1215
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36119",
+    "population": 967506,
+    "populationDensity": 780.3868530036576,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36119",
+    "name": "Westchester County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Wyoming County",
+    "cases": 67,
+    "tested": 568,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -78.22149999999999,
+      42.6945
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36121",
+    "population": 39859,
+    "populationDensity": 25.796541346636655,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36121",
+    "name": "Wyoming County, New York, United States",
+    "level": "county"
+  },
+  {
+    "state": "New York",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
+        "name": "New York State Department of Health"
+      }
+    ],
+    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "county": "Yates County",
+    "cases": 18,
+    "tested": 262,
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -77.1285,
+      42.61150000000001
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:36123",
+    "population": 24913,
+    "populationDensity": 25.490011766418448,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NY",
+    "countyId": "fips:36123",
+    "name": "Yates County, New York, United States",
+    "level": "county"
+  },
+  {
     "state": "Ohio",
     "country": "United States",
     "aggregate": "county",
@@ -139124,1887 +141540,6 @@
         "github": "nytimes"
       }
     ],
-    "county": "Albany County",
-    "state": "New York",
-    "cases": 1067,
-    "deaths": 47,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.971,
-      42.614
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36001",
-    "population": 305506,
-    "populationDensity": 220.57996805127894,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36001",
-    "name": "Albany County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Allegany County",
-    "state": "New York",
-    "cases": 35,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.01599999999999,
-      42.2605
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36003",
-    "population": 46091,
-    "populationDensity": 17.22793192332426,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36003",
-    "name": "Allegany County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Broome County",
-    "state": "New York",
-    "cases": 273,
-    "deaths": 15,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.76599999999999,
-      42.206999999999994
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36007",
-    "population": 190488,
-    "populationDensity": 102.96908804119454,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36007",
-    "name": "Broome County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Cattaraugus County",
-    "state": "New York",
-    "cases": 47,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.68450000000001,
-      42.2705
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36009",
-    "population": 76117,
-    "populationDensity": 22.18060822566756,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36009",
-    "name": "Cattaraugus County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Cayuga County",
-    "state": "New York",
-    "cases": 48,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.503,
-      43.019
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36011",
-    "population": 76576,
-    "populationDensity": 40.121490304653506,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36011",
-    "name": "Cayuga County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Chautauqua County",
-    "state": "New York",
-    "cases": 31,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -79.4115,
-      42.284
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36013",
-    "population": 126903,
-    "populationDensity": 45.18313529151627,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36013",
-    "name": "Chautauqua County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Chemung County",
-    "state": "New York",
-    "cases": 119,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.751,
-      42.147
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36015",
-    "population": 83456,
-    "populationDensity": 78.38404327010153,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36015",
-    "name": "Chemung County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Chenango County",
-    "state": "New York",
-    "cases": 96,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.593,
-      42.47
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36017",
-    "population": 47207,
-    "populationDensity": 20.27229596889498,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36017",
-    "name": "Chenango County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Clinton County",
-    "state": "New York",
-    "cases": 59,
-    "deaths": 4,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.68,
-      44.7205
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36019",
-    "population": 80485,
-    "populationDensity": 27.807796654107708,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36019",
-    "name": "Clinton County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Columbia County",
-    "state": "New York",
-    "cases": 165,
-    "deaths": 16,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.64150000000001,
-      42.244
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36021",
-    "population": 59461,
-    "populationDensity": 35.331431481724785,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36021",
-    "name": "Columbia County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Cortland County",
-    "state": "New York",
-    "cases": 28,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.0695,
-      42.5995
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36023",
-    "population": 47581,
-    "populationDensity": 36.57587695204271,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36023",
-    "name": "Cortland County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Delaware County",
-    "state": "New York",
-    "cases": 60,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.925,
-      42.183
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36025",
-    "population": 44135,
-    "populationDensity": 11.568554139160673,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36025",
-    "name": "Delaware County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Dutchess County",
-    "state": "New York",
-    "cases": 2881,
-    "deaths": 69,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.7435,
-      41.7595
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36027",
-    "population": 294218,
-    "populationDensity": 137.47746221984798,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36027",
-    "name": "Dutchess County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Erie County",
-    "state": "New York",
-    "cases": 3196,
-    "deaths": 220,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.8,
-      42.768
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36029",
-    "population": 918702,
-    "populationDensity": 336.596879603583,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36029",
-    "name": "Erie County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Essex County",
-    "state": "New York",
-    "cases": 33,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.8155,
-      44.146
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36031",
-    "population": 36885,
-    "populationDensity": 7.432662881226934,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36031",
-    "name": "Essex County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Franklin County",
-    "state": "New York",
-    "cases": 15,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.318,
-      44.551
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36033",
-    "population": 50022,
-    "populationDensity": 11.371407676575602,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36033",
-    "name": "Franklin County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Fulton County",
-    "state": "New York",
-    "cases": 67,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.43549999999999,
-      43.1345
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36035",
-    "population": 53383,
-    "populationDensity": 38.72249653316655,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36035",
-    "name": "Fulton County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Genesee County",
-    "state": "New York",
-    "cases": 152,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.185,
-      42.9985
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36037",
-    "population": 57280,
-    "populationDensity": 44.4995336098648,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36037",
-    "name": "Genesee County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Greene County",
-    "state": "New York",
-    "cases": 114,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.1565,
-      42.2805
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36039",
-    "population": 47188,
-    "populationDensity": 27.76149712966158,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36039",
-    "name": "Greene County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Hamilton County",
-    "state": "New York",
-    "cases": 3,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.4575,
-      43.668000000000006
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36041",
-    "population": 4416,
-    "populationDensity": 0.9419270535473098,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36041",
-    "name": "Hamilton County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Herkimer County",
-    "state": "New York",
-    "cases": 58,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.9575,
-      43.461
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36043",
-    "population": 61319,
-    "populationDensity": 16.246504372722484,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36043",
-    "name": "Herkimer County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Jefferson County",
-    "state": "New York",
-    "cases": 60,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.94999999999999,
-      44.0355
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36045",
-    "population": 109834,
-    "populationDensity": 30.425906390844933,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36045",
-    "name": "Jefferson County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Lewis County",
-    "state": "New York",
-    "cases": 9,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.4805,
-      43.819
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36049",
-    "population": 26296,
-    "populationDensity": 7.861695321351082,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36049",
-    "name": "Lewis County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Livingston County",
-    "state": "New York",
-    "cases": 67,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.774,
-      42.7295
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36051",
-    "population": 62914,
-    "populationDensity": 37.90911607704711,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36051",
-    "name": "Livingston County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Madison County",
-    "state": "New York",
-    "cases": 126,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.6165,
-      42.954499999999996
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36053",
-    "population": 70941,
-    "populationDensity": 41.278065278115044,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36053",
-    "name": "Madison County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Monroe County",
-    "state": "New York",
-    "cases": 1404,
-    "deaths": 93,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.684,
-      43.1545
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36055",
-    "population": 741770,
-    "populationDensity": 428.9268838070199,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36055",
-    "name": "Monroe County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Montgomery County",
-    "state": "New York",
-    "cases": 51,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.424,
-      42.91
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36057",
-    "population": 49221,
-    "populationDensity": 46.25591974309038,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36057",
-    "name": "Montgomery County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Nassau County",
-    "state": "New York",
-    "cases": 35505,
-    "deaths": 2077,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.5965,
-      40.7525
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36059",
-    "population": 1356924,
-    "populationDensity": 1607.4345993538823,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36059",
-    "name": "Nassau County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Niagara County",
-    "state": "New York",
-    "cases": 401,
-    "deaths": 11,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.7675,
-      43.197
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36063",
-    "population": 209281,
-    "populationDensity": 151.32769351743065,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36063",
-    "name": "Niagara County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Oneida County",
-    "state": "New York",
-    "cases": 422,
-    "deaths": 14,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.47800000000001,
-      43.239000000000004
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36065",
-    "population": 228671,
-    "populationDensity": 70.18456942434973,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36065",
-    "name": "Oneida County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Onondaga County",
-    "state": "New York",
-    "cases": 782,
-    "deaths": 33,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.197,
-      43.0215
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36067",
-    "population": 460528,
-    "populationDensity": 220.48078734789385,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36067",
-    "name": "Onondaga County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Ontario County",
-    "state": "New York",
-    "cases": 90,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.2875,
-      42.808
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36069",
-    "population": 109777,
-    "populationDensity": 64.01695756554616,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36069",
-    "name": "Ontario County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Orange County",
-    "state": "New York",
-    "cases": 8503,
-    "deaths": 232,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.3545,
-      41.388000000000005
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36071",
-    "population": 384940,
-    "populationDensity": 177.1172494814029,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36071",
-    "name": "Orange County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Orleans County",
-    "state": "New York",
-    "cases": 85,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.231,
-      43.253
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36073",
-    "population": 40352,
-    "populationDensity": 39.671212672755296,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36073",
-    "name": "Orleans County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Oswego County",
-    "state": "New York",
-    "cases": 63,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.1865,
-      43.4315
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36075",
-    "population": 117124,
-    "populationDensity": 44.44107131954328,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36075",
-    "name": "Oswego County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Otsego County",
-    "state": "New York",
-    "cases": 66,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.023,
-      42.611000000000004
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36077",
-    "population": 59493,
-    "populationDensity": 22.68744298390639,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36077",
-    "name": "Otsego County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Putnam County",
-    "state": "New York",
-    "cases": 946,
-    "deaths": 45,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.7565,
-      41.4245
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36079",
-    "population": 98320,
-    "populationDensity": 154.33998464910556,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36079",
-    "name": "Putnam County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Rensselaer County",
-    "state": "New York",
-    "cases": 262,
-    "deaths": 17,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.5255,
-      42.711
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36083",
-    "population": 158714,
-    "populationDensity": 92.12667254306231,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36083",
-    "name": "Rensselaer County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Rockland County",
-    "state": "New York",
-    "cases": 11586,
-    "deaths": 364,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.061,
-      41.161
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36087",
-    "population": 325789,
-    "populationDensity": 630.2894215900249,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36087",
-    "name": "Rockland County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Saratoga County",
-    "state": "New York",
-    "cases": 346,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.868,
-      43.0865
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36091",
-    "population": 229863,
-    "populationDensity": 105.05358451656703,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36091",
-    "name": "Saratoga County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Schenectady County",
-    "state": "New York",
-    "cases": 479,
-    "deaths": 25,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.057,
-      42.834
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36093",
-    "population": 155299,
-    "populationDensity": 287.9516737299475,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36093",
-    "name": "Schenectady County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Schoharie County",
-    "state": "New York",
-    "cases": 39,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.4385,
-      42.5925
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36095",
-    "population": 30999,
-    "populationDensity": 19.076682562325843,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36095",
-    "name": "Schoharie County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Schuyler County",
-    "state": "New York",
-    "cases": 7,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.863,
-      42.3905
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36097",
-    "population": 17807,
-    "populationDensity": 20.107402602314977,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36097",
-    "name": "Schuyler County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Seneca County",
-    "state": "New York",
-    "cases": 38,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.7835,
-      42.783
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36099",
-    "population": 34016,
-    "populationDensity": 33.67125149537959,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36099",
-    "name": "Seneca County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "St. Lawrence County",
-    "state": "New York",
-    "cases": 170,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -75.193,
-      44.533
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36089",
-    "population": 107740,
-    "populationDensity": 14.749293227415425,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36089",
-    "name": "St. Lawrence County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Steuben County",
-    "state": "New York",
-    "cases": 214,
-    "deaths": 11,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.3575,
-      42.289500000000004
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36101",
-    "population": 95379,
-    "populationDensity": 26.197095218247895,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36101",
-    "name": "Steuben County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Suffolk County",
-    "state": "New York",
-    "cases": 33265,
-    "deaths": 1205,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -72.6765,
-      40.95
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36103",
-    "population": 1476601,
-    "populationDensity": 489.5746907018265,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36103",
-    "name": "Suffolk County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Sullivan County",
-    "state": "New York",
-    "cases": 811,
-    "deaths": 12,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.755,
-      41.718999999999994
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36105",
-    "population": 75432,
-    "populationDensity": 29.217629744089145,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36105",
-    "name": "Sullivan County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tioga County",
-    "state": "New York",
-    "cases": 84,
-    "deaths": 5,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.322,
-      42.20399999999999
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36107",
-    "population": 48203,
-    "populationDensity": 35.57368944745211,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36107",
-    "name": "Tioga County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Tompkins County",
-    "state": "New York",
-    "cases": 127,
-    "deaths": 2,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -76.4675,
-      42.445
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36109",
-    "population": 102180,
-    "populationDensity": 80.18882208268465,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36109",
-    "name": "Tompkins County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Ulster County",
-    "state": "New York",
-    "cases": 1252,
-    "deaths": 6,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -74.346,
-      41.879000000000005
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36111",
-    "population": 177573,
-    "populationDensity": 58.98039976444965,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36111",
-    "name": "Ulster County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Warren County",
-    "state": "New York",
-    "cases": 152,
-    "deaths": 9,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.82650000000001,
-      43.513000000000005
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36113",
-    "population": 63944,
-    "populationDensity": 26.470311547201234,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36113",
-    "name": "Warren County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Washington County",
-    "state": "New York",
-    "cases": 134,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.439,
-      43.3745
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36115",
-    "population": 61204,
-    "populationDensity": 27.942636384936133,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36115",
-    "name": "Washington County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Wayne County",
-    "state": "New York",
-    "cases": 70,
-    "deaths": 0,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.039,
-      43.178
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36117",
-    "population": 89918,
-    "populationDensity": 56.71539515778241,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36117",
-    "name": "Wayne County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Westchester County",
-    "state": "New York",
-    "cases": 28625,
-    "deaths": 1119,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -73.733,
-      41.1215
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36119",
-    "population": 967506,
-    "populationDensity": 780.3868530036576,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36119",
-    "name": "Westchester County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Wyoming County",
-    "state": "New York",
-    "cases": 65,
-    "deaths": 3,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -78.22149999999999,
-      42.6945
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36121",
-    "population": 39859,
-    "populationDensity": 25.796541346636655,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36121",
-    "name": "Wyoming County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "Yates County",
-    "state": "New York",
-    "cases": 17,
-    "deaths": 1,
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.1285,
-      42.61150000000001
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36123",
-    "population": 24913,
-    "populationDensity": 25.490011766418448,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36123",
-    "name": "Yates County, New York, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
     "county": "Abbeville County",
     "state": "South Carolina",
     "cases": 29,
@@ -148181,226 +148716,6 @@
     ],
     "cases": 0,
     "deaths": 0,
-    "county": "Bronx County",
-    "state": "New York",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -73.849,
-      40.8525
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36005",
-    "population": 1418207,
-    "populationDensity": 10764.779516441715,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36005",
-    "name": "Bronx County, New York, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Kings County",
-    "state": "New York",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -73.9375,
-      40.653999999999996
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36047",
-    "population": 2559903,
-    "populationDensity": 11951.345617033212,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36047",
-    "name": "Kings County, New York, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 167478,
-    "deaths": 18069,
-    "county": "New York County",
-    "state": "New York",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -73.977,
-      40.781
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36061",
-    "population": 1628706,
-    "populationDensity": 18173.738965346274,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36061",
-    "name": "New York County, New York, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Queens County",
-    "state": "New York",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -73.831,
-      40.674
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36081",
-    "population": 2253858,
-    "populationDensity": 6886.70608880225,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36081",
-    "name": "Queens County, New York, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
-    "county": "Richmond County",
-    "state": "New York",
-    "rating": 0.5882352941176471,
-    "coordinates": [
-      -74.157,
-      40.574
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:36085",
-    "population": 476143,
-    "populationDensity": 2956.4781473945527,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY",
-    "countyId": "fips:36085",
-    "name": "Richmond County, New York, United States",
-    "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 0,
-    "deaths": 0,
     "county": "Bennett County",
     "state": "South Dakota",
     "rating": 0.5882352941176471,
@@ -152543,48 +152858,6 @@
       }
     ],
     "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Cyprus",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 850,
-    "deaths": 15,
-    "recovered": 296,
-    "aggregate": "country",
-    "active": 539,
-    "rating": 0.5490196078431373,
-    "coordinates": [
-      33.423500000000004,
-      35.1655
-    ],
-    "tz": [
-      "Europe/Nicosia"
-    ],
-    "featureId": "iso1:CY",
-    "population": 1141166,
-    "populationDensity": 126.68557056559139,
-    "countryId": "iso1:CY",
-    "name": "Cyprus",
-    "level": "country"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "Greenland",
     "curators": [
       {
@@ -155004,48 +155277,6 @@
     "populationDensity": 198.49827658211356,
     "countryId": "iso1:NP",
     "name": "Nepal",
-    "level": "country"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Netherlands",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "cases": 39316,
-    "deaths": 4795,
-    "recovered": 0,
-    "aggregate": "country",
-    "active": 34521,
-    "rating": 0.5490196078431373,
-    "coordinates": [
-      -31.422999999999995,
-      32.7705
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso1:NL",
-    "population": 17100715,
-    "populationDensity": 443.1740036917352,
-    "countryId": "iso1:NL",
-    "name": "Netherlands",
     "level": "country"
   },
   {
