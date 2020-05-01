@@ -40,7 +40,7 @@ async function generate(date, options = {}) {
   }
 
   // processor
-  rateSources(output)
+  await rateSources(output)
     .then(dedupeLocations)
     .then(reportScrape)
     .then(options.findFeatures !== false && findFeatures)
