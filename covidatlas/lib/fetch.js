@@ -19,7 +19,7 @@ export const json = function(urlToFetch) {
     try {
       obj = JSON.parse(responseText);
     } catch (err) {
-      throw new Error('Failed to parse JSON from %s: %s', urlToFetch, err);
+      throw new Error(`Failed to parse JSON from ${urlToFetch}: ${err}`);
     }
     return obj;
   });
