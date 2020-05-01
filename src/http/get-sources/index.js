@@ -42,7 +42,7 @@ ${header('sources')}
           <p class="spectrum-Body spectrum-Body--M">The ratings for the data sources here are based on how machine-readable, complete, and granular their data is — not on the accuracy or reliability of the information. We’re using a rating system like this because we’re trying to make governments more accountable for their data practices.</p>
           <p class="spectrum-Body spectrum-Body--M"><a class="spectrum-Link" href="${
             constants.repoURL
-          }blob/master/src/events/crawler/tasks/scrapeData/rateLocations.js" target="_blank">Take a look at the code</a> to learn more about how the rating system works.</p>
+          }blob/master/src/events/processor/rate-sources/calculate-ratings.js" target="_blank">Take a look at the code</a> to learn more about how the rating system works.</p>
         </div>
         <div class="col-xs-12 col-sm-6">
           <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">What does a good source look like?</h2>
