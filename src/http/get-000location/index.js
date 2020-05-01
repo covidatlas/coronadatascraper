@@ -145,7 +145,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
 
   <div class="ca-Callout--Disclaimer">
     <p class="spectrum-Body spectrum-Body--M">
-      COVID Atlas is for informational purposes only and does not offer any medical advice. Data <a class="spectrum-Link" href="#">quality and accuracy</a> is subject to <a class="spectrum-Link" href="#">local government sources</a>. Contact your local officials with questions about the data.
+      COVID Atlas is for informational purposes only and does not offer any medical advice. Data quality and accuracy is subject to local government sources. Contact your local officials with questions about the data.
     </p>
   </div>
 
