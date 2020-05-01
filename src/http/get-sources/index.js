@@ -47,7 +47,9 @@ ${header('sources')}
         <div class="col-xs-12 col-sm-6">
           <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">What does a good source look like?</h2>
           <p class="spectrum-Body spectrum-Body--M">
-            First, please have a look at our <a href="example.csv" download class="spectrum-Link">example format</a>.
+            First, please have a look at our <a href="${
+              constants.repoURL
+            }blob/master/site/example.csv" download class="spectrum-Link">example format</a>.
           </p>
           <p class="spectrum-Body spectrum-Body--M">
             As the data itself is most important, please publish <em>cumulative</em> counts for cases, deaths, hospitalized, discharged, recovered, and total tests administered.
