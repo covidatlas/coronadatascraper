@@ -199,70 +199,143 @@ const scraper = {
     'Winchester'
   ],
 
-  async scraper() {
-    const usePDFs = datetime.scrapeDateIsBefore('2020-03-26');
-    this.url = usePDFs
-      ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
-      : 'http://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
-    let counties = [];
+  scraper: {
+    '0': async function() {
+      const usePDFs = datetime.scrapeDateIsBefore('2020-03-26');
+      this.url = usePDFs
+        ? 'https://public.tableau.com/views/VirginiaCOVID-19Dashboard/VirginiaCOVID-19Dashboard'
+        : 'https://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
+      let counties = [];
 
-    if (usePDFs) {
-      const pdfBaseURL = `${this.url}.pdf?:showVizHome=no&Locality=`;
-      const fullNameCounties = [
-        'Buena Vista City',
-        'Fairfax City',
-        'Franklin City',
-        'Franklin County',
-        'Manassas City',
-        'Richmond City',
-        'Richmond County',
-        'Roanoke City',
-        'Roanoke County'
-      ];
-      this.type = 'pdf';
+      if (usePDFs) {
+        const pdfBaseURL = `${this.url}.pdf?:showVizHome=no&Locality=`;
+        const fullNameCounties = [
+          'Buena Vista City',
+          'Fairfax City',
+          'Franklin City',
+          'Franklin County',
+          'Manassas City',
+          'Richmond City',
+          'Richmond County',
+          'Roanoke City',
+          'Roanoke County'
+        ];
+        this.type = 'pdf';
 
-      const makeCacheKey = s => {
-        const ret = s.toLowerCase().replace(/ /g, '');
-        const check = /^[a-z]+$/;
-        if (check.test(ret) !== true) {
-          throw new Error(`Bad cache key ${ret}`);
-        }
-        return ret;
-      };
-
-      for (const name of this._counties) {
-        let endURL = name;
-        if (!fullNameCounties.includes(name)) {
-          endURL = endURL.slice(0, name.lastIndexOf(' '));
-        }
-        const pdfUrl = pdfBaseURL + endURL;
-        const ck = makeCacheKey(endURL);
-        const pdfScrape = await fetch.pdf(this, pdfUrl, ck);
-
-        if (pdfScrape) {
-          let pdfText = '';
-          for (const item of pdfScrape) {
-            if (item.text === '©') {
-              break;
-            }
-            pdfText += item.text;
+        const makeCacheKey = s => {
+          const ret = s.toLowerCase().replace(/ /g, '');
+          const check = /^[a-z]+$/;
+          if (check.test(ret) !== true) {
+            throw new Error(`Bad cache key ${ret}`);
           }
+          return ret;
+        };
 
-          counties.push({
-            county: name,
-            cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
-            deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
-          });
-        } else {
-          counties.push({
-            county: name,
-            cases: 0
-          });
+        for (const name of this._counties) {
+          let endURL = name;
+          if (!fullNameCounties.includes(name)) {
+            endURL = endURL.slice(0, name.lastIndexOf(' '));
+          }
+          const pdfUrl = pdfBaseURL + endURL;
+          const ck = makeCacheKey(endURL);
+          const pdfScrape = await fetch.pdf(this, pdfUrl, ck);
+
+          if (pdfScrape) {
+            let pdfText = '';
+            for (const item of pdfScrape) {
+              if (item.text === '©') {
+                break;
+              }
+              pdfText += item.text;
+            }
+
+            counties.push({
+              county: name,
+              cases: parse.number(pdfText.match(/(\d*)Cases/)[1]),
+              deaths: parse.number(pdfText.match(/(\d*)Deaths/)[1])
+            });
+          } else {
+            counties.push({
+              county: name,
+              cases: 0
+            });
+          }
         }
+      } else {
+        const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
+        const data = await fetch.csv(this, this.url, 'default', date, { disableSSL: true });
+        this.type = 'csv';
+
+        data.forEach(location => {
+          const fullNameCounties = [
+            'Buena Vista City',
+            'Fairfax City',
+            'Franklin City',
+            'Franklin County',
+            'Manassas City',
+            'Richmond City',
+            'Richmond County',
+            'Roanoke City',
+            'Roanoke County'
+          ];
+
+          const cases = parse.number(location['Total Cases']);
+
+          if (fullNameCounties.includes(location.Locality)) {
+            const name = location.Locality;
+            counties.push({
+              county: name,
+              cases
+            });
+          } else if (this._citiesAScounties.includes(location.Locality)) {
+            location.Locality += ' City';
+            const name = parse.string(location.Locality);
+            counties.push({
+              county: name,
+              cases
+            });
+          } else if (this._citiesAScounties.includes(location.Locality.replace(' city', ''))) {
+            location.Locality.replace(' city', ' City');
+            const name = parse.string(location.Locality);
+            counties.push({
+              county: name,
+              cases
+            });
+          } else {
+            const name = parse.string(geography.addCounty(location.Locality));
+            counties.push({
+              county: name,
+              cases
+            });
+          }
+        });
+
+        counties = geography.addEmptyRegions(counties, this._counties, 'county');
       }
-    } else {
-      const data = await fetch.csv(this, this.url, 'default');
+
+      counties.push(transform.sumData(counties));
+      return counties;
+    },
+    '2020-04-30': async function() {
+      this.url =
+        'https://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv';
       this.type = 'csv';
+
+      let counties = [];
+
+      const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD(datetime.today.at('EST'));
+      let data = await fetch.csv(this, this.url, 'default', date, { disableSSL: true });
+
+      // The data contains many dates, only include what we want.
+      // e.g., 'Report Date': '4/30/2020'
+      // date will be 2020-04-30
+      // console.log(date);
+      const dps = date.split('-').map(s => s.replace(/^0/, '')); // remove leading zeroes
+      const slashdate = `${dps[1]}/${dps[2]}/${dps[0]}`;
+      data = data.filter(d => {
+        return d['Report Date'] === slashdate;
+      });
+      console.log(`Filtered for ${slashdate} data count: ${data.length}`);
 
       data.forEach(location => {
         const fullNameCounties = [
@@ -277,42 +350,34 @@ const scraper = {
           'Roanoke County'
         ];
 
-        const cases = parse.number(location['Total Cases']);
-
+        let name = null;
         if (fullNameCounties.includes(location.Locality)) {
-          const name = location.Locality;
-          counties.push({
-            county: name,
-            cases
-          });
+          name = location.Locality;
         } else if (this._citiesAScounties.includes(location.Locality)) {
           location.Locality += ' City';
-          const name = parse.string(location.Locality);
-          counties.push({
-            county: name,
-            cases
-          });
+          name = parse.string(location.Locality);
         } else if (this._citiesAScounties.includes(location.Locality.replace(' city', ''))) {
           location.Locality.replace(' city', ' City');
-          const name = parse.string(location.Locality);
-          counties.push({
-            county: name,
-            cases
-          });
+          name = parse.string(location.Locality);
         } else {
-          const name = parse.string(geography.addCounty(location.Locality));
-          counties.push({
-            county: name,
-            cases
-          });
+          name = parse.string(geography.addCounty(location.Locality));
         }
+
+        const cases = parse.number(location['Total Cases']);
+        const hospitalized = parse.number(location.Hospitalizations);
+        const deaths = parse.number(location.Deaths);
+        counties.push({
+          county: name,
+          cases,
+          hospitalized,
+          deaths
+        });
       });
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      counties.push(transform.sumData(counties));
+      return counties;
     }
-
-    counties.push(transform.sumData(counties));
-    return counties;
   }
 };
 
