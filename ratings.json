@@ -36,35 +36,6 @@
     "countryId": "iso1:IT"
   },
   {
-    "state": "Washington, D.C.",
-    "country": "United States",
-    "county": "District of Columbia",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "DC Public Health Laboratory"
-      }
-    ],
-    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "type": "csv",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.6666666666666666,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-DC"
-  },
-  {
     "state": "Arkansas",
     "country": "United States",
     "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
@@ -348,32 +319,6 @@
     "stateId": "iso2:US-NE"
   },
   {
-    "country": "Cyprus",
-    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:CY"
-  },
-  {
     "country": "France",
     "timeseries": true,
     "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
@@ -470,6 +415,36 @@
     "rating": 0.5490196078431373,
     "countryId": "iso1:US",
     "stateId": "iso2:US-NH"
+  },
+  {
+    "state": "Oklahoma",
+    "country": "United States",
+    "type": "table",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-OK"
   },
   {
     "state": "Oregon",
@@ -779,7 +754,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-29",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-01",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -949,25 +924,19 @@
     "stateId": "iso2:US-ND"
   },
   {
-    "state": "New York",
     "country": "United States",
+    "state": "New Jersey",
     "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
-      }
-    ],
+    "type": "csv",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
-    "type": "csv",
+    "url": "https://opendata.arcgis.com/datasets/24f4fcf164ad4b4280f08c8939dd5dc7_0.csv",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
-    "stateId": "iso2:US-NY"
+    "stateId": "iso2:US-NJ"
   },
   {
     "state": "Ohio",
@@ -989,6 +958,37 @@
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
     "stateId": "iso2:US-OH"
+  },
+  {
+    "state": "Virginia",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "http://www.vdh.virginia.gov/",
+        "name": "VDH",
+        "description": "Virginia Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
+    "type": "csv",
+    "ssl": true,
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-VA"
   },
   {
     "state": "Vermont",
@@ -1269,38 +1269,6 @@
     "rating": 0.45098039215686275,
     "countryId": "iso1:US",
     "stateId": "iso2:US-RI"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
-      }
-    ],
-    "state": "New South Wales",
-    "type": "table",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",
@@ -2134,32 +2102,6 @@
     "countryId": "iso1:CZ"
   },
   {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:NL"
-  },
-  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "timeseries": true,
@@ -2183,6 +2125,35 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:PL"
+  },
+  {
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": true,
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "type": "csv",
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC"
   },
   {
     "country": "Lithuania",
@@ -2909,31 +2880,6 @@
     "stateId": "iso2:US-NM"
   },
   {
-    "country": "Sweden",
-    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://folkhalsomyndigheten.se",
-        "name": "Public Health Agency of Sweden"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:SE"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -3020,6 +2966,51 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "state": "Kansas",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "https://govstatus.egov.com/coronavirus"
+      },
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "twitter": "paulboal",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "state": "MO",
+        "county": "St. Louis County",
+        "city": "St. Louis",
+        "flag": "🇺🇸"
+      },
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "pdf",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/996/4-30-20-update-numbers",
+    "ssl": true,
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KS"
+  },
+  {
     "state": "Nevada",
     "country": "United States",
     "aggregate": "county",
@@ -3075,39 +3066,6 @@
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
     "stateId": "iso2:US-WY"
-  },
-  {
-    "country": "United States Virgin Islands",
-    "type": "paragraph",
-    "url": "https://doh.vi.gov/covid19usvi",
-    "sources": [
-      {
-        "url": "https://doh.vi.gov",
-        "name": "United States Virgin Islands Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:VI"
   },
   {
     "country": "Australia",
@@ -3195,6 +3153,31 @@
     "ssl": true,
     "rating": 0.21568627450980393,
     "countryId": "iso1:LV"
+  },
+  {
+    "country": "Sweden",
+    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://folkhalsomyndigheten.se",
+        "name": "Public Health Agency of Sweden"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:SE"
   },
   {
     "county": "San Francisco County",
