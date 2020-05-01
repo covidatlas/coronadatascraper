@@ -281,6 +281,8 @@ function showMap({ features, locations, timeseries, center = [-121.403732, 40.49
 
   document.body.classList.add('is-editing');
 
+  // Todo: fit to bounds https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
+
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/lazd/ck7wkzrxt0c071ip932rwdkzj',
