@@ -44,7 +44,7 @@ const scraper = {
       return counties;
     },
     '2020-04-19': async function() {
-      return new DeprecatedError(
+      throw new DeprecatedError(
         'County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/'
       );
     }
