@@ -1,4 +1,4 @@
-/* globals mapboxgl, document, window */
+/* globals mapboxgl, geojsonExtent, document, window */
 
 // import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import { getSource } from './lib/templates.js';
@@ -266,6 +266,12 @@ function populateMap() {
 
   initData();
   updateMap();
+
+  const bounds = geojsonExtent(data.features);
+
+  map.fitBounds(new mapboxgl.LngLatBounds([bounds[0], bounds[1]], [bounds[2], bounds[3]]), {
+    padding: 50
+  });
 }
 
 let rendered = false;
@@ -280,8 +286,6 @@ function showMap({ features, locations, timeseries, center = [-121.403732, 40.49
   data.features = data.features || features;
 
   document.body.classList.add('is-editing');
-
-  // Todo: fit to bounds https://docs.mapbox.com/mapbox-gl-js/example/zoomto-linestring/
 
   map = new mapboxgl.Map({
     container: 'map',

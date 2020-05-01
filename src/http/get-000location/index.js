@@ -208,6 +208,8 @@ ${header({ selectedPage: '' })}
     ${locationDetail(location, lastDate, caseInfo, rating, crosscheckReport)}
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/geojson-extent/v0.0.1/geojson-extent.js'></script>
+
     <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
     <script src="${arc.static('location.js')}"></script>
