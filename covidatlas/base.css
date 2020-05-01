@@ -14,15 +14,15 @@
   --ButtonBorderSize: var(--spectrum-alias-border-size-thin);
   --ButtonBorderRadius: var(--spectrum-global-dimension-size-50);
   --spectrum-alias-focus-ring-size: var(--spectrum-alias-border-size-thick);
-  --HeadingWeight: 700;
+  --HeadingWeight: 500;
   --BodyWeight: 300;
   --ca-PageMargin: 24px;
 
   /* Base vars */
-  --ca-FontBody: "Merriweather", Georgia, serif;
+  --ca-FontBody: "Open Sans", Helvetica, sans-serif;
   --spectrum-body-text-font-family: var(--ca-FontBody);
   --spectrum-component-text-font-family: "Open Sans", Helvetica, sans-serif;
-  --spectrum-heading-text-font-family: "Open Sans", Helvetica, sans-serif;
+  --spectrum-heading-text-font-family: "Merriweather", Georgia, serif;
   --spectrum-sociallinks-text-font-family: var(--spectrum-heading-text-font-family);
 
 
