@@ -91,7 +91,7 @@ const scraper = {
         counties.push({
           county: parse.string(county.COUNTY_LAB),
           cases: parse.number(county.TOTAL_CASES || 0),
-          deaths: parse.number(county.DEATHS || 0)
+          deaths: parse.number(county.TOTAL_DEATHS || 0)
         });
       }
       counties.push(transform.sumData(counties));
