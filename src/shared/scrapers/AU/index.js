@@ -35,6 +35,8 @@ const scraper = {
     const states = [];
     const $ = await fetch.page(this, this.url, 'default');
     const $table = $('.health-table__responsive > table');
+    assert.equal($table.length, 1, 'table not found');
+
     const $trs = $table.find('tbody > tr:not(:first-child):not(:last-child)');
     $trs.each((index, tr) => {
       const $tr = $(tr);

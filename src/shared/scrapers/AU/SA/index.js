@@ -2,15 +2,15 @@ import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import datetime from '../../../lib/datetime/index.js';
-import getKey from '../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [
-  { cases: 'confirmed case' },
-  { deaths: 'deaths' },
-  { hospitalized: 'icu' },
-  { recovered: 'cases cleared' }
-];
+const schemaKeysByHeadingFragment = {
+  'confirmed case': 'cases',
+  deaths: 'deaths',
+  icu: 'hospitalized',
+  'cases cleared': 'recovered'
+};
 
 const firstUrl =
   'https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/health+topics/health+topics+a+-+z/covid+2019/latest+updates/confirmed+and+suspected+cases+of+covid-19+in+south+australia';
@@ -61,8 +61,13 @@ const scraper = {
         .filter((_index, tr) => Boolean($(tr).find('td').length)) // Had `th` inside `tbody`, now they are inside `thead`. This suits both.
         .each((_index, tr) => {
           const $tr = $(tr);
-          const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
-          data[key] = parse.number($tr.find('td:last-child').text());
+          const key = getSchemaKeyFromHeading({
+            heading: $tr.find('td:first-child').text(),
+            schemaKeysByHeadingFragment
+          });
+          if (key) {
+            data[key] = parse.number($tr.find('td:last-child').text());
+          }
         });
       assert(data.cases > 0, 'Cases is not reasonable');
       return data;

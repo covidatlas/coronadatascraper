@@ -2,20 +2,20 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../lib/maintainers.js';
 
-const labelFragmentsByKey = [
-  { discard: 'daily change' },
-  { discard: 'imported cases' },
-  { discard: 'local outbreak' },
-  { discard: 'isolated' },
-  { discard: 'incidence' },
-  { cases: 'confirmed cases' },
-  { deaths: 'deceased' },
-  { state: 'name of state' },
-  { recovered: 'released from quarantine' }
-];
+const schemaKeysByHeadingFragment = {
+  'daily change': null,
+  'imported cases': null,
+  'local outbreak': null,
+  isolated: null,
+  incidence: null,
+  'confirmed cases': 'cases',
+  deceased: 'deaths',
+  'name of state': 'state',
+  'released from quarantine': 'recovered'
+};
 
 const UNASSIGNED = '(unassigned)';
 
@@ -68,10 +68,10 @@ const scraper = {
 
     const dataKeysByColumnIndex = [];
 
-    $headings.each((index, heading) => {
-      const $heading = $(heading);
-      const label = $heading.text();
-      const key = getKey({ label, labelFragmentsByKey });
+    $headings.each((index, headingItem) => {
+      const $heading = $(headingItem);
+      const heading = $heading.text();
+      const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
       dataKeysByColumnIndex[index + headingOffset] = key;
     });
 
@@ -86,7 +86,9 @@ const scraper = {
       $tds.each((columnIndex, td) => {
         const $td = $(td);
         const key = dataKeysByColumnIndex[columnIndex];
-        data[key] = parse.number($td.text().replace('-', 0));
+        if (key) {
+          data[key] = parse.number($td.text().replace('-', 0));
+        }
       });
 
       const mappedState = countryLevelMap[province];

@@ -2,15 +2,15 @@ import assert from 'assert';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import getDataWithTestedNegativeApplied from '../../../utils/get-data-with-tested-negative-applied.js';
-import getKey from '../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [
-  { deaths: 'deaths' },
-  { cases: 'confirmed case' },
-  { testedNegative: 'tested and excluded' },
-  { recovered: 'recovered' }
-];
+const schemaKeysByHeadingFragment = {
+  deaths: 'deaths',
+  'confirmed case': 'cases',
+  'tested and excluded': 'testedNegative',
+  recovered: 'recovered'
+};
 
 const getDeathsFromParagraph = $currentArticlePage => {
   const paragraph = $currentArticlePage('p:contains("deaths")').text();
@@ -48,8 +48,13 @@ const scraper = {
     const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey({ label: parse.string($tr.find('*:first-child').text()), labelFragmentsByKey });
-      data[key] = parse.number($tr.find('td:last-child').text());
+      const key = getSchemaKeyFromHeading({
+        heading: parse.string($tr.find('*:first-child').text()).replace('(in NSW from confirmed cases)', ''),
+        schemaKeysByHeadingFragment
+      });
+      if (key) {
+        data[key] = parse.number($tr.find('*:last-child').text());
+      }
     });
     assert(data.cases > 0, 'Cases is not reasonable');
     data.deaths = data.deaths || getDeathsFromParagraph($currentArticlePage);

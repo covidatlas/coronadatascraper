@@ -2,15 +2,15 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import maintainers from '../../lib/maintainers.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 
-const labelFragmentsByKey = [
-  { recovered: 'sembuh' },
-  { deaths: 'meninggal' },
-  { discard: 'jumlah pdp' }, // pasien dalam pengawasan: "People in monitoring"
-  { discard: 'jumlah odp' }, // orang dalam pemantauan: "Patients under supervision"
-  { cases: 'positif covid-19' }
-];
+const schemaKeysByHeadingFragment = {
+  sembuh: 'recovered',
+  meninggal: 'deaths',
+  'jumlah pdp': null, // pasien dalam pengawasan: "People in monitoring"
+  'jumlah odp': null, // orang dalam pemantauan: "Patients under supervision"
+  'positif covid-19': 'cases'
+};
 
 const scraper = {
   country: 'iso1:ID',
@@ -34,9 +34,17 @@ const scraper = {
     const $trs = $table.find('tbody tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey({ label: $tr.find('td:first-child').text(), labelFragmentsByKey });
+      const key = getSchemaKeyFromHeading({
+        heading: $tr
+          .find('td:first-child')
+          .text()
+          .replace('(Positif COVID-19)', ''),
+        schemaKeysByHeadingFragment
+      });
       const value = $tr.find('td:last-child').text();
-      data[key] = parse.number(value.replace('.', '')); // This thousands-separator replace may be better handled in the number parser.
+      if (key) {
+        data[key] = parse.number(value.replace('.', '')); // This thousands-separator replace may be better handled in the number parser.
+      }
     });
     assert(data.cases > 0, 'Cases is not reasonable');
     return data;

@@ -2,16 +2,16 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import maintainers from '../../lib/maintainers.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 
-const labelFragmentsByKey = [
-  { discard: 'confirmed case' },
-  { cases: 'probable case' }, // Recovered is often higher than confirmed, so use probable number.
-  { recovered: 'recovered cases' },
-  { deaths: 'deaths' },
-  { discard: 'cases in hospital' },
-  { discard: 'currently in hospital' }
-];
+const schemaKeysByHeadingFragment = {
+  'confirmed case': null,
+  'probable case': 'cases', // Recovered is often higher than confirmed, so use probable number.
+  'recovered cases': 'recovered',
+  deaths: 'deaths',
+  'cases in hospital': null,
+  'currently in hospital': null
+};
 
 const scraper = {
   country: 'iso1:NZ',
@@ -34,9 +34,11 @@ const scraper = {
     const $trs = $table.find('tbody tr');
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const key = getKey({ label: $tr.find('th').text(), labelFragmentsByKey });
+      const key = getSchemaKeyFromHeading({ heading: $tr.find('th').text(), schemaKeysByHeadingFragment });
       const value = $tr.find('td:first-of-type').text();
-      data[key] = parse.number(value);
+      if (key) {
+        data[key] = parse.number(value);
+      }
     });
     assert(data.cases > 0, 'Cases is not reasonable');
     return data;

@@ -1,19 +1,19 @@
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../lib/maintainers.js';
 import pivotTheTable from '../../utils/pivot-the-table.js';
 
-const labelFragmentsByKey = [
-  { deaths: 'muertes​' },
-  { tested: 'prueba' },
-  { tested: 'realizadas' },
-  { cases: '​casos postivos' },
-  { cases: 'confirmados' },
-  { discard: 'en proceso' },
-  { discard: 'negativos' }
-];
+const schemaKeysByHeadingFragment = {
+  'muertes​': 'deaths',
+  prueba: 'tested',
+  realizadas: 'tested',
+  '​casos postivos': 'cases',
+  confirmados: 'cases',
+  'en proceso': null,
+  negativos: null
+};
 
 const scraper = {
   country: 'iso1:PR',
@@ -40,9 +40,11 @@ const scraper = {
     const dataPairs = pivotTheTable($trs, $);
 
     const data = {};
-    dataPairs.forEach(([label, value]) => {
-      const key = getKey({ label, labelFragmentsByKey });
-      data[key] = parse.number(value);
+    dataPairs.forEach(([heading, value]) => {
+      const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+      if (key) {
+        data[key] = parse.number(value);
+      }
     });
 
     assert(data.cases > 0, 'Cases is not reasonable');

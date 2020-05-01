@@ -1,19 +1,19 @@
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../lib/maintainers.js';
 import getDataWithTestedNegativeApplied from '../../utils/get-data-with-tested-negative-applied.js';
 
-const labelFragmentsByKey = [
-  { discard: 'update' },
-  { discard: 'attention deficit' },
-  { discard: 'pending' },
-  { deaths: 'death' },
-  { testedNegative: 'negative' },
-  { cases: 'positive' },
-  { recovered: 'recovered' }
-];
+const schemaKeysByHeadingFragment = {
+  update: null,
+  'attention deficit': null,
+  pending: null,
+  death: 'deaths',
+  negative: 'testedNegative',
+  positive: 'cases',
+  recovered: 'recovered'
+};
 
 const scraper = {
   country: 'iso1:VI',
@@ -46,11 +46,13 @@ const scraper = {
         const text = $(paragraph)
           .text()
           .toLowerCase();
-        const [label, valueIncludingParenthetical] = text.split(':');
-        const key = getKey({ label, labelFragmentsByKey });
+        const [heading, valueIncludingParenthetical] = text.split(':');
+        const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
         const [valueWithSlash] = valueIncludingParenthetical.split('(');
         const [value] = valueWithSlash.split('/');
-        data[key] = parse.number(value);
+        if (key) {
+          data[key] = parse.number(value);
+        }
       });
 
     assert(data.cases > 0, 'Cases is not reasonable');
