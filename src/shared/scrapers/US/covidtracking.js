@@ -19,7 +19,7 @@ const scraper = {
   ],
   scraperTz: 'America/Los_Angeles',
   aggregate: 'state',
-  priority: 100,
+  priority: 0.5,
   async scraper() {
     const data = await fetch.json(this, this.url, 'default');
 
