@@ -64,9 +64,11 @@ ${header('sources')}
         </div>
         <div class="col-xs-12">
           <h2 class="spectrum-Heading spectrum-Heading--M">Questions about a source’s rating?</h2>
-          <p class="spectrum-Body spectrum-Body--M">We’d like to hear from you and help you make your source more complete. <a class="spectrum-Link" href="https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw" target="_blank">Reach out to us on on Slack</a> or <a class="spectrum-Link" href="${
-            constants.repoURL
-          }issues">file an issue on Github</a>.</p>
+          <p class="spectrum-Body spectrum-Body--M">We’d like to hear from you and help you make your source more complete. <a class="spectrum-Link" href="${
+            constants.slackURL
+          }" target="_blank">Reach out to us on on Slack</a> or <a class="spectrum-Link" href="${
+      constants.repoURL
+    }issues">file an issue on Github</a>.</p>
         </div>
       </div>
     </section>

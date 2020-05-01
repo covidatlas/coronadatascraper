@@ -45,7 +45,9 @@ ${header('about')}
       <p class="spectrum-Body spectrum-Body--M">We're working around the clock to release ${
         constants.name
       }; in the mean time, if you're a developer or researcher, you can <a class="spectrum-Link" href="https://coronadatascraper.com/data.csv"></a>download our raw local-level dataset</a> or <a class="spectrum-Link" href="https://coronadatascraper.com/features.json">view it displayed on a world map</a>.</p>
-      <p class="spectrum-Body spectrum-Body--M">If you'd like to contribute, please <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">send us a PR</a> and join us on <a class="spectrum-Link" href="https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ">Slack</a>.</p>
+      <p class="spectrum-Body spectrum-Body--M">If you'd like to contribute, please <a class="spectrum-Link" href="https://github.com/covidatlas/coronadatascraper/">send us a PR</a> and join us on <a class="spectrum-Link" href="${
+        constants.slackURL
+      }">Slack</a>.</p>
 
       <p class="spectrum-Body spectrum-Body--M">Please check back for updates!</p>
 
