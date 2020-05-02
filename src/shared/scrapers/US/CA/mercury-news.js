@@ -68,6 +68,9 @@ const scraper = {
         if (stateData['Hospital Confirmed Total'] !== '') {
           stateObj.hospitalized = parse.number(stateData['Hospital Confirmed Total']);
         }
+        if (stateData['ICU Total'] !== '') {
+          stateObj.icu = parse.number(stateData['ICU Total']);
+        }
         counties.push(stateObj);
       }
     }

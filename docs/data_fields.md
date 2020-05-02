@@ -45,6 +45,7 @@ The following fields define the epidemiological information for a data point:
 * `tested` - The cumulative number of tests from which results have been obtained (does not include pending tests)
 * `hospitalized` - The cumulative number of patients hospitalized for COVID-19
 * `discharged` - The cumulative number of patients discharged after hospitalization for COVID-19
+* `icu` - The cumulative number of patients hospitalized in the intensive care unit for COVID-19
 
 The following fields detail the data's source:
 
