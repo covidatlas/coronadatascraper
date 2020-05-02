@@ -63,6 +63,7 @@
     "needle": "^2.3.3",
     "pdf2json": "^1.2.0",
     "puppeteer": "^2.1.1",
+    "slugify": "^1.4.0",
     "spacetime": "^6.4.3",
     "yargs": "^15.3.1"
   },
