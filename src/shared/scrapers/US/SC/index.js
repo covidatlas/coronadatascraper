@@ -124,8 +124,17 @@ const scraper = {
       const data = await fetch.csv(this, this.url, 'default');
       let counties = [];
       for (const county of data) {
-        if (datetime.scrapeDateIsBefore(county.Date_)) {
-          throw new Error(`Data only available until ${county.Date_}`);
+        // On 2020-4-28, SC switched from recording dates as UTC
+        // (eg, "2020-04-27T18:13:20.273Z") to epoch (eg,
+        // 1585082918049, an _integer_ = milliseconds from Jan 1,
+        // 1970).  The Date constructor handles both of these.
+        let d = county.Date_;
+        // Check if using epoch.
+        if (d.match(/^\d+$/)) d = parseInt(d, 10);
+        const countyDate = new Date(d);
+
+        if (datetime.scrapeDateIsBefore(countyDate)) {
+          throw new Error(`Data only available until ${countyDate}`);
         }
 
         counties.push({
