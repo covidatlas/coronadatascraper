@@ -1,240 +1,126 @@
 date,country,state,county,city,type,description,severity,category
-2020-04-30,iso1:AU,iso2:AU-NSW,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-04-30,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
-2020-04-30,iso1:IE,,,,scraper failed,Error: datetime.parse: Could not parse '1582761600000' as a date,critical,scraper failure
-2020-04-30,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
-2020-04-30,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 6 on line 9016",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Glenn County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Orange County,,scraper failed,DeprecatedError: Need to scrape new page,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,San Benito County,,scraper failed,DeprecatedError: Need to scrape new arcgis,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,"DeprecatedError: Sunsetting county scraper, its PowerBI now",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-CO,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
-2020-04-30,iso1:US,iso2:US-NV,,,scraper failed,DeprecatedError: County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-NV,Washoe County,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-SC,,,scraper failed,Error: datetime.parse: Could not parse '1588261506000' as a date,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-WV,,,scraper failed,TypeError: Cannot read property 'exploration' of null,critical,scraper failure
-2020-04-30,iso1:VI,,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-04-30,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Providence,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Pawtucket,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Cranston,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,North Providence,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Central Falls,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,East Providence,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,Warwick,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Woonsocket,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Cumberland,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Smithfield,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Johnston,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,North Kingstown,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,West Warwick,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,Coventry,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Lincoln,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Bristol,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Burrillville,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,South Kingstown,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Tiverton,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,East Greenwich,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Westerly,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,North Smithfield,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Newport,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Barrington,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Warren,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Narragansett,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Middletown,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Portsmouth,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Scituate,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Exeter,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Glocester,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,West Greenwich,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Richmond,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Little Compton,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Hopkinton,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Foster,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Charlestown,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Jamestown,missing location,,low,locations
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,New Shoreham,missing location,,low,locations
-2020-04-30,iso1:KR,iso2:KR-41,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-42,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-43,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-44,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-45,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-46,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-48,,,missing population,,low,population
-2020-04-30,iso1:KR,iso2:KR-49,,,missing population,,low,population
-2020-04-30,iso1:RU,iso2:RU-SEV,,,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Providence,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Pawtucket,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Cranston,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,North Providence,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Central Falls,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,East Providence,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,Warwick,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Woonsocket,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Cumberland,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Smithfield,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Johnston,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,North Kingstown,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,West Warwick,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,Coventry,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Lincoln,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Bristol,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Burrillville,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,South Kingstown,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Tiverton,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,East Greenwich,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Westerly,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,North Smithfield,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Newport,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Barrington,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44001,Warren,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Narragansett,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Middletown,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Portsmouth,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Scituate,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Exeter,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Glocester,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44003,West Greenwich,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Richmond,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Little Compton,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Hopkinton,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44007,Foster,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,Charlestown,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44005,Jamestown,missing population,,low,population
-2020-04-30,iso1:US,iso2:US-RI,fips:44009,New Shoreham,missing population,,low,population
-2020-04-30,United States,Missouri,Clark County,,invalid location object,"Clark County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Atchison County,,invalid location object,"Atchison County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Scotland County,,invalid location object,"Scotland County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Schuyler County,,invalid location object,"Schuyler County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Nodaway County,,invalid location object,"Nodaway County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Putnam County,,invalid location object,"Putnam County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Worth County,,invalid location object,"Worth County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Mercer County,,invalid location object,"Mercer County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Harrison County,,invalid location object,"Harrison County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Gentry County,,invalid location object,"Gentry County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Sullivan County,,invalid location object,"Sullivan County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Adair County,,invalid location object,"Adair County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Knox County,,invalid location object,"Knox County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Holt County,,invalid location object,"Holt County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Grundy County,,invalid location object,"Grundy County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Lewis County,,invalid location object,"Lewis County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Andrew County,,invalid location object,"Andrew County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Daviess County,,invalid location object,"Daviess County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,DeKalb County,,invalid location object,"DeKalb County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Macon County,,invalid location object,"Macon County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Linn County,,invalid location object,"Linn County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Livingston County,,invalid location object,"Livingston County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Shelby County,,invalid location object,"Shelby County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Marion County,,invalid location object,"Marion County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Buchanan County,,invalid location object,"Buchanan County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Caldwell County,,invalid location object,"Caldwell County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Clinton County,,invalid location object,"Clinton County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Chariton County,,invalid location object,"Chariton County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Ralls County,,invalid location object,"Ralls County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Monroe County,,invalid location object,"Monroe County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Carroll County,,invalid location object,"Carroll County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Pike County,,invalid location object,"Pike County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Randolph County,,invalid location object,"Randolph County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Ray County,,invalid location object,"Ray County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Platte County,,invalid location object,"Platte County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Clay County,,invalid location object,"Clay County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Audrain County,,invalid location object,"Audrain County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Saline County,,invalid location object,"Saline County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Howard County,,invalid location object,"Howard County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Boone County,,invalid location object,"Boone County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Lincoln County,,invalid location object,"Lincoln County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Lafayette County,,invalid location object,"Lafayette County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Jackson County,,invalid location object,"Jackson County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Montgomery County,,invalid location object,"Montgomery County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Callaway County,,invalid location object,"Callaway County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Warren County,,invalid location object,"Warren County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Cooper County,,invalid location object,"Cooper County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,St. Charles County,,invalid location object,"St. Charles County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Johnson County,,invalid location object,"Johnson County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Pettis County,,invalid location object,"Pettis County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Cass County,,invalid location object,"Cass County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Moniteau County,,invalid location object,"Moniteau County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,St. Louis City,,invalid location object,"St. Louis City, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Osage County,,invalid location object,"Osage County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Gasconade County,,invalid location object,"Gasconade County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Morgan County,,invalid location object,"Morgan County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Cole County,,invalid location object,"Cole County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Franklin County,,invalid location object,"Franklin County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Henry County,,invalid location object,"Henry County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Benton County,,invalid location object,"Benton County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Jefferson County,,invalid location object,"Jefferson County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Bates County,,invalid location object,"Bates County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Miller County,,invalid location object,"Miller County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Maries County,,invalid location object,"Maries County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Washington County,,invalid location object,"Washington County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Crawford County,,invalid location object,"Crawford County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Camden County,,invalid location object,"Camden County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,St. Clair County,,invalid location object,"St. Clair County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Phelps County,,invalid location object,"Phelps County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Ste. Genevieve County,,invalid location object,"Ste. Genevieve County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Hickory County,,invalid location object,"Hickory County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Vernon County,,invalid location object,"Vernon County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,St. Francois County,,invalid location object,"St. Francois County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Pulaski County,,invalid location object,"Pulaski County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Perry County,,invalid location object,"Perry County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Cedar County,,invalid location object,"Cedar County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Dallas County,,invalid location object,"Dallas County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Laclede County,,invalid location object,"Laclede County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Polk County,,invalid location object,"Polk County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Dent County,,invalid location object,"Dent County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Iron County,,invalid location object,"Iron County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Madison County,,invalid location object,"Madison County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Barton County,,invalid location object,"Barton County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Bollinger County,,invalid location object,"Bollinger County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Cape Girardeau County,,invalid location object,"Cape Girardeau County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Reynolds County,,invalid location object,"Reynolds County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Texas County,,invalid location object,"Texas County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Dade County,,invalid location object,"Dade County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Wright County,,invalid location object,"Wright County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Webster County,,invalid location object,"Webster County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Shannon County,,invalid location object,"Shannon County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Greene County,,invalid location object,"Greene County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Jasper County,,invalid location object,"Jasper County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Wayne County,,invalid location object,"Wayne County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Scott County,,invalid location object,"Scott County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Lawrence County,,invalid location object,"Lawrence County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Stoddard County,,invalid location object,"Stoddard County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Mississippi County,,invalid location object,"Mississippi County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Carter County,,invalid location object,"Carter County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Christian County,,invalid location object,"Christian County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Douglas County,,invalid location object,"Douglas County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Newton County,,invalid location object,"Newton County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Howell County,,invalid location object,"Howell County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Stone County,,invalid location object,"Stone County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Butler County,,invalid location object,"Butler County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Barry County,,invalid location object,"Barry County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,New Madrid County,,invalid location object,"New Madrid County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Oregon County,,invalid location object,"Oregon County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Ripley County,,invalid location object,"Ripley County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Taney County,,invalid location object,"Taney County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Ozark County,,invalid location object,"Ozark County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,McDonald County,,invalid location object,"McDonald County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Dunklin County,,invalid location object,"Dunklin County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,Pemiscot County,,invalid location object,"Pemiscot County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
-2020-04-30,United States,Missouri,St. Louis County,,invalid location object,"St. Louis County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation
+2020-05-01,iso1:AU,iso2:AU-NSW,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
+2020-05-01,iso1:AU,,,,scraper failed,AssertionError [ERR_ASSERTION]: Total row is not reasonable,critical,scraper failure
+2020-05-01,iso1:CA,iso2:CA-NS,,,scraper failed,DeprecatedError: Someone needs to scrape this new data properly,critical,scraper failure
+2020-05-01,iso1:ES,,,,scraper failed,AssertionError [ERR_ASSERTION]: Castilla La Mancha not found in countryLevelMap,critical,scraper failure
+2020-05-01,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
+2020-05-01,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-05-01,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 2 on line 9663",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Glenn County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Orange County,,scraper failed,DeprecatedError: Need to scrape new page,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,San Benito County,,scraper failed,DeprecatedError: Need to scrape new arcgis,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,"DeprecatedError: Sunsetting county scraper, its PowerBI now",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
+2020-05-01,iso1:US,iso2:US-NV,,,scraper failed,DeprecatedError: County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-NV,Washoe County,,scraper failed,TypeError: Cannot read property '0' of undefined,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-WV,,,scraper failed,TypeError: Cannot read property 'exploration' of null,critical,scraper failure
+2020-05-01,iso1:VI,,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
+2020-05-01,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Providence,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Pawtucket,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Cranston,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,North Providence,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Central Falls,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,East Providence,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,Warwick,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Woonsocket,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Cumberland,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Smithfield,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Johnston,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,North Kingstown,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,West Warwick,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,Coventry,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Lincoln,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Bristol,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Burrillville,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,South Kingstown,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Tiverton,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Westerly,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,East Greenwich,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,North Smithfield,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Newport,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Warren,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Barrington,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Narragansett,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Middletown,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Portsmouth,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Scituate,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Exeter,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Glocester,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Richmond,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,West Greenwich,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Charlestown,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Little Compton,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Hopkinton,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Foster,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Jamestown,missing location,,low,locations
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,New Shoreham,missing location,,low,locations
+2020-05-01,iso1:KR,iso2:KR-41,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-42,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-43,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-44,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-45,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-46,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-48,,,missing population,,low,population
+2020-05-01,iso1:KR,iso2:KR-49,,,missing population,,low,population
+2020-05-01,iso1:RU,iso2:RU-SEV,,,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-MI,fips:26163,Detroit City,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Providence,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Pawtucket,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Cranston,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,North Providence,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Central Falls,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,East Providence,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,Warwick,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Woonsocket,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Cumberland,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Smithfield,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Johnston,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,North Kingstown,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,West Warwick,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,Coventry,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Lincoln,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Bristol,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Burrillville,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,South Kingstown,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Tiverton,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Westerly,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,East Greenwich,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,North Smithfield,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Newport,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Warren,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44001,Barrington,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Narragansett,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Middletown,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Portsmouth,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Scituate,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Exeter,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Glocester,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Richmond,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44003,West Greenwich,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Charlestown,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Little Compton,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,Hopkinton,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44007,Foster,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44005,Jamestown,missing population,,low,population
+2020-05-01,iso1:US,iso2:US-RI,fips:44009,New Shoreham,missing population,,low,population
+2020-05-01,United States,Missouri,St. Louis County,,invalid location object,"St. Louis County, Missouri, United States .publishedDate should match format ""date-time""",low,location validation

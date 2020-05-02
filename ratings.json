@@ -88,47 +88,6 @@
     "stateId": "iso2:US-TN"
   },
   {
-    "country": "Spain",
-    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
-    "priority": 1,
-    "timeseries": true,
-    "type": "csv",
-    "aggregate": "state",
-    "sources": [
-      {
-        "name": "Ministerio de Sanidad",
-        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
-        "description": "Government of Spain, Ministry of Health"
-      },
-      {
-        "name": "Departamento de Seguridad Nacional",
-        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
-        "description": "Government of Spain, Department of National Security"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Antonio Delgado",
-        "url": "https://datadista.com/",
-        "twitter": "@adelgado",
-        "github": "adelgadob"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Herb Caudill",
-        "url": "https://devresults.com",
-        "twitter": "@herbcaudill",
-        "github": "herbcaudill"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.6274509803921569,
-    "countryId": "iso1:ES"
-  },
-  {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
     "country": "United States",
@@ -317,32 +276,6 @@
     "rating": 0.5686274509803921,
     "countryId": "iso1:US",
     "stateId": "iso2:US-NE"
-  },
-  {
-    "country": "Cyprus",
-    "url": "https://data.gov.cy/api/3/action/package_show?id=f6c70a36-daaf-42c2-80d6-f99a329fdd0f",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:CY"
   },
   {
     "country": "France",
@@ -780,7 +713,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-04-30",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-01",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -805,6 +738,21 @@
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
     "stateId": "iso2:US-AL"
+  },
+  {
+    "state": "Colorado",
+    "country": "United States",
+    "aggregate": "county",
+    "priority": 1,
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "type": "csv",
+    "ssl": true,
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CO"
   },
   {
     "state": "Connecticut",
@@ -1005,6 +953,21 @@
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
     "stateId": "iso2:US-OH"
+  },
+  {
+    "state": "South Carolina",
+    "country": "United States",
+    "url": "https://opendata.arcgis.com/datasets/6847b70e6f0343138aa54d9cb6038028_0.csv",
+    "type": "json",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-SC"
   },
   {
     "state": "Virginia",
@@ -2436,6 +2399,31 @@
     "stateId": "iso2:US-NV"
   },
   {
+    "country": "Ireland",
+    "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://data.gov.ie/",
+        "name": "Ireland Open Data Portal"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": false,
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:IE"
+  },
+  {
     "country": "Slovenia",
     "url": "https://raw.githubusercontent.com/slo-covid-19/data/master/csv/stats.csv",
     "priority": 1,
@@ -2699,37 +2687,6 @@
     "stateId": "iso2:US-CA"
   },
   {
-    "aggregate": "state",
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Australian Government Department of Health",
-        "name": "Australian Government Department of Health",
-        "url": "https://www.health.gov.au/"
-      }
-    ],
-    "type": "table",
-    "url": "https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/coronavirus-covid-19-current-situation-and-case-numbers",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3137254901960784,
-    "countryId": "iso1:AU"
-  },
-  {
     "country": "Indonesia",
     "maintainers": [
       {
@@ -2814,39 +2771,6 @@
     "stateId": "iso2:US-CA"
   },
   {
-    "country": "Puerto Rico",
-    "type": "table",
-    "timeseries": false,
-    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
-    "sources": [
-      {
-        "url": "http://www.salud.gov.pr/",
-        "name": "Gobierno de Puerto Rico Departamento de Salud"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.29411764705882354,
-    "countryId": "iso1:PR"
-  },
-  {
     "country": "Australia",
     "maintainers": [
       {
@@ -2876,6 +2800,32 @@
     "rating": 0.27450980392156865,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-NT"
+  },
+  {
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.27450980392156865,
+    "countryId": "iso1:CY"
   },
   {
     "country": "United Kingdom",
@@ -3102,7 +3052,7 @@
     "certValidation": true,
     "priority": 0,
     "type": "pdf",
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/996/4-30-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
