@@ -27,7 +27,18 @@ const scraper = {
     const casesByRegion = {};
 
     for (const item of casesData) {
-      if (datetime.dateIsBeforeOrEqualTo(item.TimeStamp, date)) {
+      // item.TimeStamp appears to sometimes be a date (eg,
+      // "2020-04-27T18:13:20.273Z"), and sometimes an integer for the
+      // epoch time (eg, 1585082918049, an _integer_ = milliseconds
+      // from Jan 1, 1970).  The Date constructor handles both of
+      // these.  On 2020-4-28, US/Missouri switched from recording
+      // dates as UTC to epoch, perhaps this was a common change.
+      let ts = item.TimeStamp;
+      // If using epoch, make it an int for Date constructor.
+      if (ts.match(/^\d+$/)) ts = parseInt(ts, 10);
+      const timeStamp = new Date(ts);
+
+      if (datetime.dateIsBeforeOrEqualTo(timeStamp, date)) {
         casesByRegion[item.CountyName] = parse.number(item.ConfirmedCovidCases);
       }
     }
