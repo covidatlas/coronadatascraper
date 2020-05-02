@@ -3,19 +3,19 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
-import getKey from '../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
 const DetroitCity = 'Detroit City';
 const WayneCounty = 'Wayne County';
 
-const labelFragmentsByKey = [
-  { deaths: 'deaths' },
-  { cases: 'confirmed cases' },
-  { discard: 'rate' },
-  { county: 'county' }
-];
+const schemaKeysByHeadingFragment = {
+  deaths: 'deaths',
+  'confirmed cases': 'cases',
+  rate: null,
+  county: 'county'
+};
 
 const getValue = (key, text) => {
   if (key === 'county') {
@@ -143,7 +143,7 @@ const scraper = {
     const dataKeysByColumnIndex = [];
     $headings.each((index, heading) => {
       const $heading = $(heading);
-      dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
+      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading: $heading.text(), schemaKeysByHeadingFragment });
     });
 
     let counties = [];
@@ -163,7 +163,9 @@ const scraper = {
         const $td = $(td);
 
         const key = dataKeysByColumnIndex[columnIndex];
-        rowData[key] = getValue(key, $td.text());
+        if (key) {
+          rowData[key] = getValue(key, $td.text());
+        }
       });
 
       // Remember these to add them to Wayne County instead

@@ -1,0 +1,37 @@
+[
+  {
+    "state": "iso2:AU-ACT",
+    "cases": 96
+  },
+  {
+    "state": "iso2:AU-NSW",
+    "cases": 2686
+  },
+  {
+    "state": "iso2:AU-NT",
+    "cases": 27
+  },
+  {
+    "state": "iso2:AU-QLD",
+    "cases": 921
+  },
+  {
+    "state": "iso2:AU-SA",
+    "cases": 411
+  },
+  {
+    "state": "iso2:AU-TAS",
+    "cases": 85
+  },
+  {
+    "state": "iso2:AU-VIC",
+    "cases": 1158
+  },
+  {
+    "state": "iso2:AU-WA",
+    "cases": 460
+  },
+  {
+    "cases": 5844
+  }
+]

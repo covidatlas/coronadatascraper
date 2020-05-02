@@ -1,0 +1,199 @@
+[
+  {
+    "state": "iso2:IN-AN",
+    "cases": 33,
+    "recovered": 16,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-AP",
+    "cases": 1463,
+    "recovered": 403,
+    "deaths": 33
+  },
+  {
+    "state": "iso2:IN-AR",
+    "cases": 1,
+    "recovered": 1,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-AS",
+    "cases": 42,
+    "recovered": 29,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:IN-BR",
+    "cases": 426,
+    "recovered": 82,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:IN-CH",
+    "cases": 56,
+    "recovered": 17,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-CT",
+    "cases": 40,
+    "recovered": 36,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-DL",
+    "cases": 3515,
+    "recovered": 1094,
+    "deaths": 59
+  },
+  {
+    "state": "iso2:IN-GA",
+    "cases": 7,
+    "recovered": 7,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-GJ",
+    "cases": 4395,
+    "recovered": 613,
+    "deaths": 214
+  },
+  {
+    "state": "iso2:IN-HR",
+    "cases": 313,
+    "recovered": 209,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:IN-HP",
+    "cases": 40,
+    "recovered": 28,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:IN-JK",
+    "cases": 614,
+    "recovered": 216,
+    "deaths": 8
+  },
+  {
+    "state": "iso2:IN-JH",
+    "cases": 111,
+    "recovered": 20,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:IN-KA",
+    "cases": 576,
+    "recovered": 235,
+    "deaths": 22
+  },
+  {
+    "state": "iso2:IN-KL",
+    "cases": 497,
+    "recovered": 383,
+    "deaths": 4
+  },
+  {
+    "state": "iso2:IN-LA",
+    "cases": 22,
+    "recovered": 16,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-MP",
+    "cases": 2719,
+    "recovered": 482,
+    "deaths": 137
+  },
+  {
+    "state": "iso2:IN-MH",
+    "cases": 10498,
+    "recovered": 1773,
+    "deaths": 459
+  },
+  {
+    "state": "iso2:IN-MN",
+    "cases": 2,
+    "recovered": 2,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-ML",
+    "cases": 12,
+    "recovered": 0,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:IN-MZ",
+    "cases": 1,
+    "recovered": 0,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-OR",
+    "cases": 143,
+    "recovered": 41,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:IN-PY",
+    "cases": 8,
+    "recovered": 5,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-PB",
+    "cases": 357,
+    "recovered": 90,
+    "deaths": 19
+  },
+  {
+    "state": "iso2:IN-RJ",
+    "cases": 2584,
+    "recovered": 836,
+    "deaths": 58
+  },
+  {
+    "state": "iso2:IN-TN",
+    "cases": 2323,
+    "recovered": 1258,
+    "deaths": 27
+  },
+  {
+    "state": "iso2:IN-TG",
+    "cases": 1039,
+    "recovered": 441,
+    "deaths": 26
+  },
+  {
+    "state": "iso2:IN-TR",
+    "cases": 2,
+    "recovered": 2,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-UT",
+    "cases": 57,
+    "recovered": 36,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:IN-UP",
+    "cases": 2281,
+    "recovered": 555,
+    "deaths": 41
+  },
+  {
+    "state": "iso2:IN-WB",
+    "cases": 795,
+    "recovered": 139,
+    "deaths": 33
+  },
+  {
+    "cases": 34972,
+    "recovered": 9065,
+    "deaths": 1152
+  }
+]

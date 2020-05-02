@@ -1,17 +1,16 @@
 import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
-import getKey from '../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [
-  { deaths: 'deaths' },
-  { cases: 'total confirmed cases' },
-  { cases: 'cases to date' }, // Cases had this label between 2020-04-09 and 2020-04-11
-  { recovered: 'recovered cases' },
-  { discard: 'hhs' },
-  { discard: 'active' } // Active will be calculated.
-];
+const schemaKeysByHeadingFragment = {
+  deaths: 'deaths',
+  'cases to date': 'cases', // Cases had this label between 2020-04-09 and 2020-04-11
+  'recovered cases': 'recovered',
+  hhs: null,
+  active: null // Active will be calculated.
+};
 
 async function getCurrentArticlePage(obj) {
   const $ = await fetch.page(obj, obj.url, 'tempindex');
@@ -66,8 +65,10 @@ const scraper = {
       $headings.each((index, heading) => {
         const $heading = $(heading);
         const $total = $($totals[index]);
-        const key = getKey({ label: $heading.text(), labelFragmentsByKey });
-        data[key] = parse.number($total.text());
+        const key = getSchemaKeyFromHeading({ heading: $heading.text(), schemaKeysByHeadingFragment });
+        if (key) {
+          data[key] = parse.number($total.text());
+        }
       });
       assert(data.cases > 0, 'Cases is not reasonable');
       return data;

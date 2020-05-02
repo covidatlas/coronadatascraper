@@ -2,13 +2,13 @@ import assert from 'assert';
 import * as parse from '../../../lib/parse.js';
 import * as fetch from '../../../lib/fetch/index.js';
 import maintainers from '../../../lib/maintainers.js';
-import getKey from '../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.js';
 
-const labelFragmentsByKey = [
-  { cases: 'confirmed cases' },
-  { recovered: 'people recovered' },
-  { tests: 'tests conducted' }
-];
+const schemaKeysByHeadingFragment = {
+  'confirmed cases': 'cases',
+  'people recovered': 'recovered',
+  'tests conducted': 'tested'
+};
 
 const scraper = {
   country: 'iso1:AU',
@@ -29,12 +29,14 @@ const scraper = {
     const data = {};
     $trs.each((index, tr) => {
       const $tr = $(tr);
-      const [value, ...labelWords] = $tr.text().split(' ');
-      const label = labelWords.join(' ');
-      const numberInLabel = label.match(/\d/);
+      const [value, ...headingWords] = $tr.text().split(' ');
+      const heading = headingWords.join(' ');
+      const numberInLabel = heading.match(/\d/);
       if (!numberInLabel) {
-        const key = getKey({ label, labelFragmentsByKey });
-        data[key] = parse.number(value);
+        const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+        if (key) {
+          data[key] = parse.number(value);
+        }
       }
     });
     assert(data.cases > 0, 'Cases is not reasonable');
