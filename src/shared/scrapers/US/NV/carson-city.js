@@ -2,6 +2,7 @@ import assert from 'assert';
 import cheerio from 'cheerio';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
+import datetime from '../../../lib/datetime/index.js';
 import { DeprecatedError } from '../../../lib/errors.js';
 
 const scraper = {
@@ -56,7 +57,8 @@ const scraper = {
 
       // var countyUpdated = new Date(cheerio('.updated.rich-snippet-hidden').text());
 
-      const $ = await fetch.page(this, this.url, 'default');
+      const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
+      const $ = await fetch.page(this, this.url, 'default', date, { disableSSL: true });
       const div = $('.post-content');
       assert.equal(div.length, 1, 'Table not found');
       const records = div.find('.fusion-fullwidth:not(:first-child)');
