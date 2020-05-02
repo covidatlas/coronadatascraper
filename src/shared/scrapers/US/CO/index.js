@@ -4,6 +4,8 @@ import * as transform from '../../../lib/transform.js';
 import * as rules from '../../../lib/rules.js';
 import * as geography from '../../../lib/geography/index.js';
 
+const assert = require('assert');
+
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
 
@@ -136,6 +138,87 @@ const scraper = {
       }
       const stateData = transform.sumData(counties);
       stateData.deaths = parse.number(data[0].State_Deaths);
+      counties.push(stateData);
+      return counties;
+    },
+    '2020-04-23': async function() {
+      this.url = 'https://opendata.arcgis.com/datasets/fbae539746324ca69ff34f086286845b_0.csv';
+      this.type = 'csv';
+      let data = await fetch.csv(this, this.url, 'default');
+      assert(data, `Have csv from ${this.url}`);
+
+      const requiredKeys = [
+        'FULL_',
+        'County_Pos_Cases',
+        'County_Population',
+        'State_Number_Hospitalizations',
+        'State_Deaths',
+        'State_Number_Tested'
+      ];
+      const actualKeys = Object.keys(data[0]);
+      const missing = requiredKeys.filter(k => !actualKeys.includes(k));
+      const msg = `Missing required key(s): ${missing.join(', ')}`;
+      assert.equal(missing.length, 0, msg);
+
+      console.log(`Pre-filter, data.length: ${data.length}`);
+      data = data.filter(d => {
+        return d.FULL_ !== '';
+      });
+      console.log(`Post-filter, data.length: ${data.length}`);
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.County_Pos_Cases),
+          population: parse.number(county.County_Population)
+        });
+      }
+      const stateData = transform.sumData(counties);
+      stateData.deaths = parse.number(data[0].State_Deaths);
+      stateData.tested = parse.number(data[0].State_Number_Tested);
+      counties.push(stateData);
+      return counties;
+    },
+    '2020-05-01': async function() {
+      // The page https://covid19.colorado.gov/covid-19-data has
+      // tables of HTML data, but
+      // https://covid19.colorado.gov/data/case-data has links to data
+      // files in Google docs, and a link with "Find Colorado COVID-19
+      // Data on CDPHE's Open Data Portal", which goes to
+      // https://data-cdphe.opendata.arcgis.com/datasets/
+      // colorado-covid-19-positive-cases-and-rates-of-infection-by-county-of-identification.
+      // The link below is the "Download > Spreadsheet".
+      this.url = 'https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv';
+      this.type = 'csv';
+      const data = await fetch.csv(this, this.url, 'default');
+      if (!data) throw new Error(`No CSV at ${this.url}`);
+
+      const requiredKeys = [
+        'FULL_',
+        'County_Pos_Cases',
+        'County_Population',
+        'County_Deaths',
+        'State_Number_Hospitalizations',
+        'State_Number_Tested'
+      ];
+      const actualKeys = Object.keys(data[0]);
+      const missing = requiredKeys.filter(k => !actualKeys.includes(k));
+      const msg = `Missing required key(s): ${missing.join(', ')}`;
+      assert.equal(missing.length, 0, msg);
+
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.FULL_),
+          cases: parse.number(county.County_Pos_Cases || '0'),
+          deaths: parse.number(county.County_Deaths || '0'),
+          population: parse.number(county.County_Population || '0')
+        });
+      }
+
+      const stateData = transform.sumData(counties);
+      stateData.hospitalized = parse.number(data[0].State_Number_Hospitalizations || '0');
+      stateData.tested = parse.number(data[0].State_Number_Tested || '0');
       counties.push(stateData);
       return counties;
     }
