@@ -20,6 +20,7 @@ const caseDataProps = [
   'tested',
   'hospitalized',
   'discharged',
+  'icu',
   'growthFactor'
 ];
 
