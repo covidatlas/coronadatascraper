@@ -19,27 +19,46 @@ const scraper = {
       name: 'data.gov.cy'
     }
   ],
-  async scraper() {
-    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+  scraper: {
+    '0': async function scraper() {
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      const datasetRaw = await fetch.json(this, this.url, 'tmpindex', false);
+      const dataset = datasetRaw.result[0].resources.find(item => item.format === 'csv');
 
-    const datasetRaw = await fetch.json(this, this.url, 'tmpindex', false);
-    const dataset = datasetRaw.result[0].resources.find(item => item.format === 'csv');
+      const casesRaw = await fetch.csv(this, dataset.url, 'default', false);
+      const casesData = casesRaw.filter(item => {
+        return datetime.scrapeDateIs(reformatDate(item.date));
+      });
 
-    const casesRaw = await fetch.csv(this, dataset.url, 'default', false);
-    const casesData = casesRaw.filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
-
-    if (casesData.length > 0) {
       const data = {};
-
-      for (const item of casesData) {
-        if (datetime.dateIsBeforeOrEqualTo(reformatDate(item.date), date)) {
-          data.cases = parse.number(item['total cases']);
-          data.tested = parse.number(item['total tests']);
-          data.recovered = parse.number(item['total recovered']);
-          data.deaths = parse.number(item['total deaths']);
+      if (casesData.length > 0) {
+        for (const item of casesData) {
+          if (datetime.dateIsBeforeOrEqualTo(reformatDate(item.date), date)) {
+            data.cases = parse.number(item['total cases']);
+            data.tested = parse.number(item['total tests']);
+            data.recovered = parse.number(item['total recovered']);
+            data.deaths = parse.number(item['total deaths']);
+          }
         }
       }
-
+      return data;
+    },
+    '2020-04-14': async function scraper() {
+      this.url = 'https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv';
+      const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+      const casesRaw = await fetch.csv(this, this.url, 'default', false);
+      const casesData = casesRaw.filter(item => datetime.scrapeDateIs(reformatDate(item.date)));
+      const data = {};
+      if (casesData.length > 0) {
+        for (const item of casesData) {
+          if (datetime.dateIsBeforeOrEqualTo(reformatDate(item.date), date)) {
+            data.cases = parse.number(item['total cases']);
+            data.tested = parse.number(item['total tests']);
+            data.recovered = parse.number(item['total recovered']);
+            data.deaths = parse.number(item['total deaths']);
+          }
+        }
+      }
       return data;
     }
   }
