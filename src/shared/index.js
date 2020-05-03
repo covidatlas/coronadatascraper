@@ -45,8 +45,7 @@ async function generate(date, options = {}) {
 
   // processor
   output.locations = locations;
-  output = await rateSources(output);
-  dumpkeys('after rateSources');
+  const ratings = await rateSources(sources, locations);
 
   output = await dedupeLocations(output);
   dumpkeys('after dedupeLocations');
@@ -62,10 +61,10 @@ async function generate(date, options = {}) {
   output = await reportScrape(output);
   output = await findFeatures(output);
   output = await findPopulations(output);
+
+  output.sourceRatings = ratings;
   output = await transformIds(output);
   output = await cleanLocations(output);
-  dumpkeys('after cleanLocations');
-
   output.options = options;
   output = await writeData(output); // To be retired
 

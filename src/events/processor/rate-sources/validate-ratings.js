@@ -1,9 +1,7 @@
 import * as schema from '../../../shared/lib/schema.js';
 import log from '../../../shared/lib/log.js';
 
-const validateRatings = async args => {
-  const { sourceRatings } = args;
-
+export default function validateRatings(sourceRatings) {
   for (const rating of sourceRatings) {
     const schemaErrors = schema.schemaHasErrors(rating, schema.schemas.ratingSchema, { removeAdditional: true });
     if (schemaErrors) {
@@ -15,8 +13,5 @@ const validateRatings = async args => {
   }
 
   log('✅ Assigned ratings for %d sources', sourceRatings.length);
-
-  return args;
-};
-
-export default validateRatings;
+  return sourceRatings;
+}
