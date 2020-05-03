@@ -29,4 +29,4 @@ export default async function writeData(locations, featureCollection, ratings, r
   await fs.writeCSV(join(d, 'reports', 'crawler-report.csv'), reporter.getCSV());
 
   return { locations, featureCollection, report, options };
-};
+}

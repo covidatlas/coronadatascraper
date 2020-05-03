@@ -101,5 +101,4 @@ export default function normalizeLocations(locations) {
   }
 
   return filteredLocations;
-};
-
+}

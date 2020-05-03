@@ -22,7 +22,7 @@ async function generate(date, options = {}) {
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
   // Summary of results of each step of generation.
-  let report = {
+  const report = {
     date: date || datetime.getYYYYMD(),
     sources: {},
     scrape: {},
@@ -60,7 +60,7 @@ async function generate(date, options = {}) {
 
   await cleanLocations(locations, report.validate);
 
-  return await writeData(locations, features, ratings, report, options);
+  return writeData(locations, features, ratings, report, options);
 }
 
 export default generate;

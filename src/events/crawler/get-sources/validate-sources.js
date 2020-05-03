@@ -24,5 +24,4 @@ export default function validateSources(sources, report) {
 
   report.numSources = sources.length;
   report.errors = errors;
-};
-
+}
