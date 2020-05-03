@@ -2,9 +2,7 @@ import * as schema from '../../../shared/lib/schema.js';
 import log from '../../../shared/lib/log.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
-const validateSources = async args => {
-  const { sources, report } = args;
-
+const validateSources = sources => {
   const errors = [];
   for (const source of sources) {
     const schemaErrors = schema.schemaHasErrors(source, schema.schemas.scraperSchema, {});
@@ -24,12 +22,7 @@ const validateSources = async args => {
     log(`✅ All scrapers are valid!`);
   }
 
-  report.sources = {
-    numSources: sources.length,
-    errors
-  };
-
-  return args;
+  return errors;
 };
 
 export default validateSources;

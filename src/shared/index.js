@@ -25,26 +25,43 @@ async function generate(date, options = {}) {
     date: date || datetime.getYYYYMD()
   };
 
-  const srcs = await fetchSources({ date, report, options });
-  if (srcs.sources.length === 0) {
+  const { sources, validationErrors } = await fetchSources(options);
+  if (sources.length === 0) {
     console.log('No sources, quitting.');
     return;
   }
 
   // Break apart all parts to make connections explicit.
 
+  let output = { sources };
+  const dumpkeys = title => {
+    console.log(`${title} keys = ${Object.keys(output)}`);
+  };
+
   // Crawler
-  let output = await scrapeData(srcs);
-  output = await writeRawRegression(output);
+  output = await scrapeData(output);
+  dumpkeys('after scrape');
+  await writeRawRegression(output.locations, options);
 
   // processor
   output = await rateSources(output);
   output = await dedupeLocations(output);
+  dumpkeys('after dedupeLocations');
+
+  output.report = report;
+  output.report.sources = {
+    numSources: sources.length,
+    errors: validationErrors
+  };
+
   output = await reportScrape(output);
   output = await findFeatures(output);
   output = await findPopulations(output);
   output = await transformIds(output);
   output = await cleanLocations(output);
+  dumpkeys('after cleanLocations');
+
+  output.options = options;
   output = await writeData(output); // To be retired
 
   return output;

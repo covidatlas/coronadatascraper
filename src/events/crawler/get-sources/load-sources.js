@@ -20,7 +20,7 @@ function includeLocation(location, opts) {
   return true;
 }
 
-export default async args => {
+export default async function loadSources(options) {
   log(`⏳ Fetching scrapers...`);
   const scrapers = join(__dirname, '..', '..', '..', 'shared', 'scrapers', '**', '*.js');
   let filePaths = await fastGlob([scrapers]);
@@ -42,7 +42,7 @@ export default async args => {
     return 0;
   };
 
-  const filteredSources = sources.filter(m => includeLocation(m, args.options)).sort(sortSources);
+  const filteredSources = sources.filter(m => includeLocation(m, options)).sort(sortSources);
 
   if (filteredSources.length === 0) {
     log(`location filter returned 0 scrapers.  Please check docs/getting_started.`);
@@ -52,5 +52,5 @@ export default async args => {
     log(`✅ Fetched ${sources.length} scrapers.`);
   }
 
-  return { ...args, sources: filteredSources };
-};
+  return filteredSources;
+}
