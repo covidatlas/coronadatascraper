@@ -27,7 +27,8 @@ function emptyReport(date) {
   };
 }
 
-async function runScrape(date, options, report) {
+/** Run the crawl and scrape. */
+async function runScrape(date, report, options) {
   const sources = await fetchSources(options);
   if (sources.length === 0) {
     console.log('No sources, quitting.');
@@ -36,7 +37,6 @@ async function runScrape(date, options, report) {
 
   await validateSources(sources, report.sources);
 
-  // Crawler
   const locations = await scrapeData(sources, report.scrape);
 
   await writeRawRegression(locations, options);
@@ -44,18 +44,8 @@ async function runScrape(date, options, report) {
   return { sources, locations };
 }
 
-/**
- * Entry file while we're still hosted on GitHub
- */
-export default async function generate(date, options = {}) {
-  options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
-
-  // Summary of results of each step of generation.
-  const report = emptyReport(date);
-
-  const { sources, locations } = await runScrape(date, options, report);
-
-  // processor
+/** Generate the reports. */
+async function generateReports(date, sources, locations, report, options) {
   const ratings = await rateSources(sources, locations);
 
   await dedupeLocations(locations, report.scrape);
@@ -71,4 +61,19 @@ export default async function generate(date, options = {}) {
   await cleanLocations(locations, report.validate);
 
   return writeData(locations, features, ratings, report, options);
+}
+
+/**
+ * Entry file while we're still hosted on GitHub
+ */
+export default async function generate(date, options = {}) {
+  options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
+
+  // Summary of results of each step of generation.
+  const report = emptyReport(date);
+
+  const { sources, locations } = await runScrape(date, report, options);
+
+  // processor
+  return generateReports(date, sources, locations, report, options);
 }
