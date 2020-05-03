@@ -1,7 +1,7 @@
 import path from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 
-export default async function writeRawRegression(locations, options) {
+export default async function writeRaw(locations, report, options) {
   if (!options.dumpRaw) return;
 
   let suffix = '';
@@ -65,4 +65,6 @@ export default async function writeRawRegression(locations, options) {
   await fs.writeJSON(path.join(d, `raw${suffix}.json`), output, { space: 2 });
 
   await fs.writeJSON(path.join(d, `raw-full${suffix}.json`), data, { space: 2 });
+
+  await fs.writeJSON(path.join(d, `raw-report${suffix}.json`), report, { space: 2 });
 }
