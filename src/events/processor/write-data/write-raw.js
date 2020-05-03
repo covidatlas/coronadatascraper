@@ -1,9 +1,8 @@
 import path from 'path';
-import * as fs from '../../../shared/lib/fs.js';
+import fs from 'fs';
 
-export default async function writeRaw(locations, report, options) {
-  if (!options.dumpRaw) return;
-
+/** Get filenames. */
+function rawFilenames(options) {
   let suffix = '';
   if (options.outputSuffix !== undefined) {
     suffix = options.outputSuffix;
@@ -12,13 +11,40 @@ export default async function writeRaw(locations, report, options) {
   }
 
   const d = options.writeTo;
-  await fs.ensureDir(d);
 
-  const data = locations;
-  const keyCollector = data.reduce((hsh, val) => {
+  return {
+    // All keys present in the raw-full file (for debugging/interest)
+    keysPath: path.join(d, `raw-keys${suffix}.json`),
+
+    // The full raw data of all scraped locations.
+    locationsPath: path.join(d, `raw-locations${suffix}.json`),
+
+    // A brief version raw-full, pulling out interesting fields.
+    locationsBriefPath: path.join(d, `raw-locations-brief${suffix}.json`),
+
+    // The "report.json" accumulated during all report generation.
+    reportPath: path.join(d, `raw-report${suffix}.json`)
+  };
+}
+
+export async function writeRaw(locations, report, options) {
+  if (!options.dumpRaw) return;
+
+  const { keysPath, locationsBriefPath, locationsPath, reportPath } = rawFilenames(options);
+
+  if (!fs.existsSync(options.writeTo)) fs.mkdirSync(options.writeTo);
+
+  function writeJson(f, data) {
+    fs.writeFileSync(f, JSON.stringify(data, null, 2));
+  }
+
+  writeJson(locationsPath, locations);
+  writeJson(reportPath, report);
+
+  const keyCollector = locations.reduce((hsh, val) => {
     return { ...hsh, ...val };
   }, {});
-  await fs.writeJSON(path.join(d, `raw-keys${suffix}.json`), Object.keys(keyCollector), { space: 2 });
+  writeJson(keysPath, Object.keys(keyCollector));
 
   // Only pull out a subset of the data for each location.  Since
   // some scrapers put 'null' or 'undefined' for data, do a check to
@@ -49,7 +75,7 @@ export default async function writeRaw(locations, report, options) {
     'todayHospitalized'
   ];
 
-  const output = data.map(d => {
+  const output = locations.map(d => {
     // console.log(`Pruning ${d}`);
     // console.log(`Keys for it: ${Object.keys(d)}`);
     const pruned = {};
@@ -62,9 +88,21 @@ export default async function writeRaw(locations, report, options) {
     }
     return pruned;
   });
-  await fs.writeJSON(path.join(d, `raw${suffix}.json`), output, { space: 2 });
+  writeJson(locationsBriefPath, output);
+}
 
-  await fs.writeJSON(path.join(d, `raw-full${suffix}.json`), data, { space: 2 });
+/** Reconstitute locations and report from old raw JSON files. */
+export function loadRaw(options) {
+  function readJson(f) {
+    if (!f) throw new Error('null file path');
+    if (!fs.existsSync(f)) throw new Error(`Missing raw file ${f}`);
+    const rawdata = fs.readFileSync(f);
+    return JSON.parse(rawdata);
+  }
 
-  await fs.writeJSON(path.join(d, `raw-report${suffix}.json`), report, { space: 2 });
+  const raws = rawFilenames(options);
+  return {
+    locations: readJson(raws.locationsPath),
+    report: readJson(raws.reportPath)
+  };
 }
