@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 
+import reporter from '../../../shared/lib/error-reporter.js';
+
 /** Get filenames. */
 function rawFilenames(options) {
   let suffix = '';
@@ -16,8 +18,14 @@ function rawFilenames(options) {
     // All keys present in the raw-full file (for debugging/interest)
     keysPath: path.join(d, `raw-keys${suffix}.json`),
 
+    // The sources scraped.
+    sourcesPath: path.join(d, `raw-sources${suffix}.json`),
+
     // The full raw data of all scraped locations.
     locationsPath: path.join(d, `raw-locations${suffix}.json`),
+
+    // the error-reporter errors.
+    errorReporterErrorsPath: path.join(d, `raw-error-reporter${suffix}.json`),
 
     // A brief version raw-full, pulling out interesting fields.
     locationsBriefPath: path.join(d, `raw-locations-brief${suffix}.json`),
@@ -27,10 +35,17 @@ function rawFilenames(options) {
   };
 }
 
-export async function writeRaw(locations, report, options) {
+export async function writeRaw(sources, locations, report, options) {
   if (!options.dumpRaw) return;
 
-  const { keysPath, locationsBriefPath, locationsPath, reportPath } = rawFilenames(options);
+  const {
+    errorReporterErrorsPath,
+    keysPath,
+    sourcesPath,
+    locationsBriefPath,
+    locationsPath,
+    reportPath
+  } = rawFilenames(options);
 
   if (!fs.existsSync(options.writeTo)) fs.mkdirSync(options.writeTo);
 
@@ -38,6 +53,8 @@ export async function writeRaw(locations, report, options) {
     fs.writeFileSync(f, JSON.stringify(data, null, 2));
   }
 
+  writeJson(errorReporterErrorsPath, reporter.getErrors());
+  writeJson(sourcesPath, sources);
   writeJson(locationsPath, locations);
   writeJson(reportPath, report);
 
@@ -101,7 +118,11 @@ export function loadRaw(options) {
   }
 
   const raws = rawFilenames(options);
+
+  reporter.setErrors(readJson(raws.errorReporterErrorsPath));
+
   return {
+    sources: readJson(raws.sourcesPath),
     locations: readJson(raws.locationsPath),
     report: readJson(raws.reportPath)
   };
