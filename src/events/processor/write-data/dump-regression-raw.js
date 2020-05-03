@@ -64,6 +64,8 @@ const writeRawRegression = async args => {
   });
   await fs.writeJSON(path.join(d, `raw${suffix}.json`), output, { space: 2 });
 
+  await fs.writeJSON(path.join(d, `raw-full${suffix}.json`), data, { space: 2 });
+
   return args;
 };
 
