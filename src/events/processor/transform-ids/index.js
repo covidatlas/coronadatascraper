@@ -64,4 +64,4 @@ export default async function transformIds(locations, sourceRatings, reportScrap
   });
 
   reportTransformIds.idsResolved = idsFound;
-};
+}

@@ -175,4 +175,4 @@ export default async function generatePopulations(locations, featureCollection, 
 
   report.numLocationsWithPopulation = populationFound;
   report.missingPopulations = errors;
-};
+}

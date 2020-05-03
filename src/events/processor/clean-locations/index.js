@@ -29,4 +29,4 @@ export default function cleanLocations(locations, report) {
   }
 
   report.errors = errors;
-};
+}

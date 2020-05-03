@@ -117,7 +117,7 @@ function locationPropertyMatchesFeature(locationItem, feature) {
   );
 }
 
-export default function generateFeatures (locations, report) {
+export default function generateFeatures(locations, report) {
   const featureCollection = {
     type: 'FeatureCollection',
     features: []
@@ -395,5 +395,4 @@ export default function generateFeatures (locations, report) {
 
     resolve(featureCollection);
   });
-};
-
+}

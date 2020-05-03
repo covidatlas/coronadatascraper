@@ -146,4 +146,4 @@ export default async function runScrapers(sources) {
   }
 
   return { locations, scraperErrors: errors };
-};
+}

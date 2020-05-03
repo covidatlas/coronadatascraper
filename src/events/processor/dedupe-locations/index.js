@@ -174,4 +174,4 @@ export default function dedupeLocations(locations, report) {
 
   report.numDuplicates = deDuped;
   report.crosscheckReports = crosscheckReports;
-};
+}

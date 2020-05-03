@@ -1,7 +1,6 @@
 import log from '../../../shared/lib/log.js';
 
 export default function reportScraping(locations, report) {
-
   const locationCounts = {
     cities: 0,
     states: 0,
@@ -50,4 +49,4 @@ export default function reportScraping(locations, report) {
   report.numStates = locationCounts.states;
   report.numCounties = locationCounts.counties;
   report.numCities = locationCounts.cities;
-};
+}
