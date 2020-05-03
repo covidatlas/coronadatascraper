@@ -7,7 +7,8 @@ import getSchemaKeyFromHeading from '../../../utils/get-schema-key-from-heading.
 
 const schemaKeysByHeadingFragment = {
   'cases (positive)': 'cases',
-  'tested (negative)': 'tested',
+  'tested (negative)': 'testedNegative',
+  tests: 'tested',
   recovered: 'recovered',
   deaths: 'deaths',
   'unknown source': null
