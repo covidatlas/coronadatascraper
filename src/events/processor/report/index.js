@@ -1,6 +1,6 @@
 import log from '../../../shared/lib/log.js';
 
-export default function reportScraping(locations, scraperErrors, deDuped, crosscheckReports, report) {
+export default function reportScraping(locations, report) {
 
   const locationCounts = {
     cities: 0,
@@ -41,18 +41,13 @@ export default function reportScraping(locations, scraperErrors, deDuped, crossc
   for (const [name, count] of Object.entries(caseCounts)) {
     log('   - %d %s', count, name);
   }
-  if (scraperErrors.length) {
-    log('❌ %d error%s', scraperErrors.length, scraperErrors.length === 1 ? '' : 's');
+  const n = report.errors.length;
+  if (n) {
+    log('❌ %d error%s', n, n === 1 ? '' : 's');
   }
 
-  report.scrape = {
-    numCountries: locationCounts.countries,
-    numStates: locationCounts.states,
-    numCounties: locationCounts.counties,
-    numCities: locationCounts.cities,
-    numDuplicates: deDuped,
-    numErrors: scraperErrors.length,
-    crosscheckReports,
-    errors: scraperErrors
-  };
+  report.numCountries = locationCounts.countries;
+  report.numStates = locationCounts.states;
+  report.numCounties = locationCounts.counties;
+  report.numCities = locationCounts.cities;
 };

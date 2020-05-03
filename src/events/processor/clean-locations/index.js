@@ -28,7 +28,5 @@ export default function cleanLocations(locations, report) {
     log(`✅ All locations are valid!`);
   }
 
-  report.validate = {
-    errors
-  };
+  report.errors = errors;
 };

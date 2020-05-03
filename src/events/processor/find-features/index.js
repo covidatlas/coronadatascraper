@@ -117,7 +117,7 @@ function locationPropertyMatchesFeature(locationItem, feature) {
   );
 }
 
-export default function generateFeatures (locations) {
+export default function generateFeatures (locations, report) {
   const featureCollection = {
     type: 'FeatureCollection',
     features: []
@@ -390,12 +390,10 @@ export default function generateFeatures (locations) {
       featureCollection.features.length
     );
 
-    const reportResult = {
-      numFeaturesFound: foundCount,
-      missingFeatures: errors
-    };
+    report.numFeaturesFound = foundCount;
+    report.missingFeatures = errors;
 
-    resolve({ featureCollection, reportResult });
+    resolve(featureCollection);
   });
 };
 

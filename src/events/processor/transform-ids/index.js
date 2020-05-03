@@ -16,7 +16,7 @@ function compare(a, b) {
   return a.localeCompare(b);
 }
 
-export default async function transformIds(locations, report, sourceRatings) {
+export default async function transformIds(locations, sourceRatings, reportScrape, reportTransformIds) {
   log('⏳ Transforming IDs...');
 
   let idsFound = 0;
@@ -48,13 +48,13 @@ export default async function transformIds(locations, report, sourceRatings) {
   // Transform crosscheck reports
   const crosscheckReports = [];
 
-  for (const [, crosscheckReport] of Object.entries(report.scrape.crosscheckReports)) {
+  for (const [, crosscheckReport] of Object.entries(reportScrape.crosscheckReports)) {
     // Transform no matter what
     await countryLevels.transformLocationIds(crosscheckReport.location);
     crosscheckReports.push(crosscheckReport);
   }
 
-  report.scrape.crosscheckReports = crosscheckReports.sort((a, b) => {
+  reportScrape.crosscheckReports = crosscheckReports.sort((a, b) => {
     return (
       compare(a.location.city, b.location.city) ||
       compare(a.location.county, b.location.county) ||
@@ -63,7 +63,5 @@ export default async function transformIds(locations, report, sourceRatings) {
     );
   });
 
-  report.transformIds = {
-    idsResolved: idsFound
-  };
+  reportTransformIds.idsResolved = idsFound;
 };
