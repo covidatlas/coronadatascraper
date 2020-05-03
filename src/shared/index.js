@@ -47,17 +47,16 @@ async function generate(date, options = {}) {
   output.locations = locations;
   const ratings = await rateSources(sources, locations);
 
-  output = await dedupeLocations(output);
-  dumpkeys('after dedupeLocations');
+  const { deDuped, crosscheckReports } = await dedupeLocations(locations);
 
   output.report = report;
   output.report.sources = {
     numSources: sources.length,
     errors: validationErrors
   };
-
   output.sources = sources;
   output.scraperErrors = scraperErrors;
+  output.crosscheckReports = crosscheckReports;
   output = await reportScrape(output);
   output = await findFeatures(output);
   output = await findPopulations(output);
