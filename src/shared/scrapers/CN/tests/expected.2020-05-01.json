@@ -1,0 +1,171 @@
+[
+  {
+    "state": "iso2:CN-BJ",
+    "cases": 593,
+    "deaths": 9
+  },
+  {
+    "state": "iso2:CN-TJ",
+    "cases": 190,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:CN-HE",
+    "cases": 328,
+    "deaths": 6
+  },
+  {
+    "state": "iso2:CN-SX",
+    "cases": 197,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:CN-NM",
+    "cases": 201,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:CN-LN",
+    "cases": 146,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:CN-JL",
+    "cases": 112,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:CN-HL",
+    "cases": 944,
+    "deaths": 13
+  },
+  {
+    "state": "iso2:CN-SH",
+    "cases": 652,
+    "deaths": 7
+  },
+  {
+    "state": "iso2:CN-JS",
+    "cases": 653,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:CN-ZJ",
+    "cases": 1268,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:CN-AH",
+    "cases": 991,
+    "deaths": 6
+  },
+  {
+    "state": "iso2:CN-FJ",
+    "cases": 356,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:CN-JX",
+    "cases": 937,
+    "deaths": 1
+  },
+  {
+    "state": "iso2:CN-SD",
+    "cases": 787,
+    "deaths": 7
+  },
+  {
+    "state": "iso2:CN-HA",
+    "cases": 1276,
+    "deaths": 22
+  },
+  {
+    "state": "iso2:CN-HB",
+    "cases": 68128,
+    "deaths": 4512
+  },
+  {
+    "state": "iso2:CN-HN",
+    "cases": 1019,
+    "deaths": 4
+  },
+  {
+    "state": "iso2:CN-GD",
+    "cases": 1588,
+    "deaths": 8
+  },
+  {
+    "state": "iso2:CN-GX",
+    "cases": 254,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:CN-HI",
+    "cases": 168,
+    "deaths": 6
+  },
+  {
+    "state": "iso2:CN-CQ",
+    "cases": 579,
+    "deaths": 6
+  },
+  {
+    "state": "iso2:CN-SC",
+    "cases": 561,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:CN-GZ",
+    "cases": 147,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:CN-YN",
+    "cases": 185,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:CN-XZ",
+    "cases": 1,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:CN-SN",
+    "cases": 306,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:CN-GS",
+    "cases": 139,
+    "deaths": 2
+  },
+  {
+    "state": "iso2:CN-QH",
+    "cases": 18,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:CN-NX",
+    "cases": 75,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:CN-XJ",
+    "cases": 76,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:CN-HK",
+    "cases": 1039,
+    "deaths": 4
+  },
+  {
+    "state": "iso2:CN-MO",
+    "cases": 45,
+    "deaths": 0
+  },
+  {
+    "cases": 83959,
+    "deaths": 4637
+  }
+]

@@ -41,6 +41,7 @@ export const page = async (scraper, url, cacheKey = 'default', date, options = {
  * Load and parse JSON from the given URL
  * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
+ * @param {string} cacheKey
  * @param {*} date the date associated with this resource, or false if a timeseries data
  * @param {object} options customizable options:
  *  - alwaysRun: fetches from URL even if resource is in cache, defaults to false
