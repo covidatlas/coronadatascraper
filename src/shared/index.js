@@ -39,12 +39,15 @@ async function generate(date, options = {}) {
   };
 
   // Crawler
-  output = await scrapeData(output);
+  const { locations, scraperErrors } = await scrapeData(sources);
   dumpkeys('after scrape');
-  await writeRawRegression(output.locations, options);
+  await writeRawRegression(locations, options);
 
   // processor
+  output.locations = locations;
   output = await rateSources(output);
+  dumpkeys('after rateSources');
+
   output = await dedupeLocations(output);
   dumpkeys('after dedupeLocations');
 
@@ -54,6 +57,8 @@ async function generate(date, options = {}) {
     errors: validationErrors
   };
 
+  output.sources = sources;
+  output.scraperErrors = scraperErrors;
   output = await reportScrape(output);
   output = await findFeatures(output);
   output = await findPopulations(output);

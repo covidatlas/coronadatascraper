@@ -121,9 +121,7 @@ export async function runScraper(location) {
   return scraperOutput;
 }
 
-const runScrapers = async args => {
-  const { sources } = args;
-
+export default async function runScrapers(sources) {
   const locations = [];
   const errors = [];
   for (const location of sources) {
@@ -147,7 +145,5 @@ const runScrapers = async args => {
     }
   }
 
-  return { ...args, locations, scraperErrors: errors };
+  return { locations, scraperErrors: errors };
 };
-
-export default runScrapers;

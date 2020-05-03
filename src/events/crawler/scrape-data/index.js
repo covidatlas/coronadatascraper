@@ -1,6 +1,8 @@
 import runScrapers from './run-scraper.js';
 import normalizeLocations from './normalize-locations.js';
 
-const scrapeData = async args => runScrapers(args).then(normalizeLocations);
-
-export default scrapeData;
+export default async function scrapeData(sources) {
+  let { locations, scraperErrors } = await runScrapers(sources);
+  locations = await normalizeLocations(locations);
+  return { locations, scraperErrors }
+}
