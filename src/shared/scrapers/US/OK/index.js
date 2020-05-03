@@ -151,7 +151,7 @@ const scraper = {
     '2020-04-30': async function() {
       // They're using a looker dashboard, but also have links to download CSv.
       this.url = 'https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv';
-      const csv = await fetch.csv(this, this.url, 'tmpindex');
+      const csv = await fetch.csv(this, this.url, 'default');
       assert(csv, `No csv, failed fetch from ${this.url}`);
       let counties = [];
       csv.forEach(item => {
