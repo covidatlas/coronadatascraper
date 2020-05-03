@@ -1,11 +1,10 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
-
-// Set county to this if you only have state data, but this isn't the entire state
-// const UNASSIGNED = '(unassigned)';
+import datetime from '../../../lib/datetime/index.js';
+import * as geography from '../../../lib/geography/index.js';
 
 const scraper = {
-  county: 'Washoe County',
+  county: 'fips:32031',
   state: 'iso2:US-NV',
   country: 'iso1:US',
   url:
@@ -17,6 +16,10 @@ const scraper = {
       description: 'Washoe County, Nevada health department'
     }
   ],
+  _counties: ['Washoe County'],
+  certValidation: false,
+  // timeseries: true,
+  aggregate: 'county',
   type: 'table',
   scraper: {
     '0': async function() {
@@ -66,6 +69,68 @@ const scraper = {
         recovered: parse.number(data.recovered),
         active: parse.number(data.active)
       };
+    },
+    '2020-03-02': async function() {
+      const orgId = 'iCGWaR7ZHc5saRIl';
+      const layerName = 'CasesTable_public';
+      this.url = `https://services.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&orderByFields=reportdt%20asc`;
+      this.type = 'json';
+
+      const data = await fetch.json(this, this.url, 'default');
+      // console.info(data);
+
+      const countyDates = [];
+      for (const row of data.features) {
+        const countyDate = {
+          county: geography.addCounty(parse.string('Washoe County')),
+          cases: typeof row.attributes.confirmed === 'number' ? parse.number(row.attributes.confirmed) : null,
+          active: typeof row.attributes.active === 'number' ? parse.number(row.attributes.active) : null,
+          recovered: typeof row.attributes.recovered === 'number' ? parse.number(row.attributes.recovered) : null,
+          deaths: typeof row.attributes.deaths === 'number' ? parse.number(row.attributes.deaths) : null,
+          tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : null,
+          hospitalized:
+            typeof row.attributes.Hospitalized === 'number' ? parse.number(row.attributes.Hospitalized) : null,
+          discharged:
+            typeof row.attributes.ReleasedFromHospital === 'number'
+              ? parse.number(row.attributes.ReleasedFromHospital)
+              : null,
+          date: datetime.parse(row.attributes.MDYYYY).toString()
+        };
+        countyDates[countyDate.date] = countyDate;
+      }
+
+      const latestDateInTimeseries = datetime.parse(Object.keys(countyDates).pop());
+      const earliestDateInTimeseries = datetime.parse(Object.keys(countyDates).shift());
+      // console.info([earliestDateInTimeseries,latestDateInTimeseries]);
+
+      let scrapeDate;
+      if (typeof process.env.SCRAPE_DATE === 'undefined') {
+        scrapeDate = datetime.getYYYYMMDD(latestDateInTimeseries);
+      } else if (
+        datetime.parse(process.env.SCRAPE_DATE) > latestDateInTimeseries ||
+        datetime.parse(process.env.SCRAPE_DATE) < earliestDateInTimeseries
+      ) {
+        scrapeDate = datetime.getYYYYMMDD(latestDateInTimeseries);
+        console.error(
+          `🚨 Timeseries for : SCRAPE_DATE ${datetime.getYYYYMMDD(
+            scrapeDate
+          )} is out of sample timeseries (${datetime.getYYYYMMDD(earliestDateInTimeseries)}-${datetime.getYYYYMMDD(
+            latestDateInTimeseries
+          )}). Using latest sample.`
+        );
+      } else {
+        scrapeDate = datetime.getYYYYMMDD(latestDateInTimeseries);
+      }
+
+      const counties = [];
+      Object.keys(countyDates).forEach(function(countyDate) {
+        if (countyDate === scrapeDate) {
+          counties.push(countyDates[countyDate]);
+        }
+      });
+
+      // console.info(counties);
+      return counties;
     }
   }
 };
