@@ -57,6 +57,10 @@ const scraper = {
       recovered: paragraphMatcher({
         selector: `.page-content p:contains("people have recovered")`,
         regex: /(?<dataPoint>[\d,]+) people have recovered/
+      }),
+      tested: paragraphMatcher({
+        selector: `.page-content p:contains("More than")`,
+        regex: /More than (?<dataPoint>[\d,]+) test/
       })
     };
 
