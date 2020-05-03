@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-02",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -14487,29 +14487,26 @@
     "level": "country"
   },
   {
+    "country": "United States Virgin Islands",
+    "url": "https://www.covid19usvi.com/",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States Virgin Islands",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
+    "rating": 0.2549019607843137,
     "coordinates": [
       -64.818,
       18.0265
@@ -21946,7 +21943,6 @@
       }
     ],
     "county": "San Diego County",
-    "icu": 250,
     "rating": 0.7058823529411765,
     "coordinates": [
       -116.83850000000001,
@@ -22009,7 +22005,6 @@
       }
     ],
     "county": "San Joaquin County",
-    "icu": 53,
     "rating": 0.7058823529411765,
     "coordinates": [
       -121.2525,
@@ -40610,7 +40605,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Allen County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40663,7 +40658,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Anderson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40716,7 +40711,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Atchison County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40769,7 +40764,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Barber County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40822,7 +40817,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Barton County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40875,7 +40870,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Bourbon County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40928,7 +40923,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Brown County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -40981,7 +40976,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Butler County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41034,7 +41029,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Chase County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41087,7 +41082,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Chautauqua County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41140,7 +41135,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Cherokee County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41193,7 +41188,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Cheyenne County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41246,7 +41241,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Clark County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41299,7 +41294,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Clay County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41352,7 +41347,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Cloud County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41405,7 +41400,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Coffey County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41458,7 +41453,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Comanche County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41511,7 +41506,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Cowley County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41564,7 +41559,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Crawford County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41617,7 +41612,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Decatur County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41670,7 +41665,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Dickinson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41723,7 +41718,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Doniphan County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41776,7 +41771,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Douglas County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41829,7 +41824,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Edwards County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41882,7 +41877,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Elk County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41935,7 +41930,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Ellis County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -41988,7 +41983,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Ellsworth County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42041,7 +42036,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Finney County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42094,7 +42089,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Ford County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42147,7 +42142,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Franklin County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42200,7 +42195,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Geary County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42253,7 +42248,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Gove County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42306,7 +42301,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Graham County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42359,7 +42354,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Grant County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42412,7 +42407,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Gray County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42465,7 +42460,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Greeley County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42518,7 +42513,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Greenwood County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42571,7 +42566,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Hamilton County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42624,7 +42619,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Harper County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42677,7 +42672,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Harvey County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42730,7 +42725,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Haskell County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42783,7 +42778,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Hodgeman County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42836,7 +42831,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Jackson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42889,7 +42884,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Jefferson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42942,7 +42937,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Jewell County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -42995,7 +42990,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Johnson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43048,7 +43043,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Kearny County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43101,7 +43096,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Kingman County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43154,7 +43149,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Kiowa County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43207,7 +43202,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Labette County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43260,7 +43255,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Lane County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43313,7 +43308,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Leavenworth County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43366,7 +43361,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Lincoln County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43419,7 +43414,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Linn County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43472,7 +43467,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Logan County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43525,7 +43520,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Lyon County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43578,7 +43573,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "McPherson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43631,7 +43626,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Marion County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43684,7 +43679,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Marshall County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43737,7 +43732,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Meade County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43790,7 +43785,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Miami County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43843,7 +43838,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Mitchell County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43896,7 +43891,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Montgomery County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -43949,7 +43944,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Morris County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44002,7 +43997,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Morton County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44055,7 +44050,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Nemaha County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44108,7 +44103,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Neosho County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44161,7 +44156,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Ness County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44214,7 +44209,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Norton County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44267,7 +44262,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Osage County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44320,7 +44315,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Osborne County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44373,7 +44368,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Ottawa County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44426,7 +44421,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Pawnee County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44479,7 +44474,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Phillips County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44532,7 +44527,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Pottawatomie County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44585,7 +44580,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Pratt County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44638,7 +44633,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Rawlins County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44691,7 +44686,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Reno County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44744,7 +44739,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Republic County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44797,7 +44792,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Rice County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44850,7 +44845,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Riley County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44903,7 +44898,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Rooks County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -44956,7 +44951,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Rush County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45009,7 +45004,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Russell County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45062,7 +45057,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Saline County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45115,7 +45110,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Scott County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45168,7 +45163,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Sedgwick County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45221,7 +45216,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Seward County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45274,7 +45269,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Shawnee County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45327,7 +45322,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Sheridan County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45380,7 +45375,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Sherman County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45433,7 +45428,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Smith County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45486,7 +45481,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Stafford County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45539,7 +45534,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Stanton County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45592,7 +45587,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Stevens County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45645,7 +45640,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Sumner County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45698,7 +45693,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Thomas County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45751,7 +45746,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Trego County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45804,7 +45799,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Wabaunsee County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45857,7 +45852,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Wallace County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45910,7 +45905,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Washington County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -45963,7 +45958,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Wichita County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -46016,7 +46011,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Wilson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -46069,7 +46064,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Woodson County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -46122,7 +46117,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "county": "Wyandotte County",
     "rating": 0.17647058823529413,
     "coordinates": [
@@ -61999,7 +61994,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-01T22:03:40.245Z",
+    "publishedDate": "2020-05-02T19:20:06.838Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -62389,7 +62384,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-01T18:53:23.721Z",
+    "publishedDate": "2020-05-02T19:15:07.791Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -62428,7 +62423,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-05-01T22:03:48.736Z",
+    "publishedDate": "2020-05-02T19:15:10.449Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -62506,7 +62501,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-05-01T18:53:31.130Z",
+    "publishedDate": "2020-05-02T19:15:15.360Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -62896,7 +62891,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-01T18:53:45.798Z",
+    "publishedDate": "2020-05-02T19:15:28.588Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62974,7 +62969,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-04-30T18:08:47.213Z",
+    "publishedDate": "2020-05-02T19:15:33.345Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -63091,7 +63086,7 @@
       }
     ],
     "county": "Dade County",
-    "publishedDate": "2020-04-14T17:24:47.965Z",
+    "publishedDate": "2020-05-02T19:21:16.290Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.85,
@@ -63169,7 +63164,7 @@
       }
     ],
     "county": "Daviess County",
-    "publishedDate": "2020-05-01T22:04:18.971Z",
+    "publishedDate": "2020-05-02T19:15:39.631Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.989,
@@ -63325,7 +63320,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-05-01T18:54:10.444Z",
+    "publishedDate": "2020-05-02T19:15:46.967Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -63364,7 +63359,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-01T18:51:47.236Z",
+    "publishedDate": "2020-05-02T19:21:25.722Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -63403,7 +63398,7 @@
       }
     ],
     "county": "Gasconade County",
-    "publishedDate": "2020-05-01T22:04:24.004Z",
+    "publishedDate": "2020-05-02T19:15:51.062Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.5055,
@@ -63481,7 +63476,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-01T18:54:20.687Z",
+    "publishedDate": "2020-05-02T19:15:58.766Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -63832,7 +63827,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-01T18:54:31.124Z",
+    "publishedDate": "2020-05-02T19:16:09.320Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63910,7 +63905,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-01T18:54:35.125Z",
+    "publishedDate": "2020-05-02T19:16:20.534Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63949,7 +63944,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-05-01T22:04:38.321Z",
+    "publishedDate": "2020-05-02T19:16:26.105Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -64066,7 +64061,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-01T18:54:51.531Z",
+    "publishedDate": "2020-05-02T19:16:34.931Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -64183,7 +64178,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-04-28T18:54:10.304Z",
+    "publishedDate": "2020-05-02T19:16:39.813Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -64534,7 +64529,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-05-01T22:04:56.078Z",
+    "publishedDate": "2020-05-02T19:16:51.313Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -64729,7 +64724,7 @@
       }
     ],
     "county": "Morgan County",
-    "publishedDate": "2020-05-01T22:05:03.588Z",
+    "publishedDate": "2020-05-02T19:16:57.356Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.8515,
@@ -64768,7 +64763,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-05-01T22:05:15.305Z",
+    "publishedDate": "2020-05-02T19:16:59.523Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -64846,7 +64841,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-05-01T22:05:18.202Z",
+    "publishedDate": "2020-05-02T19:17:02.715Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -64885,7 +64880,7 @@
       }
     ],
     "county": "Oregon County",
-    "publishedDate": "2020-05-01T22:05:17.079Z",
+    "publishedDate": "2020-05-02T19:17:04.333Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.39699999999999,
@@ -65080,7 +65075,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-05-01T22:05:24.724Z",
+    "publishedDate": "2020-05-02T19:17:11.871Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -65197,7 +65192,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-01T22:05:31.958Z",
+    "publishedDate": "2020-05-02T19:17:16.492Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -65548,7 +65543,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-01T18:56:40.484Z",
+    "publishedDate": "2020-05-02T19:22:25.637Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -65706,7 +65701,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "1588339800000",
+    "publishedDate": "1588429800000",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -65745,7 +65740,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-01T18:56:30.495Z",
+    "publishedDate": "2020-05-02T19:22:18.860Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -65862,7 +65857,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-01T18:56:35.248Z",
+    "publishedDate": "2020-05-02T19:17:31.900Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -66096,7 +66091,7 @@
       }
     ],
     "county": "Taney County",
-    "publishedDate": "2020-04-28T18:55:46.804Z",
+    "publishedDate": "2020-05-02T19:22:49.083Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.03999999999999,
@@ -66447,7 +66442,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-01T18:56:50.593Z",
+    "publishedDate": "2020-05-02T19:17:42.797Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -89192,31 +89187,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dewey County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.88050000000001,
       45.0985
@@ -110468,7 +110452,6 @@
     "level": "state"
   },
   {
-    "aggregate": "state",
     "country": "Australia",
     "maintainers": [
       {
@@ -110483,14 +110466,14 @@
     ],
     "sources": [
       {
-        "description": "Government of Western Australia, Department of Health",
-        "name": "WA Health",
-        "url": "https://ww2.health.wa.gov.au"
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
       }
     ],
-    "url": "https://ww2.health.wa.gov.au/Articles/A_E/Coronavirus/COVID19-statistics",
     "state": "New South Wales",
-    "rating": 0.39215686274509803,
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "rating": 0.43137254901960786,
     "coordinates": [
       147.3115,
       -32.831
@@ -110527,7 +110510,7 @@
     ],
     "state": "Northern Territory",
     "url": "https://coronavirus.nt.gov.au/",
-    "rating": 0.27450980392156865,
+    "rating": 0.35294117647058826,
     "coordinates": [
       133.4995,
       -18.485
@@ -110680,7 +110663,7 @@
     ],
     "state": "Victoria",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.21568627450980393,
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -114531,27 +114514,29 @@
     "level": "country"
   },
   {
-    "country": "Indonesia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Indonesia",
+    "curators": [
       {
-        "description": "Ministry of Health Republic of Indonesia",
-        "name": "Ministry of Health Republic of Indonesia",
-        "url": "https://www.kemkes.go.id/"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
-    "url": "https://www.kemkes.go.id/",
-    "rating": 0.3137254901960784,
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       118.03,
       -2.5504999999999995
@@ -117170,28 +117155,29 @@
     "level": "country"
   },
   {
-    "country": "Thailand",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Thailand",
+    "curators": [
       {
-        "description": "Department of Disease Control Thailand",
-        "name": "Department of Disease Control Thailand",
-        "url": "https://ddc.moph.go.th/"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
-    "url": "https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson",
-    "icu": 61,
-    "rating": 0.3333333333333333,
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       101.4905,
       13.038
@@ -121712,7 +121698,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Panamá",
-    "icu": 66,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-8",
@@ -121773,7 +121758,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Chiriquí",
-    "icu": 1,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-4",
@@ -121834,7 +121818,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Colón",
-    "icu": 6,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-3",
@@ -121865,7 +121848,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Darién",
-    "icu": 1,
     "rating": 0.4117647058823529,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-5",
@@ -121926,7 +121908,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Comarca Guna Yala",
-    "icu": 1,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-KY",
@@ -122047,7 +122028,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Panamá Oeste",
-    "icu": 20,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-10",
@@ -122078,7 +122058,6 @@
     ],
     "url": "https://services5.arcgis.com/aqOddbAz6HewRw8I/ArcGIS/rest/services/Casos_Covid19_PA/FeatureServer/0/",
     "state": "Veraguas",
-    "icu": 1,
     "rating": 0.49019607843137253,
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-9",

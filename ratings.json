@@ -713,7 +713,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-02",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1279,6 +1279,38 @@
     "rating": 0.45098039215686275,
     "countryId": "iso1:US",
     "stateId": "iso2:US-RI"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
+      }
+    ],
+    "state": "New South Wales",
+    "type": "table",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",
@@ -2328,6 +2360,37 @@
     "priority": 2,
     "sources": [
       {
+        "name": "Northern Territory Government - Coronavirus site",
+        "url": "https://coronavirus.nt.gov.au"
+      }
+    ],
+    "state": "Northern Territory",
+    "type": "table",
+    "url": "https://coronavirus.nt.gov.au/",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NT"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
         "description": "QLD Government Health Department",
         "name": "QLD Government Health",
         "url": "https://www.health.qld.gov.au"
@@ -2447,36 +2510,6 @@
     "ssl": true,
     "rating": 0.3333333333333333,
     "countryId": "iso1:SI"
-  },
-  {
-    "country": "Thailand",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Department of Disease Control Thailand",
-        "name": "Department of Disease Control Thailand",
-        "url": "https://ddc.moph.go.th/"
-      }
-    ],
-    "type": "json",
-    "url": "https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3333333333333333,
-    "countryId": "iso1:TH"
   },
   {
     "county": "Contra Costa County",
@@ -2687,36 +2720,6 @@
     "stateId": "iso2:US-CA"
   },
   {
-    "country": "Indonesia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Ministry of Health Republic of Indonesia",
-        "name": "Ministry of Health Republic of Indonesia",
-        "url": "https://www.kemkes.go.id/"
-      }
-    ],
-    "type": "table",
-    "url": "https://www.kemkes.go.id/",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3137254901960784,
-    "countryId": "iso1:ID"
-  },
-  {
     "country": "New Zealand",
     "maintainers": [
       {
@@ -2786,20 +2789,21 @@
     "priority": 2,
     "sources": [
       {
-        "name": "Northern Territory Government - Coronavirus site",
-        "url": "https://coronavirus.nt.gov.au"
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
       }
     ],
-    "state": "Northern Territory",
-    "type": "table",
-    "url": "https://coronavirus.nt.gov.au/",
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
-    "rating": 0.27450980392156865,
+    "rating": 0.29411764705882354,
     "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NT"
+    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Cyprus",
@@ -3052,7 +3056,7 @@
     "certValidation": true,
     "priority": 0,
     "type": "pdf",
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1050/5-1-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
@@ -3094,7 +3098,15 @@
     "stateId": "iso2:US-WY"
   },
   {
-    "country": "Australia",
+    "country": "United States Virgin Islands",
+    "type": "paragraph",
+    "url": "https://www.covid19usvi.com/",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
     "maintainers": [
       {
         "name": "Cameron Chamberlain",
@@ -3106,24 +3118,13 @@
         "flag": "🇦🇺"
       }
     ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
+    "priority": 0,
     "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:VI"
   },
   {
     "country": "Japan",
