@@ -33,18 +33,14 @@ async function generate(date, options = {}) {
 
   // Break apart all parts to make connections explicit.
 
-  let output = { sources };
-  const dumpkeys = title => {
-    console.log(`${title} keys = ${Object.keys(output)}`);
-  };
+  let output = {};
 
   // Crawler
   let { locations, scraperErrors } = await scrapeData(sources);
-  dumpkeys('after scrape');
   await writeRawRegression(locations, options);
 
   // processor
-  output.locations = locations;
+  
   const ratings = await rateSources(sources, locations);
 
   const { deDuped, crosscheckReports } = await dedupeLocations(locations);
@@ -54,10 +50,7 @@ async function generate(date, options = {}) {
     numSources: sources.length,
     errors: validationErrors
   };
-  output.sources = sources;
-  output.scraperErrors = scraperErrors;
-  output.crosscheckReports = crosscheckReports;
-  output = await reportScrape(output);
+  await reportScrape(locations, scraperErrors, deDuped, crosscheckReports, output.report);
 
   const featureResult = await findFeatures(locations);
   locations = featureResult.locations;
