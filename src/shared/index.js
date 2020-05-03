@@ -20,8 +20,8 @@ import datetime from './lib/datetime/index.js';
 async function generate(date, options = {}) {
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
-  // JSON used for reporting
-  const report = {
+  // Summary of results of each step of generation.
+  let summaryReport = {
     date: date || datetime.getYYYYMD()
   };
 
@@ -31,39 +31,35 @@ async function generate(date, options = {}) {
     return;
   }
 
-  // Break apart all parts to make connections explicit.
-
-  let output = {};
+  summaryReport.sources = {
+    numSources: sources.length,
+    errors: validationErrors
+  };
 
   // Crawler
   let { locations, scraperErrors } = await scrapeData(sources);
+
   await writeRawRegression(locations, options);
 
   // processor
-  
+
   const ratings = await rateSources(sources, locations);
 
   const { deDuped, crosscheckReports } = await dedupeLocations(locations);
 
-  output.report = report;
-  output.report.sources = {
-    numSources: sources.length,
-    errors: validationErrors
-  };
-  await reportScrape(locations, scraperErrors, deDuped, crosscheckReports, output.report);
+  await reportScrape(locations, scraperErrors, deDuped, crosscheckReports, summaryReport);
 
   const featureResult = await findFeatures(locations);
   locations = featureResult.locations;
-  output.report.findFeatures = featureResult.reportResult;
+  summaryReport.findFeatures = featureResult.reportResult;
 
-  const populationResult = await findPopulations(locations, featureResult.featureCollection);
-  output.report.findPopulation = populationResult.result;
+  summaryReport.findPopulation = await findPopulations(locations, featureResult.featureCollection);
 
-  await transformIds(locations, output.report, ratings);
+  await transformIds(locations, summaryReport, ratings);
 
-  await cleanLocations(locations, output.report);
+  await cleanLocations(locations, summaryReport);
 
-  output = await writeData(locations, featureResult.featureCollection, ratings, output.report, options); // To be retired
+  const output = await writeData(locations, featureResult.featureCollection, ratings, summaryReport, options); // To be retired
 
   return output;
 }

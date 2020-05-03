@@ -173,10 +173,10 @@ export default async function generatePopulations(locations, featureCollection) 
   }
   log('✅ Found population data for %d out of %d locations', populationFound, Object.keys(locations).length);
 
-  const result = {
+  const report = {
     numLocationsWithPopulation: populationFound,
     missingPopulations: errors
   };
 
-  return { locations, result };
+  return report;
 };
