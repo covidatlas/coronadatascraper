@@ -6,10 +6,8 @@ import reporter from '../../../shared/lib/error-reporter.js';
 /*
   Clean the passed data
 */
-const cleanLocations = args => {
+export default function cleanLocations(locations, report) {
   log(`⏳ Validating and cleaning locations...`);
-
-  const { locations, report } = args;
 
   const errors = [];
   for (const location of locations) {
@@ -33,8 +31,4 @@ const cleanLocations = args => {
   report.validate = {
     errors
   };
-
-  return args;
 };
-
-export default cleanLocations;

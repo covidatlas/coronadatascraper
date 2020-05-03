@@ -68,7 +68,8 @@ async function generate(date, options = {}) {
 
   await transformIds(locations, output.report, ratings);
 
-  output = await cleanLocations(output);
+  await cleanLocations(locations, output.report);
+
   output.options = options;
   output = await writeData(output); // To be retired
 
