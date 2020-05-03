@@ -1,20 +1,20 @@
 import path from 'path';
 import * as fs from '../../../shared/lib/fs.js';
 
-const writeRawRegression = async args => {
-  if (!args.options.dumpRaw) return args;
+export default async function writeRawRegression(locations, options) {
+  if (!options.dumpRaw) return;
 
   let suffix = '';
-  if (args.options.outputSuffix !== undefined) {
-    suffix = args.options.outputSuffix;
+  if (options.outputSuffix !== undefined) {
+    suffix = options.outputSuffix;
   } else if (process.env.SCRAPE_DATE) {
     suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
-  const d = args.options.writeTo;
+  const d = options.writeTo;
   await fs.ensureDir(d);
 
-  const data = args.locations;
+  const data = locations;
   const keyCollector = data.reduce((hsh, val) => {
     return { ...hsh, ...val };
   }, {});
@@ -65,8 +65,4 @@ const writeRawRegression = async args => {
   await fs.writeJSON(path.join(d, `raw${suffix}.json`), output, { space: 2 });
 
   await fs.writeJSON(path.join(d, `raw-full${suffix}.json`), data, { space: 2 });
-
-  return args;
-};
-
-export default writeRawRegression;
+}
