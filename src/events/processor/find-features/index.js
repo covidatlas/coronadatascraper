@@ -395,7 +395,7 @@ export default function generateFeatures (locations) {
       missingFeatures: errors
     };
 
-    resolve({ locations, featureCollection, reportResult });
+    resolve({ featureCollection, reportResult });
   });
 };
 

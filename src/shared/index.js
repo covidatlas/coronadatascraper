@@ -50,7 +50,6 @@ async function generate(date, options = {}) {
   await reportScrape(locations, scraperErrors, deDuped, crosscheckReports, summaryReport);
 
   const featureResult = await findFeatures(locations);
-  locations = featureResult.locations;
   summaryReport.findFeatures = featureResult.reportResult;
 
   summaryReport.findPopulation = await findPopulations(locations, featureResult.featureCollection);
