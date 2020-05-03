@@ -42,7 +42,7 @@ async function runScrape(sources, date, report, options) {
 
   const locations = await scrapeData(sources, report.scrape);
 
-  await writeRaw(locations, report, options);
+  await writeRaw(sources, locations, report, options);
 
   return locations;
 }
@@ -99,8 +99,6 @@ export async function generateReportsFromRawFiles(date, options = {}) {
   options = getFullOptions(options);
 
   console.log('Restoring locations and report from prior saved raw files.');
-  const { locations, report } = await loadRaw(options);
-  const sources = await getSources(options);
-
+  const { sources, locations, report } = await loadRaw(options);
   return generateReports(date, sources, locations, report, options);
 }

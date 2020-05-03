@@ -19,6 +19,21 @@ const errors = [
   }
 ];
 
+/** Get errors to persist to disk during raw collection. */
+export function getErrors() {
+  return errors;
+}
+
+/** Used to restore errors from a saved file. */
+export function setErrors(arr) {
+  while (errors.length > 0) {
+    errors.pop();
+  }
+  arr.forEach(a => {
+    errors.push(a);
+  });
+}
+
 /**
  * Logs an error.
  *
@@ -69,4 +84,4 @@ function getCSV() {
   return errors;
 }
 
-export default { logError, getCSV };
+export default { logError, getCSV, getErrors, setErrors };
