@@ -1,7 +1,6 @@
 import log from '../../../shared/lib/log.js';
 
-const reportScraping = args => {
-  const { locations, scraperErrors, deDuped, crosscheckReports, report } = args;
+export default function reportScraping(locations, scraperErrors, deDuped, crosscheckReports, report) {
 
   const locationCounts = {
     cities: 0,
@@ -56,8 +55,4 @@ const reportScraping = args => {
     crosscheckReports,
     errors: scraperErrors
   };
-
-  return args;
 };
-
-export default reportScraping;
