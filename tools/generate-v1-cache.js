@@ -67,6 +67,11 @@ const { argv } = yargs
     description: 'Single date in coronadatascraper-cache to migrate',
     type: 'string'
   })
+  .option('check', {
+    alias: 'c',
+    description: 'Only check, do not migrate',
+    type: 'boolean'
+  })
   .demand(['dest'], 'Please specify output dir')
   .version(false)
   .help();
@@ -111,6 +116,54 @@ function migrateDirs(dirs, argv) {
   console.log(`${migrated.length} files written to ${argv.dest}`);
 }
 
+function checkFolder(allfiles, d, errors) {
+  function debug(h, s) {
+    if (d !== 'the/id/date/you/are/checking') return;
+    console.log('---------------------');
+    console.log(h);
+    console.log(s);
+    console.log('---------------------');
+  }
+
+  debug(
+    'filt',
+    allfiles.filter(f => f.includes(d))
+  );
+
+  // Files in the folder
+  const files = allfiles
+    .filter(f => f.includes(`${path.sep}${d}`))
+    .map(f => f.split(d))
+    .map(a => a[a.length - 1]);
+  debug('files', files);
+
+  // The keys for the files (format: 'lotsofstuff-{cachekey}-{sha}.extension')
+  let keys = files.map(f => f.split('-')).map(a => a[a.length - 2]);
+  debug('keys', keys);
+
+  // Ignore the 'intermediary files'
+  const intermediaries = ['tmpindex', 'tempindex', 'tmpcsrf', 'arcorgid', 'arcgis'];
+  keys = keys.filter(s => !intermediaries.includes(s));
+  debug('filtered keys', keys);
+
+  if (keys.length === 0) {
+    errors.push(`${d}: No files??`);
+  }
+
+  const defaults = keys.filter(k => k === 'default');
+  debug('defaults', defaults);
+  if (keys.length === 1) {
+    if (defaults.length !== 1) {
+      const msg = `${d}: DEFAULT ERR, single file should have key 'default', got ${keys}`;
+      errors.push(msg);
+    }
+  } else if (defaults.length > 0) {
+    const msg = `${d}: DEFAULT ERR, no file in multifile dir should have key 'default', got ${keys.join(', ')}`;
+    errors.push(msg);
+  }
+  // console.log(`   ${d} keys ok.`);
+}
+
 // If a cache folder has multiple files, none of them should have
 // cache key 'default'.  If it has one file, it must have cache key
 // 'default'.
@@ -130,39 +183,7 @@ function checkDefaultCacheKeySpecs(destdir) {
 
   const errors = [];
 
-  folders.forEach(d => {
-    // Files in the folder
-    const files = allfiles
-      .filter(f => f.includes(d))
-      .map(f => f.split(d))
-      .map(a => a[a.length - 1]);
-
-    // The keys for the files (format: 'lotsofstuff-{cachekey}-{sha}.extension')
-    let keys = files.map(f => f.split('-')).map(a => a[a.length - 2]);
-
-    // Ignore the 'intermediary files'
-    const intermediaries = ['tmpindex', 'tempindex', 'tmpcsrf', 'arcorgid', 'arcgis'];
-    keys = keys.filter(s => !intermediaries.includes(s));
-
-    if (keys.length === 0) {
-      errors.push(`${d}: No files??`);
-    }
-
-    const defaults = keys.filter(k => k === 'default');
-    if (keys.length === 1) {
-      if (defaults.length !== 1) {
-        const msg = `${d}: DEFAULT CACHE KEY, single file should have key 'default', got ${keys}`;
-        errors.push(msg);
-      }
-    } else if (defaults.length > 0) {
-      const msg = `${d}: DEFAULT CACHE KEY, no file in multifile cache dir should have key 'default', got ${keys.join(
-        ', '
-      )}`;
-      errors.push(msg);
-    }
-
-    console.log(`   ${d} keys ok.`);
-  });
+  folders.forEach(d => checkFolder(allfiles, d, errors));
 
   if (errors.length > 0) {
     console.log('==================================================================');
@@ -180,5 +201,8 @@ function checkDefaultCacheKeySpecs(destdir) {
   }
 }
 
-migrateDirs(dirs, argv);
+if (!argv.check) {
+  console.log('migrating');
+  migrateDirs(dirs, argv);
+}
 checkDefaultCacheKeySpecs(argv.dest);
