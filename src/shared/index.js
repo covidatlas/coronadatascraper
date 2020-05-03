@@ -2,7 +2,7 @@
 import fetchSources from '../events/crawler/get-sources/index.js';
 import validateSources from '../events/crawler/get-sources/validate-sources.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
-import writeRawRegression from '../events/processor/write-data/dump-regression-raw.js';
+import writeRaw from '../events/processor/write-data/write-raw.js';
 
 // Metadata + geo processing operations
 import rateSources from '../events/processor/rate-sources/index.js';
@@ -39,7 +39,7 @@ async function runScrape(date, report, options) {
 
   const locations = await scrapeData(sources, report.scrape);
 
-  await writeRawRegression(locations, options);
+  await writeRaw(locations, report, options);
 
   return { sources, locations };
 }
