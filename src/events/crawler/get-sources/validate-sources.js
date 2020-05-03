@@ -2,7 +2,7 @@ import * as schema from '../../../shared/lib/schema.js';
 import log from '../../../shared/lib/log.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
-const validateSources = sources => {
+export default function validateSources(sources, report) {
   const errors = [];
   for (const source of sources) {
     const schemaErrors = schema.schemaHasErrors(source, schema.schemas.scraperSchema, {});
@@ -22,7 +22,7 @@ const validateSources = sources => {
     log(`✅ All scrapers are valid!`);
   }
 
-  return errors;
+  report.numSources = sources.length;
+  report.errors = errors;
 };
 
-export default validateSources;

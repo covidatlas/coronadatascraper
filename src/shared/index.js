@@ -1,5 +1,6 @@
 // Crawler operations
 import fetchSources from '../events/crawler/get-sources/index.js';
+import validateSources from '../events/crawler/get-sources/validate-sources.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
 import writeRawRegression from '../events/processor/write-data/dump-regression-raw.js';
 
@@ -21,46 +22,45 @@ async function generate(date, options = {}) {
   options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
 
   // Summary of results of each step of generation.
-  let summaryReport = {
-    date: date || datetime.getYYYYMD()
+  let report = {
+    date: date || datetime.getYYYYMD(),
+    sources: {},
+    scrape: {},
+    findFeatures: {},
+    findPopulation: {},
+    transformIds: {},
+    validate: {}
   };
 
-  const { sources, validationErrors } = await fetchSources(options);
+  const sources = await fetchSources(options);
   if (sources.length === 0) {
     console.log('No sources, quitting.');
     return;
   }
 
-  summaryReport.sources = {
-    numSources: sources.length,
-    errors: validationErrors
-  };
+  await validateSources(sources, report.sources);
 
   // Crawler
-  let { locations, scraperErrors } = await scrapeData(sources);
+  const locations = await scrapeData(sources, report.scrape);
 
   await writeRawRegression(locations, options);
 
   // processor
-
   const ratings = await rateSources(sources, locations);
 
-  const { deDuped, crosscheckReports } = await dedupeLocations(locations);
+  await dedupeLocations(locations, report.scrape);
 
-  await reportScrape(locations, scraperErrors, deDuped, crosscheckReports, summaryReport);
+  await reportScrape(locations, report.scrape);
 
-  const featureResult = await findFeatures(locations);
-  summaryReport.findFeatures = featureResult.reportResult;
+  const features = await findFeatures(locations, report.findFeatures);
 
-  summaryReport.findPopulation = await findPopulations(locations, featureResult.featureCollection);
+  await findPopulations(locations, features, report.findPopulation);
 
-  await transformIds(locations, summaryReport, ratings);
+  await transformIds(locations, ratings, report.scrape, report.transformIds);
 
-  await cleanLocations(locations, summaryReport);
+  await cleanLocations(locations, report.validate);
 
-  const output = await writeData(locations, featureResult.featureCollection, ratings, summaryReport, options); // To be retired
-
-  return output;
+  return await writeData(locations, features, ratings, report, options);
 }
 
 export default generate;

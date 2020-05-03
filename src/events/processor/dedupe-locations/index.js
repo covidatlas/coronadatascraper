@@ -89,7 +89,7 @@ function addCrosscheckReport(crosscheckReports, locationName, crosscheckResult, 
   report.dropped.push(report.sources.length - 1);
 }
 
-export default function dedupeLocations(locations) {
+export default function dedupeLocations(locations, report) {
   log(`⏳ De-duping locations...`);
 
   const crosscheckReports = {};
@@ -172,6 +172,6 @@ export default function dedupeLocations(locations) {
 
   log('✅ De-duped %d locations and found %d crosscheck failures! ', deDuped, crossCheckFailures);
 
-  return { deDuped, crosscheckReports };
+  report.numDuplicates = deDuped;
+  report.crosscheckReports = crosscheckReports;
 };
-
