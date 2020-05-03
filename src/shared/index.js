@@ -31,18 +31,21 @@ async function generate(date, options = {}) {
     return;
   }
 
+  // Break apart all parts to make connections explicit.
+
   // Crawler
-  const output = await scrapeData(srcs)
-    .then(writeRawRegression)
-    // processor
-    .then(rateSources)
-    .then(dedupeLocations)
-    .then(reportScrape)
-    .then(options.findFeatures !== false && findFeatures)
-    .then(options.findPopulations !== false && findPopulations)
-    .then(transformIds)
-    .then(cleanLocations)
-    .then(options.writeData !== false && writeData); // To be retired
+  let output = await scrapeData(srcs);
+  output = await writeRawRegression(output);
+
+  // processor
+  output = await rateSources(output);
+  output = await dedupeLocations(output);
+  output = await reportScrape(output);
+  output = await findFeatures(output);
+  output = await findPopulations(output);
+  output = await transformIds(output);
+  output = await cleanLocations(output);
+  output = await writeData(output); // To be retired
 
   return output;
 }
