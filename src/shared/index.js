@@ -39,7 +39,7 @@ async function generate(date, options = {}) {
   };
 
   // Crawler
-  const { locations, scraperErrors } = await scrapeData(sources);
+  let { locations, scraperErrors } = await scrapeData(sources);
   dumpkeys('after scrape');
   await writeRawRegression(locations, options);
 
@@ -58,8 +58,13 @@ async function generate(date, options = {}) {
   output.scraperErrors = scraperErrors;
   output.crosscheckReports = crosscheckReports;
   output = await reportScrape(output);
-  output = await findFeatures(output);
-  output = await findPopulations(output);
+
+  const featureResult = await findFeatures(locations);
+  locations = featureResult.locations;
+  output.report.findFeatures = featureResult.reportResult;
+
+  const populationResult = await findPopulations(locations, featureResult.featureCollection);
+  output.report.findPopulation = populationResult.result;
 
   output.sourceRatings = ratings;
   output = await transformIds(output);

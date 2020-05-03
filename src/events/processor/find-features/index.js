@@ -117,7 +117,7 @@ function locationPropertyMatchesFeature(locationItem, feature) {
   );
 }
 
-const generateFeatures = ({ locations, report, options, sourceRatings }) => {
+export default function generateFeatures (locations) {
   const featureCollection = {
     type: 'FeatureCollection',
     features: []
@@ -390,13 +390,12 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       featureCollection.features.length
     );
 
-    report.findFeatures = {
+    const reportResult = {
       numFeaturesFound: foundCount,
       missingFeatures: errors
     };
 
-    resolve({ locations, featureCollection, report, options, sourceRatings });
+    resolve({ locations, featureCollection, reportResult });
   });
 };
 
-export default generateFeatures;
