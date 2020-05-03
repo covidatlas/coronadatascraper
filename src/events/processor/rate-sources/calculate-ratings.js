@@ -86,10 +86,8 @@ const rateLocation = location => {
   return rating / bestScore;
 };
 
-const calculateRatings = async args => {
+export default async function calculateRatings(sources, locations) {
   log(`⏳ Calculating ratings...`);
-
-  const { sources, locations } = args;
 
   const scoreBySource = {};
   sources.forEach(source => {
@@ -107,7 +105,5 @@ const calculateRatings = async args => {
 
   const sourceRatings = sources.filter(source => source.rating !== undefined).sort((a, b) => b.rating - a.rating);
 
-  return { ...args, sourceRatings };
-};
-
-export default calculateRatings;
+  return sourceRatings;
+}
