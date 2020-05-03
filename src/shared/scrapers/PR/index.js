@@ -3,7 +3,7 @@ import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../lib/maintainers.js';
-import pivotTheTable from '../../utils/pivot-the-table.js';
+import normalizeTable from '../../utils/normalize-table.js';
 
 const schemaKeysByHeadingFragment = {
   'muertes​': 'deaths',
@@ -35,13 +35,18 @@ const scraper = {
   ],
   async scraper() {
     const $ = await fetch.page(this, this.url, 'default');
-    const $table = $('th:contains("MUERTES")').closest('table');
-    const $trs = $table.find('tbody > tr');
-    const dataPairs = pivotTheTable($trs, $);
+    const normalizedTable = normalizeTable({ $, tableSelector: 'table:contains("MUERTES")' });
+    const headingRowIndex = 0;
+    const dataKeysByColumnIndex = [];
+    normalizedTable[headingRowIndex].forEach((heading, index) => {
+      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+    });
+
+    const dataRow = normalizedTable[normalizedTable.length - 1];
 
     const data = {};
-    dataPairs.forEach(([heading, value]) => {
-      const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+    dataRow.forEach((value, columnIndex) => {
+      const key = dataKeysByColumnIndex[columnIndex];
       if (key) {
         data[key] = parse.number(value);
       }
