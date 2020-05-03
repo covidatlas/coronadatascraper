@@ -16,7 +16,7 @@ function compare(a, b) {
   return a.localeCompare(b);
 }
 
-const transformIds = async ({ locations, featureCollection, report, options, sourceRatings }) => {
+export default async function transformIds(locations, report, sourceRatings) {
   log('⏳ Transforming IDs...');
 
   let idsFound = 0;
@@ -66,8 +66,4 @@ const transformIds = async ({ locations, featureCollection, report, options, sou
   report.transformIds = {
     idsResolved: idsFound
   };
-
-  return { locations, featureCollection, report, options, sourceRatings };
 };
-
-export default transformIds;

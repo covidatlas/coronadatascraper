@@ -66,8 +66,8 @@ async function generate(date, options = {}) {
   const populationResult = await findPopulations(locations, featureResult.featureCollection);
   output.report.findPopulation = populationResult.result;
 
-  output.sourceRatings = ratings;
-  output = await transformIds(output);
+  await transformIds(locations, output.report, ratings);
+
   output = await cleanLocations(output);
   output.options = options;
   output = await writeData(output); // To be retired
