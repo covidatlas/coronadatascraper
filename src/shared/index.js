@@ -2,7 +2,7 @@
 import fetchSources from '../events/crawler/get-sources/index.js';
 import validateSources from '../events/crawler/get-sources/validate-sources.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
-import writeRaw from '../events/processor/write-data/write-raw.js';
+import { loadRaw, writeRaw } from '../events/processor/write-data/write-raw.js';
 
 // Metadata + geo processing operations
 import rateSources from '../events/processor/rate-sources/index.js';
@@ -27,21 +27,24 @@ function emptyReport(date) {
   };
 }
 
-/** Run the crawl and scrape. */
-async function runScrape(date, report, options) {
+async function getSources(options) {
   const sources = await fetchSources(options);
   if (sources.length === 0) {
     console.log('No sources, quitting.');
     process.exit(0);
   }
+  return sources;
+}
 
+/** Run the crawl and scrape. */
+async function runScrape(sources, date, report, options) {
   await validateSources(sources, report.sources);
 
   const locations = await scrapeData(sources, report.scrape);
 
   await writeRaw(locations, report, options);
 
-  return { sources, locations };
+  return locations;
 }
 
 /** Generate the reports. */
@@ -63,17 +66,41 @@ async function generateReports(date, sources, locations, report, options) {
   return writeData(locations, features, ratings, report, options);
 }
 
+function getFullOptions(options) {
+  return { findFeatures: true, findPopulations: true, writeData: true, ...options };
+}
+
 /**
  * Entry file while we're still hosted on GitHub
  */
 export default async function generate(date, options = {}) {
-  options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
+  options = getFullOptions(options);
 
   // Summary of results of each step of generation.
   const report = emptyReport(date);
 
-  const { sources, locations } = await runScrape(date, report, options);
+  const sources = await getSources(options);
+  const locations = await runScrape(sources, date, report, options);
+  return generateReports(date, sources, locations, report, options);
+}
 
-  // processor
+/** Run only the crawl and scrape, saving raw files. */
+export async function scrapeToRawFiles(date, options = {}) {
+  options = getFullOptions(options);
+  options.dumpRaw = true;
+
+  const report = emptyReport(date);
+  const sources = await getSources(options);
+  await runScrape(sources, date, report, options);
+}
+
+/** Generate reports, using previously saved raw files only. */
+export async function generateReportsFromRawFiles(date, options = {}) {
+  options = getFullOptions(options);
+
+  console.log('Restoring locations and report from prior saved raw files.');
+  const { locations, report } = await loadRaw(options);
+  const sources = await getSources(options);
+
   return generateReports(date, sources, locations, report, options);
 }
