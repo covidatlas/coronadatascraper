@@ -15,14 +15,8 @@ import cleanLocations from '../events/processor/clean-locations/index.js';
 import writeData from '../events/processor/write-data/index.js';
 import datetime from './lib/datetime/index.js';
 
-/**
- * Entry file while we're still hosted on GitHub
- */
-async function generate(date, options = {}) {
-  options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
-
-  // Summary of results of each step of generation.
-  const report = {
+function emptyReport(date) {
+  return {
     date: date || datetime.getYYYYMD(),
     sources: {},
     scrape: {},
@@ -31,11 +25,13 @@ async function generate(date, options = {}) {
     transformIds: {},
     validate: {}
   };
+}
 
+async function runScrape(date, options, report) {
   const sources = await fetchSources(options);
   if (sources.length === 0) {
     console.log('No sources, quitting.');
-    return;
+    process.exit(0);
   }
 
   await validateSources(sources, report.sources);
@@ -44,6 +40,20 @@ async function generate(date, options = {}) {
   const locations = await scrapeData(sources, report.scrape);
 
   await writeRawRegression(locations, options);
+
+  return { sources, locations };
+}
+
+/**
+ * Entry file while we're still hosted on GitHub
+ */
+export default async function generate(date, options = {}) {
+  options = { findFeatures: true, findPopulations: true, writeData: true, ...options };
+
+  // Summary of results of each step of generation.
+  const report = emptyReport(date);
+
+  const { sources, locations } = await runScrape(date, options, report);
 
   // processor
   const ratings = await rateSources(sources, locations);
@@ -62,5 +72,3 @@ async function generate(date, options = {}) {
 
   return writeData(locations, features, ratings, report, options);
 }
-
-export default generate;
