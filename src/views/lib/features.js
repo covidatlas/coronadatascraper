@@ -9,6 +9,6 @@ module.exports.filterFeatureCollectionByLocations = function(featureCollection, 
 
   return {
     type: 'FeatureCollection',
-    features: locations.map(location => findFeature(featureCollection, location.featureId))
+    features: locations.map(location => findFeature(featureCollection, location.featureId)).filter(Boolean)
   };
 };
