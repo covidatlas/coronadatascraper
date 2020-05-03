@@ -3,7 +3,7 @@ import * as fs from '../../../shared/lib/fs.js';
 import * as stringify from './stringify.js';
 import reporter from '../../../shared/lib/error-reporter.js';
 
-const writeData = async ({ locations, featureCollection, report, options, sourceRatings }) => {
+export default async function writeData(locations, featureCollection, ratings, report, options) {
   let suffix = '';
   if (options.outputSuffix !== undefined) {
     suffix = options.outputSuffix;
@@ -24,11 +24,9 @@ const writeData = async ({ locations, featureCollection, report, options, source
 
   await fs.writeJSON(join(d, 'report.json'), report, { space: 2 });
 
-  await fs.writeJSON(join(d, 'ratings.json'), sourceRatings, { space: 2 });
+  await fs.writeJSON(join(d, 'ratings.json'), ratings, { space: 2 });
 
   await fs.writeCSV(join(d, 'reports', 'crawler-report.csv'), reporter.getCSV());
 
   return { locations, featureCollection, report, options };
 };
-
-export default writeData;

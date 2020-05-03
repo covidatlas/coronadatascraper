@@ -70,8 +70,7 @@ async function generate(date, options = {}) {
 
   await cleanLocations(locations, output.report);
 
-  output.options = options;
-  output = await writeData(output); // To be retired
+  output = await writeData(locations, featureResult.featureCollection, ratings, output.report, options); // To be retired
 
   return output;
 }
