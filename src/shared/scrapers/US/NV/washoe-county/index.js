@@ -1,6 +1,6 @@
-import * as fetch from '../../../lib/fetch/index.js';
-import * as parse from '../../../lib/parse.js';
-import datetime from '../../../lib/datetime/index.js';
+import * as fetch from '../../../../lib/fetch/index.js';
+import * as parse from '../../../../lib/parse.js';
+import datetime from '../../../../lib/datetime/index.js';
 
 const scraper = {
   county: 'fips:32031',

@@ -1,0 +1,13 @@
+[
+    {
+        "county":"fips:32031",
+        "cases":949,
+        "active":553,
+        "recovered":363,
+        "deaths":33,
+        "tested":871,
+        "hospitalized":48,
+        "discharged":69,
+        "date":"2020-05-02"
+    }
+]
