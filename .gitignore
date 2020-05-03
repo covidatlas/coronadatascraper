@@ -6,6 +6,7 @@ public/*.js
 public/*.js.map
 coronavirus-data-sources/
 dist/
+dist-raw/
 node_modules
 public/*.json
 sam.json

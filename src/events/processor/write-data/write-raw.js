@@ -3,6 +3,9 @@ import fs from 'fs';
 
 import reporter from '../../../shared/lib/error-reporter.js';
 
+/** Save and read generated raw files from dist-raw. */
+const rawDirectory = path.join(__dirname, '..', '..', '..', '..', 'dist-raw');
+
 /** Get filenames. */
 function rawFilenames(options) {
   let suffix = '';
@@ -12,26 +15,24 @@ function rawFilenames(options) {
     suffix = `-${process.env.SCRAPE_DATE}`;
   }
 
-  const d = options.writeTo;
-
   return {
     // All keys present in the raw-full file (for debugging/interest)
-    keysPath: path.join(d, `raw-keys${suffix}.json`),
+    keysPath: path.join(rawDirectory, `raw-keys${suffix}.json`),
 
     // The sources scraped.
-    sourcesPath: path.join(d, `raw-sources${suffix}.json`),
+    sourcesPath: path.join(rawDirectory, `raw-sources${suffix}.json`),
 
     // The full raw data of all scraped locations.
-    locationsPath: path.join(d, `raw-locations${suffix}.json`),
+    locationsPath: path.join(rawDirectory, `raw-locations${suffix}.json`),
 
     // the error-reporter errors.
-    errorReporterErrorsPath: path.join(d, `raw-error-reporter${suffix}.json`),
+    errorReporterErrorsPath: path.join(rawDirectory, `raw-error-reporter${suffix}.json`),
 
     // A brief version raw-full, pulling out interesting fields.
-    locationsBriefPath: path.join(d, `raw-locations-brief${suffix}.json`),
+    locationsBriefPath: path.join(rawDirectory, `raw-locations-brief${suffix}.json`),
 
     // The "report.json" accumulated during all report generation.
-    reportPath: path.join(d, `raw-report${suffix}.json`)
+    reportPath: path.join(rawDirectory, `raw-report${suffix}.json`)
   };
 }
 
@@ -47,7 +48,7 @@ export async function writeRaw(sources, locations, report, options) {
     reportPath
   } = rawFilenames(options);
 
-  if (!fs.existsSync(options.writeTo)) fs.mkdirSync(options.writeTo);
+  if (!fs.existsSync(rawDirectory)) fs.mkdirSync(rawDirectory);
 
   function writeJson(f, data) {
     fs.writeFileSync(f, JSON.stringify(data, null, 2));
