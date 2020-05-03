@@ -18,10 +18,9 @@ function findCountryLevelID(location) {
   return null;
 }
 
-const normalizeLocations = args => {
+export default function normalizeLocations(locations) {
   log('⏳ Normalizing locations...');
 
-  const { locations } = args;
   const filteredLocations = [];
 
   // Normalize data
@@ -101,7 +100,6 @@ const normalizeLocations = args => {
     filteredLocations.push(location);
   }
 
-  return { ...args, locations: filteredLocations };
+  return filteredLocations;
 };
 
-export default normalizeLocations;
