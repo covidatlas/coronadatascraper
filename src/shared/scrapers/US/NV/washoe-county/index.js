@@ -33,23 +33,20 @@ const scraper = {
       for (const row of data.features) {
         const countyDate = {
           county: this.county,
-          cases: typeof row.attributes.confirmed === 'number' ? parse.number(row.attributes.confirmed) : null,
-          active: typeof row.attributes.active === 'number' ? parse.number(row.attributes.active) : null,
-          recovered: typeof row.attributes.recovered === 'number' ? parse.number(row.attributes.recovered) : null,
-          deaths: typeof row.attributes.deaths === 'number' ? parse.number(row.attributes.deaths) : null,
-          tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : null,
+          cases: typeof row.attributes.confirmed === 'number' ? parse.number(row.attributes.confirmed) : undefined,
+          active: typeof row.attributes.active === 'number' ? parse.number(row.attributes.active) : undefined,
+          recovered: typeof row.attributes.recovered === 'number' ? parse.number(row.attributes.recovered) : undefined,
+          deaths: typeof row.attributes.deaths === 'number' ? parse.number(row.attributes.deaths) : undefined,
+          tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : undefined,
           hospitalized:
-            typeof row.attributes.Hospitalized === 'number' ? parse.number(row.attributes.Hospitalized) : null,
+            typeof row.attributes.Hospitalized === 'number' ? parse.number(row.attributes.Hospitalized) : undefined,
           discharged:
             typeof row.attributes.ReleasedFromHospital === 'number'
               ? parse.number(row.attributes.ReleasedFromHospital)
-              : null,
+              : undefined,
           date: datetime.parse(row.attributes.MDYYYY).toString()
         };
 
-        Object.keys(countyDate).forEach(key => countyDate[key] == null && delete countyDate[key]);
-
-        // console.info(countyDate);
         countyDates[countyDate.date] = countyDate;
       }
 
