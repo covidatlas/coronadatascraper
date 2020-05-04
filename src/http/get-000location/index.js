@@ -91,6 +91,9 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   if (caseInfo.hospitalized !== undefined) {
     html += renderCaseInfo('Hospitalized', caseInfo.hospitalized, 'ca-Hospitalized');
   }
+  if (caseInfo.icu !== undefined) {
+    html += renderCaseInfo('ICU', caseInfo.icu, 'ca-ICU');
+  }
   if (caseInfo.discharged !== undefined) {
     html += renderCaseInfo('Discharged', caseInfo.discharged, 'ca-Discharged');
   }
