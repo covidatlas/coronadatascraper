@@ -31,7 +31,6 @@ const scraper = {
     const nationalUrl =
       'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_national.csv';
     const nationalData = await fetch.csv(this, nationalUrl, 'national', false);
-
     const hospitalized = nationalData.find(
       item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Ziekenhuisopname'
     );
@@ -54,13 +53,33 @@ const scraper = {
       });
     }
 
-    if (hospitalized || deaths || data.length > 0)
+    if (hospitalized || deaths || data.length > 0) {
       data.push(
         transform.sumData(data, {
           hospitalized: hospitalized ? parse.number(hospitalized.Aantal) : undefined,
           deaths: deaths ? parse.number(deaths.Aantal) : undefined
         })
       );
+    }
+
+    // Depending on timezones, the data from the current date of the
+    // running locale may not be available (e.g. running at midnight
+    // on May 4, only data from May 3 is available, as NL is at 7 am
+    // May 4).  In that case, return empty dataset to prevent erroring
+    // out.
+    if (data.length === 0) {
+      for (const iso of Object.values(mapping)) {
+        data.push({
+          state: iso,
+          cases: undefined
+        });
+      }
+      data.push({
+        hospitalized: undefined,
+        deaths: undefined,
+        cases: undefined
+      });
+    }
 
     return data;
   }
