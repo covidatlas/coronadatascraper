@@ -713,7 +713,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-02",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-03",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -2440,6 +2440,37 @@
     "stateId": "iso2:AU-SA"
   },
   {
+    "country": "Australia",
+    "state": "Tasmania",
+    "priority": 2,
+    "sources": [
+      {
+        "name": "Tasmanian Government",
+        "url": "https://www.coronavirus.tas.gov.au/facts/cases-and-testing-updates"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "url": "https://www.coronavirus.tas.gov.au/facts/cases-and-testing-updates",
+    "type": "table",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-TAS"
+  },
+  {
     "county": "Clark County",
     "state": "Nevada",
     "country": "United States",
@@ -2510,6 +2541,36 @@
     "ssl": true,
     "rating": 0.3333333333333333,
     "countryId": "iso1:SI"
+  },
+  {
+    "country": "Thailand",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 1,
+    "sources": [
+      {
+        "description": "Department of Disease Control Thailand",
+        "name": "Department of Disease Control Thailand",
+        "url": "https://ddc.moph.go.th/"
+      }
+    ],
+    "type": "json",
+    "url": "https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:TH"
   },
   {
     "county": "Contra Costa County",
@@ -2718,6 +2779,36 @@
     "rating": 0.3333333333333333,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "country": "Indonesia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 1,
+    "sources": [
+      {
+        "description": "Ministry of Health Republic of Indonesia",
+        "name": "Ministry of Health Republic of Indonesia",
+        "url": "https://www.kemkes.go.id/"
+      }
+    ],
+    "type": "table",
+    "url": "https://www.kemkes.go.id/",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.3137254901960784,
+    "countryId": "iso1:ID"
   },
   {
     "country": "New Zealand",
@@ -3056,7 +3147,7 @@
     "certValidation": true,
     "priority": 0,
     "type": "pdf",
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1068/5-2-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1070/5-3-20-update-numbers",
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
@@ -3125,6 +3216,30 @@
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:VI"
+  },
+  {
+    "county": "Colusa County",
+    "state": "California",
+    "country": "United States",
+    "url": "http://www.countyofcolusa.org/covid19",
+    "maintainers": [
+      {
+        "name": "John Bencina",
+        "github": "jbencina",
+        "country": "iso1:US",
+        "state": "CA",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "list",
+    "ssl": false,
+    "rating": 0.23529411764705882,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "country": "Japan",
