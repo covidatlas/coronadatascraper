@@ -3,6 +3,8 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 
+const assert = require('assert');
+
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
@@ -158,6 +160,91 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-05-05': async function() {
+      /** WV posts a web page daily at 10 am and 5 pm,
+       * eg. https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---10-AM.aspx.
+       * These pages appear to be machine generated as they
+       * consistently followe exactly the same format.  Since I can't
+       * find any scrapable underlying source data, I'll scrape this
+       * page with regexes.  Fun. */
+
+      /** WV publishes two pages each day:
+       * - https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---10-AM.aspx
+       * - https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---5-PM.aspx
+       *
+       * Depending on the time we try to scrape, we may get 5 PM or 10 AM from today,
+       * or 10 PM from yesterady.  Try each of these in turn, and stop when we get a hit.
+       * Throw if we don't get any hitss.
+       */
+
+      const getDateString = dt => {
+        const ds = dt.toLocaleString('en-US', { timeZone: 'America/Toronto' });
+        return ds.split(',')[0];
+      };
+
+      const getUrl = (dt, time) => {
+        const ds = getDateString(dt).replace(/\//g, '-');
+        return `https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-${ds}---${time}.aspx`;
+      };
+
+      const dt = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : new Date();
+      const ydt = new Date();
+      ydt.setDate(dt.getDate() - 1);
+
+      const urls = [getUrl(dt, '5-PM'), getUrl(dt, '10-AM'), getUrl(ydt, '5-PM')];
+
+      console.log('Trying to get page, falling successively back.');
+      let $ = null;
+      for (let i = 0; i < urls.length; i++) {
+        const url = urls[i];
+        this.url = url;
+        $ = await fetch.page(this, url, 'default');
+        if ($) break;
+      }
+      assert($, `No data published, expected at least data at ${urls[urls.length - 1]}`);
+
+      const data = [];
+
+      // County-level
+      const label = 'CASES PER COUNTY:';
+      const p = $(`p:contains("${label}")`);
+      assert.equal(p.length, 1, `Have 1 paragraph containing ${label}`);
+      let rawcounty = p.text().split(label)[1];
+      assert(rawcounty, 'Have rawcounty');
+      rawcounty = rawcounty.replace(/\n/g, ' ');
+      rawcounty.split(',').forEach(c => {
+        const cre = /(.*)\((.*)\)/;
+        const cmatch = c.match(cre);
+        assert(cmatch, `Got match for ${cre} in ${c}`);
+        // Remove County in case some names end in 'County' and some don't, then add it.
+        const county = `${cmatch[1].replace(/County/, '').trim()} County`;
+        const cases = parseInt(cmatch[2].trim(), 10);
+        data.push({
+          county,
+          cases
+        });
+      });
+
+      // State-level
+      const re = /there have been (.*?) laboratory results.*?with (.*?) positive,.*? and (.*?) deaths/s;
+      // slice(1) because the first element is the full match.
+      const raw = $.html()
+        .match(re)
+        .slice(1);
+      assert(raw, `Got match for ${re} in raw html`);
+      const [tested, cases, deaths] = raw.map(s => s.replace(',', '')).map(s => parseInt(s, 10));
+      const rawStateData = {
+        cases,
+        deaths,
+        tested
+      };
+      data.push({ ...rawStateData, aggregate: 'county' });
+
+      const result = geography.addEmptyRegions(data, this._counties, 'county');
+      // no sum because we explicitly add it above
+
+      return result;
     }
   }
 };
