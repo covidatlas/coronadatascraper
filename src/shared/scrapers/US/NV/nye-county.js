@@ -53,14 +53,7 @@ const scraper = {
       $(rows).each(function(i, row) {
         const c = $('td', row);
         if (c.eq(0).text() === 'Deaths') {
-          counties[0].deaths =
-            typeof c.eq(2).text() === 'number'
-              ? parse.number(
-                  typeof $('td', row)
-                    .eq(2)
-                    .text()
-                )
-              : undefined;
+          counties[0].deaths = typeof c.eq(2).text() === 'number' ? parse.number(c.eq(2).text()) : undefined;
         } else {
           const city = {
             date,
