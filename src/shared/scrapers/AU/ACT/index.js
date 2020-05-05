@@ -9,7 +9,7 @@ import transposeArrayOfArrays from '../../../utils/transpose-array-of-arrays.js'
 
 const schemaKeysByHeadingFragment = {
   'confirmed case': 'cases',
-  'negative': 'testedNegative',
+  negative: 'testedNegative',
   recovered: 'recovered',
   'lives lost': 'deaths'
 };
