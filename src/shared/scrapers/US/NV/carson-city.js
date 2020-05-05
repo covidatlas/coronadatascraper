@@ -70,31 +70,23 @@ const scraper = {
         if (name === 'TOTAL') {
           return;
         }
+        const displayCounterValue = index => {
+          return parse.number(
+            $record('.display-counter')
+              .eq(index)
+              .data('value')
+          );
+        };
         counties.push({
           county: name,
-          cases: parse.number(
-            $record('.display-counter')
-              .eq(0)
-              .data('value')
-          ),
-          active: parse.number(
-            $record('.display-counter')
-              .eq(1)
-              .data('value')
-          ),
-          recovered: parse.number(
-            $record('.display-counter')
-              .eq(2)
-              .data('value')
-          ),
-          deaths: parse.number(
-            $record('.display-counter')
-              .eq(3)
-              .data('value')
-          )
+          cases: displayCounterValue(0),
+          active: displayCounterValue(1),
+          recovered: displayCounterValue(2),
+          deaths: displayCounterValue(3)
         });
       });
 
+      console.log(counties);
       return counties;
     }
   }
