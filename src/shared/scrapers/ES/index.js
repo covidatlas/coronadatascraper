@@ -14,6 +14,7 @@ const countryLevelMap = {
   Canarias: 'iso2:ES-CN',
   Cantabria: 'iso2:ES-CB',
   'Castilla-La Mancha': 'iso2:ES-CM',
+  'Castilla La Mancha': 'iso2:ES-CM',
   'Castilla y León': 'iso2:ES-CL',
   Cataluña: 'iso2:ES-CT',
   Ceuta: 'iso2:ES-CE',
