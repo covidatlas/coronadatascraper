@@ -1,6 +1,8 @@
 import assert from 'assert';
+import cheerio from 'cheerio';
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
+import datetime from '../../../lib/datetime/index.js';
 import { DeprecatedError } from '../../../lib/errors.js';
 
 const scraper = {
@@ -16,6 +18,7 @@ const scraper = {
         'Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties.'
     }
   ],
+  _counties: ['Carson City', 'Douglas County', 'Lyon County', 'Storey County'],
   certValidation: false,
   type: 'table',
   scraper: {
@@ -47,6 +50,44 @@ const scraper = {
       throw new DeprecatedError(
         'County-level data has moved to a bunch of DIVs at https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/'
       );
+    },
+    '2020-04-20': async function() {
+      this.url = 'https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/';
+      this.title = 'Covid-19 by County | Get Healthy Carson City';
+
+      // var countyUpdated = new Date(cheerio('.updated.rich-snippet-hidden').text());
+
+      const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
+      const $ = await fetch.headless(this, this.url, 'default', date, { disableSSL: true });
+      const div = $('.post-content');
+      assert.equal(div.length, 1, 'Table not found');
+      const records = div.find('.fusion-fullwidth:not(:first-child)');
+
+      const counties = [];
+      $(records).each((index, record) => {
+        const $record = cheerio.load(record);
+        const name = parse.string($record('.title').text());
+        if (name === 'TOTAL') {
+          return;
+        }
+        const displayCounterValue = index => {
+          return parse.number(
+            $record('.display-counter')
+              .eq(index)
+              .data('value')
+          );
+        };
+        counties.push({
+          county: name,
+          cases: displayCounterValue(0),
+          active: displayCounterValue(1),
+          recovered: displayCounterValue(2),
+          deaths: displayCounterValue(3)
+        });
+      });
+
+      console.log(counties);
+      return counties;
     }
   }
 };
