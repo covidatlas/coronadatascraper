@@ -88,6 +88,47 @@
     "stateId": "iso2:US-TN"
   },
   {
+    "country": "Spain",
+    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
+    "priority": 1,
+    "timeseries": true,
+    "type": "csv",
+    "aggregate": "state",
+    "sources": [
+      {
+        "name": "Ministerio de Sanidad",
+        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
+        "description": "Government of Spain, Ministry of Health"
+      },
+      {
+        "name": "Departamento de Seguridad Nacional",
+        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
+        "description": "Government of Spain, Department of National Security"
+      }
+    ],
+    "curators": [
+      {
+        "name": "Antonio Delgado",
+        "url": "https://datadista.com/",
+        "twitter": "@adelgado",
+        "github": "adelgadob"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Herb Caudill",
+        "url": "https://devresults.com",
+        "twitter": "@herbcaudill",
+        "github": "herbcaudill"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.6274509803921569,
+    "countryId": "iso1:ES"
+  },
+  {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
     "country": "United States",
@@ -713,7 +754,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-03",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-04",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -2328,38 +2369,6 @@
     "priority": 2,
     "sources": [
       {
-        "description": "ACT Government Health Department",
-        "name": "ACT Government Health",
-        "url": "https://www.health.act.gov.au"
-      }
-    ],
-    "state": "Australian Capital Territory",
-    "type": "table",
-    "url": "https://www.covid19.act.gov.au",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-ACT"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
         "name": "Northern Territory Government - Coronavirus site",
         "url": "https://coronavirus.nt.gov.au"
       }
@@ -2865,8 +2874,21 @@
     "stateId": "iso2:US-CA"
   },
   {
-    "country": "Australia",
+    "country": "Puerto Rico",
+    "type": "table",
+    "timeseries": false,
+    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
+    "sources": [
+      {
+        "url": "http://www.salud.gov.pr/",
+        "name": "Gobierno de Puerto Rico Departamento de Salud"
+      }
+    ],
     "maintainers": [
+      {
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
       {
         "name": "Cameron Chamberlain",
         "email": "corona@camjc.com",
@@ -2877,24 +2899,12 @@
         "flag": "🇦🇺"
       }
     ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
     "headless": false,
     "certValidation": true,
-    "ssl": true,
+    "priority": 0,
+    "ssl": false,
     "rating": 0.29411764705882354,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
+    "countryId": "iso1:PR"
   },
   {
     "country": "Cyprus",
@@ -3147,7 +3157,7 @@
     "certValidation": true,
     "priority": 0,
     "type": "pdf",
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1070/5-3-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1072/5-4-20-update-numbers",
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
@@ -3240,6 +3250,38 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",
