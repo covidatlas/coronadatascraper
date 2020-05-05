@@ -272,8 +272,12 @@ const scraper = {
       const citydiv = findOne($.root(), "lego-table > div.table:contains('City/Town')");
       const cityths = findMany(citydiv, 'div.headerRow > div.headerCell > div.headerContentDiv > div.colName');
       const cityheadings = cityths.toArray().map(th => $(th).text());
-      const expectedCityHeadings = ['City/Town', 'Positive Cases'];
-      assert.deepEqual(expectedCityHeadings.sort(), cityheadings.sort());
+      const expectedCityHeadings = [/City\/Town/, /Positive Cases/];
+      for (let i = 0; i < cityheadings.length; i++) {
+        const ch = cityheadings[i];
+        const re = expectedCityHeadings[i];
+        assert(ch.match(re), `Heading ${ch} matches ${re}`);
+      }
       const cityRaw = findMany(citydiv, 'div.tableBody > div.row')
         .toArray()
         .map(r => {
