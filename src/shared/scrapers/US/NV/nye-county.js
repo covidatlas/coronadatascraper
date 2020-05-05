@@ -17,6 +17,7 @@ const scraper = {
         'The latest information gathered within and outside the county regarding the Coronavirus (COVID-19) preparation and any response by the County Department of Emergency Management and County Administration.'
     }
   ],
+  _cities: ['Amargosa Valley', 'Beatty', 'Pahrump', 'Tonopah'],
   certValidation: false,
   url: 'https://www.nyecounty.net/1066/Coronavirus-COVID-19-Information',
   type: 'table',
@@ -49,17 +50,11 @@ const scraper = {
       ];
 
       const cities = [];
-
       $(rows).each(function(i, row) {
-        if (
-          $('td', row)
-            .eq(0)
-            .text() === 'Deaths'
-        ) {
+        const c = $('td', row);
+        if (c.eq(0).text() === 'Deaths') {
           counties[0].deaths =
-            typeof $('td', row)
-              .eq(2)
-              .text() === 'number'
+            typeof c.eq(2).text() === 'number'
               ? parse.number(
                   typeof $('td', row)
                     .eq(2)
@@ -68,21 +63,10 @@ const scraper = {
               : undefined;
         } else {
           const city = {
-            city: parse.string(
-              $('td', row)
-                .eq(0)
-                .text()
-            ),
-            cases: parse.number(
-              $('td', row)
-                .eq(2)
-                .text() || 0
-            ),
-            recovered: parse.number(
-              $('td', row)
-                .eq(3)
-                .text() || 0
-            )
+            date,
+            city: parse.string(c.eq(0).text()),
+            cases: parse.number(c.eq(2).text() || undefined),
+            recovered: parse.number(c.eq(3).text() || undefined)
           };
           counties[0].cases += city.cases;
           counties[0].recovered += city.recovered;
@@ -90,7 +74,7 @@ const scraper = {
           cities.push(city);
         }
       });
-
+      // console.info(cities);
       return counties;
     }
   }
