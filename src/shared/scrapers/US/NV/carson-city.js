@@ -58,7 +58,7 @@ const scraper = {
       // var countyUpdated = new Date(cheerio('.updated.rich-snippet-hidden').text());
 
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
-      const $ = await fetch.page(this, this.url, 'default', date, { disableSSL: true });
+      const $ = await fetch.headless(this, this.url, 'default', date, { disableSSL: true });
       const div = $('.post-content');
       assert.equal(div.length, 1, 'Table not found');
       const records = div.find('.fusion-fullwidth:not(:first-child)');
