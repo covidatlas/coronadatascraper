@@ -40,9 +40,13 @@ const scraper = {
         送驗: 'tested',
         '排除(新)': 'negative' // Test Result
       };
-      const dash3 = await fetch.json(this, 'https://covid19dashboard.cdc.gov.tw/dash3', 'default', date, {
-        headers: { Origin: 'https://919644827-atari-embeds.googleusercontent.com' }
-      });
+
+      const dash3options = {
+        headers: {
+          Origin: 'https://919644827-atari-embeds.googleusercontent.com'
+        }
+      };
+      const dash3 = await fetch.json(this, 'https://covid19dashboard.cdc.gov.tw/dash3', 'default', date, dash3options);
 
       // console.info(dash3[0]);
 
