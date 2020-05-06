@@ -28,6 +28,7 @@ export default function loadRawPriorityAdjusted(options) {
     if (!f) throw new Error('null file path');
     if (!fs.existsSync(f)) throw new Error(`Missing raw file ${f}`);
     const rawdata = fs.readFileSync(f);
+    console.log(`Loading ${f.replace(rawDirectory, '')}`);
     return JSON.parse(rawdata);
   }
 
