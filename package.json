@@ -24,6 +24,7 @@
     "start": "node src/shared/cli/index.js",
     "raw:scrape": "node src/shared/cli/rawscrape.js",
     "raw:report": "node src/shared/cli/rawreport.js",
+    "raw:reportcombined": "node src/shared/cli/rawcombinedreport.js",
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
     "test:unit": "tape tests/unit/**/*-test.js | tap-spec",
