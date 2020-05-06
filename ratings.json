@@ -23,6 +23,30 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "county": "Washoe County",
+    "state": "Nevada",
+    "country": "United States",
+    "url": "https://services.arcgis.com/iCGWaR7ZHc5saRIl/arcgis/rest/services/CasesTable_public/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&orderByFields=reportdt%20asc",
+    "sources": [
+      {
+        "name": "Washoe County Health District",
+        "url": "https://www.washoecounty.us/health/",
+        "description": "Washoe County, Nevada health department"
+      }
+    ],
+    "certValidation": false,
+    "timeseries": true,
+    "aggregate": "county",
+    "type": "json",
+    "headless": false,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.7647058823529411,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NV",
+    "countyId": "fips:32031"
+  },
+  {
     "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "timeseries": true,
@@ -319,32 +343,6 @@
     "stateId": "iso2:US-NE"
   },
   {
-    "country": "France",
-    "timeseries": true,
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "priority": 1,
-    "headless": false,
-    "certValidation": true,
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FR"
-  },
-  {
     "state": "Illinois",
     "country": "United States",
     "priority": 1,
@@ -563,6 +561,28 @@
     "stateId": "iso2:US-KY"
   },
   {
+    "state": "Nevada",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/",
+    "sources": [
+      {
+        "name": "Carson City Health and Human Services",
+        "url": "https://gethealthycarsoncity.org/",
+        "description": "Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties."
+      }
+    ],
+    "certValidation": false,
+    "type": "table",
+    "timeseries": false,
+    "headless": false,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.5294117647058824,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-NV"
+  },
+  {
     "country": "Austria",
     "url": "https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js",
     "timeseries": true,
@@ -754,7 +774,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-04",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-05",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1114,19 +1134,6 @@
     "countryId": "iso1:US"
   },
   {
-    "country": "India",
-    "url": "https://www.mohfw.gov.in/",
-    "type": "table",
-    "aggregate": "state",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:IN"
-  },
-  {
     "state": "Georgia",
     "country": "United States",
     "url": "https://ga-covid19.ondemand.sas.com/",
@@ -1320,6 +1327,27 @@
     "rating": 0.45098039215686275,
     "countryId": "iso1:US",
     "stateId": "iso2:US-RI"
+  },
+  {
+    "state": "West Virginia",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://dhhr.wv.gov/COVID-19/Pages/default.aspx",
+        "name": "West Virginia Department of Health & Human Resources"
+      }
+    ],
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---5-PM.aspx",
+    "type": "list",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.45098039215686275,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-WV"
   },
   {
     "country": "Australia",
@@ -2369,6 +2397,38 @@
     "priority": 2,
     "sources": [
       {
+        "description": "ACT Government Health Department",
+        "name": "ACT Government Health",
+        "url": "https://www.health.act.gov.au"
+      }
+    ],
+    "state": "Australian Capital Territory",
+    "type": "table",
+    "url": "https://www.covid19.act.gov.au",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-ACT"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
         "name": "Northern Territory Government - Coronavirus site",
         "url": "https://coronavirus.nt.gov.au"
       }
@@ -3157,7 +3217,7 @@
     "certValidation": true,
     "priority": 0,
     "type": "pdf",
-    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1072/5-4-20-update-numbers",
+    "url": "https://www.coronavirus.kdheks.gov//DocumentCenter/View/1124/5-5-20-update-numbers",
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
