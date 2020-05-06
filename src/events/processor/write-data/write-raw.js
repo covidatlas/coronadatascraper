@@ -16,8 +16,11 @@ function rawFilenames(options) {
   }
 
   return {
-    // All keys present in the raw-full file (for debugging/interest)
-    keysPath: path.join(rawDirectory, `raw-keys${suffix}.json`),
+    // All keys present in the locations file (for debugging/interest)
+    locationsKeysPath: path.join(rawDirectory, `raw-locations-keys${suffix}.json`),
+
+    // All keys present in the sources file (for debugging/interest)
+    sourcesKeysPath: path.join(rawDirectory, `raw-sources-keys${suffix}.json`),
 
     // The sources scraped.
     sourcesPath: path.join(rawDirectory, `raw-sources${suffix}.json`),
@@ -41,7 +44,8 @@ export async function writeRaw(sources, locations, report, options) {
 
   const {
     errorReporterErrorsPath,
-    keysPath,
+    locationsKeysPath,
+    sourcesKeysPath,
     sourcesPath,
     locationsBriefPath,
     locationsPath,
@@ -59,10 +63,12 @@ export async function writeRaw(sources, locations, report, options) {
   writeJson(locationsPath, locations);
   writeJson(reportPath, report);
 
-  const keyCollector = locations.reduce((hsh, val) => {
-    return { ...hsh, ...val };
-  }, {});
-  writeJson(keysPath, Object.keys(keyCollector));
+  const keyCollector = arr =>
+    arr.reduce((hsh, val) => {
+      return { ...hsh, ...val };
+    }, {});
+  writeJson(locationsKeysPath, Object.keys(keyCollector(locations)));
+  writeJson(sourcesKeysPath, Object.keys(keyCollector(sources)));
 
   // Only pull out a subset of the data for each location.  Since
   // some scrapers put 'null' or 'undefined' for data, do a check to
