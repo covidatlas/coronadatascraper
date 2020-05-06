@@ -3,6 +3,7 @@ import fetchSources from '../events/crawler/get-sources/index.js';
 import validateSources from '../events/crawler/get-sources/validate-sources.js';
 import scrapeData from '../events/crawler/scrape-data/index.js';
 import { loadRaw, writeRaw } from '../events/processor/write-data/write-raw.js';
+import loadRawPriorityAdjusted from '../events/processor/read-li-raw-data/index.js';
 
 // Metadata + geo processing operations
 import rateSources from '../events/processor/rate-sources/index.js';
@@ -100,5 +101,29 @@ export async function generateReportsFromRawFiles(date, options = {}) {
 
   console.log('Restoring locations and report from prior saved raw files.');
   const { sources, locations, report } = await loadRaw(options);
+  return generateReports(date, sources, locations, report, options);
+}
+
+/** Generate reports, using previously saved raw files only, also using raw output from Li. */
+export async function generateReportsFromCombinedRawFiles(date, options = {}) {
+  options = getFullOptions(options);
+
+  console.log('Restoring locations and report from prior saved raw files.');
+  const { sources, locations, report } = await loadRaw(options);
+
+  console.log('Getting Li data');
+  try {
+    const { liSources, liLocations } = await loadRawPriorityAdjusted(options);
+    liSources.forEach(s => {
+      sources.push(s);
+    });
+    liLocations.forEach(loc => {
+      locations.push(loc);
+    });
+    console.log(`Added ${liSources.length} sources and ${liLocations.length} locations from Li.`);
+  } catch (err) {
+    console.log(`Got error ${err}, continuing without Li data.`);
+  }
+
   return generateReports(date, sources, locations, report, options);
 }
