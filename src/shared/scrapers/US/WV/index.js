@@ -246,16 +246,18 @@ const scraper = {
       const raw = p.match(re);
       assert(raw, `Got match for ${re} in raw html`);
       // slice(1) because the first element is the full match.
-      const [tested, cases, deaths] = raw.slice(1).map(s => s.replace(',', '')).map(s => parseInt(s, 10));
+      const [tested, cases, deaths] = raw
+        .slice(1)
+        .map(s => s.replace(',', ''))
+        .map(s => parseInt(s, 10));
       const rawStateData = {
-        deaths,
-        tested
+        tested,
+        cases,
+        deaths
       };
       data.push({ ...rawStateData, aggregate: 'county' });
 
       const result = geography.addEmptyRegions(data, this._counties, 'county');
-      // no sum because we explicitly add it above
-
       return result;
     }
   }
