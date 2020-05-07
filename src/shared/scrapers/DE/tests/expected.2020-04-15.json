@@ -1,0 +1,82 @@
+[
+  {
+    "state": "iso2:DE-BB",
+    "cases": 2170,
+    "deaths": 72
+  },
+  {
+    "state": "iso2:DE-BE",
+    "cases": 4736,
+    "deaths": 74
+  },
+  {
+    "state": "iso2:DE-BW",
+    "cases": 27080,
+    "deaths": 816
+  },
+  {
+    "state": "iso2:DE-BY",
+    "cases": 35174,
+    "deaths": 1048
+  },
+  {
+    "state": "iso2:DE-HB",
+    "cases": 499,
+    "deaths": 20
+  },
+  {
+    "state": "iso2:DE-HE",
+    "cases": 6346,
+    "deaths": 188
+  },
+  {
+    "state": "iso2:DE-HH",
+    "cases": 3925,
+    "deaths": 61
+  },
+  {
+    "state": "iso2:DE-MV",
+    "cases": 625,
+    "deaths": 14
+  },
+  {
+    "state": "iso2:DE-NI",
+    "cases": 8558,
+    "deaths": 265
+  },
+  {
+    "state": "iso2:DE-NW",
+    "cases": 27554,
+    "deaths": 705
+  },
+  {
+    "state": "iso2:DE-RP",
+    "cases": 5191,
+    "deaths": 87
+  },
+  {
+    "state": "iso2:DE-SH",
+    "cases": 2278,
+    "deaths": 55
+  },
+  {
+    "state": "iso2:DE-SL",
+    "cases": 2191,
+    "deaths": 64
+  },
+  {
+    "state": "iso2:DE-SN",
+    "cases": 4030,
+    "deaths": 89
+  },
+  {
+    "state": "iso2:DE-ST",
+    "cases": 1258,
+    "deaths": 26
+  },
+  {
+    "state": "iso2:DE-TH",
+    "cases": 1588,
+    "deaths": 38
+  }
+]
