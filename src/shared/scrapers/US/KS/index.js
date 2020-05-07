@@ -1,6 +1,5 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
-import * as log from '../../../lib/log.js';
 import maintainers from '../../../lib/maintainers.js';
 import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
@@ -151,17 +150,18 @@ const scraper = {
    *   ... etc.
    * ]
    */
-  _extractPdfSentences(data) {
+  _extractPdfSentences(data, pages = [1, 2, 3]) {
     const items = [];
     // Remove nulls.
     for (const item of data) {
       if (item) items.push(item);
     }
 
-    const textitems = items.filter(i => {
-      return i.page && i.x && i.y && i.text;
-    });
-    // console.log(textitems);
+    const textitems = items
+      .filter(i => {
+        return i.page && i.x && i.y && i.text;
+      })
+      .filter(i => pages.includes(i.page));
 
     const pageYs = {};
     textitems.forEach(i => {
@@ -209,6 +209,67 @@ const scraper = {
 
     const lineGroups = Object.values(pageYs);
     return lineGroups.map(joinLineGroup);
+  },
+  /** Returns case data parsed from summary pdf. */
+  _parseDailySummary(body) {
+    const sentences = this._extractPdfSentences(body);
+    // console.log(sentences);
+
+    // Regex the items we want from the sentences.
+    const stateDataREs = {
+      cases: /were (\d+) cases/,
+      deaths: /with (\d+) deaths/,
+      hospitalized: /been (\d+) of .* cases that have been hospitalized/,
+      testedNeg: /(\d+) negative tests/
+    };
+
+    const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
+      const re = stateDataREs[key];
+      const text = sentences.filter(s => {
+        return re.test(s);
+      });
+      if (text.length === 0) console.log(`No match for ${key} re ${re}`);
+      if (text.length > 1) console.log(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
+      const m = text[0].match(re);
+
+      return {
+        ...hsh,
+        [key]: parse.number(m[1])
+      };
+    }, {});
+
+    rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
+    delete rawStateData.testedNeg;
+
+    const data = [];
+
+    const countyRE = /^(.*) County (\d+)$/;
+    const countyData = sentences.filter(s => {
+      return countyRE.test(s);
+    });
+    countyData.forEach(lin => {
+      const cm = lin.trim().match(countyRE);
+      // console.log(cm);
+      const rawName = `${cm[1]} County`;
+      const countyName = geography.addCounty(rawName);
+      const cases = cm[2];
+      if (this._counties.includes(countyName)) {
+        data.push({
+          county: countyName,
+          cases: parse.number(cases)
+        });
+      }
+    });
+
+    const summedData = transform.sumData(data);
+    data.push(summedData);
+
+    data.push({ ...rawStateData, aggregate: 'county' });
+
+    const result = geography.addEmptyRegions(data, this._counties, 'county');
+    // no sum because we explicitly add it above
+
+    return result;
   },
   scraper: {
     '0': async function() {
@@ -408,65 +469,33 @@ const scraper = {
       if (body === null) {
         throw new Error(`No pdf at ${this.url}`);
       }
-
-      const sentences = this._extractPdfSentences(body);
-      // console.log(sentences);
-
-      // Regex the items we want from the sentences.
-      const stateDataREs = {
-        cases: /were (\d+) cases/,
-        deaths: /with (\d+) deaths/,
-        hospitalized: /been (\d+) of .* cases that have been hospitalized/,
-        testedNeg: /(\d+) negative tests/
-      };
-
-      const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
-        const re = stateDataREs[key];
-        const text = sentences.filter(s => {
-          return re.test(s);
+      return this._parseDailySummary(body);
+    },
+    '2020-05-06': async function() {
+      // The first page has an href that downloads a PDF.
+      const entryUrl = 'https://www.coronavirus.kdheks.gov/160/COVID-19-in-Kansas';
+      const $ = await fetch.page(this, entryUrl, 'tmpindex');
+      const linkRE = /gcc01.safelinks.protection.outlook.com.*url=(.*?)&.*/;
+      const href = $('a')
+        .toArray()
+        .map(h => $(h))
+        .filter(h => {
+          return linkRE.test(h.attr('href'));
         });
-        if (text.length === 0) log.warning(`No match for ${key} re ${re}`);
-        if (text.length > 1) log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
-        const m = text[0].match(re);
+      assert.equal(1, href.length, `Expect one link on ${entryUrl} matching ${linkRE}`);
+      const m = href[0].attr('href').match(linkRE);
+      let url = m[1];
+      url = url.replace(/%3A/g, ':').replace(/%2F/g, '/');
+      this.url = url;
 
-        return {
-          ...hsh,
-          [key]: parse.number(m[1])
-        };
-      }, {});
+      this.type = 'pdf';
+      console.log(`Fetching pdf from ${this.url}`);
+      const body = await fetch.pdf(this, this.url, 'default');
 
-      rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
-      delete rawStateData.testedNeg;
-
-      const data = [];
-
-      const countyRE = /^(.*) County (\d+)$/;
-      const countyData = sentences.filter(s => {
-        return countyRE.test(s);
-      });
-      countyData.forEach(lin => {
-        const cm = lin.trim().match(countyRE);
-        // console.log(cm);
-        const rawName = `${cm[1]} County`;
-        const countyName = geography.addCounty(rawName);
-        const cases = cm[2];
-        if (this._counties.includes(countyName)) {
-          data.push({
-            county: countyName,
-            cases: parse.number(cases)
-          });
-        }
-      });
-
-      const summedData = transform.sumData(data);
-      data.push(summedData);
-
-      data.push({ ...rawStateData, aggregate: 'county' });
-
-      const result = geography.addEmptyRegions(data, this._counties, 'county');
-      // no sum because we explicitly add it above
-
-      return result;
+      if (body === null) {
+        throw new Error(`No pdf at ${this.url}`);
+      }
+      return this._parseDailySummary(body);
     }
   }
 };
