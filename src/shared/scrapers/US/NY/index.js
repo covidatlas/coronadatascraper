@@ -84,51 +84,43 @@ const scraper = {
   async scraper() {
     this.url = 'https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD';
     this.type = 'csv';
+
     const data = await fetch.csv(this, this.url, 'default', false);
 
-    const dateField = 'Test Date';
-
     // FIXME when we roll out new TZ support!
-    const fallback = process.env.USE_ISO_DATETIME ? new Date(datetime.now.at('America/New_York')) : datetime.getDate();
-    let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : fallback;
-    let scrapeDateString = datetime.getYYYYMD(scrapeDate);
-    const firstDateInTimeseries = new Date(`${data[data.length - 1][dateField]} 12:00:00`);
-    const lastDateInTimeseries = new Date(`${data[0][dateField]} 12:00:00`);
-
-    if (scrapeDate > lastDateInTimeseries) {
-      console.error(
-        `  🚨 timeseries for ${geography.getName(
-          this
-        )}: SCRAPE_DATE ${scrapeDateString} is newer than last sample time ${datetime.getYYYYMD(
-          lastDateInTimeseries
-        )}. Using last sample anyway`
-      );
-      scrapeDate = lastDateInTimeseries;
-      scrapeDateString = datetime.getYYYYMD(scrapeDate);
-    }
-
-    if (scrapeDate < firstDateInTimeseries) {
-      throw new Error(`Timeseries starts later than SCRAPE_DATE ${scrapeDateString}`);
-    }
-
-    let counties = [];
-    for (const row of data) {
-      if (datetime.getYYYYMD(`${row[dateField]} 12:00:00`) !== scrapeDateString) {
-        continue;
-      }
-      counties.push({
-        county: geography.addCounty(parse.string(row.County)),
-        cases: parse.number(row['Cumulative Number of Positives']),
-        tested: parse.number(row['Cumulative Number of Tests Performed'])
+    const today = new Date(process.env.USE_ISO_DATETIME ? datetime.today.at('America/New_York') : datetime.getDate());
+    const d = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : today;
+    const scrapeDate = datetime.getYYYYMD(d);
+    console.log(scrapeDate);
+    const counties = data
+      .filter(row => datetime.getYYYYMD(`${row['Test Date']} 12:00:00`) === scrapeDate)
+      .map(row => {
+        return {
+          county: geography.addCounty(parse.string(row.County)),
+          cases: parse.number(row['Cumulative Number of Positives']),
+          tested: parse.number(row['Cumulative Number of Tests Performed'])
+        };
       });
+
+    /* The data from the URL contains records like this:
+
+       Test Date,County,New Positives,...
+       05/05/2020,Albany,27,1321,367,12451
+       ...
+       03/02/2020,Yates,0,0,0,0
+
+       and it always lags a day behind the current date.  Return
+       'undefined' if we're missing the data, b/c we don't know what
+       the real values should be.
+    */
+    if (counties.length === 0) {
+      console.log(`No data for scrape date ${scrapeDate}, returning undefined.`);
+      return [{ cases: undefined, tested: undefined }];
     }
 
-    if (counties.length === 0) {
-      throw new Error(`Timeseries does not contain a sample for SCRAPE_DATE ${scrapeDateString}`);
-    }
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    counties.push(transform.sumData(counties));
-    return counties;
+    const result = geography.addEmptyRegions(counties, this._counties, 'county');
+    result.push(transform.sumData(counties));
+    return result;
   }
 };
 
