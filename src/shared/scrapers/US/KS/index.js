@@ -1,6 +1,5 @@
 import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
-import * as log from '../../../lib/log.js';
 import maintainers from '../../../lib/maintainers.js';
 import datetime from '../../../lib/datetime/index.js';
 import * as transform from '../../../lib/transform.js';
@@ -151,7 +150,7 @@ const scraper = {
    *   ... etc.
    * ]
    */
-  _extractPdfSentences(data) {
+  _extractPdfSentences(data, pages = [1, 2, 3]) {
     const items = [];
     // Remove nulls.
     for (const item of data) {
@@ -160,8 +159,7 @@ const scraper = {
 
     const textitems = items.filter(i => {
       return i.page && i.x && i.y && i.text;
-    });
-    // console.log(textitems);
+    }).filter(i => pages.includes(i.page));
 
     const pageYs = {};
     textitems.forEach(i => {
@@ -228,8 +226,8 @@ const scraper = {
       const text = sentences.filter(s => {
         return re.test(s);
       });
-      if (text.length === 0) log.warning(`No match for ${key} re ${re}`);
-      if (text.length > 1) log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
+      if (text.length === 0) console.log(`No match for ${key} re ${re}`);
+      if (text.length > 1) console.log(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
       const m = text[0].match(re);
 
       return {
@@ -463,6 +461,32 @@ const scraper = {
 
       this.type = 'pdf';
       this.url = entryUrl + href[0].attr('href');
+      console.log(`Fetching pdf from ${this.url}`);
+      const body = await fetch.pdf(this, this.url, 'default');
+
+      if (body === null) {
+        throw new Error(`No pdf at ${this.url}`);
+      }
+      return this._parseDailySummary(body);
+    },
+    '2020-05-06': async function() {
+      // The first page has an href that downloads a PDF.
+      const entryUrl = 'https://www.coronavirus.kdheks.gov/160/COVID-19-in-Kansas';
+      const $ = await fetch.page(this, entryUrl, 'tmpindex');
+      const linkRE = /gcc01.safelinks.protection.outlook.com.*url=(.*?)&.*/;
+      const href = $('a')
+        .toArray()
+        .map(h => $(h))
+        .filter(h => {
+          return linkRE.test(h.attr('href'));
+        });
+      assert.equal(1, href.length, `Expect one link on ${entryUrl} matching ${linkRE}`);
+      const m = href[0].attr('href').match(linkRE);
+      let url = m[1];
+      url = url.replace(/%3A/g, ':').replace(/%2F/g, '/');
+      this.url = url;
+
+      this.type = 'pdf';
       console.log(`Fetching pdf from ${this.url}`);
       const body = await fetch.pdf(this, this.url, 'default');
 
