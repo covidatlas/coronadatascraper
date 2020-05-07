@@ -54,6 +54,12 @@ const scraper = {
       country[k] = parse.number(dash3[k]) || 0;
     });
 
+    assert(country.cases > 0, 'Cases are not reasonable');
+
+    return [country];
+
+    /** Data for timeseries, in case we want to convert this to a timeseries!
+
     // Cases by Reporting Source
     const testSourceSchemaKeys = {
       通報日: 'date',
@@ -100,9 +106,7 @@ const scraper = {
       });
     });
 
-    assert(country.cases > 0, 'Cases are not reasonable');
-
-    return [country];
+    */
   }
 };
 
