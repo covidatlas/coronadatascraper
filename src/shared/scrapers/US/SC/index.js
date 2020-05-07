@@ -121,7 +121,14 @@ const scraper = {
       const dashboardId = '3732035614af4246877e20c3a496e397';
       const layerName = 'COVID19_County_Polygon_SharingView2'; // they started updating this view
       this.url = await fetch.getArcGISCSVURL(this, serverNumber, dashboardId, layerName);
-      const data = await fetch.csv(this, this.url, 'default');
+      let data = await fetch.csv(this, this.url, 'default');
+
+      // BOM hacking ... sigh.
+      data = data.map(d => {
+        if (d['ï»¿Date_'] && !d.Date_) d.Date_ = d['ï»¿Date_'];
+        return d;
+      });
+
       let counties = [];
       for (const county of data) {
         // On 2020-4-28, SC switched from recording dates as UTC
