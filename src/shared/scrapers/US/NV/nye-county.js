@@ -38,37 +38,37 @@ const scraper = {
       );
       // var lastUpdated = datetime.getYYYYMMDD($('h2').text().match(/((\w+)\s(\d{1,2})\,\s(\d{4}))/)[0])
 
-      const counties = [
-        {
-          county: this.county,
-          cases: 0,
-          tested: typeof approximateTests === 'number' ? approximateTests : undefined,
-          deaths: 0,
-          recovered: 0,
-          date
-        }
-      ];
+      const countyData = {
+        county: this.county,
+        cases: 0,
+        tested: typeof approximateTests === 'number' ? approximateTests : undefined,
+        recovered: 0,
+        date
+      };
 
+      // Collecting cities, but not returning them, in case we want to
+      // use them in the future.
       const cities = [];
       $(rows).each(function(i, row) {
-        const c = $('td', row);
+        const c = $(row).find('td');
         if (c.eq(0).text() === 'Deaths') {
-          counties[0].deaths = typeof c.eq(2).text() === 'number' ? parse.number(c.eq(2).text()) : undefined;
+          countyData.deaths = parse.number(c.eq(1).text());
         } else {
           const city = {
             date,
             city: parse.string(c.eq(0).text()),
-            cases: parse.number(c.eq(2).text() || undefined),
-            recovered: parse.number(c.eq(3).text() || undefined)
+            cases: parse.number(c.eq(1).text() || undefined),
+            recovered: parse.number(c.eq(2).text() || undefined)
           };
-          counties[0].cases += city.cases;
-          counties[0].recovered += city.recovered;
+          countyData.cases += city.cases;
+          countyData.recovered += city.recovered;
 
           cities.push(city);
         }
       });
       // console.info(cities);
-      return counties;
+      // console.info(countyData);
+      return [countyData];
     }
   }
 };
