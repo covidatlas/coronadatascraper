@@ -210,6 +210,67 @@ const scraper = {
     const lineGroups = Object.values(pageYs);
     return lineGroups.map(joinLineGroup);
   },
+  /** Returns case data parsed from summary pdf. */
+  _parseDailySummary(body) {
+    const sentences = this._extractPdfSentences(body);
+    // console.log(sentences);
+
+    // Regex the items we want from the sentences.
+    const stateDataREs = {
+      cases: /were (\d+) cases/,
+      deaths: /with (\d+) deaths/,
+      hospitalized: /been (\d+) of .* cases that have been hospitalized/,
+      testedNeg: /(\d+) negative tests/
+    };
+
+    const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
+      const re = stateDataREs[key];
+      const text = sentences.filter(s => {
+        return re.test(s);
+      });
+      if (text.length === 0) log.warning(`No match for ${key} re ${re}`);
+      if (text.length > 1) log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
+      const m = text[0].match(re);
+
+      return {
+        ...hsh,
+        [key]: parse.number(m[1])
+      };
+    }, {});
+
+    rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
+    delete rawStateData.testedNeg;
+
+    const data = [];
+
+    const countyRE = /^(.*) County (\d+)$/;
+    const countyData = sentences.filter(s => {
+      return countyRE.test(s);
+    });
+    countyData.forEach(lin => {
+      const cm = lin.trim().match(countyRE);
+      // console.log(cm);
+      const rawName = `${cm[1]} County`;
+      const countyName = geography.addCounty(rawName);
+      const cases = cm[2];
+      if (this._counties.includes(countyName)) {
+        data.push({
+          county: countyName,
+          cases: parse.number(cases)
+        });
+      }
+    });
+
+    const summedData = transform.sumData(data);
+    data.push(summedData);
+
+    data.push({ ...rawStateData, aggregate: 'county' });
+
+    const result = geography.addEmptyRegions(data, this._counties, 'county');
+    // no sum because we explicitly add it above
+
+    return result;
+  },
   scraper: {
     '0': async function() {
       const date = process.env.SCRAPE_DATE || datetime.getYYYYMMDD();
@@ -408,65 +469,7 @@ const scraper = {
       if (body === null) {
         throw new Error(`No pdf at ${this.url}`);
       }
-
-      const sentences = this._extractPdfSentences(body);
-      // console.log(sentences);
-
-      // Regex the items we want from the sentences.
-      const stateDataREs = {
-        cases: /were (\d+) cases/,
-        deaths: /with (\d+) deaths/,
-        hospitalized: /been (\d+) of .* cases that have been hospitalized/,
-        testedNeg: /(\d+) negative tests/
-      };
-
-      const rawStateData = Object.keys(stateDataREs).reduce((hsh, key) => {
-        const re = stateDataREs[key];
-        const text = sentences.filter(s => {
-          return re.test(s);
-        });
-        if (text.length === 0) log.warning(`No match for ${key} re ${re}`);
-        if (text.length > 1) log.warning(`Ambiguous match for ${key} re ${re} (${text.join(';')})`);
-        const m = text[0].match(re);
-
-        return {
-          ...hsh,
-          [key]: parse.number(m[1])
-        };
-      }, {});
-
-      rawStateData.tested = rawStateData.cases + rawStateData.testedNeg;
-      delete rawStateData.testedNeg;
-
-      const data = [];
-
-      const countyRE = /^(.*) County (\d+)$/;
-      const countyData = sentences.filter(s => {
-        return countyRE.test(s);
-      });
-      countyData.forEach(lin => {
-        const cm = lin.trim().match(countyRE);
-        // console.log(cm);
-        const rawName = `${cm[1]} County`;
-        const countyName = geography.addCounty(rawName);
-        const cases = cm[2];
-        if (this._counties.includes(countyName)) {
-          data.push({
-            county: countyName,
-            cases: parse.number(cases)
-          });
-        }
-      });
-
-      const summedData = transform.sumData(data);
-      data.push(summedData);
-
-      data.push({ ...rawStateData, aggregate: 'county' });
-
-      const result = geography.addEmptyRegions(data, this._counties, 'county');
-      // no sum because we explicitly add it above
-
-      return result;
+      return this._parseDailySummary(body);
     }
   }
 };
