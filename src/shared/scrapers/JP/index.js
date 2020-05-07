@@ -1,7 +1,7 @@
-import iso2 from 'country-levels/iso2.json';
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as transform from '../../lib/transform.js';
+import getIso2FromName from '../../utils/get-iso2-from-name.js';
 import maintainers from '../../lib/maintainers.js';
 
 /**
@@ -19,22 +19,9 @@ const groupBy = (array, func) => {
   }, {});
 };
 
-const countryIso1 = 'JP';
-const japanIso2Values = Object.values(iso2).filter(item => item.iso2.startsWith(countryIso1));
-
-const prefectureSpecialCases = {
-  Hokkaido: 'Hokkaidō'
-};
-
-const getIsoFromPrefectureName = prefectureName => {
-  const modifiedName = prefectureSpecialCases[prefectureName] || prefectureName;
-  const foundItem = japanIso2Values.find(({ name }) => name.startsWith(modifiedName));
-  assert(foundItem, `no item found for ${prefectureName}`);
-  return foundItem.countrylevel_id;
-};
-
+const country = `iso1:JP`;
 const scraper = {
-  country: `iso1:${countryIso1}`,
+  country,
   maintainers: [maintainers.camjc],
   priority: 1,
   sources: [
@@ -48,24 +35,27 @@ const scraper = {
   url:
     'https://services8.arcgis.com/JdxivnCyd1rvJTrY/arcgis/rest/services/v2_covid19_list_csv/FeatureServer/0/query?where=0%3D0&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=*&returnGeometry=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson',
   async scraper() {
-    const data = await fetch.json(this, this.url, 'default');
-    assert(data, 'No data fetched');
-    assert(data.features.length > 1, 'features are unreasonable');
-    const attributes = data.features.map(({ attributes }) => attributes);
+    const $ = await fetch.json(this, this.url, 'default');
+    assert($, 'No data fetched');
+    assert($.features.length > 1, 'features are unreasonable');
+    const attributes = $.features.map(({ attributes }) => attributes);
+
     assert(attributes.length > 1, 'data fetch failed, no attributes');
 
-    const groupedByPrefecture = groupBy(attributes, attribute => attribute.Prefecture);
+    const groupedByState = groupBy(attributes, attribute => attribute.Prefecture);
 
-    const prefectures = [];
-    for (const [prefectureName, prefectureAttributes] of Object.entries(groupedByPrefecture)) {
-      prefectures.push({
-        state: getIsoFromPrefectureName(prefectureName),
-        cases: prefectureAttributes.length
+    const states = [];
+    for (const [stateName, stateAttributes] of Object.entries(groupedByState)) {
+      states.push({
+        state: getIso2FromName({ country, name: stateName }),
+        cases: stateAttributes.length
       });
     }
-    prefectures.push(transform.sumData(prefectures));
 
-    return prefectures;
+    const summedData = transform.sumData(states);
+    states.push(summedData);
+
+    return states;
   }
 };
 

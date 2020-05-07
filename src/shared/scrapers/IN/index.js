@@ -2,15 +2,15 @@ import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 
-const labelFragmentsByKey = [
-  { state: 'name of state' },
-  { deaths: 'death' },
-  { cases: 'total confirmed cases' },
-  { recovered: 'cured' },
-  { discard: 's. no.' }
-];
+const schemaKeysByHeadingFragment = {
+  'name of state': 'state',
+  death: 'deaths',
+  'total confirmed cases': 'cases',
+  cured: 'recovered',
+  's. no.': null
+};
 
 const countryLevelMap = {
   'Andaman and Nicobar Islands': 'iso2:IN-AN',
@@ -80,7 +80,7 @@ const scraper = {
     const dataKeysByColumnIndex = [];
     $headings.each((index, heading) => {
       const $heading = $(heading);
-      dataKeysByColumnIndex[index] = getKey({ label: $heading.text(), labelFragmentsByKey });
+      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading: $heading.text(), schemaKeysByHeadingFragment });
     });
 
     const states = [];
@@ -102,7 +102,9 @@ const scraper = {
           const $td = $(td);
 
           const key = dataKeysByColumnIndex[columnIndex];
-          data[key] = getValue(key, $td.text());
+          if (key) {
+            data[key] = getValue(key, $td.text());
+          }
         });
         states.push(data);
       });

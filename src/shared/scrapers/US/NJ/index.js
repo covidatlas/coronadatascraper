@@ -82,6 +82,20 @@ const scraper = {
       }
       counties.push(transform.sumData(counties));
       return counties;
+    },
+    '2020-04-30': async function() {
+      this.url = await fetch.getArcGISCSVURLFromOrgId(this, 7, 'Z0rixLlManVefxqY', 'DailyCaseCounts');
+      const data = await fetch.csv(this, this.url, 'default');
+      const counties = [];
+      for (const county of data) {
+        counties.push({
+          county: parse.string(county.COUNTY_LAB),
+          cases: parse.number(county.TOTAL_CASES || 0),
+          deaths: parse.number(county.TOTAL_DEATHS || 0)
+        });
+      }
+      counties.push(transform.sumData(counties));
+      return counties;
     }
   }
 };

@@ -111,6 +111,22 @@ export const writeFile = async (filePath, data, options = {}) => {
 };
 
 /**
+ * Copy a file
+ *
+ * @param {*} srcPath path to read from
+ * @param {*} destPath path to write to
+ */
+export const copyFile = async (srcPath, destPath) => {
+  await ensureDir(path.dirname(destPath));
+
+  const ret = await fs.promises.copyFile(srcPath, destPath);
+
+  log(`✏️  ${srcPath} copied to ${destPath}`);
+
+  return ret;
+};
+
+/**
   Write JSON to a file
 */
 export const writeJSON = async (filePath, data, options = {}) => {

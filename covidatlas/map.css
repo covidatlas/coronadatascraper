@@ -1,0 +1,56 @@
+/* Map */
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.cds-Popup {
+  margin: -10px 0;
+}
+
+.cds-Popup-table {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+.cds-Popup-table th {
+  text-align: right;
+  padding-right: 8px;
+}
+
+#mapLegend {
+  position: absolute;
+  background: #ffffff;
+  padding: 2px 8px 2px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  bottom: 36px;
+  left: 12px;
+}
+
+.mapLegend-scaleLabels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mapLegend-scaleLabels .spectrum-Body--XS {
+  margin: 0;
+}
+
+#mapLegend canvas {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#map.ca-Map {
+  height: 320px;
+}
+
+@media screen and (min-width: 640px) {
+  #map.ca-Map{
+    height: 480px;
+  }
+}

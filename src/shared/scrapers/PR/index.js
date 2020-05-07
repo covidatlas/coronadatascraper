@@ -1,17 +1,19 @@
 import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
-import getKey from '../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../lib/maintainers.js';
-import pivotTheTable from '../../utils/pivot-the-table.js';
+import normalizeTable from '../../utils/normalize-table.js';
 
-const labelFragmentsByKey = [
-  { deaths: 'muertes​' },
-  { tested: 'realizadas' },
-  { cases: 'confirmados' },
-  { discard: 'en proceso' },
-  { discard: 'negativos' }
-];
+const schemaKeysByHeadingFragment = {
+  'muertes​': 'deaths',
+  prueba: 'tested',
+  realizadas: 'tested',
+  '​casos postivos': 'cases',
+  confirmados: 'cases',
+  'en proceso': null,
+  negativos: null
+};
 
 const scraper = {
   country: 'iso1:PR',
@@ -33,14 +35,21 @@ const scraper = {
   ],
   async scraper() {
     const $ = await fetch.page(this, this.url, 'default');
-    const $table = $('th:contains("CONFIRMADOS")').closest('table');
-    const $trs = $table.find('tbody > tr');
-    const dataPairs = pivotTheTable($trs, $);
+    const normalizedTable = normalizeTable({ $, tableSelector: 'table:contains("MUERTES")' });
+    const headingRowIndex = 0;
+    const dataKeysByColumnIndex = [];
+    normalizedTable[headingRowIndex].forEach((heading, index) => {
+      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+    });
+
+    const dataRow = normalizedTable[normalizedTable.length - 1];
 
     const data = {};
-    dataPairs.forEach(([label, value]) => {
-      const key = getKey({ label, labelFragmentsByKey });
-      data[key] = parse.number(value);
+    dataRow.forEach((value, columnIndex) => {
+      const key = dataKeysByColumnIndex[columnIndex];
+      if (key) {
+        data[key] = parse.number(value);
+      }
     });
 
     assert(data.cases > 0, 'Cases is not reasonable');

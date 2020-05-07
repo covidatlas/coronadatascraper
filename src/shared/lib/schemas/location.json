@@ -15,6 +15,7 @@
     "tested": { "type": "number", "minimum": 0 },
     "hospitalized": { "type": "number", "minimum": 0 },
     "discharged": { "type": "number", "minimum": 0 },
+    "icu": { "type": "number", "minimum": 0 },
     "population": { "type": "number", "minimum": 0 },
     "populationDensity": { "type": "number", "minimum": 0 },
     "coordinates": { "type": "array" },

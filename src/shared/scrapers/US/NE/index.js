@@ -113,32 +113,56 @@ const scraper = {
     'Wheeler County',
     'York County'
   ],
-  async scraper() {
-    let counties = [];
-    const $ = await fetch.page(this, this.url, 'default');
+  scraper: {
+    '0': async function() {
+      let counties = [];
+      const $ = await fetch.page(this, this.url, 'default');
 
-    const listItems = $('ul:contains("Lab-confirmed cases in Nebraska")').find('li');
+      const listItems = $('ul:contains("Lab-confirmed cases in Nebraska")').find('li');
 
-    listItems.each((index, li) => {
-      const text = $(li).text();
+      listItems.each((index, li) => {
+        const text = $(li).text();
 
-      const cases = parse.number(text.match(/: (\d*)/)[1]);
-      let county = geography.addCounty(text.slice(0, text.search(/[^\w\s]/)));
-      if (county === 'Douglas County/Omaha County') {
-        county = 'Douglas County';
-      }
+        const cases = parse.number(text.match(/: (\d*)/)[1]);
+        let county = geography.addCounty(text.slice(0, text.search(/[^\w\s]/)));
+        if (county === 'Douglas County/Omaha County') {
+          county = 'Douglas County';
+        }
 
-      if (this._counties.includes(county)) {
-        counties.push({
-          county,
-          cases
+        if (this._counties.includes(county)) {
+          counties.push({
+            county,
+            cases
+          });
+        }
+      });
+      counties.push(transform.sumData(counties));
+
+      counties = geography.addEmptyRegions(counties, this._counties, 'county');
+      return counties;
+    },
+    '2020-4-21': async function() {
+      this.url =
+        'https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93';
+      this.type = 'json';
+      let regions = [];
+      const data = await fetch.json(this, this.url, 'default');
+      for (const { attributes } of data.features) {
+        regions.push({
+          county: geography.addCounty(attributes.NAME),
+          cases: attributes.totalCountyPosFin,
+          tested: attributes.totalCountyTestedFin,
+          hospitalized: attributes.totalCountyHospitalized,
+          deaths: attributes.totalCountyDeathsFin
         });
       }
-    });
-    counties.push(transform.sumData(counties));
 
-    counties = geography.addEmptyRegions(counties, this._counties, 'county');
-    return counties;
+      regions.push(transform.sumData(regions));
+
+      regions = geography.addEmptyRegions(regions, this._counties, 'county');
+
+      return regions;
+    }
   }
 };
 

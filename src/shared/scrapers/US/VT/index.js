@@ -38,7 +38,7 @@ const scraper = {
   ],
   scraper: {
     '0': async function() {
-      const data = await fetch.json(this, this.url, 'default');
+      const data = await fetch.json(this, this.url, 'data');
       const counties = [];
 
       data.features.forEach(item => {

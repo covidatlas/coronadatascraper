@@ -1,4 +1,3 @@
-import geoTz from 'geo-tz';
 import { join } from 'path';
 import reporter from '../../../shared/lib/error-reporter.js';
 import * as fs from '../../../shared/lib/fs.js';
@@ -9,10 +8,6 @@ import log from '../../../shared/lib/log.js';
 import espGeoJson from '../vendor/esp.json';
 
 const DEBUG = false;
-
-// sets the caching strategy of the geo-tz library to store data in memory
-// without an expiring timeout
-geoTz.setCache({ expires: 0 });
 
 function cleanProps(obj) {
   if (obj.wikipedia === -99) {
@@ -152,16 +147,13 @@ const generateFeatures = ({ locations, report, options, sourceRatings }) => {
       console.log('Storing %s in %s', location.name, feature.properties.name);
     }
 
-    if (location.coordinates) {
-      location.tz = geoTz(location.coordinates[1], location.coordinates[0]);
-    }
-
     if (!location.feature) {
       // unless the location comes with its own feature
       // if it has an id, we use it
       const clId = countryLevels.getIdFromLocation(location);
       if (clId) {
         index = clId;
+        location.tz = [countryLevels.getTimezone(clId)];
       }
     }
 

@@ -1,0 +1,46 @@
+[
+  {
+    "state": "iso2:AU-WA",
+    "cases": 551,
+    "deaths": 8
+  },
+  {
+    "state": "iso2:AU-ACT",
+    "cases": 106,
+    "deaths": 3
+  },
+  {
+    "state": "iso2:AU-NSW",
+    "cases": 3016,
+    "deaths": 40
+  },
+  {
+    "state": "iso2:AU-NT",
+    "cases": 27,
+    "deaths": 0
+  },
+  {
+    "state": "iso2:AU-QLD",
+    "cases": 1033,
+    "deaths": 6
+  },
+  {
+    "state": "iso2:AU-SA",
+    "cases": 438,
+    "deaths": 4
+  },
+  {
+    "state": "iso2:AU-TAS",
+    "cases": 221,
+    "deaths": 12
+  },
+  {
+    "state": "iso2:AU-VIC",
+    "cases": 1361,
+    "deaths": 18
+  },
+  {
+    "cases": 6753,
+    "deaths": 91
+  }
+]

@@ -21,6 +21,18 @@ const generateReport = async report => {
 
   const filteredScaperErrors = scrape.errors.filter(error => error.type !== 'DeprecatedError');
 
+  let valTitle = `- *${validate.errors.length}* invalid locations`;
+  let valFooter = '';
+  const maxValidationFailCount = 20;
+  const displayValidationErrs = validate.errors
+    .slice(0, maxValidationFailCount)
+    .map(e => e.replace('United States', 'US'))
+    .map(e => `  - ${e}`);
+  if (displayValidationErrs.length < validate.errors.length) {
+    valTitle = `${valTitle} (${displayValidationErrs.length} shown)`;
+    valFooter = `_         ... and ${validate.errors.length - displayValidationErrs.length} more._`;
+  }
+
   return [
     {
       type: 'section',
@@ -80,8 +92,9 @@ _Populations:_
         type: 'mrkdwn',
         text: `
 _Validate:_
-- *${validate.errors.length}* invalid locations:
-${validate.errors.map(error => `  - ${error}`).join('\n')}`
+${valTitle}:
+${displayValidationErrs.join('\n')}
+${valFooter}`
       }
     },
     {
@@ -95,11 +108,20 @@ ${validate.errors.map(error => `  - ${error}`).join('\n')}`
 };
 
 const sendToSlack = async data => {
-  request.post(argv.hook, {
-    json: {
-      blocks: data
+  request.post(
+    argv.hook,
+    {
+      json: {
+        blocks: data
+      }
+    },
+    function(error, response, body) {
+      if (error) {
+        return console.error('ERROR POSTING TO SLACK:', error);
+      }
+      console.log('SERVER RESPONDED WITH:', body);
     }
-  });
+  );
 };
 
 fs.readJSON('./dist/report.json')

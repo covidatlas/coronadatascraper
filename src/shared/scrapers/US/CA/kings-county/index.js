@@ -1,10 +1,10 @@
 import assert from 'assert';
 import * as fetch from '../../../../lib/fetch/index.js';
 import * as parse from '../../../../lib/parse.js';
-import getKey from '../../../../utils/get-key.js';
+import getSchemaKeyFromHeading from '../../../../utils/get-schema-key-from-heading.js';
 import maintainers from '../../../../lib/maintainers.js';
 
-const labelFragmentsByKey = [{ deaths: 'deaths' }, { recovered: 'recovered' }, { cases: 'total cases' }];
+const schemaKeysByHeadingFragment = { deaths: 'deaths', recovered: 'recovered', 'total cases': 'cases' };
 
 const scraper = {
   county: 'Kings County',
@@ -29,12 +29,14 @@ const scraper = {
       const data = {};
       $rows.each((index, row) => {
         const $row = $(row);
-        const [label, value] = $row
+        const [heading, value] = $row
           .text()
           .split('\n')[0]
           .split(': ');
-        const key = getKey({ label, labelFragmentsByKey });
-        data[key] = parse.number(value);
+        const key = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
+        if (key) {
+          data[key] = parse.number(value);
+        }
       });
 
       assert(data.cases > 0, 'Cases is not reasonable');
