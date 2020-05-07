@@ -173,6 +173,9 @@ const scraper = {
        * - https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---10-AM.aspx
        * - https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-4-2020---5-PM.aspx
        *
+       * Sometimes they add extra dashes in front of the date ... :-( "...---5-6-2020")
+       * so handle that too.
+       *
        * Depending on the time we try to scrape, we may get 5 PM or 10 AM from today,
        * or 10 PM from yesterady.  Try each of these in turn, and stop when we get a hit.
        * Throw if we don't get any hitss.
@@ -183,16 +186,23 @@ const scraper = {
         return ds.split(',')[0];
       };
 
-      const getUrl = (dt, time) => {
+      const addUrls = (urls, dt, times) => {
         const ds = getDateString(dt).replace(/\//g, '-');
-        return `https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-${ds}---${time}.aspx`;
+        for (const dateSep of ['---', '-']) {
+          for (const t of times) {
+            const root = 'https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update';
+            urls.push([root, dateSep, ds, '---', t, '.aspx'].join(''));
+          }
+        }
       };
 
       const dt = process.env.SCRAPE_DATE ? new Date(process.env.SCRAPE_DATE) : new Date();
       const ydt = new Date();
       ydt.setDate(dt.getDate() - 1);
 
-      const urls = [getUrl(dt, '5-PM'), getUrl(dt, '10-AM'), getUrl(ydt, '5-PM')];
+      const urls = [];
+      addUrls(urls, dt, ['5-PM', '10-AM']);
+      addUrls(urls, ydt, ['5-PM']);
 
       console.log('Trying to get page, falling successively back.');
       let $ = null;
@@ -207,8 +217,8 @@ const scraper = {
       const data = [];
 
       // County-level
-      const label = 'CASES PER COUNTY:';
-      const p = $(`p:contains("${label}")`);
+      let label = 'CASES PER COUNTY:';
+      let p = $(`p:contains("${label}")`);
       assert.equal(p.length, 1, `Have 1 paragraph containing ${label}`);
       let rawcounty = p.text().split(label)[1];
       assert(rawcounty, 'Have rawcounty');
@@ -227,15 +237,17 @@ const scraper = {
       });
 
       // State-level
+      label = 'laboratory results';
+      p = $(`p:contains("${label}")`);
+      assert(p.length >= 1, `Have at least 1 paragraph containing ${label}`);
+      const ptext = p.toArray().map(e => $(e).text());
       const re = /there have been (.*?) laboratory results.*?with (.*?) positive,.*? and (.*?) deaths/s;
-      // slice(1) because the first element is the full match.
-      const raw = $.html()
-        .match(re)
-        .slice(1);
+      p = ptext.find(e => e.match(re));
+      const raw = p.match(re);
       assert(raw, `Got match for ${re} in raw html`);
-      const [tested, cases, deaths] = raw.map(s => s.replace(',', '')).map(s => parseInt(s, 10));
+      // slice(1) because the first element is the full match.
+      const [tested, cases, deaths] = raw.slice(1).map(s => s.replace(',', '')).map(s => parseInt(s, 10));
       const rawStateData = {
-        cases,
         deaths,
         tested
       };
