@@ -157,9 +157,11 @@ const scraper = {
       if (item) items.push(item);
     }
 
-    const textitems = items.filter(i => {
-      return i.page && i.x && i.y && i.text;
-    }).filter(i => pages.includes(i.page));
+    const textitems = items
+      .filter(i => {
+        return i.page && i.x && i.y && i.text;
+      })
+      .filter(i => pages.includes(i.page));
 
     const pageYs = {};
     textitems.forEach(i => {
