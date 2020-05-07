@@ -2,6 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
+import { DeprecatedError } from '../../../lib/errors.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -77,6 +78,9 @@ const scraper = {
     },
     '2020-04-20': async function() {
       return this._fetchLatest();
+    },
+    '2020-05-01': async function() {
+      throw new DeprecatedError('Now using mercury-news.js');
     }
   }
 };
