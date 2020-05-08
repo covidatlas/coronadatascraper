@@ -160,9 +160,6 @@ function compareReportFolders(left, right) {
     },
 
     { regex: /timeseries-byLocation.json/, formatters: {} },
-    { regex: /timeseries-jhu.csv/, formatters: {} },
-    { regex: /timeseries-tidy.csv/, formatters: {} },
-    { regex: /timeseries.csv/, formatters: {} },
     { regex: /timeseries.json/, formatters: {} }
   ];
 
@@ -173,7 +170,13 @@ function compareReportFolders(left, right) {
     }
   });
 
-  const csvReports = [/crawler-report.csv/, /data(.*).csv/];
+  const csvReports = [
+    /crawler-report.csv/,
+    /data(.*).csv/,
+    /timeseries.csv/,
+    /timeseries-tidy.csv/,
+    /timeseries-jhu.csv/
+  ];
   csvReports.forEach(regex => {
     const [left, right] = findLeftRightFiles(regex, leftPaths, rightPaths);
     if (left && right) {
