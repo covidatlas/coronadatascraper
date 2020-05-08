@@ -263,22 +263,25 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
-  await fs.writeJSON(path.join('dist', 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
-  await fs.writeJSON(path.join('dist', 'features.json'), featureCollection, { space: 0 });
+  const d = options.writeTo;
+  await fs.ensureDir(d);
+
+  await fs.writeJSON(path.join(d, 'timeseries-byLocation.json'), timeseriesByLocation, { space: 0 });
+  await fs.writeJSON(path.join(d, 'features.json'), featureCollection, { space: 0 });
 
   const { locations, timeseriesByDate } = transform.transposeTimeseries(timeseriesByLocation);
-  await fs.writeJSON(path.join('dist', `timeseries.json`), timeseriesByDate, { space: 2 });
-  await fs.writeJSON(path.join('dist', `locations.json`), locations, { space: 2 });
+  await fs.writeJSON(path.join(d, `timeseries.json`), timeseriesByDate, { space: 2 });
+  await fs.writeJSON(path.join(d, `locations.json`), locations, { space: 2 });
 
   let csvData = null;
   csvData = await generateCSV(timeseriesByLocation);
-  await fs.writeCSV(path.join('dist', 'timeseries.csv'), csvData);
+  await fs.writeCSV(path.join(d, 'timeseries.csv'), csvData);
 
   csvData = await generateTidyCSV(timeseriesByLocation);
-  await fs.writeCSV(path.join('dist', 'timeseries-tidy.csv'), csvData);
+  await fs.writeCSV(path.join(d, 'timeseries-tidy.csv'), csvData);
 
   csvData = await generateJHUCSV(timeseriesByLocation);
-  await fs.writeCSV(path.join('dist', 'timeseries-jhu.csv'), csvData);
+  await fs.writeCSV(path.join(d, 'timeseries-jhu.csv'), csvData);
 }
 
 generateTimeseries(argv)
