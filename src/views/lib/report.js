@@ -147,25 +147,27 @@ module.exports.ratingTemplate = function ratingTemplate(source, index) {
     csv: '✅',
     table: '⚠️',
     list: '❌',
-    paragraph: '🤮',
-    pdf: '🤮'
+    paragraph: '❌',
+    pdf: '❌'
   };
   const typeNames = {
+    table: 'HTML table',
+    list: 'HTML list',
     json: 'JSON',
     pdf: 'PDF',
     csv: 'CSV'
   };
 
   let granular = source.city || source.county;
-  let granularity = 'country-level';
+  let granularity = 'country-level data';
   if (source.city || source.aggregate === 'city') {
-    granularity = 'city-level';
+    granularity = 'city-level data';
     granular = true;
   } else if (source.county || source.aggregate === 'county') {
-    granularity = 'county-level';
+    granularity = 'county / municipality-level data';
     granular = true;
   } else if (source.state || source.aggregate === 'state') {
-    granularity = 'state-level';
+    granularity = 'state-level data';
   }
 
   const sourceURLShort = source.url.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)[1];
@@ -199,23 +201,23 @@ module.exports.ratingTemplate = function ratingTemplate(source, index) {
       }" class="spectrum-Link" target="_blank">${sourceURLShort}</a></h4>
       <div class="cds-ReportCard-criteria">
         <div class="cds-ReportCard-criterion">
-          ${typeIcons[source.type]} ${typeNames[source.type] ||
+          ${typeIcons[source.type]} Published as: ${typeNames[source.type] ||
     source.type.substr(0, 1).toUpperCase() + source.type.substr(1)}
         </div>
         <div class="cds-ReportCard-criterion">
-          ${source.timeseries ? '✅' : '❌'} Timeseries
+          ${source.timeseries ? '✅ Timeseries' : '❌ Non-timeseries'} dataset
         </div>
         <div class="cds-ReportCard-criterion">
-          ${source.aggregate ? '✅' : '❌'} Aggregate
+          ${source.aggregate ? '✅ Aggregates' : '❌ Does not aggregate'}  many localities in a single source
         </div>
         <div class="cds-ReportCard-criterion">
-          ${source.ssl ? '✅' : '❌'} SSL
+          ${source.ssl ? '✅ Site uses' : '❌ Site does not use'} SSL
         </div>
         <div class="cds-ReportCard-criterion">
-          ${source.headless ? '❌' : '✅'} ${source.headless ? 'Requires' : ' Does not require'} JavaScript
+          ${source.headless ? '❌ Site requires' : '✅ Site does not require'} JavaScript
         </div>
         <div class="cds-ReportCard-criterion">
-          ${granular ? '✅' : '❌'} Granularity (${granularity})
+          ${granular ? '✅ Granular' : '❌ Non-granular'}: ${granularity}
         </div>
       </div>
     </div>
