@@ -11,7 +11,7 @@ Lack of familiarity with the Contributor Covenant is not an excuse for non-adher
 
 ## Reporting
 
-If you are the subject of any behavior prohibited by this Code of Conduct, or observe someone who is, please [join the Slack](https://join.slack.com/t/sars-cov-2covid-19/shared_invite/zt-cr6ln0ph-6eDATfSUNDtFK3mlQxqYKw) and DM a designated team member immediately: Larry Davis, or Ryan Block.
+If you are the subject of any behavior prohibited by this Code of Conduct, or observe someone who is, please [join the Slack](https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ) and DM a designated team member immediately: Larry Davis, or Ryan Block.
 
 If possible, please attempt to collect any relevant information and evidence, including links, screenshots, or other recordings of any incident.
 
