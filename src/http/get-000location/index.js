@@ -62,7 +62,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
     <div class="col-xs-12 col-sm-6 end-sm">
       <!-- todo: make this responsive, dropdown menu on mobile -->
       <sp-button quiet variant="secondary" href="/data">Download</sp-button>
-      <!-- 
+      <!--
       <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
         <sp-button quiet variant="secondary" slot="trigger">Share</sp-button>
         <sp-popover dialog slot="click-content" tip open class="ca-DownloadPopover" direction="bottom">
@@ -116,7 +116,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-12">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Nearby locations</h1>
+      <h2 class="spectrum-Heading spectrum-Heading--M">Regional map</h1>
       <div id="map" class="ca-Map"></div>
     </div>
   </div>
@@ -126,7 +126,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
-      <p class="spectrum-Body spectrum-Body--S">We assign a <a class="spectrum-Link" href="/sources">data transparency rating</a> to each source based on the ease of acquisition and completeness of the data.</p>
+      <p class="spectrum-Body spectrum-Body--S">Our <a class="spectrum-Link" href="/sources">data transparency rating</a> refers to the granularity, completeness, and technical format for this data source.</p>
       ${ratingTemplate(rating)}
     </section>
 `;
@@ -134,10 +134,10 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   if (crosscheckReport) {
     html += `
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
-        <h4 class="spectrum-Heading spectrum-Heading--S">Location cross-check</h4>
-        <p class="spectrum-Body spectrum-Body--S">The ${
+        <h4 class="spectrum-Heading spectrum-Heading--S">Cross-check report</h4>
+        <p class="spectrum-Body spectrum-Body--S">${
           constants.name
-        } crawler checks multiple sources for the same data and reports inconsistencies.</p>
+        } checks multiple sources for the same data, and reports potential inconsistencies. The most consistent and best-rated sources are displayed in COVID Atlas graphs and maps.</p>
         ${crosscheckTemplate(crosscheckReport)}
       </section>
   `;
@@ -148,7 +148,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
 
   <div class="ca-Callout--Disclaimer">
     <p class="spectrum-Body spectrum-Body--M">
-      COVID Atlas is for informational purposes only and does not offer any medical advice. Data quality and accuracy is subject to local government sources. Contact your local officials with questions about the data.
+      ${constants.disclaimer}
     </p>
   </div>
 

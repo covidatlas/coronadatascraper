@@ -10,7 +10,7 @@ module.exports = function body(content = '', className = '') {
         <div class="col-xs-12 col-md">
           <h6 class="spectrum-Heading spectrum-Heading--XS">See an error?</h6>
           <p class="spectrum-Body spectrum-Body--XS">
-            Report an error via <a class="spectrum-Link" href="${constants.issueURL}">GitHub issues</a>.
+            Report errors in <a class="spectrum-Link" href="${constants.issueURL}">GitHub</a>.
           </p>
         </div>
         <div class="col-xs-12 col-md">
@@ -26,7 +26,7 @@ module.exports = function body(content = '', className = '') {
     </div>
     <div class="col-xs-12 col-lg-4 ca-SiteFooter-Disclaimer">
       <p class="spectrum-Body spectrum-Body--XS">
-        COVID Atlas is for informational purposes only and does not offer any medical advice. Data quality and accuracy is subject to local government sources. Contact your local officials with questions about the data.
+        ${constants.disclaimer}
       </p>
     </div>
   </div>
