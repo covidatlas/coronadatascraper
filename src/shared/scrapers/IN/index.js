@@ -32,7 +32,7 @@ const scraper = {
     });
 
     // Create new array with just the state data (no headings, comments, totals)
-    const stateDataRows = normalizedTable.filter(row => row[0].match(/\d/));
+    const stateDataRows = normalizedTable.filter(row => row[0].match(/^\d/));
 
     const states = [];
     stateDataRows.forEach(row => {
