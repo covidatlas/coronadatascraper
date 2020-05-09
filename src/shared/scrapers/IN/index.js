@@ -1,8 +1,10 @@
-import assert from 'assert';
 import * as fetch from '../../lib/fetch/index.js';
 import * as parse from '../../lib/parse.js';
 import * as transform from '../../lib/transform.js';
+import assertTotalsAreReasonable from '../../utils/assert-totals-are-reasonable.js';
+import getIso2FromName from '../../utils/get-iso2-from-name.js';
 import getSchemaKeyFromHeading from '../../utils/get-schema-key-from-heading.js';
+import normalizeTable from '../../utils/normalize-table.js';
 
 const schemaKeysByHeadingFragment = {
   'name of state': 'state',
@@ -12,107 +14,55 @@ const schemaKeysByHeadingFragment = {
   's. no.': null
 };
 
-const countryLevelMap = {
-  'Andaman and Nicobar Islands': 'iso2:IN-AN',
-  'Andhra Pradesh': 'iso2:IN-AP',
-  'Arunachal Pradesh': 'iso2:IN-AR',
-  Assam: 'iso2:IN-AS',
-  Bihar: 'iso2:IN-BR',
-  Chandigarh: 'iso2:IN-CH',
-  Chhattisgarh: 'iso2:IN-CT',
-  'Dadra and Nagar Haveli': 'iso2:IN-DN',
-  'Daman and Diu': 'iso2:IN-DD',
-  Delhi: 'iso2:IN-DL',
-  Goa: 'iso2:IN-GA',
-  Gujarat: 'iso2:IN-GJ',
-  Haryana: 'iso2:IN-HR',
-  'Himachal Pradesh': 'iso2:IN-HP',
-  'Jammu and Kashmir': 'iso2:IN-JK',
-  Jharkhand: 'iso2:IN-JH',
-  Karnataka: 'iso2:IN-KA',
-  Kerala: 'iso2:IN-KL',
-  Ladakh: 'iso2:IN-LA',
-  Lakshadweep: 'iso2:IN-LD',
-  'Madhya Pradesh': 'iso2:IN-MP',
-  Maharashtra: 'iso2:IN-MH',
-  Manipur: 'iso2:IN-MN',
-  Meghalaya: 'iso2:IN-ML',
-  Mizoram: 'iso2:IN-MZ',
-  Nagaland: 'iso2:IN-NL',
-  Odisha: 'iso2:IN-OR',
-  Puducherry: 'iso2:IN-PY',
-  Punjab: 'iso2:IN-PB',
-  Rajasthan: 'iso2:IN-RJ',
-  Sikkim: 'iso2:IN-SK',
-  'Tamil Nadu': 'iso2:IN-TN',
-  Telengana: 'iso2:IN-TG', // The site is using this spelling
-  Telangana: 'iso2:IN-TG', // country-levels-export uses this spelling
-  Tripura: 'iso2:IN-TR',
-  'Uttar Pradesh': 'iso2:IN-UP',
-  Uttarakhand: 'iso2:IN-UT',
-  'West Bengal': 'iso2:IN-WB'
-};
-
-const getValue = (key, text) => {
-  if (key === 'state') {
-    const state = parse.string(text).replace(/#/, '');
-    const mappedState = countryLevelMap[state];
-    assert(
-      mappedState,
-      `${state} not found in countryLevelMap, look up on https://github.com/hyperknot/country-levels-export/blob/master/docs/iso2_list/IN.md`
-    );
-    return mappedState;
-  }
-  return parse.number(text);
-};
+const country = 'iso1:IN';
 
 const scraper = {
-  country: 'iso1:IN',
+  country,
   url: 'https://www.mohfw.gov.in/',
   type: 'table',
   aggregate: 'state',
   async scraper() {
     const $ = await fetch.page(this, this.url, 'default');
-    const $table = $('#state-data');
-    assert.equal($table.length, 1, 'The table can not be found');
+    const normalizedTable = normalizeTable({ $, tableSelector: '#state-data' });
 
-    const $headings = $table.find('thead tr th');
+    const headingRowIndex = 0;
     const dataKeysByColumnIndex = [];
-    $headings.each((index, heading) => {
-      const $heading = $(heading);
-      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading: $heading.text(), schemaKeysByHeadingFragment });
+    normalizedTable[headingRowIndex].forEach((heading, index) => {
+      dataKeysByColumnIndex[index] = getSchemaKeyFromHeading({ heading, schemaKeysByHeadingFragment });
     });
 
+    // Create new array with just the state data (no headings, comments, totals)
+    const stateDataRows = normalizedTable.filter(row => row[0].match(/^\d/));
+
     const states = [];
-    const $trs = $table.find('tbody > tr');
-    $trs
-      .filter(
-        // Remove summary rows
-        (_rowIndex, tr) =>
-          !$(tr)
-            .find('td')
-            .first()
-            .attr('colspan')
-      )
-      .each((_rowIndex, tr) => {
-        const $tds = $(tr).find('td');
-        const data = {};
-
-        $tds.each((columnIndex, td) => {
-          const $td = $(td);
-
-          const key = dataKeysByColumnIndex[columnIndex];
-          if (key) {
-            data[key] = getValue(key, $td.text());
-          }
-        });
-        states.push(data);
+    stateDataRows.forEach(row => {
+      const stateData = {};
+      row.forEach((value, columnIndex) => {
+        const key = dataKeysByColumnIndex[columnIndex];
+        stateData[key] = value;
       });
+
+      states.push({
+        state: getIso2FromName({
+          country,
+          name: stateData.state
+            .replace('Telengana', 'Telangana')
+            .replace('Dadar Nagar Haveli', 'Dadra and Nagar Haveli')
+        }),
+        cases: parse.number(stateData.cases),
+        deaths: parse.number(stateData.deaths),
+        recovered: parse.number(stateData.recovered)
+      });
+    });
 
     const summedData = transform.sumData(states);
     states.push(summedData);
-    assert(summedData.cases > 0, 'Cases is not reasonable');
 
+    const indexForCases = dataKeysByColumnIndex.findIndex(key => key === 'cases');
+    const casesFromTotalRow = parse.number(
+      normalizedTable.find(row => row.some(cell => cell === 'Total number of confirmed cases in India'))[indexForCases]
+    );
+    assertTotalsAreReasonable({ computed: summedData.cases, scraped: casesFromTotalRow });
     return states;
   }
 };
