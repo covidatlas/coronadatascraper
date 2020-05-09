@@ -36,7 +36,7 @@ ${header('about')}
     <section class="ca-Section">
       <h1 class="spectrum-Heading spectrum-Heading--XL">About COVID Atlas</h1>
       <p class="spectrum-Body spectrum-Body--L">COVID Atlas is an international team of engineers, designers, and technologists aggregating COVID-19 (aka "Coronavirus") data from official government sources and trusted data providers.</p>
-      <p class="spectrum-Body spectrum-Body--L">Every piece of data collected is open, accessible in the public domain, published in multiple formats, and is available tagged with relevant metadata such as GeoJSON, population / census information, and source citations.</p>
+      <p class="spectrum-Body spectrum-Body--L">Every piece of data collected is open, accessible in the public domain, published in multiple formats. It is available tagged with relevant metadata such as GeoJSON, population / census information, and source citations.</p>
       <p class="spectrum-Body spectrum-Body--L">Our data is sourced exclusively from official public health channels, and verified sources.</p>
 
       <h1 class="spectrum-Heading spectrum-Heading--L">Built by a global community</h1>
@@ -89,7 +89,7 @@ ${header('about')}
 
       <h1 class="spectrum-Heading spectrum-Heading--XL">Additional acknowledgments</h1>
       <p class="spectrum-Body spectrum-Body--M">COVID Atlas would also like to acknowledge the services provided  by our hosting partner <a class="spectrum-Link" href="https://aws.amazon.com/">Amazon AWS</a>.</p>
-      <p class="spectrum-Body spectrum-Body--M">This project also exists in part thanks to the flexibility provided by <a class="spectrum-Link" href="https://adobe.com/">Adobe</a> and <a class="spectrum-Link" href="https://begin.com/">Begin</a> to some of our contributors.</p>
+      <p class="spectrum-Body spectrum-Body--M">This project also exists in part thanks to <a class="spectrum-Link" href="https://adobe.com/">Adobe</a> and <a class="spectrum-Link" href="https://begin.com/">Begin</a>. These companies provided a number of our contributors the flexibility necessary to participate in building COVID Atlas.</p>
     </section>
   ${footer()}
 </div>

@@ -61,22 +61,22 @@ ${header('sources')}
         <div class="col-xs-12 col-sm-6">
           <h2 class="spectrum-Heading spectrum-Heading--M" id="spec">Do you administer an official government health data source?</h2>
           <p class="spectrum-Body spectrum-Body--M">
-            Below is a brief list of ways the administrators of official government health data sources can improve their sources for benefit of scientists, researchers, developers, and most importantly the general public:
+            Administrators of official government health data can improve their sources for the benefit of scientists, researchers, developers, and, most importantly, the general public. Below is a brief list of ways we recommend doing so:
           </p>
           <ul class="spectrum-Body spectrum-Body--M">
             <li>
-              <strong>Publish every bit of verifiable data you can get</strong> – this includes cumulative or timeseries data for confirmed, hospitalized, discharged, and recovered cases; fatalities; total tests administered, etc.)
+              <strong>Publish every bit of verifiable data you can</strong> – this includes cumulative or timeseries data for confirmed, hospitalized, discharged, and recovered cases; fatalities; total tests administered, etc.)
             </li>
             <li>
               <strong>Publish as granularly as possible</strong> – The most useful datasets have the highest degrees of geographical specificity, including individual columns for each locality
             </li>
             <li>
-              <strong>Publish only accessible and machine-readable formats</strong> – do not publish your data in PDFs, images, and other inaccessible formats. These formats are hostile to the general public's needs understand what's going on, and are in <strong>some cases illegal</strong>. Use HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have, and if possible, also publish JSON and/or CSV formats
+              <strong>Publish only accessible and machine-readable formats</strong> – do not publish your data in PDFs, images, and other inaccessible formats. These formats are hostile to the general public's need understand what's going on, and are in <strong>some cases illegal</strong>. Use HTML <code>&lt;table&gt;</code> with one row per locality at the most granular level you have, and if possible, also publish JSON and/or CSV formats
             </li>
           </ul>
           <p class="spectrum-Body spectrum-Body--M">We’d like to hear from you and help you make your data better! <a class="spectrum-Link" href="${
             constants.slackURL
-          }" target="_blank">Pleae do reach out to us on on Slack</a> or <a class="spectrum-Link" href="${
+          }" target="_blank">Please do reach out to us on Slack</a> or <a class="spectrum-Link" href="${
       constants.repoURL
     }issues">file an issue on GitHub</a></p>
         </div>
