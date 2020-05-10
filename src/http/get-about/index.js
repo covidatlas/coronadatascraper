@@ -36,7 +36,7 @@ ${header('about')}
     <section class="ca-Section">
       <h1 class="spectrum-Heading spectrum-Heading--XL">About COVID Atlas</h1>
       <p class="spectrum-Body spectrum-Body--L">COVID Atlas is an international team of engineers, designers, and technologists aggregating COVID-19 (aka "Coronavirus") data from official government sources and trusted data providers.</p>
-      <p class="spectrum-Body spectrum-Body--L">Every piece of data collected is open, accessible in the public domain, published in multiple formats. It is available tagged with relevant metadata such as GeoJSON, population / census information, and source citations.</p>
+      <p class="spectrum-Body spectrum-Body--L">Every piece of data collected is open, accessible in the public domain, and published in multiple formats. It is available tagged with relevant metadata such as GeoJSON, population / census information, and source citations.</p>
       <p class="spectrum-Body spectrum-Body--L">Our data is sourced exclusively from official public health channels, and verified sources.</p>
 
       <h1 class="spectrum-Heading spectrum-Heading--L">Built by a global community</h1>
