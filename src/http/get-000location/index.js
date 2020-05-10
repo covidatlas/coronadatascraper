@@ -126,7 +126,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
-      <p class="spectrum-Body spectrum-Body--S">Our <a class="spectrum-Link" href="/sources">data transparency rating</a> refers to the granularity, completeness, and technical format for this data source.</p>
+      <p class="spectrum-Body spectrum-Body--S">Our <a class="spectrum-Link" href="/sources">data transparency rating</a> is based on the granularity, completeness, and technical format of this data source.</p>
       ${ratingTemplate(rating)}
     </section>
 `;
