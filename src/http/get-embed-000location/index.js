@@ -35,7 +35,7 @@ function getAttribution(location) {
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
     location
   )}</p>`;
-  html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Visualization by <a href="https://covidatlas.com" target="_blank">COVIDAtlas</a></p>`;
+  html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Visualization by <a href="/" target="_blank">COVID Atlas</a></p>`;
   html += `</div>`;
   return html;
 }

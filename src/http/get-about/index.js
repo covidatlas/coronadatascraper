@@ -41,7 +41,7 @@ ${header('about')}
 
       <h1 class="spectrum-Heading spectrum-Heading--L">Built by a global community</h1>
       <p class="spectrum-Body spectrum-Body--M">The source code for the project is community-developed and <a class="spectrum-Link" href="https://github.com/covidatlas/">open-source on GitHub</a>, providing full transparency into every aspect of its functionality. We publish all data, research, and related findings in the public domain.</p>
-      <p class="spectrum-Body spectrum-Body--M">If you're a developer or researcher, you can <a class="spectrum-Link" href="https://coronadatascraper.com/data.csv"></a>download our raw local-level dataset</a> or <a class="spectrum-Link" href="https://coronadatascraper.com/features.json">view it displayed on a world map</a>.</p>
+      <p class="spectrum-Body spectrum-Body--M">If you're a developer or researcher, you can <a class="spectrum-Link" href="/data">download our raw local-level dataset</a> or <a class="spectrum-Link" href="/united-states">view it displayed on a world map</a>.</p>
       <p class="spectrum-Body spectrum-Body--M">If you'd like to contribute, please <a class="spectrum-Link" target="_blank" href="https://github.com/covidatlas/">send us a PR</a> and join us on <a class="spectrum-Link" target="_blank" href="${
         constants.slackURL
       }">Slack</a>.</p>
