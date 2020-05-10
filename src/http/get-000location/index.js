@@ -137,7 +137,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
         <h4 class="spectrum-Heading spectrum-Heading--S">Cross-check report</h4>
         <p class="spectrum-Body spectrum-Body--S">${
           constants.name
-        } checks multiple sources for the same data, and reports potential inconsistencies. The most consistent and best-rated sources are displayed in COVID Atlas graphs and maps.</p>
+        } checks multiple sources for the same data and reports inconsistencies. The most consistent and best-rated sources are displayed in COVID Atlas graphs and maps.</p>
         ${crosscheckTemplate(crosscheckReport)}
       </section>
   `;
