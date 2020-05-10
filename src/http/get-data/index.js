@@ -31,8 +31,8 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <h1 class="spectrum-Heading spectrum-Heading--XL">COVID Atlas datasets</h1>
       <p class="spectrum-Body spectrum-Body--L">COVID Atlas crawls and aggregates data from official local and national government sources, in addition to data curated by academic institutions, reputable journalists, and other verified sources.</p>
       <p class="spectrum-Body spectrum-Body--L">COVID Atlas data is de-duplicated, cross-checked against other sources, and annotated with population data and GeoJSON features. Currently, COVID Atlas crawls and aggregates data from over 150 sources, <strong>covering more 500 states and regions, 3000 counties, and municipalities, and 190 countries</strong>.</p>
-      <p class="spectrum-Body spectrum-Body--L">The consolidated, multi-format dataset of granular COVID-19 case information is available in the public domain for anyone to view, download, or access via API.</p>
-      <p class="spectrum-Body spectrum-Body--L">We encourage scientists, researchers, developers, journalists, and anyone else to analyze this dataset, use it to create models and projections, create your own visualizations, or identify errors and missing data.</p>
+      <p class="spectrum-Body spectrum-Body--L">The consolidated, multi-format dataset of granular COVID-19 case information is available in the public domain for anyone to view, download, or access via an API.</p>
+      <p class="spectrum-Body spectrum-Body--L">We encourage scientists, researchers, developers, journalists, and anyone else to analyze this dataset, use it to create models and projections, create visualizations, or identify errors and missing data.</p>
     </div>
 
     <hr>
@@ -72,7 +72,7 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </section>
 
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
-        <h1 class="spectrum-Heading spectrum-Heading--M">Global daily totals + GeoJSON</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--M">GeoJSON features</h1>
         <p class="spectrum-Body spectrum-Body--M">Worldwide point-in-time data with GeoJSON annotations for building map visualizations</p>
         <!-- <sp-button variant="primary" quiet href="/map">View map</sp-button> -->
         <sp-button emphasized href="${baseURL}features.json" target="_blank" download>Download</sp-button>

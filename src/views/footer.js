@@ -10,7 +10,7 @@ module.exports = function body(content = '', className = '') {
         <div class="col-xs-12 col-md">
           <h6 class="spectrum-Heading spectrum-Heading--XS">See an error?</h6>
           <p class="spectrum-Body spectrum-Body--XS">
-            Report errors in <a class="spectrum-Link" href="${constants.issueURL}">GitHub</a>.
+            Report errors on <a class="spectrum-Link" href="${constants.issueURL}">GitHub</a>.
           </p>
         </div>
         <div class="col-xs-12 col-md">
