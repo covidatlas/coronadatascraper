@@ -21,7 +21,7 @@ exports.handler = async function http() {
     },
     body: template(
       'Home',
-      `
+      /* html */ `
 ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
 <div class="spectrum-Site-content">
@@ -54,7 +54,7 @@ ${header('home' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       <section class="ca-SubSection col-xs-12 col-sm-4">
       <img class="ca-Section-Image" src="${arc.static('icons/COVID_Atlas_Icons_Community.svg')}"/>
         <h1 class="spectrum-Heading spectrum-Heading--M">Built by a community</h1>
-        <p class="spectrum-Body spectrum-Body--M">COVID Atlas is <a href="https://github.com/covidatlas">open-source</a> and built by a <a href="https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ">community of volunteers</a> concerned with the same things that you are</p>
+        <p class="spectrum-Body spectrum-Body--M">COVID Atlas is <a class="spectrum-Link" href="https://github.com/covidatlas">open-source</a> and built by a <a class="spectrum-Link" href="https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ">community of volunteers</a> concerned with the same things that you are</p>
       </section>
     </div>
     <hr>

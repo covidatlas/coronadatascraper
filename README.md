@@ -27,7 +27,7 @@ You can contribute to this project in two big ways:
 
 ### Contribute to the project core
 
-Check the Issues for any task we need to get done. If you are new to open source, look for the label [`Good first issue`](https://github.com/lazd/coronadatascraper/labels/good%20first%20issue)
+Check the Issues for any task we need to get done. If you are new to open-source, look for the label [`Good first issue`](https://github.com/lazd/coronadatascraper/labels/good%20first%20issue)
 
 ### Contribute a source
 

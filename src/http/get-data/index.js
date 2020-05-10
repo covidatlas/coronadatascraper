@@ -57,7 +57,7 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
         <h1 class="spectrum-Heading spectrum-Heading--M">Global daily totals</h1>
-        <p class="spectrum-Body spectrum-Body--M">Worldwide COVID-19 data in point-in-time format (updated daily; not timeseries)</p>
+        <p class="spectrum-Body spectrum-Body--M">A point-in-time snapshot of worldwide COVID-19 data (updated daily)</p>
         <!-- <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button> -->
         </sp-dropdown>
         <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
@@ -73,7 +73,7 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
         <h1 class="spectrum-Heading spectrum-Heading--M">GeoJSON features</h1>
-        <p class="spectrum-Body spectrum-Body--M">Worldwide point-in-time data with GeoJSON annotations for building map visualizations</p>
+        <p class="spectrum-Body spectrum-Body--M">GeoJSON features for all locations found in our dataset, useful for building map visualizations</p>
         <!-- <sp-button variant="primary" quiet href="/map">View map</sp-button> -->
         <sp-button emphasized href="${baseURL}features.json" target="_blank" download>Download</sp-button>
       </section>
