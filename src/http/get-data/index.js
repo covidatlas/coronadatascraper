@@ -19,7 +19,7 @@ exports.handler = async function http() {
     },
     body: template(
       'Datasets',
-      `
+      /* html */ `
 ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
 
 <div class="spectrum-Site-content">
@@ -28,9 +28,11 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
   <div class="spectrum-Site-mainContainer spectrum-Typography">
 
     <div class="ca-Section">
-      <h1 class="spectrum-Heading spectrum-Heading--XL">Datasets</h1>
-      <p class="spectrum-Body spectrum-Body--L">COVID Atlas scrapes data from official local government sources and curated data, de-dupes, cross-checks, adds population data, and adds GeoJSON features.</p>
-      <p class="spectrum-Body spectrum-Body--L">View or download any of these data sets to analyze global COVID-19 data, create your own visualizations, or identify errors and missing data.</p>
+      <h1 class="spectrum-Heading spectrum-Heading--XL">COVID Atlas datasets</h1>
+      <p class="spectrum-Body spectrum-Body--L">COVID Atlas crawls and aggregates data from official local and national government sources, in addition to data curated by academic institutions, reputable journalists, and other verified sources.</p>
+      <p class="spectrum-Body spectrum-Body--L">COVID Atlas data is de-duplicated, cross-checked against other sources, and annotated with population data and GeoJSON features. Currently, COVID Atlas crawls and aggregates data from over 150 sources, <strong>covering more 500 states and regions, 3000 counties, and municipalities, and 190 countries</strong>.</p>
+      <p class="spectrum-Body spectrum-Body--L">The consolidated, multi-format dataset of granular COVID-19 case information is available in the public domain for anyone to view, download, or access via an API.</p>
+      <p class="spectrum-Body spectrum-Body--L">We encourage scientists, researchers, developers, journalists, and anyone else to analyze this dataset, use it to create models and projections, create visualizations, or identify errors and missing data.</p>
     </div>
 
     <hr>
@@ -38,7 +40,7 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
     <div class="ca-Section row">
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
         <h1 class="spectrum-Heading spectrum-Heading--M">Global timeseries</h1>
-        <p class="spectrum-Body spectrum-Body--M">Worldwide COVID-19 data in a time-series format since the start of the pandemic.</p>
+        <p class="spectrum-Body spectrum-Body--M">Worldwide COVID-19 data in timeseries format (starting at 2020-01-22)</p>
         <!-- <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button> -->
 
         <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
@@ -54,8 +56,8 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </section>
 
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
-        <h1 class="spectrum-Heading spectrum-Heading--M">Global daily</h1>
-        <p class="spectrum-Body spectrum-Body--M">The latest worldwide COVID-19 data.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">Global daily totals</h1>
+        <p class="spectrum-Body spectrum-Body--M">A point-in-time snapshot of worldwide COVID-19 data (updated daily)</p>
         <!-- <sp-button variant="primary" quiet href="#notimplemented">View data</sp-button> -->
         </sp-dropdown>
         <overlay-trigger id="trigger" placement="bottom" class="ca-DownloadTrigger">
@@ -70,8 +72,8 @@ ${header('data' /* 'ca-SiteHeader--dark spectrum--dark' */)}
       </section>
 
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
-        <h1 class="spectrum-Heading spectrum-Heading--M">GeoJSON</h1>
-        <p class="spectrum-Body spectrum-Body--M">This data is helpful when building your own map visualizations with COVID Atlas.</p>
+        <h1 class="spectrum-Heading spectrum-Heading--M">GeoJSON features</h1>
+        <p class="spectrum-Body spectrum-Body--M">GeoJSON features for all locations found in our dataset, useful for building map visualizations</p>
         <!-- <sp-button variant="primary" quiet href="/map">View map</sp-button> -->
         <sp-button emphasized href="${baseURL}features.json" target="_blank" download>Download</sp-button>
       </section>
