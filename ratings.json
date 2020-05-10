@@ -811,7 +811,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-08",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-09",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1171,6 +1171,19 @@
     "countryId": "iso1:US"
   },
   {
+    "country": "India",
+    "url": "https://www.mohfw.gov.in/",
+    "type": "table",
+    "aggregate": "state",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:IN"
+  },
+  {
     "state": "Georgia",
     "country": "United States",
     "url": "https://ga-covid19.ondemand.sas.com/",
@@ -1241,28 +1254,6 @@
     "rating": 0.47058823529411764,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MS"
-  },
-  {
-    "state": "Texas",
-    "country": "United States",
-    "aggregate": "county",
-    "certValidation": false,
-    "sources": [
-      {
-        "url": "https://www.dshs.state.tx.us",
-        "name": "Texas Health and Human Services",
-        "description": "Texas Department of State Health Services"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "priority": 0,
-    "url": "https://opendata.arcgis.com/datasets/bc83058386d2434ca8cf90b26dc6b580_0.csv",
-    "type": "csv",
-    "ssl": false,
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-TX"
   },
   {
     "state": "Utah",
@@ -1364,27 +1355,6 @@
     "rating": 0.45098039215686275,
     "countryId": "iso1:US",
     "stateId": "iso2:US-RI"
-  },
-  {
-    "state": "West Virginia",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "https://dhhr.wv.gov/COVID-19/Pages/default.aspx",
-        "name": "West Virginia Department of Health & Human Resources"
-      }
-    ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-7-2020---5-PM.aspx",
-    "type": "list",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.45098039215686275,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-WV"
   },
   {
     "country": "Switzerland",
@@ -1828,38 +1798,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-NT"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "QLD Government Health Department",
-        "name": "QLD Government Health",
-        "url": "https://www.health.qld.gov.au"
-      }
-    ],
-    "state": "Queensland",
-    "type": "table",
-    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-QLD"
   },
   {
     "country": "Australia",
