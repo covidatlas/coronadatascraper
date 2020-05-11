@@ -1,4 +1,5 @@
 import path from 'path';
+import assert from 'assert';
 import * as fs from '../../../shared/lib/fs.js';
 import * as stringify from './stringify.js';
 import reporter from '../../../shared/lib/error-reporter.js';
@@ -12,6 +13,7 @@ export default async function writeData(locations, featureCollection, ratings, r
   }
 
   const d = options.writeTo;
+  assert(d, 'options.writeTo is set');
   await fs.ensureDir(d);
 
   const { join } = path;

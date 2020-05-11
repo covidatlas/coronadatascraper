@@ -26,7 +26,10 @@ function rawFilenames(options) {
 export default function loadRawPriorityAdjusted(options) {
   function readJson(f) {
     if (!f) throw new Error('null file path');
-    if (!fs.existsSync(f)) throw new Error(`Missing raw file ${f}`);
+    if (!fs.existsSync(f)) {
+      console.log(`No file at ${f}, returning empty array.`);
+      return [];
+    }
     const rawdata = fs.readFileSync(f);
     console.log(`Loading ${f.replace(rawDirectory, '')}`);
     return JSON.parse(rawdata);
