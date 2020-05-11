@@ -225,7 +225,7 @@ async function doCrawl(options, date, today, lastDate) {
     findPopulations: date === lastDate,
     writeData: false
   };
-  return await runCrawler(runOptions);
+  return runCrawler(runOptions);
 }
 
 /*
@@ -249,8 +249,8 @@ export async function generateTimeseries(options = {}) {
     for (const location of data.locations) {
       const name = geography.getName(location);
 
-      const existingDates = timeseriesByLocation[name] && timeseriesByLocation[name].dates;
-      timeseriesByLocation[name] = { dates: existingDates || {}, ...stripCases(location) };
+      timeseriesByLocation[name] = timeseriesByLocation[name] || { dates: {} };
+      timeseriesByLocation[name] = { ...timeseriesByLocation[name], ...stripCases(location) };
 
       const strippedLocation = stripInfo(location);
 
