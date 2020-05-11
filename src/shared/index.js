@@ -89,10 +89,10 @@ export default async function generate(date, options = {}) {
 export async function scrapeToRawFiles(date, options = {}) {
   options = getFullOptions(options);
   options.dumpRaw = true;
-
   const report = emptyReport(date);
   const sources = await getSources(options);
-  await runScrape(sources, date, report, options);
+  const ret = await runScrape(sources, date, report, options);
+  return ret;
 }
 
 /** Generate reports, using previously saved raw files only. */

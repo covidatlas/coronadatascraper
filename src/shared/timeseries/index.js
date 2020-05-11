@@ -223,13 +223,17 @@ export async function generateTimeseries(options = {}) {
   const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
-    const data = await runCrawler({
+    const runOptions = {
       ...options,
       date: date === today ? undefined : date,
       findFeatures: date === lastDate,
       findPopulations: date === lastDate,
       writeData: false
-    });
+    };
+    const data = await runCrawler(runOptions);
+
+    // Interrupt the loop if needed.
+    if (options.runMethod === 'scrapeToRawFiles') continue;
 
     if (date === lastDate) {
       featureCollection = data.featureCollection;

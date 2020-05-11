@@ -32,6 +32,7 @@
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "tape scripts/test-timezones.js | tap-spec",
     "timeseries": "node src/shared/cli/index-timeseries.js",
+    "timeseries:raw:scrape": "node src/shared/cli/raw-timeseries-scrape.js",
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "pretty": "prettier --write '**/*.js'"

@@ -1,13 +1,18 @@
 const imports = require('esm')(module);
 
-const generate = imports('../index.js').default;
+const { generate, scrapeToRawFiles } = imports('../index.js');
 const argv = imports('../cli/cli-args.js').default;
 
 const clearAllTimeouts = imports('../utils/timeouts.js').default;
 
-generate(argv.date, argv)
+let callMethod = generate;
+if (argv.runMethod === 'scrapeToRawFiles') {
+  callMethod = scrapeToRawFiles;
+}
+
+callMethod(argv.date, argv)
   .then(data => {
-    if (process.send) {
+    if (data && process.send) {
       // Send data back to the parent process
       process.send(data);
     }

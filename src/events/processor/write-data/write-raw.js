@@ -56,6 +56,7 @@ export async function writeRaw(sources, locations, report, options) {
 
   function writeJson(f, data) {
     fs.writeFileSync(f, JSON.stringify(data, null, 2));
+    console.log(`wrote ${f.replace(rawDirectory + path.sep, '')}`);
   }
 
   writeJson(errorReporterErrorsPath, reporter.getErrors());
