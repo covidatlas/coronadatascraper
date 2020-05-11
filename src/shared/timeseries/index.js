@@ -218,7 +218,8 @@ function getDates(today, options) {
 }
 
 /** Get data from crawl. */
-async function doCrawl(options, date, today, lastDate) {
+async function doCrawl(options, date, today) {
+  const lastDate = dates[dates.length - 1];
   const runOptions = {
     ...options,
     date: date === today ? undefined : date,
@@ -250,21 +251,22 @@ function addGrowthFactor(timeseriesByLocation, dates) {
 export async function generateTimeseries(options = {}) {
   const today = new Date();
   dates = getDates(today, options);
-
   const timeseriesByLocation = {};
-  const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
-    const data = await doCrawl(options, date, today, lastDate);
-    if (date === lastDate) {
-      featureCollection = data.featureCollection;
-    }
+    const data = await doCrawl(options, date, today);
     for (const location of data.locations) {
       const name = geography.getName(location);
+      // Initialize if necessary.
       timeseriesByLocation[name] = timeseriesByLocation[name] || { dates: {} };
+      // Overwrite base data.
       timeseriesByLocation[name] = { ...timeseriesByLocation[name], ...stripCases(location) };
+      // Add case data for date.
       timeseriesByLocation[name].dates[date] = stripInfo(location);
     }
+
+    // Always return the last featureCollection.
+    featureCollection = data.featureCollection;
   }
 
   addGrowthFactor(timeseriesByLocation, dates);
