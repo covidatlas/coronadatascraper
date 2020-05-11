@@ -209,9 +209,6 @@ function getDates(today, options) {
   return dates;
 }
 
-/** Save and read generated raw files from dist-raw. */
-const rawDirectory = path.join(__dirname, '..', '..', '..', 'dist-raw');
-
 /** Get data from crawl.  This always saves the output to dist-raw. */
 async function doCrawl(options, date, today) {
   const lastDate = dates[dates.length - 1];
@@ -223,10 +220,6 @@ async function doCrawl(options, date, today) {
     writeData: false
   };
   const data = await runCrawler(runOptions);
-  const filename = `timeseries-data-${datetime.getYYYYMMDD(date)}.json`;
-  await fs.writeJSON(path.join(rawDirectory, filename), data, { space: 2 });
-  console.log(`wrote dist-raw/${filename}`);
-
   return data;
 }
 

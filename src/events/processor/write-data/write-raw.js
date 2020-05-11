@@ -43,11 +43,11 @@ export async function writeRaw(sources, locations, report, options) {
   if (!options.dumpRaw) return;
 
   const {
+    // locationsKeysPath,
+    // sourcesKeysPath,
+    // locationsBriefPath,
     errorReporterErrorsPath,
-    locationsKeysPath,
-    sourcesKeysPath,
     sourcesPath,
-    locationsBriefPath,
     locationsPath,
     reportPath
   } = rawFilenames(options);
@@ -64,6 +64,7 @@ export async function writeRaw(sources, locations, report, options) {
   writeJson(locationsPath, locations);
   writeJson(reportPath, report);
 
+  /* Not bothering writing keys, or 'brief' reports.
   const keyCollector = arr =>
     arr.reduce((hsh, val) => {
       return { ...hsh, ...val };
@@ -114,6 +115,7 @@ export async function writeRaw(sources, locations, report, options) {
     return pruned;
   });
   writeJson(locationsBriefPath, output);
+  */
 }
 
 /** Reconstitute locations and report from old raw JSON files. */
