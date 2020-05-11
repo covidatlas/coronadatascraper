@@ -23,30 +23,22 @@ const caseDataProps = [
 
 let dates;
 
-/*
-  Drop everything but case data from a location
-*/
-function stripInfo(location) {
+function stripFields(location, inCaseDataProps) {
   const newLocation = {};
-  for (const prop of caseDataProps) {
-    if (location[prop] !== undefined) {
-      newLocation[prop] = location[prop];
-    }
+  for (const prop in location) {
+    if (caseDataProps.includes(prop) === inCaseDataProps) newLocation[prop] = location[prop];
   }
   return newLocation;
 }
 
-/*
-  Drop case data from a location
-*/
-function stripCases(location) {
-  const newLocation = {};
-  for (const prop in location) {
-    if (!caseDataProps.includes(prop)) {
-      newLocation[prop] = location[prop];
-    }
-  }
-  return newLocation;
+/** Drop everything but case data from a location */
+function onlyCaseData(location) {
+  return stripFields(location, true);
+}
+
+/** Drop case data from a location */
+function removeCaseData(location) {
+  return stripFields(location, false);
 }
 
 async function generateTidyCSV(timeseriesByLocation) {
@@ -260,9 +252,9 @@ export async function generateTimeseries(options = {}) {
       // Initialize if necessary.
       timeseriesByLocation[name] = timeseriesByLocation[name] || { dates: {} };
       // Overwrite base data.
-      timeseriesByLocation[name] = { ...timeseriesByLocation[name], ...stripCases(location) };
+      timeseriesByLocation[name] = { ...timeseriesByLocation[name], ...removeCaseData(location) };
       // Add case data for date.
-      timeseriesByLocation[name].dates[date] = stripInfo(location);
+      timeseriesByLocation[name].dates[date] = onlyCaseData(location);
     }
 
     // Always return the last featureCollection.
