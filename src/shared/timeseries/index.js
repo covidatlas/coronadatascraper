@@ -2,14 +2,11 @@ const imports = require('esm')(module);
 
 const path = require('path');
 
-const argv = imports('../cli/cli-args.js').default;
 const fs = imports('../lib/fs.js');
 const transform = imports('../lib/transform.js');
 const geography = imports('../lib/geography/index.js');
 const datetime = imports('../lib/datetime/index.js').default;
 const runCrawler = imports('./run-crawler.js').default;
-
-const clearAllTimeouts = imports('../utils/timeouts.js').default;
 
 // The props to keep on a date object
 const caseDataProps = [
@@ -206,7 +203,7 @@ function getGrowthfactor(casesToday, casesYesterday) {
 /*
   Generate timeseries data
 */
-async function generateTimeseries(options = {}) {
+export async function generateTimeseries(options = {}) {
   // Generate a list of dates starting at the first date, OR the provided start date
   // ending at today or the provided end date
   dates = [];
@@ -264,10 +261,10 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
-  return { timeseriesByLocation, featureCollection }
+  return { timeseriesByLocation, featureCollection };
 }
 
-async function writeFiles(options, timeseriesByLocation, featureCollection) {
+export async function writeFiles(options, timeseriesByLocation, featureCollection) {
   const d = options.writeTo;
   await fs.ensureDir(d);
 
@@ -288,11 +285,3 @@ async function writeFiles(options, timeseriesByLocation, featureCollection) {
   csvData = await generateJHUCSV(timeseriesByLocation);
   await fs.writeCSV(path.join(d, 'timeseries-jhu.csv'), csvData);
 }
-
-generateTimeseries(argv)
-  .then(result => writeFiles(argv, result.timeseriesByLocation, result.featureCollection))
-  .then(clearAllTimeouts)
-  .catch(e => {
-    clearAllTimeouts();
-    throw e;
-  });
