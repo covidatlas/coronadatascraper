@@ -216,6 +216,18 @@ function getDates(today, options) {
   return dates;
 }
 
+/** Get data from crawl. */
+async function doCrawl(options, date, today, lastDate) {
+  const runOptions = {
+    ...options,
+    date: date === today ? undefined : date,
+    findFeatures: date === lastDate,
+    findPopulations: date === lastDate,
+    writeData: false
+  };
+  return await runCrawler(runOptions);
+}
+
 /*
   Generate timeseries data
 */
@@ -228,14 +240,7 @@ export async function generateTimeseries(options = {}) {
   const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
-    const runOptions = {
-      ...options,
-      date: date === today ? undefined : date,
-      findFeatures: date === lastDate,
-      findPopulations: date === lastDate,
-      writeData: false
-    };
-    const data = await runCrawler(runOptions);
+    const data = await doCrawl(options, date, today, lastDate);
 
     if (date === lastDate) {
       featureCollection = data.featureCollection;
