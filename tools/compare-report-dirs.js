@@ -59,6 +59,7 @@ function printTitleAndErrors(f, errs) {
   errs.forEach(e => {
     console.log(`* ${e}`);
   });
+  console.log();
 }
 
 /** Compare two json files. */
@@ -99,24 +100,25 @@ function compareCsv(leftFname, rightFname) {
   printTitleAndErrors(leftFname, errs);
 }
 
-/** Find _one_ file in leftPaths and rightPaths that matches the
- * regex. */
+/** Find corresponding files in leftPaths and rightPaths that match
+ * the regex. */
 function findLeftRightFiles(regex, leftPaths, rightPaths) {
-  function findFile(files, regex) {
-    const drs = files.filter(f => {
+  function findFiles(files, regex) {
+    return files.filter(f => {
       return regex.test(f);
     });
-    if (drs.length === 0) {
-      // console.log(`Missing ${regex} file.`);
-      return null;
-    }
-    if (drs.length > 1) {
-      console.log(`Multiple/ambiguous ${regex} files.`);
-      return null;
-    }
-    return drs[0];
   }
-  return [findFile(leftPaths, regex), findFile(rightPaths, regex)];
+  const leftFiles = findFiles(leftPaths, regex);
+  const rightFiles = findFiles(rightPaths, regex);
+
+  const filename = s => {
+    const a = s.split(path.sep);
+    return a[a.length - 1];
+  };
+  return leftFiles.map(lf => {
+    const rf = rightFiles.find(rf => filename(rf) === filename(lf));
+    return [lf, rf];
+  });
 }
 
 // Main method /////////////////////////////////////////
@@ -155,18 +157,19 @@ function compareReportFolders(left, right) {
       }
     },
     {
-      regex: /features(.*).json/,
+      regex: /features.json/,
       formatters: {}
     },
-
     { regex: /timeseries-byLocation.json/, formatters: {} },
     { regex: /timeseries.json/, formatters: {} }
   ];
 
   jsonReports.forEach(hsh => {
-    const [left, right] = findLeftRightFiles(hsh.regex, leftPaths, rightPaths);
-    if (left && right) {
-      compareJson(left, right, hsh.formatters);
+    const list = findLeftRightFiles(hsh.regex, leftPaths, rightPaths);
+    for (const [left, right] of list) {
+      if (left && right) {
+        compareJson(left, right, hsh.formatters);
+      }
     }
   });
 
@@ -178,9 +181,11 @@ function compareReportFolders(left, right) {
     /timeseries-jhu.csv/
   ];
   csvReports.forEach(regex => {
-    const [left, right] = findLeftRightFiles(regex, leftPaths, rightPaths);
-    if (left && right) {
-      compareCsv(left, right);
+    const list = findLeftRightFiles(regex, leftPaths, rightPaths);
+    for (const [left, right] of list) {
+      if (left && right) {
+        compareCsv(left, right);
+      }
     }
   });
 }
