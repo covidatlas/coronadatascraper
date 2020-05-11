@@ -252,8 +252,9 @@ async function generateTimeseries(options = {}) {
           strippedLocation.cases,
           timeseriesByLocation[name].dates[previousDate].cases
         );
-        if (growthFactor === null) {
-          strippedLocation.growthFactor = growthFactor;
+        if (growthFactor !== null) {
+          const rounded = Math.round((growthFactor + Number.EPSILON) * 100) / 100;
+          strippedLocation.growthFactor = rounded;
         }
       }
 
