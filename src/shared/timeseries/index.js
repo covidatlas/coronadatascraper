@@ -195,7 +195,8 @@ function getGrowthfactor(casesToday, casesYesterday) {
     if (growthFactor === Infinity) {
       return null;
     }
-    return growthFactor;
+    const rounded = Math.round((growthFactor + Number.EPSILON) * 100) / 100;
+    return rounded;
   }
   return null;
 }
@@ -228,6 +229,21 @@ async function doCrawl(options, date, today, lastDate) {
   return runCrawler(runOptions);
 }
 
+/** Add growth factor. */
+function addGrowthFactor(timeseriesByLocation, dates) {
+  for (const name of Object.keys(timeseriesByLocation)) {
+    const loc = timeseriesByLocation[name];
+    let prev = null;
+    for (const d of dates) {
+      if (prev && loc.dates[prev]) {
+        const gf = getGrowthfactor(loc.dates[d].cases, loc.dates[prev].cases);
+        if (gf) timeseriesByLocation[name].dates[d].growthFactor = gf;
+      }
+      prev = d;
+    }
+  }
+}
+
 /*
   Generate timeseries data
 */
@@ -236,41 +252,22 @@ export async function generateTimeseries(options = {}) {
   dates = getDates(today, options);
 
   const timeseriesByLocation = {};
-  let previousDate = null;
   const lastDate = dates[dates.length - 1];
   let featureCollection;
   for (const date of dates) {
     const data = await doCrawl(options, date, today, lastDate);
-
     if (date === lastDate) {
       featureCollection = data.featureCollection;
     }
-
     for (const location of data.locations) {
       const name = geography.getName(location);
-
       timeseriesByLocation[name] = timeseriesByLocation[name] || { dates: {} };
       timeseriesByLocation[name] = { ...timeseriesByLocation[name], ...stripCases(location) };
-
-      const strippedLocation = stripInfo(location);
-
-      // Add growth factor
-      if (previousDate && timeseriesByLocation[name].dates[previousDate]) {
-        const growthFactor = getGrowthfactor(
-          strippedLocation.cases,
-          timeseriesByLocation[name].dates[previousDate].cases
-        );
-        if (growthFactor !== null) {
-          const rounded = Math.round((growthFactor + Number.EPSILON) * 100) / 100;
-          strippedLocation.growthFactor = rounded;
-        }
-      }
-
-      timeseriesByLocation[name].dates[date] = strippedLocation;
+      timeseriesByLocation[name].dates[date] = stripInfo(location);
     }
-
-    previousDate = date;
   }
+
+  addGrowthFactor(timeseriesByLocation, dates);
 
   return { timeseriesByLocation, featureCollection };
 }
