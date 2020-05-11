@@ -264,6 +264,10 @@ async function generateTimeseries(options = {}) {
     previousDate = date;
   }
 
+  return { timeseriesByLocation, featureCollection }
+}
+
+async function writeFiles(options, timeseriesByLocation, featureCollection) {
   const d = options.writeTo;
   await fs.ensureDir(d);
 
@@ -286,6 +290,7 @@ async function generateTimeseries(options = {}) {
 }
 
 generateTimeseries(argv)
+  .then(result => writeFiles(argv, result.timeseriesByLocation, result.featureCollection))
   .then(clearAllTimeouts)
   .catch(e => {
     clearAllTimeouts();
