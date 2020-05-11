@@ -30,6 +30,9 @@ export default options =>
     if (options.location) {
       args = args.concat(['-l', options.location]);
     }
+    if (options.writeTo) {
+      args = args.concat(['--writeTo', options.writeTo]);
+    }
 
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
