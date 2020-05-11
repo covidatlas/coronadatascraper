@@ -56,9 +56,10 @@ async function generateReports(date, sources, locations, report, options) {
 
   await reportScrape(locations, report.scrape);
 
-  const features = await findFeatures(locations, report.findFeatures);
+  let features = null;
+  if (options.findFeatures) features = await findFeatures(locations, report.findFeatures);
 
-  await findPopulations(locations, features, report.findPopulation);
+  if (options.findPopulations) await findPopulations(locations, features, report.findPopulation);
 
   await transformIds(locations, ratings, report.scrape, report.transformIds);
 

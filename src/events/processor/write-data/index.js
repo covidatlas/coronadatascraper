@@ -20,7 +20,7 @@ export default async function writeData(locations, featureCollection, ratings, r
 
   await fs.writeCSV(join(d, `data${suffix}.csv`), stringify.csvForDay(locations));
 
-  await fs.writeJSON(join(d, `features${suffix}.json`), featureCollection, { space: 0 });
+  if (featureCollection) await fs.writeJSON(join(d, `features${suffix}.json`), featureCollection, { space: 0 });
 
   await fs.writeJSON(join(d, 'report.json'), report, { space: 2 });
 
