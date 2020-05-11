@@ -232,9 +232,6 @@ export async function generateTimeseries(options = {}) {
     };
     const data = await runCrawler(runOptions);
 
-    // Interrupt the loop if needed.
-    if (options.runMethod === 'scrapeToRawFiles') continue;
-
     if (date === lastDate) {
       featureCollection = data.featureCollection;
     }

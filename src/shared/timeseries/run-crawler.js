@@ -36,10 +36,6 @@ export default options =>
     if (options.dumpRaw) {
       args = args.concat(['--dumpRaw', options.dumpRaw]);
     }
-    if (options.runMethod) {
-      console.log('adding runMethod');
-      args = args.concat(['--runMethod', options.runMethod]);
-    }
 
     const child = childProcess.fork(
       path.join('src', 'shared', 'timeseries', 'worker.js'),
