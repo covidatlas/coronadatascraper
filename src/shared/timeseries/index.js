@@ -200,14 +200,10 @@ function getGrowthfactor(casesToday, casesYesterday) {
   return null;
 }
 
-/*
-  Generate timeseries data
-*/
-export async function generateTimeseries(options = {}) {
-  // Generate a list of dates starting at the first date, OR the provided start date
-  // ending at today or the provided end date
-  dates = [];
-  const today = new Date();
+/** Generate a list of dates starting at the first date, OR the
+ * provided start date ending at today or the provided end date. */
+function getDates(today, options) {
+  const dates = [];
   const endDate = options.endDate ? new Date(options.endDate) : today;
   let curDate = new Date('2020-1-22');
   if (options.date) {
@@ -217,6 +213,15 @@ export async function generateTimeseries(options = {}) {
     dates.push(datetime.getYYYYMMDD(curDate));
     curDate.setDate(curDate.getDate() + 1);
   }
+  return dates;
+}
+
+/*
+  Generate timeseries data
+*/
+export async function generateTimeseries(options = {}) {
+  const today = new Date();
+  dates = getDates(today, options);
 
   const timeseriesByLocation = {};
   let previousDate = null;
