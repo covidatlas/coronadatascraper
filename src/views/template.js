@@ -34,13 +34,13 @@ module.exports = function body(title = constants.name, content = 'No content.', 
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166095729-1"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${constants.analyticsCode}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-166095729-1');
+    gtag('config', '${constants.analyticsCode}');
   </script>
 </head>
 
