@@ -90,28 +90,6 @@
     "stateId": "iso2:US-AR"
   },
   {
-    "state": "Tennessee",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.tn.gov/health/cedep",
-        "name": "Tennessee Department of Health CEDEP",
-        "description": "Communicable and Environmental Diseases and Emergency Preparedness Division"
-      }
-    ],
-    "url": "https://services1.arcgis.com/YuVBSS7Y1of2Qud1/arcgis/rest/services/TN_Covid_Counties/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAME%20asc&resultOffset=0&resultRecordCount=96&cacheHint=true",
-    "type": "json",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.6470588235294118,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-TN"
-  },
-  {
     "country": "Spain",
     "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "priority": 1,
@@ -704,35 +682,6 @@
     "countryId": "iso1:BE"
   },
   {
-    "country": "Brazil",
-    "type": "list",
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Secretaria de Vigilância em Saúde do Ministério da Saúde",
-        "name": "SVS-MS",
-        "url": "https://covid.saude.gov.br/"
-      }
-    ],
-    "url": "https://covid.saude.gov.br/",
-    "timeseries": true,
-    "maintainers": [
-      {
-        "name": "Felipe Roberto",
-        "email": "contato@feliperoberto.com.br",
-        "url": "http://feliperoberto.com.br",
-        "github": "feliperoberto",
-        "country": "iso1:BR",
-        "flag": "🇧🇷"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:BR"
-  },
-  {
     "state": "Michigan",
     "country": "United States",
     "sources": [
@@ -811,7 +760,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-09",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-11",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1357,6 +1306,27 @@
     "stateId": "iso2:US-RI"
   },
   {
+    "state": "West Virginia",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://dhhr.wv.gov/COVID-19/Pages/default.aspx",
+        "name": "West Virginia Department of Health & Human Resources"
+      }
+    ],
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-10-2020---5-PM.aspx",
+    "type": "list",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.45098039215686275,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-WV"
+  },
+  {
     "country": "Switzerland",
     "url": "https://github.com/daenuprobst/covid19-cases-switzerland/",
     "timeseries": true,
@@ -1784,20 +1754,21 @@
     "priority": 2,
     "sources": [
       {
-        "name": "Northern Territory Government - Coronavirus site",
-        "url": "https://coronavirus.nt.gov.au"
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
       }
     ],
-    "state": "Northern Territory",
+    "state": "New South Wales",
     "type": "table",
-    "url": "https://coronavirus.nt.gov.au/",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NT"
+    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",
@@ -1815,21 +1786,20 @@
     "priority": 2,
     "sources": [
       {
-        "description": "SA Government Health Department",
-        "name": "SA Health",
-        "url": "https://www.sahealth.sa.gov.au"
+        "name": "Northern Territory Government - Coronavirus site",
+        "url": "https://coronavirus.nt.gov.au"
       }
     ],
-    "state": "South Australia",
+    "state": "Northern Territory",
     "type": "table",
-    "url": "https://www.sahealth.sa.gov.au/wps/wcm/connect/public+content/sa+health+internet/conditions/infectious+diseases/covid+2019/latest+updates/covid-19+cases+in+south+australia",
+    "url": "https://coronavirus.nt.gov.au/",
     "timeseries": false,
     "headless": false,
     "certValidation": true,
     "ssl": true,
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
-    "stateId": "iso2:AU-SA"
+    "stateId": "iso2:AU-NT"
   },
   {
     "country": "Australia",
@@ -2264,6 +2234,39 @@
     "stateId": "iso2:AU-VIC"
   },
   {
+    "country": "Puerto Rico",
+    "type": "table",
+    "timeseries": false,
+    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
+    "sources": [
+      {
+        "url": "http://www.salud.gov.pr/",
+        "name": "Gobierno de Puerto Rico Departamento de Salud"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:PR"
+  },
+  {
     "country": "Cyprus",
     "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
     "timeseries": true,
@@ -2474,6 +2477,51 @@
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "state": "Kansas",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "https://govstatus.egov.com/coronavirus"
+      },
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "twitter": "paulboal",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "state": "MO",
+        "county": "St. Louis County",
+        "city": "St. Louis",
+        "flag": "🇺🇸"
+      },
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "type": "pdf",
+    "ssl": true,
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KS"
   },
   {
     "state": "Wyoming",
