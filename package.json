@@ -22,6 +22,7 @@
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
     "start": "node src/shared/cli/index.js",
+    "li:gen": "node tools/generate-li-dist-raw-files.js",
     "raw:scrape": "node src/shared/cli/rawscrape.js",
     "raw:report": "node src/shared/cli/rawreport.js",
     "raw:reportcombined": "node src/shared/cli/rawcombinedreport.js",
