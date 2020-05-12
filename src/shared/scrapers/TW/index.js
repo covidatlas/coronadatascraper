@@ -13,7 +13,7 @@ const scraper = {
     {
       name: 'Taiwan CDC',
       url: 'https://sites.google.com/cdc.gov.tw/2019-ncov/taiwan',
-      description: ''
+      description: 'Taiwan CDC'
     }
   ],
   type: 'json',
