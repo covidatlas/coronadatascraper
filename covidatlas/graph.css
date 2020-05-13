@@ -4,10 +4,35 @@
   width: 100%;
 }
 
-.ca-Graph-line {
+.graph-button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.graph-button-container-overview,
+.graph-button-container-daily {
+  padding: 10px 20px;
+  border: 1px solid steelblue;
+  border-radius: 5px;
+}
+
+.graph-btn-disabled {
+  opacity: 0.5;
+}
+
+.graph-line {
   fill: none;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.graph-line-cases {
   stroke: steelblue;
-  stroke-width: 2px;
+}
+
+.graph-line-deaths {
+  stroke: red;
 }
 */
 

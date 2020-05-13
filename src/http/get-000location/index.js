@@ -105,6 +105,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   // }
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8">
+<<<<<<< HEAD
       <h2 class="spectrum-Heading spectrum-Heading--M">Trends</h1>
       <!-- <div id="graph" class="ca-Graph"></div> -->
       <div id="graph-elements">
@@ -112,6 +113,22 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
           <canvas id="graph"></canvas>
         </div>
       </div>
+=======
+      <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
+        <div class="graph-button-container">
+          <div class="graph-button-container-overview">
+            <button id="graph-btn-overview">Overview</button>
+            <button id="graph-btn-linear">Linear</button>
+            <button id="graph-btn-log">Logarithmic</button>
+          </div>
+          <div class="graph-button-container-daily">
+            <button id="graph-btn-daily">Daily</button>
+            <button id="graph-btn-cases">Cases</button>
+            <button id="graph-btn-deaths">Deaths</button>
+          </div>
+        </div>
+      <div id="graph" class="ca-Graph"></div>
+>>>>>>> c7e35f4... graph using d3, early edition, should be functional
     </div>
   </div>
   <div class="row">
