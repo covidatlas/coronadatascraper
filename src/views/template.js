@@ -32,6 +32,16 @@ module.exports = function body(title = constants.name, content = 'No content.', 
   <script type="text/javascript">
     window.NODE_ENV = "${constants.prod ? 'production' : 'testing'}";
   </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${constants.analyticsCode}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '${constants.analyticsCode}');
+  </script>
 </head>
 
 <body class="spectrum spectrum--light spectrum--medium">
