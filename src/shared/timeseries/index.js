@@ -229,7 +229,7 @@ function addGrowthFactor(timeseriesByLocation, dates) {
     const loc = timeseriesByLocation[name];
     let prev = null;
     for (const d of dates) {
-      if (prev && loc.dates[prev]) {
+      if (loc.dates[d] && prev && loc.dates[prev]) {
         const gf = getGrowthfactor(loc.dates[d].cases, loc.dates[prev].cases);
         if (gf) timeseriesByLocation[name].dates[d].growthFactor = gf;
       }
