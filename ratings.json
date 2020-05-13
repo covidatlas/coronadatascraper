@@ -443,36 +443,6 @@
     "stateId": "iso2:US-NH"
   },
   {
-    "state": "Oklahoma",
-    "country": "United States",
-    "type": "table",
-    "aggregate": "county",
-    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
-    "sources": [
-      {
-        "name": "Oklahoma State Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "url": "https://amitechsolutions.com",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-OK"
-  },
-  {
     "state": "Oregon",
     "country": "United States",
     "sources": [
@@ -545,7 +515,7 @@
       {
         "name": "Taiwan CDC",
         "url": "https://sites.google.com/cdc.gov.tw/2019-ncov/taiwan",
-        "description": ""
+        "description": "Taiwan CDC"
       }
     ],
     "type": "json",
@@ -607,28 +577,6 @@
     "rating": 0.5294117647058824,
     "countryId": "iso1:US",
     "stateId": "iso2:US-KY"
-  },
-  {
-    "state": "Nevada",
-    "country": "United States",
-    "aggregate": "county",
-    "url": "https://gethealthycarsoncity.org/novel-coronavirus-2019/covid-19-by-county/",
-    "sources": [
-      {
-        "name": "Carson City Health and Human Services",
-        "url": "https://gethealthycarsoncity.org/",
-        "description": "Carson City Health and Human Services - Aggregate data for the Quad County region: Carson City, Douglas, Lyon, and Storey counties."
-      }
-    ],
-    "certValidation": false,
-    "type": "table",
-    "timeseries": false,
-    "headless": false,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.5294117647058824,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV"
   },
   {
     "country": "Austria",
@@ -760,7 +708,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-11",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-12",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1314,7 +1262,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-10-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
