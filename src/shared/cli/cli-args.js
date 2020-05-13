@@ -62,6 +62,10 @@ const { argv } = yargs
     description: 'Only use cache (no http calls)',
     type: 'boolean'
   })
+  .option('addli', {
+    description: 'Generate Li files to dist-raw and include during report generation',
+    type: 'boolean'
+  })
   .help()
   .alias('help', 'h');
 

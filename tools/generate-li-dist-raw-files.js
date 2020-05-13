@@ -55,8 +55,8 @@ export default function generateLiFiles(argv) {
   // Convert args to Li script args.
   const scriptArgs = [];
   scriptArgs.push(['--output', generateFilesToDir]);
-  scriptArgs.push(['--debug', argv.debug]);
   if (date) scriptArgs.push(['--date', date]);
+  if (argv.debug) scriptArgs.push(['--debug', argv.debug]);
   if (argv.endDate) scriptArgs.push(['--endDate', argv.endDate]);
 
   // Exec.
