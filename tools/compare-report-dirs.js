@@ -160,6 +160,10 @@ function compareReportFolders(left, right) {
       regex: /features.json/,
       formatters: {}
     },
+    {
+      regex: /features-(.*).json/,
+      formatters: {}
+    },
     { regex: /timeseries-byLocation.json/, formatters: {} },
     { regex: /timeseries.json/, formatters: {} }
   ];

@@ -115,11 +115,11 @@ function _jsonDiffIter(lhs, rhs, currPath, errs, maxErrors, formatters) {
       errs.push(
         `${newPath}/ keys: [${lhsKeys}] != [${rhsKeys}]; extra left: [${lhsExtra}], extra right: [${rhsExtra}]`
       );
-    } else {
-      lhsKeys.forEach(k => {
-        _jsonDiffIter(lhs[k], rhs[k], `${newPath}/${k}`, errs, maxErrors, formatters);
-      });
     }
+    const commonKeys = lhsKeys.filter(k => rhsKeys.includes(k));
+    commonKeys.forEach(k => {
+      _jsonDiffIter(lhs[k], rhs[k], `${newPath}/${k}`, errs, maxErrors, formatters);
+    });
   } else {
     errs.push(`${newPath} value: type difference (array vs hash)`);
   }
