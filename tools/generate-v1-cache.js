@@ -31,6 +31,7 @@ const imports = require('esm')(module);
 const path = require('path');
 const glob = require('fast-glob').sync;
 const spacetime = require('spacetime');
+const fs = require('fs');
 
 const datetime = imports('../src/shared/lib/datetime').default;
 const yargs = imports('yargs');
@@ -96,19 +97,193 @@ if (dirs.length === 0) {
   process.exit();
 }
 
+// Convert eg 'US/TN/index.js' to 'us-tn', that's the Li key, and is the folder name.
+function newTopFolder(scraperPath) {
+  const ret = scraperPath
+    .replace(/^.*?src.shared.scrapers./, '')
+    .toLowerCase()
+    .replace(/[/\\]/g, '-')
+    .replace(/\.js$/, '')
+    .replace('-index', '');
+  return ret;
+}
+
+const scrapers = [
+  'AT/index.js',
+  'AU/ACT/index.js',
+  'AU/aus-from-wa-health/index.js',
+  'AU/index.js',
+  'AU/NSW/index.js',
+  'AU/NT/index.js',
+  'AU/QLD/index.js',
+  'AU/SA/index.js',
+  'AU/TAS/index.js',
+  'AU/VIC/index.js',
+  'AU/WA/index.js',
+  'BE/index.js',
+  'BR/index.js',
+  'CA/index.js',
+  'CA/NS/index.js',
+  'CH/index.js',
+  'CY/index.js',
+  'CZ/index.js',
+  'DE/index.js',
+  'EE/index.js',
+  'ES/index.js',
+  'FR/index.js',
+  'GB/index.js',
+  'GB/SCT/index.js',
+  'ID/index.js',
+  'IE/index.js',
+  'IN/index.js',
+  'IT/index.js',
+  'jhu-usa.js',
+  'jhu.js',
+  'JP/index.js',
+  'KR/index.js',
+  'LT/index.js',
+  'LV/index.js',
+  'NL/index.js',
+  'NZ/index.js',
+  'PA/index.js',
+  'PL/index.js',
+  'PR/index.js',
+  'RU/index.js',
+  'SA/index.js',
+  'SE/index.js',
+  'SI/index.js',
+  'TH/index.js',
+  'TW/index.js',
+  'UA/index.js',
+  'US/AK/index.js',
+  'US/AL/index.js',
+  'US/AR/index.js',
+  'US/AZ/index.js',
+  'US/CA/alameda-county.js',
+  'US/CA/butte-county.js',
+  'US/CA/calaveras-county.js',
+  'US/CA/colusa-county.js',
+  'US/CA/contra-costa-county.js',
+  'US/CA/del-norte-county.js',
+  'US/CA/fresno-county.js',
+  'US/CA/glenn-county.js',
+  'US/CA/kern-county.js',
+  'US/CA/kings-county/index.js',
+  'US/CA/los-angeles-county.js',
+  'US/CA/madera-county.js',
+  'US/CA/marin-county.js',
+  'US/CA/mendocino-county.js',
+  'US/CA/merced-county.js',
+  'US/CA/mercury-news.js',
+  'US/CA/mono-county.js',
+  'US/CA/monterey-county.js',
+  'US/CA/orange-county.js',
+  'US/CA/placer-county.js',
+  'US/CA/riverside-county.js',
+  'US/CA/sacramento-county.js',
+  'US/CA/san-benito-county.js',
+  'US/CA/san-bernardino-county.js',
+  'US/CA/san-diego-county.js',
+  'US/CA/san-francisco-county.js',
+  'US/CA/san-joaquin-county.js',
+  'US/CA/san-luis-obispo-county.js',
+  'US/CA/san-mateo-county.js',
+  'US/CA/santa-barbara-county.js',
+  'US/CA/santa-clara-county.js',
+  'US/CA/santa-cruz-county.js',
+  'US/CA/shasta-county.js',
+  'US/CA/solano-county.js',
+  'US/CA/sonoma-county-argcgis.js',
+  'US/CA/sonoma-county.js',
+  'US/CA/stanislaus-county.js',
+  'US/CA/ventura-county.js',
+  'US/CA/yolo-county.js',
+  'US/CO/index.js',
+  'US/covidtracking.js',
+  'US/CT/index.js',
+  'US/DC/index.js',
+  'US/DE/index.js',
+  'US/FL/index.js',
+  'US/GA/index.js',
+  'US/GU/index.js',
+  'US/HI/index.js',
+  'US/IA/index.js',
+  'US/ID/index.js',
+  'US/IL/index.js',
+  'US/IN/index.js',
+  'US/KS/index.js',
+  'US/KY/index.js',
+  'US/LA/index.js',
+  'US/MA/index.js',
+  'US/MD/index.js',
+  'US/ME/index.js',
+  'US/MI/index.js',
+  'US/MN/index.js',
+  'US/MO/index.js',
+  'US/MO/st-louis-county.js',
+  'US/MS/index.js',
+  'US/MT/index.js',
+  'US/NC/index.js',
+  'US/ND/index.js',
+  'US/NE/index.js',
+  'US/NH/index.js',
+  'US/NJ/index.js',
+  'US/NM/index.js',
+  'US/NV/carson-city.js',
+  'US/NV/clark-county.js',
+  'US/NV/nye-county.js',
+  'US/NV/washoe-county/index.js',
+  'US/NY/index.js',
+  'US/nyt-counties.js',
+  'US/OH/index.js',
+  'US/OK/index.js',
+  'US/OR/index.js',
+  'US/PA/index.js',
+  'US/RI/index.js',
+  'US/SC/index.js',
+  'US/SD/index.js',
+  'US/TN/index.js',
+  'US/TX/index.js',
+  'US/UT/index.js',
+  'US/VA/index.js',
+  'US/VT/index.js',
+  'US/WA/index.js',
+  'US/WI/index.js',
+  'US/WV/index.js',
+  'US/WY/index.js',
+  'VI/index.js',
+  'ZA/index.js'
+];
+
+const earliest = [];
+
 function migrateDirs(dirs, argv) {
   console.log(`Migrating ${dirs.length} directories.`);
   dirs.forEach(d => {
     console.log('\n\n========================================');
-    let msg = `Migrating ${d}`;
-    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
-    if (argv.location) {
-      msg = `${msg} for location ${argv.location}`;
-      cmd = `${cmd} --location ${argv.location}`;
-    }
-    console.log(msg);
-    console.log(`# Command: ${cmd}`);
-    runCommand(cmd);
+    let msg = `Migrating ${d}, ${scrapers.length} scrapers left`;
+
+    const toRemove = [];
+    scrapers.forEach(s => {
+      let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
+      msg = `${msg} for location ${s}`;
+      cmd = `${cmd} --location ${s}`;
+      console.log(msg);
+      console.log(`# Command: ${cmd}`);
+      runCommand(cmd);
+
+      if (fs.existsSync(path.join(argv.dest, newTopFolder(s), d))) {
+        // the location was migrated for that date
+        console.log(`Migrated ${s} on ${d}`);
+        toRemove.push(s);
+        earliest.push({ scraper: s, date: d });
+      }
+    });
+
+    // Remove from the list, don't bother to check it again!
+    toRemove.forEach(r => {
+      if (scrapers.includes(r)) scrapers.splice(scrapers.indexOf(r), 1);
+    });
   });
 
   const migrated = glob(path.join(argv.dest, '**', '*.*'), { onlyFiles: true });
