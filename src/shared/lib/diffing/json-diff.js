@@ -109,13 +109,17 @@ function _jsonDiffIter(lhs, rhs, currPath, errs, maxErrors, formatters) {
   } else if (isDictionary(lhs) && isDictionary(rhs)) {
     const lhsKeys = Object.keys(lhs).sort();
     const rhsKeys = Object.keys(rhs).sort();
+    const lhsExtra = lhsKeys.filter(k => !rhsKeys.includes(k));
+    const rhsExtra = rhsKeys.filter(k => !lhsKeys.includes(k));
     if (lhsKeys.toString() !== rhsKeys.toString()) {
-      errs.push(`${newPath}/ keys: [${lhsKeys}] != [${rhsKeys}]`);
-    } else {
-      lhsKeys.forEach(k => {
-        _jsonDiffIter(lhs[k], rhs[k], `${newPath}/${k}`, errs, maxErrors, formatters);
-      });
+      errs.push(
+        `${newPath}/ keys: [${lhsKeys}] != [${rhsKeys}]; extra left: [${lhsExtra}], extra right: [${rhsExtra}]`
+      );
     }
+    const commonKeys = lhsKeys.filter(k => rhsKeys.includes(k));
+    commonKeys.forEach(k => {
+      _jsonDiffIter(lhs[k], rhs[k], `${newPath}/${k}`, errs, maxErrors, formatters);
+    });
   } else {
     errs.push(`${newPath} value: type difference (array vs hash)`);
   }
