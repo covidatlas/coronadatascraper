@@ -34,13 +34,20 @@ test('diff hash values', t => {
 test('diff hash keys at root', t => {
   lhs = { a: 'apple' };
   rhs = { b: 'bat' };
-  diffShouldBe(t, ['/ keys: [a] != [b]']);
+  diffShouldBe(t, ['/ keys: [a] != [b]; extra left: [a], extra right: [b]']);
 });
 
 test('diff hash keys at child object', t => {
   lhs = { a: 'apple', b: { a: 'apple', c: 'cat' } };
   rhs = { a: 'apple', b: { b: 'bat', c: 'cat' } };
-  diffShouldBe(t, ['/b/ keys: [a,c] != [b,c]']);
+  diffShouldBe(t, ['/b/ keys: [a,c] != [b,c]; extra left: [a], extra right: [b]']);
+});
+
+test('diff hash keys and diff values at child object', t => {
+  lhs = { a: 'apple', b: { a: 'apple', c: 'cat' } };
+  rhs = { a: 'apple', b: { b: 'bat', c: 'xxx' } };
+  const expected = ['/b/ keys: [a,c] != [b,c]; extra left: [a], extra right: [b]', '/b/c value: cat != xxx'];
+  diffShouldBe(t, expected);
 });
 
 test('diff values child object', t => {
