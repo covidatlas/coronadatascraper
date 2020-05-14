@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-12",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-13",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -62014,7 +62014,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-12T19:27:29.928Z",
+    "publishedDate": "2020-05-13T18:46:42.798Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -62053,7 +62053,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-05-10T19:02:59.481Z",
+    "publishedDate": "2020-05-13T18:42:05.454Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -62404,7 +62404,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-12T19:17:19.919Z",
+    "publishedDate": "2020-05-13T18:42:15.642Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -62599,7 +62599,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-12T22:37:50.057Z",
+    "publishedDate": "2020-05-13T18:42:22.542Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -62716,7 +62716,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-05-10T19:06:07.168Z",
+    "publishedDate": "2020-05-13T18:42:27.787Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -62794,7 +62794,7 @@
       }
     ],
     "county": "Chariton County",
-    "publishedDate": "2020-05-08T21:14:17.726Z",
+    "publishedDate": "2020-05-13T18:42:30.600Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.988,
@@ -62911,7 +62911,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-12T19:17:42.292Z",
+    "publishedDate": "2020-05-13T18:42:37.489Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -63379,7 +63379,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-12T19:25:04.778Z",
+    "publishedDate": "2020-05-13T18:43:01.480Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -63496,7 +63496,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-10T19:09:12.724Z",
+    "publishedDate": "2020-05-13T18:43:10.941Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -63574,7 +63574,7 @@
       }
     ],
     "county": "Harrison County",
-    "publishedDate": "2020-05-01T22:04:31.663Z",
+    "publishedDate": "2020-05-13T18:43:15.388Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9975,
@@ -63847,7 +63847,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-12T19:18:48.063Z",
+    "publishedDate": "2020-05-13T18:47:12.811Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63925,7 +63925,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-11T19:06:02.167Z",
+    "publishedDate": "2020-05-13T18:43:31.576Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -64081,7 +64081,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-12T19:25:27.424Z",
+    "publishedDate": "2020-05-13T18:43:39.031Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -64588,7 +64588,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-05-09T18:46:33.272Z",
+    "publishedDate": "2020-05-13T18:43:53.986Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -64822,7 +64822,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-05-05T18:32:52.868Z",
+    "publishedDate": "2020-05-13T18:44:03.837Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -65017,7 +65017,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-05-11T19:06:51.277Z",
+    "publishedDate": "2020-05-13T18:44:10.369Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -65056,7 +65056,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-05-08T21:16:44.899Z",
+    "publishedDate": "2020-05-13T18:44:14.854Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -65095,7 +65095,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-05-12T19:26:08.951Z",
+    "publishedDate": "2020-05-13T18:44:17.800Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -65173,7 +65173,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-05-12T19:26:02.545Z",
+    "publishedDate": "2020-05-13T18:44:57.798Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -65212,7 +65212,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-11T19:07:02.090Z",
+    "publishedDate": "2020-05-13T18:45:02.847Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -65563,7 +65563,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-12T19:27:09.281Z",
+    "publishedDate": "2020-05-13T18:45:25.718Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -65719,7 +65719,7 @@
       }
     ],
     "county": "St. Louis County",
-    "publishedDate": "2020-05-12T19:27:01.012Z",
+    "publishedDate": "2020-05-13T18:47:41.836Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.42699999999999,
@@ -65758,7 +65758,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-10T19:11:03.420Z",
+    "publishedDate": "2020-05-13T18:45:14.279Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -65875,7 +65875,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-12T19:21:15.627Z",
+    "publishedDate": "2020-05-13T18:45:19.067Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65992,7 +65992,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-09T18:47:46.153Z",
+    "publishedDate": "2020-05-13T18:45:44.729Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -66070,7 +66070,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-05-12T19:22:08.399Z",
+    "publishedDate": "2020-05-13T18:45:54.551Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -66460,7 +66460,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-12T19:27:05.376Z",
+    "publishedDate": "2020-05-13T18:47:39.186Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -81366,20 +81366,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Adair County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.64,
       35.9005
@@ -81397,20 +81404,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Alfalfa County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.3245,
       36.731
@@ -81428,20 +81442,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Atoka County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.03999999999999,
       34.419
@@ -81459,20 +81480,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Beaver County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -100.4785,
       36.7505
@@ -81490,20 +81518,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Beckham County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.68,
       35.2695
@@ -81521,20 +81556,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Blaine County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.422,
       35.8585
@@ -81552,20 +81594,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Bryan County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.19200000000001,
       33.921499999999995
@@ -81583,20 +81632,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Caddo County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.35749999999999,
       35.2035
@@ -81614,20 +81670,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Canadian County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.992,
       35.525
@@ -81645,20 +81708,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Carter County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.248,
       34.289
@@ -81676,20 +81746,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Cherokee County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.0395,
       35.9
@@ -81707,20 +81784,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Choctaw County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.57400000000001,
       34.0115
@@ -81738,20 +81822,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Cimarron County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -102.5155,
       36.75
@@ -81769,20 +81860,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Cleveland County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.407,
       35.1525
@@ -81800,31 +81898,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Coal County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -96.303,
       34.593
@@ -81842,20 +81936,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Comanche County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.4575,
       34.6305
@@ -81873,20 +81974,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Cotton County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.4005,
       34.284499999999994
@@ -81904,20 +82012,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Craig County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.2125,
       36.754999999999995
@@ -81935,20 +82050,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Creek County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.32499999999999,
       35.9015
@@ -81966,20 +82088,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Custer County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99,
       35.6385
@@ -81997,20 +82126,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Delaware County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.787,
       36.416
@@ -82028,20 +82164,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Dewey County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.007,
       35.9885
@@ -82059,31 +82202,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Ellis County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -99.6925,
       36.2175
@@ -82101,20 +82240,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Garfield County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.7825,
       36.379000000000005
@@ -82132,20 +82278,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Garvin County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.30000000000001,
       34.681
@@ -82163,20 +82316,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Grady County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.882,
       35.0295
@@ -82194,20 +82354,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Grant County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.787,
       36.7965
@@ -82225,20 +82392,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Greer County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.5675,
       34.921
@@ -82256,31 +82430,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Harmon County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -99.8335,
       34.7685
@@ -82298,20 +82468,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Harper County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.649,
       36.7975
@@ -82329,20 +82506,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Haskell County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.1345,
       35.2585
@@ -82360,31 +82544,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Hughes County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -96.23599999999999,
       35.0285
@@ -82402,20 +82582,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Jackson County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.441,
       34.598
@@ -82433,20 +82620,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Jefferson County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.838,
       34.0695
@@ -82464,20 +82658,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Johnston County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.6705,
       34.31
@@ -82495,20 +82696,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Kay County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.106,
       36.7965
@@ -82526,20 +82734,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Kingfisher County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.9425,
       35.945
@@ -82557,20 +82772,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Kiowa County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.0145,
       34.859
@@ -82588,20 +82810,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Latimer County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.22149999999999,
       34.87
@@ -82619,20 +82848,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Le Flore County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.74600000000001,
       34.946
@@ -82650,20 +82886,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Lincoln County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.881,
       35.7025
@@ -82681,20 +82924,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Logan County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.4085,
       35.9445
@@ -82712,20 +82962,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Love County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.248,
       33.894
@@ -82743,20 +83000,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "McClain County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -97.3015,
       35.096000000000004
@@ -82774,20 +83038,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "McCurtain County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -94.809,
       34.062
@@ -82805,20 +83076,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "McIntosh County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -95.6645,
       35.3475
@@ -82836,20 +83114,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Major County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.5325,
       36.3345
@@ -82867,20 +83152,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Marshall County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.759,
       33.9985
@@ -82898,20 +83190,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Mayes County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.223,
       36.292500000000004
@@ -82929,20 +83228,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Murray County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.0895,
       34.485
@@ -82960,20 +83266,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Muskogee County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.408,
       35.5595
@@ -82991,20 +83304,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Noble County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.17500000000001,
       36.379999999999995
@@ -83022,20 +83342,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Nowata County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.60900000000001,
       36.798
@@ -83053,20 +83380,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Okfuskee County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.303,
       35.4645
@@ -83084,20 +83418,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Oklahoma County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.4075,
       35.551500000000004
@@ -83115,20 +83456,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Okmulgee County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.953,
       35.617000000000004
@@ -83146,20 +83494,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Osage County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.5325,
       36.58
@@ -83177,20 +83532,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Ottawa County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.826,
       36.834
@@ -83208,20 +83570,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Pawnee County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.63749999999999,
       36.361999999999995
@@ -83239,20 +83608,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Payne County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.9875,
       36.093500000000006
@@ -83270,20 +83646,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Pittsburg County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.7205,
       34.947500000000005
@@ -83301,20 +83684,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Pontotoc County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.66900000000001,
       34.735
@@ -83332,20 +83722,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Pottawatomie County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.883,
       35.182
@@ -83363,20 +83760,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Pushmataha County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.35849999999999,
       34.418499999999995
@@ -83394,31 +83798,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Roger Mills County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -99.682,
       35.7175
@@ -83436,20 +83836,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Rogers County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.5715,
       36.3365
@@ -83467,20 +83874,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Seminole County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.60900000000001,
       35.1625
@@ -83498,20 +83912,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Sequoyah County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.7815,
       35.465
@@ -83529,20 +83950,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Stephens County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.852,
       34.4855
@@ -83560,20 +83988,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Texas County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -101.48849999999999,
       36.7485
@@ -83591,20 +84026,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Tillman County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.924,
       34.381
@@ -83622,20 +84064,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Tulsa County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.03,
       36.14
@@ -83653,20 +84102,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Wagoner County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.514,
       35.964
@@ -83684,20 +84140,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Washington County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.894,
       36.7115
@@ -83715,31 +84178,27 @@
     "level": "county"
   },
   {
+    "state": "Oklahoma",
+    "country": "United States",
+    "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
         "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
     "county": "Washita County",
-    "state": "Oklahoma",
-    "rating": 0.5882352941176471,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -98.991,
       35.281000000000006
@@ -83757,20 +84216,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Woods County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.9945,
       36.696
@@ -83788,20 +84254,27 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Oklahoma",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
       }
     ],
     "county": "Woodward County",
-    "state": "Oklahoma",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.281,
       36.491
@@ -98622,31 +99095,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Mills County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.631,
       31.4775
@@ -104075,7 +104537,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Barbour County",
     "rating": 0.37254901960784315,
@@ -104104,7 +104566,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Berkeley County",
     "rating": 0.37254901960784315,
@@ -104133,7 +104595,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Boone County",
     "rating": 0.37254901960784315,
@@ -104162,7 +104624,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Braxton County",
     "rating": 0.37254901960784315,
@@ -104191,7 +104653,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Brooke County",
     "rating": 0.37254901960784315,
@@ -104220,7 +104682,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Cabell County",
     "rating": 0.37254901960784315,
@@ -104249,7 +104711,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Calhoun County",
     "rating": 0.37254901960784315,
@@ -104278,7 +104740,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Clay County",
     "rating": 0.37254901960784315,
@@ -104307,7 +104769,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Doddridge County",
     "rating": 0.37254901960784315,
@@ -104336,7 +104798,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Fayette County",
     "rating": 0.37254901960784315,
@@ -104365,7 +104827,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Gilmer County",
     "rating": 0.37254901960784315,
@@ -104394,7 +104856,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Grant County",
     "rating": 0.37254901960784315,
@@ -104423,7 +104885,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Greenbrier County",
     "rating": 0.37254901960784315,
@@ -104452,7 +104914,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hampshire County",
     "rating": 0.37254901960784315,
@@ -104481,7 +104943,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hancock County",
     "rating": 0.37254901960784315,
@@ -104510,7 +104972,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hardy County",
     "rating": 0.37254901960784315,
@@ -104539,7 +105001,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Harrison County",
     "rating": 0.37254901960784315,
@@ -104568,7 +105030,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jackson County",
     "rating": 0.37254901960784315,
@@ -104597,7 +105059,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jefferson County",
     "rating": 0.37254901960784315,
@@ -104626,7 +105088,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Kanawha County",
     "rating": 0.37254901960784315,
@@ -104655,7 +105117,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lewis County",
     "rating": 0.37254901960784315,
@@ -104684,7 +105146,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lincoln County",
     "rating": 0.37254901960784315,
@@ -104713,7 +105175,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Logan County",
     "rating": 0.37254901960784315,
@@ -104742,7 +105204,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "McDowell County",
     "rating": 0.37254901960784315,
@@ -104771,7 +105233,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marion County",
     "rating": 0.37254901960784315,
@@ -104800,7 +105262,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marshall County",
     "rating": 0.37254901960784315,
@@ -104829,7 +105291,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mason County",
     "rating": 0.37254901960784315,
@@ -104858,7 +105320,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mercer County",
     "rating": 0.37254901960784315,
@@ -104887,7 +105349,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mineral County",
     "rating": 0.37254901960784315,
@@ -104916,7 +105378,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mingo County",
     "rating": 0.37254901960784315,
@@ -104945,7 +105407,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monongalia County",
     "rating": 0.37254901960784315,
@@ -104974,7 +105436,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monroe County",
     "rating": 0.37254901960784315,
@@ -105003,7 +105465,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Morgan County",
     "rating": 0.37254901960784315,
@@ -105032,7 +105494,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Nicholas County",
     "rating": 0.37254901960784315,
@@ -105061,7 +105523,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ohio County",
     "rating": 0.37254901960784315,
@@ -105090,7 +105552,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pendleton County",
     "rating": 0.37254901960784315,
@@ -105119,7 +105581,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pleasants County",
     "rating": 0.37254901960784315,
@@ -105148,7 +105610,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pocahontas County",
     "rating": 0.37254901960784315,
@@ -105177,7 +105639,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Preston County",
     "rating": 0.37254901960784315,
@@ -105206,7 +105668,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Putnam County",
     "rating": 0.37254901960784315,
@@ -105235,7 +105697,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Raleigh County",
     "rating": 0.37254901960784315,
@@ -105264,7 +105726,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Randolph County",
     "rating": 0.37254901960784315,
@@ -105293,7 +105755,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ritchie County",
     "rating": 0.37254901960784315,
@@ -105322,7 +105784,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Roane County",
     "rating": 0.37254901960784315,
@@ -105351,7 +105813,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Summers County",
     "rating": 0.37254901960784315,
@@ -105380,7 +105842,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Taylor County",
     "rating": 0.37254901960784315,
@@ -105409,7 +105871,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tucker County",
     "rating": 0.37254901960784315,
@@ -105438,7 +105900,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tyler County",
     "rating": 0.37254901960784315,
@@ -105467,7 +105929,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Upshur County",
     "rating": 0.37254901960784315,
@@ -105496,7 +105958,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wayne County",
     "rating": 0.37254901960784315,
@@ -105525,7 +105987,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Webster County",
     "rating": 0.37254901960784315,
@@ -105554,7 +106016,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wetzel County",
     "rating": 0.37254901960784315,
@@ -105583,7 +106045,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wirt County",
     "rating": 0.37254901960784315,
@@ -105612,7 +106074,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wood County",
     "rating": 0.37254901960784315,
@@ -105641,7 +106103,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-11-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-12-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wyoming County",
     "rating": 0.37254901960784315,
@@ -110678,27 +111140,30 @@
     "level": "state"
   },
   {
-    "country": "Australia",
-    "state": "Tasmania",
-    "sources": [
-      {
-        "name": "Tasmanian Government",
-        "url": "https://www.coronavirus.tas.gov.au/facts/cases-and-testing-updates"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.tas.gov.au/facts/cases-and-testing-updates",
-    "rating": 0.35294117647058826,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "state",
+    "state": "Tasmania",
+    "rating": 0.5882352941176471,
     "coordinates": [
       151.382,
       -47.178
@@ -118771,6 +119236,44 @@
       }
     ],
     "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Lesotho",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
+    "coordinates": [
+      28.235,
+      -29.624000000000002
+    ],
+    "tz": [
+      "Africa/Maseru"
+    ],
+    "featureId": "iso1:LS",
+    "population": 2233339,
+    "populationDensity": 72.8667206498857,
+    "countryId": "iso1:LS",
+    "name": "Lesotho",
+    "level": "country"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "Australia",
     "curators": [
       {
@@ -120392,21 +120895,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Hlavní město Praha",
+    "state": "Ústecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      14.476500000000001,
-      50.0625
+      13.799,
+      50.568
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-10",
-    "population": 1308632,
-    "populationDensity": 2638.415429617829,
+    "featureId": "iso2:CZ-42",
+    "population": 820789,
+    "populationDensity": 154.53213016548833,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-10",
-    "name": "Hlavní město Praha, Czechia",
+    "stateId": "iso2:CZ-42",
+    "name": "Ústecký kraj, Czechia",
     "level": "state"
   },
   {
@@ -120425,21 +120928,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Ústecký kraj",
+    "state": "Hlavní město Praha",
     "rating": 0.35294117647058826,
     "coordinates": [
-      13.799,
-      50.568
+      14.476500000000001,
+      50.0625
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-42",
-    "population": 820789,
-    "populationDensity": 154.53213016548833,
+    "featureId": "iso2:CZ-10",
+    "population": 1308632,
+    "populationDensity": 2638.415429617829,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-42",
-    "name": "Ústecký kraj, Czechia",
+    "stateId": "iso2:CZ-10",
+    "name": "Hlavní město Praha, Czechia",
     "level": "state"
   },
   {
@@ -121735,21 +122238,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Královéhradecký kraj",
+    "state": "Zlínský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      15.843,
-      50.409000000000006
+      17.764499999999998,
+      49.196
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-52",
-    "population": 551021,
-    "populationDensity": 116.01412210157807,
+    "featureId": "iso2:CZ-72",
+    "population": 582921,
+    "populationDensity": 147.68663961700943,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-52",
-    "name": "Královéhradecký kraj, Czechia",
+    "stateId": "iso2:CZ-72",
+    "name": "Zlínský kraj, Czechia",
     "level": "state"
   },
   {
@@ -121768,21 +122271,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Zlínský kraj",
+    "state": "Královéhradecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      17.764499999999998,
-      49.196
+      15.843,
+      50.409000000000006
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-72",
-    "population": 582921,
-    "populationDensity": 147.68663961700943,
+    "featureId": "iso2:CZ-52",
+    "population": 551021,
+    "populationDensity": 116.01412210157807,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-72",
-    "name": "Zlínský kraj, Czechia",
+    "stateId": "iso2:CZ-52",
+    "name": "Královéhradecký kraj, Czechia",
     "level": "state"
   },
   {
@@ -122224,21 +122727,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Kraj Vysočina",
+    "state": "Olomouc Region",
     "rating": 0.35294117647058826,
     "coordinates": [
-      15.655,
-      49.4
+      17.319000000000003,
+      49.861999999999995
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-63",
-    "population": 509274,
-    "populationDensity": 75.06361234552456,
+    "featureId": "iso2:CZ-71",
+    "population": 632492,
+    "populationDensity": 119.613313271577,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-63",
-    "name": "Kraj Vysočina, Czechia",
+    "stateId": "iso2:CZ-71",
+    "name": "Olomouc Region, Czechia",
     "level": "state"
   },
   {
@@ -122257,21 +122760,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Olomouc Region",
+    "state": "Kraj Vysočina",
     "rating": 0.35294117647058826,
     "coordinates": [
-      17.319000000000003,
-      49.861999999999995
+      15.655,
+      49.4
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-71",
-    "population": 632492,
-    "populationDensity": 119.613313271577,
+    "featureId": "iso2:CZ-63",
+    "population": 509274,
+    "populationDensity": 75.06361234552456,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-71",
-    "name": "Olomouc Region, Czechia",
+    "stateId": "iso2:CZ-63",
+    "name": "Kraj Vysočina, Czechia",
     "level": "state"
   },
   {
@@ -126508,6 +127011,39 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Jihomoravský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      16.5945,
+      49.1225
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-64",
+    "population": 1187667,
+    "populationDensity": 165.47653844428984,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-64",
+    "name": "Jihomoravský kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Plzeňský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -126589,39 +127125,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jihomoravský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      16.5945,
-      49.1225
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-64",
-    "population": 1187667,
-    "populationDensity": 165.47653844428984,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-64",
-    "name": "Jihomoravský kraj, Czechia",
     "level": "state"
   },
   {
@@ -127328,21 +127831,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Liberecký kraj",
+    "state": "Moravskoslezský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      14.9875,
-      50.748
+      18.003,
+      49.861000000000004
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-51",
-    "population": 442356,
-    "populationDensity": 139.75413588159182,
+    "featureId": "iso2:CZ-80",
+    "population": 1203299,
+    "populationDensity": 221.48537480970737,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-51",
-    "name": "Liberecký kraj, Czechia",
+    "stateId": "iso2:CZ-80",
+    "name": "Moravskoslezský kraj, Czechia",
     "level": "state"
   },
   {
@@ -127361,21 +127864,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Moravskoslezský kraj",
+    "state": "Liberecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      18.003,
-      49.861000000000004
+      14.9875,
+      50.748
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-80",
-    "population": 1203299,
-    "populationDensity": 221.48537480970737,
+    "featureId": "iso2:CZ-51",
+    "population": 442356,
+    "populationDensity": 139.75413588159182,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-80",
-    "name": "Moravskoslezský kraj, Czechia",
+    "stateId": "iso2:CZ-51",
+    "name": "Liberecký kraj, Czechia",
     "level": "state"
   },
   {
