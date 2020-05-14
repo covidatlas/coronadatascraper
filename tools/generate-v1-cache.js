@@ -261,22 +261,32 @@ function migrateDirs(dirs, argv) {
   console.log(`Migrating ${dirs.length} directories.`);
   dirs.forEach(d => {
     console.log('\n\n========================================');
-    let msg = `Migrating ${d}, ${scrapers.length} scrapers left`;
 
     const toRemove = [];
-    scrapers.forEach(s => {
-      let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
-      msg = `${msg} for location ${s}`;
-      cmd = `${cmd} --location ${s}`;
-      console.log(msg);
-      console.log(`# Command: ${cmd}`);
-      runCommand(cmd);
+    let msg = `Migrating ${d}, ${scrapers.length} scrapers left`;
+    console.log(msg);
 
-      if (fs.existsSync(path.join(argv.dest, newTopFolder(s), d))) {
+    if (scrapers.length === 0) {
+      console.log('DONE!!!');
+      console.log(JSON.stringify(earliest, null, 2));
+      process.exit(0);
+    }
+      
+    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d} --location ${scrapers.join(',')}`;
+    console.log(`# Command: ${cmd}`);
+    runCommand(cmd);
+
+    scrapers.forEach(s => {
+      const migDir = path.join(argv.dest, newTopFolder(s));
+      console.log('Checking for ' + migDir);
+      if (fs.existsSync(migDir)) {
         // the location was migrated for that date
         console.log(`Migrated ${s} on ${d}`);
         toRemove.push(s);
         earliest.push({ scraper: s, date: d });
+      }
+      else {
+        // console.log(`NOT migrated: ${s}`);
       }
     });
 
@@ -289,6 +299,7 @@ function migrateDirs(dirs, argv) {
   const migrated = glob(path.join(argv.dest, '**', '*.*'), { onlyFiles: true });
   console.log('\n\nMigration complete.');
   console.log(`${migrated.length} files written to ${argv.dest}`);
+
 }
 
 function checkFolder(allfiles, d, errors) {
