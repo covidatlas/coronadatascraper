@@ -10,6 +10,16 @@ export class DeprecatedError extends Error {
   }
 }
 
+export class NotImplementedError extends Error {
+  /**
+   * @param {string} message
+   */
+  constructor(message) {
+    super(message);
+    this.name = 'NotImplementedError';
+  }
+}
+
 export class NotImplemented extends Error {
   /**
    * @param {string} message
