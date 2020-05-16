@@ -90,7 +90,7 @@ function checkCacheKey(s) {
 
 // Migrate the file to a temp folder.
 // New format:
-// crawler-cache/us-ca-xx-county/2020-04-12/2020-04-12t00_47_14.145z-default-344b7.html
+// crawler-cache/us-ca-xx-county/2020-04-12/2020-04-12t00_47_14.145z-default-344b7.html.gz
 export function migrateFile(url, filePath, encoding, scraper, date, cacheKey, type) {
   console.log(`MIGRATING ${filePath}`);
 
@@ -106,10 +106,17 @@ export function migrateFile(url, filePath, encoding, scraper, date, cacheKey, ty
 
   checkCacheKeyCollision(cacheKey, destdir);
 
+  // Some items use "bad" types -- e.g. call 'fetch.fetch' with type = 'txt' ...
+  // This breaks li importing, Li can only handle certain extensions.
+  let useType = type;
+  if (type === 'txt') useType = 'raw';
+  const allowedTypes = ['csv', 'html', 'json', 'html', 'pdf', 'tsv', 'raw'];
+  if (!allowedTypes.includes(useType)) throw new Error(`Bad type ${useType} for file ${filePath}`);
+
   const tm = `${dt}t04_00_00.000z`; // Default all migrated files to 9 pm PT (4a UTC)
   const content = fsBuiltIn.readFileSync(filePath, encoding);
   const sha = hashContent(content, 5);
-  const fname = `${tm}-${cacheKey}-${sha}.${type}.gz`;
+  const fname = `${tm}-${cacheKey}-${sha}.${useType}.gz`;
   const destfile = path.join(destdir, fname);
   if (fsBuiltIn.existsSync(destfile)) {
     const msg = `${topdir}/${dt}/${fname} ALREADY EXISTS (called for ${url})`;
