@@ -415,34 +415,6 @@
     "stateId": "iso2:US-ME"
   },
   {
-    "state": "New Hampshire",
-    "country": "United States",
-    "sources": [
-      {
-        "name": "New Hampshire Department of Health and Human Services",
-        "url": "https://www.nh.gov/covid19/"
-      }
-    ],
-    "url": "https://www.nh.gov/covid19/",
-    "aggregate": "county",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "type": "table",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NH"
-  },
-  {
     "state": "Oklahoma",
     "country": "United States",
     "type": "table",
@@ -660,6 +632,25 @@
     "countryId": "iso1:BE"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:SA"
+  },
+  {
     "state": "Michigan",
     "country": "United States",
     "sources": [
@@ -678,6 +669,39 @@
     "rating": 0.5098039215686274,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MI"
+  },
+  {
+    "county": "St. Louis County",
+    "state": "Missouri",
+    "country": "United States",
+    "aggregate": "county",
+    "priority": 1,
+    "sources": [
+      {
+        "url": "https://stlouisco.com/Your-Government/County-Executive/COVID-19",
+        "name": "St. Louis County COVID-19 page"
+      }
+    ],
+    "url": "https://opendata.arcgis.com/datasets/4b76809cf8084f87b5ee4e18c33c9d29_0.csv",
+    "headless": true,
+    "type": "table",
+    "maintainers": [
+      {
+        "name": "Brendan Slezak",
+        "email": "brendan.slezak@geospark.io",
+        "github": "slezakbs",
+        "country": "US",
+        "state": "VA",
+        "city": "Richmond",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MO"
   },
   {
     "country": "Russia",
@@ -738,7 +762,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-14",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-15",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -995,37 +1019,6 @@
     "stateId": "iso2:US-SC"
   },
   {
-    "state": "Virginia",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "http://www.vdh.virginia.gov/",
-        "name": "VDH",
-        "description": "Virginia Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.vdh.virginia.gov/content/uploads/sites/182/2020/03/VDH-COVID-19-PublicUseDataset-Cases.csv",
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-VA"
-  },
-  {
     "state": "Vermont",
     "country": "United States",
     "sources": [
@@ -1264,26 +1257,6 @@
     "countryId": "iso1:KR"
   },
   {
-    "state": "Rhode Island",
-    "country": "United States",
-    "priority": 1,
-    "type": "csv",
-    "sources": [
-      {
-        "url": "https://health.ri.gov/data/covid-19/",
-        "name": "State of Rhode Island Department of Health"
-      }
-    ],
-    "url": "https://health.ri.gov/data/covid-19/",
-    "timeseries": false,
-    "headless": true,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.45098039215686275,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-RI"
-  },
-  {
     "state": "West Virginia",
     "country": "United States",
     "sources": [
@@ -1292,7 +1265,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-13-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-14-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1781,6 +1754,38 @@
   },
   {
     "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "QLD Government Health Department",
+        "name": "QLD Government Health",
+        "url": "https://www.health.qld.gov.au"
+      }
+    ],
+    "state": "Queensland",
+    "type": "table",
+    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-QLD"
+  },
+  {
+    "country": "Australia",
     "state": "Tasmania",
     "priority": 2,
     "sources": [
@@ -1831,6 +1836,31 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:US",
     "stateId": "iso2:US-NV"
+  },
+  {
+    "country": "Ireland",
+    "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://data.gov.ie/",
+        "name": "Ireland Open Data Portal"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": false,
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:IE"
   },
   {
     "country": "Slovenia",
@@ -2148,38 +2178,6 @@
     "rating": 0.3137254901960784,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.29411764705882354,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Puerto Rico",
@@ -2558,6 +2556,38 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",
