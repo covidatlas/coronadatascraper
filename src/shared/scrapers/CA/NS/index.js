@@ -2,7 +2,7 @@ import * as fetch from '../../../lib/fetch/index.js';
 import * as parse from '../../../lib/parse.js';
 import * as geography from '../../../lib/geography/index.js';
 import datetime from '../../../lib/datetime/old/index.js';
-import { DeprecatedError } from '../../../lib/errors.js';
+import { NotImplementedError } from '../../../lib/errors.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
@@ -67,7 +67,7 @@ const scraper = {
     '2020-04-12': async function() {
       this.url = 'https://novascotia.ca/coronavirus/data/COVID-19-data.csv';
       await fetch.csv(this, this.url, 'default');
-      throw new DeprecatedError('Someone needs to scrape this new data properly');
+      throw new NotImplementedError('Someone needs to scrape this new data properly');
     }
   }
 };
