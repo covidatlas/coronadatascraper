@@ -14,6 +14,7 @@ const scraper = {
   country: 'iso1:CA',
   url: 'https://novascotia.ca/coronavirus/COVID-19-cases.csv',
   type: 'csv',
+  timeseries: true,
   certValidation: false,
   sources: [
     {
