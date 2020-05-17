@@ -90,47 +90,6 @@
     "stateId": "iso2:US-AR"
   },
   {
-    "country": "Spain",
-    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
-    "priority": 1,
-    "timeseries": true,
-    "type": "csv",
-    "aggregate": "state",
-    "sources": [
-      {
-        "name": "Ministerio de Sanidad",
-        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
-        "description": "Government of Spain, Ministry of Health"
-      },
-      {
-        "name": "Departamento de Seguridad Nacional",
-        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
-        "description": "Government of Spain, Department of National Security"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Antonio Delgado",
-        "url": "https://datadista.com/",
-        "twitter": "@adelgado",
-        "github": "adelgadob"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Herb Caudill",
-        "url": "https://devresults.com",
-        "twitter": "@herbcaudill",
-        "github": "herbcaudill"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.6274509803921569,
-    "countryId": "iso1:ES"
-  },
-  {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
     "country": "United States",
@@ -236,6 +195,26 @@
     "type": "list",
     "ssl": true,
     "rating": 0.5882352941176471
+  },
+  {
+    "state": "Nova Scotia",
+    "country": "Canada",
+    "url": "https://novascotia.ca/coronavirus/COVID-19-cases.csv",
+    "type": "csv",
+    "timeseries": true,
+    "certValidation": false,
+    "sources": [
+      {
+        "name": "Government of Nova Scotia",
+        "url": "https://novascotia.ca/coronavirus/#cases"
+      }
+    ],
+    "headless": false,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.5686274509803921,
+    "countryId": "iso1:CA",
+    "stateId": "iso2:CA-NS"
   },
   {
     "state": "Delaware",
@@ -762,7 +741,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-15",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-16",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1265,7 +1244,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-14-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1487,6 +1466,47 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:CZ"
+  },
+  {
+    "country": "Spain",
+    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
+    "priority": 1,
+    "timeseries": true,
+    "type": "csv",
+    "aggregate": "state",
+    "sources": [
+      {
+        "name": "Ministerio de Sanidad",
+        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
+        "description": "Government of Spain, Ministry of Health"
+      },
+      {
+        "name": "Departamento de Seguridad Nacional",
+        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
+        "description": "Government of Spain, Department of National Security"
+      }
+    ],
+    "curators": [
+      {
+        "name": "Antonio Delgado",
+        "url": "https://datadista.com/",
+        "twitter": "@adelgado",
+        "github": "adelgadob"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Herb Caudill",
+        "url": "https://devresults.com",
+        "twitter": "@herbcaudill",
+        "github": "herbcaudill"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:ES"
   },
   {
     "country": "Netherlands",
