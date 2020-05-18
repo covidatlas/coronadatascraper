@@ -153,7 +153,7 @@ export function createLegend(min, max, legendType) {
 
   const heading = document.createElement('span');
   heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
-  heading.innerHTML = 'Percent of population ' + legendType;
+  heading.innerHTML = `Percent of population ${legendType}`;
   container.appendChild(heading);
 
   base.appendChild(container);

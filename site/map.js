@@ -114,7 +114,7 @@ function updateMap(date, type) {
           worstAffectedPercent = infectionPercent;
           highestLocation = location;
         }
-        //worstAffectedPercent = 0.002
+
         // Calculate least affected percent
         if (infectionPercent !== 0 && infectionPercent < lowestInfectionPercent) {
           lowestInfectionPercent = infectionPercent;
@@ -147,7 +147,7 @@ function updateMap(date, type) {
   console.log('Lowest infection', lowestLocation);
   console.log('Highest infection', highestLocation);
 
-  color.createLegend(chartDataMin, chartDataMax, currentType == 'deaths' ? 'passed away' : 'infected');
+  color.createLegend(chartDataMin, chartDataMax, currentType === 'deaths' ? 'passed away' : 'infected');
 
   setData();
 }
@@ -348,7 +348,7 @@ function populateMap() {
 
       this._container.addEventListener('change', evt => {
         const { target } = evt;
-        
+
         if (target.checked) {
           currentType = 'deaths';
         } else {
@@ -356,13 +356,13 @@ function populateMap() {
         }
         updateMap(currentDate, currentType);
       });
- 
+
       return this._container;
     }
 
     onRemove() {
-        this._container.parentNode.removeChild(this._container);
-      }
+      this._container.parentNode.removeChild(this._container);
+    }
   }
 
   map.addControl(new CaseTypeSelector(), 'top-left');
