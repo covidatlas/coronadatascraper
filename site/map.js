@@ -344,16 +344,16 @@ function populateMap() {
     onAdd() {
       this._container = document.createElement('div');
       this._container.className = 'mapboxgl-ctrl cds-MapControl';
-      this._container.innerHTML = `<label class="cds-MapToggle"><input type="checkbox">Show Deaths</label>`;
+      this._container.innerHTML = `
+        <select>
+          <option value="cases">Cases</option>
+          <option value="deaths" >Deaths</option>
+        </select>
+      `;
 
       this._container.addEventListener('change', evt => {
         const { target } = evt;
-
-        if (target.checked) {
-          currentType = 'deaths';
-        } else {
-          currentType = 'cases';
-        }
+        currentType = target.value;
         updateMap(currentDate, currentType);
       });
 
