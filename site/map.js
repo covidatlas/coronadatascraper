@@ -347,7 +347,7 @@ function populateMap() {
       this._container.innerHTML = `
         <select>
           <option value="cases">Cases</option>
-          <option value="deaths" >Deaths</option>
+          <option value="deaths">Deaths</option>
         </select>
       `;
 
