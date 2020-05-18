@@ -90,6 +90,47 @@
     "stateId": "iso2:US-AR"
   },
   {
+    "country": "Spain",
+    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
+    "priority": 1,
+    "timeseries": true,
+    "type": "csv",
+    "aggregate": "state",
+    "sources": [
+      {
+        "name": "Ministerio de Sanidad",
+        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
+        "description": "Government of Spain, Ministry of Health"
+      },
+      {
+        "name": "Departamento de Seguridad Nacional",
+        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
+        "description": "Government of Spain, Department of National Security"
+      }
+    ],
+    "curators": [
+      {
+        "name": "Antonio Delgado",
+        "url": "https://datadista.com/",
+        "twitter": "@adelgado",
+        "github": "adelgadob"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Herb Caudill",
+        "url": "https://devresults.com",
+        "twitter": "@herbcaudill",
+        "github": "herbcaudill"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.6274509803921569,
+    "countryId": "iso1:ES"
+  },
+  {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
     "country": "United States",
@@ -741,7 +782,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-16",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-17",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1244,7 +1285,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1466,47 +1507,6 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:CZ"
-  },
-  {
-    "country": "Spain",
-    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
-    "priority": 1,
-    "timeseries": true,
-    "type": "csv",
-    "aggregate": "state",
-    "sources": [
-      {
-        "name": "Ministerio de Sanidad",
-        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
-        "description": "Government of Spain, Ministry of Health"
-      },
-      {
-        "name": "Departamento de Seguridad Nacional",
-        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
-        "description": "Government of Spain, Department of National Security"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Antonio Delgado",
-        "url": "https://datadista.com/",
-        "twitter": "@adelgado",
-        "github": "adelgadob"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Herb Caudill",
-        "url": "https://devresults.com",
-        "twitter": "@herbcaudill",
-        "github": "herbcaudill"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:ES"
   },
   {
     "country": "Netherlands",
@@ -1908,36 +1908,6 @@
     "countryId": "iso1:SI"
   },
   {
-    "country": "Thailand",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Department of Disease Control Thailand",
-        "name": "Department of Disease Control Thailand",
-        "url": "https://ddc.moph.go.th/"
-      }
-    ],
-    "type": "json",
-    "url": "https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3333333333333333,
-    "countryId": "iso1:TH"
-  },
-  {
     "county": "Contra Costa County",
     "state": "California",
     "country": "United States",
@@ -2198,6 +2168,38 @@
     "rating": 0.3137254901960784,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Puerto Rico",
@@ -2576,38 +2578,6 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",

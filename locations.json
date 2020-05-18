@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-16",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-17",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -59390,7 +59390,7 @@
     "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
     "aggregate": "county",
     "county": "Issaquena County",
-    "rating": 0.47058823529411764,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -90.9525,
       32.711
@@ -60994,7 +60994,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-16T19:05:09.963Z",
+    "publishedDate": "2020-05-17T18:02:45.469Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61033,7 +61033,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-05-15T18:51:26.945Z",
+    "publishedDate": "2020-05-17T17:57:13.301Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61345,7 +61345,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-05-10T19:28:21.429Z",
+    "publishedDate": "2020-05-17T17:57:26.147Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61384,7 +61384,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-16T18:55:51.259Z",
+    "publishedDate": "2020-05-17T17:57:33.087Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61579,7 +61579,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-16T19:05:52.600Z",
+    "publishedDate": "2020-05-17T17:57:43.056Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61891,7 +61891,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-16T18:56:22.459Z",
+    "publishedDate": "2020-05-17T17:57:52.846Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -61930,7 +61930,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-05-08T21:14:26.643Z",
+    "publishedDate": "2020-05-17T17:58:10.519Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62047,7 +62047,7 @@
       }
     ],
     "county": "Crawford County",
-    "publishedDate": "2020-05-01T22:04:13.849Z",
+    "publishedDate": "2020-05-17T17:58:16.677Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.315,
@@ -62437,7 +62437,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-05-14T19:42:05.741Z",
+    "publishedDate": "2020-05-17T17:58:27.657Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62476,7 +62476,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-13T18:43:10.941Z",
+    "publishedDate": "2020-05-17T17:58:40.171Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62827,7 +62827,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-16T18:57:11.743Z",
+    "publishedDate": "2020-05-17T17:58:52.154Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62905,7 +62905,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-16T18:57:15.384Z",
+    "publishedDate": "2020-05-17T17:59:00.339Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63061,7 +63061,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-15T19:14:33.803Z",
+    "publishedDate": "2020-05-17T18:03:49.329Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -64192,7 +64192,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-16T18:58:43.897Z",
+    "publishedDate": "2020-05-17T17:59:41.152Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64270,7 +64270,7 @@
       }
     ],
     "county": "Pulaski County",
-    "publishedDate": "2020-05-16T18:58:50.775Z",
+    "publishedDate": "2020-05-17T17:59:45.883Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.2175,
@@ -64543,7 +64543,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-16T18:59:11.891Z",
+    "publishedDate": "2020-05-17T18:00:07.176Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64701,7 +64701,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-16T15:00:00.000Z",
+    "publishedDate": "2020-05-17T15:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64740,7 +64740,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-16T18:59:02.580Z",
+    "publishedDate": "2020-05-17T17:59:55.666Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64857,7 +64857,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-16T18:59:07.295Z",
+    "publishedDate": "2020-05-17T18:00:01.073Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65052,7 +65052,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-05-16T18:59:30.662Z",
+    "publishedDate": "2020-05-17T18:00:27.328Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65208,7 +65208,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-05-08T21:18:08.051Z",
+    "publishedDate": "2020-05-17T18:00:35.516Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65442,7 +65442,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-16T18:59:18.856Z",
+    "publishedDate": "2020-05-17T18:04:38.647Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -103446,7 +103446,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Barbour County",
     "rating": 0.37254901960784315,
@@ -103475,7 +103475,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Berkeley County",
     "rating": 0.37254901960784315,
@@ -103504,7 +103504,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Boone County",
     "rating": 0.37254901960784315,
@@ -103533,7 +103533,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Braxton County",
     "rating": 0.37254901960784315,
@@ -103562,7 +103562,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Brooke County",
     "rating": 0.37254901960784315,
@@ -103591,7 +103591,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Cabell County",
     "rating": 0.37254901960784315,
@@ -103620,7 +103620,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Calhoun County",
     "rating": 0.37254901960784315,
@@ -103649,7 +103649,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Clay County",
     "rating": 0.37254901960784315,
@@ -103678,7 +103678,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Doddridge County",
     "rating": 0.37254901960784315,
@@ -103707,7 +103707,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Fayette County",
     "rating": 0.37254901960784315,
@@ -103736,7 +103736,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Gilmer County",
     "rating": 0.37254901960784315,
@@ -103765,7 +103765,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Grant County",
     "rating": 0.37254901960784315,
@@ -103794,7 +103794,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Greenbrier County",
     "rating": 0.37254901960784315,
@@ -103823,7 +103823,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hampshire County",
     "rating": 0.37254901960784315,
@@ -103852,7 +103852,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hancock County",
     "rating": 0.37254901960784315,
@@ -103881,7 +103881,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hardy County",
     "rating": 0.37254901960784315,
@@ -103910,7 +103910,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Harrison County",
     "rating": 0.37254901960784315,
@@ -103939,7 +103939,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jackson County",
     "rating": 0.37254901960784315,
@@ -103968,7 +103968,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jefferson County",
     "rating": 0.37254901960784315,
@@ -103997,7 +103997,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Kanawha County",
     "rating": 0.37254901960784315,
@@ -104026,7 +104026,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lewis County",
     "rating": 0.37254901960784315,
@@ -104055,7 +104055,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lincoln County",
     "rating": 0.37254901960784315,
@@ -104084,7 +104084,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Logan County",
     "rating": 0.37254901960784315,
@@ -104113,7 +104113,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "McDowell County",
     "rating": 0.37254901960784315,
@@ -104142,7 +104142,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marion County",
     "rating": 0.37254901960784315,
@@ -104171,7 +104171,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marshall County",
     "rating": 0.37254901960784315,
@@ -104200,7 +104200,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mason County",
     "rating": 0.37254901960784315,
@@ -104229,7 +104229,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mercer County",
     "rating": 0.37254901960784315,
@@ -104258,7 +104258,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mineral County",
     "rating": 0.37254901960784315,
@@ -104287,7 +104287,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mingo County",
     "rating": 0.37254901960784315,
@@ -104316,7 +104316,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monongalia County",
     "rating": 0.37254901960784315,
@@ -104345,7 +104345,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monroe County",
     "rating": 0.37254901960784315,
@@ -104374,7 +104374,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Morgan County",
     "rating": 0.37254901960784315,
@@ -104403,7 +104403,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Nicholas County",
     "rating": 0.37254901960784315,
@@ -104432,7 +104432,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ohio County",
     "rating": 0.37254901960784315,
@@ -104461,7 +104461,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pendleton County",
     "rating": 0.37254901960784315,
@@ -104490,7 +104490,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pleasants County",
     "rating": 0.37254901960784315,
@@ -104519,7 +104519,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pocahontas County",
     "rating": 0.37254901960784315,
@@ -104548,7 +104548,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Preston County",
     "rating": 0.37254901960784315,
@@ -104577,7 +104577,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Putnam County",
     "rating": 0.37254901960784315,
@@ -104606,7 +104606,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Raleigh County",
     "rating": 0.37254901960784315,
@@ -104635,7 +104635,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Randolph County",
     "rating": 0.37254901960784315,
@@ -104664,7 +104664,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ritchie County",
     "rating": 0.37254901960784315,
@@ -104693,7 +104693,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Roane County",
     "rating": 0.37254901960784315,
@@ -104722,7 +104722,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Summers County",
     "rating": 0.37254901960784315,
@@ -104751,7 +104751,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Taylor County",
     "rating": 0.37254901960784315,
@@ -104780,7 +104780,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tucker County",
     "rating": 0.37254901960784315,
@@ -104809,7 +104809,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tyler County",
     "rating": 0.37254901960784315,
@@ -104838,7 +104838,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Upshur County",
     "rating": 0.37254901960784315,
@@ -104867,7 +104867,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wayne County",
     "rating": 0.37254901960784315,
@@ -104896,7 +104896,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Webster County",
     "rating": 0.37254901960784315,
@@ -104925,7 +104925,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wetzel County",
     "rating": 0.37254901960784315,
@@ -104954,7 +104954,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wirt County",
     "rating": 0.37254901960784315,
@@ -104983,7 +104983,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wood County",
     "rating": 0.37254901960784315,
@@ -105012,7 +105012,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-15-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wyoming County",
     "rating": 0.37254901960784315,
@@ -110107,7 +110107,7 @@
     ],
     "state": "Victoria",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.21568627450980393,
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -116391,7 +116391,7 @@
         "github": "herbcaudill"
       }
     ],
-    "rating": 0.39215686274509803,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -6.919500000000001,
       35.7035
@@ -116585,27 +116585,29 @@
     "level": "country"
   },
   {
-    "country": "Thailand",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Thailand",
+    "curators": [
       {
-        "description": "Department of Disease Control Thailand",
-        "name": "Department of Disease Control Thailand",
-        "url": "https://ddc.moph.go.th/"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
-    "url": "https://ddcportal.ddc.moph.go.th/arcgis/rest/services/iT_Neillgis/thai_cities/FeatureServer/0/query?where=1%3D1&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=*&returnGeometry=false&maxAllowableOffset=&geometryPrecision=&outSR=&having=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnExceededLimitFeatures=false&quantizationParameters=&returnCentroid=false&sqlFormat=none&resultType=&featureEncoding=esriDefault&f=pjson",
-    "rating": 0.3333333333333333,
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       101.4905,
       13.038
@@ -118321,6 +118323,16 @@
     ],
     "state": "Andalusia",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -4.576499999999999,
+      37.3695
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-AN",
+    "population": 8409738,
+    "populationDensity": 95.85293796406827,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AN",
     "name": "Andalusia, Spain",
@@ -118360,6 +118372,16 @@
     ],
     "state": "Aragon",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -0.701,
+      41.3845
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-AR",
+    "population": 1324397,
+    "populationDensity": 27.72163983394826,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AR",
     "name": "Aragon, Spain",
@@ -118399,6 +118421,16 @@
     ],
     "state": "Asturias",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -5.846,
+      43.271
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-AS",
+    "population": 1028244,
+    "populationDensity": 96.9772426429027,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AS",
     "name": "Asturias, Spain",
@@ -118438,6 +118470,16 @@
     ],
     "state": "Balearic Islands",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      2.7675,
+      39.361000000000004
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-IB",
+    "population": 1150839,
+    "populationDensity": 232.36067298307515,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-IB",
     "name": "Balearic Islands, Spain",
@@ -118477,6 +118519,16 @@
     ],
     "state": "Canary Islands",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -15.790500000000002,
+      28.527
+    ],
+    "tz": [
+      "Atlantic/Canary"
+    ],
+    "featureId": "iso2:ES-CN",
+    "population": 2127685,
+    "populationDensity": 285.81101544352316,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CN",
     "name": "Canary Islands, Spain",
@@ -118516,6 +118568,16 @@
     ],
     "state": "Cantabria",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -4.0005,
+      43.1345
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-CB",
+    "population": 580229,
+    "populationDensity": 108.61432739792983,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CB",
     "name": "Cantabria, Spain",
@@ -118555,6 +118617,16 @@
     ],
     "state": "Castile-La Mancha",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -3.1585,
+      39.6755
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-CM",
+    "population": 2106331,
+    "populationDensity": 26.48325115273489,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CM",
     "name": "Castile-La Mancha, Spain",
@@ -118594,6 +118666,16 @@
     ],
     "state": "Castile and León",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -4.432,
+      41.6605
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-CL",
+    "population": 2418694,
+    "populationDensity": 25.645640911960943,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CL",
     "name": "Castile and León, Spain",
@@ -118633,6 +118715,16 @@
     ],
     "state": "Catalonia",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      1.7455,
+      41.6925
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-CT",
+    "population": 7619494,
+    "populationDensity": 237.03241139617558,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CT",
     "name": "Catalonia, Spain",
@@ -118672,6 +118764,16 @@
     ],
     "state": "Ceuta",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -5.359,
+      35.8945
+    ],
+    "tz": [
+      "Africa/Ceuta"
+    ],
+    "featureId": "iso2:ES-CE",
+    "population": 84777,
+    "populationDensity": 6761.417137766679,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CE",
     "name": "Ceuta, Spain",
@@ -118711,6 +118813,16 @@
     ],
     "state": "Valencian Community",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -0.5049999999999999,
+      39.317
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-VC",
+    "population": 5003769,
+    "populationDensity": 214.69386116910493,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-VC",
     "name": "Valencian Community, Spain",
@@ -118750,6 +118862,16 @@
     ],
     "state": "Extremadura",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -6.096,
+      39.213499999999996
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-EX",
+    "population": 1067710,
+    "populationDensity": 25.599637795791317,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-EX",
     "name": "Extremadura, Spain",
@@ -118789,6 +118911,16 @@
     ],
     "state": "Galicia",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -8.017,
+      42.7885
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-GA",
+    "population": 2703290,
+    "populationDensity": 91.47607406250619,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-GA",
     "name": "Galicia, Spain",
@@ -118828,6 +118960,16 @@
     ],
     "state": "Community of Madrid",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -3.816,
+      40.5255
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-MD",
+    "population": 6661949,
+    "populationDensity": 828.0319469260397,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-MD",
     "name": "Community of Madrid, Spain",
@@ -118867,6 +119009,16 @@
     ],
     "state": "Melilla",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -2.9495,
+      35.293
+    ],
+    "tz": [
+      "Africa/Ceuta"
+    ],
+    "featureId": "iso2:ES-ML",
+    "population": 86487,
+    "populationDensity": 7784.09164118956,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-ML",
     "name": "Melilla, Spain",
@@ -118906,6 +119058,16 @@
     ],
     "state": "Region of Murcia",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -1.526,
+      38.065
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-MC",
+    "population": 1478509,
+    "populationDensity": 130.64627683883353,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-MC",
     "name": "Region of Murcia, Spain",
@@ -118945,6 +119107,16 @@
     ],
     "state": "Navarre",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -1.6065,
+      42.6125
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-NC",
+    "population": 647554,
+    "populationDensity": 62.438167346248534,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-NC",
     "name": "Navarre, Spain",
@@ -118984,6 +119156,16 @@
     ],
     "state": "Basque Country",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -2.5860000000000003,
+      42.965999999999994
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-PV",
+    "population": 2167707,
+    "populationDensity": 299.5567500808283,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-PV",
     "name": "Basque Country, Spain",
@@ -119023,6 +119205,16 @@
     ],
     "state": "Rioja",
     "rating": 0.6274509803921569,
+    "coordinates": [
+      -2.412,
+      42.281499999999994
+    ],
+    "tz": [
+      "Europe/Madrid"
+    ],
+    "featureId": "iso2:ES-RI",
+    "population": 315675,
+    "populationDensity": 62.64505502753969,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-RI",
     "name": "Rioja, Spain",
@@ -126593,39 +126785,6 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Jihočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.5695,
-      49.085499999999996
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-31",
-    "population": 642133,
-    "populationDensity": 63.81153400322205,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-31",
-    "name": "Jihočeský kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Jihomoravský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -126740,6 +126899,39 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jihočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.5695,
+      49.085499999999996
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-31",
+    "population": 642133,
+    "populationDensity": 63.81153400322205,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-31",
+    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {
