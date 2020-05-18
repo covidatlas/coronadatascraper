@@ -60,6 +60,35 @@
     "countryId": "iso1:IT"
   },
   {
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": true,
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "type": "csv",
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.6666666666666666,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC"
+  },
+  {
     "state": "Arkansas",
     "country": "United States",
     "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
@@ -1558,35 +1587,6 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:PL"
-  },
-  {
-    "state": "Washington, D.C.",
-    "country": "United States",
-    "county": "District of Columbia",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "DC Public Health Laboratory"
-      }
-    ],
-    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "type": "csv",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-DC"
   },
   {
     "country": "Lithuania",
