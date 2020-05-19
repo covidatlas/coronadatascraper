@@ -17,8 +17,8 @@
  * # Just one date in coronadatascraper-cache:
  * node ${this_file} --dest zz-migration  --date 2020-4-13
  *
- * # Just all dates, just one location:
- * node ${this_file} --dest zz-migration  --location US/WA
+ * # All dates, just one location, and only migrate existing cache files (don't fetch new data):
+ * node ${this_file} --dest zz-migration  --location US/WA --onlyUseCache
  *
  *
  * If you get an error "Error:   KEY COLLISION", this means that a migration
@@ -72,6 +72,11 @@ const { argv } = yargs
     description: 'Only check, do not migrate',
     type: 'boolean'
   })
+  .option('onlyUseCache', {
+    alias: 'x',
+    description: 'Only use cache, do not fetch new data',
+    type: 'boolean'
+  })
   .demand(['dest'], 'Please specify output dir')
   .version(false)
   .help();
@@ -101,7 +106,7 @@ function migrateDirs(dirs, argv) {
   dirs.forEach(d => {
     console.log('\n\n========================================');
     let msg = `Migrating ${d}`;
-    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start --onlyUseCache -d ${d}`;
+    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start ${argv.onlyUseCache ? '--onlyUseCache' : ''} -d ${d}`;
     if (argv.location) {
       msg = `${msg} for location ${argv.location}`;
       cmd = `${cmd} --location ${argv.location}`;
