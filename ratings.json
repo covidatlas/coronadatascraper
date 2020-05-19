@@ -60,35 +60,6 @@
     "countryId": "iso1:IT"
   },
   {
-    "state": "Washington, D.C.",
-    "country": "United States",
-    "county": "District of Columbia",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "DC Public Health Laboratory"
-      }
-    ],
-    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "type": "csv",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.6666666666666666,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-DC"
-  },
-  {
     "state": "Arkansas",
     "country": "United States",
     "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
@@ -811,7 +782,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-17",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-18",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1314,7 +1285,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1424,32 +1395,6 @@
     "ssl": true,
     "rating": 0.4117647058823529,
     "countryId": "iso1:CA"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "type": "json",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.4117647058823529,
-    "countryId": "iso1:GB"
   },
   {
     "state": "Arizona",
@@ -1587,6 +1532,35 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:PL"
+  },
+  {
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": true,
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "type": "csv",
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC"
   },
   {
     "country": "Lithuania",
@@ -1834,28 +1808,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-TAS"
-  },
-  {
-    "county": "Clark County",
-    "state": "Nevada",
-    "country": "United States",
-    "url": "https://www.southernnevadahealthdistrict.org/coronavirus",
-    "sources": [
-      {
-        "name": "Southern Nevada Health District",
-        "url": "https://www.southernnevadahealthdistrict.org",
-        "description": "Southern Nevada health department"
-      }
-    ],
-    "type": "table",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV"
   },
   {
     "country": "Ireland",
@@ -2200,39 +2152,6 @@
     "rating": 0.29411764705882354,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-VIC"
-  },
-  {
-    "country": "Puerto Rico",
-    "type": "table",
-    "timeseries": false,
-    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
-    "sources": [
-      {
-        "url": "http://www.salud.gov.pr/",
-        "name": "Gobierno de Puerto Rico Departamento de Salud"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.29411764705882354,
-    "countryId": "iso1:PR"
   },
   {
     "country": "Cyprus",

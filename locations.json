@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-17",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-18",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -9043,7 +9043,7 @@
       }
     ],
     "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "rating": 0.6666666666666666,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -77.0145,
       38.894000000000005
@@ -13459,30 +13459,29 @@
     "level": "country"
   },
   {
-    "country": "Puerto Rico",
-    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
-    "sources": [
-      {
-        "url": "http://www.salud.gov.pr/",
-        "name": "Gobierno de Puerto Rico Departamento de Salud"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.29411764705882354,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
     "coordinates": [
       -66.594,
       18.223
@@ -60994,7 +60993,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-17T18:02:45.469Z",
+    "publishedDate": "2020-05-18T18:38:36.776Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61033,7 +61032,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-05-17T17:57:13.301Z",
+    "publishedDate": "2020-05-18T18:31:19.538Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61267,7 +61266,7 @@
       }
     ],
     "county": "Benton County",
-    "publishedDate": "2020-05-16T18:55:33.866Z",
+    "publishedDate": "2020-05-18T18:31:25.942Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.291,
@@ -61345,7 +61344,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-05-17T17:57:26.147Z",
+    "publishedDate": "2020-05-18T18:31:29.085Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61384,7 +61383,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-17T17:57:33.087Z",
+    "publishedDate": "2020-05-18T18:31:32.618Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61423,7 +61422,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-05-16T18:55:54.927Z",
+    "publishedDate": "2020-05-18T18:31:36.192Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61462,7 +61461,7 @@
       }
     ],
     "county": "Caldwell County",
-    "publishedDate": "2020-05-01T22:03:49.893Z",
+    "publishedDate": "2020-05-18T18:31:40.183Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.983,
@@ -61579,7 +61578,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-17T17:57:43.056Z",
+    "publishedDate": "2020-05-18T18:31:52.564Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61891,7 +61890,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-17T17:57:52.846Z",
+    "publishedDate": "2020-05-18T18:32:01.650Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -61969,7 +61968,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-05-11T19:05:26.818Z",
+    "publishedDate": "2020-05-18T18:32:07.744Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -62320,7 +62319,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-05-16T18:56:52.389Z",
+    "publishedDate": "2020-05-18T18:32:19.070Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62359,7 +62358,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-14T19:42:01.860Z",
+    "publishedDate": "2020-05-18T18:32:22.934Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62827,7 +62826,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-17T17:58:52.154Z",
+    "publishedDate": "2020-05-18T18:32:35.016Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62905,7 +62904,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-17T17:59:00.339Z",
+    "publishedDate": "2020-05-18T18:32:39.949Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -62944,7 +62943,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-05-15T18:53:06.524Z",
+    "publishedDate": "2020-05-18T18:32:44.595Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63061,7 +63060,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-17T18:03:49.329Z",
+    "publishedDate": "2020-05-18T18:33:01.400Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63295,7 +63294,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-05-15T18:53:37.966Z",
+    "publishedDate": "2020-05-18T18:33:14.614Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63568,7 +63567,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-05-16T18:57:51.434Z",
+    "publishedDate": "2020-05-18T18:33:19.757Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63763,7 +63762,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-05-16T18:58:27.494Z",
+    "publishedDate": "2020-05-18T18:40:10.395Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -63802,7 +63801,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-05-15T18:53:52.107Z",
+    "publishedDate": "2020-05-18T18:33:26.308Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -64036,7 +64035,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-05-13T18:44:14.854Z",
+    "publishedDate": "2020-05-18T18:34:41.712Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64075,7 +64074,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-05-16T18:58:38.352Z",
+    "publishedDate": "2020-05-18T18:34:44.404Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64153,7 +64152,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-05-15T18:54:10.862Z",
+    "publishedDate": "2020-05-18T18:34:50.309Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64192,7 +64191,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-17T17:59:41.152Z",
+    "publishedDate": "2020-05-18T18:34:54.078Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64426,7 +64425,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-05-16T18:58:57.589Z",
+    "publishedDate": "2020-05-18T18:35:05.211Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -64504,7 +64503,7 @@
       }
     ],
     "county": "Ripley County",
-    "publishedDate": "2020-05-14T19:47:19.436Z",
+    "publishedDate": "2020-05-18T18:35:22.556Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.851,
@@ -64543,7 +64542,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-17T18:00:07.176Z",
+    "publishedDate": "2020-05-18T18:40:38.370Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64701,7 +64700,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-17T15:00:00.000Z",
+    "publishedDate": "2020-05-18T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64740,7 +64739,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-17T17:59:55.666Z",
+    "publishedDate": "2020-05-18T18:35:26.730Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64857,7 +64856,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-17T18:00:01.073Z",
+    "publishedDate": "2020-05-18T18:40:33.266Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -64974,7 +64973,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-16T18:59:26.529Z",
+    "publishedDate": "2020-05-18T18:35:48.968Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65013,7 +65012,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-05-01T22:05:51.906Z",
+    "publishedDate": "2020-05-18T18:37:30.661Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65325,7 +65324,7 @@
       }
     ],
     "county": "Webster County",
-    "publishedDate": "2020-05-08T21:18:14.011Z",
+    "publishedDate": "2020-05-18T18:37:39.924Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.878,
@@ -65364,7 +65363,7 @@
       }
     ],
     "county": "Worth County",
-    "publishedDate": "2020-05-15T19:13:19.947Z",
+    "publishedDate": "2020-05-18T18:37:43.415Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.423,
@@ -65442,7 +65441,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-17T18:04:38.647Z",
+    "publishedDate": "2020-05-18T18:40:50.817Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -69756,18 +69755,20 @@
     "level": "county"
   },
   {
-    "county": "Clark County",
-    "state": "Nevada",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://www.southernnevadahealthdistrict.org/coronavirus",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "Southern Nevada Health District",
-        "url": "https://www.southernnevadahealthdistrict.org",
-        "description": "Southern Nevada health department"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "rating": 0.35294117647058826,
+    "county": "Clark County",
+    "state": "Nevada",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -114.9715,
       35.9275
@@ -103446,7 +103447,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Barbour County",
     "rating": 0.37254901960784315,
@@ -103475,7 +103476,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Berkeley County",
     "rating": 0.37254901960784315,
@@ -103504,7 +103505,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Boone County",
     "rating": 0.37254901960784315,
@@ -103533,7 +103534,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Braxton County",
     "rating": 0.37254901960784315,
@@ -103562,7 +103563,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Brooke County",
     "rating": 0.37254901960784315,
@@ -103591,7 +103592,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Cabell County",
     "rating": 0.37254901960784315,
@@ -103620,7 +103621,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Calhoun County",
     "rating": 0.37254901960784315,
@@ -103649,7 +103650,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Clay County",
     "rating": 0.37254901960784315,
@@ -103678,7 +103679,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Doddridge County",
     "rating": 0.37254901960784315,
@@ -103707,7 +103708,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Fayette County",
     "rating": 0.37254901960784315,
@@ -103736,7 +103737,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Gilmer County",
     "rating": 0.37254901960784315,
@@ -103765,7 +103766,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Grant County",
     "rating": 0.37254901960784315,
@@ -103794,7 +103795,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Greenbrier County",
     "rating": 0.37254901960784315,
@@ -103823,7 +103824,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hampshire County",
     "rating": 0.37254901960784315,
@@ -103852,7 +103853,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hancock County",
     "rating": 0.37254901960784315,
@@ -103881,7 +103882,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hardy County",
     "rating": 0.37254901960784315,
@@ -103910,7 +103911,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Harrison County",
     "rating": 0.37254901960784315,
@@ -103939,7 +103940,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jackson County",
     "rating": 0.37254901960784315,
@@ -103968,7 +103969,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jefferson County",
     "rating": 0.37254901960784315,
@@ -103997,7 +103998,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Kanawha County",
     "rating": 0.37254901960784315,
@@ -104026,7 +104027,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lewis County",
     "rating": 0.37254901960784315,
@@ -104055,7 +104056,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lincoln County",
     "rating": 0.37254901960784315,
@@ -104084,7 +104085,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Logan County",
     "rating": 0.37254901960784315,
@@ -104113,7 +104114,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "McDowell County",
     "rating": 0.37254901960784315,
@@ -104142,7 +104143,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marion County",
     "rating": 0.37254901960784315,
@@ -104171,7 +104172,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marshall County",
     "rating": 0.37254901960784315,
@@ -104200,7 +104201,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mason County",
     "rating": 0.37254901960784315,
@@ -104229,7 +104230,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mercer County",
     "rating": 0.37254901960784315,
@@ -104258,7 +104259,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mineral County",
     "rating": 0.37254901960784315,
@@ -104287,7 +104288,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mingo County",
     "rating": 0.37254901960784315,
@@ -104316,7 +104317,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monongalia County",
     "rating": 0.37254901960784315,
@@ -104345,7 +104346,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monroe County",
     "rating": 0.37254901960784315,
@@ -104374,7 +104375,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Morgan County",
     "rating": 0.37254901960784315,
@@ -104403,7 +104404,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Nicholas County",
     "rating": 0.37254901960784315,
@@ -104432,7 +104433,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ohio County",
     "rating": 0.37254901960784315,
@@ -104461,7 +104462,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pendleton County",
     "rating": 0.37254901960784315,
@@ -104490,7 +104491,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pleasants County",
     "rating": 0.37254901960784315,
@@ -104519,7 +104520,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pocahontas County",
     "rating": 0.37254901960784315,
@@ -104548,7 +104549,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Preston County",
     "rating": 0.37254901960784315,
@@ -104577,7 +104578,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Putnam County",
     "rating": 0.37254901960784315,
@@ -104606,7 +104607,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Raleigh County",
     "rating": 0.37254901960784315,
@@ -104635,7 +104636,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Randolph County",
     "rating": 0.37254901960784315,
@@ -104664,7 +104665,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ritchie County",
     "rating": 0.37254901960784315,
@@ -104693,7 +104694,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Roane County",
     "rating": 0.37254901960784315,
@@ -104722,7 +104723,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Summers County",
     "rating": 0.37254901960784315,
@@ -104751,7 +104752,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Taylor County",
     "rating": 0.37254901960784315,
@@ -104780,7 +104781,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tucker County",
     "rating": 0.37254901960784315,
@@ -104809,7 +104810,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tyler County",
     "rating": 0.37254901960784315,
@@ -104838,7 +104839,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Upshur County",
     "rating": 0.37254901960784315,
@@ -104867,7 +104868,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wayne County",
     "rating": 0.37254901960784315,
@@ -104896,7 +104897,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Webster County",
     "rating": 0.37254901960784315,
@@ -104925,7 +104926,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wetzel County",
     "rating": 0.37254901960784315,
@@ -104954,7 +104955,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wirt County",
     "rating": 0.37254901960784315,
@@ -104983,7 +104984,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wood County",
     "rating": 0.37254901960784315,
@@ -105012,7 +105013,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-16-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wyoming County",
     "rating": 0.37254901960784315,
@@ -116889,23 +116890,29 @@
     "level": "country"
   },
   {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.3333333333333333,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United Kingdom",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       -3.208,
       55.402
@@ -128748,23 +128755,10 @@
   },
   {
     "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Scotland",
-    "rating": 0.37254901960784315,
+    "url": "https://www.gov.scot/coronavirus-covid-19/",
+    "aggregate": "county",
+    "rating": 0.27450980392156865,
     "coordinates": [
       -4.212,
       57.739000000000004
@@ -128806,5508 +128800,6 @@
     "stateId": "iso2:SA-05",
     "name": "Al-Qassim Region, Saudi Arabia",
     "level": "state"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Cheshire East",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.363,
-      53.171
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CHE",
-    "population": 380790,
-    "populationDensity": 325.5464062381545,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CHE",
-    "name": "Cheshire East, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Cheshire West and Chester",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.7275,
-      53.162499999999994
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CHW",
-    "population": 340502,
-    "populationDensity": 378.03818224016084,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CHW",
-    "name": "Cheshire West and Chester, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Salford",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.3680000000000003,
-      53.479
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SLF",
-    "population": 254408,
-    "populationDensity": 2614.744758184244,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SLF",
-    "name": "Salford, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Sefton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.991,
-      53.568
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SFT",
-    "population": 275396,
-    "populationDensity": 1924.5041520621887,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SFT",
-    "name": "Sefton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Solihull",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.7335,
-      52.434
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SOL",
-    "population": 214909,
-    "populationDensity": 1272.103330266752,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SOL",
-    "name": "Solihull, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bradford",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.851,
-      53.842
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BRD",
-    "population": 537173,
-    "populationDensity": 1477.4135160539215,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BRD",
-    "name": "Bradford, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wirral",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -3.0645,
-      53.369
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WRL",
-    "population": 323235,
-    "populationDensity": 2093.9724145084397,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WRL",
-    "name": "Wirral, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of Peterborough",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.254,
-      52.5905
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-PTE",
-    "population": 201041,
-    "populationDensity": 577.6583790847203,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-PTE",
-    "name": "City of Peterborough, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Suffolk",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      1.051,
-      52.2415
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SFK",
-    "population": 758556,
-    "populationDensity": 198.54446604070304,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SFK",
-    "name": "Suffolk, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Surrey",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.39549999999999996,
-      51.272000000000006
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SRY",
-    "population": 1189934,
-    "populationDensity": 707.508611668632,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SRY",
-    "name": "Surrey, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of London",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.095,
-      51.5145
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LND",
-    "population": 8706,
-    "populationDensity": 3243.99559843252,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LND",
-    "name": "City of London, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Merton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.1895,
-      51.413
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-MRT",
-    "population": 206186,
-    "populationDensity": 5528.5347791365275,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-MRT",
-    "name": "London Borough of Merton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Barnet",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.2165,
-      51.611999999999995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BNE",
-    "population": 392140,
-    "populationDensity": 4549.64504035607,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BNE",
-    "name": "London Borough of Barnet, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Kingston upon Hull",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.3305,
-      53.7665
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KHL",
-    "population": 260645,
-    "populationDensity": 3727.6541465512396,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KHL",
-    "name": "Kingston upon Hull, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Bexley",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.1495,
-      51.461
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BEX",
-    "population": 247258,
-    "populationDensity": 3749.4454737933893,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BEX",
-    "name": "London Borough of Bexley, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Harrow",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.3355,
-      51.598
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HRW",
-    "population": 250149,
-    "populationDensity": 4852.235397318958,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HRW",
-    "name": "London Borough of Harrow, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Haringey",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.10600000000000001,
-      51.5875
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HRY",
-    "population": 270624,
-    "populationDensity": 8803.970809142776,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HRY",
-    "name": "London Borough of Haringey, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Sutton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.181,
-      51.3565
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STN",
-    "population": 204525,
-    "populationDensity": 4946.329004668001,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STN",
-    "name": "London Borough of Sutton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Halton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.7135,
-      53.354
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HAL",
-    "population": 128432,
-    "populationDensity": 1691.760574054062,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HAL",
-    "name": "Halton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Gateshead",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.682,
-      54.9315
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-GAT",
-    "population": 202508,
-    "populationDensity": 1515.1993584068512,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-GAT",
-    "name": "Gateshead, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "North East Lincolnshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.13749999999999998,
-      53.538
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NEL",
-    "population": 159821,
-    "populationDensity": 824.5982400440448,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NEL",
-    "name": "North East Lincolnshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "South Gloucestershire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.465,
-      51.546499999999995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SGC",
-    "population": 282644,
-    "populationDensity": 565.3413937063302,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SGC",
-    "name": "South Gloucestershire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Tameside",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.0629999999999997,
-      53.480000000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-TAM",
-    "population": 225197,
-    "populationDensity": 2176.7807085438894,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-TAM",
-    "name": "Tameside, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Redcar and Cleveland",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.994,
-      54.567499999999995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RCC",
-    "population": 136718,
-    "populationDensity": 541.333615239478,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RCC",
-    "name": "Redcar and Cleveland, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Doncaster",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.107,
-      53.533
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DNC",
-    "population": 310542,
-    "populationDensity": 546.0823333816484,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DNC",
-    "name": "Doncaster, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Hertfordshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.27549999999999997,
-      51.840500000000006
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HRT",
-    "population": 1184365,
-    "populationDensity": 721.4596958809675,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HRT",
-    "name": "Hertfordshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Coventry",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.5190000000000001,
-      52.417
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-COV",
-    "population": 366785,
-    "populationDensity": 3903.1957335450347,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-COV",
-    "name": "Coventry, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "York",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.0725,
-      53.966
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-YOR",
-    "population": 209893,
-    "populationDensity": 759.8108600286448,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-YOR",
-    "name": "York, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Birmingham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.8785,
-      52.4955
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BIR",
-    "population": 1141374,
-    "populationDensity": 4234.403509326548,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BIR",
-    "name": "Birmingham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Plymouth",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -4.1259999999999994,
-      50.3885
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-PLY",
-    "population": 263100,
-    "populationDensity": 3353.2283358503264,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-PLY",
-    "name": "Plymouth, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Luton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.4305,
-      51.89149999999999
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LUT",
-    "population": 214109,
-    "populationDensity": 5092.3591227791585,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LUT",
-    "name": "Luton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Somerset",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -3.0425,
-      51.073499999999996
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SOM",
-    "population": 559399,
-    "populationDensity": 162.39127365121706,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SOM",
-    "name": "Somerset, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Shropshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.733,
-      52.6525
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SHR",
-    "population": 320274,
-    "populationDensity": 100.30052578750255,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SHR",
-    "name": "Shropshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "East Riding of Yorkshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.48100000000000004,
-      53.8995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ERY",
-    "population": 339614,
-    "populationDensity": 140.0989844327388,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ERY",
-    "name": "East Riding of Yorkshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wolverhampton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.121,
-      52.593999999999994
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WLV",
-    "population": 262008,
-    "populationDensity": 3730.2493653595993,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WLV",
-    "name": "Wolverhampton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Northumberland",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.076,
-      55.297
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NBL",
-    "population": 320274,
-    "populationDensity": 63.70926348309892,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NBL",
-    "name": "Northumberland, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Northamptonshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.8370000000000001,
-      52.31
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NTH",
-    "population": 747622,
-    "populationDensity": 315.42446500701334,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NTH",
-    "name": "Northamptonshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Herefordshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.74,
-      52.1085
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HEF",
-    "population": 192107,
-    "populationDensity": 87.98746575864767,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HEF",
-    "name": "Herefordshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Croydon",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.0775,
-      51.3535
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CRY",
-    "population": 385346,
-    "populationDensity": 4694.305692357879,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CRY",
-    "name": "London Borough of Croydon, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Lancashire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.5515,
-      53.8555
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LAN",
-    "population": 1210053,
-    "populationDensity": 418.01581819060135,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LAN",
-    "name": "Lancashire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Gloucestershire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.1515,
-      51.8455
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-GLS",
-    "population": 633558,
-    "populationDensity": 235.39962335768126,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-GLS",
-    "name": "Gloucestershire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Southwark",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.0695,
-      51.4655
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SWK",
-    "population": 317256,
-    "populationDensity": 11357.924240111428,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SWK",
-    "name": "London Borough of Southwark, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bedford",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.459,
-      52.191
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BDF",
-    "population": 171623,
-    "populationDensity": 362.4476803401498,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BDF",
-    "name": "Bedford, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Stockton-on-Tees",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.3035,
-      54.558
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STT",
-    "population": 197213,
-    "populationDensity": 968.5790660426143,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STT",
-    "name": "Stockton-on-Tees, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Knowsley",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.834,
-      53.426
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KWL",
-    "population": 149571,
-    "populationDensity": 1801.5729600786588,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KWL",
-    "name": "Knowsley, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Wales",
-    "rating": 0.37254901960784315,
-    "coordinates": [
-      -3.9779999999999998,
-      52.408500000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WLS",
-    "population": 3113000,
-    "populationDensity": 149.81396059032153,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-WLS",
-    "name": "Wales, United Kingdom",
-    "level": "state"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Northern Ireland",
-    "rating": 0.37254901960784315,
-    "coordinates": [
-      -6.8055,
-      54.636
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NIR",
-    "population": 1862100,
-    "populationDensity": 131.96704920196396,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-NIR",
-    "name": "Northern Ireland, United Kingdom",
-    "level": "state"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Nottinghamshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.006,
-      53.1475
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NTT",
-    "population": 823126,
-    "populationDensity": 392.8509998216705,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NTT",
-    "name": "Nottinghamshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Hampshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.343,
-      51.0495
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HAM",
-    "population": 1376316,
-    "populationDensity": 372.15580370472753,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HAM",
-    "name": "Hampshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "West Sussex",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.46449999999999997,
-      50.947
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WSX",
-    "population": 858852,
-    "populationDensity": 431.57680432521994,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WSX",
-    "name": "West Sussex, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Buckinghamshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.7995000000000001,
-      51.781499999999994
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BKM",
-    "population": 540059,
-    "populationDensity": 343.39379181653203,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BKM",
-    "name": "Buckinghamshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Derby",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.47,
-      52.907
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DER",
-    "population": 257174,
-    "populationDensity": 3653.5539516479103,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DER",
-    "name": "Derby, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "North Somerset",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.7915,
-      51.397
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NSM",
-    "population": 213919,
-    "populationDensity": 571.6911205208305,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NSM",
-    "name": "North Somerset, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Bromley",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.041,
-      51.367000000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BRY",
-    "population": 331096,
-    "populationDensity": 2112.128819683625,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BRY",
-    "name": "London Borough of Bromley, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Hackney",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.0605,
-      51.54900000000001
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HCK",
-    "population": 279665,
-    "populationDensity": 15237.59626595578,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HCK",
-    "name": "London Borough of Hackney, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wigan",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.573,
-      53.527
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WGN",
-    "population": 326088,
-    "populationDensity": 1712.8881891849326,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WGN",
-    "name": "Wigan, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Milton Keynes",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.7355,
-      52.082
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-MIK",
-    "population": 268607,
-    "populationDensity": 879.6499370670496,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-MIK",
-    "name": "Milton Keynes, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Darlington",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.558,
-      54.546
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DAL",
-    "population": 106566,
-    "populationDensity": 548.7703489813068,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DAL",
-    "name": "Darlington, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bolton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.482,
-      53.577
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BOL",
-    "population": 285372,
-    "populationDensity": 2066.7724526366305,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BOL",
-    "name": "Bolton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Telford and Wrekin",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.4894999999999996,
-      52.724999999999994
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-TFW",
-    "population": 177799,
-    "populationDensity": 609.3291829706523,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-TFW",
-    "name": "Telford and Wrekin, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "West Berkshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.2835,
-      51.444500000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WBK",
-    "population": 158527,
-    "populationDensity": 227.7158146067675,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WBK",
-    "name": "West Berkshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Rochdale",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.1494999999999997,
-      53.606
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RCH",
-    "population": 220001,
-    "populationDensity": 1372.293669176669,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RCH",
-    "name": "Rochdale, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Portsmouth",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.0955,
-      50.818
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-POR",
-    "population": 215133,
-    "populationDensity": 5517.634180118973,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-POR",
-    "name": "Portsmouth, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of Leicester",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.1324999999999998,
-      52.6395
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LCE",
-    "population": 355218,
-    "populationDensity": 4891.962195313059,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LCE",
-    "name": "City of Leicester, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Cornwall",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -4.952999999999999,
-      50.445
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CON",
-    "population": 565968,
-    "populationDensity": 157.0621050424791,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CON",
-    "name": "Cornwall, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Cumbria",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.899,
-      54.6365
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CMA",
-    "population": 498888,
-    "populationDensity": 73.18844895257864,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CMA",
-    "name": "Cumbria, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Oxfordshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.2865,
-      51.814
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-OXF",
-    "population": 687524,
-    "populationDensity": 265.31202576321743,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-OXF",
-    "name": "Oxfordshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "North Yorkshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.3880000000000001,
-      54.090500000000006
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NYK",
-    "population": 614505,
-    "populationDensity": 76.34109077045795,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NYK",
-    "name": "North Yorkshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Lincolnshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.23149999999999998,
-      53.1265
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LIN",
-    "population": 755833,
-    "populationDensity": 127.68273452404813,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LIN",
-    "name": "Lincolnshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Essex",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.636,
-      51.8005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ESS",
-    "population": 1477764,
-    "populationDensity": 425.54448876907,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ESS",
-    "name": "Essex, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Barking and Dagenham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.129,
-      51.554
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BDG",
-    "population": 211998,
-    "populationDensity": 5634.889420154669,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BDG",
-    "name": "London Borough of Barking and Dagenham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Tower Hamlets",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.036000000000000004,
-      51.515
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-TWH",
-    "population": 317705,
-    "populationDensity": 13857.840843781778,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-TWH",
-    "name": "London Borough of Tower Hamlets, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Redbridge",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.0805,
-      51.5865
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RDB",
-    "population": 303858,
-    "populationDensity": 5244.0851053009455,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RDB",
-    "name": "London Borough of Redbridge, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Southend-on-Sea",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.7224999999999999,
-      51.55
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SOS",
-    "population": 182463,
-    "populationDensity": 4220.709913408899,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SOS",
-    "name": "Southend-on-Sea, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bath and North East Somerset",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.4935,
-      51.3565
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BAS",
-    "population": 192106,
-    "populationDensity": 548.3254342729997,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BAS",
-    "name": "Bath and North East Somerset, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Blackburn with Darwen",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.4675000000000002,
-      53.699
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BBD",
-    "population": 148942,
-    "populationDensity": 1081.7055989428775,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BBD",
-    "name": "Blackburn with Darwen, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Norfolk",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.949,
-      52.667500000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NFK",
-    "population": 903680,
-    "populationDensity": 168.5581344664633,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NFK",
-    "name": "Norfolk, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Richmond upon Thames",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.3065,
-      51.441
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RIC",
-    "population": 196904,
-    "populationDensity": 3476.2423007177736,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RIC",
-    "name": "London Borough of Richmond upon Thames, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Derbyshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.5985,
-      53.1195
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DBY",
-    "population": 796142,
-    "populationDensity": 311.4246194823009,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DBY",
-    "name": "Derbyshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Middlesbrough",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.2155,
-      54.5475
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-MDB",
-    "population": 140545,
-    "populationDensity": 2686.598662440735,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-MDB",
-    "name": "Middlesbrough, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Reading",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.9984999999999999,
-      51.4525
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RDG",
-    "population": 163203,
-    "populationDensity": 4006.958998412862,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RDG",
-    "name": "Reading, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Royal Borough of Kensington and Chelsea",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.1895,
-      51.504000000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KEC",
-    "population": 156197,
-    "populationDensity": 16159.984230192209,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KEC",
-    "name": "Royal Borough of Kensington and Chelsea, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Newham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.0415,
-      51.525999999999996
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NWM",
-    "population": 352005,
-    "populationDensity": 9752.429140629345,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NWM",
-    "name": "London Borough of Newham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Wandsworth",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.194,
-      51.4525
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WND",
-    "population": 326474,
-    "populationDensity": 8935.410067206853,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WND",
-    "name": "London Borough of Wandsworth, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Royal Borough of Greenwich",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.0495,
-      51.473
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-GRE",
-    "population": 286186,
-    "populationDensity": 5742.795659235353,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-GRE",
-    "name": "Royal Borough of Greenwich, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wakefield",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.429,
-      53.658500000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WKF",
-    "population": 345038,
-    "populationDensity": 1022.4583409807146,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WKF",
-    "name": "Wakefield, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Calderdale",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.955,
-      53.7215
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CLD",
-    "population": 210082,
-    "populationDensity": 579.7265283835364,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CLD",
-    "name": "Calderdale, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Central Bedfordshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.423,
-      52
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CBF",
-    "population": 283606,
-    "populationDensity": 391.8116353461222,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CBF",
-    "name": "Central Bedfordshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "North Lincolnshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.5725,
-      53.5895
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NLN",
-    "population": 172005,
-    "populationDensity": 198.29589504492714,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NLN",
-    "name": "North Lincolnshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of Westminster",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.1635,
-      51.5115
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WSM",
-    "population": 255324,
-    "populationDensity": 9645.19310413821,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WSM",
-    "name": "City of Westminster, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Southampton",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.3995000000000002,
-      50.914500000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STH",
-    "population": 252796,
-    "populationDensity": 4739.965821868919,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STH",
-    "name": "Southampton, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Lambeth",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.11449999999999999,
-      51.461
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LBH",
-    "population": 325917,
-    "populationDensity": 10354.864573013756,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LBH",
-    "name": "London Borough of Lambeth, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Ealing",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.3265,
-      51.525999999999996
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-EAL",
-    "population": 341982,
-    "populationDensity": 6334.52514254459,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-EAL",
-    "name": "London Borough of Ealing, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Hounslow",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.351,
-      51.4615
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HNS",
-    "population": 270782,
-    "populationDensity": 4798.925331826297,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HNS",
-    "name": "London Borough of Hounslow, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Lewisham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.0225,
-      51.454
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LEW",
-    "population": 303536,
-    "populationDensity": 10537.418365362551,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LEW",
-    "name": "London Borough of Lewisham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Leeds",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.548,
-      53.8245
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LDS",
-    "population": 789194,
-    "populationDensity": 1442.2488782199116,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LDS",
-    "name": "Leeds, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Medway",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.563,
-      51.417500000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-MDW",
-    "population": 277855,
-    "populationDensity": 1407.3433538917025,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-MDW",
-    "name": "Medway, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Trafford",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.364,
-      53.418499999999995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-TRF",
-    "population": 236370,
-    "populationDensity": 2258.4668059951623,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-TRF",
-    "name": "Trafford, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Oldham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.048,
-      53.557500000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-OLD",
-    "population": 235623,
-    "populationDensity": 1662.258260221143,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-OLD",
-    "name": "Oldham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Sunderland",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.4529999999999998,
-      54.8715
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SND",
-    "population": 277417,
-    "populationDensity": 2064.9923346904056,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SND",
-    "name": "Sunderland, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Windsor and Maidenhead",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.687,
-      51.480000000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WNM",
-    "population": 150906,
-    "populationDensity": 754.1007450775428,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WNM",
-    "name": "Windsor and Maidenhead, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "South Tyneside",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.449,
-      54.9705
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STY",
-    "population": 150265,
-    "populationDensity": 2221.81505715532,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STY",
-    "name": "South Tyneside, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Dudley",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.099,
-      52.49
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DUD",
-    "population": 320626,
-    "populationDensity": 3453.0395623268546,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DUD",
-    "name": "Dudley, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Rotherham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.2855,
-      53.408
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ROT",
-    "population": 264671,
-    "populationDensity": 909.1900939990643,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ROT",
-    "name": "Rotherham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Blackpool",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -3.02,
-      53.8255
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BPL",
-    "population": 139305,
-    "populationDensity": 4075.544757901353,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BPL",
-    "name": "Blackpool, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Kent",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.738,
-      51.197
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KEN",
-    "population": 1568623,
-    "populationDensity": 442.9672097989535,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KEN",
-    "name": "Kent, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wiltshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.9255,
-      51.3125
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WIL",
-    "population": 498064,
-    "populationDensity": 153.71157791897068,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WIL",
-    "name": "Wiltshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Staffordshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.0255,
-      52.8185
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STS",
-    "population": 875219,
-    "populationDensity": 334.62274191022397,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STS",
-    "name": "Staffordshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Thurrock",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.366,
-      51.507000000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-THR",
-    "population": 172525,
-    "populationDensity": 968.7541411706603,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-THR",
-    "name": "Thurrock, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Stockport",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.1205,
-      53.393
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SKP",
-    "population": 291775,
-    "populationDensity": 2319.4412850383037,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SKP",
-    "name": "Stockport, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Barnsley",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.5495,
-      53.5275
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BNS",
-    "population": 245199,
-    "populationDensity": 748.8026168699795,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BNS",
-    "name": "Barnsley, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Newcastle upon Tyne",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.6495,
-      55.019000000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NET",
-    "population": 300196,
-    "populationDensity": 2555.55589487637,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NET",
-    "name": "Newcastle upon Tyne, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Cambridgeshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.007500000000000007,
-      52.3725
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CAM",
-    "population": 651482,
-    "populationDensity": 214.23816363176496,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CAM",
-    "name": "Cambridgeshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Liverpool",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.9139999999999997,
-      53.4035
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LIV",
-    "population": 494814,
-    "populationDensity": 4453.464471737123,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LIV",
-    "name": "Liverpool, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of Bristol",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.6135,
-      51.471000000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BST",
-    "population": 463405,
-    "populationDensity": 4073.0030839484066,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BST",
-    "name": "City of Bristol, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "East Sussex",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.3665,
-      50.9405
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ESX",
-    "population": 554590,
-    "populationDensity": 322.46170059749386,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ESX",
-    "name": "East Sussex, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Stoke-on-Trent",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.16,
-      53.0215
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-STE",
-    "population": 255833,
-    "populationDensity": 2600.3784862758976,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-STE",
-    "name": "Stoke-on-Trent, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Dorset",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.379,
-      50.799499999999995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DOR",
-    "population": 376484,
-    "populationDensity": 149.6910208062234,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DOR",
-    "name": "Dorset, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Worcestershire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.214,
-      52.2115
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WOR",
-    "population": 592057,
-    "populationDensity": 338.0009039113237,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WOR",
-    "name": "Worcestershire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Walsall",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.9620000000000002,
-      52.6045
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WLL",
-    "population": 283378,
-    "populationDensity": 2884.3241428374354,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WLL",
-    "name": "Walsall, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "St Helens",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.701,
-      53.458
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SHN",
-    "population": 180049,
-    "populationDensity": 1320.03089328087,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SHN",
-    "name": "St Helens, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Hillingdon",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.443,
-      51.544
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HIL",
-    "population": 304824,
-    "populationDensity": 2593.9780481686416,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HIL",
-    "name": "London Borough of Hillingdon, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Brent",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.2635,
-      51.564
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BEN",
-    "population": 330795,
-    "populationDensity": 7991.154911688944,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BEN",
-    "name": "London Borough of Brent, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Sandwell",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.9985,
-      52.5155
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SAW",
-    "population": 327378,
-    "populationDensity": 3715.612798998556,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SAW",
-    "name": "Sandwell, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Swindon",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.733,
-      51.587
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SWD",
-    "population": 221996,
-    "populationDensity": 951.3166108131499,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SWD",
-    "name": "Swindon, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Warrington",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.5620000000000003,
-      53.4015
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WRT",
-    "population": 209547,
-    "populationDensity": 1140.7009964580704,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WRT",
-    "name": "Warrington, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bracknell Forest",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.747,
-      51.3995
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BRC",
-    "population": 121676,
-    "populationDensity": 1232.8438276335612,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BRC",
-    "name": "Bracknell Forest, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Brighton and Hove",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.1285,
-      50.8435
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BNH",
-    "population": 290395,
-    "populationDensity": 3510.750194879404,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BNH",
-    "name": "Brighton and Hove, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "North Tyneside",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.528,
-      55.028499999999994
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NTY",
-    "population": 205985,
-    "populationDensity": 2572.254577556572,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NTY",
-    "name": "North Tyneside, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Torbay",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -3.5595,
-      50.448
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-TOB",
-    "population": 135780,
-    "populationDensity": 2104.027391562785,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-TOB",
-    "name": "Torbay, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.3005000000000004,
-      52.8575
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ENG",
-    "population": 55268100,
-    "populationDensity": 423.1661731530186,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "name": "England, United Kingdom",
-    "level": "state"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Isle of Wight",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.3085,
-      50.67100000000001
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-IOW",
-    "population": 141538,
-    "populationDensity": 375.3302175770907,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-IOW",
-    "name": "Isle of Wight, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Devon",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -3.7954999999999997,
-      50.72
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DEV",
-    "population": 1194166,
-    "populationDensity": 180.96499301101085,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DEV",
-    "name": "Devon, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Rutland",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.626,
-      52.6425
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-RUT",
-    "population": 39697,
-    "populationDensity": 100.84217014239977,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-RUT",
-    "name": "Rutland, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Warwickshire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.556,
-      52.321
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WAR",
-    "population": 571010,
-    "populationDensity": 287.4850815051471,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WAR",
-    "name": "Warwickshire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Waltham Forest",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.0195,
-      51.599000000000004
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WFT",
-    "population": 276700,
-    "populationDensity": 7445.603840959904,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WFT",
-    "name": "London Borough of Waltham Forest, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Leicestershire",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.131,
-      52.687
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-LEC",
-    "population": 698268,
-    "populationDensity": 334.9996346373717,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-LEC",
-    "name": "Leicestershire, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "City of Nottingham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.1665,
-      52.954
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-NGM",
-    "population": 331069,
-    "populationDensity": 4359.687707532746,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-NGM",
-    "name": "City of Nottingham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Camden",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.1595,
-      51.544
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-CMD",
-    "population": 262226,
-    "populationDensity": 13329.31119409079,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-CMD",
-    "name": "London Borough of Camden, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Enfield",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.097,
-      51.649
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ENF",
-    "population": 333869,
-    "populationDensity": 4123.766757306613,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ENF",
-    "name": "London Borough of Enfield, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Royal Borough of Kingston upon Thames",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.2855,
-      51.3925
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KTT",
-    "population": 175470,
-    "populationDensity": 5290.018502464583,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KTT",
-    "name": "Royal Borough of Kingston upon Thames, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Hammersmith and Fulham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.2155,
-      51.5025
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HMF",
-    "population": 185426,
-    "populationDensity": 11531.140077842269,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HMF",
-    "name": "London Borough of Hammersmith and Fulham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Islington",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.11099999999999999,
-      51.544
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-ISL",
-    "population": 239142,
-    "populationDensity": 15671.606540029099,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-ISL",
-    "name": "London Borough of Islington, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "London Borough of Havering",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      0.23450000000000001,
-      51.558
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HAV",
-    "population": 257810,
-    "populationDensity": 2201.6231430589937,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HAV",
-    "name": "London Borough of Havering, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bury",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.308,
-      53.59
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-BUR",
-    "population": 190108,
-    "populationDensity": 1798.4072121656206,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-BUR",
-    "name": "Bury, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Kirklees",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.79,
-      53.643
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-KIR",
-    "population": 438727,
-    "populationDensity": 1077.7877996158252,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-KIR",
-    "name": "Kirklees, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "County Durham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.797,
-      54.685
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-DUR",
-    "population": 526980,
-    "populationDensity": 234.8814205185152,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-DUR",
-    "name": "County Durham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Wokingham",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.9005000000000001,
-      51.455
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-WOK",
-    "population": 167979,
-    "populationDensity": 927.4511059337332,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-WOK",
-    "name": "Wokingham, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Hartlepool",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.2725,
-      54.675
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-HPL",
-    "population": 93242,
-    "populationDensity": 1009.710287162403,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-HPL",
-    "name": "Hartlepool, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Sheffield",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.563,
-      53.4065
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SHF",
-    "population": 582506,
-    "populationDensity": 1596.7550517156642,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SHF",
-    "name": "Sheffield, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Slough",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -0.575,
-      51.504000000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-SLG",
-    "population": 149112,
-    "populationDensity": 5780.013773754182,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-SLG",
-    "name": "Slough, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Manchester",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -2.239,
-      53.441
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-MAN",
-    "population": 547627,
-    "populationDensity": 4892.661490033033,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-MAN",
-    "name": "Manchester, England, United Kingdom",
-    "level": "county"
-  },
-  {
-    "country": "United Kingdom",
-    "url": "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "GOV.UK",
-        "url": "https://coronavirus.data.gov.uk"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "England",
-    "county": "Bournemouth, Christchurch and Poole",
-    "rating": 0.4117647058823529,
-    "coordinates": [
-      -1.86,
-      50.745000000000005
-    ],
-    "tz": [
-      "Europe/London"
-    ],
-    "featureId": "iso2:GB-XBCP",
-    "population": 395784,
-    "populationDensity": 2452.1500457833968,
-    "countryId": "iso1:GB",
-    "stateId": "iso2:GB-ENG",
-    "countyId": "iso2:GB-XBCP",
-    "name": "Bournemouth, Christchurch and Poole, England, United Kingdom",
-    "level": "county"
   },
   {
     "country": "Saudi Arabia",
