@@ -4,6 +4,8 @@ import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import * as htmlTableValidation from '../../../lib/html/table-validation.js';
 
+const assert = require('assert');
+
 // Set county to this if you only have state data, but this isn't the entire state
 // const UNASSIGNED = '(unassigned)';
 
@@ -291,6 +293,83 @@ const scraper = {
 
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
+    },
+    '2020-05-19': async function scraper() {
+      // Data is split across two pages.
+      const allCounties = {};
+
+      // Cases and tested
+      this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx';
+      this.type = 'table';
+      let $ = await fetch.page(this, this.url, 'cases');
+      const $countyCases = $('td:contains("County")')
+        .closest('table')
+        .first();
+
+      let $headings = $countyCases
+        .find('tbody > tr')
+        .eq(0)
+        .find('td');
+      let hs = $headings.toArray().map(el => $(el).text());
+      assert.equal('County,Total Cases,Negatives', hs.join(), 'headings');
+      let $trs = $countyCases.find('tbody > tr:not(:first-child)');
+      $trs.each((index, tr) => {
+        const tds = $(tr)
+          .find('td')
+          .toArray()
+          .map(el => $(el).text());
+        allCounties[parse.string(tds[0])] = {
+          cases: parse.number(tds[1]),
+          tested: parse.number(tds[1]) + parse.number(tds[2])
+        };
+      });
+
+      // Deaths.
+      this.url = 'https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx';
+      this.type = 'table';
+      $ = await fetch.page(this, this.url, 'deaths');
+      const $countyDeaths = $('td:contains("County")')
+        .closest('table')
+        .first();
+      $headings = $countyDeaths
+        .find('tbody > tr')
+        .eq(0)
+        .find('td');
+      hs = $headings
+        .toArray()
+        .slice(0, 2)
+        .map(el =>
+          $(el)
+            .text()
+            .trim()
+        );
+      assert.equal('County,# of Deaths', hs.join(), 'headings');
+      $trs = $countyDeaths.find('tbody > tr:not(:first-child)');
+      $trs.each((index, tr) => {
+        const tds = $(tr)
+          .find('td')
+          .toArray()
+          .slice(0, 2)
+          .map(el => $(el).text());
+        const k = parse.string(tds[0]);
+        allCounties[k] = { ...allCounties[k], deaths: parse.number(tds[1]) };
+      });
+
+      // Create records.
+      const counties = [];
+      Object.keys(allCounties).forEach(k => {
+        const county = geography.getCounty(geography.addCounty(k), 'iso2:US-PA');
+        counties.push({ county, ...allCounties[k] });
+      });
+
+      const result = geography.addEmptyRegions(counties, this._counties, 'county');
+
+      // Add state level.
+      const stateData = transform.sumData(counties);
+      result.push(stateData);
+
+      // console.table(result);
+      return result;
     }
   }
 };
