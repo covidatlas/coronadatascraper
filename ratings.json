@@ -90,47 +90,6 @@
     "stateId": "iso2:US-AR"
   },
   {
-    "country": "Spain",
-    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
-    "priority": 1,
-    "timeseries": true,
-    "type": "csv",
-    "aggregate": "state",
-    "sources": [
-      {
-        "name": "Ministerio de Sanidad",
-        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
-        "description": "Government of Spain, Ministry of Health"
-      },
-      {
-        "name": "Departamento de Seguridad Nacional",
-        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
-        "description": "Government of Spain, Department of National Security"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Antonio Delgado",
-        "url": "https://datadista.com/",
-        "twitter": "@adelgado",
-        "github": "adelgadob"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Herb Caudill",
-        "url": "https://devresults.com",
-        "twitter": "@herbcaudill",
-        "github": "herbcaudill"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.6274509803921569,
-    "countryId": "iso1:ES"
-  },
-  {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "type": "csv",
     "country": "United States",
@@ -500,7 +459,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Cases.aspx",
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "type": "table",
     "ssl": true,
     "rating": 0.5490196078431373,
@@ -782,7 +741,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-18",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-19",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -908,27 +867,6 @@
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
     "stateId": "iso2:US-LA"
-  },
-  {
-    "state": "Maryland",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://health.maryland.gov/",
-        "name": "Maryland Department of Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "csv",
-    "url": "https://opendata.arcgis.com/datasets/fd5f93bf49cf4b35b330d6f500c1e8e6_0.csv",
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MD"
   },
   {
     "url": "https://opendata.arcgis.com/datasets/969678bce431494a8f64d7faade6e5b8_0.csv",
@@ -1285,7 +1223,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-17-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1483,6 +1421,47 @@
     "countryId": "iso1:CZ"
   },
   {
+    "country": "Spain",
+    "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
+    "priority": 1,
+    "timeseries": true,
+    "type": "csv",
+    "aggregate": "state",
+    "sources": [
+      {
+        "name": "Ministerio de Sanidad",
+        "url": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/situacionActual.htm",
+        "description": "Government of Spain, Ministry of Health"
+      },
+      {
+        "name": "Departamento de Seguridad Nacional",
+        "url": "https://www.dsn.gob.es/gl/current-affairs/press-room",
+        "description": "Government of Spain, Department of National Security"
+      }
+    ],
+    "curators": [
+      {
+        "name": "Antonio Delgado",
+        "url": "https://datadista.com/",
+        "twitter": "@adelgado",
+        "github": "adelgadob"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Herb Caudill",
+        "url": "https://devresults.com",
+        "twitter": "@herbcaudill",
+        "github": "herbcaudill"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:ES"
+  },
+  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "timeseries": true,
@@ -1532,35 +1511,6 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:PL"
-  },
-  {
-    "state": "Washington, D.C.",
-    "country": "United States",
-    "county": "District of Columbia",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "DC Public Health Laboratory"
-      }
-    ],
-    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
-    "type": "csv",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-DC"
   },
   {
     "country": "Lithuania",
@@ -2152,6 +2102,39 @@
     "rating": 0.29411764705882354,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-VIC"
+  },
+  {
+    "country": "Puerto Rico",
+    "type": "table",
+    "timeseries": false,
+    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
+    "sources": [
+      {
+        "url": "http://www.salud.gov.pr/",
+        "name": "Gobierno de Puerto Rico Departamento de Salud"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Jacob McGowan",
+        "github": "jacobmcgowan"
+      },
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": false,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:PR"
   },
   {
     "country": "Cyprus",
