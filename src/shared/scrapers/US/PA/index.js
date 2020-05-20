@@ -294,7 +294,7 @@ const scraper = {
       counties = geography.addEmptyRegions(counties, this._counties, 'county');
       return counties;
     },
-    '2020-05-19': async function scraper() {
+    '2020-05-18': async function scraper() {
       // Data is split across two pages.
       const allCounties = {};
 
