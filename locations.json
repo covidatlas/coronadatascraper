@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-19",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-20",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -9023,6 +9023,42 @@
     "stateId": "iso2:UA-30",
     "name": "Kyiv, Ukraine",
     "level": "state"
+  },
+  {
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "rating": 0.39215686274509803,
+    "coordinates": [
+      -77.0145,
+      38.894000000000005
+    ],
+    "tz": [
+      "America/New_York"
+    ],
+    "featureId": "fips:11001",
+    "population": 705749,
+    "populationDensity": 3980.1625086008685,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC",
+    "countyId": "fips:11001",
+    "name": "District of Columbia, Washington, D.C., United States",
+    "level": "county"
   },
   {
     "county": "Washoe County",
@@ -21341,7 +21377,7 @@
       }
     ],
     "county": "Sutter County",
-    "rating": 0.7843137254901961,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -121.681,
       39.0205
@@ -21558,7 +21594,7 @@
       }
     ],
     "county": "Yuba County",
-    "rating": 0.7843137254901961,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -121.32249999999999,
       39.2785
@@ -23367,37 +23403,6 @@
     "stateId": "iso2:US-DE",
     "countyId": "fips:10005",
     "name": "Sussex County, Delaware, United States",
-    "level": "county"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
-      }
-    ],
-    "county": "District of Columbia",
-    "state": "Washington, D.C.",
-    "rating": 0.6274509803921569,
-    "coordinates": [
-      -77.0145,
-      38.894000000000005
-    ],
-    "tz": [
-      "America/New_York"
-    ],
-    "featureId": "fips:11001",
-    "population": 705749,
-    "populationDensity": 3980.1625086008685,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-DC",
-    "countyId": "fips:11001",
-    "name": "District of Columbia, Washington, D.C., United States",
     "level": "county"
   },
   {
@@ -61037,7 +61042,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-19T20:26:08.978Z",
+    "publishedDate": "2020-05-20T18:12:00.769Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61076,7 +61081,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-05-19T19:59:04.026Z",
+    "publishedDate": "2020-05-20T18:05:57.122Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61115,7 +61120,7 @@
       }
     ],
     "county": "Atchison County",
-    "publishedDate": "2020-05-01T22:03:42.256Z",
+    "publishedDate": "2020-05-20T18:06:01.138Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -95.4765,
@@ -61154,7 +61159,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-05-19T19:59:37.639Z",
+    "publishedDate": "2020-05-20T18:06:05.221Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61427,7 +61432,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-19T19:59:47.239Z",
+    "publishedDate": "2020-05-20T18:06:16.803Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61466,7 +61471,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-05-19T19:59:50.606Z",
+    "publishedDate": "2020-05-20T18:06:21.421Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61505,7 +61510,7 @@
       }
     ],
     "county": "Caldwell County",
-    "publishedDate": "2020-05-18T18:31:40.183Z",
+    "publishedDate": "2020-05-20T18:06:37.500Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.983,
@@ -61622,7 +61627,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-18T18:31:52.564Z",
+    "publishedDate": "2020-05-20T18:06:46.083Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61739,7 +61744,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-05-19T20:01:00.512Z",
+    "publishedDate": "2020-05-20T18:06:59.223Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61934,7 +61939,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-19T20:01:08.174Z",
+    "publishedDate": "2020-05-20T18:07:06.405Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -61973,7 +61978,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-05-17T17:58:10.519Z",
+    "publishedDate": "2020-05-20T18:07:10.120Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62168,7 +62173,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-05-19T20:01:22.862Z",
+    "publishedDate": "2020-05-20T18:07:26.290Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62246,7 +62251,7 @@
       }
     ],
     "county": "DeKalb County",
-    "publishedDate": "2020-05-12T19:17:53.937Z",
+    "publishedDate": "2020-05-20T18:07:33.304Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62402,7 +62407,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-18T18:32:22.934Z",
+    "publishedDate": "2020-05-20T18:12:28.798Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62480,7 +62485,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-05-17T17:58:27.657Z",
+    "publishedDate": "2020-05-20T18:07:47.089Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62519,7 +62524,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-19T20:01:40.663Z",
+    "publishedDate": "2020-05-20T18:07:52.510Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62870,7 +62875,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-19T20:01:56.413Z",
+    "publishedDate": "2020-05-20T18:12:40.775Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62948,7 +62953,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-19T20:02:00.150Z",
+    "publishedDate": "2020-05-20T18:08:15.694Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63104,7 +63109,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-18T18:33:01.400Z",
+    "publishedDate": "2020-05-20T18:08:26.570Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63143,7 +63148,7 @@
       }
     ],
     "county": "Lawrence County",
-    "publishedDate": "2020-05-19T20:02:11.128Z",
+    "publishedDate": "2020-05-20T18:08:29.859Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.834,
@@ -63767,7 +63772,7 @@
       }
     ],
     "county": "Morgan County",
-    "publishedDate": "2020-05-16T18:58:24.726Z",
+    "publishedDate": "2020-05-20T19:09:25.253Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.8515,
@@ -63884,7 +63889,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-05-19T20:02:38.661Z",
+    "publishedDate": "2020-05-20T18:09:13.187Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -64235,7 +64240,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-19T20:23:13.587Z",
+    "publishedDate": "2020-05-20T18:09:31.048Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64547,7 +64552,7 @@
       }
     ],
     "county": "Ripley County",
-    "publishedDate": "2020-05-18T18:35:22.556Z",
+    "publishedDate": "2020-05-20T18:17:53.140Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.851,
@@ -64586,7 +64591,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-19T20:23:29.670Z",
+    "publishedDate": "2020-05-20T18:13:44.125Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64625,7 +64630,7 @@
       }
     ],
     "county": "St. Clair County",
-    "publishedDate": "2020-05-19T20:23:33.508Z",
+    "publishedDate": "2020-05-20T18:10:13.061Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7815,
@@ -64703,7 +64708,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-05-15T18:54:43.217Z",
+    "publishedDate": "2020-05-20T18:10:17.261Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64744,7 +64749,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-19T15:00:00.000Z",
+    "publishedDate": "2020-05-20T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64783,7 +64788,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-19T20:23:21.608Z",
+    "publishedDate": "2020-05-20T18:09:50.012Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64900,7 +64905,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-19T20:23:26.175Z",
+    "publishedDate": "2020-05-20T18:13:39.745Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65017,7 +65022,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-19T22:08:37.471Z",
+    "publishedDate": "2020-05-20T18:13:59.914Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65212,7 +65217,7 @@
       }
     ],
     "county": "Vernon County",
-    "publishedDate": "2020-05-16T18:59:35.502Z",
+    "publishedDate": "2020-05-20T18:10:44.110Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.338,
@@ -65485,7 +65490,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-19T20:23:42.395Z",
+    "publishedDate": "2020-05-20T18:13:52.847Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -84327,18 +84332,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Adams County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.213,
       39.894999999999996
@@ -84356,18 +84363,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Allegheny County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.025,
       40.4345
@@ -84385,18 +84394,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Armstrong County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.4515,
       40.848
@@ -84414,18 +84425,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Beaver County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.332,
       40.666
@@ -84443,18 +84456,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bedford County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.4715,
       40.025
@@ -84472,18 +84487,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Berks County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.985,
       40.407
@@ -84501,18 +84518,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Blair County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.36850000000001,
       40.4925
@@ -84530,18 +84549,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bradford County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.521,
       41.7715
@@ -84559,18 +84580,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bucks County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.103,
       40.329
@@ -84588,18 +84611,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Butler County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.92750000000001,
       40.921
@@ -84617,18 +84642,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cambria County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.703,
       40.484
@@ -84646,18 +84673,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cameron County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2045,
       41.417500000000004
@@ -84675,18 +84704,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Carbon County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.7355,
       40.9345
@@ -84704,18 +84735,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Centre County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.76050000000001,
       40.9725
@@ -84733,18 +84766,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Chester County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.7485,
       39.9835
@@ -84762,18 +84797,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clarion County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.452,
       41.2025
@@ -84791,18 +84828,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clearfield County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.422,
       40.989
@@ -84820,18 +84859,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clinton County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.61850000000001,
       41.221000000000004
@@ -84849,18 +84890,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Columbia County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4245,
       41.043000000000006
@@ -84878,18 +84921,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Crawford County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.0655,
       41.666
@@ -84907,18 +84952,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cumberland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2435,
       40.136
@@ -84936,18 +84983,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Dauphin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.782,
       40.388999999999996
@@ -84965,18 +85014,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Delaware County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.4045,
       39.934
@@ -84994,18 +85045,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Elk County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.66499999999999,
       41.416
@@ -85023,18 +85076,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Erie County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.065,
       42.0595
@@ -85052,18 +85107,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fayette County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.6515,
       39.9325
@@ -85081,18 +85138,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Forest County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.239,
       41.4755
@@ -85110,18 +85169,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Franklin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.7765,
       40.004999999999995
@@ -85139,18 +85200,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fulton County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.1225,
       39.9435
@@ -85168,18 +85231,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Greene County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.2115,
       39.870999999999995
@@ -85197,18 +85262,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Huntingdon County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.96700000000001,
       40.403
@@ -85226,18 +85293,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Indiana County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.12950000000001,
       40.641000000000005
@@ -85255,18 +85324,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Jefferson County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.9625,
       41.1415
@@ -85284,18 +85355,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Juniata County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.346,
       40.479
@@ -85313,18 +85386,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lackawanna County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.638,
       41.4015
@@ -85342,18 +85417,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lancaster County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.2975,
       40.019000000000005
@@ -85371,18 +85448,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lawrence County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.3085,
       40.9895
@@ -85400,18 +85479,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lebanon County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4145,
       40.376000000000005
@@ -85429,18 +85510,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lehigh County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.61250000000001,
       40.6025
@@ -85458,18 +85541,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Luzerne County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.9605,
       41.164500000000004
@@ -85487,18 +85572,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lycoming County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.0235,
       41.333
@@ -85516,18 +85603,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "McKean County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.5795,
       41.801
@@ -85545,18 +85634,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mercer County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.2595,
       41.281
@@ -85574,18 +85665,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mifflin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.601,
       40.604
@@ -85603,18 +85696,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Monroe County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.30850000000001,
       41.033500000000004
@@ -85632,18 +85727,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montgomery County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.356,
       40.212
@@ -85661,18 +85758,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montour County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.65299999999999,
       41.0275
@@ -85690,18 +85789,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northampton County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.33,
       40.7525
@@ -85719,18 +85820,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northumberland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.6645,
       40.8895
@@ -85748,18 +85851,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Perry County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2935,
       40.4065
@@ -85777,18 +85882,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Philadelphia County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.118,
       40.001999999999995
@@ -85806,18 +85913,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Pike County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.02449999999999,
       41.340999999999994
@@ -85835,18 +85944,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Potter County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.9025,
       41.7375
@@ -85864,18 +85975,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Schuylkill County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.22999999999999,
       40.723
@@ -85893,18 +86006,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Snyder County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.078,
       40.762
@@ -85922,18 +86037,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Somerset County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.03800000000001,
       40.003
@@ -85951,18 +86068,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Sullivan County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.517,
       41.43300000000001
@@ -85980,18 +86099,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Susquehanna County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.804,
       41.82
@@ -86009,18 +86130,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Tioga County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2425,
       41.772000000000006
@@ -86038,18 +86161,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Union County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.082,
       40.978
@@ -86067,18 +86192,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Venango County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.739,
       41.3985
@@ -86096,18 +86223,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Warren County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.2645,
       41.811
@@ -86125,18 +86254,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Washington County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.179,
       40.215
@@ -86154,18 +86285,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wayne County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.275,
       41.616
@@ -86183,18 +86316,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Westmoreland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.43950000000001,
       40.36
@@ -86212,18 +86347,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wyoming County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.0015,
       41.5145
@@ -86241,18 +86378,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "York County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.6885,
       39.973
@@ -90739,31 +90878,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hancock County",
     "state": "Tennessee",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -83.151,
       36.492999999999995
@@ -98016,31 +98144,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Mills County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.631,
       31.4775
@@ -99269,31 +99386,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "San Saba County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.7535,
       31.206
@@ -103469,7 +103575,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Barbour County",
     "rating": 0.37254901960784315,
@@ -103498,7 +103604,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Berkeley County",
     "rating": 0.37254901960784315,
@@ -103527,7 +103633,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Boone County",
     "rating": 0.37254901960784315,
@@ -103556,7 +103662,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Braxton County",
     "rating": 0.37254901960784315,
@@ -103585,7 +103691,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Brooke County",
     "rating": 0.37254901960784315,
@@ -103614,7 +103720,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Cabell County",
     "rating": 0.37254901960784315,
@@ -103643,7 +103749,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Calhoun County",
     "rating": 0.37254901960784315,
@@ -103672,7 +103778,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Clay County",
     "rating": 0.37254901960784315,
@@ -103701,7 +103807,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Doddridge County",
     "rating": 0.37254901960784315,
@@ -103730,7 +103836,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Fayette County",
     "rating": 0.37254901960784315,
@@ -103759,7 +103865,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Gilmer County",
     "rating": 0.37254901960784315,
@@ -103788,7 +103894,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Grant County",
     "rating": 0.37254901960784315,
@@ -103817,7 +103923,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Greenbrier County",
     "rating": 0.37254901960784315,
@@ -103846,7 +103952,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hampshire County",
     "rating": 0.37254901960784315,
@@ -103875,7 +103981,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hancock County",
     "rating": 0.37254901960784315,
@@ -103904,7 +104010,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hardy County",
     "rating": 0.37254901960784315,
@@ -103933,7 +104039,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Harrison County",
     "rating": 0.37254901960784315,
@@ -103962,7 +104068,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jackson County",
     "rating": 0.37254901960784315,
@@ -103991,7 +104097,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jefferson County",
     "rating": 0.37254901960784315,
@@ -104020,7 +104126,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Kanawha County",
     "rating": 0.37254901960784315,
@@ -104049,7 +104155,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lewis County",
     "rating": 0.37254901960784315,
@@ -104078,7 +104184,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lincoln County",
     "rating": 0.37254901960784315,
@@ -104107,7 +104213,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Logan County",
     "rating": 0.37254901960784315,
@@ -104136,7 +104242,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "McDowell County",
     "rating": 0.37254901960784315,
@@ -104165,7 +104271,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marion County",
     "rating": 0.37254901960784315,
@@ -104194,7 +104300,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marshall County",
     "rating": 0.37254901960784315,
@@ -104223,7 +104329,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mason County",
     "rating": 0.37254901960784315,
@@ -104252,7 +104358,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mercer County",
     "rating": 0.37254901960784315,
@@ -104281,7 +104387,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mineral County",
     "rating": 0.37254901960784315,
@@ -104310,7 +104416,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mingo County",
     "rating": 0.37254901960784315,
@@ -104339,7 +104445,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monongalia County",
     "rating": 0.37254901960784315,
@@ -104368,7 +104474,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monroe County",
     "rating": 0.37254901960784315,
@@ -104397,7 +104503,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Morgan County",
     "rating": 0.37254901960784315,
@@ -104426,7 +104532,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Nicholas County",
     "rating": 0.37254901960784315,
@@ -104455,7 +104561,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ohio County",
     "rating": 0.37254901960784315,
@@ -104484,7 +104590,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pendleton County",
     "rating": 0.37254901960784315,
@@ -104513,7 +104619,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pleasants County",
     "rating": 0.37254901960784315,
@@ -104542,7 +104648,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pocahontas County",
     "rating": 0.37254901960784315,
@@ -104571,7 +104677,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Preston County",
     "rating": 0.37254901960784315,
@@ -104600,7 +104706,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Putnam County",
     "rating": 0.37254901960784315,
@@ -104629,7 +104735,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Raleigh County",
     "rating": 0.37254901960784315,
@@ -104658,7 +104764,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Randolph County",
     "rating": 0.37254901960784315,
@@ -104687,7 +104793,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ritchie County",
     "rating": 0.37254901960784315,
@@ -104716,7 +104822,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Roane County",
     "rating": 0.37254901960784315,
@@ -104745,7 +104851,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Summers County",
     "rating": 0.37254901960784315,
@@ -104774,7 +104880,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Taylor County",
     "rating": 0.37254901960784315,
@@ -104803,7 +104909,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tucker County",
     "rating": 0.37254901960784315,
@@ -104832,7 +104938,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tyler County",
     "rating": 0.37254901960784315,
@@ -104861,7 +104967,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Upshur County",
     "rating": 0.37254901960784315,
@@ -104890,7 +104996,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wayne County",
     "rating": 0.37254901960784315,
@@ -104919,7 +105025,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Webster County",
     "rating": 0.37254901960784315,
@@ -104948,7 +105054,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wetzel County",
     "rating": 0.37254901960784315,
@@ -104977,7 +105083,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wirt County",
     "rating": 0.37254901960784315,
@@ -105006,7 +105112,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wood County",
     "rating": 0.37254901960784315,
@@ -105035,7 +105141,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wyoming County",
     "rating": 0.37254901960784315,
@@ -109957,27 +110063,30 @@
     "level": "state"
   },
   {
-    "country": "Australia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
       {
-        "name": "Northern Territory Government - Coronavirus site",
-        "url": "https://coronavirus.nt.gov.au"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "state",
     "state": "Northern Territory",
-    "url": "https://coronavirus.nt.gov.au/",
-    "rating": 0.35294117647058826,
+    "rating": 0.5882352941176471,
     "coordinates": [
       133.4995,
       -18.485
@@ -113964,10 +114073,29 @@
     "level": "country"
   },
   {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "India",
-    "url": "https://www.mohfw.gov.in/",
-    "aggregate": "state",
-    "rating": 0.43137254901960786,
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       82.7945,
       21.214000000000002
@@ -133447,16 +133575,6 @@
     "aggregate": "state",
     "state": "Andhra Pradesh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      80.7645,
-      15.893999999999998
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-AP",
-    "population": 49386799,
-    "populationDensity": 301.22498525485634,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-AP",
     "name": "Andhra Pradesh, India",
@@ -133468,16 +133586,6 @@
     "aggregate": "state",
     "state": "Andaman and Nicobar Islands",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      93.0755,
-      10.1655
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-AN",
-    "population": 356152,
-    "populationDensity": 50.20375583533466,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-AN",
     "name": "Andaman and Nicobar Islands, India",
@@ -133489,16 +133597,6 @@
     "aggregate": "state",
     "state": "Bihar",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      85.8065,
-      25.9185
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-BR",
-    "population": 104099452,
-    "populationDensity": 1100.6334009709894,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-BR",
     "name": "Bihar, India",
@@ -133510,16 +133608,6 @@
     "aggregate": "state",
     "state": "Chandigarh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      76.776,
-      30.7285
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-CH",
-    "population": 1055450,
-    "populationDensity": 8752.319054652118,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-CH",
     "name": "Chandigarh, India",
@@ -133531,16 +133619,6 @@
     "aggregate": "state",
     "state": "Chhattisgarh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      82.3255,
-      20.942
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-CT",
-    "population": 25545198,
-    "populationDensity": 188.08219095806598,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-CT",
     "name": "Chhattisgarh, India",
@@ -133552,16 +133630,6 @@
     "aggregate": "state",
     "state": "Delhi",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      77.09299999999999,
-      28.6425
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-DL",
-    "population": 26495000,
-    "populationDensity": 18010.738016085485,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-DL",
     "name": "Delhi, India",
@@ -133573,16 +133641,6 @@
     "aggregate": "state",
     "state": "Goa",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      74.0075,
-      15.3505
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-GA",
-    "population": 1458545,
-    "populationDensity": 399.1889009232754,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-GA",
     "name": "Goa, India",
@@ -133594,16 +133652,6 @@
     "aggregate": "state",
     "state": "Gujarat",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      71.3355,
-      22.415999999999997
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-GJ",
-    "population": 60383628,
-    "populationDensity": 331.3140744784306,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-GJ",
     "name": "Gujarat, India",
@@ -133615,16 +133663,6 @@
     "aggregate": "state",
     "state": "Haryana",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      76.0325,
-      29.29
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-HR",
-    "population": 27761063,
-    "populationDensity": 625.1413514304053,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-HR",
     "name": "Haryana, India",
@@ -133636,16 +133674,6 @@
     "aggregate": "state",
     "state": "Himachal Pradesh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      77.3005,
-      31.817500000000003
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-HP",
-    "population": 6864602,
-    "populationDensity": 122.90687311227084,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-HP",
     "name": "Himachal Pradesh, India",
@@ -133657,16 +133685,6 @@
     "aggregate": "state",
     "state": "Jammu and Kashmir",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      75.263,
-      33.531499999999994
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-JK",
-    "population": 12258433,
-    "populationDensity": 288.6175914091622,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-JK",
     "name": "Jammu and Kashmir, India",
@@ -133678,16 +133696,6 @@
     "aggregate": "state",
     "state": "Karnataka",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      76.336,
-      15.028
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-KA",
-    "population": 61095297,
-    "populationDensity": 316.6900180850645,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-KA",
     "name": "Karnataka, India",
@@ -133699,16 +133707,6 @@
     "aggregate": "state",
     "state": "Kerala",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      76.132,
-      10.5425
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-KL",
-    "population": 34523726,
-    "populationDensity": 883.033673999917,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-KL",
     "name": "Kerala, India",
@@ -133720,16 +133718,6 @@
     "aggregate": "state",
     "state": "Ladakh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      77.4135,
-      34.003
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-LA",
-    "population": 274289,
-    "populationDensity": 4.225384518811096,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-LA",
     "name": "Ladakh, India",
@@ -133741,16 +133729,6 @@
     "aggregate": "state",
     "state": "Madhya Pradesh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      78.42,
-      23.9705
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-MP",
-    "population": 72597565,
-    "populationDensity": 234.34023601341434,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-MP",
     "name": "Madhya Pradesh, India",
@@ -133762,16 +133740,6 @@
     "aggregate": "state",
     "state": "Maharashtra",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      76.7795,
-      18.818
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-MH",
-    "population": 112374333,
-    "populationDensity": 363.8469627698885,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-MH",
     "name": "Maharashtra, India",
@@ -133783,16 +133751,6 @@
     "aggregate": "state",
     "state": "Manipur",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      93.86850000000001,
-      24.762999999999998
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-MN",
-    "population": 2855794,
-    "populationDensity": 127.25831164578362,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-MN",
     "name": "Manipur, India",
@@ -133804,16 +133762,6 @@
     "aggregate": "state",
     "state": "Mizoram",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      92.8485,
-      23.242
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-MZ",
-    "population": 1097206,
-    "populationDensity": 51.896794003445955,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-MZ",
     "name": "Mizoram, India",
@@ -133825,16 +133773,6 @@
     "aggregate": "state",
     "state": "Odisha",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      84.437,
-      20.1815
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-OR",
-    "population": 41974218,
-    "populationDensity": 268.5525706512412,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-OR",
     "name": "Odisha, India",
@@ -133846,16 +133784,6 @@
     "aggregate": "state",
     "state": "Puducherry",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      80.9565,
-      13.7805
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-PY",
-    "population": 973829,
-    "populationDensity": 2024.5754809914731,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-PY",
     "name": "Puducherry, India",
@@ -133867,16 +133795,6 @@
     "aggregate": "state",
     "state": "Punjab",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      75.4125,
-      31.0285
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-PB",
-    "population": 27743338,
-    "populationDensity": 549.5786693124455,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-PB",
     "name": "Punjab, India",
@@ -133888,16 +133806,6 @@
     "aggregate": "state",
     "state": "Rajasthan",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      73.8775,
-      26.6295
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-RJ",
-    "population": 68548437,
-    "populationDensity": 199.52373014543303,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-RJ",
     "name": "Rajasthan, India",
@@ -133909,16 +133817,6 @@
     "aggregate": "state",
     "state": "Tamil Nadu",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      78.2915,
-      10.8205
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-TN",
-    "population": 72147030,
-    "populationDensity": 551.3209755054822,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-TN",
     "name": "Tamil Nadu, India",
@@ -133930,16 +133828,6 @@
     "aggregate": "state",
     "state": "Telangana",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      79.2805,
-      17.875
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-TG",
-    "population": 35193978,
-    "populationDensity": 312.1951085450627,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-TG",
     "name": "Telangana, India",
@@ -133951,16 +133839,6 @@
     "aggregate": "state",
     "state": "Uttarakhand",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      79.30250000000001,
-      30.0925
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-UT",
-    "population": 10086292,
-    "populationDensity": 188.26320127737947,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-UT",
     "name": "Uttarakhand, India",
@@ -133972,16 +133850,6 @@
     "aggregate": "state",
     "state": "Uttar Pradesh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      80.86250000000001,
-      27.137999999999998
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-UP",
-    "population": 199812341,
-    "populationDensity": 825.9833677354303,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-UP",
     "name": "Uttar Pradesh, India",
@@ -133993,16 +133861,6 @@
     "aggregate": "state",
     "state": "West Bengal",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      87.8445,
-      24.381999999999998
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-WB",
-    "population": 91276115,
-    "populationDensity": 1068.1907917098688,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-WB",
     "name": "West Bengal, India",
@@ -134862,16 +134720,6 @@
     "aggregate": "state",
     "state": "Assam",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      92.857,
-      26.054000000000002
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-AS",
-    "population": 31205576,
-    "populationDensity": 395.68615322958436,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-AS",
     "name": "Assam, India",
@@ -134883,16 +134731,6 @@
     "aggregate": "state",
     "state": "Jharkhand",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      85.64500000000001,
-      23.6535
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-JH",
-    "population": 32988134,
-    "populationDensity": 411.19810689452913,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-JH",
     "name": "Jharkhand, India",
@@ -134988,16 +134826,6 @@
     "aggregate": "state",
     "state": "Arunachal Pradesh",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      94.4785,
-      28.0165
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-AR",
-    "population": 1383727,
-    "populationDensity": 16.6029220242391,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-AR",
     "name": "Arunachal Pradesh, India",
@@ -135177,16 +135005,6 @@
     "aggregate": "state",
     "state": "Tripura",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      91.741,
-      23.743499999999997
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-TR",
-    "population": 3673917,
-    "populationDensity": 353.3728786656021,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-TR",
     "name": "Tripura, India",
@@ -139223,16 +139041,6 @@
     "aggregate": "state",
     "state": "Meghalaya",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      91.30799999999999,
-      25.575
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-ML",
-    "population": 3211000,
-    "populationDensity": 142.60179146455926,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-ML",
     "name": "Meghalaya, India",
@@ -141457,16 +141265,6 @@
     "aggregate": "state",
     "state": "Dadra and Nagar Haveli",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      73.071,
-      20.206
-    ],
-    "tz": [
-      "Asia/Kolkata"
-    ],
-    "featureId": "iso2:IN-DN",
-    "population": 342853,
-    "populationDensity": 683.4568253219834,
     "countryId": "iso1:IN",
     "stateId": "iso2:IN-DN",
     "name": "Dadra and Nagar Haveli, India",

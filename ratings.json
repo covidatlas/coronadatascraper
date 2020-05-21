@@ -446,27 +446,6 @@
     "stateId": "iso2:US-OR"
   },
   {
-    "state": "Pennsylvania",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
-    "type": "table",
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-PA"
-  },
-  {
     "state": "Wisconsin",
     "country": "United States",
     "aggregate": "county",
@@ -741,7 +720,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-19",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-20",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1049,19 +1028,6 @@
     "countryId": "iso1:US"
   },
   {
-    "country": "India",
-    "url": "https://www.mohfw.gov.in/",
-    "type": "table",
-    "aggregate": "state",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:IN"
-  },
-  {
     "state": "Georgia",
     "country": "United States",
     "url": "https://ga-covid19.ondemand.sas.com/",
@@ -1223,7 +1189,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-18-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-19-2020---5-PM.aspx",
     "type": "list",
     "aggregate": "county",
     "timeseries": false,
@@ -1354,6 +1320,30 @@
     "rating": 0.4117647058823529,
     "countryId": "iso1:US",
     "stateId": "iso2:US-AZ"
+  },
+  {
+    "county": "Orange County",
+    "state": "California",
+    "country": "United States",
+    "maintainers": [
+      {
+        "name": "John Bencina",
+        "github": "jbencina",
+        "country": "iso1:US",
+        "state": "CA",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://occovid19.ochealthinfo.com/coronavirus-in-oc",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "list",
+    "ssl": true,
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
   },
   {
     "state": "Minnesota",
@@ -1513,6 +1503,35 @@
     "countryId": "iso1:PL"
   },
   {
+    "state": "Washington, D.C.",
+    "country": "United States",
+    "county": "District of Columbia",
+    "maintainers": [
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": true,
+    "sources": [
+      {
+        "name": "DC Public Health Laboratory"
+      }
+    ],
+    "url": "https://coronavirus.dc.gov/page/coronavirus-data",
+    "type": "csv",
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-DC"
+  },
+  {
     "country": "Lithuania",
     "url": "https://services.arcgis.com/XdDVrnFqA9CT3JgB/arcgis/rest/services/covid_locations/FeatureServer/0/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
     "priority": 1,
@@ -1664,37 +1683,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-NSW"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "name": "Northern Territory Government - Coronavirus site",
-        "url": "https://coronavirus.nt.gov.au"
-      }
-    ],
-    "state": "Northern Territory",
-    "type": "table",
-    "url": "https://coronavirus.nt.gov.au/",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NT"
   },
   {
     "country": "Australia",
