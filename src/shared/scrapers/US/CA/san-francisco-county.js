@@ -38,9 +38,9 @@ const scraper = {
   },
   scraper: {
     '0': async function() {
-      const cases = await fetch.json(this, this._urls.cases, 'default', false);
-      const patients = await fetch.json(this, this._urls.patients, 'default', false);
-      const tests = await fetch.json(this, this._urls.tests, 'default', false);
+      const cases = await fetch.json(this, this._urls.cases, 'cases', false);
+      const patients = await fetch.json(this, this._urls.patients, 'patients', false);
+      const tests = await fetch.json(this, this._urls.tests, 'tests', false);
       const timeSeries = {};
       cases.reduceRight(
         (acc, cur) => {
