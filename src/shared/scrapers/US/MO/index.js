@@ -229,7 +229,7 @@ const scraper = {
 
     const orgId = 'Bd4MACzvEukoZ9mR';
     const layoutName = 'Daily_COVID19_Testing_Report_for_OPI';
-    const cumulativeResults = await fetch.queryArcGISJSON(this, 6, orgId, layoutName, queryParams);
+    const cumulativeResults = await fetch.queryArcGISJSON(this, 6, orgId, layoutName, queryParams, false);
     cumulativeResults.features.forEach(testFeatures => {
       const testRow = testFeatures.attributes;
       const countyName = testRow.county;
