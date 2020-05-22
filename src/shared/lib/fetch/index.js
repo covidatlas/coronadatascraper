@@ -293,3 +293,46 @@ export const getArcGISCSVURL = async function(scraper, serverNumber, dashboardId
   const { orgId } = dashboardManifest;
   return getArcGISCSVURLFromOrgId(scraper, serverNumber, orgId, layerName);
 };
+
+/**
+ * Get the full JSON response from arcGIS.  The query URL format is parameterized like this:
+ *  https://services{serverNumber:int}.arcgis.com/{orgId:string,alphanumeric}/arcgis/rest/services/{layerName:string}/FeatureServer/0/query
+ *
+ * You can browse the repository of layers within an orgId by going to URL: https://services{serverNumber}.arcgis.com/{orgId}/
+ * Once there, you can examine the various datasets / layers available for that organization.
+ *
+ * This function accumulates multiple pages of responses into the return object's "features" array.
+ *
+ * @param {*} scraper the scraper object
+ * @param {*} serverNumber the arcGIS server number (see format above)
+ * @param {*} orgId parameter for the arcGIS server request (see format above)
+ * @param {*} layerName parameter for the arcGIS server request (see format above)
+ * @param {*} options the request options, including the query where clause and any aggregation options
+ * @param {*} date the date of the request--populate this if caching is desired, otherwise set to false
+ * @param {*} cacheKey the key / namespace to use in generating the cache id
+ */
+export const queryArcGISJSON = async function(
+  scraper,
+  serverNumber,
+  orgId,
+  layerName,
+  options,
+  date,
+  cacheKey = 'default'
+) {
+  const url = `https://services${serverNumber}.arcgis.com/${orgId}/arcgis/rest/services/${layerName}/FeatureServer/0/query`;
+  let result = await json(scraper, url, cacheKey, date, options);
+  const rval = result;
+  log(`   Found ${rval.features.length} initial rows`);
+  while (result.exceededTransferLimit === true) {
+    const offset = rval.features.length;
+    log(`     querying next page at offset ${offset}`);
+    options.args.resultOffset = offset;
+    result = await json(scraper, url, 'default', false, options);
+    log(`     added ${result.features.length} rows`);
+    rval.features.push(...result.features);
+  }
+  log(`   Returning ${rval.features.length} total rows`);
+
+  return rval;
+};

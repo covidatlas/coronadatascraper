@@ -3,9 +3,27 @@ import * as parse from '../../../lib/parse.js';
 import * as transform from '../../../lib/transform.js';
 import * as geography from '../../../lib/geography/index.js';
 import datetime from '../../../lib/datetime/index.js';
+import { getYYYYMMDD } from '../../../lib/datetime/iso/format.js';
 
 // Set county to this if you only have state data, but this isn't the entire state
 const UNASSIGNED = '(unassigned)';
+
+// The testing data lists county names all in upper case and without the " County" suffix.
+// This function takes the prettified county list and punctuation map and builds an upper-case
+// map; e.g.: UPPER => Upper County
+function _generateUpperMap(counties, countyMap) {
+  const countySuffix = ' County';
+  const rval = {};
+  counties.forEach(element => {
+    const key = element.endsWith(countySuffix) ? element.substring(0, element.length - countySuffix.length) : element;
+    rval[key.toUpperCase()] = element;
+  });
+  Object.entries(countyMap).forEach(keyValue => {
+    const [key, value] = keyValue;
+    rval[key.toUpperCase()] = value;
+  });
+  return rval;
+}
 
 const scraper = {
   state: 'iso2:US-MO',
@@ -24,6 +42,14 @@ const scraper = {
       email: 'paul.boal@amitechsolutions.com',
       url: 'https://amitechsolutions.com',
       github: 'paulboal',
+      country: 'iso1:US',
+      flag: '🇺🇸'
+    },
+    {
+      name: 'David Cardon',
+      email: 'dcardon@artemishealth.com',
+      url: 'https://artemishealth.com',
+      github: 'davidcardonAH',
       country: 'iso1:US',
       flag: '🇺🇸'
     }
@@ -168,6 +194,59 @@ const scraper = {
 
     return countyName;
   },
+  // Missouri stores test result data separately from death and case counts, which are reported on / updated only
+  // daily as cumulative counts. This function downloads the cumulative testing counts for current scrape
+  // date.
+  async _applyTestingCounts(counties) {
+    const captureDate = new Date(datetime.scrapeDate() || getYYYYMMDD());
+
+    const queryParams = {
+      args: {
+        where: `test_date <= DATE '${getYYYYMMDD(captureDate)}'`,
+        groupByFieldsForStatistics: 'county,result',
+        outStatistics: `[{"statisticType":"count","onStatisticField":"*","outStatisticFieldName":"Count"}]`,
+        f: 'pjson',
+        resultRecordCount: 32000,
+        token: '',
+        sqlFormat: 'none',
+        time: '',
+        objectIds: '',
+        resultType: 'standard',
+        outFields: '',
+        returnIdsOnly: false,
+        returnUniqueIdsOnly: false,
+        returnCountOnly: false,
+        returnDistinctValues: false,
+        cacheHint: false,
+        orderByFields: '',
+        having: '',
+        resultOffset: 0
+      },
+      alwaysRun: true,
+      method: 'post',
+      open_timeout: 30000
+    };
+
+    const orgId = 'Bd4MACzvEukoZ9mR';
+    const layoutName = 'Daily_COVID19_Testing_Report_for_OPI';
+    const cumulativeResults = await fetch.queryArcGISJSON(this, 6, orgId, layoutName, queryParams);
+    cumulativeResults.features.forEach(testFeatures => {
+      const testRow = testFeatures.attributes;
+      const countyName = testRow.county;
+      const prettyCounty = this._upperCounties[countyName];
+      if (!(prettyCounty in counties)) {
+        counties[prettyCounty] = {
+          tested: 0,
+          positives: 0
+        };
+      } else if (!('tested' in counties[prettyCounty])) {
+        counties[prettyCounty].tested = 0;
+        counties[prettyCounty].positives = 0;
+      }
+      const testCount = testRow.Count;
+      counties[prettyCounty].tested += testCount;
+    });
+  },
   scraper: {
     '0': async function() {
       let counties = {};
@@ -198,6 +277,7 @@ const scraper = {
           }
         }
       });
+      await this._applyTestingCounts(counties);
 
       const countiesList = transform.objectToArray(counties);
       countiesList.push(transform.sumData(countiesList));
@@ -254,6 +334,7 @@ const scraper = {
           }
         });
       }
+      await this._applyTestingCounts(counties);
 
       const countiesList = transform.objectToArray(counties);
       countiesList.push(transform.sumData(countiesList));
@@ -301,6 +382,8 @@ const scraper = {
           }
         }
       }
+      await this._applyTestingCounts(counties);
+
       const countiesList = transform.objectToArray(counties);
       countiesList.push(unassigned);
       countiesList.push(transform.sumData(countiesList));
@@ -308,5 +391,7 @@ const scraper = {
     }
   }
 };
+
+scraper._upperCounties = _generateUpperMap(scraper._counties, scraper._countyMap);
 
 export default scraper;

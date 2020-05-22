@@ -431,7 +431,7 @@ You should run your source with the crawler by running `yarn start -l "<path to 
 
 The path to scraper should be the relative path under
 `src/shared/scrapers`; e.g., the scraper for Montana, USA would be
-"US/MO").
+"US/MT").
 
 After the crawler has finished running, look at how many counties, states, and countries were
 scraped. Also look for missing location or population information. Finally, look at the output located in the `dist` directory. `data.json` contains all the information

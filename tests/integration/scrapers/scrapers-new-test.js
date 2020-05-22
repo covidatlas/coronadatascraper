@@ -34,6 +34,7 @@ if (files) {
           const hasErrors = schema.schemaHasErrors(scraper.default, schema.schemas.scraperSchema);
           t.notOk(hasErrors, 'Scraper had no errors');
         } catch (err) {
+          console.log(err);
           t.fail(`Scraper failed with error: ${err}`);
         }
         t.end();
