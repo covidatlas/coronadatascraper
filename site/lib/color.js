@@ -144,7 +144,7 @@ export function getScaledColorValue(location, locationData, type, worstAffectedP
   return fill(percentRatio);
 }
 
-export function createLegend(min, max) {
+export function createLegend(min, max, legendType) {
   const base = document.getElementById('map');
   const containerId = 'mapLegend';
   const container = base.querySelector(`#${containerId}`) || document.createElement('div');
@@ -153,7 +153,7 @@ export function createLegend(min, max) {
 
   const heading = document.createElement('span');
   heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
-  heading.innerHTML = 'Percent of population infected';
+  heading.innerHTML = `Percent of population ${legendType}`;
   container.appendChild(heading);
 
   base.appendChild(container);

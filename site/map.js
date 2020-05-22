@@ -92,7 +92,7 @@ function setData() {
 }
 
 function updateMap(date, type) {
-  currentType = type || 'cases';
+  currentType = type || currentType;
   currentDate = date || Object.keys(data.timeseries).pop();
   currentData = data.timeseries[currentDate];
 
@@ -109,11 +109,12 @@ function updateMap(date, type) {
     if (location.population) {
       const locationData = currentData[index];
       if (locationData) {
-        const infectionPercent = locationData.cases / location.population;
+        const infectionPercent = locationData[currentType] / location.population;
         if (infectionPercent > worstAffectedPercent) {
           worstAffectedPercent = infectionPercent;
           highestLocation = location;
         }
+
         // Calculate least affected percent
         if (infectionPercent !== 0 && infectionPercent < lowestInfectionPercent) {
           lowestInfectionPercent = infectionPercent;
@@ -132,7 +133,7 @@ function updateMap(date, type) {
     if (location && location.population) {
       const locationData = currentData[locationId];
       if (locationData) {
-        if (locationData.cases === 0) {
+        if (locationData[currentType] === 0) {
           regionColor = color.noCasesColor;
         } else {
           regionColor = color.getScaledColorValue(location, locationData, currentType, worstAffectedPercent);
@@ -146,7 +147,7 @@ function updateMap(date, type) {
   console.log('Lowest infection', lowestLocation);
   console.log('Highest infection', highestLocation);
 
-  color.createLegend(chartDataMin, chartDataMax);
+  color.createLegend(chartDataMin, chartDataMax, currentType === 'deaths' ? 'passed away' : 'infected');
 
   setData();
 }
@@ -179,6 +180,12 @@ function populateMap() {
     if (location.population && locationData.cases) {
       htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)} (${getPercent(
         locationData.cases,
+        location.population
+      )})</td></tr>`;
+    }
+    if (location.population && locationData.deaths) {
+      htmlString += `<tr><th>Deaths:</th><td>${getRatio(locationData.deaths, location.population)} (${getPercent(
+        locationData.deaths,
         location.population
       )})</td></tr>`;
     }
@@ -331,6 +338,34 @@ function populateMap() {
   }
 
   map.addControl(new DateSelector(), 'top-right');
+
+  // Case thpe selector
+  class CaseTypeSelector {
+    onAdd() {
+      this._container = document.createElement('div');
+      this._container.className = 'mapboxgl-ctrl cds-MapControl';
+      this._container.innerHTML = `
+        <select>
+          <option value="cases">Cases</option>
+          <option value="deaths">Deaths</option>
+        </select>
+      `;
+
+      this._container.addEventListener('change', evt => {
+        const { target } = evt;
+        currentType = target.value;
+        updateMap(currentDate, currentType);
+      });
+
+      return this._container;
+    }
+
+    onRemove() {
+      this._container.parentNode.removeChild(this._container);
+    }
+  }
+
+  map.addControl(new CaseTypeSelector(), 'top-left');
 
   setData();
 
