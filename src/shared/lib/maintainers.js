@@ -86,6 +86,17 @@ const maintainers = {
     county: 'Ventura County',
     city: 'Ventura',
     flag: '🇺🇸'
+  },
+  '1ec5': {
+    name: 'Minh Nguyễn',
+    url: 'http://notes.1ec5.org/',
+    github: '1ec5',
+    twitter: '1ec5',
+    country: 'USA',
+    state: 'CA',
+    county: 'Santa Clara County',
+    city: 'San José',
+    flag: '🇺🇸'
   }
 };
 
