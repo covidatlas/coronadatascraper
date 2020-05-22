@@ -120,7 +120,11 @@ const scraper = {
       testUpdatedDate = new Date(testUpdatedDate && parseInt(testUpdatedDate[1], 10));
 
       const results = [caseDays.filter(d => d.date === scrapeDateString)[0]];
-      let currentResult;
+      let currentResult = {
+        date: scrapeDateString
+      };
+
+      // Add cases and deaths.
       if (scrapeDateString === datetime.getYYYYMMDD(updatedDate)) {
         // Fetch the current death toll and isolate the number.
         const deathsJSON = await fetch.json(this, `${this._urls.query}?deaths`, 'deaths', false, {
@@ -139,7 +143,7 @@ const scraper = {
           method: 'post',
           args: this._urls.postArgs.hospitalized
         });
-        const patients = patientsJSON.results
+        const hospitalized = patientsJSON.results
           .flatMap(r => r.result.data.dsr.DS)
           .flatMap(ds => ds.PH)
           .flatMap(ph => ph.DM0)
@@ -147,36 +151,34 @@ const scraper = {
           .filter(m0 => m0)[0];
 
         currentResult = {
-          date: datetime.getYYYYMMDD(updatedDate),
+          ...currentResult,
           // An accurate time series requires ignoring undated cases.
           cases: totalCases - (process.env.npm_lifecycle_event === 'timeseries' ? undatedCases : 0),
           deaths,
-          hospitalized: patients
+          hospitalized
         };
-        results.push(currentResult);
       }
+
+      // Add tested.
       if (scrapeDateString === datetime.getYYYYMMDD(testUpdatedDate)) {
         // Fetch the current number of tested patients and isolate the number.
         const testsJSON = await fetch.json(this, `${this._urls.query}?tested`, 'tested', false, {
           method: 'post',
           args: this._urls.postArgs.tested
         });
-        const tests = testsJSON.results
+        const tested = testsJSON.results
           .flatMap(r => r.result.data.dsr.DS)
           .flatMap(ds => ds.PH)
           .flatMap(ph => ph.DM0)
           .flatMap(dm0 => dm0.M0)
           .filter(m0 => m0)[0];
-
-        if (currentResult.date === datetime.getYYYYMMDD(testUpdatedDate)) {
-          currentResult.tested = tests;
-        } else {
-          results.push({
-            date: datetime.getYYYYMMDD(testUpdatedDate),
-            tested: tests
-          });
-        }
+        currentResult = {
+          ...currentResult,
+          tested
+        };
       }
+
+      results.push(currentResult);
 
       return results;
     }
