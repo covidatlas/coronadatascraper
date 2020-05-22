@@ -37,9 +37,8 @@ const scraper = {
     patients: 'https://data.sfgov.org/resource/nxjg-bhem.json',
     tests: 'https://data.sfgov.org/resource/nfpa-mg4g.json'
   },
-  _getScrapeDateString: (proposed, allDates) => {
+  _getScrapeDateBounds: (proposed, allDates) => {
     let scrapeDate = proposed;
-    let scrapeDateString = datetime.getYYYYMMDD(new Date(scrapeDate));
     const firstDateInTimeseries = new Date(allDates[0]);
     const lastDateInTimeseries = new Date(allDates.slice(-1)[0]);
 
@@ -50,13 +49,12 @@ const scraper = {
         )} is newer than last sample time ${datetime.getYYYYMMDD(lastDateInTimeseries)}. Using last sample anyway`
       );
       scrapeDate = lastDateInTimeseries;
-      scrapeDateString = datetime.getYYYYMMDD(scrapeDate);
     }
 
     if (datetime.scrapeDateIsBefore(firstDateInTimeseries)) {
       throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMMDD(scrapeDate)}`);
     }
-    return scrapeDateString;
+    return [firstDateInTimeseries, scrapeDate];
   },
   scraper: {
     '0': async function() {
@@ -119,32 +117,14 @@ const scraper = {
         .concat(tests.map(t => t.result_date))
         .sort() // Assuming that all follow same yyyy-mm-dd format!
         .map(s => s.split('T')[0]);
-
-      // const scrapeDateString = this._getScrapeDateString(datetime.scrapeDate() || new Date(), allDates);
-      let scrapeDate = datetime.scrapeDate() || new Date();
-      let scrapeDateString = datetime.getYYYYMMDD(new Date(scrapeDate));
-      const firstDateInTimeseries = new Date(allDates[0]);
-      const lastDateInTimeseries = new Date(allDates.slice(-1)[0]);
-
-      if (datetime.scrapeDateIsAfter(lastDateInTimeseries)) {
-        console.error(
-          `  🚨 timeseries for San Francisco County: SCRAPE_DATE ${datetime.getYYYYMMDD(
-            scrapeDate
-          )} is newer than last sample time ${datetime.getYYYYMMDD(lastDateInTimeseries)}. Using last sample anyway`
-        );
-        scrapeDate = lastDateInTimeseries;
-        scrapeDateString = datetime.getYYYYMMDD(scrapeDate);
-      }
-
-      if (datetime.scrapeDateIsBefore(firstDateInTimeseries)) {
-        throw new Error(`Timeseries starts later than SCRAPE_DATE ${datetime.getYYYYMMDD(scrapeDate)}`);
-      }
+      const [firstDate, scrapeDate] = this._getScrapeDateBounds(datetime.scrapeDate() || new Date(), allDates);
+      const scrapeDateString = datetime.getYYYYMMDD(scrapeDate);
 
       const timeSeries = {};
       let runningCases = 0;
       let runningDeaths = 0;
       let runningTested = 0;
-      for (let d = firstDateInTimeseries; datetime.getYYYYMMDD(d) <= scrapeDateString; d.setDate(d.getDate() + 1)) {
+      for (let d = firstDate; datetime.getYYYYMMDD(d) <= scrapeDateString; d.setDate(d.getDate() + 1)) {
         const currYYYYMMDD = datetime.getYYYYMMDD(d);
 
         runningCases += getCaseField(currYYYYMMDD, 'Confirmed');
