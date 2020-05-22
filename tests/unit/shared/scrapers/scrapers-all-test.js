@@ -45,11 +45,13 @@ const scraperCodeFiles = allJs.map(f => {
 function validateCodingConventions(t, lin) {
   // Having the fetch all one line helps with code instrumentation
   // (regex search-and-replace).
-  t.ok(lin.endsWith(');'), `"${lin}" ends with ');'`);
+  // disabled, no longer need this check, not regexing any more.
+  // t.ok(lin.endsWith(');'), `"${lin}" ends with ');'`);
 
   // Some places have fetch() within a larger expression, e.g.:
   // const casesData = (await fetch.csv(this.url, false)).filter(...);
   // Can't have that!
+  /*
   const fetchCheck = lin.match(/fetch.*?\(.*?\)(.*?);/);
   if (fetchCheck) {
     const afterParens = fetchCheck[1];
@@ -57,6 +59,7 @@ function validateCodingConventions(t, lin) {
   } else {
     t.fail(`Doesn't follow convention`);
   }
+  */
 
   // Each call should have the scraper object, the URL, and the
   // "cache key".
