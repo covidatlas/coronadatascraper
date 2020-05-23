@@ -86,6 +86,14 @@ const maintainers = {
     county: 'Ventura County',
     city: 'Ventura',
     flag: '🇺🇸'
+  },
+  sglyon: {
+    name: 'Spencer Lyon',
+    github: 'sglyon',
+    country: 'iso1:US',
+    state: 'FL',
+    county: 'Orange',
+    flag: '🇺🇸'
   }
 };
 
