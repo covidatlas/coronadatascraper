@@ -162,7 +162,7 @@ export const pdf = async (scraper, url, cacheKey = 'default', date, options) => 
   return data;
 };
 
-const fetchHeadless = async url => {
+export const fetchHeadlessPage = async (url, callback) => {
   log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
 
   const browser = await puppeteer.launch();
@@ -201,9 +201,9 @@ const fetchHeadless = async url => {
       // We got a good response, return it
       if (response.status() < 400) {
         await page.waitFor(RESPONSE_TIMEOUT);
-        const html = await page.content();
+        const out = callback(page);
         browser.close();
-        return html;
+        return out;
       }
 
       // 400-499 means "not found", retrying is not likely to help
@@ -221,6 +221,13 @@ const fetchHeadless = async url => {
 
   log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
+};
+
+const fetchHeadless = async url => {
+  return fetchHeadlessPage(url, async page => {
+    const html = await page.content();
+    return html;
+  });
 };
 
 /**
