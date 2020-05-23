@@ -9006,7 +9006,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-21",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-22",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -21428,7 +21428,7 @@
       }
     ],
     "county": "Trinity County",
-    "rating": 0.6274509803921569,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -123.035,
       40.671
@@ -49686,18 +49686,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Acadia Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.387,
       30.265
@@ -49715,18 +49717,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Allen Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.857,
       30.6615
@@ -49744,18 +49748,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Ascension Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.86949999999999,
       30.2035
@@ -49773,18 +49779,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Assumption Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.072,
       29.854
@@ -49802,18 +49810,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Avoyelles Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.97900000000001,
       31.0955
@@ -49831,18 +49841,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Beauregard Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.35849999999999,
       30.6425
@@ -49860,18 +49872,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Bienville Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.1005,
       32.366
@@ -49889,18 +49903,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Bossier Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.60900000000001,
       32.6275
@@ -49918,18 +49934,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Caddo Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.7525,
       32.6075
@@ -49947,18 +49965,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Calcasieu Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.32650000000001,
       30.264499999999998
@@ -49976,18 +49996,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Caldwell Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.09049999999999,
       32.102000000000004
@@ -50005,18 +50027,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Cameron Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.2715,
       29.819499999999998
@@ -50034,18 +50058,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Catahoula Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.77799999999999,
       31.597
@@ -50063,18 +50089,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Claiborne Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.982,
       32.801
@@ -50092,18 +50120,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Concordia Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.6225,
       31.366
@@ -50121,18 +50151,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "De Soto Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.69900000000001,
       32.094
@@ -50150,18 +50182,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "East Baton Rouge Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.0795,
       30.5175
@@ -50179,18 +50213,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "East Carroll Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.2305,
       32.7715
@@ -50208,18 +50244,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "East Feliciana Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.0735,
       30.825
@@ -50237,18 +50275,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Evangeline Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.402,
       30.740000000000002
@@ -50266,18 +50306,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Franklin Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.69200000000001,
       32.138999999999996
@@ -50295,18 +50337,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Grant Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.58500000000001,
       31.5925
@@ -50324,18 +50368,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Iberia Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.62700000000001,
       29.798000000000002
@@ -50353,18 +50399,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Iberville Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.36,
       30.261
@@ -50382,18 +50430,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Jackson Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.56700000000001,
       32.321
@@ -50411,18 +50461,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Jefferson Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.092,
       29.677
@@ -50440,18 +50492,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Jefferson Davis Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.857,
       30.2625
@@ -50469,18 +50523,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Lafayette Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.0955,
       30.209
@@ -50498,18 +50554,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Lafourche Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.503,
       29.493000000000002
@@ -50527,18 +50585,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "LaSalle Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.1945,
       31.625500000000002
@@ -50556,18 +50616,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Lincoln Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.648,
       32.6065
@@ -50585,18 +50647,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Livingston Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.733,
       30.4125
@@ -50614,18 +50678,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Madison Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.2165,
       32.341499999999996
@@ -50643,18 +50709,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Morehouse Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.761,
       32.757000000000005
@@ -50672,18 +50740,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Natchitoches Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.0795,
       31.747500000000002
@@ -50701,18 +50771,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Orleans Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -89.881,
       30.033
@@ -50730,18 +50802,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Ouachita Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.15950000000001,
       32.491
@@ -50759,18 +50833,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Plaquemines Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -89.53999999999999,
       29.4175
@@ -50788,18 +50864,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Pointe Coupee Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.566,
       30.750999999999998
@@ -50817,18 +50895,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Rapides Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.5265,
       31.204
@@ -50846,18 +50926,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Red River Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.368,
       32.0625
@@ -50875,18 +50957,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Richland Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.7325,
       32.4095
@@ -50904,18 +50988,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Sabine Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.5575,
       31.505499999999998
@@ -50933,18 +51019,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Bernard Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -89.4145,
       29.891
@@ -50962,18 +51050,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Charles Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.35849999999999,
       29.927500000000002
@@ -50991,18 +51081,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Helena Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.7385,
       30.8245
@@ -51020,18 +51112,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. James Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.803,
       30.0275
@@ -51049,18 +51143,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. John the Baptist Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.4215,
       30.091
@@ -51078,18 +51174,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Landry Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.086,
       30.5745
@@ -51107,18 +51205,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Martin Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.541,
       30.0985
@@ -51136,18 +51236,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Mary Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.482,
       29.674
@@ -51165,18 +51267,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "St. Tammany Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -89.89150000000001,
       30.430999999999997
@@ -51194,18 +51298,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Tangipahoa Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.364,
       30.617
@@ -51223,18 +51329,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Tensas Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.3045,
       31.991
@@ -51252,18 +51360,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Terrebonne Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.854,
       29.408
@@ -51281,18 +51391,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Union Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.39349999999999,
       32.7975
@@ -51310,18 +51422,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Vermilion Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.3515,
       29.84
@@ -51339,18 +51453,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Vernon Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.19800000000001,
       31.112000000000002
@@ -51368,18 +51484,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Washington Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.037,
       30.835
@@ -51397,18 +51515,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Webster Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.338,
       32.7145
@@ -51426,18 +51546,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "West Baton Rouge Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.3135,
       30.490499999999997
@@ -51455,18 +51577,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "West Carroll Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.452,
       32.794
@@ -51484,18 +51608,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "West Feliciana Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.463,
       30.849
@@ -51513,18 +51639,20 @@
     "level": "county"
   },
   {
-    "state": "Louisiana",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "http://ldh.la.gov/",
-        "name": "Louisiana Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://services5.arcgis.com/O5K6bb5dZVZcTo5M/arcgis/rest/services/Cases_by_Parish_2/FeatureServer/0/query?f=json&where=PFIPS%20%3C%3E%2099999&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Deaths%20desc%2CCases%20desc%2CParish%20asc&resultOffset=0&resultRecordCount=65&cacheHint=true",
     "county": "Winn Parish",
-    "rating": 0.49019607843137253,
+    "state": "Louisiana",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.644,
       31.9285
@@ -61031,7 +61159,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-21T18:30:55.019Z",
+    "publishedDate": "2020-05-22T18:25:45.266Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61148,7 +61276,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-05-21T18:18:49.552Z",
+    "publishedDate": "2020-05-22T18:20:15.135Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61187,7 +61315,7 @@
       }
     ],
     "county": "Barry County",
-    "publishedDate": "2020-05-21T18:20:35.752Z",
+    "publishedDate": "2020-05-22T18:20:18.885Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8255,
@@ -61343,7 +61471,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-05-21T18:20:43.596Z",
+    "publishedDate": "2020-05-22T18:20:24.488Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61382,7 +61510,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-05-21T18:20:48.581Z",
+    "publishedDate": "2020-05-22T18:20:31.879Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61421,7 +61549,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-21T18:20:53.121Z",
+    "publishedDate": "2020-05-22T18:20:39.111Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61616,7 +61744,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-21T18:21:02.032Z",
+    "publishedDate": "2020-05-22T18:20:50.083Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61733,7 +61861,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-05-21T18:21:08.716Z",
+    "publishedDate": "2020-05-22T18:20:54.495Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61928,7 +62056,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-21T18:21:15.547Z",
+    "publishedDate": "2020-05-22T18:21:01.091Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62006,7 +62134,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-05-19T20:01:13.203Z",
+    "publishedDate": "2020-05-22T18:21:06.339Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -62201,7 +62329,7 @@
       }
     ],
     "county": "Daviess County",
-    "publishedDate": "2020-05-02T19:15:39.631Z",
+    "publishedDate": "2020-05-22T18:21:15.388Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.989,
@@ -62396,7 +62524,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-21T18:21:39.717Z",
+    "publishedDate": "2020-05-22T18:26:07.727Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62474,7 +62602,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-05-20T18:07:47.089Z",
+    "publishedDate": "2020-05-22T18:21:31.249Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62513,7 +62641,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-21T18:31:17.088Z",
+    "publishedDate": "2020-05-22T18:21:34.370Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62591,7 +62719,7 @@
       }
     ],
     "county": "Harrison County",
-    "publishedDate": "2020-05-21T18:21:45.352Z",
+    "publishedDate": "2020-05-22T18:21:38.668Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9975,
@@ -62630,7 +62758,7 @@
       }
     ],
     "county": "Henry County",
-    "publishedDate": "2020-05-08T21:15:07.050Z",
+    "publishedDate": "2020-05-22T18:26:16.360Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.793,
@@ -62864,7 +62992,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-21T18:31:30.929Z",
+    "publishedDate": "2020-05-22T18:21:46.995Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62903,7 +63031,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-05-12T19:18:52.574Z",
+    "publishedDate": "2020-05-22T18:21:49.935Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -62942,7 +63070,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-21T18:31:35.487Z",
+    "publishedDate": "2020-05-22T18:21:52.956Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -62981,7 +63109,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-05-18T18:32:44.595Z",
+    "publishedDate": "2020-05-22T18:21:56.224Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63332,7 +63460,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-05-19T20:02:25.866Z",
+    "publishedDate": "2020-05-22T18:22:47.242Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63605,7 +63733,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-05-21T18:24:51.041Z",
+    "publishedDate": "2020-05-22T18:22:54.724Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63800,7 +63928,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-05-18T18:40:10.395Z",
+    "publishedDate": "2020-05-22T18:23:03.645Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -64034,7 +64162,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-05-19T20:02:44.188Z",
+    "publishedDate": "2020-05-22T18:26:37.998Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64151,7 +64279,7 @@
       }
     ],
     "county": "Phelps County",
-    "publishedDate": "2020-05-19T22:06:58.066Z",
+    "publishedDate": "2020-05-22T18:23:44.470Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.777,
@@ -64229,7 +64357,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-21T18:31:47.867Z",
+    "publishedDate": "2020-05-22T18:23:48.938Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64463,7 +64591,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-05-18T18:35:05.211Z",
+    "publishedDate": "2020-05-22T18:23:59.924Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -64580,7 +64708,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-21T18:32:00.223Z",
+    "publishedDate": "2020-05-22T18:24:23.082Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64697,7 +64825,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-05-20T18:10:17.261Z",
+    "publishedDate": "2020-05-22T18:24:27.327Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64738,7 +64866,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-21T14:00:00.000Z",
+    "publishedDate": "2020-05-22T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64777,7 +64905,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-20T18:09:50.012Z",
+    "publishedDate": "2020-05-22T18:24:05.449Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64894,7 +65022,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-21T18:26:08.668Z",
+    "publishedDate": "2020-05-22T18:24:18.198Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65011,7 +65139,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-21T18:32:21.120Z",
+    "publishedDate": "2020-05-22T18:24:40.635Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65089,7 +65217,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-05-21T18:26:37.181Z",
+    "publishedDate": "2020-05-22T18:24:45.428Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65479,7 +65607,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-21T18:32:07.767Z",
+    "publishedDate": "2020-05-22T18:26:48.740Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -84321,18 +84449,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Adams County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.213,
       39.894999999999996
@@ -84350,18 +84480,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Allegheny County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.025,
       40.4345
@@ -84379,18 +84511,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Armstrong County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.4515,
       40.848
@@ -84408,18 +84542,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Beaver County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.332,
       40.666
@@ -84437,18 +84573,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bedford County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.4715,
       40.025
@@ -84466,18 +84604,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Berks County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.985,
       40.407
@@ -84495,18 +84635,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Blair County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.36850000000001,
       40.4925
@@ -84524,18 +84666,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bradford County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.521,
       41.7715
@@ -84553,18 +84697,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bucks County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.103,
       40.329
@@ -84582,18 +84728,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Butler County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.92750000000001,
       40.921
@@ -84611,18 +84759,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cambria County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.703,
       40.484
@@ -84640,18 +84790,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cameron County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.2045,
       41.417500000000004
@@ -84669,18 +84821,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Carbon County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.7355,
       40.9345
@@ -84698,18 +84852,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Centre County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.76050000000001,
       40.9725
@@ -84727,18 +84883,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Chester County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.7485,
       39.9835
@@ -84756,18 +84914,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clarion County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.452,
       41.2025
@@ -84785,18 +84945,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clearfield County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.422,
       40.989
@@ -84814,18 +84976,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clinton County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.61850000000001,
       41.221000000000004
@@ -84843,18 +85007,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Columbia County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4245,
       41.043000000000006
@@ -84872,18 +85038,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Crawford County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.0655,
       41.666
@@ -84901,18 +85069,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cumberland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2435,
       40.136
@@ -84930,18 +85100,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Dauphin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.782,
       40.388999999999996
@@ -84959,18 +85131,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Delaware County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.4045,
       39.934
@@ -84988,18 +85162,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Elk County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.66499999999999,
       41.416
@@ -85017,18 +85193,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Erie County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.065,
       42.0595
@@ -85046,18 +85224,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fayette County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.6515,
       39.9325
@@ -85075,18 +85255,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Forest County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.239,
       41.4755
@@ -85104,18 +85286,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Franklin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.7765,
       40.004999999999995
@@ -85133,18 +85317,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fulton County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.1225,
       39.9435
@@ -85162,18 +85348,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Greene County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.2115,
       39.870999999999995
@@ -85191,18 +85379,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Huntingdon County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.96700000000001,
       40.403
@@ -85220,18 +85410,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Indiana County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.12950000000001,
       40.641000000000005
@@ -85249,18 +85441,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Jefferson County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.9625,
       41.1415
@@ -85278,18 +85472,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Juniata County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.346,
       40.479
@@ -85307,18 +85503,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lackawanna County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.638,
       41.4015
@@ -85336,18 +85534,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lancaster County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.2975,
       40.019000000000005
@@ -85365,18 +85565,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lawrence County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.3085,
       40.9895
@@ -85394,18 +85596,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lebanon County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4145,
       40.376000000000005
@@ -85423,18 +85627,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lehigh County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.61250000000001,
       40.6025
@@ -85452,18 +85658,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Luzerne County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.9605,
       41.164500000000004
@@ -85481,18 +85689,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lycoming County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.0235,
       41.333
@@ -85510,18 +85720,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "McKean County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.5795,
       41.801
@@ -85539,18 +85751,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mercer County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.2595,
       41.281
@@ -85568,18 +85782,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mifflin County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.601,
       40.604
@@ -85597,18 +85813,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Monroe County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.30850000000001,
       41.033500000000004
@@ -85626,18 +85844,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montgomery County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.356,
       40.212
@@ -85655,18 +85875,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montour County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.65299999999999,
       41.0275
@@ -85684,18 +85906,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northampton County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.33,
       40.7525
@@ -85713,18 +85937,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northumberland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.6645,
       40.8895
@@ -85742,18 +85968,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Perry County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2935,
       40.4065
@@ -85771,18 +85999,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Philadelphia County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.118,
       40.001999999999995
@@ -85800,18 +86030,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Pike County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.02449999999999,
       41.340999999999994
@@ -85829,18 +86061,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Potter County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.9025,
       41.7375
@@ -85858,18 +86092,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Schuylkill County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.22999999999999,
       40.723
@@ -85887,18 +86123,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Snyder County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.078,
       40.762
@@ -85916,18 +86154,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Somerset County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.03800000000001,
       40.003
@@ -85945,18 +86185,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Sullivan County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.517,
       41.43300000000001
@@ -85974,18 +86216,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Susquehanna County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.804,
       41.82
@@ -86003,18 +86247,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Tioga County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2425,
       41.772000000000006
@@ -86032,18 +86278,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Union County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.082,
       40.978
@@ -86061,18 +86309,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Venango County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.739,
       41.3985
@@ -86090,18 +86340,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Warren County",
-    "rating": 0.47058823529411764,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.2645,
       41.811
@@ -86119,18 +86371,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Washington County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.179,
       40.215
@@ -86148,18 +86402,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wayne County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.275,
       41.616
@@ -86177,18 +86433,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Westmoreland County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.43950000000001,
       40.36
@@ -86206,18 +86464,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wyoming County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.0015,
       41.5145
@@ -86235,18 +86495,20 @@
     "level": "county"
   },
   {
-    "state": "Pennsylvania",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "York County",
-    "rating": 0.5490196078431373,
+    "state": "Pennsylvania",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.6885,
       39.973
@@ -103419,7 +103681,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Barbour County",
     "rating": 0.37254901960784315,
@@ -103448,7 +103710,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Berkeley County",
     "rating": 0.37254901960784315,
@@ -103477,7 +103739,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Boone County",
     "rating": 0.37254901960784315,
@@ -103506,7 +103768,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Braxton County",
     "rating": 0.37254901960784315,
@@ -103535,7 +103797,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Brooke County",
     "rating": 0.37254901960784315,
@@ -103564,7 +103826,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Cabell County",
     "rating": 0.37254901960784315,
@@ -103593,7 +103855,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Calhoun County",
     "rating": 0.37254901960784315,
@@ -103622,7 +103884,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Clay County",
     "rating": 0.37254901960784315,
@@ -103651,7 +103913,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Doddridge County",
     "rating": 0.37254901960784315,
@@ -103680,7 +103942,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Fayette County",
     "rating": 0.37254901960784315,
@@ -103709,7 +103971,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Gilmer County",
     "rating": 0.37254901960784315,
@@ -103738,7 +104000,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Grant County",
     "rating": 0.37254901960784315,
@@ -103767,7 +104029,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Greenbrier County",
     "rating": 0.37254901960784315,
@@ -103796,7 +104058,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hampshire County",
     "rating": 0.37254901960784315,
@@ -103825,7 +104087,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hancock County",
     "rating": 0.37254901960784315,
@@ -103854,7 +104116,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Hardy County",
     "rating": 0.37254901960784315,
@@ -103883,7 +104145,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Harrison County",
     "rating": 0.37254901960784315,
@@ -103912,7 +104174,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jackson County",
     "rating": 0.37254901960784315,
@@ -103941,7 +104203,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Jefferson County",
     "rating": 0.37254901960784315,
@@ -103970,7 +104232,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Kanawha County",
     "rating": 0.37254901960784315,
@@ -103999,7 +104261,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lewis County",
     "rating": 0.37254901960784315,
@@ -104028,7 +104290,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Lincoln County",
     "rating": 0.37254901960784315,
@@ -104057,7 +104319,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Logan County",
     "rating": 0.37254901960784315,
@@ -104086,7 +104348,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "McDowell County",
     "rating": 0.37254901960784315,
@@ -104115,7 +104377,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marion County",
     "rating": 0.37254901960784315,
@@ -104144,7 +104406,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Marshall County",
     "rating": 0.37254901960784315,
@@ -104173,7 +104435,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mason County",
     "rating": 0.37254901960784315,
@@ -104202,7 +104464,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mercer County",
     "rating": 0.37254901960784315,
@@ -104231,7 +104493,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mineral County",
     "rating": 0.37254901960784315,
@@ -104260,7 +104522,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Mingo County",
     "rating": 0.37254901960784315,
@@ -104289,7 +104551,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monongalia County",
     "rating": 0.37254901960784315,
@@ -104318,7 +104580,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Monroe County",
     "rating": 0.37254901960784315,
@@ -104347,7 +104609,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Morgan County",
     "rating": 0.37254901960784315,
@@ -104376,7 +104638,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Nicholas County",
     "rating": 0.37254901960784315,
@@ -104405,7 +104667,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ohio County",
     "rating": 0.37254901960784315,
@@ -104434,7 +104696,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pendleton County",
     "rating": 0.37254901960784315,
@@ -104463,7 +104725,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pleasants County",
     "rating": 0.37254901960784315,
@@ -104492,7 +104754,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Pocahontas County",
     "rating": 0.37254901960784315,
@@ -104521,7 +104783,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Preston County",
     "rating": 0.37254901960784315,
@@ -104550,7 +104812,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Putnam County",
     "rating": 0.37254901960784315,
@@ -104579,7 +104841,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Raleigh County",
     "rating": 0.37254901960784315,
@@ -104608,7 +104870,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Randolph County",
     "rating": 0.37254901960784315,
@@ -104637,7 +104899,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Ritchie County",
     "rating": 0.37254901960784315,
@@ -104666,7 +104928,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Roane County",
     "rating": 0.37254901960784315,
@@ -104695,7 +104957,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Summers County",
     "rating": 0.37254901960784315,
@@ -104724,7 +104986,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Taylor County",
     "rating": 0.37254901960784315,
@@ -104753,7 +105015,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tucker County",
     "rating": 0.37254901960784315,
@@ -104782,7 +105044,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Tyler County",
     "rating": 0.37254901960784315,
@@ -104811,7 +105073,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Upshur County",
     "rating": 0.37254901960784315,
@@ -104840,7 +105102,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wayne County",
     "rating": 0.37254901960784315,
@@ -104869,7 +105131,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Webster County",
     "rating": 0.37254901960784315,
@@ -104898,7 +105160,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wetzel County",
     "rating": 0.37254901960784315,
@@ -104927,7 +105189,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wirt County",
     "rating": 0.37254901960784315,
@@ -104956,7 +105218,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wood County",
     "rating": 0.37254901960784315,
@@ -104985,7 +105247,7 @@
         "name": "West Virginia Department of Health & Human Resources"
       }
     ],
-    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-20-2020---5-PM.aspx",
+    "url": "https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-5-21-2020---5-PM.aspx",
     "aggregate": "county",
     "county": "Wyoming County",
     "rating": 0.37254901960784315,
@@ -111703,44 +111965,6 @@
       }
     ],
     "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Hong Kong",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
-    "coordinates": [
-      114.119,
-      22.3715
-    ],
-    "tz": [
-      "Asia/Hong_Kong"
-    ],
-    "featureId": "iso1:HK",
-    "population": 7500700,
-    "populationDensity": 7060.383886275799,
-    "countryId": "iso1:HK",
-    "name": "Hong Kong",
-    "level": "country"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "China",
     "curators": [
       {
@@ -112005,44 +112229,6 @@
     "stateId": "iso2:CN-LN",
     "name": "Liaoning, China",
     "level": "state"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Macau",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
-    "coordinates": [
-      113.5635,
-      22.139499999999998
-    ],
-    "tz": [
-      "Asia/Macau"
-    ],
-    "featureId": "iso1:MO",
-    "population": 642900,
-    "populationDensity": 35193.305501547395,
-    "countryId": "iso1:MO",
-    "name": "Macau",
-    "level": "country"
   },
   {
     "maintainers": [
@@ -116386,7 +116572,7 @@
         "github": "herbcaudill"
       }
     ],
-    "rating": 0.5098039215686274,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -6.919500000000001,
       35.7035
@@ -118324,16 +118510,6 @@
     ],
     "state": "Andalusia",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -4.576499999999999,
-      37.3695
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-AN",
-    "population": 8409738,
-    "populationDensity": 95.85293796406827,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AN",
     "name": "Andalusia, Spain",
@@ -118373,16 +118549,6 @@
     ],
     "state": "Aragon",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -0.701,
-      41.3845
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-AR",
-    "population": 1324397,
-    "populationDensity": 27.72163983394826,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AR",
     "name": "Aragon, Spain",
@@ -118422,16 +118588,6 @@
     ],
     "state": "Asturias",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -5.846,
-      43.271
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-AS",
-    "population": 1028244,
-    "populationDensity": 96.9772426429027,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-AS",
     "name": "Asturias, Spain",
@@ -118471,16 +118627,6 @@
     ],
     "state": "Balearic Islands",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      2.7675,
-      39.361000000000004
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-IB",
-    "population": 1150839,
-    "populationDensity": 232.36067298307515,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-IB",
     "name": "Balearic Islands, Spain",
@@ -118520,16 +118666,6 @@
     ],
     "state": "Canary Islands",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -15.790500000000002,
-      28.527
-    ],
-    "tz": [
-      "Atlantic/Canary"
-    ],
-    "featureId": "iso2:ES-CN",
-    "population": 2127685,
-    "populationDensity": 285.81101544352316,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CN",
     "name": "Canary Islands, Spain",
@@ -118569,16 +118705,6 @@
     ],
     "state": "Cantabria",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -4.0005,
-      43.1345
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-CB",
-    "population": 580229,
-    "populationDensity": 108.61432739792983,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CB",
     "name": "Cantabria, Spain",
@@ -118618,16 +118744,6 @@
     ],
     "state": "Castile-La Mancha",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -3.1585,
-      39.6755
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-CM",
-    "population": 2106331,
-    "populationDensity": 26.48325115273489,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CM",
     "name": "Castile-La Mancha, Spain",
@@ -118667,16 +118783,6 @@
     ],
     "state": "Castile and León",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -4.432,
-      41.6605
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-CL",
-    "population": 2418694,
-    "populationDensity": 25.645640911960943,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CL",
     "name": "Castile and León, Spain",
@@ -118716,16 +118822,6 @@
     ],
     "state": "Catalonia",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      1.7455,
-      41.6925
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-CT",
-    "population": 7619494,
-    "populationDensity": 237.03241139617558,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CT",
     "name": "Catalonia, Spain",
@@ -118765,16 +118861,6 @@
     ],
     "state": "Ceuta",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -5.359,
-      35.8945
-    ],
-    "tz": [
-      "Africa/Ceuta"
-    ],
-    "featureId": "iso2:ES-CE",
-    "population": 84777,
-    "populationDensity": 6761.417137766679,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-CE",
     "name": "Ceuta, Spain",
@@ -118814,16 +118900,6 @@
     ],
     "state": "Valencian Community",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -0.5049999999999999,
-      39.317
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-VC",
-    "population": 5003769,
-    "populationDensity": 214.69386116910493,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-VC",
     "name": "Valencian Community, Spain",
@@ -118863,16 +118939,6 @@
     ],
     "state": "Extremadura",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -6.096,
-      39.213499999999996
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-EX",
-    "population": 1067710,
-    "populationDensity": 25.599637795791317,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-EX",
     "name": "Extremadura, Spain",
@@ -118912,16 +118978,6 @@
     ],
     "state": "Galicia",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -8.017,
-      42.7885
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-GA",
-    "population": 2703290,
-    "populationDensity": 91.47607406250619,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-GA",
     "name": "Galicia, Spain",
@@ -118961,16 +119017,6 @@
     ],
     "state": "Community of Madrid",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -3.816,
-      40.5255
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-MD",
-    "population": 6661949,
-    "populationDensity": 828.0319469260397,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-MD",
     "name": "Community of Madrid, Spain",
@@ -119010,16 +119056,6 @@
     ],
     "state": "Melilla",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -2.9495,
-      35.293
-    ],
-    "tz": [
-      "Africa/Ceuta"
-    ],
-    "featureId": "iso2:ES-ML",
-    "population": 86487,
-    "populationDensity": 7784.09164118956,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-ML",
     "name": "Melilla, Spain",
@@ -119059,16 +119095,6 @@
     ],
     "state": "Region of Murcia",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -1.526,
-      38.065
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-MC",
-    "population": 1478509,
-    "populationDensity": 130.64627683883353,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-MC",
     "name": "Region of Murcia, Spain",
@@ -119108,16 +119134,6 @@
     ],
     "state": "Navarre",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -1.6065,
-      42.6125
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-NC",
-    "population": 647554,
-    "populationDensity": 62.438167346248534,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-NC",
     "name": "Navarre, Spain",
@@ -119157,16 +119173,6 @@
     ],
     "state": "Basque Country",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -2.5860000000000003,
-      42.965999999999994
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-PV",
-    "population": 2167707,
-    "populationDensity": 299.5567500808283,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-PV",
     "name": "Basque Country, Spain",
@@ -119206,16 +119212,6 @@
     ],
     "state": "Rioja",
     "rating": 0.6274509803921569,
-    "coordinates": [
-      -2.412,
-      42.281499999999994
-    ],
-    "tz": [
-      "Europe/Madrid"
-    ],
-    "featureId": "iso2:ES-RI",
-    "population": 315675,
-    "populationDensity": 62.64505502753969,
     "countryId": "iso1:ES",
     "stateId": "iso2:ES-RI",
     "name": "Rioja, Spain",

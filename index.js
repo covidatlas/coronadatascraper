@@ -1829,7 +1829,7 @@
     return fill(percentRatio);
   }
 
-  function createLegend(min, max) {
+  function createLegend(min, max, legendType) {
     const base = document.getElementById('map');
     const containerId = 'mapLegend';
     const container = base.querySelector(`#${containerId}`) || document.createElement('div');
@@ -1838,7 +1838,7 @@
 
     const heading = document.createElement('span');
     heading.className = 'spectrum-Heading spectrum-Heading--XXXS';
-    heading.innerHTML = 'Percent of population infected';
+    heading.innerHTML = `Percent of population ${legendType}`;
     container.appendChild(heading);
 
     base.appendChild(container);
@@ -2160,7 +2160,7 @@
   }
 
   function updateMap(date, type) {
-    currentType = type || 'cases';
+    currentType = type || currentType;
     currentDate = date || Object.keys(data.timeseries).pop();
     currentData = data.timeseries[currentDate];
 
@@ -2177,11 +2177,12 @@
       if (location.population) {
         const locationData = currentData[index];
         if (locationData) {
-          const infectionPercent = locationData.cases / location.population;
+          const infectionPercent = locationData[currentType] / location.population;
           if (infectionPercent > worstAffectedPercent) {
             worstAffectedPercent = infectionPercent;
             highestLocation = location;
           }
+
           // Calculate least affected percent
           if (infectionPercent !== 0 && infectionPercent < lowestInfectionPercent) {
             lowestInfectionPercent = infectionPercent;
@@ -2200,7 +2201,7 @@
       if (location && location.population) {
         const locationData = currentData[locationId];
         if (locationData) {
-          if (locationData.cases === 0) {
+          if (locationData[currentType] === 0) {
             regionColor = noCasesColor;
           } else {
             regionColor = getScaledColorValue(location, locationData, currentType, worstAffectedPercent);
@@ -2214,7 +2215,7 @@
     console.log('Lowest infection', lowestLocation);
     console.log('Highest infection', highestLocation);
 
-    createLegend(chartDataMin, chartDataMax);
+    createLegend(chartDataMin, chartDataMax, currentType === 'deaths' ? 'passed away' : 'infected');
 
     setData();
   }
@@ -2247,6 +2248,12 @@
       if (location.population && locationData.cases) {
         htmlString += `<tr><th>Infected:</th><td>${getRatio(locationData.cases, location.population)} (${getPercent(
         locationData.cases,
+        location.population
+      )})</td></tr>`;
+      }
+      if (location.population && locationData.deaths) {
+        htmlString += `<tr><th>Deaths:</th><td>${getRatio(locationData.deaths, location.population)} (${getPercent(
+        locationData.deaths,
         location.population
       )})</td></tr>`;
       }
@@ -2399,6 +2406,34 @@
     }
 
     map$1.addControl(new DateSelector(), 'top-right');
+
+    // Case thpe selector
+    class CaseTypeSelector {
+      onAdd() {
+        this._container = document.createElement('div');
+        this._container.className = 'mapboxgl-ctrl cds-MapControl';
+        this._container.innerHTML = `
+        <select>
+          <option value="cases">Cases</option>
+          <option value="deaths">Deaths</option>
+        </select>
+      `;
+
+        this._container.addEventListener('change', evt => {
+          const { target } = evt;
+          currentType = target.value;
+          updateMap(currentDate, currentType);
+        });
+
+        return this._container;
+      }
+
+      onRemove() {
+        this._container.parentNode.removeChild(this._container);
+      }
+    }
+
+    map$1.addControl(new CaseTypeSelector(), 'top-left');
 
     setData();
 
