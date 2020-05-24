@@ -106,7 +106,7 @@ function migrateDirs(dirs, argv) {
   dirs.forEach(d => {
     console.log('\n\n========================================');
     let msg = `Migrating ${d}`;
-    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} yarn start ${argv.onlyUseCache ? '--onlyUseCache' : ''} -d ${d}`;
+    let cmd = `MIGRATE_CACHE_DIR=${argv.dest} npx yarn start ${argv.onlyUseCache ? '--onlyUseCache' : ''} -d ${d}`;
     if (argv.location) {
       msg = `${msg} for location ${argv.location}`;
       cmd = `${cmd} --location ${argv.location}`;
