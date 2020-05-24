@@ -179,7 +179,7 @@ function checkDefaultCacheKeySpecs(destdir) {
 
   const allfiles = glob(pattern);
   const folders = allfiles
-    .map(f => f.replace(fulldest + path.sep, ''))
+    .map(f => f.replace(fulldest, ''))
     .map(f => f.split(path.sep))
     .map(a => path.join(a[0], a[1]))
     .filter((f, index, self) => {
