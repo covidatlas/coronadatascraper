@@ -162,17 +162,29 @@ export const pdf = async (scraper, url, cacheKey = 'default', date, options) => 
   return data;
 };
 
-export const fetchHeadlessPage = async (url, callback) => {
+/**
+ * Load a url in headless browser, call user-supplied callback, return callback's output
+ * @param {*} scraper the scraper object
+ * @param {string} url URL of the resource
+ * @param {null} cacheKey The cache key -- this is IGNORED by this function as data is dynamically extrated and cannot be cached
+ * @param {function} callback The callback to be used on open page. Should accept a single argument `page` that is a puppeteer page that has been loaded with the given url
+ */
+export const fetchHeadlessCallback = async (scraper, url, callback, cacheKey = null) => {
+  if (cacheKey !== null) {
+    throw new Error(
+      'cacheKey is ignored in fetchHeadlessCallback as data is dynamically extracted by callback each time the function is called'
+    );
+  }
   log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
-
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-
-  await page.setUserAgent(CHROME_AGENT);
-  await page.setViewport(DEFAULT_VIEWPORT);
 
   let tries = 0;
   while (tries < 5) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+
+    await page.setUserAgent(CHROME_AGENT);
+    await page.setViewport(DEFAULT_VIEWPORT);
+
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
@@ -224,7 +236,7 @@ export const fetchHeadlessPage = async (url, callback) => {
 };
 
 const fetchHeadless = async url => {
-  return fetchHeadlessPage(url, async page => {
+  return fetchHeadlessCallback(null, url, async page => {
     const html = await page.content();
     return html;
   });

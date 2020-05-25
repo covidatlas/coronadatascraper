@@ -1,5 +1,5 @@
 import * as fetch from '../../../lib/fetch/index.js';
-// import datetime from '../../../lib/datetime/index.js';
+import datetime from '../../../lib/datetime/index.js';
 import maintainers from '../../../lib/maintainers.js';
 
 // Construct xpath condition for containing a class
@@ -8,6 +8,9 @@ const classCheck = x => `contains(concat(' ',normalize-space(@class),' '),' ${x}
 // Extract the text value of the puppeteer element
 async function getTextcontent(el) {
   const out = await (await el.getProperty('textContent')).jsonValue();
+  if (typeof out === 'string') {
+    return out.trim();
+  }
   return out;
 }
 
@@ -62,8 +65,9 @@ const scraper = {
   scraper: {
     '0': async function() {
       const callback = async page => {
+        page.setDefaultTimeout(5000);
         // Wait for ICU button to load then navigate to that page
-        (await page.waitForXPath("//span[text()='ICU Bed Usage']/..")).click();
+        (await page.waitForXPath("//span[text()='Hospital/COVID Census']/..")).click();
 
         // Now wait for harris county selector to load
         (await page.waitForXPath("//div[@aria-label='Harris']")).click();
@@ -94,22 +98,57 @@ const scraper = {
         return data;
       };
       // fetch raw data
-      const data = await fetch.fetchHeadlessPage(this.url, callback);
+      const data = await fetch.fetchHeadlessCallback(this, this.url, callback);
 
       // Now parse it out
-      const dates = data.dates.map(x => new Date(x));
-      // const nRows = dates.length;
-      console.log(dates);
+      const dates = data.dates
+        .map(x => new Date(x))
+        .map(datetime.parse)
+        .map(x => x.toString());
+      const nRows = dates.length;
+      const nCols = data.colnames.length;
 
-      /* TODO:
+      if (nRows * nCols !== data.data.length) {
+        throw new Error('Number of data entries does not match nrows * ncols');
+      }
+      const hospitalCol = data.colnames.indexOf('Patients in General Beds (Suspected + Confirmed)');
+      const icuCol = data.colnames.indexOf('Patients in Intensive Care Beds (Suspected + Confirmed)');
 
-      1. find index for date: `ix`
-      2. Get data for column `i` (starting at 0) via `nRows * i + (ix-1)`
-      3. Set output via column headers.
+      const outData = {};
+      for (let ix = 0; ix < nRows; ix++) {
+        outData[dates[ix]] = {
+          hospitalized_current: hospitalCol >= 0 ? data.data[hospitalCol * nRows + ix] : undefined,
+          icu_current: hospitalCol >= 0 ? data.data[icuCol * nRows + ix] : undefined
+        };
+      }
 
-      */
+      console.log(outData);
 
-      console.log(data);
+      // Handle scrape date -- taken from scrapers/US/CA/mercury-new.js
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+
+      const lastDateInTimeseries = new Date(`${dates[nRows - 1]} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${dates[0]} 12:00:00`);
+
+      if (scrapeDate > lastDateInTimeseries) {
+        console.error(
+          `  🚨 timeseries for Harris County (TX): SCRAPE_DATE ${datetime.getYYYYMD(
+            scrapeDate
+          )} is newer than last sample time ${datetime.getYYYYMD(lastDateInTimeseries)}. Using last sample anyway`
+        );
+        scrapeDate = lastDateInTimeseries;
+      }
+
+      if (scrapeDate < firstDateInTimeseries) {
+        throw new Error(
+          `Timeseries starts at ${datetime.getYYYYMD(firstDateInTimeseries)}, but SCRAPE_DATE is ${datetime.getYYYYMD(
+            scrapeDate
+          )}`
+        );
+      }
+
+      const scrapeDateString = datetime.parse(scrapeDate).toString();
+      return outData[scrapeDateString];
     }
   }
 };
