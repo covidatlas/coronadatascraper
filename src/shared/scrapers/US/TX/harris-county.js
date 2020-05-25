@@ -87,16 +87,28 @@ const scraper = {
         await page.waitFor(2000);
         await tableButton.click();
 
-        console.log('I have a table button:', tableButton);
-
         // Get the data
         const data = await page.waitForXPath("//div[@aria-label='Grid']").then(getDataFromPivotTable);
 
         // return now as we don't need the browser anymore
         return data;
       };
-
+      // fetch raw data
       const data = await fetch.fetchHeadlessPage(this.url, callback);
+
+      // Now parse it out
+      const dates = data.dates.map(x => new Date(x));
+      // const nRows = dates.length;
+      console.log(dates);
+
+      /* TODO:
+
+      1. find index for date: `ix`
+      2. Get data for column `i` (starting at 0) via `nRows * i + (ix-1)`
+      3. Set output via column headers.
+
+      */
+
       console.log(data);
     }
   }

@@ -201,7 +201,7 @@ export const fetchHeadlessPage = async (url, callback) => {
       // We got a good response, return it
       if (response.status() < 400) {
         await page.waitFor(RESPONSE_TIMEOUT);
-        const out = callback(page);
+        const out = await callback(page);
         browser.close();
         return out;
       }
