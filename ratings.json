@@ -446,27 +446,6 @@
     "stateId": "iso2:US-OR"
   },
   {
-    "state": "Pennsylvania",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
-    "type": "table",
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-PA"
-  },
-  {
     "state": "Wisconsin",
     "country": "United States",
     "aggregate": "county",
@@ -630,26 +609,6 @@
     "countryId": "iso1:SA"
   },
   {
-    "state": "Michigan",
-    "country": "United States",
-    "sources": [
-      {
-        "name": "Michigan Department of Health & Human Services"
-      }
-    ],
-    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MI"
-  },
-  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -741,7 +700,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-24",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-25",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1431,32 +1390,6 @@
     "countryId": "iso1:ES"
   },
   {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:NL"
-  },
-  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "timeseries": true,
@@ -1630,38 +1563,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-ACT"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
-      }
-    ],
-    "state": "New South Wales",
-    "type": "table",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",
@@ -1983,36 +1884,6 @@
     "rating": 0.3333333333333333,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Indonesia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 1,
-    "sources": [
-      {
-        "description": "Ministry of Health Republic of Indonesia",
-        "name": "Ministry of Health Republic of Indonesia",
-        "url": "https://www.kemkes.go.id/"
-      }
-    ],
-    "type": "table",
-    "url": "https://www.kemkes.go.id/",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.3137254901960784,
-    "countryId": "iso1:ID"
   },
   {
     "county": "Stanislaus County",
