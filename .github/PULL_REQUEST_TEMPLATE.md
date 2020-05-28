@@ -1,3 +1,16 @@
+<!--
+Hello!
+
+This project is being replaced by Li, https://github.com/covidatlas/li, the next-generation serverless crawler for COVID-19 data.  The reasons for the switchover are documented in https://github.com/covidatlas/coronadatascraper/issues/782.
+
+We are not _actively_ accepting PRs for this repository.
+
+Note: Scraper code written for this project is not compatible with Li, see that project for examples.  We have some helpers to assist in migrating code, see [this document](https://docs.google.com/document/d/1ITPU0hESswmiWw88Pl1eI26oIQtMJw1YUeD8mWEPIeE/edit#).
+
+Thanks very much!
+-->
+
+
 <!---
 Hi there!  Some things to double-check prior to submission:
 
