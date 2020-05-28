@@ -38,8 +38,10 @@ const scraper = {
           recovered: typeof row.attributes.recovered === 'number' ? parse.number(row.attributes.recovered) : undefined,
           deaths: typeof row.attributes.deaths === 'number' ? parse.number(row.attributes.deaths) : undefined,
           tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : undefined,
-          hospitalized:
+          hospitalized_current:
             typeof row.attributes.Hospitalized === 'number' ? parse.number(row.attributes.Hospitalized) : undefined,
+          icu_current:
+            typeof row.attributes.Intubated === 'number' ? parse.number(row.attributes.Intubated) : undefined,
           discharged:
             typeof row.attributes.ReleasedFromHospital === 'number'
               ? parse.number(row.attributes.ReleasedFromHospital)

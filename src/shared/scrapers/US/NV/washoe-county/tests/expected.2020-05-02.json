@@ -6,7 +6,8 @@
         "recovered":363,
         "deaths":33,
         "tested":871,
-        "hospitalized":48,
+        "hospitalized_current":48,
+        "icu_current":24,
         "discharged":69,
         "date":"2020-05-02"
     }

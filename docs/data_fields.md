@@ -40,12 +40,15 @@ Additional attributes of a data point are:
 The following fields define the epidemiological information for a data point:
 
 * `cases` - The cumulative number of confirmed or presumed confirmed cases
+* `active` - The current number of confirmed or presumed confirmed cases. Will be calculated automatically if `cases` and `recovered` cumulative numbers are provided.
 * `deaths` - The cumulative number of deaths attributed to COVID-19
 * `recovered` - The cumulative number of recoveries
 * `tested` - The cumulative number of tests from which results have been obtained (does not include pending tests)
 * `hospitalized` - The cumulative number of patients hospitalized for COVID-19
+* `hospitalized_current` - The current number of patients hospitalized for COVID-19. Will be calculated automatically if `hospitalized` and `discharged` cumulative numbers are provided.
 * `discharged` - The cumulative number of patients discharged after hospitalization for COVID-19
 * `icu` - The cumulative number of patients hospitalized in the intensive care unit for COVID-19
+* `icu_current` - The current number of patients hospitalized in the intensive care unit for COVID-19
 
 The following fields detail the data's source:
 

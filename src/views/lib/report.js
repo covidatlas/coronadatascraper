@@ -10,7 +10,16 @@ module.exports.crosscheckTemplate = function crosscheckTemplate(report) {
 
   html += `<div class="cds-SourceComparison">`;
 
-  const metrics = ['cases', 'deaths', 'tested', 'recovered', 'hospitalized', 'icu', 'discharged'];
+  const metrics = [
+    'cases',
+    'deaths',
+    'tested',
+    'recovered',
+    'hospitalized_current',
+    'icu',
+    'icu_current',
+    'discharged'
+  ];
 
   html += `
       <table>

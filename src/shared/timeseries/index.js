@@ -19,8 +19,10 @@ const caseDataProps = [
   'active',
   'tested',
   'hospitalized',
+  'hospitalized_current',
   'discharged',
   'icu',
+  'icu_current',
   'growthFactor'
 ];
 

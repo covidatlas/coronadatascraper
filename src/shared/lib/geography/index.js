@@ -271,6 +271,28 @@ export const getActiveFromLocation = function(location) {
 };
 
 /*
+  Calculates hospitalized_current from location data
+*/
+export const getHospitalizedCurrentFromLocation = function(location) {
+  if (location.hospitalized_current === undefined) {
+    if (location.hospitalized !== undefined && location.discharged !== undefined) {
+      if (location.hospitalized > location.discharged) {
+        return location.hospitalized - location.discharged;
+      }
+
+      throw new Error(
+        `Scraper error: hospitalized data for ${getName(
+          location
+        )} is being treated as cumulative, but it seems that it is current (hospitalized: ${
+          location.hospitalized
+        }, discharged: ${location.discharged})`
+      );
+    }
+  }
+  return undefined;
+};
+
+/*
   Return a minimized and stripped county name with no punctuation
 */
 export const stripCountyName = function(county) {

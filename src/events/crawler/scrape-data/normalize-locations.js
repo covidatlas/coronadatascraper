@@ -89,8 +89,12 @@ const normalizeLocations = args => {
       }
     }
 
-    if (!location.active) {
+    if (location.active === undefined) {
       location.active = geography.getActiveFromLocation(location);
+    }
+
+    if (location.hospitalized_current === undefined) {
+      location.hospitalized_current = geography.getHospitalizedCurrentFromLocation(location);
     }
 
     // Auto-detect type if not provided
