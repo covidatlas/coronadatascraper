@@ -100,7 +100,11 @@ const scraper = {
         return page.content();
       };
 
-      const rawdata = await fetch.headless(this, this.url, 'default', false, { callback });
+      // The data is timeseries but only for a limited timespan (a few
+      // weeks), so we'll cache it like regular data.
+      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
+
+      const rawdata = await fetch.headless(this, this.url, 'default', scrapeDate, { callback });
 
       const data = getDataFromPivotTable(rawdata);
 
@@ -112,9 +116,6 @@ const scraper = {
         };
       }
       // console.table(outData);
-
-      // Handle scrape date -- taken from scrapers/US/CA/mercury-new.js
-      let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
 
       const lastDateInTimeseries = new Date(`${data.dates[data.dates.length - 1]} 12:00:00`);
       const firstDateInTimeseries = new Date(`${data.dates[0]} 12:00:00`);

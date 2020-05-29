@@ -212,6 +212,8 @@ const fetchHeadless = async (url, callback) => {
         await page.waitFor(RESPONSE_TIMEOUT);
         const out = await callback(page);
         browser.close();
+        // If the callback fails, it should return null.
+        if (out === null) continue;
         return out;
       }
 
