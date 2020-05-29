@@ -87,7 +87,7 @@ const scraper = {
     for (const item of hospitalizedData) {
       if (datetime.dateIsBeforeOrEqualTo(item.Date, date)) {
         for (const canton of this._cantons) {
-          dataByCanton[canton].hospitalized = parse.float(item[canton]) || dataByCanton[canton].hospitalized;
+          dataByCanton[canton].hospitalized_current = parse.float(item[canton]) || dataByCanton[canton].hospitalized;
         }
       }
     }
