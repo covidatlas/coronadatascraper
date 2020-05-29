@@ -162,17 +162,26 @@ export const pdf = async (scraper, url, cacheKey = 'default', date, options) => 
   return data;
 };
 
-const fetchHeadless = async url => {
+/**
+ * Load a url in headless browser, call user-supplied callback, return callback's output
+ * @param {string} url URL of the resource
+ * @param {function} callback The callback to be used on open
+ * page. Should accept a single argument `page` that is a puppeteer
+ * page that has been loaded with the given url, and should return the
+ * full page content after the page has been manipulated as desired
+ * (this full page is cached).
+ */
+const fetchHeadless = async (url, callback) => {
   log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
-
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-
-  await page.setUserAgent(CHROME_AGENT);
-  await page.setViewport(DEFAULT_VIEWPORT);
 
   let tries = 0;
   while (tries < 5) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+
+    await page.setUserAgent(CHROME_AGENT);
+    await page.setViewport(DEFAULT_VIEWPORT);
+
     tries++;
     if (tries > 1) {
       // sleep a moment before retrying
@@ -201,9 +210,11 @@ const fetchHeadless = async url => {
       // We got a good response, return it
       if (response.status() < 400) {
         await page.waitFor(RESPONSE_TIMEOUT);
-        const html = await page.content();
+        const out = await callback(page);
         browser.close();
-        return html;
+        // If the callback fails, it should return null.
+        if (out === null) continue;
+        return out;
       }
 
       // 400-499 means "not found", retrying is not likely to help
@@ -222,6 +233,11 @@ const fetchHeadless = async url => {
   log.error(`  ❌ Failed to fetch ${url} after ${tries} tries`);
   return null;
 };
+
+/** By default, just return the page. */
+async function defaultHeadlessCallback(page) {
+  return page.content();
+}
 
 /**
  * Fetch whatever is at the provided URL in headless mode with Pupeteer. Use cached version if available.
@@ -247,7 +263,8 @@ export const headless = async (
   }
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    const fetchedBody = await fetchHeadless(url);
+    const callback = options.callback || defaultHeadlessCallback;
+    const fetchedBody = await fetchHeadless(url, callback);
     await caching.saveFileToCache(scraper, url, 'html', date, fetchedBody);
 
     const $ = await cheerio.load(fetchedBody);
