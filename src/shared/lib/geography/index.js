@@ -276,7 +276,7 @@ export const getActiveFromLocation = function(location) {
 export const getHospitalizedCurrentFromLocation = function(location) {
   if (location.hospitalized_current === undefined) {
     if (location.hospitalized !== undefined && location.discharged !== undefined) {
-      if (location.hospitalized > location.discharged) {
+      if (location.hospitalized >= location.discharged) {
         return location.hospitalized - location.discharged;
       }
 
