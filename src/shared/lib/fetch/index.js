@@ -164,17 +164,14 @@ export const pdf = async (scraper, url, cacheKey = 'default', date, options) => 
 
 /**
  * Load a url in headless browser, call user-supplied callback, return callback's output
- * @param {*} scraper the scraper object
  * @param {string} url URL of the resource
- * @param {null} cacheKey The cache key -- this is IGNORED by this function as data is dynamically extrated and cannot be cached
- * @param {function} callback The callback to be used on open page. Should accept a single argument `page` that is a puppeteer page that has been loaded with the given url
+ * @param {function} callback The callback to be used on open
+ * page. Should accept a single argument `page` that is a puppeteer
+ * page that has been loaded with the given url, and should return the
+ * full page content after the page has been manipulated as desired
+ * (this full page is cached).
  */
-export const fetchHeadlessCallback = async (scraper, url, callback, cacheKey = null) => {
-  if (cacheKey !== null) {
-    throw new Error(
-      'cacheKey is ignored in fetchHeadlessCallback as data is dynamically extracted by callback each time the function is called'
-    );
-  }
+const fetchHeadless = async (url, callback) => {
   log('  🤹‍♂️  Loading data for %s from server with a headless browser', url);
 
   let tries = 0;
@@ -235,12 +232,10 @@ export const fetchHeadlessCallback = async (scraper, url, callback, cacheKey = n
   return null;
 };
 
-const fetchHeadless = async url => {
-  return fetchHeadlessCallback(null, url, async page => {
-    const html = await page.content();
-    return html;
-  });
-};
+/** By default, just return the page. */
+async function defaultHeadlessCallback(page) {
+  return page.content();
+}
 
 /**
  * Fetch whatever is at the provided URL in headless mode with Pupeteer. Use cached version if available.
@@ -266,7 +261,8 @@ export const headless = async (
   }
 
   if (cachedBody === caching.CACHE_MISS || alwaysRun) {
-    const fetchedBody = await fetchHeadless(url);
+    const callback = options.callback || defaultHeadlessCallback;
+    const fetchedBody = await fetchHeadless(url, callback);
     await caching.saveFileToCache(scraper, url, 'html', date, fetchedBody);
 
     const $ = await cheerio.load(fetchedBody);

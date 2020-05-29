@@ -2,46 +2,61 @@ import * as fetch from '../../../lib/fetch/index.js';
 import datetime from '../../../lib/datetime/index.js';
 import maintainers from '../../../lib/maintainers.js';
 
-// Construct xpath condition for containing a class
-const classCheck = x => `contains(concat(' ',normalize-space(@class),' '),' ${x} ')`;
-
-// Extract the text value of the puppeteer element
-async function getTextcontent(el) {
-  const out = await (await el.getProperty('textContent')).jsonValue();
-  if (typeof out === 'string') {
-    return out.trim();
-  }
-  return out;
-}
+const assert = require('assert');
 
 // Get cell values from part of a PowerBI pivot table.
 // Use `parentClassName = 'columnHeaders'` to get column names,
 //     `parentClassName = 'rowHeaders'` for row labels
 //     `parentClassName = 'bodyCells'` for actual body of the table
-async function _getTableVals(el, parentClassName) {
-  const elements = await el.$x(`//div[@class='${parentClassName}']//div[${classCheck('pivotTableCellWrap')}]`);
-  return Promise.all(elements.map(getTextcontent));
+function _getTableVals($, parentClassName) {
+  const elements = $(`div.${parentClassName} > div > div > div.pivotTableCellWrap`);
+  return elements.toArray().map(a =>
+    $(a)
+      .text()
+      .trim()
+  );
 }
 
-// Get the values from a PowerBI pivotTable, given the puppeteer elementHandle for the table div
-const getDataFromPivotTable = async el => {
+function _getColumnData($, n) {
+  const col = $('div.bodyCells > div > div > div').eq(n);
+  const cells = $(col)
+    .find('div.pivotTableCellWrap')
+    .toArray();
+  return cells.map(a => parseInt($(a).text(), 10));
+}
+
+// Get the values from a PowerBI pivotTable.
+const getDataFromPivotTable = $ => {
   // check that we have Date
-  const indexName = await el.$x(`//div[@class='corner']//div[${classCheck('pivotTableCellWrap')}]`);
-  if (indexName.length !== 1) {
-    throw Error(`Found ${indexName.length} index names, expected 1`);
-  }
-  const indexNameVal = await getTextcontent(indexName[0]);
-  console.log(indexNameVal);
+  const indexNameVal = $('div.corner > div > div.pivotTableCellWrap')
+    .text()
+    .trim();
   if (indexNameVal.trim() !== 'Date') {
     throw Error(`Expected index name to be Date, found ${indexNameVal}`);
   }
 
-  // get column names
-  return {
-    colnames: await _getTableVals(el, 'columnHeaders'),
-    dates: await _getTableVals(el, 'rowHeaders'),
-    data: await _getTableVals(el, 'bodyCells')
+  const colnames = _getTableVals($, 'columnHeaders').slice(0, 2);
+  const expectedColname = [
+    'Patients in General Beds (Suspected + Confirmed)',
+    'Patients in Intensive Care Beds (Suspected + Confirmed)'
+  ];
+  assert.equal(colnames.join(';'), expectedColname.join(';'), 'Column names');
+
+  const dates = _getTableVals($, 'rowHeaders')
+    .map(x => new Date(x))
+    .map(datetime.parse)
+    .map(x => x.toString());
+
+  const ret = {
+    colnames: _getTableVals($, 'columnHeaders'),
+    dates,
+    generalBeds: _getColumnData($, 0),
+    icuBeds: _getColumnData($, 1)
   };
+
+  assert.equal(ret.dates.length, ret.generalBeds.length, 'general beds');
+  assert.equal(ret.dates.length, ret.icuBeds.length, 'icu beds');
+  return ret;
 };
 
 const scraper = {
@@ -65,22 +80,12 @@ const scraper = {
   scraper: {
     '0': async function() {
       const callback = async page => {
-        page.setDefaultTimeout(5000);
-        // Wait for ICU button to load then navigate to that page
-        (await page.waitForXPath("//span[text()='Hospital/COVID Census']/..")).click();
+        page.setDefaultTimeout(10000);
+        const icuButton = await page.waitForXPath("//span[text()='Hospital/COVID Census']/..");
+        icuButton.click();
 
-        // Now wait for harris county selector to load
-        (await page.waitForXPath("//div[@aria-label='Harris']")).click();
-
-        /* PowerBI dynamicly swaps out rows so we
-     can't get it all without some scrolling magic
-  */
-        // fill start date  back to beginning
-        // const startDate = await page.waitForXPath("//div[@class='date-slicer']//input[contains(@aria-label, 'Start')]")
-        // await startDate.click({clickCount: 3})
-        // await page.keyboard.type("3/18/2020")
-        // await page.waitFor(1000)
-        // await startDate.press("Enter")
+        const harrisSelector = await page.waitForXPath("//div[@aria-label='Harris']");
+        harrisSelector.click();
 
         // use context menu to open table version of chart
         await (await page.$$('div.visual-lineChart'))[0].click({ button: 'right' });
@@ -91,44 +96,28 @@ const scraper = {
         await page.waitFor(2000);
         await tableButton.click();
 
-        // Get the data
-        const data = await page.waitForXPath("//div[@aria-label='Grid']").then(getDataFromPivotTable);
-
-        // return now as we don't need the browser anymore
-        return data;
+        await page.waitForXPath("//div[@aria-label='Grid']");
+        return page.content();
       };
-      // fetch raw data
-      const data = await fetch.fetchHeadlessCallback(this, this.url, callback);
 
-      // Now parse it out
-      const dates = data.dates
-        .map(x => new Date(x))
-        .map(datetime.parse)
-        .map(x => x.toString());
-      const nRows = dates.length;
-      const nCols = data.colnames.length;
+      const rawdata = await fetch.headless(this, this.url, 'default', false, { callback });
 
-      if (nRows * nCols !== data.data.length) {
-        throw new Error('Number of data entries does not match nrows * ncols');
-      }
-      const hospitalCol = data.colnames.indexOf('Patients in General Beds (Suspected + Confirmed)');
-      const icuCol = data.colnames.indexOf('Patients in Intensive Care Beds (Suspected + Confirmed)');
+      const data = getDataFromPivotTable(rawdata);
 
       const outData = {};
-      for (let ix = 0; ix < nRows; ix++) {
-        outData[dates[ix]] = {
-          hospitalized_current: hospitalCol >= 0 ? data.data[hospitalCol * nRows + ix] : undefined,
-          icu_current: hospitalCol >= 0 ? data.data[icuCol * nRows + ix] : undefined
+      for (let ix = 0; ix < data.dates.length; ix++) {
+        outData[data.dates[ix]] = {
+          hospitalized_current: data.generalBeds[ix],
+          icu_current: data.icuBeds[ix]
         };
       }
-
-      console.log(outData);
+      // console.table(outData);
 
       // Handle scrape date -- taken from scrapers/US/CA/mercury-new.js
       let scrapeDate = process.env.SCRAPE_DATE ? new Date(`${process.env.SCRAPE_DATE} 12:00:00`) : new Date();
 
-      const lastDateInTimeseries = new Date(`${dates[nRows - 1]} 12:00:00`);
-      const firstDateInTimeseries = new Date(`${dates[0]} 12:00:00`);
+      const lastDateInTimeseries = new Date(`${data.dates[data.dates.length - 1]} 12:00:00`);
+      const firstDateInTimeseries = new Date(`${data.dates[0]} 12:00:00`);
 
       if (scrapeDate > lastDateInTimeseries) {
         console.error(
