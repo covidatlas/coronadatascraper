@@ -1185,38 +1185,6 @@
     "level": "country"
   },
   {
-    "country": "Cyprus",
-    "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
-      }
-    ],
-    "rating": 0.27450980392156865,
-    "coordinates": [
-      33.423500000000004,
-      35.1655
-    ],
-    "tz": [
-      "Europe/Nicosia"
-    ],
-    "featureId": "iso1:CY",
-    "population": 1141166,
-    "populationDensity": 126.68557056559139,
-    "countryId": "iso1:CY",
-    "name": "Cyprus",
-    "level": "country"
-  },
-  {
     "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "aggregate": "state",
@@ -9006,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-27",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-28",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16133,31 +16101,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "North Slope Borough",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -153.921,
       69.6765
@@ -21335,7 +21292,7 @@
       }
     ],
     "county": "Stanislaus County",
-    "rating": 0.7058823529411765,
+    "rating": 0.7843137254901961,
     "coordinates": [
       -120.9375,
       37.605999999999995
@@ -61159,7 +61116,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-27T18:32:15.607Z",
+    "publishedDate": "2020-05-28T18:39:15.029Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61276,7 +61233,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-05-27T18:32:24.382Z",
+    "publishedDate": "2020-05-28T18:33:33.644Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61510,7 +61467,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-05-27T18:32:31.826Z",
+    "publishedDate": "2020-05-28T18:33:41.918Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61549,7 +61506,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-27T18:32:35.278Z",
+    "publishedDate": "2020-05-28T19:00:54.278Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61588,7 +61545,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-05-21T18:20:56.018Z",
+    "publishedDate": "2020-05-28T18:33:49.052Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61666,7 +61623,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-05-25T18:32:33.643Z",
+    "publishedDate": "2020-05-28T18:33:52.674Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61744,7 +61701,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-27T18:32:42.887Z",
+    "publishedDate": "2020-05-28T18:33:58.822Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61783,7 +61740,7 @@
       }
     ],
     "county": "Carroll County",
-    "publishedDate": "2020-05-15T18:51:43.831Z",
+    "publishedDate": "2020-05-28T18:34:05.955Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4315,
@@ -61861,7 +61818,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-05-26T18:08:54.296Z",
+    "publishedDate": "2020-05-28T18:34:11.598Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61978,7 +61935,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-05-15T18:52:23.337Z",
+    "publishedDate": "2020-05-28T18:34:15.898Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -62056,7 +62013,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-27T18:38:50.924Z",
+    "publishedDate": "2020-05-28T18:34:18.461Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62290,7 +62247,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-05-20T18:07:26.290Z",
+    "publishedDate": "2020-05-28T18:34:25.986Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62485,7 +62442,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-05-27T18:33:44.990Z",
+    "publishedDate": "2020-05-28T18:34:32.789Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62602,7 +62559,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-05-27T18:34:00.085Z",
+    "publishedDate": "2020-05-28T18:34:50.550Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62641,7 +62598,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-26T18:11:09.360Z",
+    "publishedDate": "2020-05-28T18:34:55.207Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62719,7 +62676,7 @@
       }
     ],
     "county": "Harrison County",
-    "publishedDate": "2020-05-27T18:34:03.803Z",
+    "publishedDate": "2020-05-28T18:34:58.872Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9975,
@@ -62914,7 +62871,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-05-01T22:04:35.320Z",
+    "publishedDate": "2020-05-28T18:35:04.662Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -62992,7 +62949,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-27T18:34:19.669Z",
+    "publishedDate": "2020-05-28T18:39:48.508Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63070,7 +63027,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-27T18:34:24.557Z",
+    "publishedDate": "2020-05-28T18:35:17.381Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63109,7 +63066,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-05-25T18:34:03.924Z",
+    "publishedDate": "2020-05-28T18:35:23.631Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63226,7 +63183,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-27T18:34:41.848Z",
+    "publishedDate": "2020-05-28T18:35:35.290Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63460,7 +63417,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-05-27T18:34:57.272Z",
+    "publishedDate": "2020-05-28T18:35:53.930Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63499,7 +63456,7 @@
       }
     ],
     "county": "Macon County",
-    "publishedDate": "2020-05-08T21:16:05.958Z",
+    "publishedDate": "2020-05-28T18:35:43.246Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.57300000000001,
@@ -63733,7 +63690,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-05-27T18:35:01.235Z",
+    "publishedDate": "2020-05-28T18:35:59.352Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63772,7 +63729,7 @@
       }
     ],
     "county": "Moniteau County",
-    "publishedDate": "2020-05-23T19:13:29.734Z",
+    "publishedDate": "2020-05-28T18:36:02.612Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6115,
@@ -63850,7 +63807,7 @@
       }
     ],
     "county": "Montgomery County",
-    "publishedDate": "2020-05-23T19:13:33.249Z",
+    "publishedDate": "2020-05-28T18:36:08.281Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.4535,
@@ -63928,7 +63885,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-05-23T19:13:38.403Z",
+    "publishedDate": "2020-05-28T18:36:13.261Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -64240,7 +64197,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-05-27T18:35:41.533Z",
+    "publishedDate": "2020-05-28T18:36:38.558Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64318,7 +64275,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-05-27T18:35:44.678Z",
+    "publishedDate": "2020-05-28T18:36:45.714Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64357,7 +64314,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-05-27T18:35:47.660Z",
+    "publishedDate": "2020-05-28T18:36:49.011Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64708,7 +64665,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-27T18:36:23.186Z",
+    "publishedDate": "2020-05-28T18:37:07.347Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64825,7 +64782,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-05-26T18:13:50.521Z",
+    "publishedDate": "2020-05-28T18:37:10.911Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64866,7 +64823,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-27T14:15:00.000Z",
+    "publishedDate": "2020-05-28T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64905,7 +64862,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-25T18:35:33.999Z",
+    "publishedDate": "2020-05-28T18:56:10.434Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -65022,7 +64979,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-26T18:13:40.249Z",
+    "publishedDate": "2020-05-28T18:37:00.820Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65139,7 +65096,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-27T18:40:01.996Z",
+    "publishedDate": "2020-05-28T18:37:27.970Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65217,7 +65174,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-05-25T18:36:14.473Z",
+    "publishedDate": "2020-05-28T18:37:33.624Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65607,7 +65564,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-27T18:39:57.995Z",
+    "publishedDate": "2020-05-28T18:40:24.935Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -70283,31 +70240,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Pershing County",
     "state": "Nevada",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -118.3195,
       40.480000000000004
@@ -84449,20 +84395,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Adams County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.213,
       39.894999999999996
@@ -84480,20 +84424,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Allegheny County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.025,
       40.4345
@@ -84511,20 +84453,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Armstrong County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.4515,
       40.848
@@ -84542,20 +84482,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Beaver County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.332,
       40.666
@@ -84573,20 +84511,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bedford County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -78.4715,
       40.025
@@ -84604,20 +84540,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Berks County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.985,
       40.407
@@ -84635,20 +84569,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Blair County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -78.36850000000001,
       40.4925
@@ -84666,20 +84598,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bradford County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.521,
       41.7715
@@ -84697,20 +84627,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Bucks County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.103,
       40.329
@@ -84728,20 +84656,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Butler County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.92750000000001,
       40.921
@@ -84759,20 +84685,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cambria County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -78.703,
       40.484
@@ -84790,20 +84714,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cameron County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -78.2045,
       41.417500000000004
@@ -84821,20 +84743,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Carbon County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.7355,
       40.9345
@@ -84852,20 +84772,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Centre County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.76050000000001,
       40.9725
@@ -84883,20 +84801,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Chester County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.7485,
       39.9835
@@ -84914,20 +84830,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clarion County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.452,
       41.2025
@@ -84945,20 +84859,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clearfield County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -78.422,
       40.989
@@ -84976,20 +84888,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Clinton County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.61850000000001,
       41.221000000000004
@@ -85007,20 +84917,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Columbia County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.4245,
       41.043000000000006
@@ -85038,20 +84946,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Crawford County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -80.0655,
       41.666
@@ -85069,20 +84975,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Cumberland County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.2435,
       40.136
@@ -85100,20 +85004,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Dauphin County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.782,
       40.388999999999996
@@ -85131,20 +85033,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Delaware County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.4045,
       39.934
@@ -85162,20 +85062,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Elk County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -78.66499999999999,
       41.416
@@ -85193,20 +85091,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Erie County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.065,
       42.0595
@@ -85224,20 +85120,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fayette County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.6515,
       39.9325
@@ -85255,20 +85149,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Forest County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -79.239,
       41.4755
@@ -85286,20 +85178,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Franklin County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.7765,
       40.004999999999995
@@ -85317,20 +85207,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Fulton County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -78.1225,
       39.9435
@@ -85348,20 +85236,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Greene County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -80.2115,
       39.870999999999995
@@ -85379,20 +85265,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Huntingdon County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.96700000000001,
       40.403
@@ -85410,20 +85294,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Indiana County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.12950000000001,
       40.641000000000005
@@ -85441,20 +85323,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Jefferson County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -78.9625,
       41.1415
@@ -85472,20 +85352,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Juniata County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.346,
       40.479
@@ -85503,20 +85381,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lackawanna County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.638,
       41.4015
@@ -85534,20 +85410,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lancaster County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.2975,
       40.019000000000005
@@ -85565,20 +85439,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lawrence County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.3085,
       40.9895
@@ -85596,20 +85468,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lebanon County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.4145,
       40.376000000000005
@@ -85627,20 +85497,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lehigh County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.61250000000001,
       40.6025
@@ -85658,20 +85526,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Luzerne County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.9605,
       41.164500000000004
@@ -85689,20 +85555,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Lycoming County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.0235,
       41.333
@@ -85720,20 +85584,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "McKean County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -78.5795,
       41.801
@@ -85751,20 +85613,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mercer County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.2595,
       41.281
@@ -85782,20 +85642,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Mifflin County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.601,
       40.604
@@ -85813,20 +85671,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Monroe County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.30850000000001,
       41.033500000000004
@@ -85844,20 +85700,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montgomery County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.356,
       40.212
@@ -85875,20 +85729,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Montour County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -76.65299999999999,
       41.0275
@@ -85906,20 +85758,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northampton County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.33,
       40.7525
@@ -85937,20 +85787,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Northumberland County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.6645,
       40.8895
@@ -85968,20 +85816,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Perry County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.2935,
       40.4065
@@ -85999,20 +85845,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Philadelphia County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.118,
       40.001999999999995
@@ -86030,20 +85874,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Pike County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.02449999999999,
       41.340999999999994
@@ -86061,20 +85903,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Potter County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -77.9025,
       41.7375
@@ -86092,20 +85932,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Schuylkill County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.22999999999999,
       40.723
@@ -86123,20 +85961,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Snyder County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.078,
       40.762
@@ -86154,20 +85990,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Somerset County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -79.03800000000001,
       40.003
@@ -86185,20 +86019,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Sullivan County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -76.517,
       41.43300000000001
@@ -86216,20 +86048,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Susquehanna County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.804,
       41.82
@@ -86247,20 +86077,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Tioga County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.2425,
       41.772000000000006
@@ -86278,20 +86106,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Union County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -77.082,
       40.978
@@ -86309,20 +86135,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Venango County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -79.739,
       41.3985
@@ -86340,20 +86164,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Warren County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -79.2645,
       41.811
@@ -86371,20 +86193,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Washington County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -80.179,
       40.215
@@ -86402,20 +86222,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wayne County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -75.275,
       41.616
@@ -86433,20 +86251,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Westmoreland County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -79.43950000000001,
       40.36
@@ -86464,20 +86280,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "Wyoming County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.0015,
       41.5145
@@ -86495,20 +86309,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Pennsylvania",
     "country": "United States",
     "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
       }
     ],
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
     "county": "York County",
-    "state": "Pennsylvania",
-    "rating": 0.6274509803921569,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -76.6885,
       39.973
@@ -98992,31 +98804,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Reagan County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.5215,
       31.365000000000002
@@ -110209,30 +110010,28 @@
     "level": "state"
   },
   {
+    "country": "Australia",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Australia",
-    "curators": [
+    "sources": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
       }
     ],
-    "aggregate": "state",
     "state": "New South Wales",
-    "rating": 0.5882352941176471,
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "rating": 0.35294117647058826,
     "coordinates": [
       147.3115,
       -32.831
@@ -110404,28 +110203,30 @@
     "level": "state"
   },
   {
-    "country": "Australia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
       {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "state",
     "state": "Victoria",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.29411764705882354,
+    "rating": 0.5882352941176471,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -113054,6 +112855,38 @@
     "populationDensity": 104.35792889430743,
     "countryId": "iso1:CU",
     "name": "Cuba",
+    "level": "country"
+  },
+  {
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "rating": 0.27450980392156865,
+    "coordinates": [
+      33.423500000000004,
+      35.1655
+    ],
+    "tz": [
+      "Europe/Nicosia"
+    ],
+    "featureId": "iso1:CY",
+    "population": 1141166,
+    "populationDensity": 126.68557056559139,
+    "countryId": "iso1:CY",
+    "name": "Cyprus",
     "level": "country"
   },
   {
@@ -122712,16 +122545,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      -61.4035,
-      16.1695
-    ],
-    "tz": [
-      "America/Guadeloupe"
-    ],
-    "featureId": "iso1:GP",
-    "population": 390253,
-    "populationDensity": 240.82910073500233,
     "countryId": "iso1:GP",
     "name": "Guadeloupe",
     "level": "country"
@@ -122744,16 +122567,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      -61.019999999999996,
-      14.6375
-    ],
-    "tz": [
-      "America/Martinique"
-    ],
-    "featureId": "iso1:MQ",
-    "population": 372594,
-    "populationDensity": 340.4505247650213,
     "countryId": "iso1:MQ",
     "name": "Martinique",
     "level": "country"
@@ -122776,16 +122589,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      -53.117999999999995,
-      3.933
-    ],
-    "tz": [
-      "America/Cayenne"
-    ],
-    "featureId": "iso1:GF",
-    "population": 268700,
-    "populationDensity": 3.1953411036735897,
     "countryId": "iso1:GF",
     "name": "French Guiana",
     "level": "country"
@@ -122808,16 +122611,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      55.527,
-      -21.130499999999998
-    ],
-    "tz": [
-      "Indian/Reunion"
-    ],
-    "featureId": "iso1:RE",
-    "population": 866506,
-    "populationDensity": 343.12261139940773,
     "countryId": "iso1:RE",
     "name": "Réunion",
     "level": "country"
@@ -122840,16 +122633,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      45.16,
-      -12.818999999999999
-    ],
-    "tz": [
-      "Indian/Mayotte"
-    ],
-    "featureId": "iso1:YT",
-    "population": 256518,
-    "populationDensity": 735.632251966538,
     "countryId": "iso1:YT",
     "name": "Mayotte",
     "level": "country"
@@ -122874,16 +122657,6 @@
     "county": "Aube",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.1265,
-      48.32
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-10",
-    "population": 310020,
-    "populationDensity": 51.461231284100734,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-10",
@@ -122910,16 +122683,6 @@
     "county": "Aude",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.4645,
-      43.05200000000001
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-11",
-    "population": 370260,
-    "populationDensity": 58.346032951104945,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-11",
@@ -122946,16 +122709,6 @@
     "county": "Aveyron",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.6465,
-      44.315
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-12",
-    "population": 279206,
-    "populationDensity": 31.841936984113598,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-12",
@@ -122982,16 +122735,6 @@
     "county": "Bouches-du-Rhône",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.022,
-      43.543
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-13",
-    "population": 2024162,
-    "populationDensity": 385.93880559234947,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-13",
@@ -123018,16 +122761,6 @@
     "county": "Calvados",
     "state": "Normandy",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.36350000000000005,
-      49.091
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-14",
-    "population": 694002,
-    "populationDensity": 123.90036483993943,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "countyId": "iso2:FR-14",
@@ -123054,16 +122787,6 @@
     "county": "Cantal",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.7125000000000004,
-      45.0475
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-15",
-    "population": 145143,
-    "populationDensity": 25.13012663486381,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-15",
@@ -123090,16 +122813,6 @@
     "county": "Charente",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.24149999999999996,
-      45.666
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-16",
-    "population": 352335,
-    "populationDensity": 58.79731927913359,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-16",
@@ -123126,16 +122839,6 @@
     "county": "Charente-Maritime",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.779,
-      45.723
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-17",
-    "population": 644303,
-    "populationDensity": 93.48508965603484,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-17",
@@ -123162,16 +122865,6 @@
     "county": "Cher",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.4299999999999997,
-      47.0245
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-18",
-    "population": 304256,
-    "populationDensity": 41.76159795615065,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-18",
@@ -123198,16 +122891,6 @@
     "county": "Corrèze",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.8775,
-      45.344
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-19",
-    "population": 241464,
-    "populationDensity": 40.90272762280056,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-19",
@@ -123234,16 +122917,6 @@
     "county": "Côte-d'Or",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.792,
-      47.4655
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-21",
-    "population": 533819,
-    "populationDensity": 60.65416697696376,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-21",
@@ -123270,16 +122943,6 @@
     "county": "Côtes-d'Armor",
     "state": "Brittany",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -2.7865,
-      48.45099999999999
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-22",
-    "population": 598814,
-    "populationDensity": 85.62682497113425,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BRE",
     "countyId": "iso2:FR-22",
@@ -123306,16 +122969,6 @@
     "county": "Creuse",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.9925000000000002,
-      46.06
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-23",
-    "population": 118638,
-    "populationDensity": 21.22053826513494,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-23",
@@ -123342,16 +122995,6 @@
     "county": "Dordogne",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.704,
-      45.146
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-24",
-    "population": 413606,
-    "populationDensity": 44.82153393895945,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-24",
@@ -123378,16 +123021,6 @@
     "county": "Doubs",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.3805,
-      47.063
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-25",
-    "population": 539067,
-    "populationDensity": 102.45737050986138,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-25",
@@ -123414,16 +123047,6 @@
     "county": "Drôme",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.2395,
-      44.730000000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-26",
-    "population": 511553,
-    "populationDensity": 77.97311022740992,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-26",
@@ -123450,16 +123073,6 @@
     "county": "Eure",
     "state": "Normandy",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.049,
-      49.077
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-27",
-    "population": 601843,
-    "populationDensity": 99.92868480321039,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "countyId": "iso2:FR-27",
@@ -123486,16 +123099,6 @@
     "county": "Eure-et-Loir",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.3815,
-      48.447500000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-28",
-    "population": 433233,
-    "populationDensity": 73.00027203710275,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-28",
@@ -123522,16 +123125,6 @@
     "county": "Finistère",
     "state": "Brittany",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -4.264,
-      48.2385
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-29",
-    "population": 909028,
-    "populationDensity": 133.57408337842284,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BRE",
     "countyId": "iso2:FR-29",
@@ -123558,16 +123151,6 @@
     "county": "Gard",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.058,
-      43.96
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-30",
-    "population": 744178,
-    "populationDensity": 126.41349811031942,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-30",
@@ -123594,16 +123177,6 @@
     "county": "Haute-Garonne",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.245,
-      43.304500000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-31",
-    "population": 1362672,
-    "populationDensity": 215.02775520790547,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-31",
@@ -123630,16 +123203,6 @@
     "county": "Gers",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.46049999999999996,
-      43.694500000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-32",
-    "population": 191091,
-    "populationDensity": 30.33736094909521,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-32",
@@ -123666,16 +123229,6 @@
     "county": "Gironde",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.475,
-      44.8805
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-33",
-    "population": 1583384,
-    "populationDensity": 157.45895854750813,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-33",
@@ -123702,16 +123255,6 @@
     "county": "Hérault",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.3685,
-      43.5925
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-34",
-    "population": 1144892,
-    "populationDensity": 183.10317034410417,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-34",
@@ -123738,16 +123281,6 @@
     "county": "Ille-et-Vilaine",
     "state": "Brittany",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -1.654,
-      48.1665
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-35",
-    "population": 1060199,
-    "populationDensity": 155.49111361036728,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BRE",
     "countyId": "iso2:FR-35",
@@ -123774,16 +123307,6 @@
     "county": "Indre",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.5355,
-      46.812
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-36",
-    "population": 222232,
-    "populationDensity": 32.10079429394977,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-36",
@@ -123810,16 +123333,6 @@
     "county": "Indre-et-Loire",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.7100000000000001,
-      47.223
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-37",
-    "population": 606511,
-    "populationDensity": 98.55490924890583,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-37",
@@ -123846,16 +123359,6 @@
     "county": "Isère",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.5504999999999995,
-      45.29
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-38",
-    "population": 1258722,
-    "populationDensity": 159.58537423288868,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-38",
@@ -123882,16 +123385,6 @@
     "county": "Jura",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.731,
-      46.7825
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-39",
-    "population": 260188,
-    "populationDensity": 51.57414847083304,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-39",
@@ -123918,16 +123411,6 @@
     "county": "Landes",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.694,
-      44.01349999999999
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-40",
-    "population": 407444,
-    "populationDensity": 43.57362001991493,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-40",
@@ -123954,16 +123437,6 @@
     "county": "Loir-et-Cher",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.4145,
-      47.6595
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-41",
-    "population": 331915,
-    "populationDensity": 51.57146703996274,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-41",
@@ -123990,16 +123463,6 @@
     "county": "Loire",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.227,
-      45.7555
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-42",
-    "population": 762941,
-    "populationDensity": 159.29292744917439,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-42",
@@ -124026,16 +123489,6 @@
     "county": "Haute-Loire",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.7935,
-      45.082499999999996
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-43",
-    "population": 227283,
-    "populationDensity": 45.45032619926706,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-43",
@@ -124062,16 +123515,6 @@
     "county": "Loire-Atlantique",
     "state": "Pays de la Loire",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -1.7485,
-      47.349000000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-44",
-    "population": 1394909,
-    "populationDensity": 198.7924720619587,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "countyId": "iso2:FR-44",
@@ -124098,16 +123541,6 @@
     "county": "Loiret",
     "state": "Centre-Loire Valley",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.3200000000000003,
-      47.912499999999994
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-45",
-    "population": 678105,
-    "populationDensity": 99.53417194269328,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "countyId": "iso2:FR-45",
@@ -124134,16 +123567,6 @@
     "county": "Lot",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.5955,
-      44.634
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-46",
-    "population": 173828,
-    "populationDensity": 33.30048171122659,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-46",
@@ -124170,16 +123593,6 @@
     "county": "Lot-et-Garonne",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.46699999999999997,
-      44.369
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-47",
-    "population": 332842,
-    "populationDensity": 61.754776343167585,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-47",
@@ -124206,16 +123619,6 @@
     "county": "Lozère",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.49,
-      44.543499999999995
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-48",
-    "population": 76601,
-    "populationDensity": 14.820176090575497,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-48",
@@ -124242,16 +123645,6 @@
     "county": "Maine-et-Loire",
     "state": "Pays de la Loire",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.56,
-      47.3895
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-49",
-    "population": 813493,
-    "populationDensity": 113.72788245256741,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "countyId": "iso2:FR-49",
@@ -124278,16 +123671,6 @@
     "county": "Manche",
     "state": "Normandy",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -1.3445,
-      49.091499999999996
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-50",
-    "population": 496883,
-    "populationDensity": 82.32078074601476,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "countyId": "iso2:FR-50",
@@ -124314,16 +123697,6 @@
     "county": "Marne",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.218,
-      48.961
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-51",
-    "population": 568895,
-    "populationDensity": 69.53985916305562,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-51",
@@ -124350,16 +123723,6 @@
     "county": "Haute-Marne",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.2605,
-      48.132999999999996
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-52",
-    "population": 175640,
-    "populationDensity": 28.088260553047665,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-52",
@@ -124386,16 +123749,6 @@
     "county": "Mayenne",
     "state": "Pays de la Loire",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.644,
-      48.149
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-53",
-    "population": 307445,
-    "populationDensity": 58.882550373652975,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "countyId": "iso2:FR-53",
@@ -124422,16 +123775,6 @@
     "county": "Meurthe-et-Moselle",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.295,
-      48.957
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-54",
-    "population": 733481,
-    "populationDensity": 138.9802930081532,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-54",
@@ -124458,16 +123801,6 @@
     "county": "Meuse",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.3715,
-      49.01349999999999
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-55",
-    "population": 187187,
-    "populationDensity": 30.157075453262692,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-55",
@@ -124494,16 +123827,6 @@
     "county": "Morbihan",
     "state": "Brittany",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -2.8855000000000004,
-      47.7475
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-56",
-    "population": 750863,
-    "populationDensity": 109.21953079555213,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BRE",
     "countyId": "iso2:FR-56",
@@ -124530,16 +123853,6 @@
     "county": "Moselle",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.7645,
-      49.021
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-57",
-    "population": 1043522,
-    "populationDensity": 166.97744095866003,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-57",
@@ -124566,16 +123879,6 @@
     "county": "Nièvre",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.5359999999999996,
-      47.122
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-58",
-    "population": 207182,
-    "populationDensity": 30.254542323713117,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-58",
@@ -124602,16 +123905,6 @@
     "county": "Nord",
     "state": "Hauts-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.16,
-      50.53
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-59",
-    "population": 2604361,
-    "populationDensity": 454.3536559224453,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "countyId": "iso2:FR-59",
@@ -124638,16 +123931,6 @@
     "county": "Oise",
     "state": "Hauts-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.4219999999999997,
-      49.4095
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-60",
-    "population": 824503,
-    "populationDensity": 140.32578632081876,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "countyId": "iso2:FR-60",
@@ -124674,16 +123957,6 @@
     "county": "Orne",
     "state": "Normandy",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.05399999999999999,
-      48.572500000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-61",
-    "population": 283372,
-    "populationDensity": 46.10989002316765,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "countyId": "iso2:FR-61",
@@ -124710,16 +123983,6 @@
     "county": "Pas-de-Calais",
     "state": "Hauts-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.3725,
-      50.5195
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-62",
-    "population": 1468018,
-    "populationDensity": 219.39031328334752,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "countyId": "iso2:FR-62",
@@ -124746,16 +124009,6 @@
     "county": "Puy-de-Dôme",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.1875,
-      45.774
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-63",
-    "population": 653742,
-    "populationDensity": 81.39452588984764,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-63",
@@ -124782,16 +124035,6 @@
     "county": "Pyrénées-Atlantiques",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.8775,
-      43.1885
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-64",
-    "population": 677309,
-    "populationDensity": 87.79333872877046,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-64",
@@ -124818,16 +124061,6 @@
     "county": "Hautespyrenees",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.159,
-      43.1425
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-65",
-    "population": 228530,
-    "populationDensity": 50.75667601580394,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-65",
@@ -124854,16 +124087,6 @@
     "county": "Pyrénées-Orientales",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.4505,
-      42.6265
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-66",
-    "population": 474452,
-    "populationDensity": 114.21513616211867,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-66",
@@ -124890,16 +124113,6 @@
     "county": "Bas-Rhin",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      7.596,
-      48.598
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-67",
-    "population": 1125559,
-    "populationDensity": 234.33142679417543,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-67",
@@ -124926,16 +124139,6 @@
     "county": "Haut-Rhin",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      7.234,
-      47.867000000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-68",
-    "population": 764030,
-    "populationDensity": 215.95558425143602,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-68",
@@ -124962,16 +124165,6 @@
     "county": "Rhône",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.697,
-      45.88
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-69",
-    "population": 1843319,
-    "populationDensity": 672.6759168807165,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-69",
@@ -124998,16 +124191,6 @@
     "county": "Haute-Saône",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.0985,
-      47.64
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-70",
-    "population": 236659,
-    "populationDensity": 43.99371355017266,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-70",
@@ -125034,16 +124217,6 @@
     "county": "Saône-et-Loire",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.545,
-      46.662
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-71",
-    "population": 553595,
-    "populationDensity": 64.41477428955042,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-71",
@@ -125070,16 +124243,6 @@
     "county": "Sarthe",
     "state": "Pays de la Loire",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.2315,
-      48.025000000000006
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-72",
-    "population": 566506,
-    "populationDensity": 90.78419086784956,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "countyId": "iso2:FR-72",
@@ -125106,16 +124269,6 @@
     "county": "Savoy",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.4025,
-      45.497
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-73",
-    "population": 431174,
-    "populationDensity": 68.80492716183743,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-73",
@@ -125142,16 +124295,6 @@
     "county": "Upper Savoy",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.426,
-      46.046
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-74",
-    "population": 807360,
-    "populationDensity": 175.23160849263456,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-74",
@@ -125178,16 +124321,6 @@
     "county": "Paris",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.3445,
-      48.859
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-75",
-    "population": 2187526,
-    "populationDensity": 21178.717399874455,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-75",
@@ -125214,16 +124347,6 @@
     "county": "Seine-Maritime",
     "state": "Normandy",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.9289999999999999,
-      49.661
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-76",
-    "population": 1254378,
-    "populationDensity": 198.33293104351205,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "countyId": "iso2:FR-76",
@@ -125250,16 +124373,6 @@
     "county": "Seine-et-Marne",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.9795,
-      48.620000000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-77",
-    "population": 1403997,
-    "populationDensity": 236.98714972304796,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-77",
@@ -125286,16 +124399,6 @@
     "county": "Yvelines",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.837,
-      48.760000000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-78",
-    "population": 1438266,
-    "populationDensity": 626.5832835255842,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-78",
@@ -125322,16 +124425,6 @@
     "county": "Deux-Sèvres",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -0.336,
-      46.539
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-79",
-    "population": 374351,
-    "populationDensity": 62.152657466863104,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-79",
@@ -125358,16 +124451,6 @@
     "county": "Somme",
     "state": "Hauts-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.277,
-      49.9695
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-80",
-    "population": 572443,
-    "populationDensity": 92.59783307764854,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "countyId": "iso2:FR-80",
@@ -125394,16 +124477,6 @@
     "county": "Tarn",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.241,
-      43.793
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-81",
-    "population": 387890,
-    "populationDensity": 66.9155259395349,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-81",
@@ -125430,16 +124503,6 @@
     "county": "Tarn-et-Garonne",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.366,
-      44.082
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-82",
-    "population": 258349,
-    "populationDensity": 69.07331131356122,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-82",
@@ -125466,16 +124529,6 @@
     "county": "Var",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.3015,
-      43.394499999999994
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-83",
-    "population": 1058740,
-    "populationDensity": 176.20982071125385,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-83",
@@ -125502,16 +124555,6 @@
     "county": "Vaucluse",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.2035,
-      44.045500000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-84",
-    "population": 559479,
-    "populationDensity": 156.4423814666434,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-84",
@@ -125538,16 +124581,6 @@
     "county": "Vendée",
     "state": "Pays de la Loire",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      -1.4689999999999999,
-      46.683499999999995
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-85",
-    "population": 675247,
-    "populationDensity": 99.38380927069497,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "countyId": "iso2:FR-85",
@@ -125574,16 +124607,6 @@
     "county": "Vienne",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      0.5545,
-      46.6125
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-86",
-    "population": 436876,
-    "populationDensity": 62.25237278280383,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-86",
@@ -125610,16 +124633,6 @@
     "county": "Haute-Vienne",
     "state": "New Aquitaine",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.2665,
-      45.922
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-87",
-    "population": 374426,
-    "populationDensity": 67.39085594724844,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "countyId": "iso2:FR-87",
@@ -125646,16 +124659,6 @@
     "county": "Vosges",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.3025,
-      48.164
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-88",
-    "population": 367673,
-    "populationDensity": 62.58025299022481,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-88",
@@ -125682,16 +124685,6 @@
     "county": "Yonne",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.593,
-      47.852000000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-89",
-    "population": 338291,
-    "populationDensity": 45.25029978914945,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-89",
@@ -125718,16 +124711,6 @@
     "county": "Territoire-de-Belfort",
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.946,
-      47.628
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-90",
-    "population": 142622,
-    "populationDensity": 232.34608018915972,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "countyId": "iso2:FR-90",
@@ -125754,16 +124737,6 @@
     "county": "Essonne",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.2535,
-      48.5315
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-91",
-    "population": 1296130,
-    "populationDensity": 710.8444794652876,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-91",
@@ -125790,16 +124763,6 @@
     "county": "Hauts-de-Seine",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.2405,
-      48.8405
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-92",
-    "population": 1609306,
-    "populationDensity": 9427.240536471305,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-92",
@@ -125826,16 +124789,6 @@
     "county": "Seine-Saint-Denis",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.442,
-      48.908500000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-93",
-    "population": 1623111,
-    "populationDensity": 7092.4746591100175,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-93",
@@ -125862,16 +124815,6 @@
     "county": "Val-de-Marne",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.458,
-      48.7765
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-94",
-    "population": 1387926,
-    "populationDensity": 5623.327114187617,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-94",
@@ -125898,16 +124841,6 @@
     "county": "Val-d'Oise",
     "state": "Ile-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      2.099,
-      49.070499999999996
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-95",
-    "population": 1228618,
-    "populationDensity": 969.5369765982194,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "countyId": "iso2:FR-95",
@@ -125934,16 +124867,6 @@
     "county": "Ain",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      5.45,
-      46.0625
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-01",
-    "population": 643350,
-    "populationDensity": 111.43537734197369,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-01",
@@ -125970,16 +124893,6 @@
     "county": "Aisne",
     "state": "Hauts-de-France",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.6105,
-      49.456
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-02",
-    "population": 534490,
-    "populationDensity": 72.12466248344272,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "countyId": "iso2:FR-02",
@@ -126006,16 +124919,6 @@
     "county": "Allier",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      3.1395,
-      46.3675
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-03",
-    "population": 337988,
-    "populationDensity": 45.79371141815059,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-03",
@@ -126042,16 +124945,6 @@
     "county": "Alpes-de-Haute-Provence",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.234,
-      44.162499999999994
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-04",
-    "population": 163915,
-    "populationDensity": 23.39803994859667,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-04",
@@ -126078,16 +124971,6 @@
     "county": "Hautes-Alpes",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      6.2555,
-      44.658500000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-05",
-    "population": 141284,
-    "populationDensity": 24.809360615688778,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-05",
@@ -126114,16 +124997,6 @@
     "county": "Maritime Alps",
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      7.176,
-      43.921499999999995
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-06",
-    "population": 1083310,
-    "populationDensity": 252.5923238390494,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "countyId": "iso2:FR-06",
@@ -126150,16 +125023,6 @@
     "county": "Ardèche",
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.3735,
-      44.8155
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-07",
-    "population": 325712,
-    "populationDensity": 58.5558224941747,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "countyId": "iso2:FR-07",
@@ -126186,16 +125049,6 @@
     "county": "Ardennes",
     "state": "Grand Est",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      4.7105,
-      49.697
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-08",
-    "population": 273579,
-    "populationDensity": 52.01248460716956,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "countyId": "iso2:FR-08",
@@ -126222,16 +125075,6 @@
     "county": "Ariège",
     "state": "Occitania",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      1.4975,
-      42.945
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-09",
-    "population": 153153,
-    "populationDensity": 31.114253673691586,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "countyId": "iso2:FR-09",
@@ -126258,16 +125101,6 @@
     "county": "South Corsica",
     "state": "Corsica",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      8.9805,
-      41.8745
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-2A",
-    "population": 157249,
-    "populationDensity": 39.063712352947825,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-COR",
     "countyId": "iso2:FR-2A",
@@ -126294,16 +125127,6 @@
     "county": "Haute-Corse",
     "state": "Corsica",
     "rating": 0.5490196078431373,
-    "coordinates": [
-      9.067,
-      42.422
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-2B",
-    "population": 177689,
-    "populationDensity": 37.81311175246111,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-COR",
     "countyId": "iso2:FR-2B",
@@ -126329,16 +125152,6 @@
     ],
     "state": "Grand Est",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      5.811,
-      48.792500000000004
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-GES",
-    "population": 5549586,
-    "populationDensity": 96.23212155529482,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-GES",
     "name": "Grand Est, Metropolitan France",
@@ -126363,16 +125176,6 @@
     ],
     "state": "Occitania",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      2.2575,
-      43.6905
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-OCC",
-    "population": 5845102,
-    "populationDensity": 79.63958725342005,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-OCC",
     "name": "Occitania, Metropolitan France",
@@ -126397,16 +125200,6 @@
     ],
     "state": "Provence-Alpes-Côte d'Azur",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      5.974,
-      44.055
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-PAC",
-    "population": 5030890,
-    "populationDensity": 158.11211518625544,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PAC",
     "name": "Provence-Alpes-Côte d'Azur, Metropolitan France",
@@ -126431,16 +125224,6 @@
     ],
     "state": "Normandy",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      -0.07199999999999995,
-      49.1245
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-NOR",
-    "population": 3330478,
-    "populationDensity": 110.5364264445899,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NOR",
     "name": "Normandy, Metropolitan France",
@@ -126465,16 +125248,6 @@
     ],
     "state": "Auvergne-Rhône-Alpes",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      4.6225000000000005,
-      45.46
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-ARA",
-    "population": 7948287,
-    "populationDensity": 112.11027703136324,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-ARA",
     "name": "Auvergne-Rhône-Alpes, Metropolitan France",
@@ -126499,16 +125272,6 @@
     ],
     "state": "New Aquitaine",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      0.41300000000000014,
-      44.9785
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-NAQ",
-    "population": 5956978,
-    "populationDensity": 70.3183778720033,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-NAQ",
     "name": "New Aquitaine, Metropolitan France",
@@ -126533,16 +125296,6 @@
     ],
     "state": "Centre-Loire Valley",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      1.591,
-      47.644000000000005
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-CVL",
-    "population": 2576252,
-    "populationDensity": 65.14568243838343,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-CVL",
     "name": "Centre-Loire Valley, Metropolitan France",
@@ -126567,16 +125320,6 @@
     ],
     "state": "Bourgogne-Franche-Comté",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      4.99,
-      47.281499999999994
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-BFC",
-    "population": 2811423,
-    "populationDensity": 58.54845987738452,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BFC",
     "name": "Bourgogne-Franche-Comté, Metropolitan France",
@@ -126601,16 +125344,6 @@
     ],
     "state": "Brittany",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      -3.081,
-      48.07599999999999
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-BRE",
-    "population": 3318904,
-    "populationDensity": 120.72290655112002,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-BRE",
     "name": "Brittany, Metropolitan France",
@@ -126635,16 +125368,6 @@
     ],
     "state": "Pays de la Loire",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      -0.8185,
-      47.423
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-PDL",
-    "population": 3757600,
-    "populationDensity": 115.88342537402767,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-PDL",
     "name": "Pays de la Loire, Metropolitan France",
@@ -126669,16 +125392,6 @@
     ],
     "state": "Hauts-de-France",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      2.818,
-      49.966
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-HDF",
-    "population": 6003815,
-    "populationDensity": 188.25649181954822,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-HDF",
     "name": "Hauts-de-France, Metropolitan France",
@@ -126703,16 +125416,6 @@
     ],
     "state": "Ile-de-France",
     "rating": 0.47058823529411764,
-    "coordinates": [
-      2.5015,
-      48.677
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-IDF",
-    "population": 12174880,
-    "populationDensity": 1009.524004565546,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-IDF",
     "name": "Ile-de-France, Metropolitan France",
@@ -126736,17 +125439,7 @@
       }
     ],
     "state": "Corsica",
-    "rating": 0.39215686274509803,
-    "coordinates": [
-      9.057,
-      42.189499999999995
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso2:FR-COR",
-    "population": 334938,
-    "populationDensity": 38.390128144512644,
+    "rating": 0.3137254901960784,
     "countryId": "iso1:FX",
     "stateId": "iso2:FR-COR",
     "name": "Corsica, Metropolitan France",
@@ -126770,16 +125463,6 @@
       }
     ],
     "rating": 0.43137254901960786,
-    "coordinates": [
-      2.2095000000000002,
-      46.227999999999994
-    ],
-    "tz": [
-      "Europe/Paris"
-    ],
-    "featureId": "iso1:FX",
-    "population": 64897954,
-    "populationDensity": 118.25819472154325,
     "countryId": "iso1:FX",
     "name": "Metropolitan France",
     "level": "country"
