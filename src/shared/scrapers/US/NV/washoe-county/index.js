@@ -37,7 +37,7 @@ const scraper = {
           active: typeof row.attributes.active === 'number' ? parse.number(row.attributes.active) : undefined,
           recovered: typeof row.attributes.recovered === 'number' ? parse.number(row.attributes.recovered) : undefined,
           deaths: typeof row.attributes.deaths === 'number' ? parse.number(row.attributes.deaths) : undefined,
-          tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : undefined,
+          // tested: typeof row.attributes.tested === 'number' ? parse.number(row.attributes.tested) : undefined,
           hospitalized_current:
             typeof row.attributes.Hospitalized === 'number' ? parse.number(row.attributes.Hospitalized) : undefined,
           icu_current:
