@@ -21,25 +21,34 @@ const scraper = {
   ],
   maintainers: [maintainers.qgolsteyn],
   async scraper() {
-    const date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
-
     const casesUrl =
       'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_province.csv';
     const casesRaw = await fetch.csv(this, casesUrl, 'cases', false);
-    const casesData = casesRaw.filter(item => datetime.scrapeDateIs(item.Datum));
-
     const nationalUrl =
       'https://raw.githubusercontent.com/J535D165/CoronaWatchNL/master/data/rivm_NL_covid19_national.csv';
     const nationalData = await fetch.csv(this, nationalUrl, 'national', false);
-    const hospitalized = nationalData.find(
-      item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Ziekenhuisopname'
-    );
-    const deaths = nationalData.find(item => datetime.scrapeDateIs(item.Datum) && item.Type === 'Overleden');
+
+    let date = datetime.getYYYYMMDD(process.env.SCRAPE_DATE);
+
+    // Get corrected date criteria.
+    const allDates = casesRaw.map(item => item.Datum).concat(nationalData.map(item => item.Datum));
+    const uniqueDates = Array.from(new Set(allDates)).sort();
+    const lastDate = uniqueDates[uniqueDates.length - 1];
+    if (date > lastDate) {
+      console.error(`${date} is later than last sample ${lastDate}, using ${lastDate}`);
+      date = lastDate;
+    }
+    if (date < uniqueDates[0])
+      throw new Error(`${date} requested is less than first date in series, ${uniqueDates[0]}`);
+
+    const casesData = casesRaw.filter(i => i.Datum === date);
+    const hospitalized = nationalData.find(i => i.Datum === date && i.Type === 'Ziekenhuisopname');
+    const deaths = nationalData.find(i => i.Datum === date && i.Type === 'Overleden');
 
     const casesByProvince = {};
 
     for (const item of casesData) {
-      if (datetime.dateIsBeforeOrEqualTo(item.Datum, date) && item.Provincienaam) {
+      if (item.Datum <= date && item.Provincienaam) {
         casesByProvince[item.Provincienaam] = parse.number(item.Aantal);
       }
     }
@@ -61,25 +70,7 @@ const scraper = {
         })
       );
     }
-
-    // Depending on timezones, the data from the current date of the
-    // running locale may not be available (e.g. running at midnight
-    // on May 4, only data from May 3 is available, as NL is at 7 am
-    // May 4).  In that case, return empty dataset to prevent erroring
-    // out.
-    if (data.length === 0) {
-      for (const iso of Object.values(mapping)) {
-        data.push({
-          state: iso,
-          cases: undefined
-        });
-      }
-      data.push({
-        hospitalized: undefined,
-        deaths: undefined,
-        cases: undefined
-      });
-    }
+    // console.table(data);
 
     return data;
   }
