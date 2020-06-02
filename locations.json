@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-30",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-01",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -9037,7 +9037,7 @@
       }
     ],
     "aggregate": "county",
-    "rating": 0.7647058823529411,
+    "rating": 0.6862745098039216,
     "coordinates": [
       -119.58850000000001,
       40.581999999999994
@@ -15586,31 +15586,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Bristol Bay Borough",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -156.7855,
       58.7515
@@ -15670,31 +15659,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dillingham Census Area",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -158.6825,
       59.691500000000005
@@ -39514,42 +39492,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Allen County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -95.3015,
       37.885
@@ -39567,42 +39534,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Anderson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.292,
       38.214
@@ -39620,42 +39565,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Atchison County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.2695,
       39.536
@@ -39673,42 +39596,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Barber County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.68,
       37.2345
@@ -39726,42 +39627,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Barton County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.7565,
       38.479
@@ -39779,42 +39658,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Bourbon County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.851,
       37.8555
@@ -39832,42 +39689,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Brown County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.56450000000001,
       39.826499999999996
@@ -39885,42 +39720,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Butler County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.838,
       37.782
@@ -39938,42 +39751,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Chase County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.5975,
       38.304
@@ -39991,42 +39782,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Chautauqua County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.245,
       37.150999999999996
@@ -40044,42 +39813,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Cherokee County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.84649999999999,
       37.1695
@@ -40097,42 +39844,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Cheyenne County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.73150000000001,
       39.7855
@@ -40150,42 +39875,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Clark County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.824,
       37.2375
@@ -40203,42 +39906,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Clay County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.16499999999999,
       39.3495
@@ -40256,42 +39937,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Cloud County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.6505,
       39.480000000000004
@@ -40309,42 +39968,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Coffey County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.733,
       38.236
@@ -40362,42 +39999,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Comanche County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.27199999999999,
       37.191500000000005
@@ -40415,42 +40030,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Cowley County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.839,
       37.2375
@@ -40468,42 +40061,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Crawford County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.85249999999999,
       37.5065
@@ -40521,42 +40092,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Decatur County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -100.45949999999999,
       39.7845
@@ -40574,42 +40134,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Dickinson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.13550000000001,
       38.871
@@ -40627,42 +40165,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Doniphan County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.0995,
       39.807500000000005
@@ -40680,42 +40196,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Douglas County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.279,
       38.903999999999996
@@ -40733,42 +40227,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Edwards County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.292,
       37.9105
@@ -40786,42 +40258,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Elk County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -96.2435,
       37.453
@@ -40839,42 +40300,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Ellis County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.318,
       38.915000000000006
@@ -40892,42 +40331,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Ellsworth County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.20500000000001,
       38.6965
@@ -40945,42 +40362,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Finney County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.66499999999999,
       38.0005
@@ -40998,42 +40393,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Ford County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.89150000000001,
       37.6905
@@ -41051,42 +40424,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Franklin County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.2825,
       38.564499999999995
@@ -41104,42 +40455,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Geary County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.732,
       39.045
@@ -41157,42 +40486,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Gove County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.48349999999999,
       38.915000000000006
@@ -41210,42 +40517,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Graham County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.88300000000001,
       39.3495
@@ -41263,42 +40559,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Grant County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.30850000000001,
       37.562
@@ -41316,42 +40590,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Gray County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.44,
       37.739000000000004
@@ -41369,42 +40621,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Greeley County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.806,
       38.481
@@ -41422,42 +40663,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Greenwood County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.2425,
       37.8885
@@ -41475,42 +40694,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Hamilton County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.786,
       37.9995
@@ -41528,42 +40725,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Harper County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.076,
       37.192
@@ -41581,42 +40756,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Harvey County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.42699999999999,
       38.043
@@ -41634,42 +40787,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Haskell County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.87100000000001,
       37.5625
@@ -41687,42 +40818,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Hodgeman County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.8985,
       38.0875
@@ -41740,42 +40849,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Jackson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.8,
       39.4345
@@ -41793,42 +40880,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Jefferson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.3885,
       39.226
@@ -41846,42 +40911,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Jewell County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.21799999999999,
       39.785
@@ -41899,42 +40942,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Johnson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.832,
       38.8995
@@ -41952,42 +40973,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Kearny County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.3165,
       38.0005
@@ -42005,42 +41004,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Kingman County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.136,
       37.559
@@ -42058,42 +41046,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Kiowa County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.2855,
       37.558
@@ -42111,42 +41077,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Labette County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.298,
       37.191500000000005
@@ -42164,42 +41108,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Lane County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.46600000000001,
       38.481
@@ -42217,42 +41139,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Leavenworth County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.982,
       39.1875
@@ -42270,42 +41170,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Lincoln County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.20949999999999,
       39.045500000000004
@@ -42323,42 +41212,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Linn County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.8455,
       38.213499999999996
@@ -42376,42 +41243,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Logan County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.148,
       38.917500000000004
@@ -42429,42 +41285,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Lyon County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.1515,
       38.455
@@ -42482,42 +41316,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "McPherson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.6485,
       38.391999999999996
@@ -42535,42 +41347,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Marion County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.0955,
       38.3475
@@ -42588,42 +41378,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Marshall County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -96.523,
       39.783500000000004
@@ -42641,42 +41420,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Meade County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.37100000000001,
       37.2375
@@ -42694,42 +41451,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Miami County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.838,
       38.564
@@ -42747,42 +41482,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Mitchell County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.209,
       39.393
@@ -42800,42 +41513,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Montgomery County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.741,
       37.193
@@ -42853,42 +41544,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Morris County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.64349999999999,
       38.696
@@ -42906,42 +41575,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Morton County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.7985,
       37.191
@@ -42959,42 +41606,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Nemaha County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.014,
       39.783500000000004
@@ -43012,42 +41637,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Neosho County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.30699999999999,
       37.559
@@ -43065,42 +41668,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Ness County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.91550000000001,
       38.480000000000004
@@ -43118,42 +41699,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Norton County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.9025,
       39.7845
@@ -43171,42 +41730,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Osage County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.72550000000001,
       38.652
@@ -43224,42 +41761,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Osborne County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.7675,
       39.3505
@@ -43277,42 +41792,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Ottawa County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.65100000000001,
       39.132
@@ -43330,42 +41823,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Pawnee County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.249,
       38.174499999999995
@@ -43383,42 +41865,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Phillips County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.34700000000001,
       39.7845
@@ -43436,42 +41896,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Pottawatomie County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.38149999999999,
       39.346500000000006
@@ -43489,42 +41927,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Pratt County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.73949999999999,
       37.6475
@@ -43542,42 +41958,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Rawlins County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.07650000000001,
       39.7855
@@ -43595,42 +42000,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Reno County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.086,
       37.9535
@@ -43648,42 +42031,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Republic County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.6505,
       39.828
@@ -43701,42 +42062,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Rice County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.2015,
       38.341
@@ -43754,42 +42093,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Riley County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.6755,
       39.304500000000004
@@ -43807,42 +42124,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Rooks County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.3245,
       39.349999999999994
@@ -43860,42 +42155,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Rush County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.3085,
       38.5225
@@ -43913,42 +42197,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Russell County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.7635,
       38.915000000000006
@@ -43966,42 +42239,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Saline County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.6505,
       38.783500000000004
@@ -44019,42 +42270,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Scott County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.9065,
       38.4825
@@ -44072,42 +42301,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Sedgwick County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.48,
       37.6935
@@ -44125,42 +42332,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Seward County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.8505,
       37.193
@@ -44178,42 +42363,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Shawnee County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.7695,
       39.043499999999995
@@ -44231,42 +42394,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Sheridan County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.4415,
       39.349999999999994
@@ -44284,42 +42425,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Sherman County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.7195,
       39.3505
@@ -44337,42 +42456,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Smith County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.7855,
       39.7855
@@ -44390,42 +42487,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Stafford County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.7475,
       38.042500000000004
@@ -44443,42 +42518,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Stanton County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.78399999999999,
       37.5635
@@ -44496,42 +42549,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Stevens County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.3115,
       37.1915
@@ -44549,42 +42580,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Sumner County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.47800000000001,
       37.238
@@ -44602,42 +42611,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Thomas County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.056,
       39.3505
@@ -44655,42 +42653,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Trego County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.87299999999999,
       38.914500000000004
@@ -44708,42 +42684,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Wabaunsee County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.22399999999999,
       38.9755
@@ -44761,42 +42715,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Wallace County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.76249999999999,
       38.9165
@@ -44814,42 +42757,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Washington County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -97.0875,
       39.784000000000006
@@ -44867,42 +42799,31 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
         "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Wichita County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.346,
       38.482
@@ -44920,42 +42841,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Wilson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.74350000000001,
       37.559
@@ -44973,42 +42872,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Woodson County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.74000000000001,
       37.8865
@@ -45026,42 +42903,20 @@
     "level": "county"
   },
   {
-    "state": "Kansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
     "county": "Wyandotte County",
-    "rating": 0.17647058823529413,
+    "state": "Kansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.74950000000001,
       39.097
@@ -61112,7 +58967,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-05-30T18:07:53.491Z",
+    "publishedDate": "2020-06-01T18:52:06.804Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61229,7 +59084,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-05-30T18:01:53.999Z",
+    "publishedDate": "2020-06-01T18:37:08.519Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61346,7 +59201,7 @@
       }
     ],
     "county": "Bates County",
-    "publishedDate": "2020-05-23T19:22:06.543Z",
+    "publishedDate": "2020-06-01T18:37:31.383Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.332,
@@ -61463,7 +59318,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-05-30T18:02:04.000Z",
+    "publishedDate": "2020-06-01T18:37:35.748Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61502,7 +59357,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-05-30T18:02:08.156Z",
+    "publishedDate": "2020-06-01T18:37:40.907Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61541,7 +59396,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-05-29T17:55:51.845Z",
+    "publishedDate": "2020-06-01T18:37:49.634Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61580,7 +59435,7 @@
       }
     ],
     "county": "Caldwell County",
-    "publishedDate": "2020-05-20T18:06:37.500Z",
+    "publishedDate": "2020-06-01T18:39:06.735Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.983,
@@ -61697,7 +59552,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-05-29T17:56:00.825Z",
+    "publishedDate": "2020-06-01T18:39:12.592Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61814,7 +59669,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-05-30T18:02:25.775Z",
+    "publishedDate": "2020-06-01T18:39:16.438Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61931,7 +59786,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-05-30T18:02:36.109Z",
+    "publishedDate": "2020-06-01T18:39:21.774Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -62009,7 +59864,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-05-30T18:02:48.392Z",
+    "publishedDate": "2020-06-01T18:39:25.730Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62087,7 +59942,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-05-25T18:33:03.779Z",
+    "publishedDate": "2020-06-01T18:39:30.616Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -62399,7 +60254,7 @@
       }
     ],
     "county": "Douglas County",
-    "publishedDate": "2020-05-01T22:04:22.973Z",
+    "publishedDate": "2020-05-31T17:26:51.637Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.499,
@@ -62438,7 +60293,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-05-30T18:03:00.380Z",
+    "publishedDate": "2020-06-01T18:39:42.328Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62477,7 +60332,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-05-29T17:56:29.138Z",
+    "publishedDate": "2020-06-01T18:39:49.841Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62555,7 +60410,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-05-29T18:14:10.218Z",
+    "publishedDate": "2020-06-01T18:40:00.906Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62594,7 +60449,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-05-30T18:03:15.773Z",
+    "publishedDate": "2020-06-01T18:40:05.073Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62633,7 +60488,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-05-23T19:10:17.496Z",
+    "publishedDate": "2020-05-31T17:27:06.822Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -62789,7 +60644,7 @@
       }
     ],
     "county": "Holt County",
-    "publishedDate": "2020-05-01T22:04:33.460Z",
+    "publishedDate": "2020-05-31T17:27:17.330Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -95.272,
@@ -62906,7 +60761,7 @@
       }
     ],
     "county": "Iron County",
-    "publishedDate": "2020-05-01T22:04:36.523Z",
+    "publishedDate": "2020-06-01T18:51:22.787Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.845,
@@ -62945,7 +60800,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-05-30T18:08:45.228Z",
+    "publishedDate": "2020-06-01T18:40:14.169Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63023,7 +60878,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-05-30T18:08:48.998Z",
+    "publishedDate": "2020-06-01T18:40:17.442Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63140,7 +60995,7 @@
       }
     ],
     "county": "Laclede County",
-    "publishedDate": "2020-05-12T19:19:12.453Z",
+    "publishedDate": "2020-06-01T18:40:26.185Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.55449999999999,
@@ -63179,7 +61034,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-05-28T18:35:35.290Z",
+    "publishedDate": "2020-05-31T17:28:00.154Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63296,7 +61151,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-05-26T18:11:47.092Z",
+    "publishedDate": "2020-06-01T18:40:33.875Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63413,7 +61268,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-05-29T18:08:02.152Z",
+    "publishedDate": "2020-06-01T18:40:45.423Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63608,7 +61463,7 @@
       }
     ],
     "county": "Mercer County",
-    "publishedDate": "2020-05-01T22:04:54.968Z",
+    "publishedDate": "2020-05-31T17:28:50.781Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.571,
@@ -63686,7 +61541,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-05-30T18:04:51.962Z",
+    "publishedDate": "2020-05-31T17:28:56.508Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63725,7 +61580,7 @@
       }
     ],
     "county": "Moniteau County",
-    "publishedDate": "2020-05-28T18:36:02.612Z",
+    "publishedDate": "2020-05-31T17:28:59.309Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6115,
@@ -63920,7 +61775,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-05-18T18:33:26.308Z",
+    "publishedDate": "2020-06-01T18:40:58.628Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -63959,7 +61814,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-05-30T18:05:05.970Z",
+    "publishedDate": "2020-06-01T18:41:04.023Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -64115,7 +61970,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-05-30T18:05:22.331Z",
+    "publishedDate": "2020-06-01T18:41:09.735Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64154,7 +62009,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-05-30T18:05:25.269Z",
+    "publishedDate": "2020-06-01T18:41:12.664Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64271,7 +62126,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-05-30T18:05:31.179Z",
+    "publishedDate": "2020-05-31T17:29:19.796Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64388,7 +62243,7 @@
       }
     ],
     "county": "Pulaski County",
-    "publishedDate": "2020-05-27T18:35:52.225Z",
+    "publishedDate": "2020-06-01T18:41:28.780Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.2175,
@@ -64466,7 +62321,7 @@
       }
     ],
     "county": "Ralls County",
-    "publishedDate": "2020-05-26T18:13:22.959Z",
+    "publishedDate": "2020-05-31T17:29:37.985Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.44800000000001,
@@ -64661,7 +62516,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-05-30T18:09:21.949Z",
+    "publishedDate": "2020-06-01T18:41:53.488Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64739,7 +62594,7 @@
       }
     ],
     "county": "Ste. Genevieve County",
-    "publishedDate": "2020-05-30T18:06:14.851Z",
+    "publishedDate": "2020-06-01T18:42:04.850Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.19200000000001,
@@ -64819,7 +62674,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-05-30T16:15:00.000Z",
+    "publishedDate": "2020-06-01T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64858,7 +62713,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-05-28T18:56:10.434Z",
+    "publishedDate": "2020-06-01T18:41:38.202Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64936,7 +62791,7 @@
       }
     ],
     "county": "Scotland County",
-    "publishedDate": "2020-05-01T22:05:42.725Z",
+    "publishedDate": "2020-06-01T18:41:42.249Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14699999999999,
@@ -64975,7 +62830,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-05-30T18:05:49.570Z",
+    "publishedDate": "2020-06-01T18:41:45.905Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65014,7 +62869,7 @@
       }
     ],
     "county": "Shannon County",
-    "publishedDate": "2020-05-29T18:10:31.830Z",
+    "publishedDate": "2020-06-01T18:41:49.441Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.3375,
@@ -65092,7 +62947,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-05-30T18:06:18.819Z",
+    "publishedDate": "2020-06-01T18:42:08.147Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65170,7 +63025,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-05-30T18:06:22.447Z",
+    "publishedDate": "2020-06-01T18:42:13.428Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65326,7 +63181,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-05-30T18:06:39.549Z",
+    "publishedDate": "2020-06-01T18:42:20.473Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65365,7 +63220,7 @@
       }
     ],
     "county": "Washington County",
-    "publishedDate": "2020-05-29T18:12:20.561Z",
+    "publishedDate": "2020-06-01T18:42:24.405Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.87,
@@ -65443,7 +63298,7 @@
       }
     ],
     "county": "Webster County",
-    "publishedDate": "2020-05-18T18:37:39.924Z",
+    "publishedDate": "2020-06-01T18:42:28.107Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.878,
@@ -65560,7 +63415,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-05-30T18:09:42.329Z",
+    "publishedDate": "2020-06-01T18:42:02.449Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -80405,7 +78260,7 @@
       }
     ],
     "county": "Adair County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.64,
       35.9005
@@ -80557,7 +78412,7 @@
       }
     ],
     "county": "Beckham County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.68,
       35.2695
@@ -80633,7 +78488,7 @@
       }
     ],
     "county": "Bryan County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.19200000000001,
       33.921499999999995
@@ -80671,7 +78526,7 @@
       }
     ],
     "county": "Caddo County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -98.35749999999999,
       35.2035
@@ -80785,7 +78640,7 @@
       }
     ],
     "county": "Cherokee County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.0395,
       35.9
@@ -81127,7 +78982,7 @@
       }
     ],
     "county": "Custer County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99,
       35.6385
@@ -81165,7 +79020,7 @@
       }
     ],
     "county": "Delaware County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.787,
       36.416
@@ -81317,7 +79172,7 @@
       }
     ],
     "county": "Garvin County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -97.30000000000001,
       34.681
@@ -81621,7 +79476,7 @@
       }
     ],
     "county": "Jackson County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.441,
       34.598
@@ -81887,7 +79742,7 @@
       }
     ],
     "county": "Le Flore County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.74600000000001,
       34.946
@@ -81925,7 +79780,7 @@
       }
     ],
     "county": "Lincoln County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.881,
       35.7025
@@ -82229,7 +80084,7 @@
       }
     ],
     "county": "Mayes County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.223,
       36.292500000000004
@@ -82343,7 +80198,7 @@
       }
     ],
     "county": "Noble County",
-    "rating": 0.5490196078431373,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -97.17500000000001,
       36.379999999999995
@@ -82495,7 +80350,7 @@
       }
     ],
     "county": "Okmulgee County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.953,
       35.617000000000004
@@ -82571,7 +80426,7 @@
       }
     ],
     "county": "Ottawa County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.826,
       36.834
@@ -82685,7 +80540,7 @@
       }
     ],
     "county": "Pittsburg County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -95.7205,
       34.947500000000005
@@ -82723,7 +80578,7 @@
       }
     ],
     "county": "Pontotoc County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.66900000000001,
       34.735
@@ -82913,7 +80768,7 @@
       }
     ],
     "county": "Seminole County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -96.60900000000001,
       35.1625
@@ -82951,7 +80806,7 @@
       }
     ],
     "county": "Sequoyah County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -94.7815,
       35.465
@@ -83027,7 +80882,7 @@
       }
     ],
     "county": "Texas County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -101.48849999999999,
       36.7485
@@ -83293,7 +81148,7 @@
       }
     ],
     "county": "Woodward County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.281,
       36.491
@@ -88522,31 +86377,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Gregory County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.01650000000001,
       43.248999999999995
@@ -97134,31 +94978,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Kinney County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.45400000000001,
       29.354
@@ -108509,8 +106342,6 @@
     "country": "United States",
     "aggregate": "county",
     "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
-    "county": "",
-    "population": 5758736,
     "rating": 0.49019607843137253,
     "coordinates": [
       -105.551,
@@ -108520,6 +106351,7 @@
       "America/Denver"
     ],
     "featureId": "iso2:US-CO",
+    "population": 5758736,
     "populationDensity": 21.330560753945722,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
@@ -110315,30 +108147,28 @@
     "level": "state"
   },
   {
+    "country": "Australia",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Australia",
-    "curators": [
+    "sources": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
       }
     ],
-    "aggregate": "state",
     "state": "Victoria",
-    "rating": 0.5882352941176471,
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565

@@ -23,6 +23,19 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "country": "Italy",
+    "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
+    "timeseries": true,
+    "aggregate": "state",
+    "priority": 1,
+    "headless": false,
+    "certValidation": true,
+    "type": "csv",
+    "ssl": true,
+    "rating": 0.7058823529411765,
+    "countryId": "iso1:IT"
+  },
+  {
     "county": "Washoe County",
     "state": "Nevada",
     "country": "United States",
@@ -41,23 +54,10 @@
     "headless": false,
     "priority": 0,
     "ssl": false,
-    "rating": 0.7647058823529411,
+    "rating": 0.6862745098039216,
     "countryId": "iso1:US",
     "stateId": "iso2:US-NV",
     "countyId": "fips:32031"
-  },
-  {
-    "country": "Italy",
-    "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
-    "timeseries": true,
-    "aggregate": "state",
-    "priority": 1,
-    "headless": false,
-    "certValidation": true,
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.7058823529411765,
-    "countryId": "iso1:IT"
   },
   {
     "state": "Arkansas",
@@ -822,7 +822,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-05-30",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-01",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1314,6 +1314,31 @@
     "ssl": true,
     "rating": 0.43137254901960786,
     "countryId": "iso1:DE"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:EE"
   },
   {
     "country": "Canada",
@@ -2042,6 +2067,38 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
+  },
+  {
     "country": "Puerto Rico",
     "type": "table",
     "timeseries": false,
@@ -2252,51 +2309,6 @@
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "state": "Kansas",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "https://govstatus.egov.com/coronavirus"
-      },
-      {
-        "name": "Kansas Department of Health and Environment",
-        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "twitter": "paulboal",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "state": "MO",
-        "county": "St. Louis County",
-        "city": "St. Louis",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
-    "type": "pdf",
-    "ssl": true,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-KS"
   },
   {
     "state": "Wyoming",
