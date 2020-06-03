@@ -1,6 +1,15 @@
+.graph-container {
+  --graph-color-cases: steelblue;
+  --graph-color-deaths: red;
+  --graph-color-tested: orange;
+  --graph-color-hospitalized: yellow;
+}
+
 .ca-Graph {
   height: 250px;
   width: 100%;
+  overflow: auto;
+  position: relative;
 }
 
 .graph-button-container {
@@ -20,33 +29,111 @@
   opacity: 0.5;
 }
 
+/**********
+Graph colors
+**********/
+
 .graph-line {
   fill: none;
   stroke-width: 4px;
   stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.graph-circle:hover {
+  cursor: pointer;
 }
 
 .graph-line-cases {
-  stroke: steelblue;
+  /* Stroke for line on graph */
+  stroke: var(--graph-color-cases);
+  /* bg color for graph legend color */
+  background-color: var(--graph-color-cases);
+  color: var(--graph-color-cases);
+}
+
+.graph-circle-cases {
+  fill: var(--graph-color-cases);
 }
 
 .graph-line-deaths {
-  stroke: red;
+  stroke: var(--graph-color-deaths);
+  background-color: var(--graph-color-deaths);
+}
+.graph-circle-deaths {
+  fill: var(--graph-color-deaths);
 }
 
-#graph-elements {
-  width: 100%;
-  height: 400px;
-  visibility: hidden;
+.graph-line-hospitalized {
+  stroke: var(--graph-color-hospitalized);
+  background-color: var(--graph-color-hospitalized);
 }
 
-#graph-container {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  outline: 0;
+.graph-circle-hospitalized {
+  fill: var(--graph-color-hospitalized);
 }
 
-#graph {
+.graph-line-tested {
+  stroke: var(--graph-color-tested);
+  background-color: var(--graph-color-tested);
+}
+
+.graph-circle-tested {
+  fill: var(--graph-color-tested);
+}
+
+/**********
+Legend
+**********/
+
+.graph-legend {
+  width: 150px;
+  height: 100px;
+  padding: 5px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 5px;
+  left: 60px;
+}
+
+.graph-legend-key-container {
+  display: flex;
+  align-items: center;
+}
+
+.graph-legend-color {
+  height: 15px;
+  width: 15px;
+}
+
+.graph-legend-key-name {
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.graph-legend-key-name:hover {
+  text-decoration: underline;
+}
+
+/**********
+Tooltip
+**********/
+
+.graph-tooltip {
+  background-color: #e3e3e3;
+  width: 200px;
+  min-height: 150px;
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+}
+
+.graph-tooltip-title {
+  text-align: center;
+  /* color: steelblue; */
+  margin: 0;
+  text-transform: capitalize;
 }

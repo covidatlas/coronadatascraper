@@ -104,18 +104,16 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   //   html += renderCaseInfo('Currently hospitalized', caseInfo.hospitalized - caseInfo.discharged, 'ca-Hospitalized');
   // }
   html += `</div>
-    <div class="col-xs-12 col-md-7 col-lg-8">
+    <div class="col-xs-12 col-md-7 col-lg-8 graph-container">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
         <div class="graph-button-container">
           <div class="graph-button-container-overview">
             <button id="graph-btn-overview">Overview</button>
-            <button id="graph-btn-linear">Linear</button>
-            <button id="graph-btn-log">Logarithmic</button>
+            <button id="graph-btn-daily">Daily Count</button>
           </div>
           <div class="graph-button-container-daily">
-            <button id="graph-btn-daily">Daily</button>
-            <button id="graph-btn-cases">Cases</button>
-            <button id="graph-btn-deaths">Deaths</button>
+            <button id="graph-btn-linear">Linear</button>
+            <button id="graph-btn-log">Logarithmic</button>
           </div>
         </div>
       <div id="graph" class="ca-Graph"></div>

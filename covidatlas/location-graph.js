@@ -1,34 +1,5 @@
 /* globals d3, document */
 
-// const fields = [
-//   {
-//     name: 'cases',
-//     color: 'orange'
-//   },
-//   {
-//     name: 'deaths',
-//     color: 'red'
-//   }
-// todo: what to do about tested?
-// {
-//   name: 'recovered',
-//   color: 'green'
-// },
-// {
-//   name: 'hospitalized',
-//   color: 'red'
-// },
-// {
-//   name: 'discharged',
-//   color: 'red'
-// }
-// ];
-/*
-  [
-    date: 'YYYY-MM-DD'
-  ]
-*/
-
 function generateGraphData({ timeseries, location }) {
   const graphData = [];
   for (const date in timeseries) {
@@ -45,64 +16,205 @@ function generateGraphData({ timeseries, location }) {
   return graphData;
 }
 
-function copyData(arr) {
-  const arrCopy = [];
-  arr.forEach(d => {
-    arrCopy.push({
-      cases: d.cases,
-      deaths: d.deaths,
-      date: d.date
-    });
-  });
-  return arrCopy;
-}
-
 function showGraph({ timeseries, location }) {
-  // Controller vars
-  let graphType = 'overview'; // overview or daily
-  let linLog = 'linear'; // linear or log
-  let dataKey = 'cases'; // cases or deaths
+  // display handles view controlling
+  const display = {
+    // Graph types
+    // linearGraph: true for linear graph, false for logarithmic graph
+    linearGraph: true,
+    // overviewGraph: true for total overview of time, false for daily occurrences graph
+    overviewGraph: true,
+
+    // Data points to display
+    cases: true,
+    deaths: true,
+    hospitalized: true,
+    tested: true
+  };
 
   //
   // Data
-  // Format date and remove invalid entries
+  //
 
-  let data = generateGraphData({ timeseries, location });
+  // Create an array of objects to work well with d3.nested
+  // Functions to work in forEach loop of data
 
-  // Format Dates for browser compatability
+  const lines = [];
+
+  // Pull in data
+  const data = generateGraphData({ timeseries, location });
+
+  // Parse time for cross browser compatability
   const parseTime = d3.timeParse('%Y-%m-%d');
 
-  data.forEach(function(d) {
-    d.date = parseTime(d.date);
+  // Determine the daily occurrences for each peace of data
+  function countDay(key, d, i, arr) {
+    if (i === 0) {
+      return d[key];
+    }
+
+    // Find the difference in data points between this date and the previous date and array iterator is > 0
+    // If there is data for the previous date
+    if (arr[i - 1][key] !== undefined) {
+      return d[key] - arr[i - 1][key];
+    }
+
+    // If data points started being collected at dates after beginning of array
+    // To avoid spike in data return the same daily count as the second date of data point
+    return arr[i + 1][key] - arr[i][key];
+  }
+
+  // Make sure all data is > 0 for log calculations. log0 = undefined
+  // If point is 0 set it to 1 for graphing purposes
+
+  function countLog(obj) {
+    if (obj.count <= 0) {
+      obj.countLog = 1;
+    } else {
+      obj.countLog = obj.count;
+    }
+    return obj.countLog;
+  }
+  function countLogDay(obj) {
+    if (obj.countDay <= 0) {
+      obj.countLogDay = 1;
+    } else {
+      obj.countLogDay = obj.countDay;
+    }
+    return obj.countLogDay;
+  }
+
+  // Push an object with all data set for that day into lines array
+  // Will use the data from data pulled in above
+  function populatePoint(key, d, i, arr) {
+    let obj = {};
+
+    if (d[key] !== undefined && d[key] !== null) {
+      obj.name = key;
+      obj.count = d[key];
+      obj.date = parseTime(d.date);
+      obj.countDay = countDay(key, d, i, arr);
+      obj.countLog = countLog(obj);
+      obj.countLogDay = countLogDay(obj);
+
+      lines.push(obj);
+      obj = {};
+    }
+
+    // Example for readability
+
+    // if (d.cases !== undefined && d.cases !== null) {
+    //   obj.name = 'cases';
+    //   obj.count = d.cases;
+    //   obj.date = parseTime(d.date);
+    //   obj.countDay = countDay('cases', d, i, arr);
+    //   obj.countLog = countLog(obj);
+    //   obj.countLogDay = countLogDay(obj);
+
+    //   lines.push(obj);
+    //   obj = {};
+    // }
+  }
+
+  // Add modified data object points to lines array
+  // Add key for populatePoint of what you want to label key as
+  data.forEach((d, i, arr) => {
+    populatePoint('cases', d, i, arr);
+
+    populatePoint('deaths', d, i, arr);
+
+    populatePoint('tested', d, i, arr);
+
+    populatePoint('hospitalized', d, i, arr);
   });
 
-  // Filter out any objects with values containing null or undefined
-  function cleanData({ cases, deaths, date }) {
-    if (cases === undefined || cases === null) {
-      return false;
+  // Filter lines for what is being displayed and toggled in legend
+  function filterLines(d) {
+    if (display.cases && d.name === 'cases') {
+      return 1;
     }
-    if (deaths === undefined || deaths === null) {
-      return false;
+    if (display.deaths && d.name === 'deaths') {
+      return 1;
     }
-    if (date === undefined || date === null) {
-      return false;
+    if (display.tested && d.name === 'tested') {
+      return 1;
     }
-    return true;
+    if (display.hospitalized && d.name === 'hospitalized') {
+      return 1;
+    }
   }
-  data = data.filter(cleanData);
+
+  //
+  // Legend
+  //
+
+  // Data for generating legend
+  const nestedLines = d3
+    .nest()
+    .key(d => d.name)
+    .entries(lines);
+
+  const legend = document.createElement('div');
+
+  legend.setAttribute('class', 'graph-legend');
+  legend.innerHTML = '<div class="graph-legend-key-container">';
+  for (const d of nestedLines) {
+    legend.innerHTML += `
+        <div class="graph-legend-key-container" id="graph-legend-${d.key}">
+          <div class="graph-legend-color graph-line-${d.key}"></div>
+          <div class="graph-legend-key-name">${d.key}</div>
+        </div>
+        </div>`;
+  }
+  document.getElementById('graph').appendChild(legend);
+
+  // Legend toggle buttons
+  const legendCases = document.getElementById('graph-legend-cases');
+  const legendDeaths = document.getElementById('graph-legend-deaths');
+  const legendHospitalized = document.getElementById('graph-legend-hospitalized');
+  const legendTested = document.getElementById('graph-legend-tested');
+
+  // Appends legend onto graph and toggles for filtered lines result
+  // Error check to make sure the area you are viewing has complete data or don't try to change style
+  function applyLegend() {
+    document.getElementById('graph').appendChild(legend);
+
+    // Toggle opacity of active data points in legend
+    if (legendCases) {
+      legendCases.style.opacity = display.cases === true ? 1 : 0.5;
+    }
+    if (legendDeaths) {
+      legendDeaths.style.opacity = display.deaths === true ? 1 : 0.5;
+    }
+    if (legendHospitalized) {
+      legendHospitalized.style.opacity = display.hospitalized === true ? 1 : 0.5;
+    }
+    if (legendTested) {
+      legendTested.style.opacity = display.tested === true ? 1 : 0.5;
+    }
+  }
+
+  //
+  // Building graph
+  //
 
   // set the dimensions and margins of the graph
   const el = document.querySelector('#graph');
-  const margin = { top: 20, right: 5, bottom: 30, left: 50 };
-  const width = el.offsetWidth - margin.left - margin.right;
-  const height = el.offsetHeight - margin.top - margin.bottom;
+  const margin = { top: 20, right: 10, bottom: 10, left: 45 };
+  const width = el.offsetWidth - margin.left - margin.right - 10;
+  const height = el.offsetHeight - margin.top - margin.bottom - 10;
 
-  // Call generate graph
-  // generateGraph();
+  // console.log(lines);
 
   function generateGraph() {
-    // Clear any previous graph
+    // Clear any previous graph and append legend
     d3.selectAll('#graph > *').remove();
+    applyLegend();
+
+    // Filter data for active data points and toggling
+    const filteredLines = lines.filter(d => filterLines(d));
+
+    // Data for drawing lines
 
     // append the svg object to the #graph of the page
     const svg = d3
@@ -119,46 +231,44 @@ function showGraph({ timeseries, location }) {
     // Overview graph - Line Graph
     //
 
-    function showOverviewGraph(data) {
-      // Data
-      // Make a copy of data array for modification
-      const modData = copyData(data);
-
-      // Modify data points to be >= 1 for log graph
-      if (linLog === 'log') {
-        modData.forEach(d => {
-          if (d.deaths === 0) {
-            d.deaths = 1;
-          }
-          if (d.cases === 0) {
-            d.cases = 1;
-          }
-        });
-      }
-
+    function drawGraph() {
       const xValue = d => d.date;
-      const xLabel = 'date';
-      const yValue = d => d[dataKey];
-      const yLabel = dataKey;
+      // const xLabel = 'date';
+      // Set yValue depending on if display is set for linear graph or log graph, and for overview data or day count data
+      const yValue = d => {
+        if (display.linearGraph && display.overviewGraph) {
+          return d.count;
+        }
+        if (display.linearGraph && !display.overviewGraph) {
+          return d.countDay;
+        }
+        if (!display.linearGraph && display.overviewGraph) {
+          return d.countLog;
+        }
+        if (!display.linearGraph && !display.overviewGraph) {
+          return d.countLogDay;
+        }
+      };
+      // const yLabel = 'Population';
 
       //
       // Configure x scale
       //
       const xScale = d3
         .scaleTime()
-        .domain(d3.extent(modData, xValue))
+        .domain(d3.extent(filteredLines, xValue))
         .range([0, width]);
 
       // Append x axis data onto chart
       g.append('g')
         .call(d3.axisBottom(xScale))
         .attr('transform', `translate(0,${height})`);
-      // Append x axis data onto chart
-      g.append('text')
-        .attr('class', 'bottom-axis-label')
-        .attr('x', width / 2)
-        .attr('y', height + margin.bottom)
-        .text(xLabel);
+      // Append x axis label onto chart
+      // g.append('text')
+      //   .attr('class', 'bottom-axis-label')
+      //   .attr('x', width / 2)
+      //   .attr('y', height + margin.bottom)
+      //   .text(xLabel);
 
       //
       // Configure y scale
@@ -166,16 +276,16 @@ function showGraph({ timeseries, location }) {
       // Default is linear
       let yScale = d3
         .scaleLinear()
-        .domain([0, d3.max(modData, d => yValue(d))])
+        .domain([0, d3.max(filteredLines, d => yValue(d))])
         .range([height, 0]);
 
       // Reassign yScale to be log graph
 
-      if (linLog === 'log') {
+      if (display.linearGraph === false) {
         yScale = d3
           .scaleLog()
           .base(2)
-          .domain([1, d3.max(modData, d => yValue(d))])
+          .domain([1, d3.max(filteredLines, d => yValue(d))])
           .range([height, 0]);
       }
 
@@ -183,211 +293,151 @@ function showGraph({ timeseries, location }) {
       g.append('g').call(d3.axisLeft(yScale));
       // Add y axis title and positioning
       // x and y positioning reversed due to rotation
-      g.append('text')
-        .attr('class', 'left-axis-label')
-        .attr('transform', 'rotate(-90)')
-        .attr('x', -height / 2)
-        .attr('y', '-40px')
-        .text(yLabel);
+      // g.append('text')
+      //   .attr('class', 'left-axis-label')
+      //   .attr('transform', 'rotate(-90)')
+      //   .attr('x', -height / 2)
+      //   .attr('y', '-40px')
+      //   .text(yLabel);
 
       // Create paths for lines for different data
+      const nestedFiltered = d3
+        .nest()
+        .key(d => d.name)
+        .entries(filteredLines);
+
       const lineGenerator = d3
         .line()
         .x(d => xScale(xValue(d)))
-        .y(d => yScale(yValue(d)))
-        .curve(d3.curveBasis);
-      // Line for 'cases' (default)
-      g.append('path')
-        .attr('class', 'graph-line graph-line-cases')
-        .attr('d', lineGenerator(modData));
+        .y(d => yScale(yValue(d)));
+      // .curve(d3.curveBasis);
 
-      // Line for 'deaths'
-      dataKey = 'deaths';
-      g.append('path')
-        .attr('class', 'graph-line graph-line-deaths')
-        .attr('d', lineGenerator(modData));
-
-      // Reset vars for rebuilding of graph
-      dataKey = 'cases';
-      // gData = data;
-    }
-
-    //
-    // Daily Change Graph
-    //
-
-    function showDailyGraph(data) {
-      const dailyData = [];
-
-      const xValue = d => d.date;
-      const xLabel = 'date';
-      const yValue = d => d[dataKey];
-      const yLabel = dataKey;
-
-      // Find the cases and deaths per day and format date for display
-      const formatTime = d3.timeFormat('%m/%d');
-
-      for (let i = 0; i < data.length; i++) {
-        if (i === 0) {
-          dailyData.push({
-            cases: data[i].cases,
-            deaths: data[i].deaths,
-            date: formatTime(data[i].date)
-          });
-          continue;
-        }
-        const cases = data[i].cases - data[i - 1].cases;
-        const deaths = data[i].deaths - data[i - 1].deaths;
-        const date = formatTime(data[i].date);
-
-        // If there is an error in data and a negative number results do not add it to array
-        if (cases < 0 || deaths < 0) {
-          continue;
-        }
-
-        dailyData.push({
-          cases,
-          deaths,
-          date
-        });
-      }
-      // console.log(dailyData);
-
-      //
-      // Configure x scale
-      //
-      const xScale = d3
-        .scaleBand()
-        .domain(dailyData.map(d => xValue(d)))
-        .range([0, width])
-        .padding(0.25);
-
-      // Append x axis data onto chart
-      // Tick values adjusts how many dates are displayed on x axis
-      g.append('g')
-        .call(d3.axisBottom(xScale).tickValues(xScale.domain().filter((d, i) => !(i % 3))))
-        .attr('transform', `translate(0,${height})`)
-        .selectAll('text')
-        .style('text-anchor', 'end')
-        .attr('dx', '-.8em')
-        .attr('dy', '.15em')
-        .attr('transform', 'rotate(-65)');
-      // Append x axis label onto chart
-      g.append('text')
-        .attr('class', 'bottom-axis-label')
-        .attr('x', width / 2)
-        .attr('y', height + margin.bottom)
-        .text(xLabel);
-
-      //
-      // Configure y scale
-      // Configure for depending on linear or logarithmic
-      // Default is linear
-      let yScale = d3
-        .scaleLinear()
-        .domain([0, d3.max(dailyData, d => yValue(d))])
-        .range([height, 0]);
-
-      // Reassign yScale to be log graph
-
-      if (linLog === 'log') {
-        yScale = d3
-          .scaleLog()
-          .base(2)
-          .domain([1, d3.max(dailyData, d => yValue(d))])
-          .range([height, 0]);
-
-        // const yValue = d => d[dataKey];
-        // yValue;
-      }
-
-      // Add y axis data (domain / range )
-      g.append('g').call(d3.axisLeft(yScale));
-      // Add y axis title and positioning
-      // x and y positioning reversed due to rotation
-      g.append('text')
-        .attr('class', 'left-axis-label')
-        .attr('transform', 'rotate(-90)')
-        .attr('x', -height / 2)
-        .attr('y', '-40px')
-        .text(yLabel);
-
-      // Append bars onto graph
-      g.selectAll('rect')
-        .data(dailyData)
+      // Draw lines
+      g.selectAll('graph-line')
+        .data(nestedFiltered)
         .enter()
-        .append('rect')
-        .attr('x', d => xScale(xValue(d)))
-        .attr('y', d => yScale(yValue(d)))
-        .attr('width', xScale.bandwidth())
-        .attr('height', d => height - yScale(yValue(d)));
-      // .attr('class', `bar-${dataKey}`);
+        .append('path')
+        .attr('class', d => `graph-line graph-line-${d.key}`)
+        .attr('d', d => lineGenerator(d.values));
+
+      //
+      // Tooltips
+      //
+      // Tooltips and dots use filteredLines array
+
+      const tooltip = d3
+        .select('#graph')
+        .append('div')
+        .attr('class', 'graph-tooltip')
+        .style('opacity', 0);
+
+      const formatDate = date => {
+        const dateF = {
+          year: date.getUTCFullYear(),
+          month: date.getUTCMonth() + 1,
+          day: date.getUTCDate()
+        };
+        return `${dateF.month}/${dateF.day}/${dateF.year}`;
+      };
+
+      const tooltipHTML = ({ name, date, count, countDay }) => {
+        return `
+        <h3 class="graph-tooltip-title" style="color:var(--graph-color-${name})">${name}</h3>
+        <p class="graph-tooltip-date">Date: ${formatDate(date)}</p>
+        <p class="graph-tooltip-overview-count">Total ${name}: ${count}</p>
+        <p class="graph-tooltip-daily-count">Today's ${name}: ${countDay}</p>
+        `;
+      };
+
+      const mouseover = function() {
+        tooltip.style('opacity', 1);
+      };
+
+      const mousemove = function(d) {
+        tooltip
+          .html(tooltipHTML(d))
+          .style('left', `${d3.mouse(this)[0] + 90}px`) // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+          .style('top', `${d3.mouse(this)[1] - 100}px`);
+      };
+
+      const mouseleave = function() {
+        tooltip
+          .transition()
+          .duration(200)
+          .style('opacity', 0);
+      };
+
+      // Draw dots with filtered lines for tooltips
+      g.selectAll('circle')
+        .data(filteredLines)
+        .enter()
+        .append('circle')
+        .attr('cy', d => yScale(yValue(d)))
+        .attr('cx', d => xScale(xValue(d)))
+        .attr('r', 3)
+        .attr('class', d => `graph-circle graph-circle-${d.name}`)
+        .on('mouseover', mouseover)
+        .on('mousemove', mousemove)
+        .on('mouseleave', mouseleave);
     }
 
-    //
-    // controller
-    //
-
-    if (graphType === 'overview') {
-      showOverviewGraph(data);
-    } else if (graphType === 'daily') {
-      showDailyGraph(data);
-    } else {
-      console.log('No graph type inputted');
-    }
+    drawGraph();
   }
   generateGraph();
 
+  //
+  // Event listeners
+  //
+
+  // Event listeners for legend
+  // Error check to make sure the area you are viewing has complete data or don't make a button for it
+  if (legendCases) {
+    legendCases.addEventListener('click', () => {
+      display.cases = !display.cases;
+      generateGraph();
+    });
+  }
+  if (legendDeaths) {
+    legendDeaths.addEventListener('click', () => {
+      display.deaths = !display.deaths;
+      generateGraph();
+    });
+  }
+  if (legendHospitalized) {
+    legendHospitalized.addEventListener('click', () => {
+      display.hospitalized = !display.hospitalized;
+      generateGraph();
+    });
+  }
+  if (legendTested) {
+    legendTested.addEventListener('click', () => {
+      display.tested = !display.tested;
+      generateGraph();
+    });
+  }
+
   const btnOverview = document.getElementById('graph-btn-overview');
+  const btnDailyCount = document.getElementById('graph-btn-daily');
   const btnLinear = document.getElementById('graph-btn-linear');
   const btnLog = document.getElementById('graph-btn-log');
-  const btnDaily = document.getElementById('graph-btn-daily');
-  const btnCases = document.getElementById('graph-btn-cases');
-  const btnDeaths = document.getElementById('graph-btn-deaths');
-
-  // On load
-  btnCases.disabled = true;
-  btnDeaths.disabled = true;
 
   btnOverview.addEventListener('click', () => {
-    graphType = 'overview';
+    display.overviewGraph = true;
+    generateGraph();
+  });
 
-    btnCases.disabled = true;
-    btnDeaths.disabled = true;
-
-    btnLinear.disabled = false;
-    btnLog.disabled = false;
+  btnDailyCount.addEventListener('click', () => {
+    display.overviewGraph = false;
     generateGraph();
   });
 
   btnLinear.addEventListener('click', () => {
-    linLog = 'linear';
+    display.linearGraph = true;
     generateGraph();
   });
 
   btnLog.addEventListener('click', () => {
-    linLog = 'log';
-    generateGraph();
-  });
-
-  btnDaily.addEventListener('click', () => {
-    graphType = 'daily';
-
-    btnLinear.disabled = true;
-    btnLog.disabled = true;
-
-    btnCases.disabled = false;
-    btnDeaths.disabled = false;
-    generateGraph();
-  });
-
-  btnCases.addEventListener('click', () => {
-    dataKey = 'cases';
-    generateGraph();
-  });
-
-  btnDeaths.addEventListener('click', () => {
-    dataKey = 'deaths';
+    display.linearGraph = false;
     generateGraph();
   });
 }
