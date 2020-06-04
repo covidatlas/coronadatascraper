@@ -521,6 +521,27 @@
     "stateId": "iso2:US-OR"
   },
   {
+    "state": "Pennsylvania",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
+    "type": "table",
+    "ssl": true,
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PA"
+  },
+  {
     "state": "Wisconsin",
     "country": "United States",
     "aggregate": "county",
@@ -684,26 +705,6 @@
     "countryId": "iso1:SA"
   },
   {
-    "state": "Michigan",
-    "country": "United States",
-    "sources": [
-      {
-        "name": "Michigan Department of Health & Human Services"
-      }
-    ],
-    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MI"
-  },
-  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -764,40 +765,6 @@
     "countyId": "fips:48201"
   },
   {
-    "country": "Russia",
-    "aggregate": "state",
-    "url": "https://yandex.ru/maps/api/covid?csrfToken=",
-    "type": "json",
-    "curators": [
-      {
-        "name": "Yandex",
-        "url": "https://yandex.ru"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Data provided by Rospotrebnadzor (Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing)",
-        "name": "Rospotrebnadzor",
-        "url": "https://www.rospotrebnadzor.ru/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Arseniy Ivanov",
-        "twitter": "@freeatnet",
-        "github": "freeatnet",
-        "email": "arseniy+coronadatascraper@freeatnet.com"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:RU"
-  },
-  {
     "country": "Ukraine",
     "sources": [
       {
@@ -822,7 +789,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-03",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1725,6 +1692,38 @@
   },
   {
     "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "QLD Government Health Department",
+        "name": "QLD Government Health",
+        "url": "https://www.health.qld.gov.au"
+      }
+    ],
+    "state": "Queensland",
+    "type": "table",
+    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-QLD"
+  },
+  {
+    "country": "Australia",
     "state": "Tasmania",
     "priority": 2,
     "sources": [
@@ -2309,6 +2308,51 @@
     "rating": 0.2549019607843137,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "state": "Kansas",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "https://govstatus.egov.com/coronavirus"
+      },
+      {
+        "name": "Kansas Department of Health and Environment",
+        "url": "http://www.kdheks.gov/coronavirus/COVID-19_Resource_Center.htm"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "twitter": "paulboal",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "state": "MO",
+        "county": "St. Louis County",
+        "city": "St. Louis",
+        "flag": "🇺🇸"
+      },
+      {
+        "name": "Albert III",
+        "github": "aed3",
+        "url": "https://aed3.github.io",
+        "county": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.coronavirus.kdheks.gov/DocumentCenter/View/1125/Historical---May-5",
+    "type": "pdf",
+    "ssl": true,
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-KS"
   },
   {
     "state": "Wyoming",
