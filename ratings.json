@@ -705,6 +705,26 @@
     "countryId": "iso1:SA"
   },
   {
+    "state": "Michigan",
+    "country": "United States",
+    "sources": [
+      {
+        "name": "Michigan Department of Health & Human Services"
+      }
+    ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "type": "table",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MI"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -789,7 +809,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-03",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-04",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1283,31 +1303,6 @@
     "countryId": "iso1:DE"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:EE"
-  },
-  {
     "country": "Canada",
     "sources": [
       {
@@ -1657,38 +1652,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-ACT"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
-      }
-    ],
-    "state": "New South Wales",
-    "type": "table",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",

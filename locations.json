@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-03",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-04",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -19964,7 +19964,7 @@
       }
     ],
     "county": "Del Norte County",
-    "rating": 0.7843137254901961,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -123.887,
       41.691
@@ -53497,20 +53497,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Alcona County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -83.5805,
       44.683499999999995
@@ -53528,31 +53525,17 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "county": "Alger County",
     "state": "Michigan",
-    "rating": 0.5882352941176471,
+    "country": "United States",
+    "sources": [
+      {
+        "name": "Michigan Department of Health & Human Services"
+      }
+    ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
+    "county": "Alger County",
+    "rating": 0.39215686274509803,
     "coordinates": [
       -86.491,
       46.425
@@ -53570,20 +53553,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Allegan County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.9085,
       42.5935
@@ -53601,20 +53581,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Alpena County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.578,
       45.0315
@@ -53632,20 +53609,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Antrim County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.1445,
       45.01
@@ -53663,20 +53637,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Arenac County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.8655,
       44.037
@@ -53694,20 +53665,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Baraga County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.33500000000001,
       46.6935
@@ -53725,20 +53693,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Barry County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.309,
       42.5955
@@ -53756,20 +53721,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Bay County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.93350000000001,
       43.738
@@ -53787,20 +53749,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Benzie County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.037,
       44.6455
@@ -53818,20 +53777,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Berrien County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.524,
       42.001000000000005
@@ -53849,20 +53805,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Branch County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.0595,
       41.9155
@@ -53880,20 +53833,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Calhoun County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.00450000000001,
       42.245999999999995
@@ -53911,20 +53861,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Cass County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.993,
       41.915
@@ -53942,20 +53889,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Charlevoix County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.2175,
       45.4725
@@ -53973,20 +53917,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Cheboygan County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.469,
       45.4935
@@ -54004,20 +53945,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Chippewa County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.3555,
       46.343
@@ -54035,20 +53973,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Clare County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.8475,
       43.989000000000004
@@ -54066,20 +54001,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Clinton County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.60050000000001,
       42.944500000000005
@@ -54097,20 +54029,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Crawford County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.61099999999999,
       44.6825
@@ -54128,20 +54057,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Delta County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.9135,
       45.8165
@@ -54159,20 +54085,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Dickinson County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -87.876,
       45.9845
@@ -54190,20 +54113,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Eaton County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.83699999999999,
       42.596000000000004
@@ -54221,20 +54141,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Emmet County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.92500000000001,
       45.53
@@ -54252,20 +54169,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Genesee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.6925,
       43.001999999999995
@@ -54283,20 +54197,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Gladwin County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.387,
       43.988
@@ -54314,20 +54225,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Gogebic County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.7045,
       46.4315
@@ -54345,20 +54253,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Grand Traverse County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.5755,
       44.7515
@@ -54376,20 +54281,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Gratiot County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.607,
       43.292
@@ -54407,20 +54309,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Hillsdale County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.59299999999999,
       41.8845
@@ -54438,20 +54337,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Houghton County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.6095,
       46.853
@@ -54469,20 +54365,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Huron County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.05099999999999,
       43.8695
@@ -54500,20 +54393,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Ingham County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.372,
       42.5995
@@ -54531,20 +54421,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Ionia County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.075,
       42.945
@@ -54562,20 +54449,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Iosco County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.60249999999999,
       44.337
@@ -54593,20 +54477,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Iron County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.554,
       46.170500000000004
@@ -54624,20 +54505,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Isabella County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.8475,
       43.6405
@@ -54655,20 +54533,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Jackson County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.425,
       42.2475
@@ -54686,20 +54561,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Kalamazoo County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.53,
       42.2455
@@ -54717,20 +54589,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Kalkaska County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.09049999999999,
       44.685500000000005
@@ -54748,20 +54617,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Kent County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.5505,
       43.031
@@ -54779,31 +54645,17 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "county": "Keweenaw County",
     "state": "Michigan",
-    "rating": 0.5882352941176471,
+    "country": "United States",
+    "sources": [
+      {
+        "name": "Michigan Department of Health & Human Services"
+      }
+    ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
+    "county": "Keweenaw County",
+    "rating": 0.39215686274509803,
     "coordinates": [
       -88.4205,
       47.6955
@@ -54821,20 +54673,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Lake County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.803,
       43.991
@@ -54852,20 +54701,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Lapeer County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.2225,
       43.1035
@@ -54883,20 +54729,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Leelanau County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.842,
       45.1335
@@ -54914,20 +54757,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Lenawee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.063,
       41.8945
@@ -54945,20 +54785,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Livingston County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.9115,
       42.6035
@@ -54976,20 +54813,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Luce County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.5515,
       46.5005
@@ -55007,20 +54841,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Mackinac County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.98949999999999,
       45.984
@@ -55038,20 +54869,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Macomb County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -82.9045,
       42.6725
@@ -55069,20 +54897,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Manistee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.10249999999999,
       44.341
@@ -55100,20 +54925,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Marquette County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -87.6165,
       46.448499999999996
@@ -55131,20 +54953,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Mason County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.2765,
       43.9975
@@ -55162,20 +54981,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Mecosta County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.3235,
       43.6405
@@ -55193,20 +55009,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Menominee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -87.57,
       45.540499999999994
@@ -55224,20 +55037,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Midland County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.3875,
       43.647000000000006
@@ -55255,20 +55065,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Missaukee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.0945,
       44.3365
@@ -55286,20 +55093,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Monroe County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.47749999999999,
       41.909
@@ -55317,20 +55121,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Montcalm County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.199,
       43.2935
@@ -55348,20 +55149,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Montmorency County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.126,
       45.028499999999994
@@ -55379,20 +55177,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Muskegon County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.126,
       43.295
@@ -55410,20 +55205,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Newaygo County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.8005,
       43.554500000000004
@@ -55441,20 +55233,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Oakland County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.386,
       42.66
@@ -55472,20 +55261,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Oceana County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.2895,
       43.643
@@ -55503,20 +55289,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Ogemaw County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.1275,
       44.335
@@ -55534,31 +55317,17 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "county": "Ontonagon County",
     "state": "Michigan",
-    "rating": 0.5882352941176471,
+    "country": "United States",
+    "sources": [
+      {
+        "name": "Michigan Department of Health & Human Services"
+      }
+    ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
+    "county": "Ontonagon County",
+    "rating": 0.39215686274509803,
     "coordinates": [
       -89.3765,
       46.682
@@ -55576,20 +55345,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Osceola County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.326,
       43.9895
@@ -55607,20 +55373,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Oscoda County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.12950000000001,
       44.682
@@ -55638,20 +55401,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Otsego County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.612,
       45.028499999999994
@@ -55669,20 +55429,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Ottawa County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.027,
       42.98650000000001
@@ -55700,20 +55457,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Presque Isle County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.81700000000001,
       45.4125
@@ -55731,20 +55485,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Roscommon County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.6105,
       44.335499999999996
@@ -55762,20 +55513,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Saginaw County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.0325,
       43.3485
@@ -55793,20 +55541,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "St. Clair County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -82.7045,
       42.843999999999994
@@ -55824,20 +55569,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "St. Joseph County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.5415,
       41.9155
@@ -55855,20 +55597,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Sanilac County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -82.8115,
       43.422
@@ -55886,20 +55625,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Schoolcraft County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.2405,
       46.1315
@@ -55917,20 +55653,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Shiawassee County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -84.1455,
       42.9545
@@ -55948,20 +55681,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Tuscola County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.4015,
       43.476
@@ -55979,20 +55709,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Van Buren County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -86.064,
       42.245000000000005
@@ -56010,20 +55737,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Washtenaw County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.8355,
       42.2535
@@ -56041,20 +55765,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Wayne County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -83.21100000000001,
       42.24
@@ -56072,20 +55793,17 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Michigan",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "Michigan Department of Health & Human Services"
       }
     ],
+    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
+    "aggregate": "county",
     "county": "Wexford County",
-    "state": "Michigan",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -85.5775,
       44.338499999999996
@@ -59768,7 +59486,7 @@
     "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
     "aggregate": "county",
     "county": "Issaquena County",
-    "rating": 0.39215686274509803,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.9525,
       32.711
@@ -61372,7 +61090,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-03T17:35:58.651Z",
+    "publishedDate": "2020-06-04T18:17:49.636Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61489,7 +61207,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-06-03T17:26:51.366Z",
+    "publishedDate": "2020-06-04T22:36:58.932Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61606,7 +61324,7 @@
       }
     ],
     "county": "Bates County",
-    "publishedDate": "2020-06-02T18:27:28.159Z",
+    "publishedDate": "2020-06-04T18:11:38.632Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.332,
@@ -61645,7 +61363,7 @@
       }
     ],
     "county": "Benton County",
-    "publishedDate": "2020-05-30T18:01:59.140Z",
+    "publishedDate": "2020-06-04T18:11:43.616Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.291,
@@ -61723,7 +61441,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-03T17:27:00.480Z",
+    "publishedDate": "2020-06-04T18:11:48.760Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61762,7 +61480,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-03T17:27:02.772Z",
+    "publishedDate": "2020-06-04T18:11:54.773Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61879,7 +61597,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-02T18:27:47.864Z",
+    "publishedDate": "2020-06-04T18:12:01.165Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61957,7 +61675,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-02T18:27:52.757Z",
+    "publishedDate": "2020-06-04T18:12:09.151Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61996,7 +61714,7 @@
       }
     ],
     "county": "Carroll County",
-    "publishedDate": "2020-05-28T18:34:05.955Z",
+    "publishedDate": "2020-06-04T18:12:12.730Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4315,
@@ -62035,7 +61753,7 @@
       }
     ],
     "county": "Carter County",
-    "publishedDate": "2020-05-24T18:27:12.952Z",
+    "publishedDate": "2020-06-04T18:12:25.857Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.943,
@@ -62074,7 +61792,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-06-03T17:39:39.011Z",
+    "publishedDate": "2020-06-04T18:12:29.334Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -62191,7 +61909,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-06-03T17:27:28.107Z",
+    "publishedDate": "2020-06-04T18:12:33.744Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -62269,7 +61987,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-03T17:27:33.159Z",
+    "publishedDate": "2020-06-04T18:12:38.142Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62308,7 +62026,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-05-24T18:27:32.862Z",
+    "publishedDate": "2020-06-04T18:12:40.814Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62503,7 +62221,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-05-28T18:34:25.986Z",
+    "publishedDate": "2020-06-04T18:12:47.699Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62737,7 +62455,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-03T17:27:49.625Z",
+    "publishedDate": "2020-06-04T18:12:54.545Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62815,7 +62533,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-06-03T17:34:00.487Z",
+    "publishedDate": "2020-06-04T18:12:58.003Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62854,7 +62572,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-03T17:27:54.566Z",
+    "publishedDate": "2020-06-04T18:21:53.143Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62893,7 +62611,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-06-03T17:27:57.962Z",
+    "publishedDate": "2020-06-04T18:13:21.311Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -63127,7 +62845,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-02T18:29:24.184Z",
+    "publishedDate": "2020-06-04T18:13:28.110Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -63205,7 +62923,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-03T17:28:25.157Z",
+    "publishedDate": "2020-06-04T18:13:41.284Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63244,7 +62962,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-03T17:28:28.551Z",
+    "publishedDate": "2020-06-04T18:13:44.949Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -63283,7 +63001,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-03T17:28:31.510Z",
+    "publishedDate": "2020-06-04T18:13:52.260Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63439,7 +63157,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-06-03T17:28:45.313Z",
+    "publishedDate": "2020-06-04T18:14:16.337Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63556,7 +63274,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-06-03T17:28:49.889Z",
+    "publishedDate": "2020-06-04T18:14:20.558Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63868,7 +63586,7 @@
       }
     ],
     "county": "Mercer County",
-    "publishedDate": "2020-05-31T17:28:50.781Z",
+    "publishedDate": "2020-06-04T18:14:30.289Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.571,
@@ -63946,7 +63664,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-02T18:32:26.320Z",
+    "publishedDate": "2020-06-04T18:14:35.153Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63985,7 +63703,7 @@
       }
     ],
     "county": "Moniteau County",
-    "publishedDate": "2020-06-02T18:32:30.274Z",
+    "publishedDate": "2020-06-04T18:14:38.479Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6115,
@@ -64063,7 +63781,7 @@
       }
     ],
     "county": "Montgomery County",
-    "publishedDate": "2020-05-28T18:36:08.281Z",
+    "publishedDate": "2020-06-04T18:14:44.010Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.4535,
@@ -64375,7 +64093,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-03T17:30:33.417Z",
+    "publishedDate": "2020-06-04T18:14:56.601Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64414,7 +64132,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-06-03T17:30:36.720Z",
+    "publishedDate": "2020-06-04T18:15:00.043Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64570,7 +64288,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-03T17:31:34.300Z",
+    "publishedDate": "2020-06-04T18:15:07.350Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64609,7 +64327,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-02T18:33:24.071Z",
+    "publishedDate": "2020-06-04T18:15:10.335Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64804,7 +64522,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-06-03T17:31:49.593Z",
+    "publishedDate": "2020-06-04T18:15:18.217Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -64921,7 +64639,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-03T17:32:47.632Z",
+    "publishedDate": "2020-06-04T18:15:40.859Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64999,7 +64717,7 @@
       }
     ],
     "county": "Ste. Genevieve County",
-    "publishedDate": "2020-06-03T17:33:04.974Z",
+    "publishedDate": "2020-06-04T18:16:10.906Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.19200000000001,
@@ -65038,7 +64756,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-02T18:33:56.040Z",
+    "publishedDate": "2020-06-04T18:15:44.445Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -65079,7 +64797,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-03T14:15:00.000Z",
+    "publishedDate": "2020-06-04T15:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -65235,7 +64953,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-03T17:32:30.906Z",
+    "publishedDate": "2020-06-04T18:15:35.574Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65352,7 +65070,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-03T17:34:59.496Z",
+    "publishedDate": "2020-06-04T18:16:05.595Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65391,7 +65109,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-06-02T18:34:18.046Z",
+    "publishedDate": "2020-06-04T18:16:15.317Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65430,7 +65148,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-06-02T18:34:23.999Z",
+    "publishedDate": "2020-06-04T18:16:26.448Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65586,7 +65304,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-06-02T18:34:48.873Z",
+    "publishedDate": "2020-06-04T18:16:32.292Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65820,7 +65538,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-03T17:32:57.569Z",
+    "publishedDate": "2020-06-04T18:15:50.838Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -88004,31 +87722,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Brule County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.132,
       43.717
@@ -88772,31 +88479,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hanson County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.787,
       43.675
@@ -110201,28 +109897,30 @@
     "level": "state"
   },
   {
-    "country": "Australia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
       {
-        "description": "NSW Government Health Department",
-        "name": "NSW Government Health",
-        "url": "https://www.health.nsw.gov.au"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "state",
     "state": "New South Wales",
-    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "rating": 0.35294117647058826,
+    "rating": 0.5882352941176471,
     "coordinates": [
       147.3115,
       -32.831
@@ -121441,21 +121139,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Overijssel",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      6.425,
+      52.486000000000004
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
@@ -121509,21 +121207,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      6.425,
-      52.486000000000004
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
