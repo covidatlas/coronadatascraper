@@ -521,27 +521,6 @@
     "stateId": "iso2:US-OR"
   },
   {
-    "state": "Pennsylvania",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://www.health.pa.gov/",
-        "name": "Pennsylvania Department of Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
-    "type": "table",
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-PA"
-  },
-  {
     "state": "Wisconsin",
     "country": "United States",
     "aggregate": "county",
@@ -705,26 +684,6 @@
     "countryId": "iso1:SA"
   },
   {
-    "state": "Michigan",
-    "country": "United States",
-    "sources": [
-      {
-        "name": "Michigan Department of Health & Human Services"
-      }
-    ],
-    "url": "https://www.michigan.gov/coronavirus/0,9753,7-406-98163-520743--,00.html",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MI"
-  },
-  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -809,7 +768,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-04",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-05",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1301,6 +1260,31 @@
     "ssl": true,
     "rating": 0.43137254901960786,
     "countryId": "iso1:DE"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:EE"
   },
   {
     "country": "Canada",
@@ -1922,30 +1906,6 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
-  },
-  {
-    "county": "San Joaquin County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "http://www.sjcphs.org/coronavirus.aspx#res",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "table",
-    "ssl": false,
     "rating": 0.3333333333333333,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
