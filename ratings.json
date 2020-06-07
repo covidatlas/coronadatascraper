@@ -521,6 +521,27 @@
     "stateId": "iso2:US-OR"
   },
   {
+    "state": "Pennsylvania",
+    "country": "United States",
+    "aggregate": "county",
+    "sources": [
+      {
+        "url": "https://www.health.pa.gov/",
+        "name": "Pennsylvania Department of Health"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://www.health.pa.gov/topics/disease/coronavirus/Pages/Death-Data.aspx",
+    "type": "table",
+    "ssl": true,
+    "rating": 0.5490196078431373,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PA"
+  },
+  {
     "state": "Wisconsin",
     "country": "United States",
     "aggregate": "county",
@@ -768,7 +789,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-05",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-06",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1911,6 +1932,30 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "county": "San Joaquin County",
+    "state": "California",
+    "country": "United States",
+    "maintainers": [
+      {
+        "name": "John Bencina",
+        "github": "jbencina",
+        "country": "iso1:US",
+        "state": "CA",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "http://www.sjcphs.org/coronavirus.aspx#res",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "table",
+    "ssl": false,
+    "rating": 0.3333333333333333,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
+  },
+  {
     "county": "San Mateo County",
     "state": "California",
     "country": "United States",
@@ -1987,38 +2032,6 @@
     "rating": 0.3137254901960784,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.29411764705882354,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Puerto Rico",
@@ -2364,6 +2377,38 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",
