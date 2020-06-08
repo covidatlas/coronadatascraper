@@ -738,33 +738,6 @@
     "stateId": "iso2:US-MO"
   },
   {
-    "county": "Harris County",
-    "state": "Texas",
-    "country": "United States",
-    "url": "https://app.powerbi.com/view?r=eyJrIjoiYjU5MzU4NjAtZWJjMC00MTllLTkwYjYtMzE4ODY1YjAyMGU2IiwidCI6ImI3MjgwODdjLTgwZTgtNGQzMS04YjZmLTdlMGUzYmUxMGUwOCIsImMiOjN9",
-    "sources": [
-      {
-        "name": "SouthEast Texas Regional Advisory Council",
-        "url": "https://www.setrac.org/",
-        "description": "SouthEast Texas Regional Advisory Council"
-      }
-    ],
-    "timeseries": true,
-    "aggregate": "county",
-    "type": "json",
-    "maintainers": [
-      null
-    ],
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-TX",
-    "countyId": "fips:48201"
-  },
-  {
     "country": "Ukraine",
     "sources": [
       {
@@ -789,7 +762,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-06",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-07",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -2034,6 +2007,38 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
+  },
+  {
     "country": "Puerto Rico",
     "type": "table",
     "timeseries": false,
@@ -2377,38 +2382,6 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",

@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-06",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-07",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -88407,31 +88407,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dewey County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.88050000000001,
       45.0985
@@ -96030,22 +96019,20 @@
     "level": "county"
   },
   {
-    "county": "Harris County",
-    "state": "Texas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://app.powerbi.com/view?r=eyJrIjoiYjU5MzU4NjAtZWJjMC00MTllLTkwYjYtMzE4ODY1YjAyMGU2IiwidCI6ImI3MjgwODdjLTgwZTgtNGQzMS04YjZmLTdlMGUzYmUxMGUwOCIsImMiOjN9",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "name": "SouthEast Texas Regional Advisory Council",
-        "url": "https://www.setrac.org/",
-        "description": "SouthEast Texas Regional Advisory Council"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "aggregate": "county",
-    "maintainers": [
-      null
-    ],
-    "rating": 0.5098039215686274,
+    "county": "Harris County",
+    "state": "Texas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.43549999999999,
       29.8345
@@ -99988,20 +99975,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Throckmorton County",
     "state": "Texas",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.2115,
       33.178
@@ -110329,7 +110327,7 @@
     ],
     "state": "Victoria",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.21568627450980393,
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -121355,40 +121353,6 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      6.425,
-      52.486000000000004
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
-    "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
-    "level": "state"
-  },
-  {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Limburg",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -121438,6 +121402,40 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-FL",
     "name": "Flevoland, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Overijssel",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      6.425,
+      52.486000000000004
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
