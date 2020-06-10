@@ -29,7 +29,7 @@ function showGraph({ timeseries, location }) {
     cases: true,
     deaths: true,
     hospitalized: true,
-    tested: true
+    tested: false
   };
 
   //
@@ -349,15 +349,35 @@ function showGraph({ timeseries, location }) {
         `;
       };
 
+      // Place tooltips so they load inside graph
+      // Pass in mouse position as point
+      // Need to have offset in a direction to not have weird effect
+      function placeTooltipX(point) {
+        const halfX = width / 2;
+        if (point < halfX) {
+          return point + 70;
+        }
+        return point - 120;
+      }
+
+      function placeTooltipY(point) {
+        const halfY = height / 2;
+        if (point < halfY) {
+          return point - 20;
+        }
+        return point - 100;
+      }
+
       const mouseover = function() {
         tooltip.style('opacity', 1);
       };
 
       const mousemove = function(d) {
+        // console.log(box);
         tooltip
           .html(tooltipHTML(d))
-          .style('left', `${d3.mouse(this)[0] + 90}px`) // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-          .style('top', `${d3.mouse(this)[1] - 100}px`);
+          .style('left', `${placeTooltipX(d3.mouse(this)[0])}px`)
+          .style('top', `${placeTooltipY(d3.mouse(this)[1])}px`);
       };
 
       const mouseleave = function() {

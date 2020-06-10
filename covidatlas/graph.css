@@ -123,11 +123,11 @@ Tooltip
 **********/
 
 .graph-tooltip {
-  background-color: #e3e3e3;
-  width: 200px;
-  min-height: 150px;
+  background-color: rgba(216, 216, 216, 0.7);
+  /* width: 200px; */
+  /* min-height: 150px; */
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   position: absolute;
 }
 
@@ -136,4 +136,9 @@ Tooltip
   /* color: steelblue; */
   margin: 0;
   text-transform: capitalize;
+}
+
+.graph-tooltip > p {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
