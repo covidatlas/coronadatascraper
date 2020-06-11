@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-09",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-10",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -13462,29 +13462,26 @@
     "level": "country"
   },
   {
+    "country": "United States Virgin Islands",
+    "url": "https://www.covid19usvi.com/",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States Virgin Islands",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
+    "rating": 0.2549019607843137,
     "coordinates": [
       -64.818,
       18.0265
@@ -15443,31 +15440,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Aleutians East Borough",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -162.5455,
       55.403
@@ -15713,31 +15699,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Haines Borough",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -135.4085,
       58.959999999999994
@@ -61190,7 +61165,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-09T18:23:33.620Z",
+    "publishedDate": "2020-06-10T19:16:49.959Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61229,7 +61204,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-06-06T17:24:06.557Z",
+    "publishedDate": "2020-06-10T18:34:56.148Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61307,7 +61282,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-06-09T18:26:52.414Z",
+    "publishedDate": "2020-06-10T18:50:34.837Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61541,7 +61516,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-09T18:17:49.672Z",
+    "publishedDate": "2020-06-10T18:35:09.665Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61580,7 +61555,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-09T18:17:58.758Z",
+    "publishedDate": "2020-06-10T18:35:15.949Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61619,7 +61594,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-09T18:18:02.193Z",
+    "publishedDate": "2020-06-10T18:35:25.229Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61658,7 +61633,7 @@
       }
     ],
     "county": "Caldwell County",
-    "publishedDate": "2020-06-09T18:18:07.813Z",
+    "publishedDate": "2020-06-10T18:35:29.946Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.983,
@@ -61775,7 +61750,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-09T18:18:16.059Z",
+    "publishedDate": "2020-06-10T18:35:35.912Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61892,7 +61867,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-06-09T18:18:20.092Z",
+    "publishedDate": "2020-06-10T18:35:42.153Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -62048,7 +62023,7 @@
       }
     ],
     "county": "Clark County",
-    "publishedDate": "2020-05-01T22:04:01.425Z",
+    "publishedDate": "2020-06-10T18:35:50.829Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.685,
@@ -62087,7 +62062,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-09T18:18:26.456Z",
+    "publishedDate": "2020-06-10T18:35:56.049Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62360,7 +62335,7 @@
       }
     ],
     "county": "Daviess County",
-    "publishedDate": "2020-06-09T18:18:35.272Z",
+    "publishedDate": "2020-06-10T18:38:05.584Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.989,
@@ -62516,7 +62491,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-09T18:18:46.099Z",
+    "publishedDate": "2020-06-10T18:51:08.226Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62555,7 +62530,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-09T18:18:49.485Z",
+    "publishedDate": "2020-06-10T18:38:57.763Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62672,7 +62647,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-09T18:18:55.890Z",
+    "publishedDate": "2020-06-10T18:39:04.565Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62711,7 +62686,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-06-08T18:22:21.242Z",
+    "publishedDate": "2020-06-10T18:39:10.638Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -62789,7 +62764,7 @@
       }
     ],
     "county": "Henry County",
-    "publishedDate": "2020-06-05T18:24:01.789Z",
+    "publishedDate": "2020-06-10T18:39:16.287Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.793,
@@ -62945,7 +62920,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-09T18:19:15.165Z",
+    "publishedDate": "2020-06-10T18:39:24.075Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -63023,7 +62998,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-09T18:19:23.638Z",
+    "publishedDate": "2020-06-10T18:39:37.297Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63062,7 +63037,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-09T18:19:27.516Z",
+    "publishedDate": "2020-06-10T18:40:04.415Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -63101,7 +63076,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-09T18:26:26.228Z",
+    "publishedDate": "2020-06-10T18:40:45.043Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63179,7 +63154,7 @@
       }
     ],
     "county": "Knox County",
-    "publishedDate": "2020-05-01T22:04:40.914Z",
+    "publishedDate": "2020-06-10T18:42:04.664Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14750000000001,
@@ -63413,7 +63388,7 @@
       }
     ],
     "county": "Linn County",
-    "publishedDate": "2020-06-03T17:28:52.922Z",
+    "publishedDate": "2020-06-10T18:43:28.721Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.106,
@@ -63491,7 +63466,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-09T18:19:56.505Z",
+    "publishedDate": "2020-06-10T18:43:43.944Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63725,7 +63700,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-05-12T19:19:48.602Z",
+    "publishedDate": "2020-06-10T18:43:48.632Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -63764,7 +63739,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-09T18:20:01.188Z",
+    "publishedDate": "2020-06-10T18:46:04.231Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63959,7 +63934,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-06-09T18:20:09.081Z",
+    "publishedDate": "2020-06-10T18:46:10.664Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -63998,7 +63973,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-09T18:20:15.493Z",
+    "publishedDate": "2020-06-10T18:46:16.495Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -64115,7 +64090,7 @@
       }
     ],
     "county": "Osage County",
-    "publishedDate": "2020-06-08T18:27:08.010Z",
+    "publishedDate": "2020-06-10T18:46:23.353Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.918,
@@ -64193,7 +64168,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-09T18:20:20.695Z",
+    "publishedDate": "2020-06-10T18:51:45.884Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64271,7 +64246,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-09T18:20:31.512Z",
+    "publishedDate": "2020-06-10T18:46:42.342Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64310,7 +64285,7 @@
       }
     ],
     "county": "Phelps County",
-    "publishedDate": "2020-06-03T17:30:46.757Z",
+    "publishedDate": "2020-06-10T18:46:46.845Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.777,
@@ -64349,7 +64324,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-06-05T18:25:52.579Z",
+    "publishedDate": "2020-06-10T18:46:51.080Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64388,7 +64363,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-09T18:28:16.430Z",
+    "publishedDate": "2020-06-10T18:47:00.359Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64466,7 +64441,7 @@
       }
     ],
     "county": "Pulaski County",
-    "publishedDate": "2020-06-07T18:17:30.825Z",
+    "publishedDate": "2020-06-10T18:47:17.691Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.2175,
@@ -64739,7 +64714,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-09T18:21:05.549Z",
+    "publishedDate": "2020-06-10T18:47:47.984Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64817,7 +64792,7 @@
       }
     ],
     "county": "Ste. Genevieve County",
-    "publishedDate": "2020-06-04T18:16:10.906Z",
+    "publishedDate": "2020-06-10T18:48:07.740Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.19200000000001,
@@ -64856,7 +64831,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-08T18:46:45.886Z",
+    "publishedDate": "2020-06-10T18:47:53.063Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64897,7 +64872,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-09T13:45:00.000Z",
+    "publishedDate": "2020-06-10T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -65014,7 +64989,7 @@
       }
     ],
     "county": "Scotland County",
-    "publishedDate": "2020-06-05T18:26:17.623Z",
+    "publishedDate": "2020-06-10T18:52:01.552Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14699999999999,
@@ -65053,7 +65028,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-09T18:20:58.236Z",
+    "publishedDate": "2020-06-10T18:47:40.086Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65170,7 +65145,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-09T18:21:22.989Z",
+    "publishedDate": "2020-06-10T18:48:13.341Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65209,7 +65184,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-06-06T17:28:57.081Z",
+    "publishedDate": "2020-06-10T18:48:18.205Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65248,7 +65223,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-06-09T18:21:26.265Z",
+    "publishedDate": "2020-06-10T18:48:25.179Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65404,7 +65379,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-06-09T18:21:34.612Z",
+    "publishedDate": "2020-06-10T18:48:47.582Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65638,7 +65613,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-09T18:25:53.929Z",
+    "publishedDate": "2020-06-10T18:52:40.730Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -99921,31 +99896,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Somervell County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.78049999999999,
       32.203
@@ -110669,7 +110633,7 @@
     ],
     "state": "Victoria",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.21568627450980393,
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -116580,16 +116544,29 @@
     "level": "country"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.47058823529411764,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Saudi Arabia",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -121157,33 +121134,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Eastern Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      50.323,
-      23.1085
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-04",
-    "population": 4105780,
-    "populationDensity": 7.323672650421578,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-04",
-    "name": "Eastern Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Estonia",
     "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "maintainers": [
@@ -121697,6 +121647,40 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Overijssel",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      6.425,
+      52.486000000000004
+    ],
+    "tz": [
+      "Europe/Amsterdam"
+    ],
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
+    "countryId": "iso1:NL",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Limburg",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -121746,40 +121730,6 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-FL",
     "name": "Flevoland, Netherlands",
-    "level": "state"
-  },
-  {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Overijssel",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      6.425,
-      52.486000000000004
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
-    "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
@@ -122810,33 +122760,6 @@
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-9",
     "name": "Veraguas, Panama",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Riyadh Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      45.141999999999996,
-      23.4635
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-01",
-    "population": 6777146,
-    "populationDensity": 17.961563989929314,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-01",
-    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -127101,33 +127024,6 @@
     "level": "county"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jazan Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.4525,
-      17.354
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-09",
-    "population": 1567547,
-    "populationDensity": 99.93990587193487,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-09",
-    "name": "Jazan Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "maintainers": [
@@ -127656,87 +127552,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "'Asir Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.9525,
-      19.201
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-14",
-    "population": 2211875,
-    "populationDensity": 28.486239590174346,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-14",
-    "name": "'Asir Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Tabuk Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      37.2535,
-      27.2675
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-07",
-    "population": 910030,
-    "populationDensity": 6.58598828117753,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-07",
-    "name": "Tabuk Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al Madinah Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      39.438500000000005,
-      25.006999999999998
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-03",
-    "population": 2132679,
-    "populationDensity": 14.455633104462715,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-03",
-    "name": "Al Madinah Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "state": "Massachusetts",
     "country": "United States",
     "aggregate": "county",
@@ -127939,60 +127754,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al-Qassim Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      43.069500000000005,
-      26.2755
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-05",
-    "population": 1159438,
-    "populationDensity": 16.90171756800719,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-05",
-    "name": "Al-Qassim Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Najran Region",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      45.6815,
-      18.240499999999997
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-10",
-    "population": 505652,
-    "populationDensity": 5.687857400619951,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-10",
-    "name": "Najran Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -128131,33 +127892,6 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Northern Borders Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.97,
-      29.8395
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-08",
-    "population": 375310,
-    "populationDensity": 3.2502748115551507,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-08",
-    "name": "Northern Borders Region, Saudi Arabia",
-    "level": "state"
   },
   {
     "country": "United States",
@@ -133520,33 +133254,6 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-TY",
     "name": "Tuva Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Hayel Region",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      41.647999999999996,
-      27.0925
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-06",
-    "population": 597144,
-    "populationDensity": 5.319482787232354,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-06",
-    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {
