@@ -645,6 +645,25 @@
     "countryId": "iso1:BE"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:SA"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -702,7 +721,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-10",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-11",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1937,39 +1956,6 @@
     "rating": 0.29411764705882354,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-VIC"
-  },
-  {
-    "country": "Puerto Rico",
-    "type": "table",
-    "timeseries": false,
-    "url": "http://www.salud.gov.pr/Pages/coronavirus.aspx",
-    "sources": [
-      {
-        "url": "http://www.salud.gov.pr/",
-        "name": "Gobierno de Puerto Rico Departamento de Salud"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Jacob McGowan",
-        "github": "jacobmcgowan"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.29411764705882354,
-    "countryId": "iso1:PR"
   },
   {
     "country": "Cyprus",
