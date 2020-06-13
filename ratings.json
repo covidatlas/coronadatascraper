@@ -135,51 +135,6 @@
     "countyId": "fips:32023"
   },
   {
-    "county": "San Francisco County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "Minh Nguyễn",
-        "url": "http://notes.1ec5.org/",
-        "github": "1ec5",
-        "twitter": "1ec5",
-        "country": "USA",
-        "state": "CA",
-        "county": "Santa Clara County",
-        "city": "San José",
-        "flag": "🇺🇸"
-      }
-    ],
-    "type": "json",
-    "timeseries": true,
-    "headless": false,
-    "sources": [
-      {
-        "name": "San Francisco Department of Public Health",
-        "url": "https://data.sfgov.org/COVID-19/COVID-19-Cases-Summarized-by-Date-Transmission-and/tvq9-ec9w",
-        "description": "COVID-19 Cases Summarized by Date, Transmission and Case Disposition"
-      },
-      {
-        "name": "San Francisco Department of Public Health",
-        "url": "https://data.sfgov.org/COVID-19/COVID-19-Hospitalizations/nxjg-bhem",
-        "description": "COVID-19 Hospitalizations"
-      },
-      {
-        "name": "San Francisco Department of Public Health",
-        "url": "https://data.sfgov.org/COVID-19/COVID-19-Tests/nfpa-mg4g",
-        "description": "COVID-19 Tests"
-      }
-    ],
-    "url": "https://data.sfgov.org/stories/s/dak2-gvuj",
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5882352941176471,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
-  },
-  {
     "county": "Santa Clara County",
     "state": "California",
     "country": "United States",
@@ -721,7 +676,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-11",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-12",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
