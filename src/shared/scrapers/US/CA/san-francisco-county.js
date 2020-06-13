@@ -65,16 +65,18 @@ const scraper = {
         };
       }
       let cases = await fetch.json(this, this._urls.cases, 'cases', false);
-      cases = cases.sort(sortBy('date'));
+      cases = cases.sort(sortBy('specimen_collection_date'));
 
       let patients = await fetch.json(this, this._urls.patients, 'patients', false);
       patients = patients.sort(sortBy('reportdate'));
 
       let tests = await fetch.json(this, this._urls.tests, 'tests', false);
-      tests = tests.sort(sortBy('result_date'));
+      tests = tests.sort(sortBy('specimen_collection_date'));
 
       function getCaseField(dt, fld) {
-        const c = cases.filter(cur => dt === datetime.getYYYYMMDD(cur.date) && cur.case_disposition === fld);
+        const c = cases.filter(
+          cur => dt === datetime.getYYYYMMDD(cur.specimen_collection_date) && cur.case_disposition === fld
+        );
         if (c.length === 0) return 0;
         return c.reduce((acc, curr) => {
           return acc + parse.number(curr.case_count);
@@ -82,7 +84,7 @@ const scraper = {
       }
 
       function getTestedField(dt) {
-        const c = tests.filter(cur => dt === datetime.getYYYYMMDD(cur.result_date));
+        const c = tests.filter(cur => dt === datetime.getYYYYMMDD(cur.specimen_collection_date));
         if (c.length === 0) return 0;
         return c.reduce((acc, curr) => {
           return acc + parse.number(curr.tests);
@@ -112,9 +114,9 @@ const scraper = {
       */
 
       const allDates = []
-        .concat(cases.map(c => c.date))
+        .concat(cases.map(c => c.specimen_collection_date))
         .concat(patients.map(p => p.reportdate))
-        .concat(tests.map(t => t.result_date))
+        .concat(tests.map(t => t.specimen_collection_date))
         .sort() // Assuming that all follow same yyyy-mm-dd format!
         .map(s => s.split('T')[0]);
       const [firstDate, scrapeDate] = this._getScrapeDateBounds(datetime.scrapeDate() || new Date(), allDates);
