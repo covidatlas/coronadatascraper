@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-12",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-13",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -13309,6 +13309,193 @@
     "level": "state"
   },
   {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "American Samoa",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -170.128,
+      -14.2895
+    ],
+    "tz": [
+      "Pacific/Pago_Pago"
+    ],
+    "featureId": "iso1:AS",
+    "population": 55689,
+    "populationDensity": 303.28383001410054,
+    "countryId": "iso1:AS",
+    "name": "American Samoa",
+    "level": "country"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Guam",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      144.7975,
+      13.45
+    ],
+    "tz": [
+      "Pacific/Guam"
+    ],
+    "featureId": "iso1:GU",
+    "population": 167772,
+    "populationDensity": 304.33770446431873,
+    "countryId": "iso1:GU",
+    "name": "Guam",
+    "level": "country"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Northern Mariana Islands",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      145.486,
+      16.4615
+    ],
+    "tz": [
+      "Pacific/Saipan"
+    ],
+    "featureId": "iso1:MP",
+    "population": 55144,
+    "populationDensity": 131.54217536408316,
+    "countryId": "iso1:MP",
+    "name": "Northern Mariana Islands",
+    "level": "country"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -66.594,
+      18.223
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "iso1:PR",
+    "population": 3411307,
+    "populationDensity": 380.4337773978851,
+    "countryId": "iso1:PR",
+    "name": "Puerto Rico",
+    "level": "country"
+  },
+  {
+    "country": "United States Virgin Islands",
+    "url": "https://www.covid19usvi.com/",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "rating": 0.2549019607843137,
+    "coordinates": [
+      -64.818,
+      18.0265
+    ],
+    "tz": [
+      "America/St_Thomas"
+    ],
+    "featureId": "iso1:VI",
+    "population": 104901,
+    "populationDensity": 320.67092228596476,
+    "countryId": "iso1:VI",
+    "name": "United States Virgin Islands",
+    "level": "country"
+  },
+  {
     "state": "Alabama",
     "country": "United States",
     "url": "https://opendata.arcgis.com/datasets/ff8de7707f6a422a8af6b155facc6327_0.csv",
@@ -16204,44 +16391,6 @@
     "countyId": "fips:02290",
     "name": "Yukon-Koyukuk Census Area, Alaska, United States",
     "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "American Samoa",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -170.128,
-      -14.2895
-    ],
-    "tz": [
-      "Pacific/Pago_Pago"
-    ],
-    "featureId": "iso1:AS",
-    "population": 55689,
-    "populationDensity": 303.28383001410054,
-    "countryId": "iso1:AS",
-    "name": "American Samoa",
-    "level": "country"
   },
   {
     "state": "Arizona",
@@ -29673,44 +29822,6 @@
     "countyId": "fips:13321",
     "name": "Worth County, Georgia, United States",
     "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Guam",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      144.7975,
-      13.45
-    ],
-    "tz": [
-      "Pacific/Guam"
-    ],
-    "featureId": "iso1:GU",
-    "population": 167772,
-    "populationDensity": 304.33770446431873,
-    "countryId": "iso1:GU",
-    "name": "Guam",
-    "level": "country"
   },
   {
     "country": "United States",
@@ -61031,7 +61142,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-12T18:16:36.831Z",
+    "publishedDate": "2020-06-13T18:39:21.800Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61070,7 +61181,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-06-10T18:34:56.148Z",
+    "publishedDate": "2020-06-13T18:31:20.416Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61187,7 +61298,7 @@
       }
     ],
     "county": "Barry County",
-    "publishedDate": "2020-06-12T17:57:59.435Z",
+    "publishedDate": "2020-06-13T18:31:25.564Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8255,
@@ -61343,7 +61454,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-06-11T17:38:26.802Z",
+    "publishedDate": "2020-06-13T18:31:36.614Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61382,7 +61493,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-12T18:01:51.559Z",
+    "publishedDate": "2020-06-13T18:31:39.016Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61421,7 +61532,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-12T17:58:08.598Z",
+    "publishedDate": "2020-06-13T18:31:40.864Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61460,7 +61571,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-12T17:58:24.178Z",
+    "publishedDate": "2020-06-13T18:31:42.993Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61538,7 +61649,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-12T17:58:28.036Z",
+    "publishedDate": "2020-06-13T18:31:51.001Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61616,7 +61727,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-12T17:58:34.931Z",
+    "publishedDate": "2020-06-13T18:31:56.026Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61655,7 +61766,7 @@
       }
     ],
     "county": "Carroll County",
-    "publishedDate": "2020-06-04T18:12:12.730Z",
+    "publishedDate": "2020-06-13T18:32:04.926Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4315,
@@ -61928,7 +62039,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-12T17:58:53.689Z",
+    "publishedDate": "2020-06-13T18:32:23.371Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -61967,7 +62078,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-06-05T18:23:06.153Z",
+    "publishedDate": "2020-06-13T18:32:28.056Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62240,7 +62351,7 @@
       }
     ],
     "county": "DeKalb County",
-    "publishedDate": "2020-06-12T17:59:02.326Z",
+    "publishedDate": "2020-06-13T18:32:36.808Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62357,7 +62468,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-11T17:39:13.909Z",
+    "publishedDate": "2020-06-13T18:32:41.768Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62513,7 +62624,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-12T18:02:16.270Z",
+    "publishedDate": "2020-06-13T18:39:55.313Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62552,7 +62663,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-06-11T17:39:26.398Z",
+    "publishedDate": "2020-06-13T18:32:55.299Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -62786,7 +62897,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-12T17:59:30.838Z",
+    "publishedDate": "2020-06-13T18:33:09.862Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -62864,7 +62975,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-12T17:59:35.554Z",
+    "publishedDate": "2020-06-13T18:33:15.102Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62903,7 +63014,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-12T17:59:41.057Z",
+    "publishedDate": "2020-06-13T18:33:18.175Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -62942,7 +63053,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-12T18:02:25.084Z",
+    "publishedDate": "2020-06-13T18:33:22.201Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -62981,7 +63092,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-06-11T17:39:57.729Z",
+    "publishedDate": "2020-06-13T18:33:25.628Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63098,7 +63209,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-06-12T17:59:58.596Z",
+    "publishedDate": "2020-06-13T18:33:34.233Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63215,7 +63326,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-06-12T18:00:02.376Z",
+    "publishedDate": "2020-06-13T18:33:38.327Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63293,7 +63404,7 @@
       }
     ],
     "county": "Livingston County",
-    "publishedDate": "2020-06-08T18:44:50.152Z",
+    "publishedDate": "2020-06-13T18:33:41.966Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.5115,
@@ -63332,7 +63443,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-12T18:00:11.420Z",
+    "publishedDate": "2020-06-13T18:33:58.153Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63371,7 +63482,7 @@
       }
     ],
     "county": "Macon County",
-    "publishedDate": "2020-06-03T17:28:56.349Z",
+    "publishedDate": "2020-06-13T18:33:42.961Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.57300000000001,
@@ -63488,7 +63599,7 @@
       }
     ],
     "county": "Marion County",
-    "publishedDate": "2020-06-11T17:40:28.414Z",
+    "publishedDate": "2020-06-13T18:33:47.802Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.577,
@@ -63605,7 +63716,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-12T18:00:15.538Z",
+    "publishedDate": "2020-06-13T18:34:02.615Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63800,7 +63911,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-06-12T18:00:21.111Z",
+    "publishedDate": "2020-06-13T18:34:11.593Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -63839,7 +63950,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-12T18:00:23.961Z",
+    "publishedDate": "2020-06-13T18:34:17.245Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -63917,7 +64028,7 @@
       }
     ],
     "county": "Oregon County",
-    "publishedDate": "2020-06-11T17:41:00.901Z",
+    "publishedDate": "2020-06-13T18:34:30.752Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.39699999999999,
@@ -64034,7 +64145,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-10T18:51:45.884Z",
+    "publishedDate": "2020-06-13T18:34:35.877Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64073,7 +64184,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-06-12T18:00:32.470Z",
+    "publishedDate": "2020-06-13T18:34:40.652Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64112,7 +64223,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-10T18:46:42.342Z",
+    "publishedDate": "2020-06-13T18:34:44.910Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64229,7 +64340,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-12T18:00:45.585Z",
+    "publishedDate": "2020-06-13T18:34:54.168Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64268,7 +64379,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-11T17:41:20.828Z",
+    "publishedDate": "2020-06-13T18:34:58.197Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64463,7 +64574,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-06-09T18:20:47.094Z",
+    "publishedDate": "2020-06-13T18:35:16.949Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -64541,7 +64652,7 @@
       }
     ],
     "county": "Ripley County",
-    "publishedDate": "2020-06-12T18:00:57.783Z",
+    "publishedDate": "2020-06-13T18:35:21.749Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.851,
@@ -64580,7 +64691,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-12T18:02:42.695Z",
+    "publishedDate": "2020-06-13T18:40:41.153Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64658,7 +64769,7 @@
       }
     ],
     "county": "Ste. Genevieve County",
-    "publishedDate": "2020-06-10T18:48:07.740Z",
+    "publishedDate": "2020-06-13T18:35:43.982Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.19200000000001,
@@ -64738,7 +64849,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-12T14:00:00.000Z",
+    "publishedDate": "2020-06-13T15:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64777,7 +64888,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-06-09T18:28:28.655Z",
+    "publishedDate": "2020-06-13T18:40:28.244Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64894,7 +65005,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-12T18:01:04.403Z",
+    "publishedDate": "2020-06-13T18:35:27.458Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65011,7 +65122,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-12T18:01:18.733Z",
+    "publishedDate": "2020-06-13T18:40:53.136Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65089,7 +65200,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-06-12T18:01:23.441Z",
+    "publishedDate": "2020-06-13T18:35:59.084Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65245,7 +65356,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-06-12T18:01:31.177Z",
+    "publishedDate": "2020-06-13T18:36:54.095Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65479,7 +65590,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-12T18:02:50.478Z",
+    "publishedDate": "2020-06-13T18:40:49.117Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -77752,44 +77863,6 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Northern Mariana Islands",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      145.486,
-      16.4615
-    ],
-    "tz": [
-      "Pacific/Saipan"
-    ],
-    "featureId": "iso1:MP",
-    "population": 55144,
-    "populationDensity": 131.54217536408316,
-    "countryId": "iso1:MP",
-    "name": "Northern Mariana Islands",
-    "level": "country"
-  },
-  {
     "state": "Ohio",
     "country": "United States",
     "aggregate": "county",
@@ -86423,44 +86496,6 @@
     "countyId": "fips:42133",
     "name": "York County, Pennsylvania, United States",
     "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Puerto Rico",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -66.594,
-      18.223
-    ],
-    "tz": [
-      "America/Puerto_Rico"
-    ],
-    "featureId": "iso1:PR",
-    "population": 3411307,
-    "populationDensity": 380.4337773978851,
-    "countryId": "iso1:PR",
-    "name": "Puerto Rico",
-    "level": "country"
   },
   {
     "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
@@ -101722,31 +101757,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Rich County",
     "state": "Utah",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -111.279,
       41.572500000000005
@@ -102665,41 +102689,6 @@
     "countyId": "fips:50027",
     "name": "Windsor County, Vermont, United States",
     "level": "county"
-  },
-  {
-    "country": "United States Virgin Islands",
-    "url": "https://www.covid19usvi.com/",
-    "sources": [
-      {
-        "url": "https://doh.vi.gov",
-        "name": "United States Virgin Islands Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "rating": 0.2549019607843137,
-    "coordinates": [
-      -64.818,
-      18.0265
-    ],
-    "tz": [
-      "America/St_Thomas"
-    ],
-    "featureId": "iso1:VI",
-    "population": 104901,
-    "populationDensity": 320.67092228596476,
-    "countryId": "iso1:VI",
-    "name": "United States Virgin Islands",
-    "level": "country"
   },
   {
     "state": "Washington",
@@ -120910,21 +120899,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Hlavní město Praha",
+    "state": "Ústecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      14.476500000000001,
-      50.0625
+      13.799,
+      50.568
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-10",
-    "population": 1308632,
-    "populationDensity": 2638.415429617829,
+    "featureId": "iso2:CZ-42",
+    "population": 820789,
+    "populationDensity": 154.53213016548833,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-10",
-    "name": "Hlavní město Praha, Czechia",
+    "stateId": "iso2:CZ-42",
+    "name": "Ústecký kraj, Czechia",
     "level": "state"
   },
   {
@@ -120943,21 +120932,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Ústecký kraj",
+    "state": "Hlavní město Praha",
     "rating": 0.35294117647058826,
     "coordinates": [
-      13.799,
-      50.568
+      14.476500000000001,
+      50.0625
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-42",
-    "population": 820789,
-    "populationDensity": 154.53213016548833,
+    "featureId": "iso2:CZ-10",
+    "population": 1308632,
+    "populationDensity": 2638.415429617829,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-42",
-    "name": "Ústecký kraj, Czechia",
+    "stateId": "iso2:CZ-10",
+    "name": "Hlavní město Praha, Czechia",
     "level": "state"
   },
   {
@@ -121638,21 +121627,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      6.425,
-      52.486000000000004
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
@@ -121706,21 +121695,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Overijssel",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      6.425,
+      52.486000000000004
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
