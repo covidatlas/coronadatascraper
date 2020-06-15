@@ -8970,7 +8970,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-13",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-14",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -56490,31 +56490,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cook County",
     "state": "Minnesota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.26050000000001,
       47.855500000000006
@@ -64849,7 +64838,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-13T15:00:00.000Z",
+    "publishedDate": "2020-06-14T15:45:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -89571,31 +89560,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Mellette County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.721,
       43.6225
@@ -99676,31 +99654,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Schleicher County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.5385,
       30.897
@@ -121627,21 +121594,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Overijssel",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      6.425,
+      52.486000000000004
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
@@ -121695,21 +121662,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      6.425,
-      52.486000000000004
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
@@ -125886,6 +125853,39 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Jihočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.5695,
+      49.085499999999996
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-31",
+    "population": 642133,
+    "populationDensity": 63.81153400322205,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-31",
+    "name": "Jihočeský kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Jihomoravský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -126000,39 +126000,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jihočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.5695,
-      49.085499999999996
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-31",
-    "population": 642133,
-    "populationDensity": 63.81153400322205,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-31",
-    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {

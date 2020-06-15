@@ -676,7 +676,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-13",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-14",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1153,6 +1153,31 @@
     "ssl": true,
     "rating": 0.43137254901960786,
     "countryId": "iso1:DE"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:EE"
   },
   {
     "country": "Canada",
