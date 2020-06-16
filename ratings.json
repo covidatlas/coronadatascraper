@@ -135,41 +135,6 @@
     "countyId": "fips:32023"
   },
   {
-    "county": "Santa Clara County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "Minh Nguyễn",
-        "url": "http://notes.1ec5.org/",
-        "github": "1ec5",
-        "twitter": "1ec5",
-        "country": "USA",
-        "state": "CA",
-        "county": "Santa Clara County",
-        "city": "San José",
-        "flag": "🇺🇸"
-      }
-    ],
-    "type": "json",
-    "timeseries": true,
-    "headless": false,
-    "sources": [
-      {
-        "name": "Santa Clara County Public Health",
-        "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
-        "description": "Santa Clara County COVID-19 Cases Dashboard"
-      }
-    ],
-    "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5882352941176471,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
-  },
-  {
     "maintainers": [
       {
         "name": "Larry Davis",
@@ -619,6 +584,41 @@
     "countryId": "iso1:SA"
   },
   {
+    "county": "Santa Clara County",
+    "state": "California",
+    "country": "United States",
+    "maintainers": [
+      {
+        "name": "Minh Nguyễn",
+        "url": "http://notes.1ec5.org/",
+        "github": "1ec5",
+        "twitter": "1ec5",
+        "country": "USA",
+        "state": "CA",
+        "county": "Santa Clara County",
+        "city": "San José",
+        "flag": "🇺🇸"
+      }
+    ],
+    "type": "json",
+    "timeseries": true,
+    "headless": false,
+    "sources": [
+      {
+        "name": "Santa Clara County Public Health",
+        "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
+        "description": "Santa Clara County COVID-19 Cases Dashboard"
+      }
+    ],
+    "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -676,7 +676,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-14",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-15",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1118,66 +1118,6 @@
     "ssl": true,
     "rating": 0.43137254901960786,
     "countryId": "iso1:CH"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
-    "type": "csv",
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "Robert Koch-Institut (RKI), Landesgesundheitsminmisterien, Landesgesundheitsämter",
-        "description": "before March 17 based on RKI \"situation reports\", after that: Landesbehörten, double-checked with ZEIT ONLINE, curated by JPG, see \"curators\"",
-        "url": "https://github.com/jgehrcke/covid-19-germany-gae"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Dr. Jan-Philip Gehrcke",
-        "email": "jgehrcke@googlemail.com",
-        "url": "https://gehrcke.de",
-        "github": "jgehrcke"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Dr. Jan-Philip Gehrcke",
-        "email": "jgehrcke@googlemail.com",
-        "url": "https://gehrcke.de",
-        "github": "jgehrcke"
-      }
-    ],
-    "country": "Germany",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:DE"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:EE"
   },
   {
     "country": "Canada",

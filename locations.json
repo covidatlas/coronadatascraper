@@ -1149,38 +1149,6 @@
     "level": "country"
   },
   {
-    "country": "Cyprus",
-    "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "description": "Official website for Cyprus Open Data",
-        "url": "https://data.gov.cy/",
-        "name": "data.gov.cy"
-      }
-    ],
-    "rating": 0.27450980392156865,
-    "coordinates": [
-      33.423500000000004,
-      35.1655
-    ],
-    "tz": [
-      "Europe/Nicosia"
-    ],
-    "featureId": "iso1:CY",
-    "population": 1141166,
-    "populationDensity": 126.68557056559139,
-    "countryId": "iso1:CY",
-    "name": "Cyprus",
-    "level": "country"
-  },
-  {
     "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "aggregate": "state",
@@ -7616,7 +7584,7 @@
       }
     ],
     "state": "Krško",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       15.4535,
       45.947
@@ -8970,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-14",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-15",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16828,27 +16796,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Arkansas County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.384,
       34.253
@@ -16980,27 +16941,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Boone County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.0775,
       36.306
@@ -17056,27 +17010,31 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
-    "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Calhoun County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -92.5445,
       33.536
@@ -17170,27 +17128,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Clark County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.1905,
       34.0555
@@ -17246,27 +17197,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Cleburne County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.0215,
       35.535
@@ -17284,27 +17228,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Cleveland County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.2145,
       33.884
@@ -17360,27 +17297,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Conway County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.75999999999999,
       35.2675
@@ -17398,27 +17328,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Craighead County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.662,
       35.848
@@ -17474,27 +17397,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Crittenden County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.2855,
       35.1375
@@ -17512,27 +17428,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Cross County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.77250000000001,
       35.2965
@@ -17550,27 +17459,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Dallas County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.64750000000001,
       33.9755
@@ -17664,27 +17566,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Faulkner County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.3545,
       35.105000000000004
@@ -17740,27 +17635,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Fulton County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.8045,
       36.3745
@@ -17816,27 +17704,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Grant County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.443,
       34.278000000000006
@@ -17930,27 +17811,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Hot Spring County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.0385,
       34.328
@@ -18044,27 +17918,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Izard County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.9445,
       36.064
@@ -18158,27 +18025,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Johnson County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.437,
       35.548
@@ -18272,27 +18132,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Lee County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.7555,
       34.7695
@@ -18310,27 +18163,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Lincoln County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.699,
       33.9785
@@ -18614,27 +18460,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Monroe County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.22399999999999,
       34.67
@@ -18690,27 +18529,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Nevada County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.294,
       33.698499999999996
@@ -18728,27 +18560,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Newton County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.23249999999999,
       35.925
@@ -18766,27 +18591,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Ouachita County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.84299999999999,
       33.589
@@ -18918,27 +18736,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Poinsett County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.66300000000001,
       35.573499999999996
@@ -18994,27 +18805,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Pope County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.0545,
       35.423500000000004
@@ -19146,27 +18950,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "St. Francis County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -90.77600000000001,
       35.007999999999996
@@ -19374,27 +19171,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Sharp County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.485,
       36.1945
@@ -19412,27 +19202,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Stone County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.12700000000001,
       35.919
@@ -19488,27 +19271,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Van Buren County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -92.54599999999999,
       35.5775
@@ -19564,27 +19340,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "White County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.7325,
       35.2775
@@ -19602,27 +19371,20 @@
     "level": "county"
   },
   {
-    "state": "Arkansas",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*",
-    "sources": [
-      {
-        "name": "Arkanas Department of Health",
-        "url": "https://www.healthy.arkansas.gov/programs-services/topics/novel-coronavirus"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
     "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Woodruff County",
-    "rating": 0.6470588235294118,
+    "state": "Arkansas",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -91.2585,
       35.179
@@ -61131,7 +60893,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-13T18:39:21.800Z",
+    "publishedDate": "2020-06-15T18:53:05.350Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61287,7 +61049,7 @@
       }
     ],
     "county": "Barry County",
-    "publishedDate": "2020-06-13T18:31:25.564Z",
+    "publishedDate": "2020-06-15T18:29:35.891Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8255,
@@ -61326,7 +61088,7 @@
       }
     ],
     "county": "Barton County",
-    "publishedDate": "2020-06-11T17:38:23.820Z",
+    "publishedDate": "2020-06-15T18:29:50.227Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.346,
@@ -61443,7 +61205,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-06-13T18:31:36.614Z",
+    "publishedDate": "2020-06-15T18:29:55.903Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61482,7 +61244,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-13T18:31:39.016Z",
+    "publishedDate": "2020-06-15T18:30:00.110Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61521,7 +61283,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-13T18:31:40.864Z",
+    "publishedDate": "2020-06-15T18:30:03.520Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61560,7 +61322,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-13T18:31:42.993Z",
+    "publishedDate": "2020-06-15T18:30:06.699Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61638,7 +61400,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-13T18:31:51.001Z",
+    "publishedDate": "2020-06-15T18:30:16.982Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61677,7 +61439,7 @@
       }
     ],
     "county": "Camden County",
-    "publishedDate": "2020-06-12T17:58:30.693Z",
+    "publishedDate": "2020-06-15T18:30:31.290Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.744,
@@ -61716,7 +61478,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-13T18:31:56.026Z",
+    "publishedDate": "2020-06-15T18:30:41.575Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61833,7 +61595,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-06-12T17:58:42.786Z",
+    "publishedDate": "2020-06-15T18:30:46.407Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61950,7 +61712,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-06-12T17:58:46.352Z",
+    "publishedDate": "2020-06-15T18:38:23.829Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -62028,7 +61790,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-13T18:32:23.371Z",
+    "publishedDate": "2020-06-15T18:38:29.392Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62067,7 +61829,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-06-13T18:32:28.056Z",
+    "publishedDate": "2020-06-15T18:38:32.126Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62184,7 +61946,7 @@
       }
     ],
     "county": "Crawford County",
-    "publishedDate": "2020-05-19T20:01:17.005Z",
+    "publishedDate": "2020-06-15T18:38:36.544Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.315,
@@ -62223,7 +61985,7 @@
       }
     ],
     "county": "Dade County",
-    "publishedDate": "2020-05-02T19:21:16.290Z",
+    "publishedDate": "2020-06-15T18:38:42.163Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.85,
@@ -62340,7 +62102,7 @@
       }
     ],
     "county": "DeKalb County",
-    "publishedDate": "2020-06-13T18:32:36.808Z",
+    "publishedDate": "2020-06-15T18:38:45.719Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62457,7 +62219,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-13T18:32:41.768Z",
+    "publishedDate": "2020-06-15T18:41:22.137Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62496,7 +62258,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-12T17:59:07.520Z",
+    "publishedDate": "2020-06-15T18:41:25.324Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62574,7 +62336,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-06-12T18:02:13.770Z",
+    "publishedDate": "2020-06-15T18:53:37.121Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62613,7 +62375,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-13T18:39:55.313Z",
+    "publishedDate": "2020-06-15T18:41:30.825Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62886,7 +62648,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-13T18:33:09.862Z",
+    "publishedDate": "2020-06-15T18:41:42.670Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -62964,7 +62726,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-13T18:33:15.102Z",
+    "publishedDate": "2020-06-15T18:43:30.056Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63003,7 +62765,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-13T18:33:18.175Z",
+    "publishedDate": "2020-06-15T18:43:33.260Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -63042,7 +62804,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-13T18:33:22.201Z",
+    "publishedDate": "2020-06-15T18:43:43.624Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63393,7 +63155,7 @@
       }
     ],
     "county": "Livingston County",
-    "publishedDate": "2020-06-13T18:33:41.966Z",
+    "publishedDate": "2020-06-15T18:44:04.345Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.5115,
@@ -63432,7 +63194,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-13T18:33:58.153Z",
+    "publishedDate": "2020-06-15T18:45:41.458Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63666,7 +63428,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-06-11T17:40:38.323Z",
+    "publishedDate": "2020-06-15T18:45:45.719Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -63705,7 +63467,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-13T18:34:02.615Z",
+    "publishedDate": "2020-06-15T18:45:55.228Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63939,7 +63701,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-13T18:34:17.245Z",
+    "publishedDate": "2020-06-15T18:46:06.500Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -64134,7 +63896,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-13T18:34:35.877Z",
+    "publishedDate": "2020-06-15T18:46:13.913Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64173,7 +63935,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-06-13T18:34:40.652Z",
+    "publishedDate": "2020-06-15T18:46:17.109Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64212,7 +63974,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-13T18:34:44.910Z",
+    "publishedDate": "2020-06-15T18:46:20.249Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64290,7 +64052,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-06-12T18:00:42.657Z",
+    "publishedDate": "2020-06-15T18:46:24.551Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64329,7 +64091,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-13T18:34:54.168Z",
+    "publishedDate": "2020-06-15T18:46:34.174Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64368,7 +64130,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-13T18:34:58.197Z",
+    "publishedDate": "2020-06-15T18:46:37.346Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64524,7 +64286,7 @@
       }
     ],
     "county": "Randolph County",
-    "publishedDate": "2020-05-30T18:05:40.110Z",
+    "publishedDate": "2020-06-15T18:46:45.811Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.50399999999999,
@@ -64680,7 +64442,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-13T18:40:41.153Z",
+    "publishedDate": "2020-06-15T18:47:17.095Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64797,7 +64559,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-10T18:47:53.063Z",
+    "publishedDate": "2020-06-15T18:47:20.476Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64838,7 +64600,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-14T15:45:00.000Z",
+    "publishedDate": "2020-06-15T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64877,7 +64639,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-06-13T18:40:28.244Z",
+    "publishedDate": "2020-06-15T18:46:51.730Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64916,7 +64678,7 @@
       }
     ],
     "county": "Schuyler County",
-    "publishedDate": "2020-06-12T18:01:01.220Z",
+    "publishedDate": "2020-06-15T18:49:43.656Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.53399999999999,
@@ -64955,7 +64717,7 @@
       }
     ],
     "county": "Scotland County",
-    "publishedDate": "2020-06-10T18:52:01.552Z",
+    "publishedDate": "2020-06-15T18:49:18.192Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14699999999999,
@@ -64994,7 +64756,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-13T18:35:27.458Z",
+    "publishedDate": "2020-06-15T18:47:09.012Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65228,7 +64990,7 @@
       }
     ],
     "county": "Taney County",
-    "publishedDate": "2020-06-11T17:42:20.381Z",
+    "publishedDate": "2020-06-15T18:47:45.874Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.03999999999999,
@@ -65579,7 +65341,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-13T18:40:49.117Z",
+    "publishedDate": "2020-06-15T18:54:22.289Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -88130,31 +87892,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Bennett County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.6695,
       43.193
@@ -100453,31 +100204,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Upton County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.047,
       31.365499999999997
@@ -101208,31 +100948,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Beaver County",
     "state": "Utah",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -113.1925,
       38.36
@@ -113200,6 +112929,38 @@
     "level": "country"
   },
   {
+    "country": "Cyprus",
+    "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "description": "Official website for Cyprus Open Data",
+        "url": "https://data.gov.cy/",
+        "name": "data.gov.cy"
+      }
+    ],
+    "rating": 0.27450980392156865,
+    "coordinates": [
+      33.423500000000004,
+      35.1655
+    ],
+    "tz": [
+      "Europe/Nicosia"
+    ],
+    "featureId": "iso1:CY",
+    "population": 1141166,
+    "populationDensity": 126.68557056559139,
+    "countryId": "iso1:CY",
+    "name": "Cyprus",
+    "level": "country"
+  },
+  {
     "country": "Czechia",
     "url": "https://onemocneni-aktualne.mzcr.cz/",
     "sources": [
@@ -121594,21 +121355,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      6.425,
-      52.486000000000004
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
@@ -121662,21 +121423,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Overijssel",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      6.425,
+      52.486000000000004
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
@@ -126030,16 +125791,6 @@
     "country": "Germany",
     "state": "Brandenburg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.016,
-      52.4535
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BB",
-    "population": 2449193,
-    "populationDensity": 82.67925228490692,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BB",
     "name": "Brandenburg, Germany",
@@ -126073,16 +125824,6 @@
     "country": "Germany",
     "state": "Berlin",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.416,
-      52.4965
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BE",
-    "population": 3644826,
-    "populationDensity": 4143.284631460103,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BE",
     "name": "Berlin, Germany",
@@ -126116,16 +125857,6 @@
     "country": "Germany",
     "state": "Baden-Württemberg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      8.9985,
-      48.6625
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BW",
-    "population": 10879618,
-    "populationDensity": 304.67773046335805,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BW",
     "name": "Baden-Württemberg, Germany",
@@ -126159,16 +125890,6 @@
     "country": "Germany",
     "state": "Bavaria",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.415,
-      48.911500000000004
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BY",
-    "population": 12930751,
-    "populationDensity": 183.4410592655671,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BY",
     "name": "Bavaria, Germany",
@@ -126202,16 +125923,6 @@
     "country": "Germany",
     "state": "Bremen",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      8.7355,
-      53.31
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HB",
-    "population": 661000,
-    "populationDensity": 1749.635106372453,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HB",
     "name": "Bremen, Germany",
@@ -126245,16 +125956,6 @@
     "country": "Germany",
     "state": "Hesse",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.004000000000001,
-      50.525999999999996
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HE",
-    "population": 6265809,
-    "populationDensity": 297.3919584360107,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HE",
     "name": "Hesse, Germany",
@@ -126288,16 +125989,6 @@
     "country": "Germany",
     "state": "Hamburg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      10.019,
-      53.566500000000005
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HH",
-    "population": 1841179,
-    "populationDensity": 2494.1122312265898,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HH",
     "name": "Hamburg, Germany",
@@ -126331,16 +126022,6 @@
     "country": "Germany",
     "state": "Mecklenburg-Vorpommern",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      12.5035,
-      53.8975
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-MV",
-    "population": 1609675,
-    "populationDensity": 69.87336516383276,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-MV",
     "name": "Mecklenburg-Vorpommern, Germany",
@@ -126374,16 +126055,6 @@
     "country": "Germany",
     "state": "Lower Saxony",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.121500000000001,
-      52.594
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-NI",
-    "population": 7982448,
-    "populationDensity": 168.25546959567112,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-NI",
     "name": "Lower Saxony, Germany",
@@ -126417,16 +126088,6 @@
     "country": "Germany",
     "state": "North Rhine-Westphalia",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      7.6635,
-      51.427
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-NW",
-    "population": 17932651,
-    "populationDensity": 526.8546192318631,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-NW",
     "name": "North Rhine-Westphalia, Germany",
@@ -126460,16 +126121,6 @@
     "country": "Germany",
     "state": "Rhineland-Palatinate",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      7.3055,
-      49.954
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-RP",
-    "population": 4011582,
-    "populationDensity": 202.0754218903133,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-RP",
     "name": "Rhineland-Palatinate, Germany",
@@ -126503,16 +126154,6 @@
     "country": "Germany",
     "state": "Schleswig-Holstein",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.795,
-      54.2025
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SH",
-    "population": 2896712,
-    "populationDensity": 185.03393142302903,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SH",
     "name": "Schleswig-Holstein, Germany",
@@ -126546,16 +126187,6 @@
     "country": "Germany",
     "state": "Saarland",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      6.8795,
-      49.3765
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SL",
-    "population": 995597,
-    "populationDensity": 387.4664151739917,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SL",
     "name": "Saarland, Germany",
@@ -126589,16 +126220,6 @@
     "country": "Germany",
     "state": "Saxony",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.455,
-      50.929
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SN",
-    "population": 4077937,
-    "populationDensity": 221.15224849593125,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SN",
     "name": "Saxony, Germany",
@@ -126632,16 +126253,6 @@
     "country": "Germany",
     "state": "Saxony-Anhalt",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.870000000000001,
-      51.9875
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-ST",
-    "population": 2245470,
-    "populationDensity": 109.49577333773122,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-ST",
     "name": "Saxony-Anhalt, Germany",
@@ -126675,16 +126286,6 @@
     "country": "Germany",
     "state": "Thuringia",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.2665,
-      50.927
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-TH",
-    "population": 2143145,
-    "populationDensity": 132.16809866365364,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-TH",
     "name": "Thuringia, Germany",
