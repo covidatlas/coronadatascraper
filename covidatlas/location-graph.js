@@ -28,6 +28,8 @@ function showGraph({ timeseries, location }) {
     // Data points to display
     cases: true,
     deaths: true,
+    recovered: true,
+    active: true,
     hospitalized: true,
     tested: false
   };
@@ -43,25 +45,50 @@ function showGraph({ timeseries, location }) {
 
   // Pull in data
   const data = generateGraphData({ timeseries, location });
+  console.log(data);
 
   // Parse time for cross browser compatability
   const parseTime = d3.timeParse('%Y-%m-%d');
 
   // Determine the daily occurrences for each peace of data
   function countDay(key, d, i, arr) {
+    // if (d[key === undefined]) {
+    //   return 0;
+    // }
+
     if (i === 0) {
       return d[key];
     }
 
     // Find the difference in data points between this date and the previous date and array iterator is > 0
     // If there is data for the previous date
+
     if (arr[i - 1][key] !== undefined) {
       return d[key] - arr[i - 1][key];
     }
 
     // If data points started being collected at dates after beginning of array
     // To avoid spike in data return the same daily count as the second date of data point
-    return arr[i + 1][key] - arr[i][key];
+
+    if (arr[i + 1] !== undefined) {
+      return arr[i + 1][key] - arr[i][key];
+    }
+  }
+
+  function cleanDay(num) {
+    // eslint-disable-next-line no-restricted-globals
+    if (num === undefined || isNaN(num)) {
+      return 0;
+    }
+    return num;
+  }
+
+  // Makes sure countDay is displayed correctly on graph being > 0
+  function countDayPoint(num) {
+    if (num < 0) {
+      return 0;
+    }
+    return num;
   }
 
   // Make sure all data is > 0 for log calculations. log0 = undefined
@@ -93,7 +120,8 @@ function showGraph({ timeseries, location }) {
       obj.name = key;
       obj.count = d[key];
       obj.date = parseTime(d.date);
-      obj.countDay = countDay(key, d, i, arr);
+      obj.countDay = cleanDay(countDay(key, d, i, arr));
+      obj.countDayPoint = countDayPoint(cleanDay(countDay(key, d, i, arr)));
       obj.countLog = countLog(obj);
       obj.countLogDay = countLogDay(obj);
 
@@ -123,6 +151,10 @@ function showGraph({ timeseries, location }) {
 
     populatePoint('deaths', d, i, arr);
 
+    populatePoint('recovered', d, i, arr);
+
+    populatePoint('active', d, i, arr);
+
     populatePoint('tested', d, i, arr);
 
     populatePoint('hospitalized', d, i, arr);
@@ -136,6 +168,12 @@ function showGraph({ timeseries, location }) {
     if (display.deaths && d.name === 'deaths') {
       return 1;
     }
+    if (display.recovered && d.name === 'recovered') {
+      return 1;
+    }
+    if (display.active && d.name === 'active') {
+      return 1;
+    }
     if (display.tested && d.name === 'tested') {
       return 1;
     }
@@ -143,7 +181,7 @@ function showGraph({ timeseries, location }) {
       return 1;
     }
   }
-
+  console.log(lines);
   //
   // Legend
   //
@@ -154,30 +192,31 @@ function showGraph({ timeseries, location }) {
     .key(d => d.name)
     .entries(lines);
 
-  const legend = document.createElement('div');
+  const legend = document.querySelector('.graph-legend-key-container');
 
-  legend.setAttribute('class', 'graph-legend');
-  legend.innerHTML = '<div class="graph-legend-key-container">';
+  // legend.setAttribute('class', 'graph-legend');
+  // legend.innerHTML = '<div class="graph-legend-key-container">';
   for (const d of nestedLines) {
     legend.innerHTML += `
         <div class="graph-legend-key-container" id="graph-legend-${d.key}">
           <div class="graph-legend-color graph-line-${d.key}"></div>
           <div class="graph-legend-key-name">${d.key}</div>
-        </div>
         </div>`;
   }
-  document.getElementById('graph').appendChild(legend);
+  // document.getElementById('graph').appendChild(legend);
 
   // Legend toggle buttons
   const legendCases = document.getElementById('graph-legend-cases');
   const legendDeaths = document.getElementById('graph-legend-deaths');
+  const legendRecovered = document.getElementById('graph-legend-recovered');
+  const legendActive = document.getElementById('graph-legend-active');
   const legendHospitalized = document.getElementById('graph-legend-hospitalized');
   const legendTested = document.getElementById('graph-legend-tested');
 
   // Appends legend onto graph and toggles for filtered lines result
   // Error check to make sure the area you are viewing has complete data or don't try to change style
   function applyLegend() {
-    document.getElementById('graph').appendChild(legend);
+    // document.getElementById('graph').appendChild(legend);
 
     // Toggle opacity of active data points in legend
     if (legendCases) {
@@ -185,6 +224,12 @@ function showGraph({ timeseries, location }) {
     }
     if (legendDeaths) {
       legendDeaths.style.opacity = display.deaths === true ? 1 : 0.5;
+    }
+    if (legendRecovered) {
+      legendRecovered.style.opacity = display.recovered === true ? 1 : 0.5;
+    }
+    if (legendActive) {
+      legendActive.style.opacity = display.active === true ? 1 : 0.5;
     }
     if (legendHospitalized) {
       legendHospitalized.style.opacity = display.hospitalized === true ? 1 : 0.5;
@@ -240,7 +285,7 @@ function showGraph({ timeseries, location }) {
           return d.count;
         }
         if (display.linearGraph && !display.overviewGraph) {
-          return d.countDay;
+          return d.countDayPoint;
         }
         if (!display.linearGraph && display.overviewGraph) {
           return d.countLog;
@@ -258,6 +303,20 @@ function showGraph({ timeseries, location }) {
         .scaleTime()
         .domain(d3.extent(filteredLines, xValue))
         .range([0, width]);
+
+      // gridlines in x axis function
+      function makeXgridlines() {
+        return d3.axisBottom(xScale).ticks(10);
+      }
+
+      g.append('g')
+        .attr('class', 'graph-grid')
+        .attr('transform', `translate(0,${height})`)
+        .call(
+          makeXgridlines()
+            .tickSize(-height)
+            .tickFormat('')
+        );
 
       // Append x axis data onto chart
       g.append('g')
@@ -289,6 +348,19 @@ function showGraph({ timeseries, location }) {
           .range([height, 0]);
       }
 
+      // gridlines on y axis function
+      function makeYgridlines() {
+        return d3.axisLeft(yScale).ticks(5);
+      }
+      // Add on y grid lines
+      g.append('g')
+        .attr('class', 'graph-grid')
+        .call(
+          makeYgridlines()
+            .tickSize(-width)
+            .tickFormat('')
+        );
+
       // Add y axis data (domain / range )
       g.append('g').call(d3.axisLeft(yScale));
       // Add y axis title and positioning
@@ -301,6 +373,9 @@ function showGraph({ timeseries, location }) {
       //   .text(yLabel);
 
       // Create paths for lines for different data
+
+      console.log(nestedLines);
+
       const nestedFiltered = d3
         .nest()
         .key(d => d.name)
@@ -311,7 +386,6 @@ function showGraph({ timeseries, location }) {
         .x(d => xScale(xValue(d)))
         .y(d => yScale(yValue(d)));
       // .curve(d3.curveBasis);
-
       // Draw lines
       g.selectAll('graph-line')
         .data(nestedFiltered)
@@ -420,6 +494,18 @@ function showGraph({ timeseries, location }) {
   if (legendDeaths) {
     legendDeaths.addEventListener('click', () => {
       display.deaths = !display.deaths;
+      generateGraph();
+    });
+  }
+  if (legendRecovered) {
+    legendRecovered.addEventListener('click', () => {
+      display.recovered = !display.recovered;
+      generateGraph();
+    });
+  }
+  if (legendActive) {
+    legendActive.addEventListener('click', () => {
+      display.active = !display.active;
       generateGraph();
     });
   }

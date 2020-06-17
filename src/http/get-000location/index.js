@@ -106,16 +106,21 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `</div>
     <div class="col-xs-12 col-md-7 col-lg-8 graph-container">
       <h2 class="spectrum-Heading spectrum-Heading--M">Timeline</h1>
-        <div class="graph-button-container">
-          <div class="graph-button-container-overview">
-            <button id="graph-btn-overview">Overview</button>
-            <button id="graph-btn-daily">Daily Count</button>
-          </div>
-          <div class="graph-button-container-daily">
-            <button id="graph-btn-linear">Linear</button>
-            <button id="graph-btn-log">Logarithmic</button>
-          </div>
+      <div class="graph-button-container">
+        <div class="graph-button-container-overview">
+          <sp-button variant="primary" id="graph-btn-overview">Overview</sp-button>
+          <sp-button variant="primary" id="graph-btn-daily">Daily Statistics</sp-button>
         </div>
+        <div class="graph-button-container-daily">
+          <sp-button variant="secondary" id="graph-btn-linear">Linear</sp-button>
+          <sp-button variant="secondary" id="graph-btn-log">Logarithmic</sp-button>
+        </div>
+      </div>
+      <div class="graph-legend">
+      <div class="graph-legend-key-container">
+      <strong>Key:</strong>
+      </div>
+      </div>
       <div id="graph" class="ca-Graph"></div>
     </div>
   </div>

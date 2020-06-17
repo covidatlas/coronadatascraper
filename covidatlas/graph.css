@@ -1,12 +1,14 @@
 .graph-container {
-  --graph-color-cases: steelblue;
-  --graph-color-deaths: red;
-  --graph-color-tested: orange;
+  --graph-color-cases: var(--SemanticWarningTextColor);
+  --graph-color-deaths: var(--SemanticNegativeTextColor);
+  --graph-color-recovered: var(--SemanticPositiveTextColor);
+  --graph-color-active: var(--spectrum-heading-l-text-color);
+  --graph-color-tested: steelblue;
   --graph-color-hospitalized: yellow;
 }
 
 .ca-Graph {
-  height: 250px;
+  height: 320px;
   width: 100%;
   overflow: auto;
   position: relative;
@@ -15,14 +17,11 @@
 .graph-button-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px 50px;
 }
 
 .graph-button-container-overview,
 .graph-button-container-daily {
-  padding: 10px 20px;
-  border: 1px solid steelblue;
-  border-radius: 5px;
+  padding: 5px 20px;
 }
 
 .graph-btn-disabled {
@@ -49,7 +48,8 @@ Graph colors
   stroke: var(--graph-color-cases);
   /* bg color for graph legend color */
   background-color: var(--graph-color-cases);
-  color: var(--graph-color-cases);
+  mix-blend-mode: multiply;
+  /* color: var(--graph-color-cases); */
 }
 
 .graph-circle-cases {
@@ -59,14 +59,34 @@ Graph colors
 .graph-line-deaths {
   stroke: var(--graph-color-deaths);
   background-color: var(--graph-color-deaths);
+  mix-blend-mode: multiply;
 }
 .graph-circle-deaths {
   fill: var(--graph-color-deaths);
 }
 
+.graph-line-recovered {
+  stroke: var(--graph-color-recovered);
+  background-color: var(--graph-color-recovered);
+  mix-blend-mode: multiply;
+}
+.graph-circle-recovered {
+  fill: var(--graph-color-recovered);
+}
+
+.graph-line-active {
+  stroke: var(--graph-color-active);
+  background-color: var(--graph-color-active);
+  mix-blend-mode: multiply;
+}
+.graph-circle-active {
+  fill: var(--graph-color-active);
+}
+
 .graph-line-hospitalized {
   stroke: var(--graph-color-hospitalized);
   background-color: var(--graph-color-hospitalized);
+  mix-blend-mode: multiply;
 }
 
 .graph-circle-hospitalized {
@@ -76,6 +96,7 @@ Graph colors
 .graph-line-tested {
   stroke: var(--graph-color-tested);
   background-color: var(--graph-color-tested);
+  mix-blend-mode: multiply;
 }
 
 .graph-circle-tested {
@@ -83,25 +104,42 @@ Graph colors
 }
 
 /**********
+Axis
+**********/
+
+/* Tick styling on axises */
+#graph > * g .tick {
+  font-size: 14px;
+  font-family: var(--spectrum-component-text-font-family);
+}
+
+.graph-grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.6;
+  shape-rendering: crispEdges;
+}
+
+.graph-grid path {
+  stroke-width: 0;
+}
+
+/**********
 Legend
 **********/
 
 .graph-legend {
-  width: 150px;
-  height: 100px;
   padding: 5px;
-  padding-left: 10px;
-  border: 2px solid black;
+  /* border: 1px solid black; */
   border-radius: 5px;
-
-  position: absolute;
-  top: 5px;
-  left: 60px;
+  background-color: #f9f7f7;
+  display: flex;
+  margin-bottom: 5px;
 }
 
 .graph-legend-key-container {
   display: flex;
   align-items: center;
+  margin-left: 15px;
 }
 
 .graph-legend-color {
