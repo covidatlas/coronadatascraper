@@ -619,7 +619,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-18",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-19",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -921,27 +921,6 @@
     "stateId": "iso2:US-MO"
   },
   {
-    "state": "Mississippi",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "https://msdh.ms.gov/",
-        "name": "Mississippi State Department of Health"
-      }
-    ],
-    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MS"
-  },
-  {
     "state": "Utah",
     "country": "United States",
     "aggregate": "county",
@@ -1042,29 +1021,39 @@
     "countryId": "iso1:CH"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "timeseries": true,
-    "priority": 1,
+    "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
     "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
+    "timeseries": true,
     "sources": [
       {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+        "name": "Robert Koch-Institut (RKI), Landesgesundheitsminmisterien, Landesgesundheitsämter",
+        "description": "before March 17 based on RKI \"situation reports\", after that: Landesbehörten, double-checked with ZEIT ONLINE, curated by JPG, see \"curators\"",
+        "url": "https://github.com/jgehrcke/covid-19-germany-gae"
       }
     ],
+    "curators": [
+      {
+        "name": "Dr. Jan-Philip Gehrcke",
+        "email": "jgehrcke@googlemail.com",
+        "url": "https://gehrcke.de",
+        "github": "jgehrcke"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Dr. Jan-Philip Gehrcke",
+        "email": "jgehrcke@googlemail.com",
+        "url": "https://gehrcke.de",
+        "github": "jgehrcke"
+      }
+    ],
+    "country": "Germany",
     "headless": false,
     "certValidation": true,
+    "priority": 0,
     "ssl": true,
     "rating": 0.43137254901960786,
-    "countryId": "iso1:EE"
+    "countryId": "iso1:DE"
   },
   {
     "country": "Canada",
@@ -1391,6 +1380,38 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-ACT"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
+      }
+    ],
+    "state": "New South Wales",
+    "type": "table",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NSW"
   },
   {
     "country": "Australia",
@@ -1901,31 +1922,6 @@
     "stateId": "iso2:US-NM"
   },
   {
-    "country": "Sweden",
-    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://folkhalsomyndigheten.se",
-        "name": "Public Health Agency of Sweden"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:SE"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -2165,6 +2161,31 @@
     "ssl": true,
     "rating": 0.21568627450980393,
     "countryId": "iso1:LV"
+  },
+  {
+    "country": "Sweden",
+    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://folkhalsomyndigheten.se",
+        "name": "Public Health Agency of Sweden"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:SE"
   },
   {
     "county": "San Luis Obispo County",
