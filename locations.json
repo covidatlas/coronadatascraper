@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-17",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-18",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -51502,19 +51502,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Androscoggin County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -70.23949999999999,
       44.197500000000005
@@ -51532,19 +51533,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Aroostook County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -68.8865,
       46.5165
@@ -51562,19 +51564,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Cumberland County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -70.362,
       43.849000000000004
@@ -51592,19 +51595,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Franklin County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -70.38149999999999,
       45.063500000000005
@@ -51622,19 +51626,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Hancock County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -68.40199999999999,
       44.676500000000004
@@ -51652,19 +51657,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Kennebec County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.7525,
       44.414
@@ -51682,19 +51688,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Knox County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.0175,
       44.093
@@ -51712,19 +51719,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Lincoln County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.548,
       44.0475
@@ -51742,19 +51750,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Oxford County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -70.6615,
       44.566
@@ -51772,19 +51781,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Penobscot County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -68.648,
       45.519999999999996
@@ -51802,19 +51812,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Piscataquis County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.30449999999999,
       45.792500000000004
@@ -51832,19 +51843,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Sagadahoc County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.872,
       43.9345
@@ -51862,19 +51874,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Somerset County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.91,
       45.5755
@@ -51892,19 +51905,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Waldo County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -69.152,
       44.4865
@@ -51922,19 +51936,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "Washington County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -67.5275,
       45.0415
@@ -51952,19 +51967,20 @@
     "level": "county"
   },
   {
-    "state": "Maine",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
+    "aggregate": "county",
+    "curators": [
       {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "aggregate": "county",
     "county": "York County",
-    "rating": 0.5490196078431373,
+    "state": "Maine",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -70.658,
       43.437
@@ -61088,7 +61104,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-17T18:52:55.628Z",
+    "publishedDate": "2020-06-18T19:34:14.030Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61127,7 +61143,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-06-13T18:31:20.416Z",
+    "publishedDate": "2020-06-18T18:54:12.823Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61205,7 +61221,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-06-12T17:57:56.896Z",
+    "publishedDate": "2020-06-18T18:54:16.930Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61244,7 +61260,7 @@
       }
     ],
     "county": "Barry County",
-    "publishedDate": "2020-06-17T18:23:52.890Z",
+    "publishedDate": "2020-06-18T18:54:32.970Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8255,
@@ -61283,7 +61299,7 @@
       }
     ],
     "county": "Barton County",
-    "publishedDate": "2020-06-17T18:23:56.528Z",
+    "publishedDate": "2020-06-18T18:54:35.900Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.346,
@@ -61400,7 +61416,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-06-15T18:29:55.903Z",
+    "publishedDate": "2020-06-18T18:55:08.604Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61439,7 +61455,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-17T18:24:05.829Z",
+    "publishedDate": "2020-06-18T18:55:11.406Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61478,7 +61494,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-17T18:50:24.555Z",
+    "publishedDate": "2020-06-18T18:55:14.675Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61517,7 +61533,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-17T18:24:15.842Z",
+    "publishedDate": "2020-06-18T18:55:17.845Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61595,7 +61611,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-15T18:30:16.982Z",
+    "publishedDate": "2020-06-18T18:55:26.683Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61673,7 +61689,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-17T18:30:21.984Z",
+    "publishedDate": "2020-06-18T18:55:38.246Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61790,7 +61806,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-06-17T18:30:27.468Z",
+    "publishedDate": "2020-06-18T18:55:47.323Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61907,7 +61923,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-06-15T18:38:23.829Z",
+    "publishedDate": "2020-06-18T18:55:52.615Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -61985,7 +62001,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-17T18:30:32.817Z",
+    "publishedDate": "2020-06-18T18:55:56.746Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62024,7 +62040,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-06-15T18:38:32.126Z",
+    "publishedDate": "2020-06-18T18:55:59.319Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62102,7 +62118,7 @@
       }
     ],
     "county": "Cooper County",
-    "publishedDate": "2020-06-17T18:30:44.771Z",
+    "publishedDate": "2020-06-18T18:56:07.240Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.779,
@@ -62141,7 +62157,7 @@
       }
     ],
     "county": "Crawford County",
-    "publishedDate": "2020-06-15T18:38:36.544Z",
+    "publishedDate": "2020-06-18T19:49:46.064Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.315,
@@ -62219,7 +62235,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-06-09T18:18:32.614Z",
+    "publishedDate": "2020-06-18T18:56:52.039Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62414,7 +62430,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-16T18:45:27.883Z",
+    "publishedDate": "2020-06-18T18:56:58.142Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62453,7 +62469,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-17T18:34:53.776Z",
+    "publishedDate": "2020-06-18T18:57:00.769Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62531,7 +62547,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-06-15T18:53:37.121Z",
+    "publishedDate": "2020-06-18T19:32:09.000Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62570,7 +62586,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-17T18:35:25.584Z",
+    "publishedDate": "2020-06-18T19:31:29.756Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62609,7 +62625,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-06-16T18:45:42.582Z",
+    "publishedDate": "2020-06-18T18:57:22.470Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -62687,7 +62703,7 @@
       }
     ],
     "county": "Henry County",
-    "publishedDate": "2020-06-17T18:45:31.126Z",
+    "publishedDate": "2020-06-18T18:57:27.181Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.793,
@@ -62843,7 +62859,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-17T18:45:40.432Z",
+    "publishedDate": "2020-06-18T18:57:40.809Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -62921,7 +62937,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-17T18:45:47.166Z",
+    "publishedDate": "2020-06-18T18:57:44.825Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62960,7 +62976,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-17T18:45:54.209Z",
+    "publishedDate": "2020-06-18T18:57:47.099Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -62999,7 +63015,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-17T18:46:00.223Z",
+    "publishedDate": "2020-06-18T18:57:50.235Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63038,7 +63054,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-06-17T18:46:03.600Z",
+    "publishedDate": "2020-06-18T18:57:54.097Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63116,7 +63132,7 @@
       }
     ],
     "county": "Laclede County",
-    "publishedDate": "2020-06-17T18:46:27.358Z",
+    "publishedDate": "2020-06-18T18:58:07.549Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.55449999999999,
@@ -63194,7 +63210,7 @@
       }
     ],
     "county": "Lawrence County",
-    "publishedDate": "2020-06-16T18:46:29.498Z",
+    "publishedDate": "2020-06-18T18:58:12.247Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.834,
@@ -63272,7 +63288,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-06-17T18:47:05.479Z",
+    "publishedDate": "2020-06-18T18:58:14.908Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63311,7 +63327,7 @@
       }
     ],
     "county": "Linn County",
-    "publishedDate": "2020-06-17T18:47:08.183Z",
+    "publishedDate": "2020-06-18T18:58:18.283Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.106,
@@ -63389,7 +63405,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-17T18:47:16.673Z",
+    "publishedDate": "2020-06-18T18:58:23.968Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63623,7 +63639,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-06-16T18:47:04.757Z",
+    "publishedDate": "2020-06-18T18:58:26.732Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -63662,7 +63678,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-16T18:47:09.668Z",
+    "publishedDate": "2020-06-18T18:58:31.256Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63818,7 +63834,7 @@
       }
     ],
     "county": "Morgan County",
-    "publishedDate": "2020-06-17T18:47:28.342Z",
+    "publishedDate": "2020-06-18T18:58:38.749Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.8515,
@@ -63896,7 +63912,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-17T18:51:13.163Z",
+    "publishedDate": "2020-06-18T18:58:44.781Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -63935,7 +63951,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-06-17T18:47:38.378Z",
+    "publishedDate": "2020-06-18T18:58:47.848Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -64091,7 +64107,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-15T18:46:13.913Z",
+    "publishedDate": "2020-06-18T18:58:51.426Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64169,7 +64185,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-16T18:47:41.547Z",
+    "publishedDate": "2020-06-18T18:58:55.580Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64286,7 +64302,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-16T18:47:49.137Z",
+    "publishedDate": "2020-06-18T19:32:37.496Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64325,7 +64341,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-17T18:48:00.597Z",
+    "publishedDate": "2020-06-18T18:59:03.814Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64481,7 +64497,7 @@
       }
     ],
     "county": "Randolph County",
-    "publishedDate": "2020-06-15T18:46:45.811Z",
+    "publishedDate": "2020-06-18T18:59:27.033Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.50399999999999,
@@ -64559,7 +64575,7 @@
       }
     ],
     "county": "Reynolds County",
-    "publishedDate": "2020-05-01T22:05:37.865Z",
+    "publishedDate": "2020-06-18T18:59:31.806Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.024,
@@ -64637,7 +64653,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-17T18:51:30.329Z",
+    "publishedDate": "2020-06-18T19:32:45.294Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64754,7 +64770,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-16T18:50:40.998Z",
+    "publishedDate": "2020-06-18T18:59:43.830Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64795,7 +64811,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-17T14:00:00.000Z",
+    "publishedDate": "2020-06-18T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64834,7 +64850,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-06-17T18:48:13.390Z",
+    "publishedDate": "2020-06-18T18:59:35.568Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -65068,7 +65084,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-17T18:49:36.834Z",
+    "publishedDate": "2020-06-18T18:59:55.929Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65107,7 +65123,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-06-10T18:48:18.205Z",
+    "publishedDate": "2020-06-18T18:59:58.687Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65185,7 +65201,7 @@
       }
     ],
     "county": "Taney County",
-    "publishedDate": "2020-06-17T18:49:48.794Z",
+    "publishedDate": "2020-06-18T19:00:01.648Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.03999999999999,
@@ -65341,7 +65357,7 @@
       }
     ],
     "county": "Washington County",
-    "publishedDate": "2020-06-06T17:29:10.885Z",
+    "publishedDate": "2020-06-18T19:00:08.536Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.87,
@@ -65536,7 +65552,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-17T18:51:39.270Z",
+    "publishedDate": "2020-06-18T19:32:57.381Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -81628,7 +81644,7 @@
       }
     ],
     "county": "Harmon County",
-    "rating": 0.5490196078431373,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -99.8335,
       34.7685
@@ -110684,7 +110700,7 @@
     ],
     "state": "Victoria",
     "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "rating": 0.21568627450980393,
+    "rating": 0.29411764705882354,
     "coordinates": [
       145.46949999999998,
       -36.565
@@ -116627,29 +116643,16 @@
     "level": "country"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Saudi Arabia",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
+    "rating": 0.47058823529411764,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -121217,6 +121220,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Eastern Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      50.323,
+      23.1085
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-04",
+    "population": 4105780,
+    "populationDensity": 7.323672650421578,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-04",
+    "name": "Eastern Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Estonia",
     "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "maintainers": [
@@ -122843,6 +122873,33 @@
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-9",
     "name": "Veraguas, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Riyadh Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.141999999999996,
+      23.4635
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-01",
+    "population": 6777146,
+    "populationDensity": 17.961563989929314,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-01",
+    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -126139,16 +126196,6 @@
     "country": "Germany",
     "state": "Brandenburg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.016,
-      52.4535
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BB",
-    "population": 2449193,
-    "populationDensity": 82.67925228490692,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BB",
     "name": "Brandenburg, Germany",
@@ -126182,16 +126229,6 @@
     "country": "Germany",
     "state": "Berlin",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.416,
-      52.4965
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BE",
-    "population": 3644826,
-    "populationDensity": 4143.284631460103,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BE",
     "name": "Berlin, Germany",
@@ -126225,16 +126262,6 @@
     "country": "Germany",
     "state": "Baden-Württemberg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      8.9985,
-      48.6625
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BW",
-    "population": 10879618,
-    "populationDensity": 304.67773046335805,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BW",
     "name": "Baden-Württemberg, Germany",
@@ -126268,16 +126295,6 @@
     "country": "Germany",
     "state": "Bavaria",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.415,
-      48.911500000000004
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-BY",
-    "population": 12930751,
-    "populationDensity": 183.4410592655671,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-BY",
     "name": "Bavaria, Germany",
@@ -126311,16 +126328,6 @@
     "country": "Germany",
     "state": "Bremen",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      8.7355,
-      53.31
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HB",
-    "population": 661000,
-    "populationDensity": 1749.635106372453,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HB",
     "name": "Bremen, Germany",
@@ -126354,16 +126361,6 @@
     "country": "Germany",
     "state": "Hesse",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.004000000000001,
-      50.525999999999996
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HE",
-    "population": 6265809,
-    "populationDensity": 297.3919584360107,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HE",
     "name": "Hesse, Germany",
@@ -126397,16 +126394,6 @@
     "country": "Germany",
     "state": "Hamburg",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      10.019,
-      53.566500000000005
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-HH",
-    "population": 1841179,
-    "populationDensity": 2494.1122312265898,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-HH",
     "name": "Hamburg, Germany",
@@ -126440,16 +126427,6 @@
     "country": "Germany",
     "state": "Mecklenburg-Vorpommern",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      12.5035,
-      53.8975
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-MV",
-    "population": 1609675,
-    "populationDensity": 69.87336516383276,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-MV",
     "name": "Mecklenburg-Vorpommern, Germany",
@@ -126483,16 +126460,6 @@
     "country": "Germany",
     "state": "Lower Saxony",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.121500000000001,
-      52.594
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-NI",
-    "population": 7982448,
-    "populationDensity": 168.25546959567112,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-NI",
     "name": "Lower Saxony, Germany",
@@ -126526,16 +126493,6 @@
     "country": "Germany",
     "state": "North Rhine-Westphalia",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      7.6635,
-      51.427
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-NW",
-    "population": 17932651,
-    "populationDensity": 526.8546192318631,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-NW",
     "name": "North Rhine-Westphalia, Germany",
@@ -126569,16 +126526,6 @@
     "country": "Germany",
     "state": "Rhineland-Palatinate",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      7.3055,
-      49.954
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-RP",
-    "population": 4011582,
-    "populationDensity": 202.0754218903133,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-RP",
     "name": "Rhineland-Palatinate, Germany",
@@ -126612,16 +126559,6 @@
     "country": "Germany",
     "state": "Schleswig-Holstein",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      9.795,
-      54.2025
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SH",
-    "population": 2896712,
-    "populationDensity": 185.03393142302903,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SH",
     "name": "Schleswig-Holstein, Germany",
@@ -126655,16 +126592,6 @@
     "country": "Germany",
     "state": "Saarland",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      6.8795,
-      49.3765
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SL",
-    "population": 995597,
-    "populationDensity": 387.4664151739917,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SL",
     "name": "Saarland, Germany",
@@ -126698,16 +126625,6 @@
     "country": "Germany",
     "state": "Saxony",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      13.455,
-      50.929
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-SN",
-    "population": 4077937,
-    "populationDensity": 221.15224849593125,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-SN",
     "name": "Saxony, Germany",
@@ -126741,16 +126658,6 @@
     "country": "Germany",
     "state": "Saxony-Anhalt",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.870000000000001,
-      51.9875
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-ST",
-    "population": 2245470,
-    "populationDensity": 109.49577333773122,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-ST",
     "name": "Saxony-Anhalt, Germany",
@@ -126784,16 +126691,6 @@
     "country": "Germany",
     "state": "Thuringia",
     "rating": 0.43137254901960786,
-    "coordinates": [
-      11.2665,
-      50.927
-    ],
-    "tz": [
-      "Europe/Berlin"
-    ],
-    "featureId": "iso2:DE-TH",
-    "population": 2143145,
-    "populationDensity": 132.16809866365364,
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-TH",
     "name": "Thuringia, Germany",
@@ -127105,6 +127002,33 @@
     "countyId": "fips:49057+fips:49029",
     "name": "Weber County, Morgan County, Utah, United States",
     "level": "county"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jazan Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.4525,
+      17.354
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-09",
+    "population": 1567547,
+    "populationDensity": 99.93990587193487,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-09",
+    "name": "Jazan Region, Saudi Arabia",
+    "level": "state"
   },
   {
     "country": "Poland",
@@ -127635,6 +127559,87 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "'Asir Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.9525,
+      19.201
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-14",
+    "population": 2211875,
+    "populationDensity": 28.486239590174346,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-14",
+    "name": "'Asir Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al Madinah Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      39.438500000000005,
+      25.006999999999998
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-03",
+    "population": 2132679,
+    "populationDensity": 14.455633104462715,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-03",
+    "name": "Al Madinah Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Tabuk Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      37.2535,
+      27.2675
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-07",
+    "population": 910030,
+    "populationDensity": 6.58598828117753,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-07",
+    "name": "Tabuk Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Massachusetts",
     "country": "United States",
     "aggregate": "county",
@@ -127837,6 +127842,60 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al-Qassim Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      43.069500000000005,
+      26.2755
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-05",
+    "population": 1159438,
+    "populationDensity": 16.90171756800719,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-05",
+    "name": "Al-Qassim Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Najran Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.6815,
+      18.240499999999997
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-10",
+    "population": 505652,
+    "populationDensity": 5.687857400619951,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-10",
+    "name": "Najran Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -127975,6 +128034,33 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Northern Borders Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.97,
+      29.8395
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-08",
+    "population": 375310,
+    "populationDensity": 3.2502748115551507,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-08",
+    "name": "Northern Borders Region, Saudi Arabia",
+    "level": "state"
   },
   {
     "country": "United States",
@@ -133337,6 +133423,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-TY",
     "name": "Tuva Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Hayel Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.647999999999996,
+      27.0925
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-06",
+    "population": 597144,
+    "populationDensity": 5.319482787232354,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-06",
+    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {

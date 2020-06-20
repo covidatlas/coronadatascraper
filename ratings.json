@@ -135,41 +135,6 @@
     "countyId": "fips:32023"
   },
   {
-    "county": "Santa Clara County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "Minh Nguyễn",
-        "url": "http://notes.1ec5.org/",
-        "github": "1ec5",
-        "twitter": "1ec5",
-        "country": "USA",
-        "state": "CA",
-        "county": "Santa Clara County",
-        "city": "San José",
-        "flag": "🇺🇸"
-      }
-    ],
-    "type": "json",
-    "timeseries": true,
-    "headless": false,
-    "sources": [
-      {
-        "name": "Santa Clara County Public Health",
-        "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
-        "description": "Santa Clara County COVID-19 Cases Dashboard"
-      }
-    ],
-    "url": "https://www.sccgov.org/sites/covid19/Pages/dashboard.aspx",
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5882352941176471,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
-  },
-  {
     "maintainers": [
       {
         "name": "Larry Davis",
@@ -382,28 +347,6 @@
     "stateId": "iso2:US-IL"
   },
   {
-    "state": "Maine",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.maine.gov/dhhs/mecdc",
-        "name": "MeCDC",
-        "description": "Maine Center for Disease Control & Prevention"
-      }
-    ],
-    "url": "https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus.shtml",
-    "type": "table",
-    "aggregate": "county",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-ME"
-  },
-  {
     "state": "Oklahoma",
     "country": "United States",
     "type": "table",
@@ -600,6 +543,25 @@
     "countryId": "iso1:BE"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:SA"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -657,7 +619,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-17",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-18",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1078,41 +1040,6 @@
     "ssl": true,
     "rating": 0.43137254901960786,
     "countryId": "iso1:CH"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/data.csv",
-    "type": "csv",
-    "timeseries": true,
-    "sources": [
-      {
-        "name": "Robert Koch-Institut (RKI), Landesgesundheitsminmisterien, Landesgesundheitsämter",
-        "description": "before March 17 based on RKI \"situation reports\", after that: Landesbehörten, double-checked with ZEIT ONLINE, curated by JPG, see \"curators\"",
-        "url": "https://github.com/jgehrcke/covid-19-germany-gae"
-      }
-    ],
-    "curators": [
-      {
-        "name": "Dr. Jan-Philip Gehrcke",
-        "email": "jgehrcke@googlemail.com",
-        "url": "https://gehrcke.de",
-        "github": "jgehrcke"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Dr. Jan-Philip Gehrcke",
-        "email": "jgehrcke@googlemail.com",
-        "url": "https://gehrcke.de",
-        "github": "jgehrcke"
-      }
-    ],
-    "country": "Germany",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:DE"
   },
   {
     "country": "Estonia",
@@ -1841,6 +1768,38 @@
     "stateId": "iso2:US-CA"
   },
   {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "Victoria State Government Health and Human Services Department",
+        "name": "Victoria State Government Health and Human Services",
+        "url": "https://www.dhhs.vic.gov.au"
+      }
+    ],
+    "state": "Victoria",
+    "type": "paragraph",
+    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.29411764705882354,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-VIC"
+  },
+  {
     "country": "Cyprus",
     "url": "https://data.gov.cy/sites/default/files/CY%20Covid19%20Daily%20Statistics_25.csv",
     "timeseries": true,
@@ -2151,38 +2110,6 @@
     "rating": 0.23529411764705882,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "Victoria State Government Health and Human Services Department",
-        "name": "Victoria State Government Health and Human Services",
-        "url": "https://www.dhhs.vic.gov.au"
-      }
-    ],
-    "state": "Victoria",
-    "type": "paragraph",
-    "url": "https://www.dhhs.vic.gov.au/media-hub-coronavirus-disease-covid-19",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-VIC"
   },
   {
     "country": "Japan",
