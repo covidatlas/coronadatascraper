@@ -1876,7 +1876,7 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "rating": 0.17647058823529413,
+    "rating": 0.2549019607843137,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -8310,7 +8310,7 @@
       }
     ],
     "state": "Straža",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       15.0885,
       45.7745
@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-21",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-23",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -58695,20 +58695,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Adams County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -91.4045,
       31.468
@@ -58726,20 +58724,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Alcorn County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.5935,
       34.876000000000005
@@ -58757,20 +58753,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Amite County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.8215,
       31.174500000000002
@@ -58788,20 +58782,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Attala County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.64099999999999,
       33.083
@@ -58819,20 +58811,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Benton County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.185,
       34.789
@@ -58850,20 +58840,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Bolivar County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.945,
       33.825
@@ -58881,20 +58869,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Calhoun County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.32400000000001,
       33.942
@@ -58912,20 +58898,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Carroll County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.91,
       33.445499999999996
@@ -58943,20 +58927,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Chickasaw County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.9555,
       33.907
@@ -58974,20 +58956,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Choctaw County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.27099999999999,
       33.321
@@ -59005,20 +58985,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Claiborne County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.981,
       32.005
@@ -59036,20 +59014,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Clarke County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.6725,
       32.0275
@@ -59067,20 +59043,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Clay County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.75399999999999,
       33.659
@@ -59098,20 +59072,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Coahoma County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.6785,
       34.2555
@@ -59129,20 +59101,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Copiah County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.422,
       31.8675
@@ -59160,20 +59130,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Covington County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.5775,
       31.6155
@@ -59191,20 +59159,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "DeSoto County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.018,
       34.852500000000006
@@ -59222,20 +59188,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Forrest County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.295,
       31.172
@@ -59253,20 +59217,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Franklin County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.8955,
       31.466
@@ -59284,20 +59246,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "George County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.64850000000001,
       30.866
@@ -59315,20 +59275,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Greene County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.634,
       31.217
@@ -59346,20 +59304,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Grenada County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.822,
       33.7875
@@ -59377,20 +59333,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Hancock County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.506,
       30.411
@@ -59408,20 +59362,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Harrison County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.078,
       30.439
@@ -59439,20 +59391,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Hinds County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.39750000000001,
       32.311
@@ -59470,20 +59420,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Holmes County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.09049999999999,
       33.1275
@@ -59501,20 +59449,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Humphreys County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.5315,
       33.126000000000005
@@ -59532,31 +59478,18 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "county": "Issaquena County",
     "state": "Mississippi",
-    "rating": 0.5882352941176471,
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
+    "county": "Issaquena County",
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.9525,
       32.711
@@ -59574,20 +59507,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Itawamba County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.35050000000001,
       34.276
@@ -59605,20 +59536,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Jackson County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.6395,
       30.4625
@@ -59636,20 +59565,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Jasper County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.1165,
       32.013
@@ -59667,20 +59594,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Jefferson County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
       31.740000000000002
@@ -59698,20 +59623,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Jefferson Davis County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.7815,
       31.5825
@@ -59729,20 +59652,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Jones County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.172,
       31.628999999999998
@@ -59760,20 +59681,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Kemper County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.6315,
       32.753
@@ -59791,20 +59710,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lafayette County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.483,
       34.3575
@@ -59822,20 +59739,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lamar County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.501,
       31.208
@@ -59853,20 +59768,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lauderdale County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.652,
       32.400999999999996
@@ -59884,20 +59797,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lawrence County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.102,
       31.5455
@@ -59915,20 +59826,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Leake County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.524,
       32.754000000000005
@@ -59946,20 +59855,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lee County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.684,
       34.292
@@ -59977,20 +59884,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Leflore County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.2775,
       33.522999999999996
@@ -60008,20 +59913,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lincoln County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.4905,
       31.5335
@@ -60039,20 +59942,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Lowndes County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.46000000000001,
       33.5165
@@ -60070,20 +59971,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Madison County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.09,
       32.641999999999996
@@ -60101,20 +60000,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Marion County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.84700000000001,
       31.217
@@ -60132,20 +60029,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Marshall County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.485,
       34.7455
@@ -60163,20 +60058,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Monroe County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.46199999999999,
       33.8695
@@ -60194,20 +60087,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Montgomery County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.584,
       33.482
@@ -60225,20 +60116,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Neshoba County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.1165,
       32.754000000000005
@@ -60256,20 +60145,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Newton County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.1185,
       32.4
@@ -60287,20 +60174,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Noxubee County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.559,
       33.107
@@ -60318,20 +60203,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Oktibbeha County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.87899999999999,
       33.4255
@@ -60349,20 +60232,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Panola County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.959,
       34.357
@@ -60380,20 +60261,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Pearl River County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.59649999999999,
       30.737499999999997
@@ -60411,20 +60290,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Perry County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.99000000000001,
       31.172
@@ -60442,20 +60319,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Pike County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.404,
       31.175
@@ -60473,20 +60348,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Pontotoc County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.035,
       34.227000000000004
@@ -60504,20 +60377,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Prentiss County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.5325,
       34.6105
@@ -60535,20 +60406,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Quitman County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.293,
       34.292
@@ -60566,20 +60435,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Rankin County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.989,
       32.32
@@ -60597,20 +60464,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Scott County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.5535,
       32.428
@@ -60628,20 +60493,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Sharkey County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.811,
       32.879999999999995
@@ -60659,20 +60522,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Simpson County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.9505,
       31.9015
@@ -60690,20 +60551,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Smith County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.524,
       32.0025
@@ -60721,20 +60580,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Stone County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.113,
       30.779
@@ -60752,20 +60609,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Sunflower County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.60749999999999,
       33.629000000000005
@@ -60783,20 +60638,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Tallahatchie County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.1885,
       33.9305
@@ -60814,20 +60667,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Tate County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.956,
       34.6635
@@ -60845,20 +60696,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Tippah County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.90299999999999,
       34.796
@@ -60876,20 +60725,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Tishomingo County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.232,
       34.7295
@@ -60907,20 +60754,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Tunica County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.394,
       34.658
@@ -60938,20 +60783,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Union County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.9905,
       34.4815
@@ -60969,20 +60812,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Walthall County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.04849999999999,
       31.176000000000002
@@ -61000,20 +60841,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Warren County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.86449999999999,
       32.3485
@@ -61031,20 +60870,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Washington County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.958,
       33.269000000000005
@@ -61062,20 +60899,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Wayne County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -88.6965,
       31.6635
@@ -61093,20 +60928,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Webster County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.263,
       33.5995
@@ -61124,20 +60957,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Wilkinson County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -91.348,
       31.186
@@ -61155,20 +60986,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Winston County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.066,
       33.1025
@@ -61186,20 +61015,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Yalobusha County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -89.719,
       34.03
@@ -61217,20 +61044,18 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "state": "Mississippi",
     "country": "United States",
-    "aggregate": "county",
-    "curators": [
+    "sources": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
       }
     ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "aggregate": "county",
     "county": "Yazoo County",
-    "state": "Mississippi",
-    "rating": 0.6274509803921569,
+    "rating": 0.47058823529411764,
     "coordinates": [
       -90.363,
       32.7625
@@ -61268,7 +61093,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-21T20:36:07.218Z",
+    "publishedDate": "2020-06-23T21:17:04.134Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61307,7 +61132,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-06-21T20:05:54.914Z",
+    "publishedDate": "2020-06-23T21:10:32.749Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61385,7 +61210,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-06-21T20:05:59.946Z",
+    "publishedDate": "2020-06-23T21:10:37.264Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61463,7 +61288,7 @@
       }
     ],
     "county": "Barton County",
-    "publishedDate": "2020-06-19T19:23:19.185Z",
+    "publishedDate": "2020-06-23T21:10:41.581Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.346,
@@ -61541,7 +61366,7 @@
       }
     ],
     "county": "Benton County",
-    "publishedDate": "2020-06-21T20:06:09.897Z",
+    "publishedDate": "2020-06-23T21:10:46.062Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.291,
@@ -61580,7 +61405,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-06-21T20:12:34.531Z",
+    "publishedDate": "2020-06-22T17:40:59.196Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61619,7 +61444,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-21T20:06:22.577Z",
+    "publishedDate": "2020-06-23T21:10:50.518Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61658,7 +61483,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-21T20:06:24.465Z",
+    "publishedDate": "2020-06-23T21:10:52.820Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61697,7 +61522,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-21T20:06:26.590Z",
+    "publishedDate": "2020-06-23T21:10:56.399Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61775,7 +61600,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-18T18:55:26.683Z",
+    "publishedDate": "2020-06-23T21:11:00.928Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61814,7 +61639,7 @@
       }
     ],
     "county": "Camden County",
-    "publishedDate": "2020-06-21T20:06:35.177Z",
+    "publishedDate": "2020-06-23T21:11:03.820Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.744,
@@ -61853,7 +61678,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-21T20:06:39.354Z",
+    "publishedDate": "2020-06-23T21:11:06.209Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -62087,7 +61912,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-06-21T20:06:54.573Z",
+    "publishedDate": "2020-06-23T21:11:18.861Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -62165,7 +61990,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-21T20:06:56.857Z",
+    "publishedDate": "2020-06-23T21:11:23.401Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62243,7 +62068,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-06-21T20:07:01.333Z",
+    "publishedDate": "2020-06-23T21:19:04.646Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -62282,7 +62107,7 @@
       }
     ],
     "county": "Cooper County",
-    "publishedDate": "2020-06-18T18:56:07.240Z",
+    "publishedDate": "2020-06-22T17:41:34.974Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.779,
@@ -62399,7 +62224,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-06-19T19:24:10.667Z",
+    "publishedDate": "2020-06-23T21:11:37.367Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62516,7 +62341,7 @@
       }
     ],
     "county": "Dent County",
-    "publishedDate": "2020-05-15T18:52:40.634Z",
+    "publishedDate": "2020-06-23T21:11:40.881Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.481,
@@ -62594,7 +62419,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-21T20:07:15.326Z",
+    "publishedDate": "2020-06-23T21:11:43.837Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62633,7 +62458,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-21T20:07:18.148Z",
+    "publishedDate": "2020-06-23T21:11:45.564Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62672,7 +62497,7 @@
       }
     ],
     "county": "Gasconade County",
-    "publishedDate": "2020-06-21T20:07:21.900Z",
+    "publishedDate": "2020-06-23T21:11:47.717Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.5055,
@@ -62711,7 +62536,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-06-21T20:07:27.346Z",
+    "publishedDate": "2020-06-23T21:11:56.897Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62750,7 +62575,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-21T20:07:31.049Z",
+    "publishedDate": "2020-06-23T21:11:59.301Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62828,7 +62653,7 @@
       }
     ],
     "county": "Harrison County",
-    "publishedDate": "2020-05-28T18:34:58.872Z",
+    "publishedDate": "2020-06-23T21:12:08.886Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9975,
@@ -62906,7 +62731,7 @@
       }
     ],
     "county": "Hickory County",
-    "publishedDate": "2020-05-01T22:04:32.242Z",
+    "publishedDate": "2020-06-23T21:12:26.723Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.3195,
@@ -62945,7 +62770,7 @@
       }
     ],
     "county": "Holt County",
-    "publishedDate": "2020-06-21T20:07:49.245Z",
+    "publishedDate": "2020-06-22T17:42:07.926Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -95.272,
@@ -62984,7 +62809,7 @@
       }
     ],
     "county": "Howard County",
-    "publishedDate": "2020-05-19T20:01:51.652Z",
+    "publishedDate": "2020-06-22T17:42:16.865Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6875,
@@ -63101,7 +62926,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-21T20:08:14.127Z",
+    "publishedDate": "2020-06-23T21:12:42.910Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -63140,7 +62965,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-21T20:08:17.305Z",
+    "publishedDate": "2020-06-23T21:12:45.476Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -63179,7 +63004,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-21T20:08:27.763Z",
+    "publishedDate": "2020-06-23T21:12:48.587Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63218,7 +63043,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-06-21T20:08:30.478Z",
+    "publishedDate": "2020-06-23T21:12:53.290Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63296,7 +63121,7 @@
       }
     ],
     "county": "Laclede County",
-    "publishedDate": "2020-06-21T20:08:46.879Z",
+    "publishedDate": "2020-06-23T21:13:08.806Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.55449999999999,
@@ -63374,7 +63199,7 @@
       }
     ],
     "county": "Lawrence County",
-    "publishedDate": "2020-06-21T20:08:50.444Z",
+    "publishedDate": "2020-06-23T21:13:12.572Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.834,
@@ -63452,7 +63277,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-06-18T18:58:14.908Z",
+    "publishedDate": "2020-06-23T21:13:15.155Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63491,7 +63316,7 @@
       }
     ],
     "county": "Linn County",
-    "publishedDate": "2020-06-18T18:58:18.283Z",
+    "publishedDate": "2020-06-23T21:13:16.388Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.106,
@@ -63569,7 +63394,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-21T20:09:05.634Z",
+    "publishedDate": "2020-06-23T21:13:26.547Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63686,7 +63511,7 @@
       }
     ],
     "county": "Maries County",
-    "publishedDate": "2020-05-01T22:04:52.531Z",
+    "publishedDate": "2020-06-23T21:13:22.516Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.9145,
@@ -63725,7 +63550,7 @@
       }
     ],
     "county": "Marion County",
-    "publishedDate": "2020-06-21T20:09:03.217Z",
+    "publishedDate": "2020-06-23T21:13:24.358Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.577,
@@ -63803,7 +63628,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-06-20T17:13:14.264Z",
+    "publishedDate": "2020-06-22T17:43:03.734Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -63842,7 +63667,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-18T18:58:31.256Z",
+    "publishedDate": "2020-06-23T21:13:33.180Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63959,7 +63784,7 @@
       }
     ],
     "county": "Montgomery County",
-    "publishedDate": "2020-06-19T19:26:07.129Z",
+    "publishedDate": "2020-06-23T21:13:37.220Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.4535,
@@ -63998,7 +63823,7 @@
       }
     ],
     "county": "Morgan County",
-    "publishedDate": "2020-06-18T18:58:38.749Z",
+    "publishedDate": "2020-06-23T21:13:40.791Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.8515,
@@ -64037,7 +63862,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-06-21T20:09:32.889Z",
+    "publishedDate": "2020-06-23T21:13:48.956Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -64076,7 +63901,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-21T20:09:37.112Z",
+    "publishedDate": "2020-06-23T21:13:54.809Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -64115,7 +63940,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-06-19T19:26:26.479Z",
+    "publishedDate": "2020-06-23T21:13:58.729Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -64193,7 +64018,7 @@
       }
     ],
     "county": "Osage County",
-    "publishedDate": "2020-06-10T18:46:23.353Z",
+    "publishedDate": "2020-06-23T21:14:01.795Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.918,
@@ -64271,7 +64096,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-18T18:58:51.426Z",
+    "publishedDate": "2020-06-22T17:43:26.546Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64310,7 +64135,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-06-21T20:09:43.818Z",
+    "publishedDate": "2020-06-23T21:14:06.799Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64349,7 +64174,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-20T17:14:01.206Z",
+    "publishedDate": "2020-06-23T21:14:08.249Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64388,7 +64213,7 @@
       }
     ],
     "county": "Phelps County",
-    "publishedDate": "2020-06-20T17:14:03.199Z",
+    "publishedDate": "2020-06-23T21:14:09.759Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.777,
@@ -64427,7 +64252,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-06-19T19:26:40.070Z",
+    "publishedDate": "2020-06-22T17:43:39.713Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64466,7 +64291,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-19T19:26:41.904Z",
+    "publishedDate": "2020-06-23T21:14:12.339Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64505,7 +64330,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-19T19:26:43.207Z",
+    "publishedDate": "2020-06-23T21:14:13.489Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64622,7 +64447,7 @@
       }
     ],
     "county": "Ralls County",
-    "publishedDate": "2020-06-20T17:14:12.440Z",
+    "publishedDate": "2020-06-23T21:14:17.306Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.44800000000001,
@@ -64817,7 +64642,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-21T20:10:12.414Z",
+    "publishedDate": "2020-06-23T21:14:32.403Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64934,7 +64759,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-21T20:10:20.497Z",
+    "publishedDate": "2020-06-23T21:14:35.450Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64975,7 +64800,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-21T16:00:00.000Z",
+    "publishedDate": "2020-06-23T14:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -65131,7 +64956,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-21T20:10:08.068Z",
+    "publishedDate": "2020-06-23T21:14:28.680Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -65248,7 +65073,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-20T17:15:00.650Z",
+    "publishedDate": "2020-06-23T21:14:47.240Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65287,7 +65112,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-06-19T19:27:30.900Z",
+    "publishedDate": "2020-06-23T21:14:53.694Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65326,7 +65151,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-06-21T20:10:36.235Z",
+    "publishedDate": "2020-06-23T21:14:57.298Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65365,7 +65190,7 @@
       }
     ],
     "county": "Taney County",
-    "publishedDate": "2020-06-19T19:27:34.084Z",
+    "publishedDate": "2020-06-23T21:15:00.346Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.03999999999999,
@@ -65443,7 +65268,7 @@
       }
     ],
     "county": "Vernon County",
-    "publishedDate": "2020-06-08T18:31:47.830Z",
+    "publishedDate": "2020-06-22T17:44:27.608Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.338,
@@ -65482,7 +65307,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-06-20T17:15:26.825Z",
+    "publishedDate": "2020-06-23T21:15:05.212Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65521,7 +65346,7 @@
       }
     ],
     "county": "Washington County",
-    "publishedDate": "2020-06-18T19:00:08.536Z",
+    "publishedDate": "2020-06-23T21:15:06.626Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.87,
@@ -65560,7 +65385,7 @@
       }
     ],
     "county": "Wayne County",
-    "publishedDate": "2020-06-20T17:15:30.580Z",
+    "publishedDate": "2020-06-23T21:15:07.796Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.445,
@@ -65599,7 +65424,7 @@
       }
     ],
     "county": "Webster County",
-    "publishedDate": "2020-06-21T20:10:49.074Z",
+    "publishedDate": "2020-06-23T21:19:45.924Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.878,
@@ -65716,7 +65541,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-21T20:10:27.969Z",
+    "publishedDate": "2020-06-23T21:14:41.139Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -98586,31 +98411,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Menard County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.8,
       30.899
@@ -102369,27 +102183,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Addison County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.09,
       44.0285
@@ -102407,27 +102214,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Bennington County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.055,
       43.027
@@ -102445,27 +102245,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Caledonia County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.13550000000001,
       44.462999999999994
@@ -102483,27 +102276,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Chittenden County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.08250000000001,
       44.442
@@ -102521,27 +102307,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Essex County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -71.71950000000001,
       44.681
@@ -102559,27 +102338,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Franklin County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.896,
       44.825
@@ -102597,27 +102369,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Grand Isle County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.291,
       44.789
@@ -102635,27 +102400,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Lamoille County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.64750000000001,
       44.6
@@ -102673,27 +102431,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Orange County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.411,
       43.995999999999995
@@ -102711,27 +102462,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Orleans County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.226,
       44.7755
@@ -102749,27 +102493,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Rutland County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.066,
       43.575
@@ -102787,27 +102524,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Washington County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.58449999999999,
       44.2595
@@ -102825,27 +102555,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Windham County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.7205,
       42.9945
@@ -102863,27 +102586,20 @@
     "level": "county"
   },
   {
-    "state": "Vermont",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Windsor County",
-    "rating": 0.49019607843137253,
+    "state": "Vermont",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.5925,
       43.592
@@ -116752,29 +116468,16 @@
     "level": "country"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Saudi Arabia",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
+    "rating": 0.47058823529411764,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -121342,6 +121045,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Eastern Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      50.323,
+      23.1085
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-04",
+    "population": 4105780,
+    "populationDensity": 7.323672650421578,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-04",
+    "name": "Eastern Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Estonia",
     "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "maintainers": [
@@ -121889,21 +121619,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Limburg",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      5.896,
+      51.2645
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-LI",
+    "population": 1120006,
+    "populationDensity": 507.79806543154643,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-LI",
+    "name": "Limburg, Netherlands",
     "level": "state"
   },
   {
@@ -121923,21 +121653,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Limburg",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.896,
-      51.2645
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-LI",
-    "population": 1120006,
-    "populationDensity": 507.79806543154643,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-LI",
-    "name": "Limburg, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
@@ -122968,6 +122698,33 @@
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-9",
     "name": "Veraguas, Panama",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Riyadh Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.141999999999996,
+      23.4635
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-01",
+    "population": 6777146,
+    "populationDensity": 17.961563989929314,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-01",
+    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -127232,6 +126989,33 @@
     "level": "county"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jazan Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.4525,
+      17.354
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-09",
+    "population": 1567547,
+    "populationDensity": 99.93990587193487,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-09",
+    "name": "Jazan Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "maintainers": [
@@ -127760,6 +127544,87 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "'Asir Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.9525,
+      19.201
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-14",
+    "population": 2211875,
+    "populationDensity": 28.486239590174346,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-14",
+    "name": "'Asir Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al Madinah Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      39.438500000000005,
+      25.006999999999998
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-03",
+    "population": 2132679,
+    "populationDensity": 14.455633104462715,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-03",
+    "name": "Al Madinah Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Tabuk Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      37.2535,
+      27.2675
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-07",
+    "population": 910030,
+    "populationDensity": 6.58598828117753,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-07",
+    "name": "Tabuk Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Massachusetts",
     "country": "United States",
     "aggregate": "county",
@@ -127962,6 +127827,60 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al-Qassim Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      43.069500000000005,
+      26.2755
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-05",
+    "population": 1159438,
+    "populationDensity": 16.90171756800719,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-05",
+    "name": "Al-Qassim Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Najran Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.6815,
+      18.240499999999997
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-10",
+    "population": 505652,
+    "populationDensity": 5.687857400619951,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-10",
+    "name": "Najran Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -128100,6 +128019,33 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Northern Borders Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.97,
+      29.8395
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-08",
+    "population": 375310,
+    "populationDensity": 3.2502748115551507,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-08",
+    "name": "Northern Borders Region, Saudi Arabia",
+    "level": "state"
   },
   {
     "country": "United States",
@@ -133462,6 +133408,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-TY",
     "name": "Tuva Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Hayel Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.647999999999996,
+      27.0925
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-06",
+    "population": 597144,
+    "populationDensity": 5.319482787232354,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-06",
+    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {

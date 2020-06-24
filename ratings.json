@@ -543,6 +543,25 @@
     "countryId": "iso1:BE"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:SA"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -600,7 +619,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-21",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-23",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -779,36 +798,6 @@
     "stateId": "iso2:US-OH"
   },
   {
-    "state": "Vermont",
-    "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.healthvermont.gov/response/coronavirus-covid-19",
-        "name": "Vermont Department of Health"
-      }
-    ],
-    "url": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/VT_Counties_Cases/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&outFields=*",
-    "type": "json",
-    "aggregate": "county",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-VT"
-  },
-  {
     "state": "Washington",
     "country": "United States",
     "sources": [
@@ -900,6 +889,27 @@
     "rating": 0.47058823529411764,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MO"
+  },
+  {
+    "state": "Mississippi",
+    "country": "United States",
+    "sources": [
+      {
+        "url": "https://msdh.ms.gov/",
+        "name": "Mississippi State Department of Health"
+      }
+    ],
+    "url": "https://msdh.ms.gov/msdhsite/_static/14,0,420.html",
+    "type": "table",
+    "aggregate": "county",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.47058823529411764,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MS"
   },
   {
     "state": "Utah",
@@ -1896,6 +1906,31 @@
     "stateId": "iso2:US-NM"
   },
   {
+    "country": "Sweden",
+    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://folkhalsomyndigheten.se",
+        "name": "Public Health Agency of Sweden"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:SE"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -2135,31 +2170,6 @@
     "ssl": true,
     "rating": 0.21568627450980393,
     "countryId": "iso1:LV"
-  },
-  {
-    "country": "Sweden",
-    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://folkhalsomyndigheten.se",
-        "name": "Public Health Agency of Sweden"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:SE"
   },
   {
     "county": "San Luis Obispo County",
