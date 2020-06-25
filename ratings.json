@@ -347,36 +347,6 @@
     "stateId": "iso2:US-IL"
   },
   {
-    "state": "Oklahoma",
-    "country": "United States",
-    "type": "table",
-    "aggregate": "county",
-    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
-    "sources": [
-      {
-        "name": "Oklahoma State Department of Health"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "url": "https://amitechsolutions.com",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-OK"
-  },
-  {
     "state": "Oregon",
     "country": "United States",
     "sources": [
@@ -593,36 +563,6 @@
     "rating": 0.5098039215686274,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MO"
-  },
-  {
-    "country": "Ukraine",
-    "sources": [
-      {
-        "url": "https://www.rnbo.gov.ua/en/",
-        "name": "National Security and Defense Council of Ukraine"
-      }
-    ],
-    "type": "json",
-    "aggregate": "state",
-    "maintainers": [
-      {
-        "name": "Christopher Rucinski",
-        "email": "ciscorucinski@gmail.com",
-        "github": "ciscorucinski",
-        "country": "KOR",
-        "state": "Seoul",
-        "city": "Gwanak-gu",
-        "flag": "🇰🇷"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-23",
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:UA"
   },
   {
     "state": "Alabama",
@@ -1090,30 +1030,6 @@
     "ssl": true,
     "rating": 0.4117647058823529,
     "countryId": "iso1:CA"
-  },
-  {
-    "county": "Orange County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://occovid19.ochealthinfo.com/coronavirus-in-oc",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "list",
-    "ssl": true,
-    "rating": 0.4117647058823529,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
   },
   {
     "state": "Montana",
