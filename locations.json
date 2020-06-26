@@ -7452,7 +7452,7 @@
       }
     ],
     "state": "Kobarid",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       13.5635,
       46.245000000000005
@@ -8938,9 +8938,19 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-03-14",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-25",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
+    "coordinates": [
+      30.531,
+      50.402
+    ],
+    "tz": [
+      "Europe/Kiev"
+    ],
+    "featureId": "iso2:UA-30",
+    "population": 2935239,
+    "populationDensity": 3557.6865881929652,
     "countryId": "iso1:UA",
     "stateId": "iso2:UA-30",
     "name": "Kyiv, Ukraine",
@@ -15530,31 +15540,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Denali Borough",
     "state": "Alaska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -149.999,
       63.542
@@ -19720,7 +19719,7 @@
       }
     ],
     "county": "Butte County",
-    "rating": 0.7058823529411765,
+    "rating": 0.7843137254901961,
     "coordinates": [
       -121.57300000000001,
       39.724000000000004
@@ -61083,7 +61082,7 @@
       }
     ],
     "county": "Adair County",
-    "publishedDate": "2020-06-24T17:51:51.816Z",
+    "publishedDate": "2020-06-25T17:34:16.018Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6005,
@@ -61122,7 +61121,7 @@
       }
     ],
     "county": "Andrew County",
-    "publishedDate": "2020-06-24T17:34:57.566Z",
+    "publishedDate": "2020-06-25T17:34:16.862Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.832,
@@ -61161,7 +61160,7 @@
       }
     ],
     "county": "Atchison County",
-    "publishedDate": "2020-05-20T18:06:01.138Z",
+    "publishedDate": "2020-06-25T17:34:13.832Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -95.4765,
@@ -61200,7 +61199,7 @@
       }
     ],
     "county": "Audrain County",
-    "publishedDate": "2020-06-23T21:10:37.264Z",
+    "publishedDate": "2020-06-25T17:34:20.331Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.8615,
@@ -61239,7 +61238,7 @@
       }
     ],
     "county": "Barry County",
-    "publishedDate": "2020-06-24T17:35:03.908Z",
+    "publishedDate": "2020-06-25T17:34:34.003Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8255,
@@ -61278,7 +61277,7 @@
       }
     ],
     "county": "Barton County",
-    "publishedDate": "2020-06-24T17:35:07.482Z",
+    "publishedDate": "2020-06-25T17:34:30.190Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.346,
@@ -61317,7 +61316,7 @@
       }
     ],
     "county": "Bates County",
-    "publishedDate": "2020-06-04T18:11:38.632Z",
+    "publishedDate": "2020-06-25T17:34:24.990Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.332,
@@ -61356,7 +61355,7 @@
       }
     ],
     "county": "Benton County",
-    "publishedDate": "2020-06-23T21:10:46.062Z",
+    "publishedDate": "2020-06-25T17:34:24.644Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.291,
@@ -61395,7 +61394,7 @@
       }
     ],
     "county": "Bollinger County",
-    "publishedDate": "2020-06-22T17:40:59.196Z",
+    "publishedDate": "2020-06-25T17:34:30.363Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.042,
@@ -61434,7 +61433,7 @@
       }
     ],
     "county": "Boone County",
-    "publishedDate": "2020-06-24T17:35:21.500Z",
+    "publishedDate": "2020-06-25T17:34:20.816Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.33699999999999,
@@ -61473,7 +61472,7 @@
       }
     ],
     "county": "Buchanan County",
-    "publishedDate": "2020-06-24T17:35:28.586Z",
+    "publishedDate": "2020-06-25T17:34:18.253Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.8575,
@@ -61512,7 +61511,7 @@
       }
     ],
     "county": "Butler County",
-    "publishedDate": "2020-06-24T17:35:32.977Z",
+    "publishedDate": "2020-06-25T17:34:33.862Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.408,
@@ -61551,7 +61550,7 @@
       }
     ],
     "county": "Caldwell County",
-    "publishedDate": "2020-06-21T20:06:28.363Z",
+    "publishedDate": "2020-06-25T17:34:18.393Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.983,
@@ -61590,7 +61589,7 @@
       }
     ],
     "county": "Callaway County",
-    "publishedDate": "2020-06-24T17:35:38.885Z",
+    "publishedDate": "2020-06-25T17:34:21.612Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.93,
@@ -61629,7 +61628,7 @@
       }
     ],
     "county": "Camden County",
-    "publishedDate": "2020-06-24T17:35:42.024Z",
+    "publishedDate": "2020-06-25T17:34:26.144Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.744,
@@ -61668,7 +61667,7 @@
       }
     ],
     "county": "Cape Girardeau County",
-    "publishedDate": "2020-06-23T21:11:06.209Z",
+    "publishedDate": "2020-06-25T17:34:30.613Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.644,
@@ -61707,7 +61706,7 @@
       }
     ],
     "county": "Carroll County",
-    "publishedDate": "2020-06-16T18:44:45.915Z",
+    "publishedDate": "2020-06-25T17:34:19.268Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4315,
@@ -61746,7 +61745,7 @@
       }
     ],
     "county": "Carter County",
-    "publishedDate": "2020-06-19T19:23:43.163Z",
+    "publishedDate": "2020-06-25T17:34:32.831Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.943,
@@ -61785,7 +61784,7 @@
       }
     ],
     "county": "Cass County",
-    "publishedDate": "2020-06-21T20:06:44.133Z",
+    "publishedDate": "2020-06-25T17:34:23.081Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3385,
@@ -61824,7 +61823,7 @@
       }
     ],
     "county": "Cedar County",
-    "publishedDate": "2020-05-07T19:00:11.237Z",
+    "publishedDate": "2020-06-25T17:34:28.726Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.842,
@@ -61863,7 +61862,7 @@
       }
     ],
     "county": "Chariton County",
-    "publishedDate": "2020-06-05T18:22:55.347Z",
+    "publishedDate": "2020-06-25T17:34:18.768Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.988,
@@ -61902,7 +61901,7 @@
       }
     ],
     "county": "Christian County",
-    "publishedDate": "2020-06-24T17:35:52.279Z",
+    "publishedDate": "2020-06-25T17:34:32.990Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2565,
@@ -61941,7 +61940,7 @@
       }
     ],
     "county": "Clark County",
-    "publishedDate": "2020-06-24T17:35:54.885Z",
+    "publishedDate": "2020-06-25T17:34:13.498Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.685,
@@ -61980,7 +61979,7 @@
       }
     ],
     "county": "Clay County",
-    "publishedDate": "2020-06-24T17:35:59.529Z",
+    "publishedDate": "2020-06-25T17:34:20.175Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.40899999999999,
@@ -62019,7 +62018,7 @@
       }
     ],
     "county": "Clinton County",
-    "publishedDate": "2020-06-21T20:06:58.467Z",
+    "publishedDate": "2020-06-25T17:34:18.581Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62058,7 +62057,7 @@
       }
     ],
     "county": "Cole County",
-    "publishedDate": "2020-06-24T17:36:03.457Z",
+    "publishedDate": "2020-06-25T17:34:24.144Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.24950000000001,
@@ -62097,7 +62096,7 @@
       }
     ],
     "county": "Cooper County",
-    "publishedDate": "2020-06-22T17:41:34.974Z",
+    "publishedDate": "2020-06-25T17:34:21.944Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.779,
@@ -62136,7 +62135,7 @@
       }
     ],
     "county": "Crawford County",
-    "publishedDate": "2020-06-18T19:49:46.064Z",
+    "publishedDate": "2020-06-25T17:34:25.753Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.315,
@@ -62175,7 +62174,7 @@
       }
     ],
     "county": "Dade County",
-    "publishedDate": "2020-06-15T18:38:42.163Z",
+    "publishedDate": "2020-06-25T17:34:31.128Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.85,
@@ -62214,7 +62213,7 @@
       }
     ],
     "county": "Dallas County",
-    "publishedDate": "2020-06-24T17:41:00.186Z",
+    "publishedDate": "2020-06-25T17:34:28.909Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0185,
@@ -62253,7 +62252,7 @@
       }
     ],
     "county": "Daviess County",
-    "publishedDate": "2020-06-10T18:38:05.584Z",
+    "publishedDate": "2020-06-25T17:34:17.083Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.989,
@@ -62292,7 +62291,7 @@
       }
     ],
     "county": "DeKalb County",
-    "publishedDate": "2020-06-19T19:24:15.692Z",
+    "publishedDate": "2020-06-25T17:34:17.237Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.404,
@@ -62331,7 +62330,7 @@
       }
     ],
     "county": "Dent County",
-    "publishedDate": "2020-06-23T21:11:40.881Z",
+    "publishedDate": "2020-06-25T17:34:29.456Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.481,
@@ -62370,7 +62369,7 @@
       }
     ],
     "county": "Douglas County",
-    "publishedDate": "2020-06-08T18:21:29.048Z",
+    "publishedDate": "2020-06-25T17:34:33.206Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.499,
@@ -62409,7 +62408,7 @@
       }
     ],
     "county": "Dunklin County",
-    "publishedDate": "2020-06-24T17:36:17.371Z",
+    "publishedDate": "2020-06-25T17:34:35.097Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.166,
@@ -62448,7 +62447,7 @@
       }
     ],
     "county": "Franklin County",
-    "publishedDate": "2020-06-24T17:36:21.274Z",
+    "publishedDate": "2020-06-25T17:34:24.302Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.0505,
@@ -62487,7 +62486,7 @@
       }
     ],
     "county": "Gasconade County",
-    "publishedDate": "2020-06-24T17:36:23.132Z",
+    "publishedDate": "2020-06-25T17:34:23.769Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.5055,
@@ -62526,7 +62525,7 @@
       }
     ],
     "county": "Gentry County",
-    "publishedDate": "2020-06-24T17:36:26.937Z",
+    "publishedDate": "2020-06-25T17:34:15.694Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.4105,
@@ -62565,7 +62564,7 @@
       }
     ],
     "county": "Greene County",
-    "publishedDate": "2020-06-24T17:36:29.816Z",
+    "publishedDate": "2020-06-25T17:34:31.722Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.344,
@@ -62604,7 +62603,7 @@
       }
     ],
     "county": "Grundy County",
-    "publishedDate": "2020-06-24T17:36:42.602Z",
+    "publishedDate": "2020-06-25T17:34:16.550Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.56299999999999,
@@ -62643,7 +62642,7 @@
       }
     ],
     "county": "Harrison County",
-    "publishedDate": "2020-06-23T21:12:08.886Z",
+    "publishedDate": "2020-06-25T17:34:15.476Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9975,
@@ -62682,7 +62681,7 @@
       }
     ],
     "county": "Henry County",
-    "publishedDate": "2020-06-18T18:57:27.181Z",
+    "publishedDate": "2020-06-25T17:34:24.472Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.793,
@@ -62721,7 +62720,7 @@
       }
     ],
     "county": "Hickory County",
-    "publishedDate": "2020-06-24T17:37:01.824Z",
+    "publishedDate": "2020-06-25T17:34:27.862Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.3195,
@@ -62760,7 +62759,7 @@
       }
     ],
     "county": "Holt County",
-    "publishedDate": "2020-06-22T17:42:07.926Z",
+    "publishedDate": "2020-06-25T17:34:16.378Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -95.272,
@@ -62799,7 +62798,7 @@
       }
     ],
     "county": "Howard County",
-    "publishedDate": "2020-06-22T17:42:16.865Z",
+    "publishedDate": "2020-06-25T17:34:20.628Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6875,
@@ -62838,7 +62837,7 @@
       }
     ],
     "county": "Howell County",
-    "publishedDate": "2020-06-24T17:37:14.013Z",
+    "publishedDate": "2020-06-25T17:34:33.534Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.888,
@@ -62877,7 +62876,7 @@
       }
     ],
     "county": "Iron County",
-    "publishedDate": "2020-06-21T20:08:10.232Z",
+    "publishedDate": "2020-06-25T17:34:29.629Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.845,
@@ -62916,7 +62915,7 @@
       }
     ],
     "county": "Jackson County",
-    "publishedDate": "2020-06-24T17:37:20.862Z",
+    "publishedDate": "2020-06-25T17:34:21.269Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.35650000000001,
@@ -62955,7 +62954,7 @@
       }
     ],
     "county": "Jasper County",
-    "publishedDate": "2020-06-24T17:37:24.219Z",
+    "publishedDate": "2020-06-25T17:34:31.878Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.3355,
@@ -62994,7 +62993,7 @@
       }
     ],
     "county": "Jefferson County",
-    "publishedDate": "2020-06-24T17:37:27.950Z",
+    "publishedDate": "2020-06-25T17:34:24.815Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.515,
@@ -63033,7 +63032,7 @@
       }
     ],
     "county": "Johnson County",
-    "publishedDate": "2020-06-23T21:12:53.290Z",
+    "publishedDate": "2020-06-25T17:34:22.472Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.8115,
@@ -63072,7 +63071,7 @@
       }
     ],
     "county": "Knox County",
-    "publishedDate": "2020-06-10T18:42:04.664Z",
+    "publishedDate": "2020-06-25T17:34:16.176Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14750000000001,
@@ -63111,7 +63110,7 @@
       }
     ],
     "county": "Laclede County",
-    "publishedDate": "2020-06-24T17:37:40.810Z",
+    "publishedDate": "2020-06-25T17:34:29.066Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.55449999999999,
@@ -63150,7 +63149,7 @@
       }
     ],
     "county": "Lafayette County",
-    "publishedDate": "2020-06-17T18:46:45.034Z",
+    "publishedDate": "2020-06-25T17:34:21.097Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7955,
@@ -63189,7 +63188,7 @@
       }
     ],
     "county": "Lawrence County",
-    "publishedDate": "2020-06-24T17:37:45.281Z",
+    "publishedDate": "2020-06-25T17:34:32.331Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.834,
@@ -63228,7 +63227,7 @@
       }
     ],
     "county": "Lewis County",
-    "publishedDate": "2020-05-15T18:53:20.283Z",
+    "publishedDate": "2020-06-25T17:34:16.706Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.694,
@@ -63267,7 +63266,7 @@
       }
     ],
     "county": "Lincoln County",
-    "publishedDate": "2020-06-24T17:37:49.016Z",
+    "publishedDate": "2020-06-25T17:34:20.956Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.965,
@@ -63306,7 +63305,7 @@
       }
     ],
     "county": "Linn County",
-    "publishedDate": "2020-06-23T21:13:16.388Z",
+    "publishedDate": "2020-06-25T17:34:17.612Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.106,
@@ -63345,7 +63344,7 @@
       }
     ],
     "county": "Livingston County",
-    "publishedDate": "2020-06-24T17:37:52.413Z",
+    "publishedDate": "2020-06-25T17:34:17.784Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.5115,
@@ -63384,7 +63383,7 @@
       }
     ],
     "county": "McDonald County",
-    "publishedDate": "2020-06-24T17:42:09.532Z",
+    "publishedDate": "2020-06-25T17:34:34.956Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.34299999999999,
@@ -63423,7 +63422,7 @@
       }
     ],
     "county": "Macon County",
-    "publishedDate": "2020-06-13T18:33:42.961Z",
+    "publishedDate": "2020-06-25T17:34:17.456Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.57300000000001,
@@ -63462,7 +63461,7 @@
       }
     ],
     "county": "Madison County",
-    "publishedDate": "2020-05-09T18:46:24.104Z",
+    "publishedDate": "2020-06-25T17:34:29.879Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.3445,
@@ -63501,7 +63500,7 @@
       }
     ],
     "county": "Maries County",
-    "publishedDate": "2020-06-23T21:13:22.516Z",
+    "publishedDate": "2020-06-25T17:34:25.331Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.9145,
@@ -63540,7 +63539,7 @@
       }
     ],
     "county": "Marion County",
-    "publishedDate": "2020-06-23T21:13:24.358Z",
+    "publishedDate": "2020-06-25T17:34:18.096Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.577,
@@ -63579,7 +63578,7 @@
       }
     ],
     "county": "Mercer County",
-    "publishedDate": "2020-06-11T17:40:36.336Z",
+    "publishedDate": "2020-06-25T17:34:15.081Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.571,
@@ -63618,7 +63617,7 @@
       }
     ],
     "county": "Miller County",
-    "publishedDate": "2020-06-22T17:43:03.734Z",
+    "publishedDate": "2020-06-25T17:34:25.175Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4385,
@@ -63657,7 +63656,7 @@
       }
     ],
     "county": "Mississippi County",
-    "publishedDate": "2020-06-23T21:13:33.180Z",
+    "publishedDate": "2020-06-25T17:34:32.675Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.3095,
@@ -63696,7 +63695,7 @@
       }
     ],
     "county": "Moniteau County",
-    "publishedDate": "2020-06-04T18:14:38.479Z",
+    "publishedDate": "2020-06-25T17:34:23.237Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.6115,
@@ -63735,7 +63734,7 @@
       }
     ],
     "county": "Monroe County",
-    "publishedDate": "2020-06-24T17:42:03.261Z",
+    "publishedDate": "2020-06-25T17:34:19.096Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.011,
@@ -63774,7 +63773,7 @@
       }
     ],
     "county": "Montgomery County",
-    "publishedDate": "2020-06-23T21:13:37.220Z",
+    "publishedDate": "2020-06-25T17:34:21.460Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.4535,
@@ -63813,7 +63812,7 @@
       }
     ],
     "county": "Morgan County",
-    "publishedDate": "2020-06-24T17:38:12.269Z",
+    "publishedDate": "2020-06-25T17:34:23.940Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.8515,
@@ -63852,7 +63851,7 @@
       }
     ],
     "county": "New Madrid County",
-    "publishedDate": "2020-06-23T21:13:48.956Z",
+    "publishedDate": "2020-06-25T17:34:34.159Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.64949999999999,
@@ -63891,7 +63890,7 @@
       }
     ],
     "county": "Newton County",
-    "publishedDate": "2020-06-24T17:38:17.062Z",
+    "publishedDate": "2020-06-25T17:34:33.364Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.339,
@@ -63930,7 +63929,7 @@
       }
     ],
     "county": "Nodaway County",
-    "publishedDate": "2020-06-24T17:38:20.459Z",
+    "publishedDate": "2020-06-25T17:34:14.514Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.9,
@@ -63969,7 +63968,7 @@
       }
     ],
     "county": "Oregon County",
-    "publishedDate": "2020-06-17T18:47:43.044Z",
+    "publishedDate": "2020-06-25T17:34:34.300Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.39699999999999,
@@ -64008,7 +64007,7 @@
       }
     ],
     "county": "Osage County",
-    "publishedDate": "2020-06-23T21:14:01.795Z",
+    "publishedDate": "2020-06-25T17:34:23.597Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.918,
@@ -64047,7 +64046,7 @@
       }
     ],
     "county": "Ozark County",
-    "publishedDate": "2020-06-20T17:13:50.747Z",
+    "publishedDate": "2020-06-25T17:34:34.816Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.44200000000001,
@@ -64086,7 +64085,7 @@
       }
     ],
     "county": "Pemiscot County",
-    "publishedDate": "2020-06-24T17:38:26.477Z",
+    "publishedDate": "2020-06-25T17:34:35.253Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.74799999999999,
@@ -64125,7 +64124,7 @@
       }
     ],
     "county": "Perry County",
-    "publishedDate": "2020-06-23T21:14:06.799Z",
+    "publishedDate": "2020-06-25T17:34:28.565Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.8115,
@@ -64164,7 +64163,7 @@
       }
     ],
     "county": "Pettis County",
-    "publishedDate": "2020-06-23T21:14:08.249Z",
+    "publishedDate": "2020-06-25T17:34:22.644Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.2815,
@@ -64203,7 +64202,7 @@
       }
     ],
     "county": "Phelps County",
-    "publishedDate": "2020-06-24T17:38:31.810Z",
+    "publishedDate": "2020-06-25T17:34:27.503Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.777,
@@ -64242,7 +64241,7 @@
       }
     ],
     "county": "Pike County",
-    "publishedDate": "2020-06-22T17:43:39.713Z",
+    "publishedDate": "2020-06-25T17:34:19.440Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.09049999999999,
@@ -64281,7 +64280,7 @@
       }
     ],
     "county": "Platte County",
-    "publishedDate": "2020-06-24T17:38:34.966Z",
+    "publishedDate": "2020-06-25T17:34:20.018Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.85149999999999,
@@ -64320,7 +64319,7 @@
       }
     ],
     "county": "Polk County",
-    "publishedDate": "2020-06-24T17:38:38.301Z",
+    "publishedDate": "2020-06-25T17:34:29.222Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4025,
@@ -64359,7 +64358,7 @@
       }
     ],
     "county": "Pulaski County",
-    "publishedDate": "2020-06-24T17:38:44.045Z",
+    "publishedDate": "2020-06-25T17:34:28.315Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.2175,
@@ -64398,7 +64397,7 @@
       }
     ],
     "county": "Putnam County",
-    "publishedDate": "2020-06-16T18:47:57.288Z",
+    "publishedDate": "2020-06-25T17:34:14.784Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.0205,
@@ -64437,7 +64436,7 @@
       }
     ],
     "county": "Ralls County",
-    "publishedDate": "2020-06-24T17:38:49.137Z",
+    "publishedDate": "2020-06-25T17:34:18.940Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.44800000000001,
@@ -64476,7 +64475,7 @@
       }
     ],
     "county": "Randolph County",
-    "publishedDate": "2020-06-18T18:59:27.033Z",
+    "publishedDate": "2020-06-25T17:34:19.596Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.50399999999999,
@@ -64515,7 +64514,7 @@
       }
     ],
     "county": "Ray County",
-    "publishedDate": "2020-06-13T18:35:16.949Z",
+    "publishedDate": "2020-06-25T17:34:19.785Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.9855,
@@ -64554,7 +64553,7 @@
       }
     ],
     "county": "Reynolds County",
-    "publishedDate": "2020-06-19T19:26:51.587Z",
+    "publishedDate": "2020-06-25T17:34:30.831Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.024,
@@ -64593,7 +64592,7 @@
       }
     ],
     "county": "Ripley County",
-    "publishedDate": "2020-06-24T17:38:55.618Z",
+    "publishedDate": "2020-06-25T17:34:34.487Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.851,
@@ -64632,7 +64631,7 @@
       }
     ],
     "county": "St. Charles County",
-    "publishedDate": "2020-06-24T17:43:03.017Z",
+    "publishedDate": "2020-06-25T17:34:22.274Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.53649999999999,
@@ -64671,7 +64670,7 @@
       }
     ],
     "county": "St. Clair County",
-    "publishedDate": "2020-05-20T18:10:13.061Z",
+    "publishedDate": "2020-06-25T17:34:27.331Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.7815,
@@ -64710,7 +64709,7 @@
       }
     ],
     "county": "Ste. Genevieve County",
-    "publishedDate": "2020-06-20T17:14:58.369Z",
+    "publishedDate": "2020-06-25T17:34:27.676Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.19200000000001,
@@ -64749,7 +64748,7 @@
       }
     ],
     "county": "St. Francois County",
-    "publishedDate": "2020-06-24T17:39:10.309Z",
+    "publishedDate": "2020-06-25T17:34:28.159Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.37950000000001,
@@ -64790,7 +64789,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-06-24T13:15:00.000Z",
+    "publishedDate": "2020-06-25T13:45:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -64829,7 +64828,7 @@
       }
     ],
     "county": "Saline County",
-    "publishedDate": "2020-06-19T19:26:54.472Z",
+    "publishedDate": "2020-06-25T17:34:20.487Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.1725,
@@ -64868,7 +64867,7 @@
       }
     ],
     "county": "Schuyler County",
-    "publishedDate": "2020-06-21T20:09:56.957Z",
+    "publishedDate": "2020-06-25T17:34:14.310Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.53399999999999,
@@ -64907,7 +64906,7 @@
       }
     ],
     "county": "Scotland County",
-    "publishedDate": "2020-06-15T18:49:18.192Z",
+    "publishedDate": "2020-06-25T17:34:14.116Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.14699999999999,
@@ -64946,7 +64945,7 @@
       }
     ],
     "county": "Scott County",
-    "publishedDate": "2020-06-23T21:14:28.680Z",
+    "publishedDate": "2020-06-25T17:34:32.175Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.55000000000001,
@@ -64985,7 +64984,7 @@
       }
     ],
     "county": "Shannon County",
-    "publishedDate": "2020-06-09T18:21:00.896Z",
+    "publishedDate": "2020-06-25T17:34:31.566Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.3375,
@@ -65024,7 +65023,7 @@
       }
     ],
     "county": "Shelby County",
-    "publishedDate": "2020-06-24T17:39:03.145Z",
+    "publishedDate": "2020-06-25T17:34:17.958Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.0695,
@@ -65063,7 +65062,7 @@
       }
     ],
     "county": "Stoddard County",
-    "publishedDate": "2020-06-23T21:14:47.240Z",
+    "publishedDate": "2020-06-25T17:34:32.534Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -89.97200000000001,
@@ -65102,7 +65101,7 @@
       }
     ],
     "county": "Stone County",
-    "publishedDate": "2020-06-23T21:14:53.694Z",
+    "publishedDate": "2020-06-25T17:34:33.675Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.4585,
@@ -65141,7 +65140,7 @@
       }
     ],
     "county": "Sullivan County",
-    "publishedDate": "2020-06-24T17:39:26.552Z",
+    "publishedDate": "2020-06-25T17:34:15.846Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.111,
@@ -65180,7 +65179,7 @@
       }
     ],
     "county": "Taney County",
-    "publishedDate": "2020-06-24T17:39:29.209Z",
+    "publishedDate": "2020-06-25T17:34:34.659Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -93.03999999999999,
@@ -65219,7 +65218,7 @@
       }
     ],
     "county": "Texas County",
-    "publishedDate": "2020-06-24T17:39:52.606Z",
+    "publishedDate": "2020-06-25T17:34:30.987Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.9495,
@@ -65258,7 +65257,7 @@
       }
     ],
     "county": "Vernon County",
-    "publishedDate": "2020-06-22T17:44:27.608Z",
+    "publishedDate": "2020-06-25T17:34:28.003Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.338,
@@ -65297,7 +65296,7 @@
       }
     ],
     "county": "Warren County",
-    "publishedDate": "2020-06-23T21:15:05.212Z",
+    "publishedDate": "2020-06-25T17:34:21.769Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -91.189,
@@ -65336,7 +65335,7 @@
       }
     ],
     "county": "Washington County",
-    "publishedDate": "2020-06-24T17:39:57.575Z",
+    "publishedDate": "2020-06-25T17:34:25.487Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.87,
@@ -65375,7 +65374,7 @@
       }
     ],
     "county": "Wayne County",
-    "publishedDate": "2020-06-23T21:15:07.796Z",
+    "publishedDate": "2020-06-25T17:34:32.034Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.445,
@@ -65414,7 +65413,7 @@
       }
     ],
     "county": "Webster County",
-    "publishedDate": "2020-06-24T17:40:00.929Z",
+    "publishedDate": "2020-06-25T17:34:31.409Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.878,
@@ -65453,7 +65452,7 @@
       }
     ],
     "county": "Worth County",
-    "publishedDate": "2020-05-24T18:31:21.630Z",
+    "publishedDate": "2020-06-25T17:34:14.940Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -94.423,
@@ -65492,7 +65491,7 @@
       }
     ],
     "county": "Wright County",
-    "publishedDate": "2020-06-07T18:21:16.655Z",
+    "publishedDate": "2020-06-25T17:34:31.269Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -92.4695,
@@ -65531,7 +65530,7 @@
       }
     ],
     "county": "St. Louis City",
-    "publishedDate": "2020-06-24T17:39:21.110Z",
+    "publishedDate": "2020-06-25T17:34:23.394Z",
     "rating": 0.47058823529411764,
     "coordinates": [
       -90.243,
@@ -72169,18 +72168,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Albany County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.971,
       42.614
@@ -72198,18 +72199,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Allegany County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.01599999999999,
       42.2605
@@ -72227,18 +72230,31 @@
     "level": "county"
   },
   {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
+    "maintainers": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Bronx County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -73.849,
       40.8525
@@ -72256,18 +72272,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Broome County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.76599999999999,
       42.206999999999994
@@ -72285,18 +72303,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cattaraugus County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.68450000000001,
       42.2705
@@ -72314,18 +72334,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cayuga County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.503,
       43.019
@@ -72343,18 +72365,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chautauqua County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.4115,
       42.284
@@ -72372,18 +72396,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chemung County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.751,
       42.147
@@ -72401,18 +72427,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Chenango County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.593,
       42.47
@@ -72430,18 +72458,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Clinton County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.68,
       44.7205
@@ -72459,18 +72489,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Columbia County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.64150000000001,
       42.244
@@ -72488,18 +72520,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Cortland County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.0695,
       42.5995
@@ -72517,18 +72551,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Delaware County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.925,
       42.183
@@ -72546,18 +72582,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Dutchess County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.7435,
       41.7595
@@ -72575,18 +72613,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Erie County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.8,
       42.768
@@ -72604,18 +72644,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Essex County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.8155,
       44.146
@@ -72633,18 +72675,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Franklin County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.318,
       44.551
@@ -72662,18 +72706,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Fulton County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.43549999999999,
       43.1345
@@ -72691,18 +72737,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Genesee County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.185,
       42.9985
@@ -72720,18 +72768,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Greene County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.1565,
       42.2805
@@ -72749,18 +72799,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Hamilton County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.4575,
       43.668000000000006
@@ -72778,18 +72830,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Herkimer County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.9575,
       43.461
@@ -72807,18 +72861,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Jefferson County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.94999999999999,
       44.0355
@@ -72836,18 +72892,31 @@
     "level": "county"
   },
   {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
+    "maintainers": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Kings County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -73.9375,
       40.653999999999996
@@ -72865,18 +72934,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Lewis County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.4805,
       43.819
@@ -72894,18 +72965,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Livingston County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.774,
       42.7295
@@ -72923,18 +72996,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Madison County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.6165,
       42.954499999999996
@@ -72952,18 +73027,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Monroe County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.684,
       43.1545
@@ -72981,18 +73058,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Montgomery County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.424,
       42.91
@@ -73010,18 +73089,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Nassau County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.5965,
       40.7525
@@ -73039,18 +73120,31 @@
     "level": "county"
   },
   {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
+    "maintainers": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "New York County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -73.977,
       40.781
@@ -73068,18 +73162,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Niagara County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.7675,
       43.197
@@ -73097,18 +73193,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Oneida County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.47800000000001,
       43.239000000000004
@@ -73126,18 +73224,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Onondaga County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.197,
       43.0215
@@ -73155,18 +73255,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Ontario County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.2875,
       42.808
@@ -73184,18 +73286,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Orange County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.3545,
       41.388000000000005
@@ -73213,18 +73317,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Orleans County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.231,
       43.253
@@ -73242,18 +73348,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Oswego County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.1865,
       43.4315
@@ -73271,18 +73379,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Otsego County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.023,
       42.611000000000004
@@ -73300,18 +73410,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Putnam County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.7565,
       41.4245
@@ -73329,18 +73441,31 @@
     "level": "county"
   },
   {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
+    "maintainers": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Queens County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -73.831,
       40.674
@@ -73358,18 +73483,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Rensselaer County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.5255,
       42.711
@@ -73387,18 +73514,31 @@
     "level": "county"
   },
   {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
+    "maintainers": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Richmond County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -74.157,
       40.574
@@ -73416,18 +73556,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Rockland County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.061,
       41.161
@@ -73445,18 +73587,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "St. Lawrence County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -75.193,
       44.533
@@ -73474,18 +73618,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Saratoga County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.868,
       43.0865
@@ -73503,18 +73649,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schenectady County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.057,
       42.834
@@ -73532,18 +73680,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schoharie County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.4385,
       42.5925
@@ -73561,18 +73711,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Schuyler County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.863,
       42.3905
@@ -73590,18 +73742,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Seneca County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.7835,
       42.783
@@ -73619,18 +73773,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Steuben County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.3575,
       42.289500000000004
@@ -73648,18 +73804,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Suffolk County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -72.6765,
       40.95
@@ -73677,18 +73835,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Sullivan County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.755,
       41.718999999999994
@@ -73706,18 +73866,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Tioga County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.322,
       42.20399999999999
@@ -73735,18 +73897,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Tompkins County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -76.4675,
       42.445
@@ -73764,18 +73928,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Ulster County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -74.346,
       41.879000000000005
@@ -73793,18 +73959,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Warren County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.82650000000001,
       43.513000000000005
@@ -73822,18 +73990,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Washington County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.439,
       43.3745
@@ -73851,18 +74021,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Wayne County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.039,
       43.178
@@ -73880,18 +74052,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Westchester County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -73.733,
       41.1215
@@ -73909,18 +74083,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Wyoming County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -78.22149999999999,
       42.6945
@@ -73938,18 +74114,20 @@
     "level": "county"
   },
   {
-    "state": "New York",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
     "county": "Yates County",
-    "rating": 0.49019607843137253,
+    "state": "New York",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -77.1285,
       42.61150000000001
@@ -94851,31 +95029,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Edwards County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.227,
       29.957
@@ -104742,31 +104909,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Webster County",
     "state": "West Virginia",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.431,
       38.4825
@@ -109849,30 +110005,28 @@
     "level": "state"
   },
   {
+    "country": "Australia",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Australia",
-    "curators": [
+    "sources": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "description": "QLD Government Health Department",
+        "name": "QLD Government Health",
+        "url": "https://www.health.qld.gov.au"
       }
     ],
-    "aggregate": "state",
     "state": "Queensland",
-    "rating": 0.5882352941176471,
+    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
+    "rating": 0.35294117647058826,
     "coordinates": [
       145.7735,
       -19.204
@@ -115930,16 +116084,29 @@
     "level": "country"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.47058823529411764,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Saudi Arabia",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -120507,33 +120674,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Eastern Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      50.323,
-      23.1085
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-04",
-    "population": 4105780,
-    "populationDensity": 7.323672650421578,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-04",
-    "name": "Eastern Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Estonia",
     "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "maintainers": [
@@ -121047,21 +121187,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Flevoland",
+    "state": "Overijssel",
     "rating": 0.35294117647058826,
     "coordinates": [
-      5.529999999999999,
-      52.545
+      6.425,
+      52.486000000000004
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
+    "featureId": "iso2:NL-OV",
+    "population": 1142360,
+    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-FL",
-    "name": "Flevoland, Netherlands",
+    "stateId": "iso2:NL-OV",
+    "name": "Overijssel, Netherlands",
     "level": "state"
   },
   {
@@ -121115,21 +121255,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Overijssel",
+    "state": "Flevoland",
     "rating": 0.35294117647058826,
     "coordinates": [
-      6.425,
-      52.486000000000004
+      5.529999999999999,
+      52.545
     ],
     "tz": [
       "Europe/Amsterdam"
     ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
+    "featureId": "iso2:NL-FL",
+    "population": 399893,
+    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
-    "stateId": "iso2:NL-OV",
-    "name": "Overijssel, Netherlands",
+    "stateId": "iso2:NL-FL",
+    "name": "Flevoland, Netherlands",
     "level": "state"
   },
   {
@@ -122160,33 +122300,6 @@
     "countryId": "iso1:PA",
     "stateId": "iso2:PA-9",
     "name": "Veraguas, Panama",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Riyadh Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      45.141999999999996,
-      23.4635
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-01",
-    "population": 6777146,
-    "populationDensity": 17.961563989929314,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-01",
-    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -126451,33 +126564,6 @@
     "level": "county"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jazan Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.4525,
-      17.354
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-09",
-    "population": 1567547,
-    "populationDensity": 99.93990587193487,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-09",
-    "name": "Jazan Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "maintainers": [
@@ -127006,87 +127092,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "'Asir Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.9525,
-      19.201
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-14",
-    "population": 2211875,
-    "populationDensity": 28.486239590174346,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-14",
-    "name": "'Asir Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al Madinah Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      39.438500000000005,
-      25.006999999999998
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-03",
-    "population": 2132679,
-    "populationDensity": 14.455633104462715,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-03",
-    "name": "Al Madinah Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Tabuk Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      37.2535,
-      27.2675
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-07",
-    "population": 910030,
-    "populationDensity": 6.58598828117753,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-07",
-    "name": "Tabuk Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "state": "Massachusetts",
     "country": "United States",
     "aggregate": "county",
@@ -127289,60 +127294,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al-Qassim Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      43.069500000000005,
-      26.2755
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-05",
-    "population": 1159438,
-    "populationDensity": 16.90171756800719,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-05",
-    "name": "Al-Qassim Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Najran Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      45.6815,
-      18.240499999999997
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-10",
-    "population": 505652,
-    "populationDensity": 5.687857400619951,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-10",
-    "name": "Najran Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -127481,33 +127432,6 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Northern Borders Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.97,
-      29.8395
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-08",
-    "population": 375310,
-    "populationDensity": 3.2502748115551507,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-08",
-    "name": "Northern Borders Region, Saudi Arabia",
-    "level": "state"
   },
   {
     "country": "United States",
@@ -132870,33 +132794,6 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-TY",
     "name": "Tuva Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Hayel Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.647999999999996,
-      27.0925
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-06",
-    "population": 597144,
-    "populationDensity": 5.319482787232354,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-06",
-    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {

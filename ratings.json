@@ -513,25 +513,6 @@
     "countryId": "iso1:BE"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5098039215686274,
-    "countryId": "iso1:SA"
-  },
-  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -563,6 +544,36 @@
     "rating": 0.5098039215686274,
     "countryId": "iso1:US",
     "stateId": "iso2:US-MO"
+  },
+  {
+    "country": "Ukraine",
+    "sources": [
+      {
+        "url": "https://www.rnbo.gov.ua/en/",
+        "name": "National Security and Defense Council of Ukraine"
+      }
+    ],
+    "type": "json",
+    "aggregate": "state",
+    "maintainers": [
+      {
+        "name": "Christopher Rucinski",
+        "email": "ciscorucinski@gmail.com",
+        "github": "ciscorucinski",
+        "country": "KOR",
+        "state": "Seoul",
+        "city": "Gwanak-gu",
+        "flag": "🇰🇷"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-25",
+    "ssl": true,
+    "rating": 0.49019607843137253,
+    "countryId": "iso1:UA"
   },
   {
     "state": "Alabama",
@@ -694,27 +705,6 @@
     "rating": 0.49019607843137253,
     "countryId": "iso1:US",
     "stateId": "iso2:US-NJ"
-  },
-  {
-    "state": "New York",
-    "country": "United States",
-    "aggregate": "county",
-    "sources": [
-      {
-        "url": "https://health.data.ny.gov/Health/New-York-State-Statewide-COVID-19-Testing/xdss-u53e",
-        "name": "New York State Department of Health"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "url": "https://health.data.ny.gov/api/views/xdss-u53e/rows.csv?accessType=DOWNLOAD",
-    "type": "csv",
-    "ssl": true,
-    "rating": 0.49019607843137253,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NY"
   },
   {
     "state": "Ohio",
@@ -1032,6 +1022,30 @@
     "countryId": "iso1:CA"
   },
   {
+    "county": "Orange County",
+    "state": "California",
+    "country": "United States",
+    "maintainers": [
+      {
+        "name": "John Bencina",
+        "github": "jbencina",
+        "country": "iso1:US",
+        "state": "CA",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://occovid19.ochealthinfo.com/coronavirus-in-oc",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "type": "list",
+    "ssl": true,
+    "rating": 0.4117647058823529,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-CA"
+  },
+  {
     "state": "Montana",
     "country": "United States",
     "url": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/PUBLIC_VIEW_COVID19_CASES/FeatureServer/0/query?f=json&where=Total%20%3C%3E%200&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=NAMELABEL%20asc&resultOffset=0&resultRecordCount=56&cacheHint=true",
@@ -1344,6 +1358,38 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-NSW"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
+        "description": "QLD Government Health Department",
+        "name": "QLD Government Health",
+        "url": "https://www.health.qld.gov.au"
+      }
+    ],
+    "state": "Queensland",
+    "type": "table",
+    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-QLD"
   },
   {
     "country": "Australia",
