@@ -347,18 +347,26 @@
     "stateId": "iso2:US-IL"
   },
   {
-    "state": "Oregon",
+    "state": "Oklahoma",
     "country": "United States",
-    "sources": [
-      {
-        "url": "https://www.oregon.gov/oha/PH",
-        "name": "Oregon Health Authority",
-        "description": "Public Health Division"
-      }
-    ],
-    "url": "https://www.oregon.gov/oha/PH/DISEASESCONDITIONS/DISEASESAZ/Pages/emerging-respiratory-infections.aspx",
     "type": "table",
     "aggregate": "county",
+    "url": "https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",
+    "sources": [
+      {
+        "name": "Oklahoma State Department of Health"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
     "timeseries": false,
     "headless": false,
     "certValidation": true,
@@ -366,7 +374,7 @@
     "ssl": true,
     "rating": 0.5490196078431373,
     "countryId": "iso1:US",
-    "stateId": "iso2:US-OR"
+    "stateId": "iso2:US-OK"
   },
   {
     "state": "Wisconsin",
@@ -570,7 +578,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-25",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-26",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -791,36 +799,6 @@
     "stateId": "iso2:US-GA"
   },
   {
-    "state": "Missouri",
-    "country": "United States",
-    "type": "table",
-    "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/6f2a47a25872470a815bcd95f52c2872_0.csv",
-    "sources": [
-      {
-        "name": "Missouri Department of Health and Senior Services"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Paul Boal",
-        "email": "paul.boal@amitechsolutions.com",
-        "url": "https://amitechsolutions.com",
-        "github": "paulboal",
-        "country": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-MO"
-  },
-  {
     "state": "Mississippi",
     "country": "United States",
     "sources": [
@@ -977,31 +955,6 @@
     "countryId": "iso1:DE"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:EE"
-  },
-  {
     "country": "Canada",
     "sources": [
       {
@@ -1020,30 +973,6 @@
     "ssl": true,
     "rating": 0.4117647058823529,
     "countryId": "iso1:CA"
-  },
-  {
-    "county": "Orange County",
-    "state": "California",
-    "country": "United States",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://occovid19.ochealthinfo.com/coronavirus-in-oc",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "list",
-    "ssl": true,
-    "rating": 0.4117647058823529,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
   },
   {
     "state": "Montana",
@@ -1205,6 +1134,36 @@
     "rating": 0.39215686274509803,
     "countryId": "iso1:US",
     "stateId": "iso2:US-DC"
+  },
+  {
+    "state": "Missouri",
+    "country": "United States",
+    "type": "table",
+    "aggregate": "county",
+    "url": "https://opendata.arcgis.com/datasets/6f2a47a25872470a815bcd95f52c2872_0.csv",
+    "sources": [
+      {
+        "name": "Missouri Department of Health and Senior Services"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Paul Boal",
+        "email": "paul.boal@amitechsolutions.com",
+        "url": "https://amitechsolutions.com",
+        "github": "paulboal",
+        "country": "iso1:US",
+        "flag": "🇺🇸"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "priority": 0,
+    "ssl": true,
+    "rating": 0.39215686274509803,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-MO"
   },
   {
     "country": "Lithuania",
