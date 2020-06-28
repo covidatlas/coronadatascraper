@@ -1,72 +1,124 @@
 date,country,state,county,city,type,description,severity,category
-2020-06-26,iso1:AU,iso2:AU-NT,,,scraper failed,"AssertionError [ERR_ASSERTION]: no single match found for active-cases in {""confirmed cases"":""cases"",""people recovered"":""recovered"",""tests conducted"":""tested""}}",critical,scraper failure
-2020-06-26,iso1:AU,iso2:AU-SA,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-06-26,iso1:AU,iso2:AU-WA,,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-06-26,iso1:AU,,,,scraper failed,AssertionError [ERR_ASSERTION]: Total row is not reasonable 0,critical,scraper failure
-2020-06-26,iso1:AU,,,,scraper failed,AssertionError [ERR_ASSERTION]: table not found,critical,scraper failure
-2020-06-26,iso1:BR,,,,scraper failed,Error: No match for .lb-nome.nome,critical,scraper failure
-2020-06-26,iso1:CA,iso2:CA-NS,,,scraper failed,Error: Timeseries does not contain a sample for SCRAPE_DATE 2020-06-26,critical,scraper failure
-2020-06-26,iso1:EE,,,,scraper failed,TypeError: testedData is not iterable,critical,scraper failure
-2020-06-26,iso1:FR,,,,scraper failed,Error: Invalid data: hospitalized_current is not a number,critical,scraper failure
-2020-06-26,iso1:GB,,,,scraper failed,TypeError: Cannot read property 'overview' of null,critical,scraper failure
-2020-06-26,iso1:IN,,,,scraper failed,"AssertionError [ERR_ASSERTION]: no single match found for active-cases* in {""name of state"":""state"",""death"":""deaths"",""total confirmed cases"":""cases"",""cured"":""recovered"",""s. no."":null}}",critical,scraper failure
-2020-06-26,iso1:NZ,,,,scraper failed,"AssertionError [ERR_ASSERTION]: no single match found for number-of-active-cases in {""confirmed case"":null,""probable case"":""cases"",""recovered cases"":""recovered"",""deaths"":""deaths"",""cases in hospital"":null,""currently in hospital"":null}}",critical,scraper failure
-2020-06-26,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
-2020-06-26,iso1:PR,,,,scraper failed,"AssertionError [ERR_ASSERTION]: no single match found for casos-probables-(igm+-igm+igg+-igg+) in {""muertes​"":""deaths"",""prueba"":""tested"",""realizadas"":""tested"",""​casos postivos"":""cases"",""confirmados"":""cases"",""en proceso"":null,""negativos"":null}}",critical,scraper failure
-2020-06-26,iso1:RU,,,,scraper failed,TypeError: Cannot destructure property 'data' of '(intermediate value)' as it is null.,critical,scraper failure
-2020-06-26,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 2 on line 7214",critical,scraper failure
-2020-06-26,iso1:TH,,,,scraper failed,TypeError: Cannot read property 'length' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Alameda County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Glenn County,,scraper failed,Error: Check if Glenn County has updated their site,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Kings County,,scraper failed,AssertionError [ERR_ASSERTION]: Cases is not reasonable,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Orange County,,scraper failed,AssertionError [ERR_ASSERTION]: Have non-empty cell,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,San Benito County,,scraper failed,NotImplementedError: Need to scrape new arcgis,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,San Francisco County,,scraper failed,TypeError: Cannot read property 'split' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,TypeError: Cannot read property 'results' of null,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-LA,,,scraper failed,TypeError: data.features is not iterable,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-MD,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-ME,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any county records,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-MI,,,scraper failed,AssertionError [ERR_ASSERTION]: no headings found,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-MN,,,scraper failed,TypeError: Cannot read property 'forEach' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-ND,,,scraper failed,Error: Cannot parse undefined as number.,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-NH,,,scraper failed,TypeError: Cannot read property 'forEach' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-NV,,,scraper failed,Error: Cannot parse undefined as number.,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-NV,Clark County,,scraper failed,TypeError: Cannot read property '1' of null,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-NY,,,scraper failed,Error: Timeseries starts later than SCRAPE_DATE 2020-3-2,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-OR,,,scraper failed,Error: Invalid data: tested is not a number,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-PA,,,scraper failed,AssertionError [ERR_ASSERTION]: headings,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-RI,,,scraper failed,"Error: Couldn't find actual URL, no match for /\[\{""component"":\{""name"":""iframe-card"",""settings"":\{""src"":""(.*?)""/",critical,scraper failure
-2020-06-26,iso1:US,iso2:US-SC,,,scraper failed,TypeError: Cannot read property 'map' of null,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-SD,,,scraper failed,Error: Attempted to addEmptyRegions with without providing any actual cases,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-TN,,,scraper failed,TypeError: Cannot read property 'pop' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-TX,fips:48201,,scraper failed,AssertionError [ERR_ASSERTION]: general beds,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-TX,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-VA,,,scraper failed,TypeError: Cannot read property 'filter' of null,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-VT,,,scraper failed,TypeError: Cannot read property 'forEach' of undefined,critical,scraper failure
-2020-06-26,iso1:US,iso2:US-WV,,,scraper failed,AssertionError [ERR_ASSERTION]: Have 1 paragraph containing CASES PER COUNTY:,critical,scraper failure
-2020-06-26,iso1:KR,iso2:KR-41,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-42,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-43,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-44,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-45,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-46,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-48,,,missing population,,low,population
-2020-06-26,iso1:KR,iso2:KR-49,,,missing population,,low,population
-2020-06-26,United States,Missouri,St. Louis County,,invalid location object,"St. Louis County, Missouri, United States .recovered should be <= 0",low,location validation
+2020-06-27,iso1:AT,,,,scraper failed,TypeError: Cannot read property 'match' of undefined,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-ACT,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-NSW,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-NT,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-QLD,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-SA,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-TAS,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-VIC,,,scraper failed,TypeError: $listPage is not a function,critical,scraper failure
+2020-06-27,iso1:AU,iso2:AU-WA,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:AU,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:BR,,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:CA,iso2:CA-NS,,,scraper failed,TypeError: Cannot convert undefined or null to object,critical,scraper failure
+2020-06-27,iso1:EE,,,,scraper failed,TypeError: testedData is not iterable,critical,scraper failure
+2020-06-27,iso1:FR,,,,scraper failed,Error: Invalid data: hospitalized_current is not a number,critical,scraper failure
+2020-06-27,iso1:GB,iso2:GB-SCT,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:GB,,,,scraper failed,TypeError: Cannot read property 'overview' of null,critical,scraper failure
+2020-06-27,iso1:ID,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:IN,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:JP,,,,scraper failed,AssertionError [ERR_ASSERTION]: No data fetched,critical,scraper failure
+2020-06-27,iso1:KR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:LT,,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:LV,,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:NZ,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:PA,,,,scraper failed,TypeError: Cannot read property 'split' of null,critical,scraper failure
+2020-06-27,iso1:PL,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:RU,,,,scraper failed,TypeError: Cannot read property 'cookies' of null,critical,scraper failure
+2020-06-27,iso1:TH,,,,scraper failed,AssertionError [ERR_ASSERTION]: No data fetched,critical,scraper failure
+2020-06-27,iso1:TW,,,,scraper failed,TypeError: Cannot read property '0' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-AK,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-AL,,,scraper failed,TypeError: Cannot destructure property 'serviceItemId' of 'layerMetadata' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-AR,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Alameda County,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Butte County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Calaveras County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Colusa County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Contra Costa County,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Del Norte County,,scraper failed,DeprecatedError: Sunsetting county level scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Fresno County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Glenn County,,scraper failed,Error: Check if Glenn County has updated their site,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Kern County,,scraper failed,"DeprecatedError: Kern County, CA now uses a PNG and PDF",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Kings County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Los Angeles County,,scraper failed,TypeError: Cannot read property 'text' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Madera County,,scraper failed,"DeprecatedError: Madera County, CA now uses a PNG",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Marin County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Mendocino County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Merced County,,scraper failed,DeprecatedError: Sunsetting county level scrapers,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Mono County,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Monterey County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Orange County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Placer County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Riverside County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Sacramento County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Benito County,,scraper failed,NotImplementedError: Need to scrape new arcgis,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Bernardino County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Diego County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Francisco County,,scraper failed,TypeError: Cannot read property 'split' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Joaquin County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Luis Obispo County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,San Mateo County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Santa Barbara County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Santa Clara County,,scraper failed,TypeError: Cannot read property 'results' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Santa Cruz County,,scraper failed,DeprecatedError: Moved to Tableau,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Shasta County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Solano County,,scraper failed,"DeprecatedError: Solano County, CA now uses a PDF",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Sonoma County,,scraper failed,"DeprecatedError: Sonoma switched to ArcGIS, which is handled by another scraper",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Stanislaus County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Ventura County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CA,Yolo County,,scraper failed,DeprecatedError: Sunsetting county scraper,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CO,,,scraper failed,Error: No CSV at https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-CT,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-DE,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-FL,,,scraper failed,AssertionError [ERR_ASSERTION]: fetch unsuccessful,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-GA,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-GU,,,scraper failed,"DeprecatedError: Guam stopped offering totals on their website, but there's a sweet coloring book",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-HI,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-IA,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-ID,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-IL,,,scraper failed,TypeError: Cannot read property 'characteristics_by_county' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-IN,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-KS,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-KY,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-LA,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MA,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MD,,,scraper failed,TypeError: Cannot destructure property 'orgId' of 'dashboardManifest' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-ME,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MI,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MN,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MO,,,scraper failed,TypeError: Cannot destructure property 'orgId' of 'dashboardManifest' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MO,St. Louis County,,scraper failed,TypeError: Cannot destructure property 'serviceItemId' of 'layerMetadata' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MS,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-MT,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NC,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-ND,,,scraper failed,TypeError: Cannot read property 'map' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NE,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NH,,,scraper failed,TypeError: Cannot read property 'prototype' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NJ,,,scraper failed,TypeError: Cannot destructure property 'serviceItemId' of 'layerMetadata' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NM,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NV,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NV,Clark County,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NV,fips:32023,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-NY,,,scraper failed,Error: Timeseries starts later than SCRAPE_DATE 2020-3-2,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-OH,,,scraper failed,TypeError: Cannot read property '0' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-OK,,,scraper failed,"AssertionError [ERR_ASSERTION]: No csv, failed fetch from https://storage.googleapis.com/ok-covid-gcs-public-download/oklahoma_cases_county.csv",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-OR,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-PA,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-RI,,,scraper failed,TypeError: Cannot read property 'html' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-SC,,,scraper failed,TypeError: Cannot destructure property 'orgId' of 'dashboardManifest' as it is null.,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-SD,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-TN,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-TX,fips:48201,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-TX,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-UT,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-VA,,,scraper failed,TypeError: Cannot read property 'filter' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-VT,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-WA,,,scraper failed,TypeError: Cannot read property 'features' of null,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-WI,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
+2020-06-27,iso1:US,iso2:US-WV,,,scraper failed,"AssertionError [ERR_ASSERTION]: No data published, expected at least data at https://dhhr.wv.gov/News/2020/Pages/COVID-19-Daily-Update-6-26-2020---5-PM.aspx",critical,scraper failure
+2020-06-27,iso1:US,iso2:US-WY,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
+2020-06-27,iso1:US,,,,scraper failed,TypeError: data is not iterable,critical,scraper failure
+2020-06-27,iso1:VI,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
