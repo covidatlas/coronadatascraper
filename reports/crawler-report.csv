@@ -12,7 +12,8 @@ date,country,state,county,city,type,description,severity,category
 2020-06-28,iso1:AU,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
 2020-06-28,iso1:BR,,,,scraper failed,TypeError: Cannot read property 'parent' of undefined,critical,scraper failure
 2020-06-28,iso1:CA,iso2:CA-NS,,,scraper failed,TypeError: Cannot convert undefined or null to object,critical,scraper failure
-2020-06-28,iso1:FR,,,,scraper failed,Error: Invalid data: hospitalized_current is not a number,critical,scraper failure
+2020-06-28,iso1:EE,,,,scraper failed,TypeError: testedData is not iterable,critical,scraper failure
+2020-06-28,iso1:FR,,,,scraper failed,DateTimeException: Invalid value for MonthOfYear (valid values 1 - 12): 27,critical,scraper failure
 2020-06-28,iso1:GB,iso2:GB-SCT,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
 2020-06-28,iso1:GB,,,,scraper failed,TypeError: Cannot read property 'overview' of null,critical,scraper failure
 2020-06-28,iso1:ID,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
@@ -26,7 +27,6 @@ date,country,state,county,city,type,description,severity,category
 2020-06-28,iso1:PL,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
 2020-06-28,iso1:PR,,,,scraper failed,TypeError: $ is not a function,critical,scraper failure
 2020-06-28,iso1:RU,,,,scraper failed,TypeError: Cannot read property 'cookies' of null,critical,scraper failure
-2020-06-28,iso1:SA,,,,scraper failed,"Error: Invalid Record Length: columns length is 7, got 1 on line 7887",critical,scraper failure
 2020-06-28,iso1:TH,,,,scraper failed,AssertionError [ERR_ASSERTION]: No data fetched,critical,scraper failure
 2020-06-28,iso1:TW,,,,scraper failed,TypeError: Cannot read property '0' of null,critical,scraper failure
 2020-06-28,iso1:US,iso2:US-AK,,,scraper failed,TypeError: $ is not a function,critical,scraper failure

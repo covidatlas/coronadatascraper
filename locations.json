@@ -115697,29 +115697,16 @@
     "level": "country"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Saudi Arabia",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
+    "rating": 0.47058823529411764,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -118918,6 +118905,27 @@
     "country": "Italy",
     "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
     "aggregate": "state",
+    "state": "Trentino-Alto Adige/Südtirol",
+    "rating": 0.7058823529411765,
+    "coordinates": [
+      11.431000000000001,
+      46.3825
+    ],
+    "tz": [
+      "Europe/Rome"
+    ],
+    "featureId": "iso2:IT-32",
+    "population": 1072276,
+    "populationDensity": 78.74364049555962,
+    "countryId": "iso1:IT",
+    "stateId": "iso2:IT-32",
+    "name": "Trentino-Alto Adige/Südtirol, Italy",
+    "level": "state"
+  },
+  {
+    "country": "Italy",
+    "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
+    "aggregate": "state",
     "state": "Piemont",
     "rating": 0.7058823529411765,
     "coordinates": [
@@ -119017,27 +119025,6 @@
     "countryId": "iso1:IT",
     "stateId": "iso2:IT-52",
     "name": "Tuscany, Italy",
-    "level": "state"
-  },
-  {
-    "country": "Italy",
-    "url": "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
-    "aggregate": "state",
-    "state": "Trentino-Alto Adige/Südtirol",
-    "rating": 0.7058823529411765,
-    "coordinates": [
-      11.431000000000001,
-      46.3825
-    ],
-    "tz": [
-      "Europe/Rome"
-    ],
-    "featureId": "iso2:IT-32",
-    "population": 1072276,
-    "populationDensity": 78.74364049555962,
-    "countryId": "iso1:IT",
-    "stateId": "iso2:IT-32",
-    "name": "Trentino-Alto Adige/Südtirol, Italy",
     "level": "state"
   },
   {
@@ -120296,6 +120283,33 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-DR",
     "name": "Drenthe, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Eastern Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      50.323,
+      23.1085
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-04",
+    "population": 4105780,
+    "populationDensity": 7.323672650421578,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-04",
+    "name": "Eastern Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -121838,6 +121852,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Riyadh Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.141999999999996,
+      23.4635
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-01",
+    "population": 6777146,
+    "populationDensity": 17.961563989929314,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-01",
+    "name": "Riyadh Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Czechia",
     "url": "https://onemocneni-aktualne.mzcr.cz/",
     "sources": [
@@ -121935,2946 +121976,6 @@
     "stateId": "iso2:EE-44",
     "name": "Ida-Viru maakond, Estonia",
     "level": "state"
-  },
-  {
-    "country": "Guadeloupe",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:GP",
-    "name": "Guadeloupe",
-    "level": "country"
-  },
-  {
-    "country": "Martinique",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:MQ",
-    "name": "Martinique",
-    "level": "country"
-  },
-  {
-    "country": "French Guiana",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:GF",
-    "name": "French Guiana",
-    "level": "country"
-  },
-  {
-    "country": "Réunion",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:RE",
-    "name": "Réunion",
-    "level": "country"
-  },
-  {
-    "country": "Mayotte",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:YT",
-    "name": "Mayotte",
-    "level": "country"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Aube",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-10",
-    "name": "Aube, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Aude",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-11",
-    "name": "Aude, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Aveyron",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-12",
-    "name": "Aveyron, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Bouches-du-Rhône",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-13",
-    "name": "Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Calvados",
-    "state": "Normandy",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "countyId": "iso2:FR-14",
-    "name": "Calvados, Normandy, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Cantal",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-15",
-    "name": "Cantal, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Charente",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-16",
-    "name": "Charente, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Charente-Maritime",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-17",
-    "name": "Charente-Maritime, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Cher",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-18",
-    "name": "Cher, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Corrèze",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-19",
-    "name": "Corrèze, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Côte-d'Or",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-21",
-    "name": "Côte-d'Or, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Côtes-d'Armor",
-    "state": "Brittany",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BRE",
-    "countyId": "iso2:FR-22",
-    "name": "Côtes-d'Armor, Brittany, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Creuse",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-23",
-    "name": "Creuse, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Dordogne",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-24",
-    "name": "Dordogne, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Doubs",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-25",
-    "name": "Doubs, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Drôme",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-26",
-    "name": "Drôme, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Eure",
-    "state": "Normandy",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "countyId": "iso2:FR-27",
-    "name": "Eure, Normandy, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Eure-et-Loir",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-28",
-    "name": "Eure-et-Loir, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Finistère",
-    "state": "Brittany",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BRE",
-    "countyId": "iso2:FR-29",
-    "name": "Finistère, Brittany, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Gard",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-30",
-    "name": "Gard, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Garonne",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-31",
-    "name": "Haute-Garonne, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Gers",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-32",
-    "name": "Gers, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Gironde",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-33",
-    "name": "Gironde, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Hérault",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-34",
-    "name": "Hérault, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Ille-et-Vilaine",
-    "state": "Brittany",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BRE",
-    "countyId": "iso2:FR-35",
-    "name": "Ille-et-Vilaine, Brittany, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Indre",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-36",
-    "name": "Indre, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Indre-et-Loire",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-37",
-    "name": "Indre-et-Loire, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Isère",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-38",
-    "name": "Isère, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Jura",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-39",
-    "name": "Jura, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Landes",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-40",
-    "name": "Landes, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Loir-et-Cher",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-41",
-    "name": "Loir-et-Cher, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Loire",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-42",
-    "name": "Loire, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Loire",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-43",
-    "name": "Haute-Loire, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Loire-Atlantique",
-    "state": "Pays de la Loire",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "countyId": "iso2:FR-44",
-    "name": "Loire-Atlantique, Pays de la Loire, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Loiret",
-    "state": "Centre-Loire Valley",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "countyId": "iso2:FR-45",
-    "name": "Loiret, Centre-Loire Valley, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Lot",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-46",
-    "name": "Lot, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Lot-et-Garonne",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-47",
-    "name": "Lot-et-Garonne, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Lozère",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-48",
-    "name": "Lozère, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Maine-et-Loire",
-    "state": "Pays de la Loire",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "countyId": "iso2:FR-49",
-    "name": "Maine-et-Loire, Pays de la Loire, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Manche",
-    "state": "Normandy",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "countyId": "iso2:FR-50",
-    "name": "Manche, Normandy, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Marne",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-51",
-    "name": "Marne, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Marne",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-52",
-    "name": "Haute-Marne, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Mayenne",
-    "state": "Pays de la Loire",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "countyId": "iso2:FR-53",
-    "name": "Mayenne, Pays de la Loire, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Meurthe-et-Moselle",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-54",
-    "name": "Meurthe-et-Moselle, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Meuse",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-55",
-    "name": "Meuse, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Morbihan",
-    "state": "Brittany",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BRE",
-    "countyId": "iso2:FR-56",
-    "name": "Morbihan, Brittany, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Moselle",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-57",
-    "name": "Moselle, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Nièvre",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-58",
-    "name": "Nièvre, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Nord",
-    "state": "Hauts-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "countyId": "iso2:FR-59",
-    "name": "Nord, Hauts-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Oise",
-    "state": "Hauts-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "countyId": "iso2:FR-60",
-    "name": "Oise, Hauts-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Orne",
-    "state": "Normandy",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "countyId": "iso2:FR-61",
-    "name": "Orne, Normandy, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Pas-de-Calais",
-    "state": "Hauts-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "countyId": "iso2:FR-62",
-    "name": "Pas-de-Calais, Hauts-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Puy-de-Dôme",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-63",
-    "name": "Puy-de-Dôme, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Pyrénées-Atlantiques",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-64",
-    "name": "Pyrénées-Atlantiques, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Hautespyrenees",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-65",
-    "name": "Hautespyrenees, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Pyrénées-Orientales",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-66",
-    "name": "Pyrénées-Orientales, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Bas-Rhin",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-67",
-    "name": "Bas-Rhin, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haut-Rhin",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-68",
-    "name": "Haut-Rhin, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Rhône",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-69",
-    "name": "Rhône, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Saône",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-70",
-    "name": "Haute-Saône, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Saône-et-Loire",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-71",
-    "name": "Saône-et-Loire, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Sarthe",
-    "state": "Pays de la Loire",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "countyId": "iso2:FR-72",
-    "name": "Sarthe, Pays de la Loire, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Savoy",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-73",
-    "name": "Savoy, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Upper Savoy",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-74",
-    "name": "Upper Savoy, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Paris",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-75",
-    "name": "Paris, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Seine-Maritime",
-    "state": "Normandy",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "countyId": "iso2:FR-76",
-    "name": "Seine-Maritime, Normandy, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Seine-et-Marne",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-77",
-    "name": "Seine-et-Marne, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Yvelines",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-78",
-    "name": "Yvelines, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Deux-Sèvres",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-79",
-    "name": "Deux-Sèvres, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Somme",
-    "state": "Hauts-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "countyId": "iso2:FR-80",
-    "name": "Somme, Hauts-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Tarn",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-81",
-    "name": "Tarn, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Tarn-et-Garonne",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-82",
-    "name": "Tarn-et-Garonne, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Var",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-83",
-    "name": "Var, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Vaucluse",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-84",
-    "name": "Vaucluse, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Vendée",
-    "state": "Pays de la Loire",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "countyId": "iso2:FR-85",
-    "name": "Vendée, Pays de la Loire, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Vienne",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-86",
-    "name": "Vienne, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Vienne",
-    "state": "New Aquitaine",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "countyId": "iso2:FR-87",
-    "name": "Haute-Vienne, New Aquitaine, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Vosges",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-88",
-    "name": "Vosges, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Yonne",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-89",
-    "name": "Yonne, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Territoire-de-Belfort",
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "countyId": "iso2:FR-90",
-    "name": "Territoire-de-Belfort, Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Essonne",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-91",
-    "name": "Essonne, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Hauts-de-Seine",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-92",
-    "name": "Hauts-de-Seine, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Seine-Saint-Denis",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-93",
-    "name": "Seine-Saint-Denis, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Val-de-Marne",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-94",
-    "name": "Val-de-Marne, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Val-d'Oise",
-    "state": "Ile-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "countyId": "iso2:FR-95",
-    "name": "Val-d'Oise, Ile-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Ain",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-01",
-    "name": "Ain, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Aisne",
-    "state": "Hauts-de-France",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "countyId": "iso2:FR-02",
-    "name": "Aisne, Hauts-de-France, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Allier",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-03",
-    "name": "Allier, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Alpes-de-Haute-Provence",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-04",
-    "name": "Alpes-de-Haute-Provence, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Hautes-Alpes",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-05",
-    "name": "Hautes-Alpes, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Maritime Alps",
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "countyId": "iso2:FR-06",
-    "name": "Maritime Alps, Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Ardèche",
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "countyId": "iso2:FR-07",
-    "name": "Ardèche, Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Ardennes",
-    "state": "Grand Est",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "countyId": "iso2:FR-08",
-    "name": "Ardennes, Grand Est, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Ariège",
-    "state": "Occitania",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "countyId": "iso2:FR-09",
-    "name": "Ariège, Occitania, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "South Corsica",
-    "state": "Corsica",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-COR",
-    "countyId": "iso2:FR-2A",
-    "name": "South Corsica, Corsica, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "county": "Haute-Corse",
-    "state": "Corsica",
-    "rating": 0.5490196078431373,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-COR",
-    "countyId": "iso2:FR-2B",
-    "name": "Haute-Corse, Corsica, Metropolitan France",
-    "level": "county"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Grand Est",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-GES",
-    "name": "Grand Est, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Occitania",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-OCC",
-    "name": "Occitania, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Provence-Alpes-Côte d'Azur",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PAC",
-    "name": "Provence-Alpes-Côte d'Azur, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Normandy",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NOR",
-    "name": "Normandy, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Auvergne-Rhône-Alpes",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-ARA",
-    "name": "Auvergne-Rhône-Alpes, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "New Aquitaine",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-NAQ",
-    "name": "New Aquitaine, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Centre-Loire Valley",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-CVL",
-    "name": "Centre-Loire Valley, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Bourgogne-Franche-Comté",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BFC",
-    "name": "Bourgogne-Franche-Comté, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Brittany",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-BRE",
-    "name": "Brittany, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Pays de la Loire",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-PDL",
-    "name": "Pays de la Loire, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Hauts-de-France",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-HDF",
-    "name": "Hauts-de-France, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Ile-de-France",
-    "rating": 0.47058823529411764,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-IDF",
-    "name": "Ile-de-France, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Corsica",
-    "rating": 0.3137254901960784,
-    "countryId": "iso1:FX",
-    "stateId": "iso2:FR-COR",
-    "name": "Corsica, Metropolitan France",
-    "level": "state"
-  },
-  {
-    "country": "Metropolitan France",
-    "url": "https://www.data.gouv.fr/fr/organizations/sante-publique-france/datasets-resources.csv",
-    "sources": [
-      {
-        "description": "Santé publique France is the French national agency of public health.",
-        "name": "Santé publique France",
-        "url": "https://www.santepubliquefrance.fr/"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:FX",
-    "name": "Metropolitan France",
-    "level": "country"
   },
   {
     "country": "Netherlands",
@@ -126039,6 +123140,33 @@
     "level": "county"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jazan Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.4525,
+      17.354
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-09",
+    "population": 1567547,
+    "populationDensity": 99.93990587193487,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-09",
+    "name": "Jazan Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "maintainers": [
@@ -126407,6 +123535,87 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "'Asir Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.9525,
+      19.201
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-14",
+    "population": 2211875,
+    "populationDensity": 28.486239590174346,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-14",
+    "name": "'Asir Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al Madinah Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      39.438500000000005,
+      25.006999999999998
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-03",
+    "population": 2132679,
+    "populationDensity": 14.455633104462715,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-03",
+    "name": "Al Madinah Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Tabuk Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      37.2535,
+      27.2675
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-07",
+    "population": 910030,
+    "populationDensity": 6.58598828117753,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-07",
+    "name": "Tabuk Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Massachusetts",
     "country": "United States",
     "aggregate": "county",
@@ -126599,6 +123808,60 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al-Qassim Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      43.069500000000005,
+      26.2755
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-05",
+    "population": 1159438,
+    "populationDensity": 16.90171756800719,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-05",
+    "name": "Al-Qassim Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Najran Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.6815,
+      18.240499999999997
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-10",
+    "population": 505652,
+    "populationDensity": 5.687857400619951,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-10",
+    "name": "Najran Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -126737,6 +124000,33 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Northern Borders Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.97,
+      29.8395
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-08",
+    "population": 375310,
+    "populationDensity": 3.2502748115551507,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-08",
+    "name": "Northern Borders Region, Saudi Arabia",
+    "level": "state"
   },
   {
     "country": "United States",
@@ -131577,6 +128867,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-SEV",
     "name": "Sevastopol, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Hayel Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.647999999999996,
+      27.0925
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-06",
+    "population": 597144,
+    "populationDensity": 5.319482787232354,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-06",
+    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {
