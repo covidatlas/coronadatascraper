@@ -543,6 +543,25 @@
     "countryId": "iso1:BE"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.5098039215686274,
+    "countryId": "iso1:SA"
+  },
+  {
     "county": "St. Louis County",
     "state": "Missouri",
     "country": "United States",
@@ -600,7 +619,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-29",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-06-30",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -977,31 +996,6 @@
     "countryId": "iso1:DE"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.43137254901960786,
-    "countryId": "iso1:EE"
-  },
-  {
     "country": "Canada",
     "sources": [
       {
@@ -1101,32 +1095,6 @@
     "ssl": true,
     "rating": 0.39215686274509803,
     "countryId": "iso1:ES"
-  },
-  {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:NL"
   },
   {
     "country": "Poland",
@@ -1429,6 +1397,32 @@
     "stateId": "iso2:AU-TAS"
   },
   {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:NL"
+  },
+  {
     "country": "Ireland",
     "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
     "timeseries": true,
@@ -1522,46 +1516,6 @@
     "priority": 0,
     "type": "list",
     "ssl": true,
-    "rating": 0.3333333333333333,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
-  },
-  {
-    "country": "United States",
-    "county": "Los Angeles County",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      },
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "sources": [
-      {
-        "description": "County of Los Angeles Public Health",
-        "name": "County of Los Angeles Public Health",
-        "url": "http://www.publichealth.lacounty.gov"
-      }
-    ],
-    "state": "California",
-    "type": "table",
-    "url": "http://www.publichealth.lacounty.gov/media/Coronavirus/js/casecounter.js",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": false,
     "rating": 0.3333333333333333,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CA"
@@ -2059,30 +2013,6 @@
     "ssl": true,
     "rating": 0.2549019607843137,
     "countryId": "iso1:VI"
-  },
-  {
-    "county": "Colusa County",
-    "state": "California",
-    "country": "United States",
-    "url": "http://www.countyofcolusa.org/covid19",
-    "maintainers": [
-      {
-        "name": "John Bencina",
-        "github": "jbencina",
-        "country": "iso1:US",
-        "state": "CA",
-        "flag": "🇺🇸"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "type": "list",
-    "ssl": false,
-    "rating": 0.23529411764705882,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-CA"
   },
   {
     "country": "Japan",
