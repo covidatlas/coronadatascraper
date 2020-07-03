@@ -111,30 +111,6 @@
     "countryId": "iso1:US"
   },
   {
-    "county": "Nye County",
-    "country": "United States",
-    "state": "Nevada",
-    "aggregate": "county",
-    "timeseries": false,
-    "sources": [
-      {
-        "name": "Coronavirus (COVID-19) Information | Nye County, NV Official Website",
-        "url": "https://www.nyecounty.net/",
-        "description": "The latest information gathered within and outside the county regarding the Coronavirus (COVID-19) preparation and any response by the County Department of Emergency Management and County Administration."
-      }
-    ],
-    "certValidation": false,
-    "url": "https://www.nyecounty.net/1066/Coronavirus-COVID-19-Information",
-    "type": "table",
-    "headless": false,
-    "priority": 0,
-    "ssl": false,
-    "rating": 0.6078431372549019,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NV",
-    "countyId": "fips:32023"
-  },
-  {
     "maintainers": [
       {
         "name": "Larry Davis",
@@ -619,7 +595,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-02",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"

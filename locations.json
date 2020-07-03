@@ -8475,7 +8475,7 @@
       }
     ],
     "state": "Šentjernej",
-    "rating": 0.21568627450980393,
+    "rating": 0.17647058823529413,
     "coordinates": [
       15.3295,
       45.823499999999996
@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-01",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-02",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -41027,20 +41027,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Lincoln County",
     "state": "Kansas",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.20949999999999,
       39.045500000000004
@@ -61818,7 +61829,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-01T13:45:00.000Z",
+    "publishedDate": "2020-07-02T13:45:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -67042,19 +67053,20 @@
     "level": "county"
   },
   {
-    "county": "Nye County",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "state": "Nevada",
     "aggregate": "county",
-    "sources": [
+    "curators": [
       {
-        "name": "Coronavirus (COVID-19) Information | Nye County, NV Official Website",
-        "url": "https://www.nyecounty.net/",
-        "description": "The latest information gathered within and outside the county regarding the Coronavirus (COVID-19) preparation and any response by the County Department of Emergency Management and County Administration."
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
-    "url": "https://www.nyecounty.net/1066/Coronavirus-COVID-19-Information",
-    "rating": 0.6078431372549019,
+    "county": "Nye County",
+    "state": "Nevada",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -116.5985,
       37.5635
@@ -119578,33 +119590,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Riyadh Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      45.141999999999996,
-      23.4635
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-01",
-    "population": 6777146,
-    "populationDensity": 17.961563989929314,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-01",
-    "name": "Riyadh Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Czechia",
     "url": "https://onemocneni-aktualne.mzcr.cz/",
     "sources": [
@@ -119771,6 +119756,39 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Jihočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.5695,
+      49.085499999999996
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-31",
+    "population": 642133,
+    "populationDensity": 63.81153400322205,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-31",
+    "name": "Jihočeský kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Jihomoravský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -119885,39 +119903,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jihočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.5695,
-      49.085499999999996
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-31",
-    "population": 642133,
-    "populationDensity": 63.81153400322205,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-31",
-    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {
@@ -120732,6 +120717,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Riyadh Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.141999999999996,
+      23.4635
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-01",
+    "population": 6777146,
+    "populationDensity": 17.961563989929314,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-01",
+    "name": "Riyadh Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Utah",
     "country": "United States",
     "aggregate": "county",
@@ -120904,33 +120916,6 @@
     "countyId": "fips:49057+fips:49029",
     "name": "Weber County, Morgan County, Utah, United States",
     "level": "county"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jazan Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.4525,
-      17.354
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-09",
-    "population": 1567547,
-    "populationDensity": 99.93990587193487,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-09",
-    "name": "Jazan Region, Saudi Arabia",
-    "level": "state"
   },
   {
     "country": "Poland",
@@ -121470,33 +121455,6 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "'Asir Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.9525,
-      19.201
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-14",
-    "population": 2211875,
-    "populationDensity": 28.486239590174346,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-14",
-    "name": "'Asir Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Al Madinah Region",
     "rating": 0.5098039215686274,
     "coordinates": [
@@ -121524,21 +121482,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Tabuk Region",
+    "state": "'Asir Region",
     "rating": 0.5098039215686274,
     "coordinates": [
-      37.2535,
-      27.2675
+      42.9525,
+      19.201
     ],
     "tz": [
       "Asia/Riyadh"
     ],
-    "featureId": "iso2:SA-07",
-    "population": 910030,
-    "populationDensity": 6.58598828117753,
+    "featureId": "iso2:SA-14",
+    "population": 2211875,
+    "populationDensity": 28.486239590174346,
     "countryId": "iso1:SA",
-    "stateId": "iso2:SA-07",
-    "name": "Tabuk Region, Saudi Arabia",
+    "stateId": "iso2:SA-14",
+    "name": "'Asir Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -121780,6 +121738,33 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Jazan Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.4525,
+      17.354
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-09",
+    "population": 1567547,
+    "populationDensity": 99.93990587193487,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-09",
+    "name": "Jazan Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Najran Region",
     "rating": 0.5098039215686274,
     "coordinates": [
@@ -121936,33 +121921,6 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Northern Borders Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.97,
-      29.8395
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-08",
-    "population": 375310,
-    "populationDensity": 3.2502748115551507,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-08",
-    "name": "Northern Borders Region, Saudi Arabia",
-    "level": "state"
   },
   {
     "country": "United States",
@@ -123943,6 +123901,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-AD",
     "name": "Republic of Adygea, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Tabuk Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      37.2535,
+      27.2675
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-07",
+    "population": 910030,
+    "populationDensity": 6.58598828117753,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-07",
+    "name": "Tabuk Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -127122,6 +127107,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-YAN",
     "name": "Yamalo-Nenets Autonomous Okrug, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Northern Borders Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.97,
+      29.8395
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-08",
+    "population": 375310,
+    "populationDensity": 3.2502748115551507,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-08",
+    "name": "Northern Borders Region, Saudi Arabia",
     "level": "state"
   },
   {
