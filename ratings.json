@@ -143,6 +143,36 @@
     "countryId": "iso1:US"
   },
   {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "timeseries": true,
+    "priority": -1,
+    "country": "_JHU",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "type": "list",
+    "ssl": true,
+    "rating": 0.5882352941176471
+  },
+  {
     "state": "Delaware",
     "country": "United States",
     "aggregate": "county",
@@ -546,7 +576,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-03",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-04",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1244,6 +1274,38 @@
     "priority": 2,
     "sources": [
       {
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
+      }
+    ],
+    "state": "New South Wales",
+    "type": "table",
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:AU",
+    "stateId": "iso2:AU-NSW"
+  },
+  {
+    "country": "Australia",
+    "maintainers": [
+      {
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
+      }
+    ],
+    "priority": 2,
+    "sources": [
+      {
         "description": "QLD Government Health Department",
         "name": "QLD Government Health",
         "url": "https://www.health.qld.gov.au"
@@ -1723,31 +1785,6 @@
     "stateId": "iso2:US-NM"
   },
   {
-    "country": "Sweden",
-    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://folkhalsomyndigheten.se",
-        "name": "Public Health Agency of Sweden"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.2549019607843137,
-    "countryId": "iso1:SE"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -1918,6 +1955,31 @@
     "ssl": true,
     "rating": 0.21568627450980393,
     "countryId": "iso1:LV"
+  },
+  {
+    "country": "Sweden",
+    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://folkhalsomyndigheten.se",
+        "name": "Public Health Agency of Sweden"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.21568627450980393,
+    "countryId": "iso1:SE"
   },
   {
     "county": "San Luis Obispo County",
