@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-04",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-05",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -53185,31 +53185,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Ontonagon County",
     "state": "Michigan",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -89.3765,
       46.682
@@ -61818,7 +61807,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-04T15:30:00.000Z",
+    "publishedDate": "2020-07-05T15:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
