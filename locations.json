@@ -8475,7 +8475,7 @@
       }
     ],
     "state": "Šentjernej",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       15.3295,
       45.823499999999996
@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-07",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-08",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -9302,31 +9302,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Bath County",
     "state": "Virginia",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -79.7465,
       38.055
@@ -20700,7 +20689,7 @@
       }
     ],
     "county": "San Bernardino County",
-    "rating": 0.7058823529411765,
+    "rating": 0.7843137254901961,
     "coordinates": [
       -115.9685,
       34.840500000000006
@@ -62342,31 +62331,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hickory County",
     "state": "Missouri",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -93.3195,
       37.938
@@ -64018,7 +63996,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-07T14:00:00.000Z",
+    "publishedDate": "2020-07-08T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -76247,31 +76225,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Logan County",
     "state": "North Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.477,
       46.458
@@ -77002,31 +76969,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Towner County",
     "state": "North Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.24799999999999,
       48.685
@@ -87663,31 +87619,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Butte County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.5075,
       44.891999999999996
@@ -88553,31 +88498,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Jones County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.7015,
       43.939
@@ -99192,20 +99126,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Sterling County",
     "state": "Texas",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.045,
       31.8215
@@ -114748,7 +114693,7 @@
         "flag": "🇨🇦"
       }
     ],
-    "rating": 0.39215686274509803,
+    "rating": 0.35294117647058826,
     "coordinates": [
       -31.422999999999995,
       32.7705
@@ -116052,17 +115997,29 @@
     "level": "country"
   },
   {
-    "country": "Taiwan",
-    "aggregate": "country",
-    "url": "https://covid19dashboard.cdc.gov.tw/dash3",
-    "sources": [
+    "maintainers": [
       {
-        "name": "Taiwan CDC",
-        "url": "https://sites.google.com/cdc.gov.tw/2019-ncov/taiwan",
-        "description": "Taiwan CDC"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.5294117647058824,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Taiwan",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       120.1175,
       24.073999999999998
@@ -119930,16 +119887,6 @@
     ],
     "state": "North Brabant",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.119,
-      51.525999999999996
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-NB",
-    "population": 2256848,
-    "populationDensity": 444.2149831807058,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-NB",
     "name": "North Brabant, Netherlands",
@@ -119964,16 +119911,6 @@
     ],
     "state": "North Holland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      4.935499999999999,
-      52.6755
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-NH",
-    "population": 2813466,
-    "populationDensity": 827.9149066031525,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-NH",
     "name": "North Holland, Netherlands",
@@ -120097,16 +120034,6 @@
     ],
     "state": "South Holland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      4.432,
-      51.986000000000004
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-ZH",
-    "population": 3577032,
-    "populationDensity": 1143.6685140297313,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-ZH",
     "name": "South Holland, Netherlands",
@@ -120167,16 +120094,6 @@
     ],
     "state": "Drenthe",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      6.6065000000000005,
-      52.9105
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-DR",
-    "population": 491792,
-    "populationDensity": 184.34964867856465,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-DR",
     "name": "Drenthe, Netherlands",
@@ -120267,16 +120184,6 @@
     ],
     "state": "Utrecht",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.2095,
-      52.0805
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-UT",
-    "population": 1253672,
-    "populationDensity": 801.6821954407629,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-UT",
     "name": "Utrecht, Netherlands",
@@ -120532,16 +120439,6 @@
     ],
     "state": "Gelderland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.9145,
-      52.126000000000005
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-GE",
-    "population": 2019692,
-    "populationDensity": 393.68393658244315,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-GE",
     "name": "Gelderland, Netherlands",
@@ -120698,16 +120595,6 @@
     ],
     "state": "Overijssel",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      6.425,
-      52.486000000000004
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-OV",
-    "population": 1142360,
-    "populationDensity": 332.90613948987493,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-OV",
     "name": "Overijssel, Netherlands",
@@ -120732,16 +120619,6 @@
     ],
     "state": "Flevoland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.529999999999999,
-      52.545
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-FL",
-    "population": 399893,
-    "populationDensity": 166.2271750884417,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-FL",
     "name": "Flevoland, Netherlands",
@@ -120766,16 +120643,6 @@
     ],
     "state": "Limburg",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.896,
-      51.2645
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-LI",
-    "population": 1120006,
-    "populationDensity": 507.79806543154643,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-LI",
     "name": "Limburg, Netherlands",
@@ -121274,16 +121141,6 @@
     ],
     "state": "Zeeland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      3.8175,
-      51.487
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-ZE",
-    "population": 380726,
-    "populationDensity": 166.56233165423757,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-ZE",
     "name": "Zeeland, Netherlands",
@@ -121929,16 +121786,6 @@
     ],
     "state": "Friesland",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      5.6455,
-      53.1405
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-FR",
-    "population": 646317,
-    "populationDensity": 163.28013649230112,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-FR",
     "name": "Friesland, Netherlands",
@@ -122943,16 +122790,6 @@
     ],
     "state": "Groningen",
     "rating": 0.35294117647058826,
-    "coordinates": [
-      6.693,
-      53.177
-    ],
-    "tz": [
-      "Europe/Amsterdam"
-    ],
-    "featureId": "iso2:NL-GR",
-    "population": 582728,
-    "populationDensity": 243.53375513882372,
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-GR",
     "name": "Groningen, Netherlands",

@@ -396,26 +396,6 @@
     "stateId": "iso2:US-WI"
   },
   {
-    "country": "Taiwan",
-    "aggregate": "country",
-    "url": "https://covid19dashboard.cdc.gov.tw/dash3",
-    "timeseries": false,
-    "sources": [
-      {
-        "name": "Taiwan CDC",
-        "url": "https://sites.google.com/cdc.gov.tw/2019-ncov/taiwan",
-        "description": "Taiwan CDC"
-      }
-    ],
-    "type": "json",
-    "headless": false,
-    "certValidation": true,
-    "priority": 0,
-    "ssl": true,
-    "rating": 0.5294117647058824,
-    "countryId": "iso1:TW"
-  },
-  {
     "state": "Iowa",
     "country": "United States",
     "aggregate": "county",
@@ -576,7 +556,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-07",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-08",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1054,32 +1034,6 @@
     "countryId": "iso1:ES"
   },
   {
-    "country": "Netherlands",
-    "url": "https://github.com/J535D165/CoronaWatchNL",
-    "timeseries": true,
-    "priority": 1,
-    "type": "csv",
-    "sources": [
-      {
-        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
-        "url": "https://github.com/J535D165/CoronaWatchNL",
-        "name": "CoronaWatchNL"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.39215686274509803,
-    "countryId": "iso1:NL"
-  },
-  {
     "country": "Poland",
     "url": "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2",
     "timeseries": true,
@@ -1378,6 +1332,32 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-TAS"
+  },
+  {
+    "country": "Netherlands",
+    "url": "https://github.com/J535D165/CoronaWatchNL",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "sources": [
+      {
+        "description": "RIVM reported numbers on the Coronavirus outbreak in The Netherlands",
+        "url": "https://github.com/J535D165/CoronaWatchNL",
+        "name": "CoronaWatchNL"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.35294117647058826,
+    "countryId": "iso1:NL"
   },
   {
     "country": "Ireland",
