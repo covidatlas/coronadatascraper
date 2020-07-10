@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-08",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-09",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -63996,7 +63996,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-08T14:15:00.000Z",
+    "publishedDate": "2020-07-09T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -76225,20 +76225,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Logan County",
     "state": "North Dakota",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.477,
       46.458
@@ -109341,28 +109352,30 @@
     "level": "country"
   },
   {
-    "country": "Australia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
       {
-        "description": "ACT Government Health Department",
-        "name": "ACT Government Health",
-        "url": "https://www.health.act.gov.au"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "state",
     "state": "Australian Capital Territory",
-    "url": "https://www.covid19.act.gov.au",
-    "rating": 0.35294117647058826,
+    "rating": 0.5882352941176471,
     "coordinates": [
       149.0775,
       -35.522000000000006

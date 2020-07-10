@@ -556,7 +556,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-08",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-09",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1205,38 +1205,6 @@
     "rating": 0.37254901960784315,
     "countryId": "iso1:US",
     "stateId": "iso2:US-HI"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "ACT Government Health Department",
-        "name": "ACT Government Health",
-        "url": "https://www.health.act.gov.au"
-      }
-    ],
-    "state": "Australian Capital Territory",
-    "type": "table",
-    "url": "https://www.covid19.act.gov.au",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-ACT"
   },
   {
     "country": "Australia",
