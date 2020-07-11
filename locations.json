@@ -7848,7 +7848,7 @@
       }
     ],
     "state": "Moravske Toplice",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       16.272,
       46.710499999999996
@@ -8938,7 +8938,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-09",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-10",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -63996,7 +63996,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-09T14:15:00.000Z",
+    "publishedDate": "2020-07-10T19:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -65892,21 +65892,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Adams County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.501,
       40.5245
@@ -65924,21 +65923,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Antelope County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.06700000000001,
       42.176500000000004
@@ -65956,21 +65954,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Arthur County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.696,
       41.569
@@ -65988,21 +65996,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Banner County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.711,
       41.5465
@@ -66020,21 +66027,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Blaine County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.97749999999999,
       41.913
@@ -66052,21 +66069,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Boone County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.063,
       41.698499999999996
@@ -66084,21 +66100,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Box Butte County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.07149999999999,
       42.2205
@@ -66116,21 +66131,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Boyd County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.781,
       42.88
@@ -66148,21 +66162,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Brown County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.9305,
       42.465999999999994
@@ -66180,21 +66204,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Buffalo County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.0735,
       40.8495
@@ -66212,21 +66235,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Burt County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.31,
       41.864999999999995
@@ -66244,21 +66266,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Butler County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.137,
       41.251000000000005
@@ -66276,21 +66297,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cass County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.1365,
       40.925
@@ -66308,21 +66328,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cedar County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.2505,
       42.6095
@@ -66340,21 +66359,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Chase County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.6975,
       40.5235
@@ -66372,21 +66390,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cherry County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.1265,
       42.542500000000004
@@ -66404,21 +66421,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cheyenne County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.99549999999999,
       41.2205
@@ -66436,21 +66452,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Clay County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.051,
       40.5245
@@ -66468,21 +66483,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Colfax County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.08000000000001,
       41.56
@@ -66500,21 +66514,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Cuming County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.7875,
       41.9165
@@ -66532,21 +66545,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Custer County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.727,
       41.3935
@@ -66564,21 +66576,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dakota County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.5415,
       42.4005
@@ -66596,21 +66607,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dawes County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.139,
       42.718999999999994
@@ -66628,21 +66638,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dawson County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.82,
       40.858999999999995
@@ -66660,21 +66669,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Deuel County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -102.3365,
       41.112
@@ -66692,21 +66711,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dixon County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.8245,
       42.513000000000005
@@ -66724,21 +66742,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dodge County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.6175,
       41.568
@@ -66756,21 +66773,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Douglas County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.17099999999999,
       41.2915
@@ -66788,21 +66804,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Dundy County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.6875,
       40.176500000000004
@@ -66820,21 +66846,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Fillmore County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.59649999999999,
       40.5245
@@ -66852,21 +66877,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Franklin County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.9525,
       40.176500000000004
@@ -66884,21 +66908,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Frontier County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.381,
       40.5245
@@ -66916,21 +66939,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Furnas County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.913,
       40.176
@@ -66948,21 +66970,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Gage County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.69,
       40.2625
@@ -66980,21 +67001,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Garden County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.3315,
       41.6155
@@ -67012,21 +67032,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Garfield County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.991,
       41.914500000000004
@@ -67044,21 +67063,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Gosper County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.8685,
       40.5255
@@ -67076,21 +67094,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Grant County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.747,
       41.919
@@ -67108,21 +67136,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Greeley County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.5215,
       41.567499999999995
@@ -67140,21 +67167,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hall County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.502,
       40.8725
@@ -67172,21 +67198,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hamilton County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.05449999999999,
       40.935500000000005
@@ -67204,21 +67229,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Harlan County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.4045,
       40.176500000000004
@@ -67236,21 +67260,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Hayes County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.061,
       40.5245
@@ -67268,21 +67302,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hitchcock County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.042,
       40.176500000000004
@@ -67300,21 +67333,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Holt County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.77850000000001,
       42.492000000000004
@@ -67332,21 +67364,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Hooker County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.1345,
       41.916
@@ -67364,21 +67395,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Howard County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.518,
       41.22
@@ -67396,21 +67426,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Jefferson County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.1425,
       40.1755
@@ -67428,21 +67457,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Johnson County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.2655,
       40.3925
@@ -67460,21 +67488,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Kearney County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.95150000000001,
       40.519999999999996
@@ -67492,21 +67519,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Keith County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.65299999999999,
       41.1995
@@ -67524,21 +67550,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Keya Paha County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.726,
       42.85850000000001
@@ -67556,21 +67592,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Kimball County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.715,
       41.198
@@ -67588,21 +67623,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Knox County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.89750000000001,
       42.66
@@ -67620,21 +67654,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Lancaster County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.6885,
       40.7845
@@ -67652,21 +67685,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Lincoln County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.7465,
       41.0465
@@ -67684,21 +67716,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Logan County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -100.483,
       41.566500000000005
@@ -67716,21 +67758,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Loup County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -99.4545,
       41.914
@@ -67748,21 +67800,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "McPherson County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.0595,
       41.5685
@@ -67780,21 +67831,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Madison County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.60149999999999,
       41.9165
@@ -67812,21 +67862,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Merrick County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.9425,
       41.132000000000005
@@ -67844,21 +67893,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Morrill County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.003,
       41.721500000000006
@@ -67876,21 +67924,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Nance County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.9975,
       41.3955
@@ -67908,21 +67955,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Nemaha County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.809,
       40.412000000000006
@@ -67940,21 +67986,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Nuckolls County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.0475,
       40.176500000000004
@@ -67972,21 +68017,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Otoe County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.08699999999999,
       40.6535
@@ -68004,21 +68048,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Pawnee County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -96.237,
       40.131
@@ -68036,21 +68090,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Perkins County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.65,
       40.851
@@ -68068,21 +68132,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Phelps County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.411,
       40.518
@@ -68100,21 +68163,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Pierce County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.60149999999999,
       42.2645
@@ -68132,21 +68194,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Platte County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.541,
       41.538
@@ -68164,21 +68225,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Polk County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.598,
       41.2215
@@ -68196,21 +68256,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Red Willow County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.47749999999999,
       40.1765
@@ -68228,21 +68287,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Richardson County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -95.65950000000001,
       40.131
@@ -68260,21 +68318,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Rock County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.45599999999999,
       42.445
@@ -68292,21 +68349,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Saline County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.14099999999999,
       40.5245
@@ -68324,21 +68380,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Sarpy County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.09049999999999,
       41.0925
@@ -68356,21 +68411,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Saunders County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.61000000000001,
       41.234
@@ -68388,21 +68442,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Scotts Bluff County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.708,
       41.851
@@ -68420,21 +68473,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Seward County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.1395,
       40.8725
@@ -68452,21 +68504,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Sheridan County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.3995,
       42.5025
@@ -68484,21 +68535,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Sherman County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.976,
       41.2205
@@ -68516,21 +68566,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Sioux County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.72749999999999,
       42.502
@@ -68548,21 +68597,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Stanton County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.1935,
       41.917
@@ -68580,21 +68628,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Thayer County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.595,
       40.176500000000004
@@ -68612,21 +68659,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Thomas County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.5555,
       41.914
@@ -68644,21 +68690,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Thurston County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.5455,
       42.1465
@@ -68676,21 +68721,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Valley County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.982,
       41.567499999999995
@@ -68708,21 +68752,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Washington County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.1825,
       41.537499999999994
@@ -68740,21 +68783,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Wayne County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.095,
       42.221000000000004
@@ -68772,21 +68814,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Webster County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.5005,
       40.176
@@ -68804,21 +68845,31 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
     "maintainers": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
         "flag": "🇺🇸"
       }
     ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Wheeler County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -98.52799999999999,
       41.914500000000004
@@ -68836,21 +68887,20 @@
     "level": "county"
   },
   {
-    "state": "Nebraska",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
     "aggregate": "county",
-    "maintainers": [
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "York County",
-    "rating": 0.5686274509803921,
+    "state": "Nebraska",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -97.597,
       40.873
@@ -70737,31 +70787,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Mora County",
     "state": "New Mexico",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.024,
       36.007999999999996
@@ -82170,7 +82209,7 @@
       }
     ],
     "county": "Roger Mills County",
-    "rating": 0.39215686274509803,
+    "rating": 0.5490196078431373,
     "coordinates": [
       -99.682,
       35.7175
@@ -94804,31 +94843,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Foard County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.761,
       33.988
@@ -108409,19 +108437,18 @@
     "level": "state"
   },
   {
-    "state": "Nebraska",
     "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "aggregate": "county",
-    "maintainers": [
+    "url": "https://covidtracking.com/api/v1/states/current.json",
+    "curators": [
       {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
+        "name": "The COVID Tracking Project",
+        "url": "https://covidtracking.com/",
+        "twitter": "@COVID19Tracking",
+        "github": "COVID19Tracking"
       }
     ],
+    "aggregate": "state",
+    "state": "Nebraska",
     "rating": 0.49019607843137253,
     "coordinates": [
       -99.68100000000001,
@@ -109470,28 +109497,30 @@
     "level": "state"
   },
   {
-    "country": "Australia",
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "sources": [
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Australia",
+    "curators": [
       {
-        "description": "QLD Government Health Department",
-        "name": "QLD Government Health",
-        "url": "https://www.health.qld.gov.au"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
+    "aggregate": "state",
     "state": "Queensland",
-    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
-    "rating": 0.35294117647058826,
+    "rating": 0.5882352941176471,
     "coordinates": [
       145.7735,
       -19.204

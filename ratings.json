@@ -256,30 +256,6 @@
     "stateId": "iso2:US-MA"
   },
   {
-    "state": "Nebraska",
-    "country": "United States",
-    "url": "https://gis.ne.gov/Agency/rest/services/COVID19_County_Layer/MapServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=totalCountyPosFin%20desc&outSR=102100&resultOffset=0&resultRecordCount=93",
-    "type": "json",
-    "aggregate": "county",
-    "maintainers": [
-      {
-        "name": "Albert III",
-        "github": "aed3",
-        "url": "https://aed3.github.io",
-        "county": "iso1:US",
-        "flag": "🇺🇸"
-      }
-    ],
-    "priority": 1,
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.5686274509803921,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-NE"
-  },
-  {
     "state": "Arizona",
     "country": "United States",
     "timeseries": true,
@@ -556,7 +532,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-09",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-10",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -933,6 +909,31 @@
     "countryId": "iso1:DE"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "timeseries": true,
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.43137254901960786,
+    "countryId": "iso1:EE"
+  },
+  {
     "country": "Canada",
     "sources": [
       {
@@ -1237,38 +1238,6 @@
     "rating": 0.35294117647058826,
     "countryId": "iso1:AU",
     "stateId": "iso2:AU-NSW"
-  },
-  {
-    "country": "Australia",
-    "maintainers": [
-      {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
-      }
-    ],
-    "priority": 2,
-    "sources": [
-      {
-        "description": "QLD Government Health Department",
-        "name": "QLD Government Health",
-        "url": "https://www.health.qld.gov.au"
-      }
-    ],
-    "state": "Queensland",
-    "type": "table",
-    "url": "https://www.health.qld.gov.au/news-events/doh-media-releases",
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.35294117647058826,
-    "countryId": "iso1:AU",
-    "stateId": "iso2:AU-QLD"
   },
   {
     "country": "Australia",
