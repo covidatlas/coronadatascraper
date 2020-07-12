@@ -301,6 +301,42 @@
       }
     ],
     "state": "Wallonia",
+    "county": "Luxembourg",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      5.501,
+      49.963499999999996
+    ],
+    "tz": [
+      "Europe/Brussels"
+    ],
+    "featureId": "iso2:BE-WLX",
+    "population": 283227,
+    "populationDensity": 63.65901608642079,
+    "countryId": "iso1:BE",
+    "stateId": "iso2:BE-WAL",
+    "countyId": "iso2:BE-WLX",
+    "name": "Luxembourg, Wallonia, Belgium",
+    "level": "county"
+  },
+  {
+    "country": "Belgium",
+    "url": "https://epistat.wiv-isp.be/",
+    "sources": [
+      {
+        "description": "Sciensano is a public belgian scientific institution focused on public and animal health assignments.",
+        "name": "Sciensano",
+        "url": "https://www.sciensano.be/en"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Wallonia",
     "county": "Namur",
     "rating": 0.43137254901960786,
     "coordinates": [
@@ -1876,7 +1912,7 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "rating": 0.2549019607843137,
+    "rating": 0.17647058823529413,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -8772,7 +8808,7 @@
       }
     ],
     "state": "Vuzenica",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       15.16,
       46.564499999999995
@@ -8938,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-10",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-11",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -63996,7 +64032,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-10T19:30:00.000Z",
+    "publishedDate": "2020-07-11T14:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -68048,31 +68084,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Pawnee County",
     "state": "Nebraska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -96.237,
       40.131
@@ -89044,31 +89069,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Perkins County",
     "state": "South Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.4785,
       45.4915
@@ -121061,42 +121075,6 @@
     "stateId": "iso2:AT-4",
     "name": "Upper Austria, Austria",
     "level": "state"
-  },
-  {
-    "country": "Belgium",
-    "url": "https://epistat.wiv-isp.be/",
-    "sources": [
-      {
-        "description": "Sciensano is a public belgian scientific institution focused on public and animal health assignments.",
-        "name": "Sciensano",
-        "url": "https://www.sciensano.be/en"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Wallonia",
-    "county": "Luxembourg",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      5.501,
-      49.963499999999996
-    ],
-    "tz": [
-      "Europe/Brussels"
-    ],
-    "featureId": "iso2:BE-WLX",
-    "population": 283227,
-    "populationDensity": 63.65901608642079,
-    "countryId": "iso1:BE",
-    "stateId": "iso2:BE-WAL",
-    "countyId": "iso2:BE-WLX",
-    "name": "Luxembourg, Wallonia, Belgium",
-    "level": "county"
   },
   {
     "country": "Estonia",
