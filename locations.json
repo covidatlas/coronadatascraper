@@ -8082,7 +8082,7 @@
       }
     ],
     "state": "Radenci",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       16.054000000000002,
       46.6255
@@ -8676,7 +8676,7 @@
       }
     ],
     "state": "Velika Polana",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       16.3615,
       46.58
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-11",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-12",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -64032,7 +64032,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-11T14:30:00.000Z",
+    "publishedDate": "2020-07-12T14:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
