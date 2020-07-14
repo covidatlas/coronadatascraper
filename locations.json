@@ -1912,7 +1912,7 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "rating": 0.17647058823529413,
+    "rating": 0.2549019607843137,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-12",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-13",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -64032,7 +64032,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-12T14:30:00.000Z",
+    "publishedDate": "2020-07-13T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -76289,31 +76289,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Logan County",
     "state": "North Dakota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -99.477,
       46.458
@@ -82234,7 +82223,7 @@
       }
     ],
     "county": "Roger Mills County",
-    "rating": 0.5490196078431373,
+    "rating": 0.39215686274509803,
     "coordinates": [
       -99.682,
       35.7175
@@ -135424,5 +135413,2267 @@
     "stateId": "iso2:IN-DN",
     "name": "Dadra and Nagar Haveli, India",
     "level": "state"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Adjuntas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.7505,
+      18.1815
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72001",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72001",
+    "name": "Adjuntas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Aguada Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.18299999999999,
+      18.3645
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72003",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72003",
+    "name": "Aguada Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Aguadilla Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.113,
+      18.451999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72005",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72005",
+    "name": "Aguadilla Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Aguas Buenas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.1285,
+      18.250500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72007",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72007",
+    "name": "Aguas Buenas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Aibonito Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.269,
+      18.128
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72009",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72009",
+    "name": "Aibonito Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Añasco Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.13149999999999,
+      18.285
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72011",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72011",
+    "name": "Añasco Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Arecibo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.675,
+      18.405
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72013",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72013",
+    "name": "Arecibo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Arroyo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.0575,
+      17.9975
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72015",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72015",
+    "name": "Arroyo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Barceloneta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.55449999999999,
+      18.439999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72017",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72017",
+    "name": "Barceloneta Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Barranquitas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.30699999999999,
+      18.200499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72019",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72019",
+    "name": "Barranquitas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Bayamón Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.166,
+      18.345
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72021",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72021",
+    "name": "Bayamón Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Cabo Rojo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.15700000000001,
+      18.049500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72023",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72023",
+    "name": "Cabo Rojo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Caguas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.05799999999999,
+      18.2125
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72025",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72025",
+    "name": "Caguas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Camuy Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.856,
+      18.417
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72027",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72027",
+    "name": "Camuy Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Canóvanas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.8835,
+      18.3335
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72029",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72029",
+    "name": "Canóvanas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Carolina Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.97300000000001,
+      18.363999999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72031",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72031",
+    "name": "Carolina Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Cataño Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.13900000000001,
+      18.444000000000003
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72033",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72033",
+    "name": "Cataño Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Cayey Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.1395,
+      18.103
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72035",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72035",
+    "name": "Cayey Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Ceiba Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.67099999999999,
+      18.2485
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72037",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72037",
+    "name": "Ceiba Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Ciales Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.53200000000001,
+      18.2635
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72039",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72039",
+    "name": "Ciales Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Cidra Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.169,
+      18.180500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72041",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72041",
+    "name": "Cidra Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Coamo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.35149999999999,
+      18.0965
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72043",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72043",
+    "name": "Coamo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Comerío Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.2195,
+      18.225
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72045",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72045",
+    "name": "Comerío Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Corozal Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.3305,
+      18.3045
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72047",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72047",
+    "name": "Corozal Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Dorado Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.258,
+      18.432000000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72051",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72051",
+    "name": "Dorado Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Fajardo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.65899999999999,
+      18.3305
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72053",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72053",
+    "name": "Fajardo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Florida Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.561,
+      18.375500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72054",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72054",
+    "name": "Florida Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Guánica Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.91999999999999,
+      17.9795
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72055",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72055",
+    "name": "Guánica Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Guayama Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.139,
+      18.011499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72057",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72057",
+    "name": "Guayama Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Guayanilla Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.7925,
+      18.0445
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72059",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72059",
+    "name": "Guayanilla Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Guaynabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.112,
+      18.359
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72061",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72061",
+    "name": "Guaynabo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Gurabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.975,
+      18.258499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72063",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72063",
+    "name": "Gurabo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Hatillo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.801,
+      18.407
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72065",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72065",
+    "name": "Hatillo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Hormigueros Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.12,
+      18.1325
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72067",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72067",
+    "name": "Hormigueros Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Humacao Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.80850000000001,
+      18.1385
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72069",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72069",
+    "name": "Humacao Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Isabela Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.01249999999999,
+      18.445999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72071",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72071",
+    "name": "Isabela Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Jayuya Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.593,
+      18.2255
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72073",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72073",
+    "name": "Jayuya Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Juana Díaz Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.493,
+      18.064
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72075",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72075",
+    "name": "Juana Díaz Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Juncos Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.902,
+      18.2065
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72077",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72077",
+    "name": "Juncos Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Lajas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.0375,
+      18.006
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72079",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72079",
+    "name": "Lajas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Lares Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.865,
+      18.2695
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72081",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72081",
+    "name": "Lares Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Las Marías Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.99,
+      18.238999999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72083",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72083",
+    "name": "Las Marías Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Las Piedras Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.872,
+      18.1965
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72085",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72085",
+    "name": "Las Piedras Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Loíza Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.9105,
+      18.419
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72087",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72087",
+    "name": "Loíza Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Luquillo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.7195,
+      18.342
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72089",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72089",
+    "name": "Luquillo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Manatí Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.4915,
+      18.418
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72091",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72091",
+    "name": "Manatí Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Maunabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.92,
+      18.021
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72095",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72095",
+    "name": "Maunabo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Mayagüez Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.479,
+      18.2245
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72097",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72097",
+    "name": "Mayagüez Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Moca Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.081,
+      18.384
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72099",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72099",
+    "name": "Moca Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Morovis Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.41499999999999,
+      18.317999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72101",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72101",
+    "name": "Morovis Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Naguabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.7435,
+      18.235
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72103",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72103",
+    "name": "Naguabo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Naranjito Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.259,
+      18.2875
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72105",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72105",
+    "name": "Naranjito Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Orocovis Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.449,
+      18.221
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72107",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72107",
+    "name": "Orocovis Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Patillas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.0015,
+      18.039
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72109",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72109",
+    "name": "Patillas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Peñuelas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.72399999999999,
+      18.0565
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72111",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72111",
+    "name": "Peñuelas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Ponce Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.60249999999999,
+      18.025
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72113",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72113",
+    "name": "Ponce Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Quebradillas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.93299999999999,
+      18.429000000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72115",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72115",
+    "name": "Quebradillas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Rincón Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.227,
+      18.336
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72117",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72117",
+    "name": "Rincón Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Río Grande Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.8135,
+      18.3485
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72119",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72119",
+    "name": "Río Grande Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Sabana Grande Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.9345,
+      18.087
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72121",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72121",
+    "name": "Sabana Grande Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Salinas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.25450000000001,
+      18.0035
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72123",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72123",
+    "name": "Salinas Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "San Germán Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -67.0395,
+      18.113500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72125",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72125",
+    "name": "San Germán Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "San Juan Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.0605,
+      18.384999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72127",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72127",
+    "name": "San Juan Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "San Lorenzo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.987,
+      18.1525
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72129",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72129",
+    "name": "San Lorenzo Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "San Sebastián Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.973,
+      18.3235
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72131",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72131",
+    "name": "San Sebastián Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Santa Isabel Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.3905,
+      17.991
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72133",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72133",
+    "name": "Santa Isabel Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Toa Alta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.25800000000001,
+      18.3585
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72135",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72135",
+    "name": "Toa Alta Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Toa Baja Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.1965,
+      18.4315
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72137",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72137",
+    "name": "Toa Baja Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Trujillo Alto Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.9905,
+      18.3365
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72139",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72139",
+    "name": "Trujillo Alto Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Utuado Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.6985,
+      18.250500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72141",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72141",
+    "name": "Utuado Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Vega Alta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.3385,
+      18.4095
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72143",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72143",
+    "name": "Vega Alta Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Vega Baja Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.3985,
+      18.417
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72145",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72145",
+    "name": "Vega Baja Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Villalba Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.4745,
+      18.1295
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72149",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72149",
+    "name": "Villalba Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Yabucoa Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.904,
+      18.069000000000003
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72151",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72151",
+    "name": "Yabucoa Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Yauco Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.8615,
+      18.0625
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72153",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72153",
+    "name": "Yauco Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Vieques Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.426,
+      18.121499999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72147",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72147",
+    "name": "Vieques Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Maricao Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -66.944,
+      18.173499999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72093",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72093",
+    "name": "Maricao Municipio, Puerto Rico, United States",
+    "level": "county"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "country": "United States",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
+    "county": "Culebra Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.6274509803921569,
+    "coordinates": [
+      -65.282,
+      18.315
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72049",
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72049",
+    "name": "Culebra Municipio, Puerto Rico, United States",
+    "level": "county"
   }
 ]
