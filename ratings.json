@@ -532,7 +532,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-15",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-16",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
