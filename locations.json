@@ -1912,7 +1912,7 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "rating": 0.2549019607843137,
+    "rating": 0.17647058823529413,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-17",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-18",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -13392,6 +13392,3126 @@
     "countryId": "iso1:MP",
     "name": "Northern Mariana Islands",
     "level": "country"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Adjuntas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.7505,
+      18.1815
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72001",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72001",
+    "name": "Adjuntas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Aguada Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.18299999999999,
+      18.3645
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72003",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72003",
+    "name": "Aguada Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Aguadilla Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.113,
+      18.451999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72005",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72005",
+    "name": "Aguadilla Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Aguas Buenas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.1285,
+      18.250500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72007",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72007",
+    "name": "Aguas Buenas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Aibonito Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.269,
+      18.128
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72009",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72009",
+    "name": "Aibonito Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Añasco Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.13149999999999,
+      18.285
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72011",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72011",
+    "name": "Añasco Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Arecibo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.675,
+      18.405
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72013",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72013",
+    "name": "Arecibo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Arroyo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.0575,
+      17.9975
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72015",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72015",
+    "name": "Arroyo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Barceloneta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.55449999999999,
+      18.439999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72017",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72017",
+    "name": "Barceloneta Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Barranquitas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.30699999999999,
+      18.200499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72019",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72019",
+    "name": "Barranquitas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Bayamón Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.166,
+      18.345
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72021",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72021",
+    "name": "Bayamón Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Cabo Rojo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.15700000000001,
+      18.049500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72023",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72023",
+    "name": "Cabo Rojo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Caguas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.05799999999999,
+      18.2125
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72025",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72025",
+    "name": "Caguas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Camuy Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.856,
+      18.417
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72027",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72027",
+    "name": "Camuy Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Canóvanas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.8835,
+      18.3335
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72029",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72029",
+    "name": "Canóvanas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Carolina Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.97300000000001,
+      18.363999999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72031",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72031",
+    "name": "Carolina Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Cataño Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.13900000000001,
+      18.444000000000003
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72033",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72033",
+    "name": "Cataño Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Cayey Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.1395,
+      18.103
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72035",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72035",
+    "name": "Cayey Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Ceiba Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.67099999999999,
+      18.2485
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72037",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72037",
+    "name": "Ceiba Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Ciales Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.53200000000001,
+      18.2635
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72039",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72039",
+    "name": "Ciales Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Cidra Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.169,
+      18.180500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72041",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72041",
+    "name": "Cidra Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Coamo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.35149999999999,
+      18.0965
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72043",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72043",
+    "name": "Coamo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Comerío Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.2195,
+      18.225
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72045",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72045",
+    "name": "Comerío Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Corozal Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.3305,
+      18.3045
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72047",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72047",
+    "name": "Corozal Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Culebra Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.282,
+      18.315
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72049",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72049",
+    "name": "Culebra Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Dorado Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.258,
+      18.432000000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72051",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72051",
+    "name": "Dorado Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Fajardo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.65899999999999,
+      18.3305
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72053",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72053",
+    "name": "Fajardo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Florida Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.561,
+      18.375500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72054",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72054",
+    "name": "Florida Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Guánica Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.91999999999999,
+      17.9795
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72055",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72055",
+    "name": "Guánica Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Guayama Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.139,
+      18.011499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72057",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72057",
+    "name": "Guayama Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Guayanilla Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.7925,
+      18.0445
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72059",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72059",
+    "name": "Guayanilla Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Guaynabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.112,
+      18.359
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72061",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72061",
+    "name": "Guaynabo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Gurabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.975,
+      18.258499999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72063",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72063",
+    "name": "Gurabo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Hatillo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.801,
+      18.407
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72065",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72065",
+    "name": "Hatillo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Hormigueros Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.12,
+      18.1325
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72067",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72067",
+    "name": "Hormigueros Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Humacao Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.80850000000001,
+      18.1385
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72069",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72069",
+    "name": "Humacao Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Isabela Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.01249999999999,
+      18.445999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72071",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72071",
+    "name": "Isabela Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Jayuya Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.593,
+      18.2255
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72073",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72073",
+    "name": "Jayuya Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Juana Díaz Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.493,
+      18.064
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72075",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72075",
+    "name": "Juana Díaz Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Juncos Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.902,
+      18.2065
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72077",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72077",
+    "name": "Juncos Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Lajas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.0375,
+      18.006
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72079",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72079",
+    "name": "Lajas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Lares Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.865,
+      18.2695
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72081",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72081",
+    "name": "Lares Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Las Marías Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.99,
+      18.238999999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72083",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72083",
+    "name": "Las Marías Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Las Piedras Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.872,
+      18.1965
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72085",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72085",
+    "name": "Las Piedras Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Loíza Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.9105,
+      18.419
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72087",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72087",
+    "name": "Loíza Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Luquillo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.7195,
+      18.342
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72089",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72089",
+    "name": "Luquillo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Manatí Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.4915,
+      18.418
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72091",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72091",
+    "name": "Manatí Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Maricao Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.944,
+      18.173499999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72093",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72093",
+    "name": "Maricao Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Maunabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.92,
+      18.021
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72095",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72095",
+    "name": "Maunabo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Mayagüez Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.479,
+      18.2245
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72097",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72097",
+    "name": "Mayagüez Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Moca Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.081,
+      18.384
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72099",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72099",
+    "name": "Moca Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Morovis Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.41499999999999,
+      18.317999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72101",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72101",
+    "name": "Morovis Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Naguabo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.7435,
+      18.235
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72103",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72103",
+    "name": "Naguabo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Naranjito Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.259,
+      18.2875
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72105",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72105",
+    "name": "Naranjito Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Orocovis Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.449,
+      18.221
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72107",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72107",
+    "name": "Orocovis Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Patillas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.0015,
+      18.039
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72109",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72109",
+    "name": "Patillas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Peñuelas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.72399999999999,
+      18.0565
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72111",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72111",
+    "name": "Peñuelas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Ponce Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.60249999999999,
+      18.025
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72113",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72113",
+    "name": "Ponce Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Quebradillas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.93299999999999,
+      18.429000000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72115",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72115",
+    "name": "Quebradillas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Rincón Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.227,
+      18.336
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72117",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72117",
+    "name": "Rincón Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Río Grande Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.8135,
+      18.3485
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72119",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72119",
+    "name": "Río Grande Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Sabana Grande Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.9345,
+      18.087
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72121",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72121",
+    "name": "Sabana Grande Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Salinas Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.25450000000001,
+      18.0035
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72123",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72123",
+    "name": "Salinas Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "San Germán Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -67.0395,
+      18.113500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72125",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72125",
+    "name": "San Germán Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "San Juan Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.0605,
+      18.384999999999998
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72127",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72127",
+    "name": "San Juan Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "San Lorenzo Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.987,
+      18.1525
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72129",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72129",
+    "name": "San Lorenzo Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "San Sebastián Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.973,
+      18.3235
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72131",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72131",
+    "name": "San Sebastián Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Santa Isabel Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.3905,
+      17.991
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72133",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72133",
+    "name": "Santa Isabel Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Toa Alta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.25800000000001,
+      18.3585
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72135",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72135",
+    "name": "Toa Alta Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Toa Baja Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.1965,
+      18.4315
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72137",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72137",
+    "name": "Toa Baja Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Trujillo Alto Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.9905,
+      18.3365
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72139",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72139",
+    "name": "Trujillo Alto Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Utuado Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.6985,
+      18.250500000000002
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72141",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72141",
+    "name": "Utuado Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Vega Alta Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.3385,
+      18.4095
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72143",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72143",
+    "name": "Vega Alta Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Vega Baja Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.3985,
+      18.417
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72145",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72145",
+    "name": "Vega Baja Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Vieques Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.426,
+      18.121499999999997
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72147",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72147",
+    "name": "Vieques Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Villalba Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.4745,
+      18.1295
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72149",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72149",
+    "name": "Villalba Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Yabucoa Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -65.904,
+      18.069000000000003
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72151",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72151",
+    "name": "Yabucoa Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
+  },
+  {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "county": "Yauco Municipio",
+    "state": "Puerto Rico",
+    "rating": 0.5882352941176471,
+    "coordinates": [
+      -66.8615,
+      18.0625
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "fips:72153",
+    "countryId": "iso1:PR",
+    "stateId": "iso2:US-PR",
+    "countyId": "fips:72153",
+    "name": "Yauco Municipio, Puerto Rico, Puerto Rico",
+    "level": "county"
   },
   {
     "maintainers": [
@@ -64032,7 +67152,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-17T16:15:00.000Z",
+    "publishedDate": "2020-07-18T16:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -66829,31 +69949,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Dundy County",
     "state": "Nebraska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -101.6875,
       40.176500000000004
@@ -99166,31 +102275,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Stonewall County",
     "state": "Texas",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -100.254,
       33.179
@@ -107629,6 +110727,35 @@
       }
     ],
     "aggregate": "state",
+    "state": "Puerto Rico",
+    "rating": 0.49019607843137253,
+    "coordinates": [
+      -66.594,
+      18.223
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "iso2:US-PR",
+    "population": 3411307,
+    "populationDensity": 380.4337773978851,
+    "countryId": "iso1:US",
+    "stateId": "iso2:US-PR",
+    "name": "Puerto Rico, United States",
+    "level": "state"
+  },
+  {
+    "country": "United States",
+    "url": "https://covidtracking.com/api/v1/states/current.json",
+    "curators": [
+      {
+        "name": "The COVID Tracking Project",
+        "url": "https://covidtracking.com/",
+        "twitter": "@COVID19Tracking",
+        "github": "COVID19Tracking"
+      }
+    ],
+    "aggregate": "state",
     "state": "Alabama",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -109378,30 +112505,28 @@
     "level": "state"
   },
   {
+    "country": "Australia",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Australia",
-    "curators": [
+    "sources": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "description": "NSW Government Health Department",
+        "name": "NSW Government Health",
+        "url": "https://www.health.nsw.gov.au"
       }
     ],
-    "aggregate": "state",
     "state": "New South Wales",
-    "rating": 0.5882352941176471,
+    "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
+    "rating": 0.35294117647058826,
     "coordinates": [
       147.3115,
       -32.831
@@ -115543,29 +118668,16 @@
     "level": "country"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Saudi Arabia",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "aggregate": "country",
-    "rating": 0.5490196078431373,
+    "rating": 0.47058823529411764,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -117756,39 +120868,6 @@
     "level": "country"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Harju maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.837,
-      59.326499999999996
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-37",
-    "population": 589610,
-    "populationDensity": 137.89444709654776,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-37",
-    "name": "Harju maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Spain",
     "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "aggregate": "state",
@@ -118950,72 +122029,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Pärnu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.402,
-      58.322500000000005
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-67",
-    "population": 85756,
-    "populationDensity": 15.921256717601974,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-67",
-    "name": "Pärnu maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Tartu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.8035,
-      58.408
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-78",
-    "population": 151122,
-    "populationDensity": 37.50023578313599,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-78",
-    "name": "Tartu maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Ireland",
     "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
     "maintainers": [
@@ -119922,39 +122935,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Viljandi maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.5715,
-      58.323
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-84",
-    "population": 46782,
-    "populationDensity": 13.040580862383706,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-84",
-    "name": "Viljandi maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -120102,72 +123082,6 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-DR",
     "name": "Drenthe, Netherlands",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Jõgeva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.558,
-      58.7695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-49",
-    "population": 29119,
-    "populationDensity": 10.112271027239142,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-49",
-    "name": "Jõgeva maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Rapla maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.7025,
-      58.94
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-70",
-    "population": 33299,
-    "populationDensity": 12.042274483126223,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-70",
-    "name": "Rapla maakond, Estonia",
     "level": "state"
   },
   {
@@ -120360,72 +123274,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Saare maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      22.625,
-      58.298
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-74",
-    "population": 33231,
-    "populationDensity": 11.612968568944595,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-74",
-    "name": "Saare maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Järva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.607,
-      58.935
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-51",
-    "population": 30661,
-    "populationDensity": 11.550941545367971,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-51",
-    "name": "Järva maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -120480,105 +123328,6 @@
     "countryId": "iso1:AT",
     "stateId": "iso2:AT-2",
     "name": "Carinthia, Austria",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Võru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.101,
-      57.8155
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-86",
-    "population": 36133,
-    "populationDensity": 12.942964863182764,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-86",
-    "name": "Võru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.2485,
-      59.2525
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-59",
-    "population": 59791,
-    "populationDensity": 16.235133573539763,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-59",
-    "name": "Lääne-Viru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Valga maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.1025,
-      57.867000000000004
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-82",
-    "population": 28669,
-    "populationDensity": 14.907616349489446,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-82",
-    "name": "Valga maakond, Estonia",
     "level": "state"
   },
   {
@@ -121026,39 +123775,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      23.6545,
-      58.9815
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-57",
-    "population": 20646,
-    "populationDensity": 11.561413263468216,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-57",
-    "name": "Lääne maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Austria",
     "url": "https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js",
     "maintainers": [
@@ -121248,8 +123964,8 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
         "name": "Quentin Golsteyn",
@@ -121257,27 +123973,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Hiiu maakond",
-    "rating": 0.43137254901960786,
+    "state": "Eastern Region",
+    "rating": 0.5098039215686274,
     "coordinates": [
-      22.561,
-      58.887
+      50.323,
+      23.1085
     ],
     "tz": [
-      "Europe/Tallinn"
+      "Asia/Riyadh"
     ],
-    "featureId": "iso2:EE-39",
-    "population": 9387,
-    "populationDensity": 9.22552677515442,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-39",
-    "name": "Hiiu maakond, Estonia",
+    "featureId": "iso2:SA-04",
+    "population": 4105780,
+    "populationDensity": 7.323672650421578,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-04",
+    "name": "Eastern Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -121800,39 +124510,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Ida-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.456000000000003,
-      59.1295
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-44",
-    "population": 138266,
-    "populationDensity": 40.16576598003955,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-44",
-    "name": "Ida-Viru maakond, Estonia",
     "level": "state"
   },
   {
@@ -122708,39 +125385,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Põlva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.085,
-      58.1695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-65",
-    "population": 25290,
-    "populationDensity": 12.82820102293302,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-65",
-    "name": "Põlva maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -122762,6 +125406,33 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-GR",
     "name": "Groningen, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Riyadh Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      45.141999999999996,
+      23.4635
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-01",
+    "population": 6777146,
+    "populationDensity": 17.961563989929314,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-01",
+    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -122937,6 +125608,501 @@
     "countyId": "fips:49057+fips:49029",
     "name": "Weber County, Morgan County, Utah, United States",
     "level": "county"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Tartu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.8035,
+      58.408
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-78",
+    "population": 151122,
+    "populationDensity": 37.50023578313599,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-78",
+    "name": "Tartu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Harju maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.837,
+      59.326499999999996
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-37",
+    "population": 589610,
+    "populationDensity": 137.89444709654776,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-37",
+    "name": "Harju maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Viljandi maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.5715,
+      58.323
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-84",
+    "population": 46782,
+    "populationDensity": 13.040580862383706,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-84",
+    "name": "Viljandi maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Valga maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.1025,
+      57.867000000000004
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-82",
+    "population": 28669,
+    "populationDensity": 14.907616349489446,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-82",
+    "name": "Valga maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Võru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.101,
+      57.8155
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-86",
+    "population": 36133,
+    "populationDensity": 12.942964863182764,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-86",
+    "name": "Võru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Pärnu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.402,
+      58.322500000000005
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-67",
+    "population": 85756,
+    "populationDensity": 15.921256717601974,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-67",
+    "name": "Pärnu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Jõgeva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.558,
+      58.7695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-49",
+    "population": 29119,
+    "populationDensity": 10.112271027239142,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-49",
+    "name": "Jõgeva maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      23.6545,
+      58.9815
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-57",
+    "population": 20646,
+    "populationDensity": 11.561413263468216,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-57",
+    "name": "Lääne maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Saare maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      22.625,
+      58.298
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-74",
+    "population": 33231,
+    "populationDensity": 11.612968568944595,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-74",
+    "name": "Saare maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.2485,
+      59.2525
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-59",
+    "population": 59791,
+    "populationDensity": 16.235133573539763,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-59",
+    "name": "Lääne-Viru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Põlva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.085,
+      58.1695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-65",
+    "population": 25290,
+    "populationDensity": 12.82820102293302,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-65",
+    "name": "Põlva maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Ida-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.456000000000003,
+      59.1295
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-44",
+    "population": 138266,
+    "populationDensity": 40.16576598003955,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-44",
+    "name": "Ida-Viru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Rapla maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.7025,
+      58.94
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-70",
+    "population": 33299,
+    "populationDensity": 12.042274483126223,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-70",
+    "name": "Rapla maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Hiiu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      22.561,
+      58.887
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-39",
+    "population": 9387,
+    "populationDensity": 9.22552677515442,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-39",
+    "name": "Hiiu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Järva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.607,
+      58.935
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-51",
+    "population": 30661,
+    "populationDensity": 11.550941545367971,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-51",
+    "name": "Järva maakond, Estonia",
+    "level": "state"
   },
   {
     "country": "Poland",
@@ -123669,6 +126835,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "'Asir Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.9525,
+      19.201
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-14",
+    "population": 2211875,
+    "populationDensity": 28.486239590174346,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-14",
+    "name": "'Asir Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -123807,6 +127000,33 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Najran Region",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      45.6815,
+      18.240499999999997
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-10",
+    "population": 505652,
+    "populationDensity": 5.687857400619951,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-10",
+    "name": "Najran Region, Saudi Arabia",
+    "level": "state"
   },
   {
     "country": "United States",
@@ -125598,6 +128818,33 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al-Qassim Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      43.069500000000005,
+      26.2755
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-05",
+    "population": 1159438,
+    "populationDensity": 16.90171756800719,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-05",
+    "name": "Al-Qassim Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "Russia",
     "aggregate": "state",
     "url": "https://yandex.ru/maps/api/covid?csrfToken=",
@@ -125896,6 +129143,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-AMU",
     "name": "Amur Oblast, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Al Madinah Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      39.438500000000005,
+      25.006999999999998
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-03",
+    "population": 2132679,
+    "populationDensity": 14.455633104462715,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-03",
+    "name": "Al Madinah Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -127723,6 +130997,60 @@
     "level": "state"
   },
   {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Tabuk Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      37.2535,
+      27.2675
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-07",
+    "population": 910030,
+    "populationDensity": 6.58598828117753,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-07",
+    "name": "Tabuk Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jazan Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      42.4525,
+      17.354
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-09",
+    "population": 1567547,
+    "populationDensity": 99.93990587193487,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-09",
+    "name": "Jazan Region, Saudi Arabia",
+    "level": "state"
+  },
+  {
     "country": "India",
     "url": "https://www.mohfw.gov.in/",
     "aggregate": "state",
@@ -129137,6 +132465,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-KC",
     "name": "Karachay-Cherkessia, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Northern Borders Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.97,
+      29.8395
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-08",
+    "population": 375310,
+    "populationDensity": 3.2502748115551507,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-08",
+    "name": "Northern Borders Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -133066,35 +136421,6 @@
       }
     ],
     "aggregate": "state",
-    "state": "Puerto Rico",
-    "rating": 0.49019607843137253,
-    "coordinates": [
-      -66.594,
-      18.223
-    ],
-    "tz": [
-      "America/Puerto_Rico"
-    ],
-    "featureId": "iso2:US-PR",
-    "population": 3411307,
-    "populationDensity": 380.4337773978851,
-    "countryId": "iso1:US",
-    "stateId": "iso2:US-PR",
-    "name": "Puerto Rico, United States",
-    "level": "state"
-  },
-  {
-    "country": "United States",
-    "url": "https://covidtracking.com/api/v1/states/current.json",
-    "curators": [
-      {
-        "name": "The COVID Tracking Project",
-        "url": "https://covidtracking.com/",
-        "twitter": "@COVID19Tracking",
-        "github": "COVID19Tracking"
-      }
-    ],
-    "aggregate": "state",
     "state": "American Samoa",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -135361,6 +138687,33 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-AL",
     "name": "Altai Republic, Russia",
+    "level": "state"
+  },
+  {
+    "country": "Saudi Arabia",
+    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Hayel Region",
+    "rating": 0.5098039215686274,
+    "coordinates": [
+      41.647999999999996,
+      27.0925
+    ],
+    "tz": [
+      "Asia/Riyadh"
+    ],
+    "featureId": "iso2:SA-06",
+    "population": 597144,
+    "populationDensity": 5.319482787232354,
+    "countryId": "iso1:SA",
+    "stateId": "iso2:SA-06",
+    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {
