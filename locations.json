@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-18",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-19",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16512,44 +16512,6 @@
     "countyId": "fips:72153",
     "name": "Yauco Municipio, Puerto Rico, Puerto Rico",
     "level": "county"
-  },
-  {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "Puerto Rico",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
-    "coordinates": [
-      -66.594,
-      18.223
-    ],
-    "tz": [
-      "America/Puerto_Rico"
-    ],
-    "featureId": "iso1:PR",
-    "population": 3411307,
-    "populationDensity": 380.4337773978851,
-    "countryId": "iso1:PR",
-    "name": "Puerto Rico",
-    "level": "country"
   },
   {
     "country": "United States Virgin Islands",
@@ -67152,7 +67114,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-18T16:30:00.000Z",
+    "publishedDate": "2020-07-19T14:45:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -110689,6 +110651,44 @@
     "level": "county"
   },
   {
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Puerto Rico",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
+    "coordinates": [
+      -66.594,
+      18.223
+    ],
+    "tz": [
+      "America/Puerto_Rico"
+    ],
+    "featureId": "iso1:PR",
+    "population": 3411307,
+    "populationDensity": 380.4337773978851,
+    "countryId": "iso1:PR",
+    "name": "Puerto Rico",
+    "level": "country"
+  },
+  {
     "country": "United States",
     "url": "https://covidtracking.com/api/v1/states/current.json",
     "curators": [
@@ -118668,16 +118668,29 @@
     "level": "country"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
     "maintainers": [
       {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.47058823529411764,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "Saudi Arabia",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "aggregate": "country",
+    "rating": 0.5490196078431373,
     "coordinates": [
       45.081,
       24.267000000000003
@@ -120868,6 +120881,39 @@
     "level": "country"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Harju maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.837,
+      59.326499999999996
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-37",
+    "population": 589610,
+    "populationDensity": 137.89444709654776,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-37",
+    "name": "Harju maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Spain",
     "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "aggregate": "state",
@@ -122029,6 +122075,72 @@
     "level": "state"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Pärnu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.402,
+      58.322500000000005
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-67",
+    "population": 85756,
+    "populationDensity": 15.921256717601974,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-67",
+    "name": "Pärnu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Tartu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.8035,
+      58.408
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-78",
+    "population": 151122,
+    "populationDensity": 37.50023578313599,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-78",
+    "name": "Tartu maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Ireland",
     "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
     "maintainers": [
@@ -122935,6 +123047,39 @@
     "level": "state"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Viljandi maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.5715,
+      58.323
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-84",
+    "population": 46782,
+    "populationDensity": 13.040580862383706,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-84",
+    "name": "Viljandi maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -123082,6 +123227,72 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-DR",
     "name": "Drenthe, Netherlands",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Jõgeva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.558,
+      58.7695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-49",
+    "population": 29119,
+    "populationDensity": 10.112271027239142,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-49",
+    "name": "Jõgeva maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Rapla maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.7025,
+      58.94
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-70",
+    "population": 33299,
+    "populationDensity": 12.042274483126223,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-70",
+    "name": "Rapla maakond, Estonia",
     "level": "state"
   },
   {
@@ -123274,6 +123485,72 @@
     "level": "state"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Saare maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      22.625,
+      58.298
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-74",
+    "population": 33231,
+    "populationDensity": 11.612968568944595,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-74",
+    "name": "Saare maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Järva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.607,
+      58.935
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-51",
+    "population": 30661,
+    "populationDensity": 11.550941545367971,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-51",
+    "name": "Järva maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -123328,6 +123605,105 @@
     "countryId": "iso1:AT",
     "stateId": "iso2:AT-2",
     "name": "Carinthia, Austria",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Võru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.101,
+      57.8155
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-86",
+    "population": 36133,
+    "populationDensity": 12.942964863182764,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-86",
+    "name": "Võru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.2485,
+      59.2525
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-59",
+    "population": 59791,
+    "populationDensity": 16.235133573539763,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-59",
+    "name": "Lääne-Viru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Valga maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.1025,
+      57.867000000000004
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-82",
+    "population": 28669,
+    "populationDensity": 14.907616349489446,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-82",
+    "name": "Valga maakond, Estonia",
     "level": "state"
   },
   {
@@ -123775,6 +124151,39 @@
     "level": "state"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      23.6545,
+      58.9815
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-57",
+    "population": 20646,
+    "populationDensity": 11.561413263468216,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-57",
+    "name": "Lääne maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Austria",
     "url": "https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js",
     "maintainers": [
@@ -123964,8 +124373,8 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
     "maintainers": [
       {
         "name": "Quentin Golsteyn",
@@ -123973,21 +124382,27 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Eastern Region",
-    "rating": 0.5098039215686274,
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Hiiu maakond",
+    "rating": 0.43137254901960786,
     "coordinates": [
-      50.323,
-      23.1085
+      22.561,
+      58.887
     ],
     "tz": [
-      "Asia/Riyadh"
+      "Europe/Tallinn"
     ],
-    "featureId": "iso2:SA-04",
-    "population": 4105780,
-    "populationDensity": 7.323672650421578,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-04",
-    "name": "Eastern Region, Saudi Arabia",
+    "featureId": "iso2:EE-39",
+    "population": 9387,
+    "populationDensity": 9.22552677515442,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-39",
+    "name": "Hiiu maakond, Estonia",
     "level": "state"
   },
   {
@@ -124510,6 +124925,39 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-53",
     "name": "Pardubický kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Ida-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.456000000000003,
+      59.1295
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-44",
+    "population": 138266,
+    "populationDensity": 40.16576598003955,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-44",
+    "name": "Ida-Viru maakond, Estonia",
     "level": "state"
   },
   {
@@ -125385,6 +125833,39 @@
     "level": "state"
   },
   {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Põlva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.085,
+      58.1695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-65",
+    "population": 25290,
+    "populationDensity": 12.82820102293302,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-65",
+    "name": "Põlva maakond, Estonia",
+    "level": "state"
+  },
+  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -125406,33 +125887,6 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-GR",
     "name": "Groningen, Netherlands",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Riyadh Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      45.141999999999996,
-      23.4635
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-01",
-    "population": 6777146,
-    "populationDensity": 17.961563989929314,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-01",
-    "name": "Riyadh Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -125608,501 +126062,6 @@
     "countyId": "fips:49057+fips:49029",
     "name": "Weber County, Morgan County, Utah, United States",
     "level": "county"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Tartu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.8035,
-      58.408
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-78",
-    "population": 151122,
-    "populationDensity": 37.50023578313599,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-78",
-    "name": "Tartu maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Harju maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.837,
-      59.326499999999996
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-37",
-    "population": 589610,
-    "populationDensity": 137.89444709654776,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-37",
-    "name": "Harju maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Viljandi maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.5715,
-      58.323
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-84",
-    "population": 46782,
-    "populationDensity": 13.040580862383706,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-84",
-    "name": "Viljandi maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Valga maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.1025,
-      57.867000000000004
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-82",
-    "population": 28669,
-    "populationDensity": 14.907616349489446,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-82",
-    "name": "Valga maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Võru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.101,
-      57.8155
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-86",
-    "population": 36133,
-    "populationDensity": 12.942964863182764,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-86",
-    "name": "Võru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Pärnu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.402,
-      58.322500000000005
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-67",
-    "population": 85756,
-    "populationDensity": 15.921256717601974,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-67",
-    "name": "Pärnu maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Jõgeva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.558,
-      58.7695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-49",
-    "population": 29119,
-    "populationDensity": 10.112271027239142,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-49",
-    "name": "Jõgeva maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      23.6545,
-      58.9815
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-57",
-    "population": 20646,
-    "populationDensity": 11.561413263468216,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-57",
-    "name": "Lääne maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Saare maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      22.625,
-      58.298
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-74",
-    "population": 33231,
-    "populationDensity": 11.612968568944595,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-74",
-    "name": "Saare maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.2485,
-      59.2525
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-59",
-    "population": 59791,
-    "populationDensity": 16.235133573539763,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-59",
-    "name": "Lääne-Viru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Põlva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.085,
-      58.1695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-65",
-    "population": 25290,
-    "populationDensity": 12.82820102293302,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-65",
-    "name": "Põlva maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Ida-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.456000000000003,
-      59.1295
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-44",
-    "population": 138266,
-    "populationDensity": 40.16576598003955,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-44",
-    "name": "Ida-Viru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Rapla maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.7025,
-      58.94
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-70",
-    "population": 33299,
-    "populationDensity": 12.042274483126223,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-70",
-    "name": "Rapla maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Hiiu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      22.561,
-      58.887
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-39",
-    "population": 9387,
-    "populationDensity": 9.22552677515442,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-39",
-    "name": "Hiiu maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Järva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.607,
-      58.935
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-51",
-    "population": 30661,
-    "populationDensity": 11.550941545367971,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-51",
-    "name": "Järva maakond, Estonia",
-    "level": "state"
   },
   {
     "country": "Poland",
@@ -126835,33 +126794,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "'Asir Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.9525,
-      19.201
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-14",
-    "population": 2211875,
-    "populationDensity": 28.486239590174346,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-14",
-    "name": "'Asir Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -127000,33 +126932,6 @@
     "stateId": "iso2:US-AK",
     "countyId": "fips:02060+fips:02164+fips:02013+fips:02070+fips:02016+fips:02158+fips:02050",
     "level": "county"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Najran Region",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      45.6815,
-      18.240499999999997
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-10",
-    "population": 505652,
-    "populationDensity": 5.687857400619951,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-10",
-    "name": "Najran Region, Saudi Arabia",
-    "level": "state"
   },
   {
     "country": "United States",
@@ -128818,33 +128723,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al-Qassim Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      43.069500000000005,
-      26.2755
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-05",
-    "population": 1159438,
-    "populationDensity": 16.90171756800719,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-05",
-    "name": "Al-Qassim Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "Russia",
     "aggregate": "state",
     "url": "https://yandex.ru/maps/api/covid?csrfToken=",
@@ -129143,33 +129021,6 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-AMU",
     "name": "Amur Oblast, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Al Madinah Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      39.438500000000005,
-      25.006999999999998
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-03",
-    "population": 2132679,
-    "populationDensity": 14.455633104462715,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-03",
-    "name": "Al Madinah Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -130997,60 +130848,6 @@
     "level": "state"
   },
   {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Tabuk Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      37.2535,
-      27.2675
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-07",
-    "population": 910030,
-    "populationDensity": 6.58598828117753,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-07",
-    "name": "Tabuk Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jazan Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      42.4525,
-      17.354
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-09",
-    "population": 1567547,
-    "populationDensity": 99.93990587193487,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-09",
-    "name": "Jazan Region, Saudi Arabia",
-    "level": "state"
-  },
-  {
     "country": "India",
     "url": "https://www.mohfw.gov.in/",
     "aggregate": "state",
@@ -132465,33 +132262,6 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-KC",
     "name": "Karachay-Cherkessia, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Northern Borders Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.97,
-      29.8395
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-08",
-    "population": 375310,
-    "populationDensity": 3.2502748115551507,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-08",
-    "name": "Northern Borders Region, Saudi Arabia",
     "level": "state"
   },
   {
@@ -138687,33 +138457,6 @@
     "countryId": "iso1:RU",
     "stateId": "iso2:RU-AL",
     "name": "Altai Republic, Russia",
-    "level": "state"
-  },
-  {
-    "country": "Saudi Arabia",
-    "url": "https://datasource.kapsarc.org/explore/dataset/saudi-arabia-coronavirus-disease-covid-19-situation/download/?format=csv&disjunctive.daily_cumulative=true&disjunctive.region=true&refine.daily_cumulative=Daily&timezone=America/Los_Angeles&lang=en&csv_separator=%2C",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Hayel Region",
-    "rating": 0.5098039215686274,
-    "coordinates": [
-      41.647999999999996,
-      27.0925
-    ],
-    "tz": [
-      "Asia/Riyadh"
-    ],
-    "featureId": "iso2:SA-06",
-    "population": 597144,
-    "populationDensity": 5.319482787232354,
-    "countryId": "iso1:SA",
-    "stateId": "iso2:SA-06",
-    "name": "Hayel Region, Saudi Arabia",
     "level": "state"
   },
   {
