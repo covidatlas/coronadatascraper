@@ -532,7 +532,7 @@
     "headless": false,
     "certValidation": true,
     "priority": 0,
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-19",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-20",
     "ssl": true,
     "rating": 0.49019607843137253,
     "countryId": "iso1:UA"
@@ -1615,6 +1615,31 @@
     "stateId": "iso2:US-NM"
   },
   {
+    "country": "Sweden",
+    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
+    "priority": 1,
+    "type": "csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://folkhalsomyndigheten.se",
+        "name": "Public Health Agency of Sweden"
+      }
+    ],
+    "timeseries": false,
+    "headless": false,
+    "certValidation": true,
+    "ssl": true,
+    "rating": 0.2549019607843137,
+    "countryId": "iso1:SE"
+  },
+  {
     "state": "Alaska",
     "country": "United States",
     "sources": [
@@ -1830,31 +1855,6 @@
     "ssl": true,
     "rating": 0.21568627450980393,
     "countryId": "iso1:LV"
-  },
-  {
-    "country": "Sweden",
-    "url": "https://services5.arcgis.com/fsYDFeRKu1hELJJs/arcgis/rest/services/FOHM_Covid_19_FME_1/FeatureServer/1/query?f=json&where=1%3D1&outFields=*&returnGeometry=false",
-    "priority": 1,
-    "type": "csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "url": "https://folkhalsomyndigheten.se",
-        "name": "Public Health Agency of Sweden"
-      }
-    ],
-    "timeseries": false,
-    "headless": false,
-    "certValidation": true,
-    "ssl": true,
-    "rating": 0.21568627450980393,
-    "countryId": "iso1:SE"
   },
   {
     "county": "San Luis Obispo County",
