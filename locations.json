@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-20",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-21",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16514,26 +16514,29 @@
     "level": "county"
   },
   {
-    "country": "United States Virgin Islands",
-    "url": "https://www.covid19usvi.com/",
-    "sources": [
-      {
-        "url": "https://doh.vi.gov",
-        "name": "United States Virgin Islands Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.2549019607843137,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States Virgin Islands",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
     "coordinates": [
       -64.818,
       18.0265
@@ -67114,7 +67117,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-20T14:00:00.000Z",
+    "publishedDate": "2020-07-21T14:00:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
