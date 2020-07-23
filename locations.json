@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-21",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-22",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16514,29 +16514,26 @@
     "level": "county"
   },
   {
+    "country": "United States Virgin Islands",
+    "url": "https://www.covid19usvi.com/",
+    "sources": [
+      {
+        "url": "https://doh.vi.gov",
+        "name": "United States Virgin Islands Department of Health"
+      }
+    ],
     "maintainers": [
       {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
+        "name": "Cameron Chamberlain",
+        "email": "corona@camjc.com",
+        "github": "camjc",
+        "country": "iso1:AU",
+        "state": "Victoria",
+        "city": "Melbourne",
+        "flag": "🇦🇺"
       }
     ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
-    "country": "United States Virgin Islands",
-    "aggregate": "county",
-    "curators": [
-      {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
-      }
-    ],
-    "rating": 0.47058823529411764,
+    "rating": 0.2549019607843137,
     "coordinates": [
       -64.818,
       18.0265
@@ -67117,7 +67114,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-21T14:00:00.000Z",
+    "publishedDate": "2020-07-22T14:15:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -123147,21 +123144,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Ústecký kraj",
+    "state": "Hlavní město Praha",
     "rating": 0.35294117647058826,
     "coordinates": [
-      13.799,
-      50.568
+      14.476500000000001,
+      50.0625
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-42",
-    "population": 820789,
-    "populationDensity": 154.53213016548833,
+    "featureId": "iso2:CZ-10",
+    "population": 1308632,
+    "populationDensity": 2638.415429617829,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-42",
-    "name": "Ústecký kraj, Czechia",
+    "stateId": "iso2:CZ-10",
+    "name": "Hlavní město Praha, Czechia",
     "level": "state"
   },
   {
@@ -123180,21 +123177,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Hlavní město Praha",
+    "state": "Ústecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      14.476500000000001,
-      50.0625
+      13.799,
+      50.568
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-10",
-    "population": 1308632,
-    "populationDensity": 2638.415429617829,
+    "featureId": "iso2:CZ-42",
+    "population": 820789,
+    "populationDensity": 154.53213016548833,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-10",
-    "name": "Hlavní město Praha, Czechia",
+    "stateId": "iso2:CZ-42",
+    "name": "Ústecký kraj, Czechia",
     "level": "state"
   },
   {
@@ -124281,39 +124278,6 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Středočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.4665,
-      50.058
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-20",
-    "population": 1369332,
-    "populationDensity": 125.5142885649874,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-20",
-    "name": "Středočeský kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Olomouc Region",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -124362,6 +124326,39 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-52",
     "name": "Královéhradecký kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Středočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.4665,
+      50.058
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-20",
+    "population": 1369332,
+    "populationDensity": 125.5142885649874,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-20",
+    "name": "Středočeský kraj, Czechia",
     "level": "state"
   },
   {
@@ -125020,39 +125017,6 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Jihočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.5695,
-      49.085499999999996
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-31",
-    "population": 642133,
-    "populationDensity": 63.81153400322205,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-31",
-    "name": "Jihočeský kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
     "state": "Jihomoravský kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -125134,6 +125098,39 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-51",
     "name": "Liberecký kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jihočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.5695,
+      49.085499999999996
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-31",
+    "population": 642133,
+    "populationDensity": 63.81153400322205,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-31",
+    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {
