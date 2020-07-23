@@ -21,14 +21,20 @@
     "publishSite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
-    "start": "node src/shared/cli/index.js",
+
+    "start": "echo === DISABLED === && echo Run 'yarn timeseries' to pull down reports from Li. && echo Use 'yarn start-old' to run CDS scrapers.",
+    "start-old": "node src/shared/cli/index.js",
+
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
     "test:unit": "tape tests/unit/**/*-test.js | tap-spec",
     "test:integration": "tape tests/integration/**/*-test.js | tap-spec",
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "tape scripts/test-timezones.js | tap-spec",
-    "timeseries": "node src/shared/timeseries/index.js",
+
+    "timeseries": "echo === DISABLED === && echo Downloading Li reports s3 instead && echo Use yarn timeseries-old to run old scripts. && echo && scripts/download-li-s3-reports-to-dist.sh",
+    "timeseries-old": "node src/shared/timeseries/index.js",
+
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "pretty": "prettier --write '**/*.js'"
