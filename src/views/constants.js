@@ -4,9 +4,9 @@ const prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
   name: 'COVID Atlas',
-  repoURL: 'https://github.com/covidatlas/coronadatascraper/',
+  repoURL: 'https://github.com/covidatlas/li/',
   slackURL: 'https://join.slack.com/t/covid-atlas/shared_invite/zt-d6j8q1lw-C4t00WbmIjoxeHgxn_GDPQ',
-  issueURL: 'https://github.com/covidatlas/coronadatascraper/issues/new/choose',
+  issueURL: 'https://github.com/covidatlas/li/issues/new/choose',
   analyticsCode: prod ? 'UA-166126663-1' : 'UA-166126663-2',
   prod,
   disclaimer
