@@ -47,37 +47,11 @@ module.exports.getLocationGranularityName = function(location) {
   return 'none';
 };
 
-const childLevelOrder = levelOrder.slice().reverse();
-module.exports.getChildLocations = function(location, locations, matchLevel) {
-  const subLocations = [];
-
+module.exports.getChildLocations = function(location, locations) {
   // Find all its children
-  const locationLevel = location.level;
-  const index = childLevelOrder.indexOf(locationLevel);
-
-  const mustMatch = childLevelOrder.slice(0, index + 1);
-
-  for (const otherLocation of Object.values(locations)) {
-    let matches = true;
-    if (matchLevel) {
-      if (otherLocation.level !== matchLevel) {
-        continue;
-      }
-    }
-    for (const field of mustMatch) {
-      if (otherLocation[field] !== location[field]) {
-        matches = false;
-        break;
-      }
-    }
-    if (matches) {
-      // Ensure slug is present
-      otherLocation.slug = getSlug(otherLocation);
-      subLocations.push(otherLocation);
-    }
-  }
-
-  return subLocations;
+  return locations
+    .filter(loc => loc.locationID !== location.locationID)
+    .filter(loc => loc.locationID.startsWith(location.locationID));
 };
 
 const parentLevelOrder = levelOrder.concat(['world']);
