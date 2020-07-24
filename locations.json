@@ -8049,7 +8049,7 @@
       }
     ],
     "state": "Polzela",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       15.084,
       46.3035
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-22",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-23",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -16514,26 +16514,29 @@
     "level": "county"
   },
   {
-    "country": "United States Virgin Islands",
-    "url": "https://www.covid19usvi.com/",
-    "sources": [
-      {
-        "url": "https://doh.vi.gov",
-        "name": "United States Virgin Islands Department of Health"
-      }
-    ],
     "maintainers": [
       {
-        "name": "Cameron Chamberlain",
-        "email": "corona@camjc.com",
-        "github": "camjc",
-        "country": "iso1:AU",
-        "state": "Victoria",
-        "city": "Melbourne",
-        "flag": "🇦🇺"
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
       }
     ],
-    "rating": 0.2549019607843137,
+    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "country": "United States Virgin Islands",
+    "aggregate": "county",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
+    "rating": 0.47058823529411764,
     "coordinates": [
       -64.818,
       18.0265
@@ -23435,7 +23438,7 @@
       }
     ],
     "county": "Merced County",
-    "rating": 0.6274509803921569,
+    "rating": 0.7058823529411765,
     "coordinates": [
       -120.649,
       37.1865
@@ -24507,13 +24510,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Adams County",
-    "population": 511473,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.37950000000001,
       39.8695
@@ -24522,6 +24532,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08001",
+    "population": 517421,
+    "populationDensity": 168.51059431999408,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08001",
@@ -24529,13 +24541,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Alamosa County",
-    "population": 16184,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.7465,
       37.554
@@ -24544,6 +24563,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08003",
+    "population": 16233,
+    "populationDensity": 8.694430800607302,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08003",
@@ -24551,13 +24572,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Arapahoe County",
-    "population": 651342,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.3805,
       39.653000000000006
@@ -24566,6 +24594,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08005",
+    "population": 656590,
+    "populationDensity": 316.34369261155615,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08005",
@@ -24573,13 +24603,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Archuleta County",
-    "population": 13737,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.979,
       37.208
@@ -24588,6 +24625,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08007",
+    "population": 14029,
+    "populationDensity": 3.9842498667531077,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08007",
@@ -24595,13 +24634,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Baca County",
-    "population": 3547,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.564,
       37.3185
@@ -24610,6 +24656,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08009",
+    "population": 3581,
+    "populationDensity": 0.5399894854626656,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08009",
@@ -24617,13 +24665,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Bent County",
-    "population": 5819,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.072,
       37.955
@@ -24632,6 +24687,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08011",
+    "population": 5577,
+    "populationDensity": 1.3943996251468538,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08011",
@@ -24639,13 +24696,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Boulder County",
-    "population": 325476,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.37299999999999,
       40.087999999999994
@@ -24654,6 +24718,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08013",
+    "population": 326196,
+    "populationDensity": 169.88067141336003,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08013",
@@ -24661,13 +24727,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Broomfield County",
-    "population": 69453,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.0655,
       39.967
@@ -24676,6 +24749,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08014",
+    "population": 70465,
+    "populationDensity": 790.6092969192341,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08014",
@@ -24683,13 +24758,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Chaffee County",
-    "population": 20028,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.2385,
       38.739999999999995
@@ -24698,6 +24780,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08015",
+    "population": 20356,
+    "populationDensity": 7.72663144610604,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08015",
@@ -24705,13 +24789,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Cheyenne County",
-    "population": 1862,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.60900000000001,
       38.829499999999996
@@ -24720,6 +24811,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08017",
+    "population": 1831,
+    "populationDensity": 0.39716973041134634,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08017",
@@ -24727,13 +24820,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Clear Creek County",
-    "population": 9663,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.662,
       39.7085
@@ -24742,6 +24842,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08019",
+    "population": 9700,
+    "populationDensity": 9.46407711741649,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08019",
@@ -24749,13 +24851,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Conejos County",
-    "population": 8136,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.19800000000001,
       37.199
@@ -24764,6 +24873,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08021",
+    "population": 8205,
+    "populationDensity": 2.4482893519009026,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08021",
@@ -24771,13 +24882,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Costilla County",
-    "population": 3809,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.451,
       37.326499999999996
@@ -24786,6 +24904,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08023",
+    "population": 3887,
+    "populationDensity": 1.218491906277351,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08023",
@@ -24793,13 +24913,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Crowley County",
-    "population": 5857,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.78,
       38.318
@@ -24808,6 +24935,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08025",
+    "population": 6061,
+    "populationDensity": 2.922973935094742,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08025",
@@ -24815,13 +24944,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Custer County",
-    "population": 4928,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.4225,
       38.078
@@ -24830,6 +24966,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08027",
+    "population": 5068,
+    "populationDensity": 2.64092368174304,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08027",
@@ -24837,13 +24975,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Delta County",
-    "population": 30936,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.94,
       38.943
@@ -24852,6 +24997,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08029",
+    "population": 31162,
+    "populationDensity": 10.456989233930061,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08029",
@@ -24859,13 +25006,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Denver County",
-    "population": 717797,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.85499999999999,
       39.763999999999996
@@ -24874,6 +25028,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08031",
+    "population": 727211,
+    "populationDensity": 1783.2625715582471,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08031",
@@ -24881,13 +25037,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Dolores County",
-    "population": 2053,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.452,
       37.6905
@@ -24896,6 +25059,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08033",
+    "population": 2055,
+    "populationDensity": 0.7445492281926853,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08033",
@@ -24903,13 +25068,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Douglas County",
-    "population": 342842,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.995,
       39.348
@@ -24918,6 +25090,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08035",
+    "population": 351154,
+    "populationDensity": 160.44990214888998,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08035",
@@ -24925,13 +25099,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Eagle County",
-    "population": 54863,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.64500000000001,
       39.637
@@ -24940,6 +25121,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08037",
+    "population": 55127,
+    "populationDensity": 12.563761275925264,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08037",
@@ -24947,13 +25130,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Elbert County",
-    "population": 26218,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.1885,
       39.216499999999996
@@ -24962,6 +25152,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08039",
+    "population": 26729,
+    "populationDensity": 5.573765989466663,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08039",
@@ -24969,13 +25161,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "El Paso County",
-    "population": 714395,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.56200000000001,
       38.825
@@ -24984,6 +25183,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08041",
+    "population": 720403,
+    "populationDensity": 130.55163133716624,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08041",
@@ -24991,13 +25192,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Fremont County",
-    "population": 47912,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.4765,
       38.477500000000006
@@ -25006,6 +25214,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08043",
+    "population": 47839,
+    "populationDensity": 12.023237840854616,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08043",
@@ -25013,13 +25223,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Garfield County",
-    "population": 59807,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.0415,
       39.729
@@ -25028,6 +25245,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08045",
+    "population": 60061,
+    "populationDensity": 7.835685033776165,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08045",
@@ -25035,13 +25254,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Gilpin County",
-    "population": 6097,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.549,
       39.841499999999996
@@ -25050,6 +25276,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08047",
+    "population": 6243,
+    "populationDensity": 16.041305539349672,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08047",
@@ -25057,13 +25285,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Grand County",
-    "population": 15474,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.1395,
       40.084999999999994
@@ -25072,6 +25307,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08049",
+    "population": 15734,
+    "populationDensity": 3.2426671050170373,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08049",
@@ -25079,13 +25316,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Gunnison County",
-    "population": 17173,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.941,
       38.7025
@@ -25094,6 +25338,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08051",
+    "population": 17462,
+    "populationDensity": 2.063507872719174,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08051",
@@ -25101,13 +25347,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Hinsdale County",
-    "population": 804,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.29599999999999,
       37.785
@@ -25116,6 +25369,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08053",
+    "population": 820,
+    "populationDensity": 0.28160393405010936,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08053",
@@ -25123,13 +25378,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Huerfano County",
-    "population": 6854,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.9265,
       37.653999999999996
@@ -25138,6 +25400,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08055",
+    "population": 6897,
+    "populationDensity": 1.670989334898869,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08055",
@@ -25145,13 +25409,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Jackson County",
-    "population": 1396,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.36250000000001,
       40.6635
@@ -25160,6 +25431,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08057",
+    "population": 1392,
+    "populationDensity": 0.33127584501032814,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08057",
@@ -25167,13 +25440,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Jefferson County",
-    "population": 579491,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.224,
       39.522000000000006
@@ -25182,6 +25462,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08059",
+    "population": 582881,
+    "populationDensity": 291.16145813395764,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08059",
@@ -25189,13 +25471,31 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+      }
+    ],
     "county": "Kiowa County",
-    "population": 1373,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.5882352941176471,
     "coordinates": [
       -102.7755,
       38.44
@@ -25204,6 +25504,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08061",
+    "population": 1406,
+    "populationDensity": 0.30275032528255535,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08061",
@@ -25211,13 +25513,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Kit Carson County",
-    "population": 7157,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.60499999999999,
       39.306
@@ -25226,6 +25535,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08063",
+    "population": 7097,
+    "populationDensity": 1.2644993640802757,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08063",
@@ -25233,13 +25544,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Lake County",
-    "population": 7762,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.36099999999999,
       39.2185
@@ -25248,6 +25566,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08065",
+    "population": 8127,
+    "populationDensity": 8.184438770651282,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08065",
@@ -25255,13 +25575,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "La Plata County",
-    "population": 56403,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.931,
       37.319500000000005
@@ -25270,6 +25597,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08067",
+    "population": 56221,
+    "populationDensity": 12.744522624385139,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08067",
@@ -25277,13 +25606,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Larimer County",
-    "population": 350362,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.56899999999999,
       40.628
@@ -25292,6 +25628,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08069",
+    "population": 356899,
+    "populationDensity": 52.27653637542146,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08069",
@@ -25299,13 +25637,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Las Animas County",
-    "population": 14491,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.11500000000001,
       37.405
@@ -25314,6 +25659,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08071",
+    "population": 14506,
+    "populationDensity": 1.1700759713725646,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08071",
@@ -25321,13 +25668,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Lincoln County",
-    "population": 5584,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.60499999999999,
       39.041
@@ -25336,6 +25690,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08073",
+    "population": 5701,
+    "populationDensity": 0.8484954401267204,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08073",
@@ -25343,13 +25699,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Logan County",
-    "population": 21854,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.1165,
       40.719
@@ -25358,6 +25721,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08075",
+    "population": 22409,
+    "populationDensity": 4.6809700535524295,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08075",
@@ -25365,13 +25730,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Mesa County",
-    "population": 153630,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.21950000000001,
       38.933499999999995
@@ -25380,6 +25752,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08077",
+    "population": 154210,
+    "populationDensity": 17.800477669122575,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08077",
@@ -25387,13 +25761,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Mineral County",
-    "population": 777,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.9195,
       37.6835
@@ -25402,6 +25783,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08079",
+    "population": 769,
+    "populationDensity": 0.3377122859549853,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08079",
@@ -25409,13 +25792,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Moffat County",
-    "population": 13181,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.1825,
       40.6115
@@ -25424,6 +25814,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08081",
+    "population": 13283,
+    "populationDensity": 1.0787420432189554,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08081",
@@ -25431,13 +25823,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Montezuma County",
-    "population": 26159,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.50800000000001,
       37.319500000000005
@@ -25446,6 +25845,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08083",
+    "population": 26183,
+    "populationDensity": 4.93841078474094,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08083",
@@ -25453,13 +25854,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Montrose County",
-    "population": 42260,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.28,
       38.4105
@@ -25468,6 +25876,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08085",
+    "population": 42758,
+    "populationDensity": 7.353672464568164,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08085",
@@ -25475,13 +25885,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Morgan County",
-    "population": 28503,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.8075,
       40.2625
@@ -25490,6 +25907,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08087",
+    "population": 29068,
+    "populationDensity": 8.62859381205803,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08087",
@@ -25497,13 +25916,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Otero County",
-    "population": 18364,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.7305,
       37.954499999999996
@@ -25512,6 +25938,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08089",
+    "population": 18278,
+    "populationDensity": 5.562322464185367,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08089",
@@ -25519,13 +25947,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Ouray County",
-    "population": 4798,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.8215,
       38.112
@@ -25534,6 +25969,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08091",
+    "population": 4952,
+    "populationDensity": 3.5281534986468177,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08091",
@@ -25541,13 +25978,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Park County",
-    "population": 18557,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.7695,
       39.131
@@ -25556,6 +26000,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08093",
+    "population": 18845,
+    "populationDensity": 3.285389599232493,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08093",
@@ -25563,13 +26009,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Phillips County",
-    "population": 4266,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.358,
       40.594
@@ -25578,6 +26031,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08095",
+    "population": 4265,
+    "populationDensity": 2.38697101400484,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08095",
@@ -25585,13 +26040,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Pitkin County",
-    "population": 17879,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.94550000000001,
       39.172
@@ -25600,6 +26062,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08097",
+    "population": 17767,
+    "populationDensity": 7.0452097969153336,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08097",
@@ -25607,13 +26071,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Prowers County",
-    "population": 12078,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.39500000000001,
       37.9565
@@ -25622,6 +26093,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08099",
+    "population": 12172,
+    "populationDensity": 2.8543681001190397,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08099",
@@ -25629,13 +26102,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Pueblo County",
-    "population": 167116,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.55250000000001,
       38.1285
@@ -25644,6 +26124,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08101",
+    "population": 168424,
+    "populationDensity": 27.035183471016754,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08101",
@@ -25651,13 +26133,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Rio Blanco County",
-    "population": 6305,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.04400000000001,
       39.9375
@@ -25666,6 +26155,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08103",
+    "population": 6324,
+    "populationDensity": 0.7565951265134719,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08103",
@@ -25673,13 +26164,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Rio Grande County",
-    "population": 11226,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.375,
       37.617000000000004
@@ -25688,6 +26186,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08105",
+    "population": 11267,
+    "populationDensity": 4.750762996125671,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08105",
@@ -25695,13 +26195,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Routt County",
-    "population": 25683,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.03450000000001,
       40.461
@@ -25710,6 +26217,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08107",
+    "population": 25638,
+    "populationDensity": 4.177488401653944,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08107",
@@ -25717,13 +26226,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Saguache County",
-    "population": 6837,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.215,
       38.102999999999994
@@ -25732,6 +26248,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08109",
+    "population": 6824,
+    "populationDensity": 0.8289060112546597,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08109",
@@ -25739,13 +26257,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "San Juan County",
-    "population": 762,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -107.714,
       37.8025
@@ -25754,6 +26279,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08111",
+    "population": 728,
+    "populationDensity": 0.7248609249263289,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08111",
@@ -25761,13 +26288,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "San Miguel County",
-    "population": 8177,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -108.388,
       37.9645
@@ -25776,6 +26310,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08113",
+    "population": 8179,
+    "populationDensity": 2.44069427348437,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08113",
@@ -25783,13 +26319,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Sedgwick County",
-    "population": 2275,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.352,
       40.876000000000005
@@ -25798,6 +26341,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08115",
+    "population": 2248,
+    "populationDensity": 1.5818859200163624,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08115",
@@ -25805,13 +26350,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Summit County",
-    "population": 30973,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -106.10749999999999,
       39.64149999999999
@@ -25820,6 +26372,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08117",
+    "population": 31011,
+    "populationDensity": 19.32481517469737,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08117",
@@ -25827,13 +26381,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Teller County",
-    "population": 25060,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -105.1345,
       38.889
@@ -25842,6 +26403,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08119",
+    "population": 25388,
+    "populationDensity": 17.522566838194106,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08119",
@@ -25849,13 +26412,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Washington County",
-    "population": 4729,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -103.2435,
       40.002
@@ -25864,6 +26434,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08121",
+    "population": 4908,
+    "populationDensity": 0.751808295911949,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08121",
@@ -25871,13 +26443,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Weld County",
-    "population": 314251,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -104.3155,
       40.501000000000005
@@ -25886,6 +26465,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08123",
+    "population": 324492,
+    "populationDensity": 31.157505276006212,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08123",
@@ -25893,13 +26474,20 @@
     "level": "county"
   },
   {
-    "state": "Colorado",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "curators": [
+      {
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
+      }
+    ],
     "county": "Yuma County",
-    "population": 10029,
-    "rating": 0.49019607843137253,
+    "state": "Colorado",
+    "rating": 0.6274509803921569,
     "coordinates": [
       -102.42699999999999,
       40.004
@@ -25908,6 +26496,8 @@
       "America/Denver"
     ],
     "featureId": "fips:08125",
+    "population": 10019,
+    "populationDensity": 1.6315212265682213,
     "countryId": "iso1:US",
     "stateId": "iso2:US-CO",
     "countyId": "fips:08125",
@@ -67114,7 +67704,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-22T14:15:00.000Z",
+    "publishedDate": "2020-07-23T13:45:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -110879,10 +111469,18 @@
     "level": "state"
   },
   {
-    "state": "Colorado",
     "country": "United States",
-    "aggregate": "county",
-    "url": "https://opendata.arcgis.com/datasets/7dd9bfa5607f4c70b2a7c9634ccdca53_0.csv",
+    "url": "https://covidtracking.com/api/v1/states/current.json",
+    "curators": [
+      {
+        "name": "The COVID Tracking Project",
+        "url": "https://covidtracking.com/",
+        "twitter": "@COVID19Tracking",
+        "github": "COVID19Tracking"
+      }
+    ],
+    "aggregate": "state",
+    "state": "Colorado",
     "rating": 0.49019607843137253,
     "coordinates": [
       -105.551,
@@ -120870,39 +121468,6 @@
     "level": "country"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Harju maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.837,
-      59.326499999999996
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-37",
-    "population": 589610,
-    "populationDensity": 137.89444709654776,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-37",
-    "name": "Harju maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Spain",
     "url": "https://github.com/datadista/datasets/tree/master/COVID%2019",
     "aggregate": "state",
@@ -122064,72 +122629,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Pärnu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.402,
-      58.322500000000005
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-67",
-    "population": 85756,
-    "populationDensity": 15.921256717601974,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-67",
-    "name": "Pärnu maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Tartu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.8035,
-      58.408
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-78",
-    "population": 151122,
-    "populationDensity": 37.50023578313599,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-78",
-    "name": "Tartu maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Ireland",
     "url": "http://opendata-geohive.hub.arcgis.com/datasets/d9be85b30d7748b5b7c09450b8aede63_0.csv?outSR={\"latestWkid\":3857,\"wkid\":102100}",
     "maintainers": [
@@ -123036,39 +123535,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Viljandi maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.5715,
-      58.323
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-84",
-    "population": 46782,
-    "populationDensity": 13.040580862383706,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-84",
-    "name": "Viljandi maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -123144,21 +123610,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Hlavní město Praha",
+    "state": "Ústecký kraj",
     "rating": 0.35294117647058826,
     "coordinates": [
-      14.476500000000001,
-      50.0625
+      13.799,
+      50.568
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-10",
-    "population": 1308632,
-    "populationDensity": 2638.415429617829,
+    "featureId": "iso2:CZ-42",
+    "population": 820789,
+    "populationDensity": 154.53213016548833,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-10",
-    "name": "Hlavní město Praha, Czechia",
+    "stateId": "iso2:CZ-42",
+    "name": "Ústecký kraj, Czechia",
     "level": "state"
   },
   {
@@ -123177,21 +123643,21 @@
         "flag": "🇨🇦"
       }
     ],
-    "state": "Ústecký kraj",
+    "state": "Hlavní město Praha",
     "rating": 0.35294117647058826,
     "coordinates": [
-      13.799,
-      50.568
+      14.476500000000001,
+      50.0625
     ],
     "tz": [
       "Europe/Prague"
     ],
-    "featureId": "iso2:CZ-42",
-    "population": 820789,
-    "populationDensity": 154.53213016548833,
+    "featureId": "iso2:CZ-10",
+    "population": 1308632,
+    "populationDensity": 2638.415429617829,
     "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-42",
-    "name": "Ústecký kraj, Czechia",
+    "stateId": "iso2:CZ-10",
+    "name": "Hlavní město Praha, Czechia",
     "level": "state"
   },
   {
@@ -123216,72 +123682,6 @@
     "countryId": "iso1:NL",
     "stateId": "iso2:NL-DR",
     "name": "Drenthe, Netherlands",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Jõgeva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.558,
-      58.7695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-49",
-    "population": 29119,
-    "populationDensity": 10.112271027239142,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-49",
-    "name": "Jõgeva maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Rapla maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      24.7025,
-      58.94
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-70",
-    "population": 33299,
-    "populationDensity": 12.042274483126223,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-70",
-    "name": "Rapla maakond, Estonia",
     "level": "state"
   },
   {
@@ -123474,72 +123874,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Saare maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      22.625,
-      58.298
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-74",
-    "population": 33231,
-    "populationDensity": 11.612968568944595,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-74",
-    "name": "Saare maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Järva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      25.607,
-      58.935
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-51",
-    "population": 30661,
-    "populationDensity": 11.550941545367971,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-51",
-    "name": "Järva maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -123594,105 +123928,6 @@
     "countryId": "iso1:AT",
     "stateId": "iso2:AT-2",
     "name": "Carinthia, Austria",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Võru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.101,
-      57.8155
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-86",
-    "population": 36133,
-    "populationDensity": 12.942964863182764,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-86",
-    "name": "Võru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.2485,
-      59.2525
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-59",
-    "population": 59791,
-    "populationDensity": 16.235133573539763,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-59",
-    "name": "Lääne-Viru maakond, Estonia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Valga maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      26.1025,
-      57.867000000000004
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-82",
-    "population": 28669,
-    "populationDensity": 14.907616349489446,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-82",
-    "name": "Valga maakond, Estonia",
     "level": "state"
   },
   {
@@ -124140,39 +124375,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Lääne maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      23.6545,
-      58.9815
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-57",
-    "population": 20646,
-    "populationDensity": 11.561413263468216,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-57",
-    "name": "Lääne maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Austria",
     "url": "https://info.gesundheitsministerium.at/data/GenesenTodesFaelleBL.js",
     "maintainers": [
@@ -124278,6 +124480,39 @@
         "flag": "🇨🇦"
       }
     ],
+    "state": "Středočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.4665,
+      50.058
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-20",
+    "population": 1369332,
+    "populationDensity": 125.5142885649874,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-20",
+    "name": "Středočeský kraj, Czechia",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
     "state": "Olomouc Region",
     "rating": 0.35294117647058826,
     "coordinates": [
@@ -124326,72 +124561,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-52",
     "name": "Královéhradecký kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Středočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.4665,
-      50.058
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-20",
-    "population": 1369332,
-    "populationDensity": 125.5142885649874,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-20",
-    "name": "Středočeský kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Hiiu maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      22.561,
-      58.887
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-39",
-    "population": 9387,
-    "populationDensity": 9.22552677515442,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-39",
-    "name": "Hiiu maakond, Estonia",
     "level": "state"
   },
   {
@@ -124917,39 +125086,6 @@
     "level": "state"
   },
   {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Ida-Viru maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.456000000000003,
-      59.1295
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-44",
-    "population": 138266,
-    "populationDensity": 40.16576598003955,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-44",
-    "name": "Ida-Viru maakond, Estonia",
-    "level": "state"
-  },
-  {
     "country": "Netherlands",
     "url": "https://github.com/J535D165/CoronaWatchNL",
     "sources": [
@@ -124999,6 +125135,39 @@
     "countryId": "iso1:CA",
     "stateId": "iso2:CA-NU",
     "name": "Nunavut, Canada",
+    "level": "state"
+  },
+  {
+    "country": "Czechia",
+    "url": "https://onemocneni-aktualne.mzcr.cz/",
+    "sources": [
+      {
+        "url": "https://onemocneni-aktualne.mzcr.cz/",
+        "name": "Ministry of Health of the Czech Republic"
+      }
+    ],
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "state": "Jihočeský kraj",
+    "rating": 0.35294117647058826,
+    "coordinates": [
+      14.5695,
+      49.085499999999996
+    ],
+    "tz": [
+      "Europe/Prague"
+    ],
+    "featureId": "iso2:CZ-31",
+    "population": 642133,
+    "populationDensity": 63.81153400322205,
+    "countryId": "iso1:CZ",
+    "stateId": "iso2:CZ-31",
+    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {
@@ -125098,39 +125267,6 @@
     "countryId": "iso1:CZ",
     "stateId": "iso2:CZ-51",
     "name": "Liberecký kraj, Czechia",
-    "level": "state"
-  },
-  {
-    "country": "Czechia",
-    "url": "https://onemocneni-aktualne.mzcr.cz/",
-    "sources": [
-      {
-        "url": "https://onemocneni-aktualne.mzcr.cz/",
-        "name": "Ministry of Health of the Czech Republic"
-      }
-    ],
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "state": "Jihočeský kraj",
-    "rating": 0.35294117647058826,
-    "coordinates": [
-      14.5695,
-      49.085499999999996
-    ],
-    "tz": [
-      "Europe/Prague"
-    ],
-    "featureId": "iso2:CZ-31",
-    "population": 642133,
-    "populationDensity": 63.81153400322205,
-    "countryId": "iso1:CZ",
-    "stateId": "iso2:CZ-31",
-    "name": "Jihočeský kraj, Czechia",
     "level": "state"
   },
   {
@@ -125819,39 +125955,6 @@
     "countryId": "iso1:DE",
     "stateId": "iso2:DE-TH",
     "name": "Thuringia, Germany",
-    "level": "state"
-  },
-  {
-    "country": "Estonia",
-    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
-    "maintainers": [
-      {
-        "name": "Quentin Golsteyn",
-        "github": "qgolsteyn",
-        "flag": "🇨🇦"
-      }
-    ],
-    "sources": [
-      {
-        "name": "Estonia Health and Welfare Information Systems Center",
-        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
-      }
-    ],
-    "state": "Põlva maakond",
-    "rating": 0.43137254901960786,
-    "coordinates": [
-      27.085,
-      58.1695
-    ],
-    "tz": [
-      "Europe/Tallinn"
-    ],
-    "featureId": "iso2:EE-65",
-    "population": 25290,
-    "populationDensity": 12.82820102293302,
-    "countryId": "iso1:EE",
-    "stateId": "iso2:EE-65",
-    "name": "Põlva maakond, Estonia",
     "level": "state"
   },
   {
@@ -140720,5 +140823,500 @@
     "countyId": "fips:72049",
     "name": "Culebra Municipio, Puerto Rico, United States",
     "level": "county"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Tartu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.8035,
+      58.408
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-78",
+    "population": 151122,
+    "populationDensity": 37.50023578313599,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-78",
+    "name": "Tartu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Harju maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.837,
+      59.326499999999996
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-37",
+    "population": 589610,
+    "populationDensity": 137.89444709654776,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-37",
+    "name": "Harju maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Viljandi maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.5715,
+      58.323
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-84",
+    "population": 46782,
+    "populationDensity": 13.040580862383706,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-84",
+    "name": "Viljandi maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Valga maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.1025,
+      57.867000000000004
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-82",
+    "population": 28669,
+    "populationDensity": 14.907616349489446,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-82",
+    "name": "Valga maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Võru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.101,
+      57.8155
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-86",
+    "population": 36133,
+    "populationDensity": 12.942964863182764,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-86",
+    "name": "Võru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Pärnu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.402,
+      58.322500000000005
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-67",
+    "population": 85756,
+    "populationDensity": 15.921256717601974,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-67",
+    "name": "Pärnu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Jõgeva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.558,
+      58.7695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-49",
+    "population": 29119,
+    "populationDensity": 10.112271027239142,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-49",
+    "name": "Jõgeva maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      23.6545,
+      58.9815
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-57",
+    "population": 20646,
+    "populationDensity": 11.561413263468216,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-57",
+    "name": "Lääne maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Saare maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      22.625,
+      58.298
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-74",
+    "population": 33231,
+    "populationDensity": 11.612968568944595,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-74",
+    "name": "Saare maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Lääne-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      26.2485,
+      59.2525
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-59",
+    "population": 59791,
+    "populationDensity": 16.235133573539763,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-59",
+    "name": "Lääne-Viru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Põlva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.085,
+      58.1695
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-65",
+    "population": 25290,
+    "populationDensity": 12.82820102293302,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-65",
+    "name": "Põlva maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Ida-Viru maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      27.456000000000003,
+      59.1295
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-44",
+    "population": 138266,
+    "populationDensity": 40.16576598003955,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-44",
+    "name": "Ida-Viru maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Rapla maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      24.7025,
+      58.94
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-70",
+    "population": 33299,
+    "populationDensity": 12.042274483126223,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-70",
+    "name": "Rapla maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Hiiu maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      22.561,
+      58.887
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-39",
+    "population": 9387,
+    "populationDensity": 9.22552677515442,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-39",
+    "name": "Hiiu maakond, Estonia",
+    "level": "state"
+  },
+  {
+    "country": "Estonia",
+    "url": "https://opendata.digilugu.ee/opendata_covid19_test_results.csv",
+    "maintainers": [
+      {
+        "name": "Quentin Golsteyn",
+        "github": "qgolsteyn",
+        "flag": "🇨🇦"
+      }
+    ],
+    "sources": [
+      {
+        "name": "Estonia Health and Welfare Information Systems Center",
+        "url": "https://www.terviseamet.ee/et/koroonaviirus/avaandmed"
+      }
+    ],
+    "state": "Järva maakond",
+    "rating": 0.43137254901960786,
+    "coordinates": [
+      25.607,
+      58.935
+    ],
+    "tz": [
+      "Europe/Tallinn"
+    ],
+    "featureId": "iso2:EE-51",
+    "population": 30661,
+    "populationDensity": 11.550941545367971,
+    "countryId": "iso1:EE",
+    "stateId": "iso2:EE-51",
+    "name": "Järva maakond, Estonia",
+    "level": "state"
   }
 ]
