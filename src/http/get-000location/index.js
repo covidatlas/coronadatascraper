@@ -55,9 +55,14 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `<div class="row">
     <div class="col-xs-12 col-sm-6">`;
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Updated: ${lastDate}</p>`;
+
+  // TODO (covidatlas) Determine what to use for single contributor link
+  /*
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
     location
   )}</p>`;
+  */
+
   html += `</div>
     <div class="col-xs-12 col-sm-6 end-sm">
       <!-- todo: make this responsive, dropdown menu on mobile -->
@@ -123,14 +128,18 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   <div class="row">
 `;
 
-  html += `
+  // TODO (covidatlas) rating temporarily disabled.
+  if (rating) {
+    html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
       <p class="spectrum-Body spectrum-Body--S">Our <a class="spectrum-Link" href="/sources">data transparency rating</a> is based on the granularity, completeness, and technical format of this data source.</p>
       ${ratingTemplate(rating)}
     </section>
 `;
+  }
 
+  // TODO (covidatlas) crosscheckReport temporarily disabled.
   if (crosscheckReport) {
     html += `
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
@@ -175,6 +184,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   return html;
 }
 
+// eslint-disable-next-line
 function locationMatches(a, b) {
   return a.country === b.country && a.state === b.state && a.county === b.county && a.city === b.city;
 }
@@ -192,8 +202,13 @@ async function route(req) {
   location.slug = slug;
   parentLocation.slug = getSlug(parentLocation);
 
-  const rating = ratings.find(rating => location.url === rating.url);
-  const crosscheckReport = report.scrape.crosscheckReports.find(report => locationMatches(location, report.location));
+  // TODO (covidatlas) disabling rating until we determine what to do.
+  // const rating = ratings.find(rating => location.url === rating.url);
+  const rating = null;
+
+  // TODO (covidatlas) disabling crosscheckReport until we determine what to do.
+  // const crosscheckReport = report.scrape.crosscheckReports.find(report => locationMatches(location, report.location));
+  const crosscheckReport = null;
 
   // Display the information for the location
   return {
