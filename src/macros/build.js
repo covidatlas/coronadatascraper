@@ -23,6 +23,7 @@ function buildBarebonesLocationMap(locations) {
   locations.forEach((location, index) => {
     locationMap[location.slug] = {
       id: index,
+      locationID: location.locationID,
       name: locationFullName(location)
     };
   });
@@ -37,7 +38,7 @@ function getSkinnyLocation(location) {
     county: location.countyName,
     state: location.stateName,
     country: location.countryName,
-    featureId: location.locationID
+    locationID: location.locationID
   };
 }
 
