@@ -22,7 +22,7 @@
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
 
-    "start": "echo === DISABLED === && echo Run 'yarn timeseries' to pull down reports from Li. && echo Use 'yarn start-old' to run CDS scrapers.",
+    "start": "echo === DISABLED === && echo Use 'yarn timeseries-li' to pull down reports from Li. && echo Use 'yarn start-old' to run CDS scrapers.",
     "start-old": "node src/shared/cli/index.js",
 
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
@@ -32,7 +32,8 @@
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "tape scripts/test-timezones.js | tap-spec",
 
-    "timeseries": "echo === DISABLED === && echo Downloading Li reports s3 instead && echo Use yarn timeseries-old to run old scripts. && echo && scripts/download-li-s3-reports-to-dist.sh",
+    "timeseries": "echo === DISABLED === && echo Use 'yarn timeseries-li' to download Li S3 reports to dist && echo Use 'yarn timeseries-old' to run old scripts",
+    "timeseries-li": "echo && scripts/download-li-s3-reports-to-dist.sh",
     "timeseries-old": "node src/shared/timeseries/index.js",
 
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
