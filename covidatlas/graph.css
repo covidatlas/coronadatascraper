@@ -1,29 +1,182 @@
-/*
+.graph-container {
+  --graph-color-cases: var(--SemanticWarningTextColor);
+  --graph-color-deaths: var(--SemanticNegativeTextColor);
+  --graph-color-recovered: var(--SemanticPositiveTextColor);
+  --graph-color-active: var(--spectrum-heading-l-text-color);
+  --graph-color-tested: steelblue;
+  --graph-color-hospitalized: yellow;
+}
+
 .ca-Graph {
-  height: 250px;
+  height: 320px;
   width: 100%;
+  overflow: auto;
+  position: relative;
 }
 
-.ca-Graph-line {
+.graph-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph-button-container-overview,
+.graph-button-container-daily {
+  padding: 5px 20px;
+}
+
+.graph-btn-disabled {
+  opacity: 0.5;
+}
+
+/**********
+Graph colors
+**********/
+
+.graph-line {
   fill: none;
-  stroke: steelblue;
-  stroke-width: 2px;
-}
-*/
-
-#graph-elements {
-  width: 100%;
-  height: 400px;
-  visibility: hidden;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
-#graph-container {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  outline: 0;
+.graph-circle:hover {
+  cursor: pointer;
 }
 
-#graph {
+.graph-line-cases {
+  /* Stroke for line on graph */
+  stroke: var(--graph-color-cases);
+  /* bg color for graph legend color */
+  background-color: var(--graph-color-cases);
+  mix-blend-mode: multiply;
+  /* color: var(--graph-color-cases); */
+}
+
+.graph-circle-cases {
+  fill: var(--graph-color-cases);
+}
+
+.graph-line-deaths {
+  stroke: var(--graph-color-deaths);
+  background-color: var(--graph-color-deaths);
+  mix-blend-mode: multiply;
+}
+.graph-circle-deaths {
+  fill: var(--graph-color-deaths);
+}
+
+.graph-line-recovered {
+  stroke: var(--graph-color-recovered);
+  background-color: var(--graph-color-recovered);
+  mix-blend-mode: multiply;
+}
+.graph-circle-recovered {
+  fill: var(--graph-color-recovered);
+}
+
+.graph-line-active {
+  stroke: var(--graph-color-active);
+  background-color: var(--graph-color-active);
+  mix-blend-mode: multiply;
+}
+.graph-circle-active {
+  fill: var(--graph-color-active);
+}
+
+.graph-line-hospitalized {
+  stroke: var(--graph-color-hospitalized);
+  background-color: var(--graph-color-hospitalized);
+  mix-blend-mode: multiply;
+}
+
+.graph-circle-hospitalized {
+  fill: var(--graph-color-hospitalized);
+}
+
+.graph-line-tested {
+  stroke: var(--graph-color-tested);
+  background-color: var(--graph-color-tested);
+  mix-blend-mode: multiply;
+}
+
+.graph-circle-tested {
+  fill: var(--graph-color-tested);
+}
+
+/**********
+Axis
+**********/
+
+/* Tick styling on axises */
+#graph > * g .tick {
+  font-size: 14px;
+  font-family: var(--spectrum-component-text-font-family);
+}
+
+.graph-grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.6;
+  shape-rendering: crispEdges;
+}
+
+.graph-grid path {
+  stroke-width: 0;
+}
+
+/**********
+Legend
+**********/
+
+.graph-legend {
+  padding: 5px;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  background-color: #f9f7f7;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.graph-legend-key-container {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.graph-legend-color {
+  height: 15px;
+  width: 15px;
+}
+
+.graph-legend-key-name {
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.graph-legend-key-name:hover {
+  text-decoration: underline;
+}
+
+/**********
+Tooltip
+**********/
+
+.graph-tooltip {
+  background-color: rgba(216, 216, 216, 0.7);
+  /* width: 200px; */
+  /* min-height: 150px; */
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.graph-tooltip-title {
+  text-align: center;
+  /* color: steelblue; */
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.graph-tooltip > p {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
