@@ -1912,7 +1912,7 @@
         "name": "Public Health Agency of Sweden"
       }
     ],
-    "rating": 0.2549019607843137,
+    "rating": 0.17647058823529413,
     "coordinates": [
       17.634999999999998,
       62.1985
@@ -6828,7 +6828,7 @@
       }
     ],
     "state": "Bloke",
-    "rating": 0.17647058823529413,
+    "rating": 0.21568627450980393,
     "coordinates": [
       14.514,
       45.786500000000004
@@ -8974,7 +8974,7 @@
         "flag": "🇰🇷"
       }
     ],
-    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-24",
+    "url": "https://api-covid19.rnbo.gov.ua/data?to=2020-07-25",
     "state": "Kyiv",
     "rating": 0.49019607843137253,
     "coordinates": [
@@ -60826,31 +60826,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Lake of the Woods County",
     "state": "Minnesota",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -94.886,
       48.875
@@ -67701,7 +67690,7 @@
         "flag": "🇺🇸"
       }
     ],
-    "publishedDate": "2020-07-24T13:45:00.000Z",
+    "publishedDate": "2020-07-25T15:30:00.000Z",
     "rating": 0.5098039215686274,
     "coordinates": [
       -90.42699999999999,
@@ -70498,20 +70487,31 @@
     "level": "county"
   },
   {
-    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
+    "maintainers": [
+      {
+        "name": "Larry Davis",
+        "email": "lazdnet@gmail.com",
+        "twitter": "lazdnet",
+        "github": "lazd",
+        "country": "iso1:US",
+        "state": "CA",
+        "county": "San Francisco",
+        "city": "San Francisco",
+        "flag": "🇺🇸"
+      }
+    ],
+    "url": "https://github.com/CSSEGISandData/COVID-19",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "The New York Times",
-        "url": "http://nytimes.com/",
-        "twitter": "@nytimes",
-        "github": "nytimes"
+        "name": "JHU CSSE",
+        "url": "https://systems.jhu.edu/research/public-health/ncov/"
       }
     ],
     "county": "Dundy County",
     "state": "Nebraska",
-    "rating": 0.6274509803921569,
+    "rating": 0.5882352941176471,
     "coordinates": [
       -101.6875,
       40.176500000000004
@@ -72506,31 +72506,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Wheeler County",
     "state": "Nebraska",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -98.52799999999999,
       41.914500000000004
@@ -106671,31 +106660,20 @@
     "level": "county"
   },
   {
-    "maintainers": [
-      {
-        "name": "Larry Davis",
-        "email": "lazdnet@gmail.com",
-        "twitter": "lazdnet",
-        "github": "lazd",
-        "country": "iso1:US",
-        "state": "CA",
-        "county": "San Francisco",
-        "city": "San Francisco",
-        "flag": "🇺🇸"
-      }
-    ],
-    "url": "https://github.com/CSSEGISandData/COVID-19",
+    "url": "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv",
     "country": "United States",
     "aggregate": "county",
     "curators": [
       {
-        "name": "JHU CSSE",
-        "url": "https://systems.jhu.edu/research/public-health/ncov/"
+        "name": "The New York Times",
+        "url": "http://nytimes.com/",
+        "twitter": "@nytimes",
+        "github": "nytimes"
       }
     ],
     "county": "Doddridge County",
     "state": "West Virginia",
-    "rating": 0.5882352941176471,
+    "rating": 0.6274509803921569,
     "coordinates": [
       -80.72,
       39.2705
@@ -113099,7 +113077,7 @@
     ],
     "state": "New South Wales",
     "url": "https://www.health.nsw.gov.au/_layouts/feed.aspx?xsl=1&web=/news&page=4ac47e14-04a9-4016-b501-65a23280e841&wp=baabf81e-a904-44f1-8d59-5f6d56519965&pageurl=/news/Pages/rss-nsw-health.aspx",
-    "rating": 0.35294117647058826,
+    "rating": 0.27450980392156865,
     "coordinates": [
       147.3115,
       -32.831
