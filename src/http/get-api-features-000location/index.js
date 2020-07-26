@@ -13,8 +13,7 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 
 async function route(req) {
   const { location } = req;
-  const level = req.queryStringParameters.level || location.level;
-  const childLocations = getChildLocations(location, Object.values(locationMap), level);
+  const childLocations = getChildLocations(location, Object.values(locationMap));
   const subFeatureCollection = filterFeatureCollectionByLocations(featureCollection, childLocations);
 
   return {

@@ -14,9 +14,7 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 
 async function route(req) {
   const { location } = req;
-  const level = req.queryStringParameters.level || location.level;
-  const childLocations = getChildLocations(location, Object.values(locations), level);
-  const subTimeseries = filterTimeseriesByLocations(timeseries, childLocations);
+  const subTimeseries = filterTimeseriesByLocations(timeseries, location);
 
   return {
     headers: {

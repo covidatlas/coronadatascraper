@@ -11,7 +11,7 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { levels, getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
+const { levels, getName, getParentLocation } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
@@ -36,7 +36,7 @@ function renderBreadcrumbs(location) {
   for (const level of levels.slice().reverse()) {
     if (location[level]) {
       obj[level] = location[level];
-      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${getSlug(obj)}">${location[level]}</a>`);
+      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${obj[level].slug}">${location[level]}</a>`);
     }
   }
   return htmlBits.reverse().join(', ');
@@ -55,9 +55,14 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   html += `<div class="row">
     <div class="col-xs-12 col-sm-6">`;
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Updated: ${lastDate}</p>`;
+
+  // TODO (covidatlas) Determine what to use for single contributor link
+  /*
   html += `<p class="spectrum-Body spectrum-Body--XS ca-LocationMeta">Data from ${getSingleContributorLink(
     location
   )}</p>`;
+  */
+
   html += `</div>
     <div class="col-xs-12 col-sm-6 end-sm">
       <!-- todo: make this responsive, dropdown menu on mobile -->
@@ -113,24 +118,31 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
+  </div>`;
+
+  // TODO (covidatlas) map temporarily disabled during cutover to Li.
+  html += `<div class="row">
     <div class="col-xs-12 col-md-12">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Regional map</h1>
-      <div id="map" class="ca-Map"></div>
+      <!--  DISABLED, leaving outer div b/c page layout is messed up without it.
+        <h2 class="spectrum-Heading spectrum-Heading--M">Regional map</h1>
+        <div id="map" class="ca-Map"></div>
+      -->
     </div>
   </div>
-  <div class="row">
-`;
+  <div class="row">`;
 
-  html += `
+  // TODO (covidatlas) rating temporarily disabled during cutover to Li.
+  if (rating) {
+    html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
       <h4 class="spectrum-Heading spectrum-Heading--S">Data source rating</h4>
       <p class="spectrum-Body spectrum-Body--S">Our <a class="spectrum-Link" href="/sources">data transparency rating</a> is based on the granularity, completeness, and technical format of this data source.</p>
       ${ratingTemplate(rating)}
     </section>
 `;
+  }
 
+  // TODO (covidatlas) crosscheckReport temporarily disabled during cutover to Li.
   if (crosscheckReport) {
     html += `
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">
@@ -175,25 +187,27 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
   return html;
 }
 
+// eslint-disable-next-line
 function locationMatches(a, b) {
-  return a.country === b.country && a.state === b.state && a.county === b.county && a.city === b.city;
+  return a.locationID === b.locationID;
 }
 
 async function route(req) {
   // Get latest information from timeseries
-  const { location, slug } = req;
+  const { location } = req;
   const lastDate = Object.keys(timeseries).pop();
   const caseInfo = timeseries[lastDate][location.id];
 
   // Get parent location
   const parentLocation = getParentLocation(location, locationMap) || location;
 
-  // Add slugs
-  location.slug = slug;
-  parentLocation.slug = getSlug(parentLocation);
+  // TODO (covidatlas) disabling rating until we determine what to do.
+  // const rating = ratings.find(rating => location.url === rating.url);
+  const rating = null;
 
-  const rating = ratings.find(rating => location.url === rating.url);
-  const crosscheckReport = report.scrape.crosscheckReports.find(report => locationMatches(location, report.location));
+  // TODO (covidatlas) disabling crosscheckReport until we determine what to do.
+  // const crosscheckReport = report.scrape.crosscheckReports.find(report => locationMatches(location, report.location));
+  const crosscheckReport = null;
 
   // Display the information for the location
   return {

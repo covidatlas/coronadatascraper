@@ -12,23 +12,30 @@
   "scripts": {
     "devcovidatlas": "npx arc sandbox & npx rollup -c covidatlas.rollup.config.js --watch",
     "buildcovidatlas": "npx rollup -c covidatlas.rollup.config.js",
+
     "dev": "npx rollup -c --watch",
     "build": "npx yarn start && npx yarn timeseries && npx yarn buildSite",
     "buildSite": "npx rollup -c",
-    "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/data.json dist/data-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/data.csv dist/data-$DATE.csv",
+    "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/latest.json dist/latest-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/latest.csv dist/latest-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
-    "deploySite": "cd dist && zip -r timeseries-tidy.csv.zip timeseries-tidy.csv && rm timeseries-tidy.csv && cd .. && yarn publishSite",
+    "deploySite": "yarn publishSite",
     "publishSite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
-    "start": "node src/shared/cli/index.js",
+
+    "start": "echo === DISABLED === && echo Use 'yarn timeseries-li' to pull down reports from Li. && echo Use 'yarn start-old' to run CDS scrapers.",
+    "start-old": "node src/shared/cli/index.js",
+
     "qa": "pta ./src/qa/*.qa.js -r log | node src/qa/utils/qa-reporter.js",
     "test": "tape tests/**/*-test.js | tap-spec",
     "test:unit": "tape tests/unit/**/*-test.js | tap-spec",
     "test:integration": "tape tests/integration/**/*-test.js | tap-spec",
     "test:watch": "tape-watch tests/**/*-test.js -p tap-spec",
     "test:tz": "tape scripts/test-timezones.js | tap-spec",
-    "timeseries": "node src/shared/timeseries/index.js",
+
+    "timeseries": "echo && scripts/download-li-s3-reports-to-dist.sh",
+    "timeseries-old": "node src/shared/timeseries/index.js",
+
     "update": "npm run updateModules && rm -rf cache/* && npm run start",
     "updateModules": "git submodule update --remote",
     "pretty": "prettier --write '**/*.js'"

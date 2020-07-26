@@ -1,13 +1,4 @@
-const levelOrder = (module.exports.levels = ['city', 'county', 'state', 'country']);
-
-const getSlug = (module.exports.getSlug = function(location) {
-  return levelOrder
-    .map(level => location[level])
-    .filter(Boolean)
-    .join(' ')
-    .replace(/(\s|,)+/g, '-')
-    .toLowerCase();
-});
+module.exports.levels = ['city', 'county', 'state', 'country'];
 
 /** Get the full name of a location
  * @param {{ city: string?; county: string?; state: string?; country: string?; }} location
@@ -47,89 +38,29 @@ module.exports.getLocationGranularityName = function(location) {
   return 'none';
 };
 
-const childLevelOrder = levelOrder.slice().reverse();
-module.exports.getChildLocations = function(location, locations, matchLevel) {
-  const subLocations = [];
-
+const getChildLocations = (module.exports.getChildLocations = function(location, locations) {
   // Find all its children
-  const locationLevel = location.level;
-  const index = childLevelOrder.indexOf(locationLevel);
-
-  const mustMatch = childLevelOrder.slice(0, index + 1);
-
-  for (const otherLocation of Object.values(locations)) {
-    let matches = true;
-    if (matchLevel) {
-      if (otherLocation.level !== matchLevel) {
-        continue;
-      }
-    }
-    for (const field of mustMatch) {
-      if (otherLocation[field] !== location[field]) {
-        matches = false;
-        break;
-      }
-    }
-    if (matches) {
-      // Ensure slug is present
-      otherLocation.slug = getSlug(otherLocation);
-      subLocations.push(otherLocation);
-    }
-  }
-
-  return subLocations;
-};
-
-const parentLevelOrder = levelOrder.concat(['world']);
-const getParentLevel = (module.exports.getParentLevel = function(level) {
-  return parentLevelOrder[Math.min(parentLevelOrder.indexOf(level) + 1, parentLevelOrder.length - 1)];
+  return Object.values(locations)
+    .filter(loc => loc.locationID !== location.locationID)
+    .filter(loc => loc.locationID.startsWith(location.locationID));
 });
 
-module.exports.getParentLocation = function(location, locations) {
-  const parentLevel = getParentLevel(location.level);
-  const index = parentLevelOrder.indexOf(parentLevel);
-  const mustMatch = parentLevelOrder.slice(index, -1);
-
-  const parentLocation = Object.values(locations).find(otherLocation => {
-    if (otherLocation.level !== parentLevel) {
-      return false;
-    }
-
-    let matches = true;
-    for (const field of mustMatch) {
-      if (otherLocation[field] !== location[field]) {
-        matches = false;
-        break;
-      }
-    }
-    return matches;
-  });
-
-  // Ensure slug is present
-  if (parentLocation) {
-    parentLocation.slug = getSlug(parentLocation);
-  }
-
-  return parentLocation;
-};
+const getParentLocation = (module.exports.getParentLocation = function(location, locations) {
+  const parts = location.locationID.split('#');
+  parts.pop(); // Remove the last element
+  const parentLocID = parts.join('#');
+  return Object.values(locations).find(loc => loc.locationID === parentLocID);
+});
 
 module.exports.getSiblingLocations = function(location, locations) {
-  const { level } = location;
-  const parentLevel = getParentLevel(level);
-
-  if (parentLevel === 'world') {
+  const parentLoc = getParentLocation(location, locations);
+  if (!parentLoc) {
     console.log('Will not look for siblings of %s', location.name);
     // Ideally, we find adjacent countries
     // Since this is not yet handled, just return the location
     return [location];
   }
 
-  return Object.values(locations)
-    .filter(otherLocation => {
-      return otherLocation.level === level && otherLocation[parentLevel] === location[parentLevel];
-    })
-    .map(matchingLocation => {
-      matchingLocation.slug = getSlug(matchingLocation);
-      return matchingLocation;
-    });
+  const childLocs = getChildLocations(parentLoc, locations);
+  return childLocs.filter(loc => loc.locationID !== location.locationID);
 };

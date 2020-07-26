@@ -2,58 +2,57 @@ const imports = require('esm')(module);
 
 const lunr = imports('lunr');
 const fs = imports('../shared/lib/fs.js');
-const geography = imports('../views/lib/geography.js');
+
+function locationFullName(location) {
+  const parts = [location.cityName, location.countyName, location.stateName, location.countryName];
+  return parts.filter(s => s).join(', ');
+}
 
 function buildLocationMap(locations) {
   const locationMap = {};
-  for (const [id, location] of Object.entries(locations)) {
-    const shortName = geography.getSlug(location);
-    location.id = id;
-    locationMap[shortName] = location;
-  }
+  locations.forEach((location, index) => {
+    location.id = index;
+    location.name = locationFullName(location);
+    location.featureID = location.locationID;
+    locationMap[location.slug] = location;
+  });
   return locationMap;
-}
-
-function getBarebonesLocation(location) {
-  return {
-    name: location.name
-  };
 }
 
 function buildBarebonesLocationMap(locations) {
   const locationMap = {};
-
-  for (const [id, location] of Object.entries(locations)) {
-    locationMap[geography.getSlug(location)] = {
-      id,
-      ...getBarebonesLocation(location)
+  locations.forEach((location, index) => {
+    locationMap[location.slug] = {
+      id: index,
+      locationID: location.locationID,
+      featureID: location.locationID,
+      name: locationFullName(location)
     };
-  }
-
+  });
   return locationMap;
 }
 
 function getSkinnyLocation(location) {
   return {
-    name: location.name,
+    name: locationFullName(location),
     level: location.level,
-    city: location.city,
-    county: location.county,
-    state: location.state,
-    country: location.country,
-    featureId: location.featureId
+    city: location.cityName,
+    county: location.countyName,
+    state: location.stateName,
+    country: location.countryName,
+    featureID: location.locationID,
+    locationID: location.locationID
   };
 }
 
 function buildSkinnyLocationMap(locations) {
   const locationMap = {};
-
-  for (const [id, location] of Object.entries(locations)) {
-    locationMap[geography.getSlug(location)] = {
-      id,
+  locations.forEach((location, index) => {
+    locationMap[location.slug] = {
+      id: index,
       ...getSkinnyLocation(location)
     };
-  }
+  });
 
   return locationMap;
 }
@@ -62,12 +61,9 @@ async function buildIndex(locations) {
   const index = lunr(function() {
     this.ref('slug');
     this.field('name');
-
     locations.forEach(function(location) {
-      const slug = geography.getSlug(location);
-
       this.add({
-        slug,
+        slug: location.slug,
         ...getSkinnyLocation(location)
       });
     }, this);
