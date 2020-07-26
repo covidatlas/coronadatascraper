@@ -118,17 +118,20 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
+  </div>`;
+
+  // TODO (covidatlas) map temporarily disabled during cutover to Li.
+  html += `<div class="row">
     <div class="col-xs-12 col-md-12">
-      <h2 class="spectrum-Heading spectrum-Heading--M">Regional map</h1>
-      <div id="map" class="ca-Map"></div>
+      <!--  DISABLED, leaving outer div b/c page layout is messed up without it.
+        <h2 class="spectrum-Heading spectrum-Heading--M">Regional map</h1>
+        <div id="map" class="ca-Map"></div>
+      -->
     </div>
   </div>
-  <div class="row">
-`;
+  <div class="row">`;
 
-  // TODO (covidatlas) rating temporarily disabled.
+  // TODO (covidatlas) rating temporarily disabled during cutover to Li.
   if (rating) {
     html += `
     <section class="ca-SubSection col-xs-12 col-sm-6 col-md-4">
@@ -139,7 +142,7 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
 `;
   }
 
-  // TODO (covidatlas) crosscheckReport temporarily disabled.
+  // TODO (covidatlas) crosscheckReport temporarily disabled during cutover to Li.
   if (crosscheckReport) {
     html += `
       <section class="ca-SubSection col-xs-12 col-sm-6 col-md-8">

@@ -10,15 +10,14 @@ const { getChildLocations } = require('@architect/views/lib/geography');
 
 async function route(req) {
   const { location } = req;
-  const level = req.queryStringParameters.level || location.level;
-  const childLocations = getChildLocations(location, locationMap, level);
-
+  const childLocations = getChildLocations(location, locationMap);
+  const allLocations = childLocations.concat(location);
   return {
     headers: {
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
       'content-type': 'application/json; charset=utf8'
     },
-    body: JSON.stringify(childLocations)
+    body: JSON.stringify(allLocations)
   };
 }
 
