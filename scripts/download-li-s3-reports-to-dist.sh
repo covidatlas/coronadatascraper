@@ -8,7 +8,6 @@
 # moment Li doesn't create a corresponding file.
 
 echo 'Replacing existing reports in dist with all reports downloaded from li s3.'
-echo "Note: paths are HARD-CODED to staging buckets currently!"
 echo
 
 # Bucket names pulled from Li aws.
@@ -19,11 +18,11 @@ rm -rf dist
 mkdir -p dist
 pushd dist
 
-bucketName="$stagingBucket"
+bucketName="$productionBucket"
 key=v1/latest
 
 echo "pulling files from ${bucketName}/${key}"
-for f in timeseries.json features.json locations.json; do
+for f in latest.csv latest.json timeseries.json features.json locations.json timeseries-byLocation.json timeseries.csv timeseries-jhu.csv; do
     echo "  $f"
     aws --no-sign-request --region=us-west-1 s3 cp s3://${bucketName}/${key}/${f} .
 done
