@@ -11,7 +11,7 @@ const footer = require('@architect/views/footer');
 const sidebar = require('@architect/views/sidebar');
 
 // eslint-disable-next-line
-const { levels, getName, getSlug, getParentLocation } = require('@architect/views/lib/geography');
+const { levels, getName, getParentLocation } = require('@architect/views/lib/geography');
 // eslint-disable-next-line
 const { getContributors, getSingleContributorLink } = require('@architect/views/lib/contributors');
 // eslint-disable-next-line
@@ -36,7 +36,7 @@ function renderBreadcrumbs(location) {
   for (const level of levels.slice().reverse()) {
     if (location[level]) {
       obj[level] = location[level];
-      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${getSlug(obj)}">${location[level]}</a>`);
+      htmlBits.push(`<a class="spectrum-Link spectrum-Link--silent" href="${obj[level].slug}">${location[level]}</a>`);
     }
   }
   return htmlBits.reverse().join(', ');
@@ -186,21 +186,17 @@ function locationDetail(location, lastDate, caseInfo, rating, crosscheckReport) 
 
 // eslint-disable-next-line
 function locationMatches(a, b) {
-  return a.country === b.country && a.state === b.state && a.county === b.county && a.city === b.city;
+  return a.locationID === b.locationID;
 }
 
 async function route(req) {
   // Get latest information from timeseries
-  const { location, slug } = req;
+  const { location } = req;
   const lastDate = Object.keys(timeseries).pop();
   const caseInfo = timeseries[lastDate][location.id];
 
   // Get parent location
   const parentLocation = getParentLocation(location, locationMap) || location;
-
-  // Add slugs
-  location.slug = slug;
-  parentLocation.slug = getSlug(parentLocation);
 
   // TODO (covidatlas) disabling rating until we determine what to do.
   // const rating = ratings.find(rating => location.url === rating.url);

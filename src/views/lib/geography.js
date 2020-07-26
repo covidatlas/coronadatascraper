@@ -40,7 +40,7 @@ module.exports.getLocationGranularityName = function(location) {
 
 const getChildLocations = (module.exports.getChildLocations = function(location, locations) {
   // Find all its children
-  return locations
+  return Object.values(locations)
     .filter(loc => loc.locationID !== location.locationID)
     .filter(loc => loc.locationID.startsWith(location.locationID));
 });
@@ -49,7 +49,7 @@ const getParentLocation = (module.exports.getParentLocation = function(location,
   const parts = location.locationID.split('#');
   parts.pop(); // Remove the last element
   const parentLocID = parts.join('#');
-  return locations.find(loc => loc.locationID === parentLocID);
+  return Object.values(locations).find(loc => loc.locationID === parentLocID);
 });
 
 module.exports.getSiblingLocations = function(location, locations) {

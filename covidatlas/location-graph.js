@@ -130,7 +130,7 @@ const showGraph = ({ timeseries, location }) => {
   const locationData = Object.keys(timeseries).map(date => {
     return {
       date,
-      ...timeseries[date][location.id]
+      ...timeseries[date][`${location.id}`]
     };
   });
 

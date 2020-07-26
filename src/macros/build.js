@@ -13,6 +13,7 @@ function buildLocationMap(locations) {
   locations.forEach((location, index) => {
     location.id = index;
     location.name = locationFullName(location);
+    location.featureID = location.locationID;
     locationMap[location.slug] = location;
   });
   return locationMap;
@@ -24,6 +25,7 @@ function buildBarebonesLocationMap(locations) {
     locationMap[location.slug] = {
       id: index,
       locationID: location.locationID,
+      featureID: location.locationID,
       name: locationFullName(location)
     };
   });
@@ -38,6 +40,7 @@ function getSkinnyLocation(location) {
     county: location.countyName,
     state: location.stateName,
     country: location.countryName,
+    featureID: location.locationID,
     locationID: location.locationID
   };
 }
