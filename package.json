@@ -18,7 +18,7 @@
     "buildSite": "npx rollup -c",
     "dateData": "DATE=$(date +'%Y-%m-%d') && cp dist/latest.json dist/latest-$DATE.json && cp dist/features.json dist/features-$DATE.json && cp dist/latest.csv dist/latest-$DATE.csv",
     "deploy": "npm run dateData && npm run deploySite",
-    "deploySite": "yarn publishSite",
+    "deploySite": "cd dist && zip -r timeseries.csv.zip timeseries.csv && rm timeseries.csv && cd .. && yarn publishSite",
     "publishSite": "npm run buildSite && gh-pages -a -d dist/ -e .",
     "lint": "eslint .",
     "options": "node -r esm src/shared/cli/cli-args.js -h",
