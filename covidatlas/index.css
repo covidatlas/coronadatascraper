@@ -178,6 +178,7 @@ sp-dropdown[emphasized] {
     font-size: var(--spectrum-heading-m-text-size, var(--spectrum-alias-heading-m-text-size));
     max-width: 26ch;
     margin-top: 0;
+    line-height: 1.2;
     margin-bottom: var(--spectrum-heading-xxl-margin-top, var(--spectrum-alias-heading-xxl-margin-top));
   }
 }
@@ -330,6 +331,8 @@ hr {
   align-items: baseline;
   justify-content: space-between;
   border-bottom: 1px solid var(--Gray300);
+  font-family: var(--spectrum-component-text-font-family);
+  font-weight: 700;
 
   &.spectrum-Heading {
     margin-top: var(--spectrum-heading-m-margin-top, var(--spectrum-alias-heading-m-margin-top));
@@ -341,6 +344,8 @@ hr {
 
 .ca-LocalCount {
   text-align: right;
+  font-family: var(--spectrum-component-text-font-family);
+  font-weight: 700;
 }
 
 /* .ca-Active {

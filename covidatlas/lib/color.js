@@ -3,7 +3,7 @@
 import * as d3interpolate from 'd3-interpolate';
 import * as d3scale from 'd3-scale';
 
-const choroplethColor = 'yellowOrangePurple';
+const choroplethColor = 'magma';
 
 export const noCasesColor = '#ffffff';
 export const noPopulationDataColor = 'rgba(0,0,0,0)';
