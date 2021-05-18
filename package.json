@@ -112,7 +112,7 @@
     "rollup-plugin-copy-glob": "^0.3.1",
     "rollup-plugin-livereload": "^1.1.0",
     "rollup-plugin-postcss": "^2.5.0",
-    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-serve": "^1.0.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.13.2",
     "tape-spawn": "^1.4.2",
